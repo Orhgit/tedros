@@ -1,8 +1,12 @@
+import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vitest/config";
-import tsconfigPaths from "vite-tsconfig-paths";
+
+const appDir = fileURLToPath(new URL("./app", import.meta.url));
 
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  resolve: {
+    alias: { "~": appDir },
+  },
   test: {
     environment: "jsdom",
     globals: false,

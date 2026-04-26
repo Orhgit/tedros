@@ -5,11 +5,11 @@ import { getEnv } from "../env.server";
 /**
  * Build the Auth.js v5 config at request time.
  *
- * The Drizzle adapter will be wired here once Tedros Data & Integrations
- * lands the auth tables (`users`, `accounts`, `sessions`, `verification_tokens`)
- * in `app/lib/db/schema/auth.ts` per ADR-003. Until then, providers + pages
- * are scaffolded but no adapter — meaning sign-in is parsed but no session
- * is persisted yet. This is intentional and unblocks UI work.
+ * Phase 1 uses `strategy: "jwt"` so the magic-link / Google flow works
+ * end-to-end without a DB adapter. Switching back to `strategy: "database"`
+ * is a one-line change once Tedros Data & Integrations lands the auth tables
+ * (`users`, `accounts`, `sessions`, `verification_tokens`) in
+ * `app/lib/db/schema/auth.ts` per ADR-003 + Vega D3.
  */
 function buildAuthConfig(): AuthConfig {
   const { AUTH_SECRET, AUTH_TRUST_HOST } = getEnv();
@@ -17,12 +17,12 @@ function buildAuthConfig(): AuthConfig {
     providers: authProviders,
     secret: AUTH_SECRET,
     trustHost: AUTH_TRUST_HOST,
-    session: { strategy: "database" },
+    session: { strategy: "jwt" },
     pages: authPages,
     callbacks: {
-      session({ session, user }) {
-        if (session.user && user) {
-          (session.user as { id?: string }).id = user.id;
+      session({ session, token }) {
+        if (session.user && token?.sub) {
+          (session.user as { id?: string }).id = token.sub;
         }
         return session;
       },
@@ -57,7 +57,7 @@ export async function getSession(request: Request): Promise<AuthSession | null> 
   });
   const response = await Auth(sessionRequest, buildAuthConfig());
   if (response.status !== 200) return null;
-  const data = (await response.json()) as AuthSession | Record<string, never>;
-  if (!data || !("expires" in data)) return null;
-  return data;
+  const raw = (await response.json()) as unknown;
+  if (!raw || typeof raw !== "object" || !("expires" in raw)) return null;
+  return raw as AuthSession;
 }

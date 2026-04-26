@@ -1,10 +1,15 @@
+import { fileURLToPath, URL } from "node:url";
 import { reactRouter } from "@react-router/dev/vite";
 import { paraglide } from "@inlang/paraglide-vite";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+
+const appDir = fileURLToPath(new URL("./app", import.meta.url));
 
 export default defineConfig({
+  resolve: {
+    alias: { "~": appDir },
+  },
   plugins: [
     paraglide({
       project: "./project.inlang",
@@ -12,7 +17,6 @@ export default defineConfig({
     }),
     tailwindcss(),
     reactRouter(),
-    tsconfigPaths(),
   ],
   server: {
     port: 3000,

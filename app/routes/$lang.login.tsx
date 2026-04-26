@@ -1,5 +1,6 @@
 import { Form, Link } from "react-router";
 import type { Route } from "./+types/$lang.login";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 
@@ -8,7 +9,7 @@ export async function loader({ params, request }: Route.LoaderArgs) {
   const url = new URL(request.url);
   const status = url.searchParams.get("status") ?? null;
   const redirectTo = url.searchParams.get("redirectTo") ?? `/${locale}/dashboard`;
-  const googleEnabled = !!process.env.GOOGLE_CLIENT_ID;
+  const googleEnabled = Boolean(getEnv().GOOGLE_CLIENT_ID);
   return { locale, status, redirectTo, googleEnabled };
 }
 

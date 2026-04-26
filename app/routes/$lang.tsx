@@ -1,7 +1,8 @@
 import { data, Outlet, redirect } from "react-router";
 import type { Route } from "./+types/$lang";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, LOCALE_DIRECTION } from "~/lib/i18n/config";
-import { serializeLocaleCookie } from "~/lib/i18n/cookie.server";
+import { readLocaleCookie, serializeLocaleCookie } from "~/lib/i18n/cookie.server";
 
 export async function loader({ params, request }: Route.LoaderArgs) {
   const candidate = params.lang;
@@ -10,46 +11,30 @@ export async function loader({ params, request }: Route.LoaderArgs) {
     const target = url.pathname.replace(/^\/[^/]+/, `/${DEFAULT_LOCALE}`);
     throw redirect(`${target}${url.search}`, 308);
   }
-  const setCookie = await serializeLocaleCookie(candidate);
+  const cookieLocale = await readLocaleCookie(request);
+  const headers: HeadersInit = { "Content-Language": candidate };
+  if (cookieLocale !== candidate) {
+    headers["Set-Cookie"] = await serializeLocaleCookie(candidate);
+  }
+  const { PUBLIC_URL } = getEnv();
   return data(
-    { locale: candidate, dir: LOCALE_DIRECTION[candidate] },
     {
-      headers: {
-        "Set-Cookie": setCookie,
-        "Content-Language": candidate,
-      },
+      locale: candidate,
+      dir: LOCALE_DIRECTION[candidate],
+      publicUrl: PUBLIC_URL,
     },
+    { headers },
   );
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
-  const locale = data?.locale ?? DEFAULT_LOCALE;
+  const base = data?.publicUrl ?? "http://localhost:3000";
   return [
-    { tagName: "link", rel: "canonical", href: `https://tedros.example/${locale}` },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "he",
-      href: "https://tedros.example/he",
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "en",
-      href: "https://tedros.example/en",
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "am",
-      href: "https://tedros.example/am",
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "x-default",
-      href: "https://tedros.example/he",
-    },
+    { tagName: "link", rel: "canonical", href: `${base}/${data?.locale ?? DEFAULT_LOCALE}` },
+    { tagName: "link", rel: "alternate", hrefLang: "he", href: `${base}/he` },
+    { tagName: "link", rel: "alternate", hrefLang: "en", href: `${base}/en` },
+    { tagName: "link", rel: "alternate", hrefLang: "am", href: `${base}/am` },
+    { tagName: "link", rel: "alternate", hrefLang: "x-default", href: `${base}/he` },
   ];
 };
 

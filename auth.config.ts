@@ -34,8 +34,13 @@ export const authProviders: AuthConfig["providers"] = [
     : []),
 ];
 
+/**
+ * `/login` (no lang prefix) is a locale-aware shim that redirects to
+ * `/<locale>/login` based on the `tedros_locale` cookie (see app/routes/login.tsx).
+ * This keeps Auth.js's redirects locale-aware per ADR-004.
+ */
 export const authPages = {
-  signIn: "/he/login",
-  verifyRequest: "/he/login?status=check-email",
-  error: "/he/login?status=error",
+  signIn: "/login",
+  verifyRequest: "/login?status=check-email",
+  error: "/login?status=error",
 } as const;

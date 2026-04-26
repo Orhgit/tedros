@@ -3,7 +3,6 @@ import postgres from "postgres";
 import { getEnv } from "./env.server";
 
 declare global {
-  // eslint-disable-next-line no-var
   var __tedros_pg__: postgres.Sql | undefined;
 }
 
