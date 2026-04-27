@@ -49,15 +49,16 @@ export const publishable = {
 
 // --- tsvector ---------------------------------------------------------------
 // Drizzle has no native tsvector type; declare it once and reuse.
-// Concrete generated columns are emitted by the migration with
-// `simple` + `unaccent` config (per my proposal; D3 implicitly endorses
-// Postgres-native FTS, dictionary choice still pending Architect amendment).
+// Concrete generated columns are emitted by `migrations/_post_init.sql.ts`
+// with `simple` config + `immutable_unaccent()` (a SQL wrapper around the
+// `unaccent` extension, declared IMMUTABLE so it's allowed inside
+// GENERATED ALWAYS AS (...) STORED — raw unaccent() is STABLE and rejected).
 //
 //   ALTER TABLE <t> ADD COLUMN <c> tsvector
 //     GENERATED ALWAYS AS (
-//       setweight(to_tsvector('simple', unaccent(coalesce(<col>->>'he',''))), 'A') ||
-//       setweight(to_tsvector('simple', unaccent(coalesce(<col>->>'en',''))), 'A') ||
-//       setweight(to_tsvector('simple', unaccent(coalesce(<col>->>'am',''))), 'A')
+//       setweight(to_tsvector('simple', immutable_unaccent(coalesce(<col>->>'he',''))), 'A') ||
+//       setweight(to_tsvector('simple', immutable_unaccent(coalesce(<col>->>'en',''))), 'A') ||
+//       setweight(to_tsvector('simple', immutable_unaccent(coalesce(<col>->>'am',''))), 'A')
 //     ) STORED;
 //
 // Then GIN index on the column.

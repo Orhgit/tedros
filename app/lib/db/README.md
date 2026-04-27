@@ -27,9 +27,9 @@ app/lib/db/
 
 `drizzle-kit generate` covers ordinary tables / indexes / enums. Four pieces need raw SQL applied immediately after, in the same transaction. `_post_init.sql.ts` exports `postInitSql()` returning that SQL; call it from your migration runner after `0000_init.sql` applies.
 
-1. `CREATE EXTENSION IF NOT EXISTS pgcrypto, unaccent` — for `gen_random_uuid()` and FTS normalization.
+1. `CREATE EXTENSION IF NOT EXISTS pgcrypto, unaccent` + define `immutable_unaccent(text)` — an `IMMUTABLE` SQL wrapper around `unaccent('unaccent', $1)`. Required because raw `unaccent()` is `STABLE` and Postgres rejects `STABLE` expressions inside `GENERATED ALWAYS AS ... STORED`.
 2. `audit_log` becomes `PARTITION BY RANGE (occurred_at)` + 3 monthly partitions (current + next 2). Wire `ensureRollingPartitions(now)` into a daily worker (DevOps).
-3. `*search_vec` / `*body_vec` columns become `GENERATED ALWAYS AS (... unaccent(...) ...) STORED` with `simple` config.
+3. `*search_vec` / `*body_vec` columns become `GENERATED ALWAYS AS (to_tsvector('simple', immutable_unaccent(...))) STORED`.
 4. GIN indexes on those generated columns.
 
 ## Locked decisions (ADR-002 thread + Vega D1–D5)

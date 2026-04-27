@@ -35,9 +35,20 @@ export function postInitSql(now: Date = new Date()): string {
 // 1. Extensions ------------------------------------------------------------
 
 function extensionsSql(): string {
+  // `unaccent(text)` is STABLE, not IMMUTABLE — Postgres won't allow it inside
+  // `GENERATED ALWAYS AS (...) STORED` expressions. Wrapping the dictionary
+  // call in a SQL function declared IMMUTABLE is the standard workaround:
+  // we promise immutability (the `unaccent` dictionary is loaded at extension
+  // install and not re-altered in normal ops). If someone ever ALTERs the
+  // dictionary, all generated columns become stale — drop + re-add to refresh.
+  // (QA-PR1, Round 2.)
   return /* sql */ `
     CREATE EXTENSION IF NOT EXISTS pgcrypto;   -- gen_random_uuid()
     CREATE EXTENSION IF NOT EXISTS unaccent;   -- FTS normalization for HE/EN/AM
+
+    CREATE OR REPLACE FUNCTION immutable_unaccent(text) RETURNS text
+      LANGUAGE sql IMMUTABLE PARALLEL SAFE STRICT
+      AS $$ SELECT unaccent('unaccent', $1) $$;
   `;
 }
 
@@ -71,8 +82,9 @@ function auditLogPartitionedSql(): string {
 
 // 3. Generated tsvector columns ------------------------------------------
 // Replace placeholder columns with GENERATED ALWAYS AS (...) STORED.
-// Config: 'simple' + unaccent for HE/EN/AM (per ADR-002 thread; D3
-// implicitly endorses Postgres-native FTS).
+// Config: 'simple' + immutable_unaccent for HE/EN/AM. The wrapper function
+// is defined in extensionsSql() above; raw `unaccent()` is STABLE and would
+// be rejected here by Postgres. (QA-PR1, Round 2.)
 
 function tsvectorColumnsSql(): string {
   return /* sql */ `
@@ -80,27 +92,27 @@ function tsvectorColumnsSql(): string {
     ALTER TABLE listings DROP COLUMN IF EXISTS search_vec;
     ALTER TABLE listings ADD COLUMN search_vec tsvector
       GENERATED ALWAYS AS (
-        setweight(to_tsvector('simple', unaccent(coalesce(title->>'he',''))), 'A') ||
-        setweight(to_tsvector('simple', unaccent(coalesce(title->>'en',''))), 'A') ||
-        setweight(to_tsvector('simple', unaccent(coalesce(title->>'am',''))), 'A')
+        setweight(to_tsvector('simple', immutable_unaccent(coalesce(title->>'he',''))), 'A') ||
+        setweight(to_tsvector('simple', immutable_unaccent(coalesce(title->>'en',''))), 'A') ||
+        setweight(to_tsvector('simple', immutable_unaccent(coalesce(title->>'am',''))), 'A')
       ) STORED;
 
     -- listing_translations.body_vec: full body per row (locale-scoped)
     ALTER TABLE listing_translations DROP COLUMN IF EXISTS body_vec;
     ALTER TABLE listing_translations ADD COLUMN body_vec tsvector
-      GENERATED ALWAYS AS (to_tsvector('simple', unaccent(body))) STORED;
+      GENERATED ALWAYS AS (to_tsvector('simple', immutable_unaccent(body))) STORED;
 
     ALTER TABLE right_translations DROP COLUMN IF EXISTS body_vec;
     ALTER TABLE right_translations ADD COLUMN body_vec tsvector
-      GENERATED ALWAYS AS (to_tsvector('simple', unaccent(body))) STORED;
+      GENERATED ALWAYS AS (to_tsvector('simple', immutable_unaccent(body))) STORED;
 
     ALTER TABLE program_translations DROP COLUMN IF EXISTS body_vec;
     ALTER TABLE program_translations ADD COLUMN body_vec tsvector
-      GENERATED ALWAYS AS (to_tsvector('simple', unaccent(body))) STORED;
+      GENERATED ALWAYS AS (to_tsvector('simple', immutable_unaccent(body))) STORED;
 
     ALTER TABLE article_translations DROP COLUMN IF EXISTS body_vec;
     ALTER TABLE article_translations ADD COLUMN body_vec tsvector
-      GENERATED ALWAYS AS (to_tsvector('simple', unaccent(body))) STORED;
+      GENERATED ALWAYS AS (to_tsvector('simple', immutable_unaccent(body))) STORED;
   `;
 }
 
