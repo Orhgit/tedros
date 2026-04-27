@@ -7,7 +7,6 @@ import {
 } from "../app/lib/mortgage/eligibility";
 
 const baseline: EligibilityInput = {
-  age: 30,
   familyStatus: "married",
   children: 2,
   origin: "ethiopian_oleh",
@@ -15,13 +14,6 @@ const baseline: EligibilityInput = {
 };
 
 describe("calculateEligibility — gating", () => {
-  it("does NOT reject by age (programme has no age limit)", () => {
-    const young = calculateEligibility({ ...baseline, age: 18 });
-    const old = calculateEligibility({ ...baseline, age: 75 });
-    expect(young.eligible).toBe(true);
-    expect(old.eligible).toBe(true);
-  });
-
   it("rejects applicants with no community connection", () => {
     const r = calculateEligibility({ ...baseline, origin: "other" });
     expect(r.eligible).toBe(false);
@@ -113,7 +105,6 @@ describe("calculateEligibility — interest schedule", () => {
 describe("parseEligibilityForm", () => {
   it("coerces FormData-style strings into a typed input", () => {
     const parsed = parseEligibilityForm({
-      age: "32",
       familyStatus: "married",
       children: "3",
       origin: "ethiopian_oleh",
@@ -121,15 +112,28 @@ describe("parseEligibilityForm", () => {
     });
     expect(parsed.ok).toBe(true);
     if (parsed.ok) {
-      expect(parsed.input.age).toBe(32);
       expect(parsed.input.children).toBe(3);
       expect(parsed.input.monthlyIncome).toBe(10_500);
     }
   });
 
+  it("ignores any stray `age` field (no longer part of the input)", () => {
+    const parsed = parseEligibilityForm({
+      familyStatus: "married",
+      children: "1",
+      origin: "ethiopian_oleh",
+      monthlyIncome: "8000",
+      age: "30", // legacy, should not affect parsing
+    });
+    expect(parsed.ok).toBe(true);
+    if (parsed.ok) {
+      // `age` is not on EligibilityInput — TS-checked at compile time.
+      expect((parsed.input as Record<string, unknown>).age).toBeUndefined();
+    }
+  });
+
   it("returns field errors when required fields are missing or invalid", () => {
     const parsed = parseEligibilityForm({
-      age: "",
       familyStatus: "not_a_status",
       children: "abc",
       origin: "",
@@ -137,7 +141,6 @@ describe("parseEligibilityForm", () => {
     });
     expect(parsed.ok).toBe(false);
     if (!parsed.ok) {
-      expect(parsed.fieldErrors).toHaveProperty("age");
       expect(parsed.fieldErrors).toHaveProperty("familyStatus");
       expect(parsed.fieldErrors).toHaveProperty("children");
       expect(parsed.fieldErrors).toHaveProperty("origin");

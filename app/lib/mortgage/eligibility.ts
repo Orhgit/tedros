@@ -14,11 +14,12 @@
 //     is via an annual quota of 200 families and a lottery, plus residency
 //     and no-prior-ownership rules we do not yet model.
 //
-// What this module still does (and labels as such): it gives a **soft**
-// estimate of expected loan amount and a non-repayable grant component
-// using `tier` / `grantByTier` / `INCOME_CEILING_HEURISTIC` as MVP
-// heuristics — these are NOT part of the official programme. The disclaimer
-// in `messages/*.json` makes this explicit to the user.
+// MVP scope per Tedros PM (TED-16): keep the soft estimate UX (tier /
+// grants / per-child / income ceiling) but mark every constant as a
+// heuristic, drop the age input (no effect on the calc), and surface the
+// 200-per-year lottery + ₪70 Bank Leumi registration step in the result
+// disclaimer. The full restructure to a binary check + quota / lottery /
+// no-prior-ownership / equity rules is parked under TED-23.
 //
 // Pure module: no DB, no `.server.ts` suffix — safe to unit-test under jsdom.
 
@@ -33,7 +34,6 @@ export const ORIGINS = ["ethiopian_oleh", "ethiopian_descent", "other"] as const
 export type Origin = (typeof ORIGINS)[number];
 
 export const eligibilityInputSchema = z.object({
-  age: z.number().int().min(18).max(120),
   familyStatus: z.enum(FAMILY_STATUSES),
   children: z.number().int().min(0).max(15),
   origin: z.enum(ORIGINS),
@@ -48,8 +48,8 @@ export type EligibilityResult =
   | {
       eligible: true;
       loanAmount: number;
-      grantAmount: number; // non-repayable component (מענק) — MVP heuristic
-      tier: "standard" | "enhanced" | "single_parent"; // MVP heuristic
+      grantAmount: number; // MVP heuristic — see `grantByTier` (TED-23).
+      tier: "standard" | "enhanced" | "single_parent"; // MVP heuristic (TED-23).
       // Two-phase interest schedule from the official programme:
       phase1RateAnnual: number;
       phase1Years: number;
@@ -58,18 +58,15 @@ export type EligibilityResult =
     }
   | { eligible: false; reasons: IneligibleReason[] };
 
-// MVP heuristic — NOT part of the official programme (which has no income
-// ceiling, only an annual quota + lottery). Kept as a soft pre-check so the
-// calculator does something useful for very high earners; can be removed
-// when we model the quota/lottery surface.
+// MVP heuristic — official program is single-track 600K via lottery, no
+// income ceiling. Refinement: TED-23.
 const INCOME_CEILING_HEURISTIC = 35_000;
 
 /**
- * Classify the household into one of three tiers — MVP heuristic, NOT part
- * of the official programme. Drives `grantByTier` and the per-child top-up
- * in the soft loan estimate. A flat 600K is the official ceiling for every
- * approved applicant; this banding lets us show users a more realistic
- * estimate before they reach the application stage.
+ * Classify the household into one of three tiers.
+ *
+ * MVP heuristic — official program is single-track 600K via lottery.
+ * Refinement: TED-23.
  */
 function classifyTier(
   input: EligibilityInput,
@@ -84,29 +81,28 @@ function classifyTier(
 
 export function calculateEligibility(raw: EligibilityInput): EligibilityResult {
   const reasons: IneligibleReason[] = [];
-  // Note: no `MIN_AGE` check — the official programme has no age limit.
   if (raw.origin === "other") reasons.push("origin_not_eligible");
   if (raw.monthlyIncome > INCOME_CEILING_HEURISTIC) reasons.push("income_too_high");
   if (reasons.length > 0) return { eligible: false, reasons };
 
   const tier = classifyTier(raw);
 
-  // MVP heuristic — base loan by tier (NIS). The official programme has a
-  // flat 600K ceiling for every approved applicant; tiered estimates here
-  // are a softer, more realistic preview pending the quota/lottery model.
+  // MVP heuristic — official program is single-track 600K via lottery.
+  // Refinement: TED-23.
   const baseByTier: Record<typeof tier, number> = {
     standard: 320_000,
     enhanced: 460_000,
     single_parent: 500_000,
   };
-  const perChild = 25_000; // MVP heuristic — not in official programme.
+  // MVP heuristic — official program is single-track 600K via lottery.
+  // Refinement: TED-23.
+  const perChild = 25_000;
   const cappedChildren = Math.min(raw.children, 5);
   const rawLoan = baseByTier[tier] + cappedChildren * perChild;
   const loanAmount = Math.min(rawLoan, MAX_LOAN);
 
-  // MVP heuristic — non-repayable grant (מענק עומד) by tier. The general
-  // Ministry of Construction housing-aid programme grants a "standing
-  // grant" by points; we approximate that here pending the points model.
+  // MVP heuristic — official program is single-track 600K via lottery.
+  // Refinement: TED-23.
   const grantByTier: Record<typeof tier, number> = {
     standard: 25_000,
     enhanced: 50_000,
@@ -137,7 +133,6 @@ export function parseEligibilityForm(
   | { ok: true; input: EligibilityInput }
   | { ok: false; fieldErrors: Record<string, string> } {
   const coerced = {
-    age: numberOrNaN(raw.age),
     familyStatus: raw.familyStatus,
     children: numberOrNaN(raw.children),
     origin: raw.origin,

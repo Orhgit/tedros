@@ -17,7 +17,6 @@ import {
 const CALCULATOR_PATH = "/calculator/mortgage-ethiopian-immigrants";
 
 type FormState = {
-  age: string;
   familyStatus: FamilyStatus | "";
   children: string;
   origin: Origin | "";
@@ -29,12 +28,16 @@ type ActionData =
   | { kind: "errors"; fieldErrors: Record<string, string>; form: FormState };
 
 const EMPTY_FORM: FormState = {
-  age: "",
   familyStatus: "",
   children: "0",
   origin: "",
   monthlyIncome: "",
 };
+
+// Steps shown in the "how it works in practice" section. Each entry is a
+// translation key under `mortgage_how_works_*` — title + body live in the
+// Paraglide messages (HE/EN/AM).
+const HOW_WORKS_STEPS = ["registration", "lottery", "approval", "contract"] as const;
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -47,7 +50,6 @@ export async function action({ request, params }: Route.ActionArgs) {
   const formData = await request.formData();
   const raw = Object.fromEntries(formData) as Record<string, string>;
   const form: FormState = {
-    age: raw.age ?? "",
     familyStatus: (raw.familyStatus as FamilyStatus) ?? "",
     children: raw.children ?? "0",
     origin: (raw.origin as Origin) ?? "",
@@ -167,20 +169,6 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
             {t(locale, "mortgage_calc_title")}
           </h2>
 
-          <Field label={t(locale, "mortgage_field_age")} error={errors.age} htmlFor="age">
-            <input
-              id="age"
-              name="age"
-              type="number"
-              min={18}
-              max={120}
-              defaultValue={form.age}
-              required
-              aria-invalid={Boolean(errors.age) || undefined}
-              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
-            />
-          </Field>
-
           <Field
             label={t(locale, "mortgage_field_family_status")}
             error={errors.familyStatus}
@@ -279,11 +267,78 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
           <ResultPanel locale={locale} result={actionData.result} />
         )}
 
-        <p className="mt-12 text-xs leading-relaxed text-gray-500 dark:text-gray-400">
-          {t(locale, "mortgage_disclaimer")}
-        </p>
+        <HowItWorksSection locale={locale} />
+
+        <ProgrammeDisclaimer locale={locale} />
       </main>
     </div>
+  );
+}
+
+function HowItWorksSection({ locale }: { locale: Locale }) {
+  return (
+    <section
+      aria-labelledby="mortgage-how-works-heading"
+      className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-800"
+    >
+      <h2
+        id="mortgage-how-works-heading"
+        className="text-2xl font-semibold tracking-tight"
+      >
+        {t(locale, "mortgage_how_works_title")}
+      </h2>
+      <ol className="mt-4 grid gap-4">
+        {HOW_WORKS_STEPS.map((step, i) => (
+          <li
+            key={step}
+            className="flex gap-4 rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-950"
+          >
+            <span
+              aria-hidden
+              className="inline-flex size-8 flex-none items-center justify-center rounded-full bg-gray-900 text-sm font-semibold text-white dark:bg-white dark:text-gray-900"
+            >
+              {i + 1}
+            </span>
+            <div>
+              <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+                {t(locale, `mortgage_how_works_${step}_title`)}
+              </h3>
+              <p className="mt-1 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                {t(locale, `mortgage_how_works_${step}_body`)}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+function ProgrammeDisclaimer({ locale }: { locale: Locale }) {
+  // The official gov.il page is the canonical source. Linking it directly
+  // is the only way for a user to start the application — every other link
+  // in this section must agree with this URL.
+  const govUrl =
+    "https://www.gov.il/he/pages/2-stions-and-answers-about-mortgage-program-for-ethiopians";
+  return (
+    <aside
+      role="note"
+      className="mt-10 rounded-lg border border-gray-300 bg-gray-50 p-5 text-sm leading-relaxed text-gray-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200"
+    >
+      <p>
+        <strong>{t(locale, "mortgage_disclaimer_heading")}</strong>{" "}
+        {t(locale, "mortgage_disclaimer_body")}{" "}
+        <a
+          href={govUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="font-medium underline underline-offset-4"
+        >
+          {t(locale, "mortgage_disclaimer_link")}
+        </a>
+        .
+      </p>
+    </aside>
   );
 }
 
