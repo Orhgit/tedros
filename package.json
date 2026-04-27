@@ -24,6 +24,9 @@
     "db:studio": "drizzle-kit studio",
     "db:seed": "tsx app/lib/db/seeds/index.ts",
     "db:reset": "drizzle-kit drop && drizzle-kit migrate && pnpm db:seed",
+    "a11y": "playwright test tests/a11y/axe.spec.ts",
+    "a11y:manual": "playwright test tests/a11y/manual.spec.ts",
+    "a11y:report": "node scripts/summarize-axe.js",
     "lighthouse": "lhci autorun",
     "size": "size-limit",
     "prepare": "husky"
@@ -31,9 +34,9 @@
   "dependencies": {
     "@auth/core": "^0.41.2",
     "@inlang/paraglide-js": "^1.11.8",
+    "@radix-ui/react-slot": "^1.1.1",
     "@react-router/node": "^7.1.0",
     "@react-router/serve": "^7.1.0",
-    "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.36.4",
@@ -46,8 +49,10 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.2",
     "@eslint/js": "^9.17.0",
     "@inlang/paraglide-vite": "^1.3.4",
+    "@playwright/test": "^1.59.1",
     "@react-router/dev": "^7.1.0",
     "@react-router/fs-routes": "^7.1.0",
     "@size-limit/file": "^11.1.6",

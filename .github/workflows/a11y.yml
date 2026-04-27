@@ -1,0 +1,96 @@
+name: a11y
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: a11y-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "22"
+  PNPM_VERSION: "9"
+  AUTH_SECRET: "ci-only-placeholder-secret-do-not-use-in-prod-32+chars"
+  DATABASE_URL: "postgres://tedros:tedros_ci@localhost:5432/tedros_ci"
+
+jobs:
+  axe:
+    name: axe AA matrix
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: tedros
+          POSTGRES_PASSWORD: tedros_ci
+          POSTGRES_DB: tedros_ci
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U tedros -d tedros_ci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      AUTH_TRUST_HOST: "true"
+      PORT: "4173"
+      PUBLIC_URL: "http://localhost:4173"
+      NODE_ENV: "production"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - run: pnpm exec playwright install --with-deps chromium
+
+      - run: pnpm build
+
+      - name: Start app
+        run: |
+          pnpm start &
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:4173/he/design > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          echo "App did not become reachable" >&2
+          exit 1
+
+      - name: Run axe matrix (10 stories × 3 cells + 3 routes × 2 themes)
+        run: pnpm a11y
+
+      - name: Run RTL + keyboard manual matrix
+        if: always()
+        run: pnpm a11y:manual
+
+      - name: Render summary into job log
+        if: always()
+        run: |
+          {
+            echo "## axe AA matrix"
+            echo
+            pnpm a11y:report
+          } >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload axe + RTL artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-results
+          path: |
+            qa/axe-results/
+            qa/rtl-screenshots/
+            test-results/
+          retention-days: 14

@@ -157,5 +157,11 @@ vite.config.ts.timestamp-*
 # Lighthouse CI
 .lighthouseci/
 
+# Playwright + axe artifacts (committed reports live under docs/qa/)
+/playwright-report/
+/test-results/
+/qa/axe-results/
+
+
 # Drizzle Studio
 drizzle/
