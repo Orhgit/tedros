@@ -31,6 +31,17 @@ const envSchema = z.object({
   EMAIL_SERVER_USER: z.string().optional(),
   EMAIL_SERVER_PASSWORD: z.string().optional(),
   EMAIL_FROM: z.string().email().default("no-reply@tedros.local"),
+
+  // Resend (TED-22). Free tier (3K/mo) per ADR-001.
+  // RESEND_API_KEY blank → mock adapter (logs only, no network), used in dev/test.
+  RESEND_API_KEY: z.string().optional(),
+  RESEND_FROM: z.string().email().default("no-reply@tedros.local"),
+  // Fallback recipient when a lead has no resolvable agency contact.
+  LEADS_DEFAULT_TO_EMAIL: z.string().email().default("admin@tedros.local"),
+
+  // Cloudflare Turnstile (optional). When unset, only the honeypot field is enforced.
+  TURNSTILE_SECRET_KEY: z.string().optional(),
+  TURNSTILE_SITE_KEY: z.string().optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;
