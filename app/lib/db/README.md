@@ -56,3 +56,13 @@ app/lib/db/
 - Zod listing-attribute validators per `listing_type` — me, post-skeleton.
 - Daily cron calling `ensureRollingPartitions(now)` — DevOps, per Vega.
 - Seed extended to 50 cities + categories + rights/programs content — me, post-skeleton.
+
+## First-run admin
+
+There is no admin user seed — `users.role` defaults to `'user'`. To bootstrap the first admin after migrations:
+
+```sql
+UPDATE users SET role = 'admin' WHERE email = '<your-email>';
+```
+
+Document the chosen admin email in your deployment runbook. (QA-PR1, N3.)

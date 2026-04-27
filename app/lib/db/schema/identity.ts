@@ -15,7 +15,13 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 
-import { localeEnum, softDelete, timestamps, translatable } from "../columns";
+import {
+  localeEnum,
+  softDelete,
+  timestamps,
+  translatable,
+  translatableNullable,
+} from "../columns";
 
 // --- Enums -----------------------------------------------------------------
 
@@ -73,7 +79,9 @@ export const agencies = pgTable(
     verificationStatus: verificationStatusEnum("verification_status")
       .notNull()
       .default("pending"),
-    description: translatable("description"),
+    // Optional company blurb — agencies sign up before writing one.
+    // (QA-PR1, M3.)
+    description: translatableNullable("description"),
     contactEmail: varchar("contact_email", { length: 320 }),
     contactPhone: varchar("contact_phone", { length: 32 }),
     websiteUrl: text("website_url"),

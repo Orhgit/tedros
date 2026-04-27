@@ -5,6 +5,7 @@
 import { sql } from "drizzle-orm";
 import {
   index,
+  integer,
   jsonb,
   pgTable,
   primaryKey,
@@ -68,11 +69,14 @@ export const articleTranslations = pgTable(
     locale: localeEnum("locale").notNull(),
     body: text("body").notNull(),
     bodyVec: tsvector("body_vec"),
+    // Per-locale word count for ADR-005 content gate (≥800 words).
+    // Denormalized at write time in the action layer (QA-PR1, M2).
+    wordCount: integer("word_count").notNull().default(0),
     ...timestamps,
   },
   (t) => ({
     pk: primaryKey({ columns: [t.articleId, t.locale] }),
-    bodyIdx: index("article_translations_body_gin").on(t.bodyVec),
+    // GIN index on `body_vec` owned by `_post_init.sql.ts` (B2).
   }),
 );
 
@@ -93,7 +97,9 @@ export const programmaticPages = pgTable(
     metaDescription: translatable("meta_description"),
     payload: jsonb("payload").notNull().default({}),
     // Denormalized: cheapest way to enforce the SEO content-gate at write.
-    wordCount: text("word_count"),
+    // ADR-005 requires `WHERE word_count >= 800` for index-friendly filter
+    // (QA-PR1, B3 — was `text`, fixed to `integer`).
+    wordCount: integer("word_count").notNull().default(0),
     ...timestamps,
     ...softDelete,
     ...publishable,

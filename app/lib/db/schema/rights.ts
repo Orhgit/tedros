@@ -67,7 +67,7 @@ export const rightTranslations = pgTable(
   },
   (t) => ({
     pk: primaryKey({ columns: [t.rightId, t.locale] }),
-    bodyIdx: index("right_translations_body_gin").on(t.bodyVec),
+    // GIN index on `body_vec` owned by `_post_init.sql.ts` (B2).
   }),
 );
 
@@ -118,6 +118,6 @@ export const programTranslations = pgTable(
   },
   (t) => ({
     pk: primaryKey({ columns: [t.programId, t.locale] }),
-    bodyIdx: index("program_translations_body_gin").on(t.bodyVec),
+    // GIN index on `body_vec` owned by `_post_init.sql.ts` (B2).
   }),
 );

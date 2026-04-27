@@ -17,6 +17,11 @@ export type Translatable = { he: string; en?: string; am?: string };
 export const translatable = (col: string) =>
   jsonb(col).$type<Translatable>().notNull();
 
+// Optional translatable text (e.g. agency description, professional headline).
+// `null` is a valid value at the column level — distinct from "empty in HE".
+export const translatableNullable = (col: string) =>
+  jsonb(col).$type<Translatable>();
+
 // --- Standard timestamp groups ---------------------------------------------
 // timestamptz everywhere (ADR-002 + Vega D5). DB-side defaults so seeds and
 // raw migrations get correct values without app participation.

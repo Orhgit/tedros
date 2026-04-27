@@ -10,15 +10,16 @@
 // at the DB layer (Postgres can't FK to multiple parent tables). Cleanup
 // runs in the application layer alongside soft-delete + rename actions.
 
-import { sql } from "drizzle-orm";
 import {
   index,
   inet,
   jsonb,
   pgEnum,
   pgTable,
+  primaryKey,
   text,
   timestamp,
+  uniqueIndex,
   uuid,
 } from "drizzle-orm/pg-core";
 
@@ -68,7 +69,11 @@ export const auditLog = pgTable(
     occurredAt: timestamp("occurred_at", { withTimezone: true })
       .notNull()
       .defaultNow(),
-    actorId: uuid("actor_id"), // nullable: anonymous request, system job
+    // No FK to users.id by design: actorType can be 'agent' or 'system',
+    // for which no users row exists. The id is still meaningful for the
+    // 'user'/'agency'/'admin' actor types — joinable in queries when needed.
+    // (QA-PR1, N1.)
+    actorId: uuid("actor_id"),
     actorType: actorTypeEnum("actor_type").notNull(),
     action: auditActionEnum("action").notNull(),
     entityType: text("entity_type").notNull(),
@@ -86,8 +91,11 @@ export const auditLog = pgTable(
     userAgent: text("user_agent"),
   },
   (t) => ({
-    // PK includes occurred_at because partitioned tables require partition
-    // key in primary key.
+    // Partitioned tables require the partition key in the primary key.
+    // Declared here so drizzle-kit's `0000_init.sql` emits a real PK
+    // matching the partitioned table that `_post_init.sql.ts` re-creates.
+    // (QA-PR1, M1.)
+    pk: primaryKey({ columns: [t.id, t.occurredAt] }),
     occurredAtIdx: index("audit_log_occurred_at_idx").on(t.occurredAt),
     actorIdx: index("audit_log_actor_idx").on(t.actorId, t.occurredAt),
     entityIdx: index("audit_log_entity_idx").on(
@@ -121,8 +129,13 @@ export const slugHistory = pgTable(
       .defaultNow(),
   },
   (t) => ({
-    // Hot path: 301 lookup.
-    redirectIdx: index("slug_history_redirect_idx").on(
+    // 301 redirect lookup is by `(entity_type, locale, scope_id, old_slug)`.
+    // UNIQUE prevents an old slug from pointing to two different entities,
+    // which would make the redirect non-deterministic. NULLs in `scope_id`
+    // (global entities) are treated as distinct by Postgres, which is fine
+    // — a global slug history just allows append-only versioning.
+    // (QA-PR1, M4.)
+    redirectIdx: uniqueIndex("slug_history_redirect_unique").on(
       t.entityType,
       t.locale,
       t.scopeId,

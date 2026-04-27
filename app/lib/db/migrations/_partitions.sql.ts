@@ -1,17 +1,19 @@
 // Partitioned-table SQL helper for audit_log (Vega D4).
 //
-// Drizzle's PG core has no DSL for declarative partitioning. The migration
-// runs the raw SQL from this module after `drizzle-kit` generates the
-// CREATE TABLE statement (which we then replace with the partitioned form).
+// Drizzle's PG core has no DSL for declarative partitioning. The first-run
+// migration sequence (after QA-PR1 review):
+//   1. `drizzle-kit generate` emits `0000_init.sql` with `CREATE TABLE audit_log`
+//      using the composite PK `(id, occurred_at)` declared in `schema/audit.ts`.
+//   2. `_post_init.sql.ts → postInitSql()` runs immediately after and replaces
+//      that table with the partitioned form (`auditLogParent()` here) plus
+//      initial monthly partitions via `ensureRollingPartitions(now)`. No hand
+//      editing of `0000_init.sql` is required.
+//   3. DevOps wires `ensureRollingPartitions(now)` into a daily cron — keeps
+//      current + next 2 months of partitions ahead so a write at 23:59 on
+//      the last day never fails for missing partition.
 //
-// Workflow for the first migration:
-//   1. drizzle-kit generates `0000_init.sql` with a plain `CREATE TABLE audit_log`.
-//   2. Hand-edit that file: replace the audit_log block with `auditLogParent()` + `auditLogPartition('YYYY_MM')` for current month.
-//   3. Add the cron from `ensureNextMonthPartition()` to the worker that
-//      runs daily — guarantees next month's partition exists 7 days ahead.
-//
-// The Engineer's CI test should assert that the next 2 months' partitions
-// exist; tests live in `app/lib/db/__tests__/partitions.test.ts`.
+// CI test (Engineer-owned, post-skeleton): assert the next 2 months'
+// partitions exist; tests live in `app/lib/db/__tests__/partitions.test.ts`.
 
 export function auditLogParent(): string {
   return /* sql */ `

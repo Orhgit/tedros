@@ -143,10 +143,9 @@ export const listings = pgTable(
       .on(t.publishedAt)
       .where(sql`${t.deletedAt} IS NULL AND ${t.publishedAt} IS NOT NULL`),
 
-    // FTS index. Engineer must add `using('gin', searchVec)` semantics in
-    // the migration; Drizzle's `using('gin', ...)` ergonomics here are still
-    // brittle, so we declare the column and let the migration emit the GIN.
-    searchIdx: index("listings_search_gin").on(t.searchVec),
+    // GIN index on `search_vec` is owned by `migrations/_post_init.sql.ts`
+    // (drizzle-kit defaults `index().on(tsvectorCol)` to btree, which fails
+    // on tsvector — QA-PR1, B2).
   }),
 );
 
@@ -166,7 +165,7 @@ export const listingTranslations = pgTable(
   },
   (t) => ({
     pk: primaryKey({ columns: [t.listingId, t.locale] }),
-    bodyIdx: index("listing_translations_body_gin").on(t.bodyVec),
+    // GIN index on `body_vec` owned by `_post_init.sql.ts` (B2).
   }),
 );
 

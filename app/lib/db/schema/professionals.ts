@@ -3,6 +3,7 @@
 
 import { sql } from "drizzle-orm";
 import {
+  check,
   index,
   integer,
   pgTable,
@@ -13,7 +14,13 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 
-import { publishable, softDelete, timestamps, translatable } from "../columns";
+import {
+  publishable,
+  softDelete,
+  timestamps,
+  translatable,
+  translatableNullable,
+} from "../columns";
 import { users, verificationStatusEnum } from "./identity";
 import { cities } from "./realestate";
 
@@ -26,7 +33,8 @@ export const professionals = pgTable(
     userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
     displayName: translatable("display_name"),
     slug: translatable("slug"),
-    headline: translatable("headline"),
+    // Optional short tagline. (QA-PR1, M3.)
+    headline: translatableNullable("headline"),
     cityId: uuid("city_id")
       .notNull()
       .references(() => cities.id, { onDelete: "restrict" }),
@@ -107,7 +115,7 @@ export const professionalReviews = pgTable(
     reviewerUserId: uuid("reviewer_user_id").references(() => users.id, {
       onDelete: "set null",
     }),
-    rating: integer("rating").notNull(), // 1..5; CHECK constraint in migration
+    rating: integer("rating").notNull(),
     body: text("body").notNull(),
     ...timestamps,
     ...softDelete,
@@ -117,5 +125,11 @@ export const professionalReviews = pgTable(
     professionalIdx: index("professional_reviews_pro_idx")
       .on(t.professionalId, t.publishedAt)
       .where(sql`${t.deletedAt} IS NULL`),
+    // 1..5 rating bound — declared so drizzle-kit emits the CHECK
+    // alongside the table (QA-PR1, M5).
+    ratingRange: check(
+      "professional_reviews_rating_check",
+      sql`${t.rating} BETWEEN 1 AND 5`,
+    ),
   }),
 );
