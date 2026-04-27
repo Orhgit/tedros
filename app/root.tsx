@@ -17,15 +17,15 @@ import {
 import { readLocaleCookie } from "./lib/i18n/cookie.server";
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [
-  { rel: "icon", href: "/favicon.ico" },
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Inter:wght@400;500;700&display=swap",
-  },
-];
+/**
+ * Phase 1 ships with system fonts only — the @theme cascade in app.css falls
+ * through to `system-ui`/`-apple-system`/etc. when Heebo/Inter aren't loaded.
+ * Designer re-introduces the brand fonts in Phase 2 with self-hosting (or
+ * @fontsource) + `<link rel="preload" as="font">` per ADR-005's LCP budget.
+ * The previous Google Fonts <link> was render-blocking on Slow 4G and pushed
+ * LCP past 2000ms in CI Lighthouse.
+ */
+export const links: Route.LinksFunction = () => [{ rel: "icon", href: "/favicon.ico" }];
 
 export async function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
