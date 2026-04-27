@@ -9,18 +9,18 @@ This repo is built and maintained by a multi-agent team coordinated through Mult
 
 ## Agent roster
 
-| Agent | Domain |
-|---|---|
-| Vega (coordinator) | Cross-cutting; tech lead until specialists exist |
-| Tedros PM | Issue splitting, DoD, sequencing |
-| Tedros Researcher | Market, SEO, community insights |
-| Tedros Architect | ADRs, data models, decisions |
-| Tedros Designer | UX/UI, design system, RTL, accessibility |
-| Tedros Engineer | Full-stack RR7 (UI + server + auth + CRUD) |
-| Tedros Data & Integrations | DB schema, CMS, sync workers, third-party |
-| Tedros Content & SEO | Programmatic content, copy, optimization |
-| Tedros QA | Tests, accessibility, performance, regression |
-| Tedros DevOps | CI/CD, hosting, monitoring, autopilots |
+| Agent                      | Domain                                           |
+| -------------------------- | ------------------------------------------------ |
+| Vega (coordinator)         | Cross-cutting; tech lead until specialists exist |
+| Tedros PM                  | Issue splitting, DoD, sequencing                 |
+| Tedros Researcher          | Market, SEO, community insights                  |
+| Tedros Architect           | ADRs, data models, decisions                     |
+| Tedros Designer            | UX/UI, design system, RTL, accessibility         |
+| Tedros Engineer            | Full-stack RR7 (UI + server + auth + CRUD)       |
+| Tedros Data & Integrations | DB schema, CMS, sync workers, third-party        |
+| Tedros Content & SEO       | Programmatic content, copy, optimization         |
+| Tedros QA                  | Tests, accessibility, performance, regression    |
+| Tedros DevOps              | CI/CD, hosting, monitoring, autopilots           |
 
 ## Conventions
 
@@ -33,6 +33,7 @@ This repo is built and maintained by a multi-agent team coordinated through Mult
 ## Cost discipline
 
 User has stated no monthly budget — favor free tiers and self-hosted alternatives over paid SaaS:
+
 - Cloudflare CDN (free), Cloudflare R2 (free 10GB)
 - Resend (free 3K/mo)
 - Plausible self-hosted or Umami

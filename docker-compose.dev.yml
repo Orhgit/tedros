@@ -1,0 +1,75 @@
+name: tedros-dev
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: tedros_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tedros
+      POSTGRES_PASSWORD: tedros_dev
+      POSTGRES_DB: tedros
+      POSTGRES_INITDB_ARGS: "--locale=C.UTF-8 --encoding=UTF-8"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tedros -d tedros"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: tedros_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: ["redis-server", "--save", "60", "1", "--loglevel", "warning"]
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: tedros_mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  # Payload CMS — standalone service with its own DB.
+  # NOT wired into the RR7 app in Phase 1 per Vega D1 (decided 2026-04-26).
+  # Will be integrated in Phase 4 (Rights Hub) when content model crystalizes.
+  payload-postgres:
+    image: postgres:16-alpine
+    container_name: tedros_payload_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: payload
+      POSTGRES_PASSWORD: payload_dev
+      POSTGRES_DB: payload
+    ports:
+      - "5433:5432"
+    volumes:
+      - payload_postgres_data:/var/lib/postgresql/data
+    profiles: ["payload"]
+
+  payload:
+    image: ghcr.io/payloadcms/payload:latest
+    container_name: tedros_payload
+    restart: unless-stopped
+    environment:
+      DATABASE_URI: postgres://payload:payload_dev@payload-postgres:5432/payload
+      PAYLOAD_SECRET: dev-only-payload-secret-change-me
+      NODE_ENV: development
+    ports:
+      - "3001:3000"
+    depends_on:
+      - payload-postgres
+    profiles: ["payload"]
+
+volumes:
+  postgres_data:
+  redis_data:
+  payload_postgres_data:

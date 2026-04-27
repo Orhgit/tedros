@@ -141,3 +141,21 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# React Router v7 generated types
+.react-router/
+
+# RR7 build output
+/build/
+
+# Paraglide compiled messages (regenerated on build)
+/app/paraglide/
+
+# Husky internal
+.husky/_/
+
+# Lighthouse CI
+.lighthouseci/
+
+# Drizzle Studio
+drizzle/
