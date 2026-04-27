@@ -13,6 +13,7 @@ import {
   text,
   uniqueIndex,
   uuid,
+  varchar,
 } from "drizzle-orm/pg-core";
 
 import {
@@ -27,20 +28,44 @@ import { agencies, users } from "./identity";
 
 // --- Enums -----------------------------------------------------------------
 
+// `commercial` added per TED-21 (Phase 3.3). The closed set covers every
+// pricing model agencies onboard — broader categorisation (luxury, plot,
+// etc.) lives in `attributes.subtype` to avoid enum churn.
 export const listingTypeEnum = pgEnum("listing_type", [
   "sale",
   "rent",
   "urban_renewal",
   "investment",
   "gov_program",
+  "commercial",
 ]);
 
+// Lifecycle of a published unit. Distinct from `published_at`, which is the
+// audit timestamp of the first draft → active transition. `status` is the
+// thing the listing-card renders and the search index filters on.
+//   - draft     : agency is editing; never indexed, never on the public site
+//   - active    : on the public site; eligible for `/listings`
+//   - sold      : sale-type listing closed — kept for SEO + history
+//   - rented    : rent-type listing closed — same
+//   - archived  : agency hid it but did not soft-delete (e.g. seasonal pause)
+export const listingStatusEnum = pgEnum("listing_status", [
+  "draft",
+  "active",
+  "sold",
+  "rented",
+  "archived",
+]);
+
+// Lifecycle of a single lead, from form-submit to broker close-out (TED-21).
+// Distinct from a sales funnel: this is an *assignment* flow. A lead is
+// `pending` until an agency_member claims it, then `assigned`, then
+// `contacted` once the broker has spoken to the prospect, then `closed`
+// (terminal — outcome lives on `lead_outcomes` if we add one later).
 export const leadStatusEnum = pgEnum("lead_status", [
-  "new",
+  "pending",
+  "assigned",
   "contacted",
-  "qualified",
-  "won",
-  "lost",
+  "closed",
 ]);
 
 export const mediaKindEnum = pgEnum("media_kind", [
@@ -99,13 +124,16 @@ export const listings = pgTable(
       .notNull()
       .references(() => agencies.id, { onDelete: "restrict" }),
     type: listingTypeEnum("type").notNull(),
+    // Lifecycle gate; see enum doc above. Default `draft` so the agency
+    // intake form never accidentally publishes (TED-21).
+    status: listingStatusEnum("status").notNull().default("draft"),
     title: translatable("title"),
     slug: translatable("slug"),
     // Numeric, currency-agnostic at the column level (currency stored in
     // `attributes.currency`; default 'ILS'). 14-digit precision covers
     // any plausible real-estate price in agorot.
     price: numeric("price", { precision: 14, scale: 2 }),
-    // Type-specific fields. Validated in `app/lib/validation/listings/<type>.ts`
+    // Type-specific fields. Validated in `app/lib/validation/listings.ts`
     // with a Zod schema per listing_type at the action layer (ADR-002).
     attributes: jsonb("attributes").notNull().default({}),
     cityId: uuid("city_id")
@@ -137,11 +165,15 @@ export const listings = pgTable(
     cityIdx: index("listings_city_idx").on(t.cityId),
     neighborhoodIdx: index("listings_neighborhood_idx").on(t.neighborhoodId),
     typeIdx: index("listings_type_idx").on(t.type),
+    statusIdx: index("listings_status_idx").on(t.status),
 
-    // Hot path: live listings only. Partial index keeps it small.
+    // Hot path: live listings only. Partial index keeps it small and the
+    // status check matches the loader for `/{lang}/listings` (TED-21).
     livePublished: index("listings_live_published_idx")
       .on(t.publishedAt)
-      .where(sql`${t.deletedAt} IS NULL AND ${t.publishedAt} IS NOT NULL`),
+      .where(
+        sql`${t.deletedAt} IS NULL AND ${t.publishedAt} IS NOT NULL AND ${t.status} = 'active'`,
+      ),
 
     // GIN index on `search_vec` is owned by `migrations/_post_init.sql.ts`
     // (drizzle-kit defaults `index().on(tsvectorCol)` to btree, which fails
@@ -197,6 +229,11 @@ export const listingMedia = pgTable(
 // --- leads -----------------------------------------------------------------
 // PII-sensitive (ADR-003 + Israeli Privacy Law). No softDelete: leads are
 // audited at deletion via audit_log.
+//
+// Direct `agency_id` denormalises one hop off `listings.agency_id` — keeping
+// it on the lead row makes agency-scoped queries (the dashboard inbox) a
+// single index lookup, and survives `listing_id` going NULL on listing
+// soft-delete (TED-21).
 
 export const leads = pgTable(
   "leads",
@@ -205,20 +242,31 @@ export const leads = pgTable(
     listingId: uuid("listing_id").references(() => listings.id, {
       onDelete: "set null",
     }),
+    agencyId: uuid("agency_id")
+      .notNull()
+      .references(() => agencies.id, { onDelete: "restrict" }),
     submittedByUserId: uuid("submitted_by_user_id").references(() => users.id, {
       onDelete: "set null",
     }),
-    status: leadStatusEnum("status").notNull().default("new"),
-    // {phone, email, note, source} — all client-validated with Zod at action.
-    contact: jsonb("contact").notNull(),
-    // Non-PII analytics (utm_source, page, etc.). Safe to retain post-anon.
+    assignedToUserId: uuid("assigned_to_user_id").references(() => users.id, {
+      onDelete: "set null",
+    }),
+    status: leadStatusEnum("status").notNull().default("pending"),
+    // Normalised contact fields. Length caps mirror users.email / users.phone.
+    name: varchar("name", { length: 200 }).notNull(),
+    email: varchar("email", { length: 320 }),
+    phone: varchar("phone", { length: 32 }),
+    message: text("message"),
+    // Non-PII analytics (utm_source, page, referer, locale, consent_at, ...).
+    // Safe to retain post-anon.
     metadata: jsonb("metadata").notNull().default({}),
     ...timestamps,
   },
   (t) => ({
     listingIdx: index("leads_listing_idx").on(t.listingId, t.status),
+    agencyIdx: index("leads_agency_idx").on(t.agencyId, t.status, t.createdAt),
     statusIdx: index("leads_status_idx").on(t.status),
     submittedByIdx: index("leads_submitted_by_idx").on(t.submittedByUserId),
+    assignedToIdx: index("leads_assigned_to_idx").on(t.assignedToUserId),
   }),
 );
-
