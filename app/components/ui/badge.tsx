@@ -8,12 +8,12 @@ export const badgeVariants = cva(
     variants: {
       variant: {
         default: "bg-secondary text-secondary-foreground",
-        primary: "bg-primary/10 text-primary",
-        success: "bg-success/10 text-success",
+        primary: "bg-primary/10 text-primary-strong",
+        success: "bg-success/10 text-success-strong",
         warning: "bg-warning/15 text-earth-900",
-        destructive: "bg-destructive/10 text-destructive",
+        destructive: "bg-destructive/10 text-destructive-strong",
         outline: "border border-border text-foreground",
-        sigd: "bg-accent-sigd/10 text-accent-sigd",
+        sigd: "bg-accent-sigd/10 text-accent-sigd-strong",
       },
     },
     defaultVariants: { variant: "default" },

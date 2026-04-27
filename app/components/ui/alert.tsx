@@ -8,9 +8,9 @@ export const alertVariants = cva(
     variants: {
       variant: {
         info: "border-border bg-card text-foreground",
-        success: "border-success/30 bg-success/8 text-success",
+        success: "border-success/30 bg-success/8 text-success-strong",
         warning: "border-warning/40 bg-warning/15 text-earth-900",
-        destructive: "border-destructive/30 bg-destructive/8 text-destructive",
+        destructive: "border-destructive/30 bg-destructive/8 text-destructive-strong",
       },
     },
     defaultVariants: { variant: "info" },

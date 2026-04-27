@@ -1,8 +1,12 @@
 import {
+  Children,
+  cloneElement,
   createContext,
+  isValidElement,
   useContext,
   useId,
   type HTMLAttributes,
+  type ReactElement,
   type ReactNode,
 } from "react";
 import { cn } from "~/lib/utils";
@@ -73,19 +77,33 @@ export function FormLabel({
   );
 }
 
+type ControlProps = {
+  id?: string;
+  "aria-describedby"?: string;
+  "aria-invalid"?: boolean | "true" | "false";
+};
+
 export function FormControl({ children }: { children: ReactNode }) {
   const { fieldId, descId, errorId, invalid } = useField();
-  // Clone-friendly: we just render children with controlling props injected
-  // via React.cloneElement at the call site. To stay light, expose IDs as
-  // data attributes on a wrapper instead.
+  const describedBy = [descId, invalid ? errorId : ""].filter(Boolean).join(" ");
+
+  // Inject id + aria onto the first valid React element child so the
+  // <label htmlFor> in <FormLabel> resolves and SRs read description / error.
   return (
-    <div
-      data-field-id={fieldId}
-      data-described-by={[descId, invalid ? errorId : ""].filter(Boolean).join(" ")}
-      data-invalid={invalid || undefined}
-    >
-      {children}
-    </div>
+    <>
+      {Children.map(children, (child) => {
+        if (!isValidElement(child)) return child;
+        const element = child as ReactElement<ControlProps>;
+        const childProps = element.props;
+        const existingDescribedBy = childProps["aria-describedby"];
+        return cloneElement(element, {
+          id: childProps.id ?? fieldId,
+          "aria-describedby":
+            [existingDescribedBy, describedBy].filter(Boolean).join(" ") || undefined,
+          "aria-invalid": childProps["aria-invalid"] ?? (invalid ? true : undefined),
+        });
+      })}
+    </>
   );
 }
 
