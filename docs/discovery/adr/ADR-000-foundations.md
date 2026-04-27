@@ -11,29 +11,32 @@ Foundational decisions that shape every later phase. Locked here so subsequent A
 ## Decisions LOCKED
 
 ### D1 — Languages
+
 **Hebrew (RTL) + English (LTR) + Amharic (RTL, Ge'ez script)** — supported from day one.
 
 Implications: i18n architecture is non-negotiable from Phase 1. Routing under `/he`, `/en`, `/am`. hreflang per page. Font loading strategy includes Heebo (HE), Inter (EN), Noto Sans Ethiopic (AM).
 
 ### D2 — Real-estate scope
+
 **All types**: sale, rent, urban renewal, investment, government programs (mortgage 600K, מחיר למשתכן, public housing). Commercial as a later expansion.
 
 Implications: flexible listing schema, multi-source ingestion (gov data + agency-supplied), multi-role auth (user / agency / admin).
 
 ### D3 — Coordination
+
 **Vega = tech lead + coordinator** until specialist agents are created. Each phase has a designated Owner agent role; PM splits issues; specialists work in chain.
 
 Implications: Vega holds Phase 0 directly, hands off as agents are stood up.
 
 ## Decisions PENDING
 
-| ID | Decision | Resolution |
-|---|---|---|
-| P1 | Existing-site disposition (rebuild / migrate / retire) | Awaiting URL from owner |
-| P2 | Hosting topology details (server specs, Postgres location, CDN config) | Open |
-| P3 | Git provider | ✅ `github.com/Orhgit/tedros` |
-| P4 | Lead-model — how brokers monetize (free / per-lead / subscription) | Awaiting interview validation |
-| P5 | Monthly infra budget cap | ✅ No monthly budget; free tiers + self-hosted only |
+| ID  | Decision                                                               | Resolution                                          |
+| --- | ---------------------------------------------------------------------- | --------------------------------------------------- |
+| P1  | Existing-site disposition (rebuild / migrate / retire)                 | Awaiting URL from owner                             |
+| P2  | Hosting topology details (server specs, Postgres location, CDN config) | Open                                                |
+| P3  | Git provider                                                           | ✅ `github.com/Orhgit/tedros`                       |
+| P4  | Lead-model — how brokers monetize (free / per-lead / subscription)     | Awaiting interview validation                       |
+| P5  | Monthly infra budget cap                                               | ✅ No monthly budget; free tiers + self-hosted only |
 
 ## Consequences
 

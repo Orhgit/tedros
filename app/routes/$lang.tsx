@@ -30,7 +30,11 @@ export async function loader({ params, request }: Route.LoaderArgs) {
 export const meta: Route.MetaFunction = ({ data }) => {
   const base = data?.publicUrl ?? "http://localhost:3000";
   return [
-    { tagName: "link", rel: "canonical", href: `${base}/${data?.locale ?? DEFAULT_LOCALE}` },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: `${base}/${data?.locale ?? DEFAULT_LOCALE}`,
+    },
     { tagName: "link", rel: "alternate", hrefLang: "he", href: `${base}/he` },
     { tagName: "link", rel: "alternate", hrefLang: "en", href: `${base}/en` },
     { tagName: "link", rel: "alternate", hrefLang: "am", href: `${base}/am` },

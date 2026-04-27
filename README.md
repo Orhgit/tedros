@@ -15,37 +15,37 @@ Source of truth for plans, decisions, and live progress: the Multica workspace `
 
 ## Stack (ADR-001)
 
-| Layer | Choice |
-|---|---|
-| Framework | React Router v7 (Remix-current) |
-| Language | TypeScript |
-| DB | PostgreSQL |
-| ORM | Drizzle |
-| Auth | Auth.js |
-| CMS | Payload (self-hosted) |
-| Styling | Tailwind + shadcn/ui (RTL-aware) |
-| i18n | Paraglide JS |
-| Storage | Cloudflare R2 |
-| Email | Resend (free tier) |
-| Payments | Stripe (transactional only) |
-| Hosting | User's server + Cloudflare CDN free tier |
-| Analytics | Plausible self-hosted / Umami |
-| Errors | GlitchTip self-hosted (Sentry-compatible) |
+| Layer     | Choice                                    |
+| --------- | ----------------------------------------- |
+| Framework | React Router v7 (Remix-current)           |
+| Language  | TypeScript                                |
+| DB        | PostgreSQL                                |
+| ORM       | Drizzle                                   |
+| Auth      | Auth.js                                   |
+| CMS       | Payload (self-hosted)                     |
+| Styling   | Tailwind + shadcn/ui (RTL-aware)          |
+| i18n      | Paraglide JS                              |
+| Storage   | Cloudflare R2                             |
+| Email     | Resend (free tier)                        |
+| Payments  | Stripe (transactional only)               |
+| Hosting   | User's server + Cloudflare CDN free tier  |
+| Analytics | Plausible self-hosted / Umami             |
+| Errors    | GlitchTip self-hosted (Sentry-compatible) |
 
 **Cost model**: zero monthly subscription where possible. All paid services use free tiers, all infra runs on user's server.
 
 ## Phases
 
-| # | Phase | Status |
-|---|---|---|
-| 0 | Discovery & Audit | In progress |
-| 1 | Strategy & Architecture | In progress (skeleton landed) |
-| 2 | Design System & Brand | Backlog |
-| 3 | MVP — Real Estate ⭐ | Backlog (target: live in 5-7 weeks) |
-| 4 | Rights Hub | Planned |
-| 5 | Professionals Directory | Planned |
-| 6 | SEO Content Engine | Planned |
-| 7 | Launch & Automation | Planned |
+| #   | Phase                   | Status                              |
+| --- | ----------------------- | ----------------------------------- |
+| 0   | Discovery & Audit       | In progress                         |
+| 1   | Strategy & Architecture | In progress (skeleton landed)       |
+| 2   | Design System & Brand   | Backlog                             |
+| 3   | MVP — Real Estate ⭐    | Backlog (target: live in 5-7 weeks) |
+| 4   | Rights Hub              | Planned                             |
+| 5   | Professionals Directory | Planned                             |
+| 6   | SEO Content Engine      | Planned                             |
+| 7   | Launch & Automation     | Planned                             |
 
 ## SEO Goal
 
@@ -97,7 +97,7 @@ app/
     _index.tsx                # / -> /<locale>
     $lang.tsx                 # i18n layout (validate locale, set cookie, hreflang)
     $lang._index.tsx          # Homepage in HE/EN/AM
-    $lang.login.tsx           # Magic link + Google
+    $lang.login.tsx           # Google sign-in (Email returns once auth schema lands)
     $lang.dashboard.tsx       # Auth-required, uses requireUser()
     auth.$.tsx                # Auth.js v5 catch-all handler
     healthz.tsx               # Liveness probe (DB ping)

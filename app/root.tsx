@@ -30,7 +30,8 @@ export const links: Route.LinksFunction = () => [
 export async function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
   const segment = url.pathname.split("/")[1];
-  const fromUrl = segment === "he" || segment === "en" || segment === "am" ? segment : undefined;
+  const fromUrl =
+    segment === "he" || segment === "en" || segment === "am" ? segment : undefined;
   const cookieLocale = await readLocaleCookie(request);
   const locale: Locale = (fromUrl ?? cookieLocale ?? DEFAULT_LOCALE) as Locale;
   return { locale };

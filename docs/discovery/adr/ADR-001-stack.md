@@ -6,6 +6,7 @@
 ## Context
 
 Tedros is a multi-tenant content + transactional platform:
+
 - Tri-lingual day-1 (Hebrew RTL, English LTR, Amharic RTL with Ge'ez script).
 - SEO-critical (programmatic landing pages per city × topic).
 - Multi-role auth: end users, real-estate agencies (B2B onboarding + listing CRUD), admins (verification workflow).
@@ -16,28 +17,29 @@ Tedros is a multi-tenant content + transactional platform:
 
 ## Decision
 
-| Layer | Choice | Why |
-|---|---|---|
-| **Framework** | **React Router v7** (Remix-current) | Full-stack React, SSR + streaming, file-based routing, loaders + actions for data, no separate API service. User-rejected Next.js. |
-| **Language** | TypeScript | Non-negotiable for safety + DX. |
-| **DB** | **PostgreSQL** self-hosted on user's server | Mature, JSONB for flexible listings, FTS built-in. Free. |
-| **ORM** | **Drizzle** | TypeScript-native, lightweight, framework-agnostic. |
-| **Auth** | **Auth.js** | Mature, Remix/RR7-compatible, OAuth + email. RBAC in loaders/actions. |
-| **CMS** | **Payload** self-hosted | Headless, TypeScript, multi-locale. Owns content + admin UI. Free. |
-| **Styling** | **Tailwind + shadcn/ui** | RTL-aware, accessible, consistent. Free. |
-| **i18n** | **Paraglide JS** | Compile-time, type-safe, fast. HE/EN/AM seamless. Free. |
-| **File storage** | **Cloudflare R2** | Free 10GB, S3-compatible. |
-| **Search** | **Postgres FTS** initially | Free. Meilisearch self-hosted later if needed. |
-| **Email** | **Resend** | Free tier 3K/mo. |
-| **Payments** | **Stripe** | Standard. Transactional fees only — no monthly. |
-| **Hosting** | User's server (Node, RR7 server adapter) + Cloudflare CDN free tier | Per user's existing infrastructure. Free. |
-| **Background jobs** | Node cron + queue on user's server (BullMQ + Redis self-hosted) | Free. |
-| **Observability** | **GlitchTip** self-hosted (Sentry-compatible) + **Plausible** self-hosted | Free. |
-| **Analytics** | Plausible self-hosted (privacy-friendly) + Google Search Console | Free. |
+| Layer               | Choice                                                                    | Why                                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Framework**       | **React Router v7** (Remix-current)                                       | Full-stack React, SSR + streaming, file-based routing, loaders + actions for data, no separate API service. User-rejected Next.js. |
+| **Language**        | TypeScript                                                                | Non-negotiable for safety + DX.                                                                                                    |
+| **DB**              | **PostgreSQL** self-hosted on user's server                               | Mature, JSONB for flexible listings, FTS built-in. Free.                                                                           |
+| **ORM**             | **Drizzle**                                                               | TypeScript-native, lightweight, framework-agnostic.                                                                                |
+| **Auth**            | **Auth.js**                                                               | Mature, Remix/RR7-compatible, OAuth + email. RBAC in loaders/actions.                                                              |
+| **CMS**             | **Payload** self-hosted                                                   | Headless, TypeScript, multi-locale. Owns content + admin UI. Free.                                                                 |
+| **Styling**         | **Tailwind + shadcn/ui**                                                  | RTL-aware, accessible, consistent. Free.                                                                                           |
+| **i18n**            | **Paraglide JS**                                                          | Compile-time, type-safe, fast. HE/EN/AM seamless. Free.                                                                            |
+| **File storage**    | **Cloudflare R2**                                                         | Free 10GB, S3-compatible.                                                                                                          |
+| **Search**          | **Postgres FTS** initially                                                | Free. Meilisearch self-hosted later if needed.                                                                                     |
+| **Email**           | **Resend**                                                                | Free tier 3K/mo.                                                                                                                   |
+| **Payments**        | **Stripe**                                                                | Standard. Transactional fees only — no monthly.                                                                                    |
+| **Hosting**         | User's server (Node, RR7 server adapter) + Cloudflare CDN free tier       | Per user's existing infrastructure. Free.                                                                                          |
+| **Background jobs** | Node cron + queue on user's server (BullMQ + Redis self-hosted)           | Free.                                                                                                                              |
+| **Observability**   | **GlitchTip** self-hosted (Sentry-compatible) + **Plausible** self-hosted | Free.                                                                                                                              |
+| **Analytics**       | Plausible self-hosted (privacy-friendly) + Google Search Console          | Free.                                                                                                                              |
 
 ## Consequences
 
 ### Positive
+
 - **Zero monthly subscription cost**. All infrastructure runs on user's server or free tiers.
 - **One codebase**: UI + server logic + APIs + admin in RR7. Loaders/actions = no separate backend service.
 - **React ecosystem**: huge component library, mature tooling.
@@ -45,6 +47,7 @@ Tedros is a multi-tenant content + transactional platform:
 - **i18n + RTL**: Paraglide + Tailwind logical CSS make tri-lingual easier than most frameworks.
 
 ### Negative / Risks
+
 - **RR7 ecosystem still catching up to Next.js** in third-party recipes. Mitigation: stick to first-party patterns + shadcn/ui.
 - **Self-hosted observability** has setup cost (one-time). Mitigation: DevOps agent owns this.
 - **No paid Sentry/Plausible support** — debugging incidents is on us. Acceptable for MVP scale.

@@ -28,9 +28,7 @@ export async function requireUser(request: Request): Promise<SessionUser> {
     const url = new URL(request.url);
     const locale = localeFromRequest(request);
     const redirectTo = `${url.pathname}${url.search}`;
-    throw redirect(
-      `/${locale}/login?redirectTo=${encodeURIComponent(redirectTo)}`,
-    );
+    throw redirect(`/${locale}/login?redirectTo=${encodeURIComponent(redirectTo)}`);
   }
   return session.user;
 }

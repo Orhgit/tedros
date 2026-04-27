@@ -1,9 +1,7 @@
 import { z } from "zod";
 
 const envSchema = z.object({
-  NODE_ENV: z
-    .enum(["development", "test", "production"])
-    .default("development"),
+  NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   PORT: z.coerce.number().int().positive().default(3000),
   PUBLIC_URL: z.string().url().default("http://localhost:3000"),
 
@@ -15,7 +13,10 @@ const envSchema = z.object({
 
   AUTH_SECRET: z
     .string()
-    .min(32, "AUTH_SECRET must be at least 32 characters (use `openssl rand -base64 32`)"),
+    .min(
+      32,
+      "AUTH_SECRET must be at least 32 characters (use `openssl rand -base64 32`)",
+    ),
   AUTH_URL: z.string().url().optional(),
   AUTH_TRUST_HOST: z
     .enum(["true", "false"])
