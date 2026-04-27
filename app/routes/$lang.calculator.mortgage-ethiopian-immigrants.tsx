@@ -16,6 +16,13 @@ import {
 
 const CALCULATOR_PATH = "/calculator/mortgage-ethiopian-immigrants";
 
+const FAQ_KEYS = [
+  ["mortgage_faq_q1", "mortgage_faq_a1"],
+  ["mortgage_faq_q2", "mortgage_faq_a2"],
+  ["mortgage_faq_q3", "mortgage_faq_a3"],
+  ["mortgage_faq_q4", "mortgage_faq_a4"],
+] as const;
+
 type FormState = {
   age: string;
   familyStatus: FamilyStatus | "";
@@ -71,21 +78,31 @@ export async function action({ request, params }: Route.ActionArgs) {
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
   const base = data?.publicUrl ?? "http://localhost:3000";
-  const title = t(locale, "mortgage_calc_title");
-  const description = t(locale, "mortgage_calc_subtitle");
+  const title = t(locale, "mortgage_calc_meta_title");
+  const description = t(locale, "mortgage_calc_meta_description");
+  const ogTitle = t(locale, "mortgage_calc_title");
   const canonical = `${base}/${locale}${CALCULATOR_PATH}`;
+
+  const faqEntities = FAQ_KEYS.map(([qKey, aKey]) => ({
+    "@type": "Question",
+    name: t(locale, qKey),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: t(locale, aKey),
+    },
+  }));
 
   return [
     { title },
     { name: "description", content: description },
     { name: "keywords", content: t(locale, "mortgage_seo_keywords") },
-    { property: "og:title", content: title },
+    { property: "og:title", content: ogTitle },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
     { property: "og:url", content: canonical },
     { name: "twitter:card", content: "summary" },
-    { name: "twitter:title", content: title },
+    { name: "twitter:title", content: ogTitle },
     { name: "twitter:description", content: description },
     { tagName: "link", rel: "canonical", href: canonical },
     {
@@ -116,13 +133,21 @@ export const meta: Route.MetaFunction = ({ data }) => {
       "script:ld+json": {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        name: title,
+        name: ogTitle,
         description,
         applicationCategory: "FinanceApplication",
         operatingSystem: "Web",
         url: canonical,
         inLanguage: locale,
         offers: { "@type": "Offer", price: "0", priceCurrency: "ILS" },
+      },
+    },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        inLanguage: locale,
+        mainEntity: faqEntities,
       },
     },
   ];
@@ -279,11 +304,41 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
           <ResultPanel locale={locale} result={actionData.result} />
         )}
 
+        <FaqSection locale={locale} />
+
         <p className="mt-12 text-xs leading-relaxed text-gray-500 dark:text-gray-400">
           {t(locale, "mortgage_disclaimer")}
         </p>
       </main>
     </div>
+  );
+}
+
+function FaqSection({ locale }: { locale: Locale }) {
+  return (
+    <section
+      aria-labelledby="mortgage-faq-heading"
+      className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-800"
+    >
+      <h2
+        id="mortgage-faq-heading"
+        className="text-2xl font-semibold tracking-tight"
+      >
+        {t(locale, "mortgage_faq_title")}
+      </h2>
+      <dl className="mt-4 grid gap-4">
+        {FAQ_KEYS.map(([qKey, aKey]) => (
+          <div key={qKey}>
+            <dt className="text-base font-medium text-gray-900 dark:text-gray-100">
+              {t(locale, qKey)}
+            </dt>
+            <dd className="mt-1 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+              {t(locale, aKey)}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
   );
 }
 

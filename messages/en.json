@@ -22,7 +22,9 @@
   "lang_am": "አማርኛ",
   "footer_copyright": "© {year} Tedros",
   "mortgage_calc_title": "Mortgage eligibility calculator — Ethiopian Olim",
+  "mortgage_calc_meta_title": "Mortgage Calculator for Ethiopian Olim in Israel | Tedros",
   "mortgage_calc_subtitle": "A quick check of your eligibility for a subsidised housing loan.",
+  "mortgage_calc_meta_description": "Check eligibility in under a minute — subsidised mortgage and non-repayable grant for Ethiopian olim and their children in Israel. Loan up to ₪600,000. Free, no signup.",
   "mortgage_calc_intro": "This calculator gives a preliminary estimate only. Final eligibility is decided by the Ministry of Aliyah & Integration and the Ministry of Construction & Housing, and may be higher or lower than this estimate.",
   "mortgage_field_age": "Age",
   "mortgage_field_family_status": "Family status",
@@ -57,6 +59,15 @@
   "mortgage_reason_origin_not_eligible": "This programme is for olim from Ethiopia and their children.",
   "mortgage_reason_income_too_high": "Monthly income exceeds the eligibility ceiling.",
   "mortgage_disclaimer": "The estimate above is not a binding decision. Only the Ministry of Aliyah & Integration and the Ministry of Construction & Housing can approve final eligibility.",
-  "mortgage_seo_keywords": "mortgage, ethiopian olim, eligibility, housing assistance, public housing, loan",
-  "mortgage_form_error_required": "This field is required."
+  "mortgage_seo_keywords": "mortgage calculator, mortgage for ethiopian olim, ethiopian israeli mortgage, eligibility check, subsidised mortgage israel, housing assistance, non-repayable grant, beta israel mortgage, single-parent mortgage track",
+  "mortgage_form_error_required": "This field is required.",
+  "mortgage_faq_title": "Frequently asked questions",
+  "mortgage_faq_q1": "Who is eligible for the Ethiopian-Israeli mortgage assistance?",
+  "mortgage_faq_a1": "The programme is for olim from Ethiopia and their second-generation children, age 21 and over. Household monthly income and family composition (married, single-parent, number of children) affect both the track and the amount.",
+  "mortgage_faq_q2": "How much financial assistance is available?",
+  "mortgage_faq_a2": "The loan ceiling is ₪600,000. Families with children, single-parent households and lower-income households receive a larger share of the loan at a subsidised rate, plus a non-repayable grant on top.",
+  "mortgage_faq_q3": "Are second-generation children eligible?",
+  "mortgage_faq_a3": "Yes. Children of olim from Ethiopia are eligible under the same age and income terms as olim themselves, even if they were born in Israel.",
+  "mortgage_faq_q4": "How do I start the process?",
+  "mortgage_faq_a4": "Run the eligibility check on this page, gather your documents — oleh certificate or community-affiliation letter, the last three months of payslips and bank statements — and apply at a bank that participates in the programme. A community-vetted mortgage advisor can help."
 }
