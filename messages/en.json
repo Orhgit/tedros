@@ -104,7 +104,7 @@
   "mortgage_lead_cta_button": "Contact us",
   "mortgage_govil_link_label": "Programme page on the Ministry of Construction & Housing site",
   "mortgage_disclaimer_active_lottery": "Lottery cycles are announced periodically on the Ministry of Construction & Housing site. Verify that an active cycle is open before registering.",
-  "mortgage_seo_keywords": "mortgage, ethiopian olim, eligibility, housing assistance, state loan, lottery",
+  "mortgage_seo_keywords": "ethiopian israeli mortgage calculator, state loan eligibility olim ethiopia, ethiopian israeli housing programme, 600000 shekel mortgage ethiopia, subsidised mortgage israel",
   "mortgage_form_error_required": "This field is required.",
   "pillar_live": "Live",
   "cities_index_title": "Cities for the Israeli-Ethiopian community",
@@ -135,5 +135,16 @@
   "region_jerusalem": "Jerusalem district",
   "region_center": "Center",
   "region_south": "South",
-  "region_north": "North"
+  "region_north": "North",
+  "mortgage_calc_meta_title": "Mortgage Eligibility Calculator | Ethiopian Israelis | Tedros",
+  "mortgage_calc_meta_description": "Check in 2 minutes if you qualify for a government loan of up to ₪600,000. Free tool in Hebrew, Amharic and English, with links to official forms.",
+  "mortgage_faq_title": "Frequently asked questions",
+  "mortgage_faq_q1": "Who is eligible for the Ethiopian olim mortgage?",
+  "mortgage_faq_a1": "Anyone born in Ethiopia, their direct children (second generation) aged 21+, and their spouses — provided they do not currently own property. Eligibility is binary: you either meet the criteria or you don't.",
+  "mortgage_faq_q2": "What is the loan amount?",
+  "mortgage_faq_a2": "₪600,000 over 25 years: 0% interest for the first 10 years, then 2% for years 11–25. The loan amount is identical for all qualifying applicants — it does not vary by income.",
+  "mortgage_faq_q3": "Are second-generation Israeli-Ethiopians eligible?",
+  "mortgage_faq_a3": "Yes. Children of Ethiopian-born olim qualify even if born in Israel — as long as their parents were born in Ethiopia and they themselves meet the age and ownership conditions.",
+  "mortgage_faq_q4": "How do I start?",
+  "mortgage_faq_a4": "Apply at a participating bank with your oleh certificate or community affiliation confirmation, 3 months of payslips and bank statements. It is recommended to work with a community mortgage adviser."
 }

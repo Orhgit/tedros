@@ -17,6 +17,13 @@ const CALCULATOR_PATH = "/calculator/mortgage-ethiopian-immigrants";
 const GOVIL_PROGRAMME_URL =
   "https://www.gov.il/he/departments/topics/mortgage_assistance_new_immigrant/govil-landing-page";
 
+const FAQ_KEYS = [
+  ["mortgage_faq_q1", "mortgage_faq_a1"],
+  ["mortgage_faq_q2", "mortgage_faq_a2"],
+  ["mortgage_faq_q3", "mortgage_faq_a3"],
+  ["mortgage_faq_q4", "mortgage_faq_a4"],
+] as const;
+
 const ORIGIN_FIELDS = [
   "selfBornInEthiopia",
   "parentBornInEthiopia",
@@ -102,15 +109,22 @@ export async function action({ request, params }: Route.ActionArgs) {
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
   const base = data?.publicUrl ?? "http://localhost:3000";
-  const title = t(locale, "mortgage_calc_title");
-  const description = t(locale, "mortgage_calc_subtitle");
+  const title = t(locale, "mortgage_calc_meta_title");
+  const description = t(locale, "mortgage_calc_meta_description");
+  const ogTitle = t(locale, "mortgage_calc_title");
   const canonical = `${base}/${locale}${CALCULATOR_PATH}`;
+
+  const faqEntities = FAQ_KEYS.map(([qKey, aKey]) => ({
+    "@type": "Question",
+    name: t(locale, qKey),
+    acceptedAnswer: { "@type": "Answer", text: t(locale, aKey) },
+  }));
 
   return [
     { title },
     { name: "description", content: description },
     { name: "keywords", content: t(locale, "mortgage_seo_keywords") },
-    { property: "og:title", content: title },
+    { property: "og:title", content: ogTitle },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
@@ -147,13 +161,20 @@ export const meta: Route.MetaFunction = ({ data }) => {
       "script:ld+json": {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        name: title,
+        name: ogTitle,
         description,
         applicationCategory: "FinanceApplication",
         operatingSystem: "Web",
         url: canonical,
         inLanguage: locale,
         offers: { "@type": "Offer", price: "0", priceCurrency: "ILS" },
+      },
+    },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqEntities,
       },
     },
   ];
@@ -453,18 +474,36 @@ function ProcessExplainer({ locale }: { locale: Locale }) {
 
 function LeadCta({ locale }: { locale: Locale }) {
   return (
-    <section className="mt-10 rounded-lg border border-gray-900 bg-gray-900 p-6 text-white dark:border-white dark:bg-white dark:text-gray-900">
-      <h2 className="text-xl font-semibold">{t(locale, "mortgage_lead_cta_title")}</h2>
-      <p className="mt-2 text-sm opacity-90">
-        {t(locale, "mortgage_lead_cta_description")}
-      </p>
-      <Link
-        to={`/${locale}/contact`}
-        className="mt-4 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800"
-      >
-        {t(locale, "mortgage_lead_cta_button")}
-      </Link>
-    </section>
+    <>
+      <section className="mt-10 rounded-lg border border-gray-900 bg-gray-900 p-6 text-white dark:border-white dark:bg-white dark:text-gray-900">
+        <h2 className="text-xl font-semibold">{t(locale, "mortgage_lead_cta_title")}</h2>
+        <p className="mt-2 text-sm opacity-90">
+          {t(locale, "mortgage_lead_cta_description")}
+        </p>
+        <Link
+          to={`/${locale}/contact`}
+          className="mt-4 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800"
+        >
+          {t(locale, "mortgage_lead_cta_button")}
+        </Link>
+      </section>
+
+      <section className="mt-12 border-t border-border pt-8">
+        <h2 className="font-display text-xl font-semibold text-earth-900">
+          {t(locale, "mortgage_faq_title")}
+        </h2>
+        <dl className="mt-6 space-y-6">
+          {FAQ_KEYS.map(([qKey, aKey]) => (
+            <div key={qKey}>
+              <dt className="font-medium text-earth-900">{t(locale, qKey)}</dt>
+              <dd className="mt-1 text-sm leading-relaxed text-ink-700">
+                {t(locale, aKey)}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    </>
   );
 }
 
