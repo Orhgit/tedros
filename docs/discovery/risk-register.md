@@ -1,6 +1,6 @@
 # Risk Register
 
-**Last updated**: 2026-04-26.
+**Last updated**: 2026-04-27 (added R11–R18 from Vision v2 scope widening).
 **Owner**: Vega (until specialist agents own per-area risks).
 
 | #   | Risk                                                                        | Severity | Phase    | Mitigation                                                                                                       | Escalation trigger                                     |
@@ -15,6 +15,14 @@
 | R8  | Lead model unvalidated — community brokers may not pay                      | High     | Phase 3  | Validate in interviews (Phase 0); pilot free tier first, monetize later                                          | <3 brokers paid by month 3                             |
 | R9  | Self-hosted observability + DB on user's server = single point of failure   | Medium   | Phase 7+ | Backups (daily snapshots), monitoring; document recovery runbook                                                 | Server downtime >2h                                    |
 | R10 | Government data formats change without notice                               | Medium   | Phase 3+ | Adapter layer with schema validation; alerts on parse failures; versioned snapshots                              | Sync worker fails >24h                                 |
+| R11 | Non-community founder/team ⇒ representation backlash on a community platform | High     | Always   | Stand up community advisory board (3–5 members from Tene Briut/Tebeka/ENP/IAEJ networks); hire community PM by Phase 4; transparent founder-attribution on About page | Public criticism on community Facebook / press         |
+| R12 | Health/legal/family content liability — bad info ⇒ harm or lawsuit          | High     | Phase 6  | Anchor-partner vetting (Tene Briut for health, Tebeka for legal); "information not advice" disclaimer per page; no specific legal advice generated; partner co-byline | Any incident report; user complaint about advice followed |
+| R13 | Anchor partnerships (Tene Briut, Tebeka) refuse or stall                    | High     | Phase 3+ | Start outreach in Phase 0; have alternate anchors mapped (IAEJ, Heritage Center for non-health/legal pillars); design pillars so they can launch in info-only mode without partner if needed | Tene Briut or Tebeka silent >30 days after pitch       |
+| R14 | Government program changes (3242/3243 etc.) invalidate published content    | Medium   | Always   | Govt-program-change autopilot (daily diff on data.gov.il + ministry pages); content versioning; "last verified" date stamp on every right/program page          | >5 stale-content reports / month                       |
+| R15 | Cultural/religious sensitivity error (kessim, Sigd, Beta Israel content)    | Medium   | Phase 7+ | Council of Kessim review for religious content; Heritage Center review for historical; community PM owns culture-vet | Public correction request from religious authority      |
+| R16 | Voice pillar — user-submitted reports leak / re-identify victims            | High     | Phase 8  | Crisis-mode UX (anonymous session, no-trace, no analytics on those pages); minimum-data principle; data-security audit before public Voice launch; consult Tebeka co-design | Any data-exposure incident; security researcher report |
+| R17 | Domestic-violence flow exposes user to attacker (browser history, device sharing) | High     | Phase 6  | Quick-exit button on every Family page; "history clear" guidance; HTTPS-only; no email receipts unless user opts in; Hebrew + Amharic safety guides | First user feedback on safety failure                 |
+| R18 | Falash Mura aliyah politically defunded (Knesset 2025) ⇒ new-immigrant content stale or politically charged | Medium | Phase 3+ | Fact-track only; cite govt decisions verbatim; do not editorialize on political status; partner with Jewish Agency for current klita-center info | Govt status change; user complaint about politicization |
 
 ## Risk handling rules
 
