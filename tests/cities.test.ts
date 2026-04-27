@@ -3,6 +3,7 @@ import {
   CITIES,
   CITY_PATH_PREFIX,
   cityName,
+  cityOverview,
   cityPath,
   findCityBySlug,
 } from "../app/lib/cities/registry";
@@ -49,6 +50,17 @@ describe("city registry", () => {
       expect(c.geo.lon).toBeLessThan(36);
     }
   });
+
+  it("has a substantive, non-empty overview in every supported locale", () => {
+    // Each city page renders this paragraph as the primary unique content
+    // (~280-340 chars). Guard against thin/duplicate-content regressions.
+    for (const c of CITIES) {
+      for (const loc of SUPPORTED_LOCALES) {
+        expect(c.overview[loc]).toBeTruthy();
+        expect(c.overview[loc].length).toBeGreaterThan(120);
+      }
+    }
+  });
 });
 
 describe("findCityBySlug", () => {
@@ -87,5 +99,11 @@ describe("cityName / cityPath helpers", () => {
     expect(cityPath("he", netanya.slug)).toBe(`/he${CITY_PATH_PREFIX}/netanya`);
     expect(cityPath("en", netanya.slug)).toBe(`/en${CITY_PATH_PREFIX}/netanya`);
     expect(cityPath("am", netanya.slug)).toBe(`/am${CITY_PATH_PREFIX}/netanya`);
+  });
+
+  it("returns the locale-specific overview when present", () => {
+    expect(cityOverview(netanya, "he")).toContain("נתניה");
+    expect(cityOverview(netanya, "en")).toContain("Netanya");
+    expect(cityOverview(netanya, "am")).toContain("ነታንያ");
   });
 });
