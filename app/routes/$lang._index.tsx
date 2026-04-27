@@ -52,7 +52,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           {t(locale, "homepage_intro")}
         </p>
 
-        <div className="mt-10 flex gap-3">
+        <div className="mt-10 flex flex-wrap gap-3">
           <Link
             to={`/${locale}/login`}
             className="rounded-lg bg-gray-900 px-5 py-2.5 text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
@@ -64,6 +64,12 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             className="rounded-lg border border-gray-300 px-5 py-2.5 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-900"
           >
             {t(locale, "nav_dashboard")}
+          </Link>
+          <Link
+            to={`/${locale}/calculator/mortgage-ethiopian-immigrants`}
+            className="rounded-lg border border-gray-300 px-5 py-2.5 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-900"
+          >
+            {t(locale, "mortgage_calc_title")}
           </Link>
         </div>
       </main>
