@@ -6,22 +6,34 @@ import { t } from "~/lib/i18n/messages";
 import {
   calculateEligibility,
   FAMILY_STATUSES,
-  ORIGINS,
   parseEligibilityForm,
+  PROGRAMME,
   type EligibilityResult,
   type FamilyStatus,
-  type IneligibleReason,
-  type Origin,
+  type IneligibilityReason,
 } from "~/lib/mortgage/eligibility";
 
 const CALCULATOR_PATH = "/calculator/mortgage-ethiopian-immigrants";
+const GOVIL_PROGRAMME_URL =
+  "https://www.gov.il/he/departments/topics/mortgage_assistance_new_immigrant/govil-landing-page";
+
+const ORIGIN_FIELDS = [
+  "selfBornInEthiopia",
+  "parentBornInEthiopia",
+  "spouseBornInEthiopia",
+  "spouseParentBornInEthiopia",
+] as const;
+type OriginField = (typeof ORIGIN_FIELDS)[number];
 
 type FormState = {
-  age: string;
+  selfBornInEthiopia: boolean;
+  parentBornInEthiopia: boolean;
+  spouseBornInEthiopia: boolean;
+  spouseParentBornInEthiopia: boolean;
   familyStatus: FamilyStatus | "";
-  children: string;
-  origin: Origin | "";
-  monthlyIncome: string;
+  hasChildUnder21LivingWithApplicant: boolean;
+  ownedRealEstateLast10Years: boolean;
+  recentPurchaseExceptionApplies: boolean;
 };
 
 type ActionData =
@@ -29,12 +41,20 @@ type ActionData =
   | { kind: "errors"; fieldErrors: Record<string, string>; form: FormState };
 
 const EMPTY_FORM: FormState = {
-  age: "",
+  selfBornInEthiopia: false,
+  parentBornInEthiopia: false,
+  spouseBornInEthiopia: false,
+  spouseParentBornInEthiopia: false,
   familyStatus: "",
-  children: "0",
-  origin: "",
-  monthlyIncome: "",
+  hasChildUnder21LivingWithApplicant: false,
+  ownedRealEstateLast10Years: false,
+  recentPurchaseExceptionApplies: false,
 };
+
+function readBool(raw: Record<string, string>, key: string): boolean {
+  const v = raw[key];
+  return v === "on" || v === "true" || v === "1";
+}
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -46,12 +66,26 @@ export async function action({ request, params }: Route.ActionArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const formData = await request.formData();
   const raw = Object.fromEntries(formData) as Record<string, string>;
+
   const form: FormState = {
-    age: raw.age ?? "",
-    familyStatus: (raw.familyStatus as FamilyStatus) ?? "",
-    children: raw.children ?? "0",
-    origin: (raw.origin as Origin) ?? "",
-    monthlyIncome: raw.monthlyIncome ?? "",
+    selfBornInEthiopia: readBool(raw, "selfBornInEthiopia"),
+    parentBornInEthiopia: readBool(raw, "parentBornInEthiopia"),
+    spouseBornInEthiopia: readBool(raw, "spouseBornInEthiopia"),
+    spouseParentBornInEthiopia: readBool(raw, "spouseParentBornInEthiopia"),
+    familyStatus:
+      raw.familyStatus !== undefined &&
+      (FAMILY_STATUSES as readonly string[]).includes(raw.familyStatus)
+        ? (raw.familyStatus as FamilyStatus)
+        : "",
+    hasChildUnder21LivingWithApplicant: readBool(
+      raw,
+      "hasChildUnder21LivingWithApplicant",
+    ),
+    ownedRealEstateLast10Years: readBool(raw, "ownedRealEstateLast10Years"),
+    recentPurchaseExceptionApplies: readBool(
+      raw,
+      "recentPurchaseExceptionApplies",
+    ),
   };
 
   const parsed = parseEligibilityForm(raw);
@@ -156,115 +190,81 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
         </p>
       </header>
 
+      <ActiveLotteryDisclaimer locale={locale} />
+
       <main className="mt-10 flex-1">
         <Form
           method="post"
           aria-labelledby="mortgage-calc-heading"
-          className="grid gap-5"
+          className="grid gap-8"
           noValidate
         >
           <h2 id="mortgage-calc-heading" className="sr-only">
-            {t(locale, "mortgage_calc_title")}
+            {t(locale, "mortgage_section_questions")}
           </h2>
 
-          <Field label={t(locale, "mortgage_field_age")} error={errors.age} htmlFor="age">
-            <input
-              id="age"
-              name="age"
-              type="number"
-              min={18}
-              max={120}
-              defaultValue={form.age}
-              required
-              aria-invalid={Boolean(errors.age) || undefined}
-              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
-            />
-          </Field>
+          <Fieldset legend={t(locale, "mortgage_section_origin")}>
+            {ORIGIN_FIELDS.map((field) => (
+              <CheckboxField
+                key={field}
+                name={field}
+                label={t(locale, originLabelKey(field))}
+                defaultChecked={form[field]}
+              />
+            ))}
+          </Fieldset>
 
-          <Field
-            label={t(locale, "mortgage_field_family_status")}
-            error={errors.familyStatus}
-            htmlFor="familyStatus"
-          >
-            <select
-              id="familyStatus"
-              name="familyStatus"
-              defaultValue={form.familyStatus}
-              required
-              aria-invalid={Boolean(errors.familyStatus) || undefined}
-              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
+          <Fieldset legend={t(locale, "mortgage_section_family")}>
+            <label
+              htmlFor="familyStatus"
+              className="grid gap-1.5"
             >
-              <option value="" disabled>
-                —
-              </option>
-              {FAMILY_STATUSES.map((status) => (
-                <option key={status} value={status}>
-                  {t(locale, `mortgage_status_${status}`)}
+              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                {t(locale, "mortgage_q_family_status")}
+              </span>
+              <select
+                id="familyStatus"
+                name="familyStatus"
+                defaultValue={form.familyStatus}
+                required
+                aria-invalid={Boolean(errors.familyStatus) || undefined}
+                className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
+              >
+                <option value="" disabled>
+                  —
                 </option>
-              ))}
-            </select>
-          </Field>
+                {FAMILY_STATUSES.map((status) => (
+                  <option key={status} value={status}>
+                    {t(locale, `mortgage_status_${status}`)}
+                  </option>
+                ))}
+              </select>
+              {errors.familyStatus && (
+                <span role="alert" className="text-sm text-red-600 dark:text-red-400">
+                  {errors.familyStatus}
+                </span>
+              )}
+            </label>
 
-          <Field
-            label={t(locale, "mortgage_field_children")}
-            error={errors.children}
-            htmlFor="children"
-          >
-            <input
-              id="children"
-              name="children"
-              type="number"
-              min={0}
-              max={15}
-              defaultValue={form.children}
-              required
-              aria-invalid={Boolean(errors.children) || undefined}
-              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
+            <CheckboxField
+              name="hasChildUnder21LivingWithApplicant"
+              label={t(locale, "mortgage_q_child_under_21")}
+              defaultChecked={form.hasChildUnder21LivingWithApplicant}
             />
-          </Field>
+          </Fieldset>
 
-          <Field
-            label={t(locale, "mortgage_field_origin")}
-            error={errors.origin}
-            htmlFor="origin"
-          >
-            <select
-              id="origin"
-              name="origin"
-              defaultValue={form.origin}
-              required
-              aria-invalid={Boolean(errors.origin) || undefined}
-              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
-            >
-              <option value="" disabled>
-                —
-              </option>
-              {ORIGINS.map((origin) => (
-                <option key={origin} value={origin}>
-                  {t(locale, `mortgage_origin_${originSuffix(origin)}`)}
-                </option>
-              ))}
-            </select>
-          </Field>
-
-          <Field
-            label={t(locale, "mortgage_field_monthly_income")}
-            error={errors.monthlyIncome}
-            htmlFor="monthlyIncome"
-          >
-            <input
-              id="monthlyIncome"
-              name="monthlyIncome"
-              type="number"
-              inputMode="numeric"
-              min={0}
-              step={100}
-              defaultValue={form.monthlyIncome}
-              required
-              aria-invalid={Boolean(errors.monthlyIncome) || undefined}
-              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
+          <Fieldset legend={t(locale, "mortgage_section_ownership")}>
+            <CheckboxField
+              name="ownedRealEstateLast10Years"
+              label={t(locale, "mortgage_q_owned_property")}
+              defaultChecked={form.ownedRealEstateLast10Years}
             />
-          </Field>
+            <CheckboxField
+              name="recentPurchaseExceptionApplies"
+              label={t(locale, "mortgage_q_recent_purchase_exception")}
+              defaultChecked={form.recentPurchaseExceptionApplies}
+            />
+          </Fieldset>
 
           <button
             type="submit"
@@ -279,151 +279,230 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
           <ResultPanel locale={locale} result={actionData.result} />
         )}
 
-        <p className="mt-12 text-xs leading-relaxed text-gray-500 dark:text-gray-400">
-          {t(locale, "mortgage_disclaimer")}
-        </p>
+        <ProgrammeFactsCard locale={locale} />
+        <ProcessExplainer locale={locale} />
+        <LeadCta locale={locale} />
       </main>
     </div>
   );
 }
 
-function Field({
-  label,
-  htmlFor,
-  error,
+function ActiveLotteryDisclaimer({ locale }: { locale: Locale }) {
+  return (
+    <aside
+      role="note"
+      className="mt-6 rounded-md border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-100"
+    >
+      <p>{t(locale, "mortgage_disclaimer_active_lottery")}</p>
+      <p className="mt-2">
+        <a
+          href={GOVIL_PROGRAMME_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="font-medium underline underline-offset-4 hover:no-underline"
+        >
+          {t(locale, "mortgage_govil_link_label")}
+        </a>
+      </p>
+    </aside>
+  );
+}
+
+function Fieldset({
+  legend,
   children,
 }: {
-  label: string;
-  htmlFor: string;
-  error?: string;
+  legend: string;
   children: React.ReactNode;
 }) {
-  const errorId = error ? `${htmlFor}-error` : undefined;
   return (
-    <label htmlFor={htmlFor} className="grid gap-1.5">
-      <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-        {label}
-      </span>
-      <span aria-describedby={errorId}>{children}</span>
-      {error && (
-        <span
-          id={errorId}
-          role="alert"
-          className="text-sm text-red-600 dark:text-red-400"
-        >
-          {error}
-        </span>
-      )}
+    <fieldset className="grid gap-3 rounded-lg border border-gray-200 p-4 dark:border-gray-800">
+      <legend className="px-1 text-sm font-semibold text-gray-900 dark:text-gray-100">
+        {legend}
+      </legend>
+      {children}
+    </fieldset>
+  );
+}
+
+function CheckboxField({
+  name,
+  label,
+  defaultChecked,
+}: {
+  name: string;
+  label: string;
+  defaultChecked: boolean;
+}) {
+  return (
+    <label className="flex items-start gap-3 text-sm text-gray-900 dark:text-gray-100">
+      <input
+        type="checkbox"
+        name={name}
+        defaultChecked={defaultChecked}
+        className="mt-1 h-4 w-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900 dark:border-gray-700"
+      />
+      <span>{label}</span>
     </label>
   );
 }
 
-function ResultPanel({ locale, result }: { locale: Locale; result: EligibilityResult }) {
-  if (!result.eligible) {
+function ResultPanel({
+  locale,
+  result,
+}: {
+  locale: Locale;
+  result: EligibilityResult;
+}) {
+  if (result.eligible) {
     return (
       <section
         aria-live="polite"
-        className="mt-10 rounded-lg border border-amber-300 bg-amber-50 p-6 dark:border-amber-700 dark:bg-amber-950"
+        className="mt-10 rounded-lg border border-emerald-300 bg-emerald-50 p-6 dark:border-emerald-700 dark:bg-emerald-950"
       >
-        <h2 className="text-xl font-semibold text-amber-900 dark:text-amber-100">
-          {t(locale, "mortgage_result_ineligible_title")}
+        <h2 className="text-xl font-semibold text-emerald-900 dark:text-emerald-100">
+          {t(locale, "mortgage_result_eligible_title")}
         </h2>
-        <ul className="mt-3 list-disc space-y-1 ps-6 text-sm text-amber-900 dark:text-amber-100">
-          {result.reasons.map((reason) => (
-            <li key={reason}>{t(locale, reasonKey(reason))}</li>
-          ))}
-        </ul>
+        <p className="mt-2 text-sm text-emerald-900 dark:text-emerald-100">
+          {t(locale, "mortgage_result_eligible_summary")}
+        </p>
       </section>
     );
   }
 
-  const fmt = new Intl.NumberFormat(locale === "am" ? "en" : locale);
-  const phase1Pct = (result.phase1RateAnnual * 100).toFixed(1);
-  const phase2Pct = (result.phase2RateAnnual * 100).toFixed(1);
-  const totalYears = result.phase1Years + result.phase2Years;
-
   return (
     <section
       aria-live="polite"
-      className="mt-10 rounded-lg border border-emerald-300 bg-emerald-50 p-6 dark:border-emerald-700 dark:bg-emerald-950"
+      className="mt-10 rounded-lg border border-amber-300 bg-amber-50 p-6 dark:border-amber-700 dark:bg-amber-950"
     >
-      <h2 className="text-xl font-semibold text-emerald-900 dark:text-emerald-100">
-        {t(locale, "mortgage_result_eligible_title")}
+      <h2 className="text-xl font-semibold text-amber-900 dark:text-amber-100">
+        {t(locale, "mortgage_result_ineligible_title")}
       </h2>
-      <p className="mt-1 text-sm text-emerald-800 dark:text-emerald-200">
-        {t(locale, `mortgage_result_tier_${result.tier}`)}
+      <p className="mt-2 text-sm text-amber-900 dark:text-amber-100">
+        {t(locale, "mortgage_result_ineligible_summary")}
       </p>
-
-      <dl className="mt-4 grid gap-3 sm:grid-cols-2">
-        <ResultRow
-          label={t(locale, "mortgage_result_loan_label")}
-          value={t(locale, "mortgage_result_currency_nis", {
-            amount: fmt.format(result.loanAmount),
-          })}
-        />
-        <ResultRow
-          label={t(locale, "mortgage_result_grant_label")}
-          value={t(locale, "mortgage_result_currency_nis", {
-            amount: fmt.format(result.grantAmount),
-          })}
-        />
-        <ResultRow
-          label={t(locale, "mortgage_result_phase1_label", {
-            years: result.phase1Years,
-          })}
-          value={t(locale, "mortgage_result_percent", { value: phase1Pct })}
-        />
-        <ResultRow
-          label={t(locale, "mortgage_result_phase2_label", {
-            start: result.phase1Years + 1,
-            end: totalYears,
-          })}
-          value={t(locale, "mortgage_result_percent", { value: phase2Pct })}
-        />
-        <ResultRow
-          label={t(locale, "mortgage_result_term_label")}
-          value={t(locale, "mortgage_result_term_years", { years: totalYears })}
-        />
-      </dl>
-
-      <h3 className="mt-6 text-base font-semibold text-emerald-900 dark:text-emerald-100">
-        {t(locale, "mortgage_result_next_steps_title")}
-      </h3>
-      <ol className="mt-2 list-decimal space-y-1 ps-6 text-sm text-emerald-900 dark:text-emerald-100">
-        <li>{t(locale, "mortgage_result_step_documents")}</li>
-        <li>{t(locale, "mortgage_result_step_advisor")}</li>
-        <li>{t(locale, "mortgage_result_step_bank")}</li>
-      </ol>
+      <ul className="mt-3 list-disc space-y-1 ps-6 text-sm text-amber-900 dark:text-amber-100">
+        {result.reasons.map((reason) => (
+          <li key={reason}>{t(locale, reasonKey(reason))}</li>
+        ))}
+      </ul>
     </section>
   );
 }
 
-function ResultRow({ label, value }: { label: string; value: string }) {
+function ProgrammeFactsCard({ locale }: { locale: Locale }) {
+  const fmt = new Intl.NumberFormat(locale === "am" ? "en" : locale);
+  const phase1Pct = (PROGRAMME.phase1.rateAnnual * 100).toFixed(1);
+  const phase2Pct = (PROGRAMME.phase2.rateAnnual * 100).toFixed(1);
+  const phase2End = PROGRAMME.phase1.years + PROGRAMME.phase2.years;
+
+  return (
+    <section className="mt-10 rounded-lg border border-gray-200 p-6 dark:border-gray-800">
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+        {t(locale, "mortgage_programme_title")}
+      </h2>
+      <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+        <Fact
+          label={t(locale, "mortgage_programme_loan_label")}
+          value={t(locale, "mortgage_programme_loan_value", {
+            amount: fmt.format(PROGRAMME.loanAmount),
+          })}
+        />
+        <Fact
+          label={t(locale, "mortgage_programme_term_label")}
+          value={t(locale, "mortgage_programme_term_value", {
+            years: PROGRAMME.termYears,
+          })}
+        />
+        <Fact
+          label={t(locale, "mortgage_programme_phase1_label", {
+            years: PROGRAMME.phase1.years,
+          })}
+          value={t(locale, "mortgage_programme_percent", { value: phase1Pct })}
+        />
+        <Fact
+          label={t(locale, "mortgage_programme_phase2_label", {
+            start: PROGRAMME.phase1.years + 1,
+            end: phase2End,
+          })}
+          value={t(locale, "mortgage_programme_percent", { value: phase2Pct })}
+        />
+        <Fact
+          label={t(locale, "mortgage_programme_equity_label")}
+          value={t(locale, "mortgage_programme_equity_value")}
+        />
+        <Fact
+          label={t(locale, "mortgage_programme_quota_label")}
+          value={t(locale, "mortgage_programme_quota_value", {
+            count: PROGRAMME.annualLotteryQuota,
+          })}
+        />
+      </dl>
+    </section>
+  );
+}
+
+function Fact({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <dt className="text-xs tracking-wide text-emerald-700 uppercase dark:text-emerald-300">
+      <dt className="text-xs tracking-wide text-gray-600 uppercase dark:text-gray-400">
         {label}
       </dt>
-      <dd className="text-lg font-semibold text-emerald-900 dark:text-emerald-100">
+      <dd className="text-lg font-semibold text-gray-900 dark:text-gray-100">
         {value}
       </dd>
     </div>
   );
 }
 
-// `mortgage_origin_*` keys use short suffixes for readability — map enum →
-// suffix here so the key set in messages stays small.
-function originSuffix(origin: Origin): "oleh" | "descent" | "other" {
-  switch (origin) {
-    case "ethiopian_oleh":
-      return "oleh";
-    case "ethiopian_descent":
-      return "descent";
-    case "other":
-      return "other";
+function ProcessExplainer({ locale }: { locale: Locale }) {
+  return (
+    <section className="mt-10 rounded-lg border border-gray-200 p-6 dark:border-gray-800">
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+        {t(locale, "mortgage_process_title")}
+      </h2>
+      <ol className="mt-3 list-decimal space-y-2 ps-6 text-sm text-gray-800 dark:text-gray-200">
+        <li>{t(locale, "mortgage_process_step_register")}</li>
+        <li>{t(locale, "mortgage_process_step_certificate")}</li>
+        <li>{t(locale, "mortgage_process_step_lottery")}</li>
+        <li>{t(locale, "mortgage_process_step_window")}</li>
+      </ol>
+    </section>
+  );
+}
+
+function LeadCta({ locale }: { locale: Locale }) {
+  return (
+    <section className="mt-10 rounded-lg border border-gray-900 bg-gray-900 p-6 text-white dark:border-white dark:bg-white dark:text-gray-900">
+      <h2 className="text-xl font-semibold">
+        {t(locale, "mortgage_lead_cta_title")}
+      </h2>
+      <p className="mt-2 text-sm opacity-90">
+        {t(locale, "mortgage_lead_cta_description")}
+      </p>
+      <Link
+        to={`/${locale}/contact`}
+        className="mt-4 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800"
+      >
+        {t(locale, "mortgage_lead_cta_button")}
+      </Link>
+    </section>
+  );
+}
+
+function originLabelKey(field: OriginField): string {
+  switch (field) {
+    case "selfBornInEthiopia":
+      return "mortgage_q_self_born";
+    case "parentBornInEthiopia":
+      return "mortgage_q_parent_born";
+    case "spouseBornInEthiopia":
+      return "mortgage_q_spouse_born";
+    case "spouseParentBornInEthiopia":
+      return "mortgage_q_spouse_parent_born";
   }
 }
 
-function reasonKey(reason: IneligibleReason): string {
-  return `mortgage_reason_${reason}`;
+function reasonKey(reason: IneligibilityReason): string {
+  return `mortgage_eligibility_reason_${reason}`;
 }
