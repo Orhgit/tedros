@@ -40,7 +40,7 @@ Source of truth for plans, decisions, and live progress: the Multica workspace `
 | --- | ----------------------- | ----------------------------------- |
 | 0   | Discovery & Audit       | In progress                         |
 | 1   | Strategy & Architecture | In progress (skeleton landed)       |
-| 2   | Design System & Brand   | Backlog                             |
+| 2   | Design System & Brand   | In review (TED-15)                  |
 | 3   | MVP — Real Estate ⭐    | Backlog (target: live in 5-7 weeks) |
 | 4   | Rights Hub              | Planned                             |
 | 5   | Professionals Directory | Planned                             |
@@ -54,7 +54,10 @@ Top organic ranking on Hebrew queries around the community within 90 days of lau
 ## Documentation
 
 - [`docs/discovery/`](./docs/discovery) — Phase 0 deliverables (Discovery summary, ADRs, risk register, interview protocol)
-- More as phases progress.
+- [`docs/design/0.brand.md`](./docs/design/0.brand.md) — Brand decision doc (motto, palette, typography, RTL, a11y)
+- [`tokens.json`](./tokens.json) — Canonical design tokens (mirror to `app/app.css` `@theme`)
+- Live design playground: `/he/design` (also `/en/design`, `/am/design`) — toggle locale + dark mode
+- Storybook: `.storybook/` — install with `pnpm add -D storybook @storybook/react-vite @storybook/addon-essentials @storybook/addon-a11y @storybook/addon-themes` then `storybook dev -p 6006`
 
 ## Local development
 

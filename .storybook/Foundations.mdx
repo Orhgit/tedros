@@ -1,0 +1,32 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Brand" />
+
+# Tedros — Design System
+
+ראה גם: `docs/design/0.brand.md` (decision doc) ו־`tokens.json` (canonical tokens).
+
+## Principles
+
+1. **כבוד מורשת** — הצבעים, הפונטים והטון מתייחסים לבית ישראל ולמורשת אתיופית בלי לפטרן.
+2. **שוויון פעולה** — כל מה שיהודי ותיק יכול לעשות באתר ממשלתי, גם בן הקהילה יכול — באמהרית, ללא מתווך.
+3. **אמת מצוטטת** — כל מספר וטענה קשורים למקור. E-E-A-T כיתרון תחרותי.
+4. **AA+ כברירת מחדל** — אין דף שעובר QA בלי axe נקי.
+5. **קצב** — MVP פעיל בשבוע על פני "perfect ב-3 חודשים".
+
+## Toolbar
+
+- **Locale**: he / en / am — מחליף `<html lang>` ו-`<html dir>` בזמן אמת. RTL מלא בעברית, LTR ב-EN ובאמהרית (Ge'ez).
+- **Theme**: light / dark — מחליף את class `.dark` על `<html>`. כל הטוקנים צבעוניים זזים ביחד.
+- **a11y**: addon-a11y מריץ axe על כל סטורי. zero violations היא DoD ל-Phase 2.
+
+## Stories map
+
+- **Foundations** — Brand, Icons, Colors (tokens.json mirror).
+- **Primitives** — 20+ קומפוננטות עצמאיות: Button, Input, Select, Combobox, Checkbox, Radio, Switch, Card, Badge, Alert, Avatar, Tabs, Tooltip, Dialog, Sheet, Breadcrumb, Pagination, Table, DataTable, Skeleton, Toast, NavMenu, LangSwitcher, Form composition.
+- **Page Templates** — SiteHeader, SiteFooter, Hero, ListingCard, Article, Profile, LeadForm.
+
+## Live demo
+
+מקביל ל-Storybook: ה-route `/he/design` (ו-`/en/design`, `/am/design`) ב-app עצמו —
+משתמש באותם tokens ובאותם קומפוננטות, ב-context אמיתי של React Router + Paraglide.

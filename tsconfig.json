@@ -8,6 +8,14 @@
     "**/.client/**/*.tsx",
     ".react-router/types/**/*"
   ],
+  "exclude": [
+    "node_modules",
+    "build",
+    ".react-router",
+    "**/*.stories.tsx",
+    "**/*.stories.ts",
+    ".storybook/**"
+  ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2024"],
     "types": ["@react-router/node", "vite/client", "node"],
