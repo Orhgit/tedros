@@ -15,10 +15,11 @@ const baseline: EligibilityInput = {
 };
 
 describe("calculateEligibility — gating", () => {
-  it("rejects under-21 applicants", () => {
-    const r = calculateEligibility({ ...baseline, age: 20 });
-    expect(r.eligible).toBe(false);
-    if (!r.eligible) expect(r.reasons).toContain("age_below_minimum");
+  it("does NOT reject by age (programme has no age limit)", () => {
+    const young = calculateEligibility({ ...baseline, age: 18 });
+    const old = calculateEligibility({ ...baseline, age: 75 });
+    expect(young.eligible).toBe(true);
+    expect(old.eligible).toBe(true);
   });
 
   it("rejects applicants with no community connection", () => {
@@ -27,7 +28,7 @@ describe("calculateEligibility — gating", () => {
     if (!r.eligible) expect(r.reasons).toContain("origin_not_eligible");
   });
 
-  it("rejects households above the income ceiling", () => {
+  it("rejects households above the income ceiling (MVP heuristic)", () => {
     const r = calculateEligibility({ ...baseline, monthlyIncome: 50_000 });
     expect(r.eligible).toBe(false);
     if (!r.eligible) expect(r.reasons).toContain("income_too_high");
@@ -36,18 +37,13 @@ describe("calculateEligibility — gating", () => {
   it("collects all failing reasons together", () => {
     const r = calculateEligibility({
       ...baseline,
-      age: 18,
       origin: "other",
       monthlyIncome: 99_999,
     });
     expect(r.eligible).toBe(false);
     if (!r.eligible) {
       expect(r.reasons).toEqual(
-        expect.arrayContaining([
-          "age_below_minimum",
-          "origin_not_eligible",
-          "income_too_high",
-        ]),
+        expect.arrayContaining(["origin_not_eligible", "income_too_high"]),
       );
     }
   });
@@ -97,14 +93,19 @@ describe("calculateEligibility — amounts", () => {
     expect(r.eligible).toBe(true);
     if (r.eligible) expect(r.tier).toBe("standard");
   });
+});
 
-  it("scales the subsidy share by income band", () => {
-    const low = calculateEligibility({ ...baseline, monthlyIncome: 5_000 });
-    const mid = calculateEligibility({ ...baseline, monthlyIncome: 12_000 });
-    const high = calculateEligibility({ ...baseline, monthlyIncome: 22_000 });
-    if (low.eligible && mid.eligible && high.eligible) {
-      expect(low.subsidyRate).toBeGreaterThan(mid.subsidyRate);
-      expect(mid.subsidyRate).toBeGreaterThan(high.subsidyRate);
+describe("calculateEligibility — interest schedule", () => {
+  it("returns the official two-phase interest schedule", () => {
+    const r = calculateEligibility(baseline);
+    expect(r.eligible).toBe(true);
+    if (r.eligible) {
+      expect(r.phase1RateAnnual).toBe(0);
+      expect(r.phase1Years).toBe(10);
+      expect(r.phase2RateAnnual).toBe(0.02);
+      expect(r.phase2Years).toBe(15);
+      // Total schedule covers the official 25-year repayment term.
+      expect(r.phase1Years + r.phase2Years).toBe(25);
     }
   });
 });

@@ -338,9 +338,9 @@ function ResultPanel({ locale, result }: { locale: Locale; result: EligibilityRe
   }
 
   const fmt = new Intl.NumberFormat(locale === "am" ? "en" : locale);
-  const subsidyPct = Math.round(result.subsidyRate * 100);
-  const subsidisedPct = (result.subsidisedRateAnnual * 100).toFixed(1);
-  const marketPct = (result.marketRateAnnual * 100).toFixed(1);
+  const phase1Pct = (result.phase1RateAnnual * 100).toFixed(1);
+  const phase2Pct = (result.phase2RateAnnual * 100).toFixed(1);
+  const totalYears = result.phase1Years + result.phase2Years;
 
   return (
     <section
@@ -368,16 +368,21 @@ function ResultPanel({ locale, result }: { locale: Locale; result: EligibilityRe
           })}
         />
         <ResultRow
-          label={t(locale, "mortgage_result_subsidy_label")}
-          value={t(locale, "mortgage_result_percent", { value: subsidyPct })}
+          label={t(locale, "mortgage_result_phase1_label", {
+            years: result.phase1Years,
+          })}
+          value={t(locale, "mortgage_result_percent", { value: phase1Pct })}
         />
         <ResultRow
-          label={t(locale, "mortgage_result_subsidised_rate")}
-          value={t(locale, "mortgage_result_percent", { value: subsidisedPct })}
+          label={t(locale, "mortgage_result_phase2_label", {
+            start: result.phase1Years + 1,
+            end: totalYears,
+          })}
+          value={t(locale, "mortgage_result_percent", { value: phase2Pct })}
         />
         <ResultRow
-          label={t(locale, "mortgage_result_market_rate")}
-          value={t(locale, "mortgage_result_percent", { value: marketPct })}
+          label={t(locale, "mortgage_result_term_label")}
+          value={t(locale, "mortgage_result_term_years", { years: totalYears })}
         />
       </dl>
 

@@ -1,13 +1,24 @@
 // Mortgage eligibility — Olim mi-Etiopia (משכנתא לעולים מאתיופיה).
 //
 // Indicative-only calculator for the Phase 3.1 MVP. The actual programme is
-// administered by the Ministry of Aliyah & Integration together with the
-// Ministry of Construction & Housing — final entitlement is determined by
-// them, not by this page (see `disclaimer` in the Hebrew copy).
+// the "תוכנית החומש" run jointly by the Ministry of Aliyah & Integration and
+// the Ministry of Construction & Housing — final entitlement is determined
+// by them, not by this page (see `mortgage_disclaimer` copy).
 //
-// Numbers below are tuned for the MVP and reviewed by Content & SEO before
-// every release. They are intentionally conservative: better to under-promise
-// here and let the case worker explain the upside than the other way around.
+// Verified against the official programme (gov.il, Knesset MMM, kol-zchut)
+// by Tedros Data & Integrations:
+//   - 600K NIS ceiling and 25-year repayment term ARE official.
+//   - Interest is tiered in time: 0% for the first 10 years, 2% for the
+//     next 15. There is no flat "subsidised rate" + "market rate" split.
+//   - The official programme has NO age limit and NO income ceiling — gating
+//     is via an annual quota of 200 families and a lottery, plus residency
+//     and no-prior-ownership rules we do not yet model.
+//
+// What this module still does (and labels as such): it gives a **soft**
+// estimate of expected loan amount and a non-repayable grant component
+// using `tier` / `grantByTier` / `INCOME_CEILING_HEURISTIC` as MVP
+// heuristics — these are NOT part of the official programme. The disclaimer
+// in `messages/*.json` makes this explicit to the user.
 //
 // Pure module: no DB, no `.server.ts` suffix — safe to unit-test under jsdom.
 
@@ -31,32 +42,34 @@ export const eligibilityInputSchema = z.object({
 
 export type EligibilityInput = z.infer<typeof eligibilityInputSchema>;
 
-export type IneligibleReason =
-  | "age_below_minimum"
-  | "origin_not_eligible"
-  | "income_too_high";
+export type IneligibleReason = "origin_not_eligible" | "income_too_high";
 
 export type EligibilityResult =
   | {
       eligible: true;
       loanAmount: number;
-      subsidyRate: number; // 0..1, share of the loan that carries the subsidised rate
-      subsidisedRateAnnual: number; // e.g. 0.005 = 0.5%
-      marketRateAnnual: number; // e.g. 0.045 = 4.5%
-      grantAmount: number; // non-repayable component (מענק)
-      tier: "standard" | "enhanced" | "single_parent";
+      grantAmount: number; // non-repayable component (מענק) — MVP heuristic
+      tier: "standard" | "enhanced" | "single_parent"; // MVP heuristic
+      // Two-phase interest schedule from the official programme:
+      phase1RateAnnual: number;
+      phase1Years: number;
+      phase2RateAnnual: number;
+      phase2Years: number;
     }
   | { eligible: false; reasons: IneligibleReason[] };
 
-const MIN_AGE = 21;
-// Income ceiling above which the subsidised programme is not available
-// (per nuclear-family). Keep deliberately generous for MVP.
-const INCOME_CEILING = 35_000;
+// MVP heuristic — NOT part of the official programme (which has no income
+// ceiling, only an annual quota + lottery). Kept as a soft pre-check so the
+// calculator does something useful for very high earners; can be removed
+// when we model the quota/lottery surface.
+const INCOME_CEILING_HEURISTIC = 35_000;
 
 /**
- * Classify the household into one of three tiers; tiers drive the loan
- * amount, subsidy share and grant component. Single parents get the same
- * loan amount as a couple but a higher grant.
+ * Classify the household into one of three tiers — MVP heuristic, NOT part
+ * of the official programme. Drives `grantByTier` and the per-child top-up
+ * in the soft loan estimate. A flat 600K is the official ceiling for every
+ * approved applicant; this banding lets us show users a more realistic
+ * estimate before they reach the application stage.
  */
 function classifyTier(
   input: EligibilityInput,
@@ -71,32 +84,29 @@ function classifyTier(
 
 export function calculateEligibility(raw: EligibilityInput): EligibilityResult {
   const reasons: IneligibleReason[] = [];
-  if (raw.age < MIN_AGE) reasons.push("age_below_minimum");
+  // Note: no `MIN_AGE` check — the official programme has no age limit.
   if (raw.origin === "other") reasons.push("origin_not_eligible");
-  if (raw.monthlyIncome > INCOME_CEILING) reasons.push("income_too_high");
+  if (raw.monthlyIncome > INCOME_CEILING_HEURISTIC) reasons.push("income_too_high");
   if (reasons.length > 0) return { eligible: false, reasons };
 
   const tier = classifyTier(raw);
 
-  // Base loan by tier (NIS).
+  // MVP heuristic — base loan by tier (NIS). The official programme has a
+  // flat 600K ceiling for every approved applicant; tiered estimates here
+  // are a softer, more realistic preview pending the quota/lottery model.
   const baseByTier: Record<typeof tier, number> = {
     standard: 320_000,
     enhanced: 460_000,
     single_parent: 500_000,
   };
-  // Children add a per-child top-up (capped at 5 children for the calc).
-  const perChild = 25_000;
+  const perChild = 25_000; // MVP heuristic — not in official programme.
   const cappedChildren = Math.min(raw.children, 5);
   const rawLoan = baseByTier[tier] + cappedChildren * perChild;
   const loanAmount = Math.min(rawLoan, MAX_LOAN);
 
-  // Subsidy share grows for low-income households. Below 8K → 70% subsidised,
-  // 8K–15K → 50%, 15K–25K → 30%, above 25K → 15%.
-  const monthly = raw.monthlyIncome;
-  const subsidyRate =
-    monthly < 8_000 ? 0.7 : monthly < 15_000 ? 0.5 : monthly < 25_000 ? 0.3 : 0.15;
-
-  // Non-repayable grant (מענק עומד) by tier — small fixed component.
+  // MVP heuristic — non-repayable grant (מענק עומד) by tier. The general
+  // Ministry of Construction housing-aid programme grants a "standing
+  // grant" by points; we approximate that here pending the points model.
   const grantByTier: Record<typeof tier, number> = {
     standard: 25_000,
     enhanced: 50_000,
@@ -106,11 +116,13 @@ export function calculateEligibility(raw: EligibilityInput): EligibilityResult {
   return {
     eligible: true,
     loanAmount,
-    subsidyRate,
-    subsidisedRateAnnual: 0.005,
-    marketRateAnnual: 0.045,
     grantAmount: grantByTier[tier],
     tier,
+    // Official programme: 0% for years 1–10, 2% for years 11–25.
+    phase1RateAnnual: 0,
+    phase1Years: 10,
+    phase2RateAnnual: 0.02,
+    phase2Years: 15,
   };
 }
 
