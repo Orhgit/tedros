@@ -40,5 +40,11 @@
   "city_section_professionals_title": "אנשי מקצוע מהקהילה",
   "city_section_professionals_empty": "אנשי מקצוע מקומיים מהקהילה ב-{name} (יועצי משכנתא, עו\"ד, סוכני נדל\"ן) יופיעו כאן ברגע שיירשמו.",
   "city_section_community_title": "על הקהילה ב{name}",
-  "city_section_community_body": "הקהילה ב-{name} מובילה פעילות חברתית, חינוכית ודתית. עמוד זה הוא נקודת הכניסה — תוכן מורחב יתעדכן בהמשך."
+  "city_section_community_body": "הקהילה ב-{name} מובילה פעילות חברתית, חינוכית ודתית. עמוד זה הוא נקודת הכניסה — תוכן מורחב יתעדכן בהמשך.",
+  "city_section_overview_title": "סקירה — {name}",
+  "city_section_tools_title": "כלים שימושיים",
+  "city_calc_cta_body": "מתכננים לרכוש דירה ב-{name}? בדקו זכאות להלוואה מסובסדת ולמענק עומד תוך דקה.",
+  "cta_open_calculator": "פתחו את המחשבון ←",
+  "cities_index_keywords": "ערים יוצאי אתיופיה, נדל\"ן יוצאי אתיופיה, התחדשות עירונית קהילה, אנשי מקצוע יוצאי אתיופיה, נתניה רחובות ראשון",
+  "city_keywords": "נדל\"ן ב{name}, יוצאי אתיופיה {name}, דירות ב{name}, התחדשות עירונית {name}, אנשי מקצוע {name}, משכנתא {name}"
 }

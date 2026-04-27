@@ -40,5 +40,11 @@
   "city_section_professionals_title": "የማህበረሰብ ባለሙያዎች",
   "city_section_professionals_empty": "በ{name} ያሉ የአካባቢ የማህበረሰብ ባለሙያዎች (የሞርጌጅ አማካሪዎች፣ ጠበቆች፣ የሪል እስቴት ወኪሎች) ሲመዘገቡ እዚህ ይታያሉ።",
   "city_section_community_title": "በ{name} ስለ ማህበረሰቡ",
-  "city_section_community_body": "በ{name} ያለው ማህበረሰብ ማህበራዊ፣ ትምህርታዊ እና እምነት ላይ የተመሠረተ እንቅስቃሴን ይመራል። ይህ ገጽ የመግቢያ ነጥብ ነው — ተጨማሪ ይዘት በጊዜ ሂደት ይታከላል።"
+  "city_section_community_body": "በ{name} ያለው ማህበረሰብ ማህበራዊ፣ ትምህርታዊ እና እምነት ላይ የተመሠረተ እንቅስቃሴን ይመራል። ይህ ገጽ የመግቢያ ነጥብ ነው — ተጨማሪ ይዘት በጊዜ ሂደት ይታከላል።",
+  "city_section_overview_title": "አጠቃላይ እይታ — {name}",
+  "city_section_tools_title": "ጠቃሚ መሣሪያዎች",
+  "city_calc_cta_body": "በ{name} ቤት ለመግዛት እያቀዱ ነው? ለድጎማ ሞርጌጅ እና ለማይመለስ ስጦታ ብቁነትን በደቂቃ ውስጥ ያረጋግጡ።",
+  "cta_open_calculator": "ካልኩሌተሩን ክፈት →",
+  "cities_index_keywords": "ለኢትዮጵያውያን-እስራኤላውያን ከተሞች, ለኢትዮጵያ ኦሊም ሪል እስቴት, የከተማ እድሳት ማህበረሰብ, የኢትዮጵያ-እስራኤል ባለሙያዎች, ነታንያ ረሆቮት ሪሾን",
+  "city_keywords": "በ{name} ሪል እስቴት, የኢትዮጵያ-እስራኤል {name}, በ{name} አፓርታማዎች, የከተማ እድሳት {name}, ባለሙያዎች {name}, ሞርጌጅ {name}"
 }

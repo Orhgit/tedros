@@ -40,5 +40,11 @@
   "city_section_professionals_title": "Community professionals",
   "city_section_professionals_empty": "Local community professionals in {name} (mortgage advisors, lawyers, real-estate agents) will appear here once they sign up.",
   "city_section_community_title": "About the community in {name}",
-  "city_section_community_body": "The community in {name} leads social, educational, and faith activity. This page is the entry point — extended content will be added over time."
+  "city_section_community_body": "The community in {name} leads social, educational, and faith activity. This page is the entry point — extended content will be added over time.",
+  "city_section_overview_title": "Overview — {name}",
+  "city_section_tools_title": "Useful tools",
+  "city_calc_cta_body": "Planning to buy a home in {name}? Check eligibility for a subsidised mortgage and a non-repayable grant in under a minute.",
+  "cta_open_calculator": "Open the calculator →",
+  "cities_index_keywords": "ethiopian israeli cities, ethiopian olim real estate, urban renewal community, ethiopian israeli professionals, netanya rehovot rishon",
+  "city_keywords": "real estate in {name}, ethiopian israeli {name}, apartments in {name}, urban renewal {name}, professionals {name}, mortgage {name}"
 }

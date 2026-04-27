@@ -23,6 +23,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title },
     { name: "description", content: description },
+    { name: "keywords", content: t(locale, "cities_index_keywords") },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
