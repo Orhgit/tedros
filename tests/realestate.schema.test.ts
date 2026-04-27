@@ -108,13 +108,7 @@ describe("DEMO_LISTINGS seed", () => {
 describe("Payload collection blueprints", () => {
   it("includes the five collections from the agent identity", () => {
     const slugs = PAYLOAD_COLLECTIONS.map((c) => c.slug).sort();
-    expect(slugs).toEqual([
-      "agencies",
-      "articles",
-      "listings",
-      "programs",
-      "rights",
-    ]);
+    expect(slugs).toEqual(["agencies", "articles", "listings", "programs", "rights"]);
   });
 
   it("each blueprint maps to a known Drizzle table", () => {

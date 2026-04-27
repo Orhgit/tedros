@@ -20,7 +20,7 @@ export type ListingType = ListingAttributes["type"];
 export type ListingStatus = "draft" | "active" | "sold" | "rented" | "archived";
 
 export const DEMO_AGENCY = {
-  name: { he: "תדרוס נדל\"ן הדגמה", en: "Tedros Demo Realty", am: "ቴድሮስ ነድልአን ዴሞ" },
+  name: { he: 'תדרוס נדל"ן הדגמה', en: "Tedros Demo Realty", am: "ቴድሮስ ነድልአን ዴሞ" },
   slug: { he: "tedros-demo", en: "tedros-demo", am: "tedros-demo" },
   legalId: "000000018", // valid 9-digit Luhn-style demo value
   licenseNumber: "DEMO-0001",
@@ -75,7 +75,7 @@ export const DEMO_LISTINGS: DemoListingSeed[] = [
       totalFloors: 9,
       parkingSpots: 1,
       yearBuilt: 2014,
-      amenities: ["מעלית", "מרפסת", "ממ\"ד"],
+      amenities: ["מעלית", "מרפסת", 'ממ"ד'],
       priceIncludesVat: true,
       mortgageEligibleHint: true,
     },
@@ -153,7 +153,7 @@ export const DEMO_LISTINGS: DemoListingSeed[] = [
       amenities: ["חניה", "מרפסת"],
     },
     body: {
-      he: "פרויקט פינוי-בינוי בשלבי אישור. תושבים זכאים לדירה חדשה (110 מ\"ר) במקום הקיימת + פיצוי שכירות.",
+      he: 'פרויקט פינוי-בינוי בשלבי אישור. תושבים זכאים לדירה חדשה (110 מ"ר) במקום הקיימת + פיצוי שכירות.',
       en: "Pinui-Binui project pending district approval. Residents receive a new 110 m² unit plus rental compensation.",
     },
   },
@@ -203,7 +203,7 @@ export const DEMO_LISTINGS: DemoListingSeed[] = [
     },
     price: 1_450_000,
     attributes: {
-      address: "מתחם רובע ט\"ז, אשדוד",
+      address: 'מתחם רובע ט"ז, אשדוד',
       currency: "ILS",
       areaM2: 100,
       rooms: 4,
@@ -214,7 +214,7 @@ export const DEMO_LISTINGS: DemoListingSeed[] = [
       drawDate: "2026-09-01",
     },
     body: {
-      he: "הגרלת מחיר למשתכן ברובע ט\"ז. 84 דירות. הרשמה עד 15.8.2026, הגרלה ב-1.9.2026.",
+      he: 'הגרלת מחיר למשתכן ברובע ט"ז. 84 דירות. הרשמה עד 15.8.2026, הגרלה ב-1.9.2026.',
     },
   },
 ];

@@ -7,12 +7,9 @@ import {
 
 describe("israeliLegalIdSchema", () => {
   // Pre-computed valid 9-digit IDs (Luhn-style checksum, mod 10 == 0).
-  it.each(["000000018", "000000026", "123456782"])(
-    "accepts valid id %s",
-    (id) => {
-      expect(() => israeliLegalIdSchema.parse(id)).not.toThrow();
-    },
-  );
+  it.each(["000000018", "000000026", "123456782"])("accepts valid id %s", (id) => {
+    expect(() => israeliLegalIdSchema.parse(id)).not.toThrow();
+  });
 
   it("rejects an id with the wrong checksum", () => {
     expect(() => israeliLegalIdSchema.parse("123456789")).toThrow();
@@ -29,7 +26,7 @@ describe("israeliLegalIdSchema", () => {
 
 describe("agencySignupSchema", () => {
   const valid = {
-    name: { he: "תדרוס נדל\"ן" },
+    name: { he: 'תדרוס נדל"ן' },
     slug: { he: "tedros-realty" },
     contactEmail: "broker@tedros.local",
     contactPhone: "+972-50-1234567",

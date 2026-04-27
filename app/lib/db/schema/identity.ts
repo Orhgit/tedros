@@ -126,9 +126,7 @@ export const agencies = pgTable(
       .where(sql`${t.deletedAt} IS NULL AND ${t.legalId} IS NOT NULL`),
     licenseUniq: uniqueIndex("agencies_license_number_unique")
       .on(t.licenseNumber)
-      .where(
-        sql`${t.deletedAt} IS NULL AND ${t.licenseNumber} IS NOT NULL`,
-      ),
+      .where(sql`${t.deletedAt} IS NULL AND ${t.licenseNumber} IS NOT NULL`),
     // Slug uniqueness: global per-locale (no parent in `/he/agencies/:slug`).
     slugHeIdx: uniqueIndex("agencies_slug_he_unique")
       .on(sql`(${t.slug} ->> 'he')`)

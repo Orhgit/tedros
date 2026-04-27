@@ -26,27 +26,19 @@ describe("parseListingAttributes", () => {
   });
 
   it("rejects negative areaM2", () => {
-    expect(() =>
-      parseListingAttributes("sale", { ...baseSale, areaM2: -10 }),
-    ).toThrow();
+    expect(() => parseListingAttributes("sale", { ...baseSale, areaM2: -10 })).toThrow();
   });
 
   it("rejects rooms that aren't a multiple of 0.5", () => {
-    expect(() =>
-      parseListingAttributes("sale", { ...baseSale, rooms: 3.7 }),
-    ).toThrow();
+    expect(() => parseListingAttributes("sale", { ...baseSale, rooms: 3.7 })).toThrow();
   });
 
   it("rejects unknown listing types via discriminated union", () => {
-    expect(() =>
-      listingAttributesSchema.parse({ ...baseSale, type: "yacht" }),
-    ).toThrow();
+    expect(() => listingAttributesSchema.parse({ ...baseSale, type: "yacht" })).toThrow();
   });
 
   it("requires programKind on urban_renewal", () => {
-    expect(() =>
-      parseListingAttributes("urban_renewal", { ...baseSale }),
-    ).toThrow();
+    expect(() => parseListingAttributes("urban_renewal", { ...baseSale })).toThrow();
     const ok = parseListingAttributes("urban_renewal", {
       ...baseSale,
       programKind: "pinui_binui",
@@ -66,9 +58,7 @@ describe("parseListingAttributes", () => {
   });
 
   it("requires commercialKind on commercial", () => {
-    expect(() =>
-      parseListingAttributes("commercial", { ...baseSale }),
-    ).toThrow();
+    expect(() => parseListingAttributes("commercial", { ...baseSale })).toThrow();
     const ok = parseListingAttributes("commercial", {
       ...baseSale,
       commercialKind: "office",

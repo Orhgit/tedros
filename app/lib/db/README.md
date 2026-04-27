@@ -38,39 +38,39 @@ app/lib/db/
 
 ## Locked decisions (ADR-002 thread + Vega D1–D5)
 
-| Topic | Decision | Source |
-|---|---|---|
-| Translation strategy | JSONB on-row for short text; sidecar `*_translations` for long body + FTS | ADR-002 |
-| Slug uniqueness | `(city_id, locale)` for `listings`; global per-locale for `agencies` / `articles` / `rights` / `programs` / `professionals` / `programmatic_pages` | My proposal, Vega ack |
-| FTS config | `simple` + `unaccent` for HE / EN / AM (Postgres has no production-ready dictionary for HE or AM in 2026) | Vega |
-| `slug_history` | Single polymorphic table with `entity_type` discriminator; no DB-level FK; app-layer cleanup | My proposal, Vega ack |
-| Soft delete | `deleted_at` on user-facing content; partial unique indexes guard `WHERE deleted_at IS NULL` | ADR-002 + D5 |
-| Audit | Single `audit_log` table, partitioned monthly; written by `withAudit()` wrapper at the action layer (not DB triggers) | ADR-002 + D4 |
-| `actor_type` | `'user' \| 'agency' \| 'admin' \| 'agent' \| 'system'` — distinguishes user-initiated, B2B, platform-team, agent automation, and system jobs | Vega |
-| Timestamps | `timestamptz` everywhere; `defaultNow()` at DB; `$onUpdate` on `updated_at` | D5 |
-| Postgres-native Drizzle | JSONB + partial indexes + generated tsvector + expression indexes all used; no abstraction layer | D3 |
+| Topic                   | Decision                                                                                                                                           | Source                |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Translation strategy    | JSONB on-row for short text; sidecar `*_translations` for long body + FTS                                                                          | ADR-002               |
+| Slug uniqueness         | `(city_id, locale)` for `listings`; global per-locale for `agencies` / `articles` / `rights` / `programs` / `professionals` / `programmatic_pages` | My proposal, Vega ack |
+| FTS config              | `simple` + `unaccent` for HE / EN / AM (Postgres has no production-ready dictionary for HE or AM in 2026)                                          | Vega                  |
+| `slug_history`          | Single polymorphic table with `entity_type` discriminator; no DB-level FK; app-layer cleanup                                                       | My proposal, Vega ack |
+| Soft delete             | `deleted_at` on user-facing content; partial unique indexes guard `WHERE deleted_at IS NULL`                                                       | ADR-002 + D5          |
+| Audit                   | Single `audit_log` table, partitioned monthly; written by `withAudit()` wrapper at the action layer (not DB triggers)                              | ADR-002 + D4          |
+| `actor_type`            | `'user' \| 'agency' \| 'admin' \| 'agent' \| 'system'` — distinguishes user-initiated, B2B, platform-team, agent automation, and system jobs       | Vega                  |
+| Timestamps              | `timestamptz` everywhere; `defaultNow()` at DB; `$onUpdate` on `updated_at`                                                                        | D5                    |
+| Postgres-native Drizzle | JSONB + partial indexes + generated tsvector + expression indexes all used; no abstraction layer                                                   | D3                    |
 
 ## TED-21 additions (Phase 3.3 — Listings + B2B agency onboarding)
 
 Additive on top of the Phase-1 schema:
 
-| Surface | Change |
-|---|---|
-| `listing_type` enum | Added `commercial` |
-| `listings.status` | New `listing_status` enum (`draft` / `active` / `sold` / `rented` / `archived`); default `draft` |
-| `listings_live_published_idx` | Tightened to `WHERE deleted_at IS NULL AND published_at IS NOT NULL AND status = 'active'` |
-| `agencies.legal_id` / `license_number` | New nullable columns + partial unique indexes |
-| `verification_status` enum | Added `suspended` |
-| `agency_member_status` enum | New: `invited` / `active` / `suspended` |
-| `agency_members.status` | New column, default `invited` |
-| `AGENCY_ROLES` | Renamed `member`/`admin` → `owner`/`agent` (per-agency role) |
-| `leads` | Direct `agency_id` FK + normalised `name` / `email` / `phone` / `message` columns + `assigned_to_user_id` |
-| `lead_status` enum | Replaced sales-funnel values with `pending` / `assigned` / `contacted` / `closed` (assignment lifecycle) |
-| `app/lib/validation/` | New: Zod schemas for listing intake (per-type discriminated union), agency signup, lead capture |
-| `app/lib/db/scoping.ts` | New: app-layer multi-tenant guards (`requireAgencyMember`, `requireAgencyOwner`, `requirePublishGate`) + WHERE-fragment helpers |
-| `app/lib/cms/collections.ts` | Payload collection blueprints (Listings, Agencies, Articles, Rights, Programs) |
-| `seeds/neighborhoods.ts` | 5 urban-renewal priority neighborhoods |
-| `seeds/listings.ts` | 1 verified demo agency + 5 demo listings spanning sale / rent / urban_renewal / investment / gov_program |
+| Surface                                | Change                                                                                                                          |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `listing_type` enum                    | Added `commercial`                                                                                                              |
+| `listings.status`                      | New `listing_status` enum (`draft` / `active` / `sold` / `rented` / `archived`); default `draft`                                |
+| `listings_live_published_idx`          | Tightened to `WHERE deleted_at IS NULL AND published_at IS NOT NULL AND status = 'active'`                                      |
+| `agencies.legal_id` / `license_number` | New nullable columns + partial unique indexes                                                                                   |
+| `verification_status` enum             | Added `suspended`                                                                                                               |
+| `agency_member_status` enum            | New: `invited` / `active` / `suspended`                                                                                         |
+| `agency_members.status`                | New column, default `invited`                                                                                                   |
+| `AGENCY_ROLES`                         | Renamed `member`/`admin` → `owner`/`agent` (per-agency role)                                                                    |
+| `leads`                                | Direct `agency_id` FK + normalised `name` / `email` / `phone` / `message` columns + `assigned_to_user_id`                       |
+| `lead_status` enum                     | Replaced sales-funnel values with `pending` / `assigned` / `contacted` / `closed` (assignment lifecycle)                        |
+| `app/lib/validation/`                  | New: Zod schemas for listing intake (per-type discriminated union), agency signup, lead capture                                 |
+| `app/lib/db/scoping.ts`                | New: app-layer multi-tenant guards (`requireAgencyMember`, `requireAgencyOwner`, `requirePublishGate`) + WHERE-fragment helpers |
+| `app/lib/cms/collections.ts`           | Payload collection blueprints (Listings, Agencies, Articles, Rights, Programs)                                                  |
+| `seeds/neighborhoods.ts`               | 5 urban-renewal priority neighborhoods                                                                                          |
+| `seeds/listings.ts`                    | 1 verified demo agency + 5 demo listings spanning sale / rent / urban_renewal / investment / gov_program                        |
 
 **Publish gate (ADR-005 + TED-21).** A listing can only transition to `status='active'` if its agency has `verification_status = 'verified'`. Action-layer enforcement via `requirePublishGate(agencyId)` in `scoping.ts`.
 

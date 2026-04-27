@@ -116,10 +116,9 @@ export async function canPublishListing(agencyId: string): Promise<boolean> {
 
 export async function requirePublishGate(agencyId: string): Promise<void> {
   if (!(await canPublishListing(agencyId))) {
-    throw new Response(
-      "Forbidden — agency must be verified before publishing listings",
-      { status: 403 },
-    );
+    throw new Response("Forbidden — agency must be verified before publishing listings", {
+      status: 403,
+    });
   }
 }
 
@@ -131,10 +130,7 @@ export async function requirePublishGate(agencyId: string): Promise<void> {
 //     .where(and(forListingsOf(agencyId), eq(listings.status, "active")));
 
 export function forListingsOf(agencyId: string): SQL {
-  return and(
-    eq(listings.agencyId, agencyId),
-    isNull(listings.deletedAt),
-  ) as SQL;
+  return and(eq(listings.agencyId, agencyId), isNull(listings.deletedAt)) as SQL;
 }
 
 export function forLeadsOf(agencyId: string): SQL {

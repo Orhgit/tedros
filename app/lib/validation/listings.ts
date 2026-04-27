@@ -49,9 +49,7 @@ const rentAttributes = baseAttributes.extend({
   type: z.literal("rent"),
   // Months of rent the deposit covers.
   depositMonths: z.number().int().min(0).max(12).optional(),
-  furnishedLevel: z
-    .enum(["unfurnished", "partial", "furnished"])
-    .default("unfurnished"),
+  furnishedLevel: z.enum(["unfurnished", "partial", "furnished"]).default("unfurnished"),
   petsAllowed: z.boolean().optional(),
   availableFrom: z.string().date().optional(),
   // For rent, `price` is monthly — capture annual as derived data only.
@@ -78,9 +76,7 @@ const investmentAttributes = baseAttributes.extend({
   strategy: z
     .enum(["buy_to_let", "flip", "renovation", "land_bank", "other"])
     .default("buy_to_let"),
-  occupancyStatus: z
-    .enum(["vacant", "tenant_in_place", "owner_occupied"])
-    .optional(),
+  occupancyStatus: z.enum(["vacant", "tenant_in_place", "owner_occupied"]).optional(),
 });
 
 const govProgramAttributes = baseAttributes.extend({
@@ -160,9 +156,7 @@ export const listingIntakeSchema = z.object({
     "gov_program",
     "commercial",
   ]),
-  status: z
-    .enum(["draft", "active", "sold", "rented", "archived"])
-    .default("draft"),
+  status: z.enum(["draft", "active", "sold", "rented", "archived"]).default("draft"),
   title: listingTitleSchema,
   // Top-level `price` is currency-agnostic (currency lives in attributes).
   // Allow string for HTML form posts; coerce to number.

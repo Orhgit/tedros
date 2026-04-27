@@ -137,12 +137,16 @@ export const listingsCollection: CollectionBlueprint = {
       fields: [
         { name: "r2Key", type: "text", required: true },
         { name: "altText", type: "text", localized: true },
-        { name: "kind", type: "select", options: [
-          { label: "Image", value: "image" },
-          { label: "Video", value: "video" },
-          { label: "Floorplan", value: "floorplan" },
-          { label: "3D Tour", value: "tour_3d" },
-        ] },
+        {
+          name: "kind",
+          type: "select",
+          options: [
+            { label: "Image", value: "image" },
+            { label: "Video", value: "video" },
+            { label: "Floorplan", value: "floorplan" },
+            { label: "3D Tour", value: "tour_3d" },
+          ],
+        },
       ],
     },
   ],
@@ -180,7 +184,11 @@ export const agenciesCollection: CollectionBlueprint = {
       admin: { position: "sidebar" },
     },
     { name: "legalId", type: "text", admin: { description: "ת.ז. / ח.פ. — 9 digits" } },
-    { name: "licenseNumber", type: "text", admin: { description: "Ministry of Justice broker license" } },
+    {
+      name: "licenseNumber",
+      type: "text",
+      admin: { description: "Ministry of Justice broker license" },
+    },
     { name: "contactEmail", type: "email" },
     { name: "contactPhone", type: "text" },
     { name: "websiteUrl", type: "text" },

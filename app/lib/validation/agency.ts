@@ -108,6 +108,4 @@ export const agencyVerificationDecisionSchema = z.discriminatedUnion("decision",
   }),
 ]);
 
-export type AgencyVerificationDecision = z.infer<
-  typeof agencyVerificationDecisionSchema
->;
+export type AgencyVerificationDecision = z.infer<typeof agencyVerificationDecisionSchema>;
