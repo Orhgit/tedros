@@ -47,7 +47,7 @@ export default function Login({ loaderData }: Route.ComponentProps) {
         </Form>
       ) : (
         <p className="mt-8 rounded-md bg-amber-50 px-4 py-3 text-sm text-amber-900 dark:bg-amber-950 dark:text-amber-100">
-          GOOGLE_CLIENT_ID / SECRET
+          {t(locale, "login_no_provider")}
         </p>
       )}
 
