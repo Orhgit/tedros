@@ -89,10 +89,17 @@ export async function action({ request, params }: Route.ActionArgs) {
   }
 
   // Resolve agency_id from the listing — the lead row denormalises it.
+  const listingId = parsed.data.listingId;
+  if (!listingId) {
+    return data(
+      { ok: false as const, issues: [{ path: "listingId", message: "required" }] },
+      { status: 400 },
+    );
+  }
   const targetRows = await db
     .select({ agencyId: listings.agencyId })
     .from(listings)
-    .where(eq(listings.id, parsed.data.listingId))
+    .where(eq(listings.id, listingId))
     .limit(1);
   const target = targetRows[0];
   if (!target) {

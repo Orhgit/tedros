@@ -8,6 +8,13 @@
       "when": 1777286317485,
       "tag": "0000_funny_leper_queen",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1777286715386,
+      "tag": "0001_cold_annihilus",
+      "breakpoints": true
     }
   ]
 }
