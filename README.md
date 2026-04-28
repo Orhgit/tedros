@@ -1,7 +1,7 @@
 # Tedros
 
 **Ethiopian-Israeli community platform**: rights, professionals directory, and real estate (top priority).
-Tri-lingual from day one: Hebrew (RTL), English (LTR), Amharic (RTL, Ge'ez script).
+Tri-lingual from day one: Hebrew (RTL), English (LTR), Amharic (LTR, Ge'ez script — see [ADR-008](./docs/adr/008-amharic-ltr.md)).
 
 ## Mission
 
@@ -123,7 +123,7 @@ docker-compose.dev.yml        # postgres + redis + mailhog + standalone payload
 
 ## Repo conventions
 
-- Architecture Decision Records under `docs/adr/`
+- Architecture Decision Records under `docs/adr/` (Phase 0 ADRs live in `docs/discovery/adr/`)
 - TypeScript strict mode (with `noUncheckedIndexedAccess`)
 - Conventional commits, reference TED-N when applicable
 - PR per Multica issue when feasible

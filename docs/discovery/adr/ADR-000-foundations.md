@@ -12,7 +12,9 @@ Foundational decisions that shape every later phase. Locked here so subsequent A
 
 ### D1 — Languages
 
-**Hebrew (RTL) + English (LTR) + Amharic (RTL, Ge'ez script)** — supported from day one.
+**Hebrew (RTL) + English (LTR) + Amharic (LTR, Ge'ez script)** — supported from day one.
+
+> **Correction (2026-04-27, [ADR-008](../../adr/008-amharic-ltr.md))**: this entry originally said "Amharic (RTL, Ge'ez script)". That was wrong — Ge'ez is an LTR script per Unicode UAX #9. The implementation in `app/lib/i18n/config.ts` and `app/app.css` already runs `am` as LTR; ADR-008 is the authoritative decision. This Phase 0 text is preserved with the inline correction; do not treat the original RTL claim as still-true.
 
 Implications: i18n architecture is non-negotiable from Phase 1. Routing under `/he`, `/en`, `/am`. hreflang per page. Font loading strategy includes Heebo (HE), Inter (EN), Noto Sans Ethiopic (AM).
 
@@ -43,6 +45,7 @@ Implications: Vega holds Phase 0 directly, hands off as agents are stood up.
 - All Phase 1 ADRs (data model, auth, i18n, SEO, hosting) inherit D1–D3 as constraints.
 - Cost discipline (P5 resolved) drives stack-substack choices: Plausible self-hosted, GlitchTip instead of paid Sentry, Postgres on user's server instead of paid Neon.
 - Pending P1, P2, P4 do not block Phase 1 architecture work; they refine implementation later.
+- **D1 directionality correction (2026-04-27)**: Amharic locked as **LTR** per [ADR-008](../../adr/008-amharic-ltr.md). The original "Amharic RTL" framing in this document and downstream Phase 0 artifacts (README, `0.0-summary.md`, `risk-register.md` R3 wording) is superseded; ADR-008 is authoritative for direction across all three locales.
 
 ## Risks tracked
 
