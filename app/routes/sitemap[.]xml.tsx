@@ -15,14 +15,24 @@ export function loader() {
   ).join("\n");
   const xDefault = `      <xhtml:link rel="alternate" hreflang="x-default" href="${PUBLIC_URL}/he"/>`;
 
-  const urls = SUPPORTED_LOCALES.map(
+  const calcAltLinks = SUPPORTED_LOCALES.map(
     (loc) =>
-      `  <url>
+      `      <xhtml:link rel="alternate" hreflang="${loc}" href="${PUBLIC_URL}/${loc}/calculator/mortgage-ethiopian-immigrants"/>`,
+  ).join("\n");
+  const calcXDefault = `      <xhtml:link rel="alternate" hreflang="x-default" href="${PUBLIC_URL}/he/calculator/mortgage-ethiopian-immigrants"/>`;
+
+  const urls = SUPPORTED_LOCALES.flatMap((loc) => [
+    `  <url>
     <loc>${PUBLIC_URL}/${loc}</loc>
 ${altLinks}
 ${xDefault}
   </url>`,
-  ).join("\n");
+    `  <url>
+    <loc>${PUBLIC_URL}/${loc}/calculator/mortgage-ethiopian-immigrants</loc>
+${calcAltLinks}
+${calcXDefault}
+  </url>`,
+  ]).join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

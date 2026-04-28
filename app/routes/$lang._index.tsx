@@ -119,24 +119,47 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
               {t(locale, "pillars_heading")}
             </h2>
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {PILLARS.map((p) => (
-                <article
-                  key={p}
-                  className="rounded-lg border border-border bg-card p-5 shadow-xs transition-all hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-sm"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-display text-base font-semibold text-earth-900">
-                      {t(locale, `pillar_${p}_title`)}
-                    </h3>
-                    <span className="shrink-0 rounded-full bg-accent-yellow/30 px-2.5 py-0.5 text-[11px] font-medium text-earth-900 ring-1 ring-accent-yellow/40">
-                      {t(locale, "pillar_coming_soon")}
-                    </span>
-                  </div>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-600">
-                    {t(locale, `pillar_${p}_summary`)}
-                  </p>
-                </article>
-              ))}
+              {PILLARS.map((p) => {
+                const isLive = p === "realestate";
+                const href = isLive
+                  ? `/${locale}/calculator/mortgage-ethiopian-immigrants`
+                  : null;
+                const tile = (
+                  <>
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="font-display text-base font-semibold text-earth-900">
+                        {t(locale, `pillar_${p}_title`)}
+                      </h3>
+                      {isLive ? (
+                        <span className="shrink-0 rounded-full bg-accent-green/15 px-2.5 py-0.5 text-[11px] font-medium text-accent-green ring-1 ring-accent-green/30">
+                          {t(locale, "pillar_live")}
+                        </span>
+                      ) : (
+                        <span className="shrink-0 rounded-full bg-accent-yellow/30 px-2.5 py-0.5 text-[11px] font-medium text-earth-900 ring-1 ring-accent-yellow/40">
+                          {t(locale, "pillar_coming_soon")}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-600">
+                      {t(locale, `pillar_${p}_summary`)}
+                    </p>
+                  </>
+                );
+                const baseClass =
+                  "block rounded-lg border border-border bg-card p-5 shadow-xs transition-all";
+                const hoverClass = isLive
+                  ? "hover:-translate-y-0.5 hover:border-accent-green/60 hover:shadow-sm"
+                  : "hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-sm";
+                return href ? (
+                  <Link key={p} to={href} className={`${baseClass} ${hoverClass}`}>
+                    {tile}
+                  </Link>
+                ) : (
+                  <article key={p} className={`${baseClass} ${hoverClass}`}>
+                    {tile}
+                  </article>
+                );
+              })}
             </div>
           </section>
 
