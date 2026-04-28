@@ -131,5 +131,9 @@
   "city_section_tools_title": "Useful tools",
   "city_calc_cta_body": "Planning to buy a home in {name}? Check eligibility for a subsidised mortgage and a non-repayable grant in under a minute.",
   "cities_index_keywords": "ethiopian israeli cities, ethiopian olim real estate, urban renewal community, ethiopian israeli professionals, netanya rehovot rishon",
-  "city_keywords": "real estate in {name}, ethiopian israeli {name}, apartments in {name}, urban renewal {name}, professionals {name}, mortgage {name}"
+  "city_keywords": "real estate in {name}, ethiopian israeli {name}, apartments in {name}, urban renewal {name}, professionals {name}, mortgage {name}",
+  "region_jerusalem": "Jerusalem district",
+  "region_center": "Center",
+  "region_south": "South",
+  "region_north": "North"
 }
