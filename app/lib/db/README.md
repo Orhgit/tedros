@@ -34,17 +34,17 @@ app/lib/db/
 
 ## Locked decisions (ADR-002 thread + Vega D1–D5)
 
-| Topic | Decision | Source |
-|---|---|---|
-| Translation strategy | JSONB on-row for short text; sidecar `*_translations` for long body + FTS | ADR-002 |
-| Slug uniqueness | `(city_id, locale)` for `listings`; global per-locale for `agencies` / `articles` / `rights` / `programs` / `professionals` / `programmatic_pages` | My proposal, Vega ack |
-| FTS config | `simple` + `unaccent` for HE / EN / AM (Postgres has no production-ready dictionary for HE or AM in 2026) | Vega |
-| `slug_history` | Single polymorphic table with `entity_type` discriminator; no DB-level FK; app-layer cleanup | My proposal, Vega ack |
-| Soft delete | `deleted_at` on user-facing content; partial unique indexes guard `WHERE deleted_at IS NULL` | ADR-002 + D5 |
-| Audit | Single `audit_log` table, partitioned monthly; written by `withAudit()` wrapper at the action layer (not DB triggers) | ADR-002 + D4 |
-| `actor_type` | `'user' \| 'agency' \| 'admin' \| 'agent' \| 'system'` — distinguishes user-initiated, B2B, platform-team, agent automation, and system jobs | Vega |
-| Timestamps | `timestamptz` everywhere; `defaultNow()` at DB; `$onUpdate` on `updated_at` | D5 |
-| Postgres-native Drizzle | JSONB + partial indexes + generated tsvector + expression indexes all used; no abstraction layer | D3 |
+| Topic                   | Decision                                                                                                                                           | Source                |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Translation strategy    | JSONB on-row for short text; sidecar `*_translations` for long body + FTS                                                                          | ADR-002               |
+| Slug uniqueness         | `(city_id, locale)` for `listings`; global per-locale for `agencies` / `articles` / `rights` / `programs` / `professionals` / `programmatic_pages` | My proposal, Vega ack |
+| FTS config              | `simple` + `unaccent` for HE / EN / AM (Postgres has no production-ready dictionary for HE or AM in 2026)                                          | Vega                  |
+| `slug_history`          | Single polymorphic table with `entity_type` discriminator; no DB-level FK; app-layer cleanup                                                       | My proposal, Vega ack |
+| Soft delete             | `deleted_at` on user-facing content; partial unique indexes guard `WHERE deleted_at IS NULL`                                                       | ADR-002 + D5          |
+| Audit                   | Single `audit_log` table, partitioned monthly; written by `withAudit()` wrapper at the action layer (not DB triggers)                              | ADR-002 + D4          |
+| `actor_type`            | `'user' \| 'agency' \| 'admin' \| 'agent' \| 'system'` — distinguishes user-initiated, B2B, platform-team, agent automation, and system jobs       | Vega                  |
+| Timestamps              | `timestamptz` everywhere; `defaultNow()` at DB; `$onUpdate` on `updated_at`                                                                        | D5                    |
+| Postgres-native Drizzle | JSONB + partial indexes + generated tsvector + expression indexes all used; no abstraction layer                                                   | D3                    |
 
 ## Out of scope for this PR
 
