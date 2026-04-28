@@ -68,6 +68,16 @@ export const leadStatusEnum = pgEnum("lead_status", [
   "closed",
 ]);
 
+// Result snapshot from the mortgage-eligibility flow (ADR-009 D5/Data model).
+// Captured on the lead row so brokerage can prioritise follow-ups and we can
+// measure ineligibility-reason distribution without re-running the check.
+// NULL when the lead came from a non-eligibility surface (listing detail,
+// urban-renewal, etc.).
+export const leadEligibilityOutcomeEnum = pgEnum("lead_eligibility_outcome", [
+  "eligible",
+  "ineligible",
+]);
+
 export const mediaKindEnum = pgEnum("media_kind", [
   "image",
   "video",
@@ -260,6 +270,26 @@ export const leads = pgTable(
     // Non-PII analytics (utm_source, page, referer, locale, consent_at, ...).
     // Safe to retain post-anon.
     metadata: jsonb("metadata").notNull().default({}),
+    // ADR-009 (Data model). Snapshot of the mortgage-eligibility result that
+    // produced this lead. NULL when the lead originated outside the
+    // eligibility flow.
+    eligibilityOutcome: leadEligibilityOutcomeEnum("eligibility_outcome"),
+    // Stable IneligibilityReason keys — `not_ethiopian_origin`, `not_a_family`,
+    // `single_parent_no_eligible_child`, `owned_property_within_10y` (ADR-009
+    // D1/D4). Stored as text[] (not pgEnum[]) so adding a key is a code-only
+    // change; validation lives in `app/lib/validation/lead.ts`. Defaults to
+    // empty array, never NULL — distinguishes "ran the check, no reasons" from
+    // "didn't run the check" via `eligibility_outcome IS NULL`.
+    eligibilityReasons: text("eligibility_reasons")
+      .array()
+      .notNull()
+      .default(sql`ARRAY[]::text[]`),
+    // Self-reported monthly income for brokerage follow-up only (ADR-009 D5).
+    // Optional. Must never round-trip back into the eligibility check.
+    selfReportedMonthlyIncome: numeric("self_reported_monthly_income", {
+      precision: 10,
+      scale: 2,
+    }),
     ...timestamps,
   },
   (t) => ({
@@ -268,5 +298,10 @@ export const leads = pgTable(
     statusIdx: index("leads_status_idx").on(t.status),
     submittedByIdx: index("leads_submitted_by_idx").on(t.submittedByUserId),
     assignedToIdx: index("leads_assigned_to_idx").on(t.assignedToUserId),
+    // Hot path for brokerage triage: "show me eligible leads first." Partial
+    // index keeps it cheap by skipping the NULL/non-eligibility-flow rows.
+    eligibleAgencyIdx: index("leads_eligible_agency_idx")
+      .on(t.agencyId, t.createdAt)
+      .where(sql`${t.eligibilityOutcome} = 'eligible'`),
   }),
 );

@@ -3,6 +3,7 @@ import { getTableConfig } from "drizzle-orm/pg-core";
 
 import { agencies, agencyMembers } from "../app/lib/db/schema/identity";
 import {
+  leadEligibilityOutcomeEnum,
   leadStatusEnum,
   leads,
   listingStatusEnum,
@@ -87,6 +88,30 @@ describe("leads table", () => {
     for (const required of ["agency_id", "name", "email", "phone", "message"]) {
       expect(cols).toContain(required);
     }
+  });
+
+  it("carries the ADR-009 eligibility snapshot columns", () => {
+    const cfg = getTableConfig(leads);
+    const byName = new Map(cfg.columns.map((c) => [c.name, c]));
+
+    const outcome = byName.get("eligibility_outcome");
+    expect(outcome).toBeDefined();
+    expect(outcome?.notNull).toBe(false);
+
+    const reasons = byName.get("eligibility_reasons");
+    expect(reasons).toBeDefined();
+    expect(reasons?.notNull).toBe(true);
+
+    const income = byName.get("self_reported_monthly_income");
+    expect(income).toBeDefined();
+    expect(income?.notNull).toBe(false);
+    expect(income?.getSQLType()).toBe("numeric(10, 2)");
+  });
+});
+
+describe("lead_eligibility_outcome enum", () => {
+  it("is binary per ADR-009 D1", () => {
+    expect(leadEligibilityOutcomeEnum.enumValues).toEqual(["eligible", "ineligible"]);
   });
 });
 
