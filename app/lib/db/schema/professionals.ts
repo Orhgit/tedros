@@ -59,9 +59,7 @@ export const professionals = pgTable(
       .on(sql`(${t.slug} ->> 'am')`)
       .where(sql`${t.deletedAt} IS NULL AND (${t.slug} ->> 'am') IS NOT NULL`),
     cityIdx: index("professionals_city_idx").on(t.cityId),
-    verificationIdx: index("professionals_verification_idx").on(
-      t.verificationStatus,
-    ),
+    verificationIdx: index("professionals_verification_idx").on(t.verificationStatus),
   }),
 );
 
@@ -77,8 +75,9 @@ export const professionalCategories = pgTable(
     ...timestamps,
   },
   (t) => ({
-    slugHeIdx: uniqueIndex("professional_categories_slug_he_unique")
-      .on(sql`(${t.slug} ->> 'he')`),
+    slugHeIdx: uniqueIndex("professional_categories_slug_he_unique").on(
+      sql`(${t.slug} ->> 'he')`,
+    ),
   }),
 );
 
@@ -95,9 +94,7 @@ export const professionalCategoryLinks = pgTable(
   },
   (t) => ({
     pk: primaryKey({ columns: [t.professionalId, t.categoryId] }),
-    categoryLookup: index("professional_category_links_cat_idx").on(
-      t.categoryId,
-    ),
+    categoryLookup: index("professional_category_links_cat_idx").on(t.categoryId),
   }),
 );
 

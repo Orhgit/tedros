@@ -14,22 +14,18 @@ export const localeEnum = pgEnum("locale", ["he", "en", "am"]);
 // HE is required (primary locale per ADR-004); EN/AM optional, fallback to HE.
 export type Translatable = { he: string; en?: string; am?: string };
 
-export const translatable = (col: string) =>
-  jsonb(col).$type<Translatable>().notNull();
+export const translatable = (col: string) => jsonb(col).$type<Translatable>().notNull();
 
 // Optional translatable text (e.g. agency description, professional headline).
 // `null` is a valid value at the column level — distinct from "empty in HE".
-export const translatableNullable = (col: string) =>
-  jsonb(col).$type<Translatable>();
+export const translatableNullable = (col: string) => jsonb(col).$type<Translatable>();
 
 // --- Standard timestamp groups ---------------------------------------------
 // timestamptz everywhere (ADR-002 + Vega D5). DB-side defaults so seeds and
 // raw migrations get correct values without app participation.
 
 export const timestamps = {
-  createdAt: timestamp("created_at", { withTimezone: true })
-    .notNull()
-    .defaultNow(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true })
     .notNull()
     .defaultNow()
@@ -67,4 +63,3 @@ export const tsvector = customType<{ data: string; driverData: string }>({
     return "tsvector";
   },
 });
-
