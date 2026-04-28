@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 General-purpose. Good default when the task is unclear.
 
 ## Instructions
@@ -16,4 +17,5 @@ You are a general-purpose teammate. Handle varied tasks — light coding, writin
 ```
 
 ---
+
 _Exported 2026-04-27T13:21:04Z._

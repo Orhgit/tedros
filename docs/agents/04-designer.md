@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 מעצב/ת UX/UI. מותג, מערכת עיצוב, נגישות, RTL.
 
 ## Instructions
@@ -27,4 +28,5 @@
 ```
 
 ---
+
 _Exported 2026-04-27T10:51:42Z._

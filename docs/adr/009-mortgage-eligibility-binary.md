@@ -7,10 +7,10 @@
 
 ## Context
 
-The Phase 3.1 MVP shipped a calculator for the *הלוואת המדינה ליוצאי אתיופיה* programme (`/calculator/mortgage-ethiopian-immigrants`) with an explicit disclaimer that the eligibility surface was an indicative heuristic, not the official programme. Tedros Researcher has now verified the official programme parameters against gov.il, kol-zchut, Calcalist, Bizportal, Globes, and Knesset MMM (see PR #7 — `docs/research/mortgage-program-verified.md`). Two facts emerge from that research:
+The Phase 3.1 MVP shipped a calculator for the _הלוואת המדינה ליוצאי אתיופיה_ programme (`/calculator/mortgage-ethiopian-immigrants`) with an explicit disclaimer that the eligibility surface was an indicative heuristic, not the official programme. Tedros Researcher has now verified the official programme parameters against gov.il, kol-zchut, Calcalist, Bizportal, Globes, and Knesset MMM (see PR #7 — `docs/research/mortgage-program-verified.md`). Two facts emerge from that research:
 
 1. **The programme is binary, not graded.** Every approved family receives the same loan: ₪600,000, 25 years, 0% for the first 10 years, 2% for the next 15. There are no tiers, no per-child top-ups, no graded grants, no income ceiling, no minimum age. Gating is done by an annual quota of ~200 families and a lottery, not by a means test.
-2. **Every parameter currently in `eligibility.ts` that *grades* an applicant is fabricated.** `MIN_AGE = 21`, `INCOME_CEILING_HEURISTIC = 35_000`, `tier`/`baseByTier`/`grantByTier`, `perChild = 25_000`, the sliding `subsidyRate`, `subsidisedRateAnnual`/`marketRateAnnual` — none are sourced. Some are actively wrong (the official programme has no age minimum; the official rate schedule is two-phase 0%/2%, not flat subsidised/market).
+2. **Every parameter currently in `eligibility.ts` that _grades_ an applicant is fabricated.** `MIN_AGE = 21`, `INCOME_CEILING_HEURISTIC = 35_000`, `tier`/`baseByTier`/`grantByTier`, `perChild = 25_000`, the sliding `subsidyRate`, `subsidisedRateAnnual`/`marketRateAnnual` — none are sourced. Some are actively wrong (the official programme has no age minimum; the official rate schedule is two-phase 0%/2%, not flat subsidised/market).
 
 Keeping these heuristics on a public, SEO-indexed page that targets a vulnerable population (olim and second-generation Ethiopian-Israeli families with limited financial-product literacy) is a concrete harm: the user trusts numbers we made up, then gets a different answer from the bank. The MVP disclaimer is necessary but not sufficient cover. Phase 3.1.1 must remove the fabricated grading and surface only what the official programme actually decides: **eligible / not eligible, plus the reasons.**
 
@@ -28,23 +28,23 @@ export const PROGRAMME = {
   termYears: 25,
   phase1: { years: 10, rateAnnual: 0 },
   phase2: { years: 15, rateAnnual: 0.02 },
-  equityRatioAtMaxLoan: 0.05,   // when full ₪600K is used
+  equityRatioAtMaxLoan: 0.05, // when full ₪600K is used
   equityRatioAboveMaxLoan: 0.25, // when borrowing more on top
-  annualLotteryQuota: 200,       // soft figure, displayed with "approx."
+  annualLotteryQuota: 200, // soft figure, displayed with "approx."
 } as const;
 
 export type IneligibilityReason =
   | "not_ethiopian_origin"
-  | "not_a_family"                // single, no eligible child
+  | "not_a_family" // single, no eligible child
   | "single_parent_no_eligible_child"
   | "owned_property_within_10y";
 
 export type EligibilityResult =
-  | { eligible: true }            // amount/term/rate come from PROGRAMME constants
+  | { eligible: true } // amount/term/rate come from PROGRAMME constants
   | { eligible: false; reasons: IneligibilityReason[] };
 ```
 
-There is no `loanAmount`, `grantAmount`, `tier`, `phase1RateAnnual`, etc., on the `eligible: true` branch. All of those are properties of the *programme*, not of the *applicant*; they live as `PROGRAMME` constants and are rendered the same way for everyone who passes. This is a deliberate inversion of the MVP shape — the result no longer pretends to be personalized.
+There is no `loanAmount`, `grantAmount`, `tier`, `phase1RateAnnual`, etc., on the `eligible: true` branch. All of those are properties of the _programme_, not of the _applicant_; they live as `PROGRAMME` constants and are rendered the same way for everyone who passes. This is a deliberate inversion of the MVP shape — the result no longer pretends to be personalized.
 
 ### D2. Input shape — binary questions, not numeric inputs
 
@@ -96,18 +96,18 @@ flowchart TD
   NotEligible([eligible: false<br/>show reasons + disclaimer<br/>+ link to gov.il<br/>+ Lead form CTA])
 ```
 
-Multiple reasons may accumulate (e.g. `not_ethiopian_origin` + `owned_property_within_10y`). The function returns *all* applicable reasons rather than short-circuiting on the first one — users deserve the full picture in one pass, not three rounds of "fix this, now fix that."
+Multiple reasons may accumulate (e.g. `not_ethiopian_origin` + `owned_property_within_10y`). The function returns _all_ applicable reasons rather than short-circuiting on the first one — users deserve the full picture in one pass, not three rounds of "fix this, now fix that."
 
 ### D4. `reasons[]` is the i18n contract
 
 `IneligibilityReason` is a stable enum of message keys, not user-facing strings. Translations live in Paraglide messages keyed by reason:
 
-| Reason key                          | HE message                                                                        | EN message                                                                              | AM message                                                                                                                       |
-| ----------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `not_ethiopian_origin`              | התוכנית מיועדת למי שנולד באתיופיה או שאחד מהוריו / מבני זוגו נולד באתיופיה.       | This programme is for applicants born in Ethiopia, or whose parent or spouse was born there. | ይህ ፕሮግራም ለሚገኙ ሰዎች የሚውል ነው — በኢትዮጵያ የተወለዱ፣ ወይም ወላጅ ወይም የትዳር አጋር በኢትዮጵያ የተወለደ ለሆኑ።                                              |
-| `not_a_family`                      | התוכנית מיועדת למשפחות (נשואים / ידועים בציבור / הורה יחיד עם ילד מתחת ל-21).      | This programme is for families (married, common-law, or single-parent with a child <21). | ይህ ፕሮግራም ለቤተሰቦች የሚውል ነው (ያገቡ፣ የተወዳጁ፣ ወይም ከ21 ዓመት በታች ልጅ ያላቸው ብቸኛ ወላጆች)።                                                       |
-| `single_parent_no_eligible_child`   | הורה יחיד זכאי רק אם יש ילד מתחת לגיל 21 שגר איתו.                                | Single parents qualify only when a child under 21 lives with the applicant.             | ብቸኛ ወላጆች በተግባር ብቁ የሚሆኑት ከ21 ዓመት በታች ልጅ ከእነሱ ጋር በሚኖርበት ጊዜ ብቻ ነው።                                                                |
-| `owned_property_within_10y`         | התוכנית דורשת שלא הייתה לך בעלות בנכס נדל"ן ב-10 השנים האחרונות (יש חריגים).      | The programme requires no real-estate ownership in the past 10 years (exceptions apply). | ፕሮግራሙ በመጨረሻዎቹ 10 ዓመታት የንብረት ባለቤትነት እንዳልነበረ ይጠይቃል (ልዩ ሁኔታዎች አሉ)።                                                              |
+| Reason key                        | HE message                                                                    | EN message                                                                                   | AM message                                                                       |
+| --------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `not_ethiopian_origin`            | התוכנית מיועדת למי שנולד באתיופיה או שאחד מהוריו / מבני זוגו נולד באתיופיה.   | This programme is for applicants born in Ethiopia, or whose parent or spouse was born there. | ይህ ፕሮግራም ለሚገኙ ሰዎች የሚውል ነው — በኢትዮጵያ የተወለዱ፣ ወይም ወላጅ ወይም የትዳር አጋር በኢትዮጵያ የተወለደ ለሆኑ። |
+| `not_a_family`                    | התוכנית מיועדת למשפחות (נשואים / ידועים בציבור / הורה יחיד עם ילד מתחת ל-21). | This programme is for families (married, common-law, or single-parent with a child <21).     | ይህ ፕሮግራም ለቤተሰቦች የሚውል ነው (ያገቡ፣ የተወዳጁ፣ ወይም ከ21 ዓመት በታች ልጅ ያላቸው ብቸኛ ወላጆች)።          |
+| `single_parent_no_eligible_child` | הורה יחיד זכאי רק אם יש ילד מתחת לגיל 21 שגר איתו.                            | Single parents qualify only when a child under 21 lives with the applicant.                  | ብቸኛ ወላጆች በተግባር ብቁ የሚሆኑት ከ21 ዓመት በታች ልጅ ከእነሱ ጋር በሚኖርበት ጊዜ ብቻ ነው።                  |
+| `owned_property_within_10y`       | התוכנית דורשת שלא הייתה לך בעלות בנכס נדל"ן ב-10 השנים האחרונות (יש חריגים).  | The programme requires no real-estate ownership in the past 10 years (exceptions apply).     | ፕሮግራሙ በመጨረሻዎቹ 10 ዓመታት የንብረት ባለቤትነት እንዳልነበረ ይጠይቃል (ልዩ ሁኔታዎች አሉ)።                  |
 
 Content & SEO owns the final wording; the **keys are frozen** by this ADR so Engineer can wire them, Data & Integrations can log them in `lead_events`, and translations don't drift across files. The Amharic strings above are placeholders — Content & SEO must validate with a native speaker before ship.
 
@@ -115,19 +115,20 @@ Content & SEO owns the final wording; the **keys are frozen** by this ADR so Eng
 
 **Eligibility input does not contain `monthlyIncome`.** It is not a programme criterion. Asking for it on the eligibility form would (a) imply it gates eligibility, which is false and harmful, and (b) inflate form abandonment.
 
-The Lead form (TED-21) MAY collect monthly income as a *separate, clearly-optional* field labelled *"For follow-up by a mortgage advisor — does not affect your eligibility above."* That field belongs to the brokerage's downstream workflow, not to programme eligibility, and the data flows into the leads pipeline (Data & Integrations to wire). It must never round-trip back into the eligibility check.
+The Lead form (TED-21) MAY collect monthly income as a _separate, clearly-optional_ field labelled _"For follow-up by a mortgage advisor — does not affect your eligibility above."_ That field belongs to the brokerage's downstream workflow, not to programme eligibility, and the data flows into the leads pipeline (Data & Integrations to wire). It must never round-trip back into the eligibility check.
 
 ### D6. Programme-availability disclaimer — code-enforced
 
 The Researcher could not verify (HTTP 403 from gov.il endpoints to automated agents) that the programme has an active 2026 lottery cycle. Until a human confirms current cycle status, the eligibility result page MUST render a code-level disclaimer, regardless of result:
 
-> *"הגרלות מתפרסמות מעת לעת באתר משרד הבינוי והשיכון. בדקו זמינות הגרלה פעילה לפני הרשמה."* + a direct link to `https://www.gov.il/he/departments/topics/mortgage_assistance_new_immigrant/govil-landing-page`.
+> _"הגרלות מתפרסמות מעת לעת באתר משרד הבינוי והשיכון. בדקו זמינות הגרלה פעילה לפני הרשמה."_ + a direct link to `https://www.gov.il/he/departments/topics/mortgage_assistance_new_immigrant/govil-landing-page`.
 
 Engineer to render this from a `mortgage_disclaimer_active_lottery` Paraglide key (HE/EN/AM). It is **not** dismissible.
 
 ### D7. What stays / what goes from PR #3
 
 **Goes (delete):**
+
 - `MIN_AGE`, `INCOME_CEILING_HEURISTIC`
 - `classifyTier()` and the `tier` discriminator
 - `baseByTier`, `grantByTier`, `perChild`
@@ -137,6 +138,7 @@ Engineer to render this from a `mortgage_disclaimer_active_lottery` Paraglide ke
 - All tests asserting tier classification, per-child top-up, or income ceiling
 
 **Stays:**
+
 - `MAX_LOAN = 600_000` — promoted into the `PROGRAMME` constant block
 - The two-phase rate schedule (0% / 10y, 2% / 15y) — promoted into `PROGRAMME`
 - The disclaimer copy infrastructure (Paraglide keys), expanded per D6
@@ -191,7 +193,7 @@ Engineer to render this from a `mortgage_disclaimer_active_lottery` Paraglide ke
 
 ### A. Keep the tiered MVP and just hide it behind a stronger disclaimer
 
-Rejected. The MVP disclaimer was the right move at MVP-ship gate (TED-16) when the calculator's value was "do something useful while research catches up." Now that research has caught up, continuing to show fabricated numbers is no longer a tradeoff between *useful* and *exact* — it's a tradeoff between *deceptive* and *honest*. We pick honest. Keeping made-up tiers also makes the page less trustworthy for SEO/EEAT signals (Google's helpful-content guidance treats fabricated specifics as a quality penalty).
+Rejected. The MVP disclaimer was the right move at MVP-ship gate (TED-16) when the calculator's value was "do something useful while research catches up." Now that research has caught up, continuing to show fabricated numbers is no longer a tradeoff between _useful_ and _exact_ — it's a tradeoff between _deceptive_ and _honest_. We pick honest. Keeping made-up tiers also makes the page less trustworthy for SEO/EEAT signals (Google's helpful-content guidance treats fabricated specifics as a quality penalty).
 
 ### B. Estimate likelihood of being drawn in the lottery (e.g. 200/N applicants)
 

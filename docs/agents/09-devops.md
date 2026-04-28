@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 DevOps. CI/CD, hosting, monitoring, autopilots.
 
 ## Instructions
@@ -26,4 +27,5 @@ DevOps. CI/CD, hosting, monitoring, autopilots.
 ```
 
 ---
+
 _Exported 2026-04-27T10:48:13Z._

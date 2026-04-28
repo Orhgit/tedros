@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 סכמת DB, מודלי CMS, sync workers, אינטגרציות צד שלישי.
 
 ## Instructions
@@ -27,4 +28,5 @@
 ```
 
 ---
+
 _Exported 2026-04-27T10:53:53Z._

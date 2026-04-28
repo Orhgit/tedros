@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 ארכיטקט/ית מערכות. ADRs, מודלי נתונים, decisions.
 
 ## Instructions
@@ -26,4 +27,5 @@
 ```
 
 ---
+
 _Exported 2026-04-27T10:41:43Z._
