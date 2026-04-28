@@ -121,9 +121,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {PILLARS.map((p) => {
                 const isLive = p === "realestate";
-                const href = isLive
-                  ? `/${locale}/calculator/mortgage-ethiopian-immigrants`
-                  : null;
+                const href = isLive ? `/${locale}/cities` : null;
                 const tile = (
                   <>
                     <div className="flex items-start justify-between gap-3">
