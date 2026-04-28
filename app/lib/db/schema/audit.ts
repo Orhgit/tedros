@@ -66,9 +66,7 @@ export const auditLog = pgTable(
   "audit_log",
   {
     id: uuid("id").defaultRandom().notNull(),
-    occurredAt: timestamp("occurred_at", { withTimezone: true })
-      .notNull()
-      .defaultNow(),
+    occurredAt: timestamp("occurred_at", { withTimezone: true }).notNull().defaultNow(),
     // No FK to users.id by design: actorType can be 'agent' or 'system',
     // for which no users row exists. The id is still meaningful for the
     // 'user'/'agency'/'admin' actor types — joinable in queries when needed.
@@ -98,11 +96,7 @@ export const auditLog = pgTable(
     pk: primaryKey({ columns: [t.id, t.occurredAt] }),
     occurredAtIdx: index("audit_log_occurred_at_idx").on(t.occurredAt),
     actorIdx: index("audit_log_actor_idx").on(t.actorId, t.occurredAt),
-    entityIdx: index("audit_log_entity_idx").on(
-      t.entityType,
-      t.entityId,
-      t.occurredAt,
-    ),
+    entityIdx: index("audit_log_entity_idx").on(t.entityType, t.entityId, t.occurredAt),
     agencyIdx: index("audit_log_agency_idx").on(t.agencyId, t.occurredAt),
     requestIdx: index("audit_log_request_idx").on(t.requestId),
   }),
@@ -124,9 +118,7 @@ export const slugHistory = pgTable(
     // Optional: scope slugs that were unique-per-(city, locale) for listings.
     // For other entity types this is null.
     scopeId: uuid("scope_id"),
-    occurredAt: timestamp("occurred_at", { withTimezone: true })
-      .notNull()
-      .defaultNow(),
+    occurredAt: timestamp("occurred_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => ({
     // 301 redirect lookup is by `(entity_type, locale, scope_id, old_slug)`.

@@ -1,14 +1,7 @@
 // Auth.js v5 Drizzle adapter tables (ADR-003).
 // Schema must match @auth/drizzle-adapter expectations exactly.
 
-import {
-  integer,
-  pgTable,
-  primaryKey,
-  text,
-  timestamp,
-  uuid,
-} from "drizzle-orm/pg-core";
+import { integer, pgTable, primaryKey, text, timestamp, uuid } from "drizzle-orm/pg-core";
 
 import { users } from "./identity";
 
