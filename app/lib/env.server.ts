@@ -31,6 +31,15 @@ const envSchema = z.object({
   EMAIL_SERVER_USER: z.string().optional(),
   EMAIL_SERVER_PASSWORD: z.string().optional(),
   EMAIL_FROM: z.string().email().default("no-reply@tedros.local"),
+
+  // Resend (TED-22) — blank in dev uses no-op mock adapter
+  RESEND_API_KEY: z.string().optional(),
+  RESEND_FROM: z.string().email().default("no-reply@tedros.local"),
+  LEADS_DEFAULT_TO_EMAIL: z.string().email().default("admin@tedros.local"),
+
+  // Cloudflare Turnstile (optional) — omitting keys disables verification
+  TURNSTILE_SITE_KEY: z.string().optional(),
+  TURNSTILE_SECRET_KEY: z.string().optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;
