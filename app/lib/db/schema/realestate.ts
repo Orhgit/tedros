@@ -62,8 +62,7 @@ export const cities = pgTable(
   },
   (t) => ({
     // Cities are global; HE slug is canonical lookup key.
-    slugHeIdx: uniqueIndex("cities_slug_he_unique")
-      .on(sql`(${t.slug} ->> 'he')`),
+    slugHeIdx: uniqueIndex("cities_slug_he_unique").on(sql`(${t.slug} ->> 'he')`),
   }),
 );
 
@@ -80,8 +79,10 @@ export const neighborhoods = pgTable(
   },
   (t) => ({
     cityIdx: index("neighborhoods_city_idx").on(t.cityId),
-    slugHeIdx: uniqueIndex("neighborhoods_city_slug_he_unique")
-      .on(t.cityId, sql`(${t.slug} ->> 'he')`),
+    slugHeIdx: uniqueIndex("neighborhoods_city_slug_he_unique").on(
+      t.cityId,
+      sql`(${t.slug} ->> 'he')`,
+    ),
   }),
 );
 
@@ -111,10 +112,9 @@ export const listings = pgTable(
     cityId: uuid("city_id")
       .notNull()
       .references(() => cities.id, { onDelete: "restrict" }),
-    neighborhoodId: uuid("neighborhood_id").references(
-      () => neighborhoods.id,
-      { onDelete: "set null" },
-    ),
+    neighborhoodId: uuid("neighborhood_id").references(() => neighborhoods.id, {
+      onDelete: "set null",
+    }),
     // Generated tsvector — see custom type comment above.
     searchVec: tsvector("search_vec"),
     ...timestamps,
@@ -221,4 +221,3 @@ export const leads = pgTable(
     submittedByIdx: index("leads_submitted_by_idx").on(t.submittedByUserId),
   }),
 );
-
