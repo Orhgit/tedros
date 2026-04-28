@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 כותב/ת תוכן + מומחה/ית SEO. Programmatic content, קופי, אופטימיזציה.
 
 ## Instructions
@@ -27,4 +28,5 @@
 ```
 
 ---
+
 _Exported 2026-04-27T10:48:54Z._

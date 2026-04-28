@@ -9,7 +9,7 @@
 
 ADR-000 D1 and the project README both stated **"Amharic (RTL, Ge'ez script)"**. That is wrong: Ge'ez (Ethiopic, ኣማርኛ) is an **LTR** script per the Unicode Bidirectional Algorithm (UAX #9). All Ge'ez code points belong to the bidi class **L** (left-to-right), the same class as Latin. Amharic publications, websites, and Wikipedia all read left-to-right; reading right-to-left is unattested as a norm in modern usage and conflicts with the Unicode spec.
 
-The error originated in Phase 0 from a faulty assumption that "non-Latin script + community shared with Israel ⇒ RTL like Hebrew." That conflated *script directionality* with *reader population*, which is incorrect: directionality is a property of the script, not of the audience.
+The error originated in Phase 0 from a faulty assumption that "non-Latin script + community shared with Israel ⇒ RTL like Hebrew." That conflated _script directionality_ with _reader population_, which is incorrect: directionality is a property of the script, not of the audience.
 
 Phase 2 (TED-15) shipped the correct behavior already in code:
 
@@ -22,11 +22,11 @@ So the implementation is correct; the **documentation** still claims RTL. This A
 
 **Amharic (`am`) runs in LTR.** The three supported locales lock as follows and no route, layout, or component is permitted to override on the basis of locale alone:
 
-| Locale | Script   | `dir`   | `lang` (HTML) | Font stack base       |
-| ------ | -------- | ------- | ------------- | --------------------- |
-| `he`   | Hebrew   | **rtl** | `he-IL`       | Heebo                 |
-| `en`   | Latin    | **ltr** | `en`          | Inter                 |
-| `am`   | Ge'ez    | **ltr** | `am-ET`       | Noto Sans Ethiopic    |
+| Locale | Script | `dir`   | `lang` (HTML) | Font stack base    |
+| ------ | ------ | ------- | ------------- | ------------------ |
+| `he`   | Hebrew | **rtl** | `he-IL`       | Heebo              |
+| `en`   | Latin  | **ltr** | `en`          | Inter              |
+| `am`   | Ge'ez  | **ltr** | `am-ET`       | Noto Sans Ethiopic |
 
 ### How direction is set
 

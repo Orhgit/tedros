@@ -12,51 +12,56 @@
 ```jsonc
 {
   "neighborhood": {
-    "id": "uuid",                         // FK ל-neighborhoods.id
+    "id": "uuid", // FK ל-neighborhoods.id
     "slug": "ramat-eliyahu",
     "name_he": "רמת אליהו",
     "name_en": "Ramat Eliyahu",
     "city_slug": "rishon-letzion",
     "city_name_he": "ראשון לציון",
     "lat": 31.961,
-    "lng": 34.776
+    "lng": 34.776,
   },
   "community": {
-    "ethiopian_share_estimate": 0.30,     // 0–1, מקורר לשנתי (CBS / ENP)
-    "context_he": "אחת מנקודות הריכוז הקהילתיות הגדולות בארץ. שירותים קהילתיים: ENP, מתנ\"ס, מועדון זקנים."
+    "ethiopian_share_estimate": 0.3, // 0–1, מקורר לשנתי (CBS / ENP)
+    "context_he": "אחת מנקודות הריכוז הקהילתיות הגדולות בארץ. שירותים קהילתיים: ENP, מתנ\"ס, מועדון זקנים.",
   },
   "renewal": {
-    "status": "construction",             // planning | permits | construction | done | none
+    "status": "construction", // planning | permits | construction | done | none
     "start_year": 2018,
     "expected_completion_year": 2032,
-    "tama": "פינוי-בינוי",                // tama-38 | פינוי-בינוי | תמ\"א 70 | חידוש מתחמי
+    "tama": "פינוי-בינוי", // tama-38 | פינוי-בינוי | תמ\"א 70 | חידוש מתחמי
     "developer_he": "TBD",
     "minhelet_url": "https://www.rishonlezion.muni.il/...",
     "rights_for_residents": [
       "דירה חלופית בגודל זהה לפחות",
       "פיצוי דמי הסתגלות",
-      "ייעוץ משפטי בחינם דרך מינהלת השכונה"
+      "ייעוץ משפטי בחינם דרך מינהלת השכונה",
     ],
     "legal_aid_contact_he": "מינהלת רמת אליהו, טל' XXX-XXXX, ימים א'‑ה' 09:00‑16:00",
     "milestones": [
       { "date": "2024-Q3", "label_he": "אישור תכנית בוועדה המחוזית" },
-      { "date": "2026-Q1", "label_he": "התחלת הריסות אגף צפוני" }
-    ]
+      { "date": "2026-Q1", "label_he": "התחלת הריסות אגף צפוני" },
+    ],
   },
-  "available_listings_count": 0,          // hydrate מ-listings בעיבוד
-  "professionals_in_area": [              // top 3‑5
-    { "user_id": "uuid", "profession": "lawyer-real-estate", "url": "/orech-din-yotzei-etiopiya/rishon-letzion" }
+  "available_listings_count": 0, // hydrate מ-listings בעיבוד
+  "professionals_in_area": [
+    // top 3‑5
+    {
+      "user_id": "uuid",
+      "profession": "lawyer-real-estate",
+      "url": "/orech-din-yotzei-etiopiya/rishon-letzion",
+    },
   ],
   "faqs": [
     {
       "q_he": "האם דייר יוצא אתיופיה ברמת אליהו זכאי לסיוע משפטי בפינוי-בינוי?",
-      "a_he": "כן. מינהלת השכונה מספקת ייעוץ משפטי בחינם..."
-    }
+      "a_he": "כן. מינהלת השכונה מספקת ייעוץ משפטי בחינם...",
+    },
   ],
   "sources": [
     { "label": "מינהלת רמת אליהו", "url": "https://..." },
-    { "label": "החלטה מ' 1107 — סיוע ייעודי", "url": "https://www.gov.il/..." }
-  ]
+    { "label": "החלטה מ' 1107 — סיוע ייעודי", "url": "https://www.gov.il/..." },
+  ],
 }
 ```
 
@@ -64,12 +69,12 @@
 
 ## 2. SEO meta
 
-| Field             | Hebrew                                                                                                   | מקס תווים |
-| ----------------- | -------------------------------------------------------------------------------------------------------- | --------- |
-| `<title>`         | `התחדשות עירונית {neighborhood.name_he} ({city_name_he}) — סטטוס, זכויות דייר ופרויקטים פעילים \| Tedros` | 60        |
-| `meta description` | `כל המידע על פינוי-בינוי ב{neighborhood.name_he}: סטטוס נוכחי, מועדים, זכויות לדיירים יוצאי אתיופיה, פרטי המינהלת וייעוץ משפטי בחינם.` | 155 |
-| `og:image`         | `/og/neighborhood/{neighborhood.slug}.png`                                                              | 1200×630  |
-| `canonical`        | `https://tedros.org.il/he/hitchadshut-ironit/{neighborhood.slug}`                                       |           |
+| Field              | Hebrew                                                                                                                                 | מקס תווים |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `<title>`          | `התחדשות עירונית {neighborhood.name_he} ({city_name_he}) — סטטוס, זכויות דייר ופרויקטים פעילים \| Tedros`                              | 60        |
+| `meta description` | `כל המידע על פינוי-בינוי ב{neighborhood.name_he}: סטטוס נוכחי, מועדים, זכויות לדיירים יוצאי אתיופיה, פרטי המינהלת וייעוץ משפטי בחינם.` | 155       |
+| `og:image`         | `/og/neighborhood/{neighborhood.slug}.png`                                                                                             | 1200×630  |
+| `canonical`        | `https://tedros.org.il/he/hitchadshut-ironit/{neighborhood.slug}`                                                                      |           |
 
 ---
 
@@ -78,41 +83,52 @@
 > 800‑1500 מילים. דף זה דורש **דיוק עובדתי גבוה** — תאריכים, מינהלת, חוקים. כל טענה = מקור.
 
 ### H1
+
 `התחדשות עירונית ב{neighborhood.name_he} ({city_name_he})`
 
 ### Above-the-fold
+
 - 1 פסקה עם הסטטוס הנוכחי + מועד צפוי.
 - "Status badge": תכנון / היתרים / בנייה / הסתיים.
 - CTA primary: "השאר פרטים — נעדכן בכל שלב חדש" → email capture.
 - CTA secondary: "צור קשר עם המינהלת" → tel: + WhatsApp link.
 
 ### H2 — `מה זה אומר עבור הקהילה האתיופית-ישראלית`
+
 פסקה אחת מ-`payload.community.context_he` + אזכור מספר משפחות מהקהילה (אם נתון אמין). מקור: ENP / מינהלת.
 
 ### H2 — `סטטוס הפרויקט`
+
 טבלה: סוג ההתחדשות, יזם, מינהלת, תאריך התחלה, תאריך סיום צפוי. רנדור מ-`payload.renewal`.
 
 ### H2 — `ציר זמן`
+
 לולאה על `payload.renewal.milestones`. רנדור visual + Schema `Event` אופציונלי (אם יש תאריך עתידי).
 
 ### H2 — `זכויות הדייר`
+
 לולאה על `payload.renewal.rights_for_residents`. **חובה**: כל זכות עם link למקור חוקי (gov.il / kolzchut). Schema: `GovernmentService` עבור החוק שמסדיר את הזכות.
 
 ### H2 — `סיוע משפטי וקהילתי`
+
 - מינהלת השכונה: שם, טל', שעות, כתובת.
 - ארגוני קהילה: ENP, IAEJ, Tene Briut (אם רלוונטי).
 - אנשי מקצוע מהקהילה: 3‑5 כרטיסים מ-`payload.professionals_in_area`.
 
 ### H2 — `דירות זמינות בסביבה`
+
 Live render. אם `available_listings_count = 0` → CTA "השאר פרטים".
 
 ### H2 — `שאלות נפוצות`
+
 לולאה על `payload.faqs` → FAQPage schema.
 
 ### H2 — `מקורות`
+
 חובה. **שני מקורות מינימום** — אחד רשמי (gov.il / עירייה) ואחד קהילתי (ENP / kolzchut).
 
 ### Footer-of-content (E-E-A-T)
+
 מחבר/ת + תאריך עדכון + "דווח על שינוי בסטטוס".
 
 ---
@@ -120,6 +136,7 @@ Live render. אם `available_listings_count = 0` → CTA "השאר פרטים".
 ## 4. Internal linking
 
 חובה:
+
 - 1 link ל-pillar עיר: `/nadlan/{city.slug}`.
 - 1 link לכל שכונה אחרת באותה עיר עם פרויקט פעיל (cross-link).
 - 1 link → `/zchuyot/diur/tochnit-diur-yotzei-etiopiya`.
@@ -158,6 +175,7 @@ Live render. אם `available_listings_count = 0` → CTA "השאר פרטים".
 ## 7. עדכון שוטף (לא pre-launch בלבד)
 
 תאריכי בנייה משתנים. **חובה** Autopilot שבועי שמאתר שינויים:
+
 - בודק את עמוד המינהלת (web fetch) → diff מול `payload.renewal.status`.
 - אם diff → פותח issue ל-Researcher עם שינוי מוצע.
 - DevOps: מנהל את ה-Autopilot (ראה TED-17, זרוע 5).

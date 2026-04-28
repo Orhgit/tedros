@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 Full-stack React Router v7 engineer. UI + server logic + auth + CRUD + admin.
 
 ## Instructions
@@ -32,4 +33,5 @@ Full-stack React Router v7 engineer. UI + server logic + auth + CRUD + admin.
 ```
 
 ---
+
 _Exported 2026-04-27T10:55:51Z._

@@ -7,6 +7,7 @@
 **Status**: idle
 
 ## Description
+
 חוקר/ת שוק, מתחרים, SEO, וקהילה.
 
 ## Instructions
@@ -26,4 +27,5 @@
 ```
 
 ---
+
 _Exported 2026-04-27T10:37:52Z._

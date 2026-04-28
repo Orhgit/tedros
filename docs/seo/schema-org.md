@@ -37,7 +37,7 @@
       "url": "https://tedros.org.il/he/listings/netanya/sale/dirat-3-chadarim-dora",
       "image": [
         "https://r2.tedros.org.il/listings/abc123/main.jpg",
-        "https://r2.tedros.org.il/listings/abc123/floor.jpg"
+        "https://r2.tedros.org.il/listings/abc123/floor.jpg",
       ],
       "datePosted": "2026-04-25T08:00:00+03:00",
       "validThrough": "2026-07-25T23:59:59+03:00",
@@ -47,14 +47,14 @@
         "price": "1850000",
         "priceCurrency": "ILS",
         "availability": "https://schema.org/InStock",
-        "businessFunction": "https://purl.org/goodrelations/v1#Sell"
+        "businessFunction": "https://purl.org/goodrelations/v1#Sell",
       },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "נתניה",
         "addressRegion": "מחוז המרכז",
         "addressCountry": "IL",
-        "streetAddress": "רחוב X 12, שכונת דורה"
+        "streetAddress": "רחוב X 12, שכונת דורה",
       },
       "geo": { "@type": "GeoCoordinates", "latitude": 32.3215, "longitude": 34.853 },
       "numberOfRooms": 3,
@@ -62,24 +62,27 @@
       "additionalProperty": [
         { "@type": "PropertyValue", "name": "קומה", "value": "2 מתוך 4" },
         { "@type": "PropertyValue", "name": "חניה", "value": "כן" },
-        { "@type": "PropertyValue", "name": "סוג עסקה", "value": "מכירה" }
+        { "@type": "PropertyValue", "name": "סוג עסקה", "value": "מכירה" },
       ],
-      "broker": { "@type": "RealEstateAgent", "@id": "https://tedros.org.il/agencies/{agency-slug}#agent" }
-    }
-  ]
+      "broker": {
+        "@type": "RealEstateAgent",
+        "@id": "https://tedros.org.il/agencies/{agency-slug}#agent",
+      },
+    },
+  ],
 }
 ```
 
 ### Variants לפי `listing_type`
 
-| `listing_type`   | שינוי עיקרי                                                                                            |
-| ---------------- | ------------------------------------------------------------------------------------------------------ |
-| `sale`           | `businessFunction = Sell`, `availability = InStock`                                                    |
-| `rent`           | `businessFunction = LeaseOut`, `Offer.priceSpecification = UnitPriceSpecification` עם `unitCode=MON` |
-| `urban_renewal`  | להוסיף `RealEstateListing.subjectOf = GovernmentService` של תוכנית ההתחדשות; `availability = PreOrder` |
-| `investment`     | `additionalType = "https://schema.org/SingleFamilyResidence"`; `Offer.eligibleCustomerType = Investor` |
-| `gov_program`    | להוסיף `subjectOf = GovernmentService`; `eligibilityToWorkRequirement` (אם רלוונטי)                    |
-| `commercial`     | `additionalType = "https://schema.org/Store"` או דומה — לדון פר-מקרה                                  |
+| `listing_type`  | שינוי עיקרי                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------ |
+| `sale`          | `businessFunction = Sell`, `availability = InStock`                                                    |
+| `rent`          | `businessFunction = LeaseOut`, `Offer.priceSpecification = UnitPriceSpecification` עם `unitCode=MON`   |
+| `urban_renewal` | להוסיף `RealEstateListing.subjectOf = GovernmentService` של תוכנית ההתחדשות; `availability = PreOrder` |
+| `investment`    | `additionalType = "https://schema.org/SingleFamilyResidence"`; `Offer.eligibleCustomerType = Investor` |
+| `gov_program`   | להוסיף `subjectOf = GovernmentService`; `eligibilityToWorkRequirement` (אם רלוונטי)                    |
+| `commercial`    | `additionalType = "https://schema.org/Store"` או דומה — לדון פר-מקרה                                   |
 
 ### Validation
 
@@ -92,6 +95,7 @@
 ## 2. GovernmentService
 
 **מתי**:
+
 - דף זכות סטטוטורית (תוכנית הדיור, מחיר למשתכן, דיור ציבורי).
 - דף שכונה × התחדשות עירונית (הזכויות החוקיות של דיירים בפינוי-בינוי).
 
@@ -112,24 +116,28 @@
   "audience": {
     "@type": "Audience",
     "audienceType": "Israeli citizens of Ethiopian origin",
-    "geographicArea": { "@type": "Country", "name": "Israel" }
+    "geographicArea": { "@type": "Country", "name": "Israel" },
   },
   "provider": {
     "@type": "GovernmentOrganization",
     "name": "משרד הבינוי והשיכון",
     "url": "https://www.gov.il/he/departments/ministry_of_construction_and_housing",
-    "sameAs": "https://www.wikidata.org/wiki/Q3296935"
+    "sameAs": "https://www.wikidata.org/wiki/Q3296935",
   },
   "areaServed": { "@type": "Country", "name": "Israel" },
   "isBasedOn": [
-    { "@type": "Legislation", "name": "החלטת ממשלה 1107", "url": "https://www.gov.il/he/departments/policies/dec1107_2016" }
+    {
+      "@type": "Legislation",
+      "name": "החלטת ממשלה 1107",
+      "url": "https://www.gov.il/he/departments/policies/dec1107_2016",
+    },
   ],
   "termsOfService": "https://www.gov.il/...",
   "potentialAction": {
     "@type": "ApplyAction",
     "target": "https://www.gov.il/he/service/...",
-    "name": "הגש בקשה"
-  }
+    "name": "הגש בקשה",
+  },
 }
 ```
 
@@ -169,20 +177,27 @@
     "name": "שם המחבר",
     "url": "https://tedros.org.il/team/{author-slug}",
     "jobTitle": "Content Lead",
-    "sameAs": ["https://www.linkedin.com/in/..."]
+    "sameAs": ["https://www.linkedin.com/in/..."],
   },
   "publisher": {
     "@type": "Organization",
     "name": "Tedros",
     "url": "https://tedros.org.il",
-    "logo": { "@type": "ImageObject", "url": "https://r2.tedros.org.il/brand/logo-512.png" }
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://r2.tedros.org.il/brand/logo-512.png",
+    },
   },
   "mainEntityOfPage": "https://tedros.org.il/he/beta-israel",
   "articleSection": "תרבות ומורשת",
   "wordCount": 1450,
   "citation": [
-    { "@type": "CreativeWork", "name": "CBS — אוכלוסיית יוצאי אתיופיה", "url": "https://www.cbs.gov.il/..." }
-  ]
+    {
+      "@type": "CreativeWork",
+      "name": "CBS — אוכלוסיית יוצאי אתיופיה",
+      "url": "https://www.cbs.gov.il/...",
+    },
+  ],
 }
 ```
 
@@ -214,18 +229,18 @@
       "name": "האם יוצאי אתיופיה זכאים להטבות נוספות במחיר למשתכן בנתניה?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "כן. תוכנית הדיור ליוצאי אתיופיה (החלטה 1107) מאפשרת הגרלה ייעודית עם תנאים משופרים..."
-      }
+        "text": "כן. תוכנית הדיור ליוצאי אתיופיה (החלטה 1107) מאפשרת הגרלה ייעודית עם תנאים משופרים...",
+      },
     },
     {
       "@type": "Question",
       "name": "כמה משפחות יוצאות אתיופיה גרות בנתניה?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "לפי הערכות 2024 של ENP, כ-7,500 איש מהקהילה מתגוררים בנתניה, בעיקר בשכונות דורה, נאות שקד וקרית נורדאו."
-      }
-    }
-  ]
+        "text": "לפי הערכות 2024 של ENP, כ-7,500 איש מהקהילה מתגוררים בנתניה, בעיקר בשכונות דורה, נאות שקד וקרית נורדאו.",
+      },
+    },
+  ],
 }
 ```
 
@@ -249,11 +264,26 @@
   "@type": "BreadcrumbList",
   "@id": "https://tedros.org.il/he/hitchadshut-ironit/ramat-eliyahu#breadcrumbs",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://tedros.org.il/he" },
-    { "@type": "ListItem", "position": 2, "name": "התחדשות עירונית", "item": "https://tedros.org.il/he/hitchadshut-ironit" },
-    { "@type": "ListItem", "position": 3, "name": "ראשון לציון", "item": "https://tedros.org.il/he/nadlan/rishon-letzion" },
-    { "@type": "ListItem", "position": 4, "name": "רמת אליהו" }
-  ]
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "דף הבית",
+      "item": "https://tedros.org.il/he",
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "התחדשות עירונית",
+      "item": "https://tedros.org.il/he/hitchadshut-ironit",
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ראשון לציון",
+      "item": "https://tedros.org.il/he/nadlan/rishon-letzion",
+    },
+    { "@type": "ListItem", "position": 4, "name": "רמת אליהו" },
+  ],
 }
 ```
 
@@ -270,9 +300,13 @@
   "@type": "Place",
   "@id": "https://tedros.org.il/he/hitchadshut-ironit/ramat-eliyahu#place",
   "name": "רמת אליהו",
-  "containedInPlace": { "@type": "City", "name": "ראשון לציון", "@id": "https://www.wikidata.org/wiki/Q189169" },
+  "containedInPlace": {
+    "@type": "City",
+    "name": "ראשון לציון",
+    "@id": "https://www.wikidata.org/wiki/Q189169",
+  },
   "geo": { "@type": "GeoCoordinates", "latitude": 31.961, "longitude": 34.776 },
-  "additionalType": "https://schema.org/Neighborhood"
+  "additionalType": "https://schema.org/Neighborhood",
 }
 ```
 
@@ -294,7 +328,7 @@
   "memberOf": { "@type": "Organization", "name": "ENP", "url": "https://enp.org.il" },
   "sameAs": ["https://www.linkedin.com/in/..."],
   "url": "https://tedros.org.il/he/yoetz-mashkanta/netanya/{slug}",
-  "image": "https://r2.tedros.org.il/professionals/{id}/avatar.jpg"
+  "image": "https://r2.tedros.org.il/professionals/{id}/avatar.jpg",
 }
 ```
 
@@ -317,11 +351,14 @@
   "name": "נדל\"ן ליוצאי אתיופיה בנתניה",
   "inLanguage": "he-IL",
   "isPartOf": { "@type": "WebSite", "@id": "https://tedros.org.il/#website" },
-  "primaryImageOfPage": { "@type": "ImageObject", "url": "https://r2.tedros.org.il/og/pillar-city/netanya.png" },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://r2.tedros.org.il/og/pillar-city/netanya.png",
+  },
   "datePublished": "2026-04-27T09:00:00+03:00",
   "dateModified": "2026-04-27T09:00:00+03:00",
   "breadcrumb": { "@id": "https://tedros.org.il/he/nadlan/netanya#breadcrumbs" },
-  "mainEntity": { "@id": "https://tedros.org.il/he/nadlan/netanya#place" }
+  "mainEntity": { "@id": "https://tedros.org.il/he/nadlan/netanya#place" },
 }
 ```
 
@@ -329,18 +366,18 @@
 
 ## 9. Mapping per route (Phase 3)
 
-| Route                                                  | Schema graph                                                                                          |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| `/he`                                                  | `WebSite` + `Organization` + `SearchAction` (sitelinks searchbox)                                     |
-| `/he/listings/{city}/sale`                             | `WebPage` + `BreadcrumbList` + `ItemList` of `RealEstateListing`                                      |
-| `/he/listings/{city}/{type}/{slug}`                    | `WebPage` + `BreadcrumbList` + `RealEstateListing` (mainEntity)                                       |
-| `/he/nadlan/{city}` (pillar עיר)                       | `WebPage` + `BreadcrumbList` + `Place` + `FAQPage` (אם ≥3 שאלות)                                      |
-| `/he/hitchadshut-ironit/{neighborhood}`                | `WebPage` + `BreadcrumbList` + `Place` + `GovernmentService` + `FAQPage`                              |
-| `/he/zchuyot/diur/{slug}` (pillar זכות)                | `WebPage` + `BreadcrumbList` + `Article` + `GovernmentService` + `FAQPage`                            |
-| `/he/calculator/mashkanta-yotzei-etiopiya`             | `WebPage` + `BreadcrumbList` + `WebApplication` (calculator) + `GovernmentService` (subjectOf)        |
-| `/he/yoetz-mashkanta/{city}`                           | `WebPage` + `BreadcrumbList` + `ItemList` of `Person`                                                 |
-| `/he/yoetz-mashkanta/{city}/{slug}`                    | `WebPage` + `BreadcrumbList` + `Person` (mainEntity)                                                  |
-| `/he/{article}` (Phase 4 cluster posts)                | `WebPage` + `BreadcrumbList` + `Article` + `FAQPage` (אופציונלי)                                      |
+| Route                                      | Schema graph                                                                                   |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| `/he`                                      | `WebSite` + `Organization` + `SearchAction` (sitelinks searchbox)                              |
+| `/he/listings/{city}/sale`                 | `WebPage` + `BreadcrumbList` + `ItemList` of `RealEstateListing`                               |
+| `/he/listings/{city}/{type}/{slug}`        | `WebPage` + `BreadcrumbList` + `RealEstateListing` (mainEntity)                                |
+| `/he/nadlan/{city}` (pillar עיר)           | `WebPage` + `BreadcrumbList` + `Place` + `FAQPage` (אם ≥3 שאלות)                               |
+| `/he/hitchadshut-ironit/{neighborhood}`    | `WebPage` + `BreadcrumbList` + `Place` + `GovernmentService` + `FAQPage`                       |
+| `/he/zchuyot/diur/{slug}` (pillar זכות)    | `WebPage` + `BreadcrumbList` + `Article` + `GovernmentService` + `FAQPage`                     |
+| `/he/calculator/mashkanta-yotzei-etiopiya` | `WebPage` + `BreadcrumbList` + `WebApplication` (calculator) + `GovernmentService` (subjectOf) |
+| `/he/yoetz-mashkanta/{city}`               | `WebPage` + `BreadcrumbList` + `ItemList` of `Person`                                          |
+| `/he/yoetz-mashkanta/{city}/{slug}`        | `WebPage` + `BreadcrumbList` + `Person` (mainEntity)                                           |
+| `/he/{article}` (Phase 4 cluster posts)    | `WebPage` + `BreadcrumbList` + `Article` + `FAQPage` (אופציונלי)                               |
 
 ---
 
