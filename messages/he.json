@@ -131,5 +131,9 @@
   "city_section_tools_title": "כלים שימושיים",
   "city_calc_cta_body": "מתכננים לרכוש דירה ב-{name}? בדקו זכאות להלוואה מסובסדת ולמענק עומד תוך דקה.",
   "cities_index_keywords": "ערים יוצאי אתיופיה, נדל\"ן יוצאי אתיופיה, התחדשות עירונית קהילה, אנשי מקצוע יוצאי אתיופיה, נתניה רחובות ראשון",
-  "city_keywords": "נדל\"ן ב{name}, יוצאי אתיופיה {name}, דירות ב{name}, התחדשות עירונית {name}, אנשי מקצוע {name}, משכנתא {name}"
+  "city_keywords": "נדל\"ן ב{name}, יוצאי אתיופיה {name}, דירות ב{name}, התחדשות עירונית {name}, אנשי מקצוע {name}, משכנתא {name}",
+  "region_jerusalem": "ירושלים",
+  "region_center": "מרכז",
+  "region_south": "דרום",
+  "region_north": "צפון"
 }

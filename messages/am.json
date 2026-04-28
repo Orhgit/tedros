@@ -131,5 +131,9 @@
   "city_section_tools_title": "ጠቃሚ መሣሪያዎች",
   "city_calc_cta_body": "በ{name} ቤት ለመግዛት እያቀዱ ነው? ለድጎማ ሞርጌጅ እና ለማይመለስ ስጦታ ብቁነትን በደቂቃ ውስጥ ያረጋግጡ።",
   "cities_index_keywords": "ለኢትዮጵያውያን-እስራኤላውያን ከተሞች, ለኢትዮጵያ ኦሊም ሪል እስቴት, የከተማ እድሳት ማህበረሰብ, የኢትዮጵያ-እስራኤል ባለሙያዎች, ነታንያ ረሆቮት ሪሾን",
-  "city_keywords": "በ{name} ሪል እስቴት, የኢትዮጵያ-እስራኤል {name}, በ{name} አፓርታማዎች, የከተማ እድሳት {name}, ባለሙያዎች {name}, ሞርጌጅ {name}"
+  "city_keywords": "በ{name} ሪል እስቴት, የኢትዮጵያ-እስራኤል {name}, በ{name} አፓርታማዎች, የከተማ እድሳት {name}, ባለሙያዎች {name}, ሞርጌጅ {name}",
+  "region_jerusalem": "ኢየሩሳሌም",
+  "region_center": "ማዕከል",
+  "region_south": "ደቡብ",
+  "region_north": "ሰሜን"
 }

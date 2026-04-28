@@ -5,7 +5,7 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import { CITIES, CITY_PATH_PREFIX, cityName, cityPath } from "~/lib/cities/registry";
 
-const REGIONS = ["center", "south", "north"] as const;
+const REGIONS = ["jerusalem", "center", "south", "north"] as const;
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
