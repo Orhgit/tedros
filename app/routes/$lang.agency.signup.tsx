@@ -11,7 +11,7 @@ import { requireUser } from "~/lib/auth/guards";
 import { db } from "~/lib/db.server";
 import { agencies, agencyMembers } from "~/lib/db/schema/identity";
 import { findAgencyForUser } from "~/lib/db/queries/listings.server";
-import { sendAdminAgencyPendingEmail } from "~/lib/email/resend.server";
+import { notifyAdminAgencyPending } from "~/lib/agencies/notify-admin.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import { agencySignupSchema } from "~/lib/validation/agency";
@@ -95,7 +95,7 @@ export async function action({ params, request }: Route.ActionArgs) {
 
   // Best-effort admin notification — don't fail signup on email errors.
   try {
-    await sendAdminAgencyPendingEmail({
+    await notifyAdminAgencyPending({
       agencyName: parsed.data.name.he,
       agencyId,
       contactEmail: parsed.data.contactEmail,
