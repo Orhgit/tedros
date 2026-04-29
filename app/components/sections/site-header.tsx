@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import type { Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import { Button } from "../ui/button";
-import { Icon } from "../ui/icon";
 import { LangSwitcher } from "../ui/lang-switcher";
 import { NavMenu } from "../ui/nav-menu";
 
@@ -62,11 +61,7 @@ export function SiteHeader({
         </div>
 
         <div className="flex items-center gap-2">
-          <LangSwitcher
-            current={locale}
-            hrefFor={hrefForLocale}
-            className="hidden sm:inline-flex"
-          />
+          <LangSwitcher current={locale} hrefFor={hrefForLocale} />
           {showAuth &&
             (user ? (
               <Button asChild variant="outline" size="sm">
@@ -77,15 +72,31 @@ export function SiteHeader({
                 <Link to={`${base}/login`}>{t(locale, "nav_login")}</Link>
               </Button>
             ))}
-          <button
-            type="button"
-            className="inline-flex size-10 items-center justify-center rounded-sm text-foreground hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring md:hidden"
-            aria-label="תפריט"
-          >
-            <Icon name="menu" />
-          </button>
         </div>
       </div>
+
+      {/* On mobile (<md) the inline nav row is hidden; render it below the
+          brand bar so users still get the pillar links. The lang switcher is
+          always inline above. */}
+      <nav
+        className="container-default flex gap-2 overflow-x-auto pb-2 md:hidden"
+        aria-label={t(locale, "nav_home")}
+      >
+        {items.map((item) => (
+          <Link
+            key={item.href}
+            to={item.href}
+            aria-current={item.current ? "page" : undefined}
+            className={`inline-flex shrink-0 items-center rounded-md px-3 py-1.5 text-sm transition ${
+              item.current
+                ? "bg-earth-800 text-white"
+                : "text-foreground hover:bg-muted"
+            }`}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
