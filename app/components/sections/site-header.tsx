@@ -10,15 +10,25 @@ export interface SiteHeaderProps {
   locale: Locale;
   currentPath?: string;
   user?: { name: string } | null;
+  // Owner directive: by default, the public site does not surface a login
+  // button — anyone can browse and subscribe. Logged-in flows (dashboard,
+  // agency) opt in by setting `showAuth=true`.
+  showAuth?: boolean;
 }
 
-export function SiteHeader({ locale, currentPath = "", user = null }: SiteHeaderProps) {
+export function SiteHeader({
+  locale,
+  currentPath = "",
+  user = null,
+  showAuth = false,
+}: SiteHeaderProps) {
   const base = `/${locale}`;
+  // Only surface pillars that are live in production. Coming-soon ones are
+  // shown on the homepage tile grid with a "soon" badge — but they don't
+  // belong in the global nav until the routes exist.
   const items = [
-    { href: `${base}/listings`, label: t(locale, "nav_listings") },
+    { href: `${base}/cities`, label: t(locale, "nav_listings") },
     { href: `${base}/rights`, label: t(locale, "nav_rights") },
-    { href: `${base}/professionals`, label: t(locale, "nav_professionals") },
-    { href: `${base}/articles`, label: t(locale, "nav_articles") },
   ].map((i) => ({ ...i, current: currentPath.startsWith(i.href) }));
 
   // Switch to other locale, preserving the rest of the path.
@@ -57,15 +67,16 @@ export function SiteHeader({ locale, currentPath = "", user = null }: SiteHeader
             hrefFor={hrefForLocale}
             className="hidden sm:inline-flex"
           />
-          {user ? (
-            <Button asChild variant="outline" size="sm">
-              <Link to={`${base}/dashboard`}>{user.name}</Link>
-            </Button>
-          ) : (
-            <Button asChild size="sm">
-              <Link to={`${base}/login`}>{t(locale, "nav_login")}</Link>
-            </Button>
-          )}
+          {showAuth &&
+            (user ? (
+              <Button asChild variant="outline" size="sm">
+                <Link to={`${base}/dashboard`}>{user.name}</Link>
+              </Button>
+            ) : (
+              <Button asChild size="sm">
+                <Link to={`${base}/login`}>{t(locale, "nav_login")}</Link>
+              </Button>
+            ))}
           <button
             type="button"
             className="inline-flex size-10 items-center justify-center rounded-sm text-foreground hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring md:hidden"

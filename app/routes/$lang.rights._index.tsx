@@ -5,9 +5,11 @@
 import { Link, useSearchParams } from "react-router";
 
 import type { Route } from "./+types/$lang.rights._index";
+import { SiteHeader } from "~/components/sections/site-header";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
+import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -45,17 +47,27 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="flag-stripe h-1.5" aria-hidden="true" />
-      <div className="container-default mx-auto max-w-5xl py-10">
-        <header className="mb-10">
-          <p className="text-sm font-medium text-earth-700">
+      <SiteHeader locale={locale} currentPath={`/${locale}/rights`} />
+      <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
+        {/* Hero with subtle earth + flag-color radial accent */}
+        <header className="relative mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/5 px-6 py-8 sm:px-10 sm:py-12">
+          <div
+            aria-hidden="true"
+            className="absolute -inset-e-12 -top-12 size-40 rounded-full bg-accent-yellow/15 blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute -inset-s-16 -bottom-16 size-56 rounded-full bg-accent-green/10 blur-3xl"
+          />
+          <p className="relative text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "rights_breadcrumb_home")}
             </Link>
           </p>
-          <h1 className="mt-2 font-display text-4xl font-bold tracking-tight text-earth-900 sm:text-5xl">
+          <h1 className="relative mt-2 font-display text-4xl font-bold tracking-tight text-earth-900 sm:text-5xl">
             {t(locale, "rights_landing_title")}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-700">
+          <p className="relative mt-4 max-w-2xl text-lg leading-relaxed text-ink-700">
             {t(locale, "rights_landing_subtitle")}
           </p>
         </header>
@@ -95,24 +107,28 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
             >
               {t(locale, "rights_filter_all")}
             </button>
-            {allTags.map((tg) => (
-              <button
-                key={tg}
-                type="button"
-                onClick={() => {
-                  const params = new URLSearchParams(searchParams);
-                  params.set("tag", tg);
-                  setSearchParams(params, { replace: true });
-                }}
-                className={`rounded-full px-3 py-1 text-sm transition ${
-                  tag === tg
-                    ? "bg-earth-800 text-white"
-                    : "bg-earth-100 text-earth-900 hover:bg-earth-200"
-                }`}
-              >
-                {t(locale, `rights_tag_${tg}`)}
-              </button>
-            ))}
+            {allTags.map((tg) => {
+              const isActive = tag === tg;
+              return (
+                <button
+                  key={tg}
+                  type="button"
+                  onClick={() => {
+                    const params = new URLSearchParams(searchParams);
+                    params.set("tag", tg);
+                    setSearchParams(params, { replace: true });
+                  }}
+                  className={
+                    isActive
+                      ? "inline-flex items-center gap-1.5 rounded-full bg-earth-800 px-3 py-1 text-sm text-white transition"
+                      : `${tagChipClasses(tg)} cursor-pointer px-3 py-1 text-sm`
+                  }
+                >
+                  <span aria-hidden="true">{glyphForTag(tg)}</span>
+                  {t(locale, `rights_tag_${tg}`)}
+                </button>
+              );
+            })}
           </div>
         </section>
 
@@ -126,31 +142,46 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
               {t(locale, "rights_empty_state")}
             </p>
           ) : (
-            filtered.map((r) => (
-              <Link
-                key={r.slug}
-                to={`/${locale}/rights/${r.slug}`}
-                className="group block rounded-lg border border-border bg-card p-5 shadow-xs transition-all hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-sm"
-              >
-                <h3 className="font-display text-base font-semibold text-earth-900 group-hover:text-earth-700">
-                  {r.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-600">{r.summary}</p>
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {r.tags.slice(0, 3).map((tg) => (
+            filtered.map((r) => {
+              const primaryTag = r.tags[0] ?? "housing";
+              const tone = classesForTag(primaryTag);
+              return (
+                <Link
+                  key={r.slug}
+                  to={`/${locale}/rights/${r.slug}`}
+                  className={`group relative block overflow-hidden rounded-lg border bg-card p-5 shadow-xs transition-all hover:-translate-y-0.5 hover:shadow-md ${tone.border} hover:border-earth-400`}
+                >
+                  {/* Top accent stripe in the primary-tag tone */}
+                  <span
+                    aria-hidden="true"
+                    className={`absolute inset-s-0 inset-e-0 top-0 h-1 ${tone.accentBg}`}
+                  />
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-display text-base font-semibold text-earth-900 group-hover:text-earth-700">
+                      {r.title}
+                    </h3>
                     <span
-                      key={tg}
-                      className="rounded-full bg-earth-100 px-2 py-0.5 text-[11px] text-earth-900"
+                      aria-hidden="true"
+                      className="text-xl leading-none"
+                      title={t(locale, `rights_tag_${primaryTag}`)}
                     >
-                      {t(locale, `rights_tag_${tg}`)}
+                      {glyphForTag(primaryTag)}
                     </span>
-                  ))}
-                </div>
-              </Link>
-            ))
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-600">{r.summary}</p>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {r.tags.slice(0, 3).map((tg) => (
+                      <span key={tg} className={tagChipClasses(tg)}>
+                        {t(locale, `rights_tag_${tg}`)}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              );
+            })
           )}
         </section>
-      </div>
+      </main>
     </div>
   );
 }
