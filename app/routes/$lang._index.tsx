@@ -1,8 +1,9 @@
 import { Form, Link, useNavigation } from "react-router";
-import { z } from "zod";
 import type { Route } from "./+types/$lang._index";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
+import { submitSubscriber } from "~/lib/subscribers/submit.server";
+import { subscribeSchema } from "~/lib/validation/subscriber";
 
 const PILLARS = [
   "rights",
@@ -22,25 +23,23 @@ export async function loader({ params }: Route.LoaderArgs) {
   return { locale, year: new Date().getFullYear() };
 }
 
-const subscribeSchema = z.object({
-  email: z.string().email(),
-});
-
 export async function action({ request, params }: Route.ActionArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const formData = await request.formData();
-  const parsed = subscribeSchema.safeParse({ email: formData.get("email") });
+  const parsed = subscribeSchema.safeParse({
+    email: formData.get("email"),
+    locale,
+  });
 
   if (!parsed.success) {
     return { ok: false as const, error: "invalid" as const, locale };
   }
 
-  // TODO(TED-25): persist to `subscribers` table once schema lands; send
-  // confirmation email via Resend. For now we accept the email and surface
-  // success in the UI so the UX is testable end-to-end.
-  console.log(`[subscribe] new signup: ${parsed.data.email} (locale=${locale})`);
-
-  return { ok: true as const, locale };
+  const result = await submitSubscriber(parsed.data);
+  if (!result.ok) {
+    return { ok: false as const, error: result.error, locale };
+  }
+  return { ok: true as const, status: result.status, locale };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {

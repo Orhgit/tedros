@@ -36,6 +36,7 @@ const envSchema = z.object({
   RESEND_API_KEY: z.string().optional(),
   RESEND_FROM: z.string().email().default("no-reply@tedros.local"),
   LEADS_DEFAULT_TO_EMAIL: z.string().email().default("admin@tedros.local"),
+  ADMIN_NOTIFICATIONS_EMAIL: z.string().email().default("admin@tedros.local"),
 
   // Cloudflare Turnstile (optional) — omitting keys disables verification
   TURNSTILE_SITE_KEY: z.string().optional(),

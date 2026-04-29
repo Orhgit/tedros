@@ -15,3 +15,4 @@ export * from "./rights";
 export * from "./professionals";
 export * from "./content";
 export * from "./audit";
+export * from "./subscribers";
