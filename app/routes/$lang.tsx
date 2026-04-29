@@ -16,6 +16,12 @@ export async function loader({ params, request }: Route.LoaderArgs) {
   if (cookieLocale !== candidate) {
     headers["Set-Cookie"] = await serializeLocaleCookie(candidate);
   }
+  // Prevent Safari (and others) from heuristically caching HTML in dev. A
+  // stale cached HTML caused owner-visible "the fix didn't apply" reports
+  // even after merge + reload. Production keeps default semantics.
+  if (process.env.NODE_ENV !== "production") {
+    headers["Cache-Control"] = "no-store, must-revalidate";
+  }
   const { PUBLIC_URL } = getEnv();
   return data(
     {
@@ -26,6 +32,11 @@ export async function loader({ params, request }: Route.LoaderArgs) {
     { headers },
   );
 }
+
+// Forward headers (Cache-Control, Content-Language, Set-Cookie) from the
+// loader to the actual HTTP response. React Router v7 doesn't auto-merge
+// loader-attached headers without an explicit `headers` export.
+export const headers: Route.HeadersFunction = ({ loaderHeaders }) => loaderHeaders;
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const base = data?.publicUrl ?? "http://localhost:3000";
