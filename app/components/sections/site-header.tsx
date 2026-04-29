@@ -88,9 +88,7 @@ export function SiteHeader({
             to={item.href}
             aria-current={item.current ? "page" : undefined}
             className={`inline-flex shrink-0 items-center rounded-md px-3 py-1.5 text-sm transition ${
-              item.current
-                ? "bg-earth-800 text-white"
-                : "text-foreground hover:bg-muted"
+              item.current ? "bg-earth-800 text-white" : "text-foreground hover:bg-muted"
             }`}
           >
             {item.label}
