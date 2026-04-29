@@ -216,9 +216,9 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
       am: "ተገቢ ውክልና — የመንግስት ዘርፍ የስራ ቅድመ ምርጫ",
     },
     slug: {
-      he: "public_sector-representation",
-      en: "public_sector-representation",
-      am: "public_sector-representation",
+      he: "public-sector-representation",
+      en: "public-sector-representation",
+      am: "public-sector-representation",
     },
     govUrl: "https://www.gov.il/he/departments/civil_service_commission",
     eligibilitySummary: {
@@ -639,9 +639,9 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
       am: "ቀጥተኛ መሰብሰብ — የፋላሽ ሙራ 2026 ሙከራ",
     },
     slug: {
-      he: "falash_mura-direct-absorption",
-      en: "falash_mura-direct-absorption",
-      am: "falash_mura-direct-absorption",
+      he: "falash-mura-direct-absorption",
+      en: "falash-mura-direct-absorption",
+      am: "falash-mura-direct-absorption",
     },
     govUrl: "https://www.gov.il/he/departments/integration_program/govil-landing-page",
     eligibilitySummary: {

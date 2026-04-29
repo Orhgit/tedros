@@ -1,13 +1,16 @@
 // /:lang/rights/:slug — Rights detail page (RIN-337 / part of RIN-328).
 // Renders a single right's body (markdown-rendered) with eligibility
-// summary, tags, and a CTA out to the official government form.
+// summary, tags, and a CTA out to the official government form. Visual
+// theming follows the right's primary tag (see `lib/rights/categories.ts`).
 
 import { Link, data } from "react-router";
 
 import type { Route } from "./+types/$lang.rights.$slug";
+import { SiteHeader } from "~/components/sections/site-header";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
+import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -52,45 +55,67 @@ export const meta: Route.MetaFunction = ({ data }) => {
 
 export default function RightDetail({ loaderData }: Route.ComponentProps) {
   const { locale, right, html } = loaderData;
+  const primaryTag = right.tags[0] ?? "housing";
+  const tone = classesForTag(primaryTag);
   return (
-    <article className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="flag-stripe h-1.5" aria-hidden="true" />
-      <div className="container-default mx-auto max-w-3xl py-10">
-        <p className="text-sm font-medium text-earth-700">
-          <Link to={`/${locale}`} className="hover:underline">
-            {t(locale, "rights_breadcrumb_home")}
-          </Link>{" "}
-          /{" "}
-          <Link to={`/${locale}/rights`} className="hover:underline">
-            {t(locale, "rights_landing_title")}
-          </Link>
-        </p>
-        <header className="mt-3 mb-6">
-          <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-            {right.title}
-          </h1>
-          <p className="mt-3 text-lg leading-relaxed text-ink-700">{right.summary}</p>
-          <div className="mt-4 flex flex-wrap gap-2">
+      <SiteHeader locale={locale} currentPath={`/${locale}/rights`} />
+      <article id="main-content" className="container-default mx-auto max-w-3xl py-10">
+        {/* Tone-aware hero block */}
+        <header
+          className={`relative mb-8 overflow-hidden rounded-2xl border bg-card p-6 sm:p-10 ${tone.border}`}
+        >
+          <span
+            aria-hidden="true"
+            className={`absolute inset-s-0 inset-e-0 top-0 h-1.5 ${tone.accentBg}`}
+          />
+          <p className="text-sm font-medium text-earth-700">
+            <Link to={`/${locale}`} className="hover:underline">
+              {t(locale, "rights_breadcrumb_home")}
+            </Link>{" "}
+            /{" "}
+            <Link to={`/${locale}/rights`} className="hover:underline">
+              {t(locale, "rights_landing_title")}
+            </Link>
+          </p>
+          <div className="mt-3 flex items-start gap-4">
+            <span aria-hidden="true" className="text-4xl leading-none">
+              {glyphForTag(primaryTag)}
+            </span>
+            <div className="flex-1">
+              <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
+                {right.title}
+              </h1>
+              <p className="mt-3 text-lg leading-relaxed text-ink-700">{right.summary}</p>
+            </div>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-2">
             {right.tags.map((tg) => (
               <Link
                 key={tg}
                 to={`/${locale}/rights?tag=${tg}`}
-                className="rounded-full bg-earth-100 px-2.5 py-0.5 text-xs text-earth-900 hover:bg-earth-200"
+                className={tagChipClasses(tg)}
               >
+                <span aria-hidden="true" className="me-1">
+                  {glyphForTag(tg)}
+                </span>
                 {t(locale, `rights_tag_${tg}`)}
               </Link>
             ))}
           </div>
         </header>
 
+        {/* Body — markdown-rendered from a vetted seed (HTML-escaped). */}
         <section
           className="prose prose-ink max-w-none"
-          // Body is rendered from a vetted internal seed source — escapeHtml
-          // is applied by the markdown renderer for any inline HTML.
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
-        <aside className="mt-10 rounded-lg border border-earth-200 bg-earth-50 p-5">
+        {/* Tone-themed CTA aside out to the official government form */}
+        <aside
+          className={`mt-10 overflow-hidden rounded-lg border p-5 ${tone.softBg} ${tone.border}`}
+        >
           <p className="text-sm font-medium text-earth-900">
             {t(locale, "rights_official_form_label")}
           </p>
@@ -98,15 +123,16 @@ export default function RightDetail({ loaderData }: Route.ComponentProps) {
             href={right.govUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center rounded-md bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground shadow-sm transition hover:bg-earth-700"
+            className={`mt-2 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:opacity-90 ${tone.accentBg}`}
           >
+            <span aria-hidden="true">↗</span>
             {t(locale, "rights_official_form_cta")}
           </a>
           <p className="mt-2 text-xs text-ink-600">
             {t(locale, "rights_official_form_disclaimer")}
           </p>
         </aside>
-      </div>
-    </article>
+      </article>
+    </div>
   );
 }
