@@ -38,11 +38,11 @@
 
 > Dear Tene Briut team,
 >
-> My name is Or Hazan. I'm building **Tedros** — a comprehensive community portal for the Ethiopian-Israeli community covering every life domain: rights, real estate, professionals, employment, education, **health**, family, heritage, news, and voice. Tri-lingual day one (Hebrew, English, Amharic). The platform's value is in being the action layer — *not just knowing, but receiving*.
+> My name is Or Hazan. I'm building **Tedros** — a comprehensive community portal for the Ethiopian-Israeli community covering every life domain: rights, real estate, professionals, employment, education, **health**, family, heritage, news, and voice. Tri-lingual day one (Hebrew, English, Amharic). The platform's value is in being the action layer — _not just knowing, but receiving_.
 >
 > I'm reaching out specifically because the health pillar of Tedros cannot launch credibly without you. After mapping the ecosystem, **there is no equivalent** — Tene Briut's by-and-for-community model with 25 years of work and health mediators from within the community is the trust foundation any platform needs.
 >
-> **What I'm exploring**: an anchor partnership for the health pillar — not just content, but *visible* co-byline:
+> **What I'm exploring**: an anchor partnership for the health pillar — not just content, but _visible_ co-byline:
 >
 > 1. **Amharic-fluent provider directory** — Tedros builds a searchable directory; we start from sources you flag, publish under shared credit.
 > 2. **Chronic-disease prevention content** — syndication of your existing materials with co-editing, with a clear back-link to Tene Briut on every page.

@@ -6,15 +6,15 @@
 
 ## Drafts ready to send
 
-| File | Recipient | Pillar gated | Lead time |
-|---|---|---|---|
-| [`tene-briut.md`](./tene-briut.md) | Tene Briut (טנא בריאות) | Pillar 6 — Health & Wellness | 30+ days |
-| [`tebeka.md`](./tebeka.md) | Tebeka (טבקה) | Pillar 1 (legal triage) + Pillar 10 (Voice) | 30+ days |
+| File                               | Recipient               | Pillar gated                                | Lead time |
+| ---------------------------------- | ----------------------- | ------------------------------------------- | --------- |
+| [`tene-briut.md`](./tene-briut.md) | Tene Briut (טנא בריאות) | Pillar 6 — Health & Wellness                | 30+ days  |
+| [`tebeka.md`](./tebeka.md)         | Tebeka (טבקה)           | Pillar 1 (legal triage) + Pillar 10 (Voice) | 30+ days  |
 
 ## How to use
 
 1. **Owner adapts** — these are starting drafts. Add personal notes, mutual contacts if any, etc.
-2. **Send from owner's address** (`orosh87@gmail.com`) — *not* from a generic project address. Anchor partnerships are person-to-person.
+2. **Send from owner's address** (`orosh87@gmail.com`) — _not_ from a generic project address. Anchor partnerships are person-to-person.
 3. **Update [`outreach-log.md`](./outreach-log.md)** when sent (date sent, response status, follow-up date).
 4. **Follow-up cadence**: 7 days no-response → friendly bump. 14 days no-response → escalate via mutual contact if any. 30 days no-response → mark as not-yet-engaged in risk register R13.
 

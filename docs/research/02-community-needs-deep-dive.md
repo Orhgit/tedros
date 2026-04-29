@@ -31,7 +31,7 @@ A structured map of what an Ethiopian-Israeli community member actually needs ac
 - Substantially lower wages and higher unemployment vs general Jewish population.
 - Concentrated in low-wage sectors with limited advancement.
 - Despite 2008 government decision and follow-up plans, public-sector senior representation remains minimal. ([JCPA], [Adva Center])
-- **Olim Beyahad** has placed >700 academics with 90% retention; this is the *exception* that proves the systemic problem.
+- **Olim Beyahad** has placed >700 academics with 90% retention; this is the _exception_ that proves the systemic problem.
 
 ### Mental health
 
@@ -66,88 +66,89 @@ A structured map of what an Ethiopian-Israeli community member actually needs ac
 
 ## Needs across the life journey
 
-The needs below are the matrix Tedros must serve. Each cell is a *mini-product* the platform should expose: read it, claim it, contact someone about it.
+The needs below are the matrix Tedros must serve. Each cell is a _mini-product_ the platform should expose: read it, claim it, contact someone about it.
 
 ### 1. New immigrant (years 1–3 from aliyah)
 
-| Need | Who serves it today | Tedros angle |
-|---|---|---|
-| Klita-center directory | Jewish Agency (5 centers stood up for Tzur Israel ops) | Aggregate + Amharic content + reviews |
-| Hebrew-language learning | אולפן + Ministry of Aliyah | Find-an-ulpan + community ulpan reviews |
-| Direct-absorption housing program | Govt 2026 pilot | Status checker, eligibility guide |
-| Klita basket / education bag | Kol-Zchut (encyclopedic) | "Apply now" wizard + locale switch |
-| Amharic-speaking pediatrician / GP | Tene Briut (informal) | Searchable directory |
-| Kessim & community synagogue locator | Council of Kessim (no central site) | Map + service-request form |
+| Need                                 | Who serves it today                                    | Tedros angle                            |
+| ------------------------------------ | ------------------------------------------------------ | --------------------------------------- |
+| Klita-center directory               | Jewish Agency (5 centers stood up for Tzur Israel ops) | Aggregate + Amharic content + reviews   |
+| Hebrew-language learning             | אולפן + Ministry of Aliyah                             | Find-an-ulpan + community ulpan reviews |
+| Direct-absorption housing program    | Govt 2026 pilot                                        | Status checker, eligibility guide       |
+| Klita basket / education bag         | Kol-Zchut (encyclopedic)                               | "Apply now" wizard + locale switch      |
+| Amharic-speaking pediatrician / GP   | Tene Briut (informal)                                  | Searchable directory                    |
+| Kessim & community synagogue locator | Council of Kessim (no central site)                    | Map + service-request form              |
 
 ### 2. Youth & education (ages 6–25)
 
-| Need | Who serves it today | Tedros angle |
-|---|---|---|
-| Tutoring (matriculation gap) | ENP, PERACH, Fidel | Matchmaker + community mentor signup |
-| University scholarships | ISEF, Hesegim, Kol-Zchut, individual unis | Single scholarship-finder with deadline alerts |
-| Pre-army mechinot tailored | Tabor, Dror, Chosen | Comparison + application calendar |
-| Career counseling (high school → workforce) | Olim Beyahad, Aharai | Personalized recommendation engine |
-| Hi-tech entry programs | Tech-Career, Net4U, Coding Academy | Cohort calendar + alumni stories |
-| Youth leadership | Mimad, Friends of Nature seeds | Events + applications |
+| Need                                        | Who serves it today                       | Tedros angle                                   |
+| ------------------------------------------- | ----------------------------------------- | ---------------------------------------------- |
+| Tutoring (matriculation gap)                | ENP, PERACH, Fidel                        | Matchmaker + community mentor signup           |
+| University scholarships                     | ISEF, Hesegim, Kol-Zchut, individual unis | Single scholarship-finder with deadline alerts |
+| Pre-army mechinot tailored                  | Tabor, Dror, Chosen                       | Comparison + application calendar              |
+| Career counseling (high school → workforce) | Olim Beyahad, Aharai                      | Personalized recommendation engine             |
+| Hi-tech entry programs                      | Tech-Career, Net4U, Coding Academy        | Cohort calendar + alumni stories               |
+| Youth leadership                            | Mimad, Friends of Nature seeds            | Events + applications                          |
 
 ### 3. Working-age adults (25–50)
 
-| Need | Who serves it today | Tedros angle |
-|---|---|---|
-| Job board (community-aware) | Olim Beyahad placement | Curated listings; employer accountability |
-| Promotions & advancement programs | Olim Beyahad excellence-track | Cohort applications + alumni stories |
-| Small-business loans | UJIA-KIEDF | Eligibility wizard + lender contacts |
-| Entrepreneurship training | Kurat, Shiluvim | Cohort calendar |
-| Real-estate (sale/rent/urban renewal) | Yad2/Madlan (general); Tedros (community) | **Existing pillar** — community-aware listings + lead routing to vetted brokers |
-| 600K mortgage — eligibility & application | Govt + community brokers | Wizard + status tracker + branch finder |
-| Urban-renewal status (am I in a project?) | None unified | Address lookup → project + timeline + your rights |
-| Public housing | Ministry + municipalities | Eligibility wizard + waitlist info |
+| Need                                      | Who serves it today                       | Tedros angle                                                                    |
+| ----------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------- |
+| Job board (community-aware)               | Olim Beyahad placement                    | Curated listings; employer accountability                                       |
+| Promotions & advancement programs         | Olim Beyahad excellence-track             | Cohort applications + alumni stories                                            |
+| Small-business loans                      | UJIA-KIEDF                                | Eligibility wizard + lender contacts                                            |
+| Entrepreneurship training                 | Kurat, Shiluvim                           | Cohort calendar                                                                 |
+| Real-estate (sale/rent/urban renewal)     | Yad2/Madlan (general); Tedros (community) | **Existing pillar** — community-aware listings + lead routing to vetted brokers |
+| 600K mortgage — eligibility & application | Govt + community brokers                  | Wizard + status tracker + branch finder                                         |
+| Urban-renewal status (am I in a project?) | None unified                              | Address lookup → project + timeline + your rights                               |
+| Public housing                            | Ministry + municipalities                 | Eligibility wizard + waitlist info                                              |
 
 ### 4. Family & social
 
-| Need | Who serves it today | Tedros angle |
-|---|---|---|
-| Daycare subsidies | Govt | Eligibility wizard |
-| Domestic-violence resources | WTB list, community SWs | **Crisis-mode UX** (one-tap, anonymous, multi-lingual) |
-| Women's empowerment networks | Facebook community + community SWs | Events + safe-space directory |
-| Couples counseling (culturally aware) | Tene Briut + community SWs | Searchable directory |
-| Mental health (Amharic-fluent) | Tene Briut + Kol-Zchut | **Anchor partnership content** — Amharic provider map |
-| Anti-racism complaint filing | מח"ש (broken pipeline per Comptroller) | Guided complaint flow + record-keeping |
-| Police-conduct legal aid | Tebeka | One-click triage to Tebeka with case prep |
+| Need                                  | Who serves it today                    | Tedros angle                                           |
+| ------------------------------------- | -------------------------------------- | ------------------------------------------------------ |
+| Daycare subsidies                     | Govt                                   | Eligibility wizard                                     |
+| Domestic-violence resources           | WTB list, community SWs                | **Crisis-mode UX** (one-tap, anonymous, multi-lingual) |
+| Women's empowerment networks          | Facebook community + community SWs     | Events + safe-space directory                          |
+| Couples counseling (culturally aware) | Tene Briut + community SWs             | Searchable directory                                   |
+| Mental health (Amharic-fluent)        | Tene Briut + Kol-Zchut                 | **Anchor partnership content** — Amharic provider map  |
+| Anti-racism complaint filing          | מח"ש (broken pipeline per Comptroller) | Guided complaint flow + record-keeping                 |
+| Police-conduct legal aid              | Tebeka                                 | One-click triage to Tebeka with case prep              |
 
 ### 5. Senior (50+) and second-generation parents
 
-| Need | Who serves it today | Tedros angle |
-|---|---|---|
-| National Insurance rights (גיל זהב) | Bituach Leumi | Eligibility wizard with cultural framing |
-| Long-term care (Amharic-fluent providers) | None unified | Provider directory |
-| Heritage transmission to grandchildren | Heritage Center, IAEJ | Storytelling-archive + classroom resources |
-| Synagogue + kessim accessibility | Council of Kessim | Locator + service-request |
-| Pension & savings programs | Govt | Eligibility wizard |
+| Need                                      | Who serves it today   | Tedros angle                               |
+| ----------------------------------------- | --------------------- | ------------------------------------------ |
+| National Insurance rights (גיל זהב)       | Bituach Leumi         | Eligibility wizard with cultural framing   |
+| Long-term care (Amharic-fluent providers) | None unified          | Provider directory                         |
+| Heritage transmission to grandchildren    | Heritage Center, IAEJ | Storytelling-archive + classroom resources |
+| Synagogue + kessim accessibility          | Council of Kessim     | Locator + service-request                  |
+| Pension & savings programs                | Govt                  | Eligibility wizard                         |
 
 ### 6. Heritage, culture, identity (cross-cutting)
 
-| Need | Who serves it today | Tedros angle |
-|---|---|---|
-| Sigd planning + events | IAEJ + Heritage Center | Event calendar + city editions |
-| Amharic-language preservation | School-level | Resources hub + Ge'ez learning |
-| Oral history archives | Heritage Center | Co-publish stories |
-| Community news + activism | IAEJ + scattered Facebook | Aggregated news feed + RSS |
-| Visibility / representation tracking | State Comptroller report | Live dashboard: representation by ministry |
+| Need                                 | Who serves it today       | Tedros angle                               |
+| ------------------------------------ | ------------------------- | ------------------------------------------ |
+| Sigd planning + events               | IAEJ + Heritage Center    | Event calendar + city editions             |
+| Amharic-language preservation        | School-level              | Resources hub + Ge'ez learning             |
+| Oral history archives                | Heritage Center           | Co-publish stories                         |
+| Community news + activism            | IAEJ + scattered Facebook | Aggregated news feed + RSS                 |
+| Visibility / representation tracking | State Comptroller report  | Live dashboard: representation by ministry |
 
 ### 7. Voice & advocacy (cross-cutting)
 
-| Need | Who serves it today | Tedros angle |
-|---|---|---|
-| Report racism / discrimination | Govt anti-racism unit (no enforcement power per Comptroller) | Structured submission with auto-routing |
-| Petitions + campaigns | IAEJ ad-hoc | Hosted campaign feature |
-| Personal stories | Scattered | Curated user-submitted stories with consent flow |
+| Need                           | Who serves it today                                          | Tedros angle                                     |
+| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------ |
+| Report racism / discrimination | Govt anti-racism unit (no enforcement power per Comptroller) | Structured submission with auto-routing          |
+| Petitions + campaigns          | IAEJ ad-hoc                                                  | Hosted campaign feature                          |
+| Personal stories               | Scattered                                                    | Curated user-submitted stories with consent flow |
 
 ## Strategic implications
 
 ### A. The thesis
 
 Tedros's competitive position is **the Action Layer for an Information Ecosystem**.
+
 - Information already exists across Kol-Zchut, ENP, Tebeka, Tene Briut, govt sites.
 - Trust already lives at Tene Briut, Tebeka, ENP.
 - What is missing: the unified surface where reading turns into doing — applying, booking, listing, complaining, finding a person — in HE/EN/AM.
@@ -157,14 +158,14 @@ Tedros's competitive position is **the Action Layer for an Information Ecosystem
 Every pillar exposes the same three layers:
 
 1. **Read** — Programmatic SEO content, multi-lingual, sourced. Wins ranking by being more useful per page than Kol-Zchut's encyclopedia format.
-2. **Do** — Wizards, applications, booking, complaint-filing, status-checking. Wins users by saving them the *Hebrew-bureaucracy-tax* that the community pays disproportionately.
+2. **Do** — Wizards, applications, booking, complaint-filing, status-checking. Wins users by saving them the _Hebrew-bureaucracy-tax_ that the community pays disproportionately.
 3. **Connect** — Vetted professionals, mentors, peer support, kessim, klita centers. Wins trust by curating community-from-within.
 
 ### C. Why the existing real-estate-first framing is too narrow
 
 - Real estate alone won't acquire users in 90 days. SEO authority on real-estate is contested (Yad2, Madlan, Komo) and slow.
 - Information pillars (rights, scholarships, programs) acquire users **faster** because the SEO competition is weaker (Kol-Zchut is encyclopedic; we are action-driven).
-- A wider portal *funds* itself through real-estate leads (existing plan) AND professional referrals AND optional employer postings — a portfolio of income streams instead of a single-track risk (R8: lead model unvalidated).
+- A wider portal _funds_ itself through real-estate leads (existing plan) AND professional referrals AND optional employer postings — a portfolio of income streams instead of a single-track risk (R8: lead model unvalidated).
 
 ### D. Three "trust anchors" to land before public launch
 
@@ -178,10 +179,10 @@ Without at least Tene Briut and Tebeka in place, any health/legal content we pub
 
 These move into the interview protocol (now needing expansion beyond real estate):
 
-1. Which life-journey stage is most *underserved* today, in the user's lived experience? (Hypothesis: information-to-action gap on rights claims.)
-2. For mental health, would the user prefer an *Amharic-fluent* provider or a *culturally fluent* one? (Could be different.)
+1. Which life-journey stage is most _underserved_ today, in the user's lived experience? (Hypothesis: information-to-action gap on rights claims.)
+2. For mental health, would the user prefer an _Amharic-fluent_ provider or a _culturally fluent_ one? (Could be different.)
 3. Is there appetite for an anonymous racism/police-conduct reporting flow on Tedros, or does the user prefer Tedros stay neutral and direct them to Tebeka?
-4. What language preference dominates *navigation* vs *content*? (Hypothesis: HE-first navigation, AM-first content for elders, EN-first content for diaspora visitors.)
+4. What language preference dominates _navigation_ vs _content_? (Hypothesis: HE-first navigation, AM-first content for elders, EN-first content for diaspora visitors.)
 
 ## Sources
 

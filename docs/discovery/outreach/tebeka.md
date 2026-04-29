@@ -40,7 +40,7 @@
 
 > Dear Tebeka team (and Fentahun, if reaching out directly),
 >
-> My name is Or Hazan. I'm building **Tedros** — a comprehensive community portal for the Ethiopian-Israeli community across all life domains: rights, real estate, professionals, employment, education, health, family, heritage, news, **and voice**. Tri-lingual day one (HE/EN/AM). The platform is built as the *action layer* over the information already published across the ecosystem.
+> My name is Or Hazan. I'm building **Tedros** — a comprehensive community portal for the Ethiopian-Israeli community across all life domains: rights, real estate, professionals, employment, education, health, family, heritage, news, **and voice**. Tri-lingual day one (HE/EN/AM). The platform is built as the _action layer_ over the information already published across the ecosystem.
 >
 > Two pillars cannot stand without you:
 >
