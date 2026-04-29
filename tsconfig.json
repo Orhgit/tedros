@@ -30,5 +30,13 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    ".react-router",
+    "**/*.stories.tsx",
+    "**/*.stories.ts",
+    ".storybook/**"
+  ]
 }
