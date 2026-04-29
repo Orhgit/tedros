@@ -1,4 +1,5 @@
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
+import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 
@@ -34,6 +35,10 @@ ${xDefaultFor(path)}
     "/calculator/mortgage-ethiopian-immigrants",
     CITY_PATH_PREFIX,
     ...CITIES.map((c) => `${CITY_PATH_PREFIX}/${c.slug}`),
+    "/rights",
+    // Each right has the same Latin slug across locales today; if they
+    // diverge later, sitemap will need to walk allRightSlugsByLocale().
+    ...PRIORITY_RIGHTS.map((r) => `/rights/${r.slug.he}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
