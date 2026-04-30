@@ -2,6 +2,7 @@ import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
+import { relevantCities } from "~/lib/rights/relevance";
 
 /**
  * Resource route — `/sitemap.xml`. Lists every public URL with hreflang
@@ -30,6 +31,16 @@ ${xDefaultFor(path)}
   </url>`;
   }
 
+  // RIN-339 — programmatic SEO right × city cells. Filter by relevance
+  // (`isRelevant`) so we don't ship 1,140 thin pages — narrows to ~600
+  // cells across community-cities and list-bound rights.
+  const rightCityCells: string[] = [];
+  for (const right of PRIORITY_RIGHTS) {
+    for (const city of relevantCities(right.slug.he, CITIES)) {
+      rightCityCells.push(`/rights/${right.slug.he}/${city.slug}`);
+    }
+  }
+
   const PATHS = [
     "",
     "/calculator/mortgage-ethiopian-immigrants",
@@ -39,6 +50,7 @@ ${xDefaultFor(path)}
     // Each right has the same Latin slug across locales today; if they
     // diverge later, sitemap will need to walk allRightSlugsByLocale().
     ...PRIORITY_RIGHTS.map((r) => `/rights/${r.slug.he}`),
+    ...rightCityCells,
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
