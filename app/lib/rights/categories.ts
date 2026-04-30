@@ -87,6 +87,17 @@ const TAG_TO_TONE: Record<string, Tone> = {
   anchor_partner: "sigd",
   falash_mura: "earth",
   current_program: "green",
+  // RIN-336 expansion (10 → 18 rights, more category breadth):
+  senior: "earth",
+  mentorship: "sigd",
+  mental_health: "sigd",
+  tax_relief: "gold",
+  small_business: "earth",
+  entrepreneurship: "gold",
+  civic_service: "ink",
+  urban_renewal: "earth",
+  youth: "green",
+  health: "red",
 };
 
 export function toneForTag(tag: string): Tone {
@@ -126,6 +137,17 @@ const TAG_GLYPH: Record<string, string> = {
   anchor_partner: "⭐",
   falash_mura: "🕊️",
   current_program: "🆕",
+  // RIN-336 expansion:
+  senior: "🧓",
+  mentorship: "🤲",
+  mental_health: "🧠",
+  tax_relief: "💸",
+  small_business: "🏪",
+  entrepreneurship: "🚀",
+  civic_service: "🎖️",
+  urban_renewal: "🏗️",
+  youth: "🌱",
+  health: "🏥",
 };
 
 export function glyphForTag(tag: string): string {
