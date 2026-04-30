@@ -3,6 +3,7 @@ import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
 import { GLOSSARY } from "~/lib/glossary/glossary";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
+import { ORGS } from "~/lib/orgs/orgs";
 import { relevantCities } from "~/lib/rights/relevance";
 
 /**
@@ -55,6 +56,9 @@ ${xDefaultFor(path)}
     // RIN-418 — Glossary (Wave 1 of RIN-417): 12 entries × 3 locales.
     "/glossary",
     ...GLOSSARY.map((e) => `/glossary/${e.slug}`),
+    // RIN-419 — Org profiles (Wave 1b of RIN-417): 12 entries × 3 locales.
+    "/orgs",
+    ...ORGS.map((o) => `/orgs/${o.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
