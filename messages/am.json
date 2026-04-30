@@ -314,5 +314,21 @@
   "lead_form_error_generic": "የሆነ ችግር ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።",
   "lead_form_success_title": "እናመሰግናለን!",
   "lead_form_success_body": "ጥያቄዎ ደርሷል፤ በቅርቡ እንገናኛለን።",
-  "lead_form_consent": "ላክን በመጫን ዝርዝሮቼ ለሚመለከተው ኤጀንሲ መጋራቱን ስማሁ።"
+  "lead_form_consent": "ላክን በመጫን ዝርዝሮቼ ለሚመለከተው ኤጀንሲ መጋራቱን ስማሁ።",
+  "glossary_landing_title": "የቃላት መዝገብ",
+  "glossary_landing_subtitle": "ሰግድ ምንድ ነው? ቄሶች እነማን ናቸው? በቤታ እስራኤልና በፋላሽ ሙራ መካከል ያለው ልዩነት ምንድ ነው? ሁሉንም አስፈላጊ የማህበረሰብ ቃላት — በዕብራይስጥ፣ በእንግሊዝኛ እና በአማርኛ።",
+  "glossary_breadcrumb_glossary": "የቃላት መዝገብ",
+  "glossary_search_placeholder": "ቃል ፈልግ (ለምሳሌ \"ሰግድ\"፣ \"ቄሶች\")",
+  "glossary_filter_label": "በምድብ ማጣራት",
+  "glossary_filter_all": "ሁሉም ምድቦች",
+  "glossary_empty_state": "ተመሳሳይ ቃል አልተገኘም። ሌላ ፍለጋ ይሞክሩ።",
+  "glossary_category_tradition": "ባህል",
+  "glossary_category_history": "ታሪክ",
+  "glossary_category_identity": "ማንነት",
+  "glossary_category_organization": "ድርጅቶች",
+  "glossary_category_program": "ፕሮግራሞች",
+  "glossary_related_terms_heading": "ተዛማጅ ቃላት",
+  "glossary_related_rights_heading": "ተዛማጅ መብቶች",
+  "glossary_sources_heading": "ምንጮች",
+  "glossary_term_count": "ቃላት"
 }
