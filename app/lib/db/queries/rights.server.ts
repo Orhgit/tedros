@@ -9,6 +9,7 @@
 import { PRIORITY_RIGHTS, type RightSeed } from "../seeds/rights";
 import type { Locale } from "../../i18n/config";
 import { DEFAULT_LOCALE } from "../../i18n/config";
+import type { WizardSchema } from "../../rights/wizard-engine";
 
 export interface RightSummary {
   slug: string;
@@ -20,6 +21,9 @@ export interface RightSummary {
 export interface RightDetail extends RightSummary {
   body: string;
   govUrl: string;
+  // Optional eligibility wizard schema (RIN-338). When present the detail
+  // route renders an inline `<EligibilityWizard>` below the body.
+  wizard: WizardSchema | null;
 }
 
 function pickLocale(t: { he: string; en?: string; am?: string }, locale: Locale): string {
@@ -54,6 +58,7 @@ export function getRightBySlug(slug: string, locale: Locale): RightDetail | null
     body: bodyForLocale(seed, locale),
     govUrl: seed.govUrl,
     tags: seed.tags,
+    wizard: seed.wizard ?? null,
   };
 }
 
