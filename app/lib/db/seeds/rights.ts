@@ -22,6 +22,7 @@
 
 import type { Translatable } from "../columns";
 import type { Locale } from "../../i18n/config";
+import type { WizardSchema } from "../../rights/wizard-engine";
 
 export interface RightSeed {
   title: Translatable;
@@ -30,6 +31,9 @@ export interface RightSeed {
   eligibilitySummary: Translatable;
   tags: string[];
   bodies: Record<Locale, string>;
+  // Optional wizard. When present, the detail route renders an inline
+  // eligibility check (RIN-338) below the body.
+  wizard?: WizardSchema;
 }
 
 export const PRIORITY_RIGHTS: RightSeed[] = [
@@ -206,6 +210,66 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
 📞 **የመሰብሰብ ሚኒስቴር መስመር**: *5454 (ዕብራይስጥ / እንግሊዝኛ / አማርኛ)
 `,
     },
+    wizard: {
+      questions: [
+        {
+          id: "registeredWithin12Months",
+          type: "boolean",
+          label: {
+            he: "נרשמתם במשרד הקליטה תוך 12 חודשים מיום העלייה?",
+            en: "Did you register with the Ministry of Aliyah within 12 months of arrival?",
+            am: "ከደረሱ በ12 ወራት ውስጥ በመሰብሰብ ሚኒስቴር ተመዘገቡ?",
+          },
+        },
+        {
+          id: "hasOlehId",
+          type: "boolean",
+          label: {
+            he: "ברשותכם תעודת עולה תקפה?",
+            en: "Do you have a valid immigrant ID (Te'udat Oleh)?",
+            am: "ትክክለኛ የስደተኛ መታወቂያ (የኡለ መታወቂያ) አለዎት?",
+          },
+        },
+        {
+          id: "enrolledInUlpan",
+          type: "boolean",
+          label: {
+            he: "נרשמתם / מתכוונים להירשם לאולפן עברית?",
+            en: "Are you enrolled (or planning to enroll) in a Hebrew ulpan?",
+            am: "በዕብራይስጥ ኡልፓን ተመዝግበዋል (ወይም ለመመዝገብ ያስባሉ)?",
+          },
+        },
+      ],
+      rules: [
+        {
+          kind: "require-true",
+          questionId: "registeredWithin12Months",
+          reason: {
+            he: "סל הקליטה דורש הרשמה תוך 12 חודשים מהעלייה. אחרי המועד הזכאות פגה.",
+            en: "The klita basket requires registration within 12 months of aliyah. After this window the entitlement expires.",
+            am: "የመመለሻ ቅርጫት ከአሊያ በ12 ወራት ውስጥ ምዝገባ ይጠይቃል። ከዚህ መስኮት በኋላ ብቁነቱ ያበቃል።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "hasOlehId",
+          reason: {
+            he: "תעודת עולה היא תנאי הכרחי. אם אבדה — לפנות למשרד הקליטה לקבלת עותק.",
+            en: "An immigrant ID is a hard requirement. If lost — contact the Ministry of Aliyah for a replacement.",
+            am: "የስደተኛ መታወቂያ ግዴታ ነው። ከጠፋ — ወደ መሰብሰብ ሚኒስቴር ይደውሉ።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "enrolledInUlpan",
+          reason: {
+            he: "תשלום מלא של סל הקליטה מותנה בלימוד באולפן.",
+            en: "Full klita-basket payment is conditional on ulpan enrollment.",
+            am: "የመመለሻ ቅርጫት ሙሉ ክፍያ በኡልፓን ምዝገባ ላይ የተመሰረተ ነው።",
+          },
+        },
+      ],
+    },
   },
 
   // 3 — Affirmative action / public_sector representation
@@ -362,6 +426,111 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
 🔗 **ENP**: [enp.org.il](https://www.enp.org.il/he/)
 `,
     },
+    wizard: {
+      questions: [
+        {
+          id: "ethiopianDescent",
+          type: "boolean",
+          label: {
+            he: "אתם ממוצא אתיופי (אתם / ההורה / בן.בת זוג)?",
+            en: "Are you of Ethiopian descent (self / parent / spouse)?",
+            am: "ከኢትዮጵያዊ መነሻ (እርስዎ / ወላጅ / አጋር) ነዎት?",
+          },
+        },
+        {
+          id: "activeUndergrad",
+          type: "boolean",
+          label: {
+            he: "אתם סטודנטים פעילים בתואר ראשון (שנים 1-3)?",
+            en: "Are you an active undergraduate student (years 1-3)?",
+            am: "ንቁ ቅዳሜ ተማሪ ነዎት (1-3 ዓመታት)?",
+          },
+        },
+        {
+          id: "communityServiceCommit",
+          type: "boolean",
+          label: {
+            he: "מוכנים להתחייב ל-5-10 שעות שירות קהילתי שבועיות במהלך התואר?",
+            en: "Are you willing to commit to 5-10 weekly community-service hours during your studies?",
+            am: "በትምህርት ጊዜ ለ5-10 ሳምንታዊ የማህበረሰብ አገልግሎት ሰዓታት ቁርጠኝነት ለመስጠት ይዘጋጃሉ?",
+          },
+        },
+        {
+          id: "incomeTier",
+          type: "radio",
+          label: {
+            he: "מצב סוציו-אקונומי משפחתי",
+            en: "Family socioeconomic status",
+            am: "የቤተሰብ ማህበራዊ-ኢኮኖሚያዊ ሁኔታ",
+          },
+          options: [
+            {
+              value: "low",
+              label: {
+                he: "נמוך — מתחת לחציון",
+                en: "Low — below median",
+                am: "ዝቅተኛ — ከመካከለኛ በታች",
+              },
+            },
+            {
+              value: "medium",
+              label: {
+                he: "בינוני — סביב חציון",
+                en: "Medium — around median",
+                am: "መካከለኛ — መካከለኛ አካባቢ",
+              },
+            },
+            {
+              value: "high",
+              label: {
+                he: "גבוה — מעל חציון",
+                en: "High — above median",
+                am: "ከፍተኛ — ከመካከለኛ በላይ",
+              },
+            },
+          ],
+        },
+      ],
+      rules: [
+        {
+          kind: "require-true",
+          questionId: "ethiopianDescent",
+          reason: {
+            he: "מלגות ISEF / Hesegim מיועדות לקהילת יוצאי אתיופיה.",
+            en: "ISEF / Hesegim scholarships are for the Ethiopian-Israeli community.",
+            am: "ISEF / Hesegim ስኮላርሺፖች ለኢትዮጵያ-እስራኤላውያን ማህበረሰብ ናቸው።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "activeUndergrad",
+          reason: {
+            he: "Hesegim מתמקדת בתואר ראשון; ISEF מתחיל מתואר שני (ראו אופציה זו בדף).",
+            en: "Hesegim focuses on undergraduate studies; ISEF starts at graduate level (see that option on the page).",
+            am: "Hesegim በቅዳሜ ትምህርት ላይ ያተኩራል፤ ISEF ከማስተርስ ይጀምራል (ይህን አማራጭ በገጹ ይመልከቱ)።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "communityServiceCommit",
+          reason: {
+            he: "מחויבות לשירות קהילתי היא תנאי לקבלת המלגה.",
+            en: "Community-service commitment is a scholarship requirement.",
+            am: "የማህበረሰብ አገልግሎት ቁርጠኝነት የስኮላርሺፕ መስፈርት ነው።",
+          },
+        },
+        {
+          kind: "require-not",
+          questionId: "incomeTier",
+          values: ["high"],
+          reason: {
+            he: "המלגות מקצות לפי צורך סוציו-אקונומי. במצב גבוה — בדקו אופציות אחרות בדף.",
+            en: "Scholarships are need-based. With high income, see alternative options on the page.",
+            am: "ስኮላርሺፖች በፍላጎት ላይ የተመሰረቱ ናቸው። በከፍተኛ ገቢ — በገጹ ሌሎች አማራጮችን ይመልከቱ።",
+          },
+        },
+      ],
+    },
   },
 
   // 5 — Daycare subsidy (family pillar precursor)
@@ -446,6 +615,84 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
 
 🔗 **የኢኮኖሚ ሚኒስቴር — የቀን እንክብካቤ**: gov.il
 `,
+    },
+    wizard: {
+      questions: [
+        {
+          id: "bothParentsWork",
+          type: "boolean",
+          label: {
+            he: "שני בני הזוג עובדים?",
+            en: "Are both partners employed?",
+            am: "ሁለቱም አጋሮች ይሰራሉ?",
+          },
+        },
+        {
+          id: "sufficientHours",
+          type: "boolean",
+          label: {
+            he: "אחד מבני הזוג עובד 30+ שעות שבועיות, השני 24+ שעות?",
+            en: "Does one partner work 30+ weekly hours and the other 24+?",
+            am: "አንድ አጋር በሳምንት 30+ ሰዓታት፣ ሌላው 24+ ይሰራል?",
+          },
+        },
+        {
+          id: "childAge",
+          type: "boolean",
+          label: {
+            he: "הילד.ה בגיל 3 חודשים — 3 שנים?",
+            en: "Is the child between 3 months and 3 years old?",
+            am: "ልጁ ከ3 ወራት – 3 ዓመት ዕድሜ ነው?",
+          },
+        },
+        {
+          id: "recognizedDaycare",
+          type: "boolean",
+          label: {
+            he: "המעון מוכר על ידי משרד הכלכלה?",
+            en: "Is the daycare recognized by the Ministry of Economy?",
+            am: "የቀን እንክብካቤ በኢኮኖሚ ሚኒስቴር የተወከለ ነው?",
+          },
+        },
+      ],
+      rules: [
+        {
+          kind: "require-true",
+          questionId: "bothParentsWork",
+          reason: {
+            he: "התכנית מיועדת רק למשפחות בהן שני בני הזוג עובדים.",
+            en: "The program is for families where both partners work.",
+            am: "ፕሮግራሙ ሁለቱም አጋሮች ለሚሰሩባቸው ቤተሰቦች ብቻ ነው።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "sufficientHours",
+          reason: {
+            he: "סף שעות עבודה: 30+ לאחד, 24+ לשני. אחרת אין סבסוד.",
+            en: "Work-hour threshold: 30+ for one, 24+ for the other. Below this — no subsidy.",
+            am: "የስራ ሰዓት ጣሪያ፦ ለአንዱ 30+፣ ለሌላው 24+። ከዚህ በታች ድጋፍ የለም።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "childAge",
+          reason: {
+            he: "התכנית מיועדת לגילאי 3 חודשים — 3 שנים. אחרי גיל 3 בדקו צהרונים מסובסדים.",
+            en: "The program covers ages 3 months to 3 years. For ages 3+ check subsidized after-school programs.",
+            am: "ፕሮግራሙ ከ3 ወራት – 3 ዓመት ዕድሜ ይሸፍናል። ከ3 ዓመት በላይ የተደገፉ ከት/ቤት በኋላ ፕሮግራሞችን ይፈትሹ።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "recognizedDaycare",
+          reason: {
+            he: "רק מעונות מוכרים על ידי משרד הכלכלה זכאים לסבסוד.",
+            en: "Only daycares recognized by the Ministry of Economy qualify.",
+            am: "በኢኮኖሚ ሚኒስቴር የተወከሉ የቀን እንክብካቤዎች ብቻ ብቁ ናቸው።",
+          },
+        },
+      ],
     },
   },
 
@@ -537,6 +784,119 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
 
 📞 **የግንባታ እና ቤት ሚኒስቴር**: *5442
 `,
+    },
+    wizard: {
+      questions: [
+        {
+          id: "isCitizen",
+          type: "boolean",
+          label: {
+            he: "אתם אזרחים או תושבים קבועים בישראל?",
+            en: "Are you an Israeli citizen or permanent resident?",
+            am: "የእስራኤል ዜጋ ወይም ቋሚ ነዋሪ ነዎት?",
+          },
+        },
+        {
+          id: "ownsProperty",
+          type: "boolean",
+          label: {
+            he: "האם אתם או בן.בת הזוג בעלים של דירה / נכס?",
+            en: "Do you (or your partner) own an apartment or property?",
+            am: "እርስዎ (ወይም አጋርዎ) አፓርትመንት ወይም ንብረት አለዎት?",
+          },
+        },
+        {
+          id: "incomeBelowCeiling",
+          type: "boolean",
+          label: {
+            he: "הכנסת המשפחה החודשית מתחת לתקרה (משתנה לפי גודל משפחה)?",
+            en: "Is your family monthly income below the ceiling (varies by family size)?",
+            am: "የቤተሰብ ወርሃዊ ገቢ ከጣሪያ በታች ነው (በቤተሰብ መጠን ይለያያል)?",
+          },
+        },
+        {
+          id: "familyStatus",
+          type: "radio",
+          label: {
+            he: "מצב משפחתי",
+            en: "Family status",
+            am: "የቤተሰብ ሁኔታ",
+          },
+          options: [
+            {
+              value: "married_5y",
+              label: {
+                he: "נשואים 5+ שנים",
+                en: "Married 5+ years",
+                am: "ከ5+ ዓመታት ያገቡ",
+              },
+            },
+            {
+              value: "single_parent_2",
+              label: {
+                he: "הורה יחיד עם 2+ ילדים",
+                en: "Single parent with 2+ children",
+                am: "ብቸኛ ወላጅ ከ2+ ልጆች ጋር",
+              },
+            },
+            {
+              value: "senior_no_housing",
+              label: {
+                he: "בן 60+ ללא דיור",
+                en: "Age 60+ without housing",
+                am: "60+ ዕድሜ ያለ መኖሪያ",
+              },
+            },
+            {
+              value: "single_no_dependents",
+              label: {
+                he: "רווק.ה ללא ילדים",
+                en: "Single without dependents",
+                am: "ያላገባ/ች ያለ ጥገኛ",
+              },
+            },
+          ],
+        },
+      ],
+      rules: [
+        {
+          kind: "require-true",
+          questionId: "isCitizen",
+          reason: {
+            he: "דיור ציבורי מיועד לאזרחי ותושבי ישראל בלבד.",
+            en: "Public housing is for Israeli citizens and residents only.",
+            am: "የሕዝብ መኖሪያ ቤት ለእስራኤል ዜጎች እና ነዋሪዎች ብቻ ነው።",
+          },
+        },
+        {
+          kind: "require-false",
+          questionId: "ownsProperty",
+          reason: {
+            he: "התכנית מיועדת למשפחות ללא בעלות בנכס.",
+            en: "The program is for families without property ownership.",
+            am: "ፕሮግራሙ ያለ ንብረት ባለቤትነት ለቤተሰቦች ነው።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "incomeBelowCeiling",
+          reason: {
+            he: "הכנסה מעל התקרה מוציאה את הזכאות.",
+            en: "Income above the ceiling disqualifies.",
+            am: "ከጣሪያ በላይ ገቢ ብቁነትን ያስቆማል።",
+          },
+        },
+        {
+          kind: "require-not",
+          questionId: "familyStatus",
+          values: ["single_no_dependents"],
+          reason: {
+            he: "רווקים/ות ללא ילדים אינם זכאים בדרך כלל. בדקו עדיפויות מיוחדות (נכות, ניצולי שואה).",
+            en: "Single without dependents are typically not eligible. Check special priorities (disability, Holocaust survivors).",
+            am: "ያላገባ ያለ ጥገኛ አብዛኛውን ጊዜ ብቁ አይደለም። ልዩ ቅድሚያዎችን (ጉዳት፣ ሆሎኮስት የተረፉ) ይፈትሹ።",
+          },
+        },
+      ],
     },
   },
 
