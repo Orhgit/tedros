@@ -98,6 +98,18 @@ const TAG_TO_TONE: Record<string, Tone> = {
   urban_renewal: "earth",
   youth: "green",
   health: "red",
+  // RIN-336 finish (18 → 30 rights):
+  matriculation: "sigd",
+  bootcamp: "sigd",
+  tech: "sigd",
+  chronic_disease: "red",
+  translation: "ink",
+  religion: "sigd",
+  community: "earth",
+  sigd: "sigd",
+  domestic_violence: "red",
+  summer_camp: "green",
+  language_learning: "gold",
 };
 
 export function toneForTag(tag: string): Tone {
@@ -148,6 +160,18 @@ const TAG_GLYPH: Record<string, string> = {
   urban_renewal: "🏗️",
   youth: "🌱",
   health: "🏥",
+  // RIN-336 finish:
+  matriculation: "🎯",
+  bootcamp: "💻",
+  tech: "⚙️",
+  chronic_disease: "❤️",
+  translation: "🗣️",
+  religion: "✡️",
+  community: "🤝",
+  sigd: "🕯️",
+  domestic_violence: "🆘",
+  summer_camp: "🏕️",
+  language_learning: "🔤",
 };
 
 export function glyphForTag(tag: string): string {
