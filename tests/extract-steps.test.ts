@@ -50,10 +50,7 @@ describe("extractApplicationSteps — English", () => {
 describe("extractApplicationSteps — Amharic", () => {
   it("extracts steps under Amharic 'how to apply' heading", () => {
     const body = `## ለማን ይሆናል?\n\nማንኛውም.\n\n## እንዴት ማመልከት ይቻላል?\n\n1. የመጀመሪያ እርምጃ\n2. ሁለተኛ\n`;
-    expect(extractApplicationSteps(body, "am")).toEqual([
-      "የመጀመሪያ እርምጃ",
-      "ሁለተኛ",
-    ]);
+    expect(extractApplicationSteps(body, "am")).toEqual(["የመጀመሪያ እርምጃ", "ሁለተኛ"]);
   });
 });
 
