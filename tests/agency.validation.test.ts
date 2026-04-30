@@ -26,7 +26,7 @@ describe("israeliLegalIdSchema", () => {
 
 describe("agencySignupSchema", () => {
   const valid = {
-    name: { he: 'תדרוס נדל"ן' },
+    name: { he: 'טדרוס נדל"ן' },
     slug: { he: "tedros-realty" },
     contactEmail: "broker@tedros.local",
     contactPhone: "+972-50-1234567",
@@ -34,7 +34,7 @@ describe("agencySignupSchema", () => {
 
   it("accepts a minimal payload", () => {
     const out = agencySignupSchema.parse(valid);
-    expect(out.name.he).toContain("תדרוס");
+    expect(out.name.he).toContain("טדרוס");
   });
 
   it("rejects a slug with uppercase / spaces", () => {

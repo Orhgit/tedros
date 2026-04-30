@@ -282,7 +282,7 @@ function BrandShowcase() {
         </CardHeader>
         <CardContent className="space-y-2">
           <p className="text-lg" lang="he" dir="rtl">
-            תדרוס — מהמקום שלך, אל המקום שלך.
+            טדרוס — מהמקום שלך, אל המקום שלך.
           </p>
           <p className="text-lg" lang="en" dir="ltr">
             Tedros — From where you are, to where you belong.
@@ -397,7 +397,7 @@ function Typography() {
           <CardDescription>Heebo · LH 1.6</CardDescription>
         </CardHeader>
         <CardContent lang="he" dir="rtl" className="space-y-2">
-          <p className="text-5xl font-bold">תדרוס</p>
+          <p className="text-5xl font-bold">טדרוס</p>
           <p className="text-2xl font-semibold">פלטפורמה לקהילה</p>
           <p className="text-base leading-relaxed">
             תוכן בעברית, אנגלית ואמהרית. זכויות שאפשר לדרוש, נכס שאפשר לרכוש, איש מקצוע
