@@ -11,10 +11,12 @@ import { Link, data } from "react-router";
 
 import type { Route } from "./+types/$lang.rights.$slug_.$city";
 import { EligibilityWizard } from "~/components/sections/eligibility-wizard";
+import { RelatedRights } from "~/components/sections/related-rights";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
+import { WhatsAppShare } from "~/components/sections/whatsapp-share";
 import { findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
-import { getRightBySlug } from "~/lib/db/queries/rights.server";
+import { getRightBySlug, relatedRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
@@ -36,8 +38,10 @@ export async function loader({ params }: Route.LoaderArgs) {
     throw data({ error: "not-relevant" }, { status: 404 });
   }
   const html = renderMarkdown(right.body);
+  const related = relatedRights(right.slug, locale, 4);
   const { PUBLIC_URL } = getEnv();
-  return { locale, right, city, html, publicUrl: PUBLIC_URL };
+  const shareUrl = `${PUBLIC_URL}/${locale}/rights/${right.slug}/${city.slug}`;
+  return { locale, right, city, html, publicUrl: PUBLIC_URL, related, shareUrl };
 }
 
 // Locale-specific preposition that prefixes the city name. Hebrew/Amharic
@@ -94,7 +98,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function RightCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, right, city, html } = loaderData;
+  const { locale, right, city, html, related, shareUrl } = loaderData;
   const primaryTag = right.tags[0] ?? "housing";
   const tone = classesForTag(primaryTag);
   const cityNameLocal = cityName(city, locale);
@@ -205,6 +209,12 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
             {t(locale, "rights_official_form_disclaimer")}
           </p>
         </aside>
+
+        <div className="mt-6">
+          <WhatsAppShare title={right.title} url={shareUrl} locale={locale} />
+        </div>
+
+        <RelatedRights rights={related} locale={locale} />
       </article>
       <SiteFooter locale={locale} />
     </div>
