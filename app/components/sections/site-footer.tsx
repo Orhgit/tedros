@@ -59,6 +59,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
           {/* Project / open source */}
           <FooterCol title={t(locale, "footer_project_heading")}>
+            <FooterLink to={`${base}/about`}>{t(locale, "footer_about")}</FooterLink>
             <FooterExternal href="https://github.com/Orhgit/tedros">
               {t(locale, "footer_github")}
             </FooterExternal>
