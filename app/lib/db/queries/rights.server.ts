@@ -72,3 +72,36 @@ export function allRightSlugsByLocale(): Array<{ locale: Locale; slug: string }>
   }
   return out;
 }
+
+// Find rights related to a given slug by tag overlap. Used by the detail
+// page to show "you might also be interested in" cards. Excludes the
+// current right; ranks by overlap count then alphabetical for stability.
+// Returns up to `limit` summaries.
+export function relatedRights(slug: string, locale: Locale, limit = 4): RightSummary[] {
+  const current = PRIORITY_RIGHTS.find(
+    (r) => r.slug.he === slug || r.slug.en === slug || r.slug.am === slug,
+  );
+  if (!current) return [];
+  const tagSet = new Set(current.tags);
+  const ranked = PRIORITY_RIGHTS.filter(
+    (r) => r.slug.he !== current.slug.he, // exclude self
+  )
+    .map((r) => {
+      const overlap = r.tags.filter((t) => tagSet.has(t)).length;
+      return { right: r, overlap };
+    })
+    .filter((x) => x.overlap > 0)
+    .sort((a, b) => {
+      if (b.overlap !== a.overlap) return b.overlap - a.overlap;
+      // Stable alphabetical tie-break.
+      return a.right.slug.he.localeCompare(b.right.slug.he);
+    })
+    .slice(0, limit)
+    .map(({ right }) => ({
+      slug: pickLocale(right.slug, locale),
+      title: pickLocale(right.title, locale),
+      summary: pickLocale(right.eligibilitySummary, locale),
+      tags: right.tags,
+    }));
+  return ranked;
+}

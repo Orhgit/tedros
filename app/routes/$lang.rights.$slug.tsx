@@ -7,12 +7,16 @@ import { Link, data } from "react-router";
 
 import type { Route } from "./+types/$lang.rights.$slug";
 import { EligibilityWizard } from "~/components/sections/eligibility-wizard";
+import { RelatedRights } from "~/components/sections/related-rights";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
-import { getRightBySlug } from "~/lib/db/queries/rights.server";
+import { WhatsAppShare } from "~/components/sections/whatsapp-share";
+import { getRightBySlug, relatedRights } from "~/lib/db/queries/rights.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
+import { extractApplicationSteps } from "~/lib/rights/extract-steps";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -25,13 +29,46 @@ export async function loader({ params }: Route.LoaderArgs) {
     throw data({ error: "not-found" }, { status: 404 });
   }
   const html = renderMarkdown(right.body);
-  return { locale, right, html };
+  const related = relatedRights(right.slug, locale, 4);
+  const steps = extractApplicationSteps(right.body, locale);
+  const { PUBLIC_URL } = getEnv();
+  const shareUrl = `${PUBLIC_URL}/${locale}/rights/${right.slug}`;
+  return { locale, right, html, related, steps, shareUrl };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, right } = data;
+  const { locale, right, steps } = data;
   const description = right.summary;
+  // GovernmentService describes WHAT the right is; HowTo describes the
+  // application steps. Emit both so Google can pick the most useful
+  // rich-result variant per query.
+  const ldBlocks: Array<Record<string, unknown>> = [
+    {
+      "@context": "https://schema.org",
+      "@type": "GovernmentService",
+      name: right.title,
+      description,
+      provider: { "@type": "GovernmentOrganization", name: "Government of Israel" },
+      availableChannel: {
+        "@type": "ServiceChannel",
+        serviceUrl: right.govUrl,
+      },
+    },
+  ];
+  if (steps.length >= 2) {
+    ldBlocks.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: right.title,
+      description,
+      step: steps.map((text, idx) => ({
+        "@type": "HowToStep",
+        position: idx + 1,
+        text,
+      })),
+    });
+  }
   return [
     { title: `${right.title} — Tedros` },
     { name: "description", content: description },
@@ -39,24 +76,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
-    {
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "GovernmentService",
-        name: right.title,
-        description,
-        provider: { "@type": "GovernmentOrganization", name: "Government of Israel" },
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceUrl: right.govUrl,
-        },
-      },
-    },
+    ...ldBlocks.map((b) => ({ "script:ld+json": b })),
   ];
 };
 
 export default function RightDetail({ loaderData }: Route.ComponentProps) {
-  const { locale, right, html } = loaderData;
+  const { locale, right, html, related, shareUrl } = loaderData;
   const primaryTag = right.tags[0] ?? "housing";
   const tone = classesForTag(primaryTag);
   return (
@@ -144,6 +169,14 @@ export default function RightDetail({ loaderData }: Route.ComponentProps) {
             {t(locale, "rights_official_form_disclaimer")}
           </p>
         </aside>
+
+        {/* Share button — pre-filled WhatsApp message with title + URL */}
+        <div className="mt-6">
+          <WhatsAppShare title={right.title} url={shareUrl} locale={locale} />
+        </div>
+
+        {/* Related rights by tag overlap (RIN-339 / Phase-3 enrichment) */}
+        <RelatedRights rights={related} locale={locale} />
       </article>
       <SiteFooter locale={locale} />
     </div>
