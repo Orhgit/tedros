@@ -740,4 +740,924 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 `,
     },
   },
+
+  // 9 — Senior pension supplement (Bituach Leumi)
+  {
+    title: {
+      he: "השלמת הכנסה לגיל זהב — ביטוח לאומי",
+      en: "Senior Pension Supplement — National Insurance",
+      am: "የአዛውንት የጡረታ ማሟያ — ብሔራዊ ኢንሹራንስ",
+    },
+    slug: { he: "senior-pension", en: "senior-pension", am: "senior-pension" },
+    govUrl: "https://www.btl.gov.il/benefits/old_age/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "תוספת הכנסה חודשית מביטוח לאומי לאזרחים בני 67+ עם הכנסות נמוכות. שיעור ההשלמה תלוי במצב משפחתי, גיל, ושנות תושבות.",
+      en: "Monthly income supplement from National Insurance for citizens 67+ with low income. Amount depends on family status, age, and years of residency.",
+      am: "ዝቅተኛ ገቢ ላላቸው 67+ ዕድሜ ላላቸው ዜጎች ከብሔራዊ ኢንሹራንስ ወርሃዊ የገቢ ማሟያ። መጠኑ በቤተሰብ ሁኔታ፣ በዕድሜ እና በነዋሪነት ዓመታት ይወሰናል።",
+    },
+    tags: ["senior", "monthly_payment", "welfare"],
+    bodies: {
+      he: `## למי מיועד?
+
+- אזרחי ישראל בני 67 ומעלה (גברים 67, נשים 65 — בהדרגה עולה)
+- 10+ שנות תושבות בישראל לפני הגשה
+- הכנסה משפחתית נמוכה מתקרה משתנה (משולב פנסיה + מקורות אחרים)
+
+## מה כולל?
+
+- **קצבת זקנה בסיסית**: לפי שנות תושבות
+- **תוספת השלמת הכנסה**: למי שאין לו פנסיה כלל או פנסיה נמוכה
+- **תוספת ותק**: לכל שנת תושבות מעבר ל-10
+- **תוספת בן/בת זוג**: עבור בן זוג בלי קצבה משלו
+
+## איך מגישים?
+
+1. נכנסים ל-[btl.gov.il](https://www.btl.gov.il) — אזור אישי
+2. ממלאים טופס "תביעה לקצבת זקנה" + מצרפים תעודת זהות + אישורי הכנסה
+3. במידת הצורך — פנייה לסניף הסמוך
+4. בני קהילה שעלו בגיל מבוגר — תקופת תושבות נצברת **כולל** תקופות באתיופיה לעיתים (לפי הסכמים בילטרליים)
+
+📞 **קו זקנה ביטוח לאומי**: 02-6463555 | *6050
+`,
+      en: `## Who is eligible?
+
+- Israeli citizens aged 67+ (men 67, women 65 — gradually rising)
+- 10+ years of residency in Israel before applying
+- Family income below a calibrated ceiling (combined pension + other sources)
+
+## What's included?
+
+- **Basic old-age pension**: scaled by years of residency
+- **Income supplement**: for those without pension or with low pension
+- **Seniority bonus**: per year of residency beyond 10
+- **Spouse supplement**: for a partner without their own pension
+
+## How to apply
+
+1. Login to [btl.gov.il](https://www.btl.gov.il) — personal account
+2. File "Old-age pension claim" + attach ID + income proofs
+3. If needed — visit the nearest branch
+4. Community members who immigrated late in life — residency periods may include time in Ethiopia in some cases (per bilateral agreements)
+
+📞 **National Insurance senior line**: 02-6463555 | *6050
+`,
+      am: `## ለማን ይሆናል?
+
+- 67+ ዕድሜ ያላቸው የእስራኤል ዜጎች (ወንዶች 67፣ ሴቶች 65 — ቀስ በቀስ ይነሳል)
+- ከማመልከታቸው በፊት በእስራኤል 10+ ዓመታት የነዋሪነት
+- ከተወሰነ ጣሪያ በታች የሆነ የቤተሰብ ገቢ (የተደመረ ጡረታ + ሌሎች ምንጮች)
+
+## ምን ይካተታል?
+
+- **መሠረታዊ የእርጅና ጡረታ**: በነዋሪነት ዓመታት የተደረደረ
+- **የገቢ ማሟያ**: ጡረታ ለሌላቸው ወይም ዝቅተኛ ጡረታ ላላቸው
+- **የስራ ጥቅል ጥቅማጥቅም**: ከ10 በላይ በነዋሪነት ለእያንዳንዱ ዓመት
+- **የትዳር አጋር ማሟያ**: የራሱ ጡረታ ለሌለው አጋር
+
+## እንዴት ማመልከት ይቻላል
+
+1. ወደ [btl.gov.il](https://www.btl.gov.il) ይግቡ — የግል አካውንት
+2. "የእርጅና ጡረታ ጥያቄ" ይሙሉ + መታወቂያ + የገቢ ማስረጃ ያያይዙ
+3. አስፈላጊ ከሆነ — ወደ ቅርብ ቅርንጫፍ ይሂዱ
+4. ዘግይተው የተሰደዱ የማህበረሰብ አባላት — የመኖሪያ ጊዜዎች በኢትዮጵያ የነበረን ጊዜ ሊካተት ይችላል (በሁለትዮሽ ስምምነቶች መሠረት)
+
+📞 **የብሔራዊ ኢንሹራንስ የአዛውንት መስመር**: 02-6463555 | *6050
+`,
+    },
+  },
+
+  // 10 — Excellence employment programs (Olim Beyahad / Tech-Career)
+  {
+    title: {
+      he: "תכניות מצוינות תעסוקתיות — עולים-ביחד וטק-קריירה",
+      en: "Excellence Employment Programs — Olim Beyahad & Tech-Career",
+      am: "የተግባር ብቃት የስራ ፕሮግራሞች — ኦሊም በያሃድ እና ቴክ-ካሪየር",
+    },
+    slug: {
+      he: "excellence-employment",
+      en: "excellence-employment",
+      am: "excellence-employment",
+    },
+    govUrl: "https://www.olim-beyahad.org.il",
+    eligibilitySummary: {
+      he: "השמת אקדמאים בהייטק וניהול דרך עולים-ביחד (700+ אקדמאים, 90% החזקה) וטק-קריירה (bootcamps להייטק). חינם, מבוסס מצוינות.",
+      en: "Placement of academics in tech and management via Olim Beyahad (700+ placed, 90% retention) and Tech-Career (tech bootcamps). Free, merit-based.",
+      am: "በኦሊም በያሃድ (700+ የተመደቡ፣ 90% መቆያነት) እና ቴክ-ካሪየር (ቴክ ቡት ካምፖች) በኩል በቴክ እና በአስተዳደር አካዳሚክ ምደባ። ነፃ፣ በብቃት ላይ የተመሰረተ።",
+    },
+    tags: ["employment", "mentorship", "anchor_partner"],
+    bodies: {
+      he: `## מי הארגונים?
+
+- **עולים-ביחד**: השמת אקדמאים יוצאי אתיופיה במשרות הייטק וניהול. 650+ חברות שותפות. 90% המשך-עבודה אחרי שנה.
+- **טק-קריירה**: בית ספר חינם להייטק (cybersecurity, data, dev). 6-12 חודשי תכנית, 80%+ השמה.
+
+## תנאי כניסה
+
+**עולים-ביחד**:
+- תואר ראשון לפחות
+- שאיפה למשרת הייטק או ניהול בכיר
+
+**טק-קריירה**:
+- בגרות מלאה
+- 18-35 בדרך כלל (לא נוקשה)
+- מבחני קבלה (לוגיקה + מוטיבציה)
+
+## איך מגישים?
+
+1. **עולים-ביחד**: [olim-beyahad.org.il](http://www.olim-beyahad.org.il) → "הצטרף" → טופס + קו"ח
+2. **טק-קריירה**: [tech-career.org](https://www.tech-career.org) → "תכניות" → לוח קוהורטות (פתיחה כל 3-4 חודשים)
+3. ראיון אישי + מבחני התאמה
+4. אישור → תחילת תכנית
+
+**ערך מוסף**: רשת alumni (1,200+) של אקדמאים יוצאי קהילה במגוון תפקידים.
+`,
+      en: `## What are these orgs?
+
+- **Olim Beyahad**: Places Ethiopian-Israeli academics in tech and senior management roles. 650+ partner companies. 90% retention after one year.
+- **Tech-Career**: Free tech bootcamp school (cybersecurity, data, dev). 6-12 month programs, 80%+ placement.
+
+## Entry requirements
+
+**Olim Beyahad**:
+- Bachelor's degree minimum
+- Career aspirations in tech or senior management
+
+**Tech-Career**:
+- Full matriculation
+- Typically 18-35 (not strict)
+- Entrance exams (logic + motivation)
+
+## How to apply
+
+1. **Olim Beyahad**: [olim-beyahad.org.il](http://www.olim-beyahad.org.il) → "Join" → form + CV
+2. **Tech-Career**: [tech-career.org](https://www.tech-career.org) → "Programs" → cohort calendar (new cohorts every 3-4 months)
+3. Personal interview + assessment exams
+4. Acceptance → program starts
+
+**Bonus value**: 1,200+ alumni network of community academics across roles.
+`,
+      am: `## ድርጅቶቹ ምን ናቸው?
+
+- **ኦሊም በያሃድ**: በቴክ እና በከፍተኛ አስተዳደር ሚናዎች የኢትዮጵያ-እስራኤላውያን አካዳሚክ ሰዎችን ይመድባል። 650+ የአጋር ኩባንያዎች። ከአንድ ዓመት በኋላ 90% መቆያነት።
+- **ቴክ-ካሪየር**: ነፃ የቴክ ቡት ካምፕ ት/ቤት (ሳይበርሰኩሪቲ፣ ዳታ፣ ዴቭ)። ከ6-12 ወራት ፕሮግራሞች፣ 80%+ ምደባ።
+
+## የመግቢያ መስፈርቶች
+
+**ኦሊም በያሃድ**:
+- ቢያንስ የመጀመሪያ ዲግሪ
+- በቴክ ወይም በከፍተኛ አስተዳደር የስራ ምኞት
+
+**ቴክ-ካሪየር**:
+- ሙሉ ማትሪክ
+- አብዛኛውን ጊዜ 18-35 (ጥብቅ አይደለም)
+- የመግቢያ ፈተናዎች (አመክንዮ + ተነሳሽነት)
+
+## እንዴት ማመልከት ይቻላል
+
+1. **ኦሊም በያሃድ**: [olim-beyahad.org.il](http://www.olim-beyahad.org.il) → "ተቀላቀል" → ቅጽ + የግል ታሪክ
+2. **ቴክ-ካሪየር**: [tech-career.org](https://www.tech-career.org) → "ፕሮግራሞች" → የቡድን ካላንደር
+3. የግል ቃለ መጠይቅ + የብቃት ፈተናዎች
+4. ተቀባይነት → ፕሮግራሙ ይጀምራል
+
+**የተጨማሪ እሴት**: በተለያዩ ሚናዎች 1,200+ የማህበረሰብ ምሁራን አለማዊ አውታር።
+`,
+    },
+  },
+
+  // 11 — Youth mentorship (PERACH + ENP-style)
+  {
+    title: {
+      he: "חונכות נוער — פר״ח, ENP, פידל",
+      en: "Youth Mentorship — PERACH, ENP, Fidel",
+      am: "የወጣቶች የአማካሪ ድጋፍ — PERACH፣ ENP፣ ፊደል",
+    },
+    slug: { he: "youth-mentorship", en: "youth-mentorship", am: "youth-mentorship" },
+    govUrl: "https://www.enp.org.il/he/",
+    eligibilitySummary: {
+      he: "תכניות חונכות אקדמית/חברתית לנוער יוצא אתיופיה. PERACH (סטודנטים-תלמידים), ENP (32 ערים, בית-ספרי), Fidel (משפחות + מתווכים).",
+      en: "Academic/social mentorship programs for Ethiopian-Israeli youth. PERACH (university student → school pupil), ENP (32 cities, school-based), Fidel (families + mediators).",
+      am: "ለኢትዮጵያ-እስራኤላውያን ወጣቶች የአካዳሚክ/ማህበራዊ የአማካሪ ፕሮግራሞች። PERACH (ዩኒቨርሲቲ ተማሪ → ት/ቤት ተማሪ)፣ ENP (32 ከተሞች፣ ት/ቤት-ተኮር)፣ ፊደል (ቤተሰቦች + አስታራቂዎች)።",
+    },
+    tags: ["youth", "mentorship", "education"],
+    bodies: {
+      he: `## תכניות מומלצות
+
+- **פר״ח (PERACH)**: סטודנט/ית מקבלים מלגה (כ-5,000₪/שנה) תמורת חונכות 4 שעות שבועיות לתלמיד/ה. מתאים לבני 7-18.
+- **ENP — Ethiopian National Project**: תכניות בית-ספריות (SPACE) ב-32 ערים. תוספת לימוד אחר הצהריים, הכנה לבגרות, מנטורים מהקהילה.
+- **Fidel**: מתמקדת במשפחה — מתווכים בבתי ספר, מועדוני נוער, ליווי הורים.
+
+## למי מיועד?
+
+- **PERACH**: כל תלמיד/ה מהקהילה שמורה צריך תגבור (אישי, ספציפי) — בקשה דרך יועצ/ת בית הספר
+- **ENP**: דרך בית הספר עצמו — אם הוא ברשימת 32 הערים. בדוק עם המורה.
+- **Fidel**: דרך מועדון נוער קהילתי או רשם בית הספר.
+
+## איך מתחילים?
+
+1. דבר עם **המורה / יועצ/ת בית הספר** הראשון/ה
+2. ENP: [enp.org.il/he](https://www.enp.org.il/he/) → "מי אנחנו" → סניפים
+3. PERACH: דרך אגף הסטודנטים באוניברסיטה (אם יש סטודנט במשפחה שיוכל להיות חונך)
+4. Fidel: [fidel.org.il](https://fidel.org.il) → "פנו אלינו"
+
+**טיפ**: שילוב של 2 מהתכניות (ENP + PERACH למשל) נפוץ ויעיל.
+`,
+      en: `## Recommended programs
+
+- **PERACH**: A student receives a stipend (~₪5,000/year) in exchange for 4 weekly hours of mentoring a younger pupil. For ages 7-18.
+- **ENP — Ethiopian National Project**: School-based programs (SPACE) across 32 cities. After-school tutoring, matriculation prep, community mentors.
+- **Fidel**: Family-focused — school mediators, youth clubs, parent guidance.
+
+## Who is eligible?
+
+- **PERACH**: Any community pupil whose teacher recommends targeted tutoring — request via school counselor
+- **ENP**: Through the school itself — if it's in the 32-city network. Ask the teacher.
+- **Fidel**: Via a community youth club or school registrar.
+
+## How to start
+
+1. Talk to the **teacher / school counselor** first
+2. ENP: [enp.org.il/he](https://www.enp.org.il/he/) → "About" → branches
+3. PERACH: via the dean-of-students office at the local university (if a family member can be the mentor)
+4. Fidel: [fidel.org.il](https://fidel.org.il) → "Contact"
+
+**Tip**: combining 2 programs (ENP + PERACH for example) is common and effective.
+`,
+      am: `## የተመከሩ ፕሮግራሞች
+
+- **PERACH**: አንድ ተማሪ ለታናሽ ተማሪ በሳምንት 4 ሰዓታት የአማካሪነት አገልግሎት ሲሰጥ ስቲፐንድ (~5,000 ሺ"ል/ዓመት) ይቀበላል። ከ7-18 ዕድሜ ላሉ።
+- **ENP — Ethiopian National Project**: በ32 ከተሞች ት/ቤት-ተኮር ፕሮግራሞች (SPACE)። ከት/ቤት በኋላ ትምህርት፣ ማትሪክ ዝግጅት፣ ማህበረሰብ አማካሪዎች።
+- **ፊደል**: በቤተሰብ ላይ ያተኩራል — የት/ቤት አስታራቂዎች፣ የወጣት ክለቦች፣ የወላጅ መመሪያ።
+
+## ለማን ይሆናል?
+
+- **PERACH**: ት/ቤት አማካሪ ያስፈለገው ማንኛውም የማህበረሰብ ተማሪ
+- **ENP**: በት/ቤቱ በኩል — በ32 ከተሞች አውታር ካለ
+- **ፊደል**: በማህበረሰብ ወጣት ክለብ ወይም በት/ቤት መዝገብ ቤት በኩል
+
+## እንዴት መጀመር ይቻላል
+
+1. በመጀመሪያ ለ**መምህር / የት/ቤት አማካሪ** ይነጋገሩ
+2. ENP: [enp.org.il/he](https://www.enp.org.il/he/)
+3. PERACH: በአካባቢው ዩኒቨርሲቲ የተማሪዎች ዲን ቢሮ
+4. ፊደል: [fidel.org.il](https://fidel.org.il) → "ያነጋግሩን"
+
+**ምክር**: 2 ፕሮግራሞችን ማቀላቀል (ENP + PERACH) የተለመደ እና ውጤታማ ነው።
+`,
+    },
+  },
+
+  // 12 — Tene Briut (mental health, anchor partner)
+  {
+    title: {
+      he: "סיוע נפשי דובר אמהרית — טנא בריאות",
+      en: "Amharic-Speaking Mental Health Support — Tene Briut",
+      am: "የአማርኛ ተናጋሪ የአእምሮ ጤና ድጋፍ — ጤና ብርሃት",
+    },
+    slug: {
+      he: "tene-briut-mental-health",
+      en: "tene-briut-mental-health",
+      am: "tene-briut-mental-health",
+    },
+    govUrl: "https://tene-briut.org.il",
+    eligibilitySummary: {
+      he: "טנא בריאות — עמותה ארצית של אנשי מקצוע מהקהילה. שירות בריאות הנפש דובר אמהרית, מניעת מחלות כרוניות, ומגשרי תרבות. שותף-עוגן לפילר הבריאות.",
+      en: "Tene Briut — national NGO of community health professionals. Amharic-speaking mental health services, chronic-disease prevention, cultural mediators. Anchor partner for the Health pillar.",
+      am: "ጤና ብርሃት — የማህበረሰብ የጤና ባለሙያዎች ብሔራዊ ድርጅት። የአማርኛ የአእምሮ ጤና አገልግሎቶች፣ ሥር የሰደደ በሽታ መከላከል፣ የባህል አስታራቂዎች።",
+    },
+    tags: ["mental_health", "anchor_partner", "health"],
+    bodies: {
+      he: `## מה הם מציעים?
+
+- **בריאות הנפש**: ייעוץ פסיכולוגי דובר-אמהרית, ליווי במצבי משבר, התמודדות עם טראומה (אקטואלי במיוחד אחרי ה-7.10).
+- **מניעת מחלות כרוניות**: סוכרת, יתר לחץ דם — תכנים בעברית/אמהרית, סדנאות קהילתיות.
+- **מגשרי תרבות**: בקופות חולים ובבתי חולים, מסייעים בתקשורת בין מטופלים לרופאים.
+- **ליווי משפחות**: עם מחלות כרוניות, סוף החיים, אבל.
+
+## איך פונים?
+
+1. **קו חם**: 03-7383937 (ראשון-חמישי 9:00-17:00, אמהרית/עברית)
+2. **אתר**: [tene-briut.org.il](https://tene-briut.org.il) — פרטי קשר לסניפים אזוריים
+3. **WhatsApp**: ישירות עם רכז.ת בריאות הנפש (מספר באתר)
+4. **דרך קופ"ח**: בקש "מתורגמן/מגשר תרבות לאמהרית" — טנא בריאות מספקים את השירות
+
+## למי מיועד?
+
+- כל בן/ת קהילה — הילדים, הורים, סבים. אין הגבלת גיל.
+- מצבי משבר אקוטיים מטופלים בעדיפות.
+- שירות חינמי או בעלות סמלית.
+
+🚨 **במקרה משבר חריף**: ERAN 1201 (24/7), או חדר מיון בית חולים סמוך.
+`,
+      en: `## What they offer
+
+- **Mental health**: Amharic-speaking psychological counseling, crisis support, trauma response (especially relevant post-Oct 7).
+- **Chronic-disease prevention**: diabetes, hypertension — Hebrew/Amharic content, community workshops.
+- **Cultural mediators**: at HMOs and hospitals, help patients communicate with doctors.
+- **Family support**: chronic illness, end-of-life, bereavement.
+
+## How to reach Tene Briut
+
+1. **Hotline**: 03-7383937 (Sun-Thu 9:00-17:00, Amharic/Hebrew)
+2. **Web**: [tene-briut.org.il](https://tene-briut.org.il) — regional branch contact info
+3. **WhatsApp**: directly with mental-health coordinator (number on website)
+4. **Via HMO**: ask for "Amharic translator/cultural mediator" — Tene Briut staffs the service
+
+## Who is eligible?
+
+- Any community member — children, parents, grandparents. No age restriction.
+- Acute crises prioritized.
+- Free or symbolic cost.
+
+🚨 **In acute crisis**: ERAN 1201 (24/7), or nearest hospital ER.
+`,
+      am: `## የሚያቀርቡት
+
+- **የአእምሮ ጤና**: የአማርኛ ሳይኮሎጂካል ምክር፣ የችግር ጊዜ ድጋፍ፣ የጤና ቁስል ምላሽ (ከ10/7 በኋላ በተለይ ጠቃሚ)።
+- **ሥር የሰደደ በሽታ መከላከል**: ስኳር በሽታ፣ የደም ግፊት — የዕብራይስጥ/አማርኛ ይዘት፣ የማህበረሰብ ወርክሾፖች።
+- **የባህል አስታራቂዎች**: በሕክምና ድርጅቶች እና ሆስፒታሎች፣ ታካሚዎች ከሐኪሞች ጋር እንዲገናኙ ይረዳሉ።
+- **የቤተሰብ ድጋፍ**: ሥር የሰደደ ሕመም፣ የሕይወት መጨረሻ፣ ሐዘን።
+
+## ጤና ብርሃትን እንዴት መድረስ ይቻላል
+
+1. **የስልክ መስመር**: 03-7383937 (እሁድ-ሐሙስ 9:00-17:00፣ አማርኛ/ዕብራይስጥ)
+2. **ድረ-ገጽ**: [tene-briut.org.il](https://tene-briut.org.il)
+3. **WhatsApp**: በቀጥታ ከአእምሮ ጤና አስተባባሪ ጋር (ቁጥር በድረ-ገጹ)
+4. **በሕክምና ድርጅት በኩል**: "የአማርኛ ተርጓሚ/የባህል አስታራቂ" ይጠይቁ
+
+## ለማን ይሆናል?
+
+- ማንኛውም የማህበረሰብ አባል — ልጆች፣ ወላጆች፣ አያቶች
+- ከባድ ችግሮች ቅድሚያ ያገኛሉ
+- ነፃ ወይም በምልክት ወጪ
+
+🚨 **በከባድ ችግር ጊዜ**: ERAN 1201 (24/7)፣ ወይም በቅርብ ሆስፒታል ER።
+`,
+    },
+  },
+
+  // 13 — Tax relief for new immigrants
+  {
+    title: {
+      he: "הטבות מס לעולים חדשים (5/10 שנים)",
+      en: "Tax Benefits for New Immigrants (5/10 years)",
+      am: "ለአዲስ ስደተኞች የግብር ጥቅም (5/10 ዓመታት)",
+    },
+    slug: {
+      he: "immigrant-tax-relief",
+      en: "immigrant-tax-relief",
+      am: "immigrant-tax-relief",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/olim_tax_benefits",
+    eligibilitySummary: {
+      he: 'פטור ממס הכנסה על הכנסות מחו"ל ל-10 שנים, נקודות זיכוי מוגדלות במס הכנסה ל-5 שנים, פטור ממכס על מטלטלין. חל על כל עולה — כולל יוצאי אתיופיה.',
+      en: "10-year income tax exemption on foreign income, enhanced tax credits for 5 years, customs exemption on personal effects. Applies to all olim — including Ethiopian-Israelis.",
+      am: "ለ10 ዓመታት በውጭ ገቢ የገቢ ግብር ነፃነት፣ ለ5 ዓመታት የተሻሻሉ የግብር ክሬዲቶች፣ በግል ንብረት ጉምሩክ ነፃነት። ለሁሉም ስደተኞች ይተገበራል።",
+    },
+    tags: ["tax_relief", "new_immigrant", "grants"],
+    bodies: {
+      he: `## מה כלול?
+
+### פטורי מס (10 שנים מהעלייה)
+- **פטור על הכנסות מחו"ל**: שכר, ריבית, דיבידנדים, רווחי הון ממקור זר
+- **פטור על פנסיה זרה**: עד תקרה
+- **דיווח מצומצם**: בשנים הראשונות, פטור מהדיווח על נכסים בחו"ל
+
+### נקודות זיכוי מוגדלות (5 שנים)
+- שנה ראשונה: 3 נקודות זיכוי נוספות (~9,000 ₪)
+- שנה שנייה: 2 נקודות
+- שנים 3-5: נקודה אחת לשנה
+
+### פטורי מכס (3 שנים)
+- מטלטלין אישיים, רכב (תנאים), ציוד מקצועי
+- חישוב לפי שווי שיא
+
+## איך מממשים?
+
+1. **רשום עלייה**: ת"ז עולה, אישור עלייה ממשרד הקליטה
+2. **פתיחת תיק במס הכנסה**: כעולה — אוטומטי
+3. **הגשת בקשה לנקודות זיכוי**: דרך המעסיק (טופס 101) או רואה חשבון
+4. **מטלטלין**: דיווח לרשות המכס תוך 3 שנים
+
+📞 **רשות המסים**: 4954*
+`,
+      en: `## What's included?
+
+### Tax exemptions (10 years from aliyah)
+- **Exemption on foreign income**: salary, interest, dividends, capital gains from foreign source
+- **Foreign pension exemption**: up to a ceiling
+- **Reduced reporting**: in the early years, exempt from reporting foreign assets
+
+### Enhanced tax credits (5 years)
+- Year 1: 3 extra credit points (~₪9,000)
+- Year 2: 2 points
+- Years 3-5: 1 point per year
+
+### Customs exemptions (3 years)
+- Personal effects, vehicle (with conditions), professional equipment
+- Calculated at peak value
+
+## How to claim
+
+1. **Register aliyah**: immigrant ID + aliyah confirmation from Ministry of Aliyah
+2. **Open Tax Authority file**: as oleh — automatic
+3. **Apply for credit points**: via employer (form 101) or accountant
+4. **Personal effects**: declare to Customs Authority within 3 years
+
+📞 **Israel Tax Authority**: *4954
+`,
+      am: `## ምን ይካተታል?
+
+### የግብር ነፃነቶች (ከአሊያ 10 ዓመታት)
+- **በውጭ ገቢ ነፃነት**: ደመወዝ፣ ወለድ፣ ድርሻ፣ ካፒታል ጥቅም ከውጭ ምንጭ
+- **የውጭ ጡረታ ነፃነት**: ከተወሰነ ጣሪያ ድረስ
+- **የቀለለ ሪፖርት**: በመጀመሪያ ዓመታት፣ የውጭ ንብረት ሪፖርት ከማድረግ ነፃ
+
+### የተሻሻሉ የግብር ክሬዲቶች (5 ዓመታት)
+- 1ኛ ዓመት: 3 ተጨማሪ ክሬዲት ነጥቦች (~9,000 ሺ"ል)
+- 2ኛ ዓመት: 2 ነጥቦች
+- 3-5 ዓመታት: በዓመት 1 ነጥብ
+
+### የጉምሩክ ነፃነቶች (3 ዓመታት)
+- የግል ንብረት፣ ተሽከርካሪ (በሁኔታዎች)፣ የሙያ መሳሪያ
+- በከፍተኛ ዋጋ ይሰላል
+
+## እንዴት ማግኘት ይቻላል
+
+1. **አሊያን ይመዝገቡ**: የስደተኛ መታወቂያ + ከመመለሻ ሚኒስቴር የአሊያ ማረጋገጫ
+2. **የግብር ባለሥልጣን ፋይል ይክፈቱ**: እንደ ስደተኛ — በራስ ሰር
+3. **የክሬዲት ነጥቦች ይጠይቁ**: በቀጣሪ (ቅጽ 101) ወይም በሂሳብ ባለሙያ
+4. **የግል ንብረት**: በ3 ዓመታት ውስጥ ለጉምሩክ ባለሥልጣን ያሳውቁ
+
+📞 **የእስራኤል የግብር ባለሥልጣን**: *4954
+`,
+    },
+  },
+
+  // 14 — Small business loans (UJIA-KIEDF)
+  {
+    title: {
+      he: "הלוואות לעסקים קטנים — UJIA-KIEDF",
+      en: "Small Business Loans — UJIA-KIEDF",
+      am: "ለትንሽ ንግዶች ብድር — UJIA-KIEDF",
+    },
+    slug: {
+      he: "ujia-kiedf-business-loans",
+      en: "ujia-kiedf-business-loans",
+      am: "ujia-kiedf-business-loans",
+    },
+    govUrl: "https://ujia.org/connect/supporting-israel/business/",
+    eligibilitySummary: {
+      he: "קרן הלוואות חברתית לבעלי עסקים קטנים מהקהילה. עד 200,000 ₪, ריבית מסובסדת, ללא בטחונות בנקאיים. UJIA-KIEDF במימון בריטי-יהודי.",
+      en: "Social loan fund for community small-business owners. Up to ₪200,000, subsidized interest, no bank collateral. UJIA-KIEDF funded by British-Jewish community.",
+      am: "ለማህበረሰብ ትንሽ-ንግድ ባለቤቶች ማህበራዊ የብድር ፈንድ። እስከ 200,000 ₪፣ የተደገፈ ወለድ፣ የባንክ ዋስትና አያስፈልግም።",
+    },
+    tags: ["small_business", "entrepreneurship", "grants"],
+    bodies: {
+      he: `## מה הקרן מציעה?
+
+- **סכום**: עד ₪200,000 לעסק
+- **ריבית מסובסדת**: סביב פריים-2% (משתנה)
+- **תקופת החזר**: עד 5 שנים
+- **בלי בטחונות בנקאיים**: הקרן עובדת על ערבים אישיים בלבד
+- **ליווי עסקי**: מנטור עסקי בחינם לכל לווה
+
+## למי מיועד?
+
+- בעלי עסק קיים (1+ שנת פעילות) — או תכנית עסקית מוצקה לעסק חדש
+- חברי הקהילה (יוצאי אתיופיה / Falash Mura)
+- עסק רשום בישראל — ת"ז מס + ע"מ
+- ללא רישום פלילי בעבירות מס
+
+## תהליך
+
+1. **בקשה ראשונית**: דרך [ujia.org](https://ujia.org/connect/supporting-israel/business/) → טופס + תכנית עסקית
+2. **ראיון**: עם רכז.ת הקרן + מנטור עסקי מוצמד
+3. **ועדת אשראי**: דנה במקרה (תוך ~3 שבועות)
+4. **חתימה**: חוזה הלוואה + ערבים
+5. **משיכה**: כספים בחשבון תוך שבוע
+
+**טיפ**: מנטור Kurat (ארגון נוסף) זמין לחברי קהילה לפני הגשת בקשה — מסייע בכתיבת תכנית עסקית.
+`,
+      en: `## What the fund offers
+
+- **Amount**: up to ₪200,000 per business
+- **Subsidized interest**: prime - 2% (varies)
+- **Repayment period**: up to 5 years
+- **No bank collateral**: only personal guarantors
+- **Business mentorship**: free mentor for every borrower
+
+## Who is eligible?
+
+- Existing business owners (1+ year operating) — OR a solid business plan for a new venture
+- Community members (Ethiopian-Israeli / Falash Mura)
+- Israeli-registered business — VAT + corporate ID
+- No criminal record for tax offenses
+
+## Process
+
+1. **Initial application**: via [ujia.org](https://ujia.org/connect/supporting-israel/business/) → form + business plan
+2. **Interview**: with fund coordinator + assigned business mentor
+3. **Credit committee**: reviews case (~3 weeks)
+4. **Signing**: loan contract + guarantors
+5. **Disbursement**: funds in account within a week
+
+**Tip**: Kurat (another community org) provides mentorship to community members BEFORE application — helps with business plan writing.
+`,
+      am: `## ፈንዱ የሚያቀርበው
+
+- **መጠን**: በንግድ እስከ 200,000 ሺ"ል
+- **የተደገፈ ወለድ**: prime - 2% (ይለያያል)
+- **የመክፈያ ጊዜ**: እስከ 5 ዓመታት
+- **የባንክ ዋስትና የለም**: የግል ዋስ ብቻ
+- **የንግድ የአማካሪ ድጋፍ**: ለእያንዳንዱ ተበዳሪ ነፃ አማካሪ
+
+## ለማን ይሆናል?
+
+- የነበረ ንግድ ባለቤቶች (1+ ዓመት ሲሰራ) — ወይም ለአዲስ ቬንቸር ጠንካራ የንግድ እቅድ
+- የማህበረሰብ አባላት
+- በእስራኤል የተመዘገበ ንግድ — VAT + የድርጅት መታወቂያ
+- በግብር ጥፋቶች የወንጀል መዝገብ የለም
+
+## ሂደት
+
+1. **የመጀመሪያ ማመልከቻ**: በ [ujia.org](https://ujia.org/connect/supporting-israel/business/)
+2. **ቃለ መጠይቅ**: ከፈንድ አስተባባሪ + የተመደበ የንግድ አማካሪ ጋር
+3. **የብድር ኮሚቴ**: ጉዳዩን ይመረምራል (~3 ሳምንታት)
+4. **መፈረም**: የብድር ኮንትራት + ዋሶች
+5. **መለቀቅ**: ገንዘቦች በአንድ ሳምንት ውስጥ በአካውንት
+
+**ምክር**: Kurat (ሌላ የማህበረሰብ ድርጅት) ማመልከት ከመፈለግ በፊት ለማህበረሰብ አባላት የአማካሪ ድጋፍ ይሰጣል።
+`,
+    },
+  },
+
+  // 15 — National civic service for community youth
+  {
+    title: {
+      he: "שירות לאומי-אזרחי לבני קהילה",
+      en: "National-Civic Service for Community Youth",
+      am: "ለማህበረሰብ ወጣቶች ሀገራዊ-ሲቪል አገልግሎት",
+    },
+    slug: {
+      he: "national-civic-service",
+      en: "national-civic-service",
+      am: "national-civic-service",
+    },
+    govUrl: "https://www.sherut-leumi.co.il",
+    eligibilitySummary: {
+      he: "אלטרנטיבה לצבא: שנה-שנתיים שירות בקהילה (חינוך, רווחה, בריאות), עם הטבות זהות לחיילי קבע — שכר, מלגת לימוד, פטור ממס.",
+      en: "Alternative to army: 1-2 years serving the community (education, welfare, health), with benefits identical to standing-army soldiers — stipend, study grant, tax exemption.",
+      am: "ለሰራዊት አማራጭ: ማህበረሰቡን (ትምህርት፣ ደህንነት፣ ጤና) የማገልገል 1-2 ዓመታት፣ ከቋሚ ሰራዊት ወታደሮች ጋር አንድ ዓይነት ጥቅሞች።",
+    },
+    tags: ["civic_service", "youth", "education"],
+    bodies: {
+      he: `## מתי משתלם?
+
+- **כשהצבא לא מתאים** (פטור רפואי, נפשי, או דתי) — או כשמעדיפים מסלול שירות אזרחי.
+- **לבחורות** — חוקית קלה יותר להגיע, אם הן רוצות שירות בקהילה במקום צבא.
+- **לעולים מבוגרים** — שגויסו אבל רוצים שירות בעיר מולדת.
+
+## הטבות
+
+- **מלגה**: ~5,000 ₪/חודש (משתנה לפי תפקיד)
+- **דיור**: סובסידיה לדיור או דיור משותף
+- **מלגת לימוד**: עד 5 שנים אחרי השירות לתואר
+- **פטור ממס**: שלוש שנות עבודה ראשונות אחרי שחרור
+- **שירות מוכר** ל-Bituach Leumi וגם לתפקידים ציבוריים
+
+## איך מתחילים?
+
+1. **רישום**: דרך [sherut-leumi.co.il](https://www.sherut-leumi.co.il) → "מועמדים"
+2. **בחירת תפקיד**: רשימת ארגונים שותפים — ENP, Tene Briut, Tebeka, Olim Beyahad הם רובם
+3. **ראיון**: עם הארגון
+4. **התחלה**: בדרך כלל ב-1 בחודש הקרוב
+
+**רעיון לחבר/ה**: שירות ב-ENP/Fidel/Tene Briut = עבודה ישירה עם הקהילה + פיתוח קריירה במקצועות חינוך/רווחה/בריאות.
+`,
+      en: `## When is it the right path?
+
+- **When the army doesn't fit** (medical, psychological, or religious exemption) — or when civic-service track is preferred.
+- **For women** — legally easier to enter civic over military.
+- **For older immigrants** — drafted but prefer service in their hometown.
+
+## Benefits
+
+- **Stipend**: ~₪5,000/month (varies by role)
+- **Housing**: rental subsidy or shared housing
+- **Study grant**: up to 5 years after service for tertiary education
+- **Tax exemption**: first three working years post-release
+- **Recognized service** for Bituach Leumi + public-sector roles
+
+## How to start
+
+1. **Registration**: via [sherut-leumi.co.il](https://www.sherut-leumi.co.il) → "Candidates"
+2. **Choose a role**: list of partner orgs — ENP, Tene Briut, Tebeka, Olim Beyahad are most of them
+3. **Interview**: with the host organization
+4. **Start**: usually 1st of the next month
+
+**Idea for community youth**: Service at ENP/Fidel/Tene Briut = direct community work + career development in education/welfare/health.
+`,
+      am: `## መቼ ትክክለኛ መንገድ ነው?
+
+- **ሰራዊቱ ካልተስማማ** (የሕክምና፣ የስነ ልቦና ወይም የሃይማኖት ነፃነት) — ወይም የሲቪል አገልግሎት መንገድ ሲመረጥ።
+- **ለሴቶች** — ከወታደራዊ ይልቅ ሲቪል ለመግባት በሕግ ቀላል ነው።
+- **ለትልልቅ ስደተኞች** — የተመለመሉ ግን በትውልድ ከተማቸው ማገልገል ሲመርጡ።
+
+## ጥቅሞች
+
+- **ስቲፐንድ**: በወር ~5,000 ሺ"ል (በሚና ይለያያል)
+- **መኖሪያ**: የኪራይ ድጋፍ ወይም ጋራ መኖሪያ
+- **የጥናት ስጦታ**: ከአገልግሎት በኋላ እስከ 5 ዓመታት ለከፍተኛ ትምህርት
+- **የግብር ነፃነት**: ከመለቀቅ በኋላ የመጀመሪያ ሦስት የስራ ዓመታት
+- **የተወከለ አገልግሎት** ለብሔራዊ ኢንሹራንስ + የሕዝብ-ዘርፍ ሚናዎች
+
+## እንዴት መጀመር ይቻላል
+
+1. **ምዝገባ**: በ [sherut-leumi.co.il](https://www.sherut-leumi.co.il)
+2. **ሚና ይምረጡ**: የአጋር ድርጅቶች ዝርዝር — ENP፣ ጤና ብርሃት፣ ቴቤካ፣ ኦሊም በያሃድ ብዙዎቹ ናቸው
+3. **ቃለ መጠይቅ**: ከአስተናጋጅ ድርጅት ጋር
+4. **መጀመር**: አብዛኛውን ጊዜ የቀጣዩ ወር 1ኛ
+
+**ለማህበረሰብ ወጣቶች ሀሳብ**: በ ENP/ፊደል/ጤና ብርሃት ማገልገል = ቀጥተኛ የማህበረሰብ ስራ + የሙያ ዕድገት።
+`,
+    },
+  },
+
+  // 16 — Hesegim scholarships
+  {
+    title: {
+      he: "מלגות הסגים — מצוינות אקדמית",
+      en: "Hesegim Scholarships — Academic Excellence",
+      am: "የሄሰግም ስኮላርሺፕ — የአካዳሚክ ብቃት",
+    },
+    slug: {
+      he: "hesegim-scholarships",
+      en: "hesegim-scholarships",
+      am: "hesegim-scholarships",
+    },
+    govUrl: "https://hesegim.org.il",
+    eligibilitySummary: {
+      he: "מלגות סטיפנדיה לסטודנטים יוצאי אתיופיה במגוון אוניברסיטאות, כולל ליווי אישי וסדנאות מצוינות. שונה ממלגות ISEF (תואר שני+) — Hesegim מתמקדת בתואר ראשון.",
+      en: "Stipend scholarships for Ethiopian-Israeli undergraduate students at multiple universities, with personal mentoring and excellence workshops. Distinct from ISEF (graduate+) — Hesegim focuses on undergraduates.",
+      am: "ለኢትዮጵያ-እስራኤላውያን ቅዳሜ ተማሪዎች በተለያዩ ዩኒቨርሲቲዎች የስቲፐንድ ስኮላርሺፕ፣ የግል አማካሪነት ጋር።",
+    },
+    tags: ["scholarship", "education", "student"],
+    bodies: {
+      he: `## מה כולל?
+
+- **סטיפנדיה חודשית**: 1,500-3,000 ₪ (משתנה לפי שנה ומצב)
+- **ליווי אישי**: רכז/ת מוצמד/ת לכל סטודנט/ית
+- **סדנאות מצוינות**: כתיבה אקדמית, אנגלית, מנהיגות, יזמות
+- **התקבעות בקריירה**: שיתופי-פעולה עם Olim Beyahad לאחרי התואר
+- **רשת alumni**: 500+ בוגרים בתעשייה ואקדמיה
+
+## תנאי כניסה
+
+- סטודנט/ית פעיל/ה בתואר ראשון (לפני שנה 4)
+- ממוצע ציונים תקין (לרוב 80+, בתחומים תחרותיים גבוה יותר)
+- מצב סוציו-אקונומי שמצדיק
+- מחויבות לשירות קהילתי במהלך התואר (5-10 שעות שבועיות)
+
+## איך מגישים?
+
+1. **באתר**: [hesegim.org.il](https://hesegim.org.il) → "מועמדות"
+2. **טופס + מסמכים**: גליון ציונים, אישור סטודנט, מצב סוציו-אקונומי
+3. **ראיון**: עם ועדת קבלה (~30 דק')
+4. **תוצאות**: תוך 4-6 שבועות
+
+**חשוב**: הגשה פתוחה רק פעם בשנה — בדוק תאריכים. לרוב מאי-יוני להלימה הבאה.
+`,
+      en: `## What's included
+
+- **Monthly stipend**: ₪1,500-3,000 (varies by year and circumstances)
+- **Personal mentor**: a coordinator assigned to each student
+- **Excellence workshops**: academic writing, English, leadership, entrepreneurship
+- **Career placement**: partnerships with Olim Beyahad post-graduation
+- **Alumni network**: 500+ graduates in industry and academia
+
+## Entry requirements
+
+- Active undergraduate student (before year 4)
+- Adequate GPA (typically 80+, higher in competitive fields)
+- Socioeconomic status that justifies aid
+- Community-service commitment during studies (5-10 hours weekly)
+
+## How to apply
+
+1. **Online**: [hesegim.org.il](https://hesegim.org.il) → "Candidacy"
+2. **Form + documents**: transcript, student confirmation, socioeconomic data
+3. **Interview**: with admissions committee (~30 min)
+4. **Results**: within 4-6 weeks
+
+**Important**: Applications open once a year — check dates. Usually May-June for the next academic year.
+`,
+      am: `## ምን ይካተታል
+
+- **ወርሃዊ ስቲፐንድ**: ከ1,500-3,000 ሺ"ል (በዓመት እና በሁኔታ ይለያያል)
+- **የግል አማካሪ**: ለእያንዳንዱ ተማሪ የተመደበ አስተባባሪ
+- **የብቃት ወርክሾፖች**: የአካዳሚክ ጽሑፍ፣ እንግሊዝኛ፣ መሪነት፣ ስራ ፈጠራ
+- **የሙያ ምደባ**: ከኦሊም በያሃድ ጋር ሽርክና
+- **የተመራቂ አውታር**: በዘርፉ እና በአካዳሚ 500+ ተመራቂዎች
+
+## የመግቢያ መስፈርቶች
+
+- ንቁ ቅዳሜ ተማሪ (ከ4ኛ ዓመት በፊት)
+- በቂ GPA (ብዙውን ጊዜ 80+)
+- እርዳታ የሚያስፈልገው ማህበራዊ-ኢኮኖሚያዊ ሁኔታ
+- በትምህርት ጊዜ ለማህበረሰብ አገልግሎት ቁርጠኝነት (በሳምንት ከ5-10 ሰዓት)
+
+## እንዴት ማመልከት ይቻላል
+
+1. **በመስመር ላይ**: [hesegim.org.il](https://hesegim.org.il)
+2. **ቅጽ + ሰነዶች**: የድርሻ ሰነድ፣ የተማሪ ማረጋገጫ
+3. **ቃለ መጠይቅ**: ከመግቢያ ኮሚቴ ጋር
+4. **ውጤቶች**: በ4-6 ሳምንታት ውስጥ
+
+**ጠቃሚ**: ማመልከቻ በዓመት አንድ ጊዜ ይከፈታል — ቀኖችን ይፈትሹ።
+`,
+    },
+  },
+
+  // 17 — Urban renewal — Kiryat Moshe (Rehovot priority neighborhood)
+  {
+    title: {
+      he: "התחדשות עירונית — קריית משה (רחובות)",
+      en: "Urban Renewal — Kiryat Moshe (Rehovot)",
+      am: "የከተማ ዳግም-ግንባታ — ቂርያት ሞሼ (ረሆቮት)",
+    },
+    slug: {
+      he: "urban-renewal-kiryat-moshe",
+      en: "urban-renewal-kiryat-moshe",
+      am: "urban-renewal-kiryat-moshe",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/urban_renewal",
+    eligibilitySummary: {
+      he: 'תוכנית התחדשות עירונית בקריית משה (רחובות) — אחד מ-5 השכונות בעדיפות עליונה לקהילה. דיירים מקבלים דירה חדשה תחת הסכם פינוי-בינוי או תמ"א 38.',
+      en: "Urban renewal program in Kiryat Moshe (Rehovot) — one of 5 priority neighborhoods for the community. Residents receive a new apartment under evacuation-rebuild or TAMA 38 agreement.",
+      am: "በቂርያት ሞሼ (ረሆቮት) የከተማ ዳግም-ግንባታ ፕሮግራም — ለማህበረሰብ ቅድሚያ ከሚሰጡ 5 ሰፈሮች አንዱ።",
+    },
+    tags: ["urban_renewal", "housing", "family"],
+    bodies: {
+      he: `## למי רלוונטי?
+
+דיירים נוכחיים של דירות בקריית משה ברחובות (בעלי או שוכרים בנכס מוגן). אזור זה מסומן כעדיפות עליונה ב-2024 עם מינהלת התחדשות עירונית ייעודית עם מנדט גישור-תרבותי.
+
+## מה כלול בתוכנית?
+
+- **דירה חדשה במקום**: כפי שהייתה הקיימת + תוספת שטח (10-25% תלוי בפרויקט)
+- **דמי שכירות זמני**: בזמן הבנייה (כ-2-3 שנים)
+- **מס רכישה מופחת**: דירה חדשה — מס רכישה כדירה ראשונה
+- **שמירה על הקהילה**: עיקרון מנחה — הדיירים חוזרים לאותה שכונה
+- **שיפור בתשתיות**: דרכים, חינוך, רווחה — בתקציב נפרד
+
+## מה לעשות עכשיו?
+
+1. **בדיקת זכאות**: לבדוק במינהלת ההתחדשות (משרד הבינוי והשיכון)
+2. **חתימה על הסכם**: רוב הדיירים בבניין צריכים לחתום (66%-80% תלוי בסוג ההסכם)
+3. **הסכם משפטי**: עו"ד מטעם הדיירים (Tebeka יכולים לסייע)
+4. **ועדה מקומית**: אישור התוכנית
+5. **בנייה**: 2-3 שנים, חזרה לדירה חדשה
+
+**שכונות נוספות בעדיפות**: רמת אליהו (ראשון לציון), דורה=רמת ידין / נאות שקד / קריית נורדאו (נתניה).
+
+⚠️ **לפני חתימה**: התייעץ עם עו"ד עצמאי. יש מקרים של חוזים פוגעניים.
+`,
+      en: `## Who is eligible?
+
+Current residents of apartments in Kiryat Moshe, Rehovot (owners or protected tenants). This area is marked top-priority in 2024 with a dedicated urban-renewal administration with a cultural-bridge mandate.
+
+## What's included
+
+- **New apartment in place**: same size as existing + extra area (10-25% depending on project)
+- **Temporary rent**: during construction (~2-3 years)
+- **Reduced purchase tax**: new apartment treated as first-home for tax
+- **Community preservation**: guiding principle — residents return to the same neighborhood
+- **Infrastructure upgrades**: roads, education, welfare — under separate budget
+
+## What to do now
+
+1. **Eligibility check**: with the urban-renewal admin (Ministry of Construction)
+2. **Sign agreement**: most building residents must sign (66%-80% depending on agreement type)
+3. **Legal agreement**: independent attorney for residents (Tebeka can assist)
+4. **Local committee**: approves the plan
+5. **Construction**: 2-3 years, return to new apartment
+
+**Other priority neighborhoods**: Ramat Eliyahu (Rishon LeZion), Dora=Ramat Yadin / Neot Shaked / Kiryat Nordau (Netanya).
+
+⚠️ **Before signing**: consult an independent attorney. There are cases of unfair contracts.
+`,
+      am: `## ለማን ይተገበራል?
+
+በቂርያት ሞሼ ረሆቮት የአፓርትመንቶች የአሁን ነዋሪዎች (ባለቤቶች ወይም የተጠበቁ ተከራዮች)። ይህ አካባቢ በ2024 ቅድሚያ ተብሎ ምልክት ተሰጥቷል።
+
+## ምን ይካተታል
+
+- **አዲስ አፓርትመንት በቦታው**: ከነበረው ጋር አንድ ዓይነት + ተጨማሪ ስፋት (10-25%)
+- **ጊዜያዊ ኪራይ**: በግንባታ ጊዜ (~2-3 ዓመታት)
+- **የተቀነሰ የግዢ ግብር**: አዲሱ አፓርትመንት እንደ መጀመሪያ-ቤት ይታያል
+- **የማህበረሰብ ጥበቃ**: መሪ መርህ — ነዋሪዎች ወደ ተመሳሳይ ሰፈር ይመለሳሉ
+- **የመሰረተ ልማት ማሻሻያ**: መንገዶች፣ ትምህርት፣ ደህንነት
+
+## አሁን ምን ማድረግ አለብዎ
+
+1. **የብቁነት ምርመራ**: በከተማ ዳግም-ግንባታ አስተዳደር
+2. **ስምምነት መፈረም**: አብዛኛዎቹ የህንፃ ነዋሪዎች መፈረም አለባቸው (66%-80%)
+3. **ሕጋዊ ስምምነት**: ለነዋሪዎች ራሱን የቻለ ጠበቃ (ቴቤካ ሊረዳ ይችላል)
+4. **የአካባቢ ኮሚቴ**: እቅዱን ያጸድቃል
+5. **ግንባታ**: ከ2-3 ዓመታት፣ ወደ አዲስ አፓርትመንት መመለስ
+
+**ሌሎች ቅድሚያ ሰፈሮች**: ራማት ኤሊያሁ (ሪሾን ለጽዮን)፣ ዶራ=ራማት ያዲን / ኖት ሻከድ / ቂርያት ኖርዳው (ነታንያ)።
+
+⚠️ **ከመፈረም በፊት**: ራሱን የቻለ ጠበቃ ያማክሩ።
+`,
+    },
+  },
+
+  // 18 — "Aharai!" pre-army leadership program
+  {
+    title: {
+      he: "אחריי! — תכנית מנהיגות וקדם-צבא",
+      en: "Aharai! — Pre-Army Leadership Program",
+      am: "Aharai! — የቅድመ-ሰራዊት የመሪነት ፕሮግራም",
+    },
+    slug: { he: "aharai-pre-army", en: "aharai-pre-army", am: "aharai-pre-army" },
+    govUrl: "https://aharai.org.il",
+    eligibilitySummary: {
+      he: "תכנית מנהיגות לבני נוער 14-19 לפני גיוס. מקנה כלים לחיים, מסלול תעסוקה, ולקראת תפקיד צבאי ראוי. שיתוף פעולה הדוק עם הקהילה האתיופית-ישראלית.",
+      en: "Leadership program for youth 14-19 pre-draft. Provides life skills, career path, and aim toward a worthy military role. Strong collaboration with the Ethiopian-Israeli community.",
+      am: "ለ14-19 ዓመት ወጣቶች ከሰራዊት በፊት የመሪነት ፕሮግራም። የሕይወት ክህሎቶችን፣ የሙያ መንገድ ይሰጣል።",
+    },
+    tags: ["youth", "mentorship", "civic_service"],
+    bodies: {
+      he: `## מה כוללת התכנית?
+
+- **סדנאות שבועיות**: שיח קבוצתי, מנהיגות, ערכים, תכנון עתיד
+- **מסלולי קצונה**: הכנה לקצונה צבאית — מבחנים, ראיון, פסיכוטכני
+- **מסלולי קריירה**: התאמה לתפקידים בצה"ל לפי כישרון (טכנולוגיה, מודיעין, פיקוד)
+- **מנטור אישי**: כל חניך/ה מוצמד/ת למלווה אישי לכל התהליך
+- **קהילה**: שייכות לקבוצה רב-עירונית של נוער מובילה
+
+## למי מיועד?
+
+- בני נוער **14-19** (בית ספר תיכון, ובחלק מהתכניות 12 ומעלה)
+- מוטיבציה לתרום (לא דורש מצוינות אקדמית)
+- אתגר קהילתי — מי שמתעניין במנהיגות בקרב הקהילה במקביל לצה"ל
+
+## איך מצטרפים?
+
+1. **רישום**: [aharai.org.il](https://aharai.org.il) → "הצטרף"
+2. **ראיון אישי**: + קבוצתי
+3. **תקופת ניסיון**: 1-2 חודשים
+4. **השתתפות**: בדרך כלל 1-2 פעמים בשבוע + סופ"ש לפעילויות מיוחדות
+
+**ערך מוסף**: רשת alumni של מפקדים, אנשי הייטק, ופעילים חברתיים. קישור משמעותי בקהילה.
+`,
+      en: `## What the program includes
+
+- **Weekly workshops**: group dialogue, leadership, values, future planning
+- **Officer tracks**: prep for IDF officer school — exams, interviews, psycho-technical
+- **Career paths**: matching to IDF roles by talent (tech, intelligence, command)
+- **Personal mentor**: each participant assigned a personal mentor for the whole process
+- **Community**: belonging to a multi-city group of leading youth
+
+## Who is eligible?
+
+- Youth **14-19** (high school, in some tracks ages 12+)
+- Motivation to contribute (academic excellence not required)
+- Community-engaged — interested in leadership within the community alongside IDF
+
+## How to join
+
+1. **Registration**: [aharai.org.il](https://aharai.org.il) → "Join"
+2. **Interview**: personal + group
+3. **Trial period**: 1-2 months
+4. **Participation**: usually 1-2 times per week + weekend events
+
+**Bonus value**: alumni network of commanders, tech professionals, and social activists. Meaningful community connections.
+`,
+      am: `## ፕሮግራሙ የሚያካትተው
+
+- **ሳምንታዊ ወርክሾፖች**: የቡድን ውይይት፣ መሪነት፣ እሴቶች፣ የወደፊት እቅድ
+- **የመኮንን መንገዶች**: ለ IDF ኦፊሰር ት/ቤት ዝግጅት — ፈተናዎች፣ ቃለ መጠይቆች
+- **የሙያ መንገዶች**: በተሰጥኦ ለ IDF ሚናዎች ማዛመድ
+- **የግል አማካሪ**: ለእያንዳንዱ ተሳታፊ የተመደበ የግል አማካሪ
+- **ማህበረሰብ**: በብዙ ከተሞች የሚገኙ መሪ ወጣቶች ቡድን አባልነት
+
+## ለማን ይሆናል?
+
+- **14-19** ዓመት ወጣቶች
+- ለመስጠት ተነሳሽነት (የአካዳሚክ ብቃት አያስፈልግም)
+- ለማህበረሰብ ተሰጥቷል — ከ IDF ጋር ባለ መሪነት
+
+## እንዴት መቀላቀል ይቻላል
+
+1. **ምዝገባ**: [aharai.org.il](https://aharai.org.il)
+2. **ቃለ መጠይቅ**: የግል + ቡድን
+3. **የሙከራ ጊዜ**: 1-2 ወራት
+4. **ተሳትፎ**: በሳምንት 1-2 ጊዜ + የሳምንት መጨረሻ ዝግጅቶች
+
+**የተጨማሪ እሴት**: የመኮንኖች፣ የቴክ ባለሙያዎች እና የማህበራዊ ተግባር-ፈጻሚዎች የተመራቂ አውታር።
+`,
+    },
+  },
 ];
