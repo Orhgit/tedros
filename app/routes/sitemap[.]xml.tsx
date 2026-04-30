@@ -1,6 +1,7 @@
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
+import { GLOSSARY } from "~/lib/glossary/glossary";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { relevantCities } from "~/lib/rights/relevance";
 
@@ -51,6 +52,9 @@ ${xDefaultFor(path)}
     // diverge later, sitemap will need to walk allRightSlugsByLocale().
     ...PRIORITY_RIGHTS.map((r) => `/rights/${r.slug.he}`),
     ...rightCityCells,
+    // RIN-418 — Glossary (Wave 1 of RIN-417): 12 entries × 3 locales.
+    "/glossary",
+    ...GLOSSARY.map((e) => `/glossary/${e.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

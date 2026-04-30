@@ -314,5 +314,21 @@
   "lead_form_error_generic": "משהו השתבש. נסו שוב.",
   "lead_form_success_title": "תודה!",
   "lead_form_success_body": "קיבלנו את פנייתכם, נחזור אליכם בקרוב.",
-  "lead_form_consent": "בלחיצה על שליחה, אני מאשר/ת שהפרטים יועברו למשרד הרלוונטי."
+  "lead_form_consent": "בלחיצה על שליחה, אני מאשר/ת שהפרטים יועברו למשרד הרלוונטי.",
+  "glossary_landing_title": "מילון מושגים",
+  "glossary_landing_subtitle": "מה זה סיגד? מי הם הקייסים? מה ההבדל בין ביתא ישראל לפלשמורה? כל המושגים החיוניים של הקהילה — בעברית, אנגלית ואמהרית.",
+  "glossary_breadcrumb_glossary": "מילון מושגים",
+  "glossary_search_placeholder": "חיפוש מושג (למשל \"סיגד\", \"קייסים\")",
+  "glossary_filter_label": "סינון לפי קטגוריה",
+  "glossary_filter_all": "כל הקטגוריות",
+  "glossary_empty_state": "לא נמצאו מושגים תואמים. נסו חיפוש אחר.",
+  "glossary_category_tradition": "מסורת",
+  "glossary_category_history": "הסטוריה",
+  "glossary_category_identity": "זהות",
+  "glossary_category_organization": "ארגונים",
+  "glossary_category_program": "תכניות",
+  "glossary_related_terms_heading": "מושגים קשורים",
+  "glossary_related_rights_heading": "זכויות קשורות",
+  "glossary_sources_heading": "מקורות",
+  "glossary_term_count": "מושגים"
 }

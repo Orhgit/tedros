@@ -45,6 +45,9 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <FooterLink to={`${base}/calculator/mortgage-ethiopian-immigrants`}>
               {t(locale, "footer_mortgage_calculator")}
             </FooterLink>
+            <FooterLink to={`${base}/glossary`}>
+              {t(locale, "glossary_landing_title")}
+            </FooterLink>
           </FooterCol>
 
           {/* Coming-soon pillars — surfaced as plain text so users see the

@@ -314,5 +314,21 @@
   "lead_form_error_generic": "Something went wrong. Please try again.",
   "lead_form_success_title": "Thank you!",
   "lead_form_success_body": "We received your inquiry and will be in touch shortly.",
-  "lead_form_consent": "By clicking Send, I authorize sharing my details with the relevant agency."
+  "lead_form_consent": "By clicking Send, I authorize sharing my details with the relevant agency.",
+  "glossary_landing_title": "Glossary",
+  "glossary_landing_subtitle": "What is Sigd? Who are the Kessim? What's the difference between Beta Israel and Falash Mura? All essential community terms — in Hebrew, English, and Amharic.",
+  "glossary_breadcrumb_glossary": "Glossary",
+  "glossary_search_placeholder": "Search a term (e.g. \"Sigd\", \"Kessim\")",
+  "glossary_filter_label": "Filter by category",
+  "glossary_filter_all": "All categories",
+  "glossary_empty_state": "No matching terms. Try a different search.",
+  "glossary_category_tradition": "Tradition",
+  "glossary_category_history": "History",
+  "glossary_category_identity": "Identity",
+  "glossary_category_organization": "Organizations",
+  "glossary_category_program": "Programs",
+  "glossary_related_terms_heading": "Related terms",
+  "glossary_related_rights_heading": "Related rights",
+  "glossary_sources_heading": "Sources",
+  "glossary_term_count": "terms"
 }
