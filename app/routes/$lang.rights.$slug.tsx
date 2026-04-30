@@ -7,6 +7,7 @@ import { Link, data } from "react-router";
 
 import type { Route } from "./+types/$lang.rights.$slug";
 import { EligibilityWizard } from "~/components/sections/eligibility-wizard";
+import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -144,6 +145,7 @@ export default function RightDetail({ loaderData }: Route.ComponentProps) {
           </p>
         </aside>
       </article>
+      <SiteFooter locale={locale} />
     </div>
   );
 }
