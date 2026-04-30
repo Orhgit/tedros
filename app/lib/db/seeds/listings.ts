@@ -20,7 +20,7 @@ export type ListingType = ListingAttributes["type"];
 export type ListingStatus = "draft" | "active" | "sold" | "rented" | "archived";
 
 export const DEMO_AGENCY = {
-  name: { he: 'תדרוס נדל"ן הדגמה', en: "Tedros Demo Realty", am: "ቴድሮስ ነድልአን ዴሞ" },
+  name: { he: 'טדרוס נדל"ן הדגמה', en: "Tedros Demo Realty", am: "ቴድሮስ ነድልአን ዴሞ" },
   slug: { he: "tedros-demo", en: "tedros-demo", am: "tedros-demo" },
   legalId: "000000018", // valid 9-digit Luhn-style demo value
   licenseNumber: "DEMO-0001",
@@ -28,7 +28,7 @@ export const DEMO_AGENCY = {
   contactPhone: "+972-50-0000000",
   websiteUrl: "https://demo.tedros.local",
   description: {
-    he: "סוכנות הדגמה לפיילוט הליסטינגים של תדרוס.",
+    he: "סוכנות הדגמה לפיילוט הליסטינגים של טדרוס.",
     en: "Demo agency used for the Tedros listings pilot.",
     am: "ለቴድሮስ ሊስቲንግስ ፓይለት የሚያገለግል ናሙና ኤጀንሲ።",
   } as Translatable,
