@@ -6,11 +6,11 @@
 
 import {
   GLOSSARY,
-  type GlossaryCategory,
   type GlossaryEntry,
   getEntryBodyForLocale,
   pickLocale,
-} from "../../glossary/glossary";
+} from "../../glossary/glossary.server";
+import type { GlossaryCategory } from "../../glossary/categories";
 import type { Locale } from "../../i18n/config";
 
 export interface GlossarySummary {

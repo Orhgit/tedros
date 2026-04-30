@@ -6,7 +6,7 @@ import {
   listOrgs,
   relatedOrgs,
 } from "../app/lib/db/queries/orgs.server";
-import { ORGS } from "../app/lib/orgs/orgs";
+import { ORGS } from "../app/lib/orgs/orgs.server";
 
 describe("orgs seed integrity", () => {
   it("has at least 12 orgs", () => {

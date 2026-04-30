@@ -4,11 +4,11 @@
 
 import {
   ORGS,
-  type OrgCategory,
   type OrgEntry,
   getOrgBodyForLocale,
   pickLocale,
-} from "../../orgs/orgs";
+} from "../../orgs/orgs.server";
+import type { OrgCategory } from "../../orgs/categories";
 import type { Locale } from "../../i18n/config";
 
 export interface OrgSummary {

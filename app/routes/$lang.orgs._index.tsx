@@ -14,7 +14,7 @@ import {
   ORG_CATEGORY_TO_TAG,
   glyphForOrgCategory,
   type OrgCategory,
-} from "~/lib/orgs/orgs";
+} from "~/lib/orgs/categories";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 
 const ALL_ORG_CATEGORIES: OrgCategory[] = ["education", "legal", "health", "community"];

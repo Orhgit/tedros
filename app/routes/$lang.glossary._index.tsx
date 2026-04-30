@@ -12,7 +12,7 @@ import {
   CATEGORY_TO_TAG,
   glyphForCategory,
   type GlossaryCategory,
-} from "~/lib/glossary/glossary";
+} from "~/lib/glossary/categories";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";

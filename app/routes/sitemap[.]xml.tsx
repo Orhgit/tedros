@@ -1,9 +1,9 @@
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
-import { GLOSSARY } from "~/lib/glossary/glossary";
+import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
-import { ORGS } from "~/lib/orgs/orgs";
+import { ORGS } from "~/lib/orgs/orgs.server";
 import { relevantCities } from "~/lib/rights/relevance";
 
 /**

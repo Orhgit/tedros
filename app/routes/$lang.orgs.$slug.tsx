@@ -14,7 +14,7 @@ import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
-import { ORG_CATEGORY_TO_TAG, glyphForOrgCategory } from "~/lib/orgs/orgs";
+import { ORG_CATEGORY_TO_TAG, glyphForOrgCategory } from "~/lib/orgs/categories";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
 

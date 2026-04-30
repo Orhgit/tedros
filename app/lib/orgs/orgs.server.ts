@@ -10,8 +10,9 @@
 import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
 import { DEFAULT_LOCALE } from "../i18n/config";
+import type { OrgCategory } from "./categories";
 
-export type OrgCategory = "education" | "legal" | "health" | "community";
+export type { OrgCategory } from "./categories";
 
 export interface OrgEntry {
   slug: string;
@@ -1420,24 +1421,4 @@ export function pickLocale<T extends { he: string; en?: string; am?: string }>(
 
 export function getOrgBodyForLocale(entry: OrgEntry, locale: Locale): string {
   return entry.bodies[locale] ?? entry.bodies[DEFAULT_LOCALE];
-}
-
-// Visual: each org category maps to a tone (tag) reused from
-// `lib/rights/categories.ts` — same approach as glossary.
-export const ORG_CATEGORY_TO_TAG: Record<OrgCategory, string> = {
-  education: "scholarship",
-  legal: "legal",
-  health: "health",
-  community: "community",
-};
-
-const ORG_CATEGORY_GLYPH: Record<OrgCategory, string> = {
-  education: "🎓",
-  legal: "⚖️",
-  health: "🏥",
-  community: "🤝",
-};
-
-export function glyphForOrgCategory(category: OrgCategory): string {
-  return ORG_CATEGORY_GLYPH[category];
 }
