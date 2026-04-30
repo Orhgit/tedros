@@ -49,12 +49,14 @@ export function SiteFooter({ locale }: SiteFooterProps) {
               {t(locale, "glossary_landing_title")}
             </FooterLink>
             <FooterLink to={`${base}/orgs`}>{t(locale, "orgs_landing_title")}</FooterLink>
+            <FooterLink to={`${base}/professionals`}>
+              {t(locale, "professionals_landing_title")}
+            </FooterLink>
           </FooterCol>
 
           {/* Coming-soon pillars — surfaced as plain text so users see the
               roadmap without clicking into 404s. */}
           <FooterCol title={t(locale, "footer_soon_heading")}>
-            <FooterStaticItem>{t(locale, "pillar_professionals_title")}</FooterStaticItem>
             <FooterStaticItem>{t(locale, "pillar_employment_title")}</FooterStaticItem>
             <FooterStaticItem>{t(locale, "pillar_health_title")}</FooterStaticItem>
             <FooterStaticItem>{t(locale, "pillar_family_title")}</FooterStaticItem>
