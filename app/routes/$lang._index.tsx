@@ -1,5 +1,6 @@
 import { Form, Link, useNavigation } from "react-router";
 import type { Route } from "./+types/$lang._index";
+import { SiteFooter } from "~/components/sections/site-footer";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import { submitSubscriber } from "~/lib/subscribers/submit.server";
@@ -20,7 +21,7 @@ const PILLARS = [
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
-  return { locale, year: new Date().getFullYear() };
+  return { locale };
 }
 
 export async function action({ request, params }: Route.ActionArgs) {
@@ -57,7 +58,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function Home({ loaderData, actionData }: Route.ComponentProps) {
-  const { locale, year } = loaderData;
+  const { locale } = loaderData;
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   const submitted = actionData?.ok === true;
@@ -220,11 +221,8 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
             </p>
           </section>
         </main>
-
-        <footer className="mt-16 border-t border-border pt-6 text-sm text-muted-foreground">
-          <span>{t(locale, "footer_copyright", { year })}</span>
-        </footer>
       </div>
+      <SiteFooter locale={locale} />
     </div>
   );
 }

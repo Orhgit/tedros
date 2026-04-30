@@ -5,6 +5,7 @@
 import { Link, useSearchParams } from "react-router";
 
 import type { Route } from "./+types/$lang.rights._index";
+import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -182,6 +183,7 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
           )}
         </section>
       </main>
+      <SiteFooter locale={locale} />
     </div>
   );
 }

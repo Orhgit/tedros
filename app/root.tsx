@@ -65,24 +65,89 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  const status = isRouteErrorResponse(error) ? error.status : 500;
-  const title = isRouteErrorResponse(error) ? error.statusText : "Application Error";
-  const message =
-    isRouteErrorResponse(error) && error.data
-      ? typeof error.data === "string"
-        ? error.data
-        : JSON.stringify(error.data)
-      : error instanceof Error
-        ? error.message
-        : "An unexpected error occurred.";
+  const isRouteError = isRouteErrorResponse(error);
+  const status = isRouteError ? error.status : 500;
+  // Locale fallback: ErrorBoundary may run before the layout's loader data
+  // has populated, so we default to HE per ADR-002.
+  const locale: Locale = "he";
+
+  // Friendly copy per common status. Anything else falls through to a
+  // generic "something went wrong" message — we intentionally don't
+  // surface raw error.data / stack to public visitors (raw payload was
+  // leaking serialized loader errors before this).
+  const COPY: Record<
+    string,
+    { title: string; body: string; primaryHref: string; primaryLabel: string }
+  > = {
+    "404-he": {
+      title: "הדף לא נמצא",
+      body: "הקישור הזה לא קיים, או שהוא הוסר. אפשר לחזור לעמוד הבית או לעבור ישירות לזכויות.",
+      primaryHref: "/he",
+      primaryLabel: "חזרה לעמוד הבית",
+    },
+    "404-en": {
+      title: "Page not found",
+      body: "This link doesn't exist or has been removed. Head back home, or jump to the rights catalog.",
+      primaryHref: "/en",
+      primaryLabel: "Back to homepage",
+    },
+    "404-am": {
+      title: "ገጹ አልተገኘም",
+      body: "ይህ አገናኝ የለም ወይም ተወግዷል። ወደ መነሻ ገጹ ይመለሱ ወይም ወደ መብቶች ካታሎግ ይዝለሉ።",
+      primaryHref: "/am",
+      primaryLabel: "ወደ መነሻ ገጽ",
+    },
+    "500-he": {
+      title: "משהו השתבש",
+      body: "תקלה זמנית בצד שלנו. נסו לרענן את הדף, ואם זה ממשיך — דווחו לנו ב-GitHub.",
+      primaryHref: "/he",
+      primaryLabel: "חזרה לעמוד הבית",
+    },
+    "500-en": {
+      title: "Something went wrong",
+      body: "Temporary issue on our side. Try refreshing the page; if it persists, file an issue on GitHub.",
+      primaryHref: "/en",
+      primaryLabel: "Back to homepage",
+    },
+    "500-am": {
+      title: "የሆነ ነገር ተበላሸ",
+      body: "በእኛ በኩል ጊዜያዊ ችግር። ገጹን እንደገና ለመጫን ይሞክሩ።",
+      primaryHref: "/am",
+      primaryLabel: "ወደ መነሻ ገጽ",
+    },
+  };
+
+  const key = `${status}-${locale}` in COPY ? `${status}-${locale}` : `500-${locale}`;
+  const c = COPY[key]!;
 
   return (
-    <main className="mx-auto max-w-2xl p-8">
-      <h1 className="text-3xl font-bold">{status}</h1>
-      <p className="mt-2 text-lg">{title}</p>
-      <pre className="mt-4 overflow-auto rounded-md bg-gray-100 p-4 text-sm dark:bg-gray-900">
-        {message}
-      </pre>
+    <main className="min-h-screen bg-background text-foreground">
+      <div className="flag-stripe h-1.5" aria-hidden="true" />
+      <div className="container-default mx-auto max-w-2xl py-16 sm:py-24">
+        <p className="font-display text-6xl font-bold tracking-tight text-earth-700 sm:text-7xl">
+          {status}
+        </p>
+        <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
+          {c.title}
+        </h1>
+        <p className="mt-4 text-lg leading-relaxed text-ink-700">{c.body}</p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href={c.primaryHref}
+            className="inline-flex items-center rounded-md bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground shadow-sm transition hover:bg-earth-700"
+          >
+            {c.primaryLabel}
+          </a>
+          {status === 404 && (
+            <a
+              href={`/${locale}/rights`}
+              className="inline-flex items-center rounded-md border border-earth-300 px-5 py-2.5 text-base font-medium text-earth-900 transition hover:bg-earth-50"
+            >
+              {locale === "he" ? "זכויות" : locale === "en" ? "Rights" : "መብቶች"}
+            </a>
+          )}
+        </div>
+      </div>
     </main>
   );
 }

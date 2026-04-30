@@ -11,6 +11,7 @@ import { Link, data } from "react-router";
 
 import type { Route } from "./+types/$lang.rights.$slug_.$city";
 import { EligibilityWizard } from "~/components/sections/eligibility-wizard";
+import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
@@ -205,6 +206,7 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
           </p>
         </aside>
       </article>
+      <SiteFooter locale={locale} />
     </div>
   );
 }
