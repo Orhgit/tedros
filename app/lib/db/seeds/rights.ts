@@ -2020,4 +2020,1114 @@ Current residents of apartments in Kiryat Moshe, Rehovot (owners or protected te
 `,
     },
   },
+
+  // 19 — Matriculation grant for HS students
+  {
+    title: {
+      he: "מענק בגרות לתלמידי תיכון יוצאי אתיופיה",
+      en: "Matriculation Grant for Ethiopian-Israeli HS Students",
+      am: "ለኢትዮጵያ-እስራኤላውያን የሁለተኛ ደረጃ ተማሪዎች የማትሪክ ስጦታ",
+    },
+    slug: {
+      he: "matriculation-grant",
+      en: "matriculation-grant",
+      am: "matriculation-grant",
+    },
+    govUrl: "https://www.enp.org.il/he/",
+    eligibilitySummary: {
+      he: "תוספת תקציבית לתיכוניסטים לקראת בגרות. כיסוי שיעורי תגבור, אגרות בחינה, וציוד לימודי. זמין דרך ENP בבתי ספר ב-32 ערים.",
+      en: "Budget supplement for HS students preparing for matriculation. Covers tutoring, exam fees, and study materials. Available via ENP in schools across 32 cities.",
+      am: "ለማትሪክ ለሚዘጋጁ የሁለተኛ ደረጃ ተማሪዎች የበጀት ማሟያ።",
+    },
+    tags: ["matriculation", "education", "scholarship"],
+    bodies: {
+      he: `## למי מיועד?
+
+תלמידי תיכון בכיתות י-יב יוצאי אתיופיה הלומדים בבתי ספר משתתפים בתכנית ENP (32 ערים, כולל נתניה, ראשון, רחובות, באר שבע).
+
+## מה כולל?
+
+- כיסוי שיעורי תגבור (מתמטיקה, אנגלית, מקצועות מורחבים)
+- אגרות בחינות בגרות
+- ספרים וציוד לימודי
+- מנטור אישי מהקהילה
+- סדנאות הכנה לבגרות
+
+## איך מגישים?
+
+1. דבר עם **יועץ.ת בית הספר** — לבדוק אם הוא משתתף ב-ENP
+2. אם כן — מילוי טופס ENP (דרך בית הספר)
+3. אישור תוך 4 שבועות
+4. מתחילים לקבל סיוע מיד
+
+🔗 [enp.org.il](https://www.enp.org.il/he/)
+`,
+      en: `## Who is eligible?
+
+Ethiopian-Israeli high-school students in grades 10-12 attending schools participating in ENP (32 cities, including Netanya, Rishon, Rehovot, Be'er Sheva).
+
+## What's included?
+
+- Tutoring (math, English, advanced subjects)
+- Matriculation exam fees
+- Books and study materials
+- Personal community mentor
+- Matriculation prep workshops
+
+## How to apply
+
+1. Talk to **school counselor** — check if school participates in ENP
+2. If yes — fill out ENP form (via school)
+3. Approval within 4 weeks
+4. Aid begins immediately
+
+🔗 [enp.org.il](https://www.enp.org.il/he/)
+`,
+      am: `## ለማን ይሆናል?
+
+በ ENP በተሳተፉ ት/ቤቶች የሚማሩ የ10-12ኛ ክፍል የኢትዮጵያ-እስራኤላውያን ተማሪዎች።
+
+## ምን ይካተታል?
+
+- ተጨማሪ ትምህርት (ሒሳብ፣ እንግሊዝኛ፣ ከፍተኛ ርዕሰ ጉዳዮች)
+- የማትሪክ ፈተና ክፍያዎች
+- መጻሕፍት እና የጥናት መሳሪያዎች
+- የግል የማህበረሰብ አማካሪ
+- የማትሪክ ዝግጅት ወርክሾፖች
+
+## እንዴት ማመልከት ይቻላል
+
+1. ለ**ት/ቤት አማካሪ** ይነጋገሩ
+2. ት/ቤቱ በ ENP ከሆነ — ቅጹን ይሙሉ
+3. በ4 ሳምንታት ውስጥ ይጸድቃል
+
+🔗 [enp.org.il](https://www.enp.org.il/he/)
+`,
+    },
+  },
+
+  // 20 — Tech-Career bootcamp (separate from Olim Beyahad excellence track)
+  {
+    title: {
+      he: "Tech-Career — Bootcamp הייטק חינם",
+      en: "Tech-Career — Free Tech Bootcamp",
+      am: "Tech-Career — ነፃ የቴክ ቡት ካምፕ",
+    },
+    slug: {
+      he: "tech-career-bootcamp",
+      en: "tech-career-bootcamp",
+      am: "tech-career-bootcamp",
+    },
+    govUrl: "https://www.tech-career.org/",
+    eligibilitySummary: {
+      he: "Bootcamp ל-cybersecurity, data, ופיתוח, חינם, 6-12 חודשים. 80%+ השמה. אלטרנטיבה למסלול אקדמי.",
+      en: "Bootcamp in cybersecurity, data, and development. Free, 6-12 months. 80%+ placement. An alternative to the academic track.",
+      am: "በሳይበርሰኩሪቲ፣ ዳታ እና ዴቭሎፕመንት ቡት ካምፕ። ነፃ፣ ከ6-12 ወራት።",
+    },
+    tags: ["bootcamp", "tech", "employment"],
+    bodies: {
+      he: `## תכניות זמינות
+
+- **Cybersecurity** (12 חודשים): SOC analyst, ethical hacking, GRC
+- **Data** (10 חודשים): Data Analyst, Data Engineer
+- **Full-Stack Developer** (6 חודשים): React, Node, PostgreSQL
+- **Product/UX** (4 חודשים): קצר, להחלפת תפקיד
+
+## תנאי כניסה
+
+- בגרות מלאה
+- אנגלית טובה (לא שפת אם)
+- מבחני קבלה: לוגיקה + מוטיבציה + ראיון
+- בלי דרישה לתואר
+
+## ערך מוסף
+
+- חיבור ל-650+ חברות הייטק שותפות
+- מנטור צמוד לאחר סיום
+- רשת alumni של 1,200+ בוגרים
+- חינם — ללא שכר לימוד
+
+## איך מתחילים?
+
+1. הרשמה ב-[tech-career.org](https://www.tech-career.org/)
+2. מבחני קבלה (יום או יומיים)
+3. ראיון אישי
+4. תחילת קוהורט הקרוב (כל 3-4 חודשים)
+`,
+      en: `## Available tracks
+
+- **Cybersecurity** (12 months): SOC analyst, ethical hacking, GRC
+- **Data** (10 months): Data Analyst, Data Engineer
+- **Full-Stack Developer** (6 months): React, Node, PostgreSQL
+- **Product/UX** (4 months): short, role-switch focused
+
+## Entry requirements
+
+- Full matriculation
+- Good English (not native)
+- Entrance exams: logic + motivation + interview
+- No degree required
+
+## Bonus value
+
+- Connection to 650+ partner tech companies
+- Mentor through post-graduation
+- 1,200+ alumni network
+- Free — no tuition
+
+## How to start
+
+1. Register at [tech-career.org](https://www.tech-career.org/)
+2. Entrance exams (1-2 days)
+3. Personal interview
+4. Start of next cohort (every 3-4 months)
+`,
+      am: `## ያሉ መንገዶች
+
+- **ሳይበርሰኩሪቲ** (12 ወራት)
+- **ዳታ** (10 ወራት)
+- **ሙሉ-ስታክ ዴቨሎፐር** (6 ወራት)
+- **ምርት/UX** (4 ወራት)
+
+## የመግቢያ መስፈርቶች
+
+- ሙሉ ማትሪክ
+- ጥሩ እንግሊዝኛ
+- የመግቢያ ፈተናዎች
+- ዲግሪ አያስፈልግም
+
+## የተጨማሪ እሴት
+
+- ከ650+ የቴክ ኩባንያዎች ጋር ግንኙነት
+- ከትምህርት በኋላ አማካሪ
+- 1,200+ ተመራቂዎች
+- ነፃ — የትምህርት ክፍያ የለም
+
+## እንዴት መጀመር ይቻላል
+
+1. በ [tech-career.org](https://www.tech-career.org/) ይመዝገቡ
+2. የመግቢያ ፈተናዎች
+3. ቃለ መጠይቅ
+4. የቀጣይ ቡድን መጀመሪያ
+`,
+    },
+  },
+
+  // 21 — Urban renewal Ramat Eliyahu (Rishon LeZion)
+  {
+    title: {
+      he: "התחדשות עירונית — רמת אליהו (ראשון לציון)",
+      en: "Urban Renewal — Ramat Eliyahu (Rishon LeZion)",
+      am: "የከተማ ዳግም-ግንባታ — ራማት ኤሊያሁ (ሪሾን ለጽዮን)",
+    },
+    slug: {
+      he: "urban-renewal-ramat-eliyahu",
+      en: "urban-renewal-ramat-eliyahu",
+      am: "urban-renewal-ramat-eliyahu",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/urban_renewal",
+    eligibilitySummary: {
+      he: "תכנית פינוי-בינוי בשכונת רמת אליהו (ראשון לציון) — אחת מ-5 השכונות בעדיפות עליונה לקהילה האתיופית. דיירים מקבלים דירה חדשה תחת ההסכם.",
+      en: "Evacuation-rebuild program in Ramat Eliyahu (Rishon LeZion) — one of 5 priority neighborhoods for the Ethiopian community. Residents receive a new apartment.",
+      am: "የመፈናቀል-መልሶ ግንባታ ፕሮግራም በራማት ኤሊያሁ (ሪሾን ለጽዮን) — ለማህበረሰቡ ቅድሚያ የተሰጡ 5 ሰፈሮች አንዱ።",
+    },
+    tags: ["urban_renewal", "housing", "family"],
+    bodies: {
+      he: `## למי רלוונטי?
+
+דיירים נוכחיים של בניינים ברמת אליהו, ראשון לציון. השכונה סומנה ב-2024 כ-priority neighborhood עם מנהלת ייעודית ומנדט גישור-תרבותי לקהילה.
+
+## מה כלול?
+
+- דירה חדשה במיקום (לרוב מורחבת ב-15-25%)
+- שכר דירה זמני בזמן הבנייה (~30 חודשים)
+- מס רכישה כדירה ראשונה
+- שיפור תשתיות שכונתי בנפרד
+
+## תהליך
+
+1. בדיקת זכאות במנהלת
+2. חתימה על הסכם דיירים (66%-80% מהדיירים בבניין)
+3. עו"ד מטעם דיירים (Tebeka יכול לסייע במשפט)
+4. ועדה מקומית מאשרת
+5. בנייה 2-3 שנים → חזרה
+
+⚠️ **התייעצו עם עו"ד עצמאי** לפני חתימה.
+
+📞 **מנהלת התחדשות ראשון**: עירייה 9740-040
+`,
+      en: `## Who is eligible?
+
+Current residents of buildings in Ramat Eliyahu, Rishon LeZion. The neighborhood was marked priority in 2024 with a dedicated administration and community-bridge mandate.
+
+## What's included
+
+- New apartment in place (typically 15-25% larger)
+- Temporary rent during construction (~30 months)
+- Purchase tax treated as first-home
+- Separate budget for neighborhood infrastructure
+
+## Process
+
+1. Eligibility check at the administration
+2. Sign resident agreement (66%-80% of building residents)
+3. Independent attorney for residents (Tebeka can assist)
+4. Local committee approves
+5. Construction 2-3 years → return
+
+⚠️ **Consult independent attorney** before signing.
+`,
+      am: `## ለማን ይተገበራል?
+
+በራማት ኤሊያሁ ሪሾን ለጽዮን ህንጻዎች የአሁን ነዋሪዎች።
+
+## ምን ይካተታል
+
+- አዲስ አፓርትመንት (ብዙውን ጊዜ 15-25% ትልቅ)
+- በግንባታ ጊዜ ጊዜያዊ ኪራይ (~30 ወራት)
+- እንደ መጀመሪያ-ቤት የግዢ ግብር
+- ለሰፈር መሰረተ ልማት የተለየ በጀት
+
+## ሂደት
+
+1. የብቁነት ምርመራ
+2. የነዋሪ ስምምነት መፈረም
+3. ለነዋሪዎች ራሱን የቻለ ጠበቃ
+4. የአካባቢ ኮሚቴ ያጸድቃል
+5. 2-3 ዓመታት ግንባታ → መመለስ
+
+⚠️ **ራሱን የቻለ ጠበቃ** ከመፈረም በፊት ያማክሩ።
+`,
+    },
+  },
+
+  // 22 — Urban renewal Netanya (Dora area)
+  {
+    title: {
+      he: "התחדשות עירונית — נתניה (דורה / רמת ידין / נאות שקד)",
+      en: "Urban Renewal — Netanya (Dora / Ramat Yadin / Neot Shaked)",
+      am: "የከተማ ዳግም-ግንባታ — ነታንያ (ዶራ / ራማት ያዲን / ኖት ሻከድ)",
+    },
+    slug: {
+      he: "urban-renewal-netanya",
+      en: "urban-renewal-netanya",
+      am: "urban-renewal-netanya",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/urban_renewal",
+    eligibilitySummary: {
+      he: "פינוי-בינוי בשלוש שכונות בנתניה: דורה (=רמת ידין), נאות שקד, וקריית נורדאו. אזורים בעדיפות עליונה. נתניה היא העיר עם הקהילה הוותיקה הגדולה ביותר.",
+      en: "Evacuation-rebuild in three Netanya neighborhoods: Dora (=Ramat Yadin), Neot Shaked, and Kiryat Nordau. Priority areas. Netanya hosts the largest veteran Ethiopian community.",
+      am: "በሦስት የነታንያ ሰፈሮች የመፈናቀል-መልሶ ግንባታ።",
+    },
+    tags: ["urban_renewal", "housing", "family"],
+    bodies: {
+      he: `## למי רלוונטי?
+
+דיירי דורה (נקראת גם רמת ידין), נאות שקד, וקריית נורדאו בנתניה. נתניה היא העיר עם הקהילה האתיופית הגדולה ביותר בישראל (35,000+).
+
+## מה ייחודי בנתניה?
+
+- 3 שכונות במקביל = pipeline ארוך טווח (10+ שנים)
+- מועצת קהילה ייעודית ב-עירייה
+- שותפויות עם Tene Briut + ENP לליווי תושבים
+- משקל גבוה לשמירה על הרכב הקהילתי בשכונה
+
+## הליך
+
+1. **שיחה ראשונית** עם מנהלת ההתחדשות (עיריית נתניה)
+2. **התארגנות בניין**: 66-80% מהדיירים מסכימים
+3. **חוזה משפטי**: עו"ד עצמאי חובה (לא יזם!)
+4. **תקופת בנייה**: 2-3 שנים, שכר דירה זמני
+5. **חזרה**: דירה גדולה ב-15-30%
+
+🚨 **דרישה קריטית**: לוודא שהחוזה כולל ערבות בנקאית ל-5 שנים אחרי החזרה.
+
+📞 **מנהלת התחדשות נתניה**: 09-8603333
+`,
+      en: `## Who is eligible?
+
+Residents of Dora (=Ramat Yadin), Neot Shaked, and Kiryat Nordau in Netanya. Netanya hosts the largest Ethiopian community in Israel (35,000+).
+
+## What's unique about Netanya?
+
+- 3 neighborhoods in parallel = long pipeline (10+ years)
+- Dedicated community council in the municipality
+- Partnerships with Tene Briut + ENP for resident accompaniment
+- High weight given to preserving community composition
+
+## Process
+
+1. **Initial conversation** with renewal administration (Netanya municipality)
+2. **Building organization**: 66-80% of residents agree
+3. **Legal contract**: independent attorney mandatory (NOT developer's!)
+4. **Construction**: 2-3 years, temporary rent
+5. **Return**: 15-30% larger apartment
+
+🚨 **Critical requirement**: ensure contract includes 5-year bank guarantee after return.
+
+📞 **Netanya renewal admin**: 09-8603333
+`,
+      am: `## ለማን ይተገበራል?
+
+በነታንያ ዶራ (ራማት ያዲን ተብሎም ይጠራል)፣ ኖት ሻከድ እና ቂርያት ኖርዳው ነዋሪዎች። ነታንያ በእስራኤል ትልቁን የኢትዮጵያ ማህበረሰብ ይዛለች።
+
+## ሂደት
+
+1. ከእድሳት አስተዳደር ጋር መነጋገር
+2. የህንጻ ድርጅት
+3. ሕጋዊ ኮንትራት — ራሱን የቻለ ጠበቃ ግዴታ
+4. 2-3 ዓመታት ግንባታ
+5. መመለስ — ከ15-30% ትልቅ አፓርትመንት
+
+🚨 **ወሳኝ መስፈርት**: ኮንትራቱ ከተመለሰ በኋላ ለ5 ዓመታት የባንክ ዋስትና ማካተቱን ያረጋግጡ።
+
+📞 **የነታንያ የእድሳት አስተዳደር**: 09-8603333
+`,
+    },
+  },
+
+  // 23 — Chronic disease prevention (Tene Briut)
+  {
+    title: {
+      he: "מניעת מחלות כרוניות — טנא בריאות",
+      en: "Chronic Disease Prevention — Tene Briut",
+      am: "ሥር የሰደደ በሽታ መከላከል — ጤና ብርሃት",
+    },
+    slug: {
+      he: "chronic-disease-prevention",
+      en: "chronic-disease-prevention",
+      am: "chronic-disease-prevention",
+    },
+    govUrl: "https://tene-briut.org.il",
+    eligibilitySummary: {
+      he: "תכניות מניעה לסוכרת, יתר לחץ דם, ומחלות לב — מותאמות תרבותית לקהילה. סדנאות בעברית/אמהרית, ליווי דיאטטי, ומדריכי ספורט. דרך טנא בריאות.",
+      en: "Prevention programs for diabetes, hypertension, and heart disease — culturally adapted for the community. Hebrew/Amharic workshops, dietary guidance, exercise instructors. Via Tene Briut.",
+      am: "ለስኳር በሽታ፣ ለደም ግፊት እና ለልብ በሽታ የመከላከያ ፕሮግራሞች — ለማህበረሰቡ በተስማማ ሁኔታ።",
+    },
+    tags: ["chronic_disease", "health", "anchor_partner"],
+    bodies: {
+      he: `## למי מיועד?
+
+- בני קהילה בני 40+ עם גורמי סיכון (משפחה, BMI, אורח חיים)
+- חולים סוכרת או יתר לחץ דם — ליווי קבוע
+- בני נוער במשפחות עם היסטוריה מחלתית
+
+## מה כולל?
+
+- **סדנאות תזונה**: דובר אמהרית, דגש על מאכלי קהילה (אינג'רה, ברברה, מתבחה)
+- **תכנית הליכה קהילתית**: 3 פעמים שבוע, חינם
+- **בדיקות סקר**: שטח קהילתי, חינם
+- **ייעוץ דיאטטי אישי**: לחולים מאובחנים
+- **קבוצות תמיכה**: לחולים במחלות כרוניות
+
+## איך מצטרפים?
+
+1. **טלפון**: 03-7383937 (אמהרית/עברית)
+2. **דרך קופ"ח**: בקש "תכנית מניעה דובר אמהרית" — Tene Briut מספקת
+3. **דרך מרפאה ביישוב**: בקש פנייה (סניפים בנתניה, רחובות, ראשון, ב"ש)
+4. **באתר**: [tene-briut.org.il](https://tene-briut.org.il)
+
+**עלות**: חינם או סמלי (5-30 ₪ לסדנה).
+`,
+      en: `## Who is eligible?
+
+- Community members 40+ with risk factors (family, BMI, lifestyle)
+- Patients with diabetes or hypertension — ongoing support
+- Youth in families with disease history
+
+## What's included?
+
+- **Nutrition workshops**: Amharic-speaking, focused on community foods (injera, berbere, mitmita)
+- **Community walking program**: 3x/week, free
+- **Screening tests**: in community settings, free
+- **Personal dietary counseling**: for diagnosed patients
+- **Support groups**: for those with chronic conditions
+
+## How to join
+
+1. **Phone**: 03-7383937 (Amharic/Hebrew)
+2. **Via HMO**: ask for "Amharic-speaking prevention program" — Tene Briut provides
+3. **Via local clinic**: branches in Netanya, Rehovot, Rishon, Be'er Sheva
+4. **Online**: [tene-briut.org.il](https://tene-briut.org.il)
+
+**Cost**: free or symbolic (₪5-30 per workshop).
+`,
+      am: `## ለማን ይሆናል?
+
+- 40+ ዕድሜ ያላቸው የማህበረሰብ አባላት
+- የስኳር በሽታ ወይም የደም ግፊት ታካሚዎች
+- የበሽታ ታሪክ ባለ ቤተሰቦች ውስጥ ያሉ ወጣቶች
+
+## ምን ይካተታል?
+
+- **የአመጋገብ ወርክሾፖች**: በአማርኛ
+- **የማህበረሰብ የእግር ጉዞ ፕሮግራም**: በሳምንት 3 ጊዜ
+- **የመጥላት ምርመራዎች**: በማህበረሰብ ቦታዎች፣ ነፃ
+- **የግል የአመጋገብ ምክር**
+- **የድጋፍ ቡድኖች**
+
+## እንዴት መቀላቀል ይቻላል
+
+1. **ስልክ**: 03-7383937 (አማርኛ/ዕብራይስጥ)
+2. **በሕክምና ድርጅት በኩል**: "የአማርኛ ተናጋሪ የመከላከያ ፕሮግራም" ይጠይቁ
+3. **በአካባቢ ክሊኒክ በኩል**: ቅርንጫፎች ያሉበት
+4. **በመስመር**: [tene-briut.org.il](https://tene-briut.org.il)
+
+**ወጪ**: ነፃ ወይም ምልክት ('ሺ"ል 5-30 በወርክሾፕ).
+`,
+    },
+  },
+
+  // 24 — Medical translation services
+  {
+    title: {
+      he: "שירותי תרגום רפואי דובר אמהרית",
+      en: "Amharic Medical Translation Services",
+      am: "የአማርኛ የሕክምና ትርጉም አገልግሎቶች",
+    },
+    slug: {
+      he: "medical-translation",
+      en: "medical-translation",
+      am: "medical-translation",
+    },
+    govUrl: "https://tene-briut.org.il",
+    eligibilitySummary: {
+      he: "מתורגמנים ומגשרי תרבות דוברי אמהרית בקופות חולים, בתי חולים, ומרפאות יועצים. חינם — שירות מובטח לפי חוק זכויות החולה.",
+      en: "Amharic-speaking translators and cultural mediators at HMOs, hospitals, and specialist clinics. Free — guaranteed under the Patient Rights Law.",
+      am: "በሕክምና ድርጅቶች፣ ሆስፒታሎች እና በልዩ ክሊኒኮች የአማርኛ ተናጋሪ ተርጓሚዎች።",
+    },
+    tags: ["translation", "health", "anchor_partner"],
+    bodies: {
+      he: `## למי מיועד?
+
+כל מטופל/ת דובר אמהרית — בעיקר בני המעמד הוותיק (גיל 50+). השירות זמין גם לבני המשפחה המתלוונים.
+
+## מה זמין?
+
+- **מתורגמנים בקופות חולים**: כללית, מכבי, מאוחדת, לאומית
+- **בבתי חולים**: רמב"ם, סורוקה, איכילוב, רבין, וולפסון
+- **מומחים מתמחים**: גסטרו, סוכרת, נשים, נפש
+- **שירות 24/7 דיגיטלי**: שיחת וידאו עם מתורגמן (Tene Briut + Manarah)
+
+## איך מבקשים?
+
+1. **בקופ"ח**: בעת קביעת תור — בקש "מתורגמן לאמהרית"
+2. **בבית חולים**: בעת קבלה — דרוש מגשר תרבות
+3. **ב-ER**: זכות מיידית
+4. **בטלמדיסין**: באפליקציית קופ"ח, סנן "אמהרית"
+
+🚨 **חוק זכויות החולה (סעיף 13)**: זכותך הבסיסית. אם דחו — פנה ל-Tebeka או למשרד הבריאות.
+`,
+      en: `## Who is eligible?
+
+Any Amharic-speaking patient — primarily veteran community members (age 50+). The service is also available to accompanying family members.
+
+## What's available?
+
+- **Translators at HMOs**: Clalit, Maccabi, Meuhedet, Leumit
+- **At hospitals**: Rambam, Soroka, Ichilov, Rabin, Wolfson
+- **Specialist clinics**: gastro, diabetes, OB-GYN, mental health
+- **24/7 digital service**: video call with translator (Tene Briut + Manarah)
+
+## How to request
+
+1. **At HMO**: when booking — request "Amharic translator"
+2. **At hospital**: at admission — demand a cultural mediator
+3. **In ER**: an immediate right
+4. **In telemedicine**: in HMO app, filter "Amharic"
+
+🚨 **Patient Rights Law (§13)**: this is a basic right. If denied — contact Tebeka or Ministry of Health.
+`,
+      am: `## ለማን ይሆናል?
+
+ማንኛውም የአማርኛ ተናጋሪ ታካሚ — በዋናነት ቀደምት ማህበረሰብ አባላት (50+ ዕድሜ)።
+
+## ያለ ምንድን ነው?
+
+- **በሕክምና ድርጅቶች ተርጓሚዎች**
+- **በሆስፒታሎች**
+- **የልዩ ባለሙያ ክሊኒኮች**
+- **24/7 ዲጂታል አገልግሎት**: ከተርጓሚ ጋር የቪዲዮ ጥሪ
+
+## እንዴት መጠየቅ ይቻላል
+
+1. **በሕክምና ድርጅት**: ቀጠሮ ሲይዙ — "የአማርኛ ተርጓሚ" ይጠይቁ
+2. **በሆስፒታል**: ሲቀበሉ — የባህል አስታራቂ ይጠይቁ
+3. **በ ER**: ወዲያውኑ መብት
+4. **በቴሌሕክምና**: በሕክምና ድርጅት መተግበሪያ "አማርኛ" ያጣሩ
+
+🚨 **የታካሚ መብቶች ሕግ (§13)**: ይህ መሰረታዊ መብት ነው።
+`,
+    },
+  },
+
+  // 25 — Kessim community religious support
+  {
+    title: {
+      he: "תמיכה בקהילות דתיות — קייסים",
+      en: "Religious Community Support — Kessim",
+      am: "የሃይማኖት ማህበረሰብ ድጋፍ — ቄሶች",
+    },
+    slug: {
+      he: "kessim-religious-support",
+      en: "kessim-religious-support",
+      am: "kessim-religious-support",
+    },
+    govUrl: "https://www.gov.il/he/departments/ministry_of_religious_services",
+    eligibilitySummary: {
+      he: 'קייסים — מנהיגי דת ביתא ישראל הוכרו רשמית ב-2018. שני בתי מדרש (אשקלון, ב"ש). תמיכה ממשלתית למימון פעילות, חופות, וטקסי חיים.',
+      en: "Kessim — Beta Israel religious leaders, officially recognized in 2018. Two seminaries (Ashkelon, Be'er Sheva). Government support for activities, weddings, and life-cycle ceremonies.",
+      am: "ቄሶች — የቤታ እስራኤል ሃይማኖት መሪዎች በ2018 በይፋ ታውቀዋል። ሁለት የሃይማኖት ት/ቤቶች (አሽከሎን፣ ቤር ሼቫ)።",
+    },
+    tags: ["religion", "heritage", "community"],
+    bodies: {
+      he: `## מי הם הקייסים?
+
+מנהיגי דת ביתא ישראל. בעלי סמכות בטקסי חיים: ברית, חופה, אבל. הוכרו רשמית ב-2018 ע"י משרד הדתות. שני בתי מדרש פעילים.
+
+## מה כלול?
+
+- **שירותי דת**: חופה, ברית, פדיון הבן, אבל — דרך קייס מקומי
+- **טקסי חיים**: סיגד (29 חשוון), דקס (יום אבל קהילתי)
+- **תמיכה לקייסים**: שכר חודשי ממשרד הדתות, ביטוח, פנסיה
+- **שני בתי מדרש**: אשקלון (לימוד מסורת ביתא ישראל) + ב"ש (השכלה רבנית)
+
+## איך מוצאים קייס?
+
+1. **מועצת הקייסים**: רכזות אזוריות (נתניה, ראשון, ב"ש, אשדוד, רחובות)
+2. **בית הכנסת הקהילתי**: ברוב הערים יש מבנה ייעודי
+3. **דרך IAEJ**: רשימת קייסים פעילים
+4. **לטקס פרטי**: הזמנה דרך תמ"ת (תיאום מוסדי) או מועצה דתית מקומית
+
+📞 **מועצה דתית — אגף הקייסים**: 02-5311111
+`,
+      en: `## Who are the Kessim?
+
+Beta Israel religious leaders. Authorized to officiate life-cycle ceremonies: brit milah, wedding, mourning. Officially recognized in 2018 by the Ministry of Religious Services. Two active seminaries.
+
+## What's included?
+
+- **Religious services**: weddings, brit, redemption-of-firstborn, mourning — via local kes
+- **Life-cycle ceremonies**: Sigd (29 Cheshvan), Dakas (community memorial day)
+- **Kessim support**: monthly salary from Ministry of Religious Services, insurance, pension
+- **Two seminaries**: Ashkelon (Beta Israel tradition) + Be'er Sheva (rabbinical education)
+
+## Finding a Kes
+
+1. **Council of Kessim**: regional coordinators (Netanya, Rishon, Be'er Sheva, Ashdod, Rehovot)
+2. **Community synagogue**: most cities have a dedicated building
+3. **Via IAEJ**: list of active kessim
+4. **For private ceremonies**: book via local religious council
+
+📞 **Religious Council — Kessim Division**: 02-5311111
+`,
+      am: `## ቄሶች ማን ናቸው?
+
+የቤታ እስራኤል የሃይማኖት መሪዎች። ለሕይወት ስነ ስርዓቶች ስልጣን ያላቸው፦ ብርየት ሚላ፣ ሠርግ፣ ሐዘን። በ2018 በይፋ የተወከሉ።
+
+## ምን ይካተታል?
+
+- **የሃይማኖት አገልግሎቶች**: ሠርግ፣ ብርየት፣ የበኩር መግዛት፣ ሐዘን
+- **የሕይወት ስነ ስርዓቶች**: ሲግድ (29 ቸሽቫን)፣ ዳካስ
+- **ለቄሶች ድጋፍ**: ወርሃዊ ደመወዝ፣ ኢንሹራንስ፣ ጡረታ
+- **ሁለት የሃይማኖት ት/ቤቶች**: አሽከሎን + ቤር ሼቫ
+
+## ቄስ እንዴት ማግኘት ይቻላል
+
+1. **የቄሶች ምክር ቤት**: የክልል አስተባባሪዎች
+2. **የማህበረሰብ ምኩራብ**: በአብዛኞቹ ከተሞች
+3. **በ IAEJ በኩል**: ያሉ ቄሶች ዝርዝር
+
+📞 **የሃይማኖት ምክር ቤት — የቄሶች ክፍል**: 02-5311111
+`,
+    },
+  },
+
+  // 26 — Sigd events funding
+  {
+    title: {
+      he: "מימון אירועי סיגד — חג קהילתי",
+      en: "Sigd Event Funding — Community Holiday",
+      am: "የሲግድ ዝግጅቶች ድጋፍ — የማህበረሰብ በዓል",
+    },
+    slug: { he: "sigd-funding", en: "sigd-funding", am: "sigd-funding" },
+    govUrl: "https://www.gov.il/he/departments/ministry_of_culture_and_sport",
+    eligibilitySummary: {
+      he: "סיגד (29 חשוון) — חג ביתא ישראל המוכר רשמית כחג מדינה. תקציב למימון אירועים בערים, בתי ספר, ומכינות. דרך משרד התרבות + עיריות.",
+      en: "Sigd (29 Cheshvan) — Beta Israel holiday officially recognized as a state holiday. Budget for funding events in cities, schools, and pre-army academies. Via Ministry of Culture + municipalities.",
+      am: "ሲግድ (29 ቸሽቫን) — በይፋ የተወከለ የቤታ እስራኤል በዓል። በከተሞች፣ ት/ቤቶች እና ማትሪክ ት/ቤቶች ለዝግጅት ድጋፍ።",
+    },
+    tags: ["sigd", "heritage", "community"],
+    bodies: {
+      he: `## מה זה סיגד?
+
+חג ביתא ישראל המתקיים ב-29 חשוון (~50 יום אחרי יום כיפור). מציין את חידוש הברית עם האלוהים והכמיהה לציון. הוכר ב-2008 כחג מדינה רשמי. ירושלים — מרכז החגיגה הארצית.
+
+## מי זכאי לתקציב?
+
+- **בתי ספר**: יום עיון סיגד למורים + תכנים לתלמידים — תקציב משרד החינוך
+- **רשויות מקומיות**: מימון אירועי שכונה
+- **ארגונים קהילתיים**: IAEJ, Heritage Center, מועצות מקומיות
+- **מכינות + ישיבות**: סדנאות סיגד למסיימי תיכון
+- **תרבות עירונית**: קונצרטים, תערוכות
+
+## תקציב טיפוסי
+
+- **אירוע שכונתי**: עד ₪10,000 (בית ספר/קהילה)
+- **אירוע עירוני**: ₪30,000-100,000 (לרוב בשכונות מרובות-קהילה)
+- **אירוע ארצי**: ₪500,000+ (טקס המרכזי בירושלים)
+
+## איך מקבלים?
+
+1. **קריאה לקול קורא**: באתר משרד התרבות (יוני-יולי כל שנה)
+2. **הגשה דרך עירייה**: תכנית אירוע + תקציב
+3. **שותפות עם IAEJ**: לליווי תרבותי וקהל יעד
+4. **דדליין**: ספטמבר (לחג בנובמבר)
+`,
+      en: `## What is Sigd?
+
+A Beta Israel holiday on 29 Cheshvan (~50 days after Yom Kippur). Marks renewing the covenant with God and yearning for Zion. Recognized in 2008 as an official state holiday. Jerusalem — center of national celebration.
+
+## Who is eligible for funding?
+
+- **Schools**: Sigd-themed teacher training + student content — Ministry of Education budget
+- **Municipalities**: neighborhood event funding
+- **Community orgs**: IAEJ, Heritage Center, local councils
+- **Pre-army academies & yeshivas**: Sigd workshops for HS graduates
+- **Urban culture**: concerts, exhibitions
+
+## Typical budgets
+
+- **Neighborhood event**: up to ₪10,000 (school/community)
+- **City event**: ₪30,000-100,000 (mainly in mixed-community neighborhoods)
+- **National event**: ₪500,000+ (central ceremony in Jerusalem)
+
+## How to apply
+
+1. **RFP launch**: on Ministry of Culture website (June-July annually)
+2. **Submit via municipality**: event plan + budget
+3. **Partnership with IAEJ**: cultural accompaniment and audience
+4. **Deadline**: September (for November holiday)
+`,
+      am: `## ሲግድ ምንድን ነው?
+
+በ29 ቸሽቫን የሚከበር የቤታ እስራኤል በዓል። በ2008 በይፋ የተወከለ የመንግስት በዓል።
+
+## ለማን ድጋፍ ይሰጣል?
+
+- **ት/ቤቶች**
+- **ማዘጋጃ ቤቶች**
+- **የማህበረሰብ ድርጅቶች**: IAEJ፣ Heritage Center
+- **ቅድመ-ሰራዊት እና የሕክምና ት/ቤቶች**
+- **የከተማ ባህል**: ኮንሰርቶች፣ ኤግዚቢሽኖች
+
+## ዓይነተኛ በጀቶች
+
+- **የሰፈር ዝግጅት**: እስከ 10,000 ₪
+- **የከተማ ዝግጅት**: 30,000-100,000 ₪
+- **ብሔራዊ ዝግጅት**: 500,000+ ₪
+
+## እንዴት ማመልከት ይቻላል
+
+1. **የጥሪ መለቀቅ**: በባህል ሚኒስቴር ድረ-ገጽ
+2. **በማዘጋጃ ቤት በኩል ማቅረብ**
+3. **ከ IAEJ ጋር ሽርክና**
+4. **ጊዜ ገደብ**: መስከረም
+`,
+    },
+  },
+
+  // 27 — Family counseling Amharic-speaking
+  {
+    title: {
+      he: "ייעוץ זוגי-משפחתי דובר אמהרית",
+      en: "Amharic-Speaking Family & Couples Counseling",
+      am: "የአማርኛ ተናጋሪ የቤተሰብ-ጥንዶች ምክር",
+    },
+    slug: { he: "family-counseling", en: "family-counseling", am: "family-counseling" },
+    govUrl: "https://tene-briut.org.il",
+    eligibilitySummary: {
+      he: "ייעוץ לזוגות ומשפחות עם רגישות תרבותית — להתמודדות עם פערי דורות, התאמת תפקידים משפחתיים, ומשברי זוגיות. דרך טנא בריאות + עובדות סוציאליות בקהילה.",
+      en: "Couples and family counseling with cultural sensitivity — addressing generational gaps, evolving family roles, and relationship crises. Via Tene Briut + community social workers.",
+      am: "ለጥንዶች እና ቤተሰቦች በባህል ስሜታዊነት ምክር — የትውልድ ክፍተቶችን፣ የቤተሰብ ሚና ለውጥን ለመፍታት።",
+    },
+    tags: ["family", "mental_health", "anchor_partner"],
+    bodies: {
+      he: `## למי מיועד?
+
+- **זוגות**: עם פערי דורות (אחד עולה ותיק, השני ישראלי-יליד), משברי תקשורת, התאמה תרבותית
+- **משפחות**: סכסוכי הורים-ילדים, פערי שפה, חינוך
+- **גירושים**: ליווי תרבותי-קהילתי + משפטי
+- **לאחר אבל**: סיוע לאחר פטירה במשפחה
+
+## רגישות תרבותית
+
+הייעוץ מותאם להבנת:
+- **תפקידים משפחתיים מסורתיים** של ביתא ישראל
+- **קוד הכבוד ההורי** וההשפעה שלו
+- **הבושה הקהילתית** מטיפול נפשי
+- **קייסים כסמכות מקבילה** בקהילה
+
+## איך פונים?
+
+1. **טנא בריאות — מחלקת משפחה**: 03-7383937 → "ייעוץ משפחה"
+2. **עובדת סוציאלית בקהילה**: דרך לשכת רווחה ביישוב — בקשו "מתמחה בקהילה אתיופית"
+3. **WIZO + נעמת**: סניפים אזוריים עם רכזות דוברות אמהרית
+4. **בקופ"ח**: שירותי הנפש — בקשו "מטפל אמהרית" או "תרגום"
+
+**עלות**: סבסוד עירוני, לרוב סמלי או חינם.
+`,
+      en: `## Who is eligible?
+
+- **Couples**: with generational gaps, communication crises, cultural adjustment
+- **Families**: parent-child conflicts, language gaps, education
+- **Divorces**: cultural-community + legal support
+- **After bereavement**: post-loss support
+
+## Cultural sensitivity
+
+Counseling adapted to understand:
+- **Traditional family roles** of Beta Israel
+- **Parental honor codes** and their influence
+- **Community shame** around mental health treatment
+- **Kessim as parallel authority** in the community
+
+## How to reach out
+
+1. **Tene Briut family unit**: 03-7383937 → "family counseling"
+2. **Community social worker**: via local welfare office — ask for "specialist in Ethiopian community"
+3. **WIZO + Na'amat**: regional branches with Amharic-speaking coordinators
+4. **At HMO**: mental health services — ask for "Amharic therapist" or "translation"
+
+**Cost**: municipally subsidized, usually symbolic or free.
+`,
+      am: `## ለማን ይሆናል?
+
+- **ጥንዶች**: የትውልድ ክፍተቶች ያላቸው፣ የግንኙነት ችግር
+- **ቤተሰቦች**: የወላጅ-ልጅ ግጭት፣ የቋንቋ ክፍተት
+- **ፍቺ**: የባህል-ማህበረሰብ + ሕጋዊ ድጋፍ
+- **ከሀዘን በኋላ**
+
+## የባህል ስሜታዊነት
+
+ምክሩ ለመረዳት ተስማምቷል፦
+- **ባህላዊ የቤተሰብ ሚናዎች**
+- **የወላጅ ክብር ኮድ**
+- **ስለ የአእምሮ ጤና ሕክምና ማህበረሰባዊ ሐፍረት**
+- **ቄሶች እንደ ትይዩ ስልጣን**
+
+## እንዴት ማግኘት ይቻላል
+
+1. **የጤና ብርሃት የቤተሰብ ክፍል**: 03-7383937
+2. **የማህበረሰብ ሶሻል ሰራተኛ**
+3. **WIZO + Na'amat**
+4. **በሕክምና ድርጅት**
+
+**ወጪ**: ብዙውን ጊዜ ምልክት ወይም ነፃ።
+`,
+    },
+  },
+
+  // 28 — Domestic violence support
+  {
+    title: {
+      he: "סיוע במצבי אלימות במשפחה",
+      en: "Domestic Violence Support",
+      am: "የቤት ውስጥ አመፅ ድጋፍ",
+    },
+    slug: {
+      he: "domestic-violence-support",
+      en: "domestic-violence-support",
+      am: "domestic-violence-support",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/dv_help",
+    eligibilitySummary: {
+      he: "סיוע מיידי במקרי אלימות במשפחה — מקלטים, ליווי משפטי, ייעוץ פסיכולוגי. שירותים דוברי אמהרית. אנונימיות מובטחת. WIZO + Tebeka + Tene Briut.",
+      en: "Immediate help for domestic violence cases — shelters, legal accompaniment, psychological counseling. Amharic-speaking services. Anonymity guaranteed. WIZO + Tebeka + Tene Briut.",
+      am: "በቤት ውስጥ አመፅ ጉዳዮች ወዲያውኑ ድጋፍ — መጠለያዎች፣ ሕጋዊ አጃቢነት፣ ሳይኮሎጂካል ምክር።",
+    },
+    tags: ["domestic_violence", "family", "anchor_partner"],
+    bodies: {
+      he: `## 🚨 במצב חירום
+
+- **105**: קו חירום ארצי לאלימות במשפחה — 24/7, אנונימי
+- **משטרה**: 100 (אם בסכנת חיים)
+- **ERAN**: 1201 (תמיכה רגשית)
+
+## למי מיועד?
+
+- נשים וגברים בני קהילה במצבי אלימות (פיזית, מינית, נפשית, כלכלית)
+- ילדים ובני נוער החשופים לאלימות
+- בני משפחה דאגונים שמלווים נפגע
+
+## שירותים זמינים
+
+- **מקלטים לנשים**: רשת WIZO/נעמת/דרכים — מקלטים עם רכזות דוברות אמהרית בנתניה ורחובות
+- **ליווי משפטי חינם**: דרך Tebeka — צו הגנה, גירושים, משמורת
+- **ייעוץ פסיכולוגי**: Tene Briut + מרפאות עירוניות
+- **ליווי כלכלי**: סיוע במציאת דיור, עבודה, בית ספר לילדים
+
+## דיסקרטיות
+
+כל הפניות הן **אנונימיות** ולא נמסרות לקייסים, רבנים, או הקהילה. ה-confidentiality מוחלטת.
+
+## איך מתחילים בלי סכנה?
+
+- **טלפון**: 105 (קו ארצי) או 03-5240479 (WIZO)
+- **WhatsApp**: שלח הודעה לרכזת קהילתית (מספרים ב-WIZO.org.il)
+- **דרך מורה / רופאה**: גם הם חייבים בדיווח אם יש סכנה לקטין
+- **דרך Tene Briut**: ליווי תרבותי בלי דיווח אוטומטי
+`,
+      en: `## 🚨 In emergency
+
+- **105**: national domestic violence hotline — 24/7, anonymous
+- **Police**: 100 (if life-threatening)
+- **ERAN**: 1201 (emotional support)
+
+## Who is eligible?
+
+- Community members in violent situations (physical, sexual, psychological, economic)
+- Children and youth exposed to violence
+- Concerned family supporting a victim
+
+## Available services
+
+- **Women's shelters**: WIZO/Na'amat/Drachim network — shelters with Amharic-speaking coordinators in Netanya and Rehovot
+- **Free legal accompaniment**: via Tebeka — protection orders, divorce, custody
+- **Psychological counseling**: Tene Briut + municipal clinics
+- **Economic accompaniment**: help finding housing, work, school for children
+
+## Confidentiality
+
+All inquiries are **anonymous** and not reported to kessim, rabbis, or the community. Confidentiality is absolute.
+
+## How to start safely?
+
+- **Phone**: 105 (national) or 03-5240479 (WIZO)
+- **WhatsApp**: message a community coordinator (numbers at WIZO.org.il)
+- **Via teacher / doctor**: they also have a duty to report if a minor is in danger
+- **Via Tene Briut**: cultural accompaniment without automatic reporting
+`,
+      am: `## 🚨 በአደጋ ጊዜ
+
+- **105**: ብሔራዊ የቤት ውስጥ አመፅ መስመር — 24/7
+- **ፖሊስ**: 100
+- **ERAN**: 1201
+
+## ለማን ይሆናል?
+
+- በአመፅ ሁኔታ ውስጥ ያሉ የማህበረሰብ አባላት
+- ለአመፅ የተጋለጡ ልጆች እና ወጣቶች
+- ሰለ ተጎጂ የሚጨነቁ ቤተሰቦች
+
+## ያሉ አገልግሎቶች
+
+- **የሴቶች መጠለያዎች**: በነታንያ እና ረሆቮት የአማርኛ ተናጋሪ አስተባባሪዎች ጋር
+- **ነፃ ሕጋዊ አጃቢነት**: በቴቤካ በኩል
+- **ሳይኮሎጂካል ምክር**: ጤና ብርሃት
+- **የኢኮኖሚ አጃቢነት**: ቤት፣ ሥራ፣ ት/ቤት ማግኘት
+
+## ሚስጥራዊነት
+
+ሁሉም ጥያቄዎች **ስም-አልባ** ናቸው። ለቄሶች፣ ለራቢዎች ወይም ለማህበረሰቡ ሪፖርት አይደረጉም።
+
+## በደህንነት እንዴት መጀመር ይቻላል
+
+- **ስልክ**: 105
+- **WhatsApp**: ለማህበረሰብ አስተባባሪ
+- **በመምህር / ሐኪም በኩል**
+- **በጤና ብርሃት በኩል**: ራስ-ሰር ሪፖርት ሳይደረግ
+`,
+    },
+  },
+
+  // 29 — Subsidized summer camps
+  {
+    title: {
+      he: "קייטנות קיץ סובסידיות — משרד החינוך",
+      en: "Subsidized Summer Camps — Ministry of Education",
+      am: "የተደገፉ የበጋ ካምፖች — የትምህርት ሚኒስቴር",
+    },
+    slug: {
+      he: "summer-camps-subsidy",
+      en: "summer-camps-subsidy",
+      am: "summer-camps-subsidy",
+    },
+    govUrl: "https://www.gov.il/he/departments/ministry_of_education",
+    eligibilitySummary: {
+      he: "סבסוד קייטנות קיץ לילדי בית ספר (גילאי 6-14) ממשפחות זכאיות. עד 80% הנחה. רישום דרך בית הספר או עירייה.",
+      en: "Summer camp subsidies for school-age children (6-14) from eligible families. Up to 80% discount. Register via school or municipality.",
+      am: "ለ6-14 ዕድሜ ት/ቤት ልጆች የበጋ ካምፕ ድጋፍ።",
+    },
+    tags: ["summer_camp", "youth", "subsidy"],
+    bodies: {
+      he: `## למי מיועד?
+
+- ילדי בית ספר יסודי וחטיבת ביניים (6-14)
+- משפחות עם הכנסה מתחת לתקרה (משולב אוטומטית עם זכאות לסיוע מעון)
+- עולים חדשים בשנים ראשונות (5 שנים)
+- משפחות עם 3+ ילדים
+- בני המעמד הוותיק עם הכנסה נמוכה
+
+## מה כולל?
+
+- **קייטנת בית ספר**: 3-4 שבועות באוגוסט, סבסוד עד 80%
+- **קייטנות ENP**: ייעודיות לקהילה — אוגוסט, באזורי קהילה. דגש על מצוינות + מורשת.
+- **קייטנות מתנ"ס עירוני**: עד 60% הנחה
+- **תכניות סטר תרבות**: סדנאות סיגד, אמהרית, אומנות אתיופית
+
+## איך נרשמים?
+
+1. **דרך בית הספר**: יועצ.ת או מנהל.ת בית הספר — מילוי טופס סבסוד
+2. **דרך עירייה**: אגף החינוך — רישום מקוון, מאי-יוני
+3. **דרך ENP**: רכזת ENP אזורית
+4. **קופון מותנה**: לעיתים מקבלים שובר באמצע השנה
+
+## עלויות מוערכות
+
+- **קייטנה רגילה**: ₪400-800 לשבוע (ללא סבסוד)
+- **בסבסוד 80%**: ₪80-160 לשבוע
+- **חינם**: למשפחות בעדיפות גבוהה
+`,
+      en: `## Who is eligible?
+
+- Elementary and middle-school children (6-14)
+- Families with income below the ceiling (auto-aligned with daycare-subsidy eligibility)
+- New immigrants in their first 5 years
+- Families with 3+ children
+- Veteran community members with low income
+
+## What's included?
+
+- **School camp**: 3-4 weeks in August, up to 80% subsidy
+- **ENP camps**: community-dedicated — August, in community areas. Focus on excellence + heritage.
+- **Community center camps**: up to 60% discount
+- **Heritage tracks**: Sigd workshops, Amharic, Ethiopian art
+
+## How to register
+
+1. **Via school**: counselor or principal — fill subsidy form
+2. **Via municipality**: education department — online registration, May-June
+3. **Via ENP**: regional ENP coordinator
+4. **Conditional voucher**: sometimes received mid-year
+
+## Estimated costs
+
+- **Standard camp**: ₪400-800/week (unsubsidized)
+- **At 80% subsidy**: ₪80-160/week
+- **Free**: for high-priority families
+`,
+      am: `## ለማን ይሆናል?
+
+- 6-14 ዕድሜ ላሉ ት/ቤት ልጆች
+- ከጣሪያ በታች ገቢ ላላቸው ቤተሰቦች
+- በመጀመሪያ 5 ዓመቶቻቸው ላሉ አዲስ ስደተኞች
+- 3+ ልጆች ላላቸው ቤተሰቦች
+
+## ምን ይካተታል?
+
+- **የት/ቤት ካምፕ**: በነሐሴ 3-4 ሳምንታት፣ እስከ 80% ድጋፍ
+- **የ ENP ካምፖች**: በማህበረሰብ አካባቢዎች
+- **የማህበረሰብ ማዕከል ካምፖች**: እስከ 60% ቅናሽ
+- **የቅርስ ትራኮች**: የሲግድ ወርክሾፖች፣ አማርኛ
+
+## እንዴት መመዝገብ ይቻላል
+
+1. **በት/ቤት በኩል**
+2. **በማዘጋጃ ቤት በኩል**
+3. **በ ENP በኩል**
+
+## የተገመቱ ወጪዎች
+
+- **መደበኛ ካምፕ**: በሳምንት 400-800 ₪
+- **በ80% ድጋፍ**: በሳምንት 80-160 ₪
+- **ነፃ**: ለከፍተኛ ቅድሚያ ቤተሰቦች
+`,
+    },
+  },
+
+  // 30 — Advanced ulpan grants
+  {
+    title: {
+      he: "אולפן מתקדם (ב' / ג') — לימוד עברית מעל הבסיס",
+      en: "Advanced Ulpan (Bet / Gimmel) — Hebrew Beyond Basics",
+      am: "ከፍተኛ ኡልፓን (ቤት / ጊመል) — ከመሰረታዊ ባለፈ ዕብራይስጥ",
+    },
+    slug: { he: "advanced-ulpan", en: "advanced-ulpan", am: "advanced-ulpan" },
+    govUrl: "https://www.gov.il/he/departments/integration_program/govil-landing-page",
+    eligibilitySummary: {
+      he: "המשך לימוד עברית מעבר לאולפן א' (בסיסי). אולפן ב' (יומיומי), ג' (אקדמי). חינם / מסובסד דרך משרד הקליטה. כל עולה זכאי במהלך 10 שנים מהעלייה.",
+      en: "Continued Hebrew studies beyond basic ulpan. Ulpan Bet (everyday), Gimmel (academic). Free / subsidized via Ministry of Aliyah. Every immigrant is eligible during the first 10 years.",
+      am: "ከመሰረታዊ ኡልፓን ባለፈ የዕብራይስጥ ጥናት መቀጠል። ኡልፓን ቤት (ዕለታዊ)፣ ጊመል (አካዳሚክ)።",
+    },
+    tags: ["language_learning", "new_immigrant", "education"],
+    bodies: {
+      he: `## למי מיועד?
+
+- כל עולה — בני קהילה ותיקים שעלו בילדות יכולים גם הם להגיש (10 שנים מהעלייה)
+- מועמדים לתואר אקדמי — אולפן ג' מקנה רמה אקדמית
+- עובדים שמעוניינים לקדם קריירה — אולפן ב' לעברית מקצועית
+
+## רמות זמינות
+
+- **אולפן ב' (Bet)**: 5 חודשים, יומיומי. דקדוק, אוצר מילים יומיומי, כתיבה. **חינם** דרך מתנ"ס/בית הספר התיכון העירוני
+- **אולפן ג' (Gimmel)**: 4 חודשים, מתקדם. עברית עיתונאית, ספרותית, אקדמית. **מסובסד 50%** דרך משרד הקליטה
+- **אולפן עיצוב**: למקצועות (משפט, רפואה, חינוך) — תכניות מתמחות
+- **לימוד מקוון**: Hebrew Online, eTeacher — מתאים למבוגרים עובדים
+
+## איך מתחילים?
+
+1. **בדיקת רמה**: מבחן באולפן עירוני (10 דק' שיחה + טקסט קצר)
+2. **רישום**: בית הספר התיכון העירוני, או דרך משרד הקליטה
+3. **תזמון**: אולפן ב' מתחיל ספטמבר ופברואר; ג' מתחיל אוקטובר ומרץ
+4. **שילוב עם אולפן עוצמה**: מותאם לעובדים — שעות ערב/בוקר
+
+🔗 **משרד הקליטה — אולפן**: [gov.il/integration_program](https://www.gov.il/he/departments/integration_program/govil-landing-page)
+`,
+      en: `## Who is eligible?
+
+- Every oleh — even veteran community members who immigrated as children can apply (10 years from aliyah)
+- Academic-degree candidates — Ulpan Gimmel teaches at academic level
+- Workers wanting career advancement — Ulpan Bet for professional Hebrew
+
+## Available levels
+
+- **Ulpan Bet**: 5 months, daily. Grammar, daily vocabulary, writing. **Free** via community center / municipal HS
+- **Ulpan Gimmel**: 4 months, advanced. Journalistic, literary, academic Hebrew. **50% subsidy** via Ministry of Aliyah
+- **Specialized ulpan**: for professions (law, medicine, education) — dedicated programs
+- **Online study**: Hebrew Online, eTeacher — suitable for working adults
+
+## How to start
+
+1. **Level assessment**: test at a municipal ulpan (10-min conversation + short text)
+2. **Registration**: municipal HS, or via Ministry of Aliyah
+3. **Timing**: Ulpan Bet starts September and February; Gimmel starts October and March
+4. **Combine with Ulpan Otzma**: tailored for workers — evening/morning hours
+
+🔗 **Ministry of Aliyah — Ulpan**: [gov.il/integration_program](https://www.gov.il/he/departments/integration_program/govil-landing-page)
+`,
+      am: `## ለማን ይሆናል?
+
+- ሁሉም ስደተኛ — በልጅነት የተሰደዱ ቀደምት የማህበረሰብ አባላትም ማመልከት ይችላሉ
+- የአካዳሚክ ዲግሪ ዕጩዎች
+- የሙያ ዕድገት የሚፈልጉ ሰራተኞች
+
+## ያሉ ደረጃዎች
+
+- **ኡልፓን ቤት**: 5 ወራት፣ ዕለታዊ። ሰዋስው፣ ዕለታዊ ቃላት፣ ጽሑፍ። **ነፃ**
+- **ኡልፓን ጊመል**: 4 ወራት፣ ከፍተኛ። ጋዜጠኝነት፣ ስነ ጽሑፍ፣ አካዳሚክ ዕብራይስጥ። **50% ድጋፍ**
+- **ልዩ ኡልፓን**: ለሙያዎች (ሕግ፣ ሕክምና፣ ትምህርት)
+- **የመስመር ላይ ጥናት**: ለሚሰሩ አዋቂዎች ተስማሚ
+
+## እንዴት መጀመር ይቻላል
+
+1. **የደረጃ ግምገማ**: በማዘጋጃ ቤት ኡልፓን ፈተና
+2. **ምዝገባ**: በማዘጋጃ ቤት ሁለተኛ ደረጃ ት/ቤት
+3. **ጊዜ**: ኡልፓን ቤት በመስከረም እና በየካቲት ይጀምራል፤ ጊመል በጥቅምት እና በመጋቢት
+4. **ከኡልፓን ኦዝማ ጋር ማቀላቀል**: ለሚሰሩ የተዘጋጀ — የምሽት/የጠዋት ሰዓታት
+
+🔗 **የመመለሻ ሚኒስቴር — ኡልፓን**: [gov.il/integration_program](https://www.gov.il/he/departments/integration_program/govil-landing-page)
+`,
+    },
+  },
 ];
