@@ -6,7 +6,7 @@ import {
   listGlossary,
   relatedGlossaryTerms,
 } from "../app/lib/db/queries/glossary.server";
-import { GLOSSARY } from "../app/lib/glossary/glossary";
+import { GLOSSARY } from "../app/lib/glossary/glossary.server";
 
 describe("glossary seed integrity", () => {
   it("has at least 12 entries", () => {

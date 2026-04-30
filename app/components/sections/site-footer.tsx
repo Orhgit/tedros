@@ -48,6 +48,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <FooterLink to={`${base}/glossary`}>
               {t(locale, "glossary_landing_title")}
             </FooterLink>
+            <FooterLink to={`${base}/orgs`}>{t(locale, "orgs_landing_title")}</FooterLink>
           </FooterCol>
 
           {/* Coming-soon pillars — surfaced as plain text so users see the

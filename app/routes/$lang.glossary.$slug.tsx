@@ -11,7 +11,7 @@ import { WhatsAppShare } from "~/components/sections/whatsapp-share";
 import { getGlossaryEntry, relatedGlossaryTerms } from "~/lib/db/queries/glossary.server";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
-import { CATEGORY_TO_TAG, glyphForCategory } from "~/lib/glossary/glossary";
+import { CATEGORY_TO_TAG, glyphForCategory } from "~/lib/glossary/categories";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";

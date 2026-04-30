@@ -12,13 +12,9 @@
 import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
 import { DEFAULT_LOCALE } from "../i18n/config";
+import type { GlossaryCategory } from "./categories";
 
-export type GlossaryCategory =
-  | "tradition"
-  | "history"
-  | "identity"
-  | "organization"
-  | "program";
+export type { GlossaryCategory } from "./categories";
 
 export interface GlossaryEntry {
   slug: string;
@@ -1367,27 +1363,4 @@ export function pickLocale<T extends { he: string; en?: string; am?: string }>(
 
 export function getEntryBodyForLocale(entry: GlossaryEntry, locale: Locale): string {
   return entry.bodies[locale] ?? entry.bodies[DEFAULT_LOCALE];
-}
-
-// Visual: each glossary category maps to a tone (tag) reused from
-// `lib/rights/categories.ts`. Lets the glossary inherit the same earth/sigd/
-// gold palette without inventing new colors.
-export const CATEGORY_TO_TAG: Record<GlossaryCategory, string> = {
-  tradition: "sigd",
-  history: "community",
-  identity: "new_immigrant",
-  organization: "legal",
-  program: "scholarship",
-};
-
-const CATEGORY_GLYPH: Record<GlossaryCategory, string> = {
-  tradition: "🕯️",
-  history: "📜",
-  identity: "🌿",
-  organization: "🏛️",
-  program: "🎓",
-};
-
-export function glyphForCategory(category: GlossaryCategory): string {
-  return CATEGORY_GLYPH[category];
 }
