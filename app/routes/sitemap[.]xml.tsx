@@ -1,3 +1,4 @@
+import { CAREER_TRACKS } from "~/lib/careers/careers.server";
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
@@ -110,6 +111,10 @@ ${xDefaultFor(path)}
         (city) => `/education/scholarships/${s.slug}/${city}`,
       ),
     ),
+    // RIN-471 — Careers Hub (Wave 1 of RIN-469): pillar + 10 tracks.
+    // Sub-4 (RIN-473) will add ~408 city × track cells under /careers/$track/$city.
+    "/careers",
+    ...CAREER_TRACKS.map((t) => `/careers/${t.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
