@@ -3,6 +3,7 @@ import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
 import { COMPARISONS } from "~/lib/comparisons/comparisons.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
+import { PROGRAMS } from "~/lib/programs/programs.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { ORGS } from "~/lib/orgs/orgs.server";
 import { ALL_PROFESSIONS } from "~/lib/professionals/categories";
@@ -87,6 +88,9 @@ ${xDefaultFor(path)}
     // RIN-421 — Comparisons (Wave 3a of RIN-417): 10 X-vs-Y entries.
     "/compare",
     ...COMPARISONS.map((c) => `/compare/${c.slug}`),
+    // RIN-424 — Programs (Wave 3b of RIN-417): 24 org programs.
+    "/programs",
+    ...PROGRAMS.map((p) => `/programs/${p.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
