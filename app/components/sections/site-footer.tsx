@@ -52,6 +52,9 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <FooterLink to={`${base}/professionals`}>
               {t(locale, "professionals_landing_title")}
             </FooterLink>
+            <FooterLink to={`${base}/compare`}>
+              {t(locale, "comparisons_landing_title")}
+            </FooterLink>
           </FooterCol>
 
           {/* Coming-soon pillars — surfaced as plain text so users see the
