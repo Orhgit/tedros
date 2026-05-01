@@ -1,0 +1,45 @@
+name: Deploy production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to Hetzner
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+    steps:
+      - name: SSH deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          port: ${{ secrets.DEPLOY_PORT }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          command_timeout: 8m
+          script: |
+            set -euo pipefail
+            cd /opt/tedros
+            git fetch --prune origin main
+            git reset --hard origin/main
+            docker compose -f docker-compose.prod.yml build tedros
+            docker compose -f docker-compose.prod.yml run --rm tedros pnpm db:migrate
+            docker compose -f docker-compose.prod.yml up -d tedros
+            docker image prune -f
+            for i in 1 2 3 4 5 6 7 8 9 10; do
+              if curl -fsS http://127.0.0.1:3000/healthz >/dev/null; then
+                echo "healthz ok (attempt $i)"
+                exit 0
+              fi
+              sleep 3
+            done
+            echo "healthz failed after 30s"
+            docker compose -f docker-compose.prod.yml logs --tail=80 tedros
+            exit 1
