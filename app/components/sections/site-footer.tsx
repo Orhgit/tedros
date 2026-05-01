@@ -1,10 +1,13 @@
-// Site-wide footer (Phase 3 polish).
+// Site-wide footer.
 //
-// Designed to reflect what's actually live today (Phase 3 = Rights + Real
-// Estate) rather than the long-term 10-pillar vision. Linking to non-existent
-// routes hurts user trust and pollutes the broken-link audit.
+// User-facing only. Internal-team artifacts (GitHub source, ADRs, community
+// research) live in the repo / docs — not in the public footer. The portal
+// targets community members looking for rights/services, not engineers.
 //
-// As later phases ship, move pillars from "Coming soon" → live links.
+// Designed to reflect what's actually live today (Phase 3) rather than the
+// long-term 10-pillar vision. Linking to non-existent routes hurts user
+// trust and pollutes the broken-link audit. As later phases ship, move
+// pillars from "Coming soon" → live links.
 
 import { Link } from "react-router";
 
@@ -26,7 +29,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
       className="mt-24 border-t border-border bg-surface text-surface-foreground"
     >
       <div className="container-default py-10">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3">
           {/* Brand + mission */}
           <div>
             <p className="font-display text-lg font-bold">
@@ -68,26 +71,20 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <FooterStaticItem>{t(locale, "pillar_family_title")}</FooterStaticItem>
             <FooterStaticItem>{t(locale, "pillar_voice_title")}</FooterStaticItem>
           </FooterCol>
-
-          {/* Project / open source */}
-          <FooterCol title={t(locale, "footer_project_heading")}>
-            <FooterLink to={`${base}/about`}>{t(locale, "footer_about")}</FooterLink>
-            <FooterExternal href="https://github.com/Orhgit/tedros">
-              {t(locale, "footer_github")}
-            </FooterExternal>
-            <FooterExternal href="https://github.com/Orhgit/tedros/tree/main/docs/adr">
-              {t(locale, "footer_adrs")}
-            </FooterExternal>
-            <FooterExternal href="https://github.com/Orhgit/tedros/tree/main/docs/research">
-              {t(locale, "footer_research")}
-            </FooterExternal>
-          </FooterCol>
         </div>
 
         <Separator className="my-8" />
 
         <div className="flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>{t(locale, "footer_copyright", { year })}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <p>{t(locale, "footer_copyright", { year })}</p>
+            <Link
+              to={`${base}/about`}
+              className="rounded-xs hover:text-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              {t(locale, "footer_about")}
+            </Link>
+          </div>
           <p className="text-xs">{t(locale, "footer_made_with")}</p>
         </div>
       </div>
@@ -113,21 +110,6 @@ function FooterLink({ to, children }: { to: string; children: React.ReactNode })
       >
         {children}
       </Link>
-    </li>
-  );
-}
-
-function FooterExternal({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <li>
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-xs hover:text-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-      >
-        {children} <span aria-hidden="true">↗</span>
-      </a>
     </li>
   );
 }
