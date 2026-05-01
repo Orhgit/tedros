@@ -4,6 +4,11 @@ import { getEnv } from "~/lib/env.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { ORGS } from "~/lib/orgs/orgs.server";
+import { ALL_PROFESSIONS } from "~/lib/professionals/categories";
+import {
+  PROFESSIONALS,
+  type ProfessionalSlot,
+} from "~/lib/professionals/professionals.server";
 import { relevantCities } from "~/lib/rights/relevance";
 
 /**
@@ -59,6 +64,25 @@ ${xDefaultFor(path)}
     // RIN-419 — Org profiles (Wave 1b of RIN-417): 12 entries × 3 locales.
     "/orgs",
     ...ORGS.map((o) => `/orgs/${o.slug}`),
+    // RIN-444 — Professionals directory (Wave 2b of RIN-417):
+    // landing + by-profession (8) + non-empty profession×city pairs +
+    // detail pages × 3 locales.
+    "/professionals",
+    ...ALL_PROFESSIONS.map((p) => `/professionals/${p}`),
+    // Only non-empty (profession, city) pairs — skip thin/missing pages.
+    ...(() => {
+      const seen = new Set<string>();
+      const out: string[] = [];
+      for (const e of PROFESSIONALS as ProfessionalSlot[]) {
+        const key = `${e.profession}::${e.citySlug}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          out.push(`/professionals/${e.profession}/${e.citySlug}`);
+        }
+      }
+      return out;
+    })(),
+    ...PROFESSIONALS.map((e) => `/professionals/profile/${e.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
