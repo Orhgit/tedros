@@ -123,6 +123,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                 const liveHref: Record<string, string> = {
                   realestate: `/${locale}/cities`,
                   rights: `/${locale}/rights`,
+                  professionals: `/${locale}/professionals`,
                 };
                 const href = liveHref[p] ?? null;
                 const isLive = href !== null;
@@ -162,6 +163,38 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                   </article>
                 );
               })}
+            </div>
+          </section>
+
+          {/* Supporting hubs that don't map to a single pillar — Glossary,
+              Org profiles, Programs, Comparisons. Shipped during Wave 1+3
+              of the SEO surface expansion (RIN-417). Smaller tile treatment
+              to mark them as cross-cutting resources rather than primary
+              pillars. */}
+          <section className="mt-12">
+            <h3 className="font-display text-base font-semibold tracking-tight text-earth-700">
+              {t(locale, "pillars_more_heading")}
+            </h3>
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                { slug: "glossary", glyph: "📖", titleKey: "glossary_landing_title" },
+                { slug: "orgs", glyph: "🏛️", titleKey: "orgs_landing_title" },
+                { slug: "programs", glyph: "🎓", titleKey: "programs_landing_title" },
+                { slug: "compare", glyph: "⚖️", titleKey: "comparisons_landing_title" },
+              ].map((h) => (
+                <Link
+                  key={h.slug}
+                  to={`/${locale}/${h.slug}`}
+                  className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-3 text-sm shadow-xs transition-all hover:-translate-y-0.5 hover:border-accent-green/60 hover:shadow-sm"
+                >
+                  <span aria-hidden="true" className="text-lg leading-none">
+                    {h.glyph}
+                  </span>
+                  <span className="font-medium text-earth-900">
+                    {t(locale, h.titleKey)}
+                  </span>
+                </Link>
+              ))}
             </div>
           </section>
 
