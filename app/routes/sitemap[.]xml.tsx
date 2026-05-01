@@ -1,6 +1,7 @@
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
+import { COMPARISONS } from "~/lib/comparisons/comparisons.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { ORGS } from "~/lib/orgs/orgs.server";
@@ -83,6 +84,9 @@ ${xDefaultFor(path)}
       return out;
     })(),
     ...PROFESSIONALS.map((e) => `/professionals/profile/${e.slug}`),
+    // RIN-421 — Comparisons (Wave 3a of RIN-417): 10 X-vs-Y entries.
+    "/compare",
+    ...COMPARISONS.map((c) => `/compare/${c.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
