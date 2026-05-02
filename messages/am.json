@@ -496,5 +496,11 @@
   "careers_program_back_to_track": "ወደ {track} መንገድ ይመለሱ",
   "careers_affirmative_action_title": "በመንግስት አገልግሎት ቅድሚያ ውክልና",
   "careers_affirmative_action_subtitle": "ትዕዛዝ 50 ምንድን ነው፣ እንዴት ይቀጠራል እና በመቃወም — ለኢትዮጵያ-እስራኤል ማህበረሰብ አባላት ተግባራዊ መመሪያ።",
-  "careers_affirmative_action_breadcrumb": "ቅድሚያ ውክልና"
+  "careers_affirmative_action_breadcrumb": "ቅድሚያ ውክልና",
+  "careers_cell_bootcamps_heading": "በ{city} ያሉ ፕሮግራሞች",
+  "careers_cell_professionals_heading": "በ{city} ያሉ ባለሙያዎች",
+  "careers_cell_rights_heading": "በ{city} የቅጥር መብቶች",
+  "careers_cell_orgs_heading": "ሙያን የሚደግፉ ድርጅቶች",
+  "careers_cell_other_cities": "{track} በሌሎች ከተሞች",
+  "careers_cell_other_tracks": "በ{city} ሌሎች የሙያ መንገዶች"
 }

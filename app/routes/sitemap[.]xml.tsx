@@ -1,5 +1,6 @@
 import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
+import { relevantCities as careerRelevantCities } from "~/lib/careers/relevance";
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
@@ -119,6 +120,18 @@ ${xDefaultFor(path)}
     // RIN-472 — Careers Hub Wave 2: 15 bootcamps + affirmative-action explainer.
     "/careers/affirmative-action",
     ...BOOTCAMPS.map((b) => `/careers/programs/${b.slug}`),
+    // RIN-473 — Careers Hub Wave 3: track × city programmatic cells.
+    // Filter via the careers relevance helper so we only ship pairs we
+    // believe have substance (~136 pairs vs the 380 raw cartesian).
+    ...(() => {
+      const out: string[] = [];
+      for (const track of CAREER_TRACKS) {
+        for (const city of careerRelevantCities(track.slug, CITIES)) {
+          out.push(`/careers/${track.slug}/${city.slug}`);
+        }
+      }
+      return out;
+    })(),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

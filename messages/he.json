@@ -496,5 +496,11 @@
   "careers_program_back_to_track": "חזרה למסלול {track}",
   "careers_affirmative_action_title": "ייצוג הולם בשירות הציבורי",
   "careers_affirmative_action_subtitle": "מה זה צו 50, איך מממשים אותו, ואיך לערער על דחייה — מדריך מעשי לבני קהילת יוצאי אתיופיה.",
-  "careers_affirmative_action_breadcrumb": "ייצוג הולם"
+  "careers_affirmative_action_breadcrumb": "ייצוג הולם",
+  "careers_cell_bootcamps_heading": "תכניות פעילות ב-{city}",
+  "careers_cell_professionals_heading": "אנשי מקצוע ב-{city}",
+  "careers_cell_rights_heading": "זכויות תעסוקה ב-{city}",
+  "careers_cell_orgs_heading": "ארגונים תומכי קריירה",
+  "careers_cell_other_cities": "{track} בערים אחרות",
+  "careers_cell_other_tracks": "מסלולי קריירה אחרים ב-{city}"
 }
