@@ -502,5 +502,20 @@
   "careers_cell_rights_heading": "በ{city} የቅጥር መብቶች",
   "careers_cell_orgs_heading": "ሙያን የሚደግፉ ድርጅቶች",
   "careers_cell_other_cities": "{track} በሌሎች ከተሞች",
-  "careers_cell_other_tracks": "በ{city} ሌሎች የሙያ መንገዶች"
+  "careers_cell_other_tracks": "በ{city} ሌሎች የሙያ መንገዶች",
+  "careers_jobs_landing_title": "ለኢትዮጵያ-እስራኤል ማህበረሰብ ስራዎች",
+  "careers_jobs_landing_subtitle": "ከማህበረሰብ ድርጅቶችና ከህዝብ ዘርፍ የተረጋገጡ ቦታዎች፣ የቅድሚያ ውክልና (ትዕዛዝ 50) ሚናዎችን ጨምሮ።",
+  "careers_jobs_count_label": "ንቁ ስራዎች",
+  "careers_jobs_empty_heading": "የስራ ቦርዱ እየተገነባ ነው",
+  "careers_jobs_empty_body": "ከመውጣታችን በፊት ስራዎችን ከአጋር ድርጅቶች ጋር እናረጋግጣለን፣ ስለዚህ እያንዳንዱ ስራ እውነተኛና አሁን የሚከፈት ነው። እስከዚያው — የቅድሚያ ውክልና መንገዱን ይመልከቱ።",
+  "careers_jobs_empty_cta": "የቅድሚያ ውክልና መንገድ — ትዕዛዝ 50",
+  "careers_jobs_type_full_time": "ሙሉ ጊዜ",
+  "careers_jobs_type_part_time": "ግማሽ ጊዜ",
+  "careers_jobs_type_contractor": "ኮንትራክተር",
+  "careers_jobs_type_volunteer": "በፈቃደኝነት",
+  "careers_jobs_affirmative_badge": "ቅድሚያ ውክልና · ትዕዛዝ 50",
+  "careers_jobs_apply_label": "ማመልከት",
+  "careers_jobs_apply_cta": "የቀጣሪ ድረ-ገጽ ክፈት",
+  "careers_jobs_apply_disclaimer": "ማመልከቻ የሚቀርበው በቀጣሪ ድረ-ገጽ ላይ ነው። Tedros ሂደቱን አይመራም — ህትመቱን ብቻ ነው የሚያስተባብር።",
+  "careers_jobs_back_to_landing": "ወደ የስራ ቦርድ ይመለሱ"
 }
