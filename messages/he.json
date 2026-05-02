@@ -480,5 +480,22 @@
   "careers_track_stories_heading": "סיפורי הצלחה",
   "careers_track_back_to_hub": "חזרה ל-Careers Hub",
   "careers_track_quick_links_heading": "קישורים מהירים",
-  "careers_track_terms_heading": "מושגים קשורים"
+  "careers_track_terms_heading": "מושגים קשורים",
+  "careers_program_type_label": "סוג תכנית",
+  "careers_program_type_bootcamp": "Bootcamp",
+  "careers_program_type_apprenticeship": "התמחות",
+  "careers_program_type_course": "קורס",
+  "careers_program_type_mentorship": "Mentorship",
+  "careers_program_financial_aid": "סיוע כספי זמין",
+  "careers_program_apply_label": "הגישו מועמדות",
+  "careers_program_apply_cta": "מעבר לדף ההגשה",
+  "careers_program_org_heading": "ארגון מארח",
+  "careers_program_cities_heading": "ערים פעילות",
+  "careers_program_siblings_heading": "תכניות נוספות במסלול {track}",
+  "careers_program_canonical_hint": "התכנית פעילה גם תחת",
+  "careers_program_canonical_link": "מאגר התכניות הכללי",
+  "careers_program_back_to_track": "חזרה למסלול {track}",
+  "careers_affirmative_action_title": "ייצוג הולם בשירות הציבורי",
+  "careers_affirmative_action_subtitle": "מה זה צו 50, איך מממשים אותו, ואיך לערער על דחייה — מדריך מעשי לבני קהילת יוצאי אתיופיה.",
+  "careers_affirmative_action_breadcrumb": "ייצוג הולם"
 }
