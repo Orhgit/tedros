@@ -198,8 +198,6 @@ export const CAREERS_STATISTICS: StatEntry[] = [
 ];
 
 // ── lookup helpers ─────────────────────────────────────────────────────────
-// `Translatable.en` and `Translatable.am` are optional in the shared type,
-// so the fallback chain ends at `.he` (always present per CLAUDE.md).
 
 export function statBody(entry: StatEntry, locale: Locale): string {
   return entry.context[locale] ?? entry.context[DEFAULT_LOCALE] ?? entry.context.he;
