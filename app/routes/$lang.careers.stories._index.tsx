@@ -10,7 +10,6 @@ import {
   ALL_CAREER_TRACKS,
   CAREER_TRACK_TO_TAG,
   glyphForCareerTrack,
-  isCareerTrack,
 } from "~/lib/careers/categories";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
 import { storyPath, trackPath } from "~/lib/careers/links";
@@ -172,6 +171,7 @@ export default function StoriesLanding({ loaderData }: Route.ComponentProps) {
                     {s.summary}
                   </p>
                   <div className="mt-3 flex flex-wrap items-center gap-2">
+<<<<<<< HEAD
                     {isCareerTrack(s.trackSlug) && (
                       <Link
                         to={`/${locale}${trackPath(s.trackSlug)}`}
@@ -181,6 +181,15 @@ export default function StoriesLanding({ loaderData }: Route.ComponentProps) {
                         {s.trackName}
                       </Link>
                     )}
+=======
+                    <Link
+                      to={`/${locale}${trackPath(s.trackSlug)}`}
+                      className="inline-flex items-center rounded-full border border-earth-200 bg-earth-50 px-2.5 py-0.5 text-xs text-earth-800"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {s.trackName}
+                    </Link>
+>>>>>>> 9ee8dfe (feat(careers): RIN-475 — stories (10 anonymized × HE/EN/AM + landing + detail))
                     <span className="text-xs text-ink-600">{s.cityName}</span>
                   </div>
                 </Link>
