@@ -15,8 +15,16 @@ import {
   glyphForCareerTrack,
   isCareerTrack,
 } from "~/lib/careers/categories";
+<<<<<<< HEAD
 import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
 import { bootcampPath, trackPath } from "~/lib/careers/links";
+=======
+import {
+  careerTrackBody,
+  findCareerTrack,
+} from "~/lib/careers/careers.server";
+import { bootcampPath, trackCityPath, trackPath } from "~/lib/careers/links";
+>>>>>>> 31408a0 (feat(careers): RIN-473 — wire cells into sitemap, track route, i18n + tests)
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
 import { CITIES } from "~/lib/cities/registry";
@@ -279,7 +287,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
           </section>
         )}
 
-        {/* Top cities (Sub-4 placeholder — links to /cities/$slug) -------- */}
+        {/* Top cities (RIN-473 — links to /careers/$track/$city cells) ---- */}
         {topCities.length > 0 && (
           <section className="mt-10">
             <h2 className="font-display text-xl font-semibold text-earth-900">
@@ -289,7 +297,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
               {topCities.map((city) => (
                 <li key={city.slug}>
                   <Link
-                    to={`/${locale}/cities/${city.slug}`}
+                    to={`/${locale}${trackCityPath(entry.slug, city.slug)}`}
                     className="inline-flex items-center rounded-full border border-earth-200 bg-card px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-50"
                   >
                     {city.name}

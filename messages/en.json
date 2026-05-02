@@ -497,5 +497,11 @@
   "careers_program_back_to_track": "Back to the {track} track",
   "careers_affirmative_action_title": "Affirmative representation in the civil service",
   "careers_affirmative_action_subtitle": "What Order 50 is, how to claim it, and how to appeal a rejection — a practical guide for Ethiopian-Israeli community members.",
-  "careers_affirmative_action_breadcrumb": "Affirmative action"
+  "careers_affirmative_action_breadcrumb": "Affirmative action",
+  "careers_cell_bootcamps_heading": "Programs active in {city}",
+  "careers_cell_professionals_heading": "Professionals in {city}",
+  "careers_cell_rights_heading": "Employment rights in {city}",
+  "careers_cell_orgs_heading": "Career-supporting organizations",
+  "careers_cell_other_cities": "{track} in other cities",
+  "careers_cell_other_tracks": "Other career tracks in {city}"
 }
