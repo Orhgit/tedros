@@ -1,5 +1,6 @@
 import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
+import { activeJobs } from "~/lib/careers/jobs.server";
 import { relevantCities as careerRelevantCities } from "~/lib/careers/relevance";
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
@@ -132,6 +133,12 @@ ${xDefaultFor(path)}
       }
       return out;
     })(),
+    // RIN-474 — Careers Hub Wave 4: job board landing + active jobs.
+    // Past-validThrough postings are excluded so Google never sees a 410
+    // listed in the sitemap (it would still drop them, but cleaner to
+    // omit them at sitemap-generation time).
+    "/careers/jobs",
+    ...activeJobs().map((j) => `/careers/jobs/${j.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

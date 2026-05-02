@@ -503,5 +503,20 @@
   "careers_cell_rights_heading": "Employment rights in {city}",
   "careers_cell_orgs_heading": "Career-supporting organizations",
   "careers_cell_other_cities": "{track} in other cities",
-  "careers_cell_other_tracks": "Other career tracks in {city}"
+  "careers_cell_other_tracks": "Other career tracks in {city}",
+  "careers_jobs_landing_title": "Jobs for the Ethiopian-Israeli community",
+  "careers_jobs_landing_subtitle": "Vetted positions from community organizations and the public sector, including affirmative-action (Order 50) flagged roles.",
+  "careers_jobs_count_label": "active jobs",
+  "careers_jobs_empty_heading": "The job board is being built",
+  "careers_jobs_empty_body": "We vet jobs with partner organizations before publishing, so every posting is real and currently open. In the meantime — check the affirmative-action track.",
+  "careers_jobs_empty_cta": "Affirmative-action track — Order 50",
+  "careers_jobs_type_full_time": "Full time",
+  "careers_jobs_type_part_time": "Part time",
+  "careers_jobs_type_contractor": "Contract",
+  "careers_jobs_type_volunteer": "Volunteer",
+  "careers_jobs_affirmative_badge": "Affirmative · Order 50",
+  "careers_jobs_apply_label": "Apply",
+  "careers_jobs_apply_cta": "Open the employer's site",
+  "careers_jobs_apply_disclaimer": "Applications are filed on the employer's site. Tedros doesn't run the process — we coordinate publication only.",
+  "careers_jobs_back_to_landing": "Back to the job board"
 }

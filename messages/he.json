@@ -503,5 +503,20 @@
   "careers_cell_rights_heading": "זכויות תעסוקה ב-{city}",
   "careers_cell_orgs_heading": "ארגונים תומכי קריירה",
   "careers_cell_other_cities": "{track} בערים אחרות",
-  "careers_cell_other_tracks": "מסלולי קריירה אחרים ב-{city}"
+  "careers_cell_other_tracks": "מסלולי קריירה אחרים ב-{city}",
+  "careers_jobs_landing_title": "משרות לקהילת יוצאי אתיופיה",
+  "careers_jobs_landing_subtitle": "משרות מאומתות מארגוני קהילה ומהמגזר הציבורי, כולל משרות עם דגל ייצוג הולם (צו 50).",
+  "careers_jobs_count_label": "משרות פעילות",
+  "careers_jobs_empty_heading": "לוח המשרות בהקמה",
+  "careers_jobs_empty_body": "אנחנו מאמתים משרות מול ארגוני שותפים לפני פרסום, כדי להבטיח שכל משרה אמיתית ופעילה. בינתיים — בדקו את אפיק הייצוג ההולם.",
+  "careers_jobs_empty_cta": "מסלול ייצוג הולם — צו 50",
+  "careers_jobs_type_full_time": "משרה מלאה",
+  "careers_jobs_type_part_time": "משרה חלקית",
+  "careers_jobs_type_contractor": "פרילנס",
+  "careers_jobs_type_volunteer": "התנדבות",
+  "careers_jobs_affirmative_badge": "ייצוג הולם · צו 50",
+  "careers_jobs_apply_label": "הגישו מועמדות",
+  "careers_jobs_apply_cta": "מעבר לאתר המעסיק",
+  "careers_jobs_apply_disclaimer": "הגשת המועמדות מתבצעת באתר המעסיק. Tedros לא מנהלת את התהליך — אנחנו מתאמים את הפרסום בלבד.",
+  "careers_jobs_back_to_landing": "חזרה ללוח המשרות"
 }
