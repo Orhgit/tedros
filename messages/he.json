@@ -552,5 +552,16 @@
   "heritage_events_related_orgs_heading": "ארגונים קשורים",
   "heritage_events_related_terms_heading": "מושגים קשורים",
   "heritage_events_back_to_landing": "חזרה לכל האירועים",
-  "heritage_events_back_to_event": "חזרה ל-{event}"
+  "heritage_events_back_to_event": "חזרה ל-{event}",
+  "statistics_landing_title": "סטטיסטיקות הקהילה",
+  "statistics_landing_subtitle": "8 נושאי נתונים על הקהילה האתיופית-ישראלית — דמוגרפיה, השכלה, דיור, בריאות, שפה, עלייה, משפחה, השתתפות אזרחית. נתונים ממקורות רשמיים (CBS, ENP, מבקר המדינה).",
+  "statistics_data_year_label": "נתונים עדכניים ל",
+  "statistics_figures_label": "נתונים",
+  "statistics_source_label": "מקור",
+  "statistics_methodology_note": "הנתונים מתעדכנים שנה-שנה מהפרסומים הרשמיים. אם מצאתם אי-דיוק או רוצים להציע מקור נוסף — צרו קשר.",
+  "statistics_employment_link_label": "סטטיסטיקות תעסוקה",
+  "statistics_employment_link_body": "נתוני שכר, אבטלה, ייצוג בשירות הציבורי וכו' — מתפרסמים ב-Careers Hub.",
+  "statistics_employment_link_cta": "מעבר לסטטיסטיקות התעסוקה",
+  "statistics_siblings_heading": "נושאים נוספים",
+  "statistics_back_to_landing": "חזרה לכל הנושאים"
 }

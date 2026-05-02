@@ -23,6 +23,7 @@ import {
   type ProfessionalSlot,
 } from "~/lib/professionals/professionals.server";
 import { relevantCities } from "~/lib/rights/relevance";
+import { STAT_TOPICS } from "~/lib/statistics/topics.server";
 
 /**
  * Resource route — `/sitemap.xml`. Lists every public URL with hreflang
@@ -162,6 +163,9 @@ ${xDefaultFor(path)}
       }
       return out;
     })(),
+    // RIN-423 — Statistics demographics (Wave 3 of RIN-417): 8 topics × HE/EN/AM.
+    "/statistics",
+    ...STAT_TOPICS.map((t) => `/statistics/${t.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

@@ -552,5 +552,16 @@
   "heritage_events_related_orgs_heading": "ተዛማጅ ድርጅቶች",
   "heritage_events_related_terms_heading": "ተዛማጅ ቃላት",
   "heritage_events_back_to_landing": "ወደ ሁሉም በዓላት ይመለሱ",
-  "heritage_events_back_to_event": "ወደ {event} ይመለሱ"
+  "heritage_events_back_to_event": "ወደ {event} ይመለሱ",
+  "statistics_landing_title": "የማህበረሰብ ስታቲስቲክስ",
+  "statistics_landing_subtitle": "የኢትዮጵያ-እስራኤል ማህበረሰብ 8 የመረጃ ርዕሶች — ስነ-ህዝብ፣ ትምህርት፣ መኖሪያ፣ ጤና፣ ቋንቋ፣ ስደት፣ ቤተሰብና የዜግነት ተሳትፎ።",
+  "statistics_data_year_label": "የዘመኑ መረጃ",
+  "statistics_figures_label": "አሃዞች",
+  "statistics_source_label": "ምንጭ",
+  "statistics_methodology_note": "አሃዞች በዓመት ይዘመናሉ።",
+  "statistics_employment_link_label": "የቅጥር ስታቲስቲክስ",
+  "statistics_employment_link_body": "ደመወዝ፣ ስራ አጥነት — በ Careers Hub ይኖራል።",
+  "statistics_employment_link_cta": "ወደ የቅጥር ስታቲስቲክስ",
+  "statistics_siblings_heading": "ተጨማሪ ርዕሶች",
+  "statistics_back_to_landing": "ወደ ሁሉም ርዕሶች ይመለሱ"
 }

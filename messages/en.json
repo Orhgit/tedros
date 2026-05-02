@@ -552,5 +552,16 @@
   "heritage_events_related_orgs_heading": "Related organizations",
   "heritage_events_related_terms_heading": "Related terms",
   "heritage_events_back_to_landing": "Back to all events",
-  "heritage_events_back_to_event": "Back to {event}"
+  "heritage_events_back_to_event": "Back to {event}",
+  "statistics_landing_title": "Community Statistics",
+  "statistics_landing_subtitle": "8 data topics on the Ethiopian-Israeli community — demographics, education, housing, health, language, immigration, family, civic participation. Figures from official sources (CBS, ENP, State Comptroller).",
+  "statistics_data_year_label": "Data current as of",
+  "statistics_figures_label": "figures",
+  "statistics_source_label": "Source",
+  "statistics_methodology_note": "Figures are updated yearly from official publications. If you spot an inaccuracy or want to suggest a source — get in touch.",
+  "statistics_employment_link_label": "Employment statistics",
+  "statistics_employment_link_body": "Wages, unemployment, civil-service representation — these live in the Careers Hub.",
+  "statistics_employment_link_cta": "Open the employment statistics",
+  "statistics_siblings_heading": "More topics",
+  "statistics_back_to_landing": "Back to all topics"
 }
