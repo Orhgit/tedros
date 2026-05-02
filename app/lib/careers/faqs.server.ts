@@ -1,25 +1,24 @@
-// Career-FAQ seed scaffold (RIN-470 → RIN-475 / RIN-469).
+// Career-FAQ seed (RIN-475 — Careers Hub Wave 5 / RIN-469).
 //
-// Sub-6 (RIN-475) fills FAQS with 20 long-tail Q&A entries. Sub-1
-// declares the shape so the route loader and FAQPage schema validator
-// can compile against the type today.
+// 20 long-tail Q&A entries authored in HE/EN/AM. Each FAQ targets a
+// specific community-relevant search query and links into the existing
+// verticals (rights, orgs, bootcamps, professionals).
+//
+// HE source-of-truth (CLAUDE.md). EN + AM mirrored. The route layer at
+// `/$lang/careers/faq/$question` emits a `FAQPage` JSON-LD per entry —
+// rich snippet eligible (Google may render the Q&A inline in SERP).
 
 import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
+import { DEFAULT_LOCALE } from "../i18n/config";
 
 export interface CareerFaqEntry {
   slug: string;
-  /** The question text — H1 of the FAQ page. */
   question: Translatable;
-  /** TL;DR (1-2 sentences) — used as `description` and TL;DR box. */
   shortAnswer: Translatable;
-  /** Track this FAQ relates to (optional — some are cross-track). */
   trackSlug?: string;
-  /** Order in which to display under `/careers/faq`. */
   orderIndex: number;
-  /** ISO-8601 date the answer was last reviewed by content team (E-E-A-T). */
   reviewedAt: string;
-  /** Bodies × locale — populated in Sub-6 (~250-400 words HE). */
   bodies: Record<Locale, string>;
 }
 
@@ -1182,4 +1181,8 @@ export function faqsForTrack(trackSlug: string): CareerFaqEntry[] {
 
 export function faqsByOrder(): CareerFaqEntry[] {
   return [...FAQS].sort((a, b) => a.orderIndex - b.orderIndex);
+}
+
+export function faqBody(entry: CareerFaqEntry, locale: Locale): string {
+  return entry.bodies[locale] ?? entry.bodies[DEFAULT_LOCALE];
 }
