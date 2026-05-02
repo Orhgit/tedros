@@ -16,9 +16,20 @@ import {
   isCareerTrack,
 } from "~/lib/careers/categories";
 import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
-import { bootcampPath, trackCityPath, trackPath } from "~/lib/careers/links";
+import { bootcampPath, trackCityPath, trackPath } from "~/lib/careers/links";,
+import {
+  careerTrackBody,
+  findCareerTrack,
+} from "~/lib/careers/careers.server";
+import {
+  bootcampPath,
+  storyPath,
+  trackCityPath,
+  trackPath,
+} from "~/lib/careers/links";
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
+import { storiesForTrack } from "~/lib/careers/stories.server";
 import { CITIES } from "~/lib/cities/registry";
 import { getGlossaryEntry } from "~/lib/db/queries/glossary.server";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
@@ -88,6 +99,16 @@ export async function loader({ params }: Route.LoaderArgs) {
       programType: b.programType,
     }));
 
+  // Success stories that belong to this track (Sub-6 / RIN-475).
+  const trackStories = storiesForTrack(entry.slug)
+    .slice(0, 3)
+    .map((s) => ({
+      slug: s.slug,
+      nickname: s.nickname[locale] ?? s.nickname.he,
+      currentRole: s.currentRole[locale] ?? s.currentRole.he,
+      summary: s.summary[locale] ?? s.summary.he,
+    }));
+
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}${trackPath(entry.slug)}`;
 
@@ -100,6 +121,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     relatedTerms,
     topCities,
     recommendedBootcamps,
+    trackStories,
     shareUrl,
     publicUrl: PUBLIC_URL,
   };
@@ -138,6 +160,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
     relatedTerms,
     topCities,
     recommendedBootcamps,
+    trackStories,
     shareUrl,
   } = loaderData;
   const tag = CAREER_TRACK_TO_TAG[entry.slug];
@@ -338,13 +361,28 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
           </section>
         )}
 
-        {/* Stories placeholder (Sub-6 fills) ------------------------------ */}
-        <section className="mt-10">
-          <h2 className="font-display text-xl font-semibold text-earth-900">
-            {t(locale, "careers_track_stories_heading")}
-          </h2>
-          <p className="mt-2 text-sm text-ink-600">{t(locale, "careers_coming_soon")}</p>
-        </section>
+        {/* Success stories (Sub-6 — RIN-475) ----------------------------- */}
+        {trackStories.length > 0 && (
+          <section className="mt-10">
+            <h2 className="font-display text-xl font-semibold text-earth-900">
+              {t(locale, "careers_track_stories_heading")}
+            </h2>
+            <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+              {trackStories.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    to={`/${locale}${storyPath(s.slug)}`}
+                    className="block rounded-lg border border-earth-200 bg-card p-4 text-sm transition hover:border-earth-400 hover:shadow-sm"
+                  >
+                    <span className="block font-medium text-earth-900">{s.nickname}</span>
+                    <span className="mt-1 block text-xs text-ink-600">{s.currentRole}</span>
+                    <span className="mt-2 block text-xs text-ink-700">{s.summary}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* Back to hub --------------------------------------------------- */}
         <div className="mt-12 border-t border-earth-200 pt-6">
