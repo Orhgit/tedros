@@ -9,6 +9,8 @@ import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
 import { COMPARISONS } from "~/lib/comparisons/comparisons.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
+import { HERITAGE_EVENTS } from "~/lib/heritage/events.server";
+import { relevantCities as heritageRelevantCities } from "~/lib/heritage/relevance";
 import { PROGRAMS } from "~/lib/programs/programs.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
@@ -147,6 +149,19 @@ ${xDefaultFor(path)}
     ...FAQS.map((f) => `/careers/faq/${f.slug}`),
     "/careers/stories",
     ...STORIES.map((s) => `/careers/stories/${s.slug}`),
+    // RIN-422 — Heritage events (Wave 3 of RIN-417): 3 events × HE/EN/AM
+    // + (event × city) programmatic cells filtered by relevance.
+    "/heritage/events",
+    ...HERITAGE_EVENTS.map((e) => `/heritage/events/${e.slug}`),
+    ...(() => {
+      const out: string[] = [];
+      for (const event of HERITAGE_EVENTS) {
+        for (const city of heritageRelevantCities(event.slug, CITIES)) {
+          out.push(`/heritage/events/${event.slug}/${city.slug}`);
+        }
+      }
+      return out;
+    })(),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

@@ -542,5 +542,15 @@
   "careers_story_track_label": "መንገድ",
   "careers_story_city_label": "ከተማ",
   "careers_story_programs_heading": "የተጠቀሙባቸው ፕሮግራሞች",
-  "careers_story_siblings_heading": "በ{track} መንገድ ተጨማሪ ታሪኮች"
+  "careers_story_siblings_heading": "በ{track} መንገድ ተጨማሪ ታሪኮች",
+  "heritage_events_landing_title": "የቅርስ በዓላት",
+  "heritage_events_landing_subtitle": "ሰግድ፣ ገና፣ እና የኢትዮጵያ አሊያ መታሰቢያ ቀን — የኢትዮጵያ-እስራኤል ማህበረሰብ ዋና ሦስት የቅርስ በዓላት።",
+  "heritage_events_when_label": "መቼ",
+  "heritage_events_next_observance_label": "ቀጣይ በዓል",
+  "heritage_events_cities_heading": "{event} በከተሞች",
+  "heritage_events_related_rights_heading": "ተዛማጅ መብቶች",
+  "heritage_events_related_orgs_heading": "ተዛማጅ ድርጅቶች",
+  "heritage_events_related_terms_heading": "ተዛማጅ ቃላት",
+  "heritage_events_back_to_landing": "ወደ ሁሉም በዓላት ይመለሱ",
+  "heritage_events_back_to_event": "ወደ {event} ይመለሱ"
 }

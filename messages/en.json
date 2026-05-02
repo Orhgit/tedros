@@ -542,5 +542,15 @@
   "careers_story_track_label": "Track",
   "careers_story_city_label": "City",
   "careers_story_programs_heading": "Programs used",
-  "careers_story_siblings_heading": "More stories in the {track} track"
+  "careers_story_siblings_heading": "More stories in the {track} track",
+  "heritage_events_landing_title": "Heritage Events",
+  "heritage_events_landing_subtitle": "Sigd, Genna, and Ethiopian Aliyah Memorial Day — the three main heritage events of the Ethiopian-Israeli community. Next observance dates, where they're celebrated, and how to participate.",
+  "heritage_events_when_label": "When",
+  "heritage_events_next_observance_label": "Next observance",
+  "heritage_events_cities_heading": "{event} in cities",
+  "heritage_events_related_rights_heading": "Related rights",
+  "heritage_events_related_orgs_heading": "Related organizations",
+  "heritage_events_related_terms_heading": "Related terms",
+  "heritage_events_back_to_landing": "Back to all events",
+  "heritage_events_back_to_event": "Back to {event}"
 }
