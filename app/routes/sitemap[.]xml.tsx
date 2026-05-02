@@ -1,7 +1,9 @@
 import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
+import { FAQS } from "~/lib/careers/faqs.server";
 import { activeJobs } from "~/lib/careers/jobs.server";
 import { relevantCities as careerRelevantCities } from "~/lib/careers/relevance";
+import { STORIES } from "~/lib/careers/stories.server";
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
@@ -139,6 +141,12 @@ ${xDefaultFor(path)}
     // omit them at sitemap-generation time).
     "/careers/jobs",
     ...activeJobs().map((j) => `/careers/jobs/${j.slug}`),
+    // RIN-475 — Careers Hub Wave 5: statistics + FAQs + success stories.
+    "/careers/statistics",
+    "/careers/faq",
+    ...FAQS.map((f) => `/careers/faq/${f.slug}`),
+    "/careers/stories",
+    ...STORIES.map((s) => `/careers/stories/${s.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

@@ -11,7 +11,8 @@ import { SiteHeader } from "~/components/sections/site-header";
 import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACK_TO_TAG, glyphForCareerTrack } from "~/lib/careers/categories";
 import { careerTracksByPriority } from "~/lib/careers/careers.server";
-import { bootcampPath, trackPath } from "~/lib/careers/links";
+import { faqsByOrder } from "~/lib/careers/faqs.server";
+import { bootcampPath, faqPath, trackPath } from "~/lib/careers/links";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -88,8 +89,15 @@ export async function loader({ params }: Route.LoaderArgs) {
       summary: b.shortDescription[locale] ?? b.shortDescription.he,
       trackSlug: b.trackSlug,
     }));
+  const featuredFaqs = faqsByOrder()
+    .slice(0, 5)
+    .map((f) => ({
+      slug: f.slug,
+      question: f.question[locale] ?? f.question.he,
+      shortAnswer: f.shortAnswer[locale] ?? f.shortAnswer.he,
+    }));
   const { PUBLIC_URL } = getEnv();
-  return { locale, tracks, featuredBootcamps, publicUrl: PUBLIC_URL };
+  return { locale, tracks, featuredBootcamps, featuredFaqs, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -140,7 +148,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function CareersLanding({ loaderData }: Route.ComponentProps) {
-  const { locale, tracks, featuredBootcamps } = loaderData;
+  const { locale, tracks, featuredBootcamps, featuredFaqs } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -309,12 +317,61 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
           </ul>
         </section>
 
-        {/* FAQ placeholder (Sub-6 — RIN-475) ------------------------------ */}
-        <section className="mb-12 rounded-lg border border-dashed border-earth-200 bg-earth-50/40 p-5">
-          <p className="text-sm font-medium text-earth-700">
-            {t(locale, "careers_section_faqs_heading")}
-          </p>
-          <p className="mt-1 text-xs text-ink-600">{t(locale, "careers_coming_soon")}</p>
+        {/* Featured FAQs (Sub-6 — RIN-475) -------------------------------- */}
+        <section className="mb-12" aria-labelledby="careers-faqs-heading">
+          <div className="mb-4 flex items-center justify-between">
+            <h2
+              id="careers-faqs-heading"
+              className="font-display text-2xl font-semibold text-earth-900"
+            >
+              {t(locale, "careers_section_faqs_heading")}
+            </h2>
+            <Link
+              to={`/${locale}/careers/faq`}
+              className="text-sm text-earth-700 hover:underline"
+            >
+              {t(locale, "careers_view_all_faqs")} →
+            </Link>
+          </div>
+          <ul className="space-y-2">
+            {featuredFaqs.map((f) => (
+              <li key={f.slug}>
+                <Link
+                  to={`/${locale}${faqPath(f.slug)}`}
+                  className="block rounded-lg border border-earth-200 bg-card p-4 transition hover:border-earth-400 hover:shadow-sm"
+                >
+                  <p className="text-sm font-medium text-earth-900">{f.question}</p>
+                  <p className="mt-1 text-xs text-ink-600">{f.shortAnswer}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Statistics + stories teasers (Sub-6) --------------------------- */}
+        <section className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Link
+            to={`/${locale}/careers/statistics`}
+            className="block rounded-2xl border border-earth-200 bg-card p-6 transition hover:border-earth-400 hover:shadow-sm"
+          >
+            <p className="font-display text-base font-semibold text-earth-900">
+              {t(locale, "careers_statistics_title")}
+            </p>
+            <p className="mt-1 text-sm text-ink-600">
+              {t(locale, "careers_statistics_subtitle")}
+            </p>
+          </Link>
+          <Link
+            to={`/${locale}/careers/stories`}
+            className="block rounded-2xl border border-earth-200 bg-card p-6 transition hover:border-earth-400 hover:shadow-sm"
+          >
+            <p className="font-display text-base font-semibold text-earth-900">
+              {t(locale, "careers_stories_landing_title")}
+            </p>
+            <p className="mt-1 text-sm text-ink-600">
+              {t(locale, "careers_stories_landing_subtitle")}
+            </p>
+          </Link>
         </section>
       </main>
       <SiteFooter locale={locale} />
