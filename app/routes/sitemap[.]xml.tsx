@@ -11,6 +11,8 @@ import { COMPARISONS } from "~/lib/comparisons/comparisons.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { HERITAGE_EVENTS } from "~/lib/heritage/events.server";
 import { relevantCities as heritageRelevantCities } from "~/lib/heritage/relevance";
+import { ARTICLES } from "~/lib/news/articles.server";
+import { ALL_NEWS_TAGS } from "~/lib/news/categories";
 import { PROGRAMS } from "~/lib/programs/programs.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
@@ -166,6 +168,10 @@ ${xDefaultFor(path)}
     // RIN-423 — Statistics demographics (Wave 3 of RIN-417): 8 topics × HE/EN/AM.
     "/statistics",
     ...STAT_TOPICS.map((t) => `/statistics/${t.slug}`),
+    // RIN-425 — News feed (Wave 3 of RIN-417): landing + articles + tags.
+    "/news",
+    ...ARTICLES.map((a) => `/news/${a.slug}`),
+    ...ALL_NEWS_TAGS.map((tg) => `/news/tag/${tg}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
