@@ -1,3 +1,4 @@
+import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
@@ -115,6 +116,9 @@ ${xDefaultFor(path)}
     // Sub-4 (RIN-473) will add ~408 city × track cells under /careers/$track/$city.
     "/careers",
     ...CAREER_TRACKS.map((t) => `/careers/${t.slug}`),
+    // RIN-472 — Careers Hub Wave 2: 15 bootcamps + affirmative-action explainer.
+    "/careers/affirmative-action",
+    ...BOOTCAMPS.map((b) => `/careers/programs/${b.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

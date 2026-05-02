@@ -479,5 +479,22 @@
   "careers_track_stories_heading": "የስኬት ታሪኮች",
   "careers_track_back_to_hub": "ወደ ስራ እና ሙያ መሐከል ይመለሱ",
   "careers_track_quick_links_heading": "ቁልፍ አገናኞች",
-  "careers_track_terms_heading": "ተዛማጅ ቃላት"
+  "careers_track_terms_heading": "ተዛማጅ ቃላት",
+  "careers_program_type_label": "የፕሮግራም አይነት",
+  "careers_program_type_bootcamp": "ቡት ካምፕ",
+  "careers_program_type_apprenticeship": "ስልጠና",
+  "careers_program_type_course": "ኮርስ",
+  "careers_program_type_mentorship": "አማካሪነት",
+  "careers_program_financial_aid": "የገንዘብ ድጋፍ አለ",
+  "careers_program_apply_label": "ማመልከት",
+  "careers_program_apply_cta": "የማመልከቻ ገጽ ክፈት",
+  "careers_program_org_heading": "አስተናጋጅ ድርጅት",
+  "careers_program_cities_heading": "የሚሰራባቸው ከተሞች",
+  "careers_program_siblings_heading": "ተጨማሪ ፕሮግራሞች በ{track} መንገድ",
+  "careers_program_canonical_hint": "ይህ ፕሮግራም በ",
+  "careers_program_canonical_link": "የጠቅላላ ፕሮግራሞች ካታሎግ ላይም ይታያል",
+  "careers_program_back_to_track": "ወደ {track} መንገድ ይመለሱ",
+  "careers_affirmative_action_title": "በመንግስት አገልግሎት ቅድሚያ ውክልና",
+  "careers_affirmative_action_subtitle": "ትዕዛዝ 50 ምንድን ነው፣ እንዴት ይቀጠራል እና በመቃወም — ለኢትዮጵያ-እስራኤል ማህበረሰብ አባላት ተግባራዊ መመሪያ።",
+  "careers_affirmative_action_breadcrumb": "ቅድሚያ ውክልና"
 }

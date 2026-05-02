@@ -479,5 +479,22 @@
   "careers_track_stories_heading": "Success stories",
   "careers_track_back_to_hub": "Back to Careers Hub",
   "careers_track_quick_links_heading": "Quick links",
-  "careers_track_terms_heading": "Related terms"
+  "careers_track_terms_heading": "Related terms",
+  "careers_program_type_label": "Program type",
+  "careers_program_type_bootcamp": "Bootcamp",
+  "careers_program_type_apprenticeship": "Apprenticeship",
+  "careers_program_type_course": "Course",
+  "careers_program_type_mentorship": "Mentorship",
+  "careers_program_financial_aid": "Financial aid available",
+  "careers_program_apply_label": "Apply",
+  "careers_program_apply_cta": "Open the application page",
+  "careers_program_org_heading": "Hosting organization",
+  "careers_program_cities_heading": "Active cities",
+  "careers_program_siblings_heading": "More programs in the {track} track",
+  "careers_program_canonical_hint": "Also appears in",
+  "careers_program_canonical_link": "the general programs catalog",
+  "careers_program_back_to_track": "Back to the {track} track",
+  "careers_affirmative_action_title": "Affirmative representation in the civil service",
+  "careers_affirmative_action_subtitle": "What Order 50 is, how to claim it, and how to appeal a rejection — a practical guide for Ethiopian-Israeli community members.",
+  "careers_affirmative_action_breadcrumb": "Affirmative action"
 }
