@@ -84,24 +84,24 @@ export default function EducationPillar({ loaderData }: Route.ComponentProps) {
             </div>
           </Link>
 
-          <div className="rounded-lg border border-dashed border-earth-300 bg-card/50 p-6">
+          <Link
+            to={`/${locale}/education/tracks`}
+            className="group block rounded-lg border border-earth-200 bg-card p-6 shadow-xs transition-all hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-md"
+          >
             <div className="flex items-start gap-3">
-              <span aria-hidden="true" className="text-3xl opacity-60">
-                📚
+              <span aria-hidden="true" className="text-3xl">
+                🧭
               </span>
               <div className="flex-1">
-                <h3 className="font-display text-lg font-semibold text-ink-600">
-                  {t(locale, "education_programs_title")}
+                <h3 className="font-display text-lg font-semibold text-earth-900 group-hover:text-earth-700">
+                  {t(locale, "tracks_landing_title")}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink-500">
-                  {t(locale, "education_programs_subtitle")}
+                <p className="mt-1 text-sm leading-relaxed text-ink-600">
+                  {t(locale, "tracks_landing_subtitle")}
                 </p>
-                <span className="mt-2 inline-block rounded-full bg-earth-100 px-2 py-0.5 text-xs text-earth-700">
-                  {t(locale, "pillar_coming_soon")}
-                </span>
               </div>
             </div>
-          </div>
+          </Link>
         </section>
       </main>
       <SiteFooter locale={locale} />

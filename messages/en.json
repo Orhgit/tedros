@@ -444,5 +444,11 @@
   "scholarship_apply_cta": "Apply now",
   "scholarship_provider_heading": "Provider organization",
   "scholarship_similar_heading": "Similar scholarships",
-  "scholarship_related_rights_heading": "Related rights"
+  "scholarship_related_rights_heading": "Related rights",
+  "tracks_landing_title": "Study Tracks",
+  "tracks_landing_subtitle": "Defined pathways — academic, vocational, and career-shift — aggregating scholarships and programs by the type of study that fits you.",
+  "tracks_programs_count_label": "programs",
+  "tracks_scholarships_heading": "Scholarships in this track",
+  "tracks_programs_heading": "Programs in this track",
+  "tracks_empty_state": "Content coming soon — meanwhile, try the existing scholarships and programs."
 }

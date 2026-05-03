@@ -444,5 +444,11 @@
   "scholarship_apply_cta": "አሁን ያመልክቱ",
   "scholarship_provider_heading": "የሰጪው ድርጅት",
   "scholarship_similar_heading": "ተመሳሳይ ድጋፎች",
-  "scholarship_related_rights_heading": "ተዛማጅ መብቶች"
+  "scholarship_related_rights_heading": "ተዛማጅ መብቶች",
+  "tracks_landing_title": "የጥናት መንገዶች",
+  "tracks_landing_subtitle": "የተወሰኑ መንገዶች — አካዳሚክ፣ ሙያዊና የስራ ሽግግር — የሚስማማዎ ጥናት ዓይነት ድጋፎችንና ፕሮግራሞችን ያሰባስባሉ።",
+  "tracks_programs_count_label": "ፕሮግራሞች",
+  "tracks_scholarships_heading": "በዚህ መንገድ ያሉ ድጋፎች",
+  "tracks_programs_heading": "በዚህ መንገድ ያሉ ፕሮግራሞች",
+  "tracks_empty_state": "ይዘት በቅርቡ ይጨመራል — ለአሁኑ ያሉትን ድጋፎችና ፕሮግራሞች ይሞክሩ።"
 }
