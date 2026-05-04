@@ -1,0 +1,38 @@
+# VCS / CI
+.git
+.github
+.gitignore
+.gitattributes
+
+# Local env
+.env
+.env.*
+!.env.production.example
+!.env.example
+
+# Build / runtime artifacts
+node_modules
+build
+.cache
+.turbo
+.vite
+coverage
+playwright-report
+test-results
+lighthouse-reports
+.lighthouseci
+
+# Editor / OS
+.vscode
+.idea
+.DS_Store
+*.swp
+*.swo
+
+# Misc dev-only
+docker-compose.dev.yml
+docs
+e2e
+tests
+*.log
+*.tsbuildinfo
