@@ -1,8 +1,8 @@
 # ADR-011: Anchor-partnership tiering strategy
 
-**Status**: Accepted (2026-04-29).
+**Status**: Accepted (2026-04-29). **Amended 2026-05-01** — see [Amendment 1](#amendment-1-2026-05-01--substitute-path-option-for-tier-1-anchors) below.
 **Owner**: Tedros Architect (architecture); Vega (relationships).
-**Related**: [ADR-010 — comprehensive scope](./010-comprehensive-portal-scope.md), [research/01-organizations-map.md](../research/01-organizations-map.md), `docs/discovery/outreach/`.
+**Related**: [ADR-010 — comprehensive scope](./010-comprehensive-portal-scope.md), [research/01-organizations-map.md](../research/01-organizations-map.md), [research/2026-05-01-outreach-and-prof-recruitment.md](../research/2026-05-01-outreach-and-prof-recruitment.md), `docs/discovery/outreach/`.
 
 ## Context
 
@@ -67,3 +67,51 @@ Council of Kessim, Heritage Center, IAEJ, Israeliana.
 - **A1 — Treat all partnerships equally** (rejected): over-invests in nice-to-haves and under-invests in blockers.
 - **A2 — Build first, partner later** (rejected for Tier 1): Phase 6 health content without Tene Briut byline is a credibility risk; Phase 8 voice intake without Tebeka co-design is a security/legal risk.
 - **A3 — Acquire/integrate** (rejected): Tedros has no budget to acquire NGOs and zero strategic reason to subsume their identity. Partnership preserves their independent voice while letting Tedros surface their work.
+
+---
+
+## Amendment 1 (2026-05-01) — Substitute-path option for Tier 1 anchors
+
+**Trigger**: Market research brief (`docs/research/2026-05-01-outreach-and-prof-recruitment.md`) recommended softening the original "anchor signed" gate to avoid indefinite phase blocking if anchors don't engage. Owner approved the change in session 2026-05-01.
+
+### What changed
+
+The Tier 1 gate language is updated from:
+
+> Phase 6 (Health) and Phase 8 (Voice) cannot start delivery work until anchors signed.
+
+to:
+
+> Phase 6 (Health) and Phase 8 (Voice) cannot start delivery work until **either**:
+>
+> 1. The Tier 1 anchor (Tene Briut for Phase 6; Tebeka for Phase 8) is **engaged** — defined as: response to outreach + scheduled exploratory call, OR active email correspondence on partnership terms — **OR**
+> 2. A **substitute path** is validated — defined below.
+
+### Substitute paths
+
+| Phase          | Tier 1 anchor | Substitute path                                                                                                                                                                                                   |
+| -------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **6 (Health)** | Tene Briut    | **Clalit cultural-competence unit + community social workers.** _Validated_ = at least 2 community-based health/social-work professionals committed to content review (not necessarily co-byline).                |
+| **8 (Voice)**  | Tebeka        | **Adala Center OR ACRI.** _Validated_ = legal review committed for the report-flow architecture (anonymization, routing, retention, advisor flow). Does not require case-routing handoff (that remains Tebeka's). |
+
+### Outreach timing change
+
+The original "60-day escalation" trigger is **replaced with W1 parallel outreach** to substitute paths. Both Tier 1 anchors and substitute paths are contacted in week 1; whichever engages first becomes the operational anchor for the phase. The Tier 1 anchor remains the preferred partner (deeper credibility), but the phase is no longer schedule-locked to their timeline.
+
+### What's preserved
+
+- Tier 1 anchors remain the **preferred** partners — credibility is highest with them.
+- Co-byline + content-review remains the relationship model.
+- Substitute paths trigger an "Anchor Partner" badge with the **substitute's** name, not the Tier 1 anchor's.
+- If a Tier 1 anchor engages later (e.g., W6 after the substitute is already validated), they can **replace** the substitute as the anchor; the substitute relationship continues as Tier 2.
+
+### Why this change
+
+The original framing was right as a **quality bar** but wrong as a **schedule gate**. A 30-day silent response from a single anchor should not block 30+ days of delivery work that can begin against an equally-qualified substitute. The substitute paths were already named in the original ADR (under "Escalation trigger") — the change is starting them at W1 instead of W4 (post-60-day silence).
+
+### Risk-adjusted timeline
+
+- **W1**: outreach to all 4 partner orgs (Tene Briut, Tebeka, ENP, Olim Beyahad) + parallel outreach to substitutes (Clalit health unit, Adala/ACRI legal).
+- **W2**: follow-ups on non-responders.
+- **W4**: Phase 6/8 scoping begins with whichever anchor (Tier 1 or substitute) responded first.
+- **W8**: ADR-011 review — confirm the substitute-path call was right; revert to strict gate if Tier 1 engagement was actually imminent.
