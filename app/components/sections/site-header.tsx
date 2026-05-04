@@ -28,6 +28,8 @@ export function SiteHeader({
   const items = [
     { href: `${base}/cities`, label: t(locale, "nav_listings") },
     { href: `${base}/rights`, label: t(locale, "nav_rights") },
+    { href: `${base}/professionals`, label: t(locale, "nav_professionals") },
+    { href: `${base}/education`, label: t(locale, "nav_education") },
   ].map((i) => ({ ...i, current: currentPath.startsWith(i.href) }));
 
   // Switch to other locale, preserving the rest of the path.
