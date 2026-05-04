@@ -5,6 +5,7 @@ import { COMPARISONS } from "~/lib/comparisons/comparisons.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { PROGRAMS } from "~/lib/programs/programs.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
+import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
 import { ORGS } from "~/lib/orgs/orgs.server";
 import { ALL_PROFESSIONS } from "~/lib/professionals/categories";
 import {
@@ -91,6 +92,11 @@ ${xDefaultFor(path)}
     // RIN-424 — Programs (Wave 3b of RIN-417): 24 org programs.
     "/programs",
     ...PROGRAMS.map((p) => `/programs/${p.slug}`),
+    // RIN-504 — Education Hub Wave 1: pillar landing + scholarships list +
+    // 12 scholarship details.
+    "/education",
+    "/education/scholarships",
+    ...SCHOLARSHIPS.map((s) => `/education/scholarships/${s.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
