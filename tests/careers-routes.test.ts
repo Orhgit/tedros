@@ -80,9 +80,7 @@ describe("careers track loader — happy path", () => {
     const data = await trackLoader(fakeArgs({ lang: "he", track: "law" }));
     // Law track references tebeka org + tebeka-legal-aid right + tebeka term.
     expect(data.relatedOrgs.find((o) => o.slug === "tebeka")).toBeDefined();
-    expect(
-      data.relatedRights.find((r) => r.slug === "tebeka-legal-aid"),
-    ).toBeDefined();
+    expect(data.relatedRights.find((r) => r.slug === "tebeka-legal-aid")).toBeDefined();
     expect(data.relatedTerms.find((g) => g.slug === "tebeka")).toBeDefined();
   });
 

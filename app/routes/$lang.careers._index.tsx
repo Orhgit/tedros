@@ -9,10 +9,7 @@ import type { Route } from "./+types/$lang.careers._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
-import {
-  CAREER_TRACK_TO_TAG,
-  glyphForCareerTrack,
-} from "~/lib/careers/categories";
+import { CAREER_TRACK_TO_TAG, glyphForCareerTrack } from "~/lib/careers/categories";
 import { careerTracksByPriority } from "~/lib/careers/careers.server";
 import { bootcampPath, trackPath } from "~/lib/careers/links";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
@@ -81,8 +78,9 @@ const FEATURED_BOOTCAMP_SLUGS = [
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const tracks = careerTracksByPriority();
-  const featuredBootcamps = FEATURED_BOOTCAMP_SLUGS
-    .map((slug) => BOOTCAMPS.find((b) => b.slug === slug))
+  const featuredBootcamps = FEATURED_BOOTCAMP_SLUGS.map((slug) =>
+    BOOTCAMPS.find((b) => b.slug === slug),
+  )
     .filter((b): b is NonNullable<typeof b> => b !== undefined)
     .map((b) => ({
       slug: b.slug,
@@ -133,13 +131,10 @@ export const meta: Route.MetaFunction = ({ data }) => {
       },
     },
     {
-      "script:ld+json": breadcrumbJsonLd(
-        { publicUrl, locale },
-        [
-          { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-          { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-        ],
-      ),
+      "script:ld+json": breadcrumbJsonLd({ publicUrl, locale }, [
+        { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+        { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+      ]),
     },
   ];
 };
@@ -179,10 +174,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
         </header>
 
         {/* Track grid ----------------------------------------------------- */}
-        <section
-          className="mb-12"
-          aria-labelledby="careers-tracks-heading"
-        >
+        <section className="mb-12" aria-labelledby="careers-tracks-heading">
           <h2
             id="careers-tracks-heading"
             className="mb-4 font-display text-2xl font-semibold text-earth-900"
@@ -217,9 +209,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
                         {glyphForCareerTrack(track.slug)}
                       </span>
                     </div>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-600">
-                      {summary}
-                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-600">{summary}</p>
                     <div className="mt-3">
                       <span className={tagChipClasses(tag)}>
                         {t(locale, "careers_priority_label")} #{track.priority}
@@ -233,10 +223,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
         </section>
 
         {/* Supporting orgs ------------------------------------------------- */}
-        <section
-          className="mb-12"
-          aria-labelledby="careers-orgs-heading"
-        >
+        <section className="mb-12" aria-labelledby="careers-orgs-heading">
           <h2
             id="careers-orgs-heading"
             className="mb-4 font-display text-2xl font-semibold text-earth-900"
@@ -292,10 +279,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
         </section>
 
         {/* Featured bootcamps (Sub-3 — RIN-472) --------------------------- */}
-        <section
-          className="mb-12"
-          aria-labelledby="careers-bootcamps-heading"
-        >
+        <section className="mb-12" aria-labelledby="careers-bootcamps-heading">
           <div className="mb-4 flex items-center justify-between">
             <h2
               id="careers-bootcamps-heading"
@@ -330,9 +314,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
           <p className="text-sm font-medium text-earth-700">
             {t(locale, "careers_section_faqs_heading")}
           </p>
-          <p className="mt-1 text-xs text-ink-600">
-            {t(locale, "careers_coming_soon")}
-          </p>
+          <p className="mt-1 text-xs text-ink-600">{t(locale, "careers_coming_soon")}</p>
         </section>
       </main>
       <SiteFooter locale={locale} />
