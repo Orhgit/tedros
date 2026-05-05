@@ -23,10 +23,7 @@ beforeAll(() => {
   process.env.EMAIL_FROM = process.env.EMAIL_FROM ?? "no-reply@tedros.local";
 });
 
-import {
-  JOBS,
-  type JobPostingEntry,
-} from "../app/lib/careers/jobs.server";
+import { JOBS, type JobPostingEntry } from "../app/lib/careers/jobs.server";
 import { loader as jobsLandingLoader } from "../app/routes/$lang.careers.jobs._index";
 import { loader as jobDetailLoader } from "../app/routes/$lang.careers.jobs.$slug";
 
