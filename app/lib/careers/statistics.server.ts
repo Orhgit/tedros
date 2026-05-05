@@ -101,7 +101,7 @@ export const CAREERS_STATISTICS: StatEntry[] = [
     },
     figure: { he: "1.7%", en: "1.7%", am: "1.7%" },
     context: {
-      he: "1.7% משרות שירות המדינה מאוישות ע\"י בני קהילת יוצאי אתיופיה — היעד נציבותי הוא 2.5% עד 2027 (צו 50). 70% מהמשרדים מתחת ל-1.5%; משרד הקליטה (5.1%) ומשרד החינוך (3.2%) מובילים.",
+      he: '1.7% משרות שירות המדינה מאוישות ע"י בני קהילת יוצאי אתיופיה — היעד נציבותי הוא 2.5% עד 2027 (צו 50). 70% מהמשרדים מתחת ל-1.5%; משרד הקליטה (5.1%) ומשרד החינוך (3.2%) מובילים.',
       en: "1.7% of civil-service positions are filled by Ethiopian-Israeli community members — the Civil Service Commission target is 2.5% by 2027 (Order 50). 70% of ministries are below 1.5%; the Aliyah Ministry (5.1%) and Education Ministry (3.2%) lead.",
       am: "1.7% የመንግስት አገልግሎት ቦታዎች በኢትዮጵያ-እስራኤል ማህበረሰብ ይይዛሉ — የ2.5% በ2027 ግብ (ትዕዛዝ 50)።",
     },

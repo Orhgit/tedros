@@ -108,7 +108,6 @@ ${xDefaultFor(path)}
     // (academic, vocational, career-shift).
     "/education/tracks",
     ...EDUCATION_TRACKS.map((t) => `/education/tracks/${t}`),
-    ,
     // RIN-508 — Education Hub Wave 3: programmatic SEO scholarship × city.
     // 12 scholarships × 5 community cities = 60 cells.
     ...SCHOLARSHIPS.flatMap((s) =>

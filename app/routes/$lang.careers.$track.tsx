@@ -16,17 +16,7 @@ import {
   isCareerTrack,
 } from "~/lib/careers/categories";
 import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
-import { bootcampPath, trackCityPath, trackPath } from "~/lib/careers/links";,
-import {
-  careerTrackBody,
-  findCareerTrack,
-} from "~/lib/careers/careers.server";
-import {
-  bootcampPath,
-  storyPath,
-  trackCityPath,
-  trackPath,
-} from "~/lib/careers/links";
+import { bootcampPath, storyPath, trackCityPath, trackPath } from "~/lib/careers/links";
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
 import { storiesForTrack } from "~/lib/careers/stories.server";
@@ -375,7 +365,9 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
                     className="block rounded-lg border border-earth-200 bg-card p-4 text-sm transition hover:border-earth-400 hover:shadow-sm"
                   >
                     <span className="block font-medium text-earth-900">{s.nickname}</span>
-                    <span className="mt-1 block text-xs text-ink-600">{s.currentRole}</span>
+                    <span className="mt-1 block text-xs text-ink-600">
+                      {s.currentRole}
+                    </span>
                     <span className="mt-2 block text-xs text-ink-700">{s.summary}</span>
                   </Link>
                 </li>

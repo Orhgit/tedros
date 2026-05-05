@@ -18,11 +18,7 @@ import {
 import { findCareerTrack } from "~/lib/careers/careers.server";
 import { bootcampPath, storyPath, trackPath } from "~/lib/careers/links";
 import { breadcrumbJsonLd, successStoryJsonLd } from "~/lib/careers/schema";
-import {
-  STORIES,
-  findStory,
-  storyBody,
-} from "~/lib/careers/stories.server";
+import { STORIES, findStory, storyBody } from "~/lib/careers/stories.server";
 import { CITIES, cityName } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -42,9 +38,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   const html = renderMarkdown(storyBody(story, locale));
   const city = CITIES.find((c) => c.slug === story.citySlug) ?? null;
-  const track = isCareerTrack(story.trackSlug)
-    ? findCareerTrack(story.trackSlug)
-    : null;
+  const track = isCareerTrack(story.trackSlug) ? findCareerTrack(story.trackSlug) : null;
   const programs = story.programsUsed
     .map((slug) => findBootcamp(slug))
     .filter((b): b is NonNullable<typeof b> => b !== null)
@@ -64,7 +58,17 @@ export async function loader({ params }: Route.LoaderArgs) {
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}${storyPath(story.slug)}`;
 
-  return { locale, story, html, city, track, programs, siblings, shareUrl, publicUrl: PUBLIC_URL };
+  return {
+    locale,
+    story,
+    html,
+    city,
+    track,
+    programs,
+    siblings,
+    shareUrl,
+    publicUrl: PUBLIC_URL,
+  };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -75,7 +79,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const summary = story.summary[locale] ?? story.summary.he;
   const headline = `${nickname} — ${currentRole}`;
   const cityNameLocal = city ? cityName(city, locale) : story.citySlug;
-  const trackName = track ? track.name[locale] ?? track.name.he : story.trackSlug;
+  const trackName = track ? (track.name[locale] ?? track.name.he) : story.trackSlug;
 
   const storyJsonLd = successStoryJsonLd(
     { publicUrl, locale },
@@ -91,15 +95,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: t(locale, "careers_stories_landing_title"), path: "/careers/stories" },
-      { name: nickname, path: storyPath(story.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: t(locale, "careers_stories_landing_title"), path: "/careers/stories" },
+    { name: nickname, path: storyPath(story.slug) },
+  ]);
 
   return [
     { title: `${headline} — Tedros` },
@@ -125,7 +126,7 @@ export default function StoryDetail({ loaderData }: Route.ComponentProps) {
   const currentRole = story.currentRole[locale] ?? story.currentRole.he;
   const startingPoint = story.startingPoint[locale] ?? story.startingPoint.he;
   const cityNameLocal = city ? cityName(city, locale) : story.citySlug;
-  const trackName = track ? track.name[locale] ?? track.name.he : story.trackSlug;
+  const trackName = track ? (track.name[locale] ?? track.name.he) : story.trackSlug;
   const tag = isCareerTrack(story.trackSlug)
     ? CAREER_TRACK_TO_TAG[story.trackSlug]
     : "earth";

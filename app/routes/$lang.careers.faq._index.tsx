@@ -45,14 +45,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
     })),
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: title, path: "/careers/faq" },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: title, path: "/careers/faq" },
+  ]);
 
   return [
     { title: `${title} — Tedros` },
@@ -75,8 +72,7 @@ export default function FaqLanding({ loaderData }: Route.ComponentProps) {
   const filtered = q
     ? faqs.filter(
         (f) =>
-          f.question.toLowerCase().includes(q) ||
-          f.shortAnswer.toLowerCase().includes(q),
+          f.question.toLowerCase().includes(q) || f.shortAnswer.toLowerCase().includes(q),
       )
     : faqs;
 
