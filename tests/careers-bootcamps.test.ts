@@ -19,10 +19,7 @@ import {
   bootcampsForTrack,
   findBootcamp,
 } from "../app/lib/careers/bootcamps.server";
-import {
-  ALL_CAREER_TRACKS,
-  isCareerTrack,
-} from "../app/lib/careers/categories";
+import { ALL_CAREER_TRACKS, isCareerTrack } from "../app/lib/careers/categories";
 import { bootcampJsonLd } from "../app/lib/careers/schema";
 import { CITIES } from "../app/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "../app/lib/db/seeds/rights";
@@ -78,11 +75,8 @@ describe("BOOTCAMPS seed shape", () => {
 
   it("every bootcamp has an applicationUrl that's a URL or an internal path", () => {
     for (const b of BOOTCAMPS) {
-      const ok =
-        b.applicationUrl.startsWith("http") || b.applicationUrl.startsWith("/");
-      expect(ok, `${b.slug}: invalid applicationUrl '${b.applicationUrl}'`).toBe(
-        true,
-      );
+      const ok = b.applicationUrl.startsWith("http") || b.applicationUrl.startsWith("/");
+      expect(ok, `${b.slug}: invalid applicationUrl '${b.applicationUrl}'`).toBe(true);
     }
   });
 });
@@ -116,9 +110,7 @@ describe("BOOTCAMPS — cross-vertical integrity", () => {
   it("every relatedProfessions slug is a valid Profession", () => {
     for (const b of BOOTCAMPS) {
       for (const slug of b.relatedProfessions) {
-        expect(PROFESSION_SLUGS.has(slug), `${b.slug} → prof '${slug}'`).toBe(
-          true,
-        );
+        expect(PROFESSION_SLUGS.has(slug), `${b.slug} → prof '${slug}'`).toBe(true);
       }
     }
   });
@@ -166,9 +158,7 @@ describe("BOOTCAMPS — coverage by track", () => {
       "retail-services",
     ];
     for (const track of COVERED) {
-      expect((counts.get(track) ?? 0) >= 1, `track ${track}: no bootcamp`).toBe(
-        true,
-      );
+      expect((counts.get(track) ?? 0) >= 1, `track ${track}: no bootcamp`).toBe(true);
     }
   });
 });
@@ -204,9 +194,7 @@ describe("BOOTCAMPS — JSON-LD validity for every entry", () => {
         trackSlug: b.trackSlug,
         name: b.name,
         shortDescription: b.shortDescription,
-        ...(b.orgSlug
-          ? { org: { slug: b.orgSlug, name: { he: b.orgSlug } } }
-          : {}),
+        ...(b.orgSlug ? { org: { slug: b.orgSlug, name: { he: b.orgSlug } } } : {}),
         programType: b.programType,
         ...(b.timeToComplete ? { timeToComplete: b.timeToComplete } : {}),
         financialAidEligible: b.financialAidEligible,
@@ -245,9 +233,7 @@ describe("ALL_CAREER_TRACKS still references real seed entries", () => {
     // *primary* track, but cross-track recommendations are valid (e.g.
     // ISEF excellence-employment is primary=finance and also recommended
     // by the law track). So we check both directions.
-    const { CAREER_TRACKS } = await import(
-      "../app/lib/careers/careers.server"
-    );
+    const { CAREER_TRACKS } = await import("../app/lib/careers/careers.server");
     const tracksWithPrimaryBootcamp = new Set(BOOTCAMPS.map((b) => b.trackSlug));
     // Healthcare currently has none — handled in track copy as the
     // nursing path / community-health worker route.
