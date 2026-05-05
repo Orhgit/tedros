@@ -15,10 +15,7 @@ import {
   glyphForCareerTrack,
   isCareerTrack,
 } from "~/lib/careers/categories";
-import {
-  careerTrackBody,
-  findCareerTrack,
-} from "~/lib/careers/careers.server";
+import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
 import { bootcampPath, trackPath } from "~/lib/careers/links";
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
@@ -234,10 +231,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
                     <span className="block font-medium text-earth-900">{b.name}</span>
                     <span className="mt-1 block text-ink-600">{b.summary}</span>
                     <span className="mt-2 inline-block text-xs text-earth-700">
-                      {t(
-                        locale,
-                        `careers_program_type_${b.programType.toLowerCase()}`,
-                      )}
+                      {t(locale, `careers_program_type_${b.programType.toLowerCase()}`)}
                     </span>
                   </Link>
                 </li>

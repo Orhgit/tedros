@@ -188,17 +188,14 @@ export const meta: Route.MetaFunction = ({ data }) => {
     publisher: { "@type": "Organization", name: "Tedros", url: publicUrl },
   };
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      {
-        name: t(locale, "careers_affirmative_action_breadcrumb"),
-        path: "/careers/affirmative-action",
-      },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    {
+      name: t(locale, "careers_affirmative_action_breadcrumb"),
+      path: "/careers/affirmative-action",
+    },
+  ]);
 
   return [
     { title: `${title} — Tedros` },
@@ -223,7 +220,10 @@ export default function AffirmativeAction({ loaderData }: Route.ComponentProps) 
       <SiteHeader locale={locale} currentPath={`/${locale}/careers`} />
       <article id="main-content" className="container-default mx-auto max-w-3xl py-10">
         <header className="relative mb-8 overflow-hidden rounded-2xl border border-earth-200 bg-card p-6 sm:p-10">
-          <span aria-hidden="true" className="absolute inset-s-0 inset-e-0 top-0 h-1.5 bg-accent-red" />
+          <span
+            aria-hidden="true"
+            className="absolute inset-s-0 inset-e-0 top-0 h-1.5 bg-accent-red"
+          />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "rights_breadcrumb_home")}
@@ -234,7 +234,9 @@ export default function AffirmativeAction({ loaderData }: Route.ComponentProps) 
             </Link>
           </p>
           <div className="mt-3 flex items-start gap-4">
-            <span aria-hidden="true" className="text-4xl leading-none">⚖️</span>
+            <span aria-hidden="true" className="text-4xl leading-none">
+              ⚖️
+            </span>
             <div className="flex-1">
               <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
                 {title}

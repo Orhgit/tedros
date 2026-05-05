@@ -30,9 +30,7 @@ describe("bootcamp detail loader — happy path", () => {
   it("loads every bootcamp in every locale without throwing", async () => {
     for (const b of BOOTCAMPS) {
       for (const lang of ["he", "en", "am"]) {
-        const data = await bootcampLoader(
-          fakeArgs({ lang, program: b.slug }),
-        );
+        const data = await bootcampLoader(fakeArgs({ lang, program: b.slug }));
         expect(data.entry.slug).toBe(b.slug);
         expect(data.locale).toBe(lang);
         expect(data.html.length).toBeGreaterThan(50);

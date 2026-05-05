@@ -9,22 +9,14 @@ import type { Route } from "./+types/$lang.careers.programs.$program";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import {
-  BOOTCAMPS,
-  bootcampBody,
-  findBootcamp,
-} from "~/lib/careers/bootcamps.server";
+import { BOOTCAMPS, bootcampBody, findBootcamp } from "~/lib/careers/bootcamps.server";
 import { findCareerTrack } from "~/lib/careers/careers.server";
 import {
   CAREER_TRACK_TO_TAG,
   glyphForCareerTrack,
   isCareerTrack,
 } from "~/lib/careers/categories";
-import {
-  bootcampPath,
-  trackDisplayName,
-  trackPath,
-} from "~/lib/careers/links";
+import { bootcampPath, trackDisplayName, trackPath } from "~/lib/careers/links";
 import { bootcampJsonLd, breadcrumbJsonLd } from "~/lib/careers/schema";
 import { CITIES } from "~/lib/cities/registry";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
@@ -132,15 +124,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: trackName, path: trackPath(track.slug) },
-      { name, path: bootcampPath(entry.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: trackName, path: trackPath(track.slug) },
+    { name, path: bootcampPath(entry.slug) },
+  ]);
 
   return [
     { title: `${name} — ${t(locale, "careers_landing_title")} — Tedros` },
