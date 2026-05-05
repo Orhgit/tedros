@@ -97,10 +97,7 @@ describe("relevantCities", () => {
 
 describe("cellCount — aggregate sitemap math", () => {
   it("sums to the planned ~136 cells across the 10 tracks", () => {
-    const total = ALL_CAREER_TRACKS.reduce(
-      (acc, t) => acc + cellCount(t, CITIES),
-      0,
-    );
+    const total = ALL_CAREER_TRACKS.reduce((acc, t) => acc + cellCount(t, CITIES), 0);
     // Expected per the RIN-473 distribution table:
     //   tech 5 + healthcare 16 + education 16 + public-sector 16 +
     //   entrepreneurship 6 + finance 4 + social-work 16 + law 4 +

@@ -10,11 +10,7 @@
 // pin the integrity of the graph (no dead refs).
 
 import type { Locale } from "../i18n/config";
-import {
-  CAREER_TRACKS,
-  type CareerTrackEntry,
-  findCareerTrack,
-} from "./careers.server";
+import { CAREER_TRACKS, type CareerTrackEntry, findCareerTrack } from "./careers.server";
 import type { CareerTrack } from "./categories";
 
 // ── per-track lookups ──────────────────────────────────────────────────────
@@ -144,7 +140,8 @@ export function allSlugReferences(): SlugReference[] {
   for (const t of CAREER_TRACKS) {
     for (const r of t.relatedRights) out.push({ track: t.slug, slug: r, kind: "right" });
     for (const o of t.relatedOrgs) out.push({ track: t.slug, slug: o, kind: "org" });
-    for (const term of t.relatedTerms) out.push({ track: t.slug, slug: term, kind: "term" });
+    for (const term of t.relatedTerms)
+      out.push({ track: t.slug, slug: term, kind: "term" });
     for (const b of t.recommendedBootcamps)
       out.push({ track: t.slug, slug: b, kind: "bootcamp" });
     for (const p of t.relatedProfessions)
