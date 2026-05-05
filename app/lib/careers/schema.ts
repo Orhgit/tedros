@@ -31,7 +31,10 @@ export interface SchemaContext {
 
 const SCHEMA_CONTEXT = "https://schema.org";
 
-function localizedText(t: { he: string; en?: string; am?: string }, locale: Locale): string {
+function localizedText(
+  t: { he: string; en?: string; am?: string },
+  locale: Locale,
+): string {
   return t[locale] ?? t.he;
 }
 
@@ -48,10 +51,7 @@ export interface BreadcrumbItem {
   path: string;
 }
 
-export function breadcrumbJsonLd(
-  ctx: SchemaContext,
-  items: BreadcrumbItem[],
-): JsonLd {
+export function breadcrumbJsonLd(ctx: SchemaContext, items: BreadcrumbItem[]): JsonLd {
   return {
     "@context": SCHEMA_CONTEXT,
     "@type": "BreadcrumbList",
@@ -217,7 +217,10 @@ export interface JobPostingJsonLdInput {
   affirmativeAction?: boolean;
 }
 
-export function jobPostingJsonLd(ctx: SchemaContext, input: JobPostingJsonLdInput): JsonLd {
+export function jobPostingJsonLd(
+  ctx: SchemaContext,
+  input: JobPostingJsonLdInput,
+): JsonLd {
   const url = urlFor(ctx, `/careers/jobs/${input.slug}`);
   const title = localizedText(input.title, ctx.locale);
   const description = localizedText(input.description, ctx.locale);

@@ -10,13 +10,13 @@ RIN-469 introduces a Careers Hub vertical (~720 programmatic SEO URLs). The orig
 
 When picking up the work I checked the patterns in the four most recent verticals:
 
-| Vertical    | Ticket   | Storage              | Notes                                               |
-|-------------|----------|----------------------|-----------------------------------------------------|
-| Glossary    | RIN-418  | static module        | `lib/glossary/glossary.server.ts` — no DB           |
-| Org profiles| RIN-419  | static module        | `lib/orgs/orgs.server.ts` — no DB                   |
-| Comparisons | RIN-421  | static module        | `lib/comparisons/comparisons.server.ts` — no DB     |
-| Org programs| RIN-424  | static module        | `lib/programs/programs.server.ts` — no DB           |
-| Rights Hub  | RIN-328  | Drizzle (`rights`)   | predates the static-module convention               |
+| Vertical     | Ticket  | Storage            | Notes                                           |
+| ------------ | ------- | ------------------ | ----------------------------------------------- |
+| Glossary     | RIN-418 | static module      | `lib/glossary/glossary.server.ts` — no DB       |
+| Org profiles | RIN-419 | static module      | `lib/orgs/orgs.server.ts` — no DB               |
+| Comparisons  | RIN-421 | static module      | `lib/comparisons/comparisons.server.ts` — no DB |
+| Org programs | RIN-424 | static module      | `lib/programs/programs.server.ts` — no DB       |
+| Rights Hub   | RIN-328 | Drizzle (`rights`) | predates the static-module convention           |
 
 Every vertical shipped after Rights Hub has used **render-from-seed**: a TypeScript module that exports a typed array, with route loaders importing the array directly. The DB layer is reserved for entities that need write paths (subscribers, leads, listings, audit log).
 
