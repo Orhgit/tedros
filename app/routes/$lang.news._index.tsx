@@ -7,14 +7,8 @@ import { Link, useSearchParams } from "react-router";
 import type { Route } from "./+types/$lang.news._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
-import {
-  ALL_NEWS_TAGS,
-  glyphForNewsTag,
-  isNewsTag,
-} from "~/lib/news/categories";
-import {
-  articlesByPublishedDesc,
-} from "~/lib/news/articles.server";
+import { ALL_NEWS_TAGS, glyphForNewsTag, isNewsTag } from "~/lib/news/categories";
+import { articlesByPublishedDesc } from "~/lib/news/articles.server";
 import { breadcrumbJsonLd } from "~/lib/news/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -55,13 +49,10 @@ export const meta: Route.MetaFunction = ({ data }) => {
         }
       : null;
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: title, path: "/news" },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: title, path: "/news" },
+  ]);
 
   return [
     { title: `${title} — Tedros` },

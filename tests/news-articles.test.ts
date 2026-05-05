@@ -14,11 +14,7 @@ beforeAll(() => {
   process.env.EMAIL_FROM = process.env.EMAIL_FROM ?? "no-reply@tedros.local";
 });
 
-import {
-  ALL_NEWS_TAGS,
-  glyphForNewsTag,
-  isNewsTag,
-} from "../app/lib/news/categories";
+import { ALL_NEWS_TAGS, glyphForNewsTag, isNewsTag } from "../app/lib/news/categories";
 import {
   ARTICLES,
   articleBody,
@@ -26,10 +22,7 @@ import {
   articlesByTag,
   findArticle,
 } from "../app/lib/news/articles.server";
-import {
-  breadcrumbJsonLd,
-  newsArticleJsonLd,
-} from "../app/lib/news/schema";
+import { breadcrumbJsonLd, newsArticleJsonLd } from "../app/lib/news/schema";
 
 import { loader as landingLoader } from "../app/routes/$lang.news._index";
 import { loader as detailLoader } from "../app/routes/$lang.news.$slug";
@@ -162,7 +155,9 @@ describe("landing loader", () => {
   it("articles arrive sorted descending by publishedAt", async () => {
     const data = await landingLoader(fakeArgs({ lang: "he" }));
     for (let i = 1; i < data.articles.length; i++) {
-      expect(data.articles[i - 1]!.publishedAt >= data.articles[i]!.publishedAt).toBe(true);
+      expect(data.articles[i - 1]!.publishedAt >= data.articles[i]!.publishedAt).toBe(
+        true,
+      );
     }
   });
 });
@@ -183,7 +178,9 @@ describe("detail loader", () => {
       fakeArgs({ lang: "he", slug: "community-mortgage-2026-guide" }),
     );
     expect(data.siblings.length).toBeLessThanOrEqual(3);
-    expect(data.siblings.find((s) => s.slug === "community-mortgage-2026-guide")).toBeUndefined();
+    expect(
+      data.siblings.find((s) => s.slug === "community-mortgage-2026-guide"),
+    ).toBeUndefined();
   });
 
   it("404s on unknown slug + missing param", async () => {

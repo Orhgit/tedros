@@ -10,30 +10,16 @@ import type { Route } from "./+types/$lang.heritage.events.$event.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import {
-  glyphForHeritageEvent,
-  isHeritageEvent,
-} from "~/lib/heritage/categories";
+import { glyphForHeritageEvent, isHeritageEvent } from "~/lib/heritage/categories";
 import {
   findHeritageEvent,
   heritageEventBody,
   nextDate,
 } from "~/lib/heritage/events.server";
-import {
-  eventCityPath,
-  eventPath,
-  eventsLandingPath,
-} from "~/lib/heritage/links";
+import { eventCityPath, eventPath, eventsLandingPath } from "~/lib/heritage/links";
 import { isRelevant } from "~/lib/heritage/relevance";
-import {
-  breadcrumbJsonLd,
-  heritageEventJsonLd,
-} from "~/lib/heritage/schema";
-import {
-  cityName,
-  cityOverview,
-  findCityBySlug,
-} from "~/lib/cities/registry";
+import { breadcrumbJsonLd, heritageEventJsonLd } from "~/lib/heritage/schema";
+import { cityName, cityOverview, findCityBySlug } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
@@ -100,15 +86,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "heritage_events_landing_title"), path: eventsLandingPath() },
-      { name: eventName, path: eventPath(event.slug) },
-      { name: cityNameLocal, path: eventCityPath(event.slug, city.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "heritage_events_landing_title"), path: eventsLandingPath() },
+    { name: eventName, path: eventPath(event.slug) },
+    { name: cityNameLocal, path: eventCityPath(event.slug, city.slug) },
+  ]);
 
   return [
     { title },

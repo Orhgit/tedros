@@ -27,10 +27,7 @@ import {
   statTopicDescription,
   statTopicName,
 } from "../app/lib/statistics/topics.server";
-import {
-  breadcrumbJsonLd,
-  statTopicJsonLd,
-} from "../app/lib/statistics/schema";
+import { breadcrumbJsonLd, statTopicJsonLd } from "../app/lib/statistics/schema";
 
 import { loader as landingLoader } from "../app/routes/$lang.statistics._index";
 import { loader as topicLoader } from "../app/routes/$lang.statistics.$topic";

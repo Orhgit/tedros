@@ -8,14 +8,8 @@ import type { Route } from "./+types/$lang.statistics.$topic";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import {
-  glyphForStatTopic,
-  isStatTopic,
-} from "~/lib/statistics/categories";
-import {
-  breadcrumbJsonLd,
-  statTopicJsonLd,
-} from "~/lib/statistics/schema";
+import { glyphForStatTopic, isStatTopic } from "~/lib/statistics/categories";
+import { breadcrumbJsonLd, statTopicJsonLd } from "~/lib/statistics/schema";
 import {
   STAT_TOPICS,
   findStatTopic,
@@ -83,14 +77,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "statistics_landing_title"), path: "/statistics" },
-      { name, path: `/statistics/${topic.slug}` },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "statistics_landing_title"), path: "/statistics" },
+    { name, path: `/statistics/${topic.slug}` },
+  ]);
 
   return [
     { title: `${name} — ${t(locale, "statistics_landing_title")} — Tedros` },

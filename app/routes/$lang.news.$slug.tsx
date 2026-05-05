@@ -7,19 +7,13 @@ import type { Route } from "./+types/$lang.news.$slug";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import {
-  glyphForNewsTag,
-  isNewsTag,
-} from "~/lib/news/categories";
+import { glyphForNewsTag, isNewsTag } from "~/lib/news/categories";
 import {
   articleBody,
   articlesByPublishedDesc,
   findArticle,
 } from "~/lib/news/articles.server";
-import {
-  breadcrumbJsonLd,
-  newsArticleJsonLd,
-} from "~/lib/news/schema";
+import { breadcrumbJsonLd, newsArticleJsonLd } from "~/lib/news/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
@@ -71,14 +65,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "news_landing_title"), path: "/news" },
-      { name: title, path: `/news/${article.slug}` },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "news_landing_title"), path: "/news" },
+    { name: title, path: `/news/${article.slug}` },
+  ]);
 
   return [
     { title: `${title} — Tedros` },
@@ -120,7 +111,8 @@ export default function NewsArticleDetail({ loaderData }: Route.ComponentProps) 
             {t(locale, "news_published_label")}: {article.publishedAt}
             {article.publishedAt !== article.updatedAt && (
               <>
-                {" "}· {t(locale, "news_updated_label")}: {article.updatedAt}
+                {" "}
+                · {t(locale, "news_updated_label")}: {article.updatedAt}
               </>
             )}
           </p>

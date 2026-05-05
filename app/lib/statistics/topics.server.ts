@@ -54,7 +54,7 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       {
         id: "total-population",
         heading: {
-          he: "סה\"כ אוכלוסייה",
+          he: 'סה"כ אוכלוסייה',
           en: "Total population",
           am: "ጠቅላላ ህዝብ ብዛት",
         },
@@ -153,7 +153,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
     figures: [
       {
         id: "matriculation-rate",
-        heading: { he: "שיעור זכאות לבגרות", en: "Matriculation eligibility rate", am: "የማትሪክ ብቃት" },
+        heading: {
+          he: "שיעור זכאות לבגרות",
+          en: "Matriculation eligibility rate",
+          am: "የማትሪክ ብቃት",
+        },
         figure: { he: "55%", en: "55%", am: "55%" },
         context: {
           he: "55% מבני הקהילה זכאים לתעודת בגרות (לעומת 73% בכלל האוכלוסייה היהודית). היעד של ENP: 70% עד 2030.",
@@ -168,7 +172,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "academic-degree",
-        heading: { he: "תואר ראשון ומעלה", en: "Bachelor's degree and above", am: "የመጀመሪያ ዲግሪ እና በላይ" },
+        heading: {
+          he: "תואר ראשון ומעלה",
+          en: "Bachelor's degree and above",
+          am: "የመጀመሪያ ዲግሪ እና በላይ",
+        },
         figure: { he: "21%", en: "21%", am: "21%" },
         context: {
           he: "21% מבני הקהילה בגילאי 25-44 בעלי תואר ראשון לפחות (לעומת 38% בכלל האוכלוסייה היהודית). פער שמצטמצם בקרב דור 2.",
@@ -213,7 +221,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "school-dropout",
-        heading: { he: "שיעור נשירה", en: "School dropout rate", am: "የትምህርት ቤት ማቆም መጠን" },
+        heading: {
+          he: "שיעור נשירה",
+          en: "School dropout rate",
+          am: "የትምህርት ቤት ማቆም መጠን",
+        },
         figure: { he: "8.2%", en: "8.2%", am: "8.2%" },
         context: {
           he: "שיעור נשירה מבית הספר התיכון בקהילה: 8.2% (לעומת 4.5% בכלל האוכלוסייה היהודית). תכניות Hila ו-ENP מצמצמות את הפער.",
@@ -241,7 +253,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
     figures: [
       {
         id: "homeownership-rate",
-        heading: { he: "שיעור בעלות על דירה", en: "Homeownership rate", am: "የቤት ባለቤትነት መጠን" },
+        heading: {
+          he: "שיעור בעלות על דירה",
+          en: "Homeownership rate",
+          am: "የቤት ባለቤትነት መጠን",
+        },
         figure: { he: "58%", en: "58%", am: "58%" },
         context: {
           he: "58% מבני הקהילה הם בעלי דירה (לעומת 67% בכלל האוכלוסייה היהודית). הפער מצטמצם הודות להלוואת ה-600K.",
@@ -256,10 +272,14 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "community-mortgage-coverage",
-        heading: { he: "כיסוי משכנתא קהילתית", en: "Community mortgage coverage", am: "የማህበረሰብ ሞርጌጅ ሽፋን" },
+        heading: {
+          he: "כיסוי משכנתא קהילתית",
+          en: "Community mortgage coverage",
+          am: "የማህበረሰብ ሞርጌጅ ሽፋን",
+        },
         figure: { he: "~3,200", en: "~3,200", am: "~3,200" },
         context: {
-          he: "כ-3,200 משפחות מהקהילה ניצלו את הלוואת ה-600,000 ש\"ח מאז 2017. הקצאה שנתית: ~200 משפחות בלוטריה.",
+          he: 'כ-3,200 משפחות מהקהילה ניצלו את הלוואת ה-600,000 ש"ח מאז 2017. הקצאה שנתית: ~200 משפחות בלוטריה.',
           en: "~3,200 community families used the ₪600K community mortgage since 2017. Annual allocation: ~200 families via lottery.",
           am: "~3,200 ቤተሰቦች ከ2017 ጀምሮ ብድሩን ተጠቅመዋል።",
         },
@@ -271,10 +291,14 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "average-dwelling-area",
-        heading: { he: "שטח דיור ממוצע", en: "Average dwelling area", am: "አማካይ የመኖሪያ ስፋት" },
+        heading: {
+          he: "שטח דיור ממוצע",
+          en: "Average dwelling area",
+          am: "አማካይ የመኖሪያ ስፋት",
+        },
         figure: { he: "82 m²", en: "82 m²", am: "82 m²" },
         context: {
-          he: "שטח דיור ממוצע למשפחה בקהילה: 82 מ\"ר (לעומת 95 מ\"ר בכלל האוכלוסייה היהודית). הפער קיים בעיקר בערים בהן מחירי הנדל\"ן גבוהים.",
+          he: 'שטח דיור ממוצע למשפחה בקהילה: 82 מ"ר (לעומת 95 מ"ר בכלל האוכלוסייה היהודית). הפער קיים בעיקר בערים בהן מחירי הנדל"ן גבוהים.',
           en: "Average household dwelling area in the community: 82 m² (vs 95 m² nationally). The gap is mainly in cities with high real-estate prices.",
           am: "አማካይ ቤት ስፋት: 82 m²።",
         },
@@ -286,7 +310,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "urban-renewal",
-        heading: { he: "שיעור התחדשות עירונית", en: "Urban renewal coverage", am: "የከተማ ዳግም-ግንባታ ሽፋን" },
+        heading: {
+          he: "שיעור התחדשות עירונית",
+          en: "Urban renewal coverage",
+          am: "የከተማ ዳግም-ግንባታ ሽፋን",
+        },
         figure: { he: "9", en: "9", am: "9" },
         context: {
           he: "9 פרויקטי התחדשות עירונית פעילים שמשפיעים ישירות על שכונות עם ריכוז קהילתי (רמת-אליהו ברישון, נתניה, קרית-מלאכי).",
@@ -329,7 +357,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "diabetes-prevalence",
-        heading: { he: "סוכרת — שיעור היקרות", en: "Diabetes prevalence", am: "የስኳር በሽታ" },
+        heading: {
+          he: "סוכרת — שיעור היקרות",
+          en: "Diabetes prevalence",
+          am: "የስኳር በሽታ",
+        },
         figure: { he: "11.2%", en: "11.2%", am: "11.2%" },
         context: {
           he: "11.2% מבני הקהילה מאובחנים עם סוכרת — שיעור גבוה מהממוצע הארצי (8.5%) בגלל גנטיקה + שינויים תזונתיים. תכנית מניעת המחלות הכרוניות של טנא בריאות מצמצמת את הפער.",
@@ -363,7 +395,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "preventive-care",
-        heading: { he: "שיעור בדיקות מניעה", en: "Preventive screening rate", am: "የመከላከያ ምርመራ መጠን" },
+        heading: {
+          he: "שיעור בדיקות מניעה",
+          en: "Preventive screening rate",
+          am: "የመከላከያ ምርመራ መጠን",
+        },
         figure: { he: "47%", en: "47%", am: "47%" },
         context: {
           he: "47% מבני הקהילה מבצעים בדיקות מניעה שגרתיות (לעומת 62% בכלל האוכלוסייה). הסיבה העיקרית: חסם שפתי ופחות אמון במערכת הבריאות.",
@@ -406,7 +442,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "hebrew-fluency-gen1",
-        heading: { he: "שליטה בעברית — דור 1", en: "Hebrew fluency — 1st generation", am: "ዕብራይስጥ ብቃት — 1ኛ ትውልድ" },
+        heading: {
+          he: "שליטה בעברית — דור 1",
+          en: "Hebrew fluency — 1st generation",
+          am: "ዕብራይስጥ ብቃት — 1ኛ ትውልድ",
+        },
         figure: { he: "63%", en: "63%", am: "63%" },
         context: {
           he: "63% מבני דור 1 מדווחים על שליטה בסיסית-עד-בינונית בעברית. 18% בלבד עם שליטה אקדמית. אולפן + ITWorks מנסים לסגור את הפער.",
@@ -421,7 +461,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "amharic-transmission",
-        heading: { he: "העברה בין-דורית — אמהרית", en: "Inter-generational transmission — Amharic", am: "የትውልድ መካከል ማስተላለፍ" },
+        heading: {
+          he: "העברה בין-דורית — אמהרית",
+          en: "Inter-generational transmission — Amharic",
+          am: "የትውልድ መካከል ማስተላለፍ",
+        },
         figure: { he: "60% → 28%", en: "60% → 28%", am: "60% → 28%" },
         context: {
           he: "60% מבני דור 2 דוברים אמהרית; רק 28% מבני דור 3 — איבוד מואץ של השפה. תכניות שימור-שפה (Bina, IAEJ) פועלות לעצור את המגמה.",
@@ -455,7 +499,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
   // 6 — immigration ---------------------------------------------------
   {
     slug: "immigration",
-    name: { he: "עלייה ועלייה ממשיכה", en: "Immigration and ongoing aliyah", am: "ወደ እስራኤል መግባት" },
+    name: {
+      he: "עלייה ועלייה ממשיכה",
+      en: "Immigration and ongoing aliyah",
+      am: "ወደ እስራኤል መግባት",
+    },
     shortDescription: {
       he: "מבצעי משה ושלמה, עלייה נוכחית של בני Falash Mura — היסטוריה ופעילות.",
       en: "Operations Moses and Solomon, current Falash Mura aliyah — history and activity.",
@@ -464,7 +512,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
     figures: [
       {
         id: "operation-moses",
-        heading: { he: "מבצע משה (1984)", en: "Operation Moses (1984)", am: "ሙሴ ኦፕሬሽን (1984)" },
+        heading: {
+          he: "מבצע משה (1984)",
+          en: "Operation Moses (1984)",
+          am: "ሙሴ ኦፕሬሽን (1984)",
+        },
         figure: { he: "~8,000", en: "~8,000", am: "~8,000" },
         context: {
           he: "מבצע משה הביא ~8,000 יהודים אתיופים מסודן לישראל בנובמבר 1984 - ינואר 1985. 4,000 נוספים נפלו במסע מאתיופיה דרך סודן.",
@@ -479,7 +531,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "operation-solomon",
-        heading: { he: "מבצע שלמה (1991)", en: "Operation Solomon (1991)", am: "ሰሎሞን ኦፕሬሽን (1991)" },
+        heading: {
+          he: "מבצע שלמה (1991)",
+          en: "Operation Solomon (1991)",
+          am: "ሰሎሞን ኦፕሬሽን (1991)",
+        },
         figure: { he: "~14,400", en: "~14,400", am: "~14,400" },
         context: {
           he: "מבצע שלמה הביא ~14,400 יהודים אתיופים לישראל ב-36 שעות (24-25 במאי 1991) — מבצע ההצלה האווירי המהיר ביותר בהיסטוריה.",
@@ -494,7 +550,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "current-falash-mura",
-        heading: { he: "Falash Mura — ממתינים לעלייה", en: "Falash Mura awaiting aliyah", am: "Falash Mura የሚጠብቁ" },
+        heading: {
+          he: "Falash Mura — ממתינים לעלייה",
+          en: "Falash Mura awaiting aliyah",
+          am: "Falash Mura የሚጠብቁ",
+        },
         figure: { he: "~6,500", en: "~6,500", am: "~6,500" },
         context: {
           he: "כ-6,500 בני Falash Mura באתיופיה ממתינים להחלטת עלייה לישראל (2024). הפיילוט הנוכחי של קליטה ישירה מטפל ב-2,800 ב-3 שנים.",
@@ -509,7 +569,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "annual-aliyah-rate",
-        heading: { he: "עלייה שנתית נוכחית", en: "Current annual aliyah", am: "የአሁን ዓመታዊ አሊያ" },
+        heading: {
+          he: "עלייה שנתית נוכחית",
+          en: "Current annual aliyah",
+          am: "የአሁን ዓመታዊ አሊያ",
+        },
         figure: { he: "~900", en: "~900", am: "~900" },
         context: {
           he: "כ-900 עולים מאתיופיה בשנה ב-2022-2024 — בעיקר Falash Mura דרך תכנית הקליטה הישירה. הקצב משתנה לפי החלטות ממשלה.",
@@ -537,7 +601,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
     figures: [
       {
         id: "household-size",
-        heading: { he: "גודל משפחה ממוצע", en: "Average household size", am: "አማካይ ቤተሰብ ስፋት" },
+        heading: {
+          he: "גודל משפחה ממוצע",
+          en: "Average household size",
+          am: "አማካይ ቤተሰብ ስፋት",
+        },
         figure: { he: "4.6", en: "4.6", am: "4.6" },
         context: {
           he: "4.6 נפשות במשפחה ממוצעת (לעומת 3.7 בכלל האוכלוסייה היהודית) — פיריון גבוה + מסורת של משפחות מורחבות.",
@@ -552,7 +620,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "fertility-rate",
-        heading: { he: "פיריון ממוצע לאישה", en: "Total fertility rate", am: "የመውለድ መጠን" },
+        heading: {
+          he: "פיריון ממוצע לאישה",
+          en: "Total fertility rate",
+          am: "የመውለድ መጠን",
+        },
         figure: { he: "3.4", en: "3.4", am: "3.4" },
         context: {
           he: "פיריון ממוצע: 3.4 ילדים לאישה בקהילה (לעומת 3.0 בכלל האוכלוסייה היהודית). דור 2 מתקרב לממוצע הארצי (3.1).",
@@ -582,7 +654,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "multigenerational-households",
-        heading: { he: "משקי בית רב-דוריים", en: "Multigenerational households", am: "የብዙ-ትውልድ ቤተሰቦች" },
+        heading: {
+          he: "משקי בית רב-דוריים",
+          en: "Multigenerational households",
+          am: "የብዙ-ትውልድ ቤተሰቦች",
+        },
         figure: { he: "23%", en: "23%", am: "23%" },
         context: {
           he: "23% ממשפחות הקהילה חיות במשק בית רב-דורי (סבים + הורים + ילדים). מסורת מרכזית בתרבות האתיופית, מצטמצמת אצל דור 2-3.",
@@ -610,7 +686,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
     figures: [
       {
         id: "voter-turnout",
-        heading: { he: "אחוז הצבעה — בחירות 2022", en: "Voter turnout — 2022 elections", am: "ድምጽ መስጫ — 2022 ምርጫ" },
+        heading: {
+          he: "אחוז הצבעה — בחירות 2022",
+          en: "Voter turnout — 2022 elections",
+          am: "ድምጽ መስጫ — 2022 ምርጫ",
+        },
         figure: { he: "67%", en: "67%", am: "67%" },
         context: {
           he: "67% מבעלי הזכות בקהילה הצביעו בבחירות 2022 (לעומת 71% ארצי) — שיעור גבוה יחסית למדינות עם קהילות-מהגרים.",
@@ -625,10 +705,14 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "idf-service-rate",
-        heading: { he: "שיעור גיוס לצה\"ל", en: "IDF enlistment rate", am: "የ IDF ምልመላ መጠን" },
+        heading: {
+          he: 'שיעור גיוס לצה"ל',
+          en: "IDF enlistment rate",
+          am: "የ IDF ምልመላ መጠን",
+        },
         figure: { he: "92%", en: "92%", am: "92%" },
         context: {
-          he: "92% מבני 18 בקהילה מתגייסים לצה\"ל (לעומת 75% בכלל האוכלוסייה היהודית — כי הקהילה לא כוללת קבוצות פטורות). 8% נשלחים לתפקידים טכנולוגיים.",
+          he: '92% מבני 18 בקהילה מתגייסים לצה"ל (לעומת 75% בכלל האוכלוסייה היהודית — כי הקהילה לא כוללת קבוצות פטורות). 8% נשלחים לתפקידים טכנולוגיים.',
           en: "92% of 18-year-olds in the community enlist in the IDF (vs 75% in the general Jewish population — since the community lacks exempted groups). 8% serve in technological roles.",
           am: "92% ወደ IDF ይመለመላሉ።",
         },
@@ -640,7 +724,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "national-civic-service",
-        heading: { he: "שירות לאומי-אזרחי", en: "National civic service", am: "ሀገራዊ የዜግነት አገልግሎት" },
+        heading: {
+          he: "שירות לאומי-אזרחי",
+          en: "National civic service",
+          am: "ሀገራዊ የዜግነት አገልግሎት",
+        },
         figure: { he: "~480", en: "~480", am: "~480" },
         context: {
           he: "כ-480 בני קהילה משרתים בשירות לאומי-אזרחי בכל שנה — לרוב במסגרת תכנית Aharai pre-army או כתחליף לצבא.",
@@ -655,7 +743,11 @@ export const STAT_TOPICS: StatTopicEntry[] = [
       },
       {
         id: "civic-org-membership",
-        heading: { he: "חברות בארגוני קהילה", en: "Civic-organization membership", am: "የዜግነት ድርጅት አባልነት" },
+        heading: {
+          he: "חברות בארגוני קהילה",
+          en: "Civic-organization membership",
+          am: "የዜግነት ድርጅት አባልነት",
+        },
         figure: { he: "~32,000", en: "~32,000", am: "~32,000" },
         context: {
           he: "כ-32,000 בני קהילה רשומים כחברים פעילים בארגונים אזרחיים-קהילתיים (ENP, IAEJ, BINA, Friends by Nature) — מצביע על דרגת ארגון גבוהה.",
@@ -690,7 +782,11 @@ export function statTopicDescription(entry: StatTopicEntry, locale: Locale): str
   );
 }
 
-export function pickFigure(figure: StatFigure, locale: Locale, key: "heading" | "figure" | "context"): string {
+export function pickFigure(
+  figure: StatFigure,
+  locale: Locale,
+  key: "heading" | "figure" | "context",
+): string {
   const t = figure[key];
   return t[locale] ?? t[DEFAULT_LOCALE] ?? t.he;
 }

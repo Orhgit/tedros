@@ -8,25 +8,15 @@ import type { Route } from "./+types/$lang.heritage.events.$event";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import {
-  glyphForHeritageEvent,
-  isHeritageEvent,
-} from "~/lib/heritage/categories";
+import { glyphForHeritageEvent, isHeritageEvent } from "~/lib/heritage/categories";
 import {
   findHeritageEvent,
   heritageEventBody,
   nextDate,
 } from "~/lib/heritage/events.server";
-import {
-  eventCityPath,
-  eventPath,
-  eventsLandingPath,
-} from "~/lib/heritage/links";
+import { eventCityPath, eventPath, eventsLandingPath } from "~/lib/heritage/links";
 import { relevantCities } from "~/lib/heritage/relevance";
-import {
-  breadcrumbJsonLd,
-  heritageEventJsonLd,
-} from "~/lib/heritage/schema";
+import { breadcrumbJsonLd, heritageEventJsonLd } from "~/lib/heritage/schema";
 import { CITIES, cityName } from "~/lib/cities/registry";
 import { getGlossaryEntry } from "~/lib/db/queries/glossary.server";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
@@ -106,14 +96,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "heritage_events_landing_title"), path: eventsLandingPath() },
-      { name, path: eventPath(event.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "heritage_events_landing_title"), path: eventsLandingPath() },
+    { name, path: eventPath(event.slug) },
+  ]);
 
   return [
     { title: `${name} — Tedros` },

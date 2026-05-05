@@ -23,10 +23,7 @@ export interface BreadcrumbItem {
   path: string;
 }
 
-export function breadcrumbJsonLd(
-  ctx: SchemaContext,
-  items: BreadcrumbItem[],
-): JsonLd {
+export function breadcrumbJsonLd(ctx: SchemaContext, items: BreadcrumbItem[]): JsonLd {
   return {
     "@context": SCHEMA_CONTEXT,
     "@type": "BreadcrumbList",
@@ -49,10 +46,7 @@ export interface StatTopicJsonLdInput {
   keywords?: string[];
 }
 
-export function statTopicJsonLd(
-  ctx: SchemaContext,
-  input: StatTopicJsonLdInput,
-): JsonLd {
+export function statTopicJsonLd(ctx: SchemaContext, input: StatTopicJsonLdInput): JsonLd {
   const url = urlFor(ctx, `/statistics/${input.topicSlug}`);
   return {
     "@context": SCHEMA_CONTEXT,

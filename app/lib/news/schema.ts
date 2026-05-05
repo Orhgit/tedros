@@ -23,10 +23,7 @@ export interface BreadcrumbItem {
   path: string;
 }
 
-export function breadcrumbJsonLd(
-  ctx: SchemaContext,
-  items: BreadcrumbItem[],
-): JsonLd {
+export function breadcrumbJsonLd(ctx: SchemaContext, items: BreadcrumbItem[]): JsonLd {
   return {
     "@context": SCHEMA_CONTEXT,
     "@type": "BreadcrumbList",

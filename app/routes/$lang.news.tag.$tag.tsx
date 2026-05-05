@@ -40,14 +40,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const title = `${t(locale, "news_landing_title")} — ${tagLabel}`;
   const description = t(locale, "news_landing_subtitle");
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "news_landing_title"), path: "/news" },
-      { name: tagLabel, path: `/news/tag/${tag}` },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "news_landing_title"), path: "/news" },
+    { name: tagLabel, path: `/news/tag/${tag}` },
+  ]);
 
   return [
     { title: `${title} — Tedros` },

@@ -15,7 +15,10 @@ export interface SchemaContext {
 
 const SCHEMA_CONTEXT = "https://schema.org";
 
-function localizedText(t: { he: string; en?: string; am?: string }, locale: Locale): string {
+function localizedText(
+  t: { he: string; en?: string; am?: string },
+  locale: Locale,
+): string {
   return t[locale] ?? t.he;
 }
 
@@ -31,10 +34,7 @@ export interface BreadcrumbItem {
   path: string;
 }
 
-export function breadcrumbJsonLd(
-  ctx: SchemaContext,
-  items: BreadcrumbItem[],
-): JsonLd {
+export function breadcrumbJsonLd(ctx: SchemaContext, items: BreadcrumbItem[]): JsonLd {
   return {
     "@context": SCHEMA_CONTEXT,
     "@type": "BreadcrumbList",

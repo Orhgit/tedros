@@ -8,10 +8,7 @@ import type { Route } from "./+types/$lang.heritage.events._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { glyphForHeritageEvent } from "~/lib/heritage/categories";
-import {
-  HERITAGE_EVENTS,
-  nextDate,
-} from "~/lib/heritage/events.server";
+import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
 import { eventPath } from "~/lib/heritage/links";
 import { breadcrumbJsonLd } from "~/lib/heritage/schema";
 import { getEnv } from "~/lib/env.server";
@@ -38,13 +35,10 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const description = t(locale, "heritage_events_landing_subtitle");
   const url = `${publicUrl}/${locale}/heritage/events`;
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: title, path: "/heritage/events" },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: title, path: "/heritage/events" },
+  ]);
 
   return [
     { title: `${title} — Tedros` },
@@ -102,7 +96,8 @@ export default function HeritageEventsLanding({ loaderData }: Route.ComponentPro
                   <p>{e.dateDescription}</p>
                   {e.nextObservance && (
                     <p className="font-medium text-earth-800">
-                      {t(locale, "heritage_events_next_observance_label")}: {e.nextObservance}
+                      {t(locale, "heritage_events_next_observance_label")}:{" "}
+                      {e.nextObservance}
                     </p>
                   )}
                 </div>

@@ -301,7 +301,10 @@ export function heritageEventBody(entry: HeritageEventEntry, locale: Locale): st
 }
 
 /** Next observance date (YYYY-MM-DD) or null if all upcomingDates are past. */
-export function nextDate(entry: HeritageEventEntry, now: Date = new Date()): string | null {
+export function nextDate(
+  entry: HeritageEventEntry,
+  now: Date = new Date(),
+): string | null {
   const today = now.toISOString().slice(0, 10);
   for (const d of entry.upcomingDates) {
     if (d >= today) return d;

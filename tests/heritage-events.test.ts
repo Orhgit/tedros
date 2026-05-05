@@ -32,10 +32,7 @@ import {
   relevanceFor,
   relevantCities,
 } from "../app/lib/heritage/relevance";
-import {
-  breadcrumbJsonLd,
-  heritageEventJsonLd,
-} from "../app/lib/heritage/schema";
+import { breadcrumbJsonLd, heritageEventJsonLd } from "../app/lib/heritage/schema";
 import { CITIES } from "../app/lib/cities/registry";
 
 import { loader as landingLoader } from "../app/routes/$lang.heritage.events._index";
