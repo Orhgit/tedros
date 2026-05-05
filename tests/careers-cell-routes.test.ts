@@ -31,11 +31,13 @@ function fakeArgs(params: Record<string, string | undefined>): AnyArgs {
 
 describe("cell loader — happy path", () => {
   it("loads tech × tel-aviv successfully", async () => {
-    const data = await cellLoader(fakeArgs({
-      lang: "he",
-      track: "tech",
-      city: "tel-aviv",
-    }));
+    const data = await cellLoader(
+      fakeArgs({
+        lang: "he",
+        track: "tech",
+        city: "tel-aviv",
+      }),
+    );
     expect(data.track.slug).toBe("tech");
     expect(data.city.slug).toBe("tel-aviv");
     expect(data.cityNameLocal).toBe("תל אביב");
@@ -43,21 +45,25 @@ describe("cell loader — happy path", () => {
   });
 
   it("returns relevant bootcamps for tech × beer-sheva", async () => {
-    const data = await cellLoader(fakeArgs({
-      lang: "he",
-      track: "tech",
-      city: "beer-sheva",
-    }));
+    const data = await cellLoader(
+      fakeArgs({
+        lang: "he",
+        track: "tech",
+        city: "beer-sheva",
+      }),
+    );
     // ENP Tech-Career has beer-sheva in cities[].
     expect(data.cellBootcamps.find((b) => b.slug === "enp-tech-career")).toBeDefined();
   });
 
   it("returns relevant rights × city for public-sector × jerusalem", async () => {
-    const data = await cellLoader(fakeArgs({
-      lang: "he",
-      track: "public-sector",
-      city: "jerusalem",
-    }));
+    const data = await cellLoader(
+      fakeArgs({
+        lang: "he",
+        track: "public-sector",
+        city: "jerusalem",
+      }),
+    );
     // public-sector-representation is community-cities scoped — jerusalem is
     // in COMMUNITY_CITIES so the right cell exists.
     expect(
@@ -66,11 +72,13 @@ describe("cell loader — happy path", () => {
   });
 
   it("returns cross-link suggestions (other cities + other tracks)", async () => {
-    const data = await cellLoader(fakeArgs({
-      lang: "he",
-      track: "tech",
-      city: "tel-aviv",
-    }));
+    const data = await cellLoader(
+      fakeArgs({
+        lang: "he",
+        track: "tech",
+        city: "tel-aviv",
+      }),
+    );
     expect(data.otherCitiesForTrack.find((c) => c.slug === "haifa")).toBeDefined();
     // tech does not include haifa-only tracks → just check at least one
     // other track is present.
@@ -82,11 +90,13 @@ describe("cell loader — happy path", () => {
     // bootcamps. retail-services × afula has zero bootcamps (only TA),
     // zero professionals in track, and zero relevant employment rights —
     // ideal thin candidate.
-    const data = await cellLoader(fakeArgs({
-      lang: "he",
-      track: "retail-services",
-      city: "afula",
-    }));
+    const data = await cellLoader(
+      fakeArgs({
+        lang: "he",
+        track: "retail-services",
+        city: "afula",
+      }),
+    );
     // Either we shipped real content or the fallback flag is set.
     if (
       data.cellBootcamps.length === 0 &&
@@ -129,25 +139,31 @@ describe("cell loader — error paths", () => {
 
 describe("cell loader — locale fallback", () => {
   it("falls back to HE when lang is unknown", async () => {
-    const data = await cellLoader(fakeArgs({
-      lang: "xx",
-      track: "tech",
-      city: "tel-aviv",
-    }));
+    const data = await cellLoader(
+      fakeArgs({
+        lang: "xx",
+        track: "tech",
+        city: "tel-aviv",
+      }),
+    );
     expect(data.locale).toBe("he");
   });
 
   it("renders for EN/AM as well", async () => {
-    const en = await cellLoader(fakeArgs({
-      lang: "en",
-      track: "tech",
-      city: "tel-aviv",
-    }));
-    const am = await cellLoader(fakeArgs({
-      lang: "am",
-      track: "tech",
-      city: "tel-aviv",
-    }));
+    const en = await cellLoader(
+      fakeArgs({
+        lang: "en",
+        track: "tech",
+        city: "tel-aviv",
+      }),
+    );
+    const am = await cellLoader(
+      fakeArgs({
+        lang: "am",
+        track: "tech",
+        city: "tel-aviv",
+      }),
+    );
     expect(en.cityNameLocal).toBe("Tel Aviv");
     expect(am.cityNameLocal).toMatch(/.+/);
   });
@@ -161,11 +177,13 @@ describe("cell coverage — every relevant pair loads", () => {
       const cities = careerRelevantCities(track, CITIES);
       if (cities.length === 0) continue;
       const city = cities[0]!;
-      const data = await cellLoader(fakeArgs({
-        lang: "he",
-        track,
-        city: city.slug,
-      }));
+      const data = await cellLoader(
+        fakeArgs({
+          lang: "he",
+          track,
+          city: city.slug,
+        }),
+      );
       expect(data.track.slug).toBe(track);
       expect(data.city.slug).toBe(city.slug);
     }
