@@ -6,6 +6,7 @@ import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { PROGRAMS } from "~/lib/programs/programs.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
+import { SCHOLARSHIP_RELEVANCE_CITIES } from "~/lib/education/scholarship-relevance";
 import { EDUCATION_TRACKS } from "~/lib/education/tracks";
 import { ORGS } from "~/lib/orgs/orgs.server";
 import { ALL_PROFESSIONS } from "~/lib/professionals/categories";
@@ -102,6 +103,13 @@ ${xDefaultFor(path)}
     // (academic, vocational, career-shift).
     "/education/tracks",
     ...EDUCATION_TRACKS.map((t) => `/education/tracks/${t}`),
+    // RIN-508 — Education Hub Wave 3: programmatic SEO scholarship × city.
+    // 12 scholarships × 5 community cities = 60 cells.
+    ...SCHOLARSHIPS.flatMap((s) =>
+      SCHOLARSHIP_RELEVANCE_CITIES.map(
+        (city) => `/education/scholarships/${s.slug}/${city}`,
+      ),
+    ),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
