@@ -15,16 +15,8 @@ import {
   glyphForCareerTrack,
   isCareerTrack,
 } from "~/lib/careers/categories";
-<<<<<<< HEAD
 import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
-import { bootcampPath, trackPath } from "~/lib/careers/links";
-=======
-import {
-  careerTrackBody,
-  findCareerTrack,
-} from "~/lib/careers/careers.server";
 import { bootcampPath, trackCityPath, trackPath } from "~/lib/careers/links";
->>>>>>> 31408a0 (feat(careers): RIN-473 — wire cells into sitemap, track route, i18n + tests)
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
 import { CITIES } from "~/lib/cities/registry";

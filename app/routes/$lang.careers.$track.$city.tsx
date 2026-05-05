@@ -19,24 +19,15 @@ import type { Route } from "./+types/$lang.careers.$track.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import {
-  bootcampsForCity,
-  bootcampsForTrack,
-} from "~/lib/careers/bootcamps.server";
+import { bootcampsForCity, bootcampsForTrack } from "~/lib/careers/bootcamps.server";
 import {
   CAREER_TRACK_TO_TAG,
   glyphForCareerTrack,
   isCareerTrack,
 } from "~/lib/careers/categories";
-import {
-  CAREER_TRACKS,
-  findCareerTrack,
-} from "~/lib/careers/careers.server";
+import { CAREER_TRACKS, findCareerTrack } from "~/lib/careers/careers.server";
 import { bootcampPath, trackCityPath, trackPath } from "~/lib/careers/links";
-import {
-  isRelevant as isCareerRelevant,
-  relevantCities,
-} from "~/lib/careers/relevance";
+import { isRelevant as isCareerRelevant, relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
 import { CITIES, cityName, cityOverview, findCityBySlug } from "~/lib/cities/registry";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
@@ -174,14 +165,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const {
-    locale,
-    track,
-    city,
-    cityNameLocal,
-    thinFallback,
-    publicUrl,
-  } = data;
+  const { locale, track, city, cityNameLocal, thinFallback, publicUrl } = data;
   const trackName = track.name[locale] ?? track.name.he;
   const prep = prepFor(locale);
   const title = `${trackName} ${prep}${cityNameLocal} — Tedros`;
@@ -230,15 +214,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   };
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: trackName, path: trackPath(track.slug) },
-      { name: cityNameLocal, path: trackCityPath(track.slug, city.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: trackName, path: trackPath(track.slug) },
+    { name: cityNameLocal, path: trackCityPath(track.slug, city.slug) },
+  ]);
 
   return [
     { title },
@@ -300,10 +281,7 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
               {t(locale, "careers_breadcrumb_careers")}
             </Link>{" "}
             /{" "}
-            <Link
-              to={`/${locale}${trackPath(track.slug)}`}
-              className="hover:underline"
-            >
+            <Link to={`/${locale}${trackPath(track.slug)}`} className="hover:underline">
               {trackName}
             </Link>
           </p>
@@ -368,10 +346,7 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
                     <span className="block font-medium text-earth-900">{b.name}</span>
                     <span className="mt-1 block text-ink-600">{b.summary}</span>
                     <span className="mt-2 inline-block text-xs text-earth-700">
-                      {t(
-                        locale,
-                        `careers_program_type_${b.programType.toLowerCase()}`,
-                      )}
+                      {t(locale, `careers_program_type_${b.programType.toLowerCase()}`)}
                     </span>
                   </Link>
                 </li>
@@ -533,4 +508,3 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
     </div>
   );
 }
-
