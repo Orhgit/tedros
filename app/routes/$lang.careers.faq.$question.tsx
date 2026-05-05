@@ -34,11 +34,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   // 3 cross-link FAQs in the same order range (excluding self).
   const allFaqs = faqsByOrder();
   const idx = allFaqs.findIndex((f) => f.slug === faq.slug);
-  const related = [
-    allFaqs[idx - 1],
-    allFaqs[idx + 1],
-    allFaqs[idx + 2],
-  ]
+  const related = [allFaqs[idx - 1], allFaqs[idx + 1], allFaqs[idx + 2]]
     .filter((f): f is NonNullable<typeof f> => f !== undefined)
     .slice(0, 3)
     .map((f) => ({
@@ -58,22 +54,16 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const question = faq.question[locale] ?? faq.question.he;
   const description = faq.shortAnswer[locale] ?? faq.shortAnswer.he;
 
-  const faqPageJsonLd = faqJsonLd(
-    { publicUrl, locale },
-    [
-      { question: faq.question, answer: faq.shortAnswer },
-    ],
-  );
+  const faqPageJsonLd = faqJsonLd({ publicUrl, locale }, [
+    { question: faq.question, answer: faq.shortAnswer },
+  ]);
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: t(locale, "careers_faq_landing_title"), path: "/careers/faq" },
-      { name: question, path: faqPath(faq.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: t(locale, "careers_faq_landing_title"), path: "/careers/faq" },
+    { name: question, path: faqPath(faq.slug) },
+  ]);
 
   return [
     { title: `${question} — Tedros` },

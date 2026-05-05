@@ -40,8 +40,16 @@ export const STORIES: SuccessStoryEntry[] = [
     nickname: { he: "דניאל", en: "Daniel", am: "ዳንኤል" },
     trackSlug: "tech",
     citySlug: "tel-aviv",
-    startingPoint: { he: "בוגר תואר ראשון במדעי המחשב", en: "CS bachelor's grad", am: "የ CS ምሩቅ" },
-    currentRole: { he: "Senior backend engineer", en: "Senior backend engineer", am: "ሲኒየር backend engineer" },
+    startingPoint: {
+      he: "בוגר תואר ראשון במדעי המחשב",
+      en: "CS bachelor's grad",
+      am: "የ CS ምሩቅ",
+    },
+    currentRole: {
+      he: "Senior backend engineer",
+      en: "Senior backend engineer",
+      am: "ሲኒየር backend engineer",
+    },
     summary: {
       he: "מ-ENP Tech-Career בן 12 חודשים לתפקיד junior דרך Olim Beyahad, ועד תפקיד senior תוך 4 שנים.",
       en: "From a 12-month ENP Tech-Career bootcamp to a junior role via Olim Beyahad, to a senior role in 4 years.",
@@ -117,8 +125,16 @@ Senior backend engineer at a slightly larger startup, manages a team of 3. Salar
     nickname: { he: "חנה", en: "Hanna", am: "ሐና" },
     trackSlug: "public-sector",
     citySlug: "netanya",
-    startingPoint: { he: "מורה צעירה בבית-ספר יסודי", en: "Young primary-school teacher", am: "ወጣት የመጀመሪያ ደረጃ መምህር" },
-    currentRole: { he: "רפרנטית קליטה — משרד הקליטה", en: "Aliyah-coordinator — Ministry of Aliyah", am: "የመግቢያ አስተባባሪ" },
+    startingPoint: {
+      he: "מורה צעירה בבית-ספר יסודי",
+      en: "Young primary-school teacher",
+      am: "ወጣት የመጀመሪያ ደረጃ መምህር",
+    },
+    currentRole: {
+      he: "רפרנטית קליטה — משרד הקליטה",
+      en: "Aliyah-coordinator — Ministry of Aliyah",
+      am: "የመግቢያ አስተባባሪ",
+    },
     summary: {
       he: "מ-Atidim אקדמי לתואר ראשון בעבודה סוציאלית, דרך שירות ציבורי מובטח, לתפקיד רפרנטית במשרד הקליטה.",
       en: "From Atidim Academic to a bachelor's in social work, through guaranteed civil service, to coordinator at the Aliyah Ministry.",
@@ -194,8 +210,16 @@ Still at the Aliyah Ministry, now a team lead (4 coordinators under her). Salary
     nickname: { he: "יוסף", en: "Yosef", am: "ዮሴፍ" },
     trackSlug: "trades",
     citySlug: "beer-sheva",
-    startingPoint: { he: "חסר תעודת בגרות, עובד בקמעונאות", en: "No matriculation, working in retail", am: "ያለ የብቃት ምስክር በችርቻሮ ይሰራ" },
-    currentRole: { he: "חשמלאי עצמאי", en: "Self-employed electrician", am: "የራስ-ስራ ኤሌክትሪክ" },
+    startingPoint: {
+      he: "חסר תעודת בגרות, עובד בקמעונאות",
+      en: "No matriculation, working in retail",
+      am: "ያለ የብቃት ምስክር በችርቻሮ ይሰራ",
+    },
+    currentRole: {
+      he: "חשמלאי עצמאי",
+      en: "Self-employed electrician",
+      am: "የራስ-ስራ ኤሌክትሪክ",
+    },
     summary: {
       he: "מ-תפקיד מכירות לחשמלאי מוסמך תוך 9 חודשי קורס מסובסד. עסק עצמאי שנפתח עם הלוואת UJIA-KIEDF.",
       en: "From sales to certified electrician in 9 subsidized course months. Self-employed business opened with a UJIA-KIEDF loan.",
@@ -271,8 +295,16 @@ Self-employed for 14 months. ~₪22K net per month on average (depending on work
     nickname: { he: "רחל", en: "Rachel", am: "ራሄል" },
     trackSlug: "education",
     citySlug: "jerusalem",
-    startingPoint: { he: "סטודנטית לחינוך, ממוצע נמוך", en: "Education student, low average", am: "የትምህርት ተማሪ" },
-    currentRole: { he: "מורה ובעלת תפקיד אקדמי", en: "Teacher with academic responsibility", am: "መምህር" },
+    startingPoint: {
+      he: "סטודנטית לחינוך, ממוצע נמוך",
+      en: "Education student, low average",
+      am: "የትምህርት ተማሪ",
+    },
+    currentRole: {
+      he: "מורה ובעלת תפקיד אקדמי",
+      en: "Teacher with academic responsibility",
+      am: "መምህር",
+    },
     summary: {
       he: "מ-בוגרת B.Ed עם פלייסמנט קשה לקריירה יציבה דרך ENP Teaching Fellowship — ממורה מתחילה לראש תחום אקדמי תוך 5 שנים.",
       en: "From a B.Ed grad with a tough placement to a stable career via ENP Teaching Fellowship — from beginner teacher to academic department head in 5 years.",
@@ -348,10 +380,18 @@ Teacher + department head at the same school. Salary ~₪16K gross (including th
     nickname: { he: "אסתר", en: "Ester", am: "ዐስቴር" },
     trackSlug: "healthcare",
     citySlug: "haifa",
-    startingPoint: { he: "סייעת חינוכית, רצתה משהו רפואי", en: "Educational aide, wanted something medical", am: "የትምህርት ረዳት" },
-    currentRole: { he: "מתאמת בריאות תרבותית בבית-חולים רמב\"ם", en: "Cultural Health Navigator at Rambam", am: "የባህል ጤና አማካሪ በ ራምባም" },
+    startingPoint: {
+      he: "סייעת חינוכית, רצתה משהו רפואי",
+      en: "Educational aide, wanted something medical",
+      am: "የትምህርት ረዳት",
+    },
+    currentRole: {
+      he: 'מתאמת בריאות תרבותית בבית-חולים רמב"ם',
+      en: "Cultural Health Navigator at Rambam",
+      am: "የባህል ጤና አማካሪ በ ራምባም",
+    },
     summary: {
-      he: "מסייעת חינוכית למתאמת בריאות תרבותית בבית-חולים רמב\"ם תוך 18 חודשים — דרך הכשרה פנים-ארגונית של טנא בריאות.",
+      he: 'מסייעת חינוכית למתאמת בריאות תרבותית בבית-חולים רמב"ם תוך 18 חודשים — דרך הכשרה פנים-ארגונית של טנא בריאות.',
       en: "From an educational aide to a Cultural Health Navigator at Rambam within 18 months — via Tene Briut's in-house training.",
       am: "ከትምህርት ረዳት ወደ የባህል ጤና አማካሪ።",
     },
@@ -425,8 +465,16 @@ Still at Rambam, now senior cultural health navigator (a senior role in a team o
     nickname: { he: "דוד", en: "David", am: "ዳዊት" },
     trackSlug: "entrepreneurship",
     citySlug: "rishon-lezion",
-    startingPoint: { he: "בוגר תואר ראשון בכלכלה", en: "Economics bachelor's grad", am: "የኢኮኖሚክስ ምሩቅ" },
-    currentRole: { he: "מייסד-מנכ\"ל של עסק טכנולוגי קטן (12 עובדים)", en: "Founder-CEO of a 12-employee tech startup", am: "የ12 ሰራተኛ ቡት ካምፕ መስራች" },
+    startingPoint: {
+      he: "בוגר תואר ראשון בכלכלה",
+      en: "Economics bachelor's grad",
+      am: "የኢኮኖሚክስ ምሩቅ",
+    },
+    currentRole: {
+      he: 'מייסד-מנכ"ל של עסק טכנולוגי קטן (12 עובדים)',
+      en: "Founder-CEO of a 12-employee tech startup",
+      am: "የ12 ሰራተኛ ቡት ካምፕ መስራች",
+    },
     summary: {
       he: "מתואר ראשון לעסק עצמאי דרך ScaleUp Velocity — 16 שבועות bootcamp + ₪150K seed, חברה עם 12 עובדים אחרי 4 שנים.",
       en: "From bachelor's to a self-owned business via ScaleUp Velocity — 16-week bootcamp + ₪150K seed, a 12-employee company after 4 years.",
@@ -502,8 +550,16 @@ With the seed — they hired their first developer (an ENP Tech-Career grad, Dav
     nickname: { he: "מרים", en: "Miriam", am: "ምሪም" },
     trackSlug: "social-work",
     citySlug: "rehovot",
-    startingPoint: { he: "סטודנטית לעבודה סוציאלית", en: "Social work student", am: "የማህበራዊ ስራ ተማሪ" },
-    currentRole: { he: "מנהלת מרכז קהילתי", en: "Community center director", am: "የማህበረሰብ ማዕከል ዳይሬክተር" },
+    startingPoint: {
+      he: "סטודנטית לעבודה סוציאלית",
+      en: "Social work student",
+      am: "የማህበራዊ ስራ ተማሪ",
+    },
+    currentRole: {
+      he: "מנהלת מרכז קהילתי",
+      en: "Community center director",
+      am: "የማህበረሰብ ማዕከል ዳይሬክተር",
+    },
     summary: {
       he: "מבוגרת B.A. עם מלגת ISEF לראש מרכז קהילתי ברחובות תוך 7 שנים — דרך תפקידי מדרגה במשרד הרווחה ובמרכזים עירוניים.",
       en: "From a B.A. grad with an ISEF scholarship to a community center director in Rehovot in 7 years — through stepping-stone roles at the Welfare Ministry and city centers.",
@@ -575,8 +631,16 @@ Director of that same city community center for 2 years. Salary ₪22K gross, te
     nickname: { he: "אבי", en: "Avi", am: "አቪ" },
     trackSlug: "retail-services",
     citySlug: "kiryat-malakhi",
-    startingPoint: { he: "חיילים משוחרר ללא תעודת בגרות", en: "IDF veteran without matriculation", am: "ያለ የብቃት ምስክር ከጦር የተለቀቀ" },
-    currentRole: { he: "מנהל אזורי של רשת חנויות", en: "Regional manager of a store chain", am: "የሱቅ ሰንሰለት ክልላዊ ሥራ አስኪያጅ" },
+    startingPoint: {
+      he: "חיילים משוחרר ללא תעודת בגרות",
+      en: "IDF veteran without matriculation",
+      am: "ያለ የብቃት ምስክር ከጦር የተለቀቀ",
+    },
+    currentRole: {
+      he: "מנהל אזורי של רשת חנויות",
+      en: "Regional manager of a store chain",
+      am: "የሱቅ ሰንሰለት ክልላዊ ሥራ አስኪያጅ",
+    },
     summary: {
       he: "ממוכר בשופרסל למנהל אזורי של 8 סניפים — דרך Place-IL לעבודה ראשונה ולמסלול ניהול 7 שנים.",
       en: "From cashier at Shufersal to regional manager of 8 stores — via Place-IL to a first job and a 7-year management track.",
@@ -648,8 +712,16 @@ After 4 more years (shift-manager → assistant-manager → store-manager → re
     nickname: { he: "תמר", en: "Tamar", am: "ታማር" },
     trackSlug: "finance",
     citySlug: "petach-tikva",
-    startingPoint: { he: "בוגרת תיכון מצטיינת", en: "Top high-school grad", am: "ልዩ ምሩቅ" },
-    currentRole: { he: "רואת חשבון מובילה ב-BIG4", en: "Senior CPA at a BIG4 firm", am: "በ BIG4 ሲኒየር CPA" },
+    startingPoint: {
+      he: "בוגרת תיכון מצטיינת",
+      en: "Top high-school grad",
+      am: "ልዩ ምሩቅ",
+    },
+    currentRole: {
+      he: "רואת חשבון מובילה ב-BIG4",
+      en: "Senior CPA at a BIG4 firm",
+      am: "በ BIG4 ሲኒየር CPA",
+    },
     summary: {
       he: "מבוגרת תיכון עם ממוצע 95 לתפקיד CPA בכיר — דרך ISEF + התמחות בפירמת BIG4 + רישוי אחרי 6 שנים.",
       en: "From a high-school grad with a 95 average to a senior CPA — via ISEF + a BIG4 internship + licensing after 6 years.",
@@ -721,8 +793,16 @@ Senior CPA at PwC for 4 years now. Salary ₪38K gross + annual bonus. Manages a
     nickname: { he: "שלמה", en: "Shlomo", am: "ሰሎሞን" },
     trackSlug: "law",
     citySlug: "haifa",
-    startingPoint: { he: "עוזר משפטי בטבקה ללא תואר", en: "Legal aide at Tebeka without a degree", am: "ያለ ዲግሪ የህግ ረዳት" },
-    currentRole: { he: "סטודנט שנה ד' למשפטים, מתמחה בטבקה", en: "4th-year law student, interning at Tebeka", am: "የ4ኛ ዓመት የህግ ተማሪ" },
+    startingPoint: {
+      he: "עוזר משפטי בטבקה ללא תואר",
+      en: "Legal aide at Tebeka without a degree",
+      am: "ያለ ዲግሪ የህግ ረዳት",
+    },
+    currentRole: {
+      he: "סטודנט שנה ד' למשפטים, מתמחה בטבקה",
+      en: "4th-year law student, interning at Tebeka",
+      am: "የ4ኛ ዓመት የህግ ተማሪ",
+    },
     summary: {
       he: "מעוזר משפטי לסטודנט שנה ד' למשפטים — דרך 3 שנות עבודה בטבקה שגילו לו את התשוקה למשפט.",
       en: "From a legal aide to a 4th-year law student — through 3 years at Tebeka that revealed his passion for law.",
