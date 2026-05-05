@@ -444,5 +444,11 @@
   "scholarship_apply_cta": "להגיש בקשה",
   "scholarship_provider_heading": "הארגון שמספק את המלגה",
   "scholarship_similar_heading": "מלגות דומות",
-  "scholarship_related_rights_heading": "זכויות קשורות"
+  "scholarship_related_rights_heading": "זכויות קשורות",
+  "tracks_landing_title": "מסלולי לימוד",
+  "tracks_landing_subtitle": "מסלולים מוגדרים — אקדמי, מקצועי, והסבה — שמרכזים מלגות ותכניות לפי סוג הלימוד שמתאים לך.",
+  "tracks_programs_count_label": "תכניות",
+  "tracks_scholarships_heading": "מלגות במסלול",
+  "tracks_programs_heading": "תכניות במסלול",
+  "tracks_empty_state": "תוכן יתווסף בקרוב — בינתיים נסו את המלגות והתכניות הקיימות."
 }

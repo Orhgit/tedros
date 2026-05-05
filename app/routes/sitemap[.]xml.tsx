@@ -6,6 +6,7 @@ import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { PROGRAMS } from "~/lib/programs/programs.server";
 import { SUPPORTED_LOCALES } from "~/lib/i18n/config";
 import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
+import { EDUCATION_TRACKS } from "~/lib/education/tracks";
 import { ORGS } from "~/lib/orgs/orgs.server";
 import { ALL_PROFESSIONS } from "~/lib/professionals/categories";
 import {
@@ -97,6 +98,10 @@ ${xDefaultFor(path)}
     "/education",
     "/education/scholarships",
     ...SCHOLARSHIPS.map((s) => `/education/scholarships/${s.slug}`),
+    // RIN-507 — Education Hub Wave 2: tracks list + 3 track details
+    // (academic, vocational, career-shift).
+    "/education/tracks",
+    ...EDUCATION_TRACKS.map((t) => `/education/tracks/${t}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
