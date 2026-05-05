@@ -66,9 +66,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const description = job.description[locale] ?? job.description.he;
   const employerName = org
     ? org.name
-    : job.employerNameExternal ?? job.employerOrgSlug ?? "";
+    : (job.employerNameExternal ?? job.employerOrgSlug ?? "");
   const cityNameLocal = city ? cityName(city, locale) : job.citySlug;
-  const trackName = track ? track.name[locale] ?? track.name.he : job.trackSlug;
+  const trackName = track ? (track.name[locale] ?? track.name.he) : job.trackSlug;
 
   const jobJsonLd = jobPostingJsonLd(
     { publicUrl, locale },
@@ -93,15 +93,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
     },
   );
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: t(locale, "careers_jobs_landing_title"), path: "/careers/jobs" },
-      { name: title, path: jobPath(job.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: t(locale, "careers_jobs_landing_title"), path: "/careers/jobs" },
+    { name: title, path: jobPath(job.slug) },
+  ]);
 
   return [
     { title: `${title} — ${employerName} — Tedros` },
@@ -134,9 +131,9 @@ export default function JobDetail({ loaderData }: Route.ComponentProps) {
   const title = job.title[locale] ?? job.title.he;
   const employerName = org
     ? org.name
-    : job.employerNameExternal ?? job.employerOrgSlug ?? "";
+    : (job.employerNameExternal ?? job.employerOrgSlug ?? "");
   const cityNameLocal = city ? cityName(city, locale) : job.citySlug;
-  const trackName = track ? track.name[locale] ?? track.name.he : job.trackSlug;
+  const trackName = track ? (track.name[locale] ?? track.name.he) : job.trackSlug;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -165,7 +162,10 @@ export default function JobDetail({ loaderData }: Route.ComponentProps) {
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center rounded-full border border-earth-200 bg-earth-50 px-2.5 py-0.5 text-xs text-earth-800">
-              {t(locale, EMPLOYMENT_TYPE_KEY[job.employmentType] ?? "careers_jobs_type_full_time")}
+              {t(
+                locale,
+                EMPLOYMENT_TYPE_KEY[job.employmentType] ?? "careers_jobs_type_full_time",
+              )}
             </span>
             {job.affirmativeAction && (
               <span className="inline-flex items-center rounded-full border border-accent-red/30 bg-accent-red/5 px-2.5 py-0.5 text-xs text-accent-red">

@@ -27,7 +27,7 @@ export async function loader({ params }: Route.LoaderArgs) {
       slug: j.slug,
       title: j.title[locale] ?? j.title.he,
       employer: j.employerOrgSlug ?? j.employerNameExternal ?? "",
-      cityName: city ? city.names[locale] ?? city.names.he : j.citySlug,
+      cityName: city ? (city.names[locale] ?? city.names.he) : j.citySlug,
       employmentType: j.employmentType,
       affirmativeAction: j.affirmativeAction,
       postedAt: j.postedAt,
@@ -59,14 +59,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
         }
       : null;
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: title, path: "/careers/jobs" },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: title, path: "/careers/jobs" },
+  ]);
 
   return [
     { title: `${title} — Tedros` },
@@ -156,7 +153,11 @@ export default function JobsLanding({ loaderData }: Route.ComponentProps) {
                 </p>
                 <div className="mt-3 flex flex-wrap items-center gap-2">
                   <span className="inline-flex items-center rounded-full border border-earth-200 bg-earth-50 px-2.5 py-0.5 text-xs text-earth-800">
-                    {t(locale, EMPLOYMENT_TYPE_KEY[j.employmentType] ?? "careers_jobs_type_full_time")}
+                    {t(
+                      locale,
+                      EMPLOYMENT_TYPE_KEY[j.employmentType] ??
+                        "careers_jobs_type_full_time",
+                    )}
                   </span>
                   {j.affirmativeAction && (
                     <span className="inline-flex items-center rounded-full border border-accent-red/30 bg-accent-red/5 px-2.5 py-0.5 text-xs text-accent-red">
