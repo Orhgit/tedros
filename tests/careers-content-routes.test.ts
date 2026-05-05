@@ -111,7 +111,9 @@ describe("FAQ detail route", () => {
   });
 
   it("returns 3 cross-link FAQs (or fewer at array edges)", async () => {
-    const data = await faqDetailLoader(fakeArgs({ lang: "he", question: "how-to-start-tech-career-ethiopian" }));
+    const data = await faqDetailLoader(
+      fakeArgs({ lang: "he", question: "how-to-start-tech-career-ethiopian" }),
+    );
     expect(data.related.length).toBeGreaterThanOrEqual(1);
     expect(data.related.length).toBeLessThanOrEqual(3);
   });

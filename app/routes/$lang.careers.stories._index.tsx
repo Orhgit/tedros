@@ -32,7 +32,7 @@ export async function loader({ params }: Route.LoaderArgs) {
       currentRole: s.currentRole[locale] ?? s.currentRole.he,
       summary: s.summary[locale] ?? s.summary.he,
       trackSlug: s.trackSlug,
-      trackName: track ? track.name[locale] ?? track.name.he : s.trackSlug,
+      trackName: track ? (track.name[locale] ?? track.name.he) : s.trackSlug,
       cityName: city ? cityName(city, locale) : s.citySlug,
     };
   });
@@ -51,14 +51,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const description = t(locale, "careers_stories_landing_subtitle");
   const url = `${publicUrl}/${locale}/careers/stories`;
 
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name: title, path: "/careers/stories" },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name: title, path: "/careers/stories" },
+  ]);
 
   return [
     { title: `${title} — Tedros` },
@@ -167,21 +164,8 @@ export default function StoriesLanding({ loaderData }: Route.ComponentProps) {
                   <p className="font-display text-base font-semibold text-earth-900">
                     {s.nickname} · {s.currentRole}
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-700">
-                    {s.summary}
-                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-700">{s.summary}</p>
                   <div className="mt-3 flex flex-wrap items-center gap-2">
-<<<<<<< HEAD
-                    {isCareerTrack(s.trackSlug) && (
-                      <Link
-                        to={`/${locale}${trackPath(s.trackSlug)}`}
-                        className="inline-flex items-center rounded-full border border-earth-200 bg-earth-50 px-2.5 py-0.5 text-xs text-earth-800"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {s.trackName}
-                      </Link>
-                    )}
-=======
                     <Link
                       to={`/${locale}${trackPath(s.trackSlug)}`}
                       className="inline-flex items-center rounded-full border border-earth-200 bg-earth-50 px-2.5 py-0.5 text-xs text-earth-800"
@@ -189,7 +173,6 @@ export default function StoriesLanding({ loaderData }: Route.ComponentProps) {
                     >
                       {s.trackName}
                     </Link>
->>>>>>> 9ee8dfe (feat(careers): RIN-475 — stories (10 anonymized × HE/EN/AM + landing + detail))
                     <span className="text-xs text-ink-600">{s.cityName}</span>
                   </div>
                 </Link>
