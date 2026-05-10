@@ -50,15 +50,15 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}/statistics/${topic.slug}`;
+  const name = statTopicName(topic, locale);
+  const description = statTopicDescription(topic, locale);
 
-  return { locale, topic, figures, siblings, shareUrl, publicUrl: PUBLIC_URL };
+  return { locale, topic, figures, siblings, shareUrl, publicUrl: PUBLIC_URL, name, description };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, topic, publicUrl } = data;
-  const name = statTopicName(topic, locale);
-  const description = statTopicDescription(topic, locale);
+  const { locale, topic, publicUrl, name, description } = data;
   const url = `${publicUrl}/${locale}/statistics/${topic.slug}`;
 
   const datasetJsonLd = statTopicJsonLd(
@@ -97,9 +97,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function StatisticsTopicDetail({ loaderData }: Route.ComponentProps) {
-  const { locale, topic, figures, siblings, shareUrl } = loaderData;
-  const name = statTopicName(topic, locale);
-  const description = statTopicDescription(topic, locale);
+  const { locale, topic, figures, siblings, shareUrl, name, description } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
