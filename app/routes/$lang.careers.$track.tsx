@@ -14,10 +14,7 @@ import {
   glyphForCareerTrack,
   isCareerTrack,
 } from "~/lib/careers/categories";
-import {
-  careerTrackBody,
-  findCareerTrack,
-} from "~/lib/careers/careers.server";
+import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
 import { trackPath } from "~/lib/careers/links";
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
@@ -99,14 +96,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const name = entry.name[locale] ?? entry.name.he;
   const description = entry.shortDescription[locale] ?? entry.shortDescription.he;
   const trackJsonLd = careerTrackJsonLd({ publicUrl, locale }, entry);
-  const breadcrumb = breadcrumbJsonLd(
-    { publicUrl, locale },
-    [
-      { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-      { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-      { name, path: trackPath(entry.slug) },
-    ],
-  );
+  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+    { name, path: trackPath(entry.slug) },
+  ]);
   return [
     { title: `${name} — ${t(locale, "careers_landing_title")} — Tedros` },
     { name: "description", content: description },
@@ -313,9 +307,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
           <h2 className="font-display text-xl font-semibold text-earth-900">
             {t(locale, "careers_track_stories_heading")}
           </h2>
-          <p className="mt-2 text-sm text-ink-600">
-            {t(locale, "careers_coming_soon")}
-          </p>
+          <p className="mt-2 text-sm text-ink-600">{t(locale, "careers_coming_soon")}</p>
         </section>
 
         {/* Back to hub --------------------------------------------------- */}

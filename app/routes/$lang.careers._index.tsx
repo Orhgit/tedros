@@ -8,10 +8,7 @@ import { Link } from "react-router";
 import type { Route } from "./+types/$lang.careers._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
-import {
-  CAREER_TRACK_TO_TAG,
-  glyphForCareerTrack,
-} from "~/lib/careers/categories";
+import { CAREER_TRACK_TO_TAG, glyphForCareerTrack } from "~/lib/careers/categories";
 import { careerTracksByPriority } from "~/lib/careers/careers.server";
 import { trackPath } from "~/lib/careers/links";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
@@ -111,13 +108,10 @@ export const meta: Route.MetaFunction = ({ data }) => {
       },
     },
     {
-      "script:ld+json": breadcrumbJsonLd(
-        { publicUrl, locale },
-        [
-          { name: t(locale, "rights_breadcrumb_home"), path: "/" },
-          { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
-        ],
-      ),
+      "script:ld+json": breadcrumbJsonLd({ publicUrl, locale }, [
+        { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+        { name: t(locale, "careers_breadcrumb_careers"), path: "/careers" },
+      ]),
     },
   ];
 };
@@ -157,10 +151,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
         </header>
 
         {/* Track grid ----------------------------------------------------- */}
-        <section
-          className="mb-12"
-          aria-labelledby="careers-tracks-heading"
-        >
+        <section className="mb-12" aria-labelledby="careers-tracks-heading">
           <h2
             id="careers-tracks-heading"
             className="mb-4 font-display text-2xl font-semibold text-earth-900"
@@ -195,9 +186,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
                         {glyphForCareerTrack(track.slug)}
                       </span>
                     </div>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-600">
-                      {summary}
-                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-600">{summary}</p>
                     <div className="mt-3">
                       <span className={tagChipClasses(tag)}>
                         {t(locale, "careers_priority_label")} #{track.priority}
@@ -211,10 +200,7 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
         </section>
 
         {/* Supporting orgs ------------------------------------------------- */}
-        <section
-          className="mb-12"
-          aria-labelledby="careers-orgs-heading"
-        >
+        <section className="mb-12" aria-labelledby="careers-orgs-heading">
           <h2
             id="careers-orgs-heading"
             className="mb-4 font-display text-2xl font-semibold text-earth-900"
