@@ -7,23 +7,25 @@ import {
   isCareerTrack,
 } from "../app/lib/careers/categories";
 import {
-  allSlugReferences,
   bootcampPath,
   faqPath,
-  internalLinkCount,
   jobPath,
+  storyPath,
+  trackCityPath,
+  trackPath,
+} from "../app/lib/careers/links";
+import {
+  allSlugReferences,
+  internalLinkCount,
   recommendedBootcampSlugs,
   relatedOrgSlugs,
   relatedProfessionSlugs,
   relatedRightSlugs,
   relatedTermSlugs,
-  storyPath,
-  trackCityPath,
-  trackPath,
   tracksForBootcamp,
   tracksForOrg,
   tracksForRight,
-} from "../app/lib/careers/links";
+} from "../app/lib/careers/links.server";
 import { GLOSSARY } from "../app/lib/glossary/glossary.server";
 import { ORGS } from "../app/lib/orgs/orgs.server";
 import { ALL_PROFESSIONS } from "../app/lib/professionals/categories";
