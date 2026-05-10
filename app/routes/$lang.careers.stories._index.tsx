@@ -10,6 +10,7 @@ import {
   ALL_CAREER_TRACKS,
   CAREER_TRACK_TO_TAG,
   glyphForCareerTrack,
+  type CareerTrack,
 } from "~/lib/careers/categories";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
 import { storyPath, trackPath } from "~/lib/careers/links";
@@ -167,7 +168,7 @@ export default function StoriesLanding({ loaderData }: Route.ComponentProps) {
                   <p className="mt-2 text-sm leading-relaxed text-ink-700">{s.summary}</p>
                   <div className="mt-3 flex flex-wrap items-center gap-2">
                     <Link
-                      to={`/${locale}${trackPath(s.trackSlug as import("~/lib/careers/categories").CareerTrack)}`}
+                      to={`/${locale}${trackPath(s.trackSlug as CareerTrack)}`}
                       className="inline-flex items-center rounded-full border border-earth-200 bg-earth-50 px-2.5 py-0.5 text-xs text-earth-800"
                       onClick={(e) => e.stopPropagation()}
                     >
