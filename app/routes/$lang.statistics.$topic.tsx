@@ -53,7 +53,16 @@ export async function loader({ params }: Route.LoaderArgs) {
   const name = statTopicName(topic, locale);
   const description = statTopicDescription(topic, locale);
 
-  return { locale, topic, figures, siblings, shareUrl, publicUrl: PUBLIC_URL, name, description };
+  return {
+    locale,
+    topic,
+    figures,
+    siblings,
+    shareUrl,
+    publicUrl: PUBLIC_URL,
+    name,
+    description,
+  };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
