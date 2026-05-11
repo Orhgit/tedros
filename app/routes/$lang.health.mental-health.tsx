@@ -8,11 +8,7 @@ import { HealthDisclaimer } from "~/components/health/health-disclaimer";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { healthPath } from "~/lib/health/links";
-import {
-  breadcrumbJsonLd,
-  faqJsonLd,
-  webPageJsonLd,
-} from "~/lib/health/schema";
+import { breadcrumbJsonLd, faqJsonLd, webPageJsonLd } from "~/lib/health/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
@@ -211,12 +207,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {[
               {
-                figure:
-                  locale === "he"
-                    ? "פי 2"
-                    : locale === "am"
-                      ? "2 እጥፍ"
-                      : "2×",
+                figure: locale === "he" ? "פי 2" : locale === "am" ? "2 እጥፍ" : "2×",
                 label:
                   locale === "he"
                     ? "שיעור אשפוז פסיכיאטרי"
@@ -225,12 +216,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
                       : "Psychiatric hospitalization",
               },
               {
-                figure:
-                  locale === "he"
-                    ? "פי 4"
-                    : locale === "am"
-                      ? "4 እጥፍ"
-                      : "4×",
+                figure: locale === "he" ? "פי 4" : locale === "am" ? "4 እጥፍ" : "4×",
                 label:
                   locale === "he"
                     ? "שיעור אובדנות (24.5 ל-100,000)"
@@ -280,49 +266,47 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
             {locale === "he" ? (
               <>
                 <p>
-                  בתרבות האתיופית, מצוקה נפשית נתפסת לעיתים כגזרה רוחנית
-                  (Zar) — ולא כמחלה שניתנת לטיפול רפואי. זה מוביל לפנייה
-                  למרפאים מסורתיים (דבטרה, בלאזאר) לפני הפנייה למערכת הרפואית.
+                  בתרבות האתיופית, מצוקה נפשית נתפסת לעיתים כגזרה רוחנית (Zar) — ולא כמחלה
+                  שניתנת לטיפול רפואי. זה מוביל לפנייה למרפאים מסורתיים (דבטרה, בלאזאר)
+                  לפני הפנייה למערכת הרפואית.
                 </p>
                 <p>
-                  בנוסף, חשש מסטיגמה חברתית — שמישהו יחשוב שה&quot;משוגע&quot; —
-                  גורם לאנשים רבים לשתוק ולא לפנות לעזרה. מחקרים מראים שה-43%
-                  אמון הוא מהנמוכים בקרב כל הקבוצות האתניות בישראל.
+                  בנוסף, חשש מסטיגמה חברתית — שמישהו יחשוב שה&quot;משוגע&quot; — גורם
+                  לאנשים רבים לשתוק ולא לפנות לעזרה. מחקרים מראים שה-43% אמון הוא מהנמוכים
+                  בקרב כל הקבוצות האתניות בישראל.
                 </p>
                 <p>
-                  החדשות הטובות: יש כיום פסיכולוגים ועובדים סוציאליים מהקהילה
-                  שמבינים את ההקשר הזה — ופנייה לעזרה היא מעשה אומץ, לא חולשה.
+                  החדשות הטובות: יש כיום פסיכולוגים ועובדים סוציאליים מהקהילה שמבינים את
+                  ההקשר הזה — ופנייה לעזרה היא מעשה אומץ, לא חולשה.
                 </p>
               </>
             ) : locale === "am" ? (
               <>
                 <p>
-                  በኢትዮጵያ ባህል፣ የአዕምሮ ጭንቀት አንዳንዴ እንደ ዛር (Zar) ይቆጠራል።
-                  ይህ ሰዎችን ከሐኪም ይልቅ ባህላዊ ፈዋሾች (ደብተራ፣ ባለዛር) ዘንድ ሊልካቸው ይችላል።
+                  በኢትዮጵያ ባህል፣ የአዕምሮ ጭንቀት አንዳንዴ እንደ ዛር (Zar) ይቆጠራል። ይህ ሰዎችን ከሐኪም ይልቅ ባህላዊ
+                  ፈዋሾች (ደብተራ፣ ባለዛር) ዘንድ ሊልካቸው ይችላል።
                 </p>
                 <p>
-                  43% ብቻ የሆኑ የማህበረሰብ አባላት የሕክምና ሥርዓቱ ሊረዳ ይችላል ብለው ያምናሉ።
-                  ዕርዳታ መፈለግ ጥንካሬ ነው።
+                  43% ብቻ የሆኑ የማህበረሰብ አባላት የሕክምና ሥርዓቱ ሊረዳ ይችላል ብለው ያምናሉ። ዕርዳታ መፈለግ ጥንካሬ ነው።
                 </p>
               </>
             ) : (
               <>
                 <p>
-                  In Ethiopian culture, psychological distress is sometimes seen
-                  as a spiritual matter (Zar) rather than a medical condition.
-                  This can lead people to seek traditional healers (Debtera,
-                  Balezar) before approaching the medical system.
+                  In Ethiopian culture, psychological distress is sometimes seen as a
+                  spiritual matter (Zar) rather than a medical condition. This can lead
+                  people to seek traditional healers (Debtera, Balezar) before approaching
+                  the medical system.
                 </p>
                 <p>
                   Additionally, fear of social stigma — being perceived as
                   &quot;crazy&quot; — causes many people to remain silent. Research shows
-                  that 43% trust is among the lowest across all ethnic groups in
-                  Israel.
+                  that 43% trust is among the lowest across all ethnic groups in Israel.
                 </p>
                 <p>
-                  The good news: there are now community psychologists and social
-                  workers who understand this context — and seeking help is an act
-                  of courage, not weakness.
+                  The good news: there are now community psychologists and social workers
+                  who understand this context — and seeking help is an act of courage, not
+                  weakness.
                 </p>
               </>
             )}
@@ -343,10 +327,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
           </h2>
           <ul className="space-y-4">
             {resources.map((r) => (
-              <li
-                key={r.name}
-                className="rounded-xl border border-earth-200 bg-card p-5"
-              >
+              <li key={r.name} className="rounded-xl border border-earth-200 bg-card p-5">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="font-display text-base font-semibold text-earth-900">
@@ -360,8 +341,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
                     rel="noopener noreferrer"
                     className="shrink-0 rounded-md border border-earth-200 px-3 py-1.5 text-xs font-medium text-earth-700 transition hover:border-earth-400 hover:bg-earth-50"
                   >
-                    {locale === "he" ? "לאתר" : locale === "am" ? "ድህረ ገጽ" : "Website"}{" "}
-                    ↗
+                    {locale === "he" ? "לאתר" : locale === "am" ? "ድህረ ገጽ" : "Website"} ↗
                   </a>
                 </div>
               </li>
@@ -383,16 +363,11 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
           </h2>
           <ul className="space-y-4">
             {faqs.map((faq) => (
-              <li
-                key={faq.id}
-                className="rounded-xl border border-earth-200 bg-card p-5"
-              >
+              <li key={faq.id} className="rounded-xl border border-earth-200 bg-card p-5">
                 <h3 className="font-display text-base font-semibold text-earth-900">
                   {faq.question}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-700">
-                  {faq.answer}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-700">{faq.answer}</p>
               </li>
             ))}
           </ul>

@@ -25,8 +25,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     return {
       slug: entry.slug,
       name: entry.name[locale] ?? entry.name.he,
-      shortDescription:
-        entry.shortDescription[locale] ?? entry.shortDescription.he,
+      shortDescription: entry.shortDescription[locale] ?? entry.shortDescription.he,
       glyph: glyphForCondition(slug),
       figureCount: entry.figures.length,
     };

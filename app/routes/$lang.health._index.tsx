@@ -10,11 +10,7 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { ALL_HEALTH_CONDITIONS, glyphForCondition } from "~/lib/health/categories";
 import { CONDITIONS } from "~/lib/health/conditions.server";
-import {
-  conditionsPath,
-  conditionPath,
-  mentalHealthPath,
-} from "~/lib/health/links";
+import { conditionsPath, conditionPath, mentalHealthPath } from "~/lib/health/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/health/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -30,8 +26,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     return {
       slug: entry.slug,
       name: entry.name[locale] ?? entry.name.he,
-      shortDescription:
-        entry.shortDescription[locale] ?? entry.shortDescription.he,
+      shortDescription: entry.shortDescription[locale] ?? entry.shortDescription.he,
       glyph: glyphForCondition(slug),
       figureCount: entry.figures.length,
     };

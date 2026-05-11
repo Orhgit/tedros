@@ -40,8 +40,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   const condition = {
     slug: entry.slug,
     name: conditionName(entry, locale),
-    shortDescription:
-      entry.shortDescription[locale] ?? entry.shortDescription.he,
+    shortDescription: entry.shortDescription[locale] ?? entry.shortDescription.he,
     body: conditionBody(entry, locale),
     figures: entry.figures.map((f) => ({
       id: f.id,
@@ -51,9 +50,7 @@ export async function loader({ params }: Route.LoaderArgs) {
       source: f.source,
       publishedYear: f.publishedYear,
     })),
-    warnings: entry.warnings.map(
-      (w) => w[locale] ?? w.he,
-    ),
+    warnings: entry.warnings.map((w) => w[locale] ?? w.he),
     lastReviewed: entry.lastReviewed,
   };
 
