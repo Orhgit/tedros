@@ -1,15 +1,14 @@
 // Loader integration tests for the Careers Hub Wave 4 job-board routes
-// (RIN-474). The seed JOBS array ships empty by policy (see
-// `lib/careers/jobs.server.ts`); these tests cover both the empty-seed
-// behavior (landing renders, detail 404s) and the full lifecycle when
-// jobs are temporarily injected for the test (active → detail renders;
-// expired → 410 Gone).
+// (RIN-474). JOBS now ships with 8 V1 public-sector seeds (RIN-474 V1),
+// but each test block operates on a controlled-empty JOBS state restored
+// by beforeEach/afterEach. Tests that need specific jobs push them explicitly.
 //
-// We mutate `JOBS` in-place inside isolated `it` blocks and restore it
-// in the `afterEach`. The static module pattern makes this safe — no
-// other tests in the suite read `JOBS`.
+// We mutate `JOBS` in-place inside isolated `it` blocks; beforeEach drains
+// it so every test starts from a known-empty state regardless of the V1
+// seed data. The static module pattern makes this safe — no other tests
+// in the suite read `JOBS`.
 
-import { afterEach, beforeAll, describe, expect, it } from "vitest";
+import { afterEach, beforeAll, beforeEach, describe, expect, it } from "vitest";
 
 beforeAll(() => {
   process.env.NODE_ENV = "test";
@@ -63,9 +62,12 @@ const sampleExpiredJob: JobPostingEntry = {
   validThrough: "2020-01-01T00:00:00Z", // far in the past
 };
 
-afterEach(() => {
-  // Drain the array — restore to the seed-empty state.
+beforeEach(() => {
+  // Drain before each test — every block starts with a known-empty state.
   JOBS.length = 0;
+});
+afterEach(() => {
+  JOBS.length = 0; // belt-and-suspenders
 });
 
 describe("jobs landing — empty-seed behavior (default)", () => {
