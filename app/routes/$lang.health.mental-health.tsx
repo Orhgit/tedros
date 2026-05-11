@@ -285,7 +285,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
                   למרפאים מסורתיים (דבטרה, בלאזאר) לפני הפנייה למערכת הרפואית.
                 </p>
                 <p>
-                  בנוסף, חשש מסטיגמה חברתית — שמישהו יחשוב שה"משוגע" —
+                  בנוסף, חשש מסטיגמה חברתית — שמישהו יחשוב שה&quot;משוגע&quot; —
                   גורם לאנשים רבים לשתוק ולא לפנות לעזרה. מחקרים מראים שה-43%
                   אמון הוא מהנמוכים בקרב כל הקבוצות האתניות בישראל.
                 </p>
@@ -315,7 +315,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
                 </p>
                 <p>
                   Additionally, fear of social stigma — being perceived as
-                  "crazy" — causes many people to remain silent. Research shows
+                  &quot;crazy&quot; — causes many people to remain silent. Research shows
                   that 43% trust is among the lowest across all ethnic groups in
                   Israel.
                 </p>
