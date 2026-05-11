@@ -61,35 +61,44 @@ export async function loader({ params }: Route.LoaderArgs) {
     })),
   })).filter((group) => group.services.length > 0);
 
-  return { locale, servicesByCategory, publicUrl: PUBLIC_URL };
-}
-
-export const meta: Route.MetaFunction = ({ data }) => {
-  if (!data) return [{ title: "Tedros" }];
-  const { locale, publicUrl } = data;
-  const title = t(locale, "health_services_title");
-  const description = t(locale, "health_services_subtitle");
-  const url = `${publicUrl}/${locale}/health/services`;
-
-  const teneBriutService = HEALTH_SERVICES.find((s) => s.slug === "tene-briut");
-  const localBiz = teneBriutService
+  const teneBriut = HEALTH_SERVICES.find((s) => s.slug === "tene-briut");
+  const localBizJsonLd = teneBriut
     ? localBusinessJsonLd(
-        { publicUrl, locale },
+        { publicUrl: PUBLIC_URL, locale },
         {
-          name: serviceName(teneBriutService, locale),
-          description: serviceDescription(teneBriutService, locale),
-          url: teneBriutService.url,
-          telephone: teneBriutService.phone,
+          name: serviceName(teneBriut, locale),
+          description: serviceDescription(teneBriut, locale),
+          url: teneBriut.url,
+          telephone: teneBriut.phone,
           addressCountry: "IL",
         },
       )
     : undefined;
 
-  const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
+  const title = t(locale, "health_services_title");
+  const description = t(locale, "health_services_subtitle");
+  const breadcrumb = breadcrumbJsonLd({ publicUrl: PUBLIC_URL, locale }, [
     { name: t(locale, "health_breadcrumb_home"), path: "/" },
     { name: t(locale, "health_breadcrumb_health"), path: "/health" },
     { name: title, path: "/health/services" },
   ]);
+
+  return {
+    locale,
+    servicesByCategory,
+    publicUrl: PUBLIC_URL,
+    localBizJsonLd,
+    title,
+    description,
+    breadcrumbJsonLd: breadcrumb,
+  };
+}
+
+export const meta: Route.MetaFunction = ({ data }) => {
+  if (!data) return [{ title: "Tedros" }];
+  const { locale, publicUrl, localBizJsonLd, title, description, breadcrumbJsonLd } =
+    data;
+  const url = `${publicUrl}/${locale}/health/services`;
 
   return [
     { title: `${title} — Tedros` },
@@ -99,14 +108,13 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
-    ...(localBiz ? [{ "script:ld+json": localBiz }] : []),
-    { "script:ld+json": breadcrumb },
+    ...(localBizJsonLd ? [{ "script:ld+json": localBizJsonLd }] : []),
+    { "script:ld+json": breadcrumbJsonLd },
   ];
 };
 
 export default function HealthServices({ loaderData }: Route.ComponentProps) {
-  const { locale, servicesByCategory } = loaderData;
-  const title = t(locale, "health_services_title");
+  const { locale, servicesByCategory, title } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
