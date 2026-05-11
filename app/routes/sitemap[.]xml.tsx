@@ -178,6 +178,9 @@ ${xDefaultFor(path)}
     "/health/conditions",
     ...ALL_HEALTH_CONDITIONS.map((c) => `/health/conditions/${c}`),
     "/health/mental-health",
+    // RIN-656/657 — Health Hub Wave 2: services directory + health rights.
+    "/health/services",
+    "/health/rights",
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

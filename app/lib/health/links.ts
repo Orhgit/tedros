@@ -1,5 +1,5 @@
-// Client-safe path helpers for the Health Hub (RIN-653/654/655).
-// Pure functions — no server imports.
+// Client-safe path helpers for the Health Hub (RIN-653/654/655 Wave 1,
+// RIN-656/657 Wave 2). Pure functions — no server imports.
 
 export function healthPath(): string {
   return "/health";
@@ -15,4 +15,14 @@ export function conditionPath(slug: string): string {
 
 export function mentalHealthPath(): string {
   return "/health/mental-health";
+}
+
+// RIN-656 — Health Services Directory
+export function servicesPath(): string {
+  return "/health/services";
+}
+
+// RIN-657 — Health Rights
+export function rightsPath(): string {
+  return "/health/rights";
 }

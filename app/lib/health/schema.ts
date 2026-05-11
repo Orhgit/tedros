@@ -1,4 +1,5 @@
-// JSON-LD generators for the Health Hub vertical (RIN-653/654/655).
+// JSON-LD generators for the Health Hub vertical (RIN-653/654/655 Wave 1,
+// RIN-656/657 Wave 2).
 //
 // Pure functions — return plain objects suitable for embedding in a
 // route's `meta` export under `{ "script:ld+json": ... }`. Each generator
@@ -7,7 +8,8 @@
 // Schemas covered:
 //   healthConditionJsonLd  → MedicalWebPage (YMYL-appropriate)
 //   webPageJsonLd          → WebPage (hub + conditions landing)
-//   faqJsonLd              → FAQPage (mental health hub)
+//   faqJsonLd              → FAQPage (mental health hub, health rights)
+//   localBusinessJsonLd    → LocalBusiness (health services)
 //   breadcrumbJsonLd       → BreadcrumbList helper
 
 import type { Locale } from "../i18n/config";
@@ -127,7 +129,7 @@ export function healthConditionJsonLd(
   };
 }
 
-// ── FAQPage (mental health hub) ─────────────────────────────────────────────
+// ── FAQPage (mental health hub, health rights) ─────────────────────────────
 
 export interface FaqEntry {
   question: string;
@@ -147,5 +149,44 @@ export function faqJsonLd(ctx: SchemaContext, entries: FaqEntry[]): JsonLd {
         text: e.answer,
       },
     })),
+  };
+}
+
+// ── LocalBusiness (health services directory — RIN-656) ────────────────────
+
+export interface LocalBusinessJsonLdInput {
+  name: string;
+  description: string;
+  url?: string;
+  telephone?: string;
+  /** ISO country code, e.g. "IL". */
+  addressCountry?: string;
+}
+
+export function localBusinessJsonLd(
+  ctx: SchemaContext,
+  input: LocalBusinessJsonLdInput,
+): JsonLd {
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "HealthAndBeautyBusiness",
+    name: input.name,
+    description: input.description,
+    inLanguage: ctx.locale,
+    ...(input.url ? { url: input.url } : {}),
+    ...(input.telephone ? { telephone: input.telephone } : {}),
+    ...(input.addressCountry
+      ? {
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: input.addressCountry,
+          },
+        }
+      : {}),
+    isPartOf: {
+      "@type": "WebSite",
+      url: ctx.publicUrl,
+      name: "Tedros",
+    },
   };
 }

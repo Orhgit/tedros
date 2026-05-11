@@ -609,5 +609,21 @@
   "health_rights_link_label": "Health rights",
   "health_rights_link_body": "All health rights available to community members — from the health basket to specialist services.",
   "health_conditions_count_label": "conditions",
-  "health_figures_count_label": "research figures"
+  "health_figures_count_label": "research figures",
+  "health_services_title": "Health Services Directory",
+  "health_services_subtitle": "Translation, crisis, mental-health, and rights-information services — for the Ethiopian-Israeli community.",
+  "health_services_category_translation": "Medical Translation",
+  "health_services_category_crisis": "Crisis & Rights",
+  "health_services_category_mental_health": "Mental Health",
+  "health_services_category_emergency": "Emergency",
+  "health_services_category_rights": "Medical Rights",
+  "health_services_free_badge": "Free",
+  "health_services_phone_label": "Phone",
+  "health_services_url_label": "Website",
+  "health_services_hours_label": "Hours",
+  "health_rights_title": "Health Rights",
+  "health_rights_subtitle": "7 critical health rights for the Ethiopian-Israeli community — with legal citations and practical guidance.",
+  "health_rights_legal_basis_label": "Legal basis",
+  "health_rights_last_reviewed_label": "Last reviewed",
+  "health_rights_back_to_rights_cta": "All community rights"
 }

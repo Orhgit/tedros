@@ -1,4 +1,4 @@
-// Reusable YMYL disclaimer banner for Health Hub pages (RIN-653/654/655).
+// Reusable YMYL disclaimer banner for Health Hub pages (RIN-653/654/655/656/657).
 // variant="standard" — general health information disclaimer.
 // variant="mental-health" — adds ERAN crisis line prominently.
 //
