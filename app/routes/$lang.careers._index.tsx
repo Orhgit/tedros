@@ -8,9 +8,11 @@ import { Link } from "react-router";
 import type { Route } from "./+types/$lang.careers._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
+import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACK_TO_TAG, glyphForCareerTrack } from "~/lib/careers/categories";
 import { careerTracksByPriority } from "~/lib/careers/careers.server";
-import { trackPath } from "~/lib/careers/links";
+import { faqsByOrder } from "~/lib/careers/faqs.server";
+import { bootcampPath, faqPath, trackPath } from "~/lib/careers/links";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -62,11 +64,40 @@ const SUPPORTING_ORG_ROLES: Record<
   },
 };
 
+// Curated set of 6 featured bootcamps to surface on the pillar — picked
+// across tracks (tech / public-sector / education / trades / finance /
+// retail) so the landing reads representative.
+const FEATURED_BOOTCAMP_SLUGS = [
+  "enp-tech-career",
+  "atidim-academic",
+  "enp-teaching-fellowship",
+  "madrasa-trades",
+  "isef-excellence-employment",
+  "place-il",
+];
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const tracks = careerTracksByPriority();
+  const featuredBootcamps = FEATURED_BOOTCAMP_SLUGS.map((slug) =>
+    BOOTCAMPS.find((b) => b.slug === slug),
+  )
+    .filter((b): b is NonNullable<typeof b> => b !== undefined)
+    .map((b) => ({
+      slug: b.slug,
+      name: b.name[locale] ?? b.name.he,
+      summary: b.shortDescription[locale] ?? b.shortDescription.he,
+      trackSlug: b.trackSlug,
+    }));
+  const featuredFaqs = faqsByOrder()
+    .slice(0, 5)
+    .map((f) => ({
+      slug: f.slug,
+      question: f.question[locale] ?? f.question.he,
+      shortAnswer: f.shortAnswer[locale] ?? f.shortAnswer.he,
+    }));
   const { PUBLIC_URL } = getEnv();
-  return { locale, tracks, publicUrl: PUBLIC_URL };
+  return { locale, tracks, featuredBootcamps, featuredFaqs, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -117,7 +148,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function CareersLanding({ loaderData }: Route.ComponentProps) {
-  const { locale, tracks } = loaderData;
+  const { locale, tracks, featuredBootcamps, featuredFaqs } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -255,27 +286,92 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
           </div>
         </section>
 
-        {/* Coming-soon placeholders --------------------------------------- */}
-        <section
-          className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2"
-          aria-label={t(locale, "careers_section_bootcamps_heading")}
-        >
-          <div className="rounded-lg border border-dashed border-earth-200 bg-earth-50/40 p-5">
-            <p className="text-sm font-medium text-earth-700">
+        {/* Featured bootcamps (Sub-3 — RIN-472) --------------------------- */}
+        <section className="mb-12" aria-labelledby="careers-bootcamps-heading">
+          <div className="mb-4 flex items-center justify-between">
+            <h2
+              id="careers-bootcamps-heading"
+              className="font-display text-2xl font-semibold text-earth-900"
+            >
               {t(locale, "careers_section_bootcamps_heading")}
-            </p>
-            <p className="mt-1 text-xs text-ink-600">
-              {t(locale, "careers_coming_soon")}
-            </p>
+            </h2>
+            <Link
+              to={`/${locale}/careers/affirmative-action`}
+              className="text-sm text-earth-700 hover:underline"
+            >
+              {t(locale, "careers_affirmative_action_breadcrumb")} →
+            </Link>
           </div>
-          <div className="rounded-lg border border-dashed border-earth-200 bg-earth-50/40 p-5">
-            <p className="text-sm font-medium text-earth-700">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredBootcamps.map((b) => (
+              <li key={b.slug}>
+                <Link
+                  to={`/${locale}${bootcampPath(b.slug)}`}
+                  className="block rounded-lg border border-earth-200 bg-card p-4 text-sm transition hover:border-earth-400 hover:shadow-sm"
+                >
+                  <span className="block font-medium text-earth-900">{b.name}</span>
+                  <span className="mt-1 block text-ink-600">{b.summary}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Featured FAQs (Sub-6 — RIN-475) -------------------------------- */}
+        <section className="mb-12" aria-labelledby="careers-faqs-heading">
+          <div className="mb-4 flex items-center justify-between">
+            <h2
+              id="careers-faqs-heading"
+              className="font-display text-2xl font-semibold text-earth-900"
+            >
               {t(locale, "careers_section_faqs_heading")}
-            </p>
-            <p className="mt-1 text-xs text-ink-600">
-              {t(locale, "careers_coming_soon")}
-            </p>
+            </h2>
+            <Link
+              to={`/${locale}/careers/faq`}
+              className="text-sm text-earth-700 hover:underline"
+            >
+              {t(locale, "careers_view_all_faqs")} →
+            </Link>
           </div>
+          <ul className="space-y-2">
+            {featuredFaqs.map((f) => (
+              <li key={f.slug}>
+                <Link
+                  to={`/${locale}${faqPath(f.slug)}`}
+                  className="block rounded-lg border border-earth-200 bg-card p-4 transition hover:border-earth-400 hover:shadow-sm"
+                >
+                  <p className="text-sm font-medium text-earth-900">{f.question}</p>
+                  <p className="mt-1 text-xs text-ink-600">{f.shortAnswer}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Statistics + stories teasers (Sub-6) --------------------------- */}
+        <section className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Link
+            to={`/${locale}/careers/statistics`}
+            className="block rounded-2xl border border-earth-200 bg-card p-6 transition hover:border-earth-400 hover:shadow-sm"
+          >
+            <p className="font-display text-base font-semibold text-earth-900">
+              {t(locale, "careers_statistics_title")}
+            </p>
+            <p className="mt-1 text-sm text-ink-600">
+              {t(locale, "careers_statistics_subtitle")}
+            </p>
+          </Link>
+          <Link
+            to={`/${locale}/careers/stories`}
+            className="block rounded-2xl border border-earth-200 bg-card p-6 transition hover:border-earth-400 hover:shadow-sm"
+          >
+            <p className="font-display text-base font-semibold text-earth-900">
+              {t(locale, "careers_stories_landing_title")}
+            </p>
+            <p className="mt-1 text-sm text-ink-600">
+              {t(locale, "careers_stories_landing_subtitle")}
+            </p>
+          </Link>
         </section>
       </main>
       <SiteFooter locale={locale} />

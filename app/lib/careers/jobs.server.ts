@@ -1,12 +1,32 @@
-// Job-posting seed scaffold (RIN-470 → RIN-474 / RIN-469).
-//
-// Sub-5 (RIN-474) fills JOBS with up to 20 entries. Sub-1 declares the
-// shape so the route loader, sitemap loader, and JobPosting schema
-// validator can compile against the type today.
+// Job-posting seed (RIN-474 / RIN-469).
 //
 // JobPosting is Google for Jobs eligible — every required Schema.org field
 // is required here too, which is why this type is stricter than the other
-// scaffolds.
+// careers scaffolds.
+//
+// ## Seeding policy
+//
+// Tedros emits a real Google for Jobs feature only for *real, current*
+// openings. Posting synthesized or stale jobs would (a) mislead users
+// who click expecting an active opening and (b) risk Google deindexing
+// the entire site for low-quality structured data.
+//
+// JOBS therefore stays empty in the repo until the owner has explicit
+// permission to publish a specific posting from a specific employer
+// (per `open_questions.md` Q3 / RIN-325 outreach). When permission
+// arrives, append entries below using the shape declared by
+// `JobPostingEntry`. The route layer + JSON-LD generator handle any
+// number of entries (including zero) without code changes.
+//
+// Routes behave as follows:
+//   - /:lang/careers/jobs        → renders an empty-state landing while
+//                                   JOBS.length === 0; renders cards once
+//                                   active jobs exist.
+//   - /:lang/careers/jobs/:slug  → renders a JobPosting JSON-LD page for
+//                                   active jobs; returns 410 Gone when a
+//                                   job is past `validThrough` (Google
+//                                   recommendation — distinguishes from
+//                                   404 so the indexer drops it cleanly).
 
 import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
@@ -46,9 +66,11 @@ export interface JobPostingEntry {
 }
 
 /**
- * 20 jobs will be seeded by RIN-474 (Sub-5 — Wave 4). 8 public-sector
- * postings ship without owner outreach; 12 partner-org postings depend on
- * RIN-325 outreach approval — see `open_questions.md` Q3.
+ * Active job postings. Append entries here once owner outreach has
+ * cleared a specific posting for publication (see seeding-policy
+ * comment at the top of this file). The Google for Jobs guarantee is
+ * "real openings only" — keeping this list empty until then is the
+ * safer default.
  */
 export const JOBS: JobPostingEntry[] = [];
 

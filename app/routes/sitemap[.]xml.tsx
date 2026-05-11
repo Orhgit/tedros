@@ -1,4 +1,9 @@
+import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
+import { FAQS } from "~/lib/careers/faqs.server";
+import { activeJobs } from "~/lib/careers/jobs.server";
+import { relevantCities as careerRelevantCities } from "~/lib/careers/relevance";
+import { STORIES } from "~/lib/careers/stories.server";
 import { CITIES, CITY_PATH_PREFIX } from "~/lib/cities/registry";
 import { PRIORITY_RIGHTS } from "~/lib/db/seeds/rights";
 import { getEnv } from "~/lib/env.server";
@@ -115,6 +120,33 @@ ${xDefaultFor(path)}
     // Sub-4 (RIN-473) will add ~408 city × track cells under /careers/$track/$city.
     "/careers",
     ...CAREER_TRACKS.map((t) => `/careers/${t.slug}`),
+    // RIN-472 — Careers Hub Wave 2: 15 bootcamps + affirmative-action explainer.
+    "/careers/affirmative-action",
+    ...BOOTCAMPS.map((b) => `/careers/programs/${b.slug}`),
+    // RIN-473 — Careers Hub Wave 3: track × city programmatic cells.
+    // Filter via the careers relevance helper so we only ship pairs we
+    // believe have substance (~136 pairs vs the 380 raw cartesian).
+    ...(() => {
+      const out: string[] = [];
+      for (const track of CAREER_TRACKS) {
+        for (const city of careerRelevantCities(track.slug, CITIES)) {
+          out.push(`/careers/${track.slug}/${city.slug}`);
+        }
+      }
+      return out;
+    })(),
+    // RIN-474 — Careers Hub Wave 4: job board landing + active jobs.
+    // Past-validThrough postings are excluded so Google never sees a 410
+    // listed in the sitemap (it would still drop them, but cleaner to
+    // omit them at sitemap-generation time).
+    "/careers/jobs",
+    ...activeJobs().map((j) => `/careers/jobs/${j.slug}`),
+    // RIN-475 — Careers Hub Wave 5: statistics + FAQs + success stories.
+    "/careers/statistics",
+    "/careers/faq",
+    ...FAQS.map((f) => `/careers/faq/${f.slug}`),
+    "/careers/stories",
+    ...STORIES.map((s) => `/careers/stories/${s.slug}`),
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

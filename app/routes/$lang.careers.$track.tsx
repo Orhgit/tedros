@@ -9,15 +9,17 @@ import type { Route } from "./+types/$lang.careers.$track";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
+import { findBootcamp } from "~/lib/careers/bootcamps.server";
 import {
   CAREER_TRACK_TO_TAG,
   glyphForCareerTrack,
   isCareerTrack,
 } from "~/lib/careers/categories";
 import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
-import { trackPath } from "~/lib/careers/links";
+import { bootcampPath, storyPath, trackCityPath, trackPath } from "~/lib/careers/links";
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
+import { storiesForTrack } from "~/lib/careers/stories.server";
 import { CITIES } from "~/lib/cities/registry";
 import { getGlossaryEntry } from "~/lib/db/queries/glossary.server";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
@@ -74,6 +76,29 @@ export async function loader({ params }: Route.LoaderArgs) {
     .slice(0, 8)
     .map((c) => ({ slug: c.slug, name: c.names[locale] ?? c.names.he }));
 
+  // Resolve recommended bootcamp slugs into full entries (Sub-3 / RIN-472).
+  // The seed pins these slugs to BOOTCAMPS via tests/careers-links.test.ts,
+  // so the filter below is defensive — non-empty in the happy path.
+  const recommendedBootcamps = entry.recommendedBootcamps
+    .map((slug) => findBootcamp(slug))
+    .filter((b): b is NonNullable<typeof b> => b !== null)
+    .map((b) => ({
+      slug: b.slug,
+      name: b.name[locale] ?? b.name.he,
+      summary: b.shortDescription[locale] ?? b.shortDescription.he,
+      programType: b.programType,
+    }));
+
+  // Success stories that belong to this track (Sub-6 / RIN-475).
+  const trackStories = storiesForTrack(entry.slug)
+    .slice(0, 3)
+    .map((s) => ({
+      slug: s.slug,
+      nickname: s.nickname[locale] ?? s.nickname.he,
+      currentRole: s.currentRole[locale] ?? s.currentRole.he,
+      summary: s.summary[locale] ?? s.summary.he,
+    }));
+
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}${trackPath(entry.slug)}`;
 
@@ -85,6 +110,8 @@ export async function loader({ params }: Route.LoaderArgs) {
     relatedOrgs,
     relatedTerms,
     topCities,
+    recommendedBootcamps,
+    trackStories,
     shareUrl,
     publicUrl: PUBLIC_URL,
   };
@@ -122,6 +149,8 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
     relatedOrgs,
     relatedTerms,
     topCities,
+    recommendedBootcamps,
+    trackStories,
     shareUrl,
   } = loaderData;
   const tag = CAREER_TRACK_TO_TAG[entry.slug];
@@ -199,25 +228,45 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
           </section>
         )}
 
-        {/* Bootcamps placeholder (Sub-3 fills) ---------------------------- */}
-        {entry.recommendedBootcamps.length > 0 && (
+        {/* Bootcamps (Sub-3 — RIN-472) ----------------------------------- */}
+        {recommendedBootcamps.length > 0 && (
           <section className="mt-10">
             <h2 className="font-display text-xl font-semibold text-earth-900">
               {t(locale, "careers_track_bootcamps_heading")}
             </h2>
-            <p className="mt-2 text-sm text-ink-600">
-              {t(locale, "careers_coming_soon")}
-            </p>
             <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {entry.recommendedBootcamps.map((slug) => (
-                <li
-                  key={slug}
-                  className="rounded-lg border border-dashed border-earth-200 bg-earth-50/40 p-4 text-sm"
-                >
-                  <span className="block font-medium text-earth-700">{slug}</span>
+              {recommendedBootcamps.map((b) => (
+                <li key={b.slug}>
+                  <Link
+                    to={`/${locale}${bootcampPath(b.slug)}`}
+                    className="block rounded-lg border border-earth-200 bg-card p-4 text-sm transition hover:border-earth-400 hover:shadow-sm"
+                  >
+                    <span className="block font-medium text-earth-900">{b.name}</span>
+                    <span className="mt-1 block text-ink-600">{b.summary}</span>
+                    <span className="mt-2 inline-block text-xs text-earth-700">
+                      {t(locale, `careers_program_type_${b.programType.toLowerCase()}`)}
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ul>
+          </section>
+        )}
+
+        {/* Affirmative-action link for the public-sector track ----------- */}
+        {entry.slug === "public-sector" && (
+          <section className="mt-10">
+            <Link
+              to={`/${locale}/careers/affirmative-action`}
+              className="block rounded-lg border border-accent-red/30 bg-accent-red/5 p-4 text-sm transition hover:border-accent-red/50"
+            >
+              <span className="block font-medium text-earth-900">
+                {t(locale, "careers_affirmative_action_title")}
+              </span>
+              <span className="mt-1 block text-ink-600">
+                {t(locale, "careers_affirmative_action_subtitle")}
+              </span>
+            </Link>
           </section>
         )}
 
@@ -243,7 +292,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
           </section>
         )}
 
-        {/* Top cities (Sub-4 placeholder — links to /cities/$slug) -------- */}
+        {/* Top cities (RIN-473 — links to /careers/$track/$city cells) ---- */}
         {topCities.length > 0 && (
           <section className="mt-10">
             <h2 className="font-display text-xl font-semibold text-earth-900">
@@ -253,7 +302,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
               {topCities.map((city) => (
                 <li key={city.slug}>
                   <Link
-                    to={`/${locale}/cities/${city.slug}`}
+                    to={`/${locale}${trackCityPath(entry.slug, city.slug)}`}
                     className="inline-flex items-center rounded-full border border-earth-200 bg-card px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-50"
                   >
                     {city.name}
@@ -302,13 +351,30 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
           </section>
         )}
 
-        {/* Stories placeholder (Sub-6 fills) ------------------------------ */}
-        <section className="mt-10">
-          <h2 className="font-display text-xl font-semibold text-earth-900">
-            {t(locale, "careers_track_stories_heading")}
-          </h2>
-          <p className="mt-2 text-sm text-ink-600">{t(locale, "careers_coming_soon")}</p>
-        </section>
+        {/* Success stories (Sub-6 — RIN-475) ----------------------------- */}
+        {trackStories.length > 0 && (
+          <section className="mt-10">
+            <h2 className="font-display text-xl font-semibold text-earth-900">
+              {t(locale, "careers_track_stories_heading")}
+            </h2>
+            <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+              {trackStories.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    to={`/${locale}${storyPath(s.slug)}`}
+                    className="block rounded-lg border border-earth-200 bg-card p-4 text-sm transition hover:border-earth-400 hover:shadow-sm"
+                  >
+                    <span className="block font-medium text-earth-900">{s.nickname}</span>
+                    <span className="mt-1 block text-xs text-ink-600">
+                      {s.currentRole}
+                    </span>
+                    <span className="mt-2 block text-xs text-ink-700">{s.summary}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* Back to hub --------------------------------------------------- */}
         <div className="mt-12 border-t border-earth-200 pt-6">
