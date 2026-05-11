@@ -1,4 +1,5 @@
 import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
+import { ALL_HEALTH_CONDITIONS } from "~/lib/health/categories";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
 import { FAQS } from "~/lib/careers/faqs.server";
 import { activeJobs } from "~/lib/careers/jobs.server";
@@ -172,6 +173,11 @@ ${xDefaultFor(path)}
     "/news",
     ...ARTICLES.map((a) => `/news/${a.slug}`),
     ...ALL_NEWS_TAGS.map((tg) => `/news/tag/${tg}`),
+    // RIN-653/654/655 — Health Hub Wave 1: pillar + conditions + mental-health.
+    "/health",
+    "/health/conditions",
+    ...ALL_HEALTH_CONDITIONS.map((c) => `/health/conditions/${c}`),
+    "/health/mental-health",
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
