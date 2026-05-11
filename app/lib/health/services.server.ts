@@ -33,11 +33,11 @@ export const HEALTH_SERVICES: HealthServiceEntry[] = [
     slug: "tene-briut",
     name: {
       he: "טנא בריאות — קול לבריאות",
-      en: "Tene Briut — \"Kol LaBriut\" Hotline",
-      am: "ጤና ብርሃን — \"ቆል ላብሪኡት\" የስልክ መስመር",
+      en: 'Tene Briut — "Kol LaBriut" Hotline',
+      am: 'ጤና ብርሃን — "ቆል ላብሪኡት" የስልክ መስመር',
     },
     description: {
-      he: 'קו תרגום רפואי טלפוני באמהרית, טיגרינית ועברית. נוסד ב-2007, מעניק שירותי תרגום בזמן אמת לביקורי רופא, ליווי בבתי חולים, ימי בריאות קהילתיים, שידורי רדיו בנושאי בריאות, ותיווך תרבותי. לפחות 30 מרפאות שותפות ברחבי הארץ. השירות חינמי לאוכלוסייה.',
+      he: "קו תרגום רפואי טלפוני באמהרית, טיגרינית ועברית. נוסד ב-2007, מעניק שירותי תרגום בזמן אמת לביקורי רופא, ליווי בבתי חולים, ימי בריאות קהילתיים, שידורי רדיו בנושאי בריאות, ותיווך תרבותי. לפחות 30 מרפאות שותפות ברחבי הארץ. השירות חינמי לאוכלוסייה.",
       en: "Medical phone-translation hotline in Amharic, Tigrinya, and Hebrew. Founded in 2007, providing real-time interpretation for doctor visits, hospital accompaniment, community health days, health-focused radio broadcasts, and cultural mediation. At least 30 partner clinics nationwide. Service is free of charge.",
       am: "በአማርኛ፣ ትግርኛ እና ዕብራይስጥ ሕክምናዊ የስልክ ትርጉም አገልግሎት። በ2007 የተቋቋመ፣ ለዶክተር ጉብኝቶች፣ ሆስፒታል ምትክ፣ የማህበረሰብ የጤና ቀናት፣ ስለ ጤና ሬዲዮ ስርጭቶች እና ባህላዊ ሽምግልና ትርጉም ይሰጣል። ቢያንስ 30 አጋር ክሊኒኮች አሉ። አገልግሎቱ ነጻ ነው።",
     },
@@ -74,7 +74,7 @@ export const HEALTH_SERVICES: HealthServiceEntry[] = [
   {
     slug: "natal",
     name: {
-      he: "נטל\"י — חוסן ישראלי",
+      he: 'נטל"י — חוסן ישראלי',
       en: "NATAL — Israeli Trauma & Resiliency Center",
       am: "ናታል — ከጦርነት ቀውስ የማገገሚያ ማዕከል",
     },
@@ -98,7 +98,7 @@ export const HEALTH_SERVICES: HealthServiceEntry[] = [
   {
     slug: "eran-1201",
     name: {
-      he: "ער\"ן 1201 — קו חירום נפשי",
+      he: 'ער"ן 1201 — קו חירום נפשי',
       en: "ERAN 1201 — Emotional First Aid Hotline",
       am: "ኢራን 1201 — የስነ-ልቡና ድንገተኛ ዕርዳታ",
     },

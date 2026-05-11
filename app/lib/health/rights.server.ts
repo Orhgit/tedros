@@ -45,7 +45,7 @@ If refused: approach the medical officer-in-charge and request written documenta
 ፍቃዱ ቢ거ፍ፣ ሐኪሙ ሃላፊ ጋር ቅሬታዎን ያቅርቡ። ከዚያ ለጤና ሚኒስቴር የህዝብ ቅሬታ ኮሚሽነር (5400*) ወይም በሚኒስቴሩ ድረ-ገጽ ቅሬታ ማቅረብ ይችላሉ።`,
     },
     legalBasis: {
-      he: "חוק זכויות החולה, תשנ\"ו-1996, סעיף 3",
+      he: 'חוק זכויות החולה, תשנ"ו-1996, סעיף 3',
       en: "Patient Rights Act 1996, section 3",
       am: "የታካሚ መብቶች ህግ 1996፣ አንቀጽ 3",
     },
@@ -109,7 +109,7 @@ What can be done with the results? Carriers are invited to an enhanced surveilla
 ከውጤቶቹ ምን ማድረግ ይቻላል? ሚውቴሽን ያላቸው ሴቶች ጥብቅ ክትትል ፕሮቶኮልን ይጋበዛሉ — ብዙ ጊዜ ማምኖሞግራፊ እና MRI፣ እና ቀዶ-ጥገናዊ መከላከያ። ሁሉም የዘረ-መል መረጃ ሙሉ ሚስጢራዊ ነው — የቢሕናዎ ድርጅቶች እና ቀጣሪዎች ሊጠቀሙበት አይፈቀድም።`,
     },
     legalBasis: {
-      he: "סל שירותי הבריאות, עדכון ספטמבר 2025; חוק גנטיקה (בדיקות ומחקר גנטי ויעוץ גנטי), תשס\"א-2000",
+      he: 'סל שירותי הבריאות, עדכון ספטמבר 2025; חוק גנטיקה (בדיקות ומחקר גנטי ויעוץ גנטי), תשס"א-2000',
       en: "Health Basket Update September 2025; Genetics Act (Genetic Examination, Research and Counselling) 2000",
       am: "የጤና ቅርጫት ዝማኔ ሴፕቴምበር 2025፤ የጀነቲክ ህግ 2000",
     },
@@ -142,7 +142,7 @@ Medical privacy: HIV-status information is protected under the Patient Rights Ac
 ምርምሩ አዎንታዊ ሆኖ ከተገኘ፣ ሕክምና ምክር እና ሪፈራል ይሰጣል — ወዲያውኑ ለሌሎች የማሳወቅ ግዴታ ሳይኖር። ሕክምና ሚስጢር፡ HIV ሁኔታ የሚያሳይ መረጃ ከቀጣሪ፣ ቢሕናዎ ድርጅት፣ ሠራዊት ወይም ሦስተኛ ወገን — ያለ ታካሚ ፈቃድ ሊተላለፍ አይፈቀድም።`,
     },
     legalBasis: {
-      he: "חוק זכויות החולה, תשנ\"ו-1996; הנחיות משרד הבריאות בנושא HIV/AIDS; חוק העונשין, תשל\"ז-1977",
+      he: 'חוק זכויות החולה, תשנ"ו-1996; הנחיות משרד הבריאות בנושא HIV/AIDS; חוק העונשין, תשל"ז-1977',
       en: "Patient Rights Act 1996; Ministry of Health HIV/AIDS Guidelines; Penal Code 1977",
       am: "የታካሚ መብቶች ህግ 1996፤ የጤና ሚኒስቴር HIV/AIDS መመሪያዎች፤ የወንጀለኛ ሕግ 1977",
     },
@@ -175,7 +175,7 @@ For the Ethiopian community: psychiatric diagnosis must account for cultural con
 ግዳጅ ሆስፒታልነት ትዕዛዝ በወረዳ ሥነ-ልቡናዊ ሐኪም ብቻ ሊሰጥ ይችላል። የታካሚ መብቶች: (1) ለምን ታሰሩ ማወቅ; (2) ህጋዊ ውክልና ማግኘት; (3) ትዕዛዙን በ72 ሰዓት ውስጥ ወደ አውራጃ ፍርድ ቤት ማሳደግ; (4) ሕክምና ከቢሕናዎ ሚስጢሩን ያለ ፈቃዱ ሳያውቁ ሕክምና ሳይሰጠው ለሦስት ወገናት ሳያተለፍ; (5) ከቤተሰብ እና ጠበቃ ጋር ግንኙነት ያደርጋሉ።`,
     },
     legalBasis: {
-      he: "חוק טיפול בחולי נפש, תשנ\"א-1991; תקנות טיפול בחולי נפש",
+      he: 'חוק טיפול בחולי נפש, תשנ"א-1991; תקנות טיפול בחולי נפש',
       en: "Mental Health Treatment Act 1991; Mental Health Treatment Regulations",
       am: "የአእምሮ ሕክምና ህግ 1991፤ የአእምሮ ሕክምና ደንቦች",
     },
@@ -220,7 +220,7 @@ Note: these tests are free but require you to actively approach your HMO. Do not
 ምርምሮቹ ነጻ ናቸው ነገር ግን ወደ ጤና ድርጅቱ እርስዎ ሊሄዱ ይገባዎታል። ሐኪሙ ዕርምጃ ይወስዳሉ ብለው አይጠብቁ — ጠይቁ።`,
     },
     legalBasis: {
-      he: "תקנות ביטוח בריאות ממלכתי (שירותי בריאות בסל), תשנ\"ה-1994 ועדכוניהם; הנחיות משרד הבריאות לסקר ממוגרפי",
+      he: 'תקנות ביטוח בריאות ממלכתי (שירותי בריאות בסל), תשנ"ה-1994 ועדכוניהם; הנחיות משרד הבריאות לסקר ממוגרפי',
       en: "National Health Insurance Regulations (Health Basket Services) 1994 and amendments; Ministry of Health mammography screening guidelines",
       am: "ብሔራዊ የጤና ቢሕና ደንቦች (የጤና ቅርጫት አገልግሎቶች) 1994 እና ማሻሻያዎቹ፤ የጤና ሚኒስቴር የማምኖሞግራፊ ምርምር መመሪያዎች",
     },
@@ -257,7 +257,7 @@ For community members: if you received a diagnosis that feels wrong, or if you d
 ወጪ: ጤና ድርጅቶቹ አንዳንድ ምክሮችን ይሸፍናሉ። ውጪ ምክሮቹ ከፊል ወጪ ሊጠይቁ ይችላሉ። ለከፍተኛ-አደጋ ሁኔታዎች — ቅድሚያ ውስጣዊ ምክር ይጠይቁ።`,
     },
     legalBasis: {
-      he: "חוק זכויות החולה, תשנ\"ו-1996, סעיפים 18–19",
+      he: 'חוק זכויות החולה, תשנ"ו-1996, סעיפים 18–19',
       en: "Patient Rights Act 1996, sections 18–19",
       am: "የታካሚ መብቶች ህግ 1996፣ አንቀጽ 18–19",
     },
