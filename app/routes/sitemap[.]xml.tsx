@@ -181,6 +181,9 @@ ${xDefaultFor(path)}
     // RIN-656/657 — Health Hub Wave 2: services directory + health rights.
     "/health/services",
     "/health/rights",
+    // RIN-658/659 — Health Hub Wave 3: traditional medicine + nutrition.
+    "/health/traditional-medicine",
+    "/health/nutrition",
   ];
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

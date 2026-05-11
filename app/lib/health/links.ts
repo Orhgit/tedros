@@ -26,3 +26,13 @@ export function servicesPath(): string {
 export function rightsPath(): string {
   return "/health/rights";
 }
+
+// RIN-658 — Traditional Medicine Hub
+export function traditionalMedicinePath(): string {
+  return "/health/traditional-medicine";
+}
+
+// RIN-659 — Nutrition Hub
+export function nutritionPath(): string {
+  return "/health/nutrition";
+}

@@ -625,5 +625,17 @@
   "health_rights_subtitle": "7 זכויות בריאות קריטיות לקהילת יוצאי אתיופיה — עם ביסוס משפטי ומידע מעשי.",
   "health_rights_legal_basis_label": "בסיס משפטי",
   "health_rights_last_reviewed_label": "נסקר לאחרונה",
-  "health_rights_back_to_rights_cta": "לכל זכויות הקהילה"
+  "health_rights_back_to_rights_cta": "לכל זכויות הקהילה",
+  "health_traditional_medicine_title": "רפואה מסורתית — קהילת יוצאי אתיופיה",
+  "health_traditional_medicine_subtitle": "5 פרקטיקות מסורתיות אתיופיות — הקשר, בטיחות, ושילוב נכון עם הרפואה המודרנית.",
+  "health_traditional_medicine_safety_complementary": "משלים",
+  "health_traditional_medicine_safety_consult": "להתייעץ עם רופא",
+  "health_traditional_medicine_safety_caution": "זהירות",
+  "health_traditional_medicine_cultural_note": "אנחנו מכבדים את הפרקטיקות הרפואיות המסורתיות של הקהילה האתיופית ואת הידע הנצבר לאורך דורות. המידע כאן מיועד לאפשר שיחה פתוחה עם הרופא שלכם — לא לשפוט, ולא לאסור. שילוב נכון בין גישות מסורתיות ורפואה מודרנית יכול להניב תוצאות טובות יותר.",
+  "health_nutrition_title": "תזונה ובריאות — קהילת יוצאי אתיופיה",
+  "health_nutrition_subtitle": "מעבר תזונתי, סיכוני סוכרת, ויתרונות המזון המסורתי — מידע מעשי לקהילה.",
+  "health_nutrition_category_preserve": "שמרו",
+  "health_nutrition_category_limit": "הגבילו",
+  "health_nutrition_category_transition": "מעבר הדרגתי",
+  "health_nutrition_stats_link_label": "ראו נתוני בריאות הקהילה"
 }

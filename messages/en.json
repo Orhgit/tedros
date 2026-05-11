@@ -625,5 +625,17 @@
   "health_rights_subtitle": "7 critical health rights for the Ethiopian-Israeli community — with legal citations and practical guidance.",
   "health_rights_legal_basis_label": "Legal basis",
   "health_rights_last_reviewed_label": "Last reviewed",
-  "health_rights_back_to_rights_cta": "All community rights"
+  "health_rights_back_to_rights_cta": "All community rights",
+  "health_traditional_medicine_title": "Traditional Medicine — Ethiopian-Israeli Community",
+  "health_traditional_medicine_subtitle": "5 Ethiopian traditional practices — context, safety, and how to integrate them with modern medicine.",
+  "health_traditional_medicine_safety_complementary": "Complementary",
+  "health_traditional_medicine_safety_consult": "Consult doctor",
+  "health_traditional_medicine_safety_caution": "Caution",
+  "health_traditional_medicine_cultural_note": "We respect the traditional medical practices of the Ethiopian community and the accumulated wisdom of generations. The information here is intended to enable open dialogue with your doctor — not to judge or prohibit. A thoughtful combination of traditional approaches and modern medicine can yield better outcomes.",
+  "health_nutrition_title": "Nutrition and Health — Ethiopian-Israeli Community",
+  "health_nutrition_subtitle": "Dietary transition, diabetes risks, and the benefits of traditional foods — practical information for the community.",
+  "health_nutrition_category_preserve": "Preserve",
+  "health_nutrition_category_limit": "Limit",
+  "health_nutrition_category_transition": "Gradual transition",
+  "health_nutrition_stats_link_label": "View community health statistics"
 }

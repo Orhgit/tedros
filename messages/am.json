@@ -625,5 +625,17 @@
   "health_rights_subtitle": "ለኢትዮጵያ-እስራኤላዊ ማህበረሰብ 7 ወሳኝ የጤና መብቶች — ህጋዊ ዋቢዎች እና ተግባራዊ መመሪያ።",
   "health_rights_legal_basis_label": "ህጋዊ መሠረት",
   "health_rights_last_reviewed_label": "መጨረሻ የተገመገመበት",
-  "health_rights_back_to_rights_cta": "ሁሉም የማህበረሰብ መብቶች"
+  "health_rights_back_to_rights_cta": "ሁሉም የማህበረሰብ መብቶች",
+  "health_traditional_medicine_title": "ባህላዊ ሕክምና — ኢትዮጵያ-እስራኤላዊ ማህበረሰብ",
+  "health_traditional_medicine_subtitle": "5 የኢትዮጵያ ባህላዊ ሕክምናዎች — ሁኔታ፣ ደህንነት፣ እና ዘመናዊ ሕክምና ጋር ማዋሃድ።",
+  "health_traditional_medicine_safety_complementary": "ተጨማሪ",
+  "health_traditional_medicine_safety_consult": "ሐኪምዎን ያናግሩ",
+  "health_traditional_medicine_safety_caution": "ጥንቃቄ",
+  "health_traditional_medicine_cultural_note": "የኢትዮጵያ ማህበረሰብ ባህላዊ የሕክምና ልምዶችን እናከብራለን። ይህ መረጃ ሐኪምዎ ጋር ክፍት ውይይት ለማድረግ የሚረዳ ነው — ለመፍረድ ወይም ለመከልከል አይደለም።",
+  "health_nutrition_title": "ምግብ እና ጤና — ኢትዮጵያ-እስራኤላዊ ማህበረሰብ",
+  "health_nutrition_subtitle": "የምግብ ሽግግር፣ የስኳር ህመም አደጋ፣ እና ባህላዊ ምግቦቹ ጥቅሞች — ለማህበረሰቡ ተግባራዊ መረጃ።",
+  "health_nutrition_category_preserve": "ይጠብቁ",
+  "health_nutrition_category_limit": "ይቀንሱ",
+  "health_nutrition_category_transition": "ቀስ ቀስ ሽግግር",
+  "health_nutrition_stats_link_label": "የማህበረሰብ ጤና ቅጣቶችን ይመልከቱ"
 }
