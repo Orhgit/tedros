@@ -169,6 +169,14 @@ export default function BootcampDetail({ loaderData }: Route.ComponentProps) {
         <header
           className={`relative mb-8 overflow-hidden rounded-2xl border bg-card p-6 sm:p-10 ${tone.border}`}
         >
+          <img
+            src="https://images.unsplash.com/photo-1691820776176-fcfbd25096c9?fm=webp&q=70&w=1200&fit=crop"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.15]"
+            loading="lazy"
+            decoding="async"
+          />
           <span
             aria-hidden="true"
             className={`absolute inset-s-0 inset-e-0 top-0 h-1.5 ${tone.accentBg}`}
