@@ -1,7 +1,9 @@
 import { Form, Link, useNavigation } from "react-router";
 import type { Route } from "./+types/$lang._index";
 import { SiteFooter } from "~/components/sections/site-footer";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { submitSubscriber } from "~/lib/subscribers/submit.server";
 import { subscribeSchema } from "~/lib/validation/subscriber";
@@ -45,7 +47,8 @@ const PILLAR_IMAGES: Record<string, string> = {
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
-  return { locale };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, publicUrl: PUBLIC_URL };
 }
 
 export async function action({ request, params }: Route.ActionArgs) {
@@ -69,15 +72,34 @@ export async function action({ request, params }: Route.ActionArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "";
   const title = t(locale, "homepage_title");
   const description = t(locale, "homepage_subtitle");
   return [
     { title },
     { name: "description", content: description },
+    ...hreflangMeta(publicUrl, locale, ""),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    { property: "og:url", content: `${publicUrl}/${locale}` },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": publicUrl,
+        url: publicUrl,
+        name: "Tedros",
+        description,
+        inLanguage: locale,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${publicUrl}/${locale}/rights?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+    },
   ];
 };
 

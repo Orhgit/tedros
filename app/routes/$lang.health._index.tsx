@@ -14,6 +14,7 @@ import { conditionsPath, conditionPath, mentalHealthPath } from "~/lib/health/li
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/health/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -45,11 +46,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
-    { tagName: "link", rel: "canonical", href: url },
+    ...hreflangMeta(publicUrl, locale, "/health"),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    { property: "og:url", content: url },
     {
       "script:ld+json": webPageJsonLd(
         { publicUrl, locale },

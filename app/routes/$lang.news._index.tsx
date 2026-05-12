@@ -12,6 +12,7 @@ import { articlesByPublishedDesc } from "~/lib/news/articles.server";
 import { breadcrumbJsonLd } from "~/lib/news/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -57,11 +58,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
-    { tagName: "link", rel: "canonical", href: url },
+    ...hreflangMeta(publicUrl, locale, "/news"),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    { property: "og:url", content: url },
     ...(itemList ? [{ "script:ld+json": itemList }] : []),
     { "script:ld+json": breadcrumb },
   ];

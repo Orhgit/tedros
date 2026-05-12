@@ -8,25 +8,31 @@ import type { Route } from "./+types/$lang.rights._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { listRights } from "~/lib/db/queries/rights.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const rights = listRights(locale);
-  return { locale, rights };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, rights, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "";
   return [
     { title: t(locale, "rights_landing_title") },
     { name: "description", content: t(locale, "rights_landing_subtitle") },
+    ...hreflangMeta(publicUrl, locale, "/rights"),
     { property: "og:title", content: t(locale, "rights_landing_title") },
     { property: "og:description", content: t(locale, "rights_landing_subtitle") },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    { property: "og:url", content: `${publicUrl}/${locale}/rights` },
   ];
 };
 

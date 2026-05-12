@@ -16,6 +16,7 @@ import { bootcampPath, faqPath, trackPath } from "~/lib/careers/links";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 
@@ -109,10 +110,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: subtitle },
+    ...hreflangMeta(publicUrl, locale, "/careers"),
     { property: "og:title", content: title },
     { property: "og:description", content: subtitle },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    { property: "og:url", content: `${publicUrl}/${locale}/careers` },
     {
       "script:ld+json": {
         "@context": "https://schema.org",

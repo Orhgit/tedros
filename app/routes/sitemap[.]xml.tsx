@@ -47,10 +47,11 @@ export function loader() {
     return `      <xhtml:link rel="alternate" hreflang="x-default" href="${PUBLIC_URL}/he${path}"/>`;
   }
 
-  function urlEntry(path: string): string {
+  function urlEntry(path: string, lastmod?: string): string {
+    const lastmodLine = lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : "";
     return `  <url>
     <loc>${PUBLIC_URL}/${"$LOC_PLACEHOLDER"}${path}</loc>
-${altLinksFor(path)}
+${lastmodLine}${altLinksFor(path)}
 ${xDefaultFor(path)}
   </url>`;
   }
@@ -186,8 +187,15 @@ ${xDefaultFor(path)}
     "/health/nutrition",
   ];
 
+  const lastmodByPath = new Map<string, string>([
+    ...ARTICLES.map((a) => [`/news/${a.slug}`, a.updatedAt] as [string, string]),
+    ...activeJobs().map((j) => [`/careers/jobs/${j.slug}`, j.postedAt.slice(0, 10)] as [string, string]),
+  ]);
+
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>
-    PATHS.map((path) => urlEntry(path).replace("$LOC_PLACEHOLDER", loc)),
+    PATHS.map((path) =>
+      urlEntry(path, lastmodByPath.get(path)).replace("$LOC_PLACEHOLDER", loc),
+    ),
   ).join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

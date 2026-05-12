@@ -12,6 +12,7 @@ export async function loader({ params, request }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => [
   { title: t(data?.locale ?? DEFAULT_LOCALE, "dashboard_title") },
+  { name: "robots", content: "noindex" },
 ];
 
 export default function Dashboard({ loaderData }: Route.ComponentProps) {

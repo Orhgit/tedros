@@ -8,24 +8,30 @@ import type { Route } from "./+types/$lang.education._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { listScholarships } from "~/lib/db/queries/scholarships.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const scholarships = listScholarships(locale);
-  return { locale, scholarshipCount: scholarships.length };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, scholarshipCount: scholarships.length, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "";
   return [
     { title: `${t(locale, "education_pillar_title")} — Tedros` },
     { name: "description", content: t(locale, "education_pillar_subtitle") },
+    ...hreflangMeta(publicUrl, locale, "/education"),
     { property: "og:title", content: t(locale, "education_pillar_title") },
     { property: "og:description", content: t(locale, "education_pillar_subtitle") },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    { property: "og:url", content: `${publicUrl}/${locale}/education` },
   ];
 };
 
