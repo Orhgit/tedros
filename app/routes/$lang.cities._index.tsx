@@ -1,5 +1,7 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/$lang.cities._index";
+import { SiteFooter } from "~/components/sections/site-footer";
+import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
@@ -77,52 +79,66 @@ export default function CitiesIndexPage({ loaderData }: Route.ComponentProps) {
   const { locale } = loaderData;
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-12">
-      <header>
-        <Link
-          to={`/${locale}`}
-          className="text-sm text-gray-500 underline-offset-4 hover:underline dark:text-gray-400"
-        >
-          ← {t(locale, "homepage_title")}
-        </Link>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-          {t(locale, "cities_index_title")}
-        </h1>
-        <p className="mt-2 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          {t(locale, "cities_index_lead")}
-        </p>
-      </header>
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="flag-stripe h-1.5" aria-hidden="true" />
+      <SiteHeader locale={locale} currentPath={`/${locale}${CITY_PATH_PREFIX}`} />
+      <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
+        <header className="relative mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/5 px-6 py-8 sm:px-10 sm:py-12">
+          <img
+            src="https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=1200&fit=crop"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.15]"
+            loading="lazy"
+            decoding="async"
+          />
+          <div aria-hidden="true" className="absolute -inset-e-12 -top-12 size-40 rounded-full bg-accent-yellow/15 blur-3xl" />
+          <div aria-hidden="true" className="absolute -inset-s-16 -bottom-16 size-56 rounded-full bg-accent-green/10 blur-3xl" />
+          <p className="relative text-sm font-medium text-earth-700">
+            <Link to={`/${locale}`} className="hover:underline">
+              {t(locale, "homepage_title")}
+            </Link>
+          </p>
+          <h1 className="relative mt-2 font-display text-4xl font-bold tracking-tight text-earth-900 sm:text-5xl">
+            {t(locale, "cities_index_title")}
+          </h1>
+          <p className="relative mt-4 max-w-2xl text-lg leading-relaxed text-ink-700">
+            {t(locale, "cities_index_lead")}
+          </p>
+        </header>
 
-      <main className="mt-10 grid gap-10">
-        {REGIONS.map((region) => {
-          const cities = CITIES.filter((c) => c.region === region);
-          if (cities.length === 0) return null;
-          return (
-            <section key={region} aria-labelledby={`region-${region}`}>
-              <h2
-                id={`region-${region}`}
-                className="text-xl font-semibold text-gray-900 dark:text-gray-100"
-              >
-                {t(locale, `cities_region_${region}`)}
-              </h2>
-              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-                {cities.map((c) => (
-                  <li key={c.slug}>
-                    <Link
-                      to={cityPath(locale, c.slug)}
-                      className="block rounded-lg border border-gray-200 bg-white p-4 transition hover:border-gray-400 hover:shadow-sm dark:border-gray-800 dark:bg-gray-950 dark:hover:border-gray-600"
-                    >
-                      <span className="text-base font-medium text-gray-900 dark:text-gray-100">
-                        {cityName(c, locale)}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          );
-        })}
+        <div className="grid gap-10">
+          {REGIONS.map((region) => {
+            const cities = CITIES.filter((c) => c.region === region);
+            if (cities.length === 0) return null;
+            return (
+              <section key={region} aria-labelledby={`region-${region}`}>
+                <h2
+                  id={`region-${region}`}
+                  className="mb-4 font-display text-xl font-semibold text-earth-900"
+                >
+                  {t(locale, `cities_region_${region}`)}
+                </h2>
+                <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {cities.map((c) => (
+                    <li key={c.slug}>
+                      <Link
+                        to={cityPath(locale, c.slug)}
+                        className="block rounded-lg border border-border bg-card p-4 shadow-xs transition-all hover:-translate-y-0.5 hover:border-accent-green/60 hover:shadow-md"
+                      >
+                        <span className="text-base font-medium text-earth-900">
+                          {cityName(c, locale)}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            );
+          })}
+        </div>
       </main>
+      <SiteFooter locale={locale} />
     </div>
   );
 }
