@@ -246,6 +246,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                 heritage: `/${locale}/heritage/events`,
                 news: `/${locale}/news`,
                 family: `/${locale}/family`,
+                voice: `/${locale}/voice`,
               };
               const href = liveHref[p] ?? null;
               const isLive = href !== null;

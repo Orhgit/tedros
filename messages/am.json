@@ -659,5 +659,22 @@
 
   "family_women_title": "የሴቶች ማጠናከሪያ — ፕሮግራሞች፣ ስኮላርሺፖች፣ እና ሕፃን ቤቶች",
   "family_women_subtitle": "ማጠናከሪያ ፕሮግራሞች፣ ለእናቶች ስኮላርሺፖች፣ የሕፃን ዕቅፍ ድጋፍ፣ እና ማህበረሰብ ማዕከሎች።",
-  "family_women_body": "ለኢትዮጵያ-እስራኤላዊ ሴቶች ዒላማ ስኮላርሺፖች፣ የሕፃን ዕቅፍ ድጋፍ፣ እና ማጠናከሪያ ፕሮግራሞች።"
+  "family_women_body": "ለኢትዮጵያ-እስራኤላዊ ሴቶች ዒላማ ስኮላርሺፖች፣ የሕፃን ዕቅፍ ድጋፍ፣ እና ማጠናከሪያ ፕሮግራሞች።",
+  "voice_landing_title": "ድምጽ እና እርምጃ",
+  "voice_landing_subtitle": "የዘረኝነት እና የፖሊስ ምግባር ሪፖርት ማድረግ — ወደ ቴቤካ እና ተገቢ ባለሥልጣኖች ደህንነቱ የተጠበቀ ማስተላለፍ።",
+  "voice_breadcrumb_home": "ዋናው ገጽ",
+  "voice_breadcrumb_voice": "ድምጽ እና እርምጃ",
+  "voice_racism_title": "ዘረኝነት ሪፖርት ማድረግ — ተግባራዊ መምሪያ",
+  "voice_racism_subtitle": "የዘረኝነት ክስተት እንዴት መዘገብ እና ቅሬታ ማቅረብ — ቴቤካ፣ ACRI ወይም ፖሊስ ዘንድ።",
+  "voice_racism_body": "ሪፖርት ደረጃዎች፣ ሕጋዊ ጥበቃ እና ድጋፍ ድርጅቶች ላይ ዝርዝር መምሪያ።",
+  "voice_police_title": "ከፖሊስ ጋር ባለ ግንኙነት ያሉ መብቶች እና ቅሬታ ማቅረብ",
+  "voice_police_subtitle": "ማቆሚያ፣ ፍተሻ ወይም እስር ጊዜ ያሉ መብቶች — እና ለውስጥ ምርምር ክፍል ቅሬታ እንዴት ማቅረብ።",
+  "voice_police_body": "ማቆሚያ፣ ፍተሻ እና እስር ጊዜ ያሉ መብቶች ዝርዝር ማብራሪያ።",
+  "voice_community_title": "ማህበረሰባዊ እርምጃ እና ፖለቲካዊ ተሳትፎ",
+  "voice_community_subtitle": "ማህበረሰብ ማደራጀት፣ ምርጫ መብቶች፣ የአካባቢ ምክር ቤት ውክልና እና ተሟጋቾ ድርጅቶች።",
+  "voice_community_body": "ለማህበረሰባዊ እርምጃ እና ፖለቲካዊ ተሳትፎ መምሪያ።",
+  "voice_report_steps_heading": "የሪፖርት ደረጃዎች",
+  "voice_resources_heading": "ድጋፍ ምንጮች",
+  "voice_back_to_hub": "ወደ ድምጽ እና እርምጃ ተመለስ",
+  "voice_last_reviewed_label": "የተገመገመው"
 }
