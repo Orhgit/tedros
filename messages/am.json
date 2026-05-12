@@ -640,5 +640,24 @@
   "health_nutrition_category_preserve": "ይጠብቁ",
   "health_nutrition_category_limit": "ይቀንሱ",
   "health_nutrition_category_transition": "ቀስ ቀስ ሽግግር",
-  "health_nutrition_stats_link_label": "የማህበረሰብ ጤና ቅጣቶችን ይመልከቱ"
+  "health_nutrition_stats_link_label": "የማህበረሰብ ጤና ቅጣቶችን ይመልከቱ",
+
+  "family_landing_title": "ቤተሰብ እና ድጋፍ",
+  "family_landing_subtitle": "ለከባድ ጊዜያት እርዳታ፣ የሴቶች ማጠናከሪያ፣ እና የአዛውንት መብቶች — በሦስቱም ቋንቋዎች።",
+  "family_breadcrumb_home": "ዋና ገጽ",
+  "family_breadcrumb_family": "ቤተሰብ እና ድጋፍ",
+  "family_emergency_numbers_heading": "የአደጋ ስልኮች",
+  "family_resources_heading": "ድርጅቶች እና ሀብቶች",
+
+  "family_domestic_violence_title": "የቤት ውስጥ ጥቃት — እርዳታ እና ድጋፍ",
+  "family_domestic_violence_subtitle": "ለኢትዮጵያ ሴቶች በእስራኤል — ድንገተኛ ስልኮች፣ መጠለያዎች፣ እና ህጋዊ መብቶች።",
+  "family_domestic_violence_body": "አደጋ ውስጥ ከሆኑ — 100 (ፖሊስ) ወይም 1-800-22-0000 (WIZO) ይደውሉ። ሁሉም ምንባቦች ሚስጥራዊ ናቸው።",
+
+  "family_elderly_title": "የአዛውንት ደህንነት — መብቶች እና ድጋፍ",
+  "family_elderly_subtitle": "የጡረታ አበል፣ የረዥም ጊዜ ሰርቪስ ዋስትና፣ የቀን ማዕከሎች፣ እና ለ75+ ትራንስፖርት።",
+  "family_elderly_body": "75+ ዓመት ሰዎች ነፃ ህዝባዊ ትራንስፖርት ማግኘት ይችላሉ። የጡረታ አበል ቢቱዓ ሌዑሚ ጥያቄ ይፈልጋል።",
+
+  "family_women_title": "የሴቶች ማጠናከሪያ — ፕሮግራሞች፣ ስኮላርሺፖች፣ እና ሕፃን ቤቶች",
+  "family_women_subtitle": "ማጠናከሪያ ፕሮግራሞች፣ ለእናቶች ስኮላርሺፖች፣ የሕፃን ዕቅፍ ድጋፍ፣ እና ማህበረሰብ ማዕከሎች።",
+  "family_women_body": "ለኢትዮጵያ-እስራኤላዊ ሴቶች ዒላማ ስኮላርሺፖች፣ የሕፃን ዕቅፍ ድጋፍ፣ እና ማጠናከሪያ ፕሮግራሞች።"
 }

@@ -640,5 +640,24 @@
   "health_nutrition_category_preserve": "שמרו",
   "health_nutrition_category_limit": "הגבילו",
   "health_nutrition_category_transition": "מעבר הדרגתי",
-  "health_nutrition_stats_link_label": "ראו נתוני בריאות הקהילה"
+  "health_nutrition_stats_link_label": "ראו נתוני בריאות הקהילה",
+
+  "family_landing_title": "משפחה ותמיכה",
+  "family_landing_subtitle": "כתובות לרגעים קשים, העצמת נשים, וזכויות גיל הזהב — בכל שלוש השפות.",
+  "family_breadcrumb_home": "בית",
+  "family_breadcrumb_family": "משפחה ותמיכה",
+  "family_emergency_numbers_heading": "מספרי חירום",
+  "family_resources_heading": "ארגונים ומשאבים",
+
+  "family_domestic_violence_title": "אלימות במשפחה — עזרה ותמיכה",
+  "family_domestic_violence_subtitle": "כתובות לשעת חירום, מקלטים, וזכויות משפטיות לנשים מקהילת יוצאי אתיופיה בישראל.",
+  "family_domestic_violence_body": "אם את בסכנה — חייגי 100 (משטרה) או 1-800-22-0000 (WIZO). כל הפניות חסויות.",
+
+  "family_elderly_title": "גיל הזהב — זכויות ותמיכה",
+  "family_elderly_subtitle": "קצבת זקנה, ביטוח סיעודי, מרכזי יום, ותחבורה מיוחדת לבני 75+.",
+  "family_elderly_body": "בני 75+ זכאים לנסיעה חינם בתחבורה ציבורית. קצבת זקנה מחייבת הגשת תביעה לביטוח לאומי.",
+
+  "family_women_title": "העצמת נשים — תוכניות, מלגות, ומעונות",
+  "family_women_subtitle": "תוכניות העצמה, מלגות לאמהות, סובסידיות לשמרטפות (שעוני ילדים), ומרכזים קהילתיים.",
+  "family_women_body": "מלגות ייעודיות, סובסידיות מעון ותוכניות העצמה לנשים מקהילת יוצאי אתיופיה."
 }
