@@ -1,8 +1,8 @@
 name: tedros
 
 # Production stack — postgres + redis + tedros (Node SSR).
-# Internal-only: app port is bound to 127.0.0.1 and reached via
-# Cloudflare Tunnel (see RIN-463). Postgres + Redis are not exposed.
+# App port bound to 127.0.0.1:3001 (3000 taken by merkaz-haneshasim on same host).
+# Reached via Nginx reverse proxy on 135.181.148.75.
 
 services:
   postgres:
@@ -46,7 +46,7 @@ services:
         condition: service_healthy
     env_file: .env.production
     ports:
-      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3001:3000"
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/healthz"]
       interval: 30s

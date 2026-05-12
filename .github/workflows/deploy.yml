@@ -34,7 +34,7 @@ jobs:
             docker compose -f docker-compose.prod.yml up -d tedros
             docker image prune -f
             for i in 1 2 3 4 5 6 7 8 9 10; do
-              if curl -fsS http://127.0.0.1:3000/healthz >/dev/null; then
+              if curl -fsS http://127.0.0.1:3001/healthz >/dev/null; then
                 echo "healthz ok (attempt $i)"
                 exit 0
               fi
