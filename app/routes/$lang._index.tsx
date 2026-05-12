@@ -21,28 +21,38 @@ const PILLARS = [
   "voice",
 ] as const;
 
-// Unsplash/Pexels CDN — no API key needed, free licence.
-// Images are purely decorative; alt="" + aria-hidden on all of them.
+// All images by Ethiopian photographers on Unsplash (free licence, no API key).
+// Subjects are members of the Ethiopian community photographed in Addis Ababa.
 const PILLAR_IMAGES: Record<string, string> = {
+  // Two Habesha women smiling — Gift Habeshaw, Addis Ababa
   rights:
-    "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?fm=webp&q=70&w=600&fit=crop",
+    "https://images.unsplash.com/photo-1662894312546-667d7698a1f7?fm=webp&q=70&w=600&fit=crop",
+  // Addis Ababa cityscape — Unsplash, Ethiopia
   realestate:
-    "https://images.unsplash.com/photo-1587474260584-136574528ed5?fm=webp&q=70&w=600&fit=crop",
+    "https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=600&fit=crop",
+  // Professional Ethiopian woman, black leather jacket — Samuel Tsegaye, Addis Ababa
   professionals:
-    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1691820776176-fcfbd25096c9?fm=webp&q=70&w=600&fit=crop",
+  // Women in traditional Habesha attire, community gathering — Gift Habeshaw
   employment:
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1662894310962-d62a3f7f3334?fm=webp&q=70&w=600&fit=crop",
+  // Smiling Ethiopian child in traditional clothing — Eyoel Kahssay
   education:
-    "https://images.pexels.com/photos/8613070/pexels-photo-8613070.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1764145177622-8317fbfe1877?fm=webp&q=70&w=600&fit=crop",
+  // Ethiopian woman in orange shirt — Gift Habeshaw, Addis Ababa
   health:
-    "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1625255178547-44af3d0718c3?fm=webp&q=70&w=600&fit=crop",
+  // Woman in traditional Ashenda dress — Eyoel Kahssay, Ethiopia
   family:
-    "https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1598122666068-59b41e0a3193?fm=webp&q=70&w=600&fit=crop",
+  // Timkat baptism celebration — Ethiopian Orthodox tradition
   heritage:
-    "https://images.unsplash.com/photo-1589006432-44aa2b7e4d66?fm=webp&q=70&w=600&fit=crop",
-  news: "https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1674115904513-b77d8f84642a?fm=webp&q=70&w=600&fit=crop",
+  // Community gathering in Addis Ababa
+  news: "https://images.unsplash.com/photo-1642505368560-f8b8efd2e722?fm=webp&q=70&w=600&fit=crop",
+  // Youth dancing at Ashenda holiday — Eyoel Kahssay
   voice:
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?fm=webp&q=70&w=600&fit=crop",
+    "https://images.unsplash.com/photo-1764145144753-922ae256714b?fm=webp&q=70&w=600&fit=crop",
 };
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -119,7 +129,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
       >
         {/* Background photo — Ethiopian-Israeli community celebration */}
         <img
-          src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?fm=webp&q=80&w=1600&fit=crop"
+          src="https://images.unsplash.com/photo-1764145162259-04eaf2b3d86a?fm=webp&q=80&w=1600&fit=crop"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
