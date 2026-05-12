@@ -19,6 +19,30 @@ const PILLARS = [
   "voice",
 ] as const;
 
+// Unsplash/Pexels CDN — no API key needed, free licence.
+// Images are purely decorative; alt="" + aria-hidden on all of them.
+const PILLAR_IMAGES: Record<string, string> = {
+  rights:
+    "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?fm=webp&q=70&w=600&fit=crop",
+  realestate:
+    "https://images.unsplash.com/photo-1587474260584-136574528ed5?fm=webp&q=70&w=600&fit=crop",
+  professionals:
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+  employment:
+    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+  education:
+    "https://images.pexels.com/photos/8613070/pexels-photo-8613070.jpeg?auto=compress&cs=tinysrgb&w=600",
+  health:
+    "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600",
+  family:
+    "https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=600",
+  heritage:
+    "https://images.unsplash.com/photo-1589006432-44aa2b7e4d66?fm=webp&q=70&w=600&fit=crop",
+  news: "https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=600",
+  voice:
+    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?fm=webp&q=70&w=600&fit=crop",
+};
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   return { locale };
@@ -66,70 +90,152 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Cultural flag-stripe at top — Ethiopian heritage cue, used sparingly. */}
-      <div className="flag-stripe h-1.5" aria-hidden="true" />
+      {/* ── HERO ── full-bleed, community background image */}
+      <section
+        className="relative isolate flex min-h-[85vh] flex-col overflow-hidden"
+        aria-label={t(locale, "homepage_subtitle")}
+      >
+        {/* Background photo — Ethiopian-Israeli community celebration */}
+        <img
+          src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?fm=webp&q=80&w=1600&fit=crop"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+        />
 
-      <div className="container-default flex min-h-[calc(100vh-0.375rem)] flex-col py-10">
-        <header className="flex items-center justify-between">
-          <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900">
+        {/* Tibeb diamond pattern — subtle geometric overlay */}
+        <svg
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10 h-full w-full select-none"
+          style={{ opacity: 0.07 }}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="tibeb-diamond"
+              x="0"
+              y="0"
+              width="48"
+              height="48"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M24 3L45 24L24 45L3 24Z"
+                fill="none"
+                stroke="#FCDD09"
+                strokeWidth="1"
+              />
+              <path
+                d="M24 11L37 24L24 37L11 24Z"
+                fill="none"
+                stroke="#078930"
+                strokeWidth="0.6"
+              />
+              <circle cx="24" cy="24" r="2" fill="#DA121A" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#tibeb-diamond)" />
+        </svg>
+
+        {/* Gradient scrim — dark on the text side, fades to transparent */}
+        <div
+          className="absolute inset-0 -z-10"
+          aria-hidden="true"
+          style={{
+            background:
+              "linear-gradient(to left, oklch(0.15 0.04 35 / 0.9) 0%, oklch(0.15 0.04 35 / 0.65) 50%, oklch(0.15 0.04 35 / 0.25) 100%)",
+          }}
+        />
+
+        {/* Ethiopian flag stripe at the very top */}
+        <div className="flag-stripe h-1.5 w-full" aria-hidden="true" />
+
+        {/* Header — site title + language switcher */}
+        <div className="container-default flex items-center justify-between pt-5">
+          <span className="font-display text-2xl font-bold tracking-tight text-white drop-shadow">
             {t(locale, "homepage_title")}
-          </h1>
-          <nav
-            className="flex gap-1 text-sm"
-            aria-label={t(locale, "lang_switcher_label")}
-          >
-            <Link
-              to="/he"
-              hrefLang="he"
-              className="rounded-md px-3 py-1.5 text-ink-700 hover:bg-earth-100 hover:text-earth-900"
-            >
-              {t(locale, "lang_he")}
-            </Link>
-            <Link
-              to="/en"
-              hrefLang="en"
-              className="rounded-md px-3 py-1.5 text-ink-700 hover:bg-earth-100 hover:text-earth-900"
-            >
-              {t(locale, "lang_en")}
-            </Link>
-            <Link
-              to="/am"
-              hrefLang="am"
-              className="rounded-md px-3 py-1.5 text-ink-700 hover:bg-earth-100 hover:text-earth-900"
-            >
-              {t(locale, "lang_am")}
-            </Link>
+          </span>
+          <nav className="flex gap-1 text-sm" aria-label={t(locale, "lang_switcher_label")}>
+            {(["he", "en", "am"] as const).map((lang) => (
+              <Link
+                key={lang}
+                to={`/${lang}`}
+                hrefLang={lang}
+                className="rounded-md px-3 py-1.5 text-white/80 hover:bg-white/15 hover:text-white"
+              >
+                {t(locale, `lang_${lang}`)}
+              </Link>
+            ))}
           </nav>
-        </header>
+        </div>
 
-        <main className="mt-12 flex-1">
-          {/* Hero */}
-          <section>
-            <p className="font-display text-2xl leading-relaxed font-semibold text-earth-900 sm:text-3xl">
-              {t(locale, "homepage_subtitle")}
-            </p>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-700">
-              {t(locale, "homepage_intro")}
-            </p>
-          </section>
+        {/* Hero content */}
+        <div className="container-default flex flex-1 flex-col justify-end pb-16 pt-10">
+          <h1 className="max-w-2xl font-display text-4xl font-bold leading-tight tracking-tight text-white drop-shadow sm:text-5xl lg:text-6xl">
+            {t(locale, "homepage_subtitle")}
+          </h1>
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/85 drop-shadow-sm">
+            {t(locale, "homepage_intro")}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              to={`/${locale}/rights`}
+              className="rounded-lg bg-accent-green px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+            >
+              {t(locale, "hero_cta_rights")}
+            </Link>
+            <a
+              href="#subscribe"
+              className="rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/10"
+            >
+              {t(locale, "hero_cta_community")}
+            </a>
+          </div>
+        </div>
+      </section>
 
-          {/* Pillars grid */}
-          <section className="mt-16">
-            <h2 className="font-display text-xl font-semibold tracking-tight text-earth-900">
-              {t(locale, "pillars_heading")}
-            </h2>
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {PILLARS.map((p) => {
-                const liveHref: Record<string, string> = {
-                  realestate: `/${locale}/cities`,
-                  rights: `/${locale}/rights`,
-                  professionals: `/${locale}/professionals`,
-                  education: `/${locale}/education`,
-                };
-                const href = liveHref[p] ?? null;
-                const isLive = href !== null;
-                const tile = (
-                  <>
+      {/* ── PILLARS GRID ── */}
+      <main className="container-default py-14">
+        <section>
+          <h2 className="font-display text-xl font-semibold tracking-tight text-earth-900">
+            {t(locale, "pillars_heading")}
+          </h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PILLARS.map((p) => {
+              const liveHref: Record<string, string> = {
+                realestate: `/${locale}/cities`,
+                rights: `/${locale}/rights`,
+                professionals: `/${locale}/professionals`,
+                education: `/${locale}/education`,
+              };
+              const href = liveHref[p] ?? null;
+              const isLive = href !== null;
+              const imgSrc = PILLAR_IMAGES[p];
+
+              const tile = (
+                <>
+                  {/* Card image */}
+                  {imgSrc && (
+                    <div className="relative aspect-[16/9] overflow-hidden bg-earth-100">
+                      <img
+                        src={imgSrc}
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      {/* Thin flag-stripe accent at bottom of image */}
+                      <div
+                        className="flag-stripe absolute bottom-0 inset-x-0 h-[3px] opacity-70"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  )}
+                  {/* Card body */}
+                  <div className="flex flex-col gap-2 p-5">
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="font-display text-base font-semibold text-earth-900">
                         {t(locale, `pillar_${p}_title`)}
@@ -144,118 +250,123 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                         </span>
                       )}
                     </div>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-600">
+                    <p className="text-sm leading-relaxed text-ink-600">
                       {t(locale, `pillar_${p}_summary`)}
                     </p>
-                  </>
-                );
-                const baseClass =
-                  "block rounded-lg border border-border bg-card p-5 shadow-xs transition-all";
-                const hoverClass = isLive
-                  ? "hover:-translate-y-0.5 hover:border-accent-green/60 hover:shadow-sm"
-                  : "hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-sm";
-                return href ? (
-                  <Link key={p} to={href} className={`${baseClass} ${hoverClass}`}>
-                    {tile}
-                  </Link>
-                ) : (
-                  <article key={p} className={`${baseClass} ${hoverClass}`}>
-                    {tile}
-                  </article>
-                );
-              })}
-            </div>
-          </section>
+                  </div>
+                </>
+              );
 
-          {/* Supporting hubs that don't map to a single pillar — Glossary,
-              Org profiles, Programs, Comparisons. Shipped during Wave 1+3
-              of the SEO surface expansion (RIN-417). Smaller tile treatment
-              to mark them as cross-cutting resources rather than primary
-              pillars. */}
-          <section className="mt-12">
-            <h3 className="font-display text-base font-semibold tracking-tight text-earth-700">
-              {t(locale, "pillars_more_heading")}
-            </h3>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {[
-                { slug: "glossary", glyph: "📖", titleKey: "glossary_landing_title" },
-                { slug: "orgs", glyph: "🏛️", titleKey: "orgs_landing_title" },
-                { slug: "programs", glyph: "🎓", titleKey: "programs_landing_title" },
-                { slug: "compare", glyph: "⚖️", titleKey: "comparisons_landing_title" },
-              ].map((h) => (
-                <Link
-                  key={h.slug}
-                  to={`/${locale}/${h.slug}`}
-                  className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-3 text-sm shadow-xs transition-all hover:-translate-y-0.5 hover:border-accent-green/60 hover:shadow-sm"
-                >
-                  <span aria-hidden="true" className="text-lg leading-none">
-                    {h.glyph}
-                  </span>
-                  <span className="font-medium text-earth-900">
-                    {t(locale, h.titleKey)}
-                  </span>
+              const baseClass =
+                "group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-xs transition-all";
+              const hoverClass = isLive
+                ? "hover:-translate-y-0.5 hover:border-accent-green/60 hover:shadow-md"
+                : "hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-sm";
+
+              return href ? (
+                <Link key={p} to={href} className={`${baseClass} ${hoverClass}`}>
+                  {tile}
                 </Link>
-              ))}
-            </div>
-          </section>
+              ) : (
+                <article key={p} className={`${baseClass} ${hoverClass}`}>
+                  {tile}
+                </article>
+              );
+            })}
+          </div>
+        </section>
 
-          {/* Subscribe */}
-          <section className="mt-20 rounded-2xl border border-border bg-surface p-8 sm:p-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight text-earth-900">
-              {t(locale, "subscribe_heading")}
-            </h2>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-600">
-              {t(locale, "subscribe_subtitle")}
-            </p>
+        {/* Tibeb divider */}
+        <div className="tibeb-divider my-12" aria-hidden="true" />
 
-            {submitted ? (
-              <p
-                role="status"
-                className="mt-5 rounded-md bg-accent-green/10 px-4 py-3 text-sm text-accent-green ring-1 ring-accent-green/20"
+        {/* Supporting hubs */}
+        <section>
+          <h3 className="font-display text-base font-semibold tracking-tight text-earth-700">
+            {t(locale, "pillars_more_heading")}
+          </h3>
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {[
+              { slug: "glossary", glyph: "📖", titleKey: "glossary_landing_title" },
+              { slug: "orgs", glyph: "🏛️", titleKey: "orgs_landing_title" },
+              { slug: "programs", glyph: "🎓", titleKey: "programs_landing_title" },
+              { slug: "compare", glyph: "⚖️", titleKey: "comparisons_landing_title" },
+            ].map((h) => (
+              <Link
+                key={h.slug}
+                to={`/${locale}/${h.slug}`}
+                className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-3 text-sm shadow-xs transition-all hover:-translate-y-0.5 hover:border-accent-green/60 hover:shadow-sm"
               >
-                {t(locale, "subscribe_success")}
-              </p>
-            ) : (
-              <Form
-                method="post"
-                action="?index"
-                className="mt-5 flex max-w-md flex-col gap-3 sm:flex-row"
-              >
-                <label htmlFor="email" className="sr-only">
-                  {t(locale, "subscribe_email_label")}
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  required
-                  placeholder={t(locale, "subscribe_email_placeholder")}
-                  className="flex-1 rounded-md border border-input bg-card px-4 py-2.5 text-base text-foreground placeholder:text-muted-foreground focus:border-ring focus:ring-2 focus:ring-ring/20 focus:outline-none"
-                  aria-invalid={errorKey ? true : undefined}
-                  aria-describedby={errorKey ? "email-error" : undefined}
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="rounded-md bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground shadow-sm transition hover:bg-earth-700 disabled:opacity-60"
-                >
-                  {t(locale, "subscribe_button")}
-                </button>
-              </Form>
-            )}
+                <span aria-hidden="true" className="text-lg leading-none">
+                  {h.glyph}
+                </span>
+                <span className="font-medium text-earth-900">
+                  {t(locale, h.titleKey)}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
-            {errorKey && (
-              <p id="email-error" role="alert" className="mt-3 text-sm text-destructive">
-                {t(locale, errorKey)}
-              </p>
-            )}
+        {/* Subscribe */}
+        <section
+          id="subscribe"
+          className="mt-20 rounded-2xl border border-border bg-surface p-8 sm:p-10"
+        >
+          <h2 className="font-display text-2xl font-semibold tracking-tight text-earth-900">
+            {t(locale, "subscribe_heading")}
+          </h2>
+          <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-600">
+            {t(locale, "subscribe_subtitle")}
+          </p>
 
-            <p className="mt-4 text-xs text-muted-foreground">
-              {t(locale, "subscribe_privacy_note")}
+          {submitted ? (
+            <p
+              role="status"
+              className="mt-5 rounded-md bg-accent-green/10 px-4 py-3 text-sm text-accent-green ring-1 ring-accent-green/20"
+            >
+              {t(locale, "subscribe_success")}
             </p>
-          </section>
-        </main>
-      </div>
+          ) : (
+            <Form
+              method="post"
+              action="?index"
+              className="mt-5 flex max-w-md flex-col gap-3 sm:flex-row"
+            >
+              <label htmlFor="email" className="sr-only">
+                {t(locale, "subscribe_email_label")}
+              </label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                placeholder={t(locale, "subscribe_email_placeholder")}
+                className="flex-1 rounded-md border border-input bg-card px-4 py-2.5 text-base text-foreground placeholder:text-muted-foreground focus:border-ring focus:ring-2 focus:ring-ring/20 focus:outline-none"
+                aria-invalid={errorKey ? true : undefined}
+                aria-describedby={errorKey ? "email-error" : undefined}
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="rounded-md bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground shadow-sm transition hover:bg-earth-700 disabled:opacity-60"
+              >
+                {t(locale, "subscribe_button")}
+              </button>
+            </Form>
+          )}
+
+          {errorKey && (
+            <p id="email-error" role="alert" className="mt-3 text-sm text-destructive">
+              {t(locale, errorKey)}
+            </p>
+          )}
+
+          <p className="mt-4 text-xs text-muted-foreground">
+            {t(locale, "subscribe_privacy_note")}
+          </p>
+        </section>
+      </main>
+
       <SiteFooter locale={locale} />
     </div>
   );

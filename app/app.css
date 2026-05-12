@@ -209,6 +209,20 @@
     );
   }
 
+  /* Tibeb repeating border — green/yellow/red diamond rhythm. */
+  .tibeb-divider {
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--color-accent-green) 0px 10px,
+      var(--color-accent-yellow) 10px 20px,
+      var(--color-accent-red) 20px 30px,
+      var(--color-earth-200) 30px 40px
+    );
+    opacity: 0.55;
+    border-radius: 2px;
+  }
+
   /* Container helpers (Tailwind v4 doesn't ship `container` by default). */
   .container-prose {
     max-width: 65ch;
