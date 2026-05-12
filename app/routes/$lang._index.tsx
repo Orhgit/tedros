@@ -129,7 +129,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
       >
         {/* Background photo — Ethiopian-Israeli community celebration */}
         <img
-          src="https://images.unsplash.com/photo-1764145162259-04eaf2b3d86a?fm=webp&q=80&w=1600&fit=crop"
+          src="https://images.unsplash.com/photo-1545917958-c5dce6c24633?fm=webp&q=80&w=1600&fit=crop"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
