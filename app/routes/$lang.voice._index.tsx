@@ -107,7 +107,7 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/90 via-earth-50/60 to-transparent"
             aria-hidden="true"
           />
           <div
@@ -131,7 +131,7 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
         <section aria-labelledby="voice-topics-heading">
           <h2
             id="voice-topics-heading"
-            className="mb-6 font-display text-2xl font-semibold text-earth-900"
+            className="mb-6 font-display text-2xl font-semibold text-earth-900 sr-only"
           >
             {t(locale, "voice_landing_title")}
           </h2>
@@ -145,15 +145,15 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
                   <span aria-hidden="true" className="mb-4 block text-4xl leading-none">
                     {card.glyph}
                   </span>
-                  <h3 className="font-display text-lg font-semibold text-earth-900 group-hover:text-earth-700">
+                  <p className="font-display text-lg font-semibold text-earth-900 group-hover:text-earth-700">
                     {t(locale, card.titleKey)}
-                  </h3>
+                  </p>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-600">
                     {t(locale, card.subtitleKey)}
                   </p>
                   <p className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-earth-700">
-                    {locale === "he" ? "קראו עוד" : locale === "am" ? "ተጨማሪ ያንብቡ" : "Read more"}
-                    <span aria-hidden="true">←</span>
+                    {t(locale, "voice_card_read_more")}
+                    <span aria-hidden="true" className={locale === "en" ? "rotate-180 inline-block" : ""}>←</span>
                   </p>
                 </Link>
               </li>

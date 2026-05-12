@@ -51,7 +51,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
       : null;
 
   const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
-    { name: t(locale, "rights_breadcrumb_home"), path: "/" },
+    { name: t(locale, "news_breadcrumb_home"), path: "/" },
     { name: title, path: "/news" },
   ]);
 
@@ -95,7 +95,7 @@ export default function NewsLanding({ loaderData }: Route.ComponentProps) {
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
-              {t(locale, "rights_breadcrumb_home")}
+              {t(locale, "news_breadcrumb_home")}
             </Link>
           </p>
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-earth-900 sm:text-5xl">

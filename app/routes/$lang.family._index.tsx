@@ -142,9 +142,9 @@ export default function FamilyLanding({ loaderData }: Route.ComponentProps) {
                   className="group block h-full rounded-2xl border border-earth-200 bg-card p-6 transition hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-md"
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <h2 className="font-display text-base font-semibold text-earth-900 group-hover:text-earth-700">
+                    <p className="font-display text-base font-semibold text-earth-900 group-hover:text-earth-700">
                       {t(locale, card.titleKey)}
-                    </h2>
+                    </p>
                     <span aria-hidden="true" className="text-2xl leading-none">
                       {card.icon}
                     </span>
@@ -153,8 +153,8 @@ export default function FamilyLanding({ loaderData }: Route.ComponentProps) {
                     {t(locale, card.subtitleKey)}
                   </p>
                   <p className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-earth-700">
-                    {locale === "he" ? "למידע נוסף" : locale === "am" ? "ተጨማሪ" : "Learn more"}
-                    <span aria-hidden="true">←</span>
+                    {t(locale, "family_card_learn_more")}
+                    <span aria-hidden="true" className={locale === "en" ? "rotate-180 inline-block" : ""}>←</span>
                   </p>
                 </Link>
               </li>
