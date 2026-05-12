@@ -83,7 +83,15 @@ export default function NewsLanding({ loaderData }: Route.ComponentProps) {
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}/news`} />
       <main id="main-content" className="container-default mx-auto max-w-3xl py-10">
-        <header className="mb-8">
+        <header className="relative mb-8 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/5 px-6 py-8 sm:px-10 sm:py-12">
+          <img
+            src="https://images.unsplash.com/photo-1642505368560-f8b8efd2e722?fm=webp&q=70&w=1200&fit=crop"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.12]"
+            loading="lazy"
+            decoding="async"
+          />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "rights_breadcrumb_home")}

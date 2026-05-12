@@ -80,6 +80,14 @@ export default function HealthLanding({ loaderData }: Route.ComponentProps) {
 
         {/* Hero */}
         <header className="relative mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/10 px-6 py-8 sm:px-10 sm:py-12">
+          <img
+            src="https://images.unsplash.com/photo-1625255178547-44af3d0718c3?fm=webp&q=70&w=1200&fit=crop"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.12]"
+            loading="lazy"
+            decoding="async"
+          />
           <div
             aria-hidden="true"
             className="absolute -inset-e-12 -top-12 size-40 rounded-full bg-accent-green/15 blur-3xl"
