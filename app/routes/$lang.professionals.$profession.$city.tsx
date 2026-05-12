@@ -97,7 +97,7 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
           className={`relative mb-10 isolate overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
         >
           <img
-            src="https://images.unsplash.com/photo-1662894312546-667d7698a1f7?fm=webp&q=70&w=1200&fit=crop"
+            src="https://images.unsplash.com/photo-1666887360742-974c8fce8e6b?fm=webp&q=70&w=1200&fit=crop"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 -z-20 h-full w-full object-cover"
