@@ -97,7 +97,7 @@ export default function RightDetail({ loaderData }: Route.ComponentProps) {
             src="https://images.unsplash.com/photo-1662894312546-667d7698a1f7?fm=webp&q=70&w=1200&fit=crop"
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.15]"
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25"
             loading="lazy"
             decoding="async"
           />

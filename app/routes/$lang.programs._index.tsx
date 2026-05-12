@@ -61,7 +61,7 @@ export default function ProgramsLanding({ loaderData }: Route.ComponentProps) {
             src="https://images.unsplash.com/photo-1764145177622-8317fbfe1877?fm=webp&q=70&w=1200&fit=crop"
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.12]"
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25"
             loading="lazy"
             decoding="async"
           />
