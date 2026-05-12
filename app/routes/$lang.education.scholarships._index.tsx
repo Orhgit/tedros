@@ -58,7 +58,7 @@ export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}/education/scholarships`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
-        <header className="relative mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/5 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative mb-10 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
           <p className="relative text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "rights_breadcrumb_home")}

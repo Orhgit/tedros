@@ -112,16 +112,17 @@ export default function ScholarshipDetail({ loaderData }: Route.ComponentProps) 
       <SiteHeader locale={locale} currentPath={`/${locale}/education/scholarships`} />
       <article id="main-content" className="container-default mx-auto max-w-3xl py-10">
         <header
-          className={`relative mb-8 overflow-hidden rounded-2xl border bg-card p-6 sm:p-10 ${tone.border}`}
+          className={`relative mb-8 isolate overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
         >
           <img
             src="https://images.unsplash.com/photo-1764145177622-8317fbfe1877?fm=webp&q=70&w=1200&fit=crop"
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25"
+            className="absolute inset-0 -z-20 h-full w-full object-cover"
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"
             className={`absolute inset-s-0 inset-e-0 top-0 h-1.5 ${tone.accentBg}`}

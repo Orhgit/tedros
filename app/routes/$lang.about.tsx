@@ -116,7 +116,7 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
       <SiteHeader locale={locale} currentPath={`/${locale}/about`} />
       <main id="main-content" className="container-default mx-auto max-w-3xl py-10">
         {/* Hero */}
-        <header className="mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/5 px-6 py-10 sm:px-10 sm:py-14">
+        <header className="mb-10 overflow-hidden rounded-2xl border border-earth-200 px-6 py-10 sm:px-10 sm:py-14">
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {c.homeBreadcrumb}

@@ -94,15 +94,16 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
 
   return (
     <div className="mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-12">
-      <header className="relative mb-8 overflow-hidden rounded-2xl border border-earth-200 bg-card px-6 py-8 sm:px-10 sm:py-12">
+      <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
         <img
           src="https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=1200&fit=crop"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
           loading="lazy"
           decoding="async"
         />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
         <nav aria-label="Breadcrumb" className="text-sm text-gray-500 dark:text-gray-400">
           <ol className="flex flex-wrap items-center gap-2">
             <li>

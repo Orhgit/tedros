@@ -42,15 +42,16 @@ export default function EducationPillar({ loaderData }: Route.ComponentProps) {
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}/education`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
-        <header className="relative mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/5 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative mb-10 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
           <img
             src="https://images.unsplash.com/photo-1764145177622-8317fbfe1877?fm=webp&q=70&w=1200&fit=crop"
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25"
+            className="absolute inset-0 -z-20 h-full w-full object-cover"
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div
             aria-hidden="true"
             className="absolute -inset-e-12 -top-12 size-40 rounded-full bg-accent-green/15 blur-3xl"
