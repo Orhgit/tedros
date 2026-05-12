@@ -45,6 +45,9 @@ const envSchema = z.object({
   // Cloudflare Turnstile (optional) — omitting keys disables verification
   TURNSTILE_SITE_KEY: z.string().optional(),
   TURNSTILE_SECRET_KEY: z.string().optional(),
+
+  // Google Analytics 4 — set GA_MEASUREMENT_ID=G-XXXXXXXXXX in production
+  GA_MEASUREMENT_ID: z.string().regex(/^G-[A-Z0-9]+$/).optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;

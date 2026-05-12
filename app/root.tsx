@@ -15,6 +15,8 @@ import {
   type Locale,
 } from "./lib/i18n/config";
 import { readLocaleCookie } from "./lib/i18n/cookie.server";
+import { getEnv } from "./lib/env.server";
+import { AccessibilityWidget } from "./components/ui/accessibility-widget";
 import "./app.css";
 
 /**
@@ -34,12 +36,14 @@ export async function loader({ request }: Route.LoaderArgs) {
     segment === "he" || segment === "en" || segment === "am" ? segment : undefined;
   const cookieLocale = await readLocaleCookie(request);
   const locale: Locale = (fromUrl ?? cookieLocale ?? DEFAULT_LOCALE) as Locale;
-  return { locale };
+  const { GA_MEASUREMENT_ID } = getEnv();
+  return { locale, gaId: GA_MEASUREMENT_ID ?? null };
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const data = useLoaderData<typeof loader>() ?? { locale: DEFAULT_LOCALE as Locale };
+  const data = useLoaderData<typeof loader>() ?? { locale: DEFAULT_LOCALE as Locale, gaId: null };
   const locale = data.locale ?? DEFAULT_LOCALE;
+  const gaId = data.gaId ?? null;
   const dir = LOCALE_DIRECTION[locale];
   const htmlLang = LOCALE_HTML_LANG[locale];
 
@@ -50,9 +54,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
+        {gaId && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${gaId}');`,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="min-h-screen antialiased">
         {children}
+        <AccessibilityWidget locale={locale} />
         <ScrollRestoration />
         <Scripts />
       </body>
