@@ -241,6 +241,10 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                 rights: `/${locale}/rights`,
                 professionals: `/${locale}/professionals`,
                 education: `/${locale}/education`,
+                employment: `/${locale}/careers`,
+                health: `/${locale}/health`,
+                heritage: `/${locale}/heritage/events`,
+                news: `/${locale}/news`,
               };
               const href = liveHref[p] ?? null;
               const isLive = href !== null;
