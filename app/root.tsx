@@ -17,6 +17,7 @@ import {
 import { readLocaleCookie } from "./lib/i18n/cookie.server";
 import { getEnv } from "./lib/env.server";
 import { AccessibilityWidget } from "./components/ui/accessibility-widget";
+import { MulaChat } from "./components/mula-chat";
 import "./app.css";
 
 /**
@@ -67,6 +68,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="min-h-screen antialiased">
         {children}
+        <MulaChat />
         <AccessibilityWidget locale={locale} />
         <ScrollRestoration />
         <Scripts />

@@ -29,6 +29,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.95.2",
     "@auth/core": "^0.41.2",
     "@inlang/paraglide-js": "^1.11.8",
     "@radix-ui/react-slot": "^1.1.1",
