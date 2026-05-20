@@ -115,6 +115,7 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div
             className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
             aria-hidden="true"
@@ -125,14 +126,71 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
           <p className="mt-3 text-lg leading-relaxed text-ink-700">{subtitle}</p>
         </header>
 
-        {/* Know your rights callout */}
-        <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-5">
-          <p className="text-sm font-medium text-amber-900">
+        {/* Your rights at a glance */}
+        <section className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-5" aria-labelledby="rights-glance-heading">
+          <h2 id="rights-glance-heading" className="mb-3 font-display text-base font-semibold text-amber-900">
             {locale === "he"
-              ? "שמרו את המידע הזה — הכרת הזכויות שלכם היא ההגנה הטובה ביותר."
+              ? "הזכויות שלכם בעצירה — בקצרה"
               : locale === "am"
-                ? "ይህን መረጃ ያስቀምጡ — መብቶቾን ማወቅ ምርጡ ጥበቃ ነው።"
-                : "Keep this information — knowing your rights is the best defence."}
+                ? "ቆምቻ ወቅት መብቶችዎ"
+                : "Your rights during a stop — at a glance"}
+          </h2>
+          <ul className="space-y-1.5 text-sm text-amber-900">
+            {(locale === "he"
+              ? [
+                  "שאלו: \"האם אני עצור? האם אני חופשי ללכת?\" — השוטר חייב לענות.",
+                  "אין חובה להציג תעודת זהות אלא אם יש חשד סביר לעבירה.",
+                  "זכות לשתיקה — אל תחתמו על כלום בלי עורך דין.",
+                  "זכות לעורך דין לפני חקירה — ועל-ידי עורך דין מהקהילה.",
+                  "זכות לתרגום — אם אינכם דוברי עברית, המשטרה חייבת מתורגמן.",
+                  "תעדו הכל: שם שוטר, מספר תג, שעה ומיקום.",
+                ]
+              : locale === "am"
+                ? [
+                    "'ታሰርኩ? ሊሄድ እችላለሁ?' — ፖሊሱ ሊመልስ ይገደዳል።",
+                    "ምን ማድረግ እንዳለቦት ሳይፈቀድ ታሰሩ አይደሉም።",
+                    "ዝምታ መብት — ያለ ጠበቃ ምንም አትፈርሙ።",
+                    "ቃለ-ምርመራ በፊት ጠበቃ መብት አሎት።",
+                    "ትርጉም መብት — ዕብራይስጥ ካልተናገሩ ፖሊስ ተርጓሚ ሊያቀርብ ይገደዳል።",
+                  ]
+                : [
+                    "Ask: 'Am I under arrest? Am I free to go?' — the officer must answer directly.",
+                    "You are not required to present ID unless there is reasonable suspicion of an offence.",
+                    "Right to silence — do not sign anything without a lawyer.",
+                    "Right to a lawyer before interrogation.",
+                    "Right to interpretation — if you do not speak Hebrew, the police must provide an interpreter.",
+                    "Document everything: officer name, badge number, time and location.",
+                  ]
+            ).map((right, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span aria-hidden className="mt-0.5 font-bold text-amber-700">✓</span>
+                {right}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* TEBEKA callout */}
+        <div className="mb-8 rounded-xl border border-earth-300 bg-earth-50 p-5">
+          <p className="text-sm font-semibold text-earth-900">
+            {locale === "he"
+              ? "האם חווית אלימות שוטרים או עצירה על רקע גזעני? "
+              : locale === "am"
+                ? "ፖሊሳዊ ጥቃት ወይም ዘረኝነት አጋጠምዎ? "
+                : "Did you experience police violence or ethnic profiling? "}
+            <a
+              href="https://www.tebeka.org.il"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-earth-700"
+            >
+              TEBEKA
+            </a>
+            {locale === "he"
+              ? " מציעה ייעוץ משפטי חינם לקהילה האתיופית."
+              : locale === "am"
+                ? " ለኢትዮጵያ ማህበረሰብ ነጻ የሕግ ምክር ይሰጣሉ።"
+                : " offers free legal advice for the Ethiopian community."}
           </p>
         </div>
 

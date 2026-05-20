@@ -42,6 +42,7 @@ const RELEVANCE_BY_EVENT: Record<HeritageEventSlug, Relevance> = {
   // Ethiopian Orthodox church presence — limited to three cities today.
   genna: { kind: "list", cities: ["jerusalem", "haifa", "beer-sheva"] },
   "aliyah-day": { kind: "community-cities" },
+  "beta-israel": { kind: "community-cities" },
 };
 
 export function relevanceFor(event: HeritageEventSlug): Relevance {

@@ -1,8 +1,7 @@
 import { Link, isRouteErrorResponse, useRouteError } from "react-router";
 import type { Route } from "./+types/$lang.cities.$slug";
-import { getEnv } from "~/lib/env.server";
-import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
-import { t } from "~/lib/i18n/messages";
+import { CAREER_TRACKS } from "~/lib/careers/careers.server";
+import { isRelevant as isCareerRelevant } from "~/lib/careers/relevance";
 import {
   CITY_PATH_PREFIX,
   cityName,
@@ -11,6 +10,17 @@ import {
   findCityBySlug,
   type City,
 } from "~/lib/cities/registry";
+import { listRights } from "~/lib/db/queries/rights.server";
+import { getEnv } from "~/lib/env.server";
+import {
+  HERITAGE_EVENTS,
+  nextDate,
+} from "~/lib/heritage/events.server";
+import { isRelevant as isHeritageRelevant } from "~/lib/heritage/relevance";
+import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { t } from "~/lib/i18n/messages";
+import { glyphForTag } from "~/lib/rights/categories";
+import { isRelevant as isRightRelevant } from "~/lib/rights/relevance";
 
 const MORTGAGE_CALC_PATH = "/calculator/mortgage-ethiopian-immigrants";
 
@@ -22,7 +32,25 @@ export async function loader({ params }: Route.LoaderArgs) {
     throw new Response("City not found", { status: 404 });
   }
   const { PUBLIC_URL } = getEnv();
-  return { locale, city, publicUrl: PUBLIC_URL };
+
+  const cityRights = listRights(locale)
+    .filter((r) => isRightRelevant(r.slug, city.slug))
+    .slice(0, 8);
+
+  const cityTracks = CAREER_TRACKS
+    .filter((tr) => isCareerRelevant(tr.slug, city.slug))
+    .slice(0, 6)
+    .map((tr) => ({ slug: tr.slug, name: tr.name[locale] ?? tr.name.he }));
+
+  const cityHeritage = HERITAGE_EVENTS
+    .filter((e) => isHeritageRelevant(e.slug, city.slug))
+    .map((e) => ({
+      slug: e.slug,
+      name: e.name[locale] ?? e.name.he,
+      next: nextDate(e),
+    }));
+
+  return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -89,7 +117,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function CityPage({ loaderData }: Route.ComponentProps) {
-  const { locale, city } = loaderData;
+  const { locale, city, cityRights, cityTracks, cityHeritage } = loaderData;
   const name = cityName(city, locale);
 
   return (
@@ -103,6 +131,7 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
           loading="lazy"
           decoding="async"
         />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
         <nav aria-label="Breadcrumb" className="text-sm text-gray-500 dark:text-gray-400">
           <ol className="flex flex-wrap items-center gap-2">
@@ -133,6 +162,80 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
 
       <main className="mt-10 grid gap-10">
         <CityOverviewSection locale={locale} city={city} />
+        {city.communityStats && city.communityStats.length > 0 && (
+          <CommunityStatsSection locale={locale} city={city} />
+        )}
+
+        {(cityRights.length > 0 || cityTracks.length > 0 || cityHeritage.length > 0) && (
+          <section className="rounded-lg border border-earth-200 bg-white p-6">
+            <h2 className="text-xl font-semibold text-earth-900">
+              {t(locale, "city_section_overview_title", { name })}
+            </h2>
+
+            {cityRights.length > 0 && (
+              <div className="mt-4">
+                <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
+                  {t(locale, "rights_landing_title")}
+                </h3>
+                <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  {cityRights.map((r) => (
+                    <li key={r.slug}>
+                      <Link
+                        to={`/${locale}/rights/${r.slug}/${city.slug}`}
+                        className="flex items-center gap-2 rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 hover:border-earth-300 transition"
+                      >
+                        <span aria-hidden="true">{glyphForTag(r.tags[0] ?? "housing")}</span>
+                        {r.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {cityTracks.length > 0 && (
+              <div className="mt-5">
+                <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
+                  {t(locale, "careers_breadcrumb_careers")}
+                </h3>
+                <ul className="mt-2 flex flex-wrap gap-2">
+                  {cityTracks.map((tr) => (
+                    <li key={tr.slug}>
+                      <Link
+                        to={`/${locale}/careers/${tr.slug}/${city.slug}`}
+                        className="rounded-full border border-earth-200 bg-earth-50 px-3 py-1 text-sm text-ink-700 hover:border-earth-400 transition"
+                      >
+                        {tr.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {cityHeritage.length > 0 && (
+              <div className="mt-5">
+                <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
+                  {t(locale, "heritage_events_landing_title")}
+                </h3>
+                <ul className="mt-2 space-y-1">
+                  {cityHeritage.map((e) => (
+                    <li key={e.slug}>
+                      <Link
+                        to={`/${locale}/heritage/events/${e.slug}/${city.slug}`}
+                        className="flex items-center justify-between rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 hover:border-earth-300 transition"
+                      >
+                        <span>{e.name}</span>
+                        {e.next && <span className="text-xs text-earth-500">{e.next}</span>}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
+
         <CitySection
           locale={locale}
           titleKey="city_section_listings_title"
@@ -186,6 +289,38 @@ function CityOverviewSection({ locale, city }: { locale: Locale; city: City }) {
       <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
         {cityOverview(city, locale)}
       </p>
+    </section>
+  );
+}
+
+function CommunityStatsSection({ locale, city }: { locale: Locale; city: City }) {
+  const name = cityName(city, locale);
+  const stats = city.communityStats ?? [];
+  return (
+    <section
+      aria-labelledby="community-stats-heading"
+      className="rounded-lg border border-earth-200 bg-earth-50/60 p-6"
+    >
+      <h2
+        id="community-stats-heading"
+        className="text-xl font-semibold text-earth-900"
+      >
+        {locale === "he"
+          ? `קהילה אתיופית ב${name} — נתונים`
+          : locale === "am"
+            ? `${name} ውስጥ ኢትዮጵያ ማህበረሰብ`
+            : `Ethiopian community in ${name}`}
+      </h2>
+      <dl className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {stats.map((s, i) => (
+          <div key={i} className="rounded-md border border-earth-100 bg-white px-4 py-3">
+            <dt className="text-xs font-medium text-earth-600">
+              {s.label[locale] ?? s.label.he}
+            </dt>
+            <dd className="mt-1 text-base font-semibold text-earth-900">{s.value}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

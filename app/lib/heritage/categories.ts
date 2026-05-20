@@ -2,18 +2,20 @@
 // Mirrors `lib/orgs/categories.ts` shape. The seed
 // (`lib/heritage/events.server.ts`) is server-only.
 
-export type HeritageEventSlug = "sigd" | "genna" | "aliyah-day";
+export type HeritageEventSlug = "sigd" | "genna" | "aliyah-day" | "beta-israel";
 
 export const ALL_HERITAGE_EVENT_SLUGS: HeritageEventSlug[] = [
   "sigd",
   "genna",
   "aliyah-day",
+  "beta-israel",
 ];
 
 const EVENT_GLYPH: Record<HeritageEventSlug, string> = {
   sigd: "🕯️",
   genna: "✝️",
   "aliyah-day": "✈️",
+  "beta-israel": "✡️",
 };
 
 export function glyphForHeritageEvent(slug: HeritageEventSlug): string {

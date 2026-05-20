@@ -79,6 +79,10 @@ const RELEVANCE_BY_SLUG: Record<string, Relevance> = {
 
   // Aharai! pre-army has cohorts in major community cities.
   "aharai-pre-army": { kind: "community-cities" },
+
+  // Klita basket for Ethiopian olim — community cities only (the relevant
+  // population lives there; shipping 38 thin pages nationally adds no value).
+  "klita-basket-ethiopia": { kind: "community-cities" },
 };
 
 export function relevanceFor(slug: string): Relevance {

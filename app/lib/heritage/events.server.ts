@@ -57,27 +57,54 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
     relatedTerms: ["sigd", "kessim"],
     relatedOrgs: ["bina", "iaej"],
     bodies: {
-      he: `## מה זה סיגד
+      he: `## מה זה סיגד?
 
-סיגד הוא חג מרכזי בלוח השנה של יהדות אתיופיה — נחגג מאז המאה ה-15. החג מציין את חידוש הברית של בני ישראל עם אלוהים, על-פי המודל של שיבת ציון בספר נחמיה. ב-2008 נחקק כ-חוק יום הסיגד, והוא חג רשמי במדינת ישראל.
+סיגד הוא חג מרכזי בלוח השנה של יהדות אתיופיה — נחגג מאז המאה ה-15. החג מציין את חידוש הברית של בני ישראל עם אלוהים, על-פי המודל של שיבת ציון בספר נחמיה. ב-2008 נחקק חוק יום הסיגד, והוא חג רשמי במדינת ישראל.
 
-## איפה חוגגים
+**סיגד 2026 יחול ב-19 בנובמבר 2026 (29 בחשוון תשפ"ז).**
 
-- **טקס מרכזי בירושלים** — בארמון הנציב, מכנסת ~5,000 בני קהילה. הצום, הקייסים מובילים את התפילות, פלגי מים סמליים
-- **טקסים אזוריים** — ב-36 ערים נוספות, בעיקר בקהילות-קליטה (נתניה, רחובות, באר-שבע, חיפה, אשדוד, רמלה, ועוד)
-- **בתי ספר** — תכניות לימוד מיוחדות בשבוע שלפני החג
+## לוח אירועים 2026
 
-## קייסים
+| עיר | אירוע | מועד משוער |
+|-----|-------|-----------|
+| ירושלים — ארמון הנציב | טקס מרכזי, ~5,000 משתתפים | 19.11.2026 |
+| נתניה | טקס עירוני + שוק מסורתי | 19.11.2026 |
+| רחובות | טקס קהילתי | 19.11.2026 |
+| באר-שבע | אירוע קהילה + ריקודים | 19.11.2026 |
+| חיפה | טקס בפארק | 19.11.2026 |
+| אשדוד | פסטיבל סיגד | 19.11.2026 |
+| רמלה / לוד | אירוע משותף | 19.11.2026 |
 
-הקייסים (כהני הדת של יהדות אתיופיה) מובילים את הטקסים. בני קהילה רבים שואלים את עצמם על הזמן הקרוב לסיגד — איך להגיע, מה להביא, אם יש שירותי תחבורה מאזורם.
+## הטקס בירושלים — מה לצפות?
 
-## איך להשתתף
+טקס ירושלים הוא הגדול ביותר — מאות אלפים חוגגים יחד מאז 1993 ביפה הנוף שעל הארמון הנציב.
 
-- ירושלים — הסעות מאורגנות מערי קליטה (חינם או בסבסוד)
-- במקומך — בקש בעירייה / בית כנסת המקומי
-- חינוך — בתי ספר רבים מקיימים פעילות חוויתית בשבוע שלפני
+**לוח הטקס (שעות משוערות):**
+- 07:00 — עלות הקייסים עם ספרי הוּ-אוֹת (תורה אתיופית)
+- 08:00–12:00 — תפילות ופיוטים בניהול קייסים, צום עד הצהריים
+- 12:00 — שבירת הצום + חגיגות
+- 14:00–18:00 — מופעי מוזיקה ומחול
+- 18:00+ — ריקודי שירה קהילתיים
 
-## מימון פעילויות סיגד
+## מה להביא?
+
+- בגדים לבנים (מסורתי) — אך לא חובה
+- אוכל לשבירת הצום (הטרה/דורו ווט נפוצים)
+- כיסא מתקפל / שמיכה ישיבה
+- מים (הצום ממים מותר, אך מומלץ אחרי 12:00)
+- כרית לילדים לישיבה ארוכה
+
+## הגעה לירושלים — תחבורה
+
+- **הסעות מאורגנות** ממרבית ערי הקליטה (בדרך כלל חינמיות — פנה לעירייה ולקהילה המקומית)
+- **רכבת לירושלים** ועיר מסילה → אוטובוס 78/78א' לארמון הנציב
+- **חניה**: מוגבלת מאוד — מומלץ תחבורה ציבורית
+
+## קייסים — מי הם?
+
+הקייסים הם הרבנים של יהדות אתיופיה — גדלו בתפקידם עוד לפני העלייה לישראל. הם המנהיגים את הטקסים, מלמדים ניגון התפילות המסורתיים ושומרים על האמוניקה — הנוסח האתיופי.
+
+## מימון פעילויות סיגד מקומיות
 
 יש זכות ממשלתית של סבסוד פעילויות סיגד מקומיות (טקסים, חינוך, תחבורה). ראו [מימון סיגד — זכות](/he/rights/sigd-funding) לפרטים.
 
@@ -86,25 +113,52 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
 - [סיגד — מילון](/he/glossary/sigd)
 - [קייסים — מילון](/he/glossary/kessim)
 - [BINA — פרופיל ארגון](/he/orgs/bina)`,
-      en: `## What is Sigd
+      en: `## What is Sigd?
 
 Sigd is a central holiday in the Ethiopian Jewish calendar — celebrated since the 15th century. The holiday marks the renewal of the covenant between the Children of Israel and God, modeled on the return to Zion in the Book of Nehemiah. In 2008, the Sigd Day Law was enacted, and it is now a national holiday in the State of Israel.
 
-## Where it's celebrated
+**Sigd 2026 falls on 19 November 2026 (29 Cheshvan 5787).**
 
-- **Main ceremony in Jerusalem** — at the Armon Hanatziv promenade, gathering ~5,000 community members. Fasting, the Kessim leading prayers, symbolic streams of water
-- **Regional ceremonies** — in 36 additional cities, mainly in absorption communities (Netanya, Rehovot, Beersheba, Haifa, Ashdod, Ramla, and more)
-- **Schools** — special curricula in the week before the holiday
+## 2026 events calendar
 
-## The Kessim
+| City | Event | Approx. date |
+|------|-------|-------------|
+| Jerusalem — Armon Hanatziv | Main ceremony, ~5,000 attendees | 19.11.2026 |
+| Netanya | Municipal ceremony + traditional market | 19.11.2026 |
+| Rehovot | Community ceremony | 19.11.2026 |
+| Beersheba | Community event + dancing | 19.11.2026 |
+| Haifa | Park ceremony | 19.11.2026 |
+| Ashdod | Sigd festival | 19.11.2026 |
+| Ramla / Lod | Joint event | 19.11.2026 |
 
-The Kessim (Ethiopian Jewish religious leaders) lead the ceremonies. Many community members ask how to get there, what to bring, whether transportation is provided from their area.
+## The Jerusalem ceremony — what to expect
 
-## How to participate
+The Jerusalem ceremony is the largest — tens of thousands celebrate together since 1993 at the scenic Armon Hanatziv promenade.
 
-- Jerusalem — organized buses from absorption cities (free or subsidized)
-- In your area — ask your municipality / local synagogue
-- Education — many schools host hands-on activities the week before
+**Ceremony schedule (approximate):**
+- 07:00 — Kessim ascend with Hu'at scrolls (Ethiopian Torah)
+- 08:00–12:00 — Prayers and liturgical songs led by Kessim; fasting until noon
+- 12:00 — Breaking the fast + celebrations
+- 14:00–18:00 — Music and dance performances
+- 18:00+ — Community singing and dancing
+
+## What to bring
+
+- White clothing (traditional, but not mandatory)
+- Food to break the fast (injera/doro wat are popular)
+- Folding chair or blanket to sit on
+- Water (fasting from water is permitted, but drinking from noon onward is recommended)
+- Cushion for children for the long sitting
+
+## Getting to Jerusalem
+
+- **Organised transport** from most absorption cities (usually free — check with your municipality or local community)
+- **Train to Jerusalem** then bus 78/78a to Armon Hanatziv
+- **Parking**: very limited — public transport strongly recommended
+
+## The Kessim — who are they?
+
+The Kessim are the rabbis of Ethiopian Judaism — they grew into their role before the aliyah to Israel. They lead the ceremonies, teach the traditional prayer melodies, and preserve the Orit — the Ethiopian version of the Torah.
 
 ## Funding for Sigd activities
 
@@ -115,24 +169,35 @@ There is a government right subsidizing local Sigd activities (ceremonies, educa
 - [Sigd — glossary](/en/glossary/sigd)
 - [Kessim — glossary](/en/glossary/kessim)
 - [BINA — organization profile](/en/orgs/bina)`,
-      am: `## ሰግድ ምንድን ነው
+      am: `## ሰግድ ምንድን ነው?
 
 ሰግድ የኢትዮጵያ አይሁዳዊ የቀን መቁጠሪያ ዋና በዓል ነው — ከ15ኛው ክፍለ ዘመን ጀምሮ ይከበራል። በዓሉ የእስራኤል ልጆች ከእግዚአብሔር ጋር ያለው ቃል ኪዳን መታደሱን ያመለክታል። በ2008 የሰግድ ቀን ህግ ተሻሽሏል፣ አሁን ብሔራዊ በዓል ነው።
 
-## የት ይከበራል
+**ሰግድ 2026 — ህዳር 19፣ 2026 (29 ኅዳር 5787)**
 
-- በኢየሩሳሌም ዋና ስነ-ስርዓት
-- በ36 ተጨማሪ ከተሞች
-- በትምህርት ቤቶች ልዩ ፕሮግራሞች
+## 2026 የዝግጅቶች ዝርዝር
 
-## ቄሶች
+- **ኢየሩሳሌም** — ዋና ስነ-ስርዓት፣ ~5,000 ተሳታፊዎች
+- **ናታንያ** — የከተማ ስነ-ስርዓት + ባህላዊ ገበያ
+- **ሬሆቮት** — የማህበረሰብ ስነ-ስርዓት
+- **ቤርሼቫ** — የማህበረሰብ ዝግጅት + ዳንስ
+- **ሀይፋ** — ፓርክ ስነ-ስርዓት
+- **አሽዶድ** — ሰግድ ፌስቲቫል
 
-ቄሶች (የኢትዮጵያ አይሁዳዊ ሃይማኖት መሪዎች) ስነ-ስርዓቶቹን ይመሩ።
+## ምን ይዘው ይምጡ
 
-## እንዴት ይካፈላሉ
+- ነጭ ልብስ (ባህላዊ፣ ግዴታ አይደለም)
+- ጾምን ለመስበር ምግብ (እንጀራ/ዶሮ ወጥ ዝነኛ ናቸው)
+- ወንበር ወይም ብርድ ልብስ
+- ውሃ (ከምሳ ሰዓት ጀምሮ ይመከራል)
 
-- ኢየሩሳሌም — ከመቀበያ ከተሞች የተደራጀ መጓጓዣ
-- በአካባቢዎ — ማዘጋጃ ቤትዎን ይጠይቁ
+## ቄሶች — ማን ናቸው?
+
+ቄሶች የኢትዮጵያ አይሁዳዊ ሃይማኖት መሪዎች ናቸው — ከእስራኤል ከመምጣታቸው በፊት ሚናቸውን ይዘው አደጉ። ስነ-ስርዓቶቹን ይመሩ፣ ባህላዊ ጸሎት ዜማዎችን ያስተምሩ።
+
+## ለሰግድ ዝግጅቶች ገንዘብ ድጋፍ
+
+ለሰግድ ዝግጅቶች (ስነ-ስርዓቶች፣ ትምህርት፣ ትራንስፖርት) መንግሥታዊ ድጎማ አለ። ዝርዝር ለማወቅ [ሰግድ ፋይናንሲንግ](/am/rights/sigd-funding) ይዩ።
 
 ## ተጨማሪ
 
@@ -286,6 +351,146 @@ Operations Moses and Solomon saved ~16,000 community members. About 4,000 fell d
 ## ለምን አስፈላጊ ነው
 
 የሙሴና የሰሎሞን ኦፕሬሽኖች ~16,000 የማህበረሰብ አባላትን አዳኑ። በመንገድ ላይ ~4,000 ወድቀዋል። መታሰቢያ ቀኑ የአሊያ ታሪካዊ ዋጋ ያውቃል።`,
+    },
+  },
+
+  // 4 — Beta Israel --------------------------------------------------------
+  {
+    slug: "beta-israel",
+    name: { he: "ביתא ישראל", en: "Beta Israel", am: "ቤተ እስራኤል" },
+    shortDescription: {
+      he: "קהילת יהדות אתיופיה — ההיסטוריה, התרבות, ועלייתם לישראל במבצעי משה ושלמה.",
+      en: "The Ethiopian Jewish community — history, culture, and their aliyah in Operations Moses and Solomon.",
+      am: "የኢትዮጵያ አይሁዳዊ ማህበረሰብ — ታሪክ፣ ባህል እና ወደ እስራኤል ጉዞ።",
+    },
+    dateDescription: {
+      he: "אין תאריך חג קבוע — ביתא ישראל היא קהילה, לא חג.",
+      en: "No fixed holiday date — Beta Israel refers to the community identity, not a single observance.",
+      am: "ቋሚ የበዓል ቀን የለም — ቤተ እስራኤል ማህበረሰብን ያመለክታል፣ አንድ ብቻ ክብረ-በዓልን አይደለም።",
+    },
+    upcomingDates: [],
+    relatedRights: ["klita-basket-ethiopia", "falash-mura-direct-absorption"],
+    relatedTerms: ["aliyah", "klita"],
+    relatedOrgs: ["iaej", "tebeka"],
+    bodies: {
+      he: `## ביתא ישראל — יהדות אתיופיה
+
+ביתא ישראל (גֵּעֵז: בֵּיתַ אִסְרָאֵל, "בית ישראל") הוא שמה של קהילת יהודי אתיופיה, שהתקיימה באמצע הרמה האתיופית — בעיקר באזור גונדר — במשך מאות שנים. הם שמרו על תורה, שבת, כשרות ומרכיבים ייחודיים של מנהג יהודי שנתעצבו ללא קשר לדיאספורה הרבנית.
+
+## מוצא ומסורות
+
+מסורות שונות מנסות להסביר את מוצאם:
+- **צאצאי שלמה ושבא** — מסורת מפורסמת המקשרת אותם לצאצאי מלכה שבא ושלמה המלך.
+- **צאצאי שבט דן** — מסורת רבנית מקובלת (רבי עובדיה יוסף, 1973) המכירה בהם כיהודים לכל דבר.
+- **צאצאי גלות בית ראשון** — עלו לאתיופיה לאחר חורבן בית המקדש הראשון (586 לפנה"ס).
+
+## דת ומנהג
+
+הקהילה שמרה על **אורח חיים דתי עצמאי** מבוסס על:
+- **אורית** — חמשת חומשי התורה בתרגום גֵּעֵז.
+- **כהנים (קֵסוֹת)** — מנהיגות דתית שבירתה ישנה מדגם הרבנות.
+- **בֵּית-מַסְקַל** — חגי עלייה לרגל ייחודיים.
+- הקפדה על שבת, כשרות וטהרת המשפחה.
+
+## עלייה לישראל
+
+| מבצע | שנה | עולים |
+|------|-----|--------|
+| מבצע משה | 1984–1985 | ~8,000 |
+| מבצע שבא | 1985 | ~500 |
+| מבצע שלמה | 1991 | ~14,300 |
+| עלייה שוטפת + פלשמורה | 1991–היום | ~60,000+ |
+
+**סה"כ**: כ-165,000 יוצאי אתיופיה וצאצאיהם חיים היום בישראל.
+
+## פלשמורה
+
+פלשמורה הם יהודים אתיופים שאבותיהם התנצרו בכפייה בתקופות שונות. לאחר שנים של מאבק, המדינה הכירה בזכותם לעלות, ותהליך העלייה שלהם נמשך עד היום.
+
+## קהילה בישראל
+
+- **ריכוזי אוכלוסין עיקריים**: נתניה, ראשון לציון, רחובות, אשקלון, פתח תקווה.
+- **מוסדות תרבות**: מוזיאון קסם — יהדות אתיופיה (תל אביב), מרכזי קהילה ייעודיים.
+- **ארגוני נציגות**: האגודה לקידום מעמד האתיופים (אמ"א), תבקה — סיוע משפטי.
+
+## קישורים רלוונטיים
+
+- [זכויות עולים — סל קליטה](/he/rights/klita-basket-ethiopia)
+- [זכות עלייה לפלשמורה](/he/rights/falash-mura-direct-absorption)`,
+
+      en: `## Beta Israel — Ethiopian Jewry
+
+Beta Israel (Ge'ez: ቤተ እስራኤል, "House of Israel") is the name of the Ethiopian Jewish community, which lived for centuries in the highlands of Ethiopia — primarily in the Gondar region. They maintained Torah, Shabbat, kashrut, and unique Jewish customs shaped independently from the Rabbinic diaspora.
+
+## Origins and Traditions
+
+Several traditions explain their origins:
+- **Descendants of Solomon and Sheba** — a celebrated tradition linking them to the offspring of the Queen of Sheba and King Solomon.
+- **Tribe of Dan** — the widely accepted rabbinic view (Rabbi Ovadia Yosef, 1973) recognizing them as fully Jewish.
+- **Exiles of the First Temple** — said to have reached Ethiopia after the destruction in 586 BCE.
+
+## Religion and Practice
+
+The community maintained an **independent religious lifestyle** based on:
+- **Orit** — the Pentateuch in Ge'ez translation.
+- **Kesim (singular: Kes)** — priestly religious leadership, predating the Rabbinic model.
+- **Beit-Maskal** — unique pilgrimage festivals.
+- Strict observance of Shabbat, kashrut, and family purity laws.
+
+## Aliyah to Israel
+
+| Operation | Year | Olim |
+|-----------|------|------|
+| Operation Moses | 1984–1985 | ~8,000 |
+| Operation Sheba | 1985 | ~500 |
+| Operation Solomon | 1991 | ~14,300 |
+| Ongoing + Falash Mura | 1991–present | ~60,000+ |
+
+**Total**: Approximately 165,000 Ethiopian-Israelis and their descendants live in Israel today.
+
+## Falash Mura
+
+Falash Mura are Ethiopian Jews whose ancestors converted to Christianity under coercion at various points in history. After years of advocacy, the Israeli government recognized their right of return, and their aliyah process continues to this day.
+
+## Community in Israel
+
+- **Main population centers**: Netanya, Rishon LeZion, Rehovot, Ashkelon, Petah Tikva.
+- **Cultural institutions**: Museum of Ethiopian Jews (Tel Aviv), dedicated community centers.
+- **Advocacy organizations**: IAEJ, TEBEKA — legal aid organization.
+
+## Related Rights
+
+- [Olim rights — Klita basket](/en/rights/klita-basket-ethiopia)
+- [Falash Mura right of return](/en/rights/falash-mura-direct-absorption)`,
+
+      am: `## ቤተ እስራኤል — የኢትዮጵያ አይሁዶች
+
+ቤተ እስራኤል (ግዕዝ: ቤተ እስራኤል፣ "የእስራኤል ቤት") የኢትዮጵያ አይሁዳዊ ማህበረሰብ ስም ነው። ለብዙ ምዕተ-ዓመታት በኢትዮጵያ ደጋዎች — ዋናነቱ በጎንደር ክልል — ኖሩ። ቶራ፣ ሰንበት፣ ካሽሩት እና ከሬቢናዊ ዲያስፖራ ተለይቶ የቆመ ልዩ አይሁዳዊ ወጉን ጠበቁ።
+
+## ዋና ጉዳዮች
+
+- **ኦሪት** — ፔንታቱክ በግዕዝ ቋንቋ።
+- **ቀሶች** — የሃይማኖት መሪዎች (ከሬቢናዊ ሞዴል በፊት)።
+- **ሰንበት፣ ካሽሩት እና የቤተሰብ ንጽህና** ጥብቅ ክትትል።
+
+## ወደ እስራኤል ጉዞ
+
+| ኦፕሬሽን | ዓ.ም | ቁጥር |
+|---------|------|------|
+| ሙሴ ኦፕሬሽን | 1984–1985 | ~8,000 |
+| ሰሎሞን ኦፕሬሽን | 1991 | ~14,300 |
+| ፍላሽ ሙራ + ተከታዩ | 1991–ዛሬ | ~60,000+ |
+
+ዛሬ **~165,000** የኢትዮጵያ-እስራኤሎች በእስራኤል ይኖራሉ።
+
+## ፍላሽ ሙራ
+
+ፍላሽ ሙራ ቀደም ሲል ወደ ክርስትና የተቀሩ የኢትዮጵያ አይሁዶች ናቸው። ዓመታት ታግለው በኋላ ወደ እስራኤል የመመለስ መብት ተሰጣቸው፣ ሂደቱ ዛሬም ቀጥሏል።
+
+## ተያያዥ መብቶች
+
+- [የኦሊም መብቶች — ሰል ቅሊታ](/am/rights/klita-basket-ethiopia)
+- [ፍላሽ ሙራ — የተሰጠ ወደ ሃገር ምለሻ](/am/rights/falash-mura-direct-absorption)`,
     },
   },
 ];

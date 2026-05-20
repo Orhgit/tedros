@@ -188,6 +188,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "health_breadcrumb_home")}
@@ -320,6 +321,103 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
               </>
             )}
           </div>
+        </section>
+
+        {/* Practical access guide */}
+        <section
+          className="mb-10 rounded-2xl border border-earth-200 bg-card p-6"
+          aria-labelledby="mh-access-heading"
+        >
+          <h2
+            id="mh-access-heading"
+            className="mb-3 font-display text-xl font-semibold text-earth-900"
+          >
+            {locale === "he"
+              ? "איך מגיעים לטיפול — מדריך מעשי"
+              : locale === "am"
+                ? "ወደ ሕክምና ደረጃ በደረጃ"
+                : "How to access treatment — practical guide"}
+          </h2>
+          <ol className="space-y-3 text-sm leading-relaxed text-ink-700">
+            {(locale === "he"
+              ? [
+                  "פנו לרופא משפחה בקופת חולים ואמרו: 'אני מרגיש/ה במצוקה נפשית'. הרופא מחויב לחיסיון.",
+                  "בקשו הפניה לפסיכולוג/ית קלינית — ניתן לקבל 6-12 פגישות ממומנות על-ידי קופת חולים.",
+                  "ציינו שאתם מחפשים מטפל שמכיר את ההקשר התרבותי האתיופי — שירות תנה בריאות יכול להמליץ.",
+                  "אם אין הפניה מיידית — תנה בריאות מספקת ליווי ועזרה בניווט במערכת.",
+                ]
+              : locale === "am"
+                ? [
+                    "ወደ ቤተሰብ ሐኪም ይሂዱ: 'የአዕምሮ ጭንቀት እያጋጠመኝ ነው' ይበሉ። ሐኪሙ ሚስጥር የመጠበቅ ግዴታ አለበት።",
+                    "ለሳይኮሎጂስት ሪፈራ ይጠይቁ — 6-12 ስብሰባዎች ብዙ ጊዜ ይሸፈናሉ።",
+                    "ቴኔ ብሩት ምክር ለማግኘትና ወደ ስርዓቱ ለመሄድ ሊረዳዎ ይችላሉ።",
+                  ]
+                : [
+                    "See your family doctor at the health fund and say: 'I am experiencing psychological distress'. The doctor is bound by confidentiality.",
+                    "Request a referral to a clinical psychologist — 6–12 funded sessions are usually available through the health fund.",
+                    "Mention that you are looking for a therapist with Ethiopian cultural awareness — Tene Briut can recommend one.",
+                    "If no referral is immediately available, Tene Briut provides support and help navigating the system.",
+                  ]
+            ).map((step, i) => (
+              <li key={i} className="flex gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-earth-100 text-xs font-semibold text-earth-700">
+                  {i + 1}
+                </span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* Youth at-risk */}
+        <section
+          className="mb-10 rounded-2xl border border-amber-200 bg-amber-50/60 p-6"
+          aria-labelledby="mh-youth-heading"
+        >
+          <h2
+            id="mh-youth-heading"
+            className="mb-3 font-display text-xl font-semibold text-amber-900"
+          >
+            {locale === "he"
+              ? "נוער בסיכון — תמיכה מיוחדת"
+              : locale === "am"
+                ? "አደጋ ዳርቻ ወጣቶች"
+                : "At-risk youth — dedicated support"}
+          </h2>
+          <p className="mb-4 text-sm leading-relaxed text-ink-700">
+            {locale === "he"
+              ? "26.7% מהקהילה הם מתחת לגיל 14. נוער בין שתי תרבויות נחשף לסיכון גבוה יותר לדיכאון, אלימות ועזיבת ביה\"ס. ארגון Elem מציע תוכניות ייחודיות לנוער האתיופי."
+              : locale === "am"
+                ? "26.7% ከ14 ዓመት በታች ናቸው። Elem ለኢትዮጵያ ወጣቶች ፕሮግራሞችን ያቀርባሉ።"
+                : "26.7% of the community is under 14. Youth navigating two cultures face higher rates of depression, violence, and school dropout. Elem offers dedicated programmes for Ethiopian youth."}
+          </p>
+          <ul className="space-y-2 text-sm text-ink-700">
+            {(locale === "he"
+              ? [
+                  "Elem — תוכניות ייעוץ אישי לנוער מהקהילה (קיים ב-20+ ערים)",
+                  "NATAL — ליווי לנפגעי טראומה בכל גיל",
+                  "ער\"ן 1201 — גם נוער יכולים להתקשר (חסוי לחלוטין)",
+                  "בתי ספר — יועצים בית-ספריים מוסמכים לזיהוי ילדים במצוקה",
+                ]
+              : locale === "am"
+                ? [
+                    "Elem — ለ20+ ከተሞች ግለሰባዊ ምክር",
+                    "NATAL — ለሁሉም ዕድሜ አደጋ ዳርቻ ድጋፍ",
+                    "ERAN 1201 — ወጣቶችም ሊደውሉ ይችላሉ (ሚስጥራዊ)",
+                  ]
+                : [
+                    "Elem — personal counselling for community youth (available in 20+ cities)",
+                    "NATAL — trauma support for all ages",
+                    "ERAN 1201 — young people can call too (completely confidential)",
+                    "Schools — school counsellors are trained to identify children in distress",
+                  ]
+            ).map((item, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span aria-hidden className="text-amber-600">•</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* Resources */}

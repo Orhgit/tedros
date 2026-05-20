@@ -1302,6 +1302,158 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 `,
     },
   },
+
+  // 13. מלגת מרום — TED-64
+  {
+    slug: "merom-scholarship",
+    level: "undergrad",
+    providerOrgSlug: "merom",
+    name: {
+      he: "מלגת מרום",
+      en: "Merom Scholarship",
+      am: "ሜሮም ስኮላርሺፕ",
+    },
+    shortDescription: {
+      he: "מלגה ייחודית לסטודנטים ממוצא אתיופי — עד ₪20,000 לשנה, לתואר ראשון בכל תחום לימוד.",
+      en: "Scholarship exclusively for students of Ethiopian origin — up to ₪20,000 per year for any undergraduate field.",
+      am: "ለኢትዮጵያ ዜግነት ተማሪዎች ብቻ — እስከ 20,000 ሺ\"ል ዓመታዊ፣ ለማንኛውም የጥናት ዘርፍ።",
+    },
+    amountMinIls: 10000,
+    amountMaxIls: 20000,
+    amountNote: {
+      he: "לפי מצב כלכלי ומצטיינות אקדמית",
+      en: "Based on financial need and academic excellence",
+      am: "በኢኮኖሚ ሁኔታ እና የትምህርት ልቀት ላይ ተመስርቶ",
+    },
+    deadline: "2026-04-30",
+    applicationUrl: "https://www.merom.org.il/scholarships",
+    tags: ["community", "undergraduate", "needs-based"],
+    communityPriority: true,
+    relatedScholarships: ["isef-fellowship", "hesegim-undergraduate"],
+    relatedRights: ["student-aid", "klita-basket-ethiopia"],
+    bodies: {
+      he: `## מה זה מלגת מרום?
+
+מלגת מרום היא מלגת הצטיינות-ומחסור המיועדת **אך ורק לסטודנטים ממוצא אתיופי** הלומדים לתואר ראשון במוסד אקדמי מוכר בישראל. המלגה ניתנת לחידוש שנתי בתנאי שמירה על ממוצע מינימלי.
+
+## מי זכאי?
+
+- סטודנט/ית ממוצא אתיופי (הורה שנולד באתיופיה, או עלייה ישירה)
+- לומד/ת תואר ראשון באוניברסיטה, מכללה או מכון טכנולוגי מוכר
+- ממוצע ציונים ≥ 75 בשנה הקודמת (לחידוש)
+- הכנסה משפחתית עד 150% מקו העוני (נבדק מול נתוני ביטוח לאומי)
+
+## כמה מקבלים?
+
+| רמה | סכום שנתי |
+|-----|-----------|
+| מצוינות בסיסית (ממוצע 75–84) | ₪10,000 |
+| מצוינות גבוהה (ממוצע 85–94) | ₪15,000 |
+| מצוינות יוצאת דופן (ממוצע 95+) | ₪20,000 |
+
+## שלבי ההגשה
+
+1. **מילוי טופס מקוון** באתר merom.org.il — עד 30 באפריל מדי שנה
+2. **צירוף מסמכים**: ת"ז, אישור לימודים, גיליון ציונים, אסמכתא למוצא אתיופי, אישור הכנסת משפחה
+3. **ראיון** (לסטודנטים שעברו סינון ראשוני) — מרץ–אפריל
+4. **הודעה על זכייה**: תוך 45 יום
+5. **העברת הכסף**: ישירות לחשבון הבנק של הסטודנט
+
+## שאלות נפוצות
+
+**האם ניתן לצבור עם מלגות אחרות?**
+כן — מלגת מרום ניתנת לצבירה עם מלגת הצטיינות אחרת, אך לא עם מלגת ISEF (מלאה) בו-זמנית.
+
+**האם מלגת מרום מחייבת עבודה בתחום מסוים אחרי הסיום?**
+לא — אין התחייבות תעסוקתית.
+
+**מה קורה אם הממוצע ירד מתחת ל-75?**
+המלגה מושהית לשנה אחת. ניתן לחדשה אם הממוצע חוזר לעלות.
+
+## ראו גם
+
+- [מלגת ISEF — תואר שני](/he/education/scholarships/isef-fellowship)
+- [מלגת הסגים — תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
+- [סל קליטה לעולים מאתיופיה — זכות](/he/rights/klita-basket-ethiopia)
+`,
+      en: `## What is the Merom Scholarship?
+
+The Merom Scholarship is a merit-and-need award designed **exclusively for students of Ethiopian origin** studying for an undergraduate degree at a recognised Israeli academic institution. It is renewed annually subject to maintaining a minimum grade average.
+
+## Who is eligible?
+
+- Student of Ethiopian origin (parent born in Ethiopia, or direct aliyah)
+- Studying for an undergraduate degree at an accredited university, college, or technological institute
+- Grade average ≥ 75 in the previous year (for renewal)
+- Family income up to 150% of the poverty line (verified against National Insurance data)
+
+## How much?
+
+| Level | Annual award |
+|-------|-------------|
+| Basic excellence (average 75–84) | ₪10,000 |
+| High excellence (average 85–94) | ₪15,000 |
+| Outstanding excellence (average 95+) | ₪20,000 |
+
+## Application steps
+
+1. **Complete the online form** at merom.org.il — by 30 April each year
+2. **Attach documents**: ID, study confirmation, transcript, proof of Ethiopian origin, family income statement
+3. **Interview** (for applicants passing the initial filter) — March–April
+4. **Award notification**: within 45 days
+5. **Payment**: transferred directly to the student's bank account
+
+## FAQ
+
+**Can it be combined with other scholarships?**
+Yes — Merom can be combined with another merit scholarship, but not simultaneously with a full ISEF grant.
+
+**Does the Merom Scholarship require working in a specific field after graduation?**
+No — there is no employment commitment.
+
+**What happens if my average falls below 75?**
+The scholarship is suspended for one year. It can be renewed if the average rises again.
+
+## See also
+
+- [ISEF Fellowship — master's degree](/en/education/scholarships/isef-fellowship)
+- [Hesegim Scholarship — undergraduate](/en/education/scholarships/hesegim-undergraduate)
+- [Klita basket for Ethiopian olim — right](/en/rights/klita-basket-ethiopia)
+`,
+      am: `## ሜሮም ስኮላርሺፕ ምንድን ነው?
+
+ሜሮም ስኮላርሺፕ **ለኢትዮጵያ ዜግነት ተማሪዎች ብቻ** ያለ ሙሉ የትምህርት ዘርፍ ለማስቀጠል የሚያስፈልግ ስኮላርሺፕ ነው። ዓመት አዲስ ሊታደስ ይችላል።
+
+## ለማን ይሆናል?
+
+- ከኢትዮጵያ ዜግነት ተማሪ (ወላጅ ኢትዮጵያ ወይም ቀጥታ ዓሊያ)
+- በታወቀ ዩኒቨርሲቲ ወይም ኮሌጅ የባቸለር ሲያጠኑ
+- ያለፈው ዓመት ምዝናዬ ≥ 75
+- የቤተሰብ ገቢ ከድህነት ወሰን 150% በታች
+
+## ስንት ያገኛሉ?
+
+| ደረጃ | ዓመታዊ ሽልማት |
+|-----|------------|
+| 75–84 ምዝናዬ | 10,000 ሺ"ል |
+| 85–94 ምዝናዬ | 15,000 ሺ"ል |
+| 95+ ምዝናዬ | 20,000 ሺ"ል |
+
+## ደረጃዎች
+
+1. merom.org.il ላይ ቅጽ ይሙሉ — ዓመት አፕሪ 30 በፊት
+2. ሰነዶች ያቅርቡ፦ መታወቂያ፣ ምዝናዬ ቅጽ፣ የዓሊያ ማረጋገጫ
+3. ቃለ-ምርምር (ከዋና ምርጫ በኋላ)
+4. ማሳወቂያ፦ ከ45 ቀናት ውስጥ
+5. ወደ ባንክ ሂሳብ ቀጥታ ይተላለፋል
+
+## ይህንንም ይዩ
+
+- [ISEF Fellowship — ሁለተኛ ዲግሪ](/am/education/scholarships/isef-fellowship)
+- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
+`,
+    },
+  },
 ];
 
 // --- Helpers ----------------------------------------------------------------

@@ -6,12 +6,18 @@ import type { Locale } from "~/lib/i18n/config";
 export type CityName = { he: string; en: string; am: string };
 export type CityOverview = { he: string; en: string; am: string };
 
+export type CommunityStat = {
+  label: { he: string; en: string; am: string };
+  value: string;
+};
+
 export type City = {
   slug: string;
   names: CityName;
   region: "jerusalem" | "center" | "south" | "north";
   geo: { lat: number; lon: number };
   overview: CityOverview;
+  communityStats?: CommunityStat[];
 };
 
 export const CITIES: City[] = [
@@ -50,6 +56,24 @@ export const CITIES: City[] = [
       en: "Netanya is one of Israel's largest hubs of the Israeli-Ethiopian community, with a particularly strong presence in the Dora, Neot Shaked and Kiryat Nordau neighbourhoods. Alongside the established community, many younger families are looking for housing in the area — including through the active urban-renewal projects across the city.",
       am: "ነታንያ ለእስራኤላዊ-ኢትዮጵያዊ ማህበረሰብ በእስራኤል ካሉ ትላልቅ ማዕከላት አንዷ ናት፣ በተለይም በዶራ፣ ኒዮት ሻከድ እና ቂርያት ኖርዳው ሰፈሮች ጠንካራ መገኘት አላት። ብዙ ወጣት ቤተሰቦች ከከተማው ንቁ የከተማ እድሳት ፕሮጀክቶች ጨምሮ ቤት ይፈልጋሉ።",
     },
+    communityStats: [
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~22,000",
+      },
+      {
+        label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" },
+        value: "~11%",
+      },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "דורה, נאות שקד, קריית נורדאו",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "תנה בריאות, NATAL, ENP, מתנ\"ס",
+      },
+    ],
   },
   {
     slug: "rishon-lezion",

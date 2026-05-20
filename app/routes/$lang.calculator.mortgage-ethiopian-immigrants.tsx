@@ -1,8 +1,15 @@
 import { Form, Link, useActionData, useNavigation } from "react-router";
 import type { Route } from "./+types/$lang.calculator.mortgage-ethiopian-immigrants";
+import { SiteFooter } from "~/components/sections/site-footer";
+import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
+import {
+  CITIES,
+  cityName,
+  findCityBySlug,
+} from "~/lib/cities/registry";
 import {
   calculateEligibility,
   FAMILY_STATUSES,
@@ -22,6 +29,31 @@ const FAQ_KEYS = [
   ["mortgage_faq_q2", "mortgage_faq_a2"],
   ["mortgage_faq_q3", "mortgage_faq_a3"],
   ["mortgage_faq_q4", "mortgage_faq_a4"],
+  ["mortgage_faq_q5", "mortgage_faq_a5"],
+  ["mortgage_faq_q6", "mortgage_faq_a6"],
+  ["mortgage_faq_q7", "mortgage_faq_a7"],
+  ["mortgage_faq_q8", "mortgage_faq_a8"],
+] as const;
+
+const DOC_KEYS = [
+  "mortgage_docs_id",
+  "mortgage_docs_aliya",
+  "mortgage_docs_origin",
+  "mortgage_docs_payslips",
+  "mortgage_docs_bank",
+  "mortgage_docs_marriage",
+  "mortgage_docs_no_property",
+] as const;
+
+const MORTGAGE_CITIES = [
+  "netanya",
+  "tel-aviv",
+  "haifa",
+  "beer-sheva",
+  "rehovot",
+  "bat-yam",
+  "rishon-lezion",
+  "jerusalem",
 ] as const;
 
 const ORIGIN_FIELDS = [
@@ -189,7 +221,10 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
   const errors = actionData?.kind === "errors" ? actionData.fieldErrors : {};
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-3xl flex-col px-6 py-12">
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="flag-stripe h-1.5" aria-hidden="true" />
+      <SiteHeader locale={locale} currentPath={`/${locale}${CALCULATOR_PATH}`} />
+      <div className="mx-auto flex max-w-3xl flex-col px-6 py-12">
       <header>
         <Link
           to={`/${locale}`}
@@ -296,8 +331,12 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
 
         <ProgrammeFactsCard locale={locale} />
         <ProcessExplainer locale={locale} />
+        <DocumentsChecklist locale={locale} />
+        <MortgageCitiesSection locale={locale} />
         <LeadCta locale={locale} />
       </main>
+      </div>
+      <SiteFooter locale={locale} />
     </div>
   );
 }
@@ -504,6 +543,52 @@ function LeadCta({ locale }: { locale: Locale }) {
         </dl>
       </section>
     </>
+  );
+}
+
+function DocumentsChecklist({ locale }: { locale: Locale }) {
+  return (
+    <section className="mt-10 rounded-lg border border-earth-200 bg-earth-50/50 p-6">
+      <h2 className="text-xl font-semibold text-earth-900">
+        {t(locale, "mortgage_docs_title")}
+      </h2>
+      <ul className="mt-3 space-y-2">
+        {DOC_KEYS.map((key) => (
+          <li key={key} className="flex items-start gap-2 text-sm text-ink-700">
+            <span aria-hidden="true" className="mt-0.5 text-earth-600">✓</span>
+            {t(locale, key)}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function MortgageCitiesSection({ locale }: { locale: Locale }) {
+  const cities = MORTGAGE_CITIES
+    .map((slug) => findCityBySlug(slug))
+    .filter((c): c is NonNullable<typeof c> => Boolean(c));
+
+  if (cities.length === 0) return null;
+
+  return (
+    <section className="mt-10 rounded-lg border border-earth-200 p-6">
+      <h2 className="text-xl font-semibold text-earth-900">
+        {t(locale, "mortgage_cities_title")}
+      </h2>
+      <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        {cities.map((city) => (
+          <li key={city.slug}>
+            <Link
+              to={`/${locale}/cities/${city.slug}`}
+              className="block rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 hover:border-earth-300 transition text-center"
+            >
+              {cityName(city, locale)}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
