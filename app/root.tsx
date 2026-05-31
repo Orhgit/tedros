@@ -17,16 +17,11 @@ import {
 } from "./lib/i18n/config";
 import { readLocaleCookie } from "./lib/i18n/cookie.server";
 import { getEnv } from "./lib/env.server";
+import { AccessibilityWidget } from "./components/ui/accessibility-widget";
 import "./app.css";
 
 const MulaChat = lazy(() =>
   import("./components/mula-chat").then((m) => ({ default: m.MulaChat })),
-);
-
-const AccessibilityWidget = lazy(() =>
-  import("./components/ui/accessibility-widget").then((m) => ({
-    default: m.AccessibilityWidget,
-  })),
 );
 
 /**
@@ -84,9 +79,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Suspense fallback={null}>
           <MulaChat />
         </Suspense>
-        <Suspense fallback={null}>
-          <AccessibilityWidget locale={locale} />
-        </Suspense>
+        <AccessibilityWidget locale={locale} />
         <ScrollRestoration />
         <Scripts />
       </body>
