@@ -55,6 +55,13 @@ const PILLAR_IMAGES: Record<string, string> = {
     "https://images.unsplash.com/photo-1764145144753-922ae256714b?fm=webp&q=70&w=600&fit=crop",
 };
 
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1545917958-c5dce6c24633?fm=webp&q=80&w=1600&fit=crop";
+
+export const links: Route.LinksFunction = () => [
+  { rel: "preload", href: HERO_IMAGE, as: "image", fetchpriority: "high" },
+];
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const { PUBLIC_URL } = getEnv();
@@ -129,7 +136,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
       >
         {/* Background photo — Ethiopian-Israeli community celebration */}
         <img
-          src="https://images.unsplash.com/photo-1545917958-c5dce6c24633?fm=webp&q=80&w=1600&fit=crop"
+          src={HERO_IMAGE}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
@@ -198,7 +205,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                 key={lang}
                 to={`/${lang}`}
                 hrefLang={lang}
-                className="rounded-md px-3 py-1.5 text-white/80 hover:bg-white/15 hover:text-white"
+                className="rounded-md px-3 py-1.5 text-white drop-shadow hover:bg-white/15"
               >
                 {t(locale, `lang_${lang}`)}
               </Link>
@@ -223,7 +230,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
             </Link>
             <a
               href="#subscribe"
-              className="rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/10"
+              className="rounded-lg border border-white/60 bg-black/30 px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-black/40"
             >
               {t(locale, "hero_cta_community")}
             </a>
@@ -282,7 +289,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                         {t(locale, `pillar_${p}_title`)}
                       </h3>
                       {isLive ? (
-                        <span className="shrink-0 rounded-full bg-accent-green/15 px-2.5 py-0.5 text-[11px] font-medium text-accent-green ring-1 ring-accent-green/30">
+                        <span className="shrink-0 rounded-full bg-accent-green px-2.5 py-0.5 text-[11px] font-medium text-white">
                           {t(locale, "pillar_live")}
                         </span>
                       ) : (

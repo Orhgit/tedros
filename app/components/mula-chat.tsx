@@ -138,6 +138,8 @@ export function MulaChat() {
         role="dialog"
         aria-label="צ'אט עם מולה"
         aria-hidden={!open}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        {...({ inert: !open ? "" : undefined } as any)}
         style={{ animation: open ? "mula-slide-up 0.3s ease-out" : "none" }}
       >
         {/* ── Header — big live avatar ── */}
