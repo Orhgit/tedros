@@ -435,7 +435,7 @@ Studies and reports by TEBEKA and human-rights organisations document disproport
     },
     govUrl: "https://www.mahash.gov.il",
     eligibilitySummary: {
-      he: "כל מי שחש שנפגע מהתנהגות שוטר — יכול להגיש תלונה למח\"ש (מחלקת חקירות שוטרים) או לנציב תלונות הציבור על המשטרה. אין עלות, אין צורך בעורך-דין.",
+      he: 'כל מי שחש שנפגע מהתנהגות שוטר — יכול להגיש תלונה למח"ש (מחלקת חקירות שוטרים) או לנציב תלונות הציבור על המשטרה. אין עלות, אין צורך בעורך-דין.',
       en: "Anyone who believes they were harmed by police conduct can file a complaint with MAHASH (Police Investigations Department) or the Public Complaints Commissioner — free, no lawyer required.",
       am: "የፖሊስ ባህሪ ጎድቶናል የሚል ማንኛውም ሰው ለMAHASH ወይም ለህዝብ ቅሬታ ኮሚሽነር ቅሬታ ማቅረብ ይችላል — ነፃ ነው።",
     },
@@ -3443,7 +3443,7 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
     eligibilitySummary: {
       he: "עולים חדשים זכאים לשוברי הכשרה מקצועית של עד ₪12,000 לקורסים מוכרים — לרכישת מקצוע ושילוב בשוק העבודה הישראלי.",
       en: "New immigrants are entitled to vocational training vouchers worth up to ₪12,000 for accredited courses — to acquire a trade and integrate into the Israeli labour market.",
-      am: "አዲስ ስደተኞች ለታወቁ ኮርሶች እስከ 12,000 ሺ\"ል ሙያ ስልጠና ቫዎቸሮች ያገኛሉ — ሙያ ለማዳበርና ወደ ሥራ ገበያ ለመቀላቀል።",
+      am: 'አዲስ ስደተኞች ለታወቁ ኮርሶች እስከ 12,000 ሺ"ል ሙያ ስልጠና ቫዎቸሮች ያገኛሉ — ሙያ ለማዳበርና ወደ ሥራ ገበያ ለመቀላቀል።',
     },
     tags: ["employment", "education", "new_immigrant"],
     bodies: {
@@ -3573,8 +3573,7 @@ You can cover the difference through the Merom scholarship, a special fund, or p
       en: "klita-basket-ethiopia",
       am: "klita-basket-ethiopia",
     },
-    govUrl:
-      "https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page",
+    govUrl: "https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page",
     eligibilitySummary: {
       he: "עולים מאתיופיה ועולי פלשמורה זכאים לסל קליטה מורחב: תשלום חודשי, מענקי הסתגלות, שובר אולפן, כיסוי בריאות ל-6 חודשים ולימודי השכלה מקצועית.",
       en: "Ethiopian olim and Falash Mura immigrants receive an extended klita basket: monthly stipend, adjustment grants, ulpan voucher, 6-month health coverage, and vocational training.",
@@ -3726,7 +3725,11 @@ Falash Mura olim who arrived from 2016 are entitled to a separate basket includi
 
   // 25 — Employment discrimination rights (TED-68) -------------------------
   {
-    slug: { he: "employment-discrimination-rights", en: "employment-discrimination-rights", am: "employment-discrimination-rights" },
+    slug: {
+      he: "employment-discrimination-rights",
+      en: "employment-discrimination-rights",
+      am: "employment-discrimination-rights",
+    },
     title: {
       he: "זכויות נגד אפליה בעבודה",
       en: "Rights Against Employment Discrimination",
@@ -3898,7 +3901,7 @@ Histadrut membership grants representation and legal support in labor disputes.
     eligibilitySummary: {
       he: "עולים מאתיופיה עם נכות רפואית מוכרת זכאים לגמלת נכות מהמוסד לביטוח לאומי. תקופת המתנה עשויה לחול בשנה הראשונה. גמלה מלאה לנכות 75%+ עומדת על כ-4,500 ₪ לחודש (2025).",
       en: "Ethiopian immigrants with a recognised medical disability are entitled to BTL disability benefit. A waiting period may apply in the first year. Full benefit for 75%+ disability is approximately ₪4,500/month (2025).",
-      am: "እውቅና ያገኘ ሕክምናዊ አካል ጉዳት ያላቸው የኢትዮጵያ ስደተኞች የBTL የአካል ጉዳት ጥቅማ-ጥቅም የማግኘት መብት አላቸው። 75%+ አካል ጉዳት ለ2025 ወርሃዊ ወደ 4,500 ሺ\"ል ነው።",
+      am: 'እውቅና ያገኘ ሕክምናዊ አካል ጉዳት ያላቸው የኢትዮጵያ ስደተኞች የBTL የአካል ጉዳት ጥቅማ-ጥቅም የማግኘት መብት አላቸው። 75%+ አካል ጉዳት ለ2025 ወርሃዊ ወደ 4,500 ሺ"ል ነው።',
     },
     tags: ["health", "immigration"],
     bodies: {
@@ -4856,7 +4859,7 @@ If rejected: appeal in writing within 30 days. TEBEKA (1-800-20-20-16) can assis
     eligibilitySummary: {
       he: "קשישים יוצאי אתיופיה שמתקשים בפעולות יומיומיות זכאים לגמלת סיעוד מביטוח לאומי — 4,000 עד 9,000 ₪ לחודש, בהתאם לרמת הסיעוד. עובדים סוציאליים של ביטוח לאומי מגיעים הביתה לבדיקה.",
       en: "Elderly Ethiopian-Israelis who need help with daily activities are entitled to a nursing benefit from BTL — ₪4,000 to ₪9,000/month depending on care level. BTL social workers can conduct home visits.",
-      am: "ዕለታዊ ተግባራትን ለማከናወን እርዳታ የሚያስፈልጋቸው የኢትዮጵያ-እስራኤላዊ ሽማግሌዎች ከBTL የነርሲንግ ጥቅማ-ጥቅም የማግኘት መብት አላቸው — 4,000 እስከ 9,000 ሺ\"ል/ወር።",
+      am: 'ዕለታዊ ተግባራትን ለማከናወን እርዳታ የሚያስፈልጋቸው የኢትዮጵያ-እስራኤላዊ ሽማግሌዎች ከBTL የነርሲንግ ጥቅማ-ጥቅም የማግኘት መብት አላቸው — 4,000 እስከ 9,000 ሺ"ል/ወር።',
     },
     tags: ["health", "family"],
     bodies: {

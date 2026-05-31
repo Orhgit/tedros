@@ -57,7 +57,7 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
       <SiteHeader locale={locale} currentPath={`/${locale}/rights`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
         {/* Hero with subtle earth + flag-color radial accent */}
-        <header className="relative mb-10 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-10 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
           <img
             src="https://images.unsplash.com/photo-1662894312546-667d7698a1f7?fm=webp&q=70&w=1200&fit=crop"
             alt=""
@@ -66,8 +66,14 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <div
             aria-hidden="true"
             className="absolute -inset-e-12 -top-12 size-40 rounded-full bg-accent-yellow/15 blur-3xl"

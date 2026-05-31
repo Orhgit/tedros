@@ -179,7 +179,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
         <HealthDisclaimer locale={locale} variant="mental-health" />
 
         {/* Header */}
-        <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
           <img
             src="https://images.unsplash.com/photo-1625255178547-44af3d0718c3?fm=webp&q=70&w=1200&fit=crop"
             alt=""
@@ -188,8 +188,14 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "health_breadcrumb_home")}
@@ -387,7 +393,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
           </h2>
           <p className="mb-4 text-sm leading-relaxed text-ink-700">
             {locale === "he"
-              ? "26.7% מהקהילה הם מתחת לגיל 14. נוער בין שתי תרבויות נחשף לסיכון גבוה יותר לדיכאון, אלימות ועזיבת ביה\"ס. ארגון Elem מציע תוכניות ייחודיות לנוער האתיופי."
+              ? '26.7% מהקהילה הם מתחת לגיל 14. נוער בין שתי תרבויות נחשף לסיכון גבוה יותר לדיכאון, אלימות ועזיבת ביה"ס. ארגון Elem מציע תוכניות ייחודיות לנוער האתיופי.'
               : locale === "am"
                 ? "26.7% ከ14 ዓመት በታች ናቸው። Elem ለኢትዮጵያ ወጣቶች ፕሮግራሞችን ያቀርባሉ።"
                 : "26.7% of the community is under 14. Youth navigating two cultures face higher rates of depression, violence, and school dropout. Elem offers dedicated programmes for Ethiopian youth."}
@@ -397,7 +403,7 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
               ? [
                   "Elem — תוכניות ייעוץ אישי לנוער מהקהילה (קיים ב-20+ ערים)",
                   "NATAL — ליווי לנפגעי טראומה בכל גיל",
-                  "ער\"ן 1201 — גם נוער יכולים להתקשר (חסוי לחלוטין)",
+                  'ער"ן 1201 — גם נוער יכולים להתקשר (חסוי לחלוטין)',
                   "בתי ספר — יועצים בית-ספריים מוסמכים לזיהוי ילדים במצוקה",
                 ]
               : locale === "am"
@@ -414,7 +420,9 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
                   ]
             ).map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <span aria-hidden className="text-amber-600">•</span>
+                <span aria-hidden className="text-amber-600">
+                  •
+                </span>
                 {item}
               </li>
             ))}

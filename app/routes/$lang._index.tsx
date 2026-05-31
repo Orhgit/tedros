@@ -189,7 +189,10 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
           <span className="font-display text-2xl font-bold tracking-tight text-white drop-shadow">
             {t(locale, "homepage_title")}
           </span>
-          <nav className="flex gap-1 text-sm" aria-label={t(locale, "lang_switcher_label")}>
+          <nav
+            className="flex gap-1 text-sm"
+            aria-label={t(locale, "lang_switcher_label")}
+          >
             {(["he", "en", "am"] as const).map((lang) => (
               <Link
                 key={lang}
@@ -204,8 +207,8 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
         </div>
 
         {/* Hero content */}
-        <div className="container-default flex flex-1 flex-col justify-end pb-16 pt-10">
-          <h1 className="max-w-2xl font-display text-4xl font-bold leading-tight tracking-tight text-white drop-shadow sm:text-5xl lg:text-6xl">
+        <div className="container-default flex flex-1 flex-col justify-end pt-10 pb-16">
+          <h1 className="max-w-2xl font-display text-4xl leading-tight font-bold tracking-tight text-white drop-shadow sm:text-5xl lg:text-6xl">
             {t(locale, "homepage_subtitle")}
           </h1>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/85 drop-shadow-sm">
@@ -267,7 +270,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                       />
                       {/* Thin flag-stripe accent at bottom of image */}
                       <div
-                        className="flag-stripe absolute bottom-0 inset-x-0 h-[3px] opacity-70"
+                        className="flag-stripe absolute inset-x-0 bottom-0 h-[3px] opacity-70"
                         aria-hidden="true"
                       />
                     </div>

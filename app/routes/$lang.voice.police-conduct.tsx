@@ -106,7 +106,7 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
         </nav>
 
         {/* Page header */}
-        <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
           <img
             src={VOICE_HERO_IMG}
             alt=""
@@ -115,7 +115,10 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <div
             className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
             aria-hidden="true"
@@ -127,8 +130,14 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
         </header>
 
         {/* Your rights at a glance */}
-        <section className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-5" aria-labelledby="rights-glance-heading">
-          <h2 id="rights-glance-heading" className="mb-3 font-display text-base font-semibold text-amber-900">
+        <section
+          className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-5"
+          aria-labelledby="rights-glance-heading"
+        >
+          <h2
+            id="rights-glance-heading"
+            className="mb-3 font-display text-base font-semibold text-amber-900"
+          >
             {locale === "he"
               ? "הזכויות שלכם בעצירה — בקצרה"
               : locale === "am"
@@ -138,7 +147,7 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
           <ul className="space-y-1.5 text-sm text-amber-900">
             {(locale === "he"
               ? [
-                  "שאלו: \"האם אני עצור? האם אני חופשי ללכת?\" — השוטר חייב לענות.",
+                  'שאלו: "האם אני עצור? האם אני חופשי ללכת?" — השוטר חייב לענות.',
                   "אין חובה להציג תעודת זהות אלא אם יש חשד סביר לעבירה.",
                   "זכות לשתיקה — אל תחתמו על כלום בלי עורך דין.",
                   "זכות לעורך דין לפני חקירה — ועל-ידי עורך דין מהקהילה.",
@@ -163,7 +172,9 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
                   ]
             ).map((right, i) => (
               <li key={i} className="flex items-start gap-2">
-                <span aria-hidden className="mt-0.5 font-bold text-amber-700">✓</span>
+                <span aria-hidden className="mt-0.5 font-bold text-amber-700">
+                  ✓
+                </span>
                 {right}
               </li>
             ))}
@@ -206,7 +217,9 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
               if (boldMatch) {
                 return (
                   <p key={idx} className="text-sm leading-relaxed text-ink-700">
-                    <strong className="font-semibold text-earth-900">{boldMatch[1]}</strong>
+                    <strong className="font-semibold text-earth-900">
+                      {boldMatch[1]}
+                    </strong>
                     {boldMatch[2]}
                   </p>
                 );

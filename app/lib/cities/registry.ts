@@ -71,7 +71,7 @@ export const CITIES: City[] = [
       },
       {
         label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
-        value: "תנה בריאות, NATAL, ENP, מתנ\"ס",
+        value: 'תנה בריאות, NATAL, ENP, מתנ"ס',
       },
     ],
   },

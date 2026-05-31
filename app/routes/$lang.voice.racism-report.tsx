@@ -106,7 +106,7 @@ export default function RacismReport({ loaderData }: Route.ComponentProps) {
         </nav>
 
         {/* Page header */}
-        <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
           <img
             src={VOICE_HERO_IMG}
             alt=""
@@ -115,7 +115,10 @@ export default function RacismReport({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <div
             className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
             aria-hidden="true"
@@ -149,7 +152,9 @@ export default function RacismReport({ loaderData }: Route.ComponentProps) {
               if (boldMatch) {
                 return (
                   <p key={idx} className="text-sm leading-relaxed text-ink-700">
-                    <strong className="font-semibold text-earth-900">{boldMatch[1]}</strong>
+                    <strong className="font-semibold text-earth-900">
+                      {boldMatch[1]}
+                    </strong>
                     {boldMatch[2]}
                   </p>
                 );

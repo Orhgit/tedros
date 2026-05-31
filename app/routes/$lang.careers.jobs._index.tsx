@@ -94,7 +94,7 @@ export default function JobsLanding({ loaderData }: Route.ComponentProps) {
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}/careers`} />
       <main id="main-content" className="container-default mx-auto max-w-4xl py-10">
-        <header className="relative mb-10 isolate overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-yellow/10 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-yellow/10 px-6 py-8 sm:px-10 sm:py-12">
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "rights_breadcrumb_home")}

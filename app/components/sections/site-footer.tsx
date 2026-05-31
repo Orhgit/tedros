@@ -39,14 +39,28 @@ export function SiteFooter({ locale }: SiteFooterProps) {
           {/* Content pillars — all live */}
           <FooterCol title={t(locale, "footer_live_heading")}>
             <FooterLink to={`${base}/rights`}>{t(locale, "nav_rights")}</FooterLink>
-            <FooterLink to={`${base}/careers`}>{t(locale, "pillar_employment_title")}</FooterLink>
-            <FooterLink to={`${base}/health`}>{t(locale, "pillar_health_title")}</FooterLink>
-            <FooterLink to={`${base}/education`}>{t(locale, "pillar_education_title")}</FooterLink>
-            <FooterLink to={`${base}/heritage/events`}>{t(locale, "pillar_heritage_title")}</FooterLink>
+            <FooterLink to={`${base}/careers`}>
+              {t(locale, "pillar_employment_title")}
+            </FooterLink>
+            <FooterLink to={`${base}/health`}>
+              {t(locale, "pillar_health_title")}
+            </FooterLink>
+            <FooterLink to={`${base}/education`}>
+              {t(locale, "pillar_education_title")}
+            </FooterLink>
+            <FooterLink to={`${base}/heritage/events`}>
+              {t(locale, "pillar_heritage_title")}
+            </FooterLink>
             <FooterLink to={`${base}/news`}>{t(locale, "pillar_news_title")}</FooterLink>
-            <FooterLink to={`${base}/statistics`}>{t(locale, "statistics_landing_title")}</FooterLink>
-            <FooterLink to={`${base}/family`}>{t(locale, "pillar_family_title")}</FooterLink>
-            <FooterLink to={`${base}/voice`}>{t(locale, "pillar_voice_title")}</FooterLink>
+            <FooterLink to={`${base}/statistics`}>
+              {t(locale, "statistics_landing_title")}
+            </FooterLink>
+            <FooterLink to={`${base}/family`}>
+              {t(locale, "pillar_family_title")}
+            </FooterLink>
+            <FooterLink to={`${base}/voice`}>
+              {t(locale, "pillar_voice_title")}
+            </FooterLink>
           </FooterCol>
 
           {/* Tools & directory */}

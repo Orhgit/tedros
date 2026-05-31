@@ -85,7 +85,7 @@ export default function ProfessionListing({ loaderData }: Route.ComponentProps) 
       <SiteHeader locale={locale} currentPath={`/${locale}/professionals`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
         <header
-          className={`relative mb-10 isolate overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
+          className={`relative isolate mb-10 overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
         >
           <span
             aria-hidden="true"

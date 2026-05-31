@@ -796,7 +796,11 @@ Evidence-based PTSD treatments include: Trauma-Focused Cognitive Behavioral Ther
           en: "Intergenerational trauma",
           am: "ትውልዳዊ ቁስ",
         },
-        figure: { he: "הדור השני מושפע", en: "Second generation affected", am: "ሁለተኛ ትውልድ ተጎድቷል" },
+        figure: {
+          he: "הדור השני מושפע",
+          en: "Second generation affected",
+          am: "ሁለተኛ ትውልድ ተጎድቷል",
+        },
         context: {
           he: "ילדים של עולים שסבלו מ-PTSD מציגים שיעורים גבוהים יותר של מצוקה נפשית — גם ללא חשיפה ישירה לאירועי הטראומה.",
           en: "Children of immigrants who suffered PTSD show higher rates of psychological distress — even without direct exposure to the original traumatic events.",
@@ -1052,7 +1056,11 @@ Diagnosis is simple: a complete blood count (CBC) and ferritin test (iron store 
           en: "Risk in pregnancy",
           am: "በእርግዝና ጊዜ አደጋ",
         },
-        figure: { he: "מוגבר בנשים הרות", en: "Elevated in pregnant women", am: "ለነፍሰ-ጡር ከፍ ያለ" },
+        figure: {
+          he: "מוגבר בנשים הרות",
+          en: "Elevated in pregnant women",
+          am: "ለነፍሰ-ጡር ከፍ ያለ",
+        },
         context: {
           he: "נשים הרות בקהילה עם אנמיה מחוסר ברזל לא מטופלת נמצאות בסיכון מוגבר לסיבוכים בלידה ולאנמיה בתינוק.",
           en: "Pregnant community women with untreated iron-deficiency anemia face elevated risk of birth complications and neonatal anemia.",
@@ -1115,7 +1123,11 @@ As an easy preventive step: exposing arms and legs to sunlight for 15-20 minutes
           en: "Synthesis barrier in dark skin",
           am: "ጠቆር ቆዳ ውስጥ ምርት ማኅለቅ",
         },
-        figure: { he: "3–6× חשיפה ארוכה יותר", en: "3–6× longer exposure needed", am: "3–6× ረዘም ያለ ንክኪ" },
+        figure: {
+          he: "3–6× חשיפה ארוכה יותר",
+          en: "3–6× longer exposure needed",
+          am: "3–6× ረዘም ያለ ንክኪ",
+        },
         context: {
           he: "אנשים עם מלנין גבוה (עור כהה) צריכים חשיפה לשמש ארוכה פי 3–6 לייצור אותה כמות ויטמין D — גורם סיכון משמעותי בתנאי ישראל.",
           en: "People with high melanin (dark skin) need 3–6 times longer sun exposure to produce the same amount of vitamin D — a significant risk factor under Israeli conditions.",
@@ -1134,7 +1146,11 @@ As an easy preventive step: exposing arms and legs to sunlight for 15-20 minutes
           en: "Link to type 2 diabetes",
           am: "ከሁለተኛ ደረጃ ስኳር ህመም ጋር ግንኙነት",
         },
-        figure: { he: "30–40% עלייה בסיכון", en: "30–40% risk increase", am: "30–40% አደጋ ጭማሪ" },
+        figure: {
+          he: "30–40% עלייה בסיכון",
+          en: "30–40% risk increase",
+          am: "30–40% አደጋ ጭማሪ",
+        },
         context: {
           he: "מחסור בוויטמין D קשור לעלייה של 30–40% בסיכון לסוכרת מסוג 2 — קשר שמחמיר את מצב הקהילה בשל שכיחות הסוכרת הגבוהה ממילא.",
           en: "Vitamin D deficiency is associated with a 30–40% increase in type 2 diabetes risk — a link that compounds the community's situation given already-high diabetes prevalence.",

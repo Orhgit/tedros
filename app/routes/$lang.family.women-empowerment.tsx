@@ -75,7 +75,7 @@ export default function WomenEmpowermentPage({ loaderData }: Route.ComponentProp
       <SiteHeader locale={locale} currentPath={`/${locale}${familyPath()}`} />
       <main id="main-content" className="container-default mx-auto max-w-4xl py-10">
         {/* Header */}
-        <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
           <img
             src={HERO_IMAGE}
             alt=""
@@ -107,12 +107,17 @@ export default function WomenEmpowermentPage({ loaderData }: Route.ComponentProp
         <section
           className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-3"
           aria-label={
-            locale === "he" ? "נקודות מפתח" : locale === "am" ? "ቁልፍ ነጥቦች" : "Key highlights"
+            locale === "he"
+              ? "נקודות מפתח"
+              : locale === "am"
+                ? "ቁልፍ ነጥቦች"
+                : "Key highlights"
           }
         >
           {[
             {
-              figure: locale === "he" ? "מלגות" : locale === "am" ? "ስኮላርሺፖች" : "Scholarships",
+              figure:
+                locale === "he" ? "מלגות" : locale === "am" ? "ስኮላርሺፖች" : "Scholarships",
               label:
                 locale === "he"
                   ? "לסטודנטיות מקהילת יוצאי אתיופיה"
@@ -143,7 +148,9 @@ export default function WomenEmpowermentPage({ loaderData }: Route.ComponentProp
               key={stat.label}
               className="rounded-xl border border-earth-200 bg-card p-4 text-center"
             >
-              <p className="font-display text-2xl font-bold text-earth-800">{stat.figure}</p>
+              <p className="font-display text-2xl font-bold text-earth-800">
+                {stat.figure}
+              </p>
               <p className="mt-1 text-sm text-ink-600">{stat.label}</p>
             </div>
           ))}
@@ -164,7 +171,7 @@ export default function WomenEmpowermentPage({ loaderData }: Route.ComponentProp
                 ? "ፕሮግራሞች እና ሀብቶች"
                 : "Programmes and resources"}
           </h2>
-          <div className="space-y-3 text-sm leading-relaxed text-ink-700 whitespace-pre-line">
+          <div className="space-y-3 text-sm leading-relaxed whitespace-pre-line text-ink-700">
             {body}
           </div>
         </section>
@@ -203,7 +210,8 @@ export default function WomenEmpowermentPage({ loaderData }: Route.ComponentProp
                       rel="noopener noreferrer"
                       className="shrink-0 rounded-md border border-earth-200 px-3 py-1.5 text-xs font-medium text-earth-700 transition hover:border-earth-400 hover:bg-earth-50"
                     >
-                      {locale === "he" ? "לאתר" : locale === "am" ? "ድህረ ገጽ" : "Website"} ↗
+                      {locale === "he" ? "לאתר" : locale === "am" ? "ድህረ ገጽ" : "Website"}{" "}
+                      ↗
                     </a>
                   )}
                 </div>

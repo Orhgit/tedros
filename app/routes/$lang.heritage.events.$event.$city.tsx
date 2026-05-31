@@ -55,13 +55,13 @@ export async function loader({ params }: Route.LoaderArgs) {
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}${eventCityPath(event.slug, city.slug)}`;
 
-  const otherCityEvents = HERITAGE_EVENTS
-    .filter((e) => e.slug !== event.slug && isRelevant(e.slug, city.slug))
-    .map((e) => ({
-      slug: e.slug,
-      name: e.name[locale] ?? e.name.he,
-      next: nextDate(e),
-    }));
+  const otherCityEvents = HERITAGE_EVENTS.filter(
+    (e) => e.slug !== event.slug && isRelevant(e.slug, city.slug),
+  ).map((e) => ({
+    slug: e.slug,
+    name: e.name[locale] ?? e.name.he,
+    next: nextDate(e),
+  }));
 
   return {
     locale,
@@ -118,8 +118,17 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function HeritageEventCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, event, city, cityNameLocal, cityOverviewLocal, html, next, shareUrl, otherCityEvents } =
-    loaderData;
+  const {
+    locale,
+    event,
+    city,
+    cityNameLocal,
+    cityOverviewLocal,
+    html,
+    next,
+    shareUrl,
+    otherCityEvents,
+  } = loaderData;
   const eventName = event.name[locale] ?? event.name.he;
   const dateDescription = event.dateDescription[locale] ?? event.dateDescription.he;
   const prep = prepFor(locale);
@@ -129,7 +138,7 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}/heritage/events`} />
       <article id="main-content" className="container-default mx-auto max-w-3xl py-10">
-        <header className="relative mb-6 isolate overflow-hidden rounded-2xl border border-accent-sigd/30 bg-accent-sigd/5 p-6 sm:p-10">
+        <header className="relative isolate mb-6 overflow-hidden rounded-2xl border border-accent-sigd/30 bg-accent-sigd/5 p-6 sm:p-10">
           <img
             src="https://images.unsplash.com/photo-1642505368560-f8b8efd2e722?fm=webp&q=70&w=1200&fit=crop"
             alt=""
@@ -138,8 +147,14 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "rights_breadcrumb_home")}
@@ -223,7 +238,7 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
                 <li key={e.slug}>
                   <Link
                     to={`/${locale}${eventCityPath(e.slug, city.slug)}`}
-                    className="flex items-center justify-between rounded-lg border border-earth-200 bg-white p-3 text-sm hover:border-earth-400 transition"
+                    className="flex items-center justify-between rounded-lg border border-earth-200 bg-white p-3 text-sm transition hover:border-earth-400"
                   >
                     <span className="text-ink-800">{e.name}</span>
                     {e.next && <span className="text-xs text-earth-600">{e.next}</span>}

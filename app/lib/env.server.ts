@@ -51,7 +51,10 @@ const envSchema = z.object({
   TURNSTILE_SECRET_KEY: z.string().optional(),
 
   // Google Analytics 4 — set GA_MEASUREMENT_ID=G-XXXXXXXXXX in production
-  GA_MEASUREMENT_ID: z.string().regex(/^G-[A-Z0-9]+$/).optional(),
+  GA_MEASUREMENT_ID: z
+    .string()
+    .regex(/^G-[A-Z0-9]+$/)
+    .optional(),
 
   // Mula AI chatbot — Claude API
   ANTHROPIC_API_KEY: z.string().optional(),

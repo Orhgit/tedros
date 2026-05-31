@@ -21,7 +21,11 @@ const VIDEOS: Record<AvatarState, string> = {
   talking: "/mula-talking.mp4",
 };
 
-export function MulaDigitalHuman({ state = "idle", size = 120, className }: MulaDigitalHumanProps) {
+export function MulaDigitalHuman({
+  state = "idle",
+  size = 120,
+  className,
+}: MulaDigitalHumanProps) {
   const [hasVideo, setHasVideo] = useState(false);
   const idleRef = useRef<HTMLVideoElement>(null);
   const thinkRef = useRef<HTMLVideoElement>(null);
@@ -62,7 +66,10 @@ export function MulaDigitalHuman({ state = "idle", size = 120, className }: Mula
       frameRef.current = requestAnimationFrame(loop);
     };
     frameRef.current = requestAnimationFrame(loop);
-    return () => { window.removeEventListener("mousemove", onMove); cancelAnimationFrame(frameRef.current); };
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      cancelAnimationFrame(frameRef.current);
+    };
   }, []);
 
   // החלף וידאו לפי state
@@ -82,39 +89,61 @@ export function MulaDigitalHuman({ state = "idle", size = 120, className }: Mula
   }, [state, hasVideo]);
 
   const ringSpeed = state === "thinking" ? "1s" : "5s";
-  const glowColor = state === "talking" ? "#fbbf24" : state === "thinking" ? "#a78bfa" : "#f59e0b";
+  const glowColor =
+    state === "talking" ? "#fbbf24" : state === "thinking" ? "#a78bfa" : "#f59e0b";
 
   return (
-    <div className={cn("relative shrink-0 select-none", className)} style={{ width: size, height: size }}>
-
+    <div
+      className={cn("relative shrink-0 select-none", className)}
+      style={{ width: size, height: size }}
+    >
       {/* Ambient glow */}
-      <div className="absolute inset-0 rounded-full blur-xl opacity-60"
-        style={{ background: `radial-gradient(circle, ${glowColor}55 0%, transparent 70%)`, transform: "scale(1.5)", transition: "background 0.5s" }} />
+      <div
+        className="absolute inset-0 rounded-full opacity-60 blur-xl"
+        style={{
+          background: `radial-gradient(circle, ${glowColor}55 0%, transparent 70%)`,
+          transform: "scale(1.5)",
+          transition: "background 0.5s",
+        }}
+      />
 
       {/* Spinning ring */}
-      <div className="absolute inset-0 rounded-full" style={{
-        border: "1.5px solid transparent",
-        borderTopColor: glowColor,
-        borderRightColor: `${glowColor}44`,
-        borderBottomColor: glowColor,
-        borderLeftColor: `${glowColor}22`,
-        animation: `mula-spin ${ringSpeed} linear infinite`,
-        transition: "border-color 0.5s",
-      }} />
+      <div
+        className="absolute inset-0 rounded-full"
+        style={{
+          border: "1.5px solid transparent",
+          borderTopColor: glowColor,
+          borderRightColor: `${glowColor}44`,
+          borderBottomColor: glowColor,
+          borderLeftColor: `${glowColor}22`,
+          animation: `mula-spin ${ringSpeed} linear infinite`,
+          transition: "border-color 0.5s",
+        }}
+      />
 
       {/* Counter ring */}
-      <div className="absolute rounded-full" style={{
-        inset: 3,
-        border: "1px solid transparent",
-        borderTopColor: `${glowColor}66`,
-        borderBottomColor: `${glowColor}44`,
-        animation: `mula-spin-rev ${state === "thinking" ? "1.5s" : "8s"} linear infinite`,
-      }} />
+      <div
+        className="absolute rounded-full"
+        style={{
+          inset: 3,
+          border: "1px solid transparent",
+          borderTopColor: `${glowColor}66`,
+          borderBottomColor: `${glowColor}44`,
+          animation: `mula-spin-rev ${state === "thinking" ? "1.5s" : "8s"} linear infinite`,
+        }}
+      />
 
       {/* ── תמונה/וידאו — 3D animated ── */}
-      <div ref={containerRef} className="absolute overflow-hidden rounded-full"
-        style={{ inset: 6, willChange: "transform", boxShadow: `0 0 ${size * 0.18}px ${glowColor}55`, transition: "box-shadow 0.5s" }}>
-
+      <div
+        ref={containerRef}
+        className="absolute overflow-hidden rounded-full"
+        style={{
+          inset: 6,
+          willChange: "transform",
+          boxShadow: `0 0 ${size * 0.18}px ${glowColor}55`,
+          transition: "box-shadow 0.5s",
+        }}
+      >
         {hasVideo ? (
           /* ── סרטוני מולה ── */
           <>
@@ -134,49 +163,96 @@ export function MulaDigitalHuman({ state = "idle", size = 120, className }: Mula
         ) : (
           /* ── Fallback: תמונה עם אנימציה עד שהסרטון יגיע ── */
           <>
-            <img src="/mula.jpeg" alt="מולה" draggable={false}
+            <img
+              src="/mula.jpeg"
+              alt="מולה"
+              draggable={false}
               className="size-full object-cover object-top"
               style={{
-                filter: state === "thinking" ? "brightness(0.85) saturate(0.7)" : "brightness(1.05) saturate(1.1)",
+                filter:
+                  state === "thinking"
+                    ? "brightness(0.85) saturate(0.7)"
+                    : "brightness(1.05) saturate(1.1)",
                 transition: "filter 0.4s",
               }}
             />
             {/* blink */}
-            <div className="absolute inset-x-0 top-0 h-full bg-[#5c2a0d]"
-              style={{ transformOrigin: "top", animation: "mula-blink-overlay 6s ease-in-out infinite" }} />
+            <div
+              className="absolute inset-x-0 top-0 h-full bg-[#5c2a0d]"
+              style={{
+                transformOrigin: "top",
+                animation: "mula-blink-overlay 6s ease-in-out infinite",
+              }}
+            />
             {/* talking glow */}
             {state === "talking" && (
-              <div className="absolute inset-x-0 bottom-0 h-[28%]"
-                style={{ background: "linear-gradient(to top, rgba(251,191,36,0.18), transparent)", animation: "mula-mouth-pulse 0.4s ease-in-out infinite alternate" }} />
+              <div
+                className="absolute inset-x-0 bottom-0 h-[28%]"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(251,191,36,0.18), transparent)",
+                  animation: "mula-mouth-pulse 0.4s ease-in-out infinite alternate",
+                }}
+              />
             )}
             {state === "thinking" && (
-              <div className="absolute inset-0" style={{ background: "rgba(139,92,246,0.12)", animation: "mula-think-pulse 1s ease-in-out infinite alternate" }} />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background: "rgba(139,92,246,0.12)",
+                  animation: "mula-think-pulse 1s ease-in-out infinite alternate",
+                }}
+              />
             )}
           </>
         )}
 
         {/* Scan line */}
-        <div className="absolute inset-x-0 h-px top-0 pointer-events-none"
-          style={{ background: `linear-gradient(90deg, transparent, ${glowColor}99, transparent)`, animation: "mula-scan 3s ease-in-out infinite" }} />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-px"
+          style={{
+            background: `linear-gradient(90deg, transparent, ${glowColor}99, transparent)`,
+            animation: "mula-scan 3s ease-in-out infinite",
+          }}
+        />
       </div>
 
       {/* Orbiting dot */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div style={{
-          position: "absolute", width: 6, height: 6, borderRadius: "50%",
-          background: glowColor, boxShadow: `0 0 8px ${glowColor}`,
-          top: "50%", left: "50%",
-          transformOrigin: `0 -${size / 2 + 1}px`,
-          animation: `mula-spin ${state === "thinking" ? "1s" : "4s"} linear infinite`,
-          marginTop: -3, marginLeft: -3,
-        }} />
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          style={{
+            position: "absolute",
+            width: 6,
+            height: 6,
+            borderRadius: "50%",
+            background: glowColor,
+            boxShadow: `0 0 8px ${glowColor}`,
+            top: "50%",
+            left: "50%",
+            transformOrigin: `0 -${size / 2 + 1}px`,
+            animation: `mula-spin ${state === "thinking" ? "1s" : "4s"} linear infinite`,
+            marginTop: -3,
+            marginLeft: -3,
+          }}
+        />
       </div>
 
       {/* Talking waveform */}
       {state === "talking" && (
-        <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-end gap-0.5" style={{ height: 14 }}>
+        <div
+          className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-end gap-0.5"
+          style={{ height: 14 }}
+        >
           {[0.5, 0.8, 1, 0.9, 0.6, 0.9, 0.5].map((h, i) => (
-            <div key={i} className="w-1 rounded-full" style={{ height: `${h * 100}%`, background: glowColor, animation: `mula-wave-bar 0.45s ease-in-out infinite ${i * 0.07}s alternate` }} />
+            <div
+              key={i}
+              className="w-1 rounded-full"
+              style={{
+                height: `${h * 100}%`,
+                background: glowColor,
+                animation: `mula-wave-bar 0.45s ease-in-out infinite ${i * 0.07}s alternate`,
+              }}
+            />
           ))}
         </div>
       )}
@@ -185,15 +261,20 @@ export function MulaDigitalHuman({ state = "idle", size = 120, className }: Mula
       {state === "thinking" && (
         <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 gap-1">
           {[0, 1, 2].map((i) => (
-            <span key={i} className="size-1.5 rounded-full bg-violet-400"
-              style={{ animation: `mula-dot-bounce 0.7s ease-in-out infinite ${i * 0.15}s` }} />
+            <span
+              key={i}
+              className="size-1.5 rounded-full bg-violet-400"
+              style={{
+                animation: `mula-dot-bounce 0.7s ease-in-out infinite ${i * 0.15}s`,
+              }}
+            />
           ))}
         </div>
       )}
 
       {/* Online dot */}
       {state === "idle" && (
-        <span className="absolute bottom-1 right-1 flex size-2.5">
+        <span className="absolute right-1 bottom-1 flex size-2.5">
           <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-400 opacity-70" />
           <span className="relative inline-flex size-2.5 rounded-full bg-green-500 ring-1 ring-white" />
         </span>

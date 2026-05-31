@@ -99,7 +99,7 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
       <SiteHeader locale={locale} currentPath={`/${locale}/professionals`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
         <header
-          className={`relative mb-10 isolate overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
+          className={`relative isolate mb-10 overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
         >
           <img
             src="https://images.unsplash.com/photo-1666887360742-974c8fce8e6b?fm=webp&q=70&w=1200&fit=crop"
@@ -109,8 +109,14 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <span
             aria-hidden="true"
             className={`absolute inset-s-0 inset-e-0 top-0 h-1.5 ${tone.accentBg}`}

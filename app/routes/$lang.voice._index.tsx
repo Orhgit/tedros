@@ -12,7 +12,12 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
-import { voicePath, racismReportPath, policeConductPath, communityActionPath } from "~/lib/voice/links";
+import {
+  voicePath,
+  racismReportPath,
+  policeConductPath,
+  communityActionPath,
+} from "~/lib/voice/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/voice/schema";
 
 const VOICE_HERO_IMG =
@@ -97,7 +102,7 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
 
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
         {/* Hero */}
-        <header className="relative mb-10 isolate overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/10 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-green/10 px-6 py-8 sm:px-10 sm:py-12">
           <img
             src={VOICE_HERO_IMG}
             alt=""
@@ -131,7 +136,7 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
         <section aria-labelledby="voice-topics-heading">
           <h2
             id="voice-topics-heading"
-            className="mb-6 font-display text-2xl font-semibold text-earth-900 sr-only"
+            className="sr-only mb-6 font-display text-2xl font-semibold text-earth-900"
           >
             {t(locale, "voice_landing_title")}
           </h2>
@@ -153,7 +158,12 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
                   </p>
                   <p className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-earth-700">
                     {t(locale, "voice_card_read_more")}
-                    <span aria-hidden="true" className={locale === "en" ? "rotate-180 inline-block" : ""}>←</span>
+                    <span
+                      aria-hidden="true"
+                      className={locale === "en" ? "inline-block rotate-180" : ""}
+                    >
+                      ←
+                    </span>
                   </p>
                 </Link>
               </li>

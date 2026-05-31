@@ -118,7 +118,8 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, entry, city, html, related, provider, shareUrl, cityScholarships } = loaderData;
+  const { locale, entry, city, html, related, provider, shareUrl, cityScholarships } =
+    loaderData;
   const cityNameLocal = cityName(city, locale);
   const prep = prepFor(locale);
   const overview = cityOverview(city, locale);
@@ -131,7 +132,7 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
       <SiteHeader locale={locale} currentPath={`/${locale}/education/scholarships`} />
       <article id="main-content" className="container-default mx-auto max-w-3xl py-10">
         <header
-          className={`relative mb-8 isolate overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
+          className={`relative isolate mb-8 overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
         >
           <img
             src="https://images.unsplash.com/photo-1764145177622-8317fbfe1877?fm=webp&q=70&w=1200&fit=crop"
@@ -141,8 +142,14 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <span
             aria-hidden="true"
             className={`absolute inset-s-0 inset-e-0 top-0 h-1.5 ${tone.accentBg}`}
@@ -291,7 +298,7 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
                 <li key={s.slug}>
                   <Link
                     to={`/${locale}/education/scholarships/${s.slug}/${city.slug}`}
-                    className="flex items-start gap-2 rounded-lg border border-earth-200 bg-white p-3 text-sm hover:border-earth-400 transition"
+                    className="flex items-start gap-2 rounded-lg border border-earth-200 bg-white p-3 text-sm transition hover:border-earth-400"
                   >
                     <span aria-hidden="true" className="text-lg leading-none">
                       {glyphForScholarshipLevel(s.level)}

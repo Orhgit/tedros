@@ -1,4 +1,5 @@
 # תוכנית תוכן 300+ מאמרים — Tedros
+
 **תאריך:** 30 מאי 2026  
 **מחקר:** Tedros Researcher  
 **מקורות:** CBS, KolZchut, gov.il, Knesset MMM, ENP, IAEJ, Tene Briut, AdvaCenter, CHE, BTL
@@ -8,6 +9,7 @@
 ## עקרונות
 
 ### אסטרטגיית מילות מפתח
+
 - **שפת עדיפות:** עברית ראשונה — 90% מהחיפושים בקהל היעד הם בעברית.
 - **אמהרית משנית:** דפים נבחרים יתורגמו/יסופקו גם באמהרית לקהל הקשיש ולעולים חדשים.
 - **קווי כוונת:**
@@ -18,6 +20,7 @@
 - **ציר עיר × נושא:** כל עמוד עיר-ספציפי יכוון לביטוי "[נושא] [עיר]" — זנב ארוך מובטח.
 
 ### לוגיקת עדיפות
+
 - **P1** = נפח גבוה + תחרות נמוכה + gap מול KolZchut/gov.il (לרוב חסר עומק, חסר עדכון 2025/26, חסר עיר-ספציפיות)
 - **P2** = נפח בינוני או תחרות בינונית — ערך ברור לקהל
 - **P3** = נישה עמוקה, נפח נמוך, בנייה ארוכת טווח
@@ -27,6 +30,7 @@
 ## 1. זכויות וזכאויות — 42 מאמרים
 
 ### 1.1 — מדריך סל קליטה לעולים מאתיופיה 2026
+
 - **URL:** `/he/rights/sal-klita-ethiopians`
 - **Keywords:** סל קליטה אתיופיה, זכאויות עולים מאתיופיה, משרד הקליטה מענק
 - **Intent:** informational
@@ -35,6 +39,7 @@
 - **Notes:** KolZchut מכסה בקצרה; חסר עדכון 2025/26, חסר הסבר ייחודי לעולי אתיופיה (מענק ציוד, 150% מענק צבאי).
 
 ### 1.2 — ייצוג הולם ליוצאי אתיופיה בשירות המדינה
+
 - **URL:** `/he/rights/yitsuug-holam-civil-service`
 - **Keywords:** ייצוג הולם אתיופיה שירות מדינה, חוק ייצוג הולם, אפליה תעסוקתית
 - **Intent:** informational
@@ -43,6 +48,7 @@
 - **Notes:** נושא בעל חשיפה תקשורתית גבוהה; KolZchut קיים אך ישן; חסר מידע על אכיפה 2024/25.
 
 ### 1.3 — משכנתא ליוצאי אתיופיה — תנאי זכאות ואיך מגישים
+
 - **URL:** `/he/rights/mashkanta-ethiopians`
 - **Keywords:** משכנתא יוצאי אתיופיה, זכאות דיור אתיופים, תוכנית חומש משכנתא
 - **Intent:** transactional
@@ -51,6 +57,7 @@
 - **Notes:** ביטוי מחופש מאוד (מאות חיפושים/חודש); תחרות: אתרי פיננסים כלליים — Tedros יכול להיות המדריך הקהילתי המוסמך ביותר.
 
 ### 1.4 — פינוי-בינוי בשכונות אתיופיות — מדריך לבעלי דירות
+
 - **URL:** `/he/rights/pinui-binui-ethiopian-neighborhoods`
 - **Keywords:** פינוי בינוי אתיופים, התחדשות עירונית נתניה רחובות ראשון
 - **Intent:** informational
@@ -59,6 +66,7 @@
 - **Notes:** 5 שכונות עם ריכוז אתיופי בתהליך פינוי-בינוי; gap מוחלט בתוכן.
 
 ### 1.5 — קצבת זקנה לאזרחים ותיקים יוצאי אתיופיה
+
 - **URL:** `/he/rights/bitoah-leumi-old-age-ethiopians`
 - **Keywords:** קצבת זקנה אתיופיה, ביטוח לאומי קשישים אתיופים, מיצוי זכויות אזרחים ותיקים
 - **Intent:** informational
@@ -67,6 +75,7 @@
 - **Notes:** BTL עורך "ימי מיצוי זכויות" ייחודיים לאזרחים ותיקים יוצאי אתיופיה — מרכז לפורטל.
 
 ### 1.6 — גמלת נכות לעולים מאתיופיה
+
 - **URL:** `/he/rights/disability-benefit-ethiopians`
 - **Keywords:** גמלת נכות עולים, ביטוח לאומי נכות אתיופיה, זכויות נכים עולים
 - **Intent:** transactional
@@ -75,6 +84,7 @@
 - **Notes:** כשל שפה גורם לרבים לא לתבוע — דף מנגיש זה P1 חברתי.
 
 ### 1.7 — זכויות עובד ואיסור אפליה בעבודה
+
 - **URL:** `/he/rights/employment-discrimination`
 - **Keywords:** אפליה בעבודה גזע, תלונה על אפליה, חוק שוויון הזדמנויות
 - **Intent:** informational + transactional
@@ -83,6 +93,7 @@
 - **Notes:** Gap: KolZchut כללי; Tedros יוסיף הקשר ספציפי לקהילה.
 
 ### 1.8 — זכויות בפגישה עם משטרה — מה מותר ומה אסור
+
 - **URL:** `/he/rights/police-rights-guide`
 - **Keywords:** זכויות מול משטרה, עצור אתיופי, מה לעשות כשמעצרים
 - **Intent:** informational
@@ -91,6 +102,7 @@
 - **Notes:** ביקוש גבוה בעקבות מחאות 2015, 2019; עמוד ACRI קיים אך לא ממוקד קהילה.
 
 ### 1.9 — הגשת תלונה על שיטור-יתר — מדריך שלב אחר שלב
+
 - **URL:** `/he/rights/police-complaint-guide`
 - **Keywords:** תלונה על שוטר, נציב תלונות הציבור משטרה, מח"ש תלונה
 - **Intent:** transactional
@@ -99,6 +111,7 @@
 - **Notes:** אין מדריך קהילתי ספציפי בשום מקום; content gap ברור.
 
 ### 1.10 — זכויות בתי הדין — ייצוג משפטי חינמי ליוצאי אתיופיה
+
 - **URL:** `/he/rights/free-legal-aid`
 - **Keywords:** סיוע משפטי חינם אתיופיה, ייצוג חינמי עולים, עורך דין בחינם
 - **Intent:** navigational + transactional
@@ -106,6 +119,7 @@
 - **Priority:** P1
 
 ### 1.11 — זכויות שוכרי דירות מקרב יוצאי אתיופיה
+
 - **URL:** `/he/rights/tenant-rights-ethiopians`
 - **Keywords:** זכויות שוכר דירה ישראל, אפליה בשכירות, פינוי שוכר
 - **Intent:** informational
@@ -113,6 +127,7 @@
 - **Priority:** P2
 
 ### 1.12 — מענקים ממשרד הקליטה 2026 — רשימה מלאה
+
 - **URL:** `/he/rights/ministry-immigration-grants-2026`
 - **Keywords:** מענקים משרד קליטה 2026, הטבות עולים ישראל, מה מגיע לי כעולה
 - **Intent:** informational
@@ -120,6 +135,7 @@
 - **Priority:** P1
 
 ### 1.13 — קרן קליטה ייחודית לעולים מאתיופיה
+
 - **URL:** `/he/rights/special-fund-ethiopian-immigrants`
 - **Keywords:** קרן סיוע עולי אתיופיה, מענק מיוחד אתיופיה, תמיכה כספית עולים
 - **Intent:** transactional
@@ -127,6 +143,7 @@
 - **Priority:** P2
 
 ### 1.14 — זכויות ילדים עם צרכים מיוחדים — מדריך לאבות ואמהות יוצאי אתיופיה
+
 - **URL:** `/he/rights/special-ed-rights-parents`
 - **Keywords:** ילדים עם צרכים מיוחדים אתיופיה, חינוך מיוחד זכויות עולים
 - **Intent:** informational
@@ -134,6 +151,7 @@
 - **Priority:** P2
 
 ### 1.15 — קצבת ילדים ולוח תשלומים 2026
+
 - **URL:** `/he/rights/child-allowance-2026`
 - **Keywords:** קצבת ילדים 2026, ביטוח לאומי ילדים, מתי מגיע כסף
 - **Intent:** informational
@@ -141,6 +159,7 @@
 - **Priority:** P2
 
 ### 1.16 — גמלת סיעוד לקשישים — זכויות ומדריך הגשה
+
 - **URL:** `/he/rights/nursing-benefit-elderly`
 - **Keywords:** גמלת סיעוד קשיש, ביטוח לאומי סיעוד, זכויות הורים קשישים
 - **Intent:** transactional
@@ -148,6 +167,7 @@
 - **Priority:** P1
 
 ### 1.17 — זכויות חיילים משוחררים יוצאי אתיופיה
+
 - **URL:** `/he/rights/veterans-rights-ethiopians`
 - **Keywords:** זכויות חיילים משוחררים, מענק שחרור אתיופיה, זכויות חייל יוצא אתיופיה
 - **Intent:** informational
@@ -156,6 +176,7 @@
 - **Notes:** משרד הביטחון מציין 150% מענק + תוכנית ייחודית.
 
 ### 1.18 — זכויות אסיר יוצא אתיופיה — ייצוג ושחרור
+
 - **URL:** `/he/rights/prisoner-rights-ethiopians`
 - **Keywords:** אסיר יוצא אתיופיה, זכויות אסיר, שחרור על תנאי
 - **Intent:** informational
@@ -163,6 +184,7 @@
 - **Priority:** P3
 
 ### 1.19 — הלוואות בתנאים מועדפים ליוצאי אתיופיה
+
 - **URL:** `/he/rights/preferred-loans-ethiopians`
 - **Keywords:** הלוואות עולים, הלוואה מועדפת אתיופיה, מימון לרכישת דירה
 - **Intent:** transactional
@@ -170,6 +192,7 @@
 - **Priority:** P2
 
 ### 1.20 — מה זה "פרשת הדם" — ומה השתנה מאז 1996
+
 - **URL:** `/he/rights/blood-affair-1996-history`
 - **Keywords:** פרשת הדם 1996, השמדת דם אתיופים, הפגנה ירושלים 1996
 - **Intent:** informational
@@ -178,7 +201,8 @@
 - **Notes:** זיכרון היסטורי + רלוונטי לקמפיין תרומת דם עכשווי.
 
 ### 1.21–1.42 — זכויות לפי תחום ועיר (21 דפים)
-*(אחד לכל תחום/קבוצת ערים — ראו גם סעיף 8 על דפי עיר)*
+
+_(אחד לכל תחום/קבוצת ערים — ראו גם סעיף 8 על דפי עיר)_
 
 - `/he/rights/housing-rights-natanya` — זכויות דיור נתניה — P1
 - `/he/rights/housing-rights-beer-sheva` — זכויות דיור באר שבע — P1
@@ -207,6 +231,7 @@
 ## 2. תעסוקה — 48 מאמרים
 
 ### 2.1 — מדריך כתיבת קורות חיים ליוצאי אתיופיה
+
 - **URL:** `/he/careers/cv-writing-guide`
 - **Keywords:** קורות חיים יוצאי אתיופיה, איך לכתוב קורות חיים, מדריך קורות חיים עולים
 - **Intent:** informational
@@ -215,6 +240,7 @@
 - **Notes:** Gap: אין מדריך ייחודי לקהילה; KolZchut אין, AllJobs כללי.
 
 ### 2.2 — תוכנית Tech-Career — הכשרת הייטק ליוצאי אתיופיה
+
 - **URL:** `/he/careers/programs/tech-career`
 - **Keywords:** Tech-Career אתיופיה, הכשרת הייטק יוצאי אתיופיה, קורס תכנות חינם
 - **Intent:** navigational + transactional
@@ -222,6 +248,7 @@
 - **Priority:** P1
 
 ### 2.3 — תוכנית "למרחק" — הג'וינט — מה זה ואיך נרשמים
+
 - **URL:** `/he/careers/programs/lamarkhak-joint`
 - **Keywords:** תוכנית למרחק אתיופיה, הכוונה תעסוקתית הג'וינט, קידום תעסוקה
 - **Intent:** transactional
@@ -229,6 +256,7 @@
 - **Priority:** P1
 
 ### 2.4 — מסלול הייטק — סיפורי הצלחה ממשל יוצאי אתיופיה
+
 - **URL:** `/he/careers/tracks/tech`
 - **Keywords:** הייטק יוצאי אתיופיה, תוכנית הכשרה טכנולוגית, סיפורי הצלחה
 - **Intent:** informational
@@ -236,6 +264,7 @@
 - **Priority:** P1
 
 ### 2.5 — מסלול סיעוד ובריאות — קריירה לנשים יוצאות אתיופיה
+
 - **URL:** `/he/careers/tracks/nursing`
 - **Keywords:** סיעוד אתיופיה ישראל, לימודי סיעוד עולים, מסלול אחות
 - **Intent:** informational
@@ -243,6 +272,7 @@
 - **Priority:** P1
 
 ### 2.6 — מסלול חינוך — מורה ומחנך בישראל לבוגרי אתיופיה
+
 - **URL:** `/he/careers/tracks/education`
 - **Keywords:** מורה יוצא אתיופיה, לימודי חינוך, הכשרת מורים עולים
 - **Intent:** informational
@@ -250,6 +280,7 @@
 - **Priority:** P2
 
 ### 2.7 — מסלול משפטים — עורך דין יוצא אתיופיה
+
 - **URL:** `/he/careers/tracks/law`
 - **Keywords:** עורך דין יוצא אתיופיה, לימודי משפטים אתיופיה, תוכנית עתיד משפטי
 - **Intent:** informational
@@ -257,6 +288,7 @@
 - **Priority:** P2
 
 ### 2.8 — מסלול קצונה בצבא — קידום לקצונה יוצאי אתיופיה
+
 - **URL:** `/he/careers/tracks/military-officers`
 - **Keywords:** קצין יוצא אתיופיה, קורס קצינים אתיופיה, קידום צבאי
 - **Intent:** informational
@@ -264,6 +296,7 @@
 - **Priority:** P1
 
 ### 2.9 — מסלול שירות ציבורי ממשלה
+
 - **URL:** `/he/careers/tracks/government`
 - **Keywords:** עבודה ממשל ציבורי, שירות מדינה יוצא אתיופיה, גיוס שירות ציבורי
 - **Intent:** informational
@@ -271,6 +304,7 @@
 - **Priority:** P1
 
 ### 2.10 — מסלול רפואה — רופא יוצא אתיופיה — מסלולים ומדריך לימודים
+
 - **URL:** `/he/careers/tracks/medicine`
 - **Keywords:** רפואה יוצאי אתיופיה, לימודי רפואה מסלולים, רופא ישראלי ממוצא אתיופי
 - **Intent:** informational
@@ -278,6 +312,7 @@
 - **Priority:** P2
 
 ### 2.11 — ייצוג הולם — רשימת מעסיקים המחויבים לחוק
+
 - **URL:** `/he/careers/affirmative-action/employers-list`
 - **Keywords:** ייצוג הולם מעסיקים ישראל, חברות המחויבות ייצוג הולם, גיוס מגוון
 - **Intent:** informational
@@ -285,6 +320,7 @@
 - **Priority:** P1
 
 ### 2.12 — שכר ממוצע לפי מקצוע — יוצאי אתיופיה ישראל 2025
+
 - **URL:** `/he/careers/salary-benchmarks-2025`
 - **Keywords:** שכר יוצאי אתיופיה, פערי שכר גזע ישראל, שכר ממוצע מקצועות
 - **Intent:** informational
@@ -293,6 +329,7 @@
 - **Notes:** מחקר אדווה 2026 מאשר: רק 18% בוגרים עובדים בהתאם לתחום — תוכן בעל ביקוש.
 
 ### 2.13 — הכנה לריאיון עבודה — מדריך ייעודי
+
 - **URL:** `/he/careers/job-interview-guide`
 - **Keywords:** ריאיון עבודה מדריך, הכנה לריאיון, שאלות נפוצות ריאיון
 - **Intent:** informational
@@ -300,6 +337,7 @@
 - **Priority:** P1
 
 ### 2.14 — LinkedIn ומדיה חברתית — כלים לחיפוש עבודה
+
 - **URL:** `/he/careers/linkedin-job-search`
 - **Keywords:** לינקדאין חיפוש עבודה, רשתות מקצועיות ישראל, מדיה חברתית לקריירה
 - **Intent:** informational
@@ -307,6 +345,7 @@
 - **Priority:** P2
 
 ### 2.15 — קורסי הכשרה מקצועית ממומנים — רשימה מלאה 2026
+
 - **URL:** `/he/careers/funded-training-courses-2026`
 - **Keywords:** קורסי הכשרה ממומנים 2026, הכשרה מקצועית חינם, שירות תעסוקה
 - **Intent:** transactional
@@ -314,6 +353,7 @@
 - **Priority:** P1
 
 ### 2.16 — תעסוקת נשים יוצאות אתיופיה — מצב ותוכניות
+
 - **URL:** `/he/careers/women-employment`
 - **Keywords:** תעסוקת נשים אתיופיה, נשים שוק עבודה, השמה נשים עולות
 - **Intent:** informational
@@ -321,6 +361,7 @@
 - **Priority:** P1
 
 ### 2.17 — מנהיגות ומצוינות — תוכנית "עולים ביחד"
+
 - **URL:** `/he/careers/programs/olim-beyachad`
 - **Keywords:** עולים ביחד תוכנית, מנהיגות אתיופיה, מצוינות תעסוקתית
 - **Intent:** navigational
@@ -366,6 +407,7 @@
 ## 3. בריאות — 40 מאמרים
 
 ### 3.1 — סכרת ויוצאי אתיופיה — סיכון, מניעה וטיפול
+
 - **URL:** `/he/health/conditions/diabetes`
 - **Keywords:** סכרת יוצאי אתיופיה, סכרת עולים ישראל, מניעת סכרת אתיופיה
 - **Intent:** informational
@@ -374,6 +416,7 @@
 - **Notes:** שיעור סכרת 17% — הגבוה בין העדות; gap ב-Maariv/Ynet — אין מדריך מעשי.
 
 ### 3.2 — יתר לחץ דם ביוצאי אתיופיה — גורמים ומדריך
+
 - **URL:** `/he/health/conditions/hypertension`
 - **Keywords:** לחץ דם גבוה אתיופיה, יתר לחץ דם מניעה, בריאות קרדיו-וסקולרית
 - **Intent:** informational
@@ -381,6 +424,7 @@
 - **Priority:** P1
 
 ### 3.3 — מחלת הסיקל-סל (אנמיה חרמשית) ויוצאי אתיופיה
+
 - **URL:** `/he/health/conditions/sickle-cell`
 - **Keywords:** אנמיה חרמשית אתיופיה, מחלת סיקל-סל, בדיקת גנטיקה אתיופיה
 - **Intent:** informational
@@ -388,6 +432,7 @@
 - **Priority:** P1
 
 ### 3.4 — בריאות הנפש ביוצאי אתיופיה — שירותים ואיך לפנות
+
 - **URL:** `/he/health/mental-health`
 - **Keywords:** בריאות נפש אתיופיה, פסיכולוג אמהרית ישראל, סיוע נפשי עולים
 - **Intent:** informational + transactional
@@ -396,6 +441,7 @@
 - **Notes:** 637 מאושפזים — פי 2 מחלקם; חסר לחלוטין מדריך קהילתי.
 
 ### 3.5 — תנא בריאות — שירותים ואיך פונים
+
 - **URL:** `/he/health/orgs/tene-briut`
 - **Keywords:** תנא בריאות, תנא בריאות שירותים, תרגום רפואי אמהרית
 - **Intent:** navigational
@@ -403,6 +449,7 @@
 - **Priority:** P1
 
 ### 3.6 — רפואה מסורתית אתיופית — מה מותר ומה לא בישראל
+
 - **URL:** `/he/health/traditional-medicine`
 - **Keywords:** רפואה מסורתית אתיופיה, דבטרה, יה-אבוד, צמחי מרפא אתיופי
 - **Intent:** informational
@@ -411,6 +458,7 @@
 - **Notes:** יחיד בתחום — Wikipedia ותיאורי ספרים; Tedros יכול לכתוב תוכן שימושי עדכני.
 
 ### 3.7 — בריאות אמהות ולידה בישראל — מדריך ליולדות יוצאות אתיופיה
+
 - **URL:** `/he/health/maternal-health`
 - **Keywords:** לידה ישראל עולות, בריאות אמהות, ליווי לידה עולים
 - **Intent:** informational
@@ -418,6 +466,7 @@
 - **Priority:** P1
 
 ### 3.8 — שיניים ועיניים — זכויות ושירותים לעולים חדשים
+
 - **URL:** `/he/health/dental-vision-rights`
 - **Keywords:** טיפול שיניים עולים ישראל, ראייה עולים, ביטוח שיניים עולים
 - **Intent:** informational + transactional
@@ -425,6 +474,7 @@
 - **Priority:** P1
 
 ### 3.9 — חיסונים וסקרינינג — לוח חיסונים מוסבר לעולים
+
 - **URL:** `/he/health/vaccinations-guide`
 - **Keywords:** חיסונים ישראל עולים, לוח חיסונים, סקרינינג עולי אתיופיה
 - **Intent:** informational
@@ -432,6 +482,7 @@
 - **Priority:** P1
 
 ### 3.10 — בריאות נפשית אמהרית — רשימת שירותים ומטפלים
+
 - **URL:** `/he/health/mental-health-amharic-services`
 - **Keywords:** פסיכולוג שמדבר אמהרית, טיפול נפשי אמהרית, שירות נפשי עולי אתיופיה
 - **Intent:** navigational + transactional
@@ -476,6 +527,7 @@
 ## 4. חינוך — 38 מאמרים
 
 ### 4.1 — מלגת מרום — מי זכאי ואיך מגישים 2026
+
 - **URL:** `/he/education/scholarships/marom`
 - **Keywords:** מלגת מרום, מלגה יוצאי אתיופיה, מלגת מל"ג אתיופיה
 - **Intent:** transactional
@@ -483,6 +535,7 @@
 - **Priority:** P1
 
 ### 4.2 — תוכנית סיקט — אוניברסיטת בן-גוריון
+
 - **URL:** `/he/education/scholarships/sicket-bgu`
 - **Keywords:** תוכנית סיקט בגו, מלגה בן-גוריון אתיופיה, תמיכה סטודנטים אתיופים
 - **Intent:** transactional
@@ -490,6 +543,7 @@
 - **Priority:** P1
 
 ### 4.3 — סיוע לסטודנטים יוצאי אתיופיה — האוניברסיטה העברית
+
 - **URL:** `/he/education/scholarships/hebrew-university`
 - **Keywords:** מלגה האוניברסיטה העברית אתיופיה, תמיכה אקדמית, ייעוץ סטודנטים
 - **Intent:** transactional
@@ -497,6 +551,7 @@
 - **Priority:** P1
 
 ### 4.4 — מלגות לסטודנטים יוצאי אתיופיה — רשימה מלאה 2026
+
 - **URL:** `/he/education/scholarships`
 - **Keywords:** מלגות יוצאי אתיופיה 2026, מלגות סטודנטים, מימון לימודים אתיופיה
 - **Intent:** informational
@@ -504,6 +559,7 @@
 - **Priority:** P1
 
 ### 4.5 — מכינות קדם-אקדמיות ליוצאי אתיופיה — רשימה ומדריך
+
 - **URL:** `/he/education/pre-academic-programs`
 - **Keywords:** מכינה קדם אקדמית אתיופיה, מכינה יוצאי אתיופיה, הכנה לאוניברסיטה
 - **Intent:** informational + transactional
@@ -511,6 +567,7 @@
 - **Priority:** P1
 
 ### 4.6 — תוכנית יואל — מכינה קדם-אקדמית בר-אילן
+
 - **URL:** `/he/education/programs/yoel-biu`
 - **Keywords:** תוכנית יואל בר-אילן, מכינה קדם אקדמית יוצאי אתיופיה, מכינה בר אילן
 - **Intent:** navigational
@@ -518,6 +575,7 @@
 - **Priority:** P1
 
 ### 4.7 — תוכנית "בדרך לפסגה" — מל"ג — קידום מצוינות
+
 - **URL:** `/he/education/programs/baderech-lafsga`
 - **Keywords:** בדרך לפסגה אתיופיה, מל"ג מצוינות, תכנית מצוינות אקדמית
 - **Intent:** navigational
@@ -525,6 +583,7 @@
 - **Priority:** P1
 
 ### 4.8 — ארגון פידל — חינוך ונוער יוצאי אתיופיה
+
 - **URL:** `/he/education/orgs/fidel`
 - **Keywords:** פידל ארגון, חינוך יוצאי אתיופיה, נוער ביסיקון
 - **Intent:** navigational
@@ -532,6 +591,7 @@
 - **Priority:** P2
 
 ### 4.9 — ENP SPACE — תוכנית תגבור לימודים
+
 - **URL:** `/he/education/programs/enp-space`
 - **Keywords:** ENP SPACE, תגבור לימודים אתיופיה, תוכנית חינוכית יוצאי אתיופיה
 - **Intent:** navigational
@@ -539,6 +599,7 @@
 - **Priority:** P1
 
 ### 4.10 — נשירה בחינוך — מניעה ותוכניות לנוער יוצא אתיופיה
+
 - **URL:** `/he/education/dropout-prevention`
 - **Keywords:** נשירה בית ספר אתיופיה, מניעת נשירה, תוכניות נוער בסיכון
 - **Intent:** informational
@@ -546,6 +607,7 @@
 - **Priority:** P1
 
 ### 4.11 — חינוך מיוחד — זכויות ילדים יוצאי אתיופיה
+
 - **URL:** `/he/education/special-education-rights`
 - **Keywords:** חינוך מיוחד זכויות, ילדים עם קשיים, ועדת השמה
 - **Intent:** informational
@@ -553,6 +615,7 @@
 - **Priority:** P1
 
 ### 4.12 — ארגון הישגים — תמיכה בצעירים
+
 - **URL:** `/he/education/orgs/hesegim`
 - **Keywords:** הישגים ארגון, תמיכה צעירים יוצאי אתיופיה, חינוך
 - **Intent:** navigational
@@ -593,6 +656,7 @@
 ## 5. מורשת ותרבות — 35 מאמרים
 
 ### 5.1 — חג הסיגד 2026 — תאריך, מסורות, אירועים בכל הארץ
+
 - **URL:** `/he/heritage/events/sigd/2026`
 - **Keywords:** סיגד 2026, תאריך סיגד, חג הסיגד אירועים
 - **Intent:** informational
@@ -601,6 +665,7 @@
 - **Notes:** סיגד 2026 = 9 בנובמבר; ביקוש עונתי גבוה בחודשי אוקטובר-נובמבר.
 
 ### 5.2 — מהו חג הסיגד — היסטוריה ומשמעות
+
 - **URL:** `/he/heritage/sigd-history`
 - **Keywords:** מה זה סיגד, היסטוריה חג סיגד, מנהגי סיגד
 - **Intent:** informational
@@ -608,6 +673,7 @@
 - **Priority:** P1
 
 ### 5.3 — הקייסים (כהנים אתיופים) — תפקיד, מסורת, ראיונות
+
 - **URL:** `/he/heritage/kessim`
 - **Keywords:** קייסים אתיופיה, כהן יהדות אתיופיה, מסורת קייסים
 - **Intent:** informational
@@ -615,6 +681,7 @@
 - **Priority:** P1
 
 ### 5.4 — ביתא ישראל — היסטוריה של יהדות אתיופיה
+
 - **URL:** `/he/heritage/beta-israel-history`
 - **Keywords:** ביתא ישראל, יהדות אתיופיה היסטוריה, יהודי אתיופיה מקורות
 - **Intent:** informational
@@ -622,6 +689,7 @@
 - **Priority:** P1
 
 ### 5.5 — מבצע משה ומבצע שלמה — עלייה לישראל
+
 - **URL:** `/he/heritage/operation-moses-solomon`
 - **Keywords:** מבצע שלמה, מבצע משה עלייה, עלייה יהודי אתיופיה 1991
 - **Intent:** informational
@@ -629,6 +697,7 @@
 - **Priority:** P1
 
 ### 5.6 — מוזיקה אתיופית ישראלית — אמנים, סגנונות, פלייליסט
+
 - **URL:** `/he/heritage/music`
 - **Keywords:** מוזיקה אתיופית ישראל, אמנים אתיופים ישראל, מוזיקה ביתא ישראל
 - **Intent:** informational
@@ -636,6 +705,7 @@
 - **Priority:** P2
 
 ### 5.7 — פסטיבל הולגאב — אמנות ישראלית-אתיופית
+
 - **URL:** `/he/heritage/events/hulgab-festival`
 - **Keywords:** פסטיבל הולגאב, אמנות אתיופית ישראל, פסטיבל תרבות
 - **Intent:** navigational
@@ -643,6 +713,7 @@
 - **Priority:** P2
 
 ### 5.8 — מתכוני המטבח האתיופי — אינג'רה, דורו-וט, ברברה
+
 - **URL:** `/he/heritage/food`
 - **Keywords:** מתכון אינג'רה, אוכל אתיופי מסורתי, ברברה מתכון
 - **Intent:** informational
@@ -650,6 +721,7 @@
 - **Priority:** P2
 
 ### 5.9 — לימוד אמהרית — קורסים, אפליקציות, ספרים
+
 - **URL:** `/he/heritage/amharic-learning`
 - **Keywords:** לימוד אמהרית ישראל, קורס אמהרית, אמהרית לילדים
 - **Intent:** informational + transactional
@@ -657,6 +729,7 @@
 - **Priority:** P1
 
 ### 5.10 — מרכז מורשת יהדות אתיופיה — ביקור וחינוך
+
 - **URL:** `/he/heritage/heritage-center`
 - **Keywords:** מרכז מורשת יהדות אתיופיה, מוזיאון אתיופי ישראל, כפר ביתא ישראל
 - **Intent:** navigational
@@ -696,6 +769,7 @@
 ## 6. משפחה וקהילה — 32 מאמרים
 
 ### 6.1 — אלימות במשפחה — מדריך לנשים יוצאות אתיופיה
+
 - **URL:** `/he/family/domestic-violence`
 - **Keywords:** אלימות במשפחה אתיופיה, עזרה לנשים מוכות, מקלט נשים
 - **Intent:** informational + transactional
@@ -704,13 +778,15 @@
 - **Notes:** ועדת בין-משרדית הוקמה ב-2022 בעקבות רצח נשים; gap קריטי.
 
 ### 6.2 — קווי חירום ומקלטים לנשים — רשימה לפי עיר
+
 - **URL:** `/he/family/domestic-violence-resources`
-- **Keywords:** קו חירום אלימות במשפחה, מקלט נשים ישראל, *6724
+- **Keywords:** קו חירום אלימות במשפחה, מקלט נשים ישראל, \*6724
 - **Intent:** transactional
 - **Search volume:** high
 - **Priority:** P1
 
 ### 6.3 — תמיכה בהורים חד-הוריים יוצאי אתיופיה
+
 - **URL:** `/he/family/single-parents`
 - **Keywords:** תמיכה הורה חד הורי, קצבאות אמא חד הורית, ארגוני סיוע
 - **Intent:** informational
@@ -718,6 +794,7 @@
 - **Priority:** P1
 
 ### 6.4 — טיפול בקשישים — שירותי סיוע ביתי וסיעוד
+
 - **URL:** `/he/family/elderly-care`
 - **Keywords:** טיפול קשישים אתיופיה, סיוע ביתי לקשישים, בית אבות עולים
 - **Intent:** informational
@@ -725,6 +802,7 @@
 - **Priority:** P1
 
 ### 6.5 — תמיכה במשפחה מעורבת
+
 - **URL:** `/he/family/mixed-family-support`
 - **Keywords:** משפחה מעורבת תרבויות, זוג בין-תרבותי, אתגרי זוגיות
 - **Intent:** informational
@@ -732,6 +810,7 @@
 - **Priority:** P3
 
 ### 6.6 — גישור ותרבות — איך מטפלים בסכסוך מבלי לאבד כבוד
+
 - **URL:** `/he/family/conflict-resolution-culture`
 - **Keywords:** גישור משפחתי, קהילה ופתרון סכסוכים, כבוד משפחה
 - **Intent:** informational
@@ -739,6 +818,7 @@
 - **Priority:** P3
 
 ### 6.7 — צעירים יוצאי אתיופיה בסיכון — תוכניות מניעה
+
 - **URL:** `/he/family/youth-at-risk`
 - **Keywords:** נוער אתיופי בסיכון, נשירת נוער, תוכניות מניעה
 - **Intent:** informational
@@ -746,6 +826,7 @@
 - **Priority:** P1
 
 ### 6.8 — קשרי ישראל-אתיופיה — דיאספורה ומשפחה מרוחקת
+
 - **URL:** `/he/family/israel-ethiopia-diaspora`
 - **Keywords:** קשרים עם אתיופיה, משפחה בחו"ל, דיאספורה יהודית
 - **Intent:** informational
@@ -784,6 +865,7 @@
 ## 7. קול ופעולה — 22 מאמרים
 
 ### 7.1 — איך מגישים תלונה על גזענות — מדריך מעשי
+
 - **URL:** `/he/voice/racism-report`
 - **Keywords:** תלונה על גזענות, איך מדווחים על גזענות, זכויות קורבן גזענות
 - **Intent:** transactional
@@ -791,6 +873,7 @@
 - **Priority:** P1
 
 ### 7.2 — האגודה לזכויות האזרח — שירותים לאתיופים
+
 - **URL:** `/he/voice/acri-services`
 - **Keywords:** אגודת זכויות אזרח, ACRI אתיופיה, ייצוג משפטי גזענות
 - **Intent:** navigational
@@ -798,6 +881,7 @@
 - **Priority:** P1
 
 ### 7.3 — חברי כנסת יוצאי אתיופיה — רשימה ופעולות
+
 - **URL:** `/he/voice/ethiopian-knesset-members`
 - **Keywords:** ח"כ יוצא אתיופיה, פנינה תמנו, צגה מלקו, משה סולומון
 - **Intent:** informational
@@ -805,6 +889,7 @@
 - **Priority:** P2
 
 ### 7.4 — מחאות יוצאי אתיופיה — ציר זמן 1996–2026
+
 - **URL:** `/he/voice/protest-timeline`
 - **Keywords:** מחאת אתיופים, הפגנות 2015, מחאת גזענות ישראל
 - **Intent:** informational
@@ -812,6 +897,7 @@
 - **Priority:** P2
 
 ### 7.5 — ארגון אגודת יהודי אתיופיה — מה הם עושים
+
 - **URL:** `/he/voice/iaej-org`
 - **Keywords:** אגודת יהודי אתיופיה, IAEJ, ארגון קהילתי אתיופיה
 - **Intent:** navigational
@@ -819,6 +905,7 @@
 - **Priority:** P1
 
 ### 7.6 — פרויקט ENP — הפרויקט הלאומי
+
 - **URL:** `/he/voice/enp-org`
 - **Keywords:** ENP ישראל, הפרויקט הלאומי אתיופיה, ארגון קידום
 - **Intent:** navigational
@@ -851,104 +938,124 @@
 > כל דף עיר כולל: גודל קהילה, ארגונים מקומיים, בתי ספר, קופות חולים, תוכניות תעסוקה, שירותי רווחה, ועדת שילוב.
 
 ### 8.1 — קהילת יוצאי אתיופיה בנתניה
+
 - **URL:** `/he/cities/natanya`
 - **Keywords:** קהילה אתיופית נתניה, ארגונים נתניה, יוצאי אתיופיה נתניה
 - **Search volume:** high — **Priority:** P1
 - **Notes:** 13,300 נפש — הריכוז העירוני הגדול ביותר.
 
 ### 8.2 — קהילת יוצאי אתיופיה בחדרה
+
 - **URL:** `/he/cities/hadera`
 - **Keywords:** קהילה אתיופית חדרה, יוצאי אתיופיה חדרה, שירותים חדרה
 - **Search volume:** high — **Priority:** P1
 
 ### 8.3 — קהילת יוצאי אתיופיה בבאר שבע
+
 - **URL:** `/he/cities/beer-sheva`
 - **Keywords:** קהילה אתיופית באר שבע, שירותי קהילה, ארגונים באר שבע
 - **Search volume:** high — **Priority:** P1
 
 ### 8.4 — קהילת יוצאי אתיופיה בירושלים
+
 - **URL:** `/he/cities/jerusalem`
 - **Keywords:** קהילה אתיופית ירושלים, ארגונים ירושלים, שירות לאתיופים ירושלים
 - **Search volume:** high — **Priority:** P1
 
 ### 8.5 — קהילת יוצאי אתיופיה בתל אביב
+
 - **URL:** `/he/cities/tel-aviv`
 - **Keywords:** קהילה אתיופית תל אביב, ארגונים תל אביב
 - **Search volume:** high — **Priority:** P1
 
 ### 8.6 — קהילת יוצאי אתיופיה בראשון לציון
+
 - **URL:** `/he/cities/rishon-lezion`
 - **Keywords:** קהילה אתיופית ראשון לציון
 - **Search volume:** medium — **Priority:** P2
 
 ### 8.7 — קהילת יוצאי אתיופיה בפתח תקווה
+
 - **URL:** `/he/cities/petah-tikva`
 - **Keywords:** קהילה אתיופית פתח תקווה
 - **Search volume:** medium — **Priority:** P2
 
 ### 8.8 — קהילת יוצאי אתיופיה ברחובות
+
 - **URL:** `/he/cities/rehovot`
 - **Keywords:** קהילה אתיופית רחובות
 - **Search volume:** medium — **Priority:** P2
 
 ### 8.9 — קהילת יוצאי אתיופיה באשדוד
+
 - **URL:** `/he/cities/ashdod`
 - **Keywords:** קהילה אתיופית אשדוד
 - **Search volume:** medium — **Priority:** P2
 
 ### 8.10 — קהילת יוצאי אתיופיה בבת ים
+
 - **URL:** `/he/cities/bat-yam`
 - **Keywords:** קהילה אתיופית בת ים
 - **Search volume:** medium — **Priority:** P3
 
 ### 8.11 — קהילת יוצאי אתיופיה בלוד
+
 - **URL:** `/he/cities/lod`
 - **Keywords:** קהילה אתיופית לוד, שכונת לוד, שירותים לוד
 - **Search volume:** medium — **Priority:** P2
 
 ### 8.12 — קהילת יוצאי אתיופיה ברמלה
+
 - **URL:** `/he/cities/ramla`
 - **Keywords:** קהילה אתיופית רמלה
 - **Search volume:** medium — **Priority:** P2
 
 ### 8.13 — קהילת יוצאי אתיופיה בקריית גת
+
 - **URL:** `/he/cities/kiryat-gat`
 - **Keywords:** קהילה אתיופית קריית גת, שכונת פ"ז
 - **Search volume:** medium — **Priority:** P1
 - **Notes:** 55.7% מהשכונה — ריכוז הגבוה ביותר בישראל.
 
 ### 8.14 — קהילת יוצאי אתיופיה בקריית מלאכי
+
 - **URL:** `/he/cities/kiryat-malachi`
 - **Keywords:** קהילה אתיופית קריית מלאכי, ארגונים קריית מלאכי
 - **Search volume:** high — **Priority:** P1
 - **Notes:** 13.8% מהאוכלוסייה — הגבוה ביותר יחסית.
 
 ### 8.15 — קהילת יוצאי אתיופיה באשקלון
+
 - **URL:** `/he/cities/ashkelon`
 - **Keywords:** קהילה אתיופית אשקלון
 - **Search volume:** medium — **Priority:** P2
 
 ### 8.16 — קהילת יוצאי אתיופיה בעפולה
+
 - **URL:** `/he/cities/afula`
 - **Keywords:** קהילה אתיופית עפולה
 - **Search volume:** low — **Priority:** P3
 
 ### 8.17 — קהילת יוצאי אתיופיה בנצרת עילית / נוף הגליל
+
 - **URL:** `/he/cities/nazareth-illit`
 - **Keywords:** קהילה אתיופית נוף הגליל
 - **Search volume:** low — **Priority:** P3
 
 ### 8.18 — קהילת יוצאי אתיופיה באור יהודה
+
 - **URL:** `/he/cities/or-yehuda`
 - **Keywords:** קהילה אתיופית אור יהודה
 - **Search volume:** low — **Priority:** P3
 
 ### 8.19 — קהילת יוצאי אתיופיה בחולון
+
 - **URL:** `/he/cities/holon`
 - **Keywords:** קהילה אתיופית חולון
 - **Search volume:** low — **Priority:** P3
 
 ### 8.20 — קהילת יוצאי אתיופיה בהרצליה
+
 - **URL:** `/he/cities/herzliya`
 - **Keywords:** קהילה אתיופית הרצליה
 - **Search volume:** low — **Priority:** P3
@@ -958,27 +1065,32 @@
 ## 9. סטטיסטיקה ונתונים — 12 מאמרים
 
 ### 9.1 — נתוני אוכלוסייה 2025 — יוצאי אתיופיה בישראל
+
 - **URL:** `/he/statistics/population-2025`
 - **Keywords:** סטטיסטיקה יוצאי אתיופיה 2025, למ"ס אתיופיה, נתוני קהילה
 - **Intent:** informational
 - **Search volume:** medium — **Priority:** P1
 
 ### 9.2 — נתוני חינוך — יוצאי אתיופיה 2024
+
 - **URL:** `/he/statistics/education-2024`
 - **Keywords:** חינוך יוצאי אתיופיה נתונים, בגרות אתיופיה, למ"ס חינוך
 - **Search volume:** medium — **Priority:** P1
 
 ### 9.3 — נתוני בריאות — יוצאי אתיופיה
+
 - **URL:** `/he/statistics/health`
 - **Keywords:** בריאות יוצאי אתיופיה נתונים, סכרת שיעור, נתוני בריאות
 - **Search volume:** medium — **Priority:** P1
 
 ### 9.4 — נתוני תעסוקה — פערים ומגמות
+
 - **URL:** `/he/statistics/employment`
 - **Keywords:** תעסוקה יוצאי אתיופיה נתונים, פערי שכר, אקדמאים
 - **Search volume:** medium — **Priority:** P1
 
 ### 9.5–9.12 (8 דפים)
+
 - `/he/statistics/poverty-rates` — עוני ויוצאי אתיופיה — P1
 - `/he/statistics/crime-police-data` — נתוני פשיעה משטרה — P1
 - `/he/statistics/military-service` — שירות צבאי נתונים — P2
@@ -993,17 +1105,20 @@
 ## 10. חדשות ועדכונים — 15 מאמרים
 
 ### 10.1 — תוכנית ממשלתית לשילוב יוצאי אתיופיה 2025–2027
+
 - **URL:** `/he/news/national-integration-plan-2025`
 - **Keywords:** תוכנית ממשלתית אתיופיה 2025, שילוב יוצאי אתיופיה, תקציב ממשלה
 - **Intent:** informational
 - **Search volume:** medium — **Priority:** P1
 
 ### 10.2 — לוח שנה קהילתי 2026 — ימים מיוחדים
+
 - **URL:** `/he/news/community-calendar-2026`
 - **Keywords:** לוח שנה קהילה אתיופית, אירועים קהילתיים 2026
 - **Search volume:** medium — **Priority:** P1
 
 ### 10.3–10.15 (13 דפים)
+
 - `/he/news/knesset-committee-ethiopian` — ועדת כנסת חדשות — P1
 - `/he/news/government-budget-ethiopians` — תקציב ממשלה לאתיופים — P1
 - `/he/news/police-reform-updates` — עדכוני רפורמת משטרה — P1
@@ -1052,27 +1167,28 @@
 
 ## סיכום ספירה
 
-| קטגוריה | מספר מאמרים |
-|---|---|
-| 1. זכויות וזכאויות | 42 |
-| 2. תעסוקה | 48 |
-| 3. בריאות | 40 |
-| 4. חינוך | 38 |
-| 5. מורשת ותרבות | 35 |
-| 6. משפחה וקהילה | 32 |
-| 7. קול ופעולה | 22 |
-| 8. מדריכי עיר × קהילה | 20 |
-| 9. סטטיסטיקה ונתונים | 12 |
-| 10. חדשות ועדכונים | 15 |
-| 11. גלוסרי | 8 |
-| 12. פרופילי ארגונים | 12 |
-| **סה"כ** | **324** |
+| קטגוריה               | מספר מאמרים |
+| --------------------- | ----------- |
+| 1. זכויות וזכאויות    | 42          |
+| 2. תעסוקה             | 48          |
+| 3. בריאות             | 40          |
+| 4. חינוך              | 38          |
+| 5. מורשת ותרבות       | 35          |
+| 6. משפחה וקהילה       | 32          |
+| 7. קול ופעולה         | 22          |
+| 8. מדריכי עיר × קהילה | 20          |
+| 9. סטטיסטיקה ונתונים  | 12          |
+| 10. חדשות ועדכונים    | 15          |
+| 11. גלוסרי            | 8           |
+| 12. פרופילי ארגונים   | 12          |
+| **סה"כ**              | **324**     |
 
 ---
 
 ## המלצות לביצוע
 
 ### שלב א — 50 P1 לשחרור ראשון (0–60 יום)
+
 1. כל 20 דפי עיר (skeleton + נתוני CBS)
 2. 10 מאמרי זכויות: סל קליטה, ייצוג הולם, משכנתא, פינוי-בינוי, ביטוח לאומי זקנה/נכות, חיילים משוחררים, תלונה על משטרה
 3. 5 מאמרי בריאות: סכרת, לחץ דם, בריאות נפש, תנא בריאות, לידה
@@ -1081,14 +1197,17 @@
 6. 5 מאמרים קול: תלונת גזענות, IAEJ, ENP, ח"כ אתיופים
 
 ### שלב ב — P2 (60–120 יום)
+
 - כל מאמרי P2 בסדר לפי תחום: תעסוקה → חינוך → בריאות → משפחה
 
 ### שלב ג — P3 ואמהרית (120+ יום)
+
 - תרגום 20 דפי עיר לאמהרית
 - מאמרי P3 נישה
 - תוכן וידאו מבוסס Mula לנושאי P1
 
 ### מבנה תוכן מומלץ לכל מאמר
+
 1. **H1:** שאלת חיפוש בדיוק
 2. **Lead paragraph** (150 מילים): תשובה ישירה
 3. **טבלת זכאות/שלבים**

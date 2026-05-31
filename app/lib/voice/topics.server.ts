@@ -130,9 +130,9 @@ export const POLICE_CONDUCT_TOPIC: VoiceTopic = {
     am: "ከፖሊስ ጋር ባለ ግንኙነት ያሉ መብቶች እና ቅሬታ ማቅረብ",
   },
   subtitle: {
-    he: "זכויות בעצירה, חיפוש ומעצר — ותהליך הגשת תלונה למחלקת החקירות הפנימיות (מח\"ש).",
+    he: 'זכויות בעצירה, חיפוש ומעצר — ותהליך הגשת תלונה למחלקת החקירות הפנימיות (מח"ש).',
     en: "Rights during a stop, search, or arrest — and how to file a complaint with the Internal Investigations Department (MAHASH).",
-    am: "ማቆሚያ፣ ፍተሻ ወይም እስር ጊዜ ያሉ መብቶች — እና ለውስጥ ምርምር ክፍል (מח\"ש) ቅሬታ እንዴት ማቅረብ።",
+    am: 'ማቆሚያ፣ ፍተሻ ወይም እስር ጊዜ ያሉ መብቶች — እና ለውስጥ ምርምር ክፍል (מח"ש) ቅሬታ እንዴት ማቅረብ።',
   },
   body: {
     he: `יוצאי אתיופיה בישראל מדווחים על שכיחות גבוהה יותר של עצירות, חיפושים, ואף אלימות משטרתית. הכרת הזכויות החוקיות היא כלי הגנה עצמי.
@@ -186,7 +186,7 @@ Tebeka offers free advice in cases of police violence and ethnic-based discrimin
   },
   resources: [
     {
-      name: "מח\"ש — מחלקת חקירות פנימיות של המשטרה",
+      name: 'מח"ש — מחלקת חקירות פנימיות של המשטרה',
       url: "https://www.gov.il/he/departments/units/mahash",
       description: {
         he: "הגוף הרשמי לחקירת תלונות נגד שוטרים. ניתן לפנות ישירות.",

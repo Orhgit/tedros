@@ -61,8 +61,7 @@ export async function action({ request }: Route.ActionArgs) {
     messages: validMessages,
   });
 
-  const reply =
-    response.content[0]?.type === "text" ? response.content[0].text : "";
+  const reply = response.content[0]?.type === "text" ? response.content[0].text : "";
 
   return data({ reply });
 }

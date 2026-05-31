@@ -221,7 +221,7 @@ export default function AffirmativeAction({ loaderData }: Route.ComponentProps) 
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}/careers`} />
       <article id="main-content" className="container-default mx-auto max-w-3xl py-10">
-        <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
           <img
             src="https://images.unsplash.com/photo-1691820776176-fcfbd25096c9?fm=webp&q=70&w=1200&fit=crop"
             alt=""
@@ -230,8 +230,14 @@ export default function AffirmativeAction({ loaderData }: Route.ComponentProps) 
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <span
             aria-hidden="true"
             className="absolute inset-s-0 inset-e-0 top-0 h-1.5 bg-accent-red"

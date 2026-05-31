@@ -31,7 +31,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, slug, publicUrl } = data;
   return [
     { title: `${t(locale, "lead_form_title")} — Tedros` },
-    ...hreflangMeta(publicUrl ?? "http://localhost:3000", locale, `/urban-renewal/${slug ?? ""}`),
+    ...hreflangMeta(
+      publicUrl ?? "http://localhost:3000",
+      locale,
+      `/urban-renewal/${slug ?? ""}`,
+    ),
   ];
 };
 

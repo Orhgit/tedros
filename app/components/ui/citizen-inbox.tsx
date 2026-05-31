@@ -3,14 +3,7 @@
 import { useState } from "react";
 import { Badge } from "./badge";
 import { Button } from "./button";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "./table";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./table";
 
 type Category = "Routine" | "High-Urgency" | "Sensitive";
 type Status = "New" | "In Progress" | "Resolved" | "Dismissed";
@@ -82,13 +75,19 @@ const MOCK_MESSAGES: InboxMessage[] = [
   },
 ];
 
-const CATEGORY_BADGE: Record<Category, { variant: "success" | "destructive" | "warning"; label: string }> = {
+const CATEGORY_BADGE: Record<
+  Category,
+  { variant: "success" | "destructive" | "warning"; label: string }
+> = {
   Routine: { variant: "success", label: "Routine" },
   "High-Urgency": { variant: "destructive", label: "High-Urgency" },
   Sensitive: { variant: "warning", label: "Sensitive" },
 };
 
-const STATUS_BADGE: Record<Status, { variant: "outline" | "primary" | "success" | "default"; label: string }> = {
+const STATUS_BADGE: Record<
+  Status,
+  { variant: "outline" | "primary" | "success" | "default"; label: string }
+> = {
   New: { variant: "primary", label: "New" },
   "In Progress": { variant: "default", label: "In Progress" },
   Resolved: { variant: "success", label: "Resolved" },
@@ -120,14 +119,17 @@ export function CitizenInbox() {
   const [messages, setMessages] = useState<InboxMessage[]>(MOCK_MESSAGES);
 
   function updateStatus(id: string, status: Status) {
-    setMessages((prev) =>
-      prev.map((m) => (m.id === id ? { ...m, status } : m)),
-    );
+    setMessages((prev) => prev.map((m) => (m.id === id ? { ...m, status } : m)));
   }
 
   const counts = {
     total: messages.length,
-    urgent: messages.filter((m) => m.category === "High-Urgency" && m.status !== "Dismissed" && m.status !== "Resolved").length,
+    urgent: messages.filter(
+      (m) =>
+        m.category === "High-Urgency" &&
+        m.status !== "Dismissed" &&
+        m.status !== "Resolved",
+    ).length,
     newCount: messages.filter((m) => m.status === "New").length,
   };
 
@@ -164,7 +166,9 @@ export function CitizenInbox() {
           <TableHeader>
             <TableRow className="border-zinc-800 hover:bg-transparent">
               <TableHead className="w-16 text-zinc-400">Time</TableHead>
-              <TableHead className="min-w-[280px] text-zinc-400">Resident Message</TableHead>
+              <TableHead className="min-w-[280px] text-zinc-400">
+                Resident Message
+              </TableHead>
               <TableHead className="w-36 text-zinc-400">AI Category</TableHead>
               <TableHead className="w-28 text-zinc-400">Status</TableHead>
               <TableHead className="w-60 text-zinc-400">Quick Actions</TableHead>
@@ -178,7 +182,7 @@ export function CitizenInbox() {
                 data-state={msg.status === "New" ? "selected" : undefined}
               >
                 {/* Time */}
-                <TableCell className="font-mono text-xs tabular-nums text-zinc-400">
+                <TableCell className="font-mono text-xs text-zinc-400 tabular-nums">
                   {msg.time}
                 </TableCell>
 

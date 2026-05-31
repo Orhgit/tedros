@@ -12,10 +12,7 @@ import {
 } from "~/lib/cities/registry";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
-import {
-  HERITAGE_EVENTS,
-  nextDate,
-} from "~/lib/heritage/events.server";
+import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
 import { isRelevant as isHeritageRelevant } from "~/lib/heritage/relevance";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -38,18 +35,17 @@ export async function loader({ params }: Route.LoaderArgs) {
     .filter((r) => isRightRelevant(r.slug, city.slug))
     .slice(0, 8);
 
-  const cityTracks = CAREER_TRACKS
-    .filter((tr) => isCareerRelevant(tr.slug, city.slug))
+  const cityTracks = CAREER_TRACKS.filter((tr) => isCareerRelevant(tr.slug, city.slug))
     .slice(0, 6)
     .map((tr) => ({ slug: tr.slug, name: tr.name[locale] ?? tr.name.he }));
 
-  const cityHeritage = HERITAGE_EVENTS
-    .filter((e) => isHeritageRelevant(e.slug, city.slug))
-    .map((e) => ({
-      slug: e.slug,
-      name: e.name[locale] ?? e.name.he,
-      next: nextDate(e),
-    }));
+  const cityHeritage = HERITAGE_EVENTS.filter((e) =>
+    isHeritageRelevant(e.slug, city.slug),
+  ).map((e) => ({
+    slug: e.slug,
+    name: e.name[locale] ?? e.name.he,
+    next: nextDate(e),
+  }));
 
   return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage };
 }
@@ -99,7 +95,7 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
 
   return (
     <div className="mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-12">
-      <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
+      <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
         <img
           src="https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=1200&fit=crop"
           alt=""
@@ -108,8 +104,14 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
           loading="lazy"
           decoding="async"
         />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+        <div
+          className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+          aria-hidden="true"
+        />
         <nav aria-label="Breadcrumb" className="text-sm text-gray-500 dark:text-gray-400">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
@@ -159,9 +161,11 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                     <li key={r.slug}>
                       <Link
                         to={`/${locale}/rights/${r.slug}/${city.slug}`}
-                        className="flex items-center gap-2 rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 hover:border-earth-300 transition"
+                        className="flex items-center gap-2 rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
                       >
-                        <span aria-hidden="true">{glyphForTag(r.tags[0] ?? "housing")}</span>
+                        <span aria-hidden="true">
+                          {glyphForTag(r.tags[0] ?? "housing")}
+                        </span>
                         {r.title}
                       </Link>
                     </li>
@@ -180,7 +184,7 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                     <li key={tr.slug}>
                       <Link
                         to={`/${locale}/careers/${tr.slug}/${city.slug}`}
-                        className="rounded-full border border-earth-200 bg-earth-50 px-3 py-1 text-sm text-ink-700 hover:border-earth-400 transition"
+                        className="rounded-full border border-earth-200 bg-earth-50 px-3 py-1 text-sm text-ink-700 transition hover:border-earth-400"
                       >
                         {tr.name}
                       </Link>
@@ -200,10 +204,12 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                     <li key={e.slug}>
                       <Link
                         to={`/${locale}/heritage/events/${e.slug}/${city.slug}`}
-                        className="flex items-center justify-between rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 hover:border-earth-300 transition"
+                        className="flex items-center justify-between rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
                       >
                         <span>{e.name}</span>
-                        {e.next && <span className="text-xs text-earth-500">{e.next}</span>}
+                        {e.next && (
+                          <span className="text-xs text-earth-500">{e.next}</span>
+                        )}
                       </Link>
                     </li>
                   ))}
@@ -278,10 +284,7 @@ function CommunityStatsSection({ locale, city }: { locale: Locale; city: City })
       aria-labelledby="community-stats-heading"
       className="rounded-lg border border-earth-200 bg-earth-50/60 p-6"
     >
-      <h2
-        id="community-stats-heading"
-        className="text-xl font-semibold text-earth-900"
-      >
+      <h2 id="community-stats-heading" className="text-xl font-semibold text-earth-900">
         {locale === "he"
           ? `קהילה אתיופית ב${name} — נתונים`
           : locale === "am"

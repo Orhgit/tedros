@@ -5,10 +5,7 @@ import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
-import {
-  cityName,
-  findCityBySlug,
-} from "~/lib/cities/registry";
+import { cityName, findCityBySlug } from "~/lib/cities/registry";
 import {
   calculateEligibility,
   FAMILY_STATUSES,
@@ -224,116 +221,116 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}${CALCULATOR_PATH}`} />
       <div className="mx-auto flex max-w-3xl flex-col px-6 py-12">
-      <header>
-        <Link
-          to={`/${locale}`}
-          className="text-sm text-gray-500 underline-offset-4 hover:underline dark:text-gray-400"
-        >
-          ← {t(locale, "homepage_title")}
-        </Link>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-          {t(locale, "mortgage_calc_title")}
-        </h1>
-        <p className="mt-2 text-lg text-gray-700 dark:text-gray-300">
-          {t(locale, "mortgage_calc_subtitle")}
-        </p>
-        <p className="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-          {t(locale, "mortgage_calc_intro")}
-        </p>
-      </header>
-
-      <ActiveLotteryDisclaimer locale={locale} />
-
-      <main className="mt-10 flex-1">
-        <Form
-          method="post"
-          aria-labelledby="mortgage-calc-heading"
-          className="grid gap-8"
-          noValidate
-        >
-          <h2 id="mortgage-calc-heading" className="sr-only">
-            {t(locale, "mortgage_section_questions")}
-          </h2>
-
-          <Fieldset legend={t(locale, "mortgage_section_origin")}>
-            {ORIGIN_FIELDS.map((field) => (
-              <CheckboxField
-                key={field}
-                name={field}
-                label={t(locale, originLabelKey(field))}
-                defaultChecked={form[field]}
-              />
-            ))}
-          </Fieldset>
-
-          <Fieldset legend={t(locale, "mortgage_section_family")}>
-            <label htmlFor="familyStatus" className="grid gap-1.5">
-              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                {t(locale, "mortgage_q_family_status")}
-              </span>
-              <select
-                id="familyStatus"
-                name="familyStatus"
-                defaultValue={form.familyStatus}
-                required
-                aria-invalid={Boolean(errors.familyStatus) || undefined}
-                className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
-              >
-                <option value="" disabled>
-                  —
-                </option>
-                {FAMILY_STATUSES.map((status) => (
-                  <option key={status} value={status}>
-                    {t(locale, `mortgage_status_${status}`)}
-                  </option>
-                ))}
-              </select>
-              {errors.familyStatus && (
-                <span role="alert" className="text-sm text-red-600 dark:text-red-400">
-                  {errors.familyStatus}
-                </span>
-              )}
-            </label>
-
-            <CheckboxField
-              name="hasChildUnder21LivingWithApplicant"
-              label={t(locale, "mortgage_q_child_under_21")}
-              defaultChecked={form.hasChildUnder21LivingWithApplicant}
-            />
-          </Fieldset>
-
-          <Fieldset legend={t(locale, "mortgage_section_ownership")}>
-            <CheckboxField
-              name="ownedRealEstateLast10Years"
-              label={t(locale, "mortgage_q_owned_property")}
-              defaultChecked={form.ownedRealEstateLast10Years}
-            />
-            <CheckboxField
-              name="recentPurchaseExceptionApplies"
-              label={t(locale, "mortgage_q_recent_purchase_exception")}
-              defaultChecked={form.recentPurchaseExceptionApplies}
-            />
-          </Fieldset>
-
-          <button
-            type="submit"
-            disabled={submitting}
-            className="mt-2 inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-5 py-3 text-base font-medium text-white shadow-sm transition hover:bg-gray-800 disabled:opacity-60 sm:w-auto dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+        <header>
+          <Link
+            to={`/${locale}`}
+            className="text-sm text-gray-500 underline-offset-4 hover:underline dark:text-gray-400"
           >
-            {t(locale, "mortgage_submit")}
-          </button>
-        </Form>
+            ← {t(locale, "homepage_title")}
+          </Link>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            {t(locale, "mortgage_calc_title")}
+          </h1>
+          <p className="mt-2 text-lg text-gray-700 dark:text-gray-300">
+            {t(locale, "mortgage_calc_subtitle")}
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+            {t(locale, "mortgage_calc_intro")}
+          </p>
+        </header>
 
-        {actionData?.kind === "result" && (
-          <ResultPanel locale={locale} result={actionData.result} />
-        )}
+        <ActiveLotteryDisclaimer locale={locale} />
 
-        <ProgrammeFactsCard locale={locale} />
-        <ProcessExplainer locale={locale} />
-        <DocumentsChecklist locale={locale} />
-        <MortgageCitiesSection locale={locale} />
-        <LeadCta locale={locale} />
-      </main>
+        <main className="mt-10 flex-1">
+          <Form
+            method="post"
+            aria-labelledby="mortgage-calc-heading"
+            className="grid gap-8"
+            noValidate
+          >
+            <h2 id="mortgage-calc-heading" className="sr-only">
+              {t(locale, "mortgage_section_questions")}
+            </h2>
+
+            <Fieldset legend={t(locale, "mortgage_section_origin")}>
+              {ORIGIN_FIELDS.map((field) => (
+                <CheckboxField
+                  key={field}
+                  name={field}
+                  label={t(locale, originLabelKey(field))}
+                  defaultChecked={form[field]}
+                />
+              ))}
+            </Fieldset>
+
+            <Fieldset legend={t(locale, "mortgage_section_family")}>
+              <label htmlFor="familyStatus" className="grid gap-1.5">
+                <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  {t(locale, "mortgage_q_family_status")}
+                </span>
+                <select
+                  id="familyStatus"
+                  name="familyStatus"
+                  defaultValue={form.familyStatus}
+                  required
+                  aria-invalid={Boolean(errors.familyStatus) || undefined}
+                  className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base shadow-sm focus:border-gray-900 focus:ring-1 focus:ring-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-950"
+                >
+                  <option value="" disabled>
+                    —
+                  </option>
+                  {FAMILY_STATUSES.map((status) => (
+                    <option key={status} value={status}>
+                      {t(locale, `mortgage_status_${status}`)}
+                    </option>
+                  ))}
+                </select>
+                {errors.familyStatus && (
+                  <span role="alert" className="text-sm text-red-600 dark:text-red-400">
+                    {errors.familyStatus}
+                  </span>
+                )}
+              </label>
+
+              <CheckboxField
+                name="hasChildUnder21LivingWithApplicant"
+                label={t(locale, "mortgage_q_child_under_21")}
+                defaultChecked={form.hasChildUnder21LivingWithApplicant}
+              />
+            </Fieldset>
+
+            <Fieldset legend={t(locale, "mortgage_section_ownership")}>
+              <CheckboxField
+                name="ownedRealEstateLast10Years"
+                label={t(locale, "mortgage_q_owned_property")}
+                defaultChecked={form.ownedRealEstateLast10Years}
+              />
+              <CheckboxField
+                name="recentPurchaseExceptionApplies"
+                label={t(locale, "mortgage_q_recent_purchase_exception")}
+                defaultChecked={form.recentPurchaseExceptionApplies}
+              />
+            </Fieldset>
+
+            <button
+              type="submit"
+              disabled={submitting}
+              className="mt-2 inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-5 py-3 text-base font-medium text-white shadow-sm transition hover:bg-gray-800 disabled:opacity-60 sm:w-auto dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+            >
+              {t(locale, "mortgage_submit")}
+            </button>
+          </Form>
+
+          {actionData?.kind === "result" && (
+            <ResultPanel locale={locale} result={actionData.result} />
+          )}
+
+          <ProgrammeFactsCard locale={locale} />
+          <ProcessExplainer locale={locale} />
+          <DocumentsChecklist locale={locale} />
+          <MortgageCitiesSection locale={locale} />
+          <LeadCta locale={locale} />
+        </main>
       </div>
       <SiteFooter locale={locale} />
     </div>
@@ -554,7 +551,9 @@ function DocumentsChecklist({ locale }: { locale: Locale }) {
       <ul className="mt-3 space-y-2">
         {DOC_KEYS.map((key) => (
           <li key={key} className="flex items-start gap-2 text-sm text-ink-700">
-            <span aria-hidden="true" className="mt-0.5 text-earth-600">✓</span>
+            <span aria-hidden="true" className="mt-0.5 text-earth-600">
+              ✓
+            </span>
             {t(locale, key)}
           </li>
         ))}
@@ -564,9 +563,9 @@ function DocumentsChecklist({ locale }: { locale: Locale }) {
 }
 
 function MortgageCitiesSection({ locale }: { locale: Locale }) {
-  const cities = MORTGAGE_CITIES
-    .map((slug) => findCityBySlug(slug))
-    .filter((c): c is NonNullable<typeof c> => Boolean(c));
+  const cities = MORTGAGE_CITIES.map((slug) => findCityBySlug(slug)).filter(
+    (c): c is NonNullable<typeof c> => Boolean(c),
+  );
 
   if (cities.length === 0) return null;
 
@@ -580,7 +579,7 @@ function MortgageCitiesSection({ locale }: { locale: Locale }) {
           <li key={city.slug}>
             <Link
               to={`/${locale}/cities/${city.slug}`}
-              className="block rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 hover:border-earth-300 transition text-center"
+              className="block rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-center text-sm text-ink-800 transition hover:border-earth-300"
             >
               {cityName(city, locale)}
             </Link>

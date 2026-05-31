@@ -198,7 +198,7 @@ export default function TraditionalMedicineHub({ loaderData }: Route.ComponentPr
         </nav>
 
         {/* Page header */}
-        <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 p-6 sm:p-10">
           <img
             src="https://images.unsplash.com/photo-1625255178547-44af3d0718c3?fm=webp&q=70&w=1200&fit=crop"
             alt=""
@@ -207,8 +207,14 @@ export default function TraditionalMedicineHub({ loaderData }: Route.ComponentPr
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
             {title}
           </h1>

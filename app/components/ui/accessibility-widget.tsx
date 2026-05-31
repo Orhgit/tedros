@@ -11,7 +11,11 @@ interface A11yState {
   reducedMotion: boolean;
 }
 
-const DEFAULTS: A11yState = { fontSize: "normal", highContrast: false, reducedMotion: false };
+const DEFAULTS: A11yState = {
+  fontSize: "normal",
+  highContrast: false,
+  reducedMotion: false,
+};
 const STORAGE_KEY = "tedros-a11y";
 
 function loadState(): A11yState {
@@ -98,7 +102,7 @@ export function AccessibilityWidget({ locale }: Props) {
   ];
 
   return (
-    <div className="fixed bottom-4 start-4 z-50 flex flex-col items-start gap-2">
+    <div className="fixed start-4 bottom-4 z-50 flex flex-col items-start gap-2">
       {/* Panel */}
       {open && (
         <div
@@ -124,7 +128,7 @@ export function AccessibilityWidget({ locale }: Props) {
           <div className="space-y-4 p-4">
             {/* Font size */}
             <fieldset>
-              <legend className="mb-2 text-xs font-medium text-muted-foreground uppercase tracking-wide">
+              <legend className="mb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 {t(locale, "a11y_font_size")}
               </legend>
               <div className="flex gap-2">

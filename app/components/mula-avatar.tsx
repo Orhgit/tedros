@@ -101,7 +101,12 @@ export function MulaAvatar({ size = "md", state = "idle", className }: MulaAvata
           src="/mula.jpeg"
           alt="מולה"
           className="size-full object-cover object-top"
-          style={{ filter: state === "thinking" ? "brightness(0.9) saturate(0.8)" : "brightness(1) saturate(1.05)" }}
+          style={{
+            filter:
+              state === "thinking"
+                ? "brightness(0.9) saturate(0.8)"
+                : "brightness(1) saturate(1.05)",
+          }}
         />
 
         {/* Subtle holographic shimmer on photo */}
@@ -137,7 +142,10 @@ export function MulaAvatar({ size = "md", state = "idle", className }: MulaAvata
 
       {/* Online indicator (idle only) */}
       {state === "idle" && (
-        <span className="absolute bottom-0.5 right-0.5 flex" style={{ width: px * 0.16, height: px * 0.16 }}>
+        <span
+          className="absolute right-0.5 bottom-0.5 flex"
+          style={{ width: px * 0.16, height: px * 0.16 }}
+        >
           <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-400 opacity-60" />
           <span className="relative inline-flex size-full rounded-full bg-green-500 ring-1 ring-white" />
         </span>
@@ -150,7 +158,9 @@ export function MulaAvatar({ size = "md", state = "idle", className }: MulaAvata
             <span
               key={i}
               className="size-1.5 rounded-full bg-violet-400"
-              style={{ animation: `mula-dot-bounce 0.7s ease-in-out infinite ${i * 0.15}s` }}
+              style={{
+                animation: `mula-dot-bounce 0.7s ease-in-out infinite ${i * 0.15}s`,
+              }}
             />
           ))}
         </div>

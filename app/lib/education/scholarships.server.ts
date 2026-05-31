@@ -1316,7 +1316,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     shortDescription: {
       he: "מלגה ממלכתית של המועצה להשכלה גבוהה לסטודנטים ממוצא אתיופי — עד ₪20,000 לשנה בכל האוניברסיטאות.",
       en: "National scholarship from the Council for Higher Education for students of Ethiopian origin — up to ₪20,000/year at all Israeli universities.",
-      am: "ለኢትዮጵያ ዜጎች ብቻ ከፍተኛ ትምህርት ምክር ቤት ስኮላርሺፕ — እስከ 20,000 ሺ\"ል ዓመታዊ።",
+      am: 'ለኢትዮጵያ ዜጎች ብቻ ከፍተኛ ትምህርት ምክር ቤት ስኮላርሺፕ — እስከ 20,000 ሺ"ል ዓመታዊ።',
     },
     amountMinIls: 8000,
     amountMaxIls: 20000,
@@ -1329,7 +1329,11 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     applicationUrl: "https://www.che.org.il/marom",
     tags: ["undergrad", "community", "government", "needs-based"],
     communityPriority: true,
-    relatedScholarships: ["hesegim-undergraduate", "isef-fellowship", "klita-tuition-grant"],
+    relatedScholarships: [
+      "hesegim-undergraduate",
+      "isef-fellowship",
+      "klita-tuition-grant",
+    ],
     relatedRights: ["academic-tuition-grant", "klita-basket-ethiopia"],
     bodies: {
       he: `## מה זאת מלגת מרום של המועצה להשכלה גבוהה?
@@ -1704,7 +1708,7 @@ The community scholarship is for Ethiopian-community students studying at least 
       am: "ቡ-ኢላን ዩኒቨርሲቲ ማህበረሰብ ስኮላርሺፕ",
     },
     shortDescription: {
-      he: "מלגת שכר לימוד לסטודנטים מהקהילה האתיופית באוניברסיטת בר-אילן — מיועדת לתחומי חינוך, עו\"ס ומשפטים.",
+      he: 'מלגת שכר לימוד לסטודנטים מהקהילה האתיופית באוניברסיטת בר-אילן — מיועדת לתחומי חינוך, עו"ס ומשפטים.',
       en: "Tuition scholarship for Ethiopian-community students at Bar-Ilan University — targeting education, social work, and law fields.",
       am: "ቡ-ኢላን ዩኒቨርሲቲ ለኢትዮጵያ ማህበረሰብ — ትምህርት፣ ማህበራዊ ስራ፣ ህግ ዘርፎች።",
     },
@@ -1822,7 +1826,7 @@ Bar-Ilan University offers scholarships for students of Ethiopian origin through
     shortDescription: {
       he: "מלגת ג'וינט לצעירים מצטיינים מהקהילה האתיופית — עד ₪18,000 לשנה, בשילוב תכנית מנהיגות.",
       en: "JDC Israel scholarship for outstanding young adults from the Ethiopian community — up to ₪18,000/year, combined with a leadership program.",
-      am: "ከኢትዮጵያ ማህበረሰብ ላቁ ወጣቶች — እስከ 18,000 ሺ\"ል ዓመታዊ + አመራር ፕሮግራም።",
+      am: 'ከኢትዮጵያ ማህበረሰብ ላቁ ወጣቶች — እስከ 18,000 ሺ"ል ዓመታዊ + አመራር ፕሮግራም።',
     },
     amountMinIls: 10000,
     amountMaxIls: 18000,
@@ -1962,7 +1966,7 @@ JDC (American Jewish Joint Distribution Committee) ፋይናንሺያል ስኮ�
     shortDescription: {
       he: "מלגה ייחודית לסטודנטים ממוצא אתיופי — עד ₪20,000 לשנה, לתואר ראשון בכל תחום לימוד.",
       en: "Scholarship exclusively for students of Ethiopian origin — up to ₪20,000 per year for any undergraduate field.",
-      am: "ለኢትዮጵያ ዜግነት ተማሪዎች ብቻ — እስከ 20,000 ሺ\"ል ዓመታዊ፣ ለማንኛውም የጥናት ዘርፍ።",
+      am: 'ለኢትዮጵያ ዜግነት ተማሪዎች ብቻ — እስከ 20,000 ሺ"ል ዓመታዊ፣ ለማንኛውም የጥናት ዘርፍ።',
     },
     amountMinIls: 10000,
     amountMaxIls: 20000,

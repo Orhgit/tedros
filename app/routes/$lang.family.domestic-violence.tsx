@@ -89,7 +89,7 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
         </div>
 
         {/* Header */}
-        <header className="relative mb-8 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
           <img
             src={HERO_IMAGE}
             alt=""
@@ -98,7 +98,10 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
           <div
             className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
             aria-hidden="true"
@@ -129,8 +132,13 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
             </h2>
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {emergencyResources.map((r) => (
-                <li key={r.name} className="rounded-xl border border-red-200 bg-red-50 p-5">
-                  <h3 className="font-display text-base font-semibold text-red-900">{r.name}</h3>
+                <li
+                  key={r.name}
+                  className="rounded-xl border border-red-200 bg-red-50 p-5"
+                >
+                  <h3 className="font-display text-base font-semibold text-red-900">
+                    {r.name}
+                  </h3>
                   {r.phone && (
                     <a
                       href={`tel:${r.phone.replace(/[^0-9+]/g, "")}`}
@@ -148,7 +156,8 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
                       rel="noopener noreferrer"
                       className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-red-700 hover:underline"
                     >
-                      {locale === "he" ? "לאתר" : locale === "am" ? "ድህረ ገጽ" : "Website"} ↗
+                      {locale === "he" ? "לאתר" : locale === "am" ? "ድህረ ገጽ" : "Website"}{" "}
+                      ↗
                     </a>
                   )}
                 </li>
@@ -172,7 +181,7 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
                 ? "ስለ መብቶችዎ እና ድጋፍ"
                 : "Information on rights and support"}
           </h2>
-          <div className="space-y-3 text-sm leading-relaxed text-ink-700 whitespace-pre-line">
+          <div className="space-y-3 text-sm leading-relaxed whitespace-pre-line text-ink-700">
             {body}
           </div>
         </section>
@@ -188,7 +197,10 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
             </h2>
             <ul className="space-y-4">
               {otherResources.map((r) => (
-                <li key={r.name} className="rounded-xl border border-earth-200 bg-card p-5">
+                <li
+                  key={r.name}
+                  className="rounded-xl border border-earth-200 bg-card p-5"
+                >
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h3 className="font-display text-base font-semibold text-earth-900">
@@ -203,7 +215,12 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
                         rel="noopener noreferrer"
                         className="shrink-0 rounded-md border border-earth-200 px-3 py-1.5 text-xs font-medium text-earth-700 transition hover:border-earth-400 hover:bg-earth-50"
                       >
-                        {locale === "he" ? "לאתר" : locale === "am" ? "ድህረ ገጽ" : "Website"} ↗
+                        {locale === "he"
+                          ? "לאתר"
+                          : locale === "am"
+                            ? "ድህረ ገጽ"
+                            : "Website"}{" "}
+                        ↗
                       </a>
                     )}
                   </div>

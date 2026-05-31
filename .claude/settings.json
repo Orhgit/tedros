@@ -69,8 +69,6 @@
       "Bash(sed -i '' 's/t\\(locale, \"rights_breadcrumb_home\"\\)/t\\(locale, \"news_breadcrumb_home\"\\)/g' /Users/orhazan/tedros/app/routes/\\\\$lang.news._index.tsx *)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k: d.get\\(k,{}\\) for k in ['dependencies','devDependencies']}, indent=2\\)\\)\")"
     ],
-    "additionalDirectories": [
-      "/Users/orhazan/tedros/app/routes"
-    ]
+    "additionalDirectories": ["/Users/orhazan/tedros/app/routes"]
   }
 }

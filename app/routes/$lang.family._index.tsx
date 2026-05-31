@@ -100,7 +100,7 @@ export default function FamilyLanding({ loaderData }: Route.ComponentProps) {
       <SiteHeader locale={locale} currentPath={`/${locale}${familyPath()}`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
         {/* Hero */}
-        <header className="relative mb-10 isolate overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-10 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
           <img
             src={HERO_IMAGE}
             alt=""
@@ -130,7 +130,7 @@ export default function FamilyLanding({ loaderData }: Route.ComponentProps) {
         <section aria-labelledby="family-topics-heading">
           <h2
             id="family-topics-heading"
-            className="mb-6 font-display text-2xl font-semibold text-earth-900 sr-only"
+            className="sr-only mb-6 font-display text-2xl font-semibold text-earth-900"
           >
             {t(locale, "family_landing_title")}
           </h2>
@@ -154,7 +154,12 @@ export default function FamilyLanding({ loaderData }: Route.ComponentProps) {
                   </p>
                   <p className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-earth-700">
                     {t(locale, "family_card_learn_more")}
-                    <span aria-hidden="true" className={locale === "en" ? "rotate-180 inline-block" : ""}>←</span>
+                    <span
+                      aria-hidden="true"
+                      className={locale === "en" ? "inline-block rotate-180" : ""}
+                    >
+                      ←
+                    </span>
                   </p>
                 </Link>
               </li>

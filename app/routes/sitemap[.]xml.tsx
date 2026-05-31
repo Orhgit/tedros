@@ -50,12 +50,21 @@ export function loader() {
 
   function priorityFor(path: string): string {
     if (path === "") return "1.0";
-    if (/^\/(rights|careers|education|heritage|health|cities|glossary|orgs|programs)$/.test(path)) return "0.9";
-    if (/^\/(cities|rights|careers|education|orgs|programs|glossary)\/[^/]+$/.test(path)) return "0.8";
     if (
-      /^\/(rights|heritage\/events|education\/scholarships|careers)\/[^/]+\/[^/]+$/.test(path) ||
+      /^\/(rights|careers|education|heritage|health|cities|glossary|orgs|programs)$/.test(
+        path,
+      )
+    )
+      return "0.9";
+    if (/^\/(cities|rights|careers|education|orgs|programs|glossary)\/[^/]+$/.test(path))
+      return "0.8";
+    if (
+      /^\/(rights|heritage\/events|education\/scholarships|careers)\/[^/]+\/[^/]+$/.test(
+        path,
+      ) ||
       /^\/professionals\/[^/]+\/[^/]+$/.test(path)
-    ) return "0.5";
+    )
+      return "0.5";
     return "0.6";
   }
 
@@ -224,7 +233,9 @@ ${xDefaultFor(path)}
 
   const lastmodByPath = new Map<string, string>([
     ...ARTICLES.map((a) => [`/news/${a.slug}`, a.updatedAt] as [string, string]),
-    ...activeJobs().map((j) => [`/careers/jobs/${j.slug}`, j.postedAt.slice(0, 10)] as [string, string]),
+    ...activeJobs().map(
+      (j) => [`/careers/jobs/${j.slug}`, j.postedAt.slice(0, 10)] as [string, string],
+    ),
   ]);
 
   const urls = SUPPORTED_LOCALES.flatMap((loc) =>

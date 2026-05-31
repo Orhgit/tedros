@@ -42,7 +42,10 @@ export async function loader({ request }: Route.LoaderArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const data = useLoaderData<typeof loader>() ?? { locale: DEFAULT_LOCALE as Locale, gaId: null };
+  const data = useLoaderData<typeof loader>() ?? {
+    locale: DEFAULT_LOCALE as Locale,
+    gaId: null,
+  };
   const locale = data.locale ?? DEFAULT_LOCALE;
   const gaId = data.gaId ?? null;
   const dir = LOCALE_DIRECTION[locale];
