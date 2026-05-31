@@ -4092,7 +4092,7 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
 | **IEWA** (עמותה ישראלית יהודים אתיופים) | ייעוץ, מלגות, הכשרות | iewa.org.il |
 | **עמותת "בצלאל"** | אמנויות, עיצוב, מדיה | צרו קשר ישיר |
 | **תבקה** | ייעוץ משפטי, תביעת זכויות | 1-800-20-20-16 |
-| **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | \*5454 |
+| **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | *5454 |
 
 ---
 
@@ -4638,7 +4638,7 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 | **IEWA (נשים יוצאות אתיופיה)** | ייעוץ, ליווי, קהילה | iewa.org.il |
 | **תבקה** | ייעוץ משפטי, מזונות, גירושין | 1-800-20-20-16 |
 | **ויצ"ו** | מרכזי הורים, עזרה לגננות | 1-800-500-550 |
-| **ביטוח לאומי** | מזונות מובטחים, קצבת ילדים | \*6050 |
+| **ביטוח לאומי** | מזונות מובטחים, קצבת ילדים | *6050 |
 | **שירות התעסוקה** | הכשרות, קצבאות | המשרד הקרוב |
 
 ---
@@ -4668,7 +4668,7 @@ If the father is in Ethiopia or elsewhere, BTL will advance the court-ordered am
 
 ## Key Contacts
 
-- **BTL guaranteed alimony (Form 551):** btl.gov.il | \*6050
+- **BTL guaranteed alimony (Form 551):** btl.gov.il | *6050
 - **IEWA (Ethiopian women):** iewa.org.il
 - **TEBEKA (legal aid):** 1-800-20-20-16
 - **Employment Service (retraining):** your nearest branch

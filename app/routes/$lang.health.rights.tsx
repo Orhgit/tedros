@@ -46,7 +46,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, publicUrl, rights } = data;
   const title = t(locale, "health_rights_title");
   const description = t(locale, "health_rights_subtitle");
-  const url = `${publicUrl}/${locale}/health/rights`;
+  const _url = `${publicUrl}/${locale}/health/rights`;
 
   const faqSchema = faqJsonLd(
     { publicUrl, locale },

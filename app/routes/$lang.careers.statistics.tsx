@@ -41,7 +41,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, publicUrl } = data;
   const title = t(locale, "careers_statistics_title");
   const description = t(locale, "careers_statistics_subtitle");
-  const url = `${publicUrl}/${locale}/careers/statistics`;
+  const _url = `${publicUrl}/${locale}/careers/statistics`;
 
   const datasetJsonLd = careersStatisticsJsonLd(
     { publicUrl, locale },

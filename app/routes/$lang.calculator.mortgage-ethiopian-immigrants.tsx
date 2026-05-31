@@ -6,7 +6,6 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 import {
-  CITIES,
   cityName,
   findCityBySlug,
 } from "~/lib/cities/registry";

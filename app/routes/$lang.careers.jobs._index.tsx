@@ -43,7 +43,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, jobs, publicUrl } = data;
   const title = t(locale, "careers_jobs_landing_title");
   const description = t(locale, "careers_jobs_landing_subtitle");
-  const url = `${publicUrl}/${locale}/careers/jobs`;
+  const _url = `${publicUrl}/${locale}/careers/jobs`;
 
   const itemList =
     jobs.length > 0

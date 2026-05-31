@@ -26,4 +26,3 @@ export * from "./tabs";
 export * from "./textarea";
 export * from "./toast";
 export * from "./tooltip";
-export * from "./citizen-inbox";

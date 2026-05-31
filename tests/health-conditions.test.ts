@@ -32,8 +32,8 @@ import {
 // ── categories ─────────────────────────────────────────────────────────────
 
 describe("ALL_HEALTH_CONDITIONS", () => {
-  it("contains exactly 6 entries", () => {
-    expect(ALL_HEALTH_CONDITIONS).toHaveLength(6);
+  it("contains exactly 14 entries", () => {
+    expect(ALL_HEALTH_CONDITIONS).toHaveLength(14);
   });
 
   it("contains the expected slugs", () => {
@@ -78,8 +78,8 @@ describe("glyphForCondition", () => {
 // ── conditions seed integrity ───────────────────────────────────────────────
 
 describe("CONDITIONS seed", () => {
-  it("has exactly 6 entries", () => {
-    expect(CONDITIONS).toHaveLength(6);
+  it("has exactly 14 entries", () => {
+    expect(CONDITIONS).toHaveLength(14);
   });
 
   it("every condition has a non-empty HE body (length > 100)", () => {
@@ -129,9 +129,10 @@ describe("CONDITIONS seed", () => {
     }
   });
 
-  it("lastReviewed is 2026-05-11 on all entries", () => {
+  it("lastReviewed matches ISO date format on all entries", () => {
+    const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
     for (const c of CONDITIONS) {
-      expect(c.lastReviewed).toBe("2026-05-11");
+      expect(c.lastReviewed).toMatch(ISO_DATE_RE);
     }
   });
 
@@ -194,11 +195,11 @@ import { loader as conditionDetailLoader } from "../app/routes/$lang.health.cond
 import { loader as mentalHealthLoader } from "../app/routes/$lang.health.mental-health";
 
 describe("health landing loader", () => {
-  it("loads in HE/EN/AM with all 6 conditions", async () => {
+  it("loads in HE/EN/AM with all 14 conditions", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await healthLandingLoader(fakeArgs({ lang }));
       expect(data.locale).toBe(lang);
-      expect(data.conditions).toHaveLength(6);
+      expect(data.conditions).toHaveLength(14);
     }
   });
 
@@ -213,10 +214,10 @@ describe("health landing loader", () => {
 });
 
 describe("conditions landing loader", () => {
-  it("loads in HE/EN/AM with 6 conditions", async () => {
+  it("loads in HE/EN/AM with 14 conditions", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await conditionsLandingLoader(fakeArgs({ lang }));
-      expect(data.conditions).toHaveLength(6);
+      expect(data.conditions).toHaveLength(14);
     }
   });
 });
@@ -229,7 +230,7 @@ describe("condition detail loader", () => {
         expect(data.condition.slug).toBe(slug);
         expect(data.condition.body.length).toBeGreaterThan(80);
         expect(data.condition.figures.length).toBeGreaterThanOrEqual(1);
-        expect(data.condition.lastReviewed).toBe("2026-05-11");
+        expect(data.condition.lastReviewed).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       }
     }
   });

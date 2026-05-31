@@ -69,7 +69,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
   const { locale, topic, publicUrl, name, description } = data;
-  const url = `${publicUrl}/${locale}/statistics/${topic.slug}`;
+  const _url = `${publicUrl}/${locale}/statistics/${topic.slug}`;
 
   const datasetJsonLd = statTopicJsonLd(
     { publicUrl, locale },

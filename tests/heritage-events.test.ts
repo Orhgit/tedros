@@ -48,8 +48,8 @@ function fakeArgs(params: Record<string, string | undefined>): AnyArgs {
 const ctx = { publicUrl: "https://tedros.co.il", locale: "he" as const };
 
 describe("HERITAGE_EVENTS seed shape", () => {
-  it("contains 3 events", () => {
-    expect(HERITAGE_EVENTS).toHaveLength(3);
+  it("contains 4 events", () => {
+    expect(HERITAGE_EVENTS).toHaveLength(4);
   });
 
   it("every event slug is on the canonical list", () => {
@@ -182,10 +182,10 @@ describe("body fallback", () => {
 });
 
 describe("landing loader", () => {
-  it("returns 3 events with HE/EN/AM names", async () => {
+  it("returns 4 events with HE/EN/AM names", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await landingLoader(fakeArgs({ lang }));
-      expect(data.events).toHaveLength(3);
+      expect(data.events).toHaveLength(4);
     }
   });
 });

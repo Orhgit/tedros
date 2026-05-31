@@ -39,8 +39,8 @@ describe("scholarship-relevance", () => {
     );
   });
 
-  it("V1 cell budget = 12 scholarships × 5 cities = 60", () => {
+  it("V1 cell budget = 18 scholarships × 5 cities = 90", () => {
     const cells = SCHOLARSHIPS.length * SCHOLARSHIP_RELEVANCE_CITIES.length;
-    expect(cells).toBe(60);
+    expect(cells).toBe(90);
   });
 });

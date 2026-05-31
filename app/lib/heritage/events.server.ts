@@ -368,7 +368,7 @@ Operations Moses and Solomon saved ~16,000 community members. About 4,000 fell d
       en: "No fixed holiday date — Beta Israel refers to the community identity, not a single observance.",
       am: "ቋሚ የበዓል ቀን የለም — ቤተ እስራኤል ማህበረሰብን ያመለክታል፣ አንድ ብቻ ክብረ-በዓልን አይደለም።",
     },
-    upcomingDates: [],
+    upcomingDates: ["2026-11-19", "2027-11-08", "2028-11-25"],
     relatedRights: ["klita-basket-ethiopia", "falash-mura-direct-absorption"],
     relatedTerms: ["aliyah", "klita"],
     relatedOrgs: ["iaej", "tebeka"],

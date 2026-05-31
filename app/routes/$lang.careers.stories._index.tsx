@@ -51,7 +51,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, publicUrl } = data;
   const title = t(locale, "careers_stories_landing_title");
   const description = t(locale, "careers_stories_landing_subtitle");
-  const url = `${publicUrl}/${locale}/careers/stories`;
+  const _url = `${publicUrl}/${locale}/careers/stories`;
 
   const breadcrumb = breadcrumbJsonLd({ publicUrl, locale }, [
     { name: t(locale, "rights_breadcrumb_home"), path: "/" },

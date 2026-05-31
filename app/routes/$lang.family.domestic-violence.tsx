@@ -8,7 +8,7 @@ import type { Route } from "./+types/$lang.family.domestic-violence";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { getFamilyTopic } from "~/lib/family/topics.server";
-import { familyPath, domesticViolencePath } from "~/lib/family/links";
+import { familyPath } from "~/lib/family/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/family/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";

@@ -40,7 +40,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, publicUrl } = data;
   const title = t(locale, "health_conditions_title");
   const description = t(locale, "health_conditions_subtitle");
-  const url = `${publicUrl}/${locale}/health/conditions`;
+  const _url = `${publicUrl}/${locale}/health/conditions`;
 
   return [
     { title: `${title} — Tedros` },

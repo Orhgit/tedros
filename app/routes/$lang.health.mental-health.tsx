@@ -135,7 +135,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, faqs, publicUrl } = data;
   const title = t(locale, "health_mental_health_title");
   const description = t(locale, "health_mental_health_subtitle");
-  const url = `${publicUrl}/${locale}/health/mental-health`;
+  const _url = `${publicUrl}/${locale}/health/mental-health`;
 
   return [
     { title: `${title} — Tedros` },

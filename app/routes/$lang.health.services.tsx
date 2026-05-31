@@ -99,7 +99,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
   const { locale, publicUrl, localBizJsonLd, title, description, breadcrumbJsonLd } =
     data;
-  const url = `${publicUrl}/${locale}/health/services`;
+  const _url = `${publicUrl}/${locale}/health/services`;
 
   return [
     { title: `${title} — Tedros` },

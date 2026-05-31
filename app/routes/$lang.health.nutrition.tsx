@@ -92,7 +92,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
   const { locale, title, description, publicUrl, webPage, breadcrumb } = data;
-  const url = `${publicUrl}/${locale}${nutritionPath()}`;
+  const _url = `${publicUrl}/${locale}${nutritionPath()}`;
 
   return [
     { title: `${title} — Tedros` },

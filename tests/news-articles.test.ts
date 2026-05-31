@@ -37,8 +37,8 @@ function fakeArgs(params: Record<string, string | undefined>): AnyArgs {
 const ctx = { publicUrl: "https://tedros.co.il", locale: "he" as const };
 
 describe("ARTICLES seed shape", () => {
-  it("contains 5 articles", () => {
-    expect(ARTICLES).toHaveLength(5);
+  it("contains 40 articles", () => {
+    expect(ARTICLES).toHaveLength(40);
   });
 
   it("every article has unique slug + HE/EN/AM body non-empty", () => {
@@ -70,8 +70,8 @@ describe("ARTICLES seed shape", () => {
 });
 
 describe("categories", () => {
-  it("ALL_NEWS_TAGS contains 8 tags", () => {
-    expect(ALL_NEWS_TAGS).toHaveLength(8);
+  it("ALL_NEWS_TAGS contains 13 tags", () => {
+    expect(ALL_NEWS_TAGS).toHaveLength(13);
   });
 
   it("isNewsTag narrows correctly", () => {
@@ -148,7 +148,7 @@ describe("landing loader", () => {
   it("returns articles in HE/EN/AM with the expected count", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await landingLoader(fakeArgs({ lang }));
-      expect(data.articles).toHaveLength(5);
+      expect(data.articles).toHaveLength(40);
     }
   });
 

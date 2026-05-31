@@ -34,7 +34,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, faqs, publicUrl } = data;
   const title = t(locale, "careers_faq_landing_title");
   const description = t(locale, "careers_faq_landing_subtitle");
-  const url = `${publicUrl}/${locale}/careers/faq`;
+  const _url = `${publicUrl}/${locale}/careers/faq`;
 
   // Aggregate FAQPage with all 20 questions — Google can pick top entries
   // for the rich snippet without us having to author per-page schema here.
