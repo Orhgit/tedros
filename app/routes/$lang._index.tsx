@@ -205,7 +205,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
                 key={lang}
                 to={`/${lang}`}
                 hrefLang={lang}
-                className="rounded-md px-3 py-1.5 text-white drop-shadow hover:bg-white/15"
+                className="rounded-md bg-black/40 px-3 py-1.5 text-white hover:bg-black/60"
               >
                 {t(locale, `lang_${lang}`)}
               </Link>
