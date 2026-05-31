@@ -115,6 +115,7 @@ export default function RacismReport({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div
             className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
             aria-hidden="true"

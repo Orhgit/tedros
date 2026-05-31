@@ -17,6 +17,7 @@ import { getOrgEntry } from "~/lib/db/queries/orgs.server";
 import {
   getScholarshipBySlug,
   relatedScholarships,
+  listScholarships,
 } from "~/lib/db/queries/scholarships.server";
 import {
   SCHOLARSHIP_LEVEL_TO_TAG,
@@ -25,6 +26,7 @@ import {
 import { isScholarshipCellRelevant } from "~/lib/education/scholarship-relevance";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
@@ -47,6 +49,9 @@ export async function loader({ params }: Route.LoaderArgs) {
   const provider = getOrgEntry(entry.providerOrgSlug, locale);
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}/education/scholarships/${entry.slug}/${city.slug}`;
+  const cityScholarships = listScholarships(locale)
+    .filter((s) => s.slug !== entry.slug && isScholarshipCellRelevant(city.slug))
+    .slice(0, 4);
   return {
     locale,
     entry,
@@ -56,6 +61,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     provider,
     publicUrl: PUBLIC_URL,
     shareUrl,
+    cityScholarships,
   };
 }
 
@@ -76,6 +82,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const prep = prepFor(locale);
   const title = `${entry.name} ${prep}${cityNameLocal} — Tedros`;
   const description = `${entry.shortDescription} ${prep}${cityNameLocal}.`;
+  const path = `/education/scholarships/${entry.slug}/${city.slug}`;
   return [
     { title },
     { name: "description", content: description },
@@ -83,11 +90,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
-    {
-      tagName: "link",
-      rel: "canonical",
-      href: `${publicUrl}/${locale}/education/scholarships/${entry.slug}/${city.slug}`,
-    },
+    ...hreflangMeta(publicUrl, locale, path),
     {
       "script:ld+json": {
         "@context": "https://schema.org",
@@ -115,7 +118,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, entry, city, html, related, provider, shareUrl } = loaderData;
+  const { locale, entry, city, html, related, provider, shareUrl, cityScholarships } = loaderData;
   const cityNameLocal = cityName(city, locale);
   const prep = prepFor(locale);
   const overview = cityOverview(city, locale);
@@ -138,6 +141,7 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"
@@ -274,6 +278,29 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
                 </Link>
               ))}
             </div>
+          </section>
+        )}
+
+        {cityScholarships.length > 0 && (
+          <section className="mt-10 rounded-2xl border border-earth-200 bg-earth-50 p-5">
+            <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
+              {t(locale, "education_scholarships_title")} — {cityName(city, locale)}
+            </h2>
+            <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {cityScholarships.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    to={`/${locale}/education/scholarships/${s.slug}/${city.slug}`}
+                    className="flex items-start gap-2 rounded-lg border border-earth-200 bg-white p-3 text-sm hover:border-earth-400 transition"
+                  >
+                    <span aria-hidden="true" className="text-lg leading-none">
+                      {glyphForScholarshipLevel(s.level)}
+                    </span>
+                    <span className="text-ink-800">{s.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </section>
         )}
 

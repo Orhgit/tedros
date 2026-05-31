@@ -9,7 +9,9 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
 import { listByProfessionAndCity } from "~/lib/db/queries/professionals.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import {
   PROFESSION_TO_TAG,
@@ -47,16 +49,18 @@ export async function loader({ params }: Route.LoaderArgs) {
     // want a clean 404 rather than a thin page.
     throw data({ error: "no-matches" }, { status: 404 });
   }
-  return { locale, profession, city, slots };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, profession, city, slots, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, profession, city, slots } = data;
+  const { locale, profession, city, slots, publicUrl } = data;
   const profTitle = t(locale, professionMessageKey(profession));
   const cName = cityName(city, locale);
   const title = `${profTitle} ${inCity(locale, cName)}`;
   const description = `${title} — ${t(locale, "professionals_landing_subtitle").replace(/\*\*/g, "")}`;
+  const path = `/professionals/${profession}/${city.slug}`;
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
@@ -64,6 +68,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    ...hreflangMeta(publicUrl, locale, path),
     {
       "script:ld+json": {
         "@context": "https://schema.org",
@@ -104,6 +109,7 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"

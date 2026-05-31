@@ -11,6 +11,7 @@ import { WhatsAppShare } from "~/components/sections/whatsapp-share";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -200,6 +201,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
+    ...hreflangMeta(publicUrl, locale, "/careers/affirmative-action"),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
@@ -228,6 +230,7 @@ export default function AffirmativeAction({ loaderData }: Route.ComponentProps) 
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"

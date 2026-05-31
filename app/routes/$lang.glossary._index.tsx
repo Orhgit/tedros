@@ -13,7 +13,9 @@ import {
   glyphForCategory,
   type GlossaryCategory,
 } from "~/lib/glossary/categories";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 
@@ -28,14 +30,17 @@ const ALL_CATEGORIES: GlossaryCategory[] = [
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const entries = listGlossary(locale);
-  return { locale, entries };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, entries, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "http://localhost:3000";
   return [
     { title: `${t(locale, "glossary_landing_title")} — Tedros` },
     { name: "description", content: t(locale, "glossary_landing_subtitle") },
+    ...hreflangMeta(publicUrl, locale, "/glossary"),
     { property: "og:title", content: t(locale, "glossary_landing_title") },
     { property: "og:description", content: t(locale, "glossary_landing_subtitle") },
     { property: "og:type", content: "website" },
@@ -78,6 +83,7 @@ export default function GlossaryLanding({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div
             aria-hidden="true"

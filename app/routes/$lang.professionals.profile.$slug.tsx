@@ -17,6 +17,7 @@ import { getProfessionalSlot } from "~/lib/db/queries/professionals.server";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import {
   PROFESSION_TO_TAG,
@@ -65,20 +66,35 @@ export async function loader({ params }: Route.LoaderArgs) {
     relatedTerms,
     relatedOrgs,
     shareUrl,
+    publicUrl: PUBLIC_URL,
   };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, slot } = data;
+  const { locale, slot, publicUrl } = data;
   const description = slot.shortDescription;
   return [
     { title: `${slot.title} — Tedros` },
     { name: "description", content: description },
+    ...hreflangMeta(publicUrl, locale, `/professionals/profile/${slot.slug}`),
     { property: "og:title", content: slot.title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: slot.title,
+        jobTitle: slot.profession,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: slot.citySlug,
+          addressCountry: "IL",
+        },
+      },
+    },
   ];
 };
 
@@ -103,6 +119,7 @@ export default function ProfessionalProfile({ loaderData }: Route.ComponentProps
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"

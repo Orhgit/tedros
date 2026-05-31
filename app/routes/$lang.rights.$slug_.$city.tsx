@@ -16,9 +16,10 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
 import { findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
-import { getRightBySlug, relatedRights } from "~/lib/db/queries/rights.server";
+import { getRightBySlug, relatedRights, listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
 import { isRelevant } from "~/lib/rights/relevance";
@@ -41,7 +42,10 @@ export async function loader({ params }: Route.LoaderArgs) {
   const related = relatedRights(right.slug, locale, 4);
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}/rights/${right.slug}/${city.slug}`;
-  return { locale, right, city, html, publicUrl: PUBLIC_URL, related, shareUrl };
+  const cityRights = listRights(locale)
+    .filter((r) => r.slug !== right.slug && isRelevant(r.slug, city.slug))
+    .slice(0, 4);
+  return { locale, right, city, html, publicUrl: PUBLIC_URL, related, shareUrl, cityRights };
 }
 
 // Locale-specific preposition that prefixes the city name. Hebrew/Amharic
@@ -57,6 +61,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const prep = prepFor(locale);
   const title = `${right.title} ${prep}${cityNameLocal} — Tedros`;
   const description = `${right.summary} ${prep}${cityNameLocal}.`;
+  const path = `/rights/${right.slug}/${city.slug}`;
   return [
     { title },
     { name: "description", content: description },
@@ -64,11 +69,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
-    {
-      tagName: "link",
-      rel: "canonical",
-      href: `${publicUrl}/${locale}/rights/${right.slug}/${city.slug}`,
-    },
+    ...hreflangMeta(publicUrl, locale, path),
     {
       "script:ld+json": {
         "@context": "https://schema.org",
@@ -98,7 +99,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function RightCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, right, city, html, related, shareUrl } = loaderData;
+  const { locale, right, city, html, related, shareUrl, cityRights } = loaderData;
   const primaryTag = right.tags[0] ?? "housing";
   const tone = classesForTag(primaryTag);
   const cityNameLocal = cityName(city, locale);
@@ -119,6 +120,7 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"
@@ -222,6 +224,29 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
         <div className="mt-6">
           <WhatsAppShare title={right.title} url={shareUrl} locale={locale} />
         </div>
+
+        {cityRights.length > 0 && (
+          <section className="mt-10 rounded-2xl border border-earth-200 bg-earth-50 p-5">
+            <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
+              {t(locale, "rights_city_context_heading")} {cityName(city, locale)}
+            </h2>
+            <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {cityRights.map((r) => (
+                <li key={r.slug}>
+                  <Link
+                    to={`/${locale}/rights/${r.slug}/${city.slug}`}
+                    className="flex items-start gap-2 rounded-lg border border-earth-200 bg-white p-3 text-sm hover:border-earth-400 transition"
+                  >
+                    <span aria-hidden="true" className="text-lg leading-none">
+                      {glyphForTag(r.tags[0] ?? "housing")}
+                    </span>
+                    <span className="text-ink-800">{r.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <RelatedRights rights={related} locale={locale} />
       </article>

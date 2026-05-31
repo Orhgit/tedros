@@ -93,6 +93,7 @@ export default function NewsLanding({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
               {t(locale, "news_breadcrumb_home")}

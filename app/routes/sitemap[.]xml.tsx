@@ -36,6 +36,7 @@ import { STAT_TOPICS } from "~/lib/statistics/topics.server";
  */
 export function loader() {
   const { PUBLIC_URL } = getEnv();
+  const buildDate = new Date().toISOString().slice(0, 10);
 
   function altLinksFor(path: string): string {
     return SUPPORTED_LOCALES.map(
@@ -47,11 +48,32 @@ export function loader() {
     return `      <xhtml:link rel="alternate" hreflang="x-default" href="${PUBLIC_URL}/he${path}"/>`;
   }
 
+  function priorityFor(path: string): string {
+    if (path === "") return "1.0";
+    if (/^\/(rights|careers|education|heritage|health|cities|glossary|orgs|programs)$/.test(path)) return "0.9";
+    if (/^\/(cities|rights|careers|education|orgs|programs|glossary)\/[^/]+$/.test(path)) return "0.8";
+    if (
+      /^\/(rights|heritage\/events|education\/scholarships|careers)\/[^/]+\/[^/]+$/.test(path) ||
+      /^\/professionals\/[^/]+\/[^/]+$/.test(path)
+    ) return "0.5";
+    return "0.6";
+  }
+
+  function changefreqFor(path: string): string {
+    if (path.includes("/news/")) return "daily";
+    if (path.includes("/careers/jobs/")) return "weekly";
+    if (path === "") return "weekly";
+    return "monthly";
+  }
+
   function urlEntry(path: string, lastmod?: string): string {
-    const lastmodLine = lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : "";
+    const lm = lastmod ?? buildDate;
     return `  <url>
     <loc>${PUBLIC_URL}/${"$LOC_PLACEHOLDER"}${path}</loc>
-${lastmodLine}${altLinksFor(path)}
+    <lastmod>${lm}</lastmod>
+    <changefreq>${changefreqFor(path)}</changefreq>
+    <priority>${priorityFor(path)}</priority>
+${altLinksFor(path)}
 ${xDefaultFor(path)}
   </url>`;
   }
@@ -185,6 +207,19 @@ ${xDefaultFor(path)}
     // RIN-658/659 — Health Hub Wave 3: traditional medicine + nutrition.
     "/health/traditional-medicine",
     "/health/nutrition",
+    // Family hub
+    "/family",
+    "/family/domestic-violence",
+    "/family/elderly",
+    "/family/women-empowerment",
+    // Voice hub
+    "/voice",
+    "/voice/community-action",
+    "/voice/police-conduct",
+    "/voice/racism-report",
+    // About + general mortgage calculator
+    "/about",
+    "/calculator/mortgage",
   ];
 
   const lastmodByPath = new Map<string, string>([

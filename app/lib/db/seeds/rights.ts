@@ -272,6 +272,301 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
     },
   },
 
+  // NEW 14 — Police rights guide
+  {
+    title: {
+      he: "זכויות מול משטרה — מה מותר ומה אסור",
+      en: "Your Rights With Police — What Is and Isn't Allowed",
+      am: "ከፖሊስ ጋር ያሉ መብቶች — ምን ተፈቅዶ ምን ተከልክሏል",
+    },
+    slug: {
+      he: "police-rights-guide",
+      en: "police-rights-guide",
+      am: "police-rights-guide",
+    },
+    govUrl: "https://www.gov.il/he/departments/ministry-of-public-security",
+    eligibilitySummary: {
+      he: "כל אזרח ותושב ישראל זכאי לדעת מדוע הוא נעצר או נחקר, לשתוק, ולקבל ייעוץ משפטי. אלה זכויות חוקתיות — לא טובות לב של שוטר.",
+      en: "Every citizen and resident of Israel has the right to know why they are being stopped or investigated, to remain silent, and to receive legal counsel. These are constitutional rights.",
+      am: "በእስራኤል ያለ ሁሉም ዜጋ እና ነዋሪ ለምን እንደሚቆሙ ወይም እንደሚጠየቁ የማወቅ፣침ን የመጠበቅ እና የሕግ ምክር የማግኘት መብት አለው።",
+    },
+    tags: ["legal"],
+    bodies: {
+      he: `## למה הדף הזה חשוב ליוצאי אתיופיה?
+
+נתונים של עמותת תבקה ושל המרכז לרב-תרבותיות ודמוקרטיה מציגים תמונה עקבית: צעירים יוצאי אתיופיה מדווחים על בדיקות שוטרים יזומות (profiling) בשיעור גבוה באופן לא-פרופורציונלי ביחס לנתח האוכלוסייה שלהם. מחאות 2015 ו-2019 יצאו בדיוק מהצטברות אירועים כאלה. הדרך הטובה ביותר להגן על עצמך היא לדעת את זכויותיך לפני שתצטרך להשתמש בהן.
+
+---
+
+## זכות 1 — לדעת מדוע עוצרים אותך
+
+על-פי סעיף 23 לחוק סדר הדין הפלילי (סמכויות אכיפה — חיפוש בגוף ובגופה), שוטר שמבקש לבדוק אותך חייב להציג את תעודתו ולהסביר את הסיבה. אתה רשאי לשאול בשקט: **"מה הסיבה לעצירה?"** — זה לא התנגדות, זה מימוש זכות.
+
+אם השוטר מסרב להסביר ועדיין מדרוש שתישאר במקום, לא ניתן לדעת בדיוק אם מדובר ב"חיפוש וולונטרי" או "עצור לחקירה". במקרה של ספק — ציין בקול: "אני מממש את זכותי להישאר שקט עד שאדבר עם עורך דין."
+
+---
+
+## זכות 2 — הזכות לשתוק
+
+חוק יסוד: כבוד האדם וחירותו + פקודת מעצר וחיפוש קובעים שאדם אינו חייב להפליל את עצמו. בפועל:
+
+- **אל תסביר, תצדיק, תתנצל** — כל מה שתאמר עלול לשמש ראיה.
+- ציין בפה מלא: "אני מבקש לשתוק עד שעורך הדין שלי יגיע."
+- שתיקה אינה ראיה לאשמה — שום שופט ישראלי אינו רשאי להסיק מסקנה שלילית משתיקה בחקירה.
+
+---
+
+## זכות 3 — ייעוץ משפטי לפני חקירה
+
+על-פי חוק סדר הדין הפלילי (נוסח משולב), כל נחקר זכאי לפגישה עם עורך דין **לפני** שהחקירה מתחילה. המשטרה חייבת לאפשר זאת, למעט מקרים חריגים (ביטחון המדינה, פגיעה בחקירה בהסכמת קצין בכיר).
+
+**אם אין לך עורך דין**: התקשר לתורן הלילה של לשכת עורכי הדין: **03-6200600** (24/7).
+**תבקה** — עמותת יוצאי אתיופיה: **1-800-20-20-16** (שעות משרד).
+
+---
+
+## זכות 4 — חיפוש גוף ורכב
+
+חיפוש גוף מלא דורש **צו שופט** — אלא אם יש חשד סביר ומיידי. חיפוש שטחי (מישוש חיצוני) מותר לשוטר בשטח, אך **חייב**:
+1. להיות מבוצע על-ידי שוטר מאותו מין.
+2. לא להשפיל או לגרום לסבל מיותר.
+3. להיות מתועד ברשומת הפעולה.
+
+לגבי רכב: שוטר רשאי לבקש לפתוח תא-מטען, אך פתיחה בכוח דורשת חשד סביר מוגדר. לא חובה להסכים לחיפוש "וולונטרי" — אמור בבירור: "אני אינו מסכים לחיפוש."
+
+---
+
+## זכות 5 — מעצר: מה קורה?
+
+אם נעצרת:
+1. **הודעה על עילת המעצר** — חובה על-פי חוק.
+2. **הבאה לשופט תוך 24 שעות** — אם לא הוארך המעצר, חובה לשחרר.
+3. **זכות לטלפן** — להודיע לבן-משפחה או עורך-דין.
+4. **זכות לתרגום** — אם אינך דובר עברית, המשטרה חייבת להמציא מתורגמן (ראה גם: **זכות למתורגמן בבית-משפט**).
+
+רשום מיד: שם השוטר, מספר האפודה, שעת העצירה, מיקום. אם יש עדים — בקש שמות.
+
+---
+
+## מה לעשות אם השוטר חרג?
+
+1. **אל תתעמת פיזית** — זה מסוכן ולא יועיל.
+2. **תעד** — צלם (מותר בשטח ציבורי), שמור הודעות.
+3. **הגש תלונה במח"ש** — [mahash.gov.il](https://www.mahash.gov.il) (ראה גם דף "איך מגישים תלונה על שוטר").
+4. **פנה לתבקה** — 1-800-20-20-16 / tebeka.org.il
+5. **עמותת האגודה לזכויות האזרח (עכ"א)** — 1-800-20-20-16 | acri.org.il
+
+---
+
+## טבלת זכויות מהירה
+
+| מצב | הזכות שלך |
+|-----|-----------|
+| שוטר עוצר אותך | לדעת את הסיבה |
+| חקירה מתחילה | לשתוק, לדרוש עורך-דין |
+| חיפוש גוף | לדרוש שיהיה מאותו מין, לא להסכים לוולונטרי |
+| מעצר | הבאה לשופט תוך 24 שעות, טלפון לעו"ד |
+| חוסר הבנה בשפה | מתורגמן על-חשבון המדינה |
+
+---
+
+## מספרי חירום
+
+- **מח"ש (תלונות על שוטרים)**: 1553 | mahash.gov.il
+- **תבקה**: 1-800-20-20-16 | [tebeka.org.il](https://tebeka.org.il)
+- **עכ"א**: 1-800-20-20-16 | [acri.org.il](https://www.acri.org.il)
+- **לשכת עורכי הדין (תורן 24/7)**: 03-6200600
+`,
+      en: `## Why This Matters for Ethiopian-Israelis
+
+Studies and reports by TEBEKA and human-rights organisations document disproportionate rates of police stops targeting Ethiopian-Israeli youth. The 2015 and 2019 protest movements arose directly from these experiences. Knowing your rights is the most effective protection before you ever need it.
+
+## Core Rights
+
+**Right to know why you are stopped.** Under Israeli law a police officer must identify themselves and state the reason for a stop or search. Ask calmly: "What is the reason for this stop?"
+
+**Right to remain silent.** You are never required to answer questions that could incriminate you. State clearly: "I am exercising my right to remain silent until my lawyer arrives." Silence cannot be used as evidence of guilt in Israeli courts.
+
+**Right to legal counsel.** Before any interrogation you are entitled to consult a lawyer. The police must facilitate this except in narrow national-security exceptions. If you have no lawyer, call the Bar Association duty line: 03-6200600 (24/7).
+
+**Right to dignity during searches.** A full body search requires a judicial warrant or specific immediate suspicion. Strip searches must be conducted by an officer of the same gender. You may refuse a "voluntary" search — say clearly: "I do not consent to a search."
+
+**If arrested.** The police must tell you why, bring you before a judge within 24 hours, allow you to call a family member or lawyer, and provide an interpreter if you do not speak Hebrew.
+
+## Complaint Hotlines
+
+- **MAHASH (police complaints)**: 1553 | mahash.gov.il
+- **TEBEKA**: 1-800-20-20-16 | tebeka.org.il
+- **ACRI**: acri.org.il
+- **Bar Association duty lawyer**: 03-6200600
+`,
+      am: `## ዋና መብቶች
+
+**ለምን እንደሚቆሙ የማወቅ መብት።** ፖሊስ ማንነቱን ማሳየት እና ምክንያቱን መግለጽ አለበት።
+
+**ዝምታን የመጠበቅ መብት።** ምንም ጥያቄ መመለስ አለብዎትም። ይበሉ፦ "ጠበቃዬ እስኪደርስ ምንም አልናገርም።"
+
+**የሕግ ምክር የማግኘት መብት።** ቃለ-ምልልስ ከመጀመሩ በፊት ጠበቃ የማማከር መብት አለዎት። ጠበቃ ከሌለዎት ይደውሉ፦ 03-6200600 (24/7)።
+
+**ፍተሻ።** ሙሉ የሰውነት ፍተሻ የዳኛ ትዕዛዝ ይፈልጋል። ፍተሻን "ለፈቃደኝነት" አትቀበሉ — ይበሉ፦ "ፍተሻን አልፈቅድም።"
+
+**ከተያዙ።** ፖሊስ ምክንያቱን መንገር፣ በ24 ሰዓት ፊት ለዳኛ ማቅረብ እና አስተርጓሚ ማቅረብ አለበት።
+
+## አስቸኳይ ስልኮች
+
+- **MAHASH**: 1553 | mahash.gov.il
+- **TEBEKA**: 1-800-20-20-16 | tebeka.org.il
+- **የጠበቃ ፍርድ ቤት ተረኛ**: 03-6200600
+`,
+    },
+  },
+
+  // NEW 15 — Police complaint guide
+  {
+    title: {
+      he: "איך מגישים תלונה על שוטר — מדריך שלב אחר שלב",
+      en: "How to File a Complaint Against a Police Officer — Step by Step",
+      am: "በፖሊስ ላይ ቅሬታ እንዴት እናቀርባለን — ደረጃ በደረጃ",
+    },
+    slug: {
+      he: "police-complaint-guide",
+      en: "police-complaint-guide",
+      am: "police-complaint-guide",
+    },
+    govUrl: "https://www.mahash.gov.il",
+    eligibilitySummary: {
+      he: "כל מי שחש שנפגע מהתנהגות שוטר — יכול להגיש תלונה למח\"ש (מחלקת חקירות שוטרים) או לנציב תלונות הציבור על המשטרה. אין עלות, אין צורך בעורך-דין.",
+      en: "Anyone who believes they were harmed by police conduct can file a complaint with MAHASH (Police Investigations Department) or the Public Complaints Commissioner — free, no lawyer required.",
+      am: "የፖሊስ ባህሪ ጎድቶናል የሚል ማንኛውም ሰው ለMAHASH ወይም ለህዝብ ቅሬታ ኮሚሽነር ቅሬታ ማቅረብ ይችላል — ነፃ ነው።",
+    },
+    tags: ["legal"],
+    bodies: {
+      he: `## מה הם מח"ש ונציב תלונות הציבור?
+
+**מח"ש — מחלקת חקירות שוטרים** היא יחידה בתוך המשטרה שמטפלת בחשד לעבירות פליליות של שוטרים (תקיפה, שימוש מופרז בכוח, גביית שוחד וכדומה). מח"ש פועל תחת פיקוח משרד המשפטים.
+
+**נציב תלונות הציבור על המשטרה** — גוף חיצוני ועצמאי שדן בתלונות על התנהגות לא-ראויה שאינה עולה לכדי עבירה פלילית (אדיבות, הפעלת שיקול-דעת, איחור למקרה וכדומה).
+
+לעתים רצוי להגיש לשניהם — הם מטפלים בזוויות שונות.
+
+---
+
+## שלב 1 — איסוף ראיות
+
+לפני שמגישים, אסוף כמה שיותר מהפרטים הבאים:
+
+- **שם ומספר אפודה** של השוטר (או צילום)
+- **תאריך, שעה, מיקום מדויק**
+- **עדים** — שמות ומספרי טלפון
+- **צילומים/סרטונים** מסמרטפון (מותר לצלם בשטח ציבורי)
+- **מסמכים**: טופס מעצר, קבלה, כל ניר שקיבלת
+- **עדות רפואית**: אם נפגעת — לתעד אצל רופא באותו יום
+
+---
+
+## שלב 2 — הגשת תלונה למח"ש
+
+### אפיק A — אינטרנט (מהיר ביותר)
+1. גש לאתר [mahash.gov.il](https://www.mahash.gov.il)
+2. בחר "הגשת תלונה"
+3. מלא את הטופס המקוון — שמות, תיאור, תאריך
+4. צרף קבצים (צילומים, סרטונים)
+5. תקבל מספר תיק — שמור אותו
+
+### אפיק B — פנייה ישירה
+פנה למשרד מח"ש הקרוב אליך (יש משרדים בתל-אביב, ירושלים, חיפה, באר-שבע). אפשר להגיע ללא תיאום מראש בשעות קבלת קהל.
+
+### מגבלת זמן
+לפי תקנות המשטרה — **30 ימים** לתלונה על אירוע פנימי (אפשר לבקש הארכה עם נימוק).
+
+---
+
+## שלב 3 — הגשת תלונה לנציב
+
+1. כנס לאתר [ombudsman.gov.il](https://www.ombudsman.gov.il) (או חפש "נציב תלונות הציבור")
+2. ניתן להגיש בדואר אלקטרוני, בפקס, בדואר רשום, או פנייה אישית
+3. הנציב אינו מחויב לפתוח חקירה בכל תלונה — אך חייב להודיע לך על ההחלטה ועל הנימוק
+
+---
+
+## תבקה — ליווי חינם
+
+עמותת **תבקה** (האגודה הישראלית ליהודים אתיופים) מספקת ליווי חינמי בתלונות על שוטרים, כולל:
+- ניסוח כתב התלונה
+- ייצוג בפני מח"ש
+- ניטור התיק
+
+📞 **1-800-20-20-16** | [tebeka.org.il](https://tebeka.org.il)
+
+---
+
+## מה אפשר לצפות?
+
+| תוצאה | שכיחות |
+|-------|--------|
+| סגירת תיק ללא נקיטת פעולה | שכיחה (אך יש ערעור) |
+| עיצום כספי / השעיית שוטר | קיים בעקבות ראיות חזקות |
+| הגשת כתב-אישום פלילי | נדיר — בעיקר בתקיפה |
+| פיצוי אזרחי (תביעה נפרדת) | אפשרי דרך בית-משפט |
+
+גם תלונה "שנסגרה" בונה תיעוד — שני אירועים תחת אותו שוטר עשויים להגיע לדיוויזיה פנימית.
+
+---
+
+## ערעור על החלטת מח"ש
+
+אם התיק נסגר ואתה לא מסכים:
+1. פנה בכתב לראש מח"ש לביקורת הפיקוח
+2. פנה לנציב תלונות הציבור (הוא עצמאי ממח"ש)
+3. שקול תביעה אזרחית — תבקה יכולה להעריך סיכויים
+
+---
+
+## קישורים ישירים
+
+- מח"ש: [mahash.gov.il](https://www.mahash.gov.il)
+- נציב תלונות הציבור: [ombudsman.gov.il](https://www.ombudsman.gov.il)
+- תבקה: [tebeka.org.il](https://tebeka.org.il)
+- עכ"א: [acri.org.il](https://www.acri.org.il)
+`,
+      en: `## Two Complaint Bodies
+
+**MAHASH** (Police Investigations Department) handles suspected criminal misconduct — assault, excessive force, bribery. It operates under Justice Ministry oversight.
+
+**The Public Complaints Commissioner** is an independent external body for non-criminal misconduct — rudeness, poor judgment, delayed response.
+
+Filing with both is often advisable.
+
+## Step-by-Step
+
+**Step 1 — Collect evidence.** Officer name and badge number, exact date/time/location, witness names and phones, photos or video (legal in public spaces), any documents received, and a same-day medical record if you were injured.
+
+**Step 2 — File with MAHASH.** Online at mahash.gov.il (fastest) or in person at a MAHASH office in Tel Aviv, Jerusalem, Haifa, or Be'er Sheva. Time limit: 30 days (extensions available with justification).
+
+**Step 3 — File with the Ombudsman.** Online or by registered mail at ombudsman.gov.il. The Ombudsman must notify you of any decision and its reasoning.
+
+**Free support from TEBEKA.** TEBEKA provides free complaint drafting, representation before MAHASH, and case monitoring. Call 1-800-20-20-16 or visit tebeka.org.il.
+
+## Realistic Outcomes
+
+Most files are closed without action, but documented complaints build a record. Two incidents against the same officer can trigger internal affairs review. Criminal charges are rare but possible with strong evidence. Civil lawsuits are a parallel option for damages.
+`,
+      am: `## ቅሬታ የሚቀበሉ ሁለት አካላት
+
+**MAHASH** — የወንጀል ጥቃት፣ ከልክ ያለፈ ኃይል ወይም ጉቦ ጉዳዮችን ይዳኛል።
+**የህዝብ ቅሬታ ኮሚሽነር** — ወንጀለኛ ያልሆኑ ጉዳዮችን (ጨዋነት ጉድለት፣ ዘግይቶ መምጣት) ይዳኛል።
+
+## ደረጃዎች
+
+1. ማስረጃ ያሰባስቡ፦ የፖሊሱ ስም፣ ቁጥር፣ ቀን፣ ቦታ፣ ምስክሮች፣ ፎቶዎች።
+2. MAHASH ላይ ያቅርቡ፦ mahash.gov.il ወይም ቢሮ። ጊዜ ገደብ፦ 30 ቀናት።
+3. ለኮሚሽነሩ ያቅርቡ፦ ombudsman.gov.il
+
+**TEBEKA ነፃ እርዳታ ይሰጣል።** 1-800-20-20-16 | tebeka.org.il
+`,
+    },
+  },
+
   // 3 — Affirmative action / public_sector representation
   {
     title: {
@@ -3584,6 +3879,1388 @@ Histadrut membership grants representation and legal support in labor disputes.
 
 - [የሠራተኛ መብቶች](/am/rights/minimum-wage)
 - [የዓሊያ ሰል ቅሊታ](/am/rights/klita-basket-ethiopia)`,
+    },
+  },
+
+  // NEW 16 — Disability benefit for Ethiopian immigrants
+  {
+    title: {
+      he: "גמלת נכות לעולים מאתיופיה — זכויות וכיצד מגישים",
+      en: "Disability Benefit for Ethiopian Immigrants — Rights and How to Apply",
+      am: "ለኢትዮጵያ ስደተኞች የአካል ጉዳት ጥቅማ-ጥቅም — መብቶች እና ማመልከቻ",
+    },
+    slug: {
+      he: "disability-benefit-ethiopians",
+      en: "disability-benefit-ethiopians",
+      am: "disability-benefit-ethiopians",
+    },
+    govUrl: "https://www.btl.gov.il/Benefits/Disability/Pages/disability_general.aspx",
+    eligibilitySummary: {
+      he: "עולים מאתיופיה עם נכות רפואית מוכרת זכאים לגמלת נכות מהמוסד לביטוח לאומי. תקופת המתנה עשויה לחול בשנה הראשונה. גמלה מלאה לנכות 75%+ עומדת על כ-4,500 ₪ לחודש (2025).",
+      en: "Ethiopian immigrants with a recognised medical disability are entitled to BTL disability benefit. A waiting period may apply in the first year. Full benefit for 75%+ disability is approximately ₪4,500/month (2025).",
+      am: "እውቅና ያገኘ ሕክምናዊ አካል ጉዳት ያላቸው የኢትዮጵያ ስደተኞች የBTL የአካል ጉዳት ጥቅማ-ጥቅም የማግኘት መብት አላቸው። 75%+ አካል ጉዳት ለ2025 ወርሃዊ ወደ 4,500 ሺ\"ል ነው።",
+    },
+    tags: ["health", "immigration"],
+    bodies: {
+      he: `## מה היא גמלת נכות?
+
+גמלת נכות כללית (ביטוח לאומי) היא תשלום חודשי למי שנכותו מפחיתה את כושר ההשתכרות שלו בשיעור משמעותי. היא נועדה להחליף — ולו חלקית — הכנסה שאדם עם מוגבלות אינו יכול להרוויח.
+
+---
+
+## מי זכאי — תנאים לעולים
+
+**לעולים שהגיעו אחרי 1.1.2000**: תקופת מתנה של **6 חודשים** מרישום בביטוח לאומי לפני הזכאות הראשונה לגמלה (למעט מקרים דחופים).
+
+**תנאים כלליים**:
+- גיל עבודה (18 עד גיל פרישה)
+- נכות רפואית מוכרת של **25% לפחות** (לפי תקנות)
+- ירידה בכושר השתכרות של **50% לפחות**
+- לא עובד (או מרוויח מתחת לתקרה שנקבעה בחוק)
+
+---
+
+## דרגות הנכות וסכומי הגמלה (2025)
+
+| דרגת נכות | סוג גמלה | סכום חודשי משוער |
+|-----------|---------|----------------|
+| 25–49% | גמלת נכות חלקית | ~2,200 ₪ |
+| 50–74% | גמלת נכות מלאה | ~3,500 ₪ |
+| 75–100% | גמלת נכות מלאה + תוספות | ~4,500–6,200 ₪ |
+
+בנוסף ניתן לקבל: **תוספת שירותים מיוחדים** (אם דורשים עזרה), **תוספת תלויים** (בן/בת זוג, ילדים) ו**השלמת הכנסה** אם הגמלה נמוכה.
+
+---
+
+## שלב 1 — הגשת תביעה (טופס 211)
+
+1. הורד **טופס תביעה לגמלת נכות (211)** מאתר ביטוח לאומי: [btl.gov.il](https://www.btl.gov.il)
+2. מלא ביד / בעברית — אם אינך קורא עברית, פנה לעובד-סוציאלי בביטוח לאומי (ראה להלן).
+3. צרף **מסמכים רפואיים**: אישורי רופאים, בדיקות, אשפוזים, תרופות קבועות.
+4. הגש בסניף הביטוח הלאומי הקרוב אליך **או** דרך האתר (אם יש לך חשבון אישי).
+
+**חשוב**: כלול **כל** האבחנות — גם נפשיות, גם פיזיות. אל תמעט בתיאור הקושי.
+
+---
+
+## שלב 2 — ועדה רפואית
+
+הביטוח הלאומי מזמין אותך לוועדה רפואית שבה רופא (ולעתים ועדה של שניים-שלושה) קובעים את אחוז הנכות. טיפים:
+
+- **הגע עם מסמכים מלאים** — כולל מסמכים בשפה אחרת (תוך הסבר בעברית על ידי עורך-דין/מתורגמן).
+- **תאר את הגרוע ביותר** — כיצד הנכות מתבטאת ביום הקשה, לא ביום הטוב.
+- **מותר להביא מלווה** — בן-משפחה, עובד-סוציאלי, עורך-דין.
+- **ניתן לדרוש מתורגמן** — המדינה חייבת לספק (ראה: **זכות למתורגמן**).
+
+---
+
+## שלב 3 — ערעור על ההחלטה
+
+אם הועדה קבעה אחוז נמוך מהצפוי, יש לך **60 יום** להגיש ערעור לוועדה רפואית לעררים. לאחר מכן ניתן לפנות לבית-דין לעבודה.
+
+**תבקה** מסייעת בייצוג מול ביטוח לאומי: 1-800-20-20-16.
+
+---
+
+## עובדים סוציאליים בקהילה האתיופית
+
+הביטוח הלאומי מעסיק **עובדים סוציאליים דוברי אמהרית** במספר ערים (תל-אביב, ירושלים, נתניה, באר-שבע, חדרה). מומלץ לבקש פגישה עם עובד סוציאלי מהקהילה לפני הגשת התביעה — הם מכירים את התהליך ומסייעים בניסוח.
+
+📞 **ביטוח לאומי**: *6050 (שלח ב-אמהרית אפשרי)
+🔗 [btl.gov.il](https://www.btl.gov.il)
+`,
+      en: `## Who Is Eligible
+
+Ethiopian immigrants with a recognised medical disability of at least 25% that reduces earning capacity by 50% or more. A 6-month waiting period applies for immigrants who arrived after 1 January 2000.
+
+## Disability Levels and Amounts (2025)
+
+- 25–49%: approx. ₪2,200/month
+- 50–74%: approx. ₪3,500/month
+- 75–100%: approx. ₪4,500–6,200/month (including supplements for dependants and care)
+
+## How to Apply
+
+1. Download **Form 211** from btl.gov.il.
+2. Attach all medical records — diagnoses, hospitalizations, regular medications.
+3. Submit at your nearest BTL branch or online.
+4. Attend the medical committee — bring a companion, all documents, and request an Amharic interpreter if needed.
+
+## Appeal Rights
+
+If the committee sets too low a percentage, you have 60 days to appeal to the Medical Appeals Committee, then to the Labour Court. TEBEKA offers free representation: 1-800-20-20-16.
+`,
+      am: `## ብቁ የሆኑት ማን ናቸው?
+
+ቢያንስ 25% እውቅና ያለው ሕክምናዊ አካል ጉዳት ያለው፣ ከሥራ አቅም ቢያንስ 50% የቀነሰ ሁሉ ብቁ ነው። ከ1 ጃኑዋሪ 2000 በኋላ ለደረሱ ስደተኞች 6 ወራት የጥበቃ ጊዜ አለ።
+
+## ማመልከቻ
+
+1. btl.gov.il ላይ ቅጽ 211 ያውርዱ።
+2. ሁሉም የሕክምና ሰነዶች ያያዙ።
+3. ወደ ቅርቡ BTL ቅርንጫፍ ወይም ኦንላይን ያስገቡ።
+4. ለሕክምና ኮሚቴ ይሂዱ — አስተርጓሚ ይጠይቁ።
+
+**ቅሬታ:** 60 ቀናት ውስጥ ይቃወሙ። TEBEKA ይረዳዎታል፦ 1-800-20-20-16።
+`,
+    },
+  },
+
+  // NEW 17 — Veterans rights
+  {
+    title: {
+      he: "זכויות חיילים משוחררים יוצאי אתיופיה — המדריך המלא",
+      en: "Rights for Ethiopian-Israeli Veterans — The Complete Guide",
+      am: "የኢትዮጵያ-እስራኤላዊ ቀድሞ ወታደሮች መብቶች — ሙሉ መመሪያ",
+    },
+    slug: {
+      he: "veterans-rights-ethiopians",
+      en: "veterans-rights-ethiopians",
+      am: "veterans-rights-ethiopians",
+    },
+    govUrl: "https://www.gov.il/he/departments/ministry-of-defense/govil-landing-page",
+    eligibilitySummary: {
+      he: "חיילים יוצאי אתיופיה זכאים למענק שחרור מוגדל (150% ממענק הבסיס), תוכניות הכשרה מקצועית ייעודיות, מלגות לימוד ועדיפות בתורי דיור. כל הזכויות פעילות — חשוב לדעת לתבוע אותן.",
+      en: "Ethiopian-Israeli soldiers are entitled to an enhanced discharge grant (150% of the base grant), dedicated vocational-training programs, study scholarships, and priority on housing waiting lists.",
+      am: "የኢትዮጵያ-እስራኤላዊ ወታደሮች ከፍ ያለ የስራ ፈቃጃ ስጦታ (150%)፣ ሙያዊ ስልጠና ፕሮግራሞች፣ ትምህርት ምርጫ እና ቅደምተከተል በቤት ጥበቃ ዝርዝሮች ላይ የማግኘት መብት አላቸው።",
+    },
+    tags: ["employment", "education"],
+    bodies: {
+      he: `## מה ייחודי לחיילים יוצאי אתיופיה?
+
+על-פי החלטת ממשלה המבוססת על תוכנית הייחוד לקהילה האתיופית, חיילים שזוהו כיוצאי אתיופיה (יילידי אתיופיה, ילדי יילידים, ועולי פלשמורה) זכאים למסלולי זכויות ייחודיים שאינם קיימים לשאר החיילים. הידע על זכויות אלו נמוך בקרב הקהילה, ורבים לא ממשים אותן.
+
+---
+
+## 1. מענק שחרור מוגדל — 150%
+
+**מענק שחרור רגיל**: מחושב לפי חודשי שירות × נקודת שכר.
+**מענק לחייל יוצא אתיופיה**: **150%** מהסכום הבסיסי — כלומר 50% תוספת.
+
+**איך לתבוע את ה-50% הנוספים?**
+1. לפני השחרור — ציין בפני קצין הסגל שאתה יוצא אתיופיה ושאתה מודע לזכות.
+2. מלא **טופס ב.ל.87** (בקשה להגדלת מענק שחרור).
+3. הגש לממ"ג (מרכז מיון ומידע לגיוס) שאחראי על קצבתך.
+4. אם נדחית — פנה לאגף כ"א (כוח אדם) ולממשיל.
+
+**מגבלת זמן**: יש להגיש תוך **שנה** מיום השחרור. לאחר מכן הזכאות פוקעת.
+
+---
+
+## 2. תוכניות הכשרה מקצועית ייעודיות
+
+**תוכניות ייחודיות לחיילים יוצאי אתיופיה**:
+
+| תוכנית | תחום | גוף מנהל |
+|--------|------|---------|
+| "נתיב לעתיד" | הייטק, פיתוח תוכנה | IEWA + משרד הקליטה |
+| "הכשרות קיבוץ" | חקלאות, תיירות | תנועות קיבוציות |
+| "מסלול בטחון" | שמירה, לוגיסטיקה | NESS Technologies / G4S |
+| "מהנדסים בהתהוות" | מכונאות, חשמל | עמותת תבקה + ORT |
+
+לרשימת תוכניות עדכנית: פנה לממשיל משרד הקליטה בעיר מגוריך.
+
+---
+
+## 3. מלגות לימוד לחיילים משוחררים
+
+**מלגת קרן ירושלים לחיילים אתיופים**: עד 20,000 ₪ לשנת לימודים ראשונה.
+**מלגת מפא"ל**: לבוגרי יחידות קרביות מהקהילה האתיופית.
+**מלגות האחד-עשר**: ממנות את שנת ההכנה (מכינה) לאוניברסיטה חינם.
+
+**תנאי כשירות משותפים**:
+- שחרור לאחר שירות מלא (עד גיל 35 בד"כ)
+- ממוצע בגרות / ציון פסיכומטרי (רמה משתנה לפי קרן)
+- אישור ממשיל יוצאי אתיופיה
+
+---
+
+## 4. עדיפות בתורי דיור
+
+על-פי נוהל משרד הבינוי, חיילים משוחררים יוצאי אתיופיה זכאים **לנקודות עדיפות** בתורי דיור ציבורי ובתוכנית הדיור הממלכתית. בפועל:
+
+1. פנה ל**ממשיל יוצאי אתיופיה** בעירייה שלך.
+2. בקש **אישור חייל משוחרר** מלשכת גיוס.
+3. הגש בצירוף ת"ז, אישור שחרור, ואישור מצב משפחתי.
+
+---
+
+## ארגונים שמסייעים לחיילים משוחררים
+
+| ארגון | שירות | קשר |
+|-------|-------|-----|
+| **IEWA** (עמותה ישראלית יהודים אתיופים) | ייעוץ, מלגות, הכשרות | iewa.org.il |
+| **עמותת "בצלאל"** | אמנויות, עיצוב, מדיה | צרו קשר ישיר |
+| **תבקה** | ייעוץ משפטי, תביעת זכויות | 1-800-20-20-16 |
+| **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | \*5454 |
+
+---
+
+## לוח זמנים חשוב
+
+| פעולה | מועד אחרון |
+|-------|-----------|
+| תביעת מענק מוגדל | שנה מיום שחרור |
+| הגשת בקשה לתוכנית הכשרה | 3 חודשים לאחר שחרור (לרוב) |
+| מלגות אקדמיות | לפני מועד הגשה של המוסד |
+| בקשה לעדיפות דיור | ניתן בכל עת |
+`,
+      en: `## What Is Unique to Ethiopian-Israeli Soldiers?
+
+Government resolutions establish special benefit tracks for soldiers of Ethiopian origin. Awareness is low and many do not claim what they are entitled to.
+
+**Enhanced discharge grant:** 150% of the standard base grant — 50% more. Submit Form B.L.87 before discharge, or within one year of release.
+
+**Dedicated vocational programs:** Tech training (Nativ LaAtid), logistics, agriculture, engineering — run jointly by IEWA, the Ministry of Aliyah, and partner organisations.
+
+**Study scholarships:** Jerusalem Foundation grants (up to ₪20,000/year), Mapal grants for combat veterans, and free university-prep year programs.
+
+**Housing priority:** Ethiopian-Israeli veterans receive priority points on public-housing and state housing-program waiting lists. Apply via your city's Ethiopian-community liaison (Mamshil) with your discharge certificate.
+
+Contact IEWA (iewa.org.il) or TEBEKA (1-800-20-20-16) for guidance.
+`,
+      am: `## ምን ልዩ ነው?
+
+የኢትዮጵያ-እስራኤላዊ ወታደሮች ከፍ ያለ የስራ ፈቃጃ ስጦታ (150%)፣ ሙያዊ ስልጠና ፕሮግራሞች፣ ትምህርት ምርጫ እና ቅደምተከተል ዝርዝሮች ላይ ቤት የማግኘት መብት አላቸው።
+
+**ስጦታ:** 150% ማለት 50% ተጨማሪ ነው። ከፈቃጃ ሐ/ቀን ከ1 ዓመት ውስጥ ቅጽ B.L.87 ያስገቡ።
+
+**ስልጠና:** Nativ LaAtid (ሃይቴክ)፣ ሎጂስቲክስ፣ ምህንድስና — IEWA እና ተሳታፊ ድርጅቶች ያሄዳሉ።
+
+**ቤት ቅደምተከተል:** ከተማዎ ማምሺል (Mamshil) ጋር ይቀናጁ።
+
+IEWA (iewa.org.il) ወይም TEBEKA (1-800-20-20-16) ያነጋግሩ።
+`,
+    },
+  },
+
+  // NEW 19 — Social security for new immigrants
+  {
+    title: {
+      he: "ביטוח לאומי לעולים מאתיופיה — מה מגיע ומתי",
+      en: "National Insurance for Ethiopian Immigrants — What You Get and When",
+      am: "ለኢትዮጵያ ስደተኞች ብሔራዊ ዋስትና — ምን ያገኛሉ እና መቼ",
+    },
+    slug: {
+      he: "social-security-new-immigrants",
+      en: "social-security-new-immigrants",
+      am: "social-security-new-immigrants",
+    },
+    govUrl: "https://www.btl.gov.il/Benefits/Immigrants/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "עולים מאתיופיה זכאים לקצבאות ילדים מיד עם העלייה. קצבת אמהות, נכות ואבטלה כפופות לתקופות המתנה. חשוב להירשם בביטוח הלאומי תוך 3 חודשים.",
+      en: "Ethiopian immigrants receive child allowance from day one of aliyah. Maternity, disability, and unemployment benefits have waiting periods. Register at BTL within 3 months of arrival.",
+      am: "የኢትዮጵያ ስደተኞች ከደረሱ ቀን አንስቶ የህፃናት አበል ይቀበላሉ። ለወሊድ፣ አካል ጉዳት እና ስራ አጥ ጥቅማ-ጥቅሞች የጥበቃ ጊዜ አለ። ከ3 ወራት ውስጥ ተመዝገቡ።",
+    },
+    tags: ["immigration", "health"],
+    bodies: {
+      he: `## מדוע חשוב להירשם מהר?
+
+כל יום שאינך רשום בביטוח הלאומי הוא יום שאינו נצבר לזכויותיך. הרישום אינו אוטומטי — עליך להגיע פיזית לסניף ביטוח לאומי הקרוב **תוך 3 חודשים** מיום העלייה כדי להבטיח רצף זכאות מלא.
+
+---
+
+## מה מגיע מהיום הראשון?
+
+### קצבת ילדים
+**ללא תקופת המתנה** — הזכאות מתחילה מיום עליית הילד. הסכום:
+- ילד ראשון: ~180 ₪/חודש
+- ילד שני: ~180 ₪/חודש
+- ילד שלישי ומעלה: ~245 ₪/חודש (2025)
+
+להגשה: בקשה לקצבת ילדים (טופס 707) תוך 12 חודשים מלידה/עלייה.
+
+---
+
+## תקופות המתנה לקצבאות נבחרות
+
+| קצבה | תקופת המתנה לעולה | הערות |
+|------|------------------|-------|
+| ילדים | אפס | מיידי |
+| לידה/אמהות | 6 חודשים ממועד ביטוח | גם לנשים שכבר עלו בהיריון |
+| נכות | 6 חודשים ממועד ביטוח | למעט מקרים חריגים |
+| אבטלה | 6 חודשים + 12 חודשי עבודה | ראה דף "דמי אבטלה" |
+| הכנסה (גמלה לשמירת הריון) | 6 חודשים | לנשים ב"שמירת הריון" |
+| השלמת הכנסה | אין המתנה לעולים עם ילדים | פנה לסניף לבדיקה |
+
+---
+
+## מסמכים נדרשים לרישום
+
+1. **תעודת עולה** (תעודת זהות עולה — מסופקת על-ידי משרד הקליטה)
+2. **תעודת זהות ישראלית** (אם כבר הוצאה)
+3. **מספר חשבון בנק ישראלי** (לתשלומים)
+4. **אישור ינשוף / בדיקת דם** לרישום ילדים (אם רלוונטי)
+5. **אישור מגורים** (חוזה שכירות או חשבון חשמל)
+
+---
+
+## קצבת אמהות לעולות
+
+עולה שעלתה בהיריון או ילדה תוך 6 חודשים מהעלייה:
+- זכאית לדמי לידה **אם** עבדה לפני הלידה (גם בחו"ל — ניתן לבדוק הכרה)
+- קיימת **מענק לידה** חד-פעמי (כ-1,750 ₪) גם ללא עבודה
+
+לעולות שלא עבדו: פנה לעובד-סוציאלי בביטוח הלאומי לבירור זכאות להשלמת הכנסה.
+
+---
+
+## השלמת הכנסה (גמלה לשמירת מינימום חיים)
+
+עולים שאינם יכולים לפרנס את עצמם ואין להם הכנסה מינימלית — זכאים ל**הבטחת הכנסה** (השלמת הכנסה). בפועל הסכומים נמוכים (~3,100–4,800 ₪ לחודש לפי הרכב משפחה), אך מהווים רשת ביטחון בתקופת קליטה.
+
+---
+
+## מה לעשות אם סניף הביטוח הלאומי לא עונה?
+
+- בקש פגישה עם **עובד-סוציאלי דובר אמהרית** (קיים בסניפי תל-אביב, ירושלים, נתניה, ב"ש).
+- פנה ל**ממשיל יוצאי אתיופיה** בעירייה — הם יכולים להפנות ולהאיץ.
+- תבקה יכולה לסייע בייצוג מול ביטוח לאומי: **1-800-20-20-16**.
+
+📞 **ביטוח לאומי**: *6050
+🔗 [btl.gov.il](https://www.btl.gov.il)
+`,
+      en: `## Register Within 3 Months
+
+Registration at the National Insurance Institute (BTL) is not automatic. You must appear in person within 3 months of aliyah to protect your full benefit entitlement. Bring your teudat oleh, Israeli ID (if issued), and an Israeli bank account number.
+
+## What You Get From Day One
+
+**Child allowance** — no waiting period. Approximately ₪180–245/month per child (2025). Submit Form 707 within 12 months of the child's birth or aliyah.
+
+## Waiting Periods
+
+- Child allowance: zero (immediate)
+- Maternity/birth grant: 6 months of insurance coverage
+- Disability benefit: 6 months
+- Unemployment benefit: 6 months + 12 months of prior work
+
+## Maternity Benefits for New Immigrants
+
+New-immigrant women who give birth are entitled to a one-time birth grant (approx. ₪1,750) even without prior employment. Maternity-leave pay requires prior employment in Israel or qualifying employment abroad.
+
+## Income Support
+
+Immigrants with no minimum income are entitled to income-support (Havtachat Hachnasah) — approx. ₪3,100–4,800/month depending on family composition.
+
+Contact BTL: *6050 | btl.gov.il | TEBEKA: 1-800-20-20-16
+`,
+      am: `## ከ3 ወራት ውስጥ ይመዝገቡ
+
+የBTL ምዝገባ ራሱ አይከናወንም። ሙሉ ጥቅማ-ጥቅም ለማረጋገጥ ከደረሱ ከ3 ወራት ውስጥ ቢሮ ይሂዱ። ይዘናቸው ይምጡ፦ የዓሊያ ሰነድ፣ እስራኤላዊ ID (ካለ)፣ ባንክ አካውንት ቁጥር።
+
+## ከቀን 1 ምን ያገኛሉ?
+
+**የህፃናት አበል** — ምንም ጥበቃ ጊዜ የለም። ወደ 180–245 ሺ"ል/ወር ለእያንዳንዱ ልጅ (2025)። ቅጽ 707 ከ12 ወራት ውስጥ ያስገቡ።
+
+## የጥበቃ ጊዜዎች
+
+- ህፃናት አበል፦ አለ
+- ወሊድ፦ 6 ወራት ዋስትና
+- አካል ጉዳት፦ 6 ወራት
+- ስራ አጥ፦ 6 ወራት + 12 ወራት ሥራ
+
+BTL፦ *6050 | btl.gov.il | TEBEKA፦ 1-800-20-20-16
+`,
+    },
+  },
+
+  // NEW 20 — Health insurance rights
+  {
+    title: {
+      he: "ביטוח בריאות ממלכתי לעולים — שיניים, עיניים ותרופות",
+      en: "National Health Insurance for Immigrants — Dental, Vision, and Medications",
+      am: "ለስደተኞች ብሔራዊ የጤና ዋስትና — ጥርስ፣ ዓይን እና መድሃኒቶች",
+    },
+    slug: {
+      he: "health-insurance-rights",
+      en: "health-insurance-rights",
+      am: "health-insurance-rights",
+    },
+    govUrl: "https://www.gov.il/he/departments/ministry-of-health/govil-landing-page",
+    eligibilitySummary: {
+      he: "כל עולה חדש חייב בחוק הבריאות הממלכתי מיום העלייה. לעולים בשנה הראשונה יש זכות לטיפול שיניים חינמי ועיניים מוזל. מאז 2015 — בריאות הנפש כלולה בסל הבסיסי.",
+      en: "Every new immigrant is covered by the National Health Insurance Law from day one of aliyah. In the first year, immigrants receive free dental care and subsidised vision care. Mental health has been in the basic basket since 2015.",
+      am: "ሁሉም አዲስ ስደተኛ ከደረሰ ቀን አንስቶ የብሔራዊ ጤና ዋስትና ሕግ ይሸፍናቸዋል። በመጀመሪያ ዓመት ነፃ የጥርስ ህክምና እና ቀናሽ ዓይን ህክምና አለ።",
+    },
+    tags: ["health", "immigration"],
+    bodies: {
+      he: `## חוק ביטוח בריאות ממלכתי — הבסיס
+
+על-פי **חוק ביטוח בריאות ממלכתי (1994)**, כל תושב ישראל — כולל עולה חדש — זכאי לסל שירותי הבריאות הבסיסי **מיום עלייתו** ללא תקופת המתנה. אין צורך לחכות, אין צורך לשלם פרמיה ראשונה לפני הטיפול.
+
+---
+
+## בחירת קופת-חולים
+
+קיימות ארבע קופות חולים בישראל:
+
+| קופה | חוזק לקהילה האתיופית |
+|------|---------------------|
+| **כללית** | הקופה הגדולה, מרפאות בכל עיר, ניסיון עם קהילה אתיופית |
+| **מכבי** | שירותים דיגיטליים מפותחים, אפליקציה טובה |
+| **מאוחדת** | מחירים תחרותיים לתרופות, נוכחות בפריפריה |
+| **לאומית** | רשת מרפאות רחבה |
+
+**המלצה לעולים חדשים**: כללית — בזכות נוכחות בכל עיר ו**תוכנית "תנא בריאות"** שמכוונת לקהילה האתיופית ומציעה אחיות קהילה דוברות אמהרית.
+
+---
+
+## זכויות ייחודיות לעולים בשנה הראשונה
+
+### טיפול שיניים
+עולים בשנה הראשונה זכאים ל**פשה שיניים ציורית** (בסיסית) חינם בקופת-חולים. הסל כולל:
+- בדיקת שיניים שנתית
+- ניקוי וצילום
+- עקירות וסתימות בסיסיות
+
+לאחר שנה — השיניים עוברים לביטוח שיניים פרטי (משלימים), מה שמייקר משמעותית.
+
+### ראייה ועיניים
+עולים בשנה הראשונה זכאים ל**בדיקת עיניים חינמית** אחת ול**הנחה בקנייה משקפיים** (30–50% דרך קופת-חולים).
+
+---
+
+## בריאות הנפש — מהפכת 2015
+
+מאז **ינואר 2015**, טיפול בבריאות הנפש הוכנס לסל הבסיסי של כל קופות-החולים. כל מבוטח זכאי ל:
+- **15 פגישות שנתיות** עם פסיכולוג/פסיכיאטר ללא תשלום נוסף (חלקן בתשלום עצמי נמוך)
+- תרופות פסיכיאטריות כחלק מהסל
+
+**לקהילה האתיופית**: חשוב מאוד. שיעורי PTSD (מנסיון המסע לישראל, אבדן קרובים, טראומת קהילה) גבוהים — ופנייה לעזרה היא זכות, לא חולשה.
+
+---
+
+## תנא בריאות ואחיות קהילה
+
+**תנא בריאות** הוא שירות בריאות ייחודי לקהילה האתיופית, פועל דרך כללית. מציע:
+- **אחיות קהילה דוברות אמהרית** שמבקרות בבית ומסייעות בניווט המערכת
+- **תוכנית "גשר לבריאות"** — סיוע בפגישות ראשוניות
+- חינוך בריאות בהתאמה תרבותית
+- ליווי לידה ולפני לידה
+
+לבירור: [kupa.health.gov.il](https://www.kupa.health.gov.il) — חפש "תנא בריאות".
+
+---
+
+## רופאים דוברי אמהרית
+
+ניתן לבקש רופא או אחות ספציפי בקופה. מומלץ לבקש בפה מלא: "יש לי קושי עם עברית, האם יש רופא/אחות דוברת אמהרית במרפאה?" — לעתים קרובות התשובה חיובית.
+
+**מאגר רופאים אתיופים** — תבקה עובדת על פרסום רשימה. ניתן לשאול ישירות.
+
+---
+
+## תרופות ועלויות השתתפות
+
+גם בסל הבסיסי יש השתתפות עצמית (תשלום בכיס). לעולים עם הכנסה נמוכה ניתן לקבל **פטור/הנחה** — פנה לקופת-חולים ובקש "כרטיס ממעמד נמוך" (ניסוח לפי קופה).
+
+---
+
+## איך נרשמים?
+
+1. הגע לסניף כל אחת מקופות-החולים
+2. הצג **תעודת עולה** + **ת"ז**
+3. ביקורת ראשונה ניתן לקבוע מיד
+4. ילדים: הירשמו גם אותם — ייתכן שצריך רישום נפרד
+
+📞 **כללית**: 03-7472010 | **מכבי**: *3555 | **מאוחדת**: *3833 | **לאומית**: *507
+`,
+      en: `## Coverage From Day One
+
+The National Health Insurance Law (1994) covers every Israeli resident — including new immigrants — from the day of aliyah. No waiting period, no initial premium required.
+
+## Choosing a Sick Fund
+
+Four sick funds operate in Israel. For new immigrants from Ethiopia, **Clalit** is often recommended because of its wide clinic network and the **Tene Briut** program, which provides Amharic-speaking community nurses.
+
+## Special First-Year Rights
+
+- **Dental:** Basic dental care (check-up, cleaning, X-rays, basic fillings and extractions) is free for immigrants in their first year.
+- **Vision:** One free eye exam and a 30–50% discount on glasses in the first year.
+- **Mental health:** Since January 2015, mental health is in the basic basket — 15 annual sessions with a psychologist or psychiatrist at low or no co-pay. Psychiatric medications are covered.
+
+## Tene Briut
+
+Tene Briut (תנא בריאות) is a Clalit program specifically for the Ethiopian community, offering Amharic-speaking nurses who make home visits and help navigate the healthcare system.
+
+## How to Register
+
+1. Visit any sick-fund branch with your teudat oleh and Israeli ID.
+2. First appointment can be scheduled immediately.
+3. Register children separately if needed.
+`,
+      am: `## ከቀን 1 ሽፋን
+
+ሁሉም ስደተኞች ከደረሱ ቀን አንስቶ ያለ ጥበቃ ጊዜ ተሸፍነዋል።
+
+**ከሚሸፈኑ አገልግሎቶች፦**
+- **ጥርስ:** ነፃ መሰረታዊ የጥርስ ህክምና (ምርመራ፣ ማጽጃ፣ ቅደምተከተሎች) — 1ኛ ዓመት
+- **ዓይን:** አንድ ነፃ ምርመራ + 30–50% ቅናሽ በመነጽር — 1ኛ ዓመት
+- **የአዕምሮ ጤና:** ከ2015 ጀምሮ ዋስትናው ውስጥ ተካቷል — 15 ዓመታዊ ስብሰባዎች
+
+**Tene Briut (תנא בריאות):** Clalit በኢትዮጵያ ማህበረሰብ ለሚሰጠው ፕሮግራም — አማርኛ ተናጋሪ ነርሶች።
+
+ለምዝገባ፦ ማንኛውም የሕክምና ቅርንጫፍ ይሂዱ — የዓሊያ ሰነድ + ID ያምጡ።
+`,
+    },
+  },
+
+  // NEW 21 — Domestic violence legal protection
+  {
+    title: {
+      he: "הגנה משפטית מאלימות במשפחה — מדריך לנשים יוצאות אתיופיה",
+      en: "Legal Protection From Domestic Violence — Guide for Ethiopian-Israeli Women",
+      am: "ከቤተሰብ ጥቃት የሕግ ጥበቃ — ለኢትዮጵያ-እስራኤላዊ ሴቶች መመሪያ",
+    },
+    slug: {
+      he: "domestic-violence-legal-protection",
+      en: "domestic-violence-legal-protection",
+      am: "domestic-violence-legal-protection",
+    },
+    govUrl: "https://www.gov.il/he/departments/units/domestic-violence-unit",
+    eligibilitySummary: {
+      he: "כל אישה שנפגעת מאלימות בית יכולה לקבל צו הגנה באותו יום — ללא קשר למעמד ויזה, מספר שנות נישואין או מצב כלכלי. הממשלה מחויבת לספק מגורים ודמי מחייה בשלב החירום.",
+      en: "Any woman suffering domestic violence can receive a protection order the same day — regardless of visa status, length of marriage, or financial situation. The state must provide emergency housing and living expenses.",
+      am: "ማንኛውም ሴት የቤተሰብ ጥቃት ሲደርስባት ያን ዕለት የጥበቃ ትዕዛዝ ልታገኝ ትችላለች — ከቪዛ ሁኔታ፣ ዓመታት ጋብቻ ወይም ኢኮኖሚ ሁኔታ ሳይዘዘ።",
+    },
+    tags: ["family", "legal"],
+    bodies: {
+      he: `## חשיבות מיוחדת לקהילה האתיופית
+
+ועדת-מומחים בין-משרדית שהוקמה בעקבות שורת רציחות של נשים יוצאות אתיופיה (2014–2020) הכירה בכשל מערכתי: חסמי שפה, בושה תרבותית, חשש ממשטרה, ובידוד מקהילה — כולם מונעים מנשים לבקש עזרה בזמן. הדף הזה נועד לשנות זאת.
+
+---
+
+## צו הגנה — הכלי המהיר ביותר
+
+**צו הגנה** הוא צו שיפוטי שמחייב את המתעלל לעזוב את הבית, לא להתקרב לאישה ולא ליצור קשר. ניתן לקבל ב**אותו יום** על-ידי:
+
+1. פנייה לקב"ס (קצין/ת בטחון סוציאלי) בלשכת הרווחה בעירייה
+2. **בית-משפט לענייני משפחה** — ניתן להגיע ישירות ולבקש צו דחוף ללא עורך-דין
+
+**מה הצו יכול לכלול?**
+- פינוי הבעל מהבית (גם אם הבית על שמו)
+- איסור התקרבות פיזית
+- איסור תקשורת כלשהי (טלפון, הודעות, שליחים)
+- הסדרת משמורת זמנית על הילדים
+
+---
+
+## מקלטים זמינים לנשים מהקהילה האתיופית
+
+| גוף | שירות | טלפון |
+|-----|-------|-------|
+| **ויצ"ו (WIZO)** | מקלטים בערים גדולות | 1-800-500-550 |
+| **נעמת** | מקלטים + ייעוץ | 1-800-505-360 |
+| **ל.א.ה (ארגון נשים אתיופיות)** | מלווה אמהרית | ירושלים, ת"א |
+| **ELEM** | מקלטי נוער (מתחת לגיל 18) | 1201 |
+
+**קו חירום ארצי לאלימות במשפחה**: **118** (פועל 24/7, ניתן לשוחח באמהרית)
+
+---
+
+## המצב המשפטי בעת פרידה
+
+**מעמד ויזה**: אם את תושבת ישראל (מתושבת ארעית ועלייה) — הגירושין אינם פוגעים במעמדך. אם את בתהליך גיור/אזרחות — פנה מיד לעורך-דין לפני עזיבה.
+
+**מזונות ילדים**: בישראל אישה נפרדת זכאית לתשלומי מזונות מהאב — ראה "זכויות אמהות חד-הוריות".
+
+**רכוש**: בישראל חל **עקרון שיתוף הנכסים** — כל נכס שנצבר בנישואין שייך לשני הצדדים. גם אם הדירה על שם הבעל.
+
+---
+
+## שלבי פעולה מיידיים
+
+**שלב 1 — ביטחון מיידי**:
+- התקשרי ל**118** (חם לאלימות)
+- אם בסכנה מיידית — **100** (משטרה)
+- צאי מהבית עם ילדים, ת"ז, ומסמכי הבנק
+
+**שלב 2 — תיעוד**:
+- צלמי פציעות (בנוכחות עדה)
+- שמרי הודעות, ציינו תאריכים
+- בקרי רופא — לבקש תיעוד רפואי מפורש על הסיבה
+
+**שלב 3 — דיווח**:
+- לעו"ס בלשכת הרווחה (קב"ס) — היא זו שפותחת תיק ומתאמת עם בית-המשפט
+- לאגף הסיוע המשפטי (חינם לפי הכנסה)
+
+---
+
+## ועדה בין-משרדית ועינויים מיוחדים
+
+ועדת גדות (2022) קבעה שיש הקצות תקציב לתוכניות ייחודיות לנשים מהקהילה האתיופית, כולל:
+- קציני קשר דוברי אמהרית במשטרה
+- עובדות סוציאליות מהקהילה בכל עיר עם אוכלוסייה אתיופית משמעותית
+- מקלטי חירום עם דוברת אמהרית
+
+---
+
+## ארגונים שמסייעים
+
+- **תבקה**: 1-800-20-20-16 — ייצוג בגירושין, צווי הגנה, מזונות
+- **קו חם ל-118**: 24/7, כולל אמהרית
+- **ל.א.ה**: ארגון ייחודי לנשים יוצאות אתיופיה — ירושלים ות"א
+- **הסיוע המשפטי הממשלתי**: 1-700-706-060
+`,
+      en: `## Why Ethiopian-Israeli Women Face Special Barriers
+
+An inter-ministerial expert committee established following a series of murders of Ethiopian-origin women (2014–2020) identified systemic failures: language barriers, cultural shame, fear of police, and community isolation all prevent women from seeking timely help.
+
+## The Protection Order — Fastest Legal Tool
+
+A protection order (Tzav Hagana) is a court order requiring the abuser to vacate the home, maintain distance, and cease all contact. It can be obtained the same day by:
+1. Contacting the Social Welfare Officer (Kabit'z) at your municipality's welfare office.
+2. Applying directly at a Family Court — no lawyer needed for an emergency order.
+
+The order can include eviction of the abuser (even if the home is in his name), prohibition on any contact, and temporary child-custody arrangements.
+
+## Emergency Resources
+
+- **National domestic-violence hotline: 118** (24/7, Amharic available)
+- **Police: 100**
+- **WIZO shelters: 1-800-500-550**
+- **Na'amat shelters: 1-800-505-360**
+- **TEBEKA (legal):** 1-800-20-20-16
+
+## Financial Safety Net During Separation
+
+When leaving, you are entitled to emergency housing, alimony (if children are involved), and property rights over any assets accumulated during marriage. Visa status does not affect these rights for Israeli residents.
+`,
+      am: `## ዋና መሳሪያ — የጥበቃ ትዕዛዝ
+
+የጥበቃ ትዕዛዝ ተበዳዩ ቤቱን ለቆ እንዲወጣ፣ ቅርበትን እና ማናኛውም ግንኙነትን ይከለክላል። ያን ዕለቱ ልታገኝ ትችያለሽ፦
+1. ማዘጋጃ ቤቱ ሶሻል ዌልፌር ቢሮ ወደ ቃቢዝ ቅደሚ።
+2. ወደ ቤተሰብ ፍ/ቤት ሂጂ — ጠበቃ ሳያስፈልግ።
+
+## አስቸኳይ ቁጥሮች
+
+- **የቤተሰብ ጥቃት ስልክ: 118** (24/7፣ አማርኛ አለ)
+- **ፖሊስ: 100**
+- **WIZO: 1-800-500-550**
+- **TEBEKA: 1-800-20-20-16**
+
+## ልዩነቶቹ
+
+ጋብቻ ጊዜ የተሰበሰበ ማናኛውም ንብረት ለሁለቱም ባልና ሚስት ነው — ቤቱ ባሏ ስም ቢሆን እንኳ። ቪዛ ሁኔታ ለእስራኤሎች ነዋሪዎቻቸው መብቶቻቸውን አይነካም።
+`,
+    },
+  },
+
+  // NEW 22 — Single mothers rights
+  {
+    title: {
+      he: "זכויות אמהות חד-הוריות יוצאות אתיופיה",
+      en: "Rights for Ethiopian-Israeli Single Mothers",
+      am: "ለኢትዮጵያ-እስራኤላዊ አንድ-ወላጅ እናቶች መብቶች",
+    },
+    slug: {
+      he: "rights-for-single-mothers",
+      en: "rights-for-single-mothers",
+      am: "rights-for-single-mothers",
+    },
+    govUrl: "https://www.btl.gov.il/Benefits/Alimony/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "אם חד-הורית יוצאת אתיופיה זכאית: למזונות מובטחים מביטוח לאומי, למעון מסובסד (80–100%), לדיור בעדיפות, ולסיוע בהכשרה מקצועית. אין צורך להמתין לגירושין רשמיים בחלק מהמקרים.",
+      en: "Single mothers receive guaranteed alimony from BTL, subsidised daycare (80–100%), priority housing, and professional retraining support. Some benefits do not require finalised divorce proceedings.",
+      am: "አንድ-ወላጅ እናቶች ከBTL የተረጋገጠ ምግብ ድጎማ፣ ቀናሽ የህፃናት መጠበቅ (80–100%)፣ ቅደምተከተሉ ቤት እና ሙያዊ ስልጠና ድጋፍ ያገኛሉ።",
+    },
+    tags: ["family", "employment"],
+    bodies: {
+      he: `## הקונטקסט: למה הדף הזה חשוב?
+
+אמהות חד-הוריות מהקהילה האתיופית מתמודדות עם שכבת אתגרים נוספת: חלק גדול מהאבות נמצאים מחוץ לישראל (אתיופיה, ארה"ב), ניהול מאבק מזונות בינלאומי מורכב, ו**חוסר מידע** על הזכויות הקיימות בישראל. מטרת הדף הזה: לתת את כל המידע במקום אחד.
+
+---
+
+## 1. מזונות מובטחים מביטוח לאומי
+
+**מזונות מובטחים** הוא מנגנון שבו **ביטוח לאומי משלם לאישה** את המזונות הקבועים בפסיקת בית-משפט — ואחר-כך גובה מהאב.
+
+**מי זכאית?**
+- אישה שיש לה פסיקת מזונות מבית-משפט
+- האב **לא משלם** בפועל (בין אם בישראל ובין אם בחו"ל)
+- היא **לא חיה עם האב**
+
+**סכום**: עד **~1,520 ₪ לחודש** לילד (2025) — ביטוח לאומי ישלם עד לסכום שנפסק, ולא יותר.
+
+**הגשה**: בקשת גמלת מזונות (טופס 551) + העתק פסק-הדין + אישור שהאב לא שילם.
+
+---
+
+## 2. מעון מסובסד — 80% עד 100%
+
+ילדים של אמהות חד-הוריות בעלי הכנסה נמוכה זכאים ל**מעון מסובסד מלא** (100%) דרך משרד העבודה.
+
+**תנאים**:
+- ההכנסה החודשית נטו **מתחת לתקרה** (משתנה מדי שנה — בדוק מחשבון משרד העבודה)
+- הילד בגיל 3 חודשים עד 3 שנים
+- האם **עובדת, לומדת, או מוכרת כמחפשת עבודה**
+
+**הגשה**: לשכת עבודה + אישור מצב משפחתי + הכנסות.
+
+---
+
+## 3. עדיפות בתורי דיור ציבורי
+
+אמהות חד-הוריות מהקהילה האתיופית צוברות **נקודות עדיפות כפולות**: נקודות כחד-הורית + נקודות כיוצאת אתיופיה. בפועל:
+
+1. הרשמי ב**עמידר** (החברה הממשלתית לדיור) — פתח תיק ציבורי
+2. הגישי אישור: חד-הוריות + ממצב משפחתי + אתיופית
+3. בקשי ייעוץ ממשיל יוצאי אתיופיה בעירייה
+
+---
+
+## 4. הכשרה מקצועית ומימון לימודים
+
+**שירות התעסוקה** מציע לאמהות חד-הוריות:
+- **מסלול "אמהות"** — הכשרה מקצועית בזמן שהילד במעון
+- מימון חלקי ללימודים אקדמיים (מסלול שיקום)
+- **תמיכה בתקופת הסבה** — קצבה חודשית להכשרה
+
+פנה ללשכת שירות התעסוקה הקרובה + בקש "מסלול אמא חד-הורית".
+
+---
+
+## 5. מצב כשהאב מחוץ לישראל
+
+**ייגוי מזונות בינלאומי** — ישראל חתומה על האמנה להכרה הדדית בפסקי-מזונות עם מספר מדינות. עבור אב באתיופיה — האמנה אינה פעילה ישירות, אך:
+- **ביטוח לאומי ישלם את המזונות** ויפעל בעצמו לגביית החוב
+- **לא** תצטרכי לנהל מאבק בינלאומי לבד
+
+---
+
+## ארגונים תומכים
+
+| ארגון | שירות | קשר |
+|-------|-------|-----|
+| **IEWA (נשים יוצאות אתיופיה)** | ייעוץ, ליווי, קהילה | iewa.org.il |
+| **תבקה** | ייעוץ משפטי, מזונות, גירושין | 1-800-20-20-16 |
+| **ויצ"ו** | מרכזי הורים, עזרה לגננות | 1-800-500-550 |
+| **ביטוח לאומי** | מזונות מובטחים, קצבת ילדים | \*6050 |
+| **שירות התעסוקה** | הכשרות, קצבאות | המשרד הקרוב |
+
+---
+
+## זכויות שאמהות רבות לא מממשות
+
+- **הפחתת מס הכנסה** לאם חד-הורית — 2 נקודות זיכוי נוספות
+- **ביטוח חיים/בריאות** מוזל דרך ההסתדרות
+- **סל תרבות** — כרטיסי תיאטרון/קולנוע בסיוע (בחלק מהערים)
+- **ייעוץ פסיכולוגי** — 15 פגישות בשנה בסל הבסיסי, חינם
+`,
+      en: `## Guaranteed Alimony
+
+If you have a court order for child support and the father is not paying — whether in Israel or abroad — the National Insurance Institute (BTL) will pay you directly and then pursue the father for repayment. Submit Form 551 with a copy of the court order and proof of non-payment. Amount: up to approx. ₪1,520/month per child (2025).
+
+## Subsidised Daycare
+
+Children of low-income single mothers are eligible for 80–100% subsidised daycare for children aged 3 months to 3 years. The mother must be working, studying, or registered as a job-seeker. Apply at the Employment Service office with proof of family status and income.
+
+## Housing Priority
+
+Single Ethiopian-Israeli mothers accumulate double priority points — as single mothers and as Ethiopian-origin. Register with Amidar (the state housing company) and request the combined priority assessment.
+
+## When the Father Is Abroad
+
+If the father is in Ethiopia or elsewhere, BTL will advance the court-ordered amounts and independently pursue the debt. You do not need to manage international collection yourself.
+
+## Key Contacts
+
+- **BTL guaranteed alimony (Form 551):** btl.gov.il | \*6050
+- **IEWA (Ethiopian women):** iewa.org.il
+- **TEBEKA (legal aid):** 1-800-20-20-16
+- **Employment Service (retraining):** your nearest branch
+`,
+      am: `## ዋስትና ያለው ምግብ ድጎማ
+
+የፍ/ቤት ትዕዛዝ ካለዎት እና አባት ካልከፈለ — BTL ቀጥታ ይከፍሉዎታል (እስከ ~1,520 ሺ"ል/ወር ለልጅ) ከዚያ አባቱ ላይ ይጠይቃል። ቅጽ 551 + ትዕዛዙ + ያልተከፈለ ማስረጃ ያቅርቡ።
+
+## ቀናሽ የህፃናት ቤት
+
+3 ወራት እስከ 3 ዓመት ህፃናት ለ80–100% ቀናሽ ብቁ ናቸው። ለሥራ አገልግሎት ቢሮ ያስገቡ።
+
+## ቤት ቅደምተከተሉ
+
+አንድ-ወላጅ + ኢትዮጵያዊ = ድርብ ቅደምተከተሉ ነጥቦች። Amidar ይመዝገቡ።
+
+ዋና ቁጥሮች፦ BTL *6050 | TEBEKA 1-800-20-20-16 | IEWA iewa.org.il
+`,
+    },
+  },
+
+  // NEW 23 — Unemployment benefit guide
+  {
+    title: {
+      he: "דמי אבטלה — מדריך מלא ליוצאי אתיופיה",
+      en: "Unemployment Benefit — Complete Guide for Ethiopian-Israelis",
+      am: "የስራ አጥ አበል — ለኢትዮጵያ-እስራኤሎች ሙሉ መመሪያ",
+    },
+    slug: {
+      he: "unemployment-benefit-guide",
+      en: "unemployment-benefit-guide",
+      am: "unemployment-benefit-guide",
+    },
+    govUrl: "https://www.btl.gov.il/Benefits/Unemployment/Pages/general.aspx",
+    eligibilitySummary: {
+      he: "מי שעבד לפחות 12 חודשים ב-18 החודשים האחרונים ואיבד עבודה — זכאי לדמי אבטלה. חובה להירשם בשירות התעסוקה תוך 14 יום מסיום העבודה. הגמלה: 45–80% מהשכר האחרון.",
+      en: "Anyone who worked at least 12 months in the last 18 months and lost their job is entitled to unemployment benefit. You must register at the Employment Service within 14 days of job loss. Benefit: 45–80% of last salary.",
+      am: "ባለፉት 18 ወራት ቢያንስ 12 ወራት የሰራ እና ሥራ ያጣ ሁሉ የስራ አጥ አበል ይገባዋል። ሥራ ካጡ ከ14 ቀናት ውስጥ ይመዝገቡ። ጥቅማ-ጥቅም፦ ከመጨረሻ ደሞዝ 45–80%።",
+    },
+    tags: ["employment"],
+    bodies: {
+      he: `## למי מגיע?
+
+**תנאי הזכאות הבסיסיים**:
+1. **עבד לפחות 12 חודשים** מתוך 18 החודשים שלפני האבטלה (בתשלום ביטוח לאומי)
+2. **אבד מקום העבודה שלא באשמתו** — פיטורין, סגירת עסק, פקיעת חוזה. **לא תקף**: התפטרות ללא עילה מוצדקת
+3. **נרשם בשירות התעסוקה** תוך **14 ימים** מסיום העבודה
+4. גיל **18–67** (מתחת לגיל פרישה)
+
+---
+
+## שיעור הגמלה
+
+שיעור דמי האבטלה תלוי במשך שעות עבודה ובמצב משפחתי:
+
+| מצב | שיעור מהשכר |
+|-----|------------|
+| רווק/ה, ללא ילדים, 3 חודשים ראשונים | 50% |
+| מחודש 4 ואילך | 45% |
+| עם ילדים / פרנס יחיד | 60–80% |
+
+**תקרת גמלה**: מחושבת עד שכר מקסימלי מוגדר — לא ניתן לקבל יותר מ~800 ₪/יום (2025).
+
+---
+
+## כיצד נרשמים?
+
+### שלב 1 — רישום בשירות התעסוקה (14 ימים!)
+1. הגע ל**לשכת שירות התעסוקה** הקרובה אליך
+2. הצג: **ת"ז, מכתב פיטורין, תלושי שכר** (3 אחרונים לפחות), **אישור תקופת עבודה** מהמעביד האחרון
+3. תקבל מועד לדיווח חודשי
+
+**חשוב**: אם לא נרשמת תוך 14 יום — תאבד ימים מהגמלה לכל יום איחור.
+
+### שלב 2 — הגשת תביעה לביטוח לאומי
+הרישום בשירות התעסוקה מפעיל אוטומטית את הזכאות לביטוח לאומי — **אין צורך להגיש תביעה נפרדת** בד"כ.
+
+---
+
+## משך הגמלה
+
+| גיל | משך מקסימלי |
+|-----|-----------|
+| 25–35 | 70 ימים (תקופה ראשונה) |
+| 35–45 | 100 ימים |
+| 45–67 | 138 ימים |
+| עם 5+ ילדים | תוספת |
+
+---
+
+## חובות הדיווח
+
+**מדי חודש** יש לדווח לשירות התעסוקה:
+- שהמשכת לחפש עבודה
+- שלא עבדת (אפילו יום אחד) ללא דיווח
+- שלא יצאת לחו"ל ביום יש לך זכאות
+
+**עבודה חלקית**: ניתן לעבוד עד ימים מסוימים בחודש ועדיין לקבל גמלה — לשאול על "ביום-העבודה" בלשכה.
+
+---
+
+## ערעור על דחיית תביעה
+
+אם הביטוח הלאומי דחה את תביעתך:
+1. תוך **30 ימים**: הגש **ערעור לביטוח לאומי** (בכתב + הסבר)
+2. אם נדחה שנית: **בית-דין לעבודה** (חינם להגשה)
+3. **תבקה** מסייעת בייצוג: 1-800-20-20-16
+
+**סיבות נפוצות לדחייה**:
+- נרשמת מאוחר מ-14 יום — ניתן לערער על נסיבות
+- פיטורין תוך 6 חודשים מעלייה (תקופת המתנה עדיין חלה)
+- מכתב פיטורין חסר — ניתן לבקש ממעביד בכתב
+
+---
+
+## הכשרה מקצועית תוך קבלת אבטלה
+
+כשאתה מקבל דמי אבטלה, אתה זכאי להיכנס ל**תוכנית הכשרה מקצועית מסובסדת** — לא מפסיקים את הגמלה, ויכולים גם להאריך אותה.
+
+לבקש ב**לשכת שירות התעסוקה**: "אני רוצה להצטרף לתוכנית הכשרה." יש ריכוז מסלולים ייחודיים לקהילה האתיופית (ראה: **זכויות חיילים משוחררים**).
+
+📞 **ביטוח לאומי**: *6050
+📞 **שירות התעסוקה**: *8631
+`,
+      en: `## Who Is Eligible?
+
+Anyone who worked at least 12 of the last 18 months (with National Insurance contributions), lost their job without fault (dismissal, contract expiry, business closure — not voluntary resignation), and registered at the Employment Service within 14 days of job loss.
+
+## Benefit Rate
+
+- Single, no children (months 1–3): 50% of last salary
+- From month 4: 45%
+- With children or sole breadwinner: 60–80%
+- Daily cap: approx. ₪800 (2025)
+
+## Duration
+
+- Age 25–35: 70 days
+- Age 35–45: 100 days
+- Age 45–67: 138 days
+
+## How to Apply
+
+1. Go to the nearest Employment Service office within 14 days — every late day means lost benefit.
+2. Bring: ID, termination letter, last 3 salary slips, employment-period confirmation.
+3. BTL entitlement activates automatically — no separate claim needed in most cases.
+
+## Appeal
+
+If rejected: appeal in writing within 30 days. TEBEKA (1-800-20-20-16) can assist with representation before BTL and the Labour Court.
+`,
+      am: `## ብቁ ማን ነው?
+
+ያለፉ 18 ወራት ቢያንስ 12 ወራት ሰርቶ ያለ ጥፋቱ ሥራ ያጣ እና ከ14 ቀናት ውስጥ የሥራ አገልግሎት ቢሮ ተመዝግቦ።
+
+## የጥቅማ-ጥቅም ደረጃ
+
+- ሦስቱ የመጀመሪያ ወራት (ብቸኛ)፦ ከደሞዝ 50%
+- ከ4ኛ ወር፦ 45%
+- ልጆች ካሉ / ብቸኛ አስተዳዳሪ፦ 60–80%
+
+## እንዴት ይቀርቡ?
+
+1. ከ14 ቀናት ውስጥ ወደ ሥራ አገልግሎት ቢሮ ሂዱ — እያንዳንዱ ዘገዬ ቀን ጥቅማ-ጥቅሙን ያጣል።
+2. ID፣ ማሰናበቻ ደብዳቤ፣ ለ3 ወር የደሞዝ ሰነዶች ያምጡ።
+
+ቅሬታ ካለ፦ TEBEKA 1-800-20-20-16
+`,
+    },
+  },
+
+  // NEW 24 — Nursing benefit for elderly
+  {
+    title: {
+      he: "גמלת סיעוד לקשישים — זכויות הורים קשישים יוצאי אתיופיה",
+      en: "Nursing Benefit for the Elderly — Rights of Elderly Ethiopian-Israeli Parents",
+      am: "ለሽማግሌ ወላጆች የነርሲንግ ጥቅማ-ጥቅም — የኢትዮጵያ-እስራኤላዊ ሽማግሌዎች መብቶች",
+    },
+    slug: {
+      he: "nursing-benefit-elderly",
+      en: "nursing-benefit-elderly",
+      am: "nursing-benefit-elderly",
+    },
+    govUrl: "https://www.btl.gov.il/Benefits/Nursing/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "קשישים יוצאי אתיופיה שמתקשים בפעולות יומיומיות זכאים לגמלת סיעוד מביטוח לאומי — 4,000 עד 9,000 ₪ לחודש, בהתאם לרמת הסיעוד. עובדים סוציאליים של ביטוח לאומי מגיעים הביתה לבדיקה.",
+      en: "Elderly Ethiopian-Israelis who need help with daily activities are entitled to a nursing benefit from BTL — ₪4,000 to ₪9,000/month depending on care level. BTL social workers can conduct home visits.",
+      am: "ዕለታዊ ተግባራትን ለማከናወን እርዳታ የሚያስፈልጋቸው የኢትዮጵያ-እስራኤላዊ ሽማግሌዎች ከBTL የነርሲንግ ጥቅማ-ጥቅም የማግኘት መብት አላቸው — 4,000 እስከ 9,000 ሺ\"ል/ወር።",
+    },
+    tags: ["health", "family"],
+    bodies: {
+      he: `## מה היא גמלת סיעוד?
+
+גמלת סיעוד (ביטוח לאומי) מיועדת לקשישים הזקוקים לסיוע בפעולות חיי היומיום. היא **אינה** תלויה בהכנסה — כל קשיש שעומד בתנאים זכאי, ללא קשר לחסכונות.
+
+---
+
+## תנאי זכאות בסיסיים
+
+| תנאי | פרט |
+|------|-----|
+| **גיל** | נשים מגיל 60 / גברים מגיל 65 |
+| **תושבות** | תושב ישראל רשום |
+| **צורך בסיוע** | קושי ב-2 פעולות לפחות מתוך 6 (לבישה, אכילה, ניידות, היגיינה, שליטה בצרכים, תקשורת) |
+| **בדיקה רפואית** | ממוצעת ביטוח לאומי — ביקור בית |
+
+---
+
+## רמות הסיעוד וסכומי הגמלה (2025)
+
+| רמה | קושי | שווי גמלה בחודש |
+|-----|------|----------------|
+| 1 (קל) | 2 פעולות | ~4,200 ₪ |
+| 2 (בינוני) | 3–4 פעולות | ~5,800 ₪ |
+| 3 (כבד) | 5–6 פעולות | ~7,500 ₪ |
+| סיעוד מלא | 6 פעולות + בית אבות | ~9,000 ₪ |
+
+הגמלה ניתנת **בצורת שירות** — מטפל/ת ביתי שנשלח דרך חברה מאושרת — ולא כמזומן בד"כ.
+
+---
+
+## אתגרים ייחודיים לקהילה האתיופית
+
+### חסם שפה
+קשיש שאינו דובר עברית מתקשה לתאר מצבו לפני הוועדה. **יש לדרוש מתורגמן לאמהרית** מראש. ביטוח לאומי מחויב לספק — ראה דף "זכות למתורגמן".
+
+### צרכים תרבותיים
+הגמלה אמורה להותאם לצרכי המטופל. ניתן לבקש **מטפלת ביתית מהקהילה האתיופית** המכירה:
+- תזונה ייחודית (אינג'רה, ירקות מסורתיים)
+- שפה (אמהרית, תיגריניה)
+- מנהגים דתיים (חגים, ניקוי, תפילות)
+
+לדרוש בכתב מחברת הסיעוד: "אבקש מטפלת מהקהילה האתיופית."
+
+---
+
+## שלבי הגשה
+
+1. **הגשת בקשה**: לסניף ביטוח לאומי — טופס "תביעה לגמלת סיעוד" (טופס 510 או דיגיטלי)
+2. **ביקור בית**: עובד/ת סוציאלי/ת מטעם ביטוח לאומי יגיע לבדוק את מצב הקשיש בביתו
+3. **החלטה**: תוך 30 ימים (בד"כ)
+4. **בחירת מטפל**: הקשיש בוחר מחברה רשומה ברשימה מאושרת
+
+---
+
+## ביקורי בית לקהילה האתיופית
+
+**ביטוח לאומי משתדל** לשלוח עובד/ת סוציאלי/ת מהקהילה כשזה אפשרי. לא תמיד אפשרי — אך ניתן לבקש. הסבר: "ההורה שלי לא מדבר עברית ויצטרך לתאר קשיים — אבקש עובד/ת סוציאלי/ת דובר/ת אמהרית."
+
+---
+
+## שדרוג רמת הסיעוד
+
+אם המצב הבריאותי הידרדר — **ניתן לבקש הערכה מחדש** בכל עת. חשוב לבצע זאת לפני שהמצב הופך לחמור יותר ממה שהגמלה הנוכחית מכסה.
+
+---
+
+## בית-אבות ועמותות
+
+כאשר הטיפול הביתי אינו מספיק, ניתן לבקש **סיעוד מוסדי** (בית-אבות). ביטוח לאומי משתתף בעלות. עמותת **ניצן ירוק** פועלת עם קשישים מהקהילה האתיופית בירושלים, ב"ש, ות"א.
+
+📞 **ביטוח לאומי**: *6050 | [btl.gov.il](https://www.btl.gov.il)
+`,
+      en: `## Who Is Eligible?
+
+Elderly Israelis (women 60+, men 65+) who need help with at least 2 of 6 daily activities (dressing, eating, mobility, hygiene, toileting, communication). No income test — savings do not affect eligibility.
+
+## Benefit Amounts (2025)
+
+- Level 1 (2 activities): approx. ₪4,200/month
+- Level 2 (3–4 activities): approx. ₪5,800/month
+- Level 3 (5–6 activities): approx. ₪7,500/month
+- Full nursing home: approx. ₪9,000/month
+
+Benefits are typically paid as in-home care hours rather than cash.
+
+## Cultural Needs
+
+Ethiopian elderly may need an Amharic-speaking carer familiar with traditional food, language, and religious customs. You can request this in writing from the care company. Request an Amharic-speaking BTL social worker for the home assessment visit.
+
+## How to Apply
+
+1. Submit Form 510 (nursing benefit claim) at any BTL branch.
+2. BTL sends a social worker for a home assessment within 30 days.
+3. On approval, choose a licensed home-care provider from the approved list.
+
+Contact BTL: *6050 | btl.gov.il
+`,
+      am: `## ብቁ ማን ነው?
+
+ሴቶች 60+፣ ወንዶች 65+፣ ቢያንስ 2 ዕለታዊ ተግባራት (መልበስ፣ መብላት፣ እንቅስቃሴ፣ ንጽህና፣ መጸዳጃ፣ ትርጉም ያለው ግንኙነት) ለማከናወን እርዳታ የሚያስፈልጋቸው። ለቁጠባ ወይም ገቢ ሳይመረኮዝ።
+
+## ጥቅማ-ጥቅም (2025)
+
+- ደረጃ 1፦ ~4,200 ሺ"ል/ወር
+- ደረጃ 2፦ ~5,800 ሺ"ል/ወር
+- ደረጃ 3፦ ~7,500 ሺ"ል/ወር
+
+## ማመልከቻ
+
+ቅጽ 510 ወደ BTL ቅርንጫፍ ያስገቡ። BTL ወደ ቤት ሶሻል ዎርከር ይልካሉ። ለአማርኛ ተናጋሪ ሶሻል ዎርከር ይጠይቁ።
+
+BTL፦ *6050 | btl.gov.il
+`,
+    },
+  },
+
+  // NEW 25 — Court interpreter rights
+  {
+    title: {
+      he: "זכות למתורגמן בבית משפט ובמשרדי הממשלה",
+      en: "Right to an Interpreter in Court and Government Offices",
+      am: "በፍ/ቤት እና በመንግስት ቢሮዎች አስተርጓሚ የማግኘት መብት",
+    },
+    slug: {
+      he: "court-interpreter-rights",
+      en: "court-interpreter-rights",
+      am: "court-interpreter-rights",
+    },
+    govUrl: "https://www.gov.il/he/departments/ministry-of-justice",
+    eligibilitySummary: {
+      he: "כל אדם שאינו דובר עברית זכאי למתורגמן בכל הליך משפטי — זכות חוקתית. גם במשרדי ממשלה (ביטוח לאומי, פנים, קליטה) יש חובה לספק תרגום. הזכות חינמית ועל חשבון המדינה.",
+      en: "Anyone who does not speak Hebrew is entitled to an interpreter in any legal proceeding — a constitutional right. Government offices (BTL, Interior Ministry, Aliyah Ministry) must also provide translation. The right is free and at state expense.",
+      am: "ዕብራይስጥ የማይናገር ማንኛውም ሰው በማናኛውም የሕግ ሂደት አስተርጓሚ የማግኘት መብት አለው — ይህ ሕገ-መንግስታዊ መብት ነው። ቢሮዎችም (BTL፣ ውስጣዊ ጉዳዮች፣ ቅያሴ) ትርጓሜ ማቅረብ አለባቸው።",
+    },
+    tags: ["legal", "immigration"],
+    bodies: {
+      he: `## הזכות: יסוד חוקתי
+
+**חוק יסוד: כבוד האדם וחירותו** מגן על זכות ההליך ההוגן. פרשנות בתי-המשפט ישראליים: הגנה זו כוללת את הזכות להבין ולהיות מובן בהליך שמשפיע על חיי אדם. ועדת שרנסקי (2017) קבעה מפורשות שמדינת ישראל אינה רשאית לנהל הליכים פליליים או אזרחיים משמעותיים מבלי להציע תרגום לנחקרים שאינם דוברי עברית.
+
+---
+
+## בתי-משפט — כיצד לדרוש מתורגמן
+
+### הכנה מראש (מומלץ)
+1. **לפני הדיון**: שלח מכתב (בפקס/אימייל) לכתב בית-המשפט: "אני מגיש/ה בקשה למתורגמן לאמהרית לדיון ביום ____. מספר תיק: ____"
+2. **בבית-המשפט**: הגיע מוקדם ואמור לפקיד: "אני זקוק/ה למתורגמן, אנא ודא/י שהוא כאן."
+
+### בזמן הדיון
+אם הגעת בלי מתורגמן ולא אחד הגיע:
+- **אמור לשופט**: "הגשתי בקשה למתורגמן ולא קיבלתי. איני יכול/ה להמשיך ללא תרגום."
+- השופט **חייב** לדחות את הדיון ולהסדיר מתורגמן — לא ניתן לנהל הליך פלילי ללא הבנה מלאה.
+
+---
+
+## מאגר המתורגמנים לאמהרית
+
+**מינהלת בתי-המשפט** מנהלת רשימת מתורגמנים מוסמכים. לאמהרית יש מספר מתורגמנים מוסמכים מוכרים על-ידי המדינה. לשאול ישירות ממזכירות בית-המשפט: "יש לכם מתורגמן לאמהרית ברשימה?"
+
+**אם המתורגמן לא זמין מיידית** — ניתן לבקש דחיית הדיון, וזה לגיטימי לחלוטין.
+
+---
+
+## סוגי הליכים בהם הזכות חלה
+
+| הליך | זכאות למתורגמן |
+|------|----------------|
+| **פלילי** (חקירה, משפט, גזר-דין) | **חובה מוחלטת** — ללא חריגים |
+| **אזרחי** (חוזה, נזיקין, קניין) | זכאות — יש לבקש מראש |
+| **משפחה** (גירושין, משמורת) | זכאות — חשוב במיוחד |
+| **מנהלי** (בית-דין לעבודה, ביהמ"ש לעניינים מנהליים) | זכאות |
+| **חקירה משטרתית** (לפני הגשת כתב-אישום) | **חובה** — ראה "זכויות מול משטרה" |
+
+---
+
+## משרדי ממשלה — ביטוח לאומי, פנים, קליטה
+
+**חוק שירות הציבור (תלונות הציבור)** וניהולי הוראות שירות לקוחות מחייבים:
+
+### ביטוח לאומי (*6050)
+- יש שירות טלפוני **באמהרית** דרך *6050 — לבחור "שירות לדוברי אמהרית"
+- בסניפים: ניתן לבקש מזכיר/ה לעזור במציאת עובד/ת דובר/ת אמהרית
+
+### משרד הפנים
+- **מרכז עולים**: ניתן לבקש פגישה עם מתורגמן — להודיע מראש
+- **תעודת זהות, דרכון, רישום**: ניתן להביא מלווה דובר עברית
+
+### משרד הקליטה (*5454)
+- יש נציגים דוברי אמהרית — לציין בפנייה
+
+---
+
+## אם סירבו לספק מתורגמן
+
+**בבית-משפט**: אמור ישירות לשופט. רשום את ההצהרה. שמור עותק פרוטוקול.
+
+**במשרד ממשלתי**:
+1. ביקש בכתב ממנהל הסניף
+2. פנה לנציב תלונות הציבור: [ombudsman.gov.il](https://www.ombudsman.gov.il)
+3. **תבקה** — יטפל בתלונה: 1-800-20-20-16
+
+---
+
+## שירות הפרשנות הקהילתי
+
+**שירות פרשנות קהילתי** הוא שירות וולונטרי (וחלקית ממשלתי) המספק מתורגמנים מאומנים לקהילה האתיופית. ניתן להזמין לפגישות רפואיות, בית-ספר, ומפגשים עם רשויות. לפנות דרך ממשיל יוצאי אתיופיה בעיר.
+
+---
+
+## עלות
+
+**הזכות חינמית** — המדינה משלמת למתורגמן בהליכים משפטיים. בחלק מהמשרדים — אין תשלום. אם ביקשו ממך לשלם למתורגמן בהליך משפטי — **סרב** ופנה לתבקה.
+
+---
+
+## הכנה לדיון עם מתורגמן
+
+- **הגע מוקדם** — הכר את המתורגמן לפני הדיון
+- **דבר בקצרה ובמשפטים פשוטים** — קל יותר לתרגם
+- **בקש אישור** שהמתורגמן תרגם במדויק אם אינך בטוח
+- **שמור עותק** מהפרוטוקול — זכות שלך
+
+📞 **תבקה**: 1-800-20-20-16
+🔗 **מינהלת בתי-המשפט**: [court.gov.il](https://www.court.gov.il)
+`,
+      en: `## The Constitutional Basis
+
+The right to an interpreter in legal proceedings is derived from the Basic Law: Human Dignity and Liberty. It applies in all criminal proceedings without exception, and in civil, family, and administrative cases on request. Israel's state cannot conduct significant proceedings against a person who does not understand the language.
+
+## In Court
+
+Request an interpreter in advance: write to the court clerk specifying the case number, hearing date, and that you need Amharic. At the hearing, if no interpreter is present, tell the judge directly. The judge must postpone the hearing — a criminal trial cannot proceed without full comprehension.
+
+The Courts Administration maintains a registry of certified Amharic interpreters. Ask the court secretary: "Do you have a certified Amharic interpreter on the list?"
+
+## Government Offices
+
+- **BTL (*6050):** Amharic telephone service available — select "Amharic service."
+- **Ministry of Aliyah (*5454):** Amharic-speaking representatives — specify when calling.
+- **Ministry of Interior:** Request an appointment with an interpreter in advance.
+
+## If an Interpreter Is Refused
+
+In court — state the objection on the record to the judge. In a government office — request in writing, then escalate to the Public Ombudsman (ombudsman.gov.il) or TEBEKA (1-800-20-20-16).
+
+## Cost
+
+The right is free — the state pays for court interpreters. If you are ever asked to pay for an interpreter in a legal proceeding, refuse and contact TEBEKA.
+`,
+      am: `## ሕገ-መንግስታዊ መሠረት
+
+ዕብራይስጥ ለማይናገሩ ሰዎች ሁሉ ሕጋዊ ሂደቶች ውስጥ አስተርጓሚ የማግኘት መብት አለ። ለወንጀላዊ ሂደቶች ያለ ምንም ልዩነት፤ ሲቪል፣ ቤተሰብ እና አስተዳደራዊ ጉዳዮች ለምዝገባ።
+
+## በፍ/ቤት
+
+አስቀድሞ ይጠይቁ — ለፍ/ቤት ፀሐፊ ይጻፉ (ጉዳይ ቁጥር፣ ቀን፣ አማርኛ ያስፈልጋል)። አስተርጓሚ ካልመጣ — ለዳኛ ቀጥታ ይናገሩ። ዳኛ ሂደቱን ማዘናጋት አለበት።
+
+## የመንግስት ቢሮዎች
+
+- **BTL (*6050):** "የአማርኛ አገልግሎት" ምረጡ
+- **ቅያሴ ሚኒስቴር (*5454):** አስቀድሞ ይጠቁሙ
+
+## ወጪ
+
+ነፃ ነው። ለሕጋዊ ሂደት ለአስተርጓሚ ሊከፈሉ ቢጠየቁ — ፈቃደኛ አትሁኑ፤ TEBEKA ያነጋግሩ፦ 1-800-20-20-16
+`,
+    },
+  },
+
+  // NEW 18 — Free legal aid
+  {
+    title: {
+      he: "סיוע משפטי חינמי ליוצאי אתיופיה — מי מספק ואיך פונים",
+      en: "Free Legal Aid for Ethiopian-Israelis — Who Provides It and How to Access",
+      am: "ለኢትዮጵያ-እስራኤሎች ነፃ የሕግ እርዳታ — ማን ይሰጣል እና እንዴት ይደርሳሉ",
+    },
+    slug: {
+      he: "free-legal-aid",
+      en: "free-legal-aid",
+      am: "free-legal-aid",
+    },
+    govUrl: "https://tebeka.org.il",
+    eligibilitySummary: {
+      he: "עמותת תבקה, הסיוע המשפטי הממשלתי, וקליניקות משפטיות באוניברסיטאות מספקים ייצוג ויעוץ חינמיים ליוצאי אתיופיה. אין צורך בהכנסה מוגדרת לפנייה לתבקה.",
+      en: "TEBEKA association, the Government Legal Aid Bureau, and university law clinics provide free representation and advice to Ethiopian-Israelis. TEBEKA has no income test.",
+      am: "TEBEKA ማህበር፣ የመንግስት የሕግ እርዳታ ቢሮ፣ እና የዩኒቨርሲቲ ሕግ ክሊኒኮች ለኢትዮጵያ-እስራኤሎች ነፃ ውክልና እና ምክር ይሰጣሉ።",
+    },
+    tags: ["legal"],
+    bodies: {
+      he: `## למה ייעוץ משפטי חשוב?
+
+עולים רבים מאתיופיה נמנעים מפנייה לעורך-דין מחשש לעלות, חוסר היכרות עם מערכת המשפט הישראלית, או חסם שפה. בפועל קיים מעטפת שלמה של שירותים חינמיים — שלא כולם מכירים.
+
+---
+
+## 1. תבקה — האגודה הישראלית ליהודים אתיופים
+
+**תבקה** היא הארגון המרכזי למשפט ליוצאי אתיופיה בישראל. הם עוסקים ב:
+
+- **דיני עבודה**: אפליה, פיטורין שלא כדין, שכר לא שולם
+- **דיני ביטוח לאומי**: ערעורים על קצבאות
+- **דיני משפחה**: גירושין, מחלוקות משמורת, ירושה
+- **זכויות אזרחיות**: פגיעה בידי משטרה, אפליה במוסדות ציבוריים
+- **הגנה מפני פינוי**: עזרה בסכסוכי דיור ורשויות
+
+**פנייה לתבקה**:
+- טלפון: **1-800-20-20-16** (שעות משרד — ראשון עד חמישי)
+- אתר: [tebeka.org.il](https://tebeka.org.il)
+- פגישה ראשונה חינמית תמיד — ללא תנאי הכנסה
+
+---
+
+## 2. הסיוע המשפטי הממשלתי
+
+**הסיוע המשפטי** (מנהלת הסיוע המשפטי, משרד המשפטים) מספק ייעוץ וייצוג חינמי לזכאים לפי **מבחן הכנסה**. ב-2025:
+- יחיד: הכנסה נטו עד ~7,000 ₪/חודש
+- זוג: עד ~10,500 ₪/חודש
+- ילדים: תוספת לכל ילד
+
+**תחומים מכוסים**: פלילי (חובה), אזרחי (בשיקול-דעת), מנהלי, דיני משפחה.
+
+**כיצד פונים**:
+1. פנה ללשכת הסיוע המשפטי הקרובה (בכל בית-משפט מחוזי)
+2. הצג ת"ז + אישור הכנסה
+3. אם אתה עולה חדש — הכנסה מסל הקליטה נחשבת
+
+📞 **מרכז השיחות**: 1-700-706-060
+
+---
+
+## 3. קליניקות משפטיות באוניברסיטאות
+
+קליניקות משפטיות מנוהלות על-ידי סטודנטים לתואר שני במשפטים, בפיקוח מרצים. הן מספקות ייעוץ ולעתים ייצוג **חינמי**:
+
+| אוניברסיטה | קליניקה | מוקד |
+|------------|---------|------|
+| תל-אביב | קליניקת זכויות אדם | זכויות מהגרים ועולים |
+| עברית (ירושלים) | קליניקת עניים בדין | עוני, דיור, סעד |
+| בר-אילן | קליניקת משפחה | גירושין, ירושה |
+| חיפה | קליניקת הלאום | עקירה, זכויות קהילתיות |
+
+לפרטי קשר — אתר האוניברסיטה או גוגל "קליניקה משפטית [שם עיר]".
+
+---
+
+## 4. ארגוני זכויות נוספים
+
+**עכ"א — האגודה לזכויות האזרח**: פועלת בעיקר בתביעות ציבוריות ועל-עקרוניות. מייעצת חינם במקרים של הפרת זכויות אדם. acri.org.il | 03-7621111
+
+**המוקד להגנת הפרט (HaMoked)**: מתמחה בזכויות אזרחיות מול רשויות המדינה. hamoked.org.il
+
+**עדאלה — המרכז המשפטי לזכויות המיעוט הערבי**: עוסק גם בסוגיות כלל-מיעוטים, לעיתים בשיתוף עם תבקה.
+
+---
+
+## מה להביא לפגישה ראשונה?
+
+- **ת"ז / תעודת עולה**
+- **כל מסמך רלוונטי לתיק**: חוזה, מכתב פיטורין, הודעת ביטוח לאומי, פסיקת בית-משפט
+- **כרונולוגיה קצרה** — תאריכים ואירועים בסדר
+- **שאלות מוכנות** — מה אתה רוצה לדעת ומה אתה מצפה שיקרה
+
+---
+
+## לוח זמנים: דברים שלא אפשר להחמיץ
+
+| סוג תיק | מגבלת זמן |
+|---------|-----------|
+| תביעת עבודה | 7 שנים (אך מהר יותר = טוב יותר) |
+| ערעור על קצבת ביטוח לאומי | 12 חודשים מהחלטה |
+| תלונה על שוטר (מח"ש) | 30 יום |
+| תביעה אזרחית לנזיקין | 7 שנים (מקרים מיוחדים — פחות) |
+`,
+      en: `## TEBEKA — The Primary Resource
+
+TEBEKA (the Israeli Association for Ethiopian Jews) is the main legal organisation for Ethiopian-Israelis. They handle employment discrimination, BTL benefit appeals, family law, civil-rights cases, and housing disputes. The first meeting is always free with no income test. Call 1-800-20-20-16 or visit tebeka.org.il.
+
+## Government Legal Aid Bureau
+
+The Ministry of Justice Legal Aid Bureau provides free advice and representation based on an income test (single earner up to approx. ₪7,000 net/month in 2025). Covers criminal (mandatory), civil, administrative, and family law. Contact via any District Court or call 1-700-706-060.
+
+## University Law Clinics
+
+Tel Aviv, Hebrew University, Bar-Ilan, and Haifa universities run free supervised clinics covering human rights, poverty law, family, and housing. Search "קליניקה משפטית [city]" for contact details.
+
+## What to Bring
+
+Bring your ID/teudat oleh, all relevant documents (contract, termination letter, BTL notice), a brief timeline of events, and prepared questions.
+`,
+      am: `## TEBEKA — ዋናው ምንጭ
+
+TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት ነው። የሥራ አድልዎ፣ BTL ቅሬታዎች፣ የቤተሰብ ሕግ፣ የሲቪል መብቶች እና የቤት ሙግቶችን ይዳኛሉ። የመጀመሪያ ስብሰባ ሁሌም ነፃ ነው። 1-800-20-20-16 | tebeka.org.il
+
+## የመንግስት የሕግ እርዳታ ቢሮ
+
+በሕክምና ሚኒስቴር የሕግ እርዳታ ቢሮ በገቢ ምርምር ነፃ ምክር እና ውክልና ይሰጣል (2025 ለ7,000 ሺ"ል/ወር ወይም ከዚያ ያነሰ ደሞዝ)። 1-700-706-060 ይደውሉ።
+
+## ምን ማምጣት አለብዎ?
+
+መታወቂያዎ/የዓሊያ ሰነድ፣ ሁሉም ተዛማጅ ሰነዶች (ኮንትራት፣ የቢሮ ደብዳቤ)፣ አጭር የሁኔታ ታሪክ።
+`,
     },
   },
 ];

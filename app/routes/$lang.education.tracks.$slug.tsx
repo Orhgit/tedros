@@ -9,7 +9,9 @@ import { SiteHeader } from "~/components/sections/site-header";
 import { getEducationTrackBySlug } from "~/lib/db/queries/education-tracks.server";
 import { glyphForEducationTrack } from "~/lib/education/tracks";
 import { glyphForScholarshipLevel } from "~/lib/education/categories";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -23,15 +25,17 @@ export async function loader({ params }: Route.LoaderArgs) {
     throw data({ error: "not-found" }, { status: 404 });
   }
   const introHtml = renderMarkdown(detail.intro);
-  return { locale, detail, introHtml };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, detail, introHtml, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, detail } = data;
+  const { locale, detail, publicUrl } = data;
   return [
     { title: `${detail.name} — ${t(locale, "tracks_landing_title")} — Tedros` },
     { name: "description", content: detail.shortDescription },
+    ...hreflangMeta(publicUrl, locale, `/education/tracks/${detail.slug}`),
     { property: "og:title", content: detail.name },
     { property: "og:description", content: detail.shortDescription },
     { property: "og:type", content: "website" },
@@ -68,6 +72,7 @@ export default function TrackDetail({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">

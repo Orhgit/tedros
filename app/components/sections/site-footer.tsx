@@ -3,11 +3,6 @@
 // User-facing only. Internal-team artifacts (GitHub source, ADRs, community
 // research) live in the repo / docs — not in the public footer. The portal
 // targets community members looking for rights/services, not engineers.
-//
-// Designed to reflect what's actually live today (Phase 3) rather than the
-// long-term 10-pillar vision. Linking to non-existent routes hurts user
-// trust and pollutes the broken-link audit. As later phases ship, move
-// pillars from "Coming soon" → live links.
 
 import { Link } from "react-router";
 
@@ -41,9 +36,21 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <div aria-hidden className="flag-stripe mt-4 h-1 w-24 rounded-full" />
           </div>
 
-          {/* Live pillars */}
+          {/* Content pillars — all live */}
           <FooterCol title={t(locale, "footer_live_heading")}>
             <FooterLink to={`${base}/rights`}>{t(locale, "nav_rights")}</FooterLink>
+            <FooterLink to={`${base}/careers`}>{t(locale, "pillar_employment_title")}</FooterLink>
+            <FooterLink to={`${base}/health`}>{t(locale, "pillar_health_title")}</FooterLink>
+            <FooterLink to={`${base}/education`}>{t(locale, "pillar_education_title")}</FooterLink>
+            <FooterLink to={`${base}/heritage/events`}>{t(locale, "pillar_heritage_title")}</FooterLink>
+            <FooterLink to={`${base}/news`}>{t(locale, "pillar_news_title")}</FooterLink>
+            <FooterLink to={`${base}/statistics`}>{t(locale, "statistics_landing_title")}</FooterLink>
+            <FooterLink to={`${base}/family`}>{t(locale, "pillar_family_title")}</FooterLink>
+            <FooterLink to={`${base}/voice`}>{t(locale, "pillar_voice_title")}</FooterLink>
+          </FooterCol>
+
+          {/* Tools & directory */}
+          <FooterCol title={t(locale, "footer_resources_heading")}>
             <FooterLink to={`${base}/cities`}>{t(locale, "nav_listings")}</FooterLink>
             <FooterLink to={`${base}/calculator/mortgage-ethiopian-immigrants`}>
               {t(locale, "footer_mortgage_calculator")}
@@ -61,15 +68,6 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <FooterLink to={`${base}/programs`}>
               {t(locale, "programs_landing_title")}
             </FooterLink>
-          </FooterCol>
-
-          {/* Coming-soon pillars — surfaced as plain text so users see the
-              roadmap without clicking into 404s. */}
-          <FooterCol title={t(locale, "footer_soon_heading")}>
-            <FooterStaticItem>{t(locale, "pillar_employment_title")}</FooterStaticItem>
-            <FooterStaticItem>{t(locale, "pillar_health_title")}</FooterStaticItem>
-            <FooterStaticItem>{t(locale, "pillar_family_title")}</FooterStaticItem>
-            <FooterStaticItem>{t(locale, "pillar_voice_title")}</FooterStaticItem>
           </FooterCol>
         </div>
 
@@ -112,10 +110,4 @@ function FooterLink({ to, children }: { to: string; children: React.ReactNode })
       </Link>
     </li>
   );
-}
-
-function FooterStaticItem({ children }: { children: React.ReactNode }) {
-  // Coming-soon pillars rendered as plain list items (not links) — looks
-  // present but doesn't promise navigation that doesn't work.
-  return <li className="opacity-70">{children}</li>;
 }

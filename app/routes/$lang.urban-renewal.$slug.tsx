@@ -8,6 +8,7 @@ import type { Route } from "./+types/$lang.urban-renewal.$slug";
 import { LeadForm } from "~/components/lead-form";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
 const SLUG_RE = /^[a-z0-9-]{1,64}$/;
@@ -21,8 +22,18 @@ export async function loader({ params }: Route.LoaderArgs) {
     locale,
     slug: validSlug,
     turnstileSiteKey: env.TURNSTILE_SITE_KEY ?? null,
+    publicUrl: env.PUBLIC_URL,
   };
 }
+
+export const meta: Route.MetaFunction = ({ data }) => {
+  if (!data) return [{ title: "Tedros" }];
+  const { locale, slug, publicUrl } = data;
+  return [
+    { title: `${t(locale, "lead_form_title")} — Tedros` },
+    ...hreflangMeta(publicUrl ?? "http://localhost:3000", locale, `/urban-renewal/${slug ?? ""}`),
+  ];
+};
 
 export default function UrbanRenewalNeighborhood({ loaderData }: Route.ComponentProps) {
   const { locale, slug, turnstileSiteKey } = loaderData;

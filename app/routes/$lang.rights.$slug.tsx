@@ -14,6 +14,7 @@ import { WhatsAppShare } from "~/components/sections/whatsapp-share";
 import { getRightBySlug, relatedRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
 import { extractApplicationSteps } from "~/lib/rights/extract-steps";
@@ -33,12 +34,12 @@ export async function loader({ params }: Route.LoaderArgs) {
   const steps = extractApplicationSteps(right.body, locale);
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}/rights/${right.slug}`;
-  return { locale, right, html, related, steps, shareUrl };
+  return { locale, right, html, related, steps, shareUrl, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, right, steps } = data;
+  const { locale, right, steps, publicUrl } = data;
   const description = right.summary;
   // GovernmentService describes WHAT the right is; HowTo describes the
   // application steps. Emit both so Google can pick the most useful
@@ -72,6 +73,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${right.title} — Tedros` },
     { name: "description", content: description },
+    ...hreflangMeta(publicUrl, locale, `/rights/${right.slug}`),
     { property: "og:title", content: right.title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
@@ -101,6 +103,7 @@ export default function RightDetail({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"

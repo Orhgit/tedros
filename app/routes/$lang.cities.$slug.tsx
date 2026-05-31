@@ -18,6 +18,7 @@ import {
 } from "~/lib/heritage/events.server";
 import { isRelevant as isHeritageRelevant } from "~/lib/heritage/relevance";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { glyphForTag } from "~/lib/rights/categories";
 import { isRelevant as isRightRelevant } from "~/lib/rights/relevance";
@@ -73,31 +74,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { name: "twitter:card", content: "summary" },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
-    { tagName: "link", rel: "canonical", href: canonical },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "he",
-      href: `${publicUrl}${cityPath("he", city.slug)}`,
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "en",
-      href: `${publicUrl}${cityPath("en", city.slug)}`,
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "am",
-      href: `${publicUrl}${cityPath("am", city.slug)}`,
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "x-default",
-      href: `${publicUrl}${cityPath("he", city.slug)}`,
-    },
+    ...hreflangMeta(publicUrl, locale, `${CITY_PATH_PREFIX}/${city.slug}`),
     {
       "script:ld+json": {
         "@context": "https://schema.org",

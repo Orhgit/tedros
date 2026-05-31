@@ -5,5 +5,5 @@ import { readLocaleCookie } from "~/lib/i18n/cookie.server";
 
 export async function loader({ request }: Route.LoaderArgs) {
   const locale = (await readLocaleCookie(request)) ?? DEFAULT_LOCALE;
-  return redirect(`/${locale}`, 302);
+  return redirect(`/${locale}`, 301);
 }

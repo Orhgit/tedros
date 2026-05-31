@@ -11,6 +11,7 @@ import { healthPath } from "~/lib/health/links";
 import { breadcrumbJsonLd, faqJsonLd, webPageJsonLd } from "~/lib/health/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
 // ── FAQ content (3 locales, 4 questions) ────────────────────────────────────
@@ -139,7 +140,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
-    { tagName: "link", rel: "canonical", href: url },
+    ...hreflangMeta(publicUrl, locale, "/health/mental-health"),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },

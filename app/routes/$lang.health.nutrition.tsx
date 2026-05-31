@@ -24,6 +24,7 @@ import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/health/schema";
 import type { JsonLd } from "~/lib/health/schema";
 import { healthPath, nutritionPath } from "~/lib/health/links";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
 const CATEGORY_ORDER: NutritionCategory[] = ["preserve", "limit", "transition"];
@@ -96,7 +97,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
-    { tagName: "link", rel: "canonical", href: url },
+    ...hreflangMeta(publicUrl, locale, nutritionPath()),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
@@ -140,6 +141,7 @@ export default function NutritionHub({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
             {title}

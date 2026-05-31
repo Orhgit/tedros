@@ -8,7 +8,9 @@ import type { Route } from "./+types/$lang.orgs._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { listOrgs } from "~/lib/db/queries/orgs.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import {
   ORG_CATEGORY_TO_TAG,
@@ -22,14 +24,17 @@ const ALL_ORG_CATEGORIES: OrgCategory[] = ["education", "legal", "health", "comm
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const orgs = listOrgs(locale);
-  return { locale, orgs };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, orgs, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "http://localhost:3000";
   return [
     { title: `${t(locale, "orgs_landing_title")} — Tedros` },
     { name: "description", content: t(locale, "orgs_landing_subtitle") },
+    ...hreflangMeta(publicUrl, locale, "/orgs"),
     { property: "og:title", content: t(locale, "orgs_landing_title") },
     { property: "og:description", content: t(locale, "orgs_landing_subtitle") },
     { property: "og:type", content: "website" },
@@ -63,6 +68,7 @@ export default function OrgsLanding({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div
             aria-hidden="true"

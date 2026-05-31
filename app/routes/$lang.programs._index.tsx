@@ -9,7 +9,9 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { listOrgs } from "~/lib/db/queries/orgs.server";
 import { listPrograms } from "~/lib/db/queries/programs.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import {
   ALL_PROGRAM_TRACKS,
@@ -24,14 +26,17 @@ export async function loader({ params }: Route.LoaderArgs) {
   // Pre-resolve org names for the cards.
   const orgsById: Record<string, string> = {};
   for (const o of listOrgs(locale)) orgsById[o.slug] = o.name;
-  return { locale, programs, orgsById };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, programs, orgsById, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "http://localhost:3000";
   return [
     { title: `${t(locale, "programs_landing_title")} — Tedros` },
     { name: "description", content: t(locale, "programs_landing_subtitle") },
+    ...hreflangMeta(publicUrl, locale, "/programs"),
     { property: "og:title", content: t(locale, "programs_landing_title") },
     { property: "og:description", content: t(locale, "programs_landing_subtitle") },
     { property: "og:type", content: "website" },
@@ -65,6 +70,7 @@ export default function ProgramsLanding({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div
             aria-hidden="true"

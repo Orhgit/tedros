@@ -16,6 +16,7 @@ import {
 import { breadcrumbJsonLd, newsArticleJsonLd } from "~/lib/news/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -74,11 +75,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
-    {
-      tagName: "link",
-      rel: "canonical",
-      href: `${publicUrl}/${locale}/news/${article.slug}`,
-    },
+    ...hreflangMeta(publicUrl, locale, `/news/${article.slug}`),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
@@ -106,6 +103,7 @@ export default function NewsArticleDetail({ loaderData }: Route.ComponentProps) 
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">

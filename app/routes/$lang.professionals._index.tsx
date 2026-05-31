@@ -9,7 +9,9 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { findCityBySlug, cityName } from "~/lib/cities/registry";
 import { listProfessionals } from "~/lib/db/queries/professionals.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import {
   ALL_PROFESSIONS,
@@ -22,14 +24,17 @@ import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const slots = listProfessionals(locale);
-  return { locale, slots };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, slots, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "http://localhost:3000";
   return [
     { title: `${t(locale, "professionals_landing_title")} — Tedros` },
     { name: "description", content: t(locale, "professionals_landing_subtitle") },
+    ...hreflangMeta(publicUrl, locale, "/professionals"),
     { property: "og:title", content: t(locale, "professionals_landing_title") },
     { property: "og:description", content: t(locale, "professionals_landing_subtitle") },
     { property: "og:type", content: "website" },
@@ -63,6 +68,7 @@ export default function ProfessionalsLanding({ loaderData }: Route.ComponentProp
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div
             aria-hidden="true"

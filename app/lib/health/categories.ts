@@ -9,7 +9,15 @@ export type HealthConditionSlug =
   | "stroke"
   | "mental-health"
   | "brca2"
-  | "hiv";
+  | "hiv"
+  | "sickle-cell"
+  | "tuberculosis"
+  | "ptsd-migration"
+  | "depression"
+  | "cardiovascular"
+  | "iron-deficiency-anemia"
+  | "vitamin-d-deficiency"
+  | "obesity";
 
 export const ALL_HEALTH_CONDITIONS: HealthConditionSlug[] = [
   "diabetes",
@@ -18,6 +26,14 @@ export const ALL_HEALTH_CONDITIONS: HealthConditionSlug[] = [
   "mental-health",
   "brca2",
   "hiv",
+  "sickle-cell",
+  "tuberculosis",
+  "ptsd-migration",
+  "depression",
+  "cardiovascular",
+  "iron-deficiency-anemia",
+  "vitamin-d-deficiency",
+  "obesity",
 ];
 
 const HEALTH_CONDITION_GLYPH: Record<HealthConditionSlug, string> = {
@@ -27,6 +43,14 @@ const HEALTH_CONDITION_GLYPH: Record<HealthConditionSlug, string> = {
   "mental-health": "🌿",
   brca2: "🎗️",
   hiv: "🔴",
+  "sickle-cell": "🧬",
+  tuberculosis: "🫁",
+  "ptsd-migration": "🕊️",
+  depression: "💙",
+  cardiovascular: "🫀",
+  "iron-deficiency-anemia": "💊",
+  "vitamin-d-deficiency": "☀️",
+  obesity: "⚖️",
 };
 
 export function glyphForCondition(slug: HealthConditionSlug): string {

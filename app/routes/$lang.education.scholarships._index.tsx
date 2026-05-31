@@ -13,21 +13,26 @@ import {
   glyphForScholarshipLevel,
   type ScholarshipLevel,
 } from "~/lib/education/categories";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const scholarships = listScholarships(locale);
-  return { locale, scholarships };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, scholarships, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "http://localhost:3000";
   return [
     { title: `${t(locale, "scholarships_landing_title")} — Tedros` },
     { name: "description", content: t(locale, "scholarships_landing_subtitle") },
+    ...hreflangMeta(publicUrl, locale, "/education/scholarships"),
     { property: "og:title", content: t(locale, "scholarships_landing_title") },
     { property: "og:description", content: t(locale, "scholarships_landing_subtitle") },
     { property: "og:type", content: "website" },

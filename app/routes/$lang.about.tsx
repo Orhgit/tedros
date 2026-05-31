@@ -11,11 +11,14 @@ import { Link } from "react-router";
 import type { Route } from "./+types/$lang.about";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
-  return { locale };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, publicUrl: PUBLIC_URL };
 }
 
 const COPY: Record<
@@ -96,10 +99,12 @@ const COPY: Record<
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "http://localhost:3000";
   const c = COPY[locale];
   return [
     { title: `${c.title} — Tedros` },
     { name: "description", content: c.intro },
+    ...hreflangMeta(publicUrl, locale, "/about"),
     { property: "og:title", content: c.title },
     { property: "og:description", content: c.intro },
     { property: "og:type", content: "website" },

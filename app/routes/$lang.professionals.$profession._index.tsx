@@ -10,7 +10,9 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { findCityBySlug, cityName } from "~/lib/cities/registry";
 import { listByProfession } from "~/lib/db/queries/professionals.server";
+import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import {
   PROFESSION_TO_TAG,
@@ -27,17 +29,19 @@ export async function loader({ params }: Route.LoaderArgs) {
   }
   const profession = params.profession;
   const slots = listByProfession(profession, locale);
-  return { locale, profession, slots };
+  const { PUBLIC_URL } = getEnv();
+  return { locale, profession, slots, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, profession, slots } = data;
+  const { locale, profession, slots, publicUrl } = data;
   const title = t(locale, professionMessageKey(profession));
   const description = `${title} — ${t(locale, "professionals_landing_subtitle").replace(/\*\*/g, "")}`;
   return [
     { title: `${title} — ${t(locale, "professionals_landing_title")} — Tedros` },
     { name: "description", content: description },
+    ...hreflangMeta(publicUrl, locale, `/professionals/${profession}`),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },

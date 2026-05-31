@@ -7,7 +7,11 @@ const envSchema = z.object({
     .string()
     .url()
     .regex(/[^/]$/, "PUBLIC_URL must not end with a trailing slash")
-    .default("http://localhost:3000"),
+    .default("http://localhost:3000")
+    .refine(
+      (url) => process.env.NODE_ENV !== "production" || !url.includes("localhost"),
+      "PUBLIC_URL must be set to a production URL (not localhost) when NODE_ENV=production",
+    ),
 
   DATABASE_URL: z
     .string()

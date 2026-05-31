@@ -12,6 +12,7 @@ import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
 import { glyphForHeritageEvent, isHeritageEvent } from "~/lib/heritage/categories";
 import {
+  HERITAGE_EVENTS,
   findHeritageEvent,
   heritageEventBody,
   nextDate,
@@ -22,6 +23,7 @@ import { breadcrumbJsonLd, heritageEventJsonLd } from "~/lib/heritage/schema";
 import { cityName, cityOverview, findCityBySlug } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -53,6 +55,14 @@ export async function loader({ params }: Route.LoaderArgs) {
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}${eventCityPath(event.slug, city.slug)}`;
 
+  const otherCityEvents = HERITAGE_EVENTS
+    .filter((e) => e.slug !== event.slug && isRelevant(e.slug, city.slug))
+    .map((e) => ({
+      slug: e.slug,
+      name: e.name[locale] ?? e.name.he,
+      next: nextDate(e),
+    }));
+
   return {
     locale,
     event,
@@ -63,6 +73,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     next,
     shareUrl,
     publicUrl: PUBLIC_URL,
+    otherCityEvents,
   };
 }
 
@@ -96,22 +107,18 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title },
     { name: "description", content: `${description} ${prep}${cityNameLocal}.` },
-    {
-      tagName: "link",
-      rel: "canonical",
-      href: `${publicUrl}/${locale}${eventCityPath(event.slug, city.slug)}`,
-    },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
+    ...hreflangMeta(publicUrl, locale, eventCityPath(event.slug, city.slug)),
     { "script:ld+json": eventJsonLd },
     { "script:ld+json": breadcrumb },
   ];
 };
 
 export default function HeritageEventCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, event, city, cityNameLocal, cityOverviewLocal, html, next, shareUrl } =
+  const { locale, event, city, cityNameLocal, cityOverviewLocal, html, next, shareUrl, otherCityEvents } =
     loaderData;
   const eventName = event.name[locale] ?? event.name.he;
   const dateDescription = event.dateDescription[locale] ?? event.dateDescription.he;
@@ -131,6 +138,7 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">
@@ -204,6 +212,27 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
             locale={locale}
           />
         </div>
+
+        {otherCityEvents.length > 0 && (
+          <section className="mt-10 rounded-2xl border border-earth-200 bg-earth-50 p-5">
+            <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
+              {t(locale, "heritage_events_landing_title")} — {cityNameLocal}
+            </h2>
+            <ul className="mt-3 space-y-2">
+              {otherCityEvents.map((e) => (
+                <li key={e.slug}>
+                  <Link
+                    to={`/${locale}${eventCityPath(e.slug, city.slug)}`}
+                    className="flex items-center justify-between rounded-lg border border-earth-200 bg-white p-3 text-sm hover:border-earth-400 transition"
+                  >
+                    <span className="text-ink-800">{e.name}</span>
+                    {e.next && <span className="text-xs text-earth-600">{e.next}</span>}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <div className="mt-12 border-t border-earth-200 pt-6">
           <Link

@@ -18,6 +18,7 @@ import { getOrgEntry } from "~/lib/db/queries/orgs.server";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
@@ -58,16 +59,18 @@ export async function loader({ params }: Route.LoaderArgs) {
     relatedTerms,
     relatedOrgs,
     shareUrl,
+    publicUrl: PUBLIC_URL,
   };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, entry } = data;
+  const { locale, entry, publicUrl } = data;
   const description = entry.shortDescription;
   return [
     { title: `${entry.title} — Tedros` },
     { name: "description", content: description },
+    ...hreflangMeta(publicUrl, locale, `/compare/${entry.slug}`),
     { property: "og:title", content: entry.title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
@@ -131,6 +134,7 @@ export default function ComparisonDetail({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <span
             aria-hidden="true"

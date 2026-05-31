@@ -18,6 +18,7 @@ import {
 import { breadcrumbJsonLd, careersStatisticsJsonLd } from "~/lib/careers/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -67,7 +68,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
-    { tagName: "link", rel: "canonical", href: url },
+    ...hreflangMeta(publicUrl, locale, "/careers/statistics"),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:type", content: "article" },
@@ -95,6 +96,7 @@ export default function CareersStatistics({ loaderData }: Route.ComponentProps) 
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <p className="text-sm font-medium text-earth-700">
             <Link to={`/${locale}`} className="hover:underline">

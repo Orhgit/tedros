@@ -1303,6 +1303,652 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     },
   },
 
+  // 13. מלגת מרום CHE — slug: marom-che (TED-NEW)
+  {
+    slug: "marom-che",
+    level: "undergrad",
+    providerOrgSlug: "che-israel",
+    name: {
+      he: "מלגת מרום — המועצה להשכלה גבוהה",
+      en: "Marom Scholarship — Council for Higher Education",
+      am: "ማሮም ስኮላርሺፕ — ከፍተኛ ትምህርት ምክር ቤት",
+    },
+    shortDescription: {
+      he: "מלגה ממלכתית של המועצה להשכלה גבוהה לסטודנטים ממוצא אתיופי — עד ₪20,000 לשנה בכל האוניברסיטאות.",
+      en: "National scholarship from the Council for Higher Education for students of Ethiopian origin — up to ₪20,000/year at all Israeli universities.",
+      am: "ለኢትዮጵያ ዜጎች ብቻ ከፍተኛ ትምህርት ምክር ቤት ስኮላርሺፕ — እስከ 20,000 ሺ\"ል ዓመታዊ።",
+    },
+    amountMinIls: 8000,
+    amountMaxIls: 20000,
+    amountNote: {
+      he: "מלגה שנתית; מחודשת בכפוף לממוצע ≥ 70. ניתן לצבירה עם מלגות אחרות.",
+      en: "Annual scholarship; renewable subject to GPA ≥ 70. Can be combined with other scholarships.",
+      am: "ዓመታዊ፤ GPA ≥ 70 ሲጠበቅ ይታደሳል። ከሌሎች ስኮላርሺፖች ጋር ሊጣመር ይችላል።",
+    },
+    deadline: "2026-03-31",
+    applicationUrl: "https://www.che.org.il/marom",
+    tags: ["undergrad", "community", "government", "needs-based"],
+    communityPriority: true,
+    relatedScholarships: ["hesegim-undergraduate", "isef-fellowship", "klita-tuition-grant"],
+    relatedRights: ["academic-tuition-grant", "klita-basket-ethiopia"],
+    bodies: {
+      he: `## מה זאת מלגת מרום של המועצה להשכלה גבוהה?
+
+מלגת מרום היא תכנית מלגות ממלכתית של המועצה להשכלה גבוהה (מל"ג) המיועדת **אך ורק לסטודנטים ממוצא אתיופי** הלומדים לתואר ראשון בישראל. התכנית הוקמה במסגרת המאמץ הממשלתי לצמצום פערים בהשכלה גבוהה.
+
+## מי זכאי?
+
+- סטודנט/ית בעל/ת לפחות הורה אחד שנולד באתיופיה, או עלה מאתיופיה
+- לומד/ת תואר ראשון במוסד אקדמי מוכר על-ידי מל"ג (אוניברסיטה, מכללה אקדמית)
+- הכנסה משפחתית עד 175% מקו העוני
+- ממוצע ציונים ≥ 70 (לחידוש)
+
+## כמה מקבלים?
+
+| מסלול לימוד | מלגה שנתית |
+|-------------|-----------|
+| כל התחומים (1–3 שנה) | ₪8,000–₪14,000 |
+| תחומי ביקוש גבוה (הנדסה, רפואה, רוקחות) | ₪16,000–₪20,000 |
+
+## שלבי ההגשה
+
+1. **כניסה לפורטל מל"ג** — moatza.che.org.il
+2. **מילוי בקשה מקוונת** עד 31 במרץ מדי שנה
+3. **צירוף מסמכים**: תעודת זהות, אישור לימודים, גיליון ציונים, אסמכתא על מוצא אתיופי, אישור הכנסה
+4. **אישור**: תוך 30 יום מסיום מועד ההגשה
+5. **תשלום**: ישירות לחשבון הסטודנט בתחילת כל סמסטר
+
+## שאלות נפוצות
+
+**האם מלגת מרום ממל"ג שונה ממלגת מרום הפרטית?**
+כן — מרום מל"ג היא תכנית ממשלתית. יש ארגונים עם שם דומה אך תנאים שונים; וודאו שאתם פונים לכתובת moatza.che.org.il.
+
+**האם סטודנטים שעלו לפני 15 שנה עדיין זכאים?**
+כן — אין הגבלת שנים מהעלייה. הזכאות נקבעת על-פי מוצא, לא שנת עלייה.
+
+## ראו גם
+
+- [מלגת הסגים — תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
+- [מלגת ISEF](/he/education/scholarships/isef-fellowship) — לתואר שני/שלישי
+- [מענק שכר לימוד — משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
+`,
+      en: `## What is the Marom Scholarship from the Council for Higher Education?
+
+The Marom Scholarship is a national scholarship program of the Council for Higher Education (CHE) designed **exclusively for students of Ethiopian origin** studying for an undergraduate degree in Israel. The program was established as part of the government's effort to reduce gaps in higher education.
+
+## Who is eligible?
+
+- Student with at least one parent born in Ethiopia, or who made aliyah from Ethiopia
+- Studying for an undergraduate degree at a CHE-accredited institution (university or academic college)
+- Family income up to 175% of the poverty line
+- GPA ≥ 70 (for renewal)
+
+## How much?
+
+| Field of study | Annual scholarship |
+|---------------|------------------|
+| All fields (years 1–3) | ₪8,000–₪14,000 |
+| High-demand fields (engineering, medicine, pharmacy) | ₪16,000–₪20,000 |
+
+## Application steps
+
+1. **Access the CHE portal** — moatza.che.org.il
+2. **Complete online application** by March 31 each year
+3. **Attach documents**: ID, enrollment confirmation, transcript, proof of Ethiopian origin, income verification
+4. **Decision**: within 30 days of closing date
+5. **Payment**: directly to student's account at the start of each semester
+
+## FAQ
+
+**Is the CHE Marom different from the private Marom scholarship?**
+Yes — CHE Marom is a government program. There are organizations with similar names but different terms; verify you are at moatza.che.org.il.
+
+**Are students who made aliyah 15 years ago still eligible?**
+Yes — there is no years-since-aliyah restriction. Eligibility is based on origin, not year of aliyah.
+
+## See also
+
+- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
+- [ISEF Fellowship](/en/education/scholarships/isef-fellowship) — for master's/PhD
+- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
+`,
+      am: `## ማሮም ስኮላርሺፕ (CHE) ምንድን ነው?
+
+ይህ ስኮላርሺፕ **ለኢትዮጵያ ዜጎች ብቻ** ሲሆን ወደ እስራኤል ከፍተኛ ትምህርት ተደራሽነት ለማሳደግ የሚያስፈልግ ብሔራዊ ፕሮግራም ነው።
+
+## ለማን ይሆናል?
+
+- ቢያንስ አንድ ወላጅ ኢትዮጵያ የተወለደ ወይም ከኢትዮጵያ ዐሊያ
+- CHE-ታወቀ ዩኒቨርሲቲ ወይም ኮሌጅ ያለ
+- ቤተሰብ ገቢ ≤ 175% ከድህነት ወሰን
+- GPA ≥ 70 ለታዳሽ
+
+## ስንት ያገኛሉ?
+
+| ዘርፍ | ዓመታዊ |
+|-----|-------|
+| ሁሉም ዘርፎች | 8,000–14,000 ሺ"ል |
+| ኢንጂነሪንግ/ህክምና/ፋርማሲ | 16,000–20,000 ሺ"ል |
+
+## ደረጃዎች
+
+1. moatza.che.org.il ፖርታል ይክፈቱ
+2. ማርች 31 በፊት ቅጽ ይሙሉ
+3. ሰነዶች ያቅርቡ
+4. ከ30 ቀናት ውስጥ ምላሽ
+5. ወደ ባንክ ሂሳብ ያስተላልፋሉ
+
+## ይህንንም ይዩ
+
+- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
+- [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
+`,
+    },
+  },
+
+  // 14. מלגת שיקת — משרד הקליטה (slug: siket-absorption)
+  {
+    slug: "siket-absorption",
+    level: "undergrad",
+    providerOrgSlug: "ministry-aliyah",
+    name: {
+      he: "מלגת שיקת — משרד העלייה והקליטה",
+      en: "Siket Scholarship — Ministry of Aliyah & Integration",
+      am: "ሲቀት ስኮላርሺፕ — የዐሊያ ሚኒስቴር",
+    },
+    shortDescription: {
+      he: "מלגה ממשלתית לסטודנטים עולים חדשים המשלימה את סל הקליטה — תמיכה ייחודית ללומדים שנות ראשונות.",
+      en: "Government scholarship for new immigrant students complementing the absorption basket — dedicated support for first-year students.",
+      am: "ለአዳዲስ ኦሊም ተማሪዎች የቅሊታ ቅርጫትን የሚሟሉ የመንግስት ስኮላርሺፕ።",
+    },
+    amountMinIls: 6000,
+    amountMaxIls: 15000,
+    amountNote: {
+      he: "מענק חד-שנתי (שנת לימודים א') — ניתן להאריך עד 3 שנים בהתאם לתנאים.",
+      en: "Single-year grant (first academic year) — extendable up to 3 years based on conditions.",
+      am: "1ኛ ዓመት ድጋፍ — ሁኔታ ሲሟሉ እስከ 3 ዓመታት ሊዘረጋ ይችላል።",
+    },
+    deadline: "rolling",
+    applicationUrl: "https://www.gov.il/he/departments/integration_program/siket",
+    tags: ["undergrad", "olim", "government", "academic"],
+    communityPriority: true,
+    relatedScholarships: ["klita-tuition-grant", "jewish-agency-aliyah", "marom-che"],
+    relatedRights: ["klita-basket-ethiopia"],
+    bodies: {
+      he: `## מה זאת מלגת שיקת?
+
+מלגת שיקת היא מלגה של משרד העלייה והקליטה המיועדת לסטודנטים עולים חדשים. שמה נגזר מהמילה "שיקום" — והיא נועדה לאפשר לעולים לממן לימודים אקדמיים בשנים הראשונות, שבהן ההכנסה המשפחתית עדיין נמוכה ומוגבלת.
+
+## מי זכאי?
+
+- עולה חדש מאתיופיה (ולים אחרים) עם ותק עלייה של עד 10 שנים
+- לומד לתואר ראשון או שני במוסד אקדמי מוכר
+- אינו מקבל מלגת שכר לימוד מלאה ממקור ממלכתי אחר
+- הכנסה משפחתית עד 200% מקו העוני
+
+## מה כלול?
+
+- מענק שנתי לשכר לימוד: ₪6,000–₪15,000 (בהתאם להכנסה ומסלול)
+- ליווי מנהל מקרה בקליטה אקדמית
+- גישה לשירות ייעוץ לימודי של משרד הקליטה
+
+## שלבי ההגשה
+
+1. כניסה לפורטל gov.il — חיפוש "מלגת שיקת"
+2. מילוי בקשה מקוונת (ניתן גם לפנות ישירות למשרד הקליטה הקרוב)
+3. צירוף תעודת עולה, אישור רישום, ואישור הכנסה
+4. אישור תוך 3–5 שבועות
+5. תשלום ישיר לחשבון או לאוניברסיטה
+
+## תאריכים חשובים
+
+- הגשה פתוחה כל השנה (rolling) — מומלץ לפנות לפני תחילת הסמסטר הראשון
+
+## ראו גם
+
+- [מענק שכר לימוד — משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
+- [מלגת סוכנות יהודית](/he/education/scholarships/jewish-agency-aliyah)
+- [מלגת מרום — מל"ג](/he/education/scholarships/marom-che)
+`,
+      en: `## What is the Siket Scholarship?
+
+The Siket Scholarship is a Ministry of Aliyah & Integration scholarship for new immigrant students. Its name derives from the word "rehabilitation" — it is designed to enable olim to fund academic studies in the first years, when family income is still low and limited.
+
+## Who is eligible?
+
+- New immigrant from Ethiopia (and other countries) with up to 10 years since aliyah
+- Studying for an undergraduate or master's degree at a recognized institution
+- Not receiving a full tuition scholarship from another government source
+- Family income up to 200% of the poverty line
+
+## What's included?
+
+- Annual tuition grant: ₪6,000–₪15,000 (based on income and study track)
+- Academic absorption case management
+- Access to Ministry of Aliyah academic counseling service
+
+## Application steps
+
+1. Access gov.il portal — search for "מלגת שיקת"
+2. Complete online application (can also contact the nearest Absorption Ministry office)
+3. Attach olim certificate, enrollment confirmation, income verification
+4. Decision within 3–5 weeks
+5. Payment directly to account or university
+
+## Important dates
+
+- Rolling admissions — recommended to apply before the first semester
+
+## See also
+
+- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
+- [Jewish Agency Scholarship](/en/education/scholarships/jewish-agency-aliyah)
+- [Marom CHE Scholarship](/en/education/scholarships/marom-che)
+`,
+      am: `## ሲቀት ስኮላርሺፕ ምንድን ነው?
+
+ሲቀት ስኮላርሺፕ ለአዳዲስ ኦሊም ተማሪዎች ቀደምት ዓመታት የምርምር ክፍያ እንዲሞሉ ያስችላቸዋል።
+
+## ለማን ይሆናል?
+
+- ከ10 ዓመት ባነሰ ዐሊያ ያላቸው ኢትዮጵያ ኦሊም
+- ታወቀ ተቋም ያሉ
+- ሌላ ሙሉ ዐሊያ ስኮላርሺፕ ያልተቀበሉ
+- ቤተሰብ ገቢ ≤ 200% ከድህነት ወሰን
+
+## ምን ይካተታል?
+
+- ዓመታዊ ₪6,000–₪15,000
+- ቅሊታ ምክር
+- gov.il ፖርታል ወይም ቅሊታ ሚኒስቴር ቢሮ
+
+## ይህንንም ይዩ
+
+- [ቅሊታ ሚኒስቴር ድጋፍ](/am/education/scholarships/klita-tuition-grant)
+- [ማሮም CHE ስኮላርሺፕ](/am/education/scholarships/marom-che)
+`,
+    },
+  },
+
+  // 15. מלגת האוניברסיטה הפתוחה לקהילה (slug: open-university-community)
+  {
+    slug: "open-university-community",
+    level: "undergrad",
+    providerOrgSlug: "open-university",
+    name: {
+      he: "מלגת האוניברסיטה הפתוחה — קהילה",
+      en: "Open University Community Scholarship",
+      am: "ክፍት ዩኒቨርሲቲ ማህበረሰብ ስኮላርሺፕ",
+    },
+    shortDescription: {
+      he: "מלגת שכר לימוד לסטודנטים מהקהילה האתיופית באוניברסיטה הפתוחה — גמישות לימודית ייחודית לעובדים.",
+      en: "Tuition scholarship for Ethiopian-community students at the Open University — unique study flexibility for working students.",
+      am: "ለኢትዮጵያ ማህበረሰብ ተማሪዎች ክፍት ዩኒቨርሲቲ ውስጥ — ለሰራተኛ ተማሪዎች ልዩ ተለዋዋጭነት።",
+    },
+    amountMinIls: 5000,
+    amountMaxIls: 12000,
+    amountNote: {
+      he: "מלגה לפי כמות יחידות לימוד; חידוש שנתי אוטומטי בתנאי ממוצע ≥ 65.",
+      en: "Scholarship based on number of study units; automatic annual renewal if GPA ≥ 65.",
+      am: "ዓማካኝ ≥ 65 ሲጠበቅ ዓመታዊ ታዳሽ።",
+    },
+    deadline: "rolling",
+    applicationUrl: "https://www.openu.ac.il/scholarships/community",
+    tags: ["undergrad", "community", "flexible", "working-students"],
+    communityPriority: true,
+    relatedScholarships: ["hesegim-undergraduate", "klita-tuition-grant"],
+    relatedRights: ["academic-tuition-grant"],
+    bodies: {
+      he: `## האוניברסיטה הפתוחה — מסלול ייחודי לקהילה
+
+האוניברסיטה הפתוחה מציעה לימודים גמישים לחלוטין — ניתן ללמוד בקצב אישי, ללא נוכחות פיזית חובה, ולשלב לימודים עם עבודה ומשפחה. עבור בני הקהילה האתיופית שלא יכולים לעזוב את שוק העבודה, זהו מסלול משמעותי.
+
+מלגת הקהילה מיועדת לסטודנטים מהקהילה האתיופית הלומדים לפחות 16 נקודות זכות בשנה.
+
+## מי זכאי?
+
+- סטודנט/ית ממוצא אתיופי (עצמאי/ת, הורה, או שני הורים ממוצא אתיופי)
+- רשום/ה לפחות ל-16 ש"ז בשנה אקדמית
+- ממוצע ≥ 65 (לחידוש)
+- אין הגבלת הכנסה — מלגה מבוססת מוצא
+
+## מה כלול?
+
+- כיסוי של ₪5,000–₪12,000 מהשכר לימוד
+- ייעוץ אקדמי אישי לסטודנטים בתכנית
+- גישה למרכזי הלמידה של האוניברסיטה ברחבי הארץ
+
+## איך פוני?
+
+1. רישום לאוניברסיטה הפתוחה
+2. הצהרה על מוצא אתיופי בטופס הרישום
+3. בקשה למלגת קהילה דרך המחלקה לקשרי סטודנטים
+4. אישור תוך 2–3 שבועות
+
+## תאריכים חשובים
+
+- הגשה פתוחה כל השנה (rolling) — מועדי הרשמה לסמסטרים: ינואר ויוני
+
+## ראו גם
+
+- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
+- [מענק שכר לימוד משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
+`,
+      en: `## Open University — unique pathway for the community
+
+The Open University offers completely flexible study — learn at your own pace, no mandatory physical attendance, and combine studies with work and family. For community members who cannot leave the workforce, this is a significant pathway.
+
+The community scholarship is for Ethiopian-community students studying at least 16 credit points per year.
+
+## Who is eligible?
+
+- Student of Ethiopian origin (self, parent, or both parents of Ethiopian origin)
+- Registered for at least 16 credit points per academic year
+- GPA ≥ 65 (for renewal)
+- No income restriction — origin-based scholarship
+
+## What's included?
+
+- ₪5,000–₪12,000 tuition coverage
+- Personal academic advising for program students
+- Access to Open University study centers nationwide
+
+## How to apply
+
+1. Register at the Open University
+2. Declare Ethiopian origin on the registration form
+3. Apply for the community scholarship through the student relations department
+4. Decision within 2–3 weeks
+
+## Important dates
+
+- Rolling admissions — semester registration: January and June
+
+## See also
+
+- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
+- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
+`,
+      am: `## ክፍት ዩኒቨርሲቲ — ለማህበረሰቡ ልዩ መንገድ
+
+ክፍት ዩኒቨርሲቲ ሙሉ ተለዋዋጭ ትምህርት ይሰጣል — ሰራ ሲሰሩ ትማሩ። ለቤተሰብ ያላቸው ሰዎች ተስማሚ ነው።
+
+## ለማን ይሆናል?
+
+- ከኢትዮጵያ ዜጎች
+- ≥ 16 ክሬዲት ዓመታዊ
+- GPA ≥ 65 ለታዳሽ
+- ምንም ገቢ ቅድመ-ሁኔታ የለም
+
+## ምን ይካተታል?
+
+- ₪5,000–₪12,000 ሽፋን
+- የግል አካዳሚክ ምክር
+
+## ይህንንም ይዩ
+
+- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
+- [ቅሊታ ሚኒስቴር ድጋፍ](/am/education/scholarships/klita-tuition-grant)
+`,
+    },
+  },
+
+  // 16. מלגת בר-אילן לקהילה (slug: bar-ilan-community)
+  {
+    slug: "bar-ilan-community",
+    level: "undergrad",
+    providerOrgSlug: "bar-ilan-university",
+    name: {
+      he: "מלגת בר-אילן — קהילות במצב צורך",
+      en: "Bar-Ilan University Community Scholarship",
+      am: "ቡ-ኢላን ዩኒቨርሲቲ ማህበረሰብ ስኮላርሺፕ",
+    },
+    shortDescription: {
+      he: "מלגת שכר לימוד לסטודנטים מהקהילה האתיופית באוניברסיטת בר-אילן — מיועדת לתחומי חינוך, עו\"ס ומשפטים.",
+      en: "Tuition scholarship for Ethiopian-community students at Bar-Ilan University — targeting education, social work, and law fields.",
+      am: "ቡ-ኢላን ዩኒቨርሲቲ ለኢትዮጵያ ማህበረሰብ — ትምህርት፣ ማህበራዊ ስራ፣ ህግ ዘርፎች።",
+    },
+    amountMinIls: 8000,
+    amountMaxIls: 18000,
+    amountNote: {
+      he: "מלגה שנתית; מחודשת עד 4 שנים בתנאי ממוצע ≥ 72.",
+      en: "Annual scholarship; renewable up to 4 years with GPA ≥ 72.",
+      am: "GPA ≥ 72 ሲሟሉ እስከ 4 ዓመታት ዓመታዊ ታዳሽ።",
+    },
+    deadline: "2026-03-15",
+    applicationUrl: "https://www.biu.ac.il/scholarships/community",
+    tags: ["undergrad", "community", "needs-based", "social-work"],
+    communityPriority: true,
+    relatedScholarships: ["hesegim-undergraduate", "marom-che", "isef-fellowship"],
+    relatedRights: ["academic-tuition-grant"],
+    bodies: {
+      he: `## מלגת בר-אילן לקהילה
+
+אוניברסיטת בר-אילן מציעה מלגות ייחודיות לסטודנטים ממוצא אתיופי, במסגרת תכנית "קהילות במצב צורך". המלגה ממומנת משילוב של קרנות פרטיות ותמיכה אוניברסיטאית.
+
+## מי זכאי?
+
+- סטודנט/ית ממוצא אתיופי
+- לומד/ת לתואר ראשון בבר-אילן (כל הפקולטות, אך מועדפים: חינוך, עו"ס, משפטים, פסיכולוגיה)
+- הכנסה משפחתית עד 180% מקו העוני
+- ממוצע ≥ 72 (לחידוש)
+
+## מה כלול?
+
+- מלגת שכר לימוד שנתית ₪8,000–₪18,000
+- גישה לתכנית מנטורינג של אוניברסיטת בר-אילן
+- עדיפות בדיור סטודנטים בקמפוס
+
+## שלבי ההגשה
+
+1. הרשמה לאוניברסיטת בר-אילן
+2. בקשה למלגת קהילה דרך המדור למלגות ולצרכים מיוחדים
+3. צירוף: תעודת זהות, גיליון ציונים, אישור הכנסה, מכתב מוטיבציה קצר
+4. מועד אחרון: 15 במרץ
+5. אישור תוך 30 יום
+
+## ראו גם
+
+- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
+- [מלגת מרום — מל"ג](/he/education/scholarships/marom-che)
+- [מלגת ISEF — תואר שני](/he/education/scholarships/isef-fellowship)
+`,
+      en: `## Bar-Ilan Community Scholarship
+
+Bar-Ilan University offers scholarships for students of Ethiopian origin through its "Communities in Need" program. The scholarship is funded by a combination of private foundations and university support.
+
+## Who is eligible?
+
+- Student of Ethiopian origin
+- Studying for an undergraduate degree at Bar-Ilan (all faculties, with preference for: education, social work, law, psychology)
+- Family income up to 180% of the poverty line
+- GPA ≥ 72 (for renewal)
+
+## What's included?
+
+- Annual tuition scholarship ₪8,000–₪18,000
+- Access to Bar-Ilan mentorship program
+- Priority in campus student housing
+
+## Application steps
+
+1. Register at Bar-Ilan University
+2. Apply for the community scholarship through the scholarships and special needs department
+3. Attach: ID, transcript, income statement, short motivation letter
+4. Deadline: March 15
+5. Decision within 30 days
+
+## See also
+
+- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
+- [Marom CHE Scholarship](/en/education/scholarships/marom-che)
+- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
+`,
+      am: `## ቡ-ኢላን ማህበረሰብ ስኮላርሺፕ
+
+ቡ-ኢላን ዩኒቨርሲቲ "ፍላጎት ያለባቸው ማህበረሰቦች" ፕሮግራም ውስጥ ለኢትዮጵያ ዜጎች ስኮላርሺፕ ያቀርባል።
+
+## ለማን ይሆናል?
+
+- ከኢትዮጵያ ዜጎች
+- ቡ-ኢላን ዩኒቨርሲቲ (ሁሉም ዘርፎች፤ ትምህርት፣ ማህበራዊ ስራ ይመረጣሉ)
+- ቤተሰብ ገቢ ≤ 180% ከድህነት ወሰን
+- GPA ≥ 72 ለታዳሽ
+
+## ምን ይካተታል?
+
+- ዓመታዊ ₪8,000–₪18,000
+- Mentoring ፕሮግራም
+- ካምፓስ መኖሪያ ቅድሚያ
+
+## ይህንንም ይዩ
+
+- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
+- [ማሮም CHE](/am/education/scholarships/marom-che)
+`,
+    },
+  },
+
+  // 17. מלגת ג'וינט ישראל — JDC Youth Excellence (slug: jdc-youth-excellence)
+  {
+    slug: "jdc-youth-excellence",
+    level: "undergrad",
+    providerOrgSlug: "jdc-israel",
+    name: {
+      he: "מלגת ג'וינט ישראל — מצוינות נוער",
+      en: "JDC Israel — Youth Excellence Scholarship",
+      am: "ጄDC እስራኤል — የወጣቶች ልቀት ስኮላርሺፕ",
+    },
+    shortDescription: {
+      he: "מלגת ג'וינט לצעירים מצטיינים מהקהילה האתיופית — עד ₪18,000 לשנה, בשילוב תכנית מנהיגות.",
+      en: "JDC Israel scholarship for outstanding young adults from the Ethiopian community — up to ₪18,000/year, combined with a leadership program.",
+      am: "ከኢትዮጵያ ማህበረሰብ ላቁ ወጣቶች — እስከ 18,000 ሺ\"ል ዓመታዊ + አመራር ፕሮግራም።",
+    },
+    amountMinIls: 10000,
+    amountMaxIls: 18000,
+    amountNote: {
+      he: "מלגה שנתית + השתתפות בפעילויות מנהיגות ג'וינט ללא עלות.",
+      en: "Annual scholarship + free participation in JDC leadership activities.",
+      am: "ዓመታዊ ስኮላርሺፕ + ነጻ JDC አመራር ፕሮግራም ተሳትፎ።",
+    },
+    deadline: "2026-02-28",
+    applicationUrl: "https://www.jdc.org.il/youth-excellence",
+    tags: ["undergrad", "community", "leadership", "youth"],
+    communityPriority: true,
+    relatedScholarships: ["hesegim-undergraduate", "isef-fellowship", "marom-che"],
+    relatedRights: ["academic-tuition-grant"],
+    bodies: {
+      he: `## תכנית מצוינות נוער — ג'וינט ישראל
+
+ג'וינט ישראל (American Jewish Joint Distribution Committee) מפעיל תכנית מצוינות נוער המשלבת מלגה כספית עם תכנית מנהיגות קהילתית. התכנית מיועדת לצעירים מהקהילה האתיופית שמדגימים פוטנציאל מנהיגות לצד הצטיינות אקדמית.
+
+## מי זכאי?
+
+- צעיר/ה בגיל 18–28 ממוצא אתיופי
+- לומד/ת לתואר ראשון במוסד אקדמי מוכר
+- ממוצע ≥ 80
+- מחויבות לפעילות קהילתית (הוכחה: ניסיון התנדבותי / חברה בארגון נוער)
+
+## מה כלול?
+
+- מלגת לימודים שנתית ₪10,000–₪18,000
+- השתתפות בתכנית מנהיגות ג'וינט (סמינרים, סיורי חקר, חו"ל)
+- רשת בוגרים בינלאומית של ג'וינט
+- ליווי מנטור בכיר מהתחום
+
+## שלבי ההגשה
+
+1. הרשמה מקוונת באתר jdc.org.il
+2. מילוי שאלון מנהיגות + מכתב מוטיבציה
+3. שני מכתבי המלצה (אקדמי + קהילתי)
+4. ראיון עמוק (כ-60 דקות)
+5. מועד אחרון: 28 בפברואר מדי שנה
+
+## תאריכים חשובים
+
+- פתיחת הגשה: ינואר
+- מועד אחרון: 28 בפברואר
+- הודעות: אפריל
+- תחילת תכנית: ספטמבר
+
+## ראו גם
+
+- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
+- [מלגת ISEF — תואר שני](/he/education/scholarships/isef-fellowship)
+- [מלגת מרום — מל"ג](/he/education/scholarships/marom-che)
+`,
+      en: `## Youth Excellence Program — JDC Israel
+
+JDC Israel (American Jewish Joint Distribution Committee) runs a Youth Excellence program that combines a financial scholarship with a community leadership program. The program targets young adults from the Ethiopian community who demonstrate leadership potential alongside academic excellence.
+
+## Who is eligible?
+
+- Young adult aged 18–28 of Ethiopian origin
+- Studying for an undergraduate degree at a recognized institution
+- GPA ≥ 80
+- Commitment to community activity (evidence: volunteer experience / youth organization membership)
+
+## What's included?
+
+- Annual study scholarship ₪10,000–₪18,000
+- JDC leadership program participation (seminars, study tours, international)
+- International JDC alumni network
+- Senior mentor from your field
+
+## Application steps
+
+1. Online registration at jdc.org.il
+2. Complete leadership questionnaire + motivation letter
+3. Two letters of recommendation (academic + community)
+4. In-depth interview (~60 minutes)
+5. Deadline: February 28 each year
+
+## Important dates
+
+- Applications open: January
+- Deadline: February 28
+- Notifications: April
+- Program start: September
+
+## See also
+
+- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
+- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
+- [Marom CHE Scholarship](/en/education/scholarships/marom-che)
+`,
+      am: `## JDC እስራኤል — የወጣቶች ልቀት ፕሮግራም
+
+JDC (American Jewish Joint Distribution Committee) ፋይናንሺያል ስኮላርሺፕ ከ አመራር ፕሮግራም ጋር ያጣምራል።
+
+## ለማን ይሆናል?
+
+- 18–28 ዓመት ኢትዮጵያ ዜጎች
+- ≥ 80 GPA
+- ማህበረሰብ እንቅስቃሴ ቁርጠኝነት
+
+## ምን ይካተታል?
+
+- ₪10,000–₪18,000 ዓመታዊ
+- JDC አመራር ፕሮግራም (ሴሚናር፣ ዓለምአቀፍ ጉዞ)
+- ዓለምአቀፍ JDC ቀደምት ተማሪዎች አውታረ መረብ
+
+## ደረጃዎች
+
+1. jdc.org.il ላይ ምዝገባ
+2. ቅጽ + ደብዳቤ
+3. ሁለት የምስክርነት ደብዳቤ
+4. ቃለ-ምርምር (~60 ደቂቃ)
+5. የካቲት 28 ቁርጠኛ ቀን
+
+## ይህንንም ይዩ
+
+- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
+- [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
+- [ማሮም CHE](/am/education/scholarships/marom-che)
+`,
+    },
+  },
+
   // 13. מלגת מרום — TED-64
   {
     slug: "merom-scholarship",

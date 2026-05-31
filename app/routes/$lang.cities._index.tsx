@@ -4,6 +4,7 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { CITIES, CITY_PATH_PREFIX, cityName, cityPath } from "~/lib/cities/registry";
 
@@ -34,31 +35,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { name: "twitter:card", content: "summary" },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
-    { tagName: "link", rel: "canonical", href: canonical },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "he",
-      href: `${publicUrl}/he${CITY_PATH_PREFIX}`,
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "en",
-      href: `${publicUrl}/en${CITY_PATH_PREFIX}`,
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "am",
-      href: `${publicUrl}/am${CITY_PATH_PREFIX}`,
-    },
-    {
-      tagName: "link",
-      rel: "alternate",
-      hrefLang: "x-default",
-      href: `${publicUrl}/he${CITY_PATH_PREFIX}`,
-    },
+    ...hreflangMeta(publicUrl, locale, CITY_PATH_PREFIX),
     {
       "script:ld+json": {
         "@context": "https://schema.org",
@@ -92,6 +69,7 @@ export default function CitiesIndexPage({ loaderData }: Route.ComponentProps) {
             loading="lazy"
             decoding="async"
           />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent" aria-hidden="true" />
           <div aria-hidden="true" className="absolute -inset-e-12 -top-12 size-40 rounded-full bg-accent-yellow/15 blur-3xl" />
           <div aria-hidden="true" className="absolute -inset-s-16 -bottom-16 size-56 rounded-full bg-accent-green/10 blur-3xl" />

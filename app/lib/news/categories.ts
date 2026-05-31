@@ -9,7 +9,12 @@ export type NewsTag =
   | "employment"
   | "civic"
   | "immigration"
-  | "housing";
+  | "housing"
+  | "health"
+  | "community"
+  | "family"
+  | "cities"
+  | "rights";
 
 export const ALL_NEWS_TAGS: NewsTag[] = [
   "announcement",
@@ -20,6 +25,11 @@ export const ALL_NEWS_TAGS: NewsTag[] = [
   "civic",
   "immigration",
   "housing",
+  "health",
+  "community",
+  "family",
+  "cities",
+  "rights",
 ];
 
 const TAG_GLYPH: Record<NewsTag, string> = {
@@ -31,6 +41,11 @@ const TAG_GLYPH: Record<NewsTag, string> = {
   civic: "⚖️",
   immigration: "✈️",
   housing: "🏠",
+  health: "🏥",
+  community: "🤝",
+  family: "👨‍👩‍👧",
+  cities: "🏙️",
+  rights: "⚖️",
 };
 
 export function glyphForNewsTag(tag: NewsTag): string {
