@@ -281,6 +281,7 @@ export function MulaChat() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="שאל את מולה..."
+            aria-label="שאלה למולה"
             disabled={loading}
             className="flex-1 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-800 transition-all placeholder:text-gray-400 focus:border-amber-400 focus:ring-2 focus:ring-amber-100 focus:outline-none disabled:opacity-60"
           />

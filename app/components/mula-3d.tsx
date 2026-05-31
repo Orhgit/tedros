@@ -155,6 +155,7 @@ export function MulaDigitalHuman({
                 loop
                 muted
                 playsInline
+                aria-label="מולה — נציגה דיגיטלית"
                 className="absolute inset-0 size-full object-cover object-top"
                 style={{ opacity: state === s ? 1 : 0, transition: "opacity 0.4s ease" }}
               />
