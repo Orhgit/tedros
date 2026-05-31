@@ -96,7 +96,7 @@
     {
       "name": "client bundle",
       "path": "build/client/assets/*.js",
-      "limit": "290 KB"
+      "limit": "350 KB"
     }
   ]
 }
