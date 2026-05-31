@@ -55,8 +55,7 @@ const PILLAR_IMAGES: Record<string, string> = {
     "https://images.unsplash.com/photo-1764145144753-922ae256714b?fm=webp&q=70&w=600&fit=crop",
 };
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1545917958-c5dce6c24633?fm=webp&q=80&w=1600&fit=crop";
+const HERO_IMAGE = "/hero-community.webp";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preload", href: HERO_IMAGE, as: "image", fetchpriority: "high" },
