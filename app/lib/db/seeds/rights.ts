@@ -5266,4 +5266,742 @@ TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት �
 `,
     },
   },
+
+  // ── Wave 4 additions — content plan P1 gaps ─────────────────────────────
+
+  {
+    title: {
+      he: "מדריך משכנתא ליוצאי אתיופיה 2026",
+      en: "Mortgage Guide for Ethiopian-Israelis 2026",
+      am: "የቤት ብድር መመሪያ ለኢትዮጵያ-እስራኤሎች 2026",
+    },
+    slug: {
+      he: "mashkanta-guide-ethiopians",
+      en: "mashkanta-guide-ethiopians",
+      am: "mashkanta-guide-ethiopians",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/housing-grants",
+    eligibilitySummary: {
+      he: "מדריך מקיף לכל תוכניות המשכנתא הזמינות ליוצאי אתיופיה: תוכנית ה-600,000 ₪, מענק הומות, זכאות ל-90% מימון, ומסלולי ריבית מיוחדים.",
+      en: "Complete guide to all mortgage programs available to Ethiopian-Israelis: the 600K loan, Homot grant, 90% financing eligibility, and special interest tracks.",
+      am: "ለኢትዮጵያ-እስራኤሎች ለሚገኙ ሁሉም የቤት ብድር ፕሮግራሞች ሙሉ መመሪያ።",
+    },
+    tags: ["housing", "mortgage", "grants", "new_immigrant"],
+    bodies: {
+      he: `## תוכניות המשכנתא לקהילה האתיופית
+
+ליוצאי אתיופיה עומדות מספר תוכניות ייחודיות שאינן קיימות לאוכלוסייה הכללית:
+
+### 1. הלוואת 600,000 ₪ (הגרלה שנתית)
+הלוואת מדינה ב-0% ריבית ל-10 שנים ראשונות, 2% ב-15 השנים הבאות. כ-200 משפחות זוכות מדי שנה. רישום בסניפי בנק לאומי, דיסקונט ואיגוד בינואר-פברואר.
+
+### 2. מענק "הומות" (משרד הבינוי)
+מענק חד-פעמי של 120,000–200,000 ₪ לרכישת דירה ראשונה. תנאים: הכנסה משפחתית עד ~18,000 ₪/חודש, דירה ראשונה, גיל 21+. ניתן לשלב עם הלוואת 600K.
+
+### 3. זכאות ל-90% מימון
+בנקים מוסמכים (לאומי, מזרחי, הפועלים) מאשרים עד 90% ערך הנכס — במקום 75% הסטנדרטי — לזכאים בתוכניות הממשלתיות.
+
+### 4. נקודות זיכוי משכנתא לחיילים
+שירות צבאי מזכה בנקודות ריבית נוספות ובגמישות בתנאי ההחזר.
+
+## שלבי הגשה
+1. בדיקת זכאות: gov.il/he/service/first-time-homebuyers
+2. פגישה ביועץ משכנתאות מוסמך (קהילתי — ראו [/he/professionals])
+3. הגשת בקשה לבנק עם: ת"ז, תלושי שכר 3 חודשים, אישור ביטוח לאומי
+4. אישור עקרוני → חתימת חוזה רכישה → שחרור כספים
+
+## שימו לב
+- **לא מחמיצים מועד הגרלה**: הרישום לתוכנית 600K נפתח בינואר בלבד
+- **יועץ מוסמך**: בחרו יועץ שמכיר את הזכאויות הקהילתיות — טעות עולה עשרות אלפי שקלים
+- **אין להתחיל בחיפוש דירה** לפני שיש אישור עקרוני
+
+📞 לשאלות: מרכז קבלת קהל של משרד הבינוי — 5442* | משרד הקליטה — 3450*`,
+      en: `## Mortgage Programs for the Ethiopian-Israeli Community
+
+Ethiopian-Israelis have access to several preferential programs not available to the general public:
+
+### 1. The 600,000 ILS State Loan (Annual Lottery)
+0% interest for the first 10 years, 2% for the next 15. Approx. 200 families win per year. Register at Bank Leumi, Discount, or Igud branches in January–February.
+
+### 2. "Homot" Grant (Ministry of Construction)
+One-time grant of 120,000–200,000 ILS for first-home purchase. Conditions: family income up to ~18,000 ILS/month, first apartment, age 21+. Can be combined with the 600K loan.
+
+### 3. Up to 90% Financing
+Approved banks (Leumi, Mizrahi, HaPoalim) approve up to 90% of property value — vs. the standard 75% — for government-program eligible applicants.
+
+### 4. Military Service Mortgage Points
+Army service qualifies for additional interest-rate points and more flexible repayment terms.
+
+## Application Steps
+1. Check eligibility: gov.il/he/service/first-time-homebuyers
+2. Meet with a certified mortgage advisor (community-familiar — see /en/professionals)
+3. Submit to bank: ID, 3 months pay slips, NII confirmation
+4. Preliminary approval → sign purchase contract → release of funds
+
+📞 Ministry of Construction hotline: *5442 | Ministry of Aliya: *3450`,
+      am: `## ለኢትዮጵያ-እስራኤሎች የቤት ብድር ፕሮግራሞች
+
+ኢትዮጵያ-እስራኤሎች ለሌሎች ህዝቦች የማይገኙ ልዩ ፕሮግራሞች አሏቸው፦
+
+### 1. የ600,000 ሺ"ል ብድር (ዓመታዊ ዕጣ)
+ለመጀመሪያ 10 ዓመታት 0% ወለድ። በዓመት ~200 ቤተሰቦች ይመረጣሉ። በጥር ወር ይመዘገቡ።
+
+### 2. "ሆሞት" ድጎማ
+ለመጀመሪያ ቤት 120,000–200,000 ሺ"ል ነጠላ ስጦታ። ቤተሰቡ ወርሃዊ ገቢ እስከ 18,000 ሺ"ል።
+
+### 3. እስከ 90% ፋይናንስ
+ለተፈቀደላቸው አመልካቾች ባንኮች እስከ 90% ይሰጣሉ።
+
+## አቅምዎን ያረጋግጡ
+gov.il/he/service/first-time-homebuyers ወይም *5442 ይደውሉ።`,
+    },
+  },
+
+  {
+    title: {
+      he: "זכויות דיירים בפינוי-בינוי",
+      en: "Tenant Rights in Demolish-Rebuild (Pinui-Binui) Projects",
+      am: "ቤቶችን ማፍረስና መገንባት — የተከራዮች መብቶች",
+    },
+    slug: {
+      he: "pinui-binui-tenant-rights",
+      en: "pinui-binui-tenant-rights",
+      am: "pinui-binui-tenant-rights",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/urban_renewal",
+    eligibilitySummary: {
+      he: "בעל דירה בפרויקט פינוי-בינוי זכאי לדירה חדשה גדולה יותר, פיצוי שכירות בתקופת הבנייה, ופטור ממס שבח. מדריך לזיהוי זכויותיך.",
+      en: "Apartment owners in pinui-binui projects are entitled to a larger new apartment, rental compensation during construction, and capital-gains tax exemption.",
+      am: "በፒנואይ-ቢנואይ ፕሮጀክቶች ውስጥ ያሉ የቤት ባለቤቶች ትልቅ አዲስ ቤት፣ ወቅታዊ የኪራይ ካሳ እና ከቀረጥ ነፃ የሆነ ሽያጭ ይፈቀድላቸዋል።",
+    },
+    tags: ["housing", "urban_renewal", "legal"],
+    bodies: {
+      he: `## מה זה פינוי-בינוי?
+
+פינוי-בינוי הוא תוכנית ממשלתית להריסת בניינים ישנים ובנייה מחדש של בניינים גבוהים יותר. בתמורה, בעלי הדירות מקבלים דירות חדשות גדולות יותר — ללא עלות נוספת.
+
+## הזכויות שלך כבעל דירה
+
+### 1. דירה חדשה גדולה יותר
+החוק מחייב שהדירה החדשה תהיה לפחות **12 מ"ר גדולה יותר** מהדירה הנוכחית (או 25% גדולה יותר — הגדול מביניהם).
+
+### 2. פיצוי שכירות בתקופת הבנייה
+הקבלן מחויב לשלם דמי שכירות חודשיים בזמן שאתם גרים בדירה חלופית. הסכום מחושב לפי שוק השכירות המקומי.
+
+### 3. פטור ממס שבח
+עסקת פינוי-בינוי פטורה ממס שבח (capital gains tax) — חיסכון של עשרות עד מאות אלפי ₪.
+
+### 4. הזכות לסרב
+אתם לא חייבים להסכים. אולם, אם 80% מבעלי הדירות מסכימים, בית המשפט יכול לאכוף את ההסכמה גם על המסרבים (תיקון 2006).
+
+### 5. ייצוג משפטי עצמאי
+אתם זכאים לעורך דין **משלכם** — בנפרד מעורך הדין של הקבלן. הקבלן חייב לממן את שכר הטרחה.
+
+## שלבים לפני חתימה
+1. **אל תחתמו** על שום מסמך לפני שהתייעצתם עם עו"ד עצמאי
+2. בדקו שהדירה החדשה כוללת: חניה, מחסן, ממ"ד
+3. ודאו שהפרויקט רשום ברשות להתחדשות עירונית: ir.gov.il
+4. בדקו מוניטין הקבלן ב-רשם הקבלנים
+
+📞 רשות להתחדשות עירונית: 03-7385777 | תבקה (ייעוץ משפטי חינם): 1-800-20-20-16`,
+      en: `## What is Pinui-Binui?
+
+Pinui-binui (demolish-rebuild) is a government programme that demolishes old buildings and rebuilds taller modern ones. In return, apartment owners receive larger new apartments at no extra cost.
+
+## Your Rights as an Owner
+
+**Larger new apartment**: The law requires the new apartment to be at least 12 sqm larger (or 25% larger — whichever is greater).
+
+**Rental compensation**: The developer must pay monthly rent while you live elsewhere during construction, calculated at local market rates.
+
+**Capital-gains tax exemption**: Pinui-binui transactions are exempt from capital-gains tax — savings of tens to hundreds of thousands of ILS.
+
+**Right to refuse**: You can refuse. However, if 80% of owners agree, the court can override refusers (2006 amendment).
+
+**Independent legal representation**: You are entitled to your own lawyer — separate from the developer's. The developer must cover the legal fees.
+
+## Before Signing
+1. Never sign any document before consulting an independent lawyer
+2. Confirm the new apartment includes: parking, storage room, safe room (mamad)
+3. Verify the project is registered at ir.gov.il
+
+📞 Urban Renewal Authority: 03-7385777 | Tebeka (free legal): 1-800-20-20-16`,
+      am: `## ፒንואይ-ቢንዋይ ምንድን ነው?
+
+ፒንዋይ-ቢንዋይ ያሮጋቸ ሕንፃዎችን አፍርሶ አዲስ ለመገንባት የሚያስችል የመንግስት ፕሮግራም ነው። የቤት ባለቤቶቹ አዲስ ትልቅ ቤት ያገኛሉ።
+
+## ዋና መብቶቸ
+
+- **ትልቅ አዲስ ቤት**: ቢያንስ 12 ሜ"ር ትልቅ
+- **የኪራይ ካሳ**: ግንባታ ወቅት ወርሃዊ ካሳ
+- **ቀረጥ ነፃ**: ከካፒታል ጌን ቀረጥ ነፃ
+- **የራስ ጠበቃ**: ልዩ ጠበቃ የማጣር መብት (ዴቬሎፐሩ ይከፍላል)
+
+📞 ir.gov.il | 03-7385777`,
+    },
+  },
+
+  {
+    title: {
+      he: "החלפת קופת חולים — מדריך לזכויות",
+      en: "Switching Health Fund (Kupat Holim) — Your Rights",
+      am: "የጤና ፈንድ መቀየሪያ — መብቶችዎ",
+    },
+    slug: {
+      he: "kupat-holim-switch-rights",
+      en: "kupat-holim-switch-rights",
+      am: "kupat-holim-switch-rights",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/health-basket",
+    eligibilitySummary: {
+      he: "כל אזרח רשאי להחליף קופת חולים פעם אחת בשנה, בחינם, ללא הגבלת גיל או מצב בריאותי. החלפה נכנסת לתוקף ב-1 בינואר.",
+      en: "Every citizen can switch health funds once a year, free of charge, with no age or health restrictions. The switch takes effect on January 1st.",
+      am: "ሁሉም ዜጋ በዓመት አንድ ጊዜ የጤና ፈንዱን መቀየር ይችላል — ምንም ወጪ የለም።",
+    },
+    tags: ["health", "rights", "insurance"],
+    bodies: {
+      he: `## הזכות להחליף קופת חולים
+
+על-פי חוק ביטוח בריאות ממלכתי, כל תושב ישראל זכאי לקבל שירותי בריאות מאחת מ-4 קופות החולים ולהחליף ביניהן. ההחלפה היא **חינם**, **ללא בדיקות רפואיות**, **ללא הגבלת גיל** וללא קשר למצב בריאותי.
+
+## איך מחליפים?
+
+1. **מועד**: ניתן להגיש בקשה לאורך כל השנה, אך ההחלפה נכנסת לתוקף ב-**1 בינואר** בלבד
+2. **הגשה**: בסניף הקופה החדשה, באתר ביטוח בריאות (btl.gov.il), או בדואר
+3. **מסמכים**: ת"ז בלבד
+4. **אישור**: תקבלו אישור תוך 30 יום
+
+## זכויות מיוחדות לקהילה האתיופית
+
+**שירות באמהרית**: קופות החולים מחויבות לספק תרגום בשפות מיעוט. בקשו מתורגמן או שירות בטלפון באמהרית.
+
+**בריאות הנפש בסל הבסיסי**: מ-2021 נכללת בריאות הנפש בסל הבסיסי — כולל 18 פגישות טיפול בשנה ללא עלות נוספת.
+
+**ילדים עד 18**: שירותי שיניים חינם עד גיל 18 בכל קופה.
+
+**תרופות מסובסדות**: כל הקופות חייבות לספק את תרופות הסל באותו מחיר — השוו את השירותים המורחבים (שב"ן) בלבד.
+
+## כיצד לבחור קופה?
+
+בדקו:
+- **נגישות**: האם יש סניף/קליניקה קרוב לביתכם?
+- **רופא משפחה**: האם הרופא שאתם מעוניינים בו הוא חבר בקופה?
+- **שב"ן (שירותי בריאות נוספים)**: עלות הביטוח המשלים ומה הוא כולל
+- **שירות באמהרית**: האם יש נציג דובר אמהרית?
+
+📞 ממונה על הביטוח בריאות: 02-5002738 | ביטוח לאומי: 08-6709709`,
+      en: `## Your Right to Switch Health Funds
+
+Under the National Health Insurance Law, every Israeli resident is entitled to receive healthcare from one of 4 health funds and to switch between them. The switch is **free**, requires **no medical tests**, has **no age limit**, and is independent of health status.
+
+## How to Switch
+
+1. Submit a request at any time during the year, but the change only takes effect on **January 1st**
+2. Apply at: a branch of the new health fund, btl.gov.il, or by mail
+3. Documents needed: ID card only
+4. You'll receive confirmation within 30 days
+
+## Special Rights for the Ethiopian-Israeli Community
+
+**Amharic services**: Health funds must provide translation. Request an interpreter or Amharic telephone service.
+
+**Mental health in the basic basket**: Since 2021, mental health is included in the basic basket — including 18 free therapy sessions per year.
+
+**Children under 18**: Free dental care until age 18 at every health fund.
+
+📞 Health Insurance Commissioner: 02-5002738`,
+      am: `## የጤና ፈንድ የመቀየር መብትዎ
+
+እያንዳንዱ የእስራኤል ነዋሪ 4 ጤና ፈንዶች ውስጥ ከአንዱ ወደ ሌላ ነፃ በሆነ መንገድ መቀያየር ይችላል።
+
+**እንዴት?** ጥር 1 ቀን ይፀናል። ዓመቱን ሙሉ ማመልከት ይችላሉ።
+
+**ለህፃናት**: እስከ 18 ዓመት ድረስ ነፃ ጥርስ ህክምና።
+
+**የአዕምሮ ጤና**: ዓመቱን 18 ነፃ ክፍለ ጊዜ ይፈቀዳል (ከ2021 ጀምሮ)።
+
+📞 02-5002738`,
+    },
+  },
+
+  {
+    title: {
+      he: "סיוע בשכר דירה לעולים — מדריך 2026",
+      en: "Rental Assistance for New Immigrants — Guide 2026",
+      am: "ለአዲስ ስደተኞች የኪራይ ድጎማ — 2026 መመሪያ",
+    },
+    slug: {
+      he: "rent-assistance-new-olim",
+      en: "rent-assistance-new-olim",
+      am: "rent-assistance-new-olim",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/housing-new-immigrants",
+    eligibilitySummary: {
+      he: "עולים חדשים זכאים לסיוע בשכר דירה עד 36 חודשים: יחיד 2,000 ₪/ח׳, זוג 3,100 ₪/ח׳, משפחה עם ילדים עד 4,400 ₪/ח׳. מגישים בסוכנות היהודית או משרד הקליטה.",
+      en: "New immigrants are entitled to rental assistance for up to 36 months: single 2,000 ILS/month, couple 3,100, family with children up to 4,400 ILS/month.",
+      am: 'አዲስ ስደተኞች እስከ 36 ወር የኪራይ ድጎማ ያገኛሉ። ነጠላ 2,000 ሺ"ል/ወር፣ ጥንዶች 3,100፣ ቤተሰቦች እስከ 4,400።',
+    },
+    tags: ["housing", "new_immigrant", "grants"],
+    bodies: {
+      he: `## מי זכאי לסיוע בשכר דירה?
+
+כל עולה חדש שעלה לישראל זכאי לסיוע בשכר דירה ממשרד הקליטה. הסיוע ניתן **במקום** גרות בדיור קליטה ממשלתי (מרכז קליטה), לא בנוסף לו.
+
+## הסכומים ל-2026 (בשקלים לחודש)
+
+| הרכב משפחה | סכום חודשי |
+|------------|------------|
+| יחיד | 2,000 ₪ |
+| זוג ללא ילדים | 3,100 ₪ |
+| זוג + ילד אחד | 3,700 ₪ |
+| זוג + 2 ילדים | 4,100 ₪ |
+| זוג + 3 ילדים ומעלה | 4,400 ₪ |
+
+הסכומים משתנים לפי מדד — בדקו עדכון ב-gov.il.
+
+## משך הסיוע
+
+- **שנה ראשונה**: סכום מלא
+- **שנה שנייה**: 75% מהסכום
+- **שנה שלישית**: 50% מהסכום
+- לאחר 36 חודשים: הסיוע מסתיים
+
+## איך מגישים?
+
+1. **פנו לסוכנות היהודית** (Jewish Agency) עוד לפני הגעה לישראל — או לסניף משרד הקליטה בישראל תוך 30 יום מהעלייה
+2. **מסמכים**: תעודת עולה, חוזה שכירות חתום, פרטי חשבון בנק
+3. **חשוב**: חוזה השכירות חייב להיות על שמכם ולכלול כתובת מלאה
+4. **ועדת דיור**: עולים עם 4+ ילדים או נכות יכולים לבקש תוספת
+
+## לא לדחות את הבקשה!
+הסיוע מחושב מיום העלייה — כל חודש שמחמיצים הוא חודש אבוד.
+
+📞 משרד הקליטה: 3450* | שעות פעילות: א'-ה' 8:00-16:00`,
+      en: `## Who is Eligible?
+
+Every new immigrant (oleh) is entitled to rental assistance from the Ministry of Aliya and Integration. The assistance is given **instead of** staying in a government absorption centre, not in addition to it.
+
+## 2026 Monthly Amounts (ILS)
+
+| Household | Monthly Amount |
+|-----------|---------------|
+| Single | 2,000 |
+| Couple, no children | 3,100 |
+| Couple + 1 child | 3,700 |
+| Couple + 2 children | 4,100 |
+| Couple + 3+ children | 4,400 |
+
+## Duration
+
+Year 1: full amount | Year 2: 75% | Year 3: 50% | After 36 months: ends.
+
+## How to Apply
+
+1. Contact the Jewish Agency before arriving, or the Ministry of Aliya branch within 30 days of aliya
+2. Documents: teudat oleh, signed rental contract, bank account details
+3. The lease must be in your name with a full address
+
+📞 Ministry of Aliya: *3450`,
+      am: `## ማን ይፈቀዳል?
+
+ሁሉም አዲስ ስደተኞች (ኦሊም) ከቀጠቃ ሚኒስቴር የኪራይ ድጎማ ያገኛሉ።
+
+## ወርሃዊ መጠን (2026)
+
+- ነጠላ: 2,000 ሺ"ል
+- ጥንዶች: 3,100 ሺ"ል
+- ቤተሰቦች: እስከ 4,400 ሺ"ል
+
+## ጊዜ
+1ኛ ዓመት: ሙሉ | 2ኛ ዓመት: 75% | 3ኛ ዓመት: 50%
+
+📞 *3450`,
+    },
+  },
+
+  {
+    title: {
+      he: "זכויות גמלאות צבאיות ליוצאי אתיופיה",
+      en: "Military Discharge Benefits for Ethiopian-Israeli Veterans",
+      am: "ለኢትዮጵያ-እስራኤሎች ወታደራዊ ቀናዳ",
+    },
+    slug: {
+      he: "army-discharge-benefits-ethiopians",
+      en: "army-discharge-benefits-ethiopians",
+      am: "army-discharge-benefits-ethiopians",
+    },
+    govUrl: "https://www.btl.gov.il/benefits/Rehabilitation/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "חייל משוחרר יוצא אתיופיה זכאי למענק שחרור של עד 120,000 ₪, מלגת השכלה, נקודות משכנתא וזכויות מיוחדות בשירות הממשלתי. מי שסיים קרבי מקבל בונוס נוסף.",
+      en: "Ethiopian-Israeli discharged soldiers are entitled to a discharge grant of up to 120,000 ILS, an education scholarship, mortgage points, and preference in civil service.",
+      am: 'ኢትዮጵያ-እስራኤሎች ወታደሮች እስከ 120,000 ሺ"ል ቅናሽ ድጎማ፣ ትምህርት ዕድል እና ቤት ብድር ነጥቦች ያገኛሉ።',
+    },
+    tags: ["army", "grants", "education", "housing"],
+    bodies: {
+      he: `## מענק שחרור (פיצויי שחרור)
+
+משרד הביטחון — אגף שיקום נכים ומשוחררים מעניק מענק שחרור בהתאם לתקופת השירות:
+
+- **שירות סדיר (2-3 שנים)**: 60,000–80,000 ₪
+- **שירות מוארך (4+ שנים)**: עד 120,000 ₪
+- **יחידות מיוחדות (יהלום, מטכ"ל)**: בונוס נוסף
+
+## מלגת השכלה לאחר שחרור
+
+כל משוחרר זכאי להשתתפות מדינה בלימודים אקדמיים:
+- **מוסד ציבורי (אוניברסיטה/מכללה)**: עד 80% מהשכר לימוד
+- **מוסד מוכר**: עד 60%
+- **תקופה**: 4 שנים ממועד השחרור (5 שנים לקרבי)
+
+## נקודות משכנתא
+
+שירות צבאי מזכה בנקודות אחוז ריבית למשכנתא — ומשפר את תנאי ההלוואה. ניתן לשלב עם תוכנית 600K.
+
+## עדיפות בשירות הממשלתי
+
+חוק ייצוג הולם מחייב העדפה ליוצאי אתיופיה. שירות צבאי מוסיף נקודות בציון לאיוש תפקידים ממשלתיים.
+
+## PTSD והכרה בנכות
+
+חיילים שפיתחו PTSD (הפרעת דחק פוסט-טראומטית) במהלך השירות זכאים להכרה כנכה צה"ל. זה כולל: קצבה חודשית, שיקום, כיסוי רפואי מלא.
+
+## איך מגישים?
+
+1. פנו ל-**אגף שיקום** (משרד הביטחון) תוך 90 יום מהשחרור: rehab.mod.gov.il
+2. עבור PTSD: פנו ליחידת בריאות הנפש של ביה"ח הצבאי
+3. לייעוץ מקדמי: **ותיקי צה"ל** — 03-7381111
+
+📞 אגף שיקום: 03-7381111 | ניצן — תמיכה בנפגעי טראומה: 1201`,
+      en: `## Discharge Grant
+
+The Ministry of Defense — Rehabilitation Division grants a discharge payment based on service length:
+- Regular service (2-3 years): 60,000–80,000 ILS
+- Extended service (4+ years): up to 120,000 ILS
+
+## Post-Discharge Education Grant
+
+All discharged soldiers receive state funding for academic studies: up to 80% of tuition at public universities, up to 60% at recognised colleges. Valid for 4 years (5 for combat veterans).
+
+## Mortgage Points
+
+Military service qualifies for favourable mortgage rate adjustments. Can be combined with the 600K programme.
+
+## Civil Service Preference
+
+The Affirmative Representation Law requires preference for Ethiopian-Israelis in government hiring. Military service adds points in civil service scoring.
+
+## PTSD and Disability Recognition
+
+Soldiers who developed PTSD during service qualify for IDF disability recognition, including monthly pension, rehabilitation, and full medical coverage.
+
+📞 Rehabilitation Division: 03-7381111`,
+      am: `## የቅናሽ ድጎማ
+
+2-3 ዓመት አገልጋዮች: 60,000–80,000 ሺ"ል
+4+ ዓመት አገልጋዮች: እስከ 120,000 ሺ"ል
+
+## ትምህርት ዕድል
+
+ለ4 ዓመታት የዩኒቨርሲቲ ክፍያ እስከ 80% ይሸፈናል።
+
+## PTSD
+
+በጦርነት ወቅት PTSD ያጠቃቸው ወታደሮች ወርሃዊ ካሳ ያገኛሉ።
+
+📞 03-7381111`,
+    },
+  },
+
+  {
+    title: {
+      he: "רישום בטאבו — מדריך לקהילה האתיופית",
+      en: "Land Registry (Tabo) — Guide for the Ethiopian-Israeli Community",
+      am: "የመሬት ምዝገባ (ታቦ) — ለኢትዮጵያ-እስራኤሎች መመሪያ",
+    },
+    slug: {
+      he: "land-registration-tabo",
+      en: "land-registration-tabo",
+      am: "land-registration-tabo",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/land-registration",
+    eligibilitySummary: {
+      he: "רישום נכס בטאבו (לשכת רישום המקרקעין) הוא הדרך היחידה להגן על הבעלות שלכם. מדריך לתהליך, עלויות, ובעיות נפוצות בקהילה האתיופית.",
+      en: "Registering property in the Tabo (Land Registry) is the only way to legally protect your ownership. Guide to the process, costs, and common issues for Ethiopian-Israelis.",
+      am: "ንብረትዎን በታቦ (የመሬት ምዝገባ) ማስቀመጥ ብቸኛው ሕጋዊ ጥበቃ ነው።",
+    },
+    tags: ["housing", "legal", "property"],
+    bodies: {
+      he: `## מה זה טאבו?
+
+לשכת רישום המקרקעין (טאבו) היא הגוף הממשלתי שמנהל את מרשם הנכסים בישראל. כל עסקת נדל"ן (קנייה, מכירה, ירושה, מתנה) חייבת להיות רשומה בטאבו כדי להיות תקפה מבחינה משפטית.
+
+## למה רישום בטאבו חשוב?
+
+ללא רישום — **אין לכם הגנה משפטית** על הדירה שלכם, גם אם שילמתם עליה. מקרים ידועים בקהילה האתיופית:
+- משפחה שגרה בדירה 15 שנה ללא רישום, ולאחר מכן הקבלן מכר אותה לאדם אחר
+- ירושה שלא נרשמה — יורשים אחרים תובעים בית משפט
+- עיקול על הנכס בגלל חוב של המוכר הקודם
+
+## תהליך הרישום
+
+1. **הסכם מכר/מתנה/ירושה** — חייב לכלול מספר גוש וחלקה
+2. **תשלום מס שבח/מס רכישה** — אישור ממשרד מיסוי מקרקעין
+3. **הגשה ללשכת רישום** — עם כל המסמכים (ת"ז, נסח טאבו נוכחי, חוזה, אישורים)
+4. **תשלום אגרה**: כ-700-2,000 ₪ תלוי בעסקה
+5. **רישום**: 2-8 שבועות
+
+## בעיות נפוצות בקהילה
+
+**שם שגוי**: שמות מתורגמים מאמהרית שונו בתעודת הזהות אך לא בטאבו. פנו ללשכה עם תצהיר נוטריוני של שינוי שם.
+
+**ירושה ללא צוואה**: לפי חוק הירושה, ניתן לרשום ירושה גם ללא צוואה — עם צו ירושה מבית המשפט לענייני משפחה.
+
+**רכישה מ"קבלן"**: אם קניתם מקבלן ועדיין לא רשומים — מהרו! בנייה שלא נרשמה בתוך 7 שנים עלולה ליצור בעיות.
+
+## עלויות
+
+| שירות | עלות משוערת |
+|-------|------------|
+| נסח טאבו | 70 ₪ |
+| אגרת רישום בסיסית | 720 ₪ |
+| עו"ד נדל"ן | 0.5-1% מהעסקה |
+| נוטריון (אם נדרש) | 400-800 ₪ |
+
+📞 לשכת רישום מקרקעין: 02-5028000 | לסיוע חינם: תבקה 1-800-20-20-16`,
+      en: `## What is the Tabo?
+
+The Land Registry (Tabo) is the government body that manages Israel's property register. Every real estate transaction — buying, selling, inheriting, gifting — must be registered to be legally valid.
+
+## Why Registration Matters
+
+Without registration, you have **no legal protection** on your apartment, even if you paid for it. Known cases in the Ethiopian-Israeli community: families living unregistered for 15 years, only for the developer to sell to someone else; unregistered inheritances contested in court.
+
+## Registration Process
+
+1. Purchase/gift/inheritance agreement — must include parcel numbers
+2. Pay capital gains / purchase tax — get clearance from the Tax Authority
+3. Submit to Land Registry with all documents
+4. Fee: approx. 700–2,000 ILS
+5. Processing: 2–8 weeks
+
+## Common Issues in the Community
+
+**Wrong name**: Names transliterated from Amharic may differ between ID and registry. Bring a notarised name-change affidavit.
+
+**Inheritance without a will**: Register via a family-court inheritance order.
+
+📞 Land Registry: 02-5028000 | Free advice: Tebeka 1-800-20-20-16`,
+      am: `## ታቦ ምንድን ነው?
+
+ታቦ ሁሉም የንብረት ልውውጦች የሚመዘገቡበት የመንግስት ቢሮ ነው። ምዝገባ ካልተደረገ ሕጋዊ ጥበቃ የለም።
+
+## ዋና ጉዳዮች
+
+- ምዝገባ ያልተደረገ ቤት — ሌላ ሰው ሊሸጥ ይችላል
+- ያልተመዘገበ ውርስ — ክርክር ሊፈጠር ይችላል
+
+📞 02-5028000 | ታቤቃ: 1-800-20-20-16`,
+    },
+  },
+
+  {
+    title: {
+      he: "הבטחת הכנסה — מדריך לקהילה האתיופית",
+      en: "Income Support (Havtaat Hakhnasa) — Guide for the Ethiopian-Israeli Community",
+      am: "የገቢ ዋስትና — ለኢትዮጵያ-እስራኤሎች መመሪያ",
+    },
+    slug: {
+      he: "income-support-btl",
+      en: "income-support-btl",
+      am: "income-support-btl",
+    },
+    govUrl: "https://www.btl.gov.il/benefits/income_support/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "הבטחת הכנסה היא קצבה חודשית לאנשים שהכנסתם נמוכה מהמינימום. ב-2026: יחיד 2,887 ₪, זוג 4,303 ₪. מגישים בסניף ביטוח לאומי.",
+      en: "Income support is a monthly benefit for people with income below the minimum. 2026 amounts: single 2,887 ILS, couple 4,303 ILS. Apply at your NII branch.",
+      am: 'የገቢ ዋስትና ዝቅተኛ ገቢ ላላቸው ሰዎች ወርሃዊ ክፍያ ነው። 2026: ነጠላ 2,887 ሺ"ል፣ ጥንዶች 4,303 ሺ"ል።',
+    },
+    tags: ["social_welfare", "btl", "income"],
+    bodies: {
+      he: `## מה היא הבטחת הכנסה?
+
+הבטחת הכנסה (נקראת גם "סעד") היא גמלה שמבטיחה לכל אדם הכנסה מינימלית לקיום. ביטוח לאומי משלים את ההכנסה עד לסף הקבוע בחוק.
+
+## תנאי זכאות
+
+כדי לקבל הבטחת הכנסה צריך לעמוד בכל התנאים:
+
+**1. תושבות**: תושב ישראל שגר בפועל בישראל
+
+**2. גיל**: 25 ומעלה (יחיד ללא ילדים); 20 ומעלה (הורה לילד / נשוי)
+
+**3. הכנסה**: ההכנסה החודשית מכל המקורות נמוכה מהסף הקבוע
+
+**4. נכסים**: ערך הנכסים (דירה, חסכונות) אינו עולה על הגבול המותר
+
+**5. עבודה**: לא עובד (או עובד בחלקיות מוגבלת) ורשום כמחפש עבודה בלשכת התעסוקה
+
+## סכומים חודשיים (2026)
+
+| הרכב | סכום |
+|------|------|
+| יחיד | 2,887 ₪ |
+| יחיד + ילד | 3,615 ₪ |
+| זוג | 4,303 ₪ |
+| זוג + ילד | 4,737 ₪ |
+
+הסכומים עולים עם כל ילד נוסף.
+
+## מה לא נחשב כהכנסה?
+
+- קצבת ילדים
+- מלגות לימודים
+- מתנות חד-פעמיות
+- חלק מהכנסה מעבודה חלקית
+
+## איך מגישים?
+
+1. פנו לסניף ביטוח לאומי הקרוב (עם ת"ז)
+2. מלאו טופס תביעה (ניתן גם באתר btl.gov.il)
+3. הציגו מסמכי הכנסה: תלושי שכר / אישורי הכנסה / חשבונות בנק
+4. ועדת השמה תבדוק את הבקשה — מחליטה תוך 30 יום
+
+## שימו לב
+
+הגשת הבקשה **לא פוגעת** בזכויות אחרות כגון קצבת ילדים, ביטוח בריאות וכו'. בקשו מהפקיד לבדוק **כל** הגמלאות שאתם זכאים להן.
+
+📞 ביטוח לאומי: 08-6709709 | BTL לסיוע אישי: סניף מקומי`,
+      en: `## What is Income Support?
+
+Income support (havtaat hakhnasa) guarantees everyone a minimum income. The NII tops up income to the legally-set threshold.
+
+## Eligibility Conditions
+
+- Israeli resident living in Israel
+- Age 25+ (single without children); 20+ (parent or married)
+- Monthly income below the threshold
+- Assets (apartment, savings) below the permitted limit
+- Not working full-time; registered as job-seeker at Employment Service
+
+## 2026 Monthly Amounts (ILS)
+
+| Household | Amount |
+|-----------|--------|
+| Single | 2,887 |
+| Single + child | 3,615 |
+| Couple | 4,303 |
+| Couple + child | 4,737 |
+
+## How to Apply
+
+1. Visit your nearest NII branch (bring ID)
+2. Fill in claim form (also available at btl.gov.il)
+3. Provide income documents: pay slips, bank statements
+4. Decision within 30 days
+
+📞 NII: 08-6709709`,
+      am: `## የገቢ ዋስትና ምንድን ነው?
+
+ዝቅተኛ ገቢ ላላቸው ሰዎች ቢቲኤል (ብሔራዊ ኢንሹራንስ) ወርሃዊ ክፍያ ይሰጣል።
+
+## 2026 ወርሃዊ መጠን
+
+- ነጠላ: 2,887 ሺ"ል
+- ጥንዶች: 4,303 ሺ"ል
+
+## ማመልከቻ
+በቅርብ ቢቲኤል ቅርንጫፍ ወይም btl.gov.il
+
+📞 08-6709709`,
+    },
+  },
+
+  {
+    title: {
+      he: "זכויות אנשים עם מוגבלות בתעסוקה",
+      en: "Employment Rights for People with Disabilities",
+      am: "ለአካል ጉዳተኞች የሥራ መብቶች",
+    },
+    slug: {
+      he: "disability-rights-employment",
+      en: "disability-rights-employment",
+      am: "disability-rights-employment",
+    },
+    govUrl:
+      "https://www.gov.il/he/departments/topics/equal-rights-persons-with-disabilities",
+    eligibilitySummary: {
+      he: "חוק שוויון זכויות לאנשים עם מוגבלות מחייב מעסיקים להתאים את סביבת העבודה. זכאות לקצבת ניידות, הטבות מס, ופטור מחלק מעלות ביטוח הלאומי.",
+      en: "The Equal Rights for Persons with Disabilities Law requires employers to make reasonable accommodations. Entitlements include a mobility allowance, tax benefits, and NII cost reduction.",
+      am: "አካል ጉዳተኞች ሕጋዊ ጥበቃ ይፈቀድላቸዋል። ቀጣሪዎቹ ምቹ ሁኔታ ማዘጋጀት ይጠበቅባቸዋል።",
+    },
+    tags: ["disability", "employment", "legal"],
+    bodies: {
+      he: `## חוק שוויון זכויות לאנשים עם מוגבלות
+
+חוק 5758-1998 (ותיקוניו) אוסר על אפליה של אנשים עם מוגבלות בתעסוקה ומחייב מעסיקים לבצע **התאמות סבירות** לאדם עם מוגבלות.
+
+## מה הן "התאמות סבירות"?
+
+- **התאמה פיזית**: כסא מיוחד, גובה שולחן, נגישות למקום העבודה
+- **שעות עבודה**: גמישות לצורכי טיפול רפואי
+- **ציוד מיוחד**: מחשב עם תוכנת קריאה, כלי שמיעה
+- **עמדת עבודה**: קרבה לשירותים, מעלית
+
+מעסיק **לא רשאי** לדחות מועמד מוכשר בגלל מוגבלות אם ניתן לבצע התאמה סבירה.
+
+## קצבת ניידות (ביטוח לאומי)
+
+אדם עם מוגבלות תנועתית זכאי לקצבת ניידות חודשית + הלוואה לרכישת רכב. תנאים: מוגבלות שאינה מאפשרת שימוש בתחבורה ציבורית.
+
+## הטבות מס
+
+- **נקודת זיכוי**: בעל מוגבלות מוכרת זכאי ל-2 נקודות זיכוי נוספות מס הכנסה
+- **פטור ממס**: הכנסה מגמלת נכות פטורה ממס
+- **מעסיק**: קיבל החזר 50% על תשלומי ביטוח לאומי
+
+## ייעוץ ותלונות
+
+- **נציב שוויון זכויות**: אם פוטרתם בגלל מוגבלות — הגישו תלונה בתוך 90 יום
+- **תבקה**: ייעוץ חינם לאנשים עם מוגבלות בקהילה האתיופית
+- **המוקד לזכויות נכים** (ביטוח לאומי): בדקו זכאות לכל הגמלאות
+
+📞 נציב שוויון זכויות: 02-6664444 | ביטוח לאומי: 08-6709709 | תבקה: 1-800-20-20-16`,
+      en: `## Equal Rights Law for Persons with Disabilities
+
+Law 5758-1998 prohibits discrimination against people with disabilities in employment and requires employers to make **reasonable accommodations**.
+
+## What are "Reasonable Accommodations"?
+
+Physical adaptations (chair, desk height, accessibility), flexible hours for medical appointments, special equipment (screen reader, hearing aids), proximity to toilets, elevator access.
+
+An employer **may not** reject a qualified candidate due to disability if reasonable accommodation is possible.
+
+## Mobility Allowance (NII)
+
+People with movement disabilities are entitled to a monthly mobility allowance + loan for vehicle purchase.
+
+## Tax Benefits
+
+- 2 additional income-tax credit points for recognised disability
+- Disability benefit income is tax-exempt
+- Employers receive 50% reimbursement on NII costs
+
+## Complaints
+
+If dismissed due to disability — file a complaint with the Equal Rights Commissioner within 90 days.
+
+📞 Equal Rights Commissioner: 02-6664444 | NII: 08-6709709 | Tebeka: 1-800-20-20-16`,
+      am: `## የአካል ጉዳተኞች የሥራ ሕግ
+
+ሕጉ 5758 የሥራ ቦታ አድሎ ይከለክላል። ቀጣሪዎቹ ምቹ ሁኔታ ማዘጋጀት ይጠበቅባቸዋል።
+
+## ዋና ጥቅሞቸ
+
+- ወርሃዊ የሞባይል ቸነፈር
+- ተጨማሪ 2 የቀረጥ ነጥቦቸ
+- ቅሬታ ካለ: 02-6664444
+
+📞 02-6664444 | tebeka.org.il`,
+    },
+  },
 ];

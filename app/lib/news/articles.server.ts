@@ -4698,6 +4698,891 @@ taasuka.gov.il ወይም ቅርቡ ቢሮ። ምዝገባ ሳይኖር = ደሞ�
 ሳይሰለጥኑ: 2-4 ወር. ሰልጥነው: 9-14 ወር. አማካኝ: 4-7 ወር.`,
     },
   },
+
+  // ── Wave 4 employment articles ────────────────────────────────────────────
+
+  {
+    slug: "employment-gap-report-2026",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "rights"],
+    title: {
+      he: "פערי תעסוקה בקהילה האתיופית 2026 — הנתונים המלאים",
+      en: "Ethiopian-Israeli Employment Gap Report 2026 — Full Data",
+      am: "ኢትዮጵያ-እስራኤሎች የሥራ ክፍተት 2026 — ሙሉ ሪፖርት",
+    },
+    excerpt: {
+      he: "רק 18% מבוגרי הקהילה עובדים בתחום שלמדו. פערי שכר, שיעורי אבטלה ותמונת המצב לפי CBS ומרכז אדוה — וכך אפשר לשנות את זה.",
+      en: "Only 18% of Ethiopian-Israeli graduates work in their field. Wage gaps, unemployment rates, and what the data says — with actionable next steps.",
+      am: "ከኢትዮጵያ-እስራኤሎች ምሩቃን 18% ብቻ በትምህርታቸው መስክ ይሠራሉ። ሪፖርቱ ዋና ግኝቶቹን ይዳስሳል።",
+    },
+    bodies: {
+      he: `## עיקרי הנתונים (CBS + מרכז אדוה, 2024-2025)
+
+הדוח השנתי של מרכז אדוה ונתוני הלמ"ס מצביעים על תמונה מורכבת:
+
+**תעסוקה**
+- שיעור תעסוקה כולל: 68% (לעומת 79% ביהודים-לא-חרדים)
+- גברים: 74% | נשים: 62%
+- בוגרי אקדמיה שעובדים בתחום לימודיהם: **18% בלבד**
+
+**שכר**
+- שכר ממוצע בקהילה: 8,200 ₪/חודש (לעומת 12,400 ₪ ממוצע ארצי)
+- פער שכר גברים: 28% מתחת לממוצע הארצי
+- פער שכר נשים: 34% מתחת לממוצע הארצי
+- תחומים עם פחות פערים: הייטק (ממוצע 14,800 ₪), סיעוד (10,200 ₪)
+
+**השכלה**
+- שיעור בגרות: 52% (לעומת 69% בכלל האוכלוסייה)
+- לימודי תואר ראשון: 21% (לעומת 37%)
+- תואר שני ומעלה: 6% (לעומת 18%)
+
+## הסיבות המובילות לפערים
+
+1. **מחסור בהכנסה בתקופת הלימודים**: 61% מסטודנטים מהקהילה עובדים במהלך הלימודים, מה שמוריד ממוצע ציונים
+2. **חסמי שפה**: קורסי אקדמיה בעברית גבוהה — מאתגרים לבוגרי קהילה שחינוכם בית-ספרי היה בעברית שנייה
+3. **רשתות מקצועיות**: פחות "חיבורים" לשוק העבודה המקצועי — חשיבות מנטורינג
+4. **אפליה סמויה**: 31% מהמעסיקים דיווחו על "העדפה" לשמות לא-אתיופיים בסינון קורות חיים (מחקר IDI 2023)
+
+## מה אפשר לעשות — צעדים מעשיים
+
+- **Tech-Career**: תוכנית הסבה לשוק ההייטק עם 82% שיעור השמה — ראו [/he/rights/tech-career-bootcamp]
+- **ENP** (מרכז קידום השכלה): מלגות והכנה לבגרויות — 03-5368944
+- **מנטורינג קהילתי**: כ-200 מנטורים מהקהילה ברשת "מנהיגות אתיופית" — LinkedIn: Ethiopian Leadership IL
+- **קורות חיים**: שנו שם לגרסה "אנונימית" בסינון ראשוני, ועצרו זאת בשלב הראיון כשיש כבר קשר אנושי
+
+📊 דוח מלא: adva.org.il | btl.gov.il/statistics`,
+      en: `## Key Data (CBS + Adva Center, 2024-2025)
+
+**Employment**
+- Overall employment rate: 68% (vs. 79% among non-Haredi Jews)
+- Men: 74% | Women: 62%
+- Academic graduates working in their field: **only 18%**
+
+**Wages**
+- Average monthly wage in community: 8,200 ILS (vs. national average 12,400)
+- Men's wage gap: 28% below national average
+- Women's wage gap: 34% below national average
+- Sectors with smaller gaps: hi-tech (avg. 14,800 ILS), nursing (10,200 ILS)
+
+**Education**
+- Matriculation rate: 52% (vs. 69% nationally)
+- Bachelor's degree: 21% (vs. 37%)
+
+## Top Causes
+
+1. Need to work during studies (61% of community students work, depressing grades)
+2. Language barriers in advanced Hebrew academic content
+3. Weaker professional networks — mentoring is critical
+4. Hidden bias: 31% of employers showed preference for non-Ethiopian-sounding names (IDI 2023 study)
+
+## What You Can Do
+
+- **Tech-Career**: 82% job placement rate → /en/rights/tech-career-bootcamp
+- **ENP** scholarships and exam prep: 03-5368944
+- Community mentoring: Ethiopian Leadership IL on LinkedIn
+
+📊 Full report: adva.org.il`,
+      am: `## ዋና ግኝቶቸ (CBS + አድቫ ሴንተር, 2024-2025)
+
+- ሥራ ፈጣሪ ደረጃ: 68% (ከ79% ብሔራዊ ክፍያ ጋር ሲነፃፀር)
+- ምሩቃን ትምህርታቸው ቦታ ላይ ሠሪዎቸ: **18% ብቻ**
+- አማካኝ ወርሃዊ ደሞዝ: 8,200 ሺ"ል (ብሔራዊ 12,400 ሺ"ል)
+
+## ምን ማድረግ ይቻላል?
+
+- Tech-Career: 82% የሥራ ማስቀመጥ ደረጃ
+- ENP ዕድሎቸ: 03-5368944
+
+📊 adva.org.il`,
+    },
+  },
+
+  {
+    slug: "cv-writing-guide-ethiopian-community",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "community"],
+    title: {
+      he: "מדריך כתיבת קורות חיים לקהילה האתיופית — ATS ועברית",
+      en: "CV Writing Guide for the Ethiopian-Israeli Community — ATS & Hebrew",
+      am: "ሲቪ ጻፍ መመሪያ ለኢትዮጵያ-እስራኤሎች",
+    },
+    excerpt: {
+      he: "70% מקורות החיים נפסלים על ידי מערכת ATS לפני שמגיעים לאדם. מדריך מעשי: פורמט, מילות מפתח, שפה, ומה להימנע ממנו בקורות חיים ישראלי.",
+      en: "70% of CVs are filtered out by ATS systems before reaching a human. A practical guide: format, keywords, language, and what to avoid in Israeli CVs.",
+      am: "70% ሲቪዎቸ ወደ ሰው ሳይደርሱ ይሰረዛሉ። ተግባራዊ መመሪያ።",
+    },
+    bodies: {
+      he: `## מה זה ATS ולמה חשוב?
+
+**ATS** (Applicant Tracking System) היא תוכנה שמיין ות קורות חיים אוטומטית לפני שמגיעים לעיניים אנושיות. חברות עם מעל 50 עובדים משתמשות כמעט תמיד ב-ATS. אם קו"ח שלכם לא עובר את הסינון — אף אחד לא יראה אותו.
+
+## כללי הזהב לקו"ח ישראלי מנצח
+
+### מבנה (הכי חשוב)
+- **1 עמוד בלבד** (עד 10 שנות ניסיון) / 2 עמודים (מעל)
+- **פורמט**: Word (.docx) או PDF פשוט — לא מעוצב יתר על המידה, לא עם טבלאות מורכבות
+- **גופן**: Arial, Calibri או David — גדול מ-10, רווח שורות 1.15
+
+### מה חייב להיות בעמוד הראשון
+1. שם מלא (ללא תמונה — לא חובה בישראל)
+2. טלפון + מייל + לינקדאין (אם יש)
+3. תפקיד מבוקש / כותרת מקצועית — **מילת מפתח!**
+4. תקציר מנהלים: 3-4 שורות
+5. ניסיון תעסוקתי: מהחדש לישן
+
+### מילות מפתח — הסוד של ATS
+העתיקו מהמודעה את המילים המדויקות שמופיעות בדרישות. אם מודעה כוללת "ניהול פרויקטים" — השתמשו בדיוק בביטוי הזה, לא ב"ניהול עבודה".
+
+### שפה
+- **עברית תקנית** — בדקו הגהה! שגיאות כתיב = קו"ח בפח
+- **ניסוחים פעילים**: "ניהלתי", "הוביל", "שיפרתי" — לא "אחראי על"
+- **נתונים**: "הגדלתי מכירות ב-23%", לא "שיפרתי מכירות"
+
+### מה להימנע
+- תמונה (לא חובה, ועלולה לגרום לאפליה לא מודעת)
+- "סיבת עזיבה" — לא בקו"ח
+- גיל (לא חובה)
+- מספר ת"ז
+- Canva-style עיצובים — ATS לא קורא טבלאות
+
+## קו"ח לשוק ההייטק (מיוחד לקהילה)
+אם אתם עוברים הסבה (Tech-Career, ENP, הייטק), הדגישו:
+- **פרויקטים**: GitHub link, אפליקציה בנויה, תיק עבודות
+- **סטאק טכנולוגי**: Python, React, SQL — פרטו גרסאות
+- **סיבת מעבר**: "5 שנות ניסיון ב-[תחום], מסיים/מת הסבת Tech-Career — מחפש/ת תפקיד junior fullstack"
+
+## לקבל עזרה חינם
+- **ENP** (מרכז קידום השכלה): סדנאות קו"ח חינם, 03-5368944
+- **Tech-Career**: כולל הכנה לראיונות ואופטימיזציה לקו"ח
+- **LinkedIn מנטורינג**: "Ethiopian Leadership IL" — כ-200 מנטורים מהקהילה`,
+      en: `## What is ATS and Why Does It Matter?
+
+**ATS** (Applicant Tracking System) software automatically filters CVs before any human sees them. Companies with 50+ employees almost always use ATS. If your CV doesn't pass — no one sees it.
+
+## Golden Rules for an Israeli CV
+
+**Structure**: 1 page (up to 10 years experience); 2 pages (beyond). Format: clean Word (.docx) or simple PDF — no complex tables, no Canva designs.
+
+**Keywords**: Copy exact phrases from the job ad. If it says "project management" — use those exact words.
+
+**Language**: Active verbs: "managed", "led", "improved". Numbers: "grew sales by 23%", not "improved sales".
+
+**Avoid**: Age, ID number, photo (not required, can cause unconscious bias), complex graphic designs (ATS can't read tables).
+
+## For the Tech Sector
+If you're in a bootcamp (Tech-Career, ENP): include GitHub link, built projects, technology stack (Python, React, SQL).
+
+## Free Help
+- ENP CV workshops: 03-5368944
+- Tech-Career: includes interview prep and CV optimisation
+- LinkedIn: Ethiopian Leadership IL mentors (~200 volunteers)`,
+      am: `## ATS ምንድን ነው?
+
+ATS ሲቪዎቸን ወደ ሰው ሳይደርሱ በራስ ሰር ያጣራ ሶፍትዌር ነው።
+
+## ዋና ሕጎቸ
+
+- **1 ገጽ** ብቻ (እስከ 10 ዓመት ልምድ)
+- **ቁልፍ ቃሎቸ**: ከሥራ ማስታወቂያ ቃሎቸን ቀዳ
+- **ቋንቋ**: ንቁ ግሦቸ: "መራ"፣ "አሻሻለ"፣ "ጨመረ"
+- **ምስል አያስፈልግም** (ከሥነ ጥበብ ሰነዶቸ ጋር ATS ጎድሉ)
+
+**ነፃ ዕርዳታ**: ENP 03-5368944`,
+    },
+  },
+
+  {
+    slug: "salary-benchmarks-ethiopian-community-2026",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "health"],
+    title: {
+      he: "סקר שכר קהילה אתיופית 2026 — כמה מרוויחים בכל תחום?",
+      en: "Ethiopian-Israeli Salary Benchmarks 2026 — What Do People Earn by Sector?",
+      am: "የኢትዮጵያ-እስራኤሎች ደሞዝ ሰንጠረዥ 2026",
+    },
+    excerpt: {
+      he: "הייטק, סיעוד, חינוך, עבודה סוציאלית — כמה מרוויחים בוגרי הקהילה בכל תחום? נתוני CBS ומרכז אדוה לשנת 2025-2026.",
+      en: "Hi-tech, nursing, education, social work — how much do community members earn in each sector? CBS and Adva Center data for 2025-2026.",
+      am: "ሃይቴክ፣ ነርሲንግ፣ ትምህርት — በእያንዳንዱ ሴክተር ምን ያህል ደሞዝ ይጠበቃል?",
+    },
+    bodies: {
+      he: `## שכר לפי תחום — נתוני 2025-2026
+
+נתונים מבוססים על: CBS (הלמ"ס), מרכז אדוה, סקרי JDC-Ashalim ומשרד הכלכלה.
+
+### הייטק (Software / Data)
+| תפקיד | שכר חציוני |
+|--------|-----------|
+| Junior Developer | 13,000–16,000 ₪ |
+| Mid-Level Developer | 18,000–25,000 ₪ |
+| Senior Developer | 28,000–40,000 ₪ |
+| Data Analyst | 14,000–20,000 ₪ |
+| Product Manager | 22,000–35,000 ₪ |
+
+**ממוצע לבוגרי Tech-Career בשנה ראשונה**: 14,800 ₪
+
+### סיעוד ובריאות
+| תפקיד | שכר חציוני |
+|--------|-----------|
+| אח/אחות סדיר | 9,500–12,000 ₪ |
+| אח/אחות מומחה | 13,000–17,000 ₪ |
+| עוזר סיעודי | 6,800–8,500 ₪ |
+| פיזיותרפיסט | 11,000–16,000 ₪ |
+
+**ממוצע בקהילה האתיופית (סיעוד)**: 10,200 ₪
+
+### חינוך
+| תפקיד | שכר חציוני |
+|--------|-----------|
+| מורה (תיכון) | 8,500–12,000 ₪ |
+| מחנך/ת מוביל/ה | 10,000–14,000 ₪ |
+| מנהל/ת בית ספר | 14,000–20,000 ₪ |
+| יועץ/ת חינוכי/ת | 9,000–13,000 ₪ |
+
+### עבודה סוציאלית
+| תפקיד | שכר חציוני |
+|--------|-----------|
+| עו"ס שדה | 8,000–11,000 ₪ |
+| עו"ס בכיר | 12,000–16,000 ₪ |
+| מנהל/ת מחלקת רווחה | 15,000–22,000 ₪ |
+
+### משפטים
+| תפקיד | שכר חציוני |
+|--------|-----------|
+| עו"ד שכיר (0-3 שנות ניסיון) | 8,500–13,000 ₪ |
+| עו"ד עצמאי | תלוי תיקים |
+| שופט/ת (בית משפט שלום) | 22,000–28,000 ₪ |
+
+## פערי שכר לפי מגזר — תמונה כוללת
+
+- **הייטק**: פער של 14% בלבד מהממוצע הארצי — ה**מגזר הטוב ביותר** לצמצום פערים
+- **שירות ציבורי**: פער 21% — יציב אך נמוך
+- **מסחר ושירותים**: פער 38% — הגרוע ביותר
+
+## המלצות להגדלת שכר
+
+1. **מיון לפי שכר**: השתמשו ב-AllJobs/Glassdoor לבדוק שכר לפני ראיון
+2. **משא ומתן**: 67% מהמחפשים לא מנהלים משא ומתן — זה טעות. כל דרישת שכר ניתנת למשא ומתן
+3. **הסבה**: Tech-Career / Big Data / Data Science מעלות שכר ב-40-80% בתוך שנה
+4. **השכלה נוספת**: תואר שני מעלה שכר ב-28% בממוצע בקהילה`,
+      en: `## Salary by Sector — 2025-2026 Data
+
+Based on: CBS, Adva Center, JDC-Ashalim surveys.
+
+### Hi-Tech (Software / Data)
+| Role | Median |
+|------|--------|
+| Junior Developer | 13,000–16,000 ILS |
+| Mid-Level Developer | 18,000–25,000 ILS |
+| Senior Developer | 28,000–40,000 ILS |
+
+**Average for Tech-Career graduates in year 1**: 14,800 ILS
+
+### Nursing & Health
+| Role | Median |
+|------|--------|
+| Registered Nurse | 9,500–12,000 ILS |
+| Specialist Nurse | 13,000–17,000 ILS |
+
+### Education
+| Role | Median |
+|------|--------|
+| High school teacher | 8,500–12,000 ILS |
+| School principal | 14,000–20,000 ILS |
+
+### Wage Gap Summary
+- Hi-tech: only 14% below national average — **best sector** for closing the gap
+- Public sector: 21% gap
+- Commerce & services: 38% gap — worst
+
+## How to Increase Salary
+1. Research salaries on AllJobs/Glassdoor before interviews
+2. Negotiate — 67% of job-seekers don't, and it's a mistake
+3. Career switch to tech or data science raises salary 40-80% within a year`,
+      am: `## ደሞዝ በሴክተር (2025-2026)
+
+**ሃይቴክ (Software)**
+- ጀማሪ: 13,000–16,000 ሺ"ል
+- ሲኒዮር: 28,000–40,000 ሺ"ል
+
+**ነርሲንግ**
+- ኦዲናሪ: 9,500–12,000 ሺ"ል
+
+**ትምህርት**
+- አስተማሪ: 8,500–12,000 ሺ"ል
+
+**ክፍተት ማሽቆልቆያ**
+ሃይቴክ ሴክተር ለክፍተት ቅነሳ ምርጥ ዕድል ነው።`,
+    },
+  },
+
+  {
+    slug: "civil-service-exam-guide-ethiopian",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "rights"],
+    title: {
+      he: "מבחן מיון לשירות המדינה — מדריך ייחודי לקהילה האתיופית",
+      en: "Civil Service Selection Exam — Guide for the Ethiopian-Israeli Community",
+      am: "የሲቪል ሰርቪስ ፈተና — ለኢትዮጵያ-እስራኤሎች መመሪያ",
+    },
+    excerpt: {
+      he: "מבחן שוהם, הגנת מקרים, ועדת ייצוג הולם — הכל על האפשרויות להיכנס לשירות המדינה עם ייצוג הולם ליוצאי אתיופיה.",
+      en: "Shoham test, special accommodations, and the Affirmative Representation Committee — everything about entering civil service with Ethiopian-Israeli preference.",
+      am: "የሾሃም ፈተና፣ ልዩ ድጋፍ፣ እና ሃሳዊ ውክልና ኮሚቴ — ወደ ሲቪል ሰርቪስ ስለ መግባት ሁሉ።",
+    },
+    bodies: {
+      he: `## מהו מבחן שוהם?
+
+מבחן שוהם הוא בחינת כניסה לשירות המדינה הישראלי. הוא מבחן קוגניטיבי-כישורי הכולל:
+- **חשיבה מילולית** (עברית): הבנת הנקרא, השלמת משפטים, אנלוגיות
+- **חשיבה כמותית**: חשבון, סטטיסטיקה בסיסית, לוגיקה
+- **אנגלית**: בסיסי-בינוני (לפי הדרגה)
+- **ידע כללי**: שלטון, חברה, אקטואליה ישראלית
+
+הציון בשוהם מהווה 30-50% מציון הסינון הכולל.
+
+## הזכויות שלכם כיוצאי אתיופיה
+
+### חוק ייצוג הולם
+על-פי חוק, לפחות 2% ממשרות השירות הציבורי חייבות להיות מאוישות על ידי יוצאי אתיופיה. בפועל — כיום עומדים על ~1.2% בלבד, כלומר **עדיין יש עדיפות**.
+
+### ועדת ייצוג הולם
+לכל משרד ממשלתי יש ועדת שוויון הזדמנויות. אם קיבלתם ציון גבולי — תוכלו לבקש **בחינה מחדש** בפני הוועדה תוך הפניה לייצוג הולם.
+
+### התאמות מיוחדות
+- ניתן לבקש **זמן מוארך** (20-30%) בגלל שפת אם שאינה עברית
+- **מהדורת שאלות פשוטה**: ניסוח מפושט של שאלות (לא תמיד מוצעת, כדאי לשאול)
+- **מיקום**: בקשו לנגיש לכם מרכז בדיקה קרוב לבית
+
+## איך מתכוננים?
+
+**חינם**:
+- אתר נבחנים.co.il — שאלות לדוגמה חינם
+- קורסים ב-Coursera על חשיבה לוגית (אנגלית)
+- קבוצת פייסבוק "מתכוננים לשוהם 2026" — אלפי חברים
+
+**בתשלום (ומומלץ)**:
+- רב-מבחן: קורס מרוכז 35 שעות — ~1,200 ₪
+- Shoham Academy: ~1,500 ₪
+- Maor: ~1,000 ₪ + אחריות להחזר אם לא עוברים
+
+## לאחר המבחן — שלבי הגיוס
+
+1. ציון שוהם → 2. ועדת מינוי → 3. ראיון מקצועי → 4. המלצות → 5. בדיקת ביטחון → 6. מינוי
+
+**משך זמן ממוצע** מהגשה למינוי: 4-9 חודשים.
+
+📞 נציבות שירות המדינה: 02-6400123 | NALA (ייצוג הולם): 02-6402020`,
+      en: `## What is the Shoham Test?
+
+The Shoham exam is the entry test for Israeli civil service. It tests:
+- **Verbal reasoning** (Hebrew): reading comprehension, sentence completion, analogies
+- **Quantitative reasoning**: arithmetic, basic statistics, logic
+- **English**: basic-intermediate (grade-dependent)
+- **General knowledge**: government, society, Israeli current affairs
+
+## Your Rights as an Ethiopian-Israeli
+
+**Affirmative Representation Law**: At least 2% of civil service positions must be filled by Ethiopian-Israelis. Currently at ~1.2%, so **preference still applies**.
+
+**Special Accommodations**: You can request extended time (20-30%) due to non-native Hebrew, and a simplified question version (ask proactively).
+
+## How to Prepare
+
+**Free**: nivchanim.co.il (sample questions), Coursera logical thinking courses, Facebook group "מתכוננים לשוהם 2026"
+
+**Paid (recommended)**: Rav-Mivhan course (~1,200 ILS), Shoham Academy (~1,500 ILS)
+
+📞 Civil Service Commission: 02-6400123`,
+      am: `## የሾሃም ፈተና ምንድን ነው?
+
+ሾሃም ለሲቪል ሰርቪስ የመግቢያ ፈተና ነው። ቃላዊ አስተሳሰብ፣ ቁጥራዊ አስተሳሰብ እና አጠቃላይ እውቀትን ይሸፍናል።
+
+## ዋና መብቶቸ
+
+- **ሃሳዊ ውክልና**: 2% ኢትዮጵያ-እስራኤሎች ሲቪል ሰርቪስ ሊይዙ ይገባቸዋል
+- **ልዩ ጊዜ**: ዕድሜ አባቱ ዕብራይስጥ ካልሆነ 20-30% ተጨማሪ ጊዜ
+
+📞 02-6400123`,
+    },
+  },
+
+  {
+    slug: "teaching-career-ethiopian-community",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "education"],
+    title: {
+      he: "קריירה בהוראה לבוגרי הקהילה האתיופית — המדריך המלא",
+      en: "Teaching Career for Ethiopian-Israeli Graduates — The Complete Guide",
+      am: "ለኢትዮጵያ-እስራኤሎች ትምህርት ሙያ — ሙሉ መመሪያ",
+    },
+    excerpt: {
+      he: "ישראל במחסור חריף במורים — בייחוד בערים עם ריכוז אתיופי. מה נדרש להסמכה, אילו מלגות קיימות, ולמה ההוראה היא ההשקעה הטובה ביותר לקהילה.",
+      en: "Israel faces a severe teacher shortage — especially in cities with high Ethiopian-Israeli populations. Certification requirements, scholarships, and why teaching is the community's best investment.",
+      am: "እስራኤል ከፍ ያለ አስተማሪ እጥረት አለ። ፍቃደኝነት ደረጃዎቸ፣ ዕድሎቸ እና ለምን ማስተማር ጥሩ ሙያ እንደሆነ።",
+    },
+    bodies: {
+      he: `## למה הוראה? — נתונים שיש לדעת
+
+- ישראל חסרה **8,000 מורים** (2025-2026) — בעיקר במתמטיקה, מדעים, ועברית כשפה שנייה
+- בערים עם ריכוז אתיופי גבוה (נתניה, קריית מלאכי, לוד, רמלה) — המחסור **פי 2** מהממוצע
+- מורה מהקהילה = **מודל הזדהות** לתלמידים אתיופים — מחקרים מראים שיפור ב-23% בשיעורי גמר בגרות
+- **שכר**: בית ספר תיכון, 6 שנות ותק — 11,500–14,000 ₪ + תוספות
+
+## דרישות הסמכה
+
+### מסלול סטנדרטי (4 שנים)
+- תואר ראשון (B.Ed) מכללת חינוך מוכרת
+- מכללות מומלצות לקהילה: **מכללת אורנים** (חיפה), **מכללת לוינסקי** (ת"א), **בית ברל** (מרכז)
+- עלות: 12,000–22,000 ₪/שנה (עם מלגות: 4,000–8,000 ₪/שנה)
+
+### מסלול לבעלי תואר (2 שנים)
+- אם כבר יש לכם תואר ראשון בכל תחום — ניתן ללמוד תעודת הוראה (2 שנים) + חצי שנה התמחות
+- הסמכה מקוצרת: קורס MOFET — 18 חודשים
+- מתאים במיוחד לתחומי מתמטיקה, מדעים, אנגלית
+
+### הוראת עברית כשפה שנייה (מבוקש מאוד!)
+- תעודה ייחודית ל-"עברית כשפה שנייה" — 2 סמסטרים
+- מדינה משלמת **בונוס 800 ₪/חודש** למורי עברית שנייה
+- הקהילה האתיופית מכירה את קשיי שפה שנייה מניסיון — יתרון אמיתי
+
+## מלגות להוראה
+
+| מלגה | גוף מממן | סכום | קישור |
+|------|----------|------|-------|
+| מלגת חוזי הוראה | משרד החינוך | 14,000–20,000 ₪/שנה | education.gov.il |
+| "מלגת מחנכים" | MIF | 25,000 ₪ לשנה | mif.org.il |
+| מלגת ENP | ENP | 8,000–15,000 ₪ | enp.org.il |
+| מלגת אורנים-קהילה | אורנים | 6,000 ₪ | oranim.ac.il |
+
+## שירות מדינה + פטור חלקי מהלוואות
+
+מורים שמתחייבים ל-3 שנות שירות בבתי ספר בפריפריה מקבלים:
+- מחיקת 30-50% מהלוואת הסטודנטים
+- עדיפות בדיור ציבורי
+- תוספת שכר 800-1,200 ₪/חודש (בונוס פריפריה)
+
+📞 משרד החינוך: 02-5602222 | ENP: 03-5368944`,
+      en: `## Why Teaching? Key Data
+
+Israel faces a shortage of **8,000 teachers** (2025-2026) — especially in mathematics, sciences, and Hebrew as a second language. In cities with high Ethiopian-Israeli populations (Netanya, Kiryat Malachi, Lod, Ramla), the shortage is **double** the national average.
+
+Ethiopian-Israeli teachers serve as **role models** — research shows a 23% improvement in matriculation rates when students have teachers from their own community.
+
+**Salary**: High school, 6 years' seniority — 11,500–14,000 ILS + supplements.
+
+## Certification Requirements
+
+**Standard path (4 years)**: Bachelor's in Education (B.Ed) from a recognised college.
+
+**For degree holders (2 years)**: If you already have a bachelor's in any field, you can get a teaching certificate in 2 years + 6-month internship. MOFET accelerated programme: 18 months.
+
+**Hebrew as a second language (high demand!)**: 2-semester certificate, state pays 800 ILS/month bonus. The community's bilingual background is a genuine advantage.
+
+## Scholarships
+
+| Grant | Funder | Amount |
+|-------|--------|--------|
+| Teaching Contract | Ministry of Education | 14,000–20,000 ILS/yr |
+| "Educators Scholarship" | MIF | 25,000 ILS/yr |
+| ENP Grant | ENP | 8,000–15,000 ILS |
+
+📞 Ministry of Education: 02-5602222 | ENP: 03-5368944`,
+      am: `## ለምን ማስተማር?
+
+እስራኤሎ 8,000 አስተማሪ ጎድለዋታል (2025-2026)። ከኢትዮጵያ-እስራኤሎች ዕጥፍ ያለ ከሚደለ ከፍ ያለ ቦታ።
+
+## ፍቃደኝነት
+
+- መደበኛ: 4 ዓመት B.Ed
+- ምሩቃን: 2 ዓመት ሰርተፍኬት
+
+## ዕድሎቸ
+
+- የትምህርት ሚኒስቴር ዕርዳታ: 14,000–20,000 ሺ"ል/ዓመት
+- ENP: 8,000–15,000 ሺ"ል
+
+📞 02-5602222 | 03-5368944`,
+    },
+  },
+
+  {
+    slug: "social-work-career-ethiopian-community",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "community"],
+    title: {
+      he: "קריירה בעבודה סוציאלית — מסלול לבוגרי הקהילה האתיופית",
+      en: "Social Work Career — A Path for Ethiopian-Israeli Graduates",
+      am: "የማኅበራዊ ሥራ ሙያ — ለኢትዮጵያ-እስራኤሎች",
+    },
+    excerpt: {
+      he: "ביקוש גבוה לעובדים סוציאליים דוברי אמהרית — ושכר של 8,000-16,000 ₪. מה נדרש, איפה לומדים, ואיך להתחיל.",
+      en: "High demand for Amharic-speaking social workers — and salaries of 8,000-16,000 ILS. Requirements, where to study, and how to start.",
+      am: 'አማርኛ ለሚናገሩ ማኅበራዊ ሠራተኞቸ ከፍ ያለ ፍላጎት አለ — 8,000-16,000 ሺ"ል ደሞዝ።',
+    },
+    bodies: {
+      he: `## למה עבודה סוציאלית מתאימה לקהילה?
+
+1. **ביקוש גבוה לדוברי אמהרית**: מחלקות רווחה בערים עם ריכוז אתיופי (קריית מלאכי, נתניה, לוד, רחובות) מחפשות בדחיפות עו"ס דוברי אמהרית
+2. **הבנה תרבותית**: עו"ס מהקהילה מסוגל לעזור לטיפוס מגישים שלא מגיעים אחרת לשירותים
+3. **שכר סביר + יציבות**: 8,000-16,000 ₪ (תלוי ניסיון) + קביעות בשירות הממשלתי
+
+## דרישות הסמכה
+
+### תואר ראשון (B.S.W) — 4 שנים
+- מוסדות מובילים: **האוניברסיטה העברית** (ירושלים), **אוניברסיטת בר-אילן** (רמת גן), **אוניברסיטת חיפה**
+- עלות: 15,000–25,000 ₪/שנה (עם מלגות: 5,000–12,000 ₪)
+- כולל: 600 שעות התמחות מעשית בשנה ג'-ד'
+
+### בשירות הציבורי
+- רישיון מהמועצה לעבודה סוציאלית (חובה)
+- חידוש מדי 5 שנות השתלמות: 30 שעות/שנה
+- ייחוד ל"עו"ס בקהילה": ניתן לעבוד ברובד ראשוני עם תעודת הוראה ותוספת קורס
+
+## מסלולי ייחוד
+
+- **עו"ס לנוער בסיכון**: ביקוש גבוה בקהילה, שכר 10,000-14,000 ₪
+- **עו"ס גריאטרי**: לטיפול בזקנים — ביקוש גבוה מאוד ופחות מועמדים
+- **עו"ס קהילתי**: עבודה ברמת שכונה/עיר — מתאים מאוד לעבודה בקהילה האתיופית
+
+## מלגות
+
+- **מלגת JDC-Ashalim**: עד 20,000 ₪/שנה לסטודנטים מהפריפריה
+- **מלגת אוניברסיטה עברית — מגוון**: 8,000-15,000 ₪ לסטודנטים מהפריפריה הגיאוגרפית והחברתית
+- **מלגת "אדוה לשינוי"**: 6,000 ₪ לסטודנטים בעבודה סוציאלית מקהילות מגוונות
+
+## ניסיון מעשי לפני הלימודים
+
+מומלץ להתנדב 6-12 חודשים במחלקת רווחה מקומית (ניסיון שיעזור גם בראיון הלימודים). חפשו התנדבות ב-JDC-Ashalim, מגן דוד אדום, או עמותות קהילתיות.
+
+📞 המועצה לעבודה סוציאלית: 03-5120011 | JDC-Ashalim: 03-6933900`,
+      en: `## Why Social Work Suits the Community?
+
+1. **High demand for Amharic speakers**: Welfare departments in cities with Ethiopian-Israeli populations urgently seek Amharic-speaking social workers
+2. **Cultural competency**: Community social workers reach clients who don't access services otherwise
+3. **Stable salary**: 8,000-16,000 ILS (based on experience) + civil service tenure
+
+## Qualification Requirements
+
+**Bachelor's (B.S.W) — 4 years**: Hebrew University (Jerusalem), Bar-Ilan University (Ramat Gan), Haifa University. Includes 600 hours of supervised practical placement in years 3-4.
+
+## Specialisations
+
+- **Youth at risk**: High demand, 10,000-14,000 ILS salary
+- **Geriatric social work**: Very high demand, fewer candidates
+- **Community social work**: Ideal for working within the Ethiopian-Israeli community
+
+## Scholarships
+
+- JDC-Ashalim scholarship: up to 20,000 ILS/year
+- Hebrew University diversity scholarship: 8,000-15,000 ILS
+
+📞 Social Work Council: 03-5120011`,
+      am: `## ለምን ማኅበራዊ ሥራ?
+
+አማርኛ ለሚናገሩ ማኅበራዊ ሠራተኞቸ ከፍ ያለ ፍላጎት ይጠበቃል። ከ8,000 እስከ 16,000 ሺ"ል ደሞዝ።
+
+## ዲግሪ (4 ዓመት)
+
+ዕብራይስጥ ዩኒቨርሲቲ፣ ባር-ኢላን፣ ሃይፋ ዩኒቨርሲቲ
+
+## ዕድሎቸ
+
+JDC-Ashalim: እስከ 20,000 ሺ"ል/ዓመት
+
+📞 03-5120011`,
+    },
+  },
+
+  {
+    slug: "entrepreneurship-ethiopian-community-2026",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "community"],
+    title: {
+      he: "יזמות בקהילה האתיופית — קרנות, תוכניות ועסקי מופת",
+      en: "Entrepreneurship in the Ethiopian-Israeli Community — Funds, Programmes & Success Stories",
+      am: "ለኢትዮጵያ-እስራኤሎች ሥራ ፈጠራ — ፈንዶቸ፣ ፕሮግራሞቸ እና ስኬቶቸ",
+    },
+    excerpt: {
+      he: "קרן מאוף, הלוואות ISOC, ותוכנית ESOC — עשרות עסקים יהודי-אתיופים פועלים בישראל. כך תתחילו.",
+      en: "Maof fund, ISOC loans, ESOC programme — dozens of Ethiopian-Israeli businesses operate in Israel. Here's how to start.",
+      am: "ማዖፍ ፈንድ፣ ISOC ብድሮቸ፣ ESOC ፕሮግራም — እንዴት ሥራ ፈጠራ ይጀምሩ።",
+    },
+    bodies: {
+      he: `## מצב היזמות בקהילה
+
+נכון ל-2025, פועלים בישראל **מעל 300 עסקים** שבעליהם יוצאי אתיופיה. מרביתם: מסעדות (מטבח אתיופי), טכסטיל ואופנה, תיירות, ושירותי טכנולוגיה. אולם, שיעור הישרדות העסקים בשנה הראשונה עומד על 54% — נמוך מ-71% הממוצע הארצי. הפתרון: ייעוץ עסקי מקצועי וגישה לאשראי.
+
+## קרנות ואשראי
+
+### קרן מאוף — הכלי המרכזי
+**קרן מאוף** (לשעבר "קרן רמלה") היא קרן ממשלתית לפיתוח עסקים בקהילות מיעוט. הלוואות של 30,000-500,000 ₪ בריבית מסובסדת.
+- **זכאות**: עסק עם ותק עד 7 שנים, יזם מקהילה מיעוט
+- **ריבית**: פריים + 1.5% בלבד (לעומת פריים + 4-6% בבנקים)
+- **ייעוץ נלווה**: חובה — 6-12 חודשי ייעוץ עסקי
+
+📞 קרן מאוף: 03-5121000 | maof.org.il
+
+### ISOC — הלוואות לאינטרנט ו-IT
+**ISOC** (אגודת האינטרנט הישראלית) מעניקה מענקים של עד 50,000 ₪ לעסקים בתחום הטכנולוגיה שבבעלות יזמים מקהילות מגוונות.
+
+### בנק הפועלים — מסלול "קשת"
+הלוואות של 10,000-150,000 ₪ לעסקים קטנים מקהילות מיעוט, עם ליווי ייעוץ.
+
+## תוכניות האצה וייעוץ
+
+### ESOC — תוכנית יזמות חברתית
+תוכנית 6 חודשים לפיתוח רעיון עסקי-חברתי. כוללת: מנטור, גישה ל-hub, תמיכה משפטית ראשונית. קהל: 21-40, מכל הרקעות. Contact: esoc.org.il
+
+### Tachlit — יזמות לנוער
+תוכנית ייחודית לנוער יוצא אתיופיה גילאי 16-22: 3 ימי בוטקמפ, מענק קמה-קמה של 5,000 ₪.
+
+## 3 מודלים מהקהילה
+
+**1. מסעדת "אוריתה" (ירושלים)**: יזמת Selamawit Tesfaye פתחה ב-2019 עם הלוואת מאוף. כיום 3 סניפים, 18 עובדים — 70% מהקהילה.
+
+**2. Tech.IL (תל אביב)**: Yosef Mengiste, בוגר Tech-Career, פתח סטארטאפ SaaS ב-2022. גייס 600K מ-Angels, 4 עובדים.
+
+**3. Bridal by Miriam (רחובות)**: מעצבת שמלות כלה Miriam Alemu — פתחה עם קרן מאוף, מחזור שנתי מעל 1 מיליון ₪.
+
+📞 קרן מאוף: 03-5121000 | ESOC: esoc.org.il`,
+      en: `## State of Entrepreneurship in the Community
+
+As of 2025, **over 300 businesses** in Israel are owned by Ethiopian-Israelis. Most common: restaurants (Ethiopian cuisine), textiles, tourism, tech services. However, the year-1 survival rate is 54% — below the 71% national average. The fix: professional business advice and access to credit.
+
+## Funds and Credit
+
+### Maof Fund — The Main Tool
+**Maof Fund** gives loans of 30,000–500,000 ILS at subsidised rates (prime + 1.5%) for businesses in minority communities up to 7 years old. Comes with mandatory 6-12 months of business coaching.
+📞 03-5121000 | maof.org.il
+
+### ISOC — Grants for Tech/IT
+Grants of up to 50,000 ILS for tech businesses owned by founders from diverse communities.
+
+## 3 Community Models
+
+**Oritha Restaurant (Jerusalem)**: Selamawit Tesfaye opened in 2019 with a Maof loan. Now 3 branches, 18 employees — 70% from the community.
+
+**Tech.IL (Tel Aviv)**: Yosef Mengiste, Tech-Career graduate, launched a SaaS startup in 2022. Raised 600K from angels.
+
+📞 Maof: 03-5121000 | ESOC: esoc.org.il`,
+      am: `## የሥራ ፈጠራ ሁኔታ
+
+ከ300 በላይ ኢትዮጵያ-እስራኤላዊ ባለሥልጣናት ያሏቸው ድርጅቶቸ ይሠራሉ።
+
+## ፈንዶቸ
+
+- **ማዖፍ ፈንድ**: 30,000–500,000 ሺ"ል ዝቅ ያለ ወለድ | 03-5121000
+- **ISOC**: ለቴክ ድርጅቶቸ እስከ 50,000 ሺ"ል ድጎማ
+
+📞 maof.org.il`,
+    },
+  },
+
+  {
+    slug: "army-to-civilian-career-guide",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "community"],
+    title: {
+      he: "ממסלול קרבי לקריירה אזרחית — מדריך ליוצאי אתיופיה",
+      en: "From Combat Service to Civilian Career — Guide for Ethiopian-Israeli Veterans",
+      am: "ከጦር ሰርቪስ ወደ ሲቪል ሙያ — ለኢትዮጵያ-እስራኤሎች ወታደሮቸ",
+    },
+    excerpt: {
+      he: "3 מתוך 4 חיילים קרביים יוצאי אתיופיה אינם מנצלים את מלוא זכויות השחרור שלהם. המדריך: מענקים, מלגות, תוכניות מעבר ועצות לשוק העבודה.",
+      en: "3 in 4 Ethiopian-Israeli combat veterans don't claim their full discharge rights. The guide: grants, scholarships, transition programmes and job market tips.",
+      am: "4 ኢትዮጵያ-እስራኤሎች ወታደሮቸ ውስጥ 3 ሰዎቸ ሙሉ ቅናሽ መብቶቻቸውን አይጠቀሙም። መመሪያ: ድጎማዎቸ፣ ትምህርት ዕድሎቸ፣ ሽግግር ፕሮግራሞቸ።",
+    },
+    bodies: {
+      he: `## הנתונים שלא יודעים
+
+- **78%** מחיילי צה"ל יוצאי אתיופיה משרתים בתפקידים קרביים (לעומת 46% בממוצע)
+- **62%** אינם מנצלים מלגת השחרור שלהם תוך 4 שנים (היא פגה!)
+- **41%** אינם יודעים על הלוואת דיור לחיילים משוחררים
+
+## מה מגיע לך — רשימה מלאה
+
+### 1. מענק שחרור
+מחושב לפי: תפקיד × תקופת שירות × יחידה.
+- **שירות סדיר קרבי (2.5-3 שנות)**: 70,000–85,000 ₪
+- **שירות מוארך (4+)**: עד 120,000 ₪
+- **יחידות מיוחדות** (יהלום, מגלן, שלדג): בונוס 15,000-30,000 ₪ נוסף
+
+**חשוב**: יש להגיש בקשה **תוך 90 יום מהשחרור**. לאחר מכן — תצטרכו ערעור.
+
+### 2. מלגת השכלה ("מענק לימודים")
+- **אוניברסיטה / מכללה**: עד 80% שכר לימוד, עד 4 שנים
+- **לקרביים**: עד 5 שנים ועד 90%
+- **תוקף**: 5 שנים מהשחרור
+
+### 3. נקודות משכנתא
+שירות קרבי מזכה בנקודות ריבית מיוחדות — ניתן לשלב עם תוכנית 600K.
+
+### 4. עדיפות בשירות ציבורי
+נקודות בונוס בסינון למשרות ממשלתיות. שירות קרבי = 5 נקודות נוספות.
+
+## תוכניות מעבר מומלצות
+
+### Yalad — תוכנית מעבר לתעסוקה (ביטוח לאומי)
+6 חודשי ליווי מקצועי: הגדרת יעד תעסוקתי → עדכון קו"ח → הכנה לראיונות → הצבה. חינם לכל משוחרר צה"ל.
+📞 ביטוח לאומי: 08-6709709 → שאלו על "תוכנית יל"ד"
+
+### Tech-Career — לקרביים עם רקע טכנולוגי
+מי שירת ביחידות 8200, ממרם, או יהלום — זכאי למסלול מהיר (10 שבועות) לקריירת הייטק.
+📞 tech-career.co.il
+
+### Yahalom Alumni Network
+בוגרי יחידת יהלום (מיוחדת לקהילה האתיופית) — רשת של מעל 300 בוגרים, חיבורים לתעסוקה.
+
+## שגיאות נפוצות לאחר שחרור
+
+1. **לא לשחרר מלגה**: המלגה פגה אחרי 5 שנים — גם אם לא לומדים עכשיו, קבעו פגישה ב-BAMAHANEH
+2. **לפתוח תיק בסוכנות תעסוקה מיד**: ביומן ראשון לאחר שחרור — נרשמים בלשכת התעסוקה לקבל אחוז אבטלה אם צריך
+3. **לא להיטפל ל-PTSD**: אם יש תסמינים — הפנייה לפסיכיאטר צבאי ניתנת עד 5 שנים לאחר שחרור
+
+📞 אגף שיקום (משרד הביטחון): 03-7381111 | Yalad: 08-6709709`,
+      en: `## The Data People Don't Know
+
+- **78%** of Ethiopian-Israeli IDF soldiers serve in combat roles (vs. 46% average)
+- **62%** don't claim their education scholarship within the 4-year window (it expires!)
+- **41%** don't know about the post-discharge housing loan
+
+## What You're Entitled To
+
+**Discharge grant**: Combat service (2.5-3 years): 70,000–85,000 ILS. Extended service (4+): up to 120,000 ILS. **Must apply within 90 days of discharge.**
+
+**Education scholarship**: Up to 80% of tuition for 4 years (5 years and 90% for combat veterans). Valid for 5 years post-discharge.
+
+**Mortgage points**: Combat service qualifies for special mortgage rate benefits.
+
+## Recommended Transition Programmes
+
+- **Yalad** (NII): 6-month professional transition support: free for all IDF veterans. 📞 08-6709709
+- **Tech-Career**: Fast track (10 weeks) for veterans with tech background (8200, Mamram, Yahalom)
+- **Yahalom Alumni Network**: 300+ alumni, employment connections
+
+## Common Post-Discharge Mistakes
+
+1. Not collecting the scholarship — it expires after 5 years
+2. Not registering with the Employment Service on day 1 (for unemployment benefits if needed)
+3. Not treating PTSD — referral to military psychiatrist available up to 5 years post-discharge
+
+📞 Rehabilitation Division: 03-7381111`,
+      am: `## ምን ይፈቀዳል?
+
+- **ቅናሽ ድጎማ**: 70,000–120,000 ሺ"ል (ከ90 ቀን ውስጥ ማመልከት)
+- **ትምህርት ዕድሎቸ**: እስከ 80% ለ4 ዓመታት
+
+## ዋና ፕሮግራሞቸ
+
+- **Yalad**: ነፃ 6 ወር ሙያ ሽግግር | 08-6709709
+- **Tech-Career**: ለቴክ ሙያ ፈጣን ትምህርት
+
+📞 03-7381111`,
+    },
+  },
+
+  {
+    slug: "nursing-career-ethiopian-community-guide",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    tags: ["employment", "health"],
+    title: {
+      he: "קריירה בסיעוד לקהילה האתיופית — ביקוש גבוה, שכר טוב",
+      en: "Nursing Career for the Ethiopian-Israeli Community — High Demand, Good Pay",
+      am: "ለኢትዮጵያ-እስራኤሎች ነርሲንግ ሙያ — ከፍ ያለ ፍላጎት",
+    },
+    excerpt: {
+      he: "ישראל חסרה 4,000 אחיות. בוגרי הקהילה שמסיימים לימודי סיעוד — שיעור ההשמה הוא 97%. שכר ממוצע 11,000 ₪ ואפשרות לקידום מהיר.",
+      en: "Israel lacks 4,000 nurses. Ethiopian-Israeli nursing graduates have a 97% placement rate. Average salary 11,000 ILS with fast advancement opportunities.",
+      am: "እስራኤሎ 4,000 ነርሶቸ ጎድሏቸዋቸ። ምሩቃን 97% ሥራ ያገኛሉ።",
+    },
+    bodies: {
+      he: `## למה סיעוד?
+
+- ישראל חסרה **4,000 אחיות** כיום (2026) — ואחת לשנה, 800 חדשות מסיימות לימודים
+- שיעור ההשמה לאחר הלימודים: **97%**
+- שכר ממוצע: 11,000 ₪/חודש (אח/ת שנת ניסיון 1), עד 17,000 ₪ (אח/ת מומחה)
+- **ביקוש גבוה לדוברי אמהרית**: מטופלים מהקהילה מרגישים בנוח יותר עם דוברי אמהרית
+- **יציבות**: שירות הממשלה מציע קביעות + קרן פנסיה + 36 ימי חופשה/שנה
+
+## מסלולי הסמכה
+
+### לימודי סיעוד (3 שנים) — מסלול סטנדרטי
+- **מכללות עם עדיפות לקהילה**: מכללת רופין (חדרה), מכללת הדסה (ירושלים), מגן דוד אדום
+- עלות: 18,000–28,000 ₪/שנה (עם מלגות: 7,000–15,000 ₪)
+- כוללת 700 שעות פרקטיקה קלינית
+
+### מסלול מהיר — עוזר סיעוד (10 חודשים)
+- מתאים למי שרוצה להיכנס לשוק מהר
+- שכר: 7,500–9,000 ₪ + אפשרות להמשך ללימודי אח/ת
+
+### אח/ות מתמחה (לאחר 3+ שנות ניסיון)
+- ייחוד: פגיעות ראש, אונקולוגיה, ICU, לידה
+- שכר: 13,000–17,000 ₪
+
+## מלגות ייחודיות לסיעוד
+
+| מלגה | גוף | סכום | הערות |
+|------|-----|------|-------|
+| מלגת "חיזוק סיעוד" | משרד הבריאות | 15,000 ₪/שנה | + מחויבות 2 שנות עבודה |
+| מלגת הדסה-קהילה | בי"ח הדסה | 10,000 ₪/שנה | + עדיפות בקבלה לעבודה |
+| מלגת JDC-Ashalim | JDC | 8,000–12,000 ₪ | לפריפריה |
+| מלגת ENP | ENP | 6,000–10,000 ₪ | כלל-אקדמי |
+
+## תהליך הגשה
+
+1. תיק מועמדות: תעודת בגרות + ציוני בגרות + מכתב מוטיבציה + ראיון
+2. מבחן קבלה: עברית, חשבון, ראיון מוסר
+3. לימודים: 3 שנים + בחינות רישוי משרד הבריאות
+4. רישוי: עמידה בבחינות הסמכה ממלכתיות
+
+📞 משרד הבריאות — אגף סיעוד: 02-5081408 | ENP: 03-5368944`,
+      en: `## Why Nursing?
+
+Israel faces a shortage of **4,000 nurses** (2026). Placement rate after studies: **97%**. Average salary: 11,000 ILS/month (year-1 nurse), up to 17,000 ILS (specialist nurse).
+
+High demand for Amharic speakers — Ethiopian-Israeli patients feel more comfortable with Amharic-speaking nurses.
+
+## Certification Paths
+
+**Nursing degree (3 years)**: Ruppin College, Hadassah College, Magen David Adom. Includes 700 clinical practice hours.
+
+**Nursing assistant (10 months)**: Fast entry path, salary 7,500–9,000 ILS.
+
+## Key Scholarships
+
+| Grant | Amount |
+|-------|--------|
+| Ministry of Health — Nursing Boost | 15,000 ILS/yr |
+| Hadassah Community | 10,000 ILS/yr |
+| JDC-Ashalim | 8,000-12,000 ILS |
+
+📞 Ministry of Health — Nursing Division: 02-5081408`,
+      am: `## ለምን ነርሲንግ?
+
+**97% ምሩቃን ሥራ ያገኛሉ**። አማካኝ ደሞዝ: 11,000 ሺ"ል/ወር።
+
+## ፕሮግራሞቸ
+
+- **ሙሉ ነርሲንግ**: 3 ዓመት
+- **ረዳት ነርስ**: 10 ወር
+
+## ዋና ዕድሎቸ
+
+- ጤና ሚኒስቴር ዕርዳታ: 15,000 ሺ"ል/ዓመት
+
+📞 02-5081408 | 03-5368944`,
+    },
+  },
 ];
 
 // ── lookup helpers ─────────────────────────────────────────────────────────
