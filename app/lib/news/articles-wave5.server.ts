@@ -2161,7 +2161,7 @@ Tell your doctor about all herbal remedies (drug interactions). Never use Tenada
 
 ## ምርምር ምን ይላል?
 
-ጌሾ: ፀረ-ባክቴሪያ ✅ | ተናዳም: በፅንስ ጊዜ ​አደገኛ ⚠️ | ቆሶ: ቁጥጥር ሲኖር ✅
+ጌሾ: ፀረ-ባክቴሪያ ✅ | ተናዳም: በፅንስ ጊዜ አደገኛ ⚠️ | ቆሶ: ቁጥጥር ሲኖር ✅
 
 📞 ethiopianjhc.org.il`,
     },
