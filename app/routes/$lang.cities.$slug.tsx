@@ -48,12 +48,21 @@ export async function loader({ params }: Route.LoaderArgs) {
     next: nextDate(e),
   }));
 
-  const { items: cityListings } = await listPublicListings(
+  const { items: allCityListings } = await listPublicListings(
     { citySlugHe: city.slug },
     0,
   ).catch(() => ({ items: [] as PublicListingSummary[], total: 0 }));
 
-  return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage, cityListings: cityListings.slice(0, 6) };
+  // Prioritise listings that have a featured image, then fill with the rest.
+  const withImage = allCityListings.filter(
+    (l) => !!(l.attributes as Record<string, unknown>).featuredImageUrl,
+  );
+  const withoutImage = allCityListings.filter(
+    (l) => !(l.attributes as Record<string, unknown>).featuredImageUrl,
+  );
+  const cityListings = [...withImage, ...withoutImage].slice(0, 6);
+
+  return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage, cityListings };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
