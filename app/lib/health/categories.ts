@@ -38,8 +38,8 @@ export type HealthConditionSlug =
   | "bone-osteoporosis-health"
   | "kidney-urinary-health";
 
-// Wave 1 (14 conditions with full data in conditions.server.ts)
 export const ALL_HEALTH_CONDITIONS: HealthConditionSlug[] = [
+  // Wave 1
   "diabetes",
   "hypertension",
   "stroke",
@@ -54,6 +54,21 @@ export const ALL_HEALTH_CONDITIONS: HealthConditionSlug[] = [
   "iron-deficiency-anemia",
   "vitamin-d-deficiency",
   "obesity",
+  // Wave 2
+  "asthma",
+  "oral-dental-health",
+  "eye-vision-health",
+  "postpartum-maternal-health",
+  "youth-mental-health",
+  "addiction-alcohol-drugs",
+  "nutrition-adaptation",
+  "bone-osteoporosis-health",
+  "anxiety-depression",
+  "weight-management",
+  "domestic-violence-health",
+  "migraine-chronic-headache",
+  "heart-vascular-disease",
+  "kidney-urinary-health",
 ];
 
 const HEALTH_CONDITION_GLYPH: Record<HealthConditionSlug, string> = {

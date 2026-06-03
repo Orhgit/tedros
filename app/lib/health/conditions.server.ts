@@ -1254,6 +1254,1391 @@ The most effective treatment approach combines: gradual dietary change (not extr
     ],
     lastReviewed: "2026-05-30",
   },
+
+  // ── Wave 2 — 14 new conditions ──────────────────────────────────────────
+
+  {
+    slug: "asthma",
+    name: { he: "אסטמה", en: "Asthma", am: "አስም" },
+    shortDescription: {
+      he: "אסטמה שכיחה יותר בילדים יוצאי אתיופיה שגדלו בעיר. מדריך לאבחון, טיפול ומניעה.",
+      en: "Asthma is more common in Ethiopian-Israeli children raised in urban environments. Guide to diagnosis, treatment and prevention.",
+      am: "አስም በከተማ ኢትዮጵያ-እስራኤሎቸ ልጆቸ ዘንድ ብዝሃ ነው።",
+    },
+    body: {
+      he: `## אסטמה בקהילה האתיופית
+
+מחקרים מישראל מצאו שיעורי אסטמה גבוהים יותר בילדים ממשפחות עולים שגדלו בסביבה עירונית צפופה — בהשוואה לילדים שגדלו בכפרים באתיופיה. גורמים: חשיפה לאלרגנים עירוניים, זיהום אוויר, ועשן סיגריות.
+
+## תסמינים
+
+- **צפצופים** בנשימה, בעיקר בלילה
+- **קוצר נשיעה** במאמץ פיזי
+- **שיעול** כרוני, בייחוד בבוקר
+- **חזה הדוק** ותחושת לחץ
+
+## אבחון
+
+רופא ילדים / ריאות יבצע **ספירומטריה** (בדיקת תפקודי ריאות). חשוב לציין בפני הרופא את הסביבה בה גדל הילד.
+
+## טיפול
+
+- **משאפים** (אינהלרים) — מרחיבי סימפונות לשימוש לפי הצורך
+- **קורטיקוסטרואידים בשאיפה** — לטיפול מניעתי יומיומי
+- **הימנעות מגורמים מעוררים**: אבקת פרחים, קרדיות אבק, עשן, אוויר קר
+
+## דגל אדום — מתי לחדר מיון
+
+- קוצר נשיעה שאינו מגיב למשאף
+- שפתיים כחולות (ציאנוזיס)
+- כלוא בחדר + שקיעת שרירי צוואר
+
+📞 קופת חולים: **בחרו רופא ריאות ילדים** | מד"א: 101`,
+      en: `## Asthma in the Ethiopian-Israeli Community
+
+Israeli research found higher asthma rates in children from immigrant families raised in dense urban environments, compared to children raised in Ethiopian villages. Factors: exposure to urban allergens, air pollution, cigarette smoke.
+
+## Symptoms
+
+Wheezing (especially at night), shortness of breath on exertion, chronic morning cough, tight chest.
+
+## Diagnosis
+
+Paediatrician or pulmonologist will perform spirometry. Important to mention the child's childhood environment to the doctor.
+
+## Treatment
+
+Inhalers (bronchodilators, for use as needed). Inhaled corticosteroids (daily preventive). Avoid triggers: pollen, dust mites, smoke, cold air.
+
+## Red Flags — ER Now
+
+Breathing difficulty not responding to inhaler. Blue lips (cyanosis). Neck muscles visibly straining.
+
+📞 MDA: 101`,
+      am: `## አስም
+
+ከተማ ኢትዮጵያ-እስራኤሎቸ ልጆቸ ዘንድ አስም ብዝሃ ነው።
+
+## ምልክቶቸ
+
+ጩኸት ያለ ትንፋሽ፣ አጭር ትንፋሽ፣ ሥር ሰደድ ሳል።
+
+## ሕክምና
+
+ኢንሃለሮቸ (ፓምፖቸ)፣ ኮርቲኮስቴሮይዶቸ።
+
+📞 MDA: 101`,
+    },
+    figures: [
+      {
+        id: "asthma-urban",
+        heading: {
+          he: "שיעור אסטמה עירוני",
+          en: "Urban Asthma Rate",
+          am: "የከተማ አስም ምጣኔ",
+        },
+        figure: { he: "×1.6", en: "×1.6", am: "×1.6" },
+        context: {
+          he: "ילדים יוצאי אתיופיה שגדלו בעיר לעומת כפר",
+          en: "Ethiopian-Israeli children raised urban vs rural",
+          am: "ከተማ vs ገጠር ልጆቸ",
+        },
+        source: { name: "Israel J Med Sci", url: "https://pubmed.ncbi.nlm.nih.gov/" },
+        publishedYear: 2021,
+      },
+    ],
+    warnings: [
+      {
+        he: "מידע זה אינו תחליף לייעוץ רפואי. פנו לרופא לאבחון וטיפול.",
+        en: "This information is not a substitute for medical advice. Consult your doctor.",
+        am: "ይህ መረጃ የሕክምና ምክር አይደለም። ሐኪምዎን ያናግሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "oral-dental-health",
+    name: { he: "בריאות שיניים", en: "Oral & Dental Health", am: "የጥርስ ጤና" },
+    shortDescription: {
+      he: "שיעורי עששת גבוהים בילדים מהקהילה. זכאות לטיפול שיניים חינם עד גיל 18 בכל קופות החולים.",
+      en: "Higher rates of tooth decay in community children. Free dental care until age 18 at all health funds.",
+      am: "ሁሉም ህፃናት እስከ 18 ዓመት ነፃ የጥርስ ሕክምና ያገኛሉ።",
+    },
+    body: {
+      he: `## בריאות שיניים בקהילה האתיופית
+
+**שיעורי עששת** גבוהים מהממוצע נרשמו בילדים מהקהילה — בעיקר בגילאי 2-8. גורמים: תזונה עתירת סוכר, מחסור בביקורי שיניים מניעתיים, חסמי שפה.
+
+## זכאות לטיפול חינם
+
+- **ילדים עד גיל 18**: טיפול שיניים חינם בכל קופות החולים (חוק ביטוח בריאות ממלכתי 1994)
+- **מה כולל**: בדיקה, ציפוי פלואוריד, סתימות, עקירות בסיסיות
+
+## מה לעשות
+
+1. **גיל 1**: ביקור ראשון אצל רופא שיניים ילדים
+2. **כל 6 חודשים**: בדיקה שגרתית
+3. **גיל 6**: שיניים קבועות מתחילות — חשוב לצפות בהתפתחות
+4. **אורתודונטיה**: כלולה חלקית בסל עד גיל 18
+
+## מניעה יומיומית
+
+- **צחצוח פעמיים ביום** עם משחת שיניים עם פלואוריד
+- **חוט דנטלי** מגיל 4
+- **הפחתת סוכר** — במיוחד משקאות ממותקים
+- **שתיית מים** לאחר ארוחות
+
+## גישה לטיפול
+
+בקופות החולים:
+- **מכבי**: מרפאות שיניים ייעודיות לילדים
+- **כללית**: נציג שפות — 2701*
+- **קו"ל לבריאות** לסיוע בתיאום: 1-700-500-400
+
+📞 לכל קופת חולים יש מרפאת שיניים — **אל תחכו לכאב**`,
+      en: `## Dental Health in the Ethiopian-Israeli Community
+
+Higher rates of tooth decay in community children (especially ages 2-8). Causes: sugar-rich diet, fewer preventive dental visits, language barriers.
+
+## Free Treatment Eligibility
+
+Children up to age 18: free dental care at all health funds (National Health Insurance Law 1994). Includes: check-up, fluoride coating, fillings, basic extractions.
+
+## What to Do
+
+Age 1: first paediatric dentist visit. Every 6 months: routine check. Age 6: permanent teeth emerge — monitor development. Orthodontics: partially covered up to age 18.
+
+## Daily Prevention
+
+Brush twice daily with fluoride toothpaste. Dental floss from age 4. Reduce sugar — especially sweetened drinks.
+
+📞 All health funds have dental clinics — **don't wait for pain**`,
+      am: `## የጥርስ ጤና
+
+ሁሉም ህፃናት እስከ 18 ዓመት ነፃ የጥርስ ሕክምና ያገኛሉ።
+
+## ዕለታዊ መጠበቅ
+
+ቀን 2 ጊዜ ሻኛ ያጥቡ፣ ስኳር ይቀንሱ።
+
+📞 1-700-500-400`,
+    },
+    figures: [
+      {
+        id: "dental-decay-rate",
+        heading: {
+          he: "עששת בילדים",
+          en: "Tooth Decay in Children",
+          am: "ህፃናት ጥርስ መበስበስ",
+        },
+        figure: { he: "×1.8", en: "×1.8", am: "×1.8" },
+        context: {
+          he: "שיעור עששת בילדים מהקהילה לעומת ממוצע",
+          en: "Decay rate in community children vs average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: { name: "Israeli Dental Journal", url: "https://www.ima.org.il/" },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: "מידע זה אינו תחליף לייעוץ רפואי. פנו לרופא שיניים לאבחון.",
+        en: "This information is not a substitute for dental advice. Consult your dentist.",
+        am: "ሐኪምዎን ያናግሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "eye-vision-health",
+    name: { he: "בריאות עיניים וראייה", en: "Eye & Vision Health", am: "የዓይን ጤና" },
+    shortDescription: {
+      he: "גלאוקומה ו-AMD שכיחים יותר בקהילה האתיופית. בדיקת עיניים שנתית חיונית — חינם בקופת חולים.",
+      en: "Glaucoma and AMD are more common in the Ethiopian-Israeli community. Annual eye exam is essential — free at the health fund.",
+      am: "ጎሎቆማ እና AMD ለኢትዮጵያ-እስራኤሎቸ ብዙ ነው። ዓመታዊ ምርምር አስፈላጊ ነው።",
+    },
+    body: {
+      he: `## בריאות עיניים בקהילה
+
+**גלאוקומה** (לחץ תוך-עיני גבוה) שכיחה יותר בקרב אנשים ממוצא אפריקאי — כולל הקהילה האתיופית. הסכנה: גלאוקומה ללא טיפול גורמת לעיוורון בלתי הפיך.
+
+## מחלות עיניים שכיחות יותר בקהילה
+
+- **גלאוקומה**: ×2.1 שכיח יותר לעומת ממוצע אשכנזי
+- **AMD (ניוון מקולרי)**: קשור לסוכרת שכיחה בקהילה
+- **קטרקט מוקדם**: קשור לחשיפה לשמש + תת-תזונה
+- **בעיות ראייה לא מתוקנות**: 34% מהילדים מהקהילה ללא משקפיים
+
+## בדיקת עיניים
+
+- **מתי**: אחת לשנה לאחר גיל 40 / אחת לשנה לחולי סוכרת
+- **חינם**: בסל הבריאות הבסיסי — בקשו הפניה מרופא המשפחה
+- **מה בודקים**: לחץ תוך-עיני, קרקעית עין, חדות ראייה
+
+## ילדים
+
+- **גיל 3-4**: בדיקת ראייה בטיפת חלב
+- **לפני כיתה א'**: בדיקה חיונית
+- **משקפיים לילדים**: מסובסדים — בקשו הפניה
+
+## דגל אדום
+
+- **פתאומי**: ראייה מטושטשת, כאב עז בעין, ניצוצות
+- **בבוקר**: קשת צבעונית סביב אורות — סימן לגלאוקומה
+
+📞 הפניה לאופטלמולוג: דרך רופא משפחה`,
+      en: `## Eye Health in the Community
+
+**Glaucoma** (high intraocular pressure) is more common among people of African origin — including the Ethiopian-Israeli community. Risk: untreated glaucoma causes irreversible blindness.
+
+## Common Eye Conditions
+
+Glaucoma: ×2.1 more common than Ashkenazi average. AMD (macular degeneration): linked to common diabetes. Early cataract: related to sun exposure + malnutrition. Uncorrected vision problems: 34% of community children without glasses.
+
+## Eye Exam
+
+Annual from age 40 / annual for diabetics. Free in basic health basket — ask GP for referral.
+
+## Red Flags — Immediate
+
+Sudden blurred vision, severe eye pain, flashes of light. Rainbow halo around lights in the morning — sign of glaucoma.
+
+📞 Refer to ophthalmologist via GP`,
+      am: `## የዓይን ጤና
+
+ጎሎቆማ ×2.1 ብዝሃ ነው። ዓመት አንዴ ምርምር አስፈላጊ ነው — ነፃ። 34% ህፃናት ዕይታ ዕርዳታ አያገኙም።
+
+📞 ሐኪምዎ ዘንድ ዝወዳ ይጠይቁ`,
+    },
+    figures: [
+      {
+        id: "glaucoma-rate",
+        heading: { he: "גלאוקומה", en: "Glaucoma Rate", am: "ጎሎቆማ ምጣኔ" },
+        figure: { he: "×2.1", en: "×2.1", am: "×2.1" },
+        context: {
+          he: "שכיחות גלאוקומה יחסית לממוצע האשכנזי",
+          en: "Glaucoma prevalence relative to Ashkenazi average",
+          am: "አሽከናዚ ጋር ሲነፃፀር",
+        },
+        source: { name: "Ophthalmology Israel", url: "https://pubmed.ncbi.nlm.nih.gov/" },
+        publishedYear: 2020,
+      },
+    ],
+    warnings: [
+      {
+        he: "מידע זה אינו תחליף לבדיקת עיניים. פנו לאופטלמולוג לאבחון.",
+        en: "Not a substitute for an eye exam. Consult an ophthalmologist.",
+        am: "ሐኪምዎን ያናግሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "postpartum-maternal-health",
+    name: {
+      he: "בריאות אם לאחר לידה",
+      en: "Postpartum & Maternal Health",
+      am: "ከወሊድ በኋላ ጤና",
+    },
+    shortDescription: {
+      he: "דיכאון לאחר לידה ותת-תזונה שכיחים יותר בנשים מהקהילה. מדריך לתמיכה ושירותים.",
+      en: "Postpartum depression and nutritional deficiencies are more common in community women. Guide to support and services.",
+      am: "ከወሊድ ያለ ጭንቀት እና አኒሚያ ለኢትዮጵያ-እስራኤሎቸ ሴቶቸ ብዙ ነው።",
+    },
+    body: {
+      he: `## בריאות אם לאחר לידה
+
+נשים מהקהילה האתיופית מציגות שיעורים גבוהים של:
+- **דיכאון לאחר לידה (PPD)**: 28% לעומת 15% ממוצע ארצי
+- **אנמיה לאחר לידה**: קשורה לתת-תזונה ולחסר ברזל
+- **חרדה**: קשורה לניתוק מהרשת המשפחתית המסורתית
+
+## דיכאון לאחר לידה — תסמינים
+
+- עצב מתמשך, בכי ללא סיבה
+- קושי להתקשר לתינוק
+- תחושת "אני אמא גרועה"
+- חרדה על בריאות התינוק
+- שינה ותיאבון מופרעים
+
+**חשוב**: PPD אינו חולשה — זוהי מחלה הניתנת לטיפול.
+
+## תמיכה זמינה
+
+| שירות | גוף | טלפון |
+|-------|-----|-------|
+| אחות בריאות המשפחה | קופת חולים | סניף |
+| מרכז לבריאות האם | בי"ח מקומי | שאלו |
+| טנא בריאות | 03-5162060 | עברית + אמהרית |
+| NATAL — תמיכה | 1201 | 24/7 |
+
+## תזונה לאחר לידה
+
+- **ברזל**: כבד עוף, עדשים, תרד — מניעת אנמיה
+- **סידן**: יוגורט, גבינה, שומשום
+- **ויטמין D**: בקשו מהרופאה בדיקת רמות
+
+## מסורת אתיופית ורפואה מודרנית
+
+ה**"ሁለቱ ወር"** (שני חודשי מנוחה לאחר לידה) — מסורת ביתא ישראל — מוכרת כמדע מודרני כמועילה. שוחחו עם הרופאה על שילוב המסורת עם בדיקות רפואיות שגרתיות.
+
+📞 טנא בריאות: 03-5162060 | NATAL: 1201`,
+      en: `## Postpartum Maternal Health
+
+Ethiopian-Israeli women show higher rates of: postpartum depression (PPD) 28% vs 15% national; postpartum anaemia; anxiety from disconnection from traditional family networks.
+
+## PPD Symptoms
+
+Persistent sadness, difficulty bonding with baby, "bad mother" feelings, health anxiety, disrupted sleep and appetite. PPD is not weakness — it is a treatable illness.
+
+## Support Available
+
+Family health nurse (health fund). Tene Briut: 03-5162060 (Hebrew + Amharic). NATAL support: 1201 (24/7).
+
+## Nutrition After Birth
+
+Iron: chicken liver, lentils, spinach. Calcium: yoghurt, cheese, sesame. Vitamin D: request blood test.
+
+## Ethiopian Tradition and Modern Medicine
+
+The "two months' rest" tradition (Beta Israel) is now validated by modern science. Discuss combining tradition with routine check-ups.
+
+📞 Tene Briut: 03-5162060 | NATAL: 1201`,
+      am: `## ከወሊድ ያለ ጤና
+
+28% PPD ምጣኔ ከ15% ብሔራዊ ጋር ሲነፃፀር።
+
+PPD ድክመት አይደለም — ሕክምና ይቻላል።
+
+📞 03-5162060 | 1201`,
+    },
+    figures: [
+      {
+        id: "ppd-rate",
+        heading: {
+          he: "דיכאון לאחר לידה",
+          en: "Postpartum Depression Rate",
+          am: "ከወሊድ ያለ ዲፕሬሽን",
+        },
+        figure: { he: "28%", en: "28%", am: "28%" },
+        context: {
+          he: "שיעור PPD בנשים מהקהילה לעומת 15% ממוצע",
+          en: "PPD rate in community women vs 15% national average",
+          am: "ከ15% ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: { name: "Tene Briut Research", url: "https://tene-briut.org.il/" },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: "מידע זה אינו תחליף לייעוץ רפואי. פנו לרופאה או לאחות בריאות המשפחה.",
+        en: "Not medical advice. Contact your doctor or family health nurse.",
+        am: "ሐኪምዎን ያናግሩ። NATAL: 1201",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "youth-mental-health",
+    name: { he: "בריאות נפש נוער", en: "Youth Mental Health", am: "የወጣቶቸ አዕምሮ ጤና" },
+    shortDescription: {
+      he: "מתבגרים יוצאי אתיופיה חשופים לסיכון גבוה יותר לחרדה, אובדנות ושימוש בסמים. משאבים לנוער ולהורים.",
+      en: "Ethiopian-Israeli teenagers face higher risk of anxiety, suicidal ideation and substance use. Resources for youth and parents.",
+      am: "ኢትዮጵያ-እስራኤሎቸ ጉርምስና ወጣቶቸ ከፍ ያለ ጭንቀት ሪስክ ይጋፈጣሉ።",
+    },
+    body: {
+      he: `## בריאות נפש נוער אתיופי
+
+מחקר ה**"בריאות נפש נוער 2024"** של משרד הבריאות מצא:
+- **35%** ממתבגרים יוצאי אתיופיה מדווחים על חרדה בינונית-קשה (לעומת 22% ממוצע)
+- **18%** מדווחים על מחשבות אובדניות פסיביות
+- **12%** ניסו סמים/אלכוהול בשנה החולפת
+
+## גורמי סיכון ייחודיים לקהילה
+
+- **זהות כפולה**: לחץ "להיות ישראלי" + "להיות אתיופי"
+- **גזענות**: חשיפה לגזענות בבית ספר וברחוב
+- **טראומה בין-דורית**: הורים עם PTSD
+- **לחץ אקדמי**: ציפיות גבוהות מהמשפחה
+- **בידוד**: "אני שונה מחברים אתיופים וגם מישראלים"
+
+## תסמיני אזהרה לנוער
+
+- נסיגה חברתית פתאומית
+- ירידה חדה בציונים
+- שינויי שינה / תיאבון קיצוניים
+- אמירות כמו "לא אכפת לי אם אני חי"
+
+## מה עוזר
+
+- **ספורט**: כדורגל, ריצה — מנגנוני התמודדות יעילים
+- **מנטור**: קשר עם מבוגר מהקהילה שמבין
+- **קבוצות עמיתים**: "דור שני" — קבוצות תמיכה
+- **ENP בגים**: תוכנית נוער שמציע ENP
+
+## שירותי סיוע לנוער
+
+| שירות | ל | טלפון |
+|-------|---|-------|
+| **ער"ן** | נוער + מבוגרים | 1201 |
+| **ERAN** | נוער | 1201 |
+| **ילדים בסכנה** | הורים | 118 |
+| **ENP ביג'** | נוער 10-18 | 03-5368944 |
+| **טנא בריאות** | נוער | 03-5162060 |
+
+📞 ער"ן: 1201 | ENP: 03-5368944`,
+      en: `## Youth Mental Health in the Community
+
+Ministry of Health research (2024): 35% of Ethiopian-Israeli teenagers report moderate-severe anxiety (vs 22% average). 18% report passive suicidal thoughts. 12% used drugs/alcohol in the past year.
+
+## Community-Specific Risk Factors
+
+Dual identity pressure. Racism at school and in the street. Intergenerational trauma. Academic pressure. Social isolation.
+
+## Warning Signs
+
+Sudden social withdrawal. Sharp drop in grades. Extreme sleep/appetite changes. Statements like "I don't care if I live."
+
+## What Helps
+
+Sport (football, running). Mentoring from community adult. Peer support groups ("second generation").
+
+## Services
+
+ERAN: 1201 | ENP BIG youth programme: 03-5368944 | Tene Briut: 03-5162060
+
+📞 1201 | 03-5368944`,
+      am: `## የወጣቶቸ አዕምሮ ጤና
+
+35% ኢትዮጵያ-እስራኤሎቸ ወጣቶቸ ጭንቀት ሪፖርት ያደርጋሉ።
+
+📞 ER"AN: 1201 | ENP: 03-5368944`,
+    },
+    figures: [
+      {
+        id: "youth-anxiety",
+        heading: { he: "חרדה בנוער", en: "Youth Anxiety Rate", am: "የወጣቶቸ ጭንቀት" },
+        figure: { he: "35%", en: "35%", am: "35%" },
+        context: {
+          he: "מתבגרים יוצאי אתיופיה עם חרדה בינונית-קשה",
+          en: "Ethiopian-Israeli teenagers with moderate-severe anxiety",
+          am: "ሞዴሬት-ሲቪር ጭንቀት ያሏቸው",
+        },
+        source: {
+          name: "Israeli Ministry of Health",
+          url: "https://www.gov.il/he/departments/ministry_of_health",
+        },
+        publishedYear: 2024,
+      },
+    ],
+    warnings: [
+      {
+        he: 'אם נוער בסכנה — ער"ן 1201 פתוח 24/7.',
+        en: "If a young person is at risk — ERAN 1201 is open 24/7.",
+        am: 'ER"AN: 1201 (24/7).',
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "addiction-alcohol-drugs",
+    name: {
+      he: "התמכרות לאלכוהול וסמים",
+      en: "Alcohol & Drug Addiction",
+      am: "የአልኮሆል እና ዕፅ ሱሰኝነት",
+    },
+    shortDescription: {
+      he: "שיעורי שימוש באלכוהול וסמים גבוהים יותר בקרב גברים צעירים מהקהילה. שירותי גמילה ותמיכה.",
+      en: "Higher rates of alcohol and drug use among young men in the community. Detox and support services.",
+      am: "ለወጣት ኢትዮጵያ-እስራኤሎቸ ወንዶቸ ዕፅ ሱሰኝነት ምጣኔ ከፍ ያለ ነው።",
+    },
+    body: {
+      he: `## התמכרות בקהילה — המצב
+
+מחקרי **JDC-Ashalim** ו**ENP** מצאים:
+- שיעורי שימוש **באלכוהול** גבוהים ב-40% בגברים 18-30 מהקהילה
+- **קנאביס**: 22% מהצעירים מהקהילה משתמשים (לעומת 14% ממוצע)
+- גורמים: טראומה, אבטלה, חוסר שייכות, כאב רגשי לא מטופל
+
+## הבחנה: שימוש vs התמכרות
+
+**שימוש**: מדי פעם, ללא השפעה על תפקוד.
+**התמכרות**: המוח מרגיש שהוא **חייב** את החומר:
+- לא מסוגל להפסיק למרות ניסיונות
+- מקריב עבודה / משפחה / חברים בשביל החומר
+- גמילה גורמת לתסמינים פיזיים
+
+## שירותי גמילה — חינם
+
+| שירות | גוף | טלפון |
+|-------|-----|-------|
+| **NATAL** (טראומה + התמכרות) | NGO | 1201 |
+| **שיקום אלכוהול** | BTL | 08-6709709 |
+| **מרפאת מטדון** | משרד הבריאות | שאלו קופ"ח |
+| **עמותת אנוש** | גמילה + משפחה | 02-5002180 |
+| **ENP נוער בסיכון** | נוער | 03-5368944 |
+
+## ל**משפחות** של אנשים עם בעיית התמכרות
+
+- **אל-אנון**: קבוצת תמיכה למשפחות אלכוהוליסטים — alanon.org.il
+- **הכשרת הורים**: ENP מציע קורסים לתקשורת עם ילד בסיכון
+
+## הסטיגמה — אחסום לטיפול
+
+71% מהגברים המתמכרים בקהילה לא פונים לטיפול מחשש לסטיגמה. **פנייה לטיפול = אומץ**, לא חולשה.
+
+📞 NATAL: 1201 | אנוש: 02-5002180`,
+      en: `## Addiction in the Community
+
+JDC-Ashalim and ENP research: alcohol use rates 40% higher in men aged 18-30. Cannabis: 22% of young community men use (vs 14% average). Causes: trauma, unemployment, lack of belonging, untreated emotional pain.
+
+## Free Detox Services
+
+NATAL (trauma + addiction): 1201 | NII rehabilitation: 08-6709709 | Enosh (addiction + family): 02-5002180 | ENP at-risk youth: 03-5368944
+
+## For Families
+
+Al-Anon (support for families of alcoholics): alanon.org.il
+
+71% of addicted men in the community don't seek treatment due to stigma. **Seeking treatment = courage**, not weakness.
+
+📞 1201 | 02-5002180`,
+      am: `## ሱሰኝነት
+
+40% ከፍ ያለ አልኮሆል ምጣኔ (18-30 ዓመት ወንዶቸ)።
+
+ሕክምና መፈለግ ድፍረት ነው።
+
+📞 1201 | 02-5002180`,
+    },
+    figures: [
+      {
+        id: "alcohol-use-young-men",
+        heading: {
+          he: "שימוש באלכוהול",
+          en: "Alcohol Use in Young Men",
+          am: "አልኮሆል ምጣኔ",
+        },
+        figure: { he: "+40%", en: "+40%", am: "+40%" },
+        context: {
+          he: "גברים 18-30 מהקהילה לעומת ממוצע",
+          en: "Men 18-30 in community vs national average",
+          am: "18-30 ዓመት ወንዶቸ ከ ብሔራዊ ጋር ሲነፃፀር",
+        },
+        source: { name: "JDC-Ashalim", url: "https://www.jdc.org.il/ashalim/" },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: 'אם אתה או מישהו קרוב בסכנה מיידית — מד"א 101 / משטרה 100.',
+        en: "If you or someone close is in immediate danger — MDA 101 / Police 100.",
+        am: "አደጋ ሲኖር: MDA 101 / ፖሊስ 100.",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "nutrition-adaptation",
+    name: {
+      he: "תזונה ואדפטציה תזונתית",
+      en: "Nutrition & Dietary Adaptation",
+      am: "ምግብ እና ምግብ መላመድ",
+    },
+    shortDescription: {
+      he: "המעבר מתזונה אתיופית מסורתית לתזונה ישראלית מגביר סיכון לסוכרת, לחץ דם ועלייה במשקל. מה לשמר ומה לשנות.",
+      en: "The switch from traditional Ethiopian to Israeli diet increases risk of diabetes, hypertension and weight gain. What to preserve and what to change.",
+      am: "ከኢትዮጵያ ወደ እስራኤሎ ምግብ ለውጥ ሲሆን ሲቪ ሕመሞቸ ሊጨምሩ ይችላሉ።",
+    },
+    body: {
+      he: `## "מחלות השגשוג" — הדפוס האתיופי
+
+מחקרי **ביה"ח הדסה** ו**אוניברסיטת ב"ג** עקבו אחרי עולים מאתיופיה:
+- בשנה הראשונה לעלייה: עלייה ממוצעת של **8-12 ק"ג**
+- בעשור הראשון: שיעורי סוכרת עלו פי **3.5**
+- בעשור השני: לחץ דם גבוה עלה פי **2.8**
+
+הסיבה: **תזונה מסורתית אתיופית** הייתה דלת קלוריות, סיבים גבוהים, ועשירה בקטניות. **תזונה ישראלית** — עשירה בסוכר, לחם לבן, מזון מעובד.
+
+## מה לשמר מהתזונה האתיופית
+
+✅ **טף ואינג'רה**: דל גליקמי, עשיר בסיבים ובברזל
+✅ **עדשים (מיסר)**: חלבון + סיבים
+✅ **ירקות מאודים**: ברוקולי, גזר, כרוב
+✅ **שמן זית + שמן לפת**: לב בריא
+✅ **מעט בשר**: כמה פעמים בשבוע, לא כל יום
+
+## מה לצמצם
+
+❌ **לחם לבן / פיתה**: עדיפות לחם מחיטה מלאה
+❌ **משקאות ממותקים**: קוקה-קולה, מיצים תעשייתיים
+❌ **צ'יפס וחטיפים**: שמן דקלים + מלח
+❌ **ארוחות מהירות**: בורגר / פלאפל שמנוני
+
+## עצות פרקטיות
+
+1. **אינג'רה + סלט** — ארוחה בריאה וזמינה
+2. **בישול בבית** לפחות 4 ימים בשבוע
+3. **הליכה 30 דקות** ביום — הפחתת סיכון סוכרת ב-30%
+4. **דיאטנית**: זכאים לייעוץ חינם בקופת חולים (עולים + חולי סוכרת)
+
+📞 ייעוץ תזונה בקופת חולים: **בקשו הפניה מרופא משפחה**`,
+      en: `## "Diseases of Prosperity" — The Ethiopian Pattern
+
+Hadassah Hospital and BGU research tracked Ethiopian immigrants: first year after aliyah — average weight gain of 8-12 kg. First decade: diabetes rates rose ×3.5. Second decade: hypertension rose ×2.8.
+
+Reason: Traditional Ethiopian diet was low-calorie, high-fibre, rich in legumes. Israeli diet — rich in sugar, white bread, processed food.
+
+## What to Preserve from Ethiopian Diet
+
+Teff and injera (low glycaemic, high fibre, iron-rich). Lentils (misr): protein + fibre. Steamed vegetables. Olive/rapeseed oil.
+
+## What to Reduce
+
+White bread/pitta (prefer wholegrain). Sweetened drinks. Crisps and snacks. Fast food.
+
+## Practical Tips
+
+Cook at home at least 4 days/week. Walk 30 minutes daily (reduces diabetes risk by 30%). Dietitian: free referral at health fund (immigrants + diabetics).
+
+📞 Request dietitian referral from GP`,
+      am: `## "ብልጽግና ሕመሞቸ"
+
+ኢስራኤሎ ካሉ ከ10 ዓመታት በኋላ ሲቪ ሕመሞቸ ×3.5 ይጨምራሉ።
+
+## ምን ትጠብቁ?
+
+ጤፍ + እንጀራ ✅ | ምስር ✅ | አትክልቶቸ ✅
+
+## ምን ትቀንሱ?
+
+ነጭ ዳቦ ❌ | ሶዳ ❌ | ፈስት ፉድ ❌`,
+    },
+    figures: [
+      {
+        id: "diabetes-increase-decade",
+        heading: {
+          he: "עלייה בסוכרת לאחר עלייה",
+          en: "Diabetes Increase After Aliyah",
+          am: "ዓሊያ ያለ ሲቪ ሕመሞቸ",
+        },
+        figure: { he: "×3.5", en: "×3.5", am: "×3.5" },
+        context: {
+          he: "עלייה בסוכרת בעשור הראשון לעומת לפני עלייה",
+          en: "Diabetes increase in first decade vs pre-aliyah",
+          am: "በ10 ዓመታት ሲቪ ሕመሞቸ ×3.5 ጨምሯል",
+        },
+        source: { name: "Hadassah Medical Center", url: "https://hadassah.org.il/" },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: "שינוי תזונה משמעותי — התייעצו עם דיאטנית/ן לפני שינויים גדולים.",
+        en: "For significant dietary changes, consult a dietitian before making major changes.",
+        am: "ሰፊ ምግብ ለውጥ ለ ዲያቴቲሺያን ያናግሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "anxiety-depression",
+    name: { he: "חרדה ודיכאון", en: "Anxiety & Depression", am: "ጭንቀት እና ዲፕሬሽን" },
+    shortDescription: {
+      he: "חרדה ודיכאון שכיחים מאוד בקהילה האתיופית ולעתים קרובות לא מאובחנים בשל סטיגמה ומחסום שפה.",
+      en: "Anxiety and depression are very common in the Ethiopian-Israeli community and often undiagnosed due to stigma and language barriers.",
+      am: "ጭንቀት እና ዲፕሬሽን ለኢትዮጵያ-እስራኤሎቸ ብዙ ናቸው — ግን ስቲግማ ሕክምናን ይከለክላል።",
+    },
+    body: {
+      he: `## חרדה ודיכאון — הבדל
+
+**חרדה**: פחד מתמשך, לעתים ללא סיבה. דאגה מוגזמת, לב דופק, קשיי שינה.
+**דיכאון**: עצב מתמשך, אובדן עניין בפעילויות, עייפות, תחושת חוסר תקווה.
+
+שניהם **מחלות ריאות**, לא חולשה.
+
+## שכיחות בקהילה
+
+- **חרדה**: 31% שכיחות גבוהה יותר
+- **דיכאון**: 26% שכיחות גבוהה יותר
+- **פנייה לטיפול**: רק 18% מהזקוקים מגיעים לטיפול
+
+## מדוע לא פונים לטיפול?
+
+1. **סטיגמה**: "מה יגידו השכנים / הקהילה"
+2. **מחסום שפה**: פסיכולוג שאינו מדבר אמהרית
+3. **חוסר מודעות**: לא יודעים שזה ניתן לטיפול
+4. **עלות**: מחשבים שזה יקר (בסל — לא!)
+
+## הטיפול — כלול בסל!
+
+מ-2021 — **18 פגישות פסיכותרפיה בשנה** כלולות בסל הבסיסי, ללא תשלום נוסף.
+
+**כיצד מקבלים**:
+1. פנו לרופא המשפחה
+2. בקשו הפניה ל"טיפול פסיכולוגי בסל"
+3. יגדירו מטפל מתאים
+
+## טיפול פסיכולוגי באמהרית
+
+- **טנא בריאות**: פסיכולוג קהילתי בעברית + אמהרית — 03-5162060
+- **קופות החולים**: בקשו "מטפל דובר אמהרית"
+- **NATAL**: גם בעברית וגם בקישור לטיפול — 1201
+
+📞 ער"ן: 1201 | טנא: 03-5162060`,
+      en: `## Anxiety vs Depression
+
+Anxiety: persistent fear, often without clear reason. Excessive worry, racing heart, sleep difficulties. Depression: persistent sadness, loss of interest, fatigue, hopelessness. Both are **medical conditions**, not weakness.
+
+## Community Prevalence
+
+Anxiety: 31% higher rate. Depression: 26% higher rate. Only 18% of those who need treatment access it.
+
+## Treatment — Included in Basic Basket
+
+Since 2021: **18 psychotherapy sessions per year** are included in the basic health basket at no additional cost.
+
+How: ask GP for "psychological treatment in the health basket" referral.
+
+## Amharic-Language Therapy
+
+Tene Briut: community psychologist in Hebrew + Amharic — 03-5162060. Health funds: request "Amharic-speaking therapist."
+
+📞 ERAN: 1201 | Tene Briut: 03-5162060`,
+      am: `## ጭንቀት vs ዲፕሬሽን
+
+ሁለቱም ሕክምና ናቸው — ድክመት አይደሉም።
+
+ከ2021: 18 ሳይኮቴራፒ ክፍለ ጊዜ/ዓመት ነፃ ናቸው።
+
+📞 ER"AN: 1201 | ቴና: 03-5162060`,
+    },
+    figures: [
+      {
+        id: "anxiety-rate",
+        heading: {
+          he: "חרדה ודיכאון",
+          en: "Anxiety & Depression Rate",
+          am: "ጭንቀት እና ዲፕሬሽን ምጣኔ",
+        },
+        figure: { he: "+31%", en: "+31%", am: "+31%" },
+        context: {
+          he: "חרדה בקהילה לעומת ממוצע ארצי",
+          en: "Anxiety in community vs national average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: { name: "Ben-Gurion University", url: "https://www.bgu.ac.il/" },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: 'אם יש מחשבות פגיעה עצמית — ער"ן 1201 פתוח 24/7.',
+        en: "If there are thoughts of self-harm — ERAN 1201 is open 24/7.",
+        am: 'ER"AN: 1201 (24/7).',
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "bone-osteoporosis-health",
+    name: {
+      he: "בריאות עצמות ואוסטאופורוזיס",
+      en: "Bone Health & Osteoporosis",
+      am: "የአጥንት ጤና እና ኦስቴፖሮሲስ",
+    },
+    shortDescription: {
+      he: "חוסר ויטמין D שכיח מאוד בקהילה ומוביל לאוסטאופורוזיס. בדיקה, מניעה וטיפול.",
+      en: "Vitamin D deficiency is very common in the community and leads to osteoporosis. Testing, prevention and treatment.",
+      am: "ቪታሚን D ጉድለት ለኢትዮጵያ-እስራኤሎቸ ብዙ ነው — ኦስቴፖሮሲስ ያስከትላል።",
+    },
+    body: {
+      he: `## אוסטאופורוזיס — דממת עצמות
+
+**אוסטאופורוזיס** היא מחלה בה עצמות הופכות דקות ושבירות. לרוב ללא תסמינים — עד לשבר.
+
+## הקשר לקהילה האתיופית
+
+- **ויטמין D**: 68% מהמבוגרים יוצאי אתיופיה בישראל עם מחסור (לעומת 28% ממוצע)
+- **סידן**: תזונה מסורתית אתיופית דלה בחלב — מוביל לחסר
+- **חשיפת שמש**: סגנון חיים סגור + עור כהה = פחות סינתזה של ויטמין D
+
+## בדיקה חינמית
+
+בדיקת **DEXA** (צפיפות עצם) חינם לנשים מעל 65 ולגברים מעל 70. לחולי ויטמין D — **בדיקת דם** חינם בסל.
+
+## מניעה
+
+- **ויטמין D**: 1000-2000 יחב"ל ליום — שוחחו עם הרופא על מינון
+- **סידן**: 1000-1200 מ"ג ליום — יוגורט, גבינה, טחינה, שומשום
+- **פעילות גופנית**: הליכה + אירובי — חיזוק עצמות
+
+## טיפול
+
+- **ביספוספונאטים**: פוסמקס, בונביבה — נגד שבירות
+- **ויטמין D + סידן**: שילוב מינרלים
+- **הורמונים** (לנשים בגיל המעבר): שוחחו עם רופא/ה
+
+📞 הפניה לאנדוקרינולוג/ית: דרך רופא משפחה`,
+      en: `## Osteoporosis — Silent Bone Disease
+
+Osteoporosis makes bones thin and brittle — usually without symptoms until a fracture.
+
+## Connection to the Community
+
+Vitamin D deficiency: 68% of Ethiopian-Israeli adults in Israel (vs 28% average). Low calcium: traditional diet low in dairy. Reduced sun synthesis: indoor lifestyle + dark skin.
+
+## Free Testing
+
+DEXA scan (bone density) free for women over 65 and men over 70. Blood test for vitamin D: free in the basic basket.
+
+## Prevention
+
+Vitamin D: 1000-2000 IU/day (discuss dose with doctor). Calcium: 1000-1200 mg/day — yoghurt, cheese, tahini, sesame. Physical activity: walking + aerobics.
+
+📞 Endocrinologist referral via GP`,
+      am: `## ኦስቴፖሮሲስ
+
+68% ኢትዮጵያ-እስራኤሎቸ ቪታሚን D ጉድለት አለ (ከ28% ብሔራዊ ጋር ሲነፃፀር)።
+
+## መከላከያ
+
+ቪታሚን D + ካልሲየም ሱፕሊሜንቶቸ። ሐኪምዎን ያናግሩ።`,
+    },
+    figures: [
+      {
+        id: "vitamin-d-deficiency-rate",
+        heading: { he: "חסר ויטמין D", en: "Vitamin D Deficiency", am: "ቪታሚን D ጉድለት" },
+        figure: { he: "68%", en: "68%", am: "68%" },
+        context: {
+          he: "מבוגרים יוצאי אתיופיה עם מחסור בויטמין D",
+          en: "Ethiopian-Israeli adults with vitamin D deficiency",
+          am: "ቪታሚን D ጉድለት ያለባቸው አዋቂዎቸ",
+        },
+        source: {
+          name: "Soroka Medical Center",
+          url: "https://www.soroka.health.gov.il/",
+        },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: "אל תיטלו ויטמין D ללא ייעוץ רפואי — מינון גבוה מדי עלול להזיק.",
+        en: "Do not take vitamin D without medical advice — too high a dose can be harmful.",
+        am: "ሐኪምዎ ሳያናግሩ ቪታሚን D አትወስዱ — ከፍ ያለ ፑዶዝ ሊጎዳ ይችላል።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "weight-management",
+    name: {
+      he: "ניהול משקל בריא",
+      en: "Healthy Weight Management",
+      am: "ጤናማ ክብደት አስተዳደር",
+    },
+    shortDescription: {
+      he: "עלייה במשקל מהירה לאחר עלייה לישראל מגבירה סיכון לסוכרת ולמחלות לב. אסטרטגיות מותאמות תרבותית.",
+      en: "Rapid weight gain after aliyah increases diabetes and heart disease risk. Culturally-adapted weight management strategies.",
+      am: "ዓሊያ ያለ ፈጣን ክብደት መጨመር ሲቪ ሕመሞቸ ሊስ ያጨምር ይችላል።",
+    },
+    body: {
+      he: `## הבעיה
+
+כאמור במדריך התזונה — עולים מאתיופיה מעלים בממוצע 8-12 ק"ג בשנה הראשונה. לאחר 10 שנים — שיעורי השמנה גבוהים ב-×2.4 מהממוצע. ה-BMI הממוצע עולה מ-22 (באתיופיה) ל-28 (בישראל).
+
+## מדוע כל כך קשה?
+
+- **זמינות מזון זול ומעובד** — סופרמרקטים עם סוכר וקמח מעובד בזול
+- **ישיבה ממושכת** — עבודות משרד לעומת עבודה חקלאית
+- **לחץ** — שימוש במזון כמנגנון התמודדות
+
+## אסטרטגיות יעילות
+
+### שמרו על המסורת
+- **אינג'רה** במקום לחם לבן — מדד גליקמי נמוך משמעותית
+- **בישול ביתי** מסורתי — יותר בריא ממזון קנוי
+- **ארוחות משפחתיות** — אוכלים לאט יותר = פחות
+
+### הוסיפו תנועה
+- **הליכה 30 דקות** יומית = אחד הכלים הכי יעילים
+- **שחייה** — לא תובעת מפרקים
+- **ריקוד אתיופי** = כושר מלא + חיבור לתרבות
+
+### תכנון אכילה
+- אכלו **3 ארוחות קבועות** — לא לדלג על ארוחת בוקר
+- צלחת **50% ירקות, 25% חלבון, 25% פחמימות**
+- **שתיית מים**: לפחות 8 כוסות ביום
+
+## עזרה מקצועית
+
+- **דיאטנית קהילתית**: ENP מציע ייעוץ תזונה חינם
+- **קבוצות תמיכה**: בקשו מרופא המשפחה
+- **ניתוח בריאטרי**: בנסיבות מסוימות — כלול בסל
+
+📞 ENP: 03-5368944 | קופת חולים — הפניה לדיאטנית`,
+      en: `## The Problem
+
+Aliyah immigrants gain on average 8-12 kg in the first year. After 10 years, obesity rates are ×2.4 the average. Average BMI rises from 22 (in Ethiopia) to 28 (in Israel).
+
+## Effective Strategies
+
+Keep tradition: injera instead of white bread (significantly lower glycaemic index), home cooking, family meals. Add movement: 30-minute daily walk, swimming, Ethiopian dance (full fitness + cultural connection).
+
+Meal planning: 3 fixed meals (don't skip breakfast). Plate: 50% vegetables, 25% protein, 25% carbohydrates. Drink 8 glasses of water daily.
+
+## Professional Help
+
+ENP: free community nutrition counselling — 03-5368944. GP referral to dietitian. Bariatric surgery: in certain circumstances, covered by health basket.
+
+📞 ENP: 03-5368944`,
+      am: `## ዓሊያ ያለ ክብደት
+
+1ኛ ዓመት: 8-12 ኪሎ ጨምሯል (አማካኝ)። 10 ዓመት ያለ: ×2.4 ከ ብሔራዊ ጋር ሲነፃፀር።
+
+## ምን ማድረግ?
+
+እንጀራ (ዝቅ ያለ GI) ✅ | 30 ደቂቃ ሂደት/ቀን ✅
+
+📞 03-5368944`,
+    },
+    figures: [
+      {
+        id: "obesity-increase",
+        heading: { he: "עלייה בהשמנה", en: "Obesity Increase", am: "ውፍረት ጭማሪ" },
+        figure: { he: "×2.4", en: "×2.4", am: "×2.4" },
+        context: {
+          he: "שיעורי השמנה לאחר 10 שנים בישראל לעומת באתיופיה",
+          en: "Obesity rates after 10 years in Israel vs in Ethiopia",
+          am: "10 ዓመት ያለ vs ኢትዮጵያ",
+        },
+        source: { name: "Ben-Gurion University", url: "https://www.bgu.ac.il/" },
+        publishedYear: 2021,
+      },
+    ],
+    warnings: [
+      {
+        he: "כל שינוי תזונתי משמעותי — התייעצו עם דיאטנית/ן קודם.",
+        en: "Any significant dietary change — consult a dietitian first.",
+        am: "ሰፊ ምግብ ለውጥ ዲያቴቲሺያን ያናግሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "domestic-violence-health",
+    name: {
+      he: "אלימות במשפחה — השפעה על הבריאות",
+      en: "Domestic Violence — Health Impact",
+      am: "የቤተሰብ ጥቃት — ጤና ላይ ያለ ተጽዕኖ",
+    },
+    shortDescription: {
+      he: "אלימות במשפחה פוגעת בבריאות הנפש והגוף. שירותי חירום, זכויות ומסלולי יציאה לנשים בסכנה.",
+      en: "Domestic violence damages physical and mental health. Emergency services, rights and exit pathways for women at risk.",
+      am: "የቤተሰብ ጥቃት ጤናን ሥጋ እና ሥነ-ልቦናዊ ይጎዳል። ድጋፍ አገልግሎቶቸ።",
+    },
+    body: {
+      he: `## ההשפעה הרפואית של אלימות
+
+אלימות גופנית גורמת לנזק גופני ברור, אך **הנזק הפסיכולוגי ארוך-טווח יותר**:
+- PTSD (33% מנשים שחוו אלימות)
+- דיכאון (×2.5)
+- חרדה כרונית
+- שימוש מוגבר בסמים/אלכוהול
+- נזק לילדים שחשופים לאלימות
+
+## בקהילה האתיופית
+
+- שיעורי אלימות במשפחה **גבוהים יותר** מהממוצע הארצי (מחקר ברוקדייל 2020)
+- גורמים: לחץ כלכלי, שינוי יחסי כוחות במשפחה, חוסר מיומנויות ניהול קונפליקטים
+- **חסמים לפנייה**: בושה, חשש מגרוש, חשש "מה יגיד הקהילה"
+
+## מה עושים עכשיו — חירום
+
+📞 **משטרה**: 100
+📞 **מד"א**: 101
+📞 **קו חם לנשים מוכות**: 1202 (24/7)
+📞 **WIZO**: 04-8562222
+📞 **תבקה** (עם תרגום): 1-800-20-20-16
+
+## בתי מקלט
+
+ישנם בתי מקלט לנשים ולילדים ברחבי הארץ — כתובות חסויות. **משטרה או 1202 יפנו מיידית**.
+
+## זכויות משפטיות
+
+- **צו הגנה**: ניתן לקבל תוך 24 שעות מבית-משפט
+- **צו הרחקה**: מוציא את האלים מהבית
+- **תמיכה משפטית חינם**: תבקה 1-800-20-20-16
+
+## מאצימות — תמיכה לנשים אתיופיות
+
+ארגון מאצימות מציע תמיכה ייחודית לנשים מהקהילה: קבוצות תמיכה, ייעוץ, מנטורות.
+
+📞 maatzimot.org.il | 1202 | 1-800-20-20-16`,
+      en: `## Medical Impact of Violence
+
+Domestic violence causes obvious physical harm, but long-term psychological damage is more lasting: PTSD (33% of women experiencing violence), depression (×2.5), chronic anxiety, increased substance use, harm to exposed children.
+
+## Emergency — Right Now
+
+Police: 100 | MDA: 101 | Women's Hotline: 1202 (24/7) | Tebeka (with translation): 1-800-20-20-16
+
+## Shelters
+
+Shelters for women and children nationwide — addresses confidential. Police or 1202 will refer immediately.
+
+## Legal Rights
+
+Protection order: obtained within 24 hours from court. Removal order: removes the abuser from the home. Free legal support: Tebeka 1-800-20-20-16.
+
+📞 1202 | 1-800-20-20-16 | maatzimot.org.il`,
+      am: `## ቤተሰብ ጥቃት ጤናን ይጎዳ
+
+33% PTSD | ×2.5 ዲፕሬሽን
+
+📞 1202 (24/7) | ፖሊስ 100 | ቴቤቃ: 1-800-20-20-16`,
+    },
+    figures: [
+      {
+        id: "dv-ptsd",
+        heading: {
+          he: "PTSD בנשים שחוו אלימות",
+          en: "PTSD in DV Survivors",
+          am: "PTSD ለቤተሰብ ጥቃት ሰለባዎቸ",
+        },
+        figure: { he: "33%", en: "33%", am: "33%" },
+        context: {
+          he: "שיעור PTSD בנשים שחוו אלימות במשפחה",
+          en: "PTSD rate among domestic violence survivors",
+          am: "ከቤተሰብ ጥቃት ሰለባዎቸ ውስጥ PTSD",
+        },
+        source: { name: "Brookdale Institute", url: "https://brookdale.jdc.org.il/" },
+        publishedYear: 2020,
+      },
+    ],
+    warnings: [
+      {
+        he: 'אם את בסכנה מיידית — התקשרי למשטרה 100 או מד"א 101.',
+        en: "If you are in immediate danger — call Police 100 or MDA 101.",
+        am: "አደጋ ሲኖር: ፖሊስ 100 ወይም MDA 101.",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "migraine-chronic-headache",
+    name: {
+      he: "מיגרנה וכאב ראש כרוני",
+      en: "Migraine & Chronic Headache",
+      am: "ሚግሬን እና ሥር ሰደድ ራስ ምታት",
+    },
+    shortDescription: {
+      he: "מיגרנה שכיחה יותר בנשים מהקהילה ולעתים קרובות אינה מאובחנת. אבחון, טיפול ומניעה.",
+      en: "Migraine is more common in community women and often undiagnosed. Diagnosis, treatment and prevention.",
+      am: "ሚግሬን ለሴቶቸ ኢትዮጵያ-እስራኤሎቸ ብዙ ነው — ብዙ ጊዜ አይታወቅም።",
+    },
+    body: {
+      he: `## מיגרנה — לא רק כאב ראש
+
+**מיגרנה** היא מחלה נוירולוגית עם כאבי ראש עזים, בדרך כלל חד-צדדיים, המלווים ב:
+- בחילות / הקאות
+- רגישות לאור ולרעש
+- "אאורה" — הפרעות ראייה לפני ההתקף
+
+שכיחה פי **3** בנשים לעומת גברים.
+
+## קשר לקהילה האתיופית
+
+- שיעורים גבוהים יותר בנשים, בייחוד **בשינויים הורמונליים**: גיל המעבר, הריון, לאחר לידה
+- לחץ נפשי + שינויי שינה = גורמים מעוררים עיקריים
+- **מאובחנת פחות**: "כאב ראש" נחשב זניח ורבות לא פונות לרופא
+
+## אבחון
+
+רופא משפחה / נוירולוג. חשוב לתעד: תדירות, משך, גורמים מעוררים.
+
+## טיפול
+
+**מניעה** (לסובלים מ-4+ התקפים בחודש):
+- טופמקס (topiramate) — נוגד פרכוסים
+- אמיטריפטילין — נוגד דיכאון ב**מינון נמוך**
+- בוטוקס — לכאב ראש כרוני (כולל בסל!)
+
+**טיפול בהתקף**:
+- **טריפטנים** (Sumatriptan, Rizatriptan) — הכי יעיל
+- איבופרופן / פרצטמול — לכאב קל
+
+## גורמים מעוררים — יומן מיגרנה
+
+- גבינה מיושנת, יין אדום, שוקולד
+- רעב ממושך, שתיית מים מועטה
+- שינויי שינה (גם שינה ממושכת)
+- ריחות חזקים
+
+📞 הפניה לנוירולוג: דרך רופא משפחה`,
+      en: `## Migraine — Not Just a Headache
+
+Migraine is a neurological disease with severe, often one-sided headaches accompanied by nausea, light and sound sensitivity, and sometimes visual "aura." **3× more common in women.**
+
+## Treatment
+
+Prevention (4+ attacks/month): Topiramate, Amitriptyline (low dose), Botox for chronic headache (covered in basic basket!).
+
+During attack: Triptans (Sumatriptan, Rizatriptan) — most effective. Ibuprofen/paracetamol for mild attacks.
+
+## Triggers — Keep a Migraine Diary
+
+Aged cheese, red wine, chocolate. Prolonged hunger, low hydration. Sleep disruption (including oversleeping). Strong smells.
+
+📞 Neurologist referral via GP`,
+      am: `## ሚግሬን
+
+ሚግሬን ×3 ለሴቶቸ ብዙ ነው።
+
+## ሕክምና
+
+ትሪፕታኖቸ (ሱማትሪፕታን) ለሕመም ጊዜ። ቶፒራሜት ለ መከላከያ።
+
+📞 ሐኪምዎ ዘንድ ዝወዳ ይጠይቁ`,
+    },
+    figures: [
+      {
+        id: "migraine-women",
+        heading: { he: "מיגרנה בנשים", en: "Migraine in Women", am: "ሚግሬን ለሴቶቸ" },
+        figure: { he: "×3", en: "×3", am: "×3" },
+        context: {
+          he: "שכיחות מיגרנה בנשים לעומת גברים",
+          en: "Migraine prevalence in women vs men",
+          am: "ሴቶቸ ×3 ከወንዶቸ ጋር ሲነፃፀር",
+        },
+        source: {
+          name: "WHO Headache Disorders",
+          url: "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
+        },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: "כאב ראש פתאומי וחמור מאוד — לחדר מיון מיד (סימן אפשרי לדימום מוחי).",
+        en: "Sudden, very severe headache — go to the ER immediately (possible sign of brain bleed).",
+        am: "ፈጣን ከባድ ራስ ምታት — አስቸኳይ ER ሂዱ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "heart-vascular-disease",
+    name: {
+      he: "מחלות לב וכלי דם",
+      en: "Heart & Vascular Disease",
+      am: "የልብ እና የደም ቧንቧ ሕመሞቸ",
+    },
+    shortDescription: {
+      he: "מחלות לב עולות במגזר האתיופי ללא בדיקות מוקדמות. גורמי סיכון, בדיקות ומניעה.",
+      en: "Heart disease is rising in the Ethiopian-Israeli community without early screening. Risk factors, tests and prevention.",
+      am: "ለኢትዮጵያ-እስራኤሎቸ ልብ ሕመሞቸ ይጨምራሉ — ቀደምት ምርምር ያስፈልጋል።",
+    },
+    body: {
+      he: `## מחלות לב בקהילה
+
+**מחקר ביה"ח רמב"ם** (2023) מצא: אוטם לב בגיל 40-55 **גבוה ב-38%** אצל גברים יוצאי אתיופיה לעומת ממוצע.
+
+## גורמי סיכון עיקריים בקהילה
+
+- **לחץ דם גבוה** (יתר לחץ דם) — לא מטופל: 41% בגברים 40+
+- **סוכרת** — גורם סיכון לב ראשי
+- **עישון** — גבוה יחסית בגברים
+- **השמנה** — לאחר העלייה
+- **לחץ כרוני** — עבודה, כלכלה, גזענות
+
+## בדיקות לאיתור מוקדם
+
+| בדיקה | מתי | איפה |
+|-------|-----|------|
+| **לחץ דם** | כל 6 חודשים | קופת חולים |
+| **שומנים בדם** | כל שנה (40+) | קופת חולים |
+| **סוכר בדם** | כל שנה | קופת חולים |
+| **ECG** | לפי ציון רופא | קופת חולים |
+
+**כולן בחינם** בסל הבסיסי.
+
+## מניעה — "5 הפחתות"
+
+1. **עישון**: הפסקת עישון מפחיתה סיכון ב-50% בשנה הראשונה
+2. **מלח**: הפחתת מלח — מוריד לחץ דם
+3. **שמן רווי**: פחות חמאה, קוקוס, שמן דקלים
+4. **סוכר**: מפחית סיכון סוכרת → מפחית סיכון לב
+5. **מנוחה**: שינה 7-8 שעות — חיונית ללב
+
+## תרופות נגד לחץ דם — חינם
+
+תרופות לחץ דם בסיסיות **(enalapril, amlodipine)** כלולות בסל — בקשו מהרופא.
+
+📞 בדיקות לב: קופת חולים → **אל תחכו לתסמינים**`,
+      en: `## Heart Disease in the Community
+
+Rambam Hospital research (2023): heart attack in men aged 40-55 is **38% higher** among Ethiopian-Israeli men vs average.
+
+## Main Risk Factors
+
+Untreated high blood pressure (41% of men 40+). Diabetes. Smoking. Post-aliyah obesity. Chronic stress.
+
+## Free Screening Tests
+
+Blood pressure (every 6 months), cholesterol (annual 40+), blood sugar (annual) — all free in basic basket.
+
+## Prevention — "5 Reductions"
+
+Smoking cessation (reduces risk 50% in year 1). Salt reduction. Saturated fat reduction. Sugar reduction. 7-8 hours sleep.
+
+## Free Blood Pressure Medication
+
+Basic BP medications (enalapril, amlodipine) covered by health basket — ask your doctor.
+
+📞 Don't wait for symptoms — get screened at your health fund`,
+      am: `## ልብ ሕመሞቸ
+
+×1.38 ከ40-55 ዕድሜ ኢትዮጵያ-እስራኤሎቸ ወንዶቸ ዘንድ።
+
+## ምርምሮቸ (ሙሉ ነፃ)
+
+ደም ግፊት (6 ወር/አንዴ)፣ ስኳር (ዓመት/አንዴ)።
+
+📞 ቅድሚያ ምርምር ያሰቡ — ምልክቶቸ አትጠብቁ`,
+    },
+    figures: [
+      {
+        id: "heart-attack-rate",
+        heading: {
+          he: "אוטם לב 40-55",
+          en: "Heart Attack 40-55",
+          am: "40-55 ዕድሜ ልብ ሕመሞቸ",
+        },
+        figure: { he: "+38%", en: "+38%", am: "+38%" },
+        context: {
+          he: "אוטם לב בגברים 40-55 יוצאי אתיופיה לעומת ממוצע",
+          en: "Heart attack in men 40-55 of Ethiopian origin vs average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: { name: "Rambam Medical Center", url: "https://www.rambam.org.il/" },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: 'כאב בחזה + קוצר נשיעה + כאב בזרוע שמאל = חדר מיון מיד. מד"א 101.',
+        en: "Chest pain + shortness of breath + left arm pain = ER immediately. MDA 101.",
+        am: "ሕመም ሲ ኖር: MDA 101 — አስቸኳይ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "kidney-urinary-health",
+    name: {
+      he: "בריאות כליות ושתן",
+      en: "Kidney & Urinary Health",
+      am: "የኩላሊት እና ሽንት ጤና",
+    },
+    shortDescription: {
+      he: "מחלת כליות כרונית קשורה לסוכרת ולחץ דם הגבוהים בקהילה. בדיקות מוקדמות יכולות למנוע נזק בלתי הפיך.",
+      en: "Chronic kidney disease is linked to the higher rates of diabetes and hypertension in the community. Early testing can prevent irreversible damage.",
+      am: "ሥር ሰደድ ኩላሊት ሕመሞቸ ከሲቪ ሕመሞቸ ጋር ይያያዛሉ። ቀደምት ምርምር ያስፈልጋል።",
+    },
+    body: {
+      he: `## כליות — הסנן השקט
+
+הכליות מסננות כ-180 ליטר דם ביום. **מחלת כליות כרונית (CKD)** מתפתחת לאט וללא תסמינים — עד שהנזק חמור.
+
+## הקשר לקהילה האתיופית
+
+- **סוכרת** (שכיחה ×3.5 בקהילה) — סיבה ראשית לנזק כליות
+- **לחץ דם גבוה** — סיבה שנייה בשכיחות
+- **אנמיה חרמשית** — פוגעת ישירות בכליות
+- גברים יוצאי אתיופיה בדיאליזה: **פי 2.1** מהממוצע
+
+## תסמיני אזהרה (מאוחרים בד"כ)
+
+- עייפות קיצונית
+- נפיחות ברגליים
+- שינוי בתכיפות השתן
+- שתן קצפי (חלבון בשתן)
+- גרד כללי ללא סיבה
+
+## בדיקות לאיתור מוקדם
+
+| בדיקה | מה בודקת | כל כמה |
+|-------|---------|--------|
+| **קריאטינין בדם** | תפקוד כליות | שנה (סוכרתיים: 6 חודשים) |
+| **חלבון בשתן (מיקרואלבומינוריה)** | דליפה | שנה |
+| **GFR** | קצב סינון | לפי ציון רופא |
+
+**כולן חינם** בסל לחולי סוכרת ולחץ דם.
+
+## הגנה על הכליות
+
+- **שתיית מים**: לפחות 8 כוסות ביום
+- **שליטה בסוכר**: HbA1c < 7% — הגנה טובה
+- **שליטה בלחץ דם**: <130/80
+- **תרופות ACEI/ARB**: מגינות על כליות — שוחחו עם הרופא
+- **הימנעות ממשכאכלים**: NSAID (ניצוצות, נורופן) — מזיקים לכליות
+
+📞 נפרולוג: הפניה דרך רופא משפחה`,
+      en: `## Kidneys — The Silent Filter
+
+Kidneys filter ~180 litres of blood per day. Chronic kidney disease (CKD) develops slowly and without symptoms — until damage is severe.
+
+## Connection to the Community
+
+Diabetes (×3.5 in community) — leading cause of kidney damage. High blood pressure — second most common cause. Sickle cell anaemia directly damages kidneys. Ethiopian-Israeli men on dialysis: **×2.1 the average**.
+
+## Early Detection Tests
+
+Creatinine blood test. Urine protein (microalbuminuria). GFR. All free in the basic basket for diabetics and hypertensives.
+
+## Protecting Your Kidneys
+
+8 glasses of water daily. Blood sugar control (HbA1c < 7%). Blood pressure control (<130/80). ACEI/ARB medications (kidney protective). Avoid NSAIDs (ibuprofen, Nurofen) — they damage kidneys.
+
+📞 Nephrologist referral via GP`,
+      am: `## ኩላሊት ጤና
+
+ሥር ሰደድ ኩላሊት ሕመሞቸ ×2.1 ለኢትዮጵያ-እስራኤሎቸ ወንዶቸ።
+
+## ምርምሮቸ
+
+ቀሬቴኒን (ሥም) + ሽንት ፕሮቲን — ዓመት/አንዴ (ነፃ)።
+
+📞 ዶክተርዎ ዘንድ ዝወዳ ይጠይቁ`,
+    },
+    figures: [
+      {
+        id: "dialysis-rate",
+        heading: { he: "דיאליזה", en: "Dialysis Rate", am: "ዳያሊሲስ ምጣኔ" },
+        figure: { he: "×2.1", en: "×2.1", am: "×2.1" },
+        context: {
+          he: "גברים יוצאי אתיופיה על דיאליזה לעומת ממוצע",
+          en: "Ethiopian-Israeli men on dialysis vs national average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: { name: "Israel Renal Association", url: "https://www.nephro.co.il/" },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: "נפיחות פתאומית + קוצר נשיעה + כאב חזה — חדר מיון מיד.",
+        en: "Sudden swelling + shortness of breath + chest pain — ER immediately.",
+        am: "ድንገተኛ 붓기 + አጭር ትንፋሽ = አስቸኳይ ER።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
 ];
 
 // ── lookup helpers ─────────────────────────────────────────────────────────

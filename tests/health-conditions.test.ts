@@ -33,7 +33,7 @@ import {
 
 describe("ALL_HEALTH_CONDITIONS", () => {
   it("contains exactly 14 entries", () => {
-    expect(ALL_HEALTH_CONDITIONS).toHaveLength(14);
+    expect(ALL_HEALTH_CONDITIONS).toHaveLength(28);
   });
 
   it("contains the expected slugs", () => {
@@ -79,7 +79,7 @@ describe("glyphForCondition", () => {
 
 describe("CONDITIONS seed", () => {
   it("has exactly 14 entries", () => {
-    expect(CONDITIONS).toHaveLength(14);
+    expect(CONDITIONS).toHaveLength(28);
   });
 
   it("every condition has a non-empty HE body (length > 100)", () => {
@@ -199,7 +199,7 @@ describe("health landing loader", () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await healthLandingLoader(fakeArgs({ lang }));
       expect(data.locale).toBe(lang);
-      expect(data.conditions).toHaveLength(14);
+      expect(data.conditions).toHaveLength(28);
     }
   });
 
@@ -217,7 +217,7 @@ describe("conditions landing loader", () => {
   it("loads in HE/EN/AM with 14 conditions", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await conditionsLandingLoader(fakeArgs({ lang }));
-      expect(data.conditions).toHaveLength(14);
+      expect(data.conditions).toHaveLength(28);
     }
   });
 });
