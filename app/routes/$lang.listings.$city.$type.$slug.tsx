@@ -181,6 +181,19 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
         </p>
       </header>
 
+      {(listing.attributes as { externalSourceUrl?: string }).externalSourceUrl && (
+        <p className="mt-3 text-sm">
+          <a
+            href={(listing.attributes as { externalSourceUrl: string }).externalSourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 rounded border border-blue-200 bg-blue-50 px-3 py-1.5 text-blue-700 hover:bg-blue-100 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900"
+          >
+            {locale === "he" ? "צפה בנכס במרכז הנכסים ↗" : "View on Merkaz HaNekhasim ↗"}
+          </a>
+        </p>
+      )}
+
       <PriceLine listing={listing} locale={locale} />
       <AttributesGrid listing={listing} locale={locale} />
 
