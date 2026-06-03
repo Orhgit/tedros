@@ -392,6 +392,7 @@ function ListingCard({
                 src={previewImgs[0]}
                 alt={title}
                 loading="lazy"
+                referrerPolicy="no-referrer"
                 className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
               />
             </div>
@@ -404,6 +405,7 @@ function ListingCard({
                       src={img}
                       alt=""
                       loading="lazy"
+                      referrerPolicy="no-referrer"
                       className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                     />
                     {/* Overlay on last thumb if more images exist */}
