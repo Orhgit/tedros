@@ -16,6 +16,8 @@ import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
 import { DEFAULT_LOCALE } from "../i18n/config";
 import type { NewsTag } from "./categories";
+import { ARTICLES_WAVE4 } from "./articles-wave4.server";
+import { ARTICLES_WAVE5 } from "./articles-wave5.server";
 
 export interface NewsArticleEntry {
   slug: string;
@@ -5583,6 +5585,8 @@ High demand for Amharic speakers — Ethiopian-Israeli patients feel more comfor
 📞 02-5081408 | 03-5368944`,
     },
   },
+  ...ARTICLES_WAVE4,
+  ...ARTICLES_WAVE5,
 ];
 
 // ── lookup helpers ─────────────────────────────────────────────────────────

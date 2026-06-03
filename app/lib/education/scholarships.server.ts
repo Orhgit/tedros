@@ -1,8 +1,8 @@
 // Scholarships seed (RIN-504 / Phase 5 Education Hub Wave 1).
 //
-// 12 scholarships authored in HE/EN/AM. Captures high-intent
-// "{scholarship name}", "מלגה לבני קהילת יוצאי אתיופיה", "Ethiopian
-// Israeli scholarship" queries and routes applicants to providers.
+// 17 scholarships Wave 1 + 20 scholarships Wave 2 (total 37).
+// Captures high-intent "{scholarship name}", "מלגה לבני קהילת יוצאי אתיופיה",
+// "Ethiopian Israeli scholarship" queries and routes applicants to providers.
 //
 // HE source-of-truth (CLAUDE.md). Same render-from-seed pattern as
 // `lib/orgs/orgs.server.ts` — no DB needed in V1.
@@ -11,6 +11,7 @@ import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
 import { DEFAULT_LOCALE } from "../i18n/config";
 import type { ScholarshipLevel } from "./categories";
+import { SCHOLARSHIPS_WAVE2 } from "./scholarships-wave2.server";
 
 export type { ScholarshipLevel } from "./categories";
 
@@ -2104,7 +2105,12 @@ The scholarship is suspended for one year. It can be renewed if the average rise
 `,
     },
   },
+
+  ...SCHOLARSHIPS_WAVE2,
 ];
+
+// Re-export for convenience — callers may import ALL_SCHOLARSHIPS directly.
+export const ALL_SCHOLARSHIPS = SCHOLARSHIPS;
 
 // --- Helpers ----------------------------------------------------------------
 

@@ -17,8 +17,28 @@ export type HealthConditionSlug =
   | "cardiovascular"
   | "iron-deficiency-anemia"
   | "vitamin-d-deficiency"
-  | "obesity";
+  | "obesity"
+  // Wave 2
+  | "asthma"
+  | "weight-management"
+  | "anemia-iron"
+  | "tuberculosis-screening"
+  | "hiv-update-2026"
+  | "oral-dental-health"
+  | "eye-vision-health"
+  | "nutrition-adaptation"
+  | "anxiety-depression"
+  | "ptsd-immigration-trauma"
+  | "addiction-alcohol-drugs"
+  | "domestic-violence-health"
+  | "youth-mental-health"
+  | "postpartum-maternal-health"
+  | "migraine-chronic-headache"
+  | "heart-vascular-disease"
+  | "bone-osteoporosis-health"
+  | "kidney-urinary-health";
 
+// Wave 1 (14 conditions with full data in conditions.server.ts)
 export const ALL_HEALTH_CONDITIONS: HealthConditionSlug[] = [
   "diabetes",
   "hypertension",
@@ -51,6 +71,25 @@ const HEALTH_CONDITION_GLYPH: Record<HealthConditionSlug, string> = {
   "iron-deficiency-anemia": "💊",
   "vitamin-d-deficiency": "☀️",
   obesity: "⚖️",
+  // Wave 2
+  asthma: "💨",
+  "weight-management": "⚖️",
+  "anemia-iron": "💊",
+  "tuberculosis-screening": "🫁",
+  "hiv-update-2026": "🔴",
+  "oral-dental-health": "🦷",
+  "eye-vision-health": "👁️",
+  "nutrition-adaptation": "🥗",
+  "anxiety-depression": "💙",
+  "ptsd-immigration-trauma": "🕊️",
+  "addiction-alcohol-drugs": "🚫",
+  "domestic-violence-health": "🏠",
+  "youth-mental-health": "🌱",
+  "postpartum-maternal-health": "🤱",
+  "migraine-chronic-headache": "🧠",
+  "heart-vascular-disease": "🫀",
+  "bone-osteoporosis-health": "🦴",
+  "kidney-urinary-health": "🫘",
 };
 
 export function glyphForCondition(slug: HealthConditionSlug): string {

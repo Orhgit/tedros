@@ -6004,4 +6004,844 @@ If dismissed due to disability — file a complaint with the Equal Rights Commis
 📞 02-6664444 | tebeka.org.il`,
     },
   },
+
+  // ── Wave 5 — 15 new rights entries ──────────────────────────────────────
+
+  {
+    title: {
+      he: "קצבת ילדים — זכויות מלאות 2026",
+      en: "Child Allowance — Full Rights 2026",
+      am: "የልጆቸ ቅናሽ — ሙሉ መብቶቸ 2026",
+    },
+    slug: {
+      he: "child-allowance-full-guide",
+      en: "child-allowance-full-guide",
+      am: "child-allowance-full-guide",
+    },
+    govUrl: "https://www.btl.gov.il/benefits/Child_Allowance/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "כל ילד עד גיל 18 זכאי לקצבת ילדים. ב-2026: 162 ₪/חודש לילד ראשון, עולה עם כל ילד נוסף. מגישים בביטוח לאומי.",
+      en: "Every child up to age 18 is entitled to child allowance. 2026: 162 ILS/month for the first child, increasing with each additional child.",
+      am: 'ሁሉም ልጅ እስከ 18 ዓመት ቅናሽ ያገኛሉ። 2026: 162 ሺ"ל/ወር ለቀዳሚ ልጅ።',
+    },
+    tags: ["family", "btl", "benefits"],
+    bodies: {
+      he: `## מה זה קצבת ילדים?
+
+קצבת ילדים היא תשלום חודשי לכל ילד עד גיל 18. מדינת ישראל מכירה בחשיבות גידול הילד ומסייעת לכל משפחה ללא קשר להכנסה.
+
+## סכומים 2026
+
+| סדר הילד | סכום חודשי |
+|---------|-----------|
+| ילד ראשון | 162 ₪ |
+| ילד שני | 162 ₪ |
+| ילד שלישי | 162 ₪ |
+| ילד רביעי+ | 162 ₪ + תוספת |
+
+## תוספות מיוחדות
+
+- **ילד עם מוגבלות**: תוספת של עד 1,600 ₪/חודש
+- **ילד לאם חד-הורית**: תוספת 100 ₪/חודש
+- **ילד בפנימייה**: מחצית מהקצבה הרגילה
+
+## איך מגישים?
+
+1. **לאחר לידה**: הגישו ב-BTL תוך 12 חודשים (בדיעבד רטרואקטיבי)
+2. **מסמכים**: תעודת לידה + ת"ז הורה + פרטי חשבון בנק
+3. **אונליין**: btl.gov.il → "תביעות" → "קצבת ילדים"
+4. **סניף**: סניף BTL הקרוב לבית
+
+## מה לדעת על עולים חדשים
+
+עולים חדשים זכאים לקצבה **מיום הרישום במרשם האוכלוסין** — לא מיום הלידה בחו"ל. הגישו מיד עם הגעה.
+
+📞 BTL: 08-6709709 | btl.gov.il`,
+      en: `## What is Child Allowance?
+
+A monthly payment for every child up to age 18. 2026: 162 ILS/month per child (additional supplements for disabled children, single-parent families).
+
+## How to Apply
+
+Apply at BTL within 12 months of birth (retroactive payment available). Online: btl.gov.il → Claims → Child Allowance. Documents: birth certificate + parent ID + bank details.
+
+## New Immigrants
+
+Entitled from the date of registration in the population registry — not from birth abroad. Apply immediately upon arrival.
+
+📞 BTL: 08-6709709`,
+      am: `## ምን ነው?
+
+ሁሉም ልጅ እስከ 18 ዓመት ወርሃዊ ቅናሽ ያገኛሉ።
+
+📞 08-6709709 | btl.gov.il`,
+    },
+  },
+  {
+    title: {
+      he: "גמלת שמירת היריון — זכויות אישה עובדת",
+      en: "High-Risk Pregnancy Benefit — Rights for Working Women",
+      am: "ከፍ ያለ ሪስክ ፅንስ ጥቅም — ለሠሪ ሴቶቸ",
+    },
+    slug: {
+      he: "high-risk-pregnancy-benefit",
+      en: "high-risk-pregnancy-benefit",
+      am: "high-risk-pregnancy-benefit",
+    },
+    govUrl: "https://www.btl.gov.il/benefits/Maternity/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "אישה שרופא ציווה עליה שמירת היריון זכאית לגמלה של 100% משכרה, ישירות מביטוח לאומי. אין צורך באישור מעסיק.",
+      en: "A woman ordered to bed rest by a doctor is entitled to 100% of her salary from NII directly. No employer approval needed.",
+      am: "ሐኪም ዕረፍት ያዘዘ ሴት 100% ደሞዝ ከቢቲኤል ያገኛሉ።",
+    },
+    tags: ["family", "btl", "health", "employment"],
+    bodies: {
+      he: `## מהי שמירת היריון?
+
+כאשר רופא מחליט שאישה הרה לא יכולה לעבוד מסיבות רפואיות — היא זכאית ל"גמלת שמירת היריון" מביטוח לאומי. הגמלה מחליפה את השכר שהיא מפסידה.
+
+## כמה מקבלים?
+
+**100% משכר העבודה** — עד תקרה של כ-1,750 ₪/יום (נכון 2026). אין ימי המתנה.
+
+## תנאי זכאות
+
+- **אישור רפואי** מרופא/ה מוסמך לפחות: "שמירת היריון ל-X ימים"
+- **עבדה לפחות 10 חודשים** ב-14 החודשים האחרונים
+- **לא מקבלת שכר** מהמעסיק בתקופת השמירה
+
+## תהליך הגשה
+
+1. קבלת אישור רפואי (מטפל ראשוני, מומחה, ביה"ח)
+2. הגשת תביעה ל-BTL תוך **7 ימים** מתחילת השמירה
+3. BTL מעביר תשלום ישירות לחשבון הבנק
+4. **לא צריך אישור מהמעסיק** — מגישים ישירות
+
+## זכויות נוספות בהיריון
+
+- **מניעת פיטורים**: אסור לפטר אישה הרה ללא אישור ועדה
+- **ירידה בשכר**: אסור להוריד שכר בגלל היריון
+- **תנאים מסוכנים**: ניתן לדרוש העברה לתפקיד בטוח יותר
+
+📞 BTL: 08-6709709 | קו נשים: 1-800-200-800`,
+      en: `## What is High-Risk Pregnancy Benefit?
+
+When a doctor orders a pregnant woman to rest for medical reasons, she is entitled to a high-risk pregnancy benefit from NII — replacing the salary she is losing.
+
+## Amount
+
+**100% of salary** — up to approximately 1,750 ILS/day (2026). No waiting days.
+
+## How to Apply
+
+Get medical certificate stating "bed rest for X days." Submit claim to BTL within **7 days** of starting rest. BTL pays directly to bank account. **No employer approval needed.**
+
+## Additional Pregnancy Rights
+
+Prohibition on dismissal while pregnant (requires committee approval). Prohibition on salary reduction due to pregnancy. Right to transfer to safer role if current work is hazardous.
+
+📞 BTL: 08-6709709`,
+      am: `## ምን ነው?
+
+ሐኪም ዕረፍት ያዘዘ ሴት 100% ደሞዝ ቀጥተኛ ከቢቲኤል ያገኛሉ።
+
+📞 08-6709709`,
+    },
+  },
+  {
+    title: {
+      he: "זכויות עובד זר — גם לעובדים בלתי מסמכים",
+      en: "Foreign Worker Rights — Including Undocumented Workers",
+      am: "የውጭ ሠራተኛ መብቶቸ — ሰነድ ለሌሉም ጭምር",
+    },
+    slug: {
+      he: "foreign-worker-rights-undocumented",
+      en: "foreign-worker-rights-undocumented",
+      am: "foreign-worker-rights-undocumented",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/foreign-workers",
+    eligibilitySummary: {
+      he: "עובדים ללא מסמכים זכאים לשכר מינימום, תנאי עבודה בסיסיים ואינם ניתנים לגירוש בגלל הגשת תלונה. גם אם הם שוהים שלא כחוק.",
+      en: "Undocumented workers are entitled to minimum wage, basic working conditions and cannot be deported for filing a complaint — even if residing illegally.",
+      am: "ሰነድ ሌሉ ሠራተኞቸ ዝቅተኛ ደሞዝ ይፈቀዳቸዋል — ቅሬታ ቢቀርቡ አይባረሩም።",
+    },
+    tags: ["employment", "rights", "immigration"],
+    bodies: {
+      he: `## חשוב לדעת
+
+בישראל, **זכויות עבודה חלות על כל עובד** — ללא קשר למעמד החוקי. גם מי שנמצא בישראל ללא אשרת שהייה תקפה זכאי לזכויות עבודה בסיסיות.
+
+## זכויות בסיסיות
+
+- **שכר מינימום**: 35.17 ₪/שעה (2026) — אף מעסיק לא רשאי לשלם פחות
+- **ימי חופשה**: 12-24 ימים/שנה (תלוי ותק)
+- **מחלה**: 1.5 ימי מחלה לכל חודש עבודה
+- **פיצויי פיטורים**: לאחר שנה — חודש לכל שנת עבודה
+- **שעות עבודה**: מקסימום 45 שעות/שבוע
+
+## מניעת גירוש בגלל תלונה
+
+**חוק עובדים זרים** מגן על עובד שמגיש תלונה — לא ניתן לגרשו בתקופת הבירור.
+
+## למי לפנות?
+
+| גוף | טלפון | נושא |
+|-----|-------|------|
+| **קו לעובד** | 1-800-354-354 | ייעוץ חינם |
+| **רשות האוכלוסין** | 3450* | מעמד חוקי |
+- **הסתדרות** | 03-6921111 | ייצוג עובדים |
+| **תבקה** | 1-800-20-20-16 | ייצוג משפטי |
+
+## לעובדים אתיופים ספציפית
+
+חלק מהמהגרים הבלתי-חוקיים מאתיופיה — פלאשמורה שלא עלו רשמית — נמצאים בישראל במעמד לא מוסדר. הם זכאים לפנות ל-UNHCR ולבקש מעמד פליט.
+
+📞 קו לעובד: 1-800-354-354 | UNHCR: unhcr.org.il`,
+      en: `## Key Principle
+
+In Israel, **labour rights apply to every worker** — regardless of legal status. Even those residing illegally are entitled to basic employment rights.
+
+## Basic Rights
+
+Minimum wage: 35.17 ILS/hour (2026). Annual leave: 12-24 days/year. Sick pay: 1.5 days/month worked. Severance: after 1 year — 1 month per year worked. Maximum hours: 45/week.
+
+## Protection from Deportation
+
+The Foreign Workers Law protects anyone filing a labour complaint — they cannot be deported during investigation proceedings.
+
+## Who to Contact
+
+Kav LaOved (free advice): 1-800-354-354 | Tebeka: 1-800-20-20-16 | UNHCR (refugee status): unhcr.org.il
+
+📞 1-800-354-354`,
+      am: `## ዋና ሕግ
+
+ሁሉም ሠራተኞቸ — ሰነድ ቢሆን ባይሆን — መሠረታዊ የሥራ መብቶቸ ይፈቀዳቸዋል።
+
+📞 1-800-354-354`,
+    },
+  },
+  {
+    title: {
+      he: "זכות לתרגום משפטי — ניווט בתי המשפט בעברית",
+      en: "Right to Legal Translation — Navigating Courts in Hebrew",
+      am: "ሕጋዊ ትርጉም መብት — ዕብራይስጥ ፍርድ ቤቶቸ",
+    },
+    slug: {
+      he: "legal-translation-court-rights",
+      en: "legal-translation-court-rights",
+      am: "legal-translation-court-rights",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/court-interpreter",
+    eligibilitySummary: {
+      he: "כל נאשם שאינו שולט בעברית זכאי למתרגם בחינם בכל הליך משפטי. זו זכות חוקתית שרבים אינם יודעים עליה.",
+      en: "Every defendant who does not have command of Hebrew is entitled to a free interpreter in all court proceedings. A constitutional right many are unaware of.",
+      am: "ዕብራይስጥ የማይችሉ ሁሉ — ነፃ ፍርድ ቤት ተርጓሚ የማግኘት ሕጋዊ መብት አላቸው።",
+    },
+    tags: ["legal", "rights", "civic"],
+    bodies: {
+      he: `## הזכות לתרגום
+
+**חוק סדר הדין הפלילי** ו**פסיקת בית המשפט העליון** קובעים: כל אדם שאינו שולט בעברית זכאי למתרגם בחינם בכל הליך פלילי, אזרחי או מנהלי.
+
+## מה כוללת הזכות?
+
+- **חקירה במשטרה**: זכות לתרגום — בקשו "אני דורש מתרגם לאמהרית"
+- **דיונים בבית-משפט**: שופט חייב לדאוג לתרגום
+- **חתימה על מסמכים**: לא לחתום בלי הבנה מלאה
+- **כתב אישום**: זכות לתרגום של מסמכים
+- **גזר דין**: זכות להסבר בשפה המובנת
+
+## מה לעשות אם מסרבים?
+
+1. **אל תחתמו** על שום מסמך שלא הבנתם
+2. אמרו: "אני מסרב להמשיך ללא מתרגם"
+3. **ערעור**: פסיקה ללא תרגום ניתנת לביטול
+4. **תלונה**: לנציב תלונות הציבור על שופטים
+
+## עם מי לדבר
+
+- **תבקה**: ייצוג חינם בפלילים — 1-800-20-20-16
+- **הסנגוריה הציבורית**: ייצוג חינם לנאשמים ללא אמצעים — 02-5453555
+- **ACRI**: תלונות על הפרת זכויות — 03-6936893
+
+## מתרגמים מוסמכים
+
+רשימת מתרגמים לאמהרית מאושרים על-ידי בתי-המשפט: בקשו מהמזכירות.
+
+📞 תבקה: 1-800-20-20-16 | סנגוריה: 02-5453555`,
+      en: `## The Right to Translation
+
+The Code of Criminal Procedure and Supreme Court rulings establish: every person without command of Hebrew is entitled to a **free interpreter** in all criminal, civil and administrative proceedings.
+
+## What the Right Covers
+
+Police investigation (demand "interpreter for Amharic"). Court hearings. Signing documents (never sign without full understanding). Indictment documents. Sentencing (right to explanation in your language).
+
+## What If Refused?
+
+Don't sign any document you haven't understood. Say: "I refuse to continue without an interpreter." Rulings without translation can be appealed.
+
+## Who to Contact
+
+Tebeka (free criminal defence): 1-800-20-20-16 | Public Defender (free): 02-5453555 | ACRI (rights violations): 03-6936893
+
+📞 1-800-20-20-16`,
+      am: `## ትርጉም መብት
+
+ዕብራይስጥ የማይችሉ ሁሉ ነፃ ፍርድ ቤት ተርጓሚ ይፈቀዳቸዋል — ህጋዊ መብት።
+
+📞 ቴቤቃ: 1-800-20-20-16`,
+    },
+  },
+  {
+    title: {
+      he: "ביטוח אבטלה — כל מה שצריך לדעת 2026",
+      en: "Unemployment Insurance — Everything You Need to Know 2026",
+      am: "የሥራ አጥነት ኢንሹራንስ — 2026 ሁሉ ምን ማወቅ ያስፈልጋል",
+    },
+    slug: {
+      he: "unemployment-insurance-full-guide",
+      en: "unemployment-insurance-full-guide",
+      am: "unemployment-insurance-full-guide",
+    },
+    govUrl: "https://www.btl.gov.il/benefits/unemployment/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "נרשמת ביום הראשון לאחר הפיטורים בלשכת התעסוקה. ביטוח אבטלה: עד 70% משכרך, עד 175 יום, עם ניכויים יומיים בעד עבודה.",
+      en: "Register on the first day after dismissal at the Employment Service. Unemployment insurance: up to 70% of your salary, up to 175 days.",
+      am: "ከሥራ ከወጡ በቀዳሚ ቀን ይመዝገቡ። እስከ 70% ደሞዝ፣ እስከ 175 ቀናት።",
+    },
+    tags: ["employment", "btl", "rights"],
+    bodies: {
+      he: `## מה זה דמי אבטלה?
+
+**דמי אבטלה** הם תשלום מביטוח לאומי למי שאיבד עבודתו ומחפש עבודה חדשה. מדינת ישראל מאמינה שאדם מובטל ראוי לרשת ביטחון בזמן החיפוש.
+
+## כמה מקבלים?
+
+| תקופה | אחוז משכר |
+|-------|-----------|
+| חודש 1-4 | 70% |
+| חודש 5+ | 60% |
+| מקסימום יומי (2026) | 340 ₪ |
+| ימים מקסימליים | 175 ימים |
+
+## תנאי זכאות
+
+- **שכיר** שפוטר (לא התפטר) — **חשוב!** אם התפטרתם מרצון ייתכן שלא תהיו זכאים
+- עבדתם לפחות **12 חודשים** ב-18 האחרונים
+- **נרשמתם בלשכת התעסוקה** (חובה — ביום הראשון!)
+- לא עובדים ולא מרוויחים (מעל תקרה)
+
+## שלבים קריטיים
+
+1. **יום הפיטורים** — קבלו "אישור סיום עבודה" מהמעסיק
+2. **יום למחרת** — הירשמו בלשכת התעסוקה (לא דחיה!)
+3. **תוך שבועיים** — הגישו תביעה ב-BTL
+4. **כל חודש** — חתמו על "הצהרת מובטל" ב-BTL
+
+## אם פוטרתם בגלל קיצוצים
+
+גם אם החברה קרסה — זכאים לדמי אבטלה. הגישו מיד.
+
+## אם עבדתם בשתי עבודות
+
+דמי אבטלה מחושבים לפי סכום כל השכר — לא רק עבודה אחת.
+
+📞 BTL: 08-6709709 | לשכת תעסוקה: 1-800-300-026`,
+      en: `## What is Unemployment Insurance?
+
+An NII payment for people who have lost their job and are searching for new employment. Up to 70% of salary (months 1-4), 60% (month 5+). Maximum 175 days. Maximum daily: 340 ILS (2026).
+
+## Key Conditions
+
+Salaried employee dismissed (not resigned — critical!). Worked at least 12 months in the past 18. **Registered with Employment Service on the first day after dismissal.** Not working / not earning above threshold.
+
+## Critical Steps
+
+1. Day of dismissal: get "end of employment confirmation" from employer
+2. **Next day**: register with Employment Service (no delay!)
+3. Within two weeks: file claim at BTL
+4. Monthly: sign "unemployed declaration" at BTL
+
+📞 BTL: 08-6709709 | Employment Service: 1-800-300-026`,
+      am: `## ምን ነው?
+
+ከሥራ ከወጡ: ቀዳሚ ቀን ይመዝገቡ። 70% ደሞዝ (ወር 1-4)፣ 175 ቀናት ከፍ ያለ።
+
+📞 08-6709709 | 1-800-300-026`,
+    },
+  },
+  {
+    title: {
+      he: "ייעוץ משכנתא חינם — מדריך לזכאים",
+      en: "Free Mortgage Counselling — Guide for Those Entitled",
+      am: "ነፃ ሞርጌጅ ምክር — ለዘብታ ለሚፈቀዱ",
+    },
+    slug: {
+      he: "free-mortgage-counselling",
+      en: "free-mortgage-counselling",
+      am: "free-mortgage-counselling",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/mortgage-counselling",
+    eligibilitySummary: {
+      he: "משרד השיכון מממן ייעוץ משכנתא חינמי לזכאי דיור. יועץ מוסמך עוזר לבחור משכנתא נכונה — חיסכון של עשרות אלפי שקלים.",
+      en: "The Ministry of Housing funds free mortgage counselling for housing benefit recipients. A certified adviser saves tens of thousands of ILS in interest.",
+      am: 'ቤት ድጎማ ዘብቶቸ ነፃ ሞርጌጅ ምክር ያገኛሉ — ከሺ ሺ ሺ"ሎቸ ወለድ ይቆጥባሉ።',
+    },
+    tags: ["housing", "mortgage", "rights"],
+    bodies: {
+      he: `## למה ייעוץ מקצועי?
+
+רוב האנשים בוחרים משכנתא לבד — ומפסידים עשרות אלפי שקלים בריבית גבוהה מיותרת. יועץ משכנתאות מוסמך:
+- משווה בין הצעות כל הבנקים
+- מסביר את מסלולי הריבית (קבועה, משתנה, פריים)
+- מוודא שתנצלו את כל ההטבות לזכאים
+
+## הייעוץ החינמי — מי זכאי?
+
+**ייעוץ חינם ממשרד השיכון** ניתן למי שמגיש בקשה לאחת מהתוכניות:
+- זכאי **הלוואת 600,000 ₪**
+- זכאי **מענק הומות**
+- **עולים חדשים** עד 5 שנים מעלייה
+- **אזרחים ותיקים** (גיל 67+)
+- **עמידר/עמיגור** — דיירי דיור ציבורי הקונים דירה
+
+**כיצד לקבל**: פנו למשרד השיכון האזורי → בקשו "ייעוץ משכנתאות" → תוקצה לכם יועץ מוסמך ללא עלות.
+
+## מה לשאול את היועץ?
+
+1. "מהי ריבית הפריים כיום ואיך היא משפיעה עליי?"
+2. "מהו המסלול המתאים לי — קבוע, משתנה, או שילוב?"
+3. "האם ניתן לשלב תוכנית 600K עם הלוואה בנקאית?"
+4. "מתי כדאי לבצע מחזור?"
+
+## יועצים קהילתיים
+
+מספר יועצים מהקהילה האתיופית עצמה מציעים ייעוץ ראשוני חינם:
+- חפשו ב-LinkedIn: "יועץ משכנתאות אתיופי"
+- פורטל Tedros → [/he/professionals] — יועצי משכנתאות מהקהילה
+
+📞 משרד השיכון: 5442* | sivan.housing.gov.il`,
+      en: `## Why Professional Advice?
+
+Most people choose mortgages alone — and lose tens of thousands of ILS in unnecessary high interest. A certified mortgage adviser compares all bank offers, explains interest tracks (fixed, variable, prime), and ensures you use all eligible benefits.
+
+## Free Counselling — Who Qualifies?
+
+Ministry of Housing free counselling for: 600K loan applicants, Homot grant applicants, new immigrants (up to 5 years), senior citizens (67+), public housing tenants buying an apartment.
+
+How to access: Contact regional Housing Ministry → request "mortgage counselling" → free certified adviser assigned.
+
+📞 Ministry of Housing: *5442`,
+      am: `## ነፃ ምክር ምን ያደርጋል?
+
+ሁሉም ባንኮቸ ያወዳድራሉ — ሺ ሺ ሺ"ሎቸ ወለድ ይቆጥባሉ።
+
+📞 *5442`,
+    },
+  },
+  {
+    title: {
+      he: "פיצויי פיטורים — הזכות שכולם צריכים לדעת",
+      en: "Severance Pay — The Right Everyone Needs to Know",
+      am: "የሥራ ማቋረጫ ካሳ — ሁሉም ሊያውቅ የሚገባ",
+    },
+    slug: {
+      he: "severance-pay-guide",
+      en: "severance-pay-guide",
+      am: "severance-pay-guide",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/severance-pay",
+    eligibilitySummary: {
+      he: "כל עובד שפוטר לאחר שנת עבודה אחת מלאה זכאי לפיצויי פיטורים: חודש שכר לכל שנת עבודה. גם ממשכורת אחרונה, לא ממוצע.",
+      en: "Every employee dismissed after one full year of work is entitled to severance: one month's last salary per year of work — calculated on last salary, not average.",
+      am: "ሙሉ 1 ዓመት ከሠሩ በኋላ ከስንብት ካሳ ይፈቀዳቸዋል: ለዓመት ወር ደሞዝ።",
+    },
+    tags: ["employment", "rights", "legal"],
+    bodies: {
+      he: `## מה זה פיצויי פיטורים?
+
+**פיצויי פיטורים** הם תשלום שמעסיק חייב לשלם לעובד שפיטר אותו. הם מטרתם לאפשר לעובד "ריפוד" כלכלי עד למציאת עבודה חדשה.
+
+## החישוב
+
+**נוסחה**: שכר חודשי אחרון × שנות עבודה
+
+**דוגמה**: עבדתם 5 שנים בשכר של 8,000 ₪/חודש:
+8,000 × 5 = **40,000 ₪**
+
+**שימו לב**: מחשבים לפי **שכר אחרון** — לא ממוצע. אם השכר עלה — יותר טוב לכם.
+
+## מתי מגיע?
+
+- **פיטורים**: תמיד (אחרי שנה)
+- **מוות**: לשאירים
+- **נכות**: לא יכול להמשיך לעבוד
+- **עזיבה מרצון**: לרוב לא (חריגים: מחלה, הטרדה)
+- **פנסיה**: לרוב כלול בקרן הפנסיה
+
+## היכן הכסף?
+
+מאז 2008, מעסיקים חייבים לשלם לקרן פנסיה — חלק מהפקדות הן "פיצויים". בדקו בתלוש: שורת "פיצויים".
+
+## מה אם מסרבים לשלם?
+
+1. **תלונה בממונה על חוק עבודה**: 02-6667222
+2. **תביעה בבית-דין לעבודה**: ניתן לתבוע ללא עורך דין
+3. **קו לעובד**: 1-800-354-354
+
+## טיפ לאתיופים
+
+אם עבדתם "בשחור" (ללא תלוש) — עדיין זכאים! אפשר להוכיח עבודה עם: העברות בנק, עדים, הודעות וואטסאפ.
+
+📞 קו לעובד: 1-800-354-354 | ממונה: 02-6667222`,
+      en: `## What is Severance Pay?
+
+Payment that an employer must make to a dismissed employee. Formula: **last monthly salary × years worked**.
+
+Example: 5 years at 8,000 ILS/month = **40,000 ILS**. Calculated on **last salary** — not average. If your salary increased, this helps you.
+
+## When Are You Entitled?
+
+Dismissal (always, after 1 year). Death (to heirs). Disability (cannot continue working). Resignation (usually not — exceptions: illness, harassment).
+
+## Where Is the Money?
+
+Since 2008, employers must pay pension fund contributions — part of these are "severance." Check your pay slip: "pitzuim" (severance) line.
+
+## If Refused
+
+Complaint to Labour Commissioner: 02-6667222 | Labour Court claim (no lawyer needed) | Kav LaOved: 1-800-354-354
+
+## Tip for Ethiopian-Israelis
+
+If you worked "off the books" (no pay slip) — you are still entitled. Prove employment with: bank transfers, witnesses, WhatsApp messages.
+
+📞 1-800-354-354`,
+      am: `## ምን ነው?
+
+ከሥራ ከወጡ: ለዓመት ወር ደሞዝ ካሳ ይፈቀዳቸዋል።
+
+ቁጥር: ዕለታዊ ደሞዝ × ዓመቶቸ = ካሳ
+
+📞 1-800-354-354`,
+    },
+  },
+  {
+    title: {
+      he: "זכות לדיור ציבורי — רשימת ממתינים ואיך מגישים",
+      en: "Right to Public Housing — Waiting List and How to Apply",
+      am: "የህዝብ ቤት መብት — መጠበቂያ ዝርዝር እና ማመልከቻ",
+    },
+    slug: {
+      he: "public-housing-waiting-list",
+      en: "public-housing-waiting-list",
+      am: "public-housing-waiting-list",
+    },
+    govUrl: "https://www.gov.il/he/departments/topics/public-housing",
+    eligibilitySummary: {
+      he: "משפחות בעלות הכנסה נמוכה ותושבות ותיקה יכולות להגיש לדיור ציבורי. ממוצע המתנה: 8-15 שנים, אך יש עדיפויות לזכאים מיוחדים.",
+      en: "Low-income families with long residency can apply for public housing. Average wait: 8-15 years, but special eligible groups receive priority.",
+      am: "ዝቅተኛ ገቢ ያላቸው ቤተሰቦቸ ለህዝብ ቤት ማመልከት ይችላሉ። አማካኝ ጊዜ: 8-15 ዓመታት።",
+    },
+    tags: ["housing", "rights", "social_welfare"],
+    bodies: {
+      he: `## מה זה דיור ציבורי?
+
+**דיור ציבורי** הוא דירה בבעלות המדינה (עמידר/עמיגור) שמושכרת במחיר מסובסד (כ-20-30% משוק) למשפחות בעלות הכנסה נמוכה.
+
+## מי זכאי?
+
+**תנאים בסיסיים:**
+- תושב ישראל לפחות **12 שנים**
+- אין בבעלותך דירה (או חלק מדירה)
+- הכנסה חודשית מתחת לתקרה (לפי גודל משפחה)
+
+**עדיפות ראשונה:**
+- נכה עם מוגבלות פיזית קשה
+- קשיש חסר דיור
+- משפחה עם ילד נכה
+
+## ממוצע המתנה
+
+- **בכלל**: 8-15 שנים
+- **קריית מלאכי**: 12-16 שנים
+- **נתניה**: 10-14 שנים
+
+## איך מגישים?
+
+1. פנו לסניף **עמידר** הקרוב (עמיגור בצפון): amigour.co.il
+2. מלאו טופס בקשה
+3. הוכיחו: הכנסה (תלושים), תושבות (ת"ז+חוזה שכירות), מצב מגורים
+4. ממתינים ברשימה
+
+## עדיפות לעולים חדשים
+
+עולי אתיופיה (פלאשמורה ומבצע שלמה) זכאים ל**עדיפות** על רשימת ממתינים לפי צו מיוחד — בדקו עם משרד הקליטה.
+
+📞 עמידר: 03-9533333 | עמיגור: 04-8507777 | משרד השיכון: 5442*`,
+      en: `## What is Public Housing?
+
+State-owned apartments (Amidar/Amigour) rented at subsidised prices (~20-30% of market rate) to low-income families.
+
+## Who Qualifies?
+
+Israeli resident for at least **12 years**; no property ownership; income below threshold (by family size). Priority: severe physical disability, homeless elderly, family with disabled child.
+
+## Average Wait Time
+
+8-15 years nationally. Apply regardless — the clock starts from application date.
+
+## Special Priority for Ethiopian Immigrants
+
+Falashmura and Operation Solomon olim may have **priority** on the waiting list under special government decree — check with Ministry of Aliyah.
+
+📞 Amidar: 03-9533333 | Ministry of Housing: *5442`,
+      am: `## ምን ነው?
+
+መንግስት ቤቶቸ (20-30% ከ ገበያ ዋጋ) ዝቅተኛ ደሞዝ ቤተሰቦቸ ይሰጣቸዋል።
+
+ቀጠሮ: 8-15 ዓመት — ዛሬ ያመልክቱ!
+
+📞 03-9533333`,
+    },
+  },
+  {
+    title: {
+      he: "ביטוח לאומי לחייל משוחרר — כל הגמלאות",
+      en: "NII Benefits for Discharged Soldiers — All Allowances",
+      am: "ለተሰናበቱ ወታደሮቸ ቢቲኤል ጥቅሞቸ",
+    },
+    slug: {
+      he: "nii-benefits-discharged-soldiers",
+      en: "nii-benefits-discharged-soldiers",
+      am: "nii-benefits-discharged-soldiers",
+    },
+    govUrl: "https://www.btl.gov.il/benefits/rehabilitation/Pages/default.aspx",
+    eligibilitySummary: {
+      he: "חייל שהשתחרר זכאי לגמלאות BTL: ביטוח בריאות, אבטלה ל-30 ימים ראשונים, ועוד תלוי מצב. חשוב לפנות ביום הראשון.",
+      en: "A discharged soldier is entitled to NII benefits: health insurance, 30-day unemployment buffer and more depending on circumstances. Contact NII on day one.",
+      am: "የተሰናበቱ ወታደሮቸ ቢቲኤል ጥቅሞቸ ያለቸው: ጤና ኢንሹራንስ፣ 30 ቀን የሥራ አጥነት ቸናፈ።",
+    },
+    tags: ["army", "btl", "rights", "employment"],
+    bodies: {
+      he: `## ביום השחרור
+
+חייל שמשתחרר מצה"ל מקבל "תעודת שחרור" — זהו מסמך קריטי. **לא לאבד!**
+
+## גמלאות BTL לחיילים משוחררים
+
+### 1. ביטוח בריאות מיידי
+מיום השחרור — ביטוח בריאות מלא עד שתירשמו לקופת חולים (30 יום). **לא צריך לעשות כלום** — אוטומטי.
+
+### 2. דמי אבטלה ל-30 הימים הראשונים
+בשונה מעובד רגיל — חייל משוחרר **לא צריך להוכיח** שחיפש עבודה ב-30 הימים הראשונים. מקבל דמי אבטלה אוטומטית.
+
+**כיצד לקבל**: הירשמו בלשכת תעסוקה ביום השחרור.
+
+### 3. שיפוי על לימודים
+
+חיילים שהחלו לימודים תוך 3 חודשים מהשחרור זכאים להחזר על שכר הלימוד — בדקו עם המוסד האקדמי.
+
+### 4. מענק לשיקום
+
+חיילים שפיתחו בעיה רפואית במהלך השירות (גב, פגיעת ראש, PTSD) — הגישו ל**אגף השיקום** תוך שנה מהשחרור.
+
+## לוח הפעולות
+
+| יום | מה לעשות |
+|-----|---------|
+| יום 1 | הירשמו בלשכת תעסוקה |
+| שבוע 1 | בחרו קופת חולים |
+| שבוע 2 | הגישו בקשת מלגה לאקדמיה |
+| חודש 1 | בדקו זכאות לאגף שיקום |
+| חודש 3 | בדיקת נסיבות לפיצויים |
+
+📞 BTL: 08-6709709 | אגף שיקום: 03-7381111`,
+      en: `## On Discharge Day
+
+A discharged IDF soldier receives a "discharge certificate" — a critical document. Don't lose it.
+
+## NII Benefits for Discharged Soldiers
+
+**Immediate health insurance**: from discharge day, full coverage until registering with a health fund (30 days). Automatic — no action needed.
+
+**30-day unemployment**: unlike regular employees, discharged soldiers don't need to prove job-seeking for the first 30 days. Register at Employment Service on discharge day.
+
+**Academic study reimbursement**: soldiers starting studies within 3 months of discharge may receive tuition reimbursement — check with the academic institution.
+
+**Rehabilitation grant**: soldiers who developed medical issues during service (back, head injury, PTSD) — apply to the Rehabilitation Division within 1 year.
+
+📞 BTL: 08-6709709 | Rehabilitation Division: 03-7381111`,
+      am: `## ቀዳሚ ቀን
+
+ቢቲኤልን ይመዝገቡ — 30 ቀን ዝቅ ያለ ጥቅሞቸ ይፈቀዳቸዋል።
+
+📞 08-6709709 | 03-7381111`,
+    },
+  },
+  {
+    title: {
+      he: "מלגות ללא תנאים — 7 מקורות פחות מוכרים",
+      en: "Unconditional Scholarships — 7 Lesser-Known Sources",
+      am: "ያለ ቅድመ ሁኔታ ዕርዳታ — 7 ያልታወቁ ምንጮቸ",
+    },
+    slug: {
+      he: "unconditional-scholarships-7-sources",
+      en: "unconditional-scholarships-7-sources",
+      am: "unconditional-scholarships-7-sources",
+    },
+    govUrl: "https://che.org.il/scholarships",
+    eligibilitySummary: {
+      he: "מלגות שלרוב לא ידועות: JDC, מנחם בגין, ברכה, ג'וינט, קרן שלם ועוד. חלקן ייחודיות ליוצאי אתיופיה.",
+      en: "Lesser-known scholarships: JDC, Menachem Begin, Bracha, Joint, Shalem Fund and more. Some are specific to Ethiopian-Israelis.",
+      am: "ብዙ ሰዎቸ የማያውቁ ዕርዳታዎቸ: JDC፣ Begin፣ ጆይንት፣ ሻሌም ፈንድ።",
+    },
+    tags: ["education", "rights", "community"],
+    bodies: {
+      he: `## למה מלגות "בלי תנאים"?
+
+רוב המלגות דורשות: ציון גבוה, מוצא ספציפי, שדה לימוד ספציפי. כאן — מלגות שפחות ידועות ודורשות פחות תנאים.
+
+## 7 מקורות מלגות
+
+### 1. JDC-Ashalim — מלגת "כישורים ייחודיים"
+עד **20,000 ₪/שנה** לסטודנטים מהפריפריה הסוציו-אקונומית. לא דורשת ציון מינימלי — דורשת מוטיבציה ומעורבות קהילתית.
+📞 jdc.org.il/ashalim | 03-9533420
+
+### 2. קרן שלם — מלגת מנהיגות
+**12,000 ₪/שנה** למנהיגים צעירים בני 18-25 עם פוטנציאל הנהגה. מדגישה מגוון — יוצאי אתיופיה מועדפים.
+📞 shalemfund.org.il
+
+### 3. מלגת "ראשית" — אוניברסיטת ת"א
+**10,000 ₪/שנה** לסטודנטים מצטיינים מהפריפריה. אין מחויבות לתחום לימוד.
+📞 tau.ac.il/scholarships
+
+### 4. קרן מנחם בגין
+**8,000 ₪/שנה** לסטודנטים מהפריפריה בכלל התחומים. אחת הגדולות — וסלקטיבית פחות.
+📞 beginheritage.co.il
+
+### 5. JNF (קק"ל) — מלגות פיתוח
+**6,000-12,000 ₪/שנה** לתחומים: חקלאות, מדעי הסביבה, תכנון עירוני, הנדסה.
+📞 kkl-jnf.org.il
+
+### 6. פנינה — מלגת ברכה
+מלגת **5,000 ₪** ספציפית ליוצאות אתיופיה לתואר ראשון. הגשה: אפריל בכל שנה.
+📞 brachafund.org.il
+
+### 7. מלגות המוסד האקדמי עצמו
+כל אוניברסיטה מקיימת מלגות פנימיות שלא מפורסמות — פנו **ישירות לרפרנט הסוציאלי** של המוסד.
+
+## איך להגיש?
+
+1. בדקו תנאים ב: milgapo.co.il (מאגר מלגות)
+2. הכינו: ת.ז, תלוש הורים, אישור לימודים, מכתב מוטיבציה
+3. הגישו **מוקדם** — מרבית המלגות על בסיס "ראשון-ראשון"
+
+📞 milgapo.co.il | che.org.il`,
+      en: `## 7 Lesser-Known Scholarship Sources
+
+1. **JDC-Ashalim**: up to 20,000 ILS/year. No minimum grade required — requires community involvement. jdc.org.il/ashalim
+2. **Shalem Fund**: 12,000 ILS/year for young leaders aged 18-25. Ethiopian-Israelis preferred. shalemfund.org.il
+3. **Reshit (TAU)**: 10,000 ILS/year for high-achieving periphery students. No field restriction. tau.ac.il/scholarships
+4. **Menachem Begin Fund**: 8,000 ILS/year, all fields. beginheritage.co.il
+5. **JNF/KKL**: 6,000-12,000 ILS/year for agriculture, environment, engineering. kkl-jnf.org.il
+6. **Penina-Bracha Fund**: 5,000 ILS specifically for Ethiopian-Israeli women, first degree. brachafund.org.il
+7. **Internal university scholarships**: Every university has unpublicised internal grants — contact the social worker at your institution directly.
+
+Scholarship database: milgapo.co.il | che.org.il`,
+      am: `## 7 ዕርዳታ ምንጮቸ
+
+1. JDC-Ashalim: 20,000 ሺ"ል/ዓ | jdc.org.il
+2. Shalem Fund: 12,000 ሺ"ል | shalemfund.org.il
+3. Begin Fund: 8,000 ሺ"ል | beginheritage.co.il
+4. Bracha Fund (ሴቶቸ): 5,000 ሺ"ል | brachafund.org.il
+
+📞 milgapo.co.il`,
+    },
+  },
+  {
+    title: {
+      he: "נגישות לשירותי ממשלה באמהרית — מדריך מלא",
+      en: "Access to Government Services in Amharic — Complete Guide",
+      am: "በአምሃርኛ የመንግስት አገልግሎቶቸ ተደራሽነት — ሙሉ መመሪያ",
+    },
+    slug: {
+      he: "government-services-amharic-access",
+      en: "government-services-amharic-access",
+      am: "government-services-amharic-access",
+    },
+    govUrl: "https://www.gov.il/he",
+    eligibilitySummary: {
+      he: "לפי חוק — כל גוף ציבורי חייב לספק שירותים בשפות מיעוט. מדריך לכל הגופים הממשלתיים עם שירות באמהרית.",
+      en: "By law — every public body must provide services in minority languages. Guide to all government agencies offering Amharic service.",
+      am: "ሕጉ: ሁሉም የህዝብ ዘርፎቸ በአናሳ ቋንቋዎቸ አገልግሎት ይስጣሉ — በአምሃርኛ ጨምሮ።",
+    },
+    tags: ["rights", "civic", "immigration"],
+    bodies: {
+      he: `## הזכות לשירות בשפת האם
+
+חוק שוויון זכויות האזרח ופסיקות בית-המשפט העליון קובעים: גופים ציבוריים חייבים לספק שירות לדוברי שפות מיעוט, כולל אמהרית.
+
+## שירותי ממשלה עם אמהרית
+
+| גוף | שירות אמהרית | טלפון |
+|-----|-------------|-------|
+| **ביטוח לאומי (BTL)** | נציג דובר אמהרית | 08-6709709 |
+| **משרד הקליטה** | מרכז קליטה + קו | 3450* |
+| **משרד הבריאות** | קו"ל לבריאות | 1-700-500-400 |
+| **משרד החינוך** | שירות עולים | 02-5602222 |
+| **מכבי שירותי בריאות** | נציג אמהרית | 3555* |
+| **כללית** | מרכז שפות | 2701* |
+| **אגודת בני-ברית** | מרכז שפות | שאלו |
+
+## זכויות שאינן ידועות
+
+**בדיון משפטי**: זכות למתרגם (ראו מדריך ייעודי).
+**בבית החולים**: כל ביה"ח חייב לספק מתרגם — בקשו "מתרגם לאמהרית".
+**בבית-ספר ילדים**: הורים זכאים לתקשורת בשפה מובנת.
+
+## אפליקציות ממשלה
+
+- **myisrael.gov.il**: שירותים ממשלתיים דיגיטליים — לרוב בעברית בלבד
+- **Gov.il**: אתר ממשלתי — בעברית, ערבית, אנגלית
+- **BTL אפליקציה**: גישה לכל הגמלאות — ממשק עברי + ייעוץ טלפוני אמהרית
+
+## טיפ לשימוש בשירות ממשלה
+
+כשמתקשרים לכל גוף ממשלתי, אמרו מיד:
+**"שלום, אני דורש/ת שירות באמהרית — Amharic please"**
+
+רוב הגופים יעבירו לנציג מתאים תוך דקות.
+
+📞 BTL: 08-6709709 | משרד הקליטה: 3450*`,
+      en: `## The Right to Service in Your Language
+
+Civil Rights Equality Law and Supreme Court rulings require public bodies to provide service to minority language speakers, including Amharic.
+
+## Government Services with Amharic
+
+NII (BTL): Amharic-speaking agent — 08-6709709. Ministry of Aliyah: absorption centre + line — *3450. Ministry of Health: Kol LaBriut — 1-700-500-400. Maccabi: Amharic agent — *3555. Clalit: language centre — *2701.
+
+## Unknown Rights
+
+Court proceedings: right to interpreter. Hospital: every hospital must provide a translator — request "Amharic translator." School (for your children): parents entitled to communication in understandable language.
+
+## Tip
+
+When calling any government body, say immediately: **"Amharic please"** — most will transfer to a suitable agent within minutes.
+
+📞 BTL: 08-6709709 | Ministry of Aliyah: *3450`,
+      am: `## የቋንቋ አገልግሎት መብት
+
+ሕጉ ሁሉም የህዝብ ዘርፎቸ በአምሃርኛ ጨምሮ አናሳ ቋንቋዎቸ አገልግሎት ይስጣሉ ይላል።
+
+## ዋና ቁጥሮቸ
+
+- ቢቲኤሎ: 08-6709709
+- ቆሊያህ: 3450*
+- ቆሎ ለብሪዩት: 1-700-500-400`,
+    },
+  },
 ];

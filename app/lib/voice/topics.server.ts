@@ -2,8 +2,10 @@
 //
 // HE is source-of-truth (CLAUDE.md). EN + AM mirrored.
 // Content reviewed: 2026-05-12.
+// Wave 2 (18 topics) added: 2026-06-02.
 
 import type { Translatable } from "../db/columns";
+import { VOICE_TOPICS_WAVE2 } from "./topics-wave2.server";
 
 // ── Shared types ─────────────────────────────────────────────────────────────
 
@@ -341,3 +343,14 @@ export function resourceDescription(
 ): string {
   return resource.description[locale] ?? resource.description.he;
 }
+
+// ── All topics — wave 1 + wave 2 ─────────────────────────────────────────────
+
+export const ALL_VOICE_TOPICS: VoiceTopic[] = [
+  RACISM_REPORT_TOPIC,
+  POLICE_CONDUCT_TOPIC,
+  COMMUNITY_ACTION_TOPIC,
+  ...VOICE_TOPICS_WAVE2,
+];
+
+export { VOICE_TOPICS_WAVE2 };

@@ -13,7 +13,35 @@ export interface FamilyResource {
 }
 
 export interface FamilyTopic {
-  slug: "domestic-violence" | "elderly" | "women-empowerment";
+  slug:
+    | "domestic-violence"
+    | "elderly"
+    | "women-empowerment"
+    | "emergency-lines-by-city"
+    | "single-parents"
+    | "elderly-home-care"
+    | "children-at-risk"
+    | "divorce-rights"
+    | "child-support"
+    | "daycare-subsidy"
+    | "parenting-workshops"
+    | "youth-clubs"
+    | "community-services-netanya"
+    | "community-services-beer-sheva"
+    | "community-services-kiryat-malachi"
+    | "community-services-lod-ramla"
+    | "community-services-jerusalem"
+    | "community-services-hadera"
+    | "intergenerational-support"
+    | "grandmothers-raising-grandchildren"
+    | "child-rights-guide"
+    | "adoption-foster-care"
+    | "child-protection-law"
+    | "rent-assistance"
+    | "welfare-services-overview"
+    | "community-kiryat-gat-paz"
+    | "community-services-ashkelon"
+    | "community-services-rishon-lezion";
   title: Record<Locale, string>;
   subtitle: Record<Locale, string>;
   body: Record<Locale, string>;

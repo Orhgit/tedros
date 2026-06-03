@@ -8,11 +8,15 @@
 // HE is source-of-truth (CLAUDE.md). EN + AM are factual mirrors.
 // Each entry is renderable from this seed alone — no DB, no CMS — same
 // pattern as `lib/db/seeds/rights.ts`.
+//
+// Wave 2 (20 additional entries) is imported from ./glossary-wave2.server.ts
+// and merged into the exported GLOSSARY array at the bottom of this file.
 
 import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
 import { DEFAULT_LOCALE } from "../i18n/config";
 import type { GlossaryCategory } from "./categories";
+import { GLOSSARY_WAVE2 } from "./glossary-wave2.server";
 
 export type { GlossaryCategory } from "./categories";
 
@@ -31,9 +35,10 @@ export interface GlossaryEntry {
   bodies: Record<Locale, string>;
 }
 
-// --- 12 glossary entries ----------------------------------------------------
+// --- Wave 1: 12 glossary entries --------------------------------------------
+// Wave 2 (20 entries) is defined in ./glossary-wave2.server.ts and merged below.
 
-export const GLOSSARY: GlossaryEntry[] = [
+const GLOSSARY_WAVE1: GlossaryEntry[] = [
   // 1. Sigd — חג קהילתי + חוק 5774
   {
     slug: "sigd",
@@ -1351,6 +1356,10 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
     },
   },
 ];
+
+// --- Merged export: Wave 1 + Wave 2 ----------------------------------------
+
+export const GLOSSARY: GlossaryEntry[] = [...GLOSSARY_WAVE1, ...GLOSSARY_WAVE2];
 
 // --- Helpers ----------------------------------------------------------------
 

@@ -39,10 +39,40 @@ export const COMMUNITY_CITIES = [
 
 const RELEVANCE_BY_EVENT: Record<HeritageEventSlug, Relevance> = {
   sigd: { kind: "community-cities" },
-  // Ethiopian Orthodox church presence — limited to three cities today.
   genna: { kind: "list", cities: ["jerusalem", "haifa", "beer-sheva"] },
   "aliyah-day": { kind: "community-cities" },
   "beta-israel": { kind: "community-cities" },
+  // Culture article slugs — national relevance (all cities)
+  "sigd-meaning": { kind: "community-cities" },
+  "beta-israel-history": { kind: "community-cities" },
+  "operation-solomon-1991": { kind: "community-cities" },
+  "operation-moses-1984": { kind: "community-cities" },
+  "kessim-priests": { kind: "community-cities" },
+  "orit-holy-book": { kind: "community-cities" },
+  "geez-sacred-language": { kind: "community-cities" },
+  "ethiopian-israeli-music": { kind: "community-cities" },
+  "ethiopian-cuisine-recipes": { kind: "community-cities" },
+  "coffee-ceremony": { kind: "community-cities" },
+  "traditional-dress": { kind: "community-cities" },
+  "ethiopian-wedding": { kind: "community-cities" },
+  "20-sivan-memorial": { kind: "community-cities" },
+  "aliyah-day-june": { kind: "community-cities" },
+  "notable-ethiopian-israelis": { kind: "community-cities" },
+  "second-generation-identity": { kind: "community-cities" },
+  "traditional-crafts": { kind: "community-cities" },
+  "ethiopian-athletes": { kind: "community-cities" },
+  "digital-diaspora": { kind: "community-cities" },
+  "amharic-learning": { kind: "community-cities" },
+  "amharic-proverbs": { kind: "community-cities" },
+  "blood-affair-1996": { kind: "community-cities" },
+  "media-representation": { kind: "community-cities" },
+  "heritage-center": { kind: "community-cities" },
+  "festivals-holagav": { kind: "community-cities" },
+  "literature-creativity": { kind: "community-cities" },
+  "olympic-athletes": { kind: "community-cities" },
+  "visual-artists": { kind: "community-cities" },
+  "famous-musicians": { kind: "community-cities" },
+  "israel-ethiopia-relations": { kind: "community-cities" },
 };
 
 export function relevanceFor(event: HeritageEventSlug): Relevance {
