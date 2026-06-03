@@ -10,6 +10,7 @@ import {
   findCityBySlug,
   type City,
 } from "~/lib/cities/registry";
+import { listPublicListings, type PublicListingSummary } from "~/lib/db/queries/listings.server";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
@@ -47,7 +48,12 @@ export async function loader({ params }: Route.LoaderArgs) {
     next: nextDate(e),
   }));
 
-  return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage };
+  const { items: cityListings } = await listPublicListings(
+    { citySlugHe: city.slug },
+    0,
+  ).catch(() => ({ items: [] as PublicListingSummary[], total: 0 }));
+
+  return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage, cityListings: cityListings.slice(0, 6) };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -90,7 +96,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function CityPage({ loaderData }: Route.ComponentProps) {
-  const { locale, city, cityRights, cityTracks, cityHeritage } = loaderData;
+  const { locale, city, cityRights, cityTracks, cityHeritage, cityListings } = loaderData;
   const name = cityName(city, locale);
 
   return (
@@ -219,11 +225,10 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
           </section>
         )}
 
-        <CitySection
+        <CityListingsSection
           locale={locale}
-          titleKey="city_section_listings_title"
-          emptyKey="city_section_listings_empty"
           city={city}
+          listings={cityListings}
         />
         <CitySection
           locale={locale}
@@ -330,6 +335,85 @@ function MortgageCalculatorCta({ locale, city }: { locale: Locale; city: City })
       >
         {t(locale, "cta_open_calculator")}
       </Link>
+    </section>
+  );
+}
+
+function CityListingsSection({
+  locale,
+  city,
+  listings,
+}: {
+  locale: Locale;
+  city: City;
+  listings: PublicListingSummary[];
+}) {
+  const name = cityName(city, locale);
+  const allUrl = `/${locale}/listings?city=${city.slug}`;
+
+  if (listings.length === 0) {
+    return (
+      <section className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-950">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          {t(locale, "city_section_listings_title")}
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+          {t(locale, "city_section_listings_empty", { name })}
+        </p>
+      </section>
+    );
+  }
+
+  return (
+    <section className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-950">
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          {t(locale, "city_section_listings_title")}
+        </h2>
+        <Link
+          to={allUrl}
+          className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+        >
+          {locale === "he" ? `כל הנכסים ב${name} ←` : `All listings in ${name} →`}
+        </Link>
+      </div>
+      <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {listings.map((l) => {
+          const title = (l.title as { he: string }).he;
+          const slug = (l.slug as { he: string }).he;
+          const attrs = l.attributes as Record<string, unknown>;
+          const externalUrl = attrs.externalSourceUrl as string | undefined;
+          const rooms = typeof attrs.rooms === "number" ? attrs.rooms : undefined;
+          const area = typeof attrs.areaM2 === "number" ? attrs.areaM2 : undefined;
+          const price = l.price ? `₪${l.price.toLocaleString()}` : null;
+
+          return (
+            <li key={l.id}>
+              <a
+                href={externalUrl ?? `/${locale}/listings/${city.slug}/${l.type}/${slug}`}
+                target={externalUrl ? "_blank" : undefined}
+                rel={externalUrl ? "noopener noreferrer" : undefined}
+                className="block rounded-md border border-gray-100 bg-gray-50 p-3 text-sm transition hover:border-gray-300 hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
+              >
+                <p className="font-medium text-gray-900 line-clamp-2 dark:text-gray-100">{title}</p>
+                <p className="mt-1 text-gray-500 dark:text-gray-400">
+                  {price ?? "—"}
+                  {rooms !== undefined ? ` · ${rooms} חדרים` : ""}
+                  {area !== undefined ? ` · ${area} מ"ר` : ""}
+                </p>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="mt-4 text-center">
+        <Link
+          to={allUrl}
+          className="inline-block rounded border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-900"
+        >
+          {locale === "he" ? "ראה כל הנכסים" : "See all listings"}
+        </Link>
+      </div>
     </section>
   );
 }
