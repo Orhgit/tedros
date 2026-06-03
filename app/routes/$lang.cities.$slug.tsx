@@ -355,11 +355,14 @@ function ListingCard({
   const href = externalUrl ?? `/${locale}/listings/${citySlug}/${listing.type}/${slug}`;
   const isExternal = !!externalUrl;
 
+  const proxyImg = (url: string) => `/media/proxy?url=${encodeURIComponent(url)}`;
+
   const images = (attrs.images as string[] | undefined) ?? [];
   const featured = (attrs.featuredImageUrl as string | undefined) ?? images[0];
-  const previewImgs = featured
+  const previewImgs = (featured
     ? [featured, ...images.filter((u) => u !== featured)].slice(0, 3)
-    : images.slice(0, 3);
+    : images.slice(0, 3)
+  ).map(proxyImg);
 
   const rooms = typeof attrs.rooms === "number" ? attrs.rooms : undefined;
   const area = typeof attrs.areaM2 === "number" ? attrs.areaM2 : undefined;
