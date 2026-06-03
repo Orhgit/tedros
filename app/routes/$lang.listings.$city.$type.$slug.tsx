@@ -181,10 +181,10 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
         </p>
       </header>
 
-      {(listing.attributes as { externalSourceUrl?: string }).externalSourceUrl && (
+      {typeof (listing.attributes as Record<string, unknown>).externalSourceUrl === "string" && (
         <p className="mt-3 text-sm">
           <a
-            href={(listing.attributes as { externalSourceUrl: string }).externalSourceUrl}
+            href={(listing.attributes as Record<string, unknown>).externalSourceUrl as string}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 rounded border border-blue-200 bg-blue-50 px-3 py-1.5 text-blue-700 hover:bg-blue-100 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900"

@@ -339,6 +339,148 @@ function MortgageCalculatorCta({ locale, city }: { locale: Locale; city: City })
   );
 }
 
+function ListingCard({
+  listing,
+  locale,
+  citySlug,
+}: {
+  listing: PublicListingSummary;
+  locale: Locale;
+  citySlug: string;
+}) {
+  const title = (listing.title as { he: string }).he;
+  const slug = (listing.slug as { he: string }).he;
+  const attrs = listing.attributes as Record<string, unknown>;
+  const externalUrl = attrs.externalSourceUrl as string | undefined;
+  const href = externalUrl ?? `/${locale}/listings/${citySlug}/${listing.type}/${slug}`;
+  const isExternal = !!externalUrl;
+
+  const images = (attrs.images as string[] | undefined) ?? [];
+  const featured = (attrs.featuredImageUrl as string | undefined) ?? images[0];
+  const previewImgs = featured
+    ? [featured, ...images.filter((u) => u !== featured)].slice(0, 3)
+    : images.slice(0, 3);
+
+  const rooms = typeof attrs.rooms === "number" ? attrs.rooms : undefined;
+  const area = typeof attrs.areaM2 === "number" ? attrs.areaM2 : undefined;
+  const floor = typeof attrs.floor === "number" ? attrs.floor : undefined;
+  const propType = typeof attrs.propertyType === "string" ? attrs.propertyType : null;
+  const address = typeof attrs.address === "string" ? attrs.address : null;
+  const price = listing.price ? `₪${Number(listing.price).toLocaleString("he-IL")}` : null;
+  const isRent = listing.type === "rent";
+
+  const typeBadgeColor =
+    listing.type === "rent"
+      ? "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200"
+      : "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200";
+  const typeLabel = isRent ? "להשכרה" : "למכירה";
+
+  return (
+    <a
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950"
+    >
+      {/* Image strip */}
+      <div className="relative h-48 w-full overflow-hidden bg-gray-100 dark:bg-gray-900">
+        {previewImgs.length > 0 ? (
+          <div className="flex h-full w-full">
+            {/* Main image — takes 2/3 width when siblings exist */}
+            <div className={previewImgs.length > 1 ? "relative h-full w-2/3 shrink-0" : "relative h-full w-full"}>
+              <img
+                src={previewImgs[0]}
+                alt={title}
+                loading="lazy"
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+              />
+            </div>
+            {/* Side thumbnails */}
+            {previewImgs.length > 1 && (
+              <div className="flex h-full w-1/3 flex-col gap-0.5 pr-0.5">
+                {previewImgs.slice(1, 3).map((img, i) => (
+                  <div key={i} className="relative flex-1 overflow-hidden">
+                    <img
+                      src={img}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                    {/* Overlay on last thumb if more images exist */}
+                    {i === 1 && images.length > 3 && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/50 text-sm font-semibold text-white">
+                        +{images.length - 3}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="flex h-full items-center justify-center text-gray-400 dark:text-gray-600">
+            <svg className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+        )}
+        {/* Type badge */}
+        <span className={`absolute top-3 right-3 rounded-full px-2.5 py-0.5 text-xs font-semibold ${typeBadgeColor}`}>
+          {typeLabel}
+        </span>
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-1 flex-col gap-1 p-4">
+        {propType && (
+          <p className="text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">
+            {propType}
+          </p>
+        )}
+        <h3 className="line-clamp-2 text-base font-semibold leading-snug text-gray-900 dark:text-gray-100">
+          {title}
+        </h3>
+        {address && (
+          <p className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+            <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            {address}
+          </p>
+        )}
+
+        <div className="mt-auto pt-3">
+          {/* Price */}
+          <p className="text-xl font-bold text-gray-900 dark:text-gray-100">
+            {price ?? <span className="text-sm font-normal text-gray-400">מחיר לא צוין</span>}
+            {price && isRent && <span className="text-sm font-normal text-gray-500"> / חודש</span>}
+          </p>
+
+          {/* Specs chips */}
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {rooms !== undefined && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                🛏 {rooms} חד׳
+              </span>
+            )}
+            {area !== undefined && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                📐 {area} מ״ר
+              </span>
+            )}
+            {floor !== undefined && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                🏢 קומה {floor}
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+}
+
 function CityListingsSection({
   locale,
   city,
@@ -365,53 +507,44 @@ function CityListingsSection({
   }
 
   return (
-    <section className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-950">
-      <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          {t(locale, "city_section_listings_title")}
-        </h2>
+    <section>
+      <div className="mb-4 flex items-end justify-between">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            {t(locale, "city_section_listings_title")}
+          </h2>
+          <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">
+            {locale === "he" ? `${listings.length} נכסים זמינים ב${name}` : `${listings.length} available in ${name}`}
+          </p>
+        </div>
         <Link
           to={allUrl}
-          className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+          className="flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
         >
-          {locale === "he" ? `כל הנכסים ב${name} ←` : `All listings in ${name} →`}
+          {locale === "he" ? "כל הנכסים" : "See all"}
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
         </Link>
       </div>
-      <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {listings.map((l) => {
-          const title = (l.title as { he: string }).he;
-          const slug = (l.slug as { he: string }).he;
-          const attrs = l.attributes as Record<string, unknown>;
-          const externalUrl = attrs.externalSourceUrl as string | undefined;
-          const rooms = typeof attrs.rooms === "number" ? attrs.rooms : undefined;
-          const area = typeof attrs.areaM2 === "number" ? attrs.areaM2 : undefined;
-          const price = l.price ? `₪${l.price.toLocaleString()}` : null;
 
-          return (
-            <li key={l.id}>
-              <a
-                href={externalUrl ?? `/${locale}/listings/${city.slug}/${l.type}/${slug}`}
-                target={externalUrl ? "_blank" : undefined}
-                rel={externalUrl ? "noopener noreferrer" : undefined}
-                className="block rounded-md border border-gray-100 bg-gray-50 p-3 text-sm transition hover:border-gray-300 hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
-              >
-                <p className="font-medium text-gray-900 line-clamp-2 dark:text-gray-100">{title}</p>
-                <p className="mt-1 text-gray-500 dark:text-gray-400">
-                  {price ?? "—"}
-                  {rooms !== undefined ? ` · ${rooms} חדרים` : ""}
-                  {area !== undefined ? ` · ${area} מ"ר` : ""}
-                </p>
-              </a>
-            </li>
-          );
-        })}
+      <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {listings.map((l) => (
+          <li key={l.id}>
+            <ListingCard listing={l} locale={locale} citySlug={city.slug} />
+          </li>
+        ))}
       </ul>
-      <div className="mt-4 text-center">
+
+      <div className="mt-6 text-center">
         <Link
           to={allUrl}
-          className="inline-block rounded border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-900"
+          className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
         >
-          {locale === "he" ? "ראה כל הנכסים" : "See all listings"}
+          {locale === "he" ? `ראה את כל הנכסים ב${name}` : `All listings in ${name}`}
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
         </Link>
       </div>
     </section>
