@@ -376,7 +376,7 @@ function ListingCard({
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950"
     >
       {/* Image */}
       <div className="relative h-52 w-full overflow-hidden bg-gray-100 dark:bg-gray-900">
@@ -501,9 +501,9 @@ function CityListingsSection({
         </Link>
       </div>
 
-      <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {listings.map((l) => (
-          <li key={l.id}>
+          <li key={l.id} className="h-full">
             <ListingCard listing={l} locale={locale} citySlug={city.slug} />
           </li>
         ))}
