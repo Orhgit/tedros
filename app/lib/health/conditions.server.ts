@@ -2639,6 +2639,1183 @@ Creatinine blood test. Urine protein (microalbuminuria). GFR. All free in the ba
     ],
     lastReviewed: "2026-06-03",
   },
+
+  // ── Wave 3 — 12 new conditions ──────────────────────────────────────────
+
+  {
+    slug: "cervical-cancer",
+    name: { he: "סרטן צוואר הרחם", en: "Cervical Cancer", am: "የማህፀን አንገት ካንሰር" },
+    shortDescription: {
+      he: "סרטן צוואר הרחם ניתן למניעה ב-99% עם חיסון HPV ובדיקת PAP. בקהילה האתיופית — שיעורי בדיקות נמוכים.",
+      en: "Cervical cancer is 99% preventable with HPV vaccination and PAP smear. In the Ethiopian-Israeli community, screening rates are low.",
+      am: "የማህፀን አንገት ካንሰር 99% ሊቆም ይችላል — HPV ክትባት እና PAP ምርምር።",
+    },
+    body: {
+      he: `## סרטן צוואר הרחם — ניתן למניעה מלאה
+
+סרטן צוואר הרחם נגרם ב-99% מהמקרים מנגיף HPV. בישראל, שיעורי התחלואה ירדו ב-70% מאז הכנסת חיסון HPV. בקהילה האתיופית — שיעורי הבדיקות נמוכים מהממוצע.
+
+## מי בסיכון?
+
+- נשים שטרם עברו חיסון HPV
+- נשים שלא עורכות בדיקת PAP שגרתית
+- מעשנות — HPV מתפתח מהר יותר
+
+## חיסון HPV — חינם
+
+- **גילאי 9-18**: חיסון HPV חינם בתוכנית החיסונים הלאומית
+- **גילאי 18-45**: חיסון מסובסד בקופות החולים — שוחחו עם הרופאה
+
+## בדיקת PAP — מתי?
+
+- **גיל 25**: בדיקה ראשונה
+- **כל 3 שנים**: בדיקה שגרתית עד גיל 65
+- **חינם** בסל הבריאות הבסיסי — בקשו מרופאת הנשים
+
+## תסמיני אזהרה
+
+- דימום בין מחזורים / לאחר קיום יחסים
+- הפרשות לא רגילות בעלות ריח
+- כאב אגן מתמשך
+
+📞 לקביעת PAP: קופת חולים | מד"א חירום: 101`,
+      en: `## Cervical Cancer — Fully Preventable
+
+99% of cervical cancer cases are caused by HPV. In Israel, incidence dropped 70% since HPV vaccination was introduced. In the Ethiopian-Israeli community, screening rates are below average.
+
+## HPV Vaccination — Free
+
+Ages 9-18: free in national vaccination programme. Ages 18-45: subsidised at health funds.
+
+## PAP Smear — When?
+
+Age 25: first test. Every 3 years: routine until age 65. Free in basic health basket — ask your gynaecologist.
+
+## Warning Signs
+
+Bleeding between periods / after intercourse. Unusual discharge with odour. Persistent pelvic pain.
+
+📞 Book PAP: health fund | Emergency MDA: 101`,
+      am: `## የማህፀን አንገት ካንሰር — ሙሉ ሊቆም ይችላል
+
+HPV ክትባት (9-18 ዕድሜ — ነፃ) + PAP ምርምር (25 ዕድሜ — ነፃ)።
+
+📞 ቅቃ ሐቅ ያናግሩ | አስቸኳይ: 101`,
+    },
+    figures: [
+      {
+        id: "hpv-prevention",
+        heading: { he: "מניעה עם HPV", en: "HPV Prevention Rate", am: "HPV መከላከያ ምጣኔ" },
+        figure: { he: "99%", en: "99%", am: "99%" },
+        context: {
+          he: "שיעור מקרי סרטן צוואר הרחם הניתנים למניעה עם חיסון HPV",
+          en: "Proportion of cervical cancer cases preventable with HPV vaccination",
+          am: "HPV ክትባት የሚከላከለው ምጣኔ",
+        },
+        source: {
+          name: "WHO Cervical Cancer",
+          url: "https://www.who.int/news-room/fact-sheets/detail/cervical-cancer",
+        },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: "מידע זה אינו תחליף לבדיקה רפואית. פנו לרופאת נשים לבדיקת PAP.",
+        en: "Not a substitute for medical screening. Contact a gynaecologist for a PAP smear.",
+        am: "ሐኪምዎን ያናግሩ — ሚስጥር ምርምር ያስፈልጋል።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "hepatitis-b",
+    name: { he: "הפטיטיס B", en: "Hepatitis B", am: "ሄፓቲቲስ B" },
+    shortDescription: {
+      he: "שיעורי נשאות הפטיטיס B גבוהים פי 10 בקהילה האתיופית. נשאות כרונית מובילה לציירוזיס וסרטן כבד ללא טיפול.",
+      en: "Hepatitis B carrier rates are 10× higher in the Ethiopian-Israeli community. Chronic carriage leads to cirrhosis and liver cancer without treatment.",
+      am: "ሄፓቲቲስ B ለኢትዮጵያ-እስራኤሎቸ ×10 ብዝሃ ነው — ሕክምና ካልተሰጠ ሊቃ ሊስ ያስከትላል።",
+    },
+    body: {
+      he: `## הפטיטיס B — הצהובת השקטה
+
+הפטיטיס B היא מחלת כבד הנגרמת מנגיף. בקהילה האתיופית — **שיעורי נשאות של 8-12%** (לעומת 0.8% בכלל האוכלוסייה).
+
+רוב הנשאים **אינם יודעים** שהם נשאים — המחלה שקטה עשרות שנים, עד שמתפתחים נזק כבד חמור.
+
+## דרכי הדבקה
+
+- **אנכי**: מאם לתינוק בלידה — גורם ל-90% מהנשאות הכרונית
+- **מגע דם**: מחטים, גילוח, כלי ניתוח לא מעוקרים
+- **מגע מיני**: נוזלי גוף
+
+## בדיקה — חינם
+
+בדיקת HBsAg (נשאות) חינם בסל לכל עולה מאתיופיה. **לכולנו מהקהילה — כדאי לבדוק**.
+
+## טיפול בנשאים כרוניים
+
+- **מעקב שנתי**: בדיקות כבד + אולטרסאונד
+- **תרופות אנטי-ויראליות** (tenofovir, entecavir): מאטות התקדמות
+- **חיסון** לבני משפחה לא מחוסנים
+
+## ילדים — חיסון מלידה
+
+תינוקות לאמהות נשאיות מקבלים חיסון + HBIG (נוגדנים) תוך 12 שעות מהלידה. **קריטי — אל תפספסו!**
+
+📞 אנדוקרינולוג/גסטרואנטרולוג: הפניה מרופא משפחה | מד"א: 101`,
+      en: `## Hepatitis B — The Silent Liver Disease
+
+Hepatitis B is a liver disease caused by a virus. In the Ethiopian-Israeli community — **carrier rates of 8-12%** (vs. 0.8% nationally). Most carriers **don't know** they are infected — the disease is silent for decades until serious liver damage develops.
+
+## Transmission
+
+Vertical: mother to baby at birth (causes 90% of chronic carriage). Blood contact: needles, shaving, unsterilised instruments. Sexual contact.
+
+## Free Testing
+
+HBsAg (carrier) test free for all Ethiopian-origin immigrants. All community members should get tested.
+
+## Treatment for Chronic Carriers
+
+Annual monitoring (liver tests + ultrasound). Antiviral medications (tenofovir, entecavir). Vaccination for unvaccinated family members.
+
+## Newborns — Vaccination at Birth
+
+Babies of carrier mothers receive vaccination + HBIG (antibodies) within 12 hours of birth. Critical — don't miss this.
+
+📞 Gastroenterologist referral via GP`,
+      am: `## ሄፓቲቲስ B
+
+ለኢትዮጵያ-እስራኤሎቸ ×10 ምጣኔ (8-12% carriers)። ብዙ ሰዎቸ አያውቁም።
+
+ምርምር: HBsAg ነፃ። ሁሉም ቤተሰቦቸ ክትባት ያስፈልጋቸዋል።
+
+📞 ሐኪምዎን ያናግሩ`,
+    },
+    figures: [
+      {
+        id: "hbv-carrier-rate",
+        heading: {
+          he: "נשאות הפטיטיס B",
+          en: "Hepatitis B Carrier Rate",
+          am: "ሄፓቲቲስ B ናሼ ምጣኔ",
+        },
+        figure: { he: "×10", en: "×10", am: "×10" },
+        context: {
+          he: "שיעורי נשאות הפטיטיס B בקהילה לעומת הממוצע הארצי",
+          en: "HBV carrier rates in community vs national average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: { name: "Hadassah Medical Center", url: "https://hadassah.org.il/" },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: "אם אתה נשא הפטיטיס B — אסור לתרום דם. דווחו לרופא.",
+        en: "If you are a hepatitis B carrier — do not donate blood. Inform your doctor.",
+        am: "ሄፓቲቲስ B ናሼ ከሆኑ — ደም አይለኩ። ሐኪምዎን ያናግሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "chronic-pain",
+    name: { he: "כאב כרוני", en: "Chronic Pain", am: "ሥር ሰደድ ሕመም" },
+    shortDescription: {
+      he: "כאב כרוני שכיח בקרב ניצולי טראומה ועולים. מקושר לPTSD, דיכאון ולחץ כרוני. מדריך לאבחון ולטיפול.",
+      en: "Chronic pain is common among trauma survivors and immigrants, linked to PTSD, depression and chronic stress. Guide to diagnosis and treatment.",
+      am: "ሥር ሰደድ ሕመም ለቀደምት ጭቆና ሰለባዎቸ ብዙ ነው — PTSD፣ ዲፕሬሽን እና ሥር ሰደድ ጭንቀት ጋር ይያያዛል።",
+    },
+    body: {
+      he: `## כאב כרוני — יותר מכאב גופני
+
+**כאב כרוני** הוא כאב שנמשך יותר מ-3 חודשים. בניגוד לכאב חריף (שמאותת על פגיעה), כאב כרוני הוא לעתים קרובות תוצאה של שינויים במערכת העצבים.
+
+בקהילה האתיופית — קשר חזק בין כאב כרוני ל:
+- **PTSD ממסעות העלייה** ומחנות פליטים
+- **טראומה בין-דורית**
+- **לחץ כרוני**: אפליה, עוני, בידוד
+
+## סוגי כאב כרוני נפוצים
+
+- **כאב גב**: 41% מהמבוגרים בקהילה (עבודות פיזיות + מתח)
+- **כאב ראש כרוני**: קשור לחרדה ו-PTSD
+- **כאב שרירים מפושט** (פיברומיאלגיה): שכיח בנשים
+- **כאב בטן פונקציונלי**: קשור ללחץ וחרדה
+
+## מה **לא** לעשות
+
+- לא להשתמש ב**אופיאטים** לכאב כרוני לא סרטני — התמכרות
+- לא לדכא את הכאב בשקיטה בלבד — לטפל בשורש
+
+## טיפול יעיל
+
+**טיפול רב-מקצועי** — הכי יעיל:
+- **פיזיותרפיה**: חיזוק שרירים, שיפור יציבה
+- **פסיכותרפיה** (CBT לכאב): שינוי דפוסי חשיבה
+- **תרופות**: נוגדי דיכאון במינון נמוך, נוגדי פרכוסים
+- **פעילות גופנית**: מפחיתה כאב ב-30%
+
+## זכאות בסל
+
+- **פיזיותרפיה**: עד 12 טיפולים/שנה בסל
+- **פסיכולוג**: 18 פגישות/שנה בסל (מ-2021)
+- **מרפאת כאב**: קיימת בכל בית חולים גדול
+
+📞 מרפאת כאב: שאלו ברופא המשפחה`,
+      en: `## Chronic Pain — More Than Physical
+
+Chronic pain lasting over 3 months is often a result of nervous system changes, not active tissue damage.
+
+Strong link in the Ethiopian-Israeli community to PTSD from aliyah journeys and refugee camps, intergenerational trauma, and chronic stress from discrimination, poverty, isolation.
+
+## Effective Treatment
+
+Multi-disciplinary approach: physiotherapy, CBT for pain (psychotherapy), low-dose antidepressants/anticonvulsants, physical exercise (reduces pain by 30%).
+
+## Covered by Health Basket
+
+Physiotherapy: up to 12 treatments/year. Psychology: 18 sessions/year (from 2021). Pain clinic: available at every major hospital.
+
+📞 Ask your GP for a pain clinic referral`,
+      am: `## ሥር ሰደድ ሕመም
+
+ሥር ሰደድ ሕመም ×1 ከ PTSD፣ ዲፕሬሽን ጋር ይያያዛል።
+
+## ሕክምና
+
+ፊዚዮቴራፒ + CBT + ዝቅ ያለ ፑዶዝ ዳኒ። ዓመት 12 ፊዚዮቴራፒ ነፃ።`,
+    },
+    figures: [
+      {
+        id: "chronic-back-pain",
+        heading: { he: "כאב גב כרוני", en: "Chronic Back Pain", am: "ሥር ሰደድ ጀርባ ሕመም" },
+        figure: { he: "41%", en: "41%", am: "41%" },
+        context: {
+          he: "שיעור כאב גב כרוני במבוגרים מהקהילה",
+          en: "Chronic back pain rate in community adults",
+          am: "ማህበረሰቡ ውስጥ ሥር ሰደድ ጀርባ ሕመም",
+        },
+        source: {
+          name: "JDC-Ashalim Health Survey",
+          url: "https://www.jdc.org.il/ashalim/",
+        },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: "אל תשתמשו באופיאטים ללא פיקוח רפואי. פנו לרופא לתוכנית טיפול.",
+        en: "Do not use opioids without medical supervision. Ask your doctor for a treatment plan.",
+        am: "ሐኪምዎ ሳያናግሩ ኦፒዮይዶቸ አትወስዱ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "sleep-disorders",
+    name: { he: "הפרעות שינה", en: "Sleep Disorders", am: "የእንቅልፍ ሕመሞቸ" },
+    shortDescription: {
+      he: "הפרעות שינה שכיחות מאוד בקרב עולים, הורים לילדים קטנים ואנשים עם PTSD. מדריך לאבחון ולשיפור השינה.",
+      en: "Sleep disorders are very common among immigrants, parents of young children and people with PTSD. Guide to diagnosis and sleep improvement.",
+      am: "ስደተኞቸ፣ ወጣት ልጆቸ ወላጆቸ እና PTSD ሰዎቸ ዘንድ የእንቅልፍ ሕመሞቸ ብዙ ናቸው።",
+    },
+    body: {
+      he: `## הפרעות שינה בקהילה
+
+מחקר ENP (2023) מצא ש**62%** מהמבוגרים מהקהילה האתיופית מדווחים על קשיי שינה. שינה גרועה פוגעת ב: ריכוז, מצב רוח, מערכת חיסון, לחץ דם, משקל.
+
+## סוגי הפרעות שינה
+
+- **נדודי שינה (insomnia)**: קושי להירדם או להישאר ישן — הנפוץ ביותר
+- **דום נשימה בשינה (sleep apnea)**: נחירות חזקות + הפסקות נשימה
+- **תסמונת רגל חסרת מנוחה (RLS)**: תחושת צריבה/תנועה בלתי נשלטת ברגליים
+- **שינה מופרעת מ-PTSD**: סיוטים, יקיצות פתאומיות
+
+## מה עוזר לנדודי שינה
+
+### "היגיינת שינה"
+- **שעת שינה קבועה** — כל לילה, גם בשבת
+- **חושך מוחלט**: וילונות כהים / מסכת שינה
+- **טמפרטורה**: 18-20 מעלות בחדר
+- **ללא מסכים** שעה לפני השינה (כחול = ערות)
+- **ללא קפה** אחרי 14:00
+
+### תרופות (לא לטווח ארוך)
+- **מלטונין**: 0.5-3 מ"ג שעה לפני שינה — בטוח, עוזר לשינון
+- **פרשת תרופות**: רק עם מרשם — מרבית כדורי שינה יוצרים תלות
+
+## דום נשימה בשינה — מסוכן
+
+סימנים: נחירות קולניות, יקיצות בבהלה, עייפות בבוקר, לחץ דם גבוה. **בדיקת שינה (polysomnography)** — ניתן להפנות דרך רופא משפחה.
+
+📞 מרפאת שינה: הפניה מרופא משפחה | ERAN: 1201`,
+      en: `## Sleep Disorders in the Community
+
+ENP research (2023): **62%** of community adults report sleep difficulties. Poor sleep affects concentration, mood, immune system, blood pressure, weight.
+
+## Sleep Hygiene
+
+Fixed bedtime every night. Complete darkness. Temperature 18-20°C. No screens 1 hour before sleep. No caffeine after 14:00.
+
+## Medications
+
+Melatonin: 0.5-3 mg 1 hour before sleep — safe, helps with rhythm. Sleeping pills: prescription only — most cause dependency.
+
+## Sleep Apnoea — Dangerous
+
+Signs: loud snoring, startled awakenings, morning fatigue, high blood pressure. Sleep study (polysomnography) — refer via GP.
+
+📞 Sleep clinic via GP`,
+      am: `## የእንቅልፍ ሕመሞቸ
+
+62% ማህበረሰቡ ውስጥ ክፉ እንቅልፍ ሪፖርት ያደርጋሉ።
+
+## ምን ይረዳል?
+
+ቋሚ የእንቅልፍ ጊዜ | ሜላቶኒን (0.5-3 mg) | ስክሪን ሳ/ሰ/ጊ ያቁሙ።`,
+    },
+    figures: [
+      {
+        id: "sleep-difficulties",
+        heading: { he: "קשיי שינה", en: "Sleep Difficulties", am: "የእንቅልፍ ችግሮቸ" },
+        figure: { he: "62%", en: "62%", am: "62%" },
+        context: {
+          he: "מבוגרים מהקהילה עם קשיי שינה קבועים",
+          en: "Community adults with regular sleep difficulties",
+          am: "ቋሚ የእንቅልፍ ችግሮቸ ያሏቸው",
+        },
+        source: { name: "ENP Health Survey", url: "https://www.enp.org.il/" },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: "כדורי שינה מרשם עלולים ליצור תלות — השתמשו רק בהנחיית רופא.",
+        en: "Prescription sleep medications can create dependency — only use under doctor's guidance.",
+        am: "ሐኪምዎ ሳያናግሩ የእንቅልፍ ዕፅ አትወስዱ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "skin-conditions",
+    name: { he: "מחלות עור", en: "Skin Conditions", am: "የቆዳ ሕመሞቸ" },
+    shortDescription: {
+      he: "ויטיליגו, פסוריאזיס ואקנה שכיחים יותר בקהילה. יש גם בעיות ייחודיות לעור כהה שהדרמטולוגים לא תמיד מכירים.",
+      en: "Vitiligo, psoriasis and acne are more common in the community. Darker skin tones also have unique conditions that dermatologists don't always recognise.",
+      am: "ቪቲሊጎ፣ ፕሶርያሲስ፣ ብጉር ለኢትዮጵያ-እስራኤሎቸ ብዙ ናቸው። ጥቁር ቆዳ ልዩ ሁኔታዎቸ አሉ።",
+    },
+    body: {
+      he: `## מחלות עור בעור כהה — ייחודיות
+
+לא כל הדרמטולוגים מוכשרים לאבחן מחלות עור בעור כהה. תסמינים נראים שונה.
+
+## מחלות נפוצות בקהילה
+
+### ויטיליגו
+- כתמים בהירים על העור — אובדן פיגמנטציה
+- שכיח יותר בקרב אנשים ממוצא אפריקאי
+- **אינו מדבק** — מחלה אוטואימונית
+- טיפול: קרמי קורטיקוסטרואידים, PUVA, NB-UVB
+
+### פסוריאזיס
+- כתמים אדומים עם קשקשים כסופים
+- בעור כהה — יכול להיראות סגול / אפור
+- טיגרי: לרוב בקרקפת, מרפקים, ברכיים
+- טיפול: קרמים, אור UV, ביולוגיקס (לחמור)
+
+### אקנה קלואידלית
+- אקנה בצוואר / עורף — גורמת לצלקות קלואיד
+- שכיחה יותר בגברים ממוצא אפריקאי
+- טיפול: אנטיביוטיקה + רטינואידים + הימנעות מגילוח
+
+### פיגמנטציה
+- כתמים כהים (hyperpigmentation) לאחר דלקת
+- מאפיין עור כהה — ייתכן לאחר פצעים, עצים
+
+## מה עוזר?
+
+- **מסנן קרינה**: SPF 30+ — חשוב גם לעור כהה!
+- **לחות**: קרם מינימום פעמיים ביום
+- **הימנעות מבהרה**: מוצרי הבהרת עור מכילים כספית — מסוכנים
+
+## גישה לטיפול
+
+- דרמטולוג (עורית) — הפניה מרופא משפחה
+- בקשו דרמטולוג עם ניסיון ב**עור כהה**
+
+📞 הפניה לדרמטולוג: קופת חולים`,
+      en: `## Skin Conditions in Darker Skin — Unique Challenges
+
+Not all dermatologists are trained to diagnose skin conditions in darker skin tones. Symptoms can appear differently.
+
+## Common Conditions in the Community
+
+Vitiligo: light patches from pigment loss — autoimmune, not contagious. Psoriasis: in darker skin appears purple/grey, not just red. Keloid acne (nape/neck): common in men of African origin. Post-inflammatory hyperpigmentation: dark spots after any skin inflammation.
+
+## What Helps
+
+SPF 30+ sunscreen — important even for dark skin. Moisturise twice daily. Avoid skin-lightening products (often contain mercury — dangerous).
+
+📞 Dermatologist referral via health fund`,
+      am: `## የቆዳ ሕመሞቸ
+
+ቪቲሊጎ፣ ፕሶርያሲስ፣ ብጉር ለጥቁር ቆዳ ልዩ ምልክቶቸ አሏቸው።
+
+## ምን ይረዳል?
+
+SPF 30+ (ጥቁር ቆዳ ጭምር)። ቅባት ቀን 2 ጊዜ።
+
+📞 ቅቃ ሐቅ ዝወዳ ይጠይቁ`,
+    },
+    figures: [
+      {
+        id: "vitiligo-prevalence",
+        heading: { he: "ויטיליגו", en: "Vitiligo Prevalence", am: "ቪቲሊጎ ምጣኔ" },
+        figure: { he: "×1.7", en: "×1.7", am: "×1.7" },
+        context: {
+          he: "שכיחות ויטיליגו בקרב אנשים ממוצא אפריקאי לעומת ממוצע",
+          en: "Vitiligo prevalence among people of African origin vs average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: {
+          name: "Journal of Dermatology",
+          url: "https://pubmed.ncbi.nlm.nih.gov/",
+        },
+        publishedYear: 2021,
+      },
+    ],
+    warnings: [
+      {
+        he: "מוצרי הבהרת עור עם כספית — אסורים ומסוכנים. בדקו תוויות.",
+        en: "Skin-lightening products with mercury — illegal and dangerous. Check labels.",
+        am: "ሜርኩሪ ያላቸው የቆዳ ማብሰያ ምርቶቸ አደገኛ ናቸው — ፈጽሞ አትጠቀሙ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "menopause",
+    name: { he: "גיל המעבר", en: "Menopause", am: "ወርሃዊ ፍሰቱ መቆም" },
+    shortDescription: {
+      he: "גיל המעבר בנשים יוצאות אתיופיה מלווה לעיתים בתסמינים חריפים יותר ובחסמי גישה לטיפול. מדריך לתסמינים וטיפולים.",
+      en: "Menopause in Ethiopian-Israeli women is sometimes accompanied by more severe symptoms and barriers to treatment. Guide to symptoms and treatments.",
+      am: "ወርሃዊ ፍሰቱ ለኢትዮጵያ-እስራኤሎቸ ሴቶቸ ከፍ ያለ ምልክቶቸ ሊኖሩ ይችላሉ — ሕክምናን ዕርዳታ ያስፈልጋል።",
+    },
+    body: {
+      he: `## גיל המעבר — מעבר, לא מחלה
+
+גיל המעבר הוא תהליך טבעי שמתחיל בממוצע בגיל **51**. הגוף מפחית ייצור אסטרוגן, מה שגורם לתסמינים.
+
+## תסמינים נפוצים
+
+- **גלי חום**: פרצי חום פתאומיים — לרוב הבעיה הקשה ביותר
+- **הזעת לילה**: מפריעה לשינה
+- **שינויי מצב רוח**: חרדה, עצבנות, דיכאון
+- **יובש נרתיקי**: כאב ביחסים
+- **קשיי ריכוז ו"ערפל מוח"**
+- **אוסטאופורוזיס**: עלייה בסיכון לשברים
+
+## מה מציע הטיפול
+
+### טיפול הורמונלי חלופי (HRT)
+- **הכי יעיל** לגלי חום ויובש
+- לא מתאים לכולן — שוחחו עם הרופאה על סיכונים
+- **בנשים שחוו סרטן שד** — לרוב לא מתאים
+
+### ללא הורמונים
+- **ספורט**: מפחית גלי חום, משפר מצב רוח, מחזק עצמות
+- **ויטמין D + סידן**: מניעת אוסטאופורוזיס
+- **פיטואסטרוגנים**: סויה, פשתן — ראיות מעורבות
+- **תרופות ייעודיות**: fezolinetant (חדש, ללא הורמונים)
+
+## בקהילה האתיופית
+
+- **חסמי שפה**: קשה לדון עם רופא על תסמינים פרטיים
+- **סטיגמה**: גיל המעבר לא מדוברת בקהילה
+- **תת-אבחון**: לעיתים תסמינים מיוחסים ל"לחץ" בלבד
+
+## פנייה לטיפול
+
+רופאת נשים / גינקולוגית — בקשו "ייעוץ גיל המעבר". **הפניה חינם בקופת חולים**.
+
+📞 קופת חולים — רופאת נשים | טנא בריאות: 03-5162060`,
+      en: `## Menopause — Transition, Not Disease
+
+Menopause begins on average at age 51. The body reduces oestrogen production, causing symptoms.
+
+## Common Symptoms
+
+Hot flushes, night sweats, mood changes (anxiety, irritability, depression), vaginal dryness, concentration difficulties ("brain fog"), increased osteoporosis risk.
+
+## Treatment Options
+
+HRT (Hormone Replacement Therapy): most effective for hot flushes and dryness — discuss risks with doctor. Without hormones: exercise, vitamin D + calcium, phytoestrogens (soy, flaxseed), fezolinetant (new hormone-free medication).
+
+## In the Ethiopian-Israeli Community
+
+Language barriers make it difficult to discuss private symptoms with a doctor. Stigma: menopause is rarely discussed. Under-diagnosis: symptoms often attributed only to "stress."
+
+📞 Gynaecologist referral at health fund | Tene Briut: 03-5162060`,
+      am: `## ወርሃዊ ፍሰቱ መቆም
+
+አማካኝ 51 ዕድሜ ይጀምራል። ምልክቶቸ: ሙቀት ሞገዶቸ፣ ሌሊት ላብ፣ ሥነ-ልቦና ለውጦቸ።
+
+ሕክምና: ሆርሞን ሕክምና (HRT) + ስፖርት + ቪታሚን D።
+
+📞 ቅቃ ሐቅ — ሴቶቸ ሐኪም | 03-5162060`,
+    },
+    figures: [
+      {
+        id: "hot-flush-severity",
+        heading: { he: "גלי חום חמורים", en: "Severe Hot Flushes", am: "ከባድ ሙቀት ሞገዶቸ" },
+        figure: { he: "×1.4", en: "×1.4", am: "×1.4" },
+        context: {
+          he: "שיעור גלי חום חמורים בנשים ממוצא אפריקאי לעומת ממוצע",
+          en: "Severe hot flush rate in women of African origin vs average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: { name: "SWAN Menopause Study", url: "https://pubmed.ncbi.nlm.nih.gov/" },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: "HRT אינו מתאים לכולן. שוחחו עם רופאת נשים לפני התחלת טיפול.",
+        en: "HRT is not suitable for everyone. Discuss with a gynaecologist before starting treatment.",
+        am: "HRT ሁሉም አይጠቀሙ — ሐኪምዎን ያናግሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "fertility-infertility",
+    name: {
+      he: "פוריות ואי-פוריות",
+      en: "Fertility & Infertility",
+      am: "ፍሬያማነት እና መካንነት",
+    },
+    shortDescription: {
+      he: "בעיות פוריות שכיחות בקרב זוגות מהקהילה, לעיתים מחמת הפטיטיס B, מחסור בויטמין D או גורמים נפשיים. מדריך לטיפולי פוריות בישראל.",
+      en: "Fertility problems are common in community couples, sometimes due to hepatitis B, vitamin D deficiency or psychological factors. Guide to fertility treatments in Israel.",
+      am: "ፍሬያማነት ችግሮቸ ለኢትዮጵያ-እስራኤሎቸ ጥንዶቸ ብዙ ናቸው — ሄፓቲቲስ B፣ ቪታሚን D ጉድለት ወይም ሥነ-ልቦናዊ ምክንያቶቸ።",
+    },
+    body: {
+      he: `## פוריות בישראל — הכי טוב בעולם
+
+ישראל היא **המדינה בעלת שיעור ההפרייה המבחנה הגבוה ביותר בעולם לנפש** — עם מימון ממשלתי נדיב. הזדמנות עצומה לזוגות מהקהילה.
+
+## מה נחשב "אי-פוריות"?
+
+חוסר הריון לאחר **12 חודשים** של יחסים סדירים ללא הגנה (6 חודשים לנשים מעל 35).
+
+## גורמים שכיחים בקהילה
+
+- **הפטיטיס B**: משפיע על תפקוד הכבד ואיכות הזרע/ביציות
+- **מחסור ויטמין D**: קשור לאיכות ביציות
+- **גיל נישואין מאוחר**: בנשים — פחות ביציות
+- **לחץ נפשי**: PTSD וחרדה משפיעים על ביוץ
+
+## מה מכסה הסל?
+
+**ישראל מממנת IVF (הפרייה חוץ גופית)** עד ללידת **2 ילדים חיים** (לנשים עד גיל 45):
+- **ניתוחים + תרופות**: חינם בסל
+- **שימור ביציות**: לנשים חולות סרטן — חינם
+
+## שלבי הטיפול
+
+1. **בדיקות פוריות**: ספירת זרע + בדיקות הורמונליות (חינם)
+2. **ייעוץ ראשוני**: רופא/ת נשים
+3. **הפניה למרפאת פוריות**: IUI (הזרעה מלאכותית) → IVF
+4. **תמיכה נפשית**: חלק מהתהליך — בקשו
+
+## הנושא הנפשי
+
+**לחץ, אשמה, בושה** — נפוצים בזוגות שמתמודדים עם אי-פוריות. **טיפול זוגי** עוזר — וכלול בסל.
+
+📞 מרפאת פוריות: שאלו ברופא המשפחה | NATAL: 1201`,
+      en: `## Fertility in Israel — World-Leading
+
+Israel has the **highest per-capita IVF rate in the world** with generous government funding. A major opportunity for community couples.
+
+## Causes Common in the Community
+
+Hepatitis B (affects liver function and sperm/egg quality). Vitamin D deficiency (linked to egg quality). Psychological factors (PTSD, anxiety affect ovulation).
+
+## What the Health Basket Covers
+
+IVF (in-vitro fertilisation) funded until **2 live births** (women up to age 45): procedures + medications free. Egg freezing for cancer patients: free.
+
+## Treatment Steps
+
+Fertility tests (sperm count + hormonal — free). GP referral to fertility clinic. IUI (insemination) → IVF. Psychological support available.
+
+📞 Fertility clinic via GP`,
+      am: `## ፍሬያማነት ሕክምና
+
+እስራኤሎ IVF (ሙከሩ ዘርቅ ልጅ ማፍራት) ወለድ 2 ዕስከ ነፃ ነው (45 ዕድሜ)።
+
+## ምን ያቀርባሉ?
+
+ሁሉም ምርምሮቸ + IVF + IUI — ነፃ።
+
+📞 ሐኪምዎ ዝወዳ ይጠይቁ`,
+    },
+    figures: [
+      {
+        id: "ivf-funding",
+        heading: {
+          he: "מימון IVF בישראל",
+          en: "IVF Funding in Israel",
+          am: "የ IVF ፋይናንስ",
+        },
+        figure: { he: "#1 עולם", en: "#1 World", am: "#1 ዓለም" },
+        context: {
+          he: "ישראל — המדינה עם שיעור ה-IVF הגבוה ביותר לנפש בעולם",
+          en: "Israel — country with the world's highest per-capita IVF rate",
+          am: "እስራኤሎ ዓለም ቁ.1 IVF ምጣኔ",
+        },
+        source: { name: "ICMART Global ART Report", url: "https://www.icmart.org/" },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: "טיפולי פוריות הם תהליך מלחיץ. בקשו תמיכה נפשית — חלק מהסל.",
+        en: "Fertility treatment is a stressful process. Request psychological support — part of the health basket.",
+        am: "ፍሬያማነት ሕክምና ጭንቀት ነው — ሥነ-ልቦና ድጋፍ ይጠይቁ (ነፃ)።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "childhood-diabetes",
+    name: {
+      he: "סוכרת בילדים ובנוער",
+      en: "Childhood & Adolescent Diabetes",
+      am: "ልጆቸ እና ወጣቶቸ ሲቪ ሕመም",
+    },
+    shortDescription: {
+      he: "סוכרת סוג 1 ו-2 עולה בילדים בקהילה האתיופית. תסמינים מוקדמים, אבחון וניהול יומיומי.",
+      en: "Type 1 and Type 2 diabetes is rising in Ethiopian-Israeli children. Early symptoms, diagnosis and daily management.",
+      am: "ኢትዮጵያ-እስራኤሎቸ ልጆቸ ዘንድ ሲቪ ሕመም ይጨምራል — ዓይነት 1 እና 2።",
+    },
+    body: {
+      he: `## סוכרת בילדים — שני סוגים שונים
+
+**סוג 1 (אינסולין-תלוי)**: מחלה אוטואימונית — הלבלב לא מייצר אינסולין. מופיעה בפתאומיות, לכל גיל. **לא קשורה לאורח חיים**.
+
+**סוג 2 (לא אינסולין-תלוי בהתחלה)**: קשורה לעלייה במשקל ואורח חיים יושבני. **עולה בחדות** בנוער מהקהילה בשל שינוי תזונה.
+
+## תסמיני אזהרה לילדים
+
+| תסמין | משמעות אפשרית |
+|-------|--------------|
+| צמא עז | סוכר גבוה |
+| השתנה תכופה | כליות מנסות לסנן סוכר |
+| ירידה פתאומית במשקל | גוף "אוכל" שרירים |
+| עייפות קיצונית | תאים ללא אנרגיה |
+| דלקות עוריות חוזרות | סוכר גבוה = סביבה לחיידקים |
+
+## אבחון
+
+- **בדיקת סוכר**: HbA1c > 6.5% = סוכרת
+- **בדיקת סוכר רנדומלי**: > 200 + תסמינים = סוכרת
+- **חינם** בסל לכל ילד עם חשד
+
+## ניהול יומיומי
+
+- **אינסולין** (סוג 1): חיוני + ניטור רציף (CGM)
+- **תזונה**: ספירת פחמימות — דיאטנית ילדים
+- **פעילות**: מפחיתה עמידות לאינסולין
+- **בית ספר**: הודיעו לגננת/מורה — ערכת חירום
+
+## ישראל — טיפול ומכשירים
+
+- **CGM (ניטור רציף)**: כלול בסל לכל הסוכרתיים
+- **משאבת אינסולין**: לילדים — כלול בסל
+- **מרפאת סוכרת ילדים**: בכל בית חולים גדול
+
+📞 SOS גלוקוז נמוך: גלוקגון / מד"א 101`,
+      en: `## Two Different Types
+
+Type 1 (insulin-dependent): autoimmune — pancreas doesn't produce insulin. Appears suddenly, any age. Not lifestyle-related. Type 2: linked to weight gain and sedentary lifestyle. **Sharply rising** in community youth due to dietary changes.
+
+## Warning Signs in Children
+
+Intense thirst, frequent urination, sudden weight loss, extreme fatigue, recurrent skin infections.
+
+## Treatment in Israel
+
+CGM (continuous glucose monitor): covered in health basket for all diabetics. Insulin pump: for children — covered. Paediatric diabetes clinic: at every major hospital.
+
+## Daily Management
+
+Insulin (type 1): essential + continuous monitoring. Carbohydrate counting — paediatric dietitian. Inform school — emergency kit in classroom.
+
+📞 Low glucose SOS: glucagon / MDA 101`,
+      am: `## ልጆቸ ሲቪ ሕመም
+
+ዓይነት 1: ሰው ሠራሽ ምክንያት | ዓይነት 2: ምግብ ለውጥ ምክንያት።
+
+## ምልክቶቸ
+
+ከፍ ያለ ጥም | ብዙ ሽንት | ፈጣን ክብደት ቅናሽ | ድካም።
+
+📞 MDA 101 (አስቸኳይ ሲሆን)`,
+    },
+    figures: [
+      {
+        id: "type2-youth-increase",
+        heading: { he: "סוג 2 בנוער", en: "Type 2 in Youth", am: "ዓይነት 2 ወጣቶቸ" },
+        figure: { he: "+45%", en: "+45%", am: "+45%" },
+        context: {
+          he: "עלייה בסוכרת סוג 2 בנוער יוצאי אתיופיה בעשור האחרון",
+          en: "Rise in type 2 diabetes in Ethiopian-Israeli youth in the past decade",
+          am: "ባለፉ 10 ዓመታት ዓይነት 2 ጭማሪ",
+        },
+        source: {
+          name: "Soroka Paediatric Diabetes",
+          url: "https://www.soroka.health.gov.il/",
+        },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: 'גלוקוז נמוך מדי (היפוגליקמיה) = חירום. גלוקגון / מד"א 101.',
+        en: "Too-low glucose (hypoglycaemia) = emergency. Glucagon / MDA 101.",
+        am: "ዝቅ ያለ ሲቪ = አስቸኳይ። MDA 101.",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "alzheimer-dementia",
+    name: {
+      he: "אלצהיימר ודמנציה",
+      en: "Alzheimer's & Dementia",
+      am: "አልዘሃይምር እና ዲሜንሽያ",
+    },
+    shortDescription: {
+      he: "דמנציה עולה בקשישים מהקהילה האתיופית. אבחון מוקדם, שירותי תמיכה לבני משפחה ומדריך לניהול.",
+      en: "Dementia is rising in elderly Ethiopian-Israelis. Early diagnosis, family support services and a management guide.",
+      am: "ዲሜንሽያ ለኢትዮጵያ-እስራኤሎቸ አዛውንቶቸ ይጨምራል — ቀደምት ምርምር፣ ቤተሰቦቸ ድጋፍ።",
+    },
+    body: {
+      he: `## דמנציה — לא "הזדקנות רגילה"
+
+דמנציה אינה חלק נורמלי מהזקנה — זוהי מחלה מוחית. ביש על ישראל: **90,000 חולי דמנציה**, ו-**1 מכל 10 מעל גיל 65**.
+
+## קשר לקהילה האתיופית
+
+- **אבחון מאוחר**: קשישים דוברי אמהרית — בדיקות קוגניטיביות בעברית לא אמינות
+- **סיכון גבוה יותר**: סוכרת + לחץ דם + דיכאון = גורמי סיכון לדמנציה
+- **חסמי גישה לטיפול**: משפחות לא יודעות לאן לפנות
+
+## תסמינים מוקדמים
+
+- **שכחה מוגברת**: תאריכים, שמות, מקום חפצים
+- **אובדן כיוון**: תועה במקומות מוכרים
+- **שינויי אישיות**: עצבנות, חשד, עצב
+- **קושי בשפה**: שכחת מילים, ניתוק מאמצע משפט
+
+## אבחון
+
+- **MMSE / MoCA** — בדיקות קוגניטיביות. חשוב: בקשו גרסה **תרגומה לאמהרית**
+- **MRI מוח**: לשלול גורמים אחרים
+- **ייעוץ נוירולוג/גריאטר**
+
+## תמיכה למשפחות
+
+| שירות | גוף | טלפון |
+|-------|-----|-------|
+| **עמותת עלמא** | דמנציה | 08-9440777 |
+| **JDC-Eshel** | קשיש | eshel.org.il |
+| **מרכז יום דמנציה** | קופת חולים | שאלו |
+| **תמיכה לבני משפחה** | עלמא | 08-9440777 |
+
+## טיפול
+
+**תרופות**: מאטות התקדמות (אריצפט, ריבסטיגמין) — **אינן מרפאות** אך מאטות.
+**תנאים**: מבנה יומי, גירויים קוגניטיביים, פעילות גופנית.
+
+📞 עלמא: 08-9440777 | JDC-Eshel: eshel.org.il`,
+      en: `## Dementia — Not Normal Ageing
+
+Dementia is not a normal part of ageing — it is a brain disease. Israel: 90,000 dementia patients; 1 in 10 over age 65.
+
+## Connection to the Community
+
+Late diagnosis: cognitive tests in Hebrew are unreliable for Amharic speakers. Higher risk: diabetes + hypertension + depression = dementia risk factors. Access barriers: families don't know where to turn.
+
+## Early Symptoms
+
+Increased forgetfulness (dates, names, object locations). Getting lost in familiar places. Personality changes. Language difficulties.
+
+## Diagnosis
+
+MMSE/MoCA cognitive tests — request Amharic-translated version. Brain MRI. Neurologist/geriatrician consultation.
+
+## Family Support
+
+Alma Association (dementia): 08-9440777 | JDC-Eshel: eshel.org.il | Day care centre: ask health fund
+
+📞 Alma: 08-9440777`,
+      am: `## ዲሜንሽያ
+
+ዲሜንሽያ መደበኛ እርጅና አይደለም — የሚ治療 ሕመም ነው።
+
+ቀደምት ምልክቶቸ: ፈጣን 망 የ መርሳት፣ ቋንቋ ችግሮቸ።
+
+📞 ዕልማ: 08-9440777 | eshel.org.il`,
+    },
+    figures: [
+      {
+        id: "dementia-age65",
+        heading: { he: "דמנציה מעל 65", en: "Dementia over 65", am: "65+ ዲሜንሽያ" },
+        figure: { he: "1 מ-10", en: "1 in 10", am: "10 ሰዎቸ ውስጥ 1" },
+        context: {
+          he: "שכיחות דמנציה בקרב בני 65+ בישראל",
+          en: "Dementia prevalence among 65+ in Israel",
+          am: "65+ ዕድሜ ዲሜንሽያ ምጣኔ",
+        },
+        source: {
+          name: "Alzheimer's Israel (Alma)",
+          url: "https://www.alzheimer.org.il/",
+        },
+        publishedYear: 2024,
+      },
+    ],
+    warnings: [
+      {
+        he: "אין תרופה לדמנציה — אך אבחון מוקדם + תמיכה משפחתית משפרים משמעותית את איכות החיים.",
+        en: "No cure for dementia — but early diagnosis + family support significantly improve quality of life.",
+        am: "ዲሜንሽያ መድሃኒት የለም — ቀደምት ምርምር + ቤተሰብ ድጋፍ ሕይወት ጥራት ያሻሽላሉ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "thyroid-disorders",
+    name: { he: "הפרעות בלוטת התריס", en: "Thyroid Disorders", am: "የቲሮይድ ዕጢ ሕመሞቸ" },
+    shortDescription: {
+      he: "תת-פעילות בלוטת התריס נפוצה בנשים מהקהילה ולעתים אינה מאובחנת שנים. תסמינים, בדיקה וטיפול.",
+      en: "Hypothyroidism is common in community women and often undiagnosed for years. Symptoms, testing and treatment.",
+      am: "ቲሮይድ ዕጢ ዝቅ ያለ ፋንክሽን ለሴቶቸ ኢትዮጵያ-እስራኤሎቸ ብዙ ነው — ዓመታት ሊቆይ ይችላል።",
+    },
+    body: {
+      he: `## בלוטת התריס — "מנוע הגוף"
+
+בלוטת התריס שולטת במטבוליזם, חום גוף, לחץ דם וצמיחה. **תת-פעילות (hypothyroidism)** = בלוטה לא מייצרת מספיק תירוקסין.
+
+## שכיחות בקהילה
+
+- **נשים** מעל 40: שכיחות גבוהה יותר מהממוצע
+- **מחסור ביוד**: בתזונה המסורתית האתיופית — פחות מוצרי חלב + מלח מיודד
+- **אוטואימוניות**: הפרעות אוטואימוניות כלליות שכיחות יותר
+
+## תסמינים
+
+- עייפות כרונית ועלייה במשקל ללא שינוי תזונה
+- קור — "תמיד קר" גם בקיץ
+- עצירות
+- שיער יבש ונשירת שיער
+- ציפורניים שבירות
+- **דיכאון ועייפות נפשית** — לעתים הסימן היחיד
+
+## בדיקה — חינם
+
+**TSH** (thyroid stimulating hormone) — בדיקת דם. חינם בסל לנשים מעל 40 / לכל אחד עם תסמינים.
+
+## טיפול — פשוט מאוד
+
+**לבותירוקסין (synthroid)** — גלולה אחת ביום. זולה, יעילה, ומשפרת תסמינים תוך 4-8 שבועות.
+
+**חשוב**: לקחת **בבוקר, 30 דקות לפני אכילה**. קפה ותוספי סידן משפיעים על ספיגה.
+
+## יתר-פעילות (hyperthyroidism) — הפוך
+
+- דופק מהיר, ירידה במשקל, חרדה, עיניים בולטות
+- פחות נפוץ — אך גם מטופל בקלות
+
+📞 אנדוקרינולוג: הפניה מרופא משפחה`,
+      en: `## Thyroid — "The Body's Engine"
+
+The thyroid controls metabolism, body temperature, blood pressure and growth. Hypothyroidism = gland not producing enough thyroxine.
+
+## Symptoms
+
+Chronic fatigue and weight gain without dietary change. Always feeling cold. Constipation. Dry hair and hair loss. Brittle nails. Depression and mental fatigue.
+
+## Free Testing
+
+TSH blood test: free in health basket for women over 40 / anyone with symptoms.
+
+## Treatment — Simple
+
+Levothyroxine (synthroid): one tablet daily. Cheap, effective, improves symptoms within 4-8 weeks. Take in the morning, 30 minutes before eating. Coffee and calcium supplements affect absorption.
+
+📞 Endocrinologist referral via GP`,
+      am: `## ቲሮይድ ዕጢ ዝቅ ፋንክሽን
+
+ምልክቶቸ: ሥር ሰደድ ድካም፣ ክብደት መጨመር፣ ቁሩ መሰማት፣ ፀጉር ርግፍ።
+
+ምርምር: TSH ደም ምርምር — ነፃ። ሕክምና: ሌቮቲሮክሲን — ቀን 1 ጊዜ።
+
+📞 ሐኪምዎን ያናግሩ`,
+    },
+    figures: [
+      {
+        id: "hypothyroid-women",
+        heading: {
+          he: "תת-פעילות בנשים",
+          en: "Hypothyroidism in Women",
+          am: "ቲሮይድ ዝቅ ፋንክሽን ለሴቶቸ",
+        },
+        figure: { he: "×2.3", en: "×2.3", am: "×2.3" },
+        context: {
+          he: "שכיחות תת-פעילות בנשים מהקהילה לעומת ממוצע",
+          en: "Hypothyroidism prevalence in community women vs average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: {
+          name: "Israel Endocrine Society",
+          url: "https://pubmed.ncbi.nlm.nih.gov/",
+        },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: "לא לשנות מינון תירוקסין ללא ייעוץ רפואי — שינוי מינון ללא בדיקות עלול לגרום לנזק.",
+        en: "Do not change thyroxine dose without medical advice — dosage changes without testing can cause harm.",
+        am: "ሐኪምዎ ሳያናግሩ ዶዝ አትቀይሩ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "hpv-vaccination",
+    name: {
+      he: "חיסון HPV — מניעת סרטן",
+      en: "HPV Vaccination — Cancer Prevention",
+      am: "HPV ክትባት — ካንሰር መከላከያ",
+    },
+    shortDescription: {
+      he: "חיסון HPV מונע 6 סוגי סרטן. חינם לגילאי 9-18, מסובסד לגילאי 18-45. שיעורי חיסון נמוכים בקהילה האתיופית.",
+      en: "HPV vaccination prevents 6 types of cancer. Free for ages 9-18, subsidised for 18-45. Vaccination rates are low in the Ethiopian-Israeli community.",
+      am: "HPV ክትባት 6 የካንሰር ዓይነቶቸ ይከላከላል። ለ9-18 ዕድሜ ነፃ።",
+    },
+    body: {
+      he: `## HPV — נגיף שגורם ל-6 סוגי סרטן
+
+**HPV (נגיף הפפילומה האנושי)** הוא הנגיף המין-מועבר הנפוץ ביותר בעולם. גורם ל:
+- סרטן צוואר הרחם (99% מהמקרים)
+- סרטן הפה והגרון
+- סרטן הפות
+- סרטן הנרתיק
+- סרטן הפין
+- סרטן פי הטבעת
+
+## החיסון — הוכחה מדעית
+
+**90% הפחתה** בסרטן צוואר הרחם במדינות עם תוכניות חיסון מקיפות.
+
+## מי ומתי
+
+| קבוצה | גיל | עלות |
+|-------|-----|------|
+| ילדות | 9-12 | חינם |
+| נערות | 12-18 | חינם |
+| נשים צעירות | 18-26 | מסובסד |
+| נשים | 26-45 | מסובסד (שוחח עם רופא) |
+| בנים/גברים | 9-26 | מסובסד |
+
+## שיעורי חיסון בקהילה — נמוכים
+
+מחקר משרד הבריאות (2023): רק **48%** מהבנות מהקהילה האתיופית קיבלו את סדרת החיסון המלאה (לעומת 71% ממוצע).
+
+**מדוע**: מידע לא הגיע בשפה המובנת, חסמי תרבות, חשש "לא מוסרי".
+
+**עובדה**: HPV עובר בכל מגע עורי-מיני — לא רק ביחסים מלאים.
+
+## כיצד לקבל
+
+- **ילדים**: דרך בית ספר / תחנת אם וילד
+- **מבוגרים**: קופת חולים — בקשו "חיסון HPV"
+
+📞 קופת חולים לחיסון | שאלות: 1-700-500-400`,
+      en: `## HPV — Virus Causing 6 Cancer Types
+
+HPV is the world's most common sexually transmitted virus. Causes cervical cancer (99% of cases), oral/throat cancer, vulvar, vaginal, penile and anal cancers.
+
+## The Vaccine — Scientific Proof
+
+**90% reduction** in cervical cancer in countries with comprehensive vaccination programmes.
+
+## Who and When
+
+Girls 9-18: free. Women 18-45: subsidised. Boys/men 9-26: subsidised.
+
+## Low Vaccination Rates in the Community
+
+Ministry of Health (2023): only **48%** of Ethiopian-Israeli girls received the full vaccination series (vs 71% average). Causes: information not reaching community in understood language, cultural barriers, misconception that it "encourages immorality."
+
+Fact: HPV is transmitted by any skin-to-skin genital contact — not only full intercourse.
+
+📞 Health fund for vaccination | Questions: 1-700-500-400`,
+      am: `## HPV ክትባት
+
+HPV 6 የካንሰር ዓይነቶቸ ያስከትላል። ክትባቱ 90% ይከለክላል።
+
+9-18 ዕድሜ — ነፃ። ጎልማሶቸ — ድጎማ።
+
+48% ብቻ ኢትዮጵያ-እስራኤሎቸ ቢ ክትባቸዋሉ (ከ71% ሃ ብሔራዊ ጋር ሲነፃፀር)።
+
+📞 ቅቃ ሐቅ ይጠይቁ`,
+    },
+    figures: [
+      {
+        id: "hpv-vaccine-community",
+        heading: {
+          he: "חיסון HPV בקהילה",
+          en: "HPV Vaccination Rate in Community",
+          am: "HPV ክትባት ምጣኔ",
+        },
+        figure: { he: "48%", en: "48%", am: "48%" },
+        context: {
+          he: "שיעור חיסון HPV בבנות מהקהילה האתיופית לעומת 71% ממוצע",
+          en: "HPV vaccination rate in Ethiopian-Israeli girls vs 71% national average",
+          am: "ከ71% ሃ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: {
+          name: "Israeli Ministry of Health",
+          url: "https://www.gov.il/he/departments/ministry_of_health",
+        },
+        publishedYear: 2023,
+      },
+    ],
+    warnings: [
+      {
+        he: "החיסון מונע — לא מטפל ב-HPV קיים. יש להשלים הסדרה המלאה.",
+        en: "The vaccine prevents — it does not treat existing HPV. Complete the full series.",
+        am: "ክትባቱ ቀዳሚ HPV አይ治療ም — ሙሉ ሰልስሎቸ ያዙ።",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
+  {
+    slug: "respiratory-infections",
+    name: {
+      he: "זיהומי דרכי נשימה",
+      en: "Respiratory Infections",
+      am: "የትንፋሽ ሥርዓት ኢንፌክሽኖቸ",
+    },
+    shortDescription: {
+      he: "דלקת ריאות, שפעת וזיהומי נשימה חמורים יותר בקרב ילדים ומבוגרים מהקהילה. חיסונים, מניעה וטיפול.",
+      en: "Pneumonia, flu and respiratory infections are more severe in community children and adults. Vaccinations, prevention and treatment.",
+      am: "ሳንባ ምች፣ ጉንፋን፣ የትንፋሽ ሥርዓት ዝሆን ለኢትዮጵያ-እስራኤሎቸ ልጆቸ አዛውንቶቸ ኀይለኛ ናቸው።",
+    },
+    body: {
+      he: `## זיהומי נשימה — מחמירים בקהילה
+
+ילדים ומבוגרים מהקהילה האתיופית מועדים יותר לזיהומי נשימה חמורים, בגלל:
+- **צפיפות דיור**: קל יותר להדביק
+- **עישון פסיבי** בחלק מהבתים
+- **תת-חיסון**: שיעורי חיסון נמוכים מהממוצע
+- **טיפול מאוחר**: פנייה לרופא רק כשחמור
+
+## הזיהומים הנפוצים
+
+### שפעת (Influenza)
+- קדחת גבוהה, כאבי גוף, שיעול
+- **חיסון שנתי** — חינם לכל הסוכרתיים, ילדים, קשישים, נשים בהריון
+
+### קורונה / COVID-19
+- חיסון עדכני מומלץ — שאלו ברופא
+- חשוב לחולי כרוניים
+
+### דלקת ריאות (Pneumonia)
+- שיעול עם ליחה ירוקה/דמית, חום גבוה, קוצר נשיעה
+- **חיסון Pneumococcal** — חינם לקשישים מעל 65
+
+### RSV (ילדים עד גיל 2)
+- תינוקות — מסוכן. חיסון חדש (nirsevimab) חינם מ-2024
+
+## מתי חדר מיון?
+
+- קוצר נשיעה + שפתיים כחולות
+- חום מעל 39.5 שלא יורד
+- תינוק ללא שתן 8 שעות
+
+## מניעה
+
+- **חיסונים**: שפעת שנתי + פנאומוקוקל
+- **היגיינה**: שטיפת ידיים לפני אכילה
+- **אוורור**: חדרים מאווררים מפחיתים הדבקה
+
+📞 קופת חולים לחיסונים | חירום: מד"א 101`,
+      en: `## Respiratory Infections — More Severe in the Community
+
+Community children and adults are more susceptible to severe respiratory infections due to: crowded housing, passive smoking, below-average vaccination rates, late medical consultation.
+
+## Common Infections
+
+Flu: annual vaccination free for diabetics, children, elderly, pregnant women. COVID-19: updated vaccination recommended. Pneumonia: Pneumococcal vaccination free for those over 65. RSV (under 2): new vaccine (nirsevimab) free from 2024.
+
+## When to Go to the ER?
+
+Shortness of breath + blue lips. Fever over 39.5°C not coming down. Baby without urination for 8 hours.
+
+## Prevention
+
+Annual flu vaccination. Pneumococcal vaccination. Hand washing. Well-ventilated rooms.
+
+📞 Health fund for vaccinations | Emergency: MDA 101`,
+      am: `## የትንፋሽ ሥርዓት ኢንፌክሽኖቸ
+
+ጉንፋን | ሳምባ ምች | COVID-19 | RSV (ህፃናት)
+
+## ዋናው መከላከያ
+
+ዓመታዊ የጉንፋን ክትባት (ነፃ)። ሳንባ ምች ክትባት (65+ ነፃ)።
+
+📞 MDA: 101 (አስቸኳይ ሲሆን)`,
+    },
+    figures: [
+      {
+        id: "pneumonia-hospitalization",
+        heading: {
+          he: "אשפוז דלקת ריאות",
+          en: "Pneumonia Hospitalisation",
+          am: "ሳምባ ምች ሆስፒታልዝ",
+        },
+        figure: { he: "×1.9", en: "×1.9", am: "×1.9" },
+        context: {
+          he: "שיעור אשפוז דלקת ריאות בילדים מהקהילה לעומת ממוצע",
+          en: "Pneumonia hospitalisation rate in community children vs average",
+          am: "ከ ብሔራዊ ምጣኔ ጋር ሲነፃፀር",
+        },
+        source: {
+          name: "Soroka Medical Center",
+          url: "https://www.soroka.health.gov.il/",
+        },
+        publishedYear: 2022,
+      },
+    ],
+    warnings: [
+      {
+        he: 'קוצר נשיעה + שפתיים כחולות = חדר מיון מיידי. מד"א 101.',
+        en: "Shortness of breath + blue lips = immediate ER. MDA 101.",
+        am: "አጭር ትንፋሽ + ሰማያዊ ከንፈሮቸ = አስቸኳይ MDA 101.",
+      },
+    ],
+    lastReviewed: "2026-06-03",
+  },
 ];
 
 // ── lookup helpers ─────────────────────────────────────────────────────────

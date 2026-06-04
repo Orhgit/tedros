@@ -36,7 +36,20 @@ export type HealthConditionSlug =
   | "migraine-chronic-headache"
   | "heart-vascular-disease"
   | "bone-osteoporosis-health"
-  | "kidney-urinary-health";
+  | "kidney-urinary-health"
+  // Wave 3
+  | "cervical-cancer"
+  | "hepatitis-b"
+  | "chronic-pain"
+  | "sleep-disorders"
+  | "skin-conditions"
+  | "menopause"
+  | "fertility-infertility"
+  | "childhood-diabetes"
+  | "alzheimer-dementia"
+  | "thyroid-disorders"
+  | "hpv-vaccination"
+  | "respiratory-infections";
 
 export const ALL_HEALTH_CONDITIONS: HealthConditionSlug[] = [
   // Wave 1
@@ -69,6 +82,19 @@ export const ALL_HEALTH_CONDITIONS: HealthConditionSlug[] = [
   "migraine-chronic-headache",
   "heart-vascular-disease",
   "kidney-urinary-health",
+  // Wave 3
+  "cervical-cancer",
+  "hepatitis-b",
+  "chronic-pain",
+  "sleep-disorders",
+  "skin-conditions",
+  "menopause",
+  "fertility-infertility",
+  "childhood-diabetes",
+  "alzheimer-dementia",
+  "thyroid-disorders",
+  "hpv-vaccination",
+  "respiratory-infections",
 ];
 
 const HEALTH_CONDITION_GLYPH: Record<HealthConditionSlug, string> = {
@@ -105,6 +131,19 @@ const HEALTH_CONDITION_GLYPH: Record<HealthConditionSlug, string> = {
   "heart-vascular-disease": "🫀",
   "bone-osteoporosis-health": "🦴",
   "kidney-urinary-health": "🫘",
+  // Wave 3
+  "cervical-cancer": "🎗️",
+  "hepatitis-b": "🫀",
+  "chronic-pain": "💊",
+  "sleep-disorders": "😴",
+  "skin-conditions": "🧴",
+  menopause: "🌡️",
+  "fertility-infertility": "👶",
+  "childhood-diabetes": "🩸",
+  "alzheimer-dementia": "🧠",
+  "thyroid-disorders": "🦋",
+  "hpv-vaccination": "💉",
+  "respiratory-infections": "🫁",
 };
 
 export function glyphForCondition(slug: HealthConditionSlug): string {
