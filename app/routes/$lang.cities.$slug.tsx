@@ -352,14 +352,10 @@ function ListingCard({
   const href = externalUrl ?? `/${locale}/listings/${citySlug}/${listing.type}/${slug}`;
   const isExternal = !!externalUrl;
 
-  const proxyImg = (url: string) => `/media/proxy?url=${encodeURIComponent(url)}`;
-
-  const images = (attrs.images as string[] | undefined) ?? [];
-  const featured = (attrs.featuredImageUrl as string | undefined) ?? images[0];
-  const previewImgs = (featured
-    ? [featured, ...images.filter((u) => u !== featured)].slice(0, 3)
-    : images.slice(0, 3)
-  ).map(proxyImg);
+  const featuredUrl = attrs.featuredImageUrl as string | undefined;
+  const previewImgs = featuredUrl
+    ? [`/media/proxy?url=${encodeURIComponent(featuredUrl)}`]
+    : [];
 
   const rooms = typeof attrs.rooms === "number" ? attrs.rooms : undefined;
   const area = typeof attrs.areaM2 === "number" ? attrs.areaM2 : undefined;
@@ -382,50 +378,25 @@ function ListingCard({
       rel={isExternal ? "noopener noreferrer" : undefined}
       className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950"
     >
-      {/* Image strip */}
-      <div className="relative h-48 w-full overflow-hidden bg-gray-100 dark:bg-gray-900">
+      {/* Image */}
+      <div className="relative h-52 w-full overflow-hidden bg-gray-100 dark:bg-gray-900">
         {previewImgs.length > 0 ? (
-          <div className="flex h-full w-full">
-            {/* Main image — takes 2/3 width when siblings exist */}
-            <div className={previewImgs.length > 1 ? "relative h-full w-2/3 shrink-0" : "relative h-full w-full"}>
-              <img
-                src={previewImgs[0]}
-                alt={title}
-                loading="lazy"
-                referrerPolicy="no-referrer"
-                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-              />
-            </div>
-            {/* Side thumbnails */}
-            {previewImgs.length > 1 && (
-              <div className="flex h-full w-1/3 flex-col gap-0.5 pr-0.5">
-                {previewImgs.slice(1, 3).map((img, i) => (
-                  <div key={i} className="relative flex-1 overflow-hidden">
-                    <img
-                      src={img}
-                      alt=""
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                    />
-                    {/* Overlay on last thumb if more images exist */}
-                    {i === 1 && images.length > 3 && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/50 text-sm font-semibold text-white">
-                        +{images.length - 3}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          <img
+            src={previewImgs[0]}
+            alt={title}
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          />
         ) : (
-          <div className="flex h-full items-center justify-center text-gray-400 dark:text-gray-600">
-            <svg className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          <div className="flex h-full items-center justify-center text-gray-300 dark:text-gray-700">
+            <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
         )}
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
         {/* Type badge */}
         <span className={`absolute top-3 right-3 rounded-full px-2.5 py-0.5 text-xs font-semibold ${typeBadgeColor}`}>
           {typeLabel}
