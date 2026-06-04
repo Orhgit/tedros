@@ -11,7 +11,10 @@ import {
   findCityBySlug,
   type City,
 } from "~/lib/cities/registry";
-import { listCityListingPreviews, type CityListingPreview } from "~/lib/db/queries/city-listings.server";
+import {
+  listCityListingPreviews,
+  type CityListingPreview,
+} from "~/lib/db/queries/city-listings.server";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
@@ -51,7 +54,15 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   const cityListings = await listCityListingPreviews(city.slug, 6).catch(() => []);
 
-  return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage, cityListings };
+  return {
+    locale,
+    city,
+    publicUrl: PUBLIC_URL,
+    cityRights,
+    cityTracks,
+    cityHeritage,
+    cityListings,
+  };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -101,163 +112,164 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
     <>
       <SiteHeader locale={locale} currentPath={`/${locale}/cities/${city.slug}`} />
       <div className="mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-12">
-      <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
-        <img
-          src="https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=1200&fit=crop"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 -z-20 h-full w-full object-cover"
-          loading="lazy"
-          decoding="async"
-        />
-        <div
-          className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
-          aria-hidden="true"
-        />
-        <nav aria-label="Breadcrumb" className="text-sm text-gray-500 dark:text-gray-400">
-          <ol className="flex flex-wrap items-center gap-2">
-            <li>
-              <Link to={`/${locale}`} className="hover:underline">
-                {t(locale, "homepage_title")}
-              </Link>
-            </li>
-            <li aria-hidden>›</li>
-            <li>
-              <Link to={`/${locale}${CITY_PATH_PREFIX}`} className="hover:underline">
-                {t(locale, "cities_index_title")}
-              </Link>
-            </li>
-            <li aria-hidden>›</li>
-            <li aria-current="page" className="text-gray-700 dark:text-gray-300">
-              {name}
-            </li>
-          </ol>
-        </nav>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-          {t(locale, "city_page_h1", { name })}
-        </h1>
-        <p className="mt-2 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          {t(locale, "city_page_lead", { name })}
-        </p>
-      </header>
+        <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
+          <img
+            src="https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=1200&fit=crop"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 -z-20 h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            aria-hidden="true"
+          />
+          <nav
+            aria-label="Breadcrumb"
+            className="text-sm text-gray-500 dark:text-gray-400"
+          >
+            <ol className="flex flex-wrap items-center gap-2">
+              <li>
+                <Link to={`/${locale}`} className="hover:underline">
+                  {t(locale, "homepage_title")}
+                </Link>
+              </li>
+              <li aria-hidden>›</li>
+              <li>
+                <Link to={`/${locale}${CITY_PATH_PREFIX}`} className="hover:underline">
+                  {t(locale, "cities_index_title")}
+                </Link>
+              </li>
+              <li aria-hidden>›</li>
+              <li aria-current="page" className="text-gray-700 dark:text-gray-300">
+                {name}
+              </li>
+            </ol>
+          </nav>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            {t(locale, "city_page_h1", { name })}
+          </h1>
+          <p className="mt-2 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            {t(locale, "city_page_lead", { name })}
+          </p>
+        </header>
 
-      <main className="mt-10 grid gap-10">
-        <CityOverviewSection locale={locale} city={city} />
-        {city.communityStats && city.communityStats.length > 0 && (
-          <CommunityStatsSection locale={locale} city={city} />
-        )}
+        <main className="mt-10 grid gap-10">
+          <CityOverviewSection locale={locale} city={city} />
+          {city.communityStats && city.communityStats.length > 0 && (
+            <CommunityStatsSection locale={locale} city={city} />
+          )}
 
-        {(cityRights.length > 0 || cityTracks.length > 0 || cityHeritage.length > 0) && (
-          <section className="rounded-lg border border-earth-200 bg-white p-6">
-            <h2 className="text-xl font-semibold text-earth-900">
-              {t(locale, "city_section_overview_title", { name })}
-            </h2>
+          {(cityRights.length > 0 ||
+            cityTracks.length > 0 ||
+            cityHeritage.length > 0) && (
+            <section className="rounded-lg border border-earth-200 bg-white p-6">
+              <h2 className="text-xl font-semibold text-earth-900">
+                {t(locale, "city_section_overview_title", { name })}
+              </h2>
 
-            {cityRights.length > 0 && (
-              <div className="mt-4">
-                <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
-                  {t(locale, "rights_landing_title")}
-                </h3>
-                <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
-                  {cityRights.map((r) => (
-                    <li key={r.slug}>
-                      <Link
-                        to={`/${locale}/rights/${r.slug}/${city.slug}`}
-                        className="flex items-center gap-2 rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
-                      >
-                        <span aria-hidden="true">
-                          {glyphForTag(r.tags[0] ?? "housing")}
-                        </span>
-                        {r.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+              {cityRights.length > 0 && (
+                <div className="mt-4">
+                  <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
+                    {t(locale, "rights_landing_title")}
+                  </h3>
+                  <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    {cityRights.map((r) => (
+                      <li key={r.slug}>
+                        <Link
+                          to={`/${locale}/rights/${r.slug}/${city.slug}`}
+                          className="flex items-center gap-2 rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
+                        >
+                          <span aria-hidden="true">
+                            {glyphForTag(r.tags[0] ?? "housing")}
+                          </span>
+                          {r.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-            {cityTracks.length > 0 && (
-              <div className="mt-5">
-                <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
-                  {t(locale, "careers_breadcrumb_careers")}
-                </h3>
-                <ul className="mt-2 flex flex-wrap gap-2">
-                  {cityTracks.map((tr) => (
-                    <li key={tr.slug}>
-                      <Link
-                        to={`/${locale}/careers/${tr.slug}/${city.slug}`}
-                        className="rounded-full border border-earth-200 bg-earth-50 px-3 py-1 text-sm text-ink-700 transition hover:border-earth-400"
-                      >
-                        {tr.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+              {cityTracks.length > 0 && (
+                <div className="mt-5">
+                  <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
+                    {t(locale, "careers_breadcrumb_careers")}
+                  </h3>
+                  <ul className="mt-2 flex flex-wrap gap-2">
+                    {cityTracks.map((tr) => (
+                      <li key={tr.slug}>
+                        <Link
+                          to={`/${locale}/careers/${tr.slug}/${city.slug}`}
+                          className="rounded-full border border-earth-200 bg-earth-50 px-3 py-1 text-sm text-ink-700 transition hover:border-earth-400"
+                        >
+                          {tr.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-            {cityHeritage.length > 0 && (
-              <div className="mt-5">
-                <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
-                  {t(locale, "heritage_events_landing_title")}
-                </h3>
-                <ul className="mt-2 space-y-1">
-                  {cityHeritage.map((e) => (
-                    <li key={e.slug}>
-                      <Link
-                        to={`/${locale}/heritage/events/${e.slug}/${city.slug}`}
-                        className="flex items-center justify-between rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
-                      >
-                        <span>{e.name}</span>
-                        {e.next && (
-                          <span className="text-xs text-earth-500">{e.next}</span>
-                        )}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </section>
-        )}
+              {cityHeritage.length > 0 && (
+                <div className="mt-5">
+                  <h3 className="text-sm font-semibold tracking-wide text-earth-700 uppercase">
+                    {t(locale, "heritage_events_landing_title")}
+                  </h3>
+                  <ul className="mt-2 space-y-1">
+                    {cityHeritage.map((e) => (
+                      <li key={e.slug}>
+                        <Link
+                          to={`/${locale}/heritage/events/${e.slug}/${city.slug}`}
+                          className="flex items-center justify-between rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
+                        >
+                          <span>{e.name}</span>
+                          {e.next && (
+                            <span className="text-xs text-earth-500">{e.next}</span>
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </section>
+          )}
 
-        <CityListingsSection
-          locale={locale}
-          city={city}
-          listings={cityListings}
-        />
-        <CitySection
-          locale={locale}
-          titleKey="city_section_urban_renewal_title"
-          emptyKey="city_section_urban_renewal_empty"
-          city={city}
-        />
-        <CitySection
-          locale={locale}
-          titleKey="city_section_professionals_title"
-          emptyKey="city_section_professionals_empty"
-          city={city}
-        />
-        <MortgageCalculatorCta locale={locale} city={city} />
-        <CitySection
-          locale={locale}
-          titleKey="city_section_community_title"
-          emptyKey="city_section_community_body"
-          city={city}
-          tone="info"
-        />
-      </main>
+          <CityListingsSection locale={locale} city={city} listings={cityListings} />
+          <CitySection
+            locale={locale}
+            titleKey="city_section_urban_renewal_title"
+            emptyKey="city_section_urban_renewal_empty"
+            city={city}
+          />
+          <CitySection
+            locale={locale}
+            titleKey="city_section_professionals_title"
+            emptyKey="city_section_professionals_empty"
+            city={city}
+          />
+          <MortgageCalculatorCta locale={locale} city={city} />
+          <CitySection
+            locale={locale}
+            titleKey="city_section_community_title"
+            emptyKey="city_section_community_body"
+            city={city}
+            tone="info"
+          />
+        </main>
 
-      <footer className="mt-16 border-t border-gray-200 pt-6 text-sm text-gray-500 dark:border-gray-800">
-        <Link to={`/${locale}${CITY_PATH_PREFIX}`} className="hover:underline">
-          ← {t(locale, "cities_back_to_index")}
-        </Link>
-      </footer>
-    </div>
+        <footer className="mt-16 border-t border-gray-200 pt-6 text-sm text-gray-500 dark:border-gray-800">
+          <Link to={`/${locale}${CITY_PATH_PREFIX}`} className="hover:underline">
+            ← {t(locale, "cities_back_to_index")}
+          </Link>
+        </footer>
+      </div>
     </>
   );
 }
@@ -366,7 +378,9 @@ function ListingCard({
   const floor = typeof attrs.floor === "number" ? attrs.floor : undefined;
   const propType = typeof attrs.propertyType === "string" ? attrs.propertyType : null;
   const address = typeof attrs.address === "string" ? attrs.address : null;
-  const price = listing.price ? `₪${Number(listing.price).toLocaleString("he-IL")}` : null;
+  const price = listing.price
+    ? `₪${Number(listing.price).toLocaleString("he-IL")}`
+    : null;
   const isRent = listing.type === "rent";
 
   const typeBadgeColor =
@@ -394,15 +408,27 @@ function ListingCard({
           />
         ) : (
           <div className="flex h-full items-center justify-center text-gray-300 dark:text-gray-700">
-            <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            <svg
+              className="h-16 w-16"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1}
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
             </svg>
           </div>
         )}
         {/* Gradient overlay for readability */}
         <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
         {/* Type badge */}
-        <span className={`absolute top-3 right-3 rounded-full px-2.5 py-0.5 text-xs font-semibold ${typeBadgeColor}`}>
+        <span
+          className={`absolute top-3 right-3 rounded-full px-2.5 py-0.5 text-xs font-semibold ${typeBadgeColor}`}
+        >
           {typeLabel}
         </span>
       </div>
@@ -410,18 +436,33 @@ function ListingCard({
       {/* Content */}
       <div className="flex flex-1 flex-col gap-1 p-4">
         {propType && (
-          <p className="text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">
+          <p className="text-xs font-medium tracking-wide text-gray-400 uppercase dark:text-gray-500">
             {propType}
           </p>
         )}
-        <h3 className="line-clamp-2 text-base font-semibold leading-snug text-gray-900 dark:text-gray-100">
+        <h3 className="line-clamp-2 text-base leading-snug font-semibold text-gray-900 dark:text-gray-100">
           {title}
         </h3>
         {address && (
           <p className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
-            <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            <svg
+              className="h-3.5 w-3.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
             </svg>
             {address}
           </p>
@@ -430,8 +471,12 @@ function ListingCard({
         <div className="mt-auto pt-3">
           {/* Price */}
           <p className="text-xl font-bold text-gray-900 dark:text-gray-100">
-            {price ?? <span className="text-sm font-normal text-gray-400">מחיר לא צוין</span>}
-            {price && isRent && <span className="text-sm font-normal text-gray-500"> / חודש</span>}
+            {price ?? (
+              <span className="text-sm font-normal text-gray-400">מחיר לא צוין</span>
+            )}
+            {price && isRent && (
+              <span className="text-sm font-normal text-gray-500"> / חודש</span>
+            )}
           </p>
 
           {/* Specs chips */}
@@ -491,7 +536,9 @@ function CityListingsSection({
             {t(locale, "city_section_listings_title")}
           </h2>
           <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">
-            {locale === "he" ? `${listings.length} נכסים זמינים ב${name}` : `${listings.length} available in ${name}`}
+            {locale === "he"
+              ? `${listings.length} נכסים זמינים ב${name}`
+              : `${listings.length} available in ${name}`}
           </p>
         </div>
         <Link
@@ -500,7 +547,12 @@ function CityListingsSection({
         >
           {locale === "he" ? "כל הנכסים" : "See all"}
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
         </Link>
       </div>
@@ -520,7 +572,12 @@ function CityListingsSection({
         >
           {locale === "he" ? `ראה את כל הנכסים ב${name}` : `All listings in ${name}`}
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
         </Link>
       </div>

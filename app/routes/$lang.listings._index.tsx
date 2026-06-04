@@ -97,128 +97,128 @@ export default function ListingsIndex({ loaderData }: Route.ComponentProps) {
     <>
       <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
       <div className="mx-auto max-w-6xl px-6 py-10">
-      <header className="mb-6">
-        <h1 className="text-3xl font-bold tracking-tight">
-          {t(locale, "listings_title")}
-        </h1>
-        <p className="mt-2 text-gray-600 dark:text-gray-400">
-          {t(locale, "listings_intro")}
+        <header className="mb-6">
+          <h1 className="text-3xl font-bold tracking-tight">
+            {t(locale, "listings_title")}
+          </h1>
+          <p className="mt-2 text-gray-600 dark:text-gray-400">
+            {t(locale, "listings_intro")}
+          </p>
+        </header>
+
+        <Form
+          method="get"
+          className="mb-8 grid grid-cols-1 gap-3 rounded-lg border border-gray-200 p-4 sm:grid-cols-2 lg:grid-cols-6 dark:border-gray-800"
+        >
+          <label className="flex flex-col text-sm">
+            <span className="mb-1 font-medium">{t(locale, "listings_filter_city")}</span>
+            <select
+              name="city"
+              defaultValue={filters.city}
+              className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
+            >
+              <option value="">{t(locale, "listings_filter_any")}</option>
+              {cities.map((c) => (
+                <option key={c.id} value={c.slugHe}>
+                  {pickLocale(c.name, locale)}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="flex flex-col text-sm">
+            <span className="mb-1 font-medium">{t(locale, "listings_filter_type")}</span>
+            <select
+              name="type"
+              defaultValue={filters.type}
+              className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
+            >
+              <option value="">{t(locale, "listings_filter_any")}</option>
+              {LISTING_TYPES.map((tp) => (
+                <option key={tp} value={tp}>
+                  {t(locale, `listings_type_${tp}`)}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="flex flex-col text-sm">
+            <span className="mb-1 font-medium">
+              {t(locale, "listings_filter_min_price")}
+            </span>
+            <input
+              type="number"
+              name="min_price"
+              inputMode="numeric"
+              min={0}
+              defaultValue={filters.minPrice}
+              className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
+            />
+          </label>
+
+          <label className="flex flex-col text-sm">
+            <span className="mb-1 font-medium">
+              {t(locale, "listings_filter_max_price")}
+            </span>
+            <input
+              type="number"
+              name="max_price"
+              inputMode="numeric"
+              min={0}
+              defaultValue={filters.maxPrice}
+              className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
+            />
+          </label>
+
+          <label className="flex flex-col text-sm">
+            <span className="mb-1 font-medium">
+              {t(locale, "listings_filter_min_rooms")}
+            </span>
+            <input
+              type="number"
+              name="min_rooms"
+              inputMode="decimal"
+              step="0.5"
+              min={0}
+              defaultValue={filters.minRooms}
+              className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
+            />
+          </label>
+
+          <div className="flex items-end gap-2">
+            <button
+              type="submit"
+              className="rounded-lg bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+            >
+              {t(locale, "listings_filter_apply")}
+            </button>
+            <Link
+              to={`/${locale}/listings`}
+              className="rounded-lg border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-900"
+            >
+              {t(locale, "listings_filter_clear")}
+            </Link>
+          </div>
+        </Form>
+
+        <p className="mb-4 text-sm text-gray-500" data-testid="results-count">
+          {t(locale, "listings_results_count", { count: total })}
         </p>
-      </header>
 
-      <Form
-        method="get"
-        className="mb-8 grid grid-cols-1 gap-3 rounded-lg border border-gray-200 p-4 sm:grid-cols-2 lg:grid-cols-6 dark:border-gray-800"
-      >
-        <label className="flex flex-col text-sm">
-          <span className="mb-1 font-medium">{t(locale, "listings_filter_city")}</span>
-          <select
-            name="city"
-            defaultValue={filters.city}
-            className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
-          >
-            <option value="">{t(locale, "listings_filter_any")}</option>
-            {cities.map((c) => (
-              <option key={c.id} value={c.slugHe}>
-                {pickLocale(c.name, locale)}
-              </option>
+        {items.length === 0 ? (
+          <p className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-500 dark:border-gray-700">
+            {t(locale, "listings_empty")}
+          </p>
+        ) : (
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((item) => (
+              <li key={item.id}>
+                <ListingCard item={item} locale={locale} />
+              </li>
             ))}
-          </select>
-        </label>
-
-        <label className="flex flex-col text-sm">
-          <span className="mb-1 font-medium">{t(locale, "listings_filter_type")}</span>
-          <select
-            name="type"
-            defaultValue={filters.type}
-            className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
-          >
-            <option value="">{t(locale, "listings_filter_any")}</option>
-            {LISTING_TYPES.map((tp) => (
-              <option key={tp} value={tp}>
-                {t(locale, `listings_type_${tp}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="flex flex-col text-sm">
-          <span className="mb-1 font-medium">
-            {t(locale, "listings_filter_min_price")}
-          </span>
-          <input
-            type="number"
-            name="min_price"
-            inputMode="numeric"
-            min={0}
-            defaultValue={filters.minPrice}
-            className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
-          />
-        </label>
-
-        <label className="flex flex-col text-sm">
-          <span className="mb-1 font-medium">
-            {t(locale, "listings_filter_max_price")}
-          </span>
-          <input
-            type="number"
-            name="max_price"
-            inputMode="numeric"
-            min={0}
-            defaultValue={filters.maxPrice}
-            className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
-          />
-        </label>
-
-        <label className="flex flex-col text-sm">
-          <span className="mb-1 font-medium">
-            {t(locale, "listings_filter_min_rooms")}
-          </span>
-          <input
-            type="number"
-            name="min_rooms"
-            inputMode="decimal"
-            step="0.5"
-            min={0}
-            defaultValue={filters.minRooms}
-            className="rounded border border-gray-300 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-900"
-          />
-        </label>
-
-        <div className="flex items-end gap-2">
-          <button
-            type="submit"
-            className="rounded-lg bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
-          >
-            {t(locale, "listings_filter_apply")}
-          </button>
-          <Link
-            to={`/${locale}/listings`}
-            className="rounded-lg border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-900"
-          >
-            {t(locale, "listings_filter_clear")}
-          </Link>
-        </div>
-      </Form>
-
-      <p className="mb-4 text-sm text-gray-500" data-testid="results-count">
-        {t(locale, "listings_results_count", { count: total })}
-      </p>
-
-      {items.length === 0 ? (
-        <p className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-500 dark:border-gray-700">
-          {t(locale, "listings_empty")}
-        </p>
-      ) : (
-        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((item) => (
-            <li key={item.id}>
-              <ListingCard item={item} locale={locale} />
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+          </ul>
+        )}
+      </div>
     </>
   );
 }

@@ -3,7 +3,19 @@
 // Loaders/actions import from here instead of touching `db` directly so the
 // scoping helpers in `~/lib/db/scoping` are always wired into the WHERE.
 
-import { and, asc, desc, eq, gte, ilike, inArray, isNull, lte, sql, type SQL } from "drizzle-orm";
+import {
+  and,
+  asc,
+  desc,
+  eq,
+  gte,
+  ilike,
+  inArray,
+  isNull,
+  lte,
+  sql,
+  type SQL,
+} from "drizzle-orm";
 
 import { db } from "../../db.server";
 import type { Locale } from "../../i18n/config";

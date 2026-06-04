@@ -162,81 +162,87 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
     <>
       <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
       <article className="mx-auto max-w-3xl px-6 py-10">
-      <p className="mb-4 text-sm">
-        <Link
-          to={`/${locale}/listings`}
-          className="text-gray-600 underline hover:text-gray-900 dark:text-gray-400"
-        >
-          {t(locale, "listing_back_to_results")}
-        </Link>
-      </p>
-
-      <header>
-        <span className="inline-block rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
-          {t(locale, `listings_type_${listing.type}`)}
-        </span>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight">{title}</h1>
-        <p className="mt-1 text-gray-600 dark:text-gray-400">
-          {cityName}
-          {listing.neighborhood
-            ? ` · ${pickLocale(listing.neighborhood.name, locale)}`
-            : ""}
-        </p>
-      </header>
-
-      {typeof (listing.attributes as Record<string, unknown>).externalSourceUrl === "string" && (
-        <p className="mt-3 text-sm">
-          <a
-            href={(listing.attributes as Record<string, unknown>).externalSourceUrl as string}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 rounded border border-blue-200 bg-blue-50 px-3 py-1.5 text-blue-700 hover:bg-blue-100 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900"
+        <p className="mb-4 text-sm">
+          <Link
+            to={`/${locale}/listings`}
+            className="text-gray-600 underline hover:text-gray-900 dark:text-gray-400"
           >
-            {locale === "he" ? "צפה בנכס במרכז הנכסים ↗" : "View on Merkaz HaNekhasim ↗"}
-          </a>
-        </p>
-      )}
-
-      <PriceLine listing={listing} locale={locale} />
-      <AttributesGrid listing={listing} locale={locale} />
-
-      {body && (
-        <section className="prose prose-sm mt-6 max-w-none whitespace-pre-line text-gray-800 dark:text-gray-200">
-          {body}
-        </section>
-      )}
-
-      <section
-        aria-labelledby="lead-form-heading"
-        className="mt-10 rounded-lg border border-gray-200 p-6 dark:border-gray-800"
-      >
-        <h2 id="lead-form-heading" className="text-xl font-semibold">
-          {t(locale, "listing_lead_form_title")}
-        </h2>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-          {t(locale, "listing_lead_form_intro")}
+            {t(locale, "listing_back_to_results")}
+          </Link>
         </p>
 
-        {actionData?.ok ? (
-          <div
-            ref={successRef}
-            tabIndex={-1}
-            role="status"
-            className="mt-4 rounded border border-green-300 bg-green-50 p-3 text-sm text-green-800 dark:border-green-800 dark:bg-green-950 dark:text-green-200"
-          >
-            {t(locale, "listing_lead_thanks")}
-          </div>
-        ) : (
-          <LeadForm listingId={listing.id} locale={locale} actionData={actionData} />
+        <header>
+          <span className="inline-block rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+            {t(locale, `listings_type_${listing.type}`)}
+          </span>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight">{title}</h1>
+          <p className="mt-1 text-gray-600 dark:text-gray-400">
+            {cityName}
+            {listing.neighborhood
+              ? ` · ${pickLocale(listing.neighborhood.name, locale)}`
+              : ""}
+          </p>
+        </header>
+
+        {typeof (listing.attributes as Record<string, unknown>).externalSourceUrl ===
+          "string" && (
+          <p className="mt-3 text-sm">
+            <a
+              href={
+                (listing.attributes as Record<string, unknown>)
+                  .externalSourceUrl as string
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded border border-blue-200 bg-blue-50 px-3 py-1.5 text-blue-700 hover:bg-blue-100 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900"
+            >
+              {locale === "he"
+                ? "צפה בנכס במרכז הנכסים ↗"
+                : "View on Merkaz HaNekhasim ↗"}
+            </a>
+          </p>
         )}
-      </section>
 
-      <script
-        type="application/ld+json"
-        // JSON-LD is server-rendered so search engines pick it up before JS hydrates.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-    </article>
+        <PriceLine listing={listing} locale={locale} />
+        <AttributesGrid listing={listing} locale={locale} />
+
+        {body && (
+          <section className="prose prose-sm mt-6 max-w-none whitespace-pre-line text-gray-800 dark:text-gray-200">
+            {body}
+          </section>
+        )}
+
+        <section
+          aria-labelledby="lead-form-heading"
+          className="mt-10 rounded-lg border border-gray-200 p-6 dark:border-gray-800"
+        >
+          <h2 id="lead-form-heading" className="text-xl font-semibold">
+            {t(locale, "listing_lead_form_title")}
+          </h2>
+          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+            {t(locale, "listing_lead_form_intro")}
+          </p>
+
+          {actionData?.ok ? (
+            <div
+              ref={successRef}
+              tabIndex={-1}
+              role="status"
+              className="mt-4 rounded border border-green-300 bg-green-50 p-3 text-sm text-green-800 dark:border-green-800 dark:bg-green-950 dark:text-green-200"
+            >
+              {t(locale, "listing_lead_thanks")}
+            </div>
+          ) : (
+            <LeadForm listingId={listing.id} locale={locale} actionData={actionData} />
+          )}
+        </section>
+
+        <script
+          type="application/ld+json"
+          // JSON-LD is server-rendered so search engines pick it up before JS hydrates.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </article>
     </>
   );
 }

@@ -44,23 +44,26 @@ export default function UrbanRenewalNeighborhood({ loaderData }: Route.Component
   const { locale, slug, turnstileSiteKey } = loaderData;
   return (
     <>
-      <SiteHeader locale={locale} currentPath={`/${locale}/urban-renewal/${slug ?? ""}`} />
+      <SiteHeader
+        locale={locale}
+        currentPath={`/${locale}/urban-renewal/${slug ?? ""}`}
+      />
       <main className="mx-auto max-w-2xl px-6 py-12">
-      <p className="text-xs tracking-wide text-gray-500 uppercase">{slug ?? "—"}</p>
-      <h1 className="mt-1 text-3xl font-bold tracking-tight">
-        {t(locale, "lead_form_title")}
-      </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-400">
-        {t(locale, "lead_form_subtitle")}
-      </p>
-      <div className="mt-8">
-        <LeadForm
-          locale={locale}
-          source={slug ? { kind: "urban-renewal", slug } : { kind: "general" }}
-          {...(turnstileSiteKey ? { turnstileSiteKey } : {})}
-        />
-      </div>
-    </main>
+        <p className="text-xs tracking-wide text-gray-500 uppercase">{slug ?? "—"}</p>
+        <h1 className="mt-1 text-3xl font-bold tracking-tight">
+          {t(locale, "lead_form_title")}
+        </h1>
+        <p className="mt-2 text-gray-600 dark:text-gray-400">
+          {t(locale, "lead_form_subtitle")}
+        </p>
+        <div className="mt-8">
+          <LeadForm
+            locale={locale}
+            source={slug ? { kind: "urban-renewal", slug } : { kind: "general" }}
+            {...(turnstileSiteKey ? { turnstileSiteKey } : {})}
+          />
+        </div>
+      </main>
     </>
   );
 }
