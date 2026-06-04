@@ -1,4 +1,5 @@
 import { Link, isRouteErrorResponse, useRouteError } from "react-router";
+import { SiteHeader } from "~/components/sections/site-header";
 import type { Route } from "./+types/$lang.cities.$slug";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
 import { isRelevant as isCareerRelevant } from "~/lib/careers/relevance";
@@ -97,7 +98,9 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
   const name = cityName(city, locale);
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-12">
+    <>
+      <SiteHeader locale={locale} currentPath={`/${locale}/cities/${city.slug}`} />
+      <div className="mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-12">
       <header className="relative isolate mb-8 overflow-hidden rounded-2xl border border-earth-200 px-6 py-8 sm:px-10 sm:py-12">
         <img
           src="https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=1200&fit=crop"
@@ -255,6 +258,7 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
         </Link>
       </footer>
     </div>
+    </>
   );
 }
 

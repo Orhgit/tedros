@@ -4,6 +4,7 @@
 // status='active', published rows). Server-rendered for SEO + LCP.
 
 import { Form, Link } from "react-router";
+import { SiteHeader } from "~/components/sections/site-header";
 import type { Route } from "./+types/$lang.listings._index";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
@@ -93,7 +94,9 @@ export default function ListingsIndex({ loaderData }: Route.ComponentProps) {
   const { locale, items, total, cities, filters } = loaderData;
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-10">
+    <>
+      <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
+      <div className="mx-auto max-w-6xl px-6 py-10">
       <header className="mb-6">
         <h1 className="text-3xl font-bold tracking-tight">
           {t(locale, "listings_title")}
@@ -216,6 +219,7 @@ export default function ListingsIndex({ loaderData }: Route.ComponentProps) {
         </ul>
       )}
     </div>
+    </>
   );
 }
 

@@ -6,6 +6,7 @@
 
 import type { Route } from "./+types/$lang.urban-renewal.$slug";
 import { LeadForm } from "~/components/lead-form";
+import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -42,7 +43,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
 export default function UrbanRenewalNeighborhood({ loaderData }: Route.ComponentProps) {
   const { locale, slug, turnstileSiteKey } = loaderData;
   return (
-    <main className="mx-auto max-w-2xl px-6 py-12">
+    <>
+      <SiteHeader locale={locale} currentPath={`/${locale}/urban-renewal/${slug ?? ""}`} />
+      <main className="mx-auto max-w-2xl px-6 py-12">
       <p className="text-xs tracking-wide text-gray-500 uppercase">{slug ?? "—"}</p>
       <h1 className="mt-1 text-3xl font-bold tracking-tight">
         {t(locale, "lead_form_title")}
@@ -58,5 +61,6 @@ export default function UrbanRenewalNeighborhood({ loaderData }: Route.Component
         />
       </div>
     </main>
+    </>
   );
 }

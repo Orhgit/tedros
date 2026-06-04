@@ -6,6 +6,7 @@
 
 import { useEffect, useRef } from "react";
 import { Form, Link, data } from "react-router";
+import { SiteHeader } from "~/components/sections/site-header";
 import type { Route } from "./+types/$lang.listings.$city.$type.$slug";
 
 import { db } from "~/lib/db.server";
@@ -158,7 +159,9 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
   const jsonLd = buildRealEstateJsonLd({ listing, locale, publicUrl });
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-10">
+    <>
+      <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
+      <article className="mx-auto max-w-3xl px-6 py-10">
       <p className="mb-4 text-sm">
         <Link
           to={`/${locale}/listings`}
@@ -234,6 +237,7 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </article>
+    </>
   );
 }
 
