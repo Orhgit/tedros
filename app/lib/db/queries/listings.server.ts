@@ -3,7 +3,7 @@
 // Loaders/actions import from here instead of touching `db` directly so the
 // scoping helpers in `~/lib/db/scoping` are always wired into the WHERE.
 
-import { and, asc, desc, eq, gte, ilike, inArray, lte, sql, type SQL } from "drizzle-orm";
+import { and, asc, desc, eq, gte, ilike, inArray, isNull, lte, sql, type SQL } from "drizzle-orm";
 
 import { db } from "../../db.server";
 import type { Locale } from "../../i18n/config";
@@ -137,6 +137,61 @@ export async function listPublicListings(
   }));
 
   return { items, total: totalRow[0]?.count ?? items.length };
+}
+
+/** Fetch up to `limit` listings for a city, images-first, for city landing pages. */
+export async function listCityListingsWithImages(
+  citySlugHe: string,
+  limit = 6,
+): Promise<PublicListingSummary[]> {
+  const cityRows = await db
+    .select({ id: cities.id, name: cities.name, slug: cities.slug })
+    .from(cities)
+    .where(sql`(${cities.slug} ->> 'he') = ${citySlugHe}`)
+    .limit(1);
+  const city = cityRows[0];
+  if (!city) return [];
+
+  const rows = await db
+    .select({
+      id: listings.id,
+      type: listings.type,
+      title: listings.title,
+      slug: listings.slug,
+      price: listings.price,
+      attributes: listings.attributes,
+      publishedAt: listings.publishedAt,
+    })
+    .from(listings)
+    .where(
+      and(
+        eq(listings.cityId, city.id),
+        isNull(listings.deletedAt),
+        sql`${listings.publishedAt} IS NOT NULL`,
+        sql`${listings.status} = 'active'`,
+      ),
+    )
+    .orderBy(
+      sql`CASE WHEN (${listings.attributes} ->> 'featuredImageUrl') != '' AND (${listings.attributes} ->> 'featuredImageUrl') IS NOT NULL THEN 0 ELSE 1 END`,
+      desc(listings.publishedAt),
+    )
+    .limit(limit);
+
+  return rows.map((r) => ({
+    id: r.id,
+    type: r.type as PublicListingSummary["type"],
+    title: r.title as PublicListingSummary["title"],
+    slug: r.slug as PublicListingSummary["slug"],
+    price: priceAsNumber(r.price),
+    city: {
+      id: city.id,
+      name: city.name as PublicListingSummary["city"]["name"],
+      slugHe: ((city.slug as { he?: string } | null)?.he ?? "") as string,
+    },
+    neighborhood: null,
+    attributes: (r.attributes ?? {}) as Record<string, unknown>,
+    publishedAt: r.publishedAt ? r.publishedAt.toISOString() : null,
+  }));
 }
 
 export type PublicListingDetail = PublicListingSummary & {

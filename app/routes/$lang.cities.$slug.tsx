@@ -10,11 +10,7 @@ import {
   findCityBySlug,
   type City,
 } from "~/lib/cities/registry";
-import { db } from "~/lib/db.server";
-import { and, desc, isNull, sql } from "drizzle-orm";
-import { cities as citiesTable, listings } from "~/lib/db/schema/realestate";
-import { eq } from "drizzle-orm";
-import { listPublicListings, type PublicListingSummary } from "~/lib/db/queries/listings.server";
+import { listCityListingsWithImages, listPublicListings, type PublicListingSummary } from "~/lib/db/queries/listings.server";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
@@ -52,65 +48,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     next: nextDate(e),
   }));
 
-  // Fetch 6 city listings sorted by image availability at DB level.
-  const cityListings: PublicListingSummary[] = await (async () => {
-    try {
-      const cityRow = await db
-        .select({ id: citiesTable.id })
-        .from(citiesTable)
-        .where(sql`(${citiesTable.slug} ->> 'he') = ${city.slug}`)
-        .limit(1);
-      if (!cityRow[0]) return [];
-
-      const rows = await db
-        .select({
-          id: listings.id,
-          type: listings.type,
-          title: listings.title,
-          slug: listings.slug,
-          price: listings.price,
-          attributes: listings.attributes,
-          publishedAt: listings.publishedAt,
-          cityId: citiesTable.id,
-          cityName: citiesTable.name,
-          citySlug: citiesTable.slug,
-        })
-        .from(listings)
-        .innerJoin(citiesTable, eq(listings.cityId, citiesTable.id))
-        .where(
-          and(
-            eq(listings.cityId, cityRow[0].id),
-            isNull(listings.deletedAt),
-            sql`${listings.publishedAt} IS NOT NULL`,
-            sql`${listings.status} = 'active'`,
-          ),
-        )
-        // Images-first, then by published_at desc
-        .orderBy(
-          sql`CASE WHEN (${listings.attributes} ->> 'featuredImageUrl') != '' AND (${listings.attributes} ->> 'featuredImageUrl') IS NOT NULL THEN 0 ELSE 1 END`,
-          desc(listings.publishedAt),
-        )
-        .limit(6);
-
-      return rows.map((r) => ({
-        id: r.id,
-        type: r.type as PublicListingSummary["type"],
-        title: r.title as PublicListingSummary["title"],
-        slug: r.slug as PublicListingSummary["slug"],
-        price: r.price ? Number(r.price) : null,
-        city: {
-          id: r.cityId,
-          name: r.cityName as PublicListingSummary["city"]["name"],
-          slugHe: ((r.citySlug as { he?: string } | null)?.he ?? "") as string,
-        },
-        neighborhood: null,
-        attributes: (r.attributes ?? {}) as Record<string, unknown>,
-        publishedAt: r.publishedAt ? r.publishedAt.toISOString() : null,
-      }));
-    } catch {
-      return [];
-    }
-  })();
+  const cityListings = await listCityListingsWithImages(city.slug, 6).catch(() => []);
 
   return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage, cityListings };
 }
