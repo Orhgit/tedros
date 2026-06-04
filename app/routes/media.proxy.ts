@@ -3,12 +3,12 @@
 // and URL-encoding issues with Hebrew characters in paths.
 // Route: GET /media/proxy?url=<encoded-merkaz-url>
 
-import type { Route } from "./+types/media.proxy";
+import type { LoaderFunctionArgs } from "react-router";
 
 const ALLOWED_HOST = "merkaz-h.co.il";
 const CACHE_SECONDS = 60 * 60 * 24 * 7; // 7 days
 
-export async function loader({ request }: Route.LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   const raw = new URL(request.url).searchParams.get("url");
   if (!raw) return new Response("Missing url", { status: 400 });
 
