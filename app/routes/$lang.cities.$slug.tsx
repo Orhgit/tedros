@@ -10,7 +10,7 @@ import {
   findCityBySlug,
   type City,
 } from "~/lib/cities/registry";
-import { listCityListingsWithImages, listPublicListings, type PublicListingSummary } from "~/lib/db/queries/listings.server";
+import { listCityListingPreviews, type CityListingPreview } from "~/lib/db/queries/city-listings.server";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
@@ -48,7 +48,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     next: nextDate(e),
   }));
 
-  const cityListings = await listCityListingsWithImages(city.slug, 6).catch(() => []);
+  const cityListings = await listCityListingPreviews(city.slug, 6).catch(() => []);
 
   return { locale, city, publicUrl: PUBLIC_URL, cityRights, cityTracks, cityHeritage, cityListings };
 }
@@ -341,7 +341,7 @@ function ListingCard({
   locale,
   citySlug,
 }: {
-  listing: PublicListingSummary;
+  listing: CityListingPreview;
   locale: Locale;
   citySlug: string;
 }) {
@@ -490,7 +490,7 @@ function CityListingsSection({
 }: {
   locale: Locale;
   city: City;
-  listings: PublicListingSummary[];
+  listings: CityListingPreview[];
 }) {
   const name = cityName(city, locale);
   const allUrl = `/${locale}/listings?city=${city.slug}`;
