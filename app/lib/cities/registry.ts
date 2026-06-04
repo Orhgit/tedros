@@ -45,6 +45,18 @@ export const CITIES: City[] = [
     },
   },
 
+  {
+    slug: "maale-adumim",
+    names: { he: "מעלה אדומים", en: "Ma'ale Adumim", am: "ማዓለ አዱሚም" },
+    region: "jerusalem",
+    geo: { lat: 31.7724, lon: 35.2992 },
+    overview: {
+      he: 'מעלה אדומים היא עיר באזור ירושלים עם קהילה ערה של יוצאי אתיופיה. שוק הנדל"ן מציע מגוון רחב של דירות, דופלקסים ובתים פרטיים — לרוב במחירים נוחים יותר ביחס לירושלים הסמוכה, עם גישה מהירה לבירה ולאזור המרכז.',
+      en: "Ma'ale Adumim is a city in the greater Jerusalem area with a vibrant Israeli-Ethiopian community. The real-estate market offers a wide range of apartments, duplexes and private homes — often at more accessible prices than neighbouring Jerusalem, with quick access to the capital and the central region.",
+      am: "ማዓለ አዱሚም በኢየሩሳሌም ዙሪያ ላይ ያለ ከተማ ሲሆን ንቁ የእስራኤላዊ-ኢትዮጵያዊ ማህበረሰብ አለ። ለካፒታሉ ቅርበት ያለ ሰፊ ቤቶች፣ ዱፕሌክሶች እና ፍላቶች ዕድሎች ያቀርባል።",
+    },
+  },
+
   // ── Center ───────────────────────────────────────────────────────────────
   {
     slug: "netanya",
