@@ -58,6 +58,10 @@ const envSchema = z.object({
 
   // Mula AI chatbot — Claude API
   ANTHROPIC_API_KEY: z.string().optional(),
+
+  // IndexNow — submit new/updated URLs to search engines immediately
+  // Generate: openssl rand -hex 16
+  INDEXNOW_KEY: z.string().optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;

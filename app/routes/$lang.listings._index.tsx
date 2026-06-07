@@ -7,7 +7,9 @@ import { Form, Link } from "react-router";
 import { SiteHeader } from "~/components/sections/site-header";
 import type { Route } from "./+types/$lang.listings._index";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+import { getEnv } from "~/lib/env.server";
 import {
   listCitiesForFilter,
   listPublicListings,
@@ -61,8 +63,10 @@ export async function loader({ params, request }: Route.LoaderArgs) {
     listCitiesForFilter(),
   ]);
 
+  const { PUBLIC_URL } = getEnv();
   return {
     locale,
+    publicUrl: PUBLIC_URL,
     items,
     total,
     cities: citiesList,
@@ -78,6 +82,7 @@ export async function loader({ params, request }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
+  const publicUrl = data?.publicUrl ?? "";
   const title = t(locale, "listings_title");
   const description = t(locale, "listings_intro");
   return [
@@ -87,6 +92,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    ...hreflangMeta(publicUrl, locale, "/listings"),
   ];
 };
 

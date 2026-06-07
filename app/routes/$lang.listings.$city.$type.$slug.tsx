@@ -19,6 +19,7 @@ import {
 } from "~/lib/db/queries/listings.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
+import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { leadSubmissionSchema } from "~/lib/validation/lead";
 
@@ -132,7 +133,7 @@ export const meta: Route.MetaFunction = ({ data, params }) => {
     0,
     200,
   );
-  const url = `${data.publicUrl}/${locale}/listings/${params.city}/${params.type}/${params.slug}`;
+  const path = `/listings/${params.city}/${params.type}/${params.slug}`;
 
   return [
     { title: `${title} · ${cityName}` },
@@ -141,7 +142,7 @@ export const meta: Route.MetaFunction = ({ data, params }) => {
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
-    { tagName: "link", rel: "canonical", href: url },
+    ...hreflangMeta(data.publicUrl, locale, path),
   ];
 };
 
