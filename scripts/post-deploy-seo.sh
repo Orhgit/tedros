@@ -7,7 +7,7 @@
 set -euo pipefail
 
 BASE_URL="${BASE_URL:-https://tedros.co.il}"
-INDEXNOW_KEY="${INDEXNOW_KEY:-c2f6183abc392355a7278b1791a62a16}"
+INDEXNOW_KEY="${INDEXNOW_KEY:-266aaac460ad69529d18d0c9e96b9ebd}"
 KEY_LOCATION="${BASE_URL}/${INDEXNOW_KEY}.txt"
 
 # ── 1. Verify key file is live ─────────────────────────────────────────────
