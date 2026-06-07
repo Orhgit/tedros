@@ -15,7 +15,7 @@ import { RelatedRights } from "~/components/sections/related-rights";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import { findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
+import { CITIES, findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
 import {
   getRightBySlug,
   relatedRights,
@@ -26,7 +26,7 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
-import { isRelevant } from "~/lib/rights/relevance";
+import { isRelevant, relevantCities } from "~/lib/rights/relevance";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -49,6 +49,9 @@ export async function loader({ params }: Route.LoaderArgs) {
   const cityRights = listRights(locale)
     .filter((r) => r.slug !== right.slug && isRelevant(r.slug, city.slug))
     .slice(0, 4);
+  const otherCitiesForRight = relevantCities(right.slug, CITIES)
+    .filter((c) => c.slug !== city.slug)
+    .slice(0, 6);
   return {
     locale,
     right,
@@ -58,6 +61,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     related,
     shareUrl,
     cityRights,
+    otherCitiesForRight,
   };
 }
 
@@ -112,7 +116,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function RightCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, right, city, html, related, shareUrl, cityRights } = loaderData;
+  const { locale, right, city, html, related, shareUrl, cityRights, otherCitiesForRight } = loaderData;
   const primaryTag = right.tags[0] ?? "housing";
   const tone = classesForTag(primaryTag);
   const cityNameLocal = cityName(city, locale);
@@ -244,10 +248,37 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
           <WhatsAppShare title={right.title} url={shareUrl} locale={locale} />
         </div>
 
+        {/* Community stats for this city — unique data that differentiates
+            each rights×city cell from duplicates. Only shown when the city
+            registry has communityStats entries. */}
+        {city.communityStats && city.communityStats.length > 0 && (
+          <section className="mt-10 rounded-2xl border border-earth-200 bg-earth-50/60 p-5">
+            <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
+              {locale === "he"
+                ? `קהילה אתיופית ב${cityName(city, locale)} — נתונים`
+                : locale === "am"
+                  ? `${cityName(city, locale)} ውስጥ ኢትዮጵያ ማህበረሰብ`
+                  : `Ethiopian community in ${cityName(city, locale)}`}
+            </h2>
+            <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {city.communityStats.map((s, i) => (
+                <div key={i} className="rounded-md border border-earth-100 bg-white px-3 py-2">
+                  <dt className="text-xs font-medium text-earth-600">{s.label[locale] ?? s.label.he}</dt>
+                  <dd className="mt-1 text-sm font-semibold text-earth-900">{s.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
+
         {cityRights.length > 0 && (
           <section className="mt-10 rounded-2xl border border-earth-200 bg-earth-50 p-5">
             <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
-              {t(locale, "rights_city_context_heading")} {cityName(city, locale)}
+              {locale === "he"
+                ? `זכויות נוספות ב${cityName(city, locale)}`
+                : locale === "am"
+                  ? `በ${cityName(city, locale)} ሌሎች መብቶች`
+                  : `More rights in ${cityName(city, locale)}`}
             </h2>
             <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {cityRights.map((r) => (
@@ -260,6 +291,32 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
                       {glyphForTag(r.tags[0] ?? "housing")}
                     </span>
                     <span className="text-ink-800">{r.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* Other cities where this same right is relevant — key internal link
+            for SEO: gives Google a connected graph of right×city cells. */}
+        {otherCitiesForRight.length > 0 && (
+          <section className="mt-8 rounded-2xl border border-earth-100 bg-white p-5">
+            <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
+              {locale === "he"
+                ? `זכות זו בערים נוספות`
+                : locale === "am"
+                  ? `ይህ መብት በሌሎች ከተሞች`
+                  : `This right in other cities`}
+            </h2>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {otherCitiesForRight.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    to={`/${locale}/rights/${right.slug}/${c.slug}`}
+                    className="inline-flex items-center rounded-full border border-earth-200 bg-earth-50 px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-100"
+                  >
+                    {cityName(c, locale)}
                   </Link>
                 </li>
               ))}

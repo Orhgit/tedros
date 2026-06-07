@@ -32,6 +32,12 @@ export const CITIES: City[] = [
       en: "Jerusalem, Israel's capital, hosts a large Israeli-Ethiopian community concentrated historically in the Gondar neighbourhood in the north and with significant presence in Kiryat HaYovel and other areas. The city is home to the Centre for Ethiopian Jewish Heritage and several traditional synagogues led by kessim, alongside a broad housing market.",
       am: "ኢየሩሳሌም፣ የእስራኤል ዋና ከተማ፣ ከታሪካዊ አኳያ ሰሜናዊ ጎንደር ሰፈር ላይ ያተኮረ ትልቅ እስራኤላዊ-ኢትዮጵያዊ ማህበረሰብ ያስተናግዳለች። ከተማዋ የኢትዮጵያ አይሁዳዊ ቅርስ ማዕከልን እና በቄሶች የሚመሩ ተለምዷዊ ምኩራቦችን ታስተናግዳለች፣ ሰፊ የቤት ፍለጋ ዕድሎችም አሉ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~30,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "גונדר, קרית היובל, פסגת זאב" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "מרכז מורשת יהדות אתיופיה, ENP" },
+    ],
   },
   {
     slug: "beit-shemesh",
@@ -97,6 +103,12 @@ export const CITIES: City[] = [
       en: "Rishon LeZion is home to a large, active Israeli-Ethiopian community, historically concentrated in the Ramat Eliyahu neighbourhood — originally built as absorption housing and now a long-standing community centre. The neighbourhood is at the heart of urban-renewal efforts, alongside a growing second-generation presence across the city.",
       am: "ሪሾን ለጽዮን ትልቅ እና ንቁ የሆነ ማህበረሰብ ያስተናግዳለች፣ በታሪክ ወደ ራማት ኤልያሁ ሰፈር ያተኮረ። ሰፈሩ አሁን የከተማ እድሳት ማዕከል ሆኖ ሲሆን፣ ሁለተኛ ትውልዱ በመላ ከተማዋ ይስፋፋል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~12,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~8%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת אליהו, נחלה" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "תנה בריאות, ביטוח לאומי מקומי" },
+    ],
   },
   {
     slug: "rehovot",
@@ -108,6 +120,12 @@ export const CITIES: City[] = [
       en: "Rehovot has a long-established Israeli-Ethiopian community, with a significant concentration in the Kiryat Moshe neighbourhood. Most of the neighbourhood's residents are from the community, and it is currently going through urban-renewal processes — driving demand for additional housing options in the city and surrounding area.",
       am: "ረሆቮት ቆየት ያለ ማህበረሰብ አላት፣ በቂርያት ሞሼ ሰፈር ላይ ጉልህ መገኘት ያለው። ሰፈሩ የከተማ እድሳት ሂደቶችን እያለፈ ሲሆን ለቤት ፍለጋ ፍላጎቱ እያደገ ነው።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~8%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "קריית משה" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "tel-aviv",
@@ -141,6 +159,12 @@ export const CITIES: City[] = [
       en: "Lod has a long-established Israeli-Ethiopian community in neighbourhoods where the community proportion is significant. In recent years the city has drawn attention due to urban-renewal plans and demographic shifts that directly affect the local real-estate market and housing options for the community.",
       am: "ሎዳ ጉልህ ከሆነ ሕዝቡ ድርሻ ያላቸው ሰፈሮች ቆየት ያለ ማህበረሰብ አላት። ቀጥተኛ ሁኔታ ለቤቶች ዕቅዶች እና ሕዝብ ለውጦች ምክንያት ሎዳ ሰፊ ትኩረት ሳቢ ሆኗል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~11%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת אשכול, מרכז, גנים" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, NATAL, ביה\"ס אתיופי" },
+    ],
   },
   {
     slug: "ramla",
@@ -163,6 +187,12 @@ export const CITIES: City[] = [
       en: "Ashdod, one of Israel's largest cities, is home to a large and well-rooted Israeli-Ethiopian community that arrived in the first waves of aliyah. The city offers a variety of properties — from apartments in established neighbourhoods to new projects — alongside an extensive network of community services and institutions.",
       am: "ከእስራኤል ትላልቅ ከተሞች አንዷ አሽዶድ ከመጀመሪያዎቹ ዓሊያ ሞገዶች ትልቅ እና ሥር የሰደደ ማህበረሰብ ያስተናግዳለህ። ሰፊ ማህበረሰብ አገልግሎቶች ጎን ለጎን ዓይነት ዓይነት ንብረቶችን ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~15,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "ד', ה', ז'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, NATAL, תנה בריאות" },
+    ],
   },
   {
     slug: "holon",
@@ -242,6 +272,12 @@ export const CITIES: City[] = [
       en: "Ashkelon absorbed significant waves of Israeli-Ethiopian community members from the 1990s onward and is today a major southern community hub. Community members are spread across multiple neighbourhoods in the city, alongside a growing presence of local businesses, educational institutions and community-led initiatives.",
       am: "አሽከሎን ከ1990ዎቹ ጀምሮ ጉልህ ሞገዶችን ተቀብላ ዛሬ ዋና ደቡባዊ ማዕከል ናት። ማህበረሰቡ ከአካባቢ ንግዶች እና ትምህርት ተቋማት ጋር በሰፈሮች ተበትኗል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~9,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "ברנע, שמשון, אפרידר" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, NATAL, מרכז קהילתי" },
+    ],
   },
   {
     slug: "kiryat-gat",
@@ -253,6 +289,12 @@ export const CITIES: City[] = [
       en: "Kiryat Gat has one of the highest proportions of Israeli-Ethiopian community members relative to total population in Israel. The community has been active in the city for decades, with a broad network of organisations, schools and initiatives — and a correspondingly high demand for fair housing options.",
       am: "ቂርያት ጋት ከጠቅላላ ሕዝብ አንፃር ከፍተኛ ድርሻ ያለ ማህበረሰብ ካሉባቸው ከተሞች አንዷ ናት። ሰፊ ድርጅቶች፣ ትምህርት ቤቶች፣ ተነሳሽነቶች እና ፍትሐዊ ቤት ዕድሎች ሰፊ ፍላጎት አለ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~15,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~28%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, מזרח, גבעת השלושה" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מתנ\"ס, ביה\"ס קהילתי" },
+    ],
   },
   {
     slug: "beer-sheva",
@@ -264,6 +306,12 @@ export const CITIES: City[] = [
       en: "Be'er Sheva, the largest city in the south, hosts a growing Israeli-Ethiopian community, with a notable second-generation presence around Ben-Gurion University and regional educational institutions. The city offers a wide range of properties and housing opportunities alongside ongoing infrastructure and development projects.",
       am: "ቤር ሼቫ ከደቡብ ትላቅ ናት፣ እያደገ ያለ ማህበረሰብ ያስተናግዳለህ፣ ዋናው ሁለተኛ ትውልድ ሲሆን ሰፊ ቤቶች እና ሥርዓተ-ምህዳር ዕድሎች ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~10,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ד', שכ' ה', שכ' א'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, אוניברסיטת בן גוריון, עמותות מקומיות" },
+    ],
   },
   {
     slug: "kiryat-malakhi",
@@ -275,6 +323,12 @@ export const CITIES: City[] = [
       en: "Kiryat Malakhi is one of Israel's cities with a particularly high proportion of Israeli-Ethiopian community members relative to total population. The community is a central part of the city's character — visibly present in education, commerce and community activity — alongside significant demand for updated housing options.",
       am: "ቂርያት ማላኪ ከጠቅላላ ሕዝቡ አንፃር ከፍ ያለ ድርሻ ያለ ማህበረሰብ ካሉባቸው ከተሞች አንዷ ናት። ማህበረሰቡ ለከተማዋ ባሕሪ ዋናው ክፍል ናቸው — ለዘመናዊ ቤቶች ጉልህ ፍላጎት አለ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~9,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~30%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, צפון, קרית חיים" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "sderot",
@@ -297,6 +351,12 @@ export const CITIES: City[] = [
       en: "Dimona is known as one of Israel's cities with a high proportion of Israeli-Ethiopian community members relative to total population — a community that accounts for a significant part of the city's culture and educational networks. The real-estate market offers properties at accessible prices relative to apartment size.",
       am: "ዲሞና ከፍ ያለ ድርሻ ያለ ማህበረሰብ ካሉባቸው ከተሞች ታዋቂ ናት። ማህበረሰቡ ለከተማ ባህል እና ትምህርት ዋናው ክፍል ናቸው ሲሆን ተደራሽ ዋጋ ያሉ ንብረቶች ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~32%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג', מרכז" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי, בית כנסת קייסים" },
+    ],
   },
   {
     slug: "yerucham",
@@ -354,6 +414,12 @@ export const CITIES: City[] = [
       en: "Haifa is home to an established Israeli-Ethiopian community, spread across multiple neighbourhoods in the city. The local real-estate market offers a range of housing options — from modern projects in the Carmel area to neighbourhoods with urban-renewal potential in the eastern part of the city.",
       am: "ሐይፋ የተመሰረተ ማህበረሰብ ያስተናጋጅ ናት፣ በብዙ ሰፈሮች ተበትኗል። ሪል እስቴት ዓይነት ዓይነት ምርጫ ያቀርባል — ከካርሜል ዘመናዊ ፕሮጀክቶች እስከ ምስራቃዊ ሰፈሮች።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~10,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "כרמל הצרפתי, הדר, כרמליה" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP חיפה, בית הספר לקהילה" },
+    ],
   },
   {
     slug: "kiryat-ata",

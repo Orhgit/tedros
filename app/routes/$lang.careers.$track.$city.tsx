@@ -336,6 +336,16 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
           <p className="mt-2 text-base leading-relaxed text-ink-700">
             {cityOverviewLocal}
           </p>
+          {city.communityStats && city.communityStats.length > 0 && (
+            <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {city.communityStats.map((s, i) => (
+                <div key={i} className="rounded-md border border-earth-100 bg-white px-3 py-2">
+                  <dt className="text-xs font-medium text-earth-600">{s.label[locale] ?? s.label.he}</dt>
+                  <dd className="mt-1 text-sm font-semibold text-earth-900">{s.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
           <p className="mt-3 text-sm text-earth-700">
             <Link to={`/${locale}/cities/${city.slug}`} className="hover:underline">
               {t(locale, "rights_city_more_link")}
