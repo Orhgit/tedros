@@ -15,7 +15,8 @@ export async function pingIndexNow(urls: string[]): Promise<void> {
       body: JSON.stringify({
         host: new URL(PUBLIC_URL).hostname,
         key: INDEXNOW_KEY,
-        keyLocation: `${PUBLIC_URL}/indexnow.txt`,
+        // Static file in /public/ — served immediately, no code deployment needed
+        keyLocation: `${PUBLIC_URL}/${INDEXNOW_KEY}.txt`,
         urlList: urls,
       }),
     });
