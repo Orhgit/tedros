@@ -127,7 +127,15 @@ export default function NewsArticleDetail({ loaderData }: Route.ComponentProps) 
                 {" "}
                 · {t(locale, "news_updated_label")}: {article.updatedAt}
               </>
-            )}
+            )}{" "}
+            ·{" "}
+            <Link to={`/${locale}/about`} className="hover:underline">
+              {locale === "he"
+                ? "מערכת טדרוס"
+                : locale === "am"
+                  ? "የቴድሮስ ዝግጅት ክፍል"
+                  : "Tedros Editorial"}
+            </Link>
           </p>
           <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
             {title}

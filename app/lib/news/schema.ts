@@ -45,13 +45,39 @@ export interface NewsArticleJsonLdInput {
   /** ISO-8601 last-update date. */
   dateModified: string;
   tags: string[];
+  author?: { name: string; url?: string };
 }
+
+const EDITORIAL_TEAM = {
+  "@type": "Organization",
+  "@id": "https://tedros.co.il/#editorial-team",
+  name: "צוות מערכת טדרוס",
+  url: "https://tedros.co.il/he/about",
+  member: [
+    {
+      "@type": "Person",
+      name: "צוות קהילה טדרוס",
+      jobTitle: "עורכת תוכן קהילתית",
+      knowsLanguage: ["he", "en", "am"],
+      worksFor: { "@id": "https://tedros.co.il/#organization" },
+    },
+  ],
+};
 
 export function newsArticleJsonLd(
   ctx: SchemaContext,
   input: NewsArticleJsonLdInput,
 ): JsonLd {
   const url = urlFor(ctx, `/news/${input.slug}`);
+  const authorNode = input.author
+    ? {
+        "@type": "Person",
+        name: input.author.name,
+        ...(input.author.url ? { url: input.author.url } : {}),
+        worksFor: { "@id": `${ctx.publicUrl}/#organization` },
+      }
+    : EDITORIAL_TEAM;
+
   return {
     "@context": SCHEMA_CONTEXT,
     "@type": "NewsArticle",
@@ -63,15 +89,17 @@ export function newsArticleJsonLd(
     dateModified: input.dateModified,
     inLanguage: ctx.locale,
     keywords: input.tags,
-    author: {
-      "@type": "Organization",
-      name: "Tedros",
-      url: ctx.publicUrl,
-    },
+    author: authorNode,
     publisher: {
       "@type": "Organization",
+      "@id": `${ctx.publicUrl}/#organization`,
       name: "Tedros",
       url: ctx.publicUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${ctx.publicUrl}/logo.png`,
+      },
     },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
   };
 }

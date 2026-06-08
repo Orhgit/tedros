@@ -1,0 +1,23 @@
+name: Send backlink outreach emails
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send:
+    name: Send outreach to partner orgs
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: SSH — run outreach script on production server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          port: ${{ secrets.DEPLOY_PORT }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          command_timeout: 4m
+          script: |
+            set -euo pipefail
+            cd /opt/tedros
+            node --env-file=.env scripts/send-backlink-outreach.mjs
