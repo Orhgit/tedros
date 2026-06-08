@@ -119,7 +119,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
         logo: `${publicUrl}/logo.png`,
         description:
           locale === "he"
-            ? "פורטל קהילתי מקיף ליוצאי אתיופיה בישראל — זכויות, קריירה, בריאות, נדל\"ן, קהילה."
+            ? 'פורטל קהילתי מקיף ליוצאי אתיופיה בישראל — זכויות, קריירה, בריאות, נדל"ן, קהילה.'
             : locale === "am"
               ? "ለኢትዮጵያ-እስራኤላውያን ሁሉን አቀፍ ማህበረሰብ ፖርታል — መብቶች፣ ሥራ፣ ጤና፣ ሪል እስቴት።"
               : "Comprehensive community portal for Ethiopian-Israelis — rights, careers, health, real-estate.",
@@ -128,9 +128,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
         audience: {
           "@type": "Audience",
           audienceType:
-            locale === "he"
-              ? "יוצאי אתיופיה בישראל"
-              : "Ethiopian-Israeli community",
+            locale === "he" ? "יוצאי אתיופיה בישראל" : "Ethiopian-Israeli community",
         },
         inLanguage: ["he", "en", "am"],
         sameAs: ["https://github.com/Orhgit/tedros"],

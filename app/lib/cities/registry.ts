@@ -33,10 +33,19 @@ export const CITIES: City[] = [
       am: "ኢየሩሳሌም፣ የእስራኤል ዋና ከተማ፣ ከታሪካዊ አኳያ ሰሜናዊ ጎንደር ሰፈር ላይ ያተኮረ ትልቅ እስራኤላዊ-ኢትዮጵያዊ ማህበረሰብ ያስተናግዳለች። ከተማዋ የኢትዮጵያ አይሁዳዊ ቅርስ ማዕከልን እና በቄሶች የሚመሩ ተለምዷዊ ምኩራቦችን ታስተናግዳለች፣ ሰፊ የቤት ፍለጋ ዕድሎችም አሉ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~30,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~30,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "גונדר, קרית היובל, פסגת זאב" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "מרכז מורשת יהדות אתיופיה, ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "גונדר, קרית היובל, פסגת זאב",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "מרכז מורשת יהדות אתיופיה, ENP",
+      },
     ],
   },
   {
@@ -50,10 +59,19 @@ export const CITIES: City[] = [
       am: "ቤት ሼሜሽ ከፍ ያለ ዕድገት ካለባቸው ከተሞች አንዷ ናት፣ እስራኤላዊ-ኢትዮጵያዊ ማህበረሰቡም ተመጣጥኖ አድጓል። ትምህርት ቤቶችን ያካተቱ አዳዲስ ልማቶች ምቹ ዋጋ ያቀርባሉ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~8,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~9%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת שפיר, גבעת שרת, נווה שאנן" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: 'ENP, מרכז קהילתי, ביה"ס עירוני' },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "רמת שפיר, גבעת שרת, נווה שאנן",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: 'ENP, מרכז קהילתי, ביה"ס עירוני',
+      },
     ],
   },
 
@@ -68,10 +86,19 @@ export const CITIES: City[] = [
       am: "ማዓለ አዱሚም በኢየሩሳሌም ዙሪያ ላይ ያለ ከተማ ሲሆን ንቁ የእስራኤላዊ-ኢትዮጵያዊ ማህበረሰብ አለ። ለካፒታሉ ቅርበት ያለ ሰፊ ቤቶች፣ ዱፕሌክሶች እና ፍላቶች ዕድሎች ያቀርባል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~2,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "פרחי אביב, נופים" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "פרחי אביב, נופים",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
 
@@ -116,10 +143,19 @@ export const CITIES: City[] = [
       am: "ሪሾን ለጽዮን ትልቅ እና ንቁ የሆነ ማህበረሰብ ያስተናግዳለች፣ በታሪክ ወደ ራማት ኤልያሁ ሰፈር ያተኮረ። ሰፈሩ አሁን የከተማ እድሳት ማዕከል ሆኖ ሲሆን፣ ሁለተኛ ትውልዱ በመላ ከተማዋ ይስፋፋል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~12,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~12,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~8%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת אליהו, נחלה" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "תנה בריאות, ביטוח לאומי מקומי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "רמת אליהו, נחלה",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "תנה בריאות, ביטוח לאומי מקומי",
+      },
     ],
   },
   {
@@ -133,10 +169,19 @@ export const CITIES: City[] = [
       am: "ረሆቮት ቆየት ያለ ማህበረሰብ አላት፣ በቂርያት ሞሼ ሰፈር ላይ ጉልህ መገኘት ያለው። ሰፈሩ የከተማ እድሳት ሂደቶችን እያለፈ ሲሆን ለቤት ፍለጋ ፍላጎቱ እያደገ ነው።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~8,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~8%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "קריית משה" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "קריית משה",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -150,10 +195,22 @@ export const CITIES: City[] = [
       am: "ቴል አቪቭ ለሁለተኛ ትውልድ እስራኤላዊ-ኢትዮጵያዊ — ምሁራን፣ ሥራ ፈጣሪዎች፣ ሙያተኞች — ዋና ማዕከል ናት። ማህበረሰቡ ለሕዝቦቻቸው ሚዛናዊ ሁኔታ ዘርፈ-ሰፊ ድርጊቶችን ሲሰጥ ሕያው የሪል እስቴት ገበያ ሰፊ ምርጫ ያቀርባል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~6,000" },
-      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~1.5%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' הצפון, דרום תל אביב" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, HAMA, פרנץ' קיי קולה" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~6,000",
+      },
+      {
+        label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" },
+        value: "~1.5%",
+      },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' הצפון, דרום תל אביב",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, HAMA, פרנץ' קיי קולה",
+      },
     ],
   },
   {
@@ -167,10 +224,19 @@ export const CITIES: City[] = [
       am: "ፔታህ ቲቅቫ ዋናው በኦሊም ቢያሃድ ድርጅት ጋር ትብብርን ጨምሮ ሙያ ከፍ ያሉ እና ምሁራን ያሉ ንቁ ማህበረሰብ ያስተናጋጅ ናት። ከተማዋ ለሻሮን ክልሉ ተወዳዳሪ ዋጋ ያሉ ዓይነት ዓይነት አፓርታማዎች እና ምርጫዎች ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~7,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~7,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "כפר גנים, קריית ספיר" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "עולים ביחד, ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "כפר גנים, קריית ספיר",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "עולים ביחד, ENP",
+      },
     ],
   },
   {
@@ -184,10 +250,19 @@ export const CITIES: City[] = [
       am: "ሎዳ ጉልህ ከሆነ ሕዝቡ ድርሻ ያላቸው ሰፈሮች ቆየት ያለ ማህበረሰብ አላት። ቀጥተኛ ሁኔታ ለቤቶች ዕቅዶች እና ሕዝብ ለውጦች ምክንያት ሎዳ ሰፊ ትኩረት ሳቢ ሆኗል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~8,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~11%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת אשכול, מרכז, גנים" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, NATAL, ביה\"ס אתיופי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "רמת אשכול, מרכז, גנים",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: 'ENP, NATAL, ביה"ס אתיופי',
+      },
     ],
   },
   {
@@ -201,10 +276,19 @@ export const CITIES: City[] = [
       am: "ለቴል አቪቭ እና ቤን ጉሪዮን አውሮፕላን ማረፊያ ቅርብ ራምላ ጣቢያዊ ቦታ ጥቅሞቹን ተጠቅሞ ያለ ማህበረሰብ ትኮለምቻለህ። ለማዕከሉ ተደራሽ ዋጋ ያሉ አፓርታማዎችን ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~5,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~5,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~8%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ד', מרכז" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ד', מרכז",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -218,10 +302,19 @@ export const CITIES: City[] = [
       am: "ከእስራኤል ትላልቅ ከተሞች አንዷ አሽዶድ ከመጀመሪያዎቹ ዓሊያ ሞገዶች ትልቅ እና ሥር የሰደደ ማህበረሰብ ያስተናግዳለህ። ሰፊ ማህበረሰብ አገልግሎቶች ጎን ለጎን ዓይነት ዓይነት ንብረቶችን ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~15,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~15,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "ד', ה', ז'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, NATAL, תנה בריאות" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "ד', ה', ז'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, NATAL, תנה בריאות",
+      },
     ],
   },
   {
@@ -235,10 +328,19 @@ export const CITIES: City[] = [
       am: "ሆሎን እያደገ ያለ ዋናው ሁለተኛ ትውልድ አባላት ሲሆኑ ለቴል አቪቭ ቅርበትን ሲፈልጉ ተደራሽ የቤት ወጪዎችን ያስጠብቃሉ። ሰፊ ዘርፍ ያለው ሪል እስቴት ገበያ እና ባህላዊ ተቋማት ያሉ ከተማዊ አካባቢ ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~5,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~5,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "קריית שרת, אזור" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: 'ENP, מתנ"ס' },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "קריית שרת, אזור",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: 'ENP, מתנ"ס',
+      },
     ],
   },
   {
@@ -252,10 +354,19 @@ export const CITIES: City[] = [
       am: "ወደ ባህሩ እና ቴል አቪቭ ቅርብ ባት ያም በከተማዋ ብዙ ሰፈሮች ያሉ ማህበረሰብ ያስተናጋጅ ናት። ተደራሽ ዋጋ እና ቅርብ ቦታ ማዕከልነት ሚዛናዊ ለሚፈልጉ ምቹ ምርጫ ናት።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~4,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~4,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת יוסף, בת-גלים" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "רמת יוסף, בת-גלים",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -269,10 +380,19 @@ export const CITIES: City[] = [
       am: "ደቡብ-ማዕከላዊ ክልሉ ልብ ያለ ያቭኔ አካባቢያዊ ማህበረሰብ አላት። ዋጋ ተወዳዳሪ ሁኔታ እና ጥሩ ጥቅም ያለ ሕይወት ሁኔታ ለሚፈልጉ ቤተሰቦች ሰፊ አቅርቦት ታቀርብለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~3,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~6%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ד', מרכז" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ד', מרכז",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
   {
@@ -286,10 +406,19 @@ export const CITIES: City[] = [
       am: "ካፋር ሳባ ዋናው አካባቢያዊ ሥራ ገበያ ውስጥ ተዋህደዉ ያሉ ምሁራን እና ሙያተኞችን ያቀፈ ማህበረሰብ ያስተናጋጅ ናት። ጸጥ ያሉ ሰፈሮች፣ ከፍ ያለ ሕይወት ጥራት እና ለሻሮን ቀዳሚ ቦታ ትሰጣለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~3,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~3%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', רמת כפר סבא" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "עולים ביחד, ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ג', רמת כפר סבא",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "עולים ביחד, ENP",
+      },
     ],
   },
   {
@@ -303,10 +432,19 @@ export const CITIES: City[] = [
       am: "ሄርዝሊያ ሃይ-ቴክ ማዕከልነቱ ታዋቂ ሲሆን ወደ ሁለተኛ ትውልድ እስራኤላዊ-ኢትዮጵያዊ ቀዳምያን ይስባል። ሕያው ሪል እስቴት ገበያ ዓይነት ዓይነት ምርጫ ያቀርባል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~2,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~2%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "הרצליה פיתוח, נווה אמל" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "הרצליה פיתוח, נווה אמל",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
   {
@@ -320,10 +458,19 @@ export const CITIES: City[] = [
       am: "ሞዲኢን-ማካቢም-ሪኡት ዕቅድ ተይዞ የተሰራ ሲሆን ዘመናዊ አካባቢ ለሚፈልጉ ሁለተኛ ትውልድ ቀዳሚ ምርጫ ነው። ዳበሩ ትምህርት እና ትራንስፖርት ጎን ለጎን አዳዲስ ቤቶችን ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~2,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~2%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "אנות, ענבל" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "אנות, ענבל",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
 
@@ -339,10 +486,19 @@ export const CITIES: City[] = [
       am: "አሽከሎን ከ1990ዎቹ ጀምሮ ጉልህ ሞገዶችን ተቀብላ ዛሬ ዋና ደቡባዊ ማዕከል ናት። ማህበረሰቡ ከአካባቢ ንግዶች እና ትምህርት ተቋማት ጋር በሰፈሮች ተበትኗል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~9,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~9,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "ברנע, שמשון, אפרידר" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, NATAL, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "ברנע, שמשון, אפרידר",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, NATAL, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -356,10 +512,19 @@ export const CITIES: City[] = [
       am: "ቂርያት ጋት ከጠቅላላ ሕዝብ አንፃር ከፍተኛ ድርሻ ያለ ማህበረሰብ ካሉባቸው ከተሞች አንዷ ናት። ሰፊ ድርጅቶች፣ ትምህርት ቤቶች፣ ተነሳሽነቶች እና ፍትሐዊ ቤት ዕድሎች ሰፊ ፍላጎት አለ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~15,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~15,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~28%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, מזרח, גבעת השלושה" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מתנ\"ס, ביה\"ס קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, מזרח, גבעת השלושה",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: 'ENP, מתנ"ס, ביה"ס קהילתי',
+      },
     ],
   },
   {
@@ -373,10 +538,19 @@ export const CITIES: City[] = [
       am: "ቤር ሼቫ ከደቡብ ትላቅ ናት፣ እያደገ ያለ ማህበረሰብ ያስተናግዳለህ፣ ዋናው ሁለተኛ ትውልድ ሲሆን ሰፊ ቤቶች እና ሥርዓተ-ምህዳር ዕድሎች ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~10,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~10,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ד', שכ' ה', שכ' א'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, אוניברסיטת בן גוריון, עמותות מקומיות" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ד', שכ' ה', שכ' א'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, אוניברסיטת בן גוריון, עמותות מקומיות",
+      },
     ],
   },
   {
@@ -390,10 +564,19 @@ export const CITIES: City[] = [
       am: "ቂርያት ማላኪ ከጠቅላላ ሕዝቡ አንፃር ከፍ ያለ ድርሻ ያለ ማህበረሰብ ካሉባቸው ከተሞች አንዷ ናት። ማህበረሰቡ ለከተማዋ ባሕሪ ዋናው ክፍል ናቸው — ለዘመናዊ ቤቶች ጉልህ ፍላጎት አለ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~9,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~9,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~30%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, צפון, קרית חיים" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, צפון, קרית חיים",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -407,10 +590,19 @@ export const CITIES: City[] = [
       am: "ከጋዛ ድንበር ቅርብ ያለ ስደሮት ከጸጥታ ፈተናዎች ጋር ቆርቆሮ ቆየ ያለ ማህበረሰብ ያስተናግዳለህ። ማህበረሰቡ ጉልህ ጽናት ያሳይ ሲሆን ልማት ፕሮጀክቶች አዳዲስ ቤት ዕድሎች ያቀርባሉ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~7,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~7,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~35%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: 'ENP, NATAL, ביה"ס קהילתי' },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ב', שכ' ג'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: 'ENP, NATAL, ביה"ס קהילתי',
+      },
     ],
   },
   {
@@ -424,10 +616,19 @@ export const CITIES: City[] = [
       am: "ዲሞና ከፍ ያለ ድርሻ ያለ ማህበረሰብ ካሉባቸው ከተሞች ታዋቂ ናት። ማህበረሰቡ ለከተማ ባህል እና ትምህርት ዋናው ክፍል ናቸው ሲሆን ተደራሽ ዋጋ ያሉ ንብረቶች ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~8,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~32%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג', מרכז" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי, בית כנסת קייסים" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ב', שכ' ג', מרכז",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי, בית כנסת קייסים",
+      },
     ],
   },
   {
@@ -441,10 +642,19 @@ export const CITIES: City[] = [
       am: "ትንሽ የኔጌቭ ምድረ-በዳ ከተማ ኢሩሃም ወደ አካባቢ ሕይወት ተዋህዶ ያለ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ወጣቶችን የሚስብ ልማት ማዕከል ሆኗል፣ ሰፊ ተደራሽ ዋጋ ያሉ ቤቶችን ያቀርባሉ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~2,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~20%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, צפון" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, צפון",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -458,10 +668,19 @@ export const CITIES: City[] = [
       am: "የቀይ ባሕር ወደብ ከተማ ደቡባዊ ኤይላት ዕረፍት እና አገልግሎቶች ዘርፍ ያለ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ቀረጥ የሌለ ምርጫ ሕዝቡን ሁሉ ሰፊ ሳቢ ያደርጋቸዋል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~3%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, צפון אילת" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, צפון אילת",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
   {
@@ -475,10 +694,19 @@ export const CITIES: City[] = [
       am: "ንቲቮት ብዙ ዓመታት ኖሮ ያለ ማህበረሰብ ያስተናጋጅ ትንሽ ደቡባዊ ከተማ ናት። ጸጥ ያለ ጥሩ ሕይወት ምቹ ዋጋ ያሉ ቤቶችን ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~3,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~14%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, מזרח" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, מזרח",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -492,10 +720,19 @@ export const CITIES: City[] = [
       am: "ትንሽ የኔጌቭ ምድረ-በዳ ከተማ ዓረድ ትንሽ እና ሙሉ ማህበረሰብ ያስተናጋጅ ናት። ዝቅተኛ ዋጋ ያለ ሪል እስቴት፣ ንፁህ አየር እና ድንቅ ተፈጥሮ ዙሪያ ጥቅሞቿ ናቸው።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~10%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', שכ' ד'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ג', שכ' ד'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
 
@@ -511,10 +748,19 @@ export const CITIES: City[] = [
       am: "ሐይፋ የተመሰረተ ማህበረሰብ ያስተናጋጅ ናት፣ በብዙ ሰፈሮች ተበትኗል። ሪል እስቴት ዓይነት ዓይነት ምርጫ ያቀርባል — ከካርሜል ዘመናዊ ፕሮጀክቶች እስከ ምስራቃዊ ሰፈሮች።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~10,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~10,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "כרמל הצרפתי, הדר, כרמליה" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP חיפה, בית הספר לקהילה" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "כרמל הצרפתי, הדר, כרמליה",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP חיפה, בית הספר לקהילה",
+      },
     ],
   },
   {
@@ -528,10 +774,19 @@ export const CITIES: City[] = [
       am: "ቂርያት አታ ለሐይፋ ሜትሮ አካባቢ ያለ ለብዙ ሰፈሮች ዘርፍ ያለ ማህበረሰብ ቤት ናት። ለሐይፋ ቅርበቱ ዝቅ ያለ ዋጋ ለሚፈልጉ ጥሩ ምርጫ ያደርጋቸዋል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~3,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי חיפה" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ב', שכ' ג'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי חיפה",
+      },
     ],
   },
   {
@@ -545,10 +800,19 @@ export const CITIES: City[] = [
       am: "ቂርያት ቢያሊቅ ለሐይፋ ቅርብ ሰፈሮቿ ካሉ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ለሰሜን ቦታዎች ሰፊ ቀዳሜ ዋጋ ያለ ሪል እስቴት ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~2,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', מרכז" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ג', מרכז",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
   {
@@ -562,10 +826,19 @@ export const CITIES: City[] = [
       am: "ካርሚኤል ዋናዋ ጋሊሌ ከተማ ሆና ትንሽ ነገር ግን ንቁ ማህበረሰብ ያስተናጋጅ ናት። ሰፊ ልዩ ቦታ ሕያው ሪል እስቴት ሁኔታ እና ከፍ ያለ ሕይወት ጥራት ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~2,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, שכ' ב'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, שכ' ב'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -579,10 +852,19 @@ export const CITIES: City[] = [
       am: "ዬዝሬኤል ሸለቆ ማዕከል አፉላ ዓይነት ዓይነት ሰፈሮች ያሉ ማህበረሰብ ያስተናጋጅ ናት። ምቹ ዋጋ ያሉ ሪል እስቴት እና ወደ ጤና አገልግሎቶች ቀዳሚ ቦታ ትሰጣለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~3,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ב', שכ' ג'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -596,10 +878,19 @@ export const CITIES: City[] = [
       am: "ታሪካዊ ሰሜናዊ ወደብ ዓክኮ ትንሽ ነገር ግን ንቁ የሆነ ማህበረሰብ ያስተናጋጅ ናት። ምቹ ዋጋ ያሉ ሪል እስቴት ታቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "הצפון, המזרח" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "הצפון, המזרח",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
   {
@@ -613,10 +904,19 @@ export const CITIES: City[] = [
       am: "ቆንጆ ሰሜናዊ ወደብ ናሃርያ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ሰፊ ዓይነት ዓይነት ንብረቶችን ለሰሜን ተደራሽ ዋጋ ያቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', מרכז" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ג', מרכז",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
   {
@@ -630,10 +930,19 @@ export const CITIES: City[] = [
       am: "ከፍ ባለ ጋሊሌ ያለ ቂርያት ሽሞና ትንሽ ነገር ግን ሙሉ ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ዝቅ ያለ ዋጋ ያቀርባለህ፣ ከጥሩ ተፈጥሮ ጋር።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~6%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, דרום" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, דרום",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -647,10 +956,19 @@ export const CITIES: City[] = [
       am: "ኪናሮስ ባሕር ዳርቻ ጢቤርያስ ትንሽ ነገር ግን ሕያው ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ምቹ ዋጋ ያሉ ቤቶችን ከኪናሮስ ምስክር ጋር ያቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' א', שכ' ב'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' א', שכ' ב'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
   {
@@ -664,10 +982,19 @@ export const CITIES: City[] = [
       am: "ሰፊ ባህሉ ሕዝቡን ታዋቂ ከሆነው ጋሊሌ ሸለቆ ተራሮ ጽፋት ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ምቹ ዋጋ ያቀርባለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, קנדה" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז, קנדה",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -681,10 +1008,19 @@ export const CITIES: City[] = [
       am: "ናዝሬት ላይ ያለ ኖፍ ሃጋሊል ዓይነት ዓይነት ሰፈሮች ያሉ ማህበረሰብ ያስተናጋጅ ናት። ድንቅ ጋሊሌ ምስክር፣ ምቹ ዋጋ ያሉ ቤቶች እና ለሰሜን ቀዳሚ ቦታ ትሰጣለህ።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,500" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~2,500",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', שכ' ד'" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "שכ' ג', שכ' ד'",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP, מרכז קהילתי",
+      },
     ],
   },
   {
@@ -698,10 +1034,19 @@ export const CITIES: City[] = [
       am: "ማዓሎት-ታርሺሃ ሰሜናዊ ጋሊሌ ቅልቅል ከተማ ናት፣ ከትንሽ ማህበረሰብ ጋር። ምቹ ዋጋ ያሉ ሪል እስቴት፣ ሰፊ አረንጓዴ ሁኔታ እና ከፍ ያለ ሕይወት ጥራት ጋሪ ያደርጋቸዋል።",
     },
     communityStats: [
-      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,000" },
+      {
+        label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" },
+        value: "~1,000",
+      },
       { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
-      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז" },
-      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+      {
+        label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" },
+        value: "מרכז",
+      },
+      {
+        label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" },
+        value: "ENP",
+      },
     ],
   },
 ];

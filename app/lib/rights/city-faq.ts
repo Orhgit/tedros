@@ -26,11 +26,7 @@ function statVal(city: City, idx: number): string {
   return city.communityStats?.[idx]?.value ?? "";
 }
 
-export function generateCityFaq(
-  right: RightLike,
-  city: City,
-  locale: Locale,
-): FaqItem[] {
+export function generateCityFaq(right: RightLike, city: City, locale: Locale): FaqItem[] {
   const cityName = city.names[locale] ?? city.names.he;
   const rightTitle = right.title;
   const popVal = statVal(city, 0);
@@ -127,7 +123,9 @@ function getApplicationAnswer(
       family: `פנו לאגף הרווחה של עיריית ${cityName} — מחויבים לטפל בבקשות תוך 30 יום.${support}`,
       health: `פנו לקופת החולים המקומית ב${cityName} — כל הקופות מחויבות לספק שירות בשפה מובנת.${support}`,
     };
-    return answers[tag] ?? `הגישו את הבקשה דרך הגוף הממשלתי הרלוונטי ב${cityName}.${support}`;
+    return (
+      answers[tag] ?? `הגישו את הבקשה דרך הגוף הממשלתי הרלוונטי ב${cityName}.${support}`
+    );
   }
 
   if (locale === "am") {
@@ -143,5 +141,7 @@ function getApplicationAnswer(
     family: `Contact the ${cityName} municipal welfare department — they are required to respond within 30 days.${support}`,
     health: `Contact your local health fund (kupat holim) in ${cityName} — all funds are required to provide understandable service.${support}`,
   };
-  return answers[tag] ?? `Apply via the relevant government body in ${cityName}.${support}`;
+  return (
+    answers[tag] ?? `Apply via the relevant government body in ${cityName}.${support}`
+  );
 }
