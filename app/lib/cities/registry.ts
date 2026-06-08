@@ -49,6 +49,12 @@ export const CITIES: City[] = [
       en: "Beit Shemesh is one of Israel's fastest-growing cities, and the Israeli-Ethiopian community has grown alongside it, settling in several neighbourhoods. The real-estate market offers relatively accessible prices for the greater Jerusalem area, with new developments and strong school infrastructure.",
       am: "ቤት ሼሜሽ ከፍ ያለ ዕድገት ካለባቸው ከተሞች አንዷ ናት፣ እስራኤላዊ-ኢትዮጵያዊ ማህበረሰቡም ተመጣጥኖ አድጓል። ትምህርት ቤቶችን ያካተቱ አዳዲስ ልማቶች ምቹ ዋጋ ያቀርባሉ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~8,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~9%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת שפיר, גבעת שרת, נווה שאנן" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: 'ENP, מרכז קהילתי, ביה"ס עירוני' },
+    ],
   },
 
   {
@@ -61,6 +67,12 @@ export const CITIES: City[] = [
       en: "Ma'ale Adumim is a city in the greater Jerusalem area with a vibrant Israeli-Ethiopian community. The real-estate market offers a wide range of apartments, duplexes and private homes — often at more accessible prices than neighbouring Jerusalem, with quick access to the capital and the central region.",
       am: "ማዓለ አዱሚም በኢየሩሳሌም ዙሪያ ላይ ያለ ከተማ ሲሆን ንቁ የእስራኤላዊ-ኢትዮጵያዊ ማህበረሰብ አለ። ለካፒታሉ ቅርበት ያለ ሰፊ ቤቶች፣ ዱፕሌክሶች እና ፍላቶች ዕድሎች ያቀርባል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "פרחי אביב, נופים" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
 
   // ── Center ───────────────────────────────────────────────────────────────
@@ -137,6 +149,12 @@ export const CITIES: City[] = [
       en: "Tel Aviv is the main draw for the second generation of Israeli-Ethiopians — academics, entrepreneurs and professionals in tech, design and law. Community activity in the city focuses on equality and combating racism, alongside a vibrant real-estate market offering a wide range of housing options.",
       am: "ቴል አቪቭ ለሁለተኛ ትውልድ እስራኤላዊ-ኢትዮጵያዊ — ምሁራን፣ ሥራ ፈጣሪዎች፣ ሙያተኞች — ዋና ማዕከል ናት። ማህበረሰቡ ለሕዝቦቻቸው ሚዛናዊ ሁኔታ ዘርፈ-ሰፊ ድርጊቶችን ሲሰጥ ሕያው የሪል እስቴት ገበያ ሰፊ ምርጫ ያቀርባል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~6,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~1.5%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' הצפון, דרום תל אביב" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, HAMA, פרנץ' קיי קולה" },
+    ],
   },
   {
     slug: "petach-tikva",
@@ -148,6 +166,12 @@ export const CITIES: City[] = [
       en: "Petach Tikva hosts an active Israeli-Ethiopian community with a concentration of senior professionals and academics, in part through collaboration with the Olim Beyahad organisation. The city offers a variety of apartments and purchase options at competitive prices for the Sharon region.",
       am: "ፔታህ ቲቅቫ ዋናው በኦሊም ቢያሃድ ድርጅት ጋር ትብብርን ጨምሮ ሙያ ከፍ ያሉ እና ምሁራን ያሉ ንቁ ማህበረሰብ ያስተናጋጅ ናት። ከተማዋ ለሻሮን ክልሉ ተወዳዳሪ ዋጋ ያሉ ዓይነት ዓይነት አፓርታማዎች እና ምርጫዎች ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~7,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "כפר גנים, קריית ספיר" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "עולים ביחד, ENP" },
+    ],
   },
   {
     slug: "lod",
@@ -176,6 +200,12 @@ export const CITIES: City[] = [
       en: "Ramla, conveniently located near Tel Aviv and Ben Gurion Airport, hosts an Israeli-Ethiopian community that benefits from the city's strategic location. Ramla's housing market offers apartments at relatively accessible prices for the central region, attracting residents seeking easy access to greater Tel Aviv.",
       am: "ለቴል አቪቭ እና ቤን ጉሪዮን አውሮፕላን ማረፊያ ቅርብ ራምላ ጣቢያዊ ቦታ ጥቅሞቹን ተጠቅሞ ያለ ማህበረሰብ ትኮለምቻለህ። ለማዕከሉ ተደራሽ ዋጋ ያሉ አፓርታማዎችን ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~5,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~8%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ד', מרכז" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "ashdod",
@@ -204,6 +234,12 @@ export const CITIES: City[] = [
       en: "Holon hosts a growing Israeli-Ethiopian community, primarily second-generation members seeking proximity to Tel Aviv while maintaining accessible housing costs. The city offers a diverse real-estate market and an urban environment with developed services and cultural institutions.",
       am: "ሆሎን እያደገ ያለ ዋናው ሁለተኛ ትውልድ አባላት ሲሆኑ ለቴል አቪቭ ቅርበትን ሲፈልጉ ተደራሽ የቤት ወጪዎችን ያስጠብቃሉ። ሰፊ ዘርፍ ያለው ሪል እስቴት ገበያ እና ባህላዊ ተቋማት ያሉ ከተማዊ አካባቢ ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~5,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "קריית שרת, אזור" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: 'ENP, מתנ"ס' },
+    ],
   },
   {
     slug: "bat-yam",
@@ -215,6 +251,12 @@ export const CITIES: City[] = [
       en: "Bat Yam, adjacent to the sea and Tel Aviv, hosts an Israeli-Ethiopian community present in several neighbourhoods across the city. Its relatively accessible real-estate prices and attractive location make it a preferred housing option for those seeking a balance between centrality and accessibility.",
       am: "ወደ ባህሩ እና ቴል አቪቭ ቅርብ ባት ያም በከተማዋ ብዙ ሰፈሮች ያሉ ማህበረሰብ ያስተናጋጅ ናት። ተደራሽ ዋጋ እና ቅርብ ቦታ ማዕከልነት ሚዛናዊ ለሚፈልጉ ምቹ ምርጫ ናት።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~4,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "רמת יוסף, בת-גלים" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "yavne",
@@ -226,6 +268,12 @@ export const CITIES: City[] = [
       en: "Yavne, located in the heart of the south-central region, has a local Israeli-Ethiopian community. Yavne's real-estate market is known for competitive prices and good quality of life, attracting families looking for an intermediate housing option between the centre and the south.",
       am: "ደቡብ-ማዕከላዊ ክልሉ ልብ ያለ ያቭኔ አካባቢያዊ ማህበረሰብ አላት። ዋጋ ተወዳዳሪ ሁኔታ እና ጥሩ ጥቅም ያለ ሕይወት ሁኔታ ለሚፈልጉ ቤተሰቦች ሰፊ አቅርቦት ታቀርብለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~6%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ד', מרכז" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
   {
     slug: "kfar-saba",
@@ -237,6 +285,12 @@ export const CITIES: City[] = [
       en: "Kfar Saba hosts an Israeli-Ethiopian community with a concentration of academics and professionals integrated into the regional job market. The city offers quiet neighbourhoods, high quality of life and easy access to transportation and employment centres in the Sharon region.",
       am: "ካፋር ሳባ ዋናው አካባቢያዊ ሥራ ገበያ ውስጥ ተዋህደዉ ያሉ ምሁራን እና ሙያተኞችን ያቀፈ ማህበረሰብ ያስተናጋጅ ናት። ጸጥ ያሉ ሰፈሮች፣ ከፍ ያለ ሕይወት ጥራት እና ለሻሮን ቀዳሚ ቦታ ትሰጣለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~3%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', רמת כפר סבא" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "עולים ביחד, ENP" },
+    ],
   },
   {
     slug: "herzliya",
@@ -248,6 +302,12 @@ export const CITIES: City[] = [
       en: "Herzliya, known as a hub of Israeli high-tech, attracts second-generation Israeli-Ethiopians integrated into advanced industries and services. The city's real-estate market is active and dynamic, with a variety of housing options for professionals.",
       am: "ሄርዝሊያ ሃይ-ቴክ ማዕከልነቱ ታዋቂ ሲሆን ወደ ሁለተኛ ትውልድ እስራኤላዊ-ኢትዮጵያዊ ቀዳምያን ይስባል። ሕያው ሪል እስቴት ገበያ ዓይነት ዓይነት ምርጫ ያቀርባል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~2%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "הרצליה פיתוח, נווה אמל" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
   {
     slug: "modiin",
@@ -259,6 +319,12 @@ export const CITIES: City[] = [
       en: "Modi'in-Maccabim-Re'ut, built as a planned mixed city, is a magnet for the second generation of Israeli-Ethiopians looking for a new urban environment. The city offers new, high-quality housing options alongside developed education and transportation infrastructure.",
       am: "ሞዲኢን-ማካቢም-ሪኡት ዕቅድ ተይዞ የተሰራ ሲሆን ዘመናዊ አካባቢ ለሚፈልጉ ሁለተኛ ትውልድ ቀዳሚ ምርጫ ነው። ዳበሩ ትምህርት እና ትራንስፖርት ጎን ለጎን አዳዲስ ቤቶችን ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~2%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "אנות, ענבל" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
 
   // ── South ────────────────────────────────────────────────────────────────
@@ -340,6 +406,12 @@ export const CITIES: City[] = [
       en: "Sderot, located adjacent to the Gaza border, hosts a long-established Israeli-Ethiopian community that has dealt with security challenges alongside economic hardship. The community has demonstrated remarkable resilience, and development projects in the city offer new housing opportunities.",
       am: "ከጋዛ ድንበር ቅርብ ያለ ስደሮት ከጸጥታ ፈተናዎች ጋር ቆርቆሮ ቆየ ያለ ማህበረሰብ ያስተናግዳለህ። ማህበረሰቡ ጉልህ ጽናት ያሳይ ሲሆን ልማት ፕሮጀክቶች አዳዲስ ቤት ዕድሎች ያቀርባሉ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~7,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~35%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: 'ENP, NATAL, ביה"ס קהילתי' },
+    ],
   },
   {
     slug: "dimona",
@@ -368,6 +440,12 @@ export const CITIES: City[] = [
       en: "Yerucham, a small Negev desert town, hosts a small Israeli-Ethiopian community integrated into local community life. In recent years Yerucham has become a development hub attracting younger populations, offering very accessible housing prices.",
       am: "ትንሽ የኔጌቭ ምድረ-በዳ ከተማ ኢሩሃም ወደ አካባቢ ሕይወት ተዋህዶ ያለ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ወጣቶችን የሚስብ ልማት ማዕከል ሆኗል፣ ሰፊ ተደራሽ ዋጋ ያሉ ቤቶችን ያቀርባሉ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~20%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, צפון" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "eilat",
@@ -379,6 +457,12 @@ export const CITIES: City[] = [
       en: "Eilat, the southern port city on the Red Sea, hosts a small Israeli-Ethiopian community with a presence in the hospitality and services sectors. Eilat's real-estate market is unique in its VAT exemption on property purchases, attracting investors and buyers from across the country.",
       am: "የቀይ ባሕር ወደብ ከተማ ደቡባዊ ኤይላት ዕረፍት እና አገልግሎቶች ዘርፍ ያለ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ቀረጥ የሌለ ምርጫ ሕዝቡን ሁሉ ሰፊ ሳቢ ያደርጋቸዋል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~3%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, צפון אילת" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
   {
     slug: "netivot",
@@ -390,6 +474,12 @@ export const CITIES: City[] = [
       en: "Netivot is a small southern city with an Israeli-Ethiopian community that has lived there for many years. The city offers a quiet, quality living environment with accessible real-estate prices for the Negev region.",
       am: "ንቲቮት ብዙ ዓመታት ኖሮ ያለ ማህበረሰብ ያስተናጋጅ ትንሽ ደቡባዊ ከተማ ናት። ጸጥ ያለ ጥሩ ሕይወት ምቹ ዋጋ ያሉ ቤቶችን ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~14%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, מזרח" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "arad",
@@ -401,6 +491,12 @@ export const CITIES: City[] = [
       en: "Arad, a small Negev desert city, hosts a small and stable Israeli-Ethiopian community. Arad's advantages include low real-estate prices, clean air and a stunning natural environment, alongside new development projects in the city.",
       am: "ትንሽ የኔጌቭ ምድረ-በዳ ከተማ ዓረድ ትንሽ እና ሙሉ ማህበረሰብ ያስተናጋጅ ናት። ዝቅተኛ ዋጋ ያለ ሪል እስቴት፣ ንፁህ አየር እና ድንቅ ተፈጥሮ ዙሪያ ጥቅሞቿ ናቸው።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~10%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', שכ' ד'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
 
   // ── North ────────────────────────────────────────────────────────────────
@@ -431,6 +527,12 @@ export const CITIES: City[] = [
       en: "Kiryat Ata, a city in the Haifa metropolitan area, is home to an Israeli-Ethiopian community spread across several neighbourhoods. Its proximity to Haifa and major employment centres makes it an attractive option for those seeking housing at a lower cost than Haifa.",
       am: "ቂርያት አታ ለሐይፋ ሜትሮ አካባቢ ያለ ለብዙ ሰፈሮች ዘርፍ ያለ ማህበረሰብ ቤት ናት። ለሐይፋ ቅርበቱ ዝቅ ያለ ዋጋ ለሚፈልጉ ጥሩ ምርጫ ያደርጋቸዋል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי חיפה" },
+    ],
   },
   {
     slug: "kiryat-bialik",
@@ -442,6 +544,12 @@ export const CITIES: City[] = [
       en: "Kiryat Bialik, one of the Kiryot settlements adjacent to Haifa, hosts a small Israeli-Ethiopian community. The city offers accessible real-estate prices relative to Haifa and easy access to employment areas and educational institutions in the north.",
       am: "ቂርያት ቢያሊቅ ለሐይፋ ቅርብ ሰፈሮቿ ካሉ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ለሰሜን ቦታዎች ሰፊ ቀዳሜ ዋጋ ያለ ሪል እስቴት ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', מרכז" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
   {
     slug: "carmiel",
@@ -453,6 +561,12 @@ export const CITIES: City[] = [
       en: "Carmiel, a major city in the Galilee, has a small but active Israeli-Ethiopian community. The city offers a stable real-estate market and high quality of life in a green environment, with access to employment areas and regional educational institutions.",
       am: "ካርሚኤል ዋናዋ ጋሊሌ ከተማ ሆና ትንሽ ነገር ግን ንቁ ማህበረሰብ ያስተናጋጅ ናት። ሰፊ ልዩ ቦታ ሕያው ሪል እስቴት ሁኔታ እና ከፍ ያለ ሕይወት ጥራት ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, שכ' ב'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "afula",
@@ -464,6 +578,12 @@ export const CITIES: City[] = [
       en: "Afula, the centre of the Jezreel Valley, hosts an Israeli-Ethiopian community with a presence in various neighbourhoods. The city offers accessible real-estate prices and access to health services and regional employment centres.",
       am: "ዬዝሬኤል ሸለቆ ማዕከል አፉላ ዓይነት ዓይነት ሰፈሮች ያሉ ማህበረሰብ ያስተናጋጅ ናት። ምቹ ዋጋ ያሉ ሪል እስቴት እና ወደ ጤና አገልግሎቶች ቀዳሚ ቦታ ትሰጣለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~3,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ב', שכ' ג'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "acre",
@@ -475,6 +595,12 @@ export const CITIES: City[] = [
       en: "Acre, the historic northern port city, hosts a small Israeli-Ethiopian community that enjoys the city's unique atmosphere. Acre's real-estate market offers properties at accessible prices, including properties in the Old City and the newer neighbourhoods.",
       am: "ታሪካዊ ሰሜናዊ ወደብ ዓክኮ ትንሽ ነገር ግን ንቁ የሆነ ማህበረሰብ ያስተናጋጅ ናት። ምቹ ዋጋ ያሉ ሪል እስቴት ታቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "הצפון, המזרח" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
   {
     slug: "nahariya",
@@ -486,6 +612,12 @@ export const CITIES: City[] = [
       en: "Nahariya, a scenic northern coastal city, hosts a small Israeli-Ethiopian community. Nahariya's real-estate market offers a variety of properties along and near the sea, at prices considered accessible relative to the northern region.",
       am: "ቆንጆ ሰሜናዊ ወደብ ናሃርያ ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ሰፊ ዓይነት ዓይነት ንብረቶችን ለሰሜን ተደራሽ ዋጋ ያቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~4%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', מרכז" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
   {
     slug: "kiryat-shmona",
@@ -497,6 +629,12 @@ export const CITIES: City[] = [
       en: "Kiryat Shmona, located in the Upper Galilee, hosts a small Israeli-Ethiopian community that enjoys the scenery and proximity to nature. The real-estate market offers properties at very low prices, alongside known security challenges.",
       am: "ከፍ ባለ ጋሊሌ ያለ ቂርያት ሽሞና ትንሽ ነገር ግን ሙሉ ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ዝቅ ያለ ዋጋ ያቀርባለህ፣ ከጥሩ ተፈጥሮ ጋር።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~6%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, דרום" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "tiberias",
@@ -508,6 +646,12 @@ export const CITIES: City[] = [
       en: "Tiberias, on the shores of the Sea of Galilee, hosts a small Israeli-Ethiopian community. Tiberias's real-estate market offers accessible-priced properties with views of the Kinneret, alongside tourism and business development opportunities.",
       am: "ኪናሮስ ባሕር ዳርቻ ጢቤርያስ ትንሽ ነገር ግን ሕያው ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ምቹ ዋጋ ያሉ ቤቶችን ከኪናሮስ ምስክር ጋር ያቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' א', שכ' ב'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
   {
     slug: "safed",
@@ -519,6 +663,12 @@ export const CITIES: City[] = [
       en: "Safed, the Galilean mountain city known for its spiritual heritage, hosts a small Israeli-Ethiopian community. The real-estate market offers properties at accessible prices relative to the quality of the environment, with unique tourism potential.",
       am: "ሰፊ ባህሉ ሕዝቡን ታዋቂ ከሆነው ጋሊሌ ሸለቆ ተራሮ ጽፋት ትንሽ ማህበረሰብ ያስተናጋጅ ናት። ሪል እስቴት ምቹ ዋጋ ያቀርባለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~5%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז, קנדה" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "nof-hagalil",
@@ -530,6 +680,12 @@ export const CITIES: City[] = [
       en: "Nof HaGalil (formerly Nazareth Illit), a city overlooking Nazareth, hosts an Israeli-Ethiopian community with a presence in various neighbourhoods. The city offers stunning Galilee views, accessible housing prices and a convenient location for employment areas in the north.",
       am: "ናዝሬት ላይ ያለ ኖፍ ሃጋሊል ዓይነት ዓይነት ሰፈሮች ያሉ ማህበረሰብ ያስተናጋጅ ናት። ድንቅ ጋሊሌ ምስክር፣ ምቹ ዋጋ ያሉ ቤቶች እና ለሰሜን ቀዳሚ ቦታ ትሰጣለህ።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~2,500" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "שכ' ג', שכ' ד'" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP, מרכז קהילתי" },
+    ],
   },
   {
     slug: "maalot-tarshiha",
@@ -541,6 +697,12 @@ export const CITIES: City[] = [
       en: "Ma'alot-Tarshiha is a mixed (Jewish-Arab) city in the Upper Galilee, with a small Israeli-Ethiopian community. Its accessible real-estate prices, green surroundings and high quality of life make it an attractive residential option.",
       am: "ማዓሎት-ታርሺሃ ሰሜናዊ ጋሊሌ ቅልቅል ከተማ ናት፣ ከትንሽ ማህበረሰብ ጋር። ምቹ ዋጋ ያሉ ሪል እስቴት፣ ሰፊ አረንጓዴ ሁኔታ እና ከፍ ያለ ሕይወት ጥራት ጋሪ ያደርጋቸዋል።",
     },
+    communityStats: [
+      { label: { he: "אוכלוסיית הקהילה", en: "Community population", am: "የማህበረሰብ ህዝብ" }, value: "~1,000" },
+      { label: { he: "אחוז מהעיר", en: "Share of city", am: "ከከተማ ድርሻ" }, value: "~7%" },
+      { label: { he: "שכונות עיקריות", en: "Main neighbourhoods", am: "ዋና ሰፈሮች" }, value: "מרכז" },
+      { label: { he: "שירותי קהילה", en: "Community services", am: "የማህበረሰብ አገልግሎቶች" }, value: "ENP" },
+    ],
   },
 ];
 

@@ -109,6 +109,39 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:description", content: c.intro },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": `${publicUrl}/#organization`,
+        name: "Tedros",
+        url: publicUrl,
+        logo: `${publicUrl}/logo.png`,
+        description:
+          locale === "he"
+            ? "פורטל קהילתי מקיף ליוצאי אתיופיה בישראל — זכויות, קריירה, בריאות, נדל\"ן, קהילה."
+            : locale === "am"
+              ? "ለኢትዮጵያ-እስራኤላውያን ሁሉን አቀፍ ማህበረሰብ ፖርታል — መብቶች፣ ሥራ፣ ጤና፣ ሪል እስቴት።"
+              : "Comprehensive community portal for Ethiopian-Israelis — rights, careers, health, real-estate.",
+        foundingDate: "2026",
+        areaServed: { "@type": "Country", name: "Israel" },
+        audience: {
+          "@type": "Audience",
+          audienceType:
+            locale === "he"
+              ? "יוצאי אתיופיה בישראל"
+              : "Ethiopian-Israeli community",
+        },
+        inLanguage: ["he", "en", "am"],
+        sameAs: ["https://github.com/Orhgit/tedros"],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          email: "info@tedros.co.il",
+          availableLanguage: ["Hebrew", "English", "Amharic"],
+        },
+      },
+    },
   ];
 };
 

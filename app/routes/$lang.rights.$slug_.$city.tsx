@@ -26,6 +26,7 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
+import { generateCityFaq } from "~/lib/rights/city-faq";
 import { isRelevant, relevantCities } from "~/lib/rights/relevance";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -52,6 +53,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   const otherCitiesForRight = relevantCities(right.slug, CITIES)
     .filter((c) => c.slug !== city.slug)
     .slice(0, 6);
+  const cityFaq = generateCityFaq(right, city, locale);
   return {
     locale,
     right,
@@ -62,6 +64,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     shareUrl,
     cityRights,
     otherCitiesForRight,
+    cityFaq,
   };
 }
 
@@ -73,7 +76,7 @@ function prepFor(locale: Locale): string {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, right, city, publicUrl } = data;
+  const { locale, right, city, publicUrl, cityFaq } = data;
   const cityNameLocal = cityName(city, locale);
   const prep = prepFor(locale);
   const title = `${right.title} ${prep}${cityNameLocal} — Tedros`;
@@ -112,11 +115,22 @@ export const meta: Route.MetaFunction = ({ data }) => {
         },
       },
     },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: cityFaq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      },
+    },
   ];
 };
 
 export default function RightCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, right, city, html, related, shareUrl, cityRights, otherCitiesForRight } = loaderData;
+  const { locale, right, city, html, related, shareUrl, cityRights, otherCitiesForRight, cityFaq } = loaderData;
   const primaryTag = right.tags[0] ?? "housing";
   const tone = classesForTag(primaryTag);
   const cityNameLocal = cityName(city, locale);
@@ -321,6 +335,28 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
                 </li>
               ))}
             </ul>
+          </section>
+        )}
+
+        {/* City-specific FAQ — unique Q&A per rights×city cell, also emitted
+            as FAQPage JSON-LD for rich results in Google Search. */}
+        {cityFaq.length > 0 && (
+          <section className="mt-8 rounded-2xl border border-earth-100 bg-white p-5">
+            <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
+              {locale === "he"
+                ? `שאלות נפוצות — ${cityName(city, locale)}`
+                : locale === "am"
+                  ? `ተደጋጋሚ ጥያቄዎች — ${cityName(city, locale)}`
+                  : `FAQ — ${cityName(city, locale)}`}
+            </h2>
+            <dl className="mt-4 divide-y divide-earth-100">
+              {cityFaq.map((item, i) => (
+                <div key={i} className="py-4 first:pt-0 last:pb-0">
+                  <dt className="font-medium text-earth-900">{item.question}</dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-ink-700">{item.answer}</dd>
+                </div>
+              ))}
+            </dl>
           </section>
         )}
 

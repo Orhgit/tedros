@@ -104,16 +104,29 @@ export const meta: Route.MetaFunction = ({ data }) => {
       "script:ld+json": {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "@id": publicUrl,
+        "@id": `${publicUrl}/#website`,
         url: publicUrl,
         name: "Tedros",
         description,
         inLanguage: locale,
+        publisher: { "@id": `${publicUrl}/#organization` },
         potentialAction: {
           "@type": "SearchAction",
           target: `${publicUrl}/${locale}/rights?q={search_term_string}`,
           "query-input": "required name=search_term_string",
         },
+      },
+    },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": `${publicUrl}/#organization`,
+        name: "Tedros",
+        url: publicUrl,
+        sameAs: ["https://github.com/Orhgit/tedros"],
+        areaServed: { "@type": "Country", name: "Israel" },
+        inLanguage: ["he", "en", "am"],
       },
     },
   ];
