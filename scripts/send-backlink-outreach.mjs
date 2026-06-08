@@ -1,3 +1,4 @@
+/* eslint-env node */
 /**
  * One-shot backlink outreach script.
  * Sends personalised Hebrew emails to 5 partner orgs asking for a backlink
@@ -118,7 +119,7 @@ ${BASE_URL}/he/about`,
   },
 ];
 
-async function sendEmail({ to, subject, bodyHe, name }) {
+async function sendEmail({ to, subject, bodyHe }) {
   const html = `<div dir="rtl" style="font-family:Arial,sans-serif;font-size:15px;line-height:1.7;color:#222;max-width:600px">
     ${bodyHe.replace(/\n\n/g, "</p><p>").replace(/\n/g, "<br>").replace(/^/, "<p>").replace(/$/, "</p>")}
   </div>`;
