@@ -110,6 +110,32 @@ export function governmentServiceJsonLd(
   };
 }
 
+// ── ItemList (city aggregate page — TED-94) ─────────────────────────────────
+
+export interface ItemListEntry {
+  name: string;
+  /** Path relative to the locale, e.g. `/urban-renewal/dora-netanya`. */
+  path: string;
+}
+
+/** `ItemList` of the neighborhood pages aggregated on a
+ * `/cities/:slug/urban-renewal` page — each item links out to its own
+ * `Place` + `GovernmentService` page rather than re-declaring those types
+ * here (avoids duplicate `@id`s across pages, see schema-org.md §11). */
+export function itemListJsonLd(ctx: SchemaContext, items: ItemListEntry[]): JsonLd {
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "ItemList",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: urlFor(ctx, item.path),
+      name: item.name,
+    })),
+  };
+}
+
 // ── FAQ (only when ≥3 visible Q&As exist on the page) ───────────────────────
 
 export interface FaqEntry {

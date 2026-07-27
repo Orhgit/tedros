@@ -5,6 +5,7 @@ import {
   breadcrumbJsonLd,
   faqJsonLd,
   governmentServiceJsonLd,
+  itemListJsonLd,
   placeJsonLd,
   type SchemaContext,
 } from "../app/lib/urban-renewal/schema";
@@ -52,6 +53,29 @@ describe("governmentServiceJsonLd", () => {
     const provider = out["provider"] as Record<string, unknown>;
     expect(provider["@type"]).toBe("GovernmentOrganization");
     expect(provider["name"]).toBe(dora.authority.he);
+  });
+});
+
+describe("itemListJsonLd", () => {
+  it("emits an ItemList with 1-indexed ListItems and locale-aware URLs (TED-94)", () => {
+    const out = itemListJsonLd(ctx, [
+      { name: "דורה", path: "/urban-renewal/dora-netanya" },
+      { name: "נאות שקד", path: "/urban-renewal/neot-shaked-netanya" },
+    ]);
+    expect(out["@type"]).toBe("ItemList");
+    expect(out["numberOfItems"]).toBe(2);
+    const items = out["itemListElement"] as Array<Record<string, unknown>>;
+    expect(items).toHaveLength(2);
+    expect(items[0]?.position).toBe(1);
+    expect(items[0]?.url).toBe("https://tedros.co.il/he/urban-renewal/dora-netanya");
+    expect(items[1]?.position).toBe(2);
+    expect(items[1]?.name).toBe("נאות שקד");
+  });
+
+  it("handles an empty list", () => {
+    const out = itemListJsonLd(ctx, []);
+    expect(out["numberOfItems"]).toBe(0);
+    expect(out["itemListElement"]).toEqual([]);
   });
 });
 
