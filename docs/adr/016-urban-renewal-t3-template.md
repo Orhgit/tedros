@@ -1,6 +1,6 @@
 # ADR-016: Urban-renewal neighborhood pages graduate to a full T3 template
 
-**Status**: Accepted (2026-07-26). Implemented same day (TED-93).
+**Status**: Accepted (2026-07-26). Implemented same day (TED-93). §D4/§D5 updated 2026-07-27 (TED-97) — the 15th Kiryat Gat neighborhood shipped.
 **Owner**: Tedros Engineer (implementation); Tedros Content & SEO (facts, sourcing).
 **Related**: [ADR-017](./017-tier1-seo-routing.md) (D2 — the routing decision this ADR implements), [docs/seo/programmatic-templates.md](../seo/programmatic-templates.md) (T3 definition), [docs/seo/schema-org.md](../seo/schema-org.md) §6/§9, [docs/seo/technical-audit-2026-05-30.md](../seo/technical-audit-2026-05-30.md).
 
@@ -26,20 +26,20 @@ Each page emits `BreadcrumbList`, `Place` (with `containedInPlace` → the city)
 
 ### D4. Legal-aid contact reuses existing `rights` content — no new facts invented
 
-Three neighborhoods already have a dedicated `rights` entry (`urban-renewal-kiryat-moshe`, `urban-renewal-ramat-eliyahu`, `urban-renewal-netanya`). The other 9 link to the generic `pinui-binui-tenant-rights` right, which already carries real, sourced contact info (Tebeka free legal hotline, Urban Renewal Authority phone). No new contact facts were invented for this ADR.
+Three neighborhoods already have a dedicated `rights` entry (`urban-renewal-kiryat-moshe`, `urban-renewal-ramat-eliyahu`, `urban-renewal-netanya`). The other 9 (and, as of TED-97, a 10th — the Kiryat Gat 15th neighborhood) link to the generic `pinui-binui-tenant-rights` right, which already carries real, sourced contact info (Tebeka free legal hotline, Urban Renewal Authority phone). No new contact facts were invented for this ADR.
 
-### D5. One neighborhood skipped for lack of verifiable naming
+### D5. One neighborhood skipped for lack of verifiable naming — shipped in TED-97
 
-TED-93's source list included a 15th neighborhood in Kiryat Gat ("Atzmaut-Komemiyut" / transliteration uncertain). It was not added — see the TED-93 PR description for detail. Ship the other 14 (5 upgraded + 9 new) now; add the 15th once a named, sourced confirmation exists.
+TED-93's source list included a 15th neighborhood in Kiryat Gat ("Atzmaut-Komemiyut" / transliteration uncertain). It was not added at the time — see the TED-93 PR description for detail. **Update (TED-97, 2026-07-27)**: TED-96's research verified the neighborhood's real name — "מתחם קוממיות-יסקי" (Komemiyut-Yaski complex, TAMAL 2014) — against `minheletgat.co.il` (the official Kiryat Gat urban-renewal authority page), `ynet`, and `magdilim.co.il`. It has since shipped as `komemiyut-yaski-kiryat-gat` in `app/lib/urban-renewal/registry.ts`, bringing the T3 template to its full planned 15 neighborhoods (5 upgraded + 9 added in TED-93 + 1 added in TED-97).
 
 ## Consequences
 
-- 14 neighborhoods × 3 locales = 42 real, indexable URLs replace 5×3=15 thin/duplicate ones (net +27 new URLs, all non-thin).
+- 15 neighborhoods × 3 locales = 45 real, indexable URLs (14×3=42 shipped in TED-93; +3 added in TED-97 once the 15th neighborhood's name was verified) replace 5×3=15 thin/duplicate ones.
 - `docs/seo/programmatic-templates.md` T3 status moves from "Planned" to "Live".
-- Future neighborhoods (the skipped 15th, or any new priority area) follow the same two-registry split: DB seed row (if listings will reference it) + SEO registry entry (for the page).
+- Kiryat Gat's `/cities/:slug/urban-renewal` aggregate page (TED-94) now reflects all 3 of its registered neighborhoods, matching the original TED-94 spec.
 - City pages (`/cities/:slug`) can now cross-link to their neighborhoods' T3 pages instead of rendering the "coming soon" empty state.
 
 ## Alternatives considered
 
-- **Store T3 content directly on the DB `neighborhoods` row** (e.g. a JSONB `content` column). Rejected for this pass — would require a migration + Data agent involvement, and the T1 precedent (pure-module registry, no DB) is proven, cheaper, and sufficient for the current variant count (14, not thousands).
+- **Store T3 content directly on the DB `neighborhoods` row** (e.g. a JSONB `content` column). Rejected for this pass — would require a migration + Data agent involvement, and the T1 precedent (pure-module registry, no DB) is proven, cheaper, and sufficient for the current variant count (15, not thousands).
 - **Skip the Kiryat Gat 15th neighborhood by guessing the Hebrew name.** Rejected — CLAUDE.md's cost/quality bar and the source ticket both explicitly call for skipping over guessing when a fact can't be verified.

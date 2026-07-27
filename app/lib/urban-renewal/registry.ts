@@ -275,6 +275,45 @@ export const URBAN_RENEWAL_NEIGHBORHOODS: UrbanRenewalNeighborhood[] = [
     sources: ["kg4u.co.il — 2026 Kiryat Gat urban-renewal map"],
   },
   {
+    slug: "komemiyut-yaski-kiryat-gat",
+    citySlug: "kiryat-gat",
+    name: {
+      he: "מתחם קוממיות-יסקי",
+      en: "Komemiyut-Yaski complex",
+      am: "ኮመሚዩት-ያስኪ ማዕከል",
+    },
+    status: {
+      he: 'מתחם קוממיות-יסקי (תמ"ל 2014) אושר להפקדה בוותמ"ל ב-17.3.2022, ואושר סופית בספטמבר 2022 — כ-6 חודשים לאחר מכן. התוכנית מחליפה 114 יחידות דיור קיימות (6 מבנים בני 3 קומות, במצב פיזי רעוע) ב-1,552–1,585 יחידות דיור חדשות (המספר המדויק משתנה מעט בין שלב ההפקדה לאישור הסופי) במבנים בני 9–30 קומות. זו תוכנית התחדשות עירונית שלישית ונפרדת בקריית גת, לצד רובע הנביאים (2017) ושבט ישראל (2019).',
+      en: "The Komemiyut-Yaski complex (TAMAL 2014) was approved for deposit by the Vatmal on 17.3.2022, and received final approval in September 2022 — roughly 6 months later. The plan replaces 114 existing housing units (6 buildings, 3 stories, in poor physical condition) with approximately 1,552–1,585 new units (the exact figure varies slightly between the deposit and final-approval stages) in buildings of 9–30 stories. This is a third, separate urban-renewal plan in Kiryat Gat, alongside Rova HaNevi'im (2017) and Shevet Israel (2019).",
+      am: 'የኮመሚዩት-ያስኪ ማዕከል (ትማ"ል 2014) በ17.3.2022 በቫትማል ለማስቀመጥ ጸድቆ፣ በመስከረም 2022 (ከ6 ወራት በኋላ) የመጨረሻ ማጽደቅ አግኝቷል። ዕቅዱ 114 ነባር ቤቶችን (6 ህንፃዎች፣ 3 ፎቅ፣ በደካማ አካላዊ ሁኔታ) በ9–30 ፎቅ ህንፃዎች ውስጥ ወደ 1,552–1,585 አዲስ ቤቶች ይተካል። ይህ ከሮቫ ሃነቢኢም (2017) እና ሸቬት እስራኤል (2019) ጎን ለጎን በቂርያት ጋት ሦስተኛ እና የተለየ የከተማ ዕድሳት ዕቅድ ነው።',
+    },
+    authority: {
+      he: 'הוותמ"ל (הוועדה הארצית לתכנון ולבנייה של מתחמים מועדפים לדיור), בביצוע משותף עם עיריית קריית גת ורשות מקרקעי ישראל (רמ"י); תכנון אדריכלי: משרד יער אדריכלים.',
+      en: "The Vatmal (National Planning and Building Committee for Preferred Housing Complexes), implemented jointly with Kiryat Gat municipality and the Israel Land Authority (Rashut Mekarke'ei Yisrael); architectural planning by Ya'ar Architects.",
+      am: "ቫትማል (ለተመራጭ የመኖሪያ ማዕከሎች ብሔራዊ የዕቅድ እና ግንባታ ኮሚቴ)፣ ከቂርያት ጋት ማዘጋጃ ቤት እና ከእስራኤል መሬት ባለስልጣን ጋር በጋራ የሚተገበር፤ የስነ-ህንፃ ዕቅድ በያዕር አርክቴክቶች።",
+    },
+    units: {
+      before: 114,
+      after: 1552,
+      note: {
+        he: 'שני מספרים פורסמו: 1,585 יח"ד בשלב ההפקדה (17.3.2022) ו-1,552 יח"ד באישור הסופי (ספטמבר 2022, כולל כ-300–310 דירות קטנות) — הפער נובע ככל הנראה משינויים בין השלבים, לא מסתירה מהותית.',
+        en: "Two figures have been published: 1,585 units at the deposit stage (17.3.2022) and 1,552 units at final approval (September 2022, including roughly 300–310 small apartments) — the gap likely reflects changes between stages, not a material contradiction.",
+        am: "ሁለት ቁጥሮች ታትመዋል፦ 1,585 ቤቶች በማስቀመጥ ደረጃ (17.3.2022) እና 1,552 ቤቶች በመጨረሻ ማጽደቅ (መስከረም 2022)።",
+      },
+    },
+    communityContext: {
+      he: "קריית גת היא אחת הערים בישראל עם השיעור הגבוה ביותר של יוצאי אתיופיה מכלל האוכלוסייה (כ-28%). מתחם קוממיות-יסקי הוא הפרויקט השלישי של התחדשות עירונית בעיר, לצד רובע הנביאים ושבט ישראל, ומחזק עוד יותר את מרכזיות קריית גת בתוכניות ההתחדשות העירונית המשרתות את הקהילה.",
+      en: "Kiryat Gat is one of Israel's cities with the highest share of Israeli-Ethiopians relative to total population (roughly 28%). The Komemiyut-Yaski complex is the third urban-renewal project in the city, alongside Rova HaNevi'im and Shevet Israel, further reinforcing Kiryat Gat's centrality to urban-renewal plans serving the community.",
+      am: "ቂርያት ጋት ከጠቅላላ ሕዝብ አንፃር ከፍተኛ የኢትዮጵያ-እስራኤላውያን ድርሻ (~28%) ካላቸው ከተሞች አንዷ ናት። የኮመሚዩት-ያስኪ ማዕከል ከሮቫ ሃነቢኢም እና ሸቬት እስራኤል ጎን ለጎን በከተማዋ ሦስተኛው የከተማ ዕድሳት ፕሮጀክት ሲሆን ለማህበረሰቡ የሚያገለግሉ የከተማ ዕድሳት ዕቅዶች ማዕከላዊነትን የበለጠ ያጠናክራል።",
+    },
+    rightSlug: "pinui-binui-tenant-rights",
+    sources: [
+      "https://minheletgat.co.il/projects/2850-2/",
+      "https://magdilim.co.il/170320221458/",
+      "https://www.ynet.co.il/economy/article/hyfql7dls",
+    ],
+  },
+  {
     slug: "kibbutz-galuyot-kiryat-malakhi",
     citySlug: "kiryat-malakhi",
     name: { he: "מתחם קיבוץ גלויות", en: "Kibbutz Galuyot", am: "ኪቡትስ ጋሉዮት" },

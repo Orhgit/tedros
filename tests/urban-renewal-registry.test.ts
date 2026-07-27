@@ -12,7 +12,7 @@ import {
 } from "../app/lib/urban-renewal/registry";
 
 describe("urban-renewal registry", () => {
-  it("includes the 5 original priority neighborhoods plus 9 new ones (14 total)", () => {
+  it("includes the 5 original priority neighborhoods plus 9 TED-93 + 1 TED-97 (15 total)", () => {
     const slugs = new Set(URBAN_RENEWAL_NEIGHBORHOODS.map((n) => n.slug));
     const original = [
       "kiryat-moshe-rehovot",
@@ -24,14 +24,15 @@ describe("urban-renewal registry", () => {
     for (const s of original) {
       expect(slugs.has(s), `missing original neighborhood: ${s}`).toBe(true);
     }
-    expect(URBAN_RENEWAL_NEIGHBORHOODS.length).toBe(14);
+    expect(URBAN_RENEWAL_NEIGHBORHOODS.length).toBe(15);
   });
 
-  it("does NOT include the unverifiable Kiryat Gat neighborhood", () => {
+  it("includes the verified 15th Kiryat Gat neighborhood (TED-96/TED-97)", () => {
     const slugs = URBAN_RENEWAL_NEIGHBORHOODS.map((n) => n.slug);
-    expect(slugs.some((s) => s.includes("atzmaut") || s.includes("komemiyut"))).toBe(
-      false,
-    );
+    expect(slugs).toContain("komemiyut-yaski-kiryat-gat");
+    const n = findNeighborhoodBySlug("komemiyut-yaski-kiryat-gat")!;
+    expect(n.name.he).toBe("מתחם קוממיות-יסקי");
+    expect(n.citySlug).toBe("kiryat-gat");
   });
 
   it("has unique slugs in `<neighborhood>-<city>` kebab-case form", () => {
