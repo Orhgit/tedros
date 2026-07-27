@@ -1,5 +1,6 @@
 // /:lang/education/scholarships — Scholarships list (RIN-504 / Phase 5 Wave 1).
-// Lists 12 scholarships with search + level filter.
+// Lists all scholarships (count is dynamic, see SCHOLARSHIPS registry) with
+// search + level filter.
 
 import { Link, useSearchParams } from "react-router";
 
