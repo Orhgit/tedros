@@ -1,6 +1,7 @@
 // Scholarships seed (RIN-504 / Phase 5 Education Hub Wave 1).
 //
-// 17 scholarships Wave 1 + 20 scholarships Wave 2 (total 37).
+// 17 scholarships Wave 1 + 20 scholarships Wave 2 + 13 scholarships Wave 3
+// (TED-95 education hub — org/scholarship pages) = 50 total.
 // Captures high-intent "{scholarship name}", "מלגה לבני קהילת יוצאי אתיופיה",
 // "Ethiopian Israeli scholarship" queries and routes applicants to providers.
 //
@@ -12,6 +13,7 @@ import type { Locale } from "../i18n/config";
 import { DEFAULT_LOCALE } from "../i18n/config";
 import type { ScholarshipLevel } from "./categories";
 import { SCHOLARSHIPS_WAVE2 } from "./scholarships-wave2.server";
+import { SCHOLARSHIPS_WAVE3 } from "./scholarships-wave3.server";
 
 export type { ScholarshipLevel } from "./categories";
 
@@ -1304,7 +1306,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     },
   },
 
-  // 13. מלגת מרום CHE — slug: marom-che (TED-NEW)
+  // 13. מלגת מרום CHE — slug: marom-che (TED-95: facts corrected against
+  // che.org.il/scholarships/marom, verified 2026-07-26. Prior version of this
+  // entry stated an income/GPA means-test and a fixed March 31 deadline that
+  // do not match the published CHE terms for תשפ"ז — replaced below.)
   {
     slug: "marom-che",
     level: "undergrad",
@@ -1315,138 +1320,120 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       am: "ማሮም ስኮላርሺፕ — ከፍተኛ ትምህርት ምክር ቤት",
     },
     shortDescription: {
-      he: "מלגה ממלכתית של המועצה להשכלה גבוהה לסטודנטים ממוצא אתיופי — עד ₪20,000 לשנה בכל האוניברסיטאות.",
-      en: "National scholarship from the Council for Higher Education for students of Ethiopian origin — up to ₪20,000/year at all Israeli universities.",
-      am: 'ለኢትዮጵያ ዜጎች ብቻ ከፍተኛ ትምህርት ምክር ቤት ስኮላርሺፕ — እስከ 20,000 ሺ"ል ዓመታዊ።',
+      he: 'מלגה ממלכתית של המועצה להשכלה גבוהה (מל"ג/ות"ת) לתואר ראשון ושני ליוצאי אתיופיה — ₪10,000 לשנה; הרשמה לתשפ"ז נפתחת 9.9.2026.',
+      en: "National scholarship from the Council for Higher Education (CHE/VATAT) for undergraduate and master's students of Ethiopian origin — ₪10,000/year; 2026-27 registration opens Sept 9, 2026.",
+      am: "ከCHE/VATAT ለመጀመሪያና ለሁለተኛ ዲግሪ ኢትዮጵያ-ተወላጅ ተማሪዎች ብሔራዊ ስኮላርሺፕ — ₪10,000/ዓመት፤ ለ2026-27 ምዝገባ በሴፕቴምበር 9, 2026 ይከፈታል።",
     },
-    amountMinIls: 8000,
-    amountMaxIls: 20000,
+    amountMinIls: 10000,
+    amountMaxIls: 10000,
     amountNote: {
-      he: "מלגה שנתית; מחודשת בכפוף לממוצע ≥ 70. ניתן לצבירה עם מלגות אחרות.",
-      en: "Annual scholarship; renewable subject to GPA ≥ 70. Can be combined with other scholarships.",
-      am: "ዓመታዊ፤ GPA ≥ 70 ሲጠበቅ ይታደሳል። ከሌሎች ስኮላርሺፖች ጋር ሊጣመር ይችላል።",
+      he: "₪10,000 קבועים לכל שנת לימודים, משנה א' ועד סיום שנות התואר התקניות (עודכן — לא מדורג לפי שנה או תחום כפי שנכתב בעבר).",
+      en: "A flat ₪10,000 per academic year, from year 1 through the standard duration of the degree (corrected — not tiered by year or field as previously written here).",
+      am: "₪10,000 ቋሚ በዓመት፣ ከ1ኛ ዓመት እስከ መደበኛ የዲግሪ ዓመታት ፍጻሜ ድረስ።",
     },
-    deadline: "2026-03-31",
-    applicationUrl: "https://www.che.org.il/marom",
-    tags: ["undergrad", "community", "government", "needs-based"],
+    deadline: "2026-09-09",
+    applicationUrl: "https://che.org.il/scholarships/marom/",
+    tags: ["undergrad", "masters", "community", "government"],
     communityPriority: true,
     relatedScholarships: [
       "hesegim-undergraduate",
       "isef-fellowship",
       "klita-tuition-grant",
+      "vatat-excellence-mentoring",
     ],
     relatedRights: ["academic-tuition-grant", "klita-basket-ethiopia"],
     bodies: {
       he: `## מה זאת מלגת מרום של המועצה להשכלה גבוהה?
 
-מלגת מרום היא תכנית מלגות ממלכתית של המועצה להשכלה גבוהה (מל"ג) המיועדת **אך ורק לסטודנטים ממוצא אתיופי** הלומדים לתואר ראשון בישראל. התכנית הוקמה במסגרת המאמץ הממשלתי לצמצום פערים בהשכלה גבוהה.
+מלגת מרום היא תכנית מלגות ממלכתית של המועצה להשכלה גבוהה (מל"ג/ות"ת), המיועדת **אך ורק לסטודנטים ממוצא אתיופי**. החל משנת הלימודים תשפ"ז (2026–27) ניתן להגיש בקשה גם לתואר שני, לא רק תואר ראשון.
 
 ## מי זכאי?
 
-- סטודנט/ית בעל/ת לפחות הורה אחד שנולד באתיופיה, או עלה מאתיופיה
-- לומד/ת תואר ראשון במוסד אקדמי מוכר על-ידי מל"ג (אוניברסיטה, מכללה אקדמית)
-- הכנסה משפחתית עד 175% מקו העוני
-- ממוצע ציונים ≥ 70 (לחידוש)
+- סטודנט/ית ממוצא אתיופי בלבד — נמצא/ת בישראל 15+ שנה, **או** נולד/ה בישראל להורים שנולדו באתיופיה
+- לומד/ת בתכנית אקדמית המוכרת על-ידי מל"ג (תואר ראשון או שני)
+- החל מתשפ"ז: ניתן להגיש בכל שנות הלימוד התקניות של התואר, לא רק בשנה א'
+- החל מתשפ"ז: המצב הסוציו-אקונומי אינו עוד תנאי סף, אלא משוקלל בניקוד הכולל; חובת ההתנדבות שהייתה בעבר בוטלה
+
+> **הערה לעריכה**: הסעיפים לעיל אומתו מול che.org.il/scholarships/marom (יולי 2026). תנאי סף מדויקים לתואר שני (האם יש הבדל בסכום/קריטריונים מול תואר ראשון) לא פורטו במקור שנבדק — מומלץ לוודא מול מל"ג לפני קמפיין ממומן.
 
 ## כמה מקבלים?
 
-| מסלול לימוד | מלגה שנתית |
-|-------------|-----------|
-| כל התחומים (1–3 שנה) | ₪8,000–₪14,000 |
-| תחומי ביקוש גבוה (הנדסה, רפואה, רוקחות) | ₪16,000–₪20,000 |
+₪10,000 לשנת לימודים, מדי שנה עד סיום שנות התואר התקניות.
 
-## שלבי ההגשה
+## איך פונים?
 
-1. **כניסה לפורטל מל"ג** — moatza.che.org.il
-2. **מילוי בקשה מקוונת** עד 31 במרץ מדי שנה
-3. **צירוף מסמכים**: תעודת זהות, אישור לימודים, גיליון ציונים, אסמכתא על מוצא אתיופי, אישור הכנסה
-4. **אישור**: תוך 30 יום מסיום מועד ההגשה
-5. **תשלום**: ישירות לחשבון הסטודנט בתחילת כל סמסטר
-
-## שאלות נפוצות
-
-**האם מלגת מרום ממל"ג שונה ממלגת מרום הפרטית?**
-כן — מרום מל"ג היא תכנית ממשלתית. יש ארגונים עם שם דומה אך תנאים שונים; וודאו שאתם פונים לכתובת moatza.che.org.il.
-
-**האם סטודנטים שעלו לפני 15 שנה עדיין זכאים?**
-כן — אין הגבלת שנים מהעלייה. הזכאות נקבעת על-פי מוצא, לא שנת עלייה.
+1. הרשמה מקוונת דרך che.org.il/scholarships/marom
+2. ההרשמה לתשפ"ז נפתחת ב-**9 בספטמבר 2026** ונסגרת בתחילת נובמבר (מועד סגירה מדויק — לוודא כל שנה מול האתר; לא פורסם תאריך יום מדויק)
+3. צירוף מסמכים: תעודת זהות, אישור לימודים/רישום אקדמי, אסמכתא על מוצא אתיופי
+4. אישור הזכאות והעברת המלגה ישירות דרך המוסד האקדמי
 
 ## ראו גם
 
 - [מלגת הסגים — תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship) — לתואר שני/שלישי
 - [מענק שכר לימוד — משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
+- [ות"ת — מצוינות ומנטורינג](/he/education/scholarships/vatat-excellence-mentoring)
 `,
       en: `## What is the Marom Scholarship from the Council for Higher Education?
 
-The Marom Scholarship is a national scholarship program of the Council for Higher Education (CHE) designed **exclusively for students of Ethiopian origin** studying for an undergraduate degree in Israel. The program was established as part of the government's effort to reduce gaps in higher education.
+The Marom Scholarship is a national scholarship program of the Council for Higher Education (CHE/VATAT), designed **exclusively for students of Ethiopian origin**. Starting in the 2026-27 academic year (Hebrew: תשפ"ז), master's students can also apply — not only undergraduates.
 
 ## Who is eligible?
 
-- Student with at least one parent born in Ethiopia, or who made aliyah from Ethiopia
-- Studying for an undergraduate degree at a CHE-accredited institution (university or academic college)
-- Family income up to 175% of the poverty line
-- GPA ≥ 70 (for renewal)
+- Students of Ethiopian origin only — resident in Israel 15+ years, **or** born in Israel to parents born in Ethiopia
+- Enrolled in a CHE-recognized academic program (undergraduate or master's)
+- From 2026-27: applicants may apply in any standard year of the degree, not just year 1
+- From 2026-27: socio-economic status is no longer a strict eligibility gate but is weighted into the overall score; the previous volunteering requirement has been dropped
+
+> **Editorial note**: the above was verified against che.org.il/scholarships/marom (July 2026). Exact master's-level criteria (whether amount/requirements differ from undergraduate) were not detailed on the page checked — confirm with CHE before any paid campaign.
 
 ## How much?
 
-| Field of study | Annual scholarship |
-|---------------|------------------|
-| All fields (years 1–3) | ₪8,000–₪14,000 |
-| High-demand fields (engineering, medicine, pharmacy) | ₪16,000–₪20,000 |
+A flat ₪10,000 per academic year, through the standard duration of the degree.
 
-## Application steps
+## How to apply
 
-1. **Access the CHE portal** — moatza.che.org.il
-2. **Complete online application** by March 31 each year
-3. **Attach documents**: ID, enrollment confirmation, transcript, proof of Ethiopian origin, income verification
-4. **Decision**: within 30 days of closing date
-5. **Payment**: directly to student's account at the start of each semester
-
-## FAQ
-
-**Is the CHE Marom different from the private Marom scholarship?**
-Yes — CHE Marom is a government program. There are organizations with similar names but different terms; verify you are at moatza.che.org.il.
-
-**Are students who made aliyah 15 years ago still eligible?**
-Yes — there is no years-since-aliyah restriction. Eligibility is based on origin, not year of aliyah.
+1. Apply online via che.org.il/scholarships/marom
+2. Registration for 2026-27 opens **September 9, 2026** and closes in early November (exact closing date not published on the page checked — verify yearly)
+3. Attach documents: ID, academic enrollment confirmation, proof of Ethiopian origin
+4. Eligibility confirmation and payment via the academic institution
 
 ## See also
 
 - [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship) — for master's/PhD
 - [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
+- [VATAT — Excellence & Mentoring](/en/education/scholarships/vatat-excellence-mentoring)
 `,
-      am: `## ማሮም ስኮላርሺፕ (CHE) ምንድን ነው?
+      am: `## ማሮም ስኮላርሺፕ (CHE/VATAT) ምንድን ነው?
 
-ይህ ስኮላርሺፕ **ለኢትዮጵያ ዜጎች ብቻ** ሲሆን ወደ እስራኤል ከፍተኛ ትምህርት ተደራሽነት ለማሳደግ የሚያስፈልግ ብሔራዊ ፕሮግራም ነው።
+ይህ ስኮላርሺፕ **ለኢትዮጵያ-ተወላጅ ተማሪዎች ብቻ** የተዘጋጀ ብሔራዊ ፕሮግራም ነው። ከ2026-27 ጀምሮ ለሁለተኛ ዲግሪ ተማሪዎችም ክፍት ነው (ከዚህ በፊት ለመጀመሪያ ዲግሪ ብቻ ነበር)።
 
 ## ለማን ይሆናል?
 
-- ቢያንስ አንድ ወላጅ ኢትዮጵያ የተወለደ ወይም ከኢትዮጵያ ዐሊያ
-- CHE-ታወቀ ዩኒቨርሲቲ ወይም ኮሌጅ ያለ
-- ቤተሰብ ገቢ ≤ 175% ከድህነት ወሰን
-- GPA ≥ 70 ለታዳሽ
+- ኢትዮጵያ-ተወላጅ ተማሪዎች ብቻ — ከ15+ ዓመታት በእስራኤል የኖሩ ወይም በእስራኤል የተወለዱ ለኢትዮጵያ ወላጆች
+- CHE-እውቅና ያለው ፕሮግራም ውስጥ (መጀመሪያ ወይም ሁለተኛ ዲግሪ)
+- ከ2026-27 ጀምሮ፦ በማንኛውም መደበኛ የዲግሪ ዓመት ማመልከት ይቻላል
+- ከ2026-27 ጀምሮ፦ ማህበራዊ-ኢኮኖሚያዊ ሁኔታ ቅድመ-ሁኔታ አይደለም፣ በውጤት ውስጥ ግን ይመዘናል
+
+*(ማስታወሻ፦ ከላይ ያለው መረጃ ከche.org.il/scholarships/marom ጋር ተረጋግጧል — ሐምሌ 2026)*
 
 ## ስንት ያገኛሉ?
 
-| ዘርፍ | ዓመታዊ |
-|-----|-------|
-| ሁሉም ዘርፎች | 8,000–14,000 ሺ"ል |
-| ኢንጂነሪንግ/ህክምና/ፋርማሲ | 16,000–20,000 ሺ"ል |
+₪10,000 ቋሚ በዓመት፣ እስከ ዲግሪ ፍጻሜ ድረስ።
 
-## ደረጃዎች
+## እንዴት ማመልከት ይቻላል?
 
-1. moatza.che.org.il ፖርታል ይክፈቱ
-2. ማርች 31 በፊት ቅጽ ይሙሉ
-3. ሰነዶች ያቅርቡ
-4. ከ30 ቀናት ውስጥ ምላሽ
-5. ወደ ባንክ ሂሳብ ያስተላልፋሉ
+1. በche.org.il/scholarships/marom በመስመር ላይ ማመልከት
+2. ለ2026-27 ምዝገባ በሴፕቴምበር 9, 2026 ይከፈታል፣ በኖቬምበር መጀመሪያ ይዘጋል
+3. ሰነዶች ማስረከብ፦ መታወቂያ፣ የትምህርት ምዝገባ ማረጋገጫ፣ የኢትዮጵያ ትውልድ ማረጋገጫ
+4. ብቁነት ማረጋገጫና ክፍያ በአካዳሚክ ተቋሙ በኩል
 
 ## ይህንንም ይዩ
 
 - [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
 - [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
+- [VATAT — ልቀትና አማካሪነት](/am/education/scholarships/vatat-excellence-mentoring)
 `,
     },
   },
@@ -2107,6 +2094,7 @@ The scholarship is suspended for one year. It can be renewed if the average rise
   },
 
   ...SCHOLARSHIPS_WAVE2,
+  ...SCHOLARSHIPS_WAVE3,
 ];
 
 // Re-export for convenience — callers may import ALL_SCHOLARSHIPS directly.

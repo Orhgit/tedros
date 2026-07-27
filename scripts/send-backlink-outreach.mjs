@@ -1,4 +1,3 @@
-/* eslint-env node */
 /**
  * One-shot backlink outreach script.
  * Sends personalised Hebrew emails to 5 partner orgs asking for a backlink
