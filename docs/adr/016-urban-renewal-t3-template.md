@@ -2,7 +2,7 @@
 
 **Status**: Accepted (2026-07-26). Implemented same day (TED-93).
 **Owner**: Tedros Engineer (implementation); Tedros Content & SEO (facts, sourcing).
-**Related**: [docs/seo/programmatic-templates.md](../seo/programmatic-templates.md) (T3 definition), [docs/seo/schema-org.md](../seo/schema-org.md) §6/§9, [docs/seo/technical-audit-2026-05-30.md](../seo/technical-audit-2026-05-30.md).
+**Related**: [ADR-017](./017-tier1-seo-routing.md) (D2 — the routing decision this ADR implements), [docs/seo/programmatic-templates.md](../seo/programmatic-templates.md) (T3 definition), [docs/seo/schema-org.md](../seo/schema-org.md) §6/§9, [docs/seo/technical-audit-2026-05-30.md](../seo/technical-audit-2026-05-30.md).
 
 ## Context
 
