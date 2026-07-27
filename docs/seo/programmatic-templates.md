@@ -41,6 +41,19 @@ The goal is **non-thin, intent-matched** programmatic output. Every variant a te
 | Variant-specific content | calculator form + result + FAQ section                          |
 | Internal links in        | every city page (CTA card)                                      |
 
+### T3 — `/urban-renewal/:neighborhood` (TED-16 §3.2 — shipped TED-93 / ADR-016)
+
+| field                    | value                                                                                                                                                           |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Routes                   | `app/routes/$lang.urban-renewal.$slug.tsx`                                                                                                                      |
+| Variants                 | 14 neighborhoods (`app/lib/urban-renewal/registry.ts`) — 5 original priority neighborhoods + 9 added in TED-93                                                  |
+| URLs generated           | 14 × 3 = 42                                                                                                                                                     |
+| Slug convention          | `<neighborhood>-<city>`, e.g. `kiryat-moshe-rehovot`, `ramat-ashkol-lod`, `shchuna-dalet-beer-sheva` (always suffixed with city to avoid collisions)            |
+| Schema                   | `BreadcrumbList` + `Place` (`containedInPlace` → City, no `geo` — unverified at neighborhood level) + `GovernmentService` + `FAQPage` (3 visibly-rendered Q&As) |
+| Variant-specific content | project status, developer/authority, unit counts (before → planned), community relevance, legal-aid pointer into `rights` content, source citations             |
+| Internal links           | city pages (`/cities/:slug`) list their neighborhoods; each neighborhood page links back to its city and to the matching `rights` legal-aid entry               |
+| Known gap                | a 15th Kiryat Gat neighborhood ("Atzmaut-Komemiyut") was skipped — the name/transliteration could not be verified against a source; see ADR-016 §D5             |
+
 ### T7 — `/education/scholarships` index → `/education/scholarships/:slug` (RIN-504 → TED-95)
 
 | field                    | value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -56,16 +69,6 @@ The goal is **non-thin, intent-matched** programmatic output. Every variant a te
 ## Planned templates
 
 These are committed in TED-16 phase 3 but not yet shipped. Designs below so future implementation stays aligned with the SEO model.
-
-### T3 — `/urban-renewal/:neighborhood` (TED-16 §3.2, blocked on seed + map decision)
-
-| field                    | value                                                                                                                                                                      |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Variants                 | 5 priority neighborhoods (Kiryat Moshe / Rehovot, Ramat Eliyahu / Rishon, Dora · Neot Shaked · Kiryat Nordau / Netanya)                                                    |
-| URLs generated           | 5 × 3 = 15                                                                                                                                                                 |
-| Slug convention          | `kiryat-moshe-rehovot`, `ramat-eliyahu-rishon-lezion`, `dora-netanya`, `neot-shaked-netanya`, `kiryat-nordau-netanya` (always `<neighborhood>-<city>` to avoid collisions) |
-| Schema                   | `Place` with `containedInPlace` referencing the City                                                                                                                       |
-| Variant-specific content | neighborhood description, project status, administration contact, legal aid link                                                                                           |
 
 ### T4 — `/listings/:city/:type/:slug` (TED-16 §3.3)
 

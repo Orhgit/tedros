@@ -24,6 +24,7 @@ import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { glyphForTag } from "~/lib/rights/categories";
 import { isRelevant as isRightRelevant } from "~/lib/rights/relevance";
+import { neighborhoodName, neighborhoodsByCity } from "~/lib/urban-renewal/registry";
 
 const MORTGAGE_CALC_PATH = "/calculator/mortgage-ethiopian-immigrants";
 
@@ -54,6 +55,11 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   const cityListings = await listCityListingPreviews(city.slug, 6).catch(() => []);
 
+  const cityNeighborhoods = neighborhoodsByCity(city.slug).map((n) => ({
+    slug: n.slug,
+    name: neighborhoodName(n, locale),
+  }));
+
   return {
     locale,
     city,
@@ -62,6 +68,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     cityTracks,
     cityHeritage,
     cityListings,
+    cityNeighborhoods,
   };
 }
 
@@ -105,7 +112,15 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function CityPage({ loaderData }: Route.ComponentProps) {
-  const { locale, city, cityRights, cityTracks, cityHeritage, cityListings } = loaderData;
+  const {
+    locale,
+    city,
+    cityRights,
+    cityTracks,
+    cityHeritage,
+    cityListings,
+    cityNeighborhoods,
+  } = loaderData;
   const name = cityName(city, locale);
 
   return (
@@ -242,12 +257,39 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
           )}
 
           <CityListingsSection locale={locale} city={city} listings={cityListings} />
-          <CitySection
-            locale={locale}
-            titleKey="city_section_urban_renewal_title"
-            emptyKey="city_section_urban_renewal_empty"
-            city={city}
-          />
+          {cityNeighborhoods.length > 0 ? (
+            <section
+              aria-labelledby="city-urban-renewal-heading"
+              className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-950"
+            >
+              <h2
+                id="city-urban-renewal-heading"
+                className="text-xl font-semibold text-gray-900 dark:text-gray-100"
+              >
+                {t(locale, "city_section_urban_renewal_title")}
+              </h2>
+              <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                {cityNeighborhoods.map((n) => (
+                  <li key={n.slug}>
+                    <Link
+                      to={`/${locale}/urban-renewal/${n.slug}`}
+                      className="flex items-center gap-2 rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
+                    >
+                      <span aria-hidden="true">🏗️</span>
+                      {n.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : (
+            <CitySection
+              locale={locale}
+              titleKey="city_section_urban_renewal_title"
+              emptyKey="city_section_urban_renewal_empty"
+              city={city}
+            />
+          )}
           <CitySection
             locale={locale}
             titleKey="city_section_professionals_title"
