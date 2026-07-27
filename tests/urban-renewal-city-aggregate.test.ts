@@ -87,10 +87,13 @@ describe("aggregateUnits", () => {
     );
   });
 
-  it("only counts Kiryat Gat's Shevet Israel figure (2,300) — Rova HaNevi'im's shared-budget note is not summed", () => {
+  it("sums Kiryat Gat's Shevet Israel (2,300) and Komemiyut-Yaski (1,552) figures — Rova HaNevi'im's shared-budget note is not summed", () => {
     const agg = aggregateUnits(neighborhoodsByCity("kiryat-gat"));
-    expect(agg.total).toBe(2300);
-    expect(agg.countedSlugs).toEqual(["shvat-israel-kiryat-gat"]);
+    expect(agg.total).toBe(3852);
+    expect(agg.countedSlugs).toEqual(
+      expect.arrayContaining(["shvat-israel-kiryat-gat", "komemiyut-yaski-kiryat-gat"]),
+    );
+    expect(agg.countedSlugs.length).toBe(2);
   });
 
   it("has zero numeric total for Kiryat Malakhi — all 4 compounds only cite the shared ~4,000 note", () => {
