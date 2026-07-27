@@ -281,6 +281,15 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                   </li>
                 ))}
               </ul>
+              {cityNeighborhoods.length > 0 && (
+                <Link
+                  to={`/${locale}/cities/${city.slug}/urban-renewal`}
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-earth-700 hover:underline"
+                >
+                  {t(locale, "city_section_urban_renewal_aggregate_cta", { name })}
+                  <span aria-hidden="true">←</span>
+                </Link>
+              )}
             </section>
           ) : (
             <CitySection
