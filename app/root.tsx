@@ -33,7 +33,12 @@ const MulaChat = lazy(() =>
  * The previous Google Fonts <link> was render-blocking on Slow 4G and pushed
  * LCP past 2000ms in CI Lighthouse.
  */
-export const links: Route.LinksFunction = () => [{ rel: "icon", href: "/favicon.ico" }];
+export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+  { rel: "icon", href: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+  { rel: "icon", href: "/favicon.ico", sizes: "any" },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+];
 
 export async function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
