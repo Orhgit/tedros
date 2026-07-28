@@ -20,11 +20,9 @@ export function PromoBanner({ locale }: { locale: Locale }) {
         <span aria-hidden className="text-lg">
           🏝️
         </span>
-        <span className="font-medium">
-          {t(locale, "promo_banner_text")}{" "}
-          <span className="font-bold text-[#deb459]">
-            {t(locale, "promo_banner_price")}
-          </span>
+        <span className="font-medium">{t(locale, "promo_banner_text")}</span>
+        <span className="rounded-full bg-[#deb459] px-2.5 py-0.5 text-sm font-extrabold text-[#1c2b45] shadow-sm">
+          {t(locale, "promo_banner_price")}
         </span>
         <a
           href={PROMO_HREF}
