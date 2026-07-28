@@ -18,6 +18,7 @@ import {
 import { readLocaleCookie } from "./lib/i18n/cookie.server";
 import { getEnv } from "./lib/env.server";
 import { AccessibilityWidget } from "./components/ui/accessibility-widget";
+import { PromoBanner } from "./components/sections/promo-banner";
 import "./app.css";
 
 const MulaChat = lazy(() =>
@@ -75,6 +76,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         )}
       </head>
       <body className="min-h-screen antialiased">
+        <PromoBanner locale={locale} />
         {children}
         <Suspense fallback={null}>
           <MulaChat />
