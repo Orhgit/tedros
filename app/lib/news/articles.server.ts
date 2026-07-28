@@ -5585,6 +5585,67 @@ High demand for Amharic speakers — Ethiopian-Israeli patients feel more comfor
 📞 02-5081408 | 03-5368944`,
     },
   },
+  {
+    slug: "tech-innovation-authority-funding-lod-campus-2026",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    tags: ["employment", "cities"],
+    title: {
+      he: "מימון רשות החדשנות להכשרה טכנולוגית + קמפוס חדש בלוד — מה חדש ב-2026",
+      en: "Israel Innovation Authority tech-training funding + new Lod campus — what's new in 2026",
+      am: "የእስራኤል ኢኖቬሽን ባለስልጣን የቴክኖሎጂ ስልጠና ፈንድ + አዲስ የሎድ ካምፓስ — በ2026 ምን አዲስ ነገር አለ",
+    },
+    excerpt: {
+      he: "משרד העבודה ורשות החדשנות מממנים תוכנית הכשרה טכנולוגית ייעודית לקהילה בתקציב 10 מיליון ₪, לצד קמפוס טכנולוגי חדש בלוד וזווית יזמות/ניהול לבוגרי יחידה 8200.",
+      en: "The Ministry of Labor and the Israel Innovation Authority are funding a dedicated tech-training program for the community with a 10M ILS budget, alongside a new tech campus in Lod and an entrepreneurship/management track for Unit 8200 alumni.",
+      am: 'የስራ ሚኒስቴር እና የእስራኤል ኢኖቬሽን ባለስልጣን ለማህበረሰቡ ልዩ የቴክኖሎጂ ስልጠና ፕሮግራም በ10 ሚሊዮን ሺ"ል በጀት ይደግፋሉ፣ ከአዲስ የሎድ ቴክኖሎጂ ካምፓስ ጎን ለጎን።',
+    },
+    bodies: {
+      he: `## מימון ממשלתי ייעודי להכשרה טכנולוגית
+
+משרד העבודה ורשות החדשנות משיקים תוכנית הכשרה טכנולוגית ממוקדת קהילה, בתקציב של **10 מיליון ₪**, ביעד להכשיר **כ-500 גברים ונשים** מקהילת יוצאי אתיופיה בתוך שנתיים. התוכנית שונה מתוכניות ההכשרה הפרטיות הקיימות (כמו טק-קריירה) — זהו תקצוב ממשלתי-רוחבי ולא תוכנית של ארגון בודד.
+
+## קמפוס טכנולוגי חדש בלוד
+
+לצד התקצוב, נבנה בלוד קמפוס הכשרה ויזמות טכנולוגית ייעודי, עם סיום בנייה מתוכנן לסוף 2026. לוד היא גם אחת מערי היעד המרכזיות בתוכנית ההתחדשות העירונית של הקהילה (ראו [התחדשות עירונית ברמת אשכול, לוד](/he/urban-renewal/ramat-ashkol-lod)) — הקמת הקמפוס בעיר יוצרת זיקה ישירה בין שיפור הדיור לשיפור ההזדמנויות התעסוקתיות באותה עיר.
+
+## תוכנית יזמות וניהול — בוגרי יחידה 8200
+
+עמותת בוגרי יחידת 8200 מפעילה תוכנית ייעודית לקידום יזמות וניהול (לא רק הכשרה טכנית) בקרב יוצאי אתיופיה — זווית שונה מהמסלולים הטכניים הקיימים, בהתמקדות בכישורי ניהול, בניית סטארטאפים, וחיבור למנטורים בכירים בהייטק.
+
+## ראו גם
+
+- [טק-קריירה — מדריך הכשרה טכנולוגית](/he/news/tech-career-bootcamp-guide)
+- [התחדשות עירונית בלוד](/he/urban-renewal/ramat-ashkol-lod)`,
+      en: `## Dedicated government funding for tech training
+
+The Ministry of Labor and the Israel Innovation Authority are launching a community-focused tech-training program with a **10 million ILS** budget, aiming to train roughly **500 men and women** from the Ethiopian-Israeli community within two years. This differs from existing private training programs (like Tech-Career) — it is a cross-cutting government allocation, not a single organization's program.
+
+## New tech campus in Lod
+
+Alongside the funding, a dedicated tech training and entrepreneurship campus is being built in Lod, with construction completion planned for the end of 2026. Lod is also one of the key target cities in the community's urban-renewal plan (see [urban renewal in Ramat Ashkol, Lod](/en/urban-renewal/ramat-ashkol-lod)) — the campus creates a direct link between improved housing and improved employment opportunities in the same city.
+
+## Entrepreneurship and management track — Unit 8200 alumni
+
+The Unit 8200 alumni association runs a dedicated program advancing entrepreneurship and management (not just technical training) among Ethiopian-Israelis — a different angle from the existing technical tracks, focused on management skills, building startups, and connections to senior hi-tech mentors.
+
+## See also
+
+- [Tech-Career — training guide](/en/news/tech-career-bootcamp-guide)
+- [Urban renewal in Lod](/en/urban-renewal/ramat-ashkol-lod)`,
+      am: `## ልዩ የመንግስት የቴክኖሎጂ ስልጠና ፈንድ
+
+የስራ ሚኒስቴር እና የእስራኤል ኢኖቬሽን ባለስልጣን በ**10 ሚሊዮን ሺ"ል** በጀት ለማህበረሰቡ ልዩ የቴክኖሎጂ ስልጠና ፕሮግራም እያስጀመሩ ነው፣ በ2 ዓመት ውስጥ ወደ **500 ወንዶች እና ሴቶች** ለማሰልጠን ያለመ።
+
+## በሎድ አዲስ የቴክኖሎጂ ካምፓስ
+
+ከፈንዱ ጎን ለጎን፣ በሎድ ልዩ የቴክኖሎጂ ስልጠና እና ስራ ፈጠራ ካምፓስ እየተገነባ ነው፣ ግንባታው በ2026 መጨረሻ ይጠናቀቃል ተብሎ ይጠበቃል። ሎድ ደግሞ ለማህበረሰቡ የከተማ ዕድሳት ዕቅድ ካሉት ዋና ዋና ከተሞች አንዷ ናት።
+
+## የስራ ፈጠራ እና አመራር ትራክ — የ8200 ክፍል ምሩቃን
+
+የ8200 ክፍል ምሩቃን ማህበር ለኢትዮጵያ-እስራኤላውያን የስራ ፈጠራ እና አመራር ልዩ ፕሮግራም ያካሂዳል — ከነባር የቴክኒክ ትራኮች የተለየ አቅጣጫ፣ በአመራር ክህሎቶች እና በስታርትአፕ ግንባታ ላይ ያተኮረ።`,
+    },
+  },
   ...ARTICLES_WAVE4,
   ...ARTICLES_WAVE5,
 ];

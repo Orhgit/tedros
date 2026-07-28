@@ -67,6 +67,8 @@ const DOMESTIC_VIOLENCE: FamilyTopic = {
 
 מחקרים מראים שנשים מקהילת יוצאי אתיופיה מדווחות פחות על אלימות מחשש מסטיגמה קהילתית ומאי ידיעת הזכויות. פנייה לעזרה היא מעשה אומץ ואחריות — לא בגידה. כל הפניות לגורמי הסיוע חסויות.
 
+לפי מרכז המחקר והמידע של הכנסת, שיעור המשפחות ממוצא אתיופי הפונות למרכזי הטיפול באלימות במשפחה, ושיעור הנשים ממוצא אתיופי ששהו במקלטים לנשים מוכות, גבוהים משמעותית מחלקה של הקהילה באוכלוסייה הכללית — נתון המחזק את החשיבות שבפנייה מוקדמת לעזרה, ולא סימן לכך שהתופעה נפוצה יותר בקהילה עצמה.
+
 זכויות בסיסיות:
 • זכות לצו הגנה — ניתן לבקש בבית משפט לענייני משפחה או במשטרה. הצו יכול להרחיק את המתעלל מהבית.
 • זכות לייצוג משפטי חינם — לנשים שאינן יכולות לממן עורך דין, הלשכה לסיוע משפטי מספקת ייצוג.
@@ -76,6 +78,8 @@ const DOMESTIC_VIOLENCE: FamilyTopic = {
 
 Research shows that women from the Ethiopian-Israeli community under-report domestic violence due to fear of community stigma and lack of awareness of their rights. Seeking help is an act of courage and responsibility — not betrayal. All referrals to support services are confidential.
 
+According to the Knesset Research and Information Center, the share of Ethiopian-origin families referred to family-violence treatment centers, and the share of Ethiopian-origin women who have stayed in shelters for abused women, are significantly higher than the community's share of the general population — a figure that underscores the importance of seeking help early, not evidence that the phenomenon itself is more common within the community.
+
 Basic rights:
 • Right to a protection order — can be requested at the family court or police station. The order can remove the abuser from the home.
 • Right to free legal representation — the Legal Aid Bureau provides free representation for women who cannot afford a lawyer.
@@ -84,6 +88,8 @@ Basic rights:
     am: `የቤት ውስጥ ጥቃት በእስራኤል ወንጀል ነው — ባህላዊ ወይም ሃይማኖታዊ ምክንያቶች ምንም ቢሆኑ። የቤተሰብ ጥቃት መከላከያ ህግ (1991) በጥቂት ሰዓታት ውስጥ የጥበቃ ትዕዛዝ ለማውጣት ያስችላል። አደጋ ውስጥ ከሆኑ — ወዲያው 100 (ፖሊስ) ወይም 1-800-22-0000 (WIZO — ነፃ 24/7) ይደውሉ።
 
 ጥናቶች እንደሚያሳዩ ከኢትዮጵያ ማህበረሰብ የሆኑ ሴቶች ስለ ማህበረሰብ ስቃይ ፍርሃት እና ስለ መብቶቻቸው ስለ ማወቅ ማጣት ጥቃቱን ሪፖርት ማድረጊያ ይቸገራሉ። እርዳታ መጠየቅ ድፍረት እና ሃላፊነት ነው — ክህደት አይደለም።
+
+በክነሴት የምርምር እና መረጃ ማዕከል መሠረት፣ ወደ ቤተሰብ-ጥቃት ህክምና ማዕከሎች የሚላኩ የኢትዮጵያ-ትውልድ ቤተሰቦች ድርሻ፣ እና በተጎዱ ሴቶች መጠለያዎች ውስጥ የቆዩ የኢትዮጵያ-ትውልድ ሴቶች ድርሻ፣ ከጠቅላላ ህዝብ ውስጥ ካለው የማህበረሰቡ ድርሻ በእጅጉ ከፍ ያለ ነው።
 
 መሠረታዊ መብቶች:
 • የጥበቃ ትዕዛዝ መብት — ከቤተሰብ ፍርድ ቤት ወይም ፖሊስ ጣቢያ ሊጠየቅ ይችላል።

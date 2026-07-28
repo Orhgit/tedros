@@ -40,15 +40,15 @@ export const PRIORITY_RIGHTS: RightSeed[] = [
   // 1 — 600K mortgage (community-specific). Cross-pillar with RE.
   {
     title: {
-      he: "המשכנתא הקהילתית — 600,000 ₪ ליוצאי אתיופיה",
-      en: "Community Mortgage — 600,000 ILS for Ethiopian-Israelis",
-      am: "የማህበረሰብ ብድር — 600,000 ሺ" + "ል ለኢትዮጵያ-እስራኤላውያን",
+      he: "משכנתא ליוצאי אתיופיה — המשכנתא הקהילתית, 600,000 ₪",
+      en: "Mortgage for Ethiopian Israelis — Community Mortgage, 600,000 ILS",
+      am: "ለኢትዮጵያ-እስራኤላውያን ሞርጌጅ — የማህበረሰብ ብድር, 600,000 ሺ" + "ል",
     },
     slug: { he: "600k-mortgage", en: "600k-mortgage", am: "600k-mortgage" },
     govUrl: "https://www.gov.il/he/departments/integration_program/govil-landing-page",
     eligibilitySummary: {
-      he: "הלוואת מדינה ליוצאי אתיופיה: ₪600,000 ל-25 שנה, 0% ריבית ב-10 שנים הראשונות, 2% ב-15 הבאות. הקצאה ב-הגרלה שנתית של ~200 משפחות.",
-      en: "Govt loan for Ethiopian-Israeli families: ₪600,000 over 25 years, 0% interest for the first 10, 2% for the next 15. Allocated by annual lottery (~200 families).",
+      he: "משכנתא ליוצאי אתיופיה: הלוואת מדינה בסך ₪600,000 ל-25 שנה, 0% ריבית ב-10 שנים הראשונות, 2% ב-15 הבאות. הקצאה בהגרלה שנתית של כ-200 משפחות.",
+      en: "Mortgage for Ethiopian Israelis: govt loan of ₪600,000 over 25 years, 0% interest for the first 10, 2% for the next 15. Allocated by annual lottery (~200 families).",
       am:
         "የመንግስት ብድር ለኢትዮጵያ-እስራኤላውያን ቤተሰቦች፦ 600,000 ሺ" +
         "ል ለ25 ዓመት፣ ለመጀመሪያዎቹ 10 ዓመታት 0% ወለድ፣ ለቀጣዮቹ 15 ዓመታት 2%። በዓመታዊ ዕጣ (~200 ቤተሰቦች) ይመደባል።",
@@ -1001,9 +1001,9 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
     slug: { he: "public-housing", en: "public-housing", am: "public-housing" },
     govUrl: "https://www.gov.il/he/departments/topics/eligibility_for_public_housing",
     eligibilitySummary: {
-      he: "זכאות לדיור ציבורי לפי הכנסה, גודל משפחה, ומצב נכסים. רשימת המתנה ארוכה — לפעמים שנים. עלייה משמעותית בעדיפות לאחר שלב ייעודי.",
-      en: "Public-housing eligibility by income, family size, and asset status. Waitlist is long — sometimes years. Priority bumps available for specific situations.",
-      am: "በገቢ፣ በቤተሰብ መጠን እና በንብረት ሁኔታ የሕዝብ መኖሪያ ቤት ብቁነት። የጥበቃ ዝርዝር ረጅም ነው — አንዳንዴ ዓመታት። ለልዩ ሁኔታዎች ቅድሚያ ጭማሪዎች ይገኛሉ።",
+      he: "דיור ציבורי ליוצאי אתיופיה ולכלל הזכאים: לפי הכנסה, גודל משפחה, ומצב נכסים. זכות עולה חדש מקנה עדיפות עד כ-15 שנה מהעלייה. נדחיתם? אפשר לערער בפני ועדת חריגים.",
+      en: "Public housing for Ethiopian-Israelis and all eligible applicants: by income, family size, and asset status. New-immigrant priority applies for up to ~15 years from aliyah. Rejected? You can appeal to an exceptions committee.",
+      am: "የሕዝብ መኖሪያ ቤት ለኢትዮጵያ-እስራኤላውያን እና ለሁሉም ብቁ አመልካቾች፦ በገቢ፣ በቤተሰብ መጠን እና በንብረት ሁኔታ። የአዲስ ስደተኛ ቅድሚያ እስከ ~15 ዓመታት ይሠራል። ካልተቀበሉ ወደ ልዩ ጉዳዮች ኮሚቴ ይግባኝ ማለት ይችላሉ።",
     },
     tags: ["housing", "subsidy", "welfare"],
     bodies: {
@@ -1029,6 +1029,25 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
 3. הצטרפות לרשימת המתנה לפי אזור גיאוגרפי
 4. עדכון שנתי של פרטים — אחרת מורידים מהרשימה
 
+## מי מנהל את הדירות בפועל?
+
+חברות הדיור הציבורי (עמידר, עמיגור, חלמיש, שיקמונה) מנהלות את מלאי הדירות בשם משרד הבינוי והשיכון — פנייה לחברה הרלוונטית באזורכם מזרזת בירורים על סטטוס הבקשה.
+
+## ליוצאי אתיופיה — נקודות שכדאי לדעת
+
+- זכות "עולה חדש" (הכוללת בני הקהילה שעלו לישראל) מקנה עדיפות מוגברת עד כ-15 שנה מהעלייה — לפי אותה זכות עלייה כללית, ולא מסלול ייעודי נפרד ליוצאי אתיופיה.
+- תעודת הזכאות תקפה ל-4 שנים — יש לחדש לפני פקיעתה כדי לא לאבד את המקום ברשימת ההמתנה.
+- אם השפה או הבירוקרטיה מהוות חסם — ארגוני קהילה (למשל דרך Tebeka, ראו הזכות "סיוע משפטי חינם") יכולים לסייע בליווי הפנייה.
+
+## מה עושים אם נדחיתם?
+
+1. מבקשים בכתב את נימוקי הדחייה ממשרד הבינוי והשיכון או מחברת הדיור המנהלת
+2. ניתן לערער בפני **ועדת חריגים** — ועדה פנימית הבוחנת מקרים שאינם עומדים בקריטריונים הרגילים אך מצדיקים חריגה
+3. אם הערעור נדחה גם הוא — מומלץ לפנות לעורך דין המתמחה בדיור ציבורי, או לסיוע המשפטי החינמי של Tebeka
+4. אפשר גם לפנות ל-kolzchut.org.il לבדיקת עדכני זכויות והליכי הערעור המלאים
+
+🔗 **עמידר**: [amidar.co.il](https://www.amidar.co.il)
+🔗 **מידע מלא על זכויות וערעור**: [kolzchut.org.il](https://www.kolzchut.org.il)
 📞 **משרד הבינוי והשיכון**: 5442*
 `,
       en: `## Basic eligibility
@@ -1053,6 +1072,25 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
 3. Join the waitlist by geographic area
 4. Annual updates required — otherwise dropped from list
 
+## Who actually manages the apartments?
+
+Public-housing companies (Amidar, Amigor, Halamish, Shikmona) manage the apartment stock on behalf of the Ministry of Construction & Housing — contacting the relevant company for your area speeds up status inquiries.
+
+## For Ethiopian-Israelis — worth knowing
+
+- The general "new immigrant" priority (which covers community members who made aliyah) grants a priority bump for up to ~15 years from aliyah — this is the same general oleh right, not a dedicated Ethiopian-specific track.
+- The eligibility certificate is valid for 4 years — renew before it expires or you lose your place on the waitlist.
+- If language or bureaucracy is a barrier, community organizations (e.g. via Tebeka — see the "Free Legal Aid" right) can help with the application.
+
+## What to do if you're rejected
+
+1. Request the rejection reasons in writing from the Ministry of Construction & Housing or the managing housing company
+2. You can appeal to a **Va'adat Chariggim** ("exceptions committee") — an internal committee reviewing cases that don't meet standard criteria but justify an exception
+3. If the appeal is also rejected — consider a lawyer specializing in public housing, or Tebeka's free legal aid
+4. kolzchut.org.il maintains an up-to-date explainer of rights and the full appeal process
+
+🔗 **Amidar**: [amidar.co.il](https://www.amidar.co.il)
+🔗 **Full rights & appeal info**: [kolzchut.org.il](https://www.kolzchut.org.il)
 📞 **Ministry of Construction & Housing**: *5442
 `,
       am: `## መሠረታዊ ብቁነት
@@ -1077,6 +1115,25 @@ Any Ethiopian-Israeli candidate for a state job (including municipalities, gover
 3. በጂኦግራፊያዊ አካባቢ ወደ ጥበቃ ዝርዝር ይቀላቀሉ
 4. ዓመታዊ ዝመናዎች ያስፈልጋሉ — አለበለዚያ ከዝርዝሩ ይወገዳሉ
 
+## ቤቶቹን በተግባር የሚያስተዳድረው ማን ነው?
+
+የሕዝብ መኖሪያ ቤት ኩባንያዎች (ዓሚዳር፣ ዓሚጎር፣ ሃላሚሽ፣ ሺቅሞና) ለግንባታ እና ቤት ሚኒስቴር ወክለው ቤቶቹን ያስተዳድራሉ — በአካባቢዎ ላለው ኩባንያ በቀጥታ መደወል ስለ ሁኔታው ፈጣን መልስ ይሰጣል።
+
+## ለኢትዮጵያ-እስራኤላውያን — ጠቃሚ መረጃ
+
+- አጠቃላይ "አዲስ ስደተኛ" ቅድሚያ (ማህበረሰብ አባላትንም የሚያካትት) ከአሊያ በኋላ እስከ ~15 ዓመታት ቅድሚያ ይሰጣል — ይህ አጠቃላይ የኦሊ መብት ነው፣ ለኢትዮጵያውያን ብቻ ልዩ መንገድ አይደለም።
+- የብቁነት ሰርተፍኬት ለ4 ዓመታት ዋጋ አለው — ከማብቃቱ በፊት ያድሱት፣ አለበለዚያ በጥበቃ ዝርዝር ላይ ያለዎትን ቦታ ያጣሉ።
+- ቋንቋ ወይም ቢሮክራሲ እንቅፋት ከሆነ፣ የማህበረሰብ ድርጅቶች (ለምሳሌ ቴቤካ — "ነፃ የህግ ድጋፍ" መብቱን ይመልከቱ) በማመልከቻው ሊረዱ ይችላሉ።
+
+## ካልተቀበሉ ምን ማድረግ ይቻላል?
+
+1. ከግንባታ እና ቤት ሚኒስቴር ወይም ከሚያስተዳድረው ኩባንያ የመናቅ ምክንያቶችን በጽሑፍ ይጠይቁ
+2. ወደ **የተለየ ጉዳዮች ኮሚቴ** (ועדת חריגים) ይግባኝ ማለት ይችላሉ — መደበኛ መስፈርቶችን የማያሟሉ ግን ልዩ ሁኔታ የሚያስፈልጋቸውን ጉዳዮች የሚመረምር ውስጣዊ ኮሚቴ
+3. ይግባኙም ካልተቀበለ — በሕዝብ መኖሪያ ቤት ጉዳይ የተካነ ጠበቃ ወይም የቴቤካ ነፃ የህግ ድጋፍ ያማክሩ
+4. kolzchut.org.il ስለ መብቶች እና ሙሉ የይግባኝ ሂደት ወቅታዊ መረጃ ይይዛል
+
+🔗 **ዓሚዳር**: [amidar.co.il](https://www.amidar.co.il)
+🔗 **ሙሉ የመብት እና ይግባኝ መረጃ**: [kolzchut.org.il](https://www.kolzchut.org.il)
 📞 **የግንባታ እና ቤት ሚኒስቴር**: *5442
 `,
     },
@@ -2887,6 +2944,10 @@ Any Amharic-speaking patient — primarily veteran community members (age 50+). 
 - **תמיכה לקייסים**: שכר חודשי ממשרד הדתות, ביטוח, פנסיה
 - **שני בתי מדרש**: אשקלון (לימוד מסורת ביתא ישראל) + ב"ש (השכלה רבנית)
 
+## פערי מעמד ושכר
+
+לפי דיווחים (עיתון "דבר", 2024), הקייסים עדיין מקבלים שכר נמוך משמעותית משל רבני קהילה רשמיים, ואינם משולבים באופן מלא במערך הרבנות הראשית — חרף ההכרה הרשמית מ-2018 ותוספת 20 התקנים ברבנות.
+
 ## איך מוצאים קייס?
 
 1. **מועצת הקייסים**: רכזות אזוריות (נתניה, ראשון, ב"ש, אשדוד, רחובות)
@@ -2907,6 +2968,10 @@ Beta Israel religious leaders. Authorized to officiate life-cycle ceremonies: br
 - **Kessim support**: monthly salary from Ministry of Religious Services, insurance, pension
 - **Two seminaries**: Ashkelon (Beta Israel tradition) + Be'er Sheva (rabbinical education)
 
+## Status and pay gap
+
+According to reporting (Davar newspaper, 2024), kessim still earn significantly less than official community rabbis and are not fully integrated into the Chief Rabbinate's structure — despite the official 2018 recognition and the addition of 20 rabbinate posts.
+
 ## Finding a Kes
 
 1. **Council of Kessim**: regional coordinators (Netanya, Rishon, Be'er Sheva, Ashdod, Rehovot)
@@ -2926,6 +2991,10 @@ Beta Israel religious leaders. Authorized to officiate life-cycle ceremonies: br
 - **የሕይወት ስነ ስርዓቶች**: ሲግድ (29 ቸሽቫን)፣ ዳካስ
 - **ለቄሶች ድጋፍ**: ወርሃዊ ደመወዝ፣ ኢንሹራንስ፣ ጡረታ
 - **ሁለት የሃይማኖት ት/ቤቶች**: አሽከሎን + ቤር ሼቫ
+
+## ደረጃ እና የደመወዝ ልዩነት
+
+በ2024 ዘገባ (ዳቫር ጋዜጣ) መሠረት፣ ቄሶች ከይፋዊ የማህበረሰብ ራቢዎች ያነሰ ደመወዝ ያገኛሉ፣ እና በ2018 ይፋዊ እውቅና ቢኖራቸውም ሙሉ በሙሉ ወደ ዋና ራቢነት መዋቅር አልተካተቱም።
 
 ## ቄስ እንዴት ማግኘት ይቻላል
 

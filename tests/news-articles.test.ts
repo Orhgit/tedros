@@ -38,7 +38,7 @@ const ctx = { publicUrl: "https://tedros.co.il", locale: "he" as const };
 
 describe("ARTICLES seed shape", () => {
   it("contains 40 articles", () => {
-    expect(ARTICLES).toHaveLength(85);
+    expect(ARTICLES).toHaveLength(86);
   });
 
   it("every article has unique slug + HE/EN/AM body non-empty", () => {
@@ -148,7 +148,7 @@ describe("landing loader", () => {
   it("returns articles in HE/EN/AM with the expected count", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await landingLoader(fakeArgs({ lang }));
-      expect(data.articles).toHaveLength(85);
+      expect(data.articles).toHaveLength(86);
     }
   });
 
