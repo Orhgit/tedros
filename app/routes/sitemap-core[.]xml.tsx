@@ -43,6 +43,7 @@ export function loader() {
     "/listings",
     CITY_PATH_PREFIX,
     ...CITIES.map((c) => `${CITY_PATH_PREFIX}/${c.slug}`),
+    URBAN_RENEWAL_PATH_PREFIX,
     ...URBAN_RENEWAL_NEIGHBORHOODS.map((n) => `${URBAN_RENEWAL_PATH_PREFIX}/${n.slug}`),
     ...CITY_URBAN_RENEWAL_SLUGS.map(
       (slug) => `${CITY_PATH_PREFIX}/${slug}/urban-renewal`,
