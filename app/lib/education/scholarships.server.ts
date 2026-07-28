@@ -70,7 +70,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["masters", "phd", "academic", "community"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "cogito-stem-phd"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## למי המלגה?
 
@@ -195,7 +195,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["undergrad", "academic", "community", "mentorship"],
     communityPriority: true,
     relatedScholarships: ["isef-fellowship", "atidim-pre-academic"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## למי המלגה?
 
@@ -320,7 +320,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["high-school", "community", "rights"],
     communityPriority: true,
     relatedScholarships: ["atidim-pre-academic"],
-    relatedRights: ["bagrut-completion-bonus"],
+    relatedRights: ["matriculation-grant"],
     bodies: {
       he: `## למי המלגה?
 
@@ -431,7 +431,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["undergrad", "academic", "community"],
     communityPriority: true,
     relatedScholarships: ["isef-fellowship", "hesegim-undergraduate"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## למי המלגה?
 
@@ -527,7 +527,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["pre-academic", "community", "academic"],
     communityPriority: true,
     relatedScholarships: ["enp-bagrut-grant", "tech-career-bootcamp-stipend"],
-    relatedRights: ["academic-prep-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## למי המכינה?
 
@@ -640,7 +640,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["phd", "stem", "academic", "community"],
     communityPriority: true,
     relatedScholarships: ["isef-fellowship"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## למי המלגה?
 
@@ -1134,7 +1134,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["vocational", "religious", "olim", "falash-mura"],
     communityPriority: true,
     relatedScholarships: ["jewish-agency-aliyah"],
-    relatedRights: ["falash-mura-aliyah-completion"],
+    relatedRights: ["falash-mura-direct-absorption"],
     bodies: {
       he: `## למי המלגה?
 
@@ -1341,7 +1341,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       "klita-tuition-grant",
       "vatat-excellence-mentoring",
     ],
-    relatedRights: ["academic-tuition-grant", "klita-basket-ethiopia"],
+    relatedRights: ["student-aid", "klita-basket-ethiopia"],
     bodies: {
       he: `## מה זאת מלגת מרום של המועצה להשכלה גבוהה?
 
@@ -1589,7 +1589,7 @@ The Siket Scholarship is a Ministry of Aliyah & Integration scholarship for new 
     tags: ["undergrad", "community", "flexible", "working-students"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "klita-tuition-grant"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## האוניברסיטה הפתוחה — מסלול ייחודי לקהילה
 
@@ -1712,7 +1712,7 @@ The community scholarship is for Ethiopian-community students studying at least 
     tags: ["undergrad", "community", "needs-based", "social-work"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "marom-che", "isef-fellowship"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מלגת בר-אילן לקהילה
 
@@ -1828,7 +1828,7 @@ Bar-Ilan University offers scholarships for students of Ethiopian origin through
     tags: ["undergrad", "community", "leadership", "youth"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "isef-fellowship", "marom-che"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## תכנית מצוינות נוער — ג'וינט ישראל
 

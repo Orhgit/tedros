@@ -51,7 +51,7 @@ export const ORGS: OrgEntry[] = [
     websiteUrl: "https://www.tene-briut.org.il",
     headquartersCity: { he: "רחובות", en: "Rehovot", am: "ሬሆቮት" },
     contactEmail: "info@tene-briut.org.il",
-    relatedRights: ["chronic-disease-prevention", "medical-translation-services"],
+    relatedRights: ["chronic-disease-prevention", "medical-translation"],
     relatedTerms: ["tene-briut", "beta-israel"],
     relatedOrgs: ["jdc-ashalim", "enp"],
     bodies: {
@@ -286,7 +286,7 @@ Tebeka ("vindicator" / "advocate" in Amharic) is a community legal-aid center fo
     websiteUrl: "https://www.enp.org.il",
     headquartersCity: { he: "ירושלים", en: "Jerusalem", am: "ኢየሩሳሌም" },
     contactEmail: "info@enp.org.il",
-    relatedRights: ["bagrut-grant", "tech-career-bootcamp"],
+    relatedRights: ["matriculation-grant", "tech-career-bootcamp"],
     relatedTerms: ["enp", "beta-israel"],
     relatedOrgs: ["fidel", "hila", "isef"],
     bodies: {
@@ -403,7 +403,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
     websiteUrl: "https://www.olim-beyahad.org.il",
     headquartersCity: { he: "תל אביב", en: "Tel Aviv", am: "ቴል አቪቭ" },
     contactEmail: "info@olim-beyahad.org.il",
-    relatedRights: ["mentorship-program-graduates"],
+    relatedRights: ["youth-mentorship"],
     relatedTerms: ["olim-beyahad", "beta-israel"],
     relatedOrgs: ["enp"],
     bodies: {
@@ -521,7 +521,7 @@ Olim Beyahad ("Rising Together") is an NGO focused on the career advancement of 
     websiteUrl: "https://www.isef.org.il",
     headquartersCity: { he: "ירושלים", en: "Jerusalem", am: "ኢየሩሳሌም" },
     contactEmail: "info@isef.org.il",
-    relatedRights: ["scholarship-aggregator"],
+    relatedRights: ["unconditional-scholarships-7-sources"],
     relatedTerms: ["hesegim-isef", "beta-israel"],
     relatedOrgs: ["enp", "fidel"],
     bodies: {
@@ -640,7 +640,7 @@ ISEF (Israel Sephardi Education Fund) የተገለሉ ማህበረሰቦችን �
     foundedYear: 1995,
     websiteUrl: "https://www.fidel-il.org",
     headquartersCity: { he: "ירושלים", en: "Jerusalem", am: "ኢየሩሳሌም" },
-    relatedRights: ["bagrut-grant", "scholarship-aggregator"],
+    relatedRights: ["matriculation-grant", "unconditional-scholarships-7-sources"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["enp", "hila"],
     bodies: {
@@ -750,7 +750,7 @@ Fidel ("alphabet" in Amharic) is the Ethiopian-Israeli parents-students associat
     foundedYear: 1998,
     websiteUrl: "https://www.hila.org.il",
     headquartersCity: { he: "תל אביב", en: "Tel Aviv", am: "ቴል አቪቭ" },
-    relatedRights: ["bagrut-grant"],
+    relatedRights: ["matriculation-grant"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["fidel", "enp"],
     bodies: {
@@ -861,7 +861,7 @@ Hila (Education for Ethiopian-Israeli Children) was founded in 1998 by graduates
     foundedYear: 1998,
     websiteUrl: "https://www.jdc.org.il/ashalim",
     headquartersCity: { he: "ירושלים", en: "Jerusalem", am: "ኢየሩሳሌም" },
-    relatedRights: ["chronic-disease-prevention", "summer-camp-subsidies"],
+    relatedRights: ["chronic-disease-prevention", "summer-camps-subsidy"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["tene-briut", "enp", "friends-by-nature"],
     bodies: {
@@ -974,7 +974,7 @@ Ashalim ("Children and Youth at Risk in Israel") is a division of JDC-Israel (Am
     foundedYear: 1996,
     websiteUrl: "https://www.fbn.org.il",
     headquartersCity: { he: "ירושלים", en: "Jerusalem", am: "ኢየሩሳሌም" },
-    relatedRights: ["domestic-violence-support", "summer-camp-subsidies"],
+    relatedRights: ["domestic-violence-support", "summer-camps-subsidy"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["jdc-ashalim"],
     bodies: {
@@ -1312,7 +1312,7 @@ Beta Israel of North America (BINA) is an umbrella organization of ~5,000 Beta I
     foundedYear: 2003,
     websiteUrl: "https://www.atidbamidbar.org.il",
     headquartersCity: { he: "באר שבע", en: "Beersheba", am: "ቤርሼባ" },
-    relatedRights: ["tech-career-bootcamp", "summer-camp-subsidies"],
+    relatedRights: ["tech-career-bootcamp", "summer-camps-subsidy"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["enp"],
     bodies: {

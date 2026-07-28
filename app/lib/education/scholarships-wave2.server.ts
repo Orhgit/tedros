@@ -31,7 +31,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "periphery", "community", "needs-based"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "marom-che"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -137,7 +137,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "stem", "engineering", "community"],
     communityPriority: true,
     relatedScholarships: ["cogito-stem-phd", "isef-fellowship"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -243,7 +243,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "community", "diversity"],
     communityPriority: true,
     relatedScholarships: ["marom-che", "hesegim-undergraduate"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -348,7 +348,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["high-school", "periphery", "community"],
     communityPriority: true,
     relatedScholarships: ["enp-bagrut-grant", "atidim-pre-academic"],
-    relatedRights: ["bagrut-completion-bonus"],
+    relatedRights: ["matriculation-grant"],
     bodies: {
       he: `## מי זכאי?
 
@@ -446,7 +446,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "disability", "community", "rights"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "klita-tuition-grant"],
-    relatedRights: ["disability-student-rights"],
+    relatedRights: ["disability-benefit-ethiopians"],
     bodies: {
       he: `## מי זכאי?
 
@@ -549,7 +549,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "community", "alumni"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "jdc-youth-excellence"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -649,7 +649,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "idf", "olim", "community"],
     communityPriority: true,
     relatedScholarships: ["klita-tuition-grant", "marom-che"],
-    relatedRights: ["idf-discharge-rights"],
+    relatedRights: ["army-discharge-benefits-ethiopians"],
     bodies: {
       he: `## מי זכאי?
 
@@ -751,7 +751,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["high-school", "community", "excellence"],
     communityPriority: true,
     relatedScholarships: ["enp-bagrut-grant", "moe-periphery-excellence"],
-    relatedRights: ["bagrut-completion-bonus"],
+    relatedRights: ["matriculation-grant"],
     bodies: {
       he: `## מי זכאי?
 
@@ -850,7 +850,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "masters", "social-work", "community"],
     communityPriority: true,
     relatedScholarships: ["bar-ilan-community", "isef-fellowship"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -952,7 +952,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["phd", "post-doc", "research", "community", "social-policy"],
     communityPriority: true,
     relatedScholarships: ["cogito-stem-phd", "isef-fellowship"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -1057,7 +1057,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["vocational", "community", "career-shift"],
     communityPriority: true,
     relatedScholarships: ["tech-career-bootcamp-stipend"],
-    relatedRights: ["vocational-training-right"],
+    relatedRights: ["vocational-training-vouchers-immigrants"],
     bodies: {
       he: `## מי זכאי?
 
@@ -1160,7 +1160,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "health", "medicine", "community"],
     communityPriority: true,
     relatedScholarships: ["isef-fellowship", "marom-che"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -1480,7 +1480,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["masters", "education", "teachers", "community"],
     communityPriority: true,
     relatedScholarships: ["bgu-social-work-community", "isef-fellowship"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -1686,7 +1686,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "community", "integration"],
     communityPriority: true,
     relatedScholarships: ["marom-che", "hesegim-undergraduate"],
-    relatedRights: ["academic-tuition-grant"],
+    relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
 
@@ -1890,7 +1890,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "single-parent", "women", "community"],
     communityPriority: true,
     relatedScholarships: ["nevet-women", "klita-tuition-grant"],
-    relatedRights: ["single-parent-rights"],
+    relatedRights: ["rights-for-single-mothers"],
     bodies: {
       he: `## מי זכאי/ת?
 
@@ -1996,7 +1996,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     tags: ["undergrad", "needs-based", "community", "government"],
     communityPriority: true,
     relatedScholarships: ["klita-tuition-grant", "marom-che", "siket-absorption"],
-    relatedRights: ["klita-basket-ethiopia", "academic-tuition-grant"],
+    relatedRights: ["klita-basket-ethiopia", "student-aid"],
     bodies: {
       he: `## מי זכאי?
 

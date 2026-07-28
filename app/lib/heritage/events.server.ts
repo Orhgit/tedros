@@ -370,7 +370,7 @@ Operations Moses and Solomon saved ~16,000 community members. About 4,000 fell d
     },
     upcomingDates: ["2026-11-19", "2027-11-08", "2028-11-25"],
     relatedRights: ["klita-basket-ethiopia", "falash-mura-direct-absorption"],
-    relatedTerms: ["aliyah", "klita"],
+    relatedTerms: ["aliyah-from-ethiopia", "sal-klita"],
     relatedOrgs: ["iaej", "tebeka"],
     bodies: {
       he: `## ביתא ישראל — יהדות אתיופיה
