@@ -22,7 +22,9 @@ export function PromoBanner({ locale }: { locale: Locale }) {
         </span>
         <span className="font-medium">
           {t(locale, "promo_banner_text")}{" "}
-          <span className="font-bold text-[#deb459]">{t(locale, "promo_banner_price")}</span>
+          <span className="font-bold text-[#deb459]">
+            {t(locale, "promo_banner_price")}
+          </span>
         </span>
         <a
           href={PROMO_HREF}
@@ -39,7 +41,12 @@ export function PromoBanner({ locale }: { locale: Locale }) {
         aria-label={t(locale, "promo_banner_dismiss")}
         className="absolute end-2 top-1/2 -translate-y-1/2 rounded-full p-1.5 text-white/80 transition hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
-        <svg viewBox="0 0 20 20" fill="currentColor" className="size-4" aria-hidden="true">
+        <svg
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className="size-4"
+          aria-hidden="true"
+        >
           <path d="M4.293 4.293a1 1 0 0 1 1.414 0L10 8.586l4.293-4.293a1 1 0 1 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 0 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 0-1.414Z" />
         </svg>
       </button>
