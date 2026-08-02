@@ -26,11 +26,15 @@ import {
   pickFigure,
   statTopicDescription,
   statTopicName,
+  statTopicNarrative,
+  topicTemporalCoverage,
 } from "../app/lib/statistics/topics.server";
 import { breadcrumbJsonLd, statTopicJsonLd } from "../app/lib/statistics/schema";
+import { topicToCsv } from "../app/lib/statistics/csv.server";
 
 import { loader as landingLoader } from "../app/routes/$lang.statistics._index";
 import { loader as topicLoader } from "../app/routes/$lang.statistics.$topic";
+import { loader as topicCsvLoader } from "../app/routes/$lang.statistics.$topic[.]csv";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyArgs = any;
@@ -182,5 +186,124 @@ describe("topic detail loader", () => {
     await expect(
       topicLoader(fakeArgs({ lang: "he", topic: undefined })),
     ).rejects.toMatchObject({ init: { status: 404 } });
+  });
+});
+
+// ── TED-20 wave 1: verified demographics + education data ──────────────────
+
+describe("verified data — demographics (TED-20)", () => {
+  const demo = findStatTopic("demographics")!;
+
+  it("headline population figure matches the verified CBS Sigd-2025 digest", () => {
+    const totalPop = demo.figures.find((f) => f.id === "total-population");
+    expect(totalPop).toBeDefined();
+    expect(totalPop!.figure.he).toBe("177,600");
+    expect(totalPop!.source.url).toContain("cbs.gov.il");
+    expect(totalPop!.source.url).toContain("367");
+  });
+
+  it("does not contain the old unverified ~165,000 placeholder figure", () => {
+    const serialized = JSON.stringify(demo.figures);
+    expect(serialized).not.toContain("165,000");
+  });
+
+  it("ships a district-distribution bar chart summing to ~100%", () => {
+    expect(demo.barChart).toBeDefined();
+    const total = demo.barChart!.items.reduce((sum, i) => sum + i.valuePercent, 0);
+    expect(total).toBeCloseTo(100, 0);
+  });
+
+  it("ships an HE/EN/AM narrative", () => {
+    for (const locale of ["he", "en", "am"] as const) {
+      const n = statTopicNarrative(demo, locale);
+      expect(n).toBeTruthy();
+      expect(n!.length).toBeGreaterThan(200);
+    }
+  });
+});
+
+describe("verified data — education (TED-20)", () => {
+  const edu = findStatTopic("education")!;
+
+  it("headline bagrut exam-taking rate matches the verified CBS figure (not the old 55% placeholder)", () => {
+    const bagrut = edu.figures.find((f) => f.id === "bagrut-exam-takers");
+    expect(bagrut).toBeDefined();
+    expect(bagrut!.figure.he).toBe("93.7%");
+  });
+
+  it("does not present the stale 2017 bagrut-eligibility or Taub Center 2012/13 numbers as headline figures", () => {
+    const serialized = JSON.stringify(edu.figures);
+    expect(serialized).not.toMatch(/\b62%\b/);
+    expect(serialized).not.toContain("Taub");
+  });
+
+  it("every figure cites a real source URL", () => {
+    for (const f of edu.figures) {
+      expect(f.source.url.startsWith("http")).toBe(true);
+    }
+  });
+
+  it("mentions the stale bagrut figure only as labeled historical context in the narrative", () => {
+    const heNarrative = statTopicNarrative(edu, "he")!;
+    expect(heNarrative).toContain("62%");
+    expect(heNarrative).toMatch(/ישן|היסטורי/);
+  });
+});
+
+describe("topicTemporalCoverage", () => {
+  it("returns a single year when all figures share one", () => {
+    expect(topicTemporalCoverage(findStatTopic("demographics")!)).toBe("2024");
+  });
+
+  it("returns a min/max range when figures span multiple years", () => {
+    const coverage = topicTemporalCoverage(findStatTopic("education")!);
+    expect(coverage).toBe("2024/2025");
+  });
+});
+
+describe("CSV export (TED-20)", () => {
+  it("topicToCsv renders a header + one row per figure, with sources", () => {
+    const demo = findStatTopic("demographics")!;
+    const csv = topicToCsv(demo, "he");
+    const lines = csv.trim().split("\n");
+    // title comment + header + N figure rows
+    expect(lines.length).toBe(demo.figures.length + 2);
+    expect(lines[1]).toBe("label,value,source_name,source_url,data_year,confidence_note");
+    expect(csv).toContain("177,600");
+    expect(csv).toContain("cbs.gov.il");
+  });
+
+  it("CSV resource route serves text/csv with an attachment header", async () => {
+    const res = await topicCsvLoader(fakeArgs({ lang: "he", topic: "demographics" }));
+    expect(res.headers.get("Content-Type")).toContain("text/csv");
+    expect(res.headers.get("Content-Disposition")).toContain("attachment");
+    const body = await res.text();
+    expect(body).toContain("177,600");
+  });
+
+  it("404s on unknown topic", async () => {
+    try {
+      await topicCsvLoader(fakeArgs({ lang: "he", topic: "nope" }));
+      throw new Error("expected loader to throw");
+    } catch (err) {
+      expect((err as Response).status).toBe(404);
+    }
+  });
+});
+
+describe("Dataset JSON-LD distribution (TED-20)", () => {
+  it("includes a CSV DataDownload when requested", () => {
+    const out = statTopicJsonLd(ctx, {
+      topicSlug: "demographics",
+      name: "דמוגרפיה כללית",
+      description: "אוכלוסייה...",
+      temporalCoverage: "2024",
+      includeCsvDistribution: true,
+    });
+    const distribution = out["distribution"] as Array<Record<string, unknown>>;
+    expect(distribution[0]?.contentUrl).toBe(
+      "https://tedros.co.il/he/statistics/demographics.csv",
+    );
+    expect(distribution[0]?.encodingFormat).toBe("text/csv");
   });
 });

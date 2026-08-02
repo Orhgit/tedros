@@ -31,6 +31,23 @@ export interface StatFigure {
   context: Translatable;
   source: { name: string; url: string };
   publishedYear: number;
+  /** Optional caveat surfaced next to the source citation (e.g. "historical,
+   * not a current figure"). Used when a stat is verified but stale. */
+  confidenceNote?: Translatable;
+}
+
+/** A single bar in the energy-light CSS/SVG bar visualization (no chart
+ * library — TED-20 explicitly calls for "ENERGY-LIGHT"). Values are
+ * percentages (0-100) so bar widths can be computed directly. */
+export interface StatBarChartItem {
+  label: Translatable;
+  valuePercent: number;
+}
+
+export interface StatBarChart {
+  heading: Translatable;
+  items: StatBarChartItem[];
+  source: { name: string; url: string };
 }
 
 export interface StatTopicEntry {
@@ -38,207 +55,475 @@ export interface StatTopicEntry {
   name: Translatable;
   shortDescription: Translatable;
   figures: StatFigure[];
+  /** Longer-form markdown narrative (HE source-of-truth, EN/AM mirrored —
+   * CLAUDE.md convention). Optional: only topics with a verified narrative
+   * brief ship one (TED-20 wave 1: demographics, education). */
+  narrative?: Record<Locale, string>;
+  /** Optional energy-light bar visualization (e.g. district distribution). */
+  barChart?: StatBarChart;
 }
 
 export const STAT_TOPICS: StatTopicEntry[] = [
   // 1 — demographics ----------------------------------------------------
+  // Verified against docs/research/2026-07-29-community-statistics-verified.md
+  // (TED-20 wave 1). Primary source: CBS "לקט נתונים לרגל חג הסיגד 2025"
+  // (media release 367/2025, published 16.11.2025), data as of end-2024.
   {
     slug: "demographics",
     name: { he: "דמוגרפיה כללית", en: "General demographics", am: "ጠቅላላ ስነ-ህዝብ" },
     shortDescription: {
-      he: "אוכלוסייה, גיל, מגדר — תמונת מצב של הקהילה האתיופית-ישראלית.",
-      en: "Population, age, gender — a snapshot of the Ethiopian-Israeli community.",
-      am: "ህዝብ ብዛት፣ ዕድሜ፣ ጾታ — የኢትዮጵያ-እስራኤል ማህበረሰብ ስዕል።",
+      he: "אוכלוסייה, גיל, פריסה גיאוגרפית — תמונת מצב מאומתת של הקהילה האתיופית-ישראלית, נכון לסוף 2024.",
+      en: "Population, age, geographic spread — a verified snapshot of the Ethiopian-Israeli community as of end-2024.",
+      am: "ህዝብ ብዛት፣ ዕድሜ፣ ጂኦግራፊያዊ ስርጭት — የተረጋገጠ የኢትዮጵያ-እስራኤል ማህበረሰብ ስዕል፣ እስከ 2024 መጨረሻ።",
     },
     figures: [
       {
         id: "total-population",
         heading: {
-          he: 'סה"כ אוכלוסייה',
-          en: "Total population",
-          am: "ጠቅላላ ህዝብ ብዛት",
+          he: 'סה"כ אוכלוסייה ממוצא אתיופי',
+          en: "Total Ethiopian-origin population",
+          am: "ጠቅላላ የኢትዮጵያ ምንጭ ህዝብ ብዛት",
         },
-        figure: { he: "~165,000", en: "~165,000", am: "~165,000" },
+        figure: { he: "177,600", en: "177,600", am: "177,600" },
         context: {
-          he: "כ-165,000 בני קהילת יוצאי אתיופיה חיים בישראל ב-2024 — מתוכם כ-50% נולדו בישראל (דור 2 ומעלה).",
-          en: "~165,000 Ethiopian-Israeli community members live in Israel as of 2024 — about 50% were born in Israel (2nd generation and onward).",
-          am: "በ2024 ~165,000 የማህበረሰብ አባላት በእስራኤል ይኖራሉ — ~50% በእስራኤል ተወልደዋል።",
+          he: "177,600 נפש ממוצא אתיופי חיים בישראל, נכון לסוף 2024 — עלייה מ-171,600 בסוף 2023 (קצב גידול שנתי של כ-3.5%). מתוכם 93,400 ילידי אתיופיה (כ-53%) ו-84,200 ילידי ישראל שאביהם נולד באתיופיה (כ-47%).",
+          en: "177,600 people of Ethiopian origin live in Israel as of end-2024 — up from 171,600 at end-2023 (an annual growth rate of about 3.5%). Of these, 93,400 (~53%) were born in Ethiopia and 84,200 (~47%) were born in Israel to a father born in Ethiopia.",
+          am: "177,600 የኢትዮጵያ ምንጭ ያላቸው ሰዎች እስከ 2024 መጨረሻ በእስራኤል ይኖራሉ — ከ2023 መጨረሻ 171,600 ጭማሪ (~3.5% ዓመታዊ እድገት)። 93,400 (~53%) በኢትዮጵያ የተወለዱ፣ 84,200 (~47%) በእስራኤል የተወለዱ አባታቸው በኢትዮጵያ የተወለደ ናቸው።",
         },
         source: {
-          name: "CBS Annual Statistical Abstract 2024 — Ethiopian-Israeli Tables",
-          url: "https://www.cbs.gov.il/he/publications/Pages/2024/שנתון-סטטיסטי-לישראל-2024-מספר-75.aspx",
+          name: 'הלמ"ס — "האוכלוסייה ממוצא אתיופי בישראל, לקט נתונים לרגל חג הסיגד 2025" (הודעה 367/2025, 16.11.2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
         },
         publishedYear: 2024,
       },
       {
-        id: "median-age",
-        heading: { he: "גיל חציוני", en: "Median age", am: "መካከለኛ ዕድሜ" },
-        figure: { he: "26", en: "26", am: "26" },
-        context: {
-          he: "גיל חציוני בקהילה: 26 שנים (לעומת 31 בכלל האוכלוסייה היהודית). הקהילה צעירה יחסית בגלל פיריון גבוה ועלייה מאוחרת.",
-          en: "Community median age: 26 years (vs 31 in the general Jewish population). The community is relatively young due to high fertility and late aliyah.",
-          am: "የማህበረሰቡ መካከለኛ ዕድሜ: 26 ዓመት (ከ31 አጠቃላይ የአይሁድ ህዝብ ጋር ሲነጻጸር)።",
-        },
-        source: {
-          name: "CBS Annual Statistical Abstract 2024",
-          url: "https://www.cbs.gov.il/he/publications/Pages/2024/שנתון-סטטיסטי-לישראל-2024-מספר-75.aspx",
-        },
-        publishedYear: 2024,
-      },
-      {
-        id: "gender-distribution",
-        heading: { he: "התפלגות מגדרית", en: "Gender distribution", am: "የጾታ ስርጭት" },
-        figure: { he: "51% / 49%", en: "51% / 49%", am: "51% / 49%" },
-        context: {
-          he: "התפלגות מגדרית: 51% נשים, 49% גברים — דומה לממוצע הארצי (50.6% נשים).",
-          en: "Gender distribution: 51% women, 49% men — close to the national average (50.6% women).",
-          am: "የጾታ ስርጭት: 51% ሴቶች፣ 49% ወንዶች።",
-        },
-        source: {
-          name: "CBS Population Tables 2024",
-          url: "https://www.cbs.gov.il/he/publications/Pages/2024/שנתון-סטטיסטי-לישראל-2024-מספר-75.aspx",
-        },
-        publishedYear: 2024,
-      },
-      {
-        id: "geographic-concentration",
+        id: "age-0-14",
         heading: {
-          he: "ריכוז גיאוגרפי",
-          en: "Geographic concentration",
-          am: "የጂኦግራፊ ስብስብ",
+          he: "ילדים בגילאי 0-14",
+          en: "Children aged 0-14",
+          am: "ከ0-14 ዓመት ልጆች",
         },
-        figure: { he: "73%", en: "73%", am: "73%" },
+        figure: { he: "26.2%", en: "26.2%", am: "26.2%" },
         context: {
-          he: "73% מבני הקהילה מתגוררים ב-16 ערי קליטה: נתניה, רחובות, ראשון לציון, באר-שבע, אשדוד, אשקלון, קרית-מלאכי ועוד.",
-          en: "73% of community members live in 16 absorption cities: Netanya, Rehovot, Rishon LeZion, Beersheba, Ashdod, Ashkelon, Kiryat Malachi, and more.",
-          am: "73% በ16 መቀበያ ከተሞች ይኖራሉ።",
+          he: "26.2% מהאוכלוסייה ממוצא אתיופי הם ילדים בגילאי 0-14 — קרוב לשיעור בכלל האוכלוסייה היהודית והאחרים (26.7%).",
+          en: "26.2% of the Ethiopian-origin population are children aged 0-14 — close to the share in the general Jewish-and-others population (26.7%).",
+          am: "26.2% የኢትዮጵያ ምንጭ ህዝብ ከ0-14 ዓመት ልጆች ናቸው — ከጠቅላላ የአይሁድ ህዝብ (26.7%) ጋር ተቀራራቢ።",
         },
         source: {
-          name: "ENP Demographics Report 2024",
-          url: "https://www.enp.org.il/research",
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
         },
         publishedYear: 2024,
       },
       {
-        id: "generation-distribution",
-        heading: {
-          he: "התפלגות לפי דור",
-          en: "Generation distribution",
-          am: "የትውልድ ስርጭት",
-        },
-        figure: { he: "50% / 50%", en: "50% / 50%", am: "50% / 50%" },
+        id: "age-65-plus",
+        heading: { he: "בני 65 ומעלה", en: "Aged 65 and over", am: "ከ65 ዓመት በላይ" },
+        figure: { he: "7.0%", en: "7.0%", am: "7.0%" },
         context: {
-          he: "כ-50% מבני הקהילה הם דור 1 (עלו מאתיופיה) ו-50% דור 2-3 (נולדו בישראל). דור 2 הוא הקבוצה הצומחת המהירה ביותר.",
-          en: "About 50% of community members are 1st generation (immigrated from Ethiopia) and 50% are 2nd-3rd generation (born in Israel). The 2nd generation is the fastest-growing group.",
-          am: "~50% 1ኛ ትውልድ (ከኢትዮጵያ የመጡ) እና 50% 2ኛ-3ኛ ትውልድ (በእስራኤል የተወለዱ)።",
+          he: "רק 7.0% מהאוכלוסייה ממוצא אתיופי הם בני 65 ומעלה, לעומת 15.0% בכלל האוכלוסייה היהודית והאחרים — אוכלוסייה צעירה משמעותית.",
+          en: "Only 7.0% of the Ethiopian-origin population is aged 65+, versus 15.0% in the general Jewish-and-others population — a significantly younger population.",
+          am: "7.0% ብቻ የኢትዮጵያ ምንጭ ህዝብ ከ65 ዓመት በላይ ናቸው፣ ከጠቅላላ ህዝብ 15.0% ጋር ሲነጻጸር — በጣም ወጣት ህዝብ።",
         },
         source: {
-          name: "CBS Annual Statistical Abstract 2024",
-          url: "https://www.cbs.gov.il/he/publications/Pages/2024/שנתון-סטטיסטי-לישראל-2024-מספר-75.aspx",
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "geographic-district-concentration",
+        heading: {
+          he: "ריכוז גיאוגרפי — מחוז מוביל",
+          en: "Geographic concentration — leading district",
+          am: "ጂኦግራፊያዊ ስብስብ — ግንባር ግዛት",
+        },
+        figure: { he: "37.2%", en: "37.2%", am: "37.2%" },
+        context: {
+          he: "37.2% מהקהילה מתגוררים במחוז המרכז, 27.4% במחוז הדרום — יחד כ-65% משני מחוזות. הפילוח המלא מוצג בתרשים למטה.",
+          en: "37.2% of the community lives in the Central District, 27.4% in the Southern District — together about 65% across just two districts. Full breakdown in the chart below.",
+          am: "37.2% ማህበረሰቡ በማዕከላዊ ግዛት ይኖራል፣ 27.4% በደቡብ ግዛት — በጠቅላላ ~65% በሁለት ግዛቶች ብቻ።",
+        },
+        source: {
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "top-municipality-count",
+        heading: {
+          he: "הרשות עם מספר התושבים הגבוה ביותר",
+          en: "Municipality with the most residents",
+          am: "ከፍተኛ ነዋሪ ያለው ማዘጋጃ ቤት",
+        },
+        figure: { he: "נתניה — 13,300", en: "Netanya — 13,300", am: "ነታኒያ — 13,300" },
+        context: {
+          he: "נתניה מובילה במספר תושבים ממוצא אתיופי — 13,300 נפש, כ-5.6% מאוכלוסיית העיר.",
+          en: "Netanya leads in absolute number of Ethiopian-origin residents — 13,300 people, about 5.6% of the city's population.",
+          am: "ነታኒያ በኢትዮጵያ ምንጭ ነዋሪዎች ብዛት ግንባር ቀደም ናት — 13,300 ሰዎች፣ ~5.6% የከተማዋ ህዝብ።",
+        },
+        source: {
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "top-municipality-share",
+        heading: {
+          he: "הרשות עם האחוז הגבוה ביותר",
+          en: "Municipality with the highest share",
+          am: "ከፍተኛ መቶኛ ያለው ማዘጋጃ ቤት",
+        },
+        figure: {
+          he: "קריית מלאכי — 13.8%",
+          en: "Kiryat Malachi — 13.8%",
+          am: "ኪርያት ማላኪ — 13.8%",
+        },
+        context: {
+          he: "קריית מלאכי מובילה באחוז יחסי לגודל היישוב — 13.8% מכלל אוכלוסיית העיר (3,900 נפש) הם ממוצא אתיופי.",
+          en: "Kiryat Malachi leads in relative share of the local population — 13.8% of the city's total population (3,900 people) is of Ethiopian origin.",
+          am: "ኪርያት ማላኪ በአካባቢያዊ ድርሻ ግንባር ቀደም ናት — 13.8% የከተማዋ ጠቅላላ ህዝብ (3,900 ሰዎች) የኢትዮጵያ ምንጭ ናቸው።",
+        },
+        source: {
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "new-immigrants-2024",
+        heading: {
+          he: "עולים חדשים מאתיופיה",
+          en: "New immigrants from Ethiopia",
+          am: "ከኢትዮጵያ አዲስ ስደተኞች",
+        },
+        figure: { he: "285", en: "285", am: "285" },
+        context: {
+          he: "285 עולים חדשים מאתיופיה ב-2024 — ירידה חדה לעומת 1,812 ב-2023 ו-1,680 ב-2022.",
+          en: "285 new immigrants arrived from Ethiopia in 2024 — a sharp decline from 1,812 in 2023 and 1,680 in 2022.",
+          am: "285 አዲስ ስደተኞች ከኢትዮጵያ በ2024 — ከ2023 (1,812) እና ከ2022 (1,680) ጋር ሲነጻጸር ትልቅ ቅናሽ።",
+        },
+        source: {
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "births-fertility",
+        heading: {
+          he: "לידות ושיעור פריון",
+          en: "Births and fertility rate",
+          am: "ልደት እና የመውለድ መጠን",
+        },
+        figure: {
+          he: "4,010 לידות · TFR 2.54",
+          en: "4,010 births · TFR 2.54",
+          am: "4,010 ልደት · TFR 2.54",
+        },
+        context: {
+          he: "4,010 לידות חי בקרב נשים ממוצא אתיופי ב-2024; שיעור פריון כולל (TFR) של 2.54 ילדים לאישה.",
+          en: "4,010 live births to Ethiopian-origin women in 2024; a total fertility rate (TFR) of 2.54 children per woman.",
+          am: "4,010 ህያው ልደት በኢትዮጵያ ምንጭ ሴቶች በ2024; 2.54 የመውለድ መጠን (TFR) በአንዲት ሴት።",
+        },
+        source: {
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "household-size",
+        heading: {
+          he: "גודל משק בית ממוצע",
+          en: "Average household size",
+          am: "አማካይ የቤተሰብ ብዛት",
+        },
+        figure: { he: "3.70", en: "3.70", am: "3.70" },
+        context: {
+          he: "גודל משק בית ממוצע בקהילה: 3.70 נפשות, לעומת 2.99 בממוצע בכלל האוכלוסייה היהודית והאחרים.",
+          en: "Average household size in the community: 3.70 people, versus 2.99 in the general Jewish-and-others population.",
+          am: "አማካይ የቤተሰብ ብዛት በማህበረሰቡ: 3.70 ሰዎች፣ ከጠቅላላ ህዝብ 2.99 ጋር ሲነጻጸር።",
+        },
+        source: {
+          name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 — אינפוגרפיקה',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
         },
         publishedYear: 2024,
       },
     ],
+    barChart: {
+      heading: {
+        he: "התפלגות גיאוגרפית לפי מחוז",
+        en: "Geographic distribution by district",
+        am: "በግዛት የጂኦግራፊያዊ ስርጭት",
+      },
+      items: [
+        {
+          label: { he: "מחוז המרכז", en: "Central District", am: "ማዕከላዊ ግዛት" },
+          valuePercent: 37.2,
+        },
+        {
+          label: { he: "מחוז הדרום", en: "Southern District", am: "ደቡብ ግዛት" },
+          valuePercent: 27.4,
+        },
+        {
+          label: { he: "מחוז חיפה", en: "Haifa District", am: "ሃይፋ ግዛት" },
+          valuePercent: 13.8,
+        },
+        {
+          label: { he: "מחוז ירושלים", en: "Jerusalem District", am: "ኢየሩሳሌም ግዛት" },
+          valuePercent: 6.6,
+        },
+        {
+          label: { he: "מחוז הצפון", en: "Northern District", am: "ሰሜን ግዛት" },
+          valuePercent: 6.5,
+        },
+        {
+          label: { he: "מחוז תל אביב", en: "Tel Aviv District", am: "ተል አቪቭ ግዛት" },
+          valuePercent: 6.4,
+        },
+        {
+          label: {
+            he: "אזור יהודה ושומרון",
+            en: "Judea and Samaria Area",
+            am: "ይሁዳ እና ሳምራ አካባቢ",
+          },
+          valuePercent: 2.1,
+        },
+      ],
+      source: {
+        name: 'הלמ"ס, לקט נתונים לרגל חג הסיגד 2025 (367/2025)',
+        url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+      },
+    },
+    narrative: {
+      he: `## תמונת מצב
+
+האוכלוסייה ממוצא אתיופי בישראל היא אוכלוסייה צעירה יחסית לכלל האוכלוסייה היהודית, עם ריכוז גיאוגרפי בולט במחוזות המרכז והדרום. נכון לסוף 2024 עומדת האוכלוסייה על 177,600 נפש — עלייה של כ-3.5% מסוף 2023 (171,600).
+
+## מקור הנתונים ותדירות עדכון
+
+הלמ"ס מפרסמת מדי שנה, לקראת חג הסיגד (בנובמבר), "לקט נתונים" רשמי הכולל דמוגרפיה, חינוך, ספורט, רווחה ופשיעה — זהו המקור העדכני והאמין ביותר לנתוני הקהילה, ומתעדכן שנה אחרי שנה. עמוד זה מבוסס על הפרסום האחרון (367/2025, נתוני סוף 2024) ויעודכן מדי נובמבר עם צאת הדוח החדש.
+
+## נקודות מפתח
+
+- **אוכלוסייה צעירה**: רק 7.0% מהקהילה בני 65+ (לעומת 15.0% בכלל האוכלוסייה) — תוצאה של פריון גבוה יחסית ועלייה שהתרחשה בעיקר בעשורים האחרונים.
+- **ריכוז גיאוגרפי**: כ-65% מהקהילה מתגוררים במחוזות המרכז והדרום בלבד. נתניה היא הרשות עם מספר התושבים הגבוה ביותר (13,300); קריית מלאכי היא הרשות עם האחוז היחסי הגבוה ביותר (13.8%).
+- **קצב עלייה בירידה חדה**: 285 עולים חדשים ב-2024, לעומת 1,812 ב-2023 — ירידה שמשקפת שינויים במדיניות הקליטה והיקף מועמדי העלייה הממתינים.`,
+      en: `## Snapshot
+
+The Ethiopian-origin population in Israel is relatively young compared to the general Jewish population, with a pronounced geographic concentration in the Central and Southern districts. As of end-2024 the population stood at 177,600 — up about 3.5% from end-2023 (171,600).
+
+## Data source and update cadence
+
+CBS publishes an official "data digest" every year ahead of the Sigd holiday (November), covering demographics, education, sports, welfare, and crime — the most current and reliable source for community data, refreshed annually. This page is based on the latest publication (367/2025, end-2024 data) and will be updated every November when the new report is released.
+
+## Key points
+
+- **Young population**: only 7.0% of the community is aged 65+ (vs 15.0% in the general population) — a result of relatively high fertility and aliyah concentrated mostly in recent decades.
+- **Geographic concentration**: about 65% of the community lives in just the Central and Southern districts. Netanya has the highest absolute number of residents (13,300); Kiryat Malachi has the highest relative share (13.8%).
+- **Sharply declining aliyah rate**: 285 new immigrants in 2024, down from 1,812 in 2023 — reflecting changes in absorption policy and the size of the waiting pool of aliyah candidates.`,
+      am: `## አጠቃላይ እይታ
+
+የኢትዮጵያ ምንጭ ያለው ህዝብ በእስራኤል ከጠቅላላ የአይሁድ ህዝብ ጋር ሲነጻጸር በአንጻራዊነት ወጣት ነው፣ በማዕከላዊ እና በደቡብ ግዛቶች ጎላ ያለ ጂኦግራፊያዊ ስብስብ አለው። እስከ 2024 መጨረሻ ህዝቡ 177,600 ደርሷል — ከ2023 መጨረሻ (171,600) ~3.5% ጭማሪ።
+
+## የመረጃ ምንጭ እና የማዘመኛ ጊዜ
+
+የእስራኤል ማዕከላዊ ስታቲስቲክስ ቢሮ (הלמ"ס) በየዓመቱ ከሲግድ በዓል በፊት (ኖቬምበር) ኦፊሴላዊ "የመረጃ ስብስብ" ያትማል። ይህ ገጽ በቅርብ ጊዜ ህትመት (367/2025፣ የ2024 መጨረሻ መረጃ) ላይ የተመሰረተ ሲሆን በየኖቬምበር ይዘመናል።
+
+## ቁልፍ ነጥቦች
+
+- **ወጣት ህዝብ**: 7.0% ብቻ ማህበረሰቡ ከ65 ዓመት በላይ ናቸው (ከጠቅላላ ህዝብ 15.0% ጋር ሲነጻጸር)።
+- **ጂኦግራፊያዊ ስብስብ**: ~65% ማህበረሰቡ በማዕከላዊ እና በደቡብ ግዛቶች ብቻ ይኖራል። ነታኒያ ከፍተኛ ነዋሪ ብዛት አላት (13,300); ኪርያት ማላኪ ከፍተኛ አንጻራዊ ድርሻ አላት (13.8%)።
+- **በከፍተኛ ሁኔታ እየቀነሰ ያለ የስደት መጠን**: 285 አዲስ ስደተኞች በ2024፣ ከ2023 (1,812) ጋር ሲነጻጸር ትልቅ ቅናሽ።`,
+    },
   },
 
   // 2 — education -------------------------------------------------------
+  // Verified against docs/research/2026-07-29-community-statistics-verified.md
+  // (TED-20 wave 1). Primary source: CBS Sigd data digests 2024 (371/2024)
+  // and 2025 (367/2025). The stale 2017 bagrut-eligibility figure and the
+  // 2012/13 Taub Center higher-ed gap are intentionally NOT shown as
+  // headline figures (per research brief) — the former is referenced only
+  // as labeled historical context in the narrative below; the latter is
+  // omitted entirely (single, decade-old secondary source).
   {
     slug: "education",
     name: { he: "השכלה", en: "Education", am: "ትምህርት" },
     shortDescription: {
-      he: "שיעורי בגרות, אקדמיה ומקצועות — נתוני השכלה בקהילה האתיופית-ישראלית.",
-      en: "Matriculation rates, academia, vocational — education data in the Ethiopian-Israeli community.",
-      am: "የማትሪክ ምጣኔዎች፣ አካዳሚ — የትምህርት መረጃ።",
+      he: "שיעורי ניגשים לבגרות, המשך ללימודים אקדמיים והכשרות מקצועיות — נתוני השכלה מאומתים בקהילה.",
+      en: "Matriculation exam rates, continuation to academia, vocational training — verified education data in the community.",
+      am: "የማትሪክ ፈተና ተሳታፊነት፣ ወደ አካዳሚ መቀጠል — የተረጋገጠ የትምህርት መረጃ።",
     },
     figures: [
       {
-        id: "matriculation-rate",
+        id: "students-count",
         heading: {
-          he: "שיעור זכאות לבגרות",
-          en: "Matriculation eligibility rate",
-          am: "የማትሪክ ብቃት",
+          he: "תלמידים ממוצא אתיופי בחינוך היסודי-על-יסודי",
+          en: "Students in primary-secondary education",
+          am: "በአንደኛ-ሁለተኛ ደረጃ ትምህርት ያሉ ተማሪዎች",
         },
-        figure: { he: "55%", en: "55%", am: "55%" },
+        figure: { he: "34,300", en: "34,300", am: "34,300" },
         context: {
-          he: "55% מבני הקהילה זכאים לתעודת בגרות (לעומת 73% בכלל האוכלוסייה היהודית). היעד של ENP: 70% עד 2030.",
-          en: "55% of community members are eligible for a matriculation certificate (vs 73% nationally). ENP target: 70% by 2030.",
-          am: "55% የማትሪክ ምስክር ወረቀት ብቁ (ከ73% አጠቃላይ ጋር)።",
+          he: '34,300 תלמידים ממוצא אתיופי בחינוך העברי בתשפ"ד (2023/24) — 2.2% מכלל התלמידים בחינוך העברי.',
+          en: "34,300 Ethiopian-origin students in the Hebrew education system in the 2023/24 school year — 2.2% of all students in Hebrew-medium education.",
+          am: "34,300 የኢትዮጵያ ምንጭ ተማሪዎች በዕብራይስጥ ትምህርት ሥርዓት በ2023/24 — 2.2% ከጠቅላላ ተማሪዎች።",
         },
         source: {
-          name: "Ministry of Education — Matriculation by Population Group 2024",
-          url: "https://edu.gov.il",
+          name: 'הלמ"ס, "לקט נתונים לרגל חג הסיגד 2025" (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
         },
         publishedYear: 2024,
       },
       {
-        id: "academic-degree",
+        id: "bagrut-exam-takers",
         heading: {
-          he: "תואר ראשון ומעלה",
-          en: "Bachelor's degree and above",
-          am: "የመጀመሪያ ዲግሪ እና በላይ",
+          he: 'שיעור הניגשים לבחינות בגרות (י"ב)',
+          en: "Matriculation exam-taking rate (12th grade)",
+          am: "የ12ኛ ክፍል የማትሪክ ፈተና ተሳታፊነት",
         },
-        figure: { he: "21%", en: "21%", am: "21%" },
+        figure: { he: "93.7%", en: "93.7%", am: "93.7%" },
         context: {
-          he: "21% מבני הקהילה בגילאי 25-44 בעלי תואר ראשון לפחות (לעומת 38% בכלל האוכלוסייה היהודית). פער שמצטמצם בקרב דור 2.",
-          en: "21% of community members aged 25-44 hold at least a bachelor's degree (vs 38% nationally). The gap is closing among the 2nd generation.",
-          am: "21% ከ25-44 ዕድሜ ያላቸው የመጀመሪያ ዲግሪ ወይም ከዚያ በላይ።",
+          he: '93.7% מבני הקהילה ניגשו לבחינות בגרות בתשפ"ד (2023/24), לעומת 95.1% בכלל החינוך העברי — פער קטן.',
+          en: "93.7% of community 12th-graders sat matriculation exams in the 2023/24 school year, versus 95.1% across all Hebrew-medium education — a small gap.",
+          am: "93.7% ማህበረሰቡ ተማሪዎች የማትሪክ ፈተና ወስደዋል በ2023/24፣ ከ95.1% ጠቅላላ ጋር ሲነጻጸር።",
         },
         source: {
-          name: "CBS Higher Education Survey 2024",
-          url: "https://www.cbs.gov.il",
+          name: 'הלמ"ס, "לקט נתונים לרגל חג הסיגד 2025" (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "academic-college-continuation",
+        heading: {
+          he: "המשך ללימודי תואר ראשון במכללות אקדמיות",
+          en: "Continuation to BA studies at academic colleges",
+          am: "ወደ BA ትምህርት በአካዳሚክ ኮሌጆች መቀጠል",
+        },
+        figure: { he: "57.7%", en: "57.7%", am: "57.7%" },
+        context: {
+          he: 'בקרב בוגרי י"ב יוצאי אתיופיה (תשפ"ד), 57.7% ממשיכים ללימודי תואר ראשון במכללות אקדמיות — גבוה מ-39.1% בכלל החינוך העברי. מגמה קשורה כנראה לנגישות מכללות אזוריות.',
+          en: "Among Ethiopian-origin 12th-grade graduates (2023/24), 57.7% continue to BA studies at academic colleges — higher than the 39.1% rate across all Hebrew-medium education. Likely linked to the accessibility of regional colleges.",
+          am: "ከኢትዮጵያ ምንጭ 12ኛ ክፍል ተመራቂዎች (2023/24)፣ 57.7% ወደ BA ትምህርት በአካዳሚክ ኮሌጆች ይቀጥላሉ — ከ39.1% ጠቅላላ በላይ።",
+        },
+        source: {
+          name: 'הלמ"ס, "לקט נתונים לרגל חג הסיגד 2025" (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2024,
+      },
+      {
+        id: "university-ba-students",
+        heading: {
+          he: "סטודנטים לתואר ראשון באוניברסיטאות",
+          en: "University BA students",
+          am: "የዩኒቨርሲቲ BA ተማሪዎች",
+        },
+        figure: { he: "4,151", en: "4,151", am: "4,151" },
+        context: {
+          he: 'בתשפ"ה (2024/25) לומדים 4,151 סטודנטים יוצאי אתיופיה לתואר ראשון באוניברסיטאות בישראל — מתוכם 534 סטודנטים לשנה ראשונה.',
+          en: "In the 2024/25 academic year, 4,151 Ethiopian-origin students study for a BA at Israeli universities — 534 of them first-year students.",
+          am: "በ2024/25 የትምህርት ዓመት፣ 4,151 የኢትዮጵያ ምንጭ ተማሪዎች በእስራኤል ዩኒቨርሲቲዎች BA ያጠናሉ — 534 ከነሱ 1ኛ ዓመት ተማሪዎች።",
+        },
+        source: {
+          name: 'הלמ"ס, "לקט נתונים לרגל חג הסיגד 2025" (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
+        },
+        publishedYear: 2025,
+      },
+      {
+        id: "higher-ed-growth-trend",
+        heading: {
+          he: "מגמת גידול בהשכלה גבוהה — 7 שנים",
+          en: "Higher-education growth trend — 7 years",
+          am: "የከፍተኛ ትምህርት እድገት አዝማሚያ — 7 ዓመታት",
+        },
+        figure: {
+          he: "3,194 ← 4,144 (+29.7%)",
+          en: "3,194 → 4,144 (+29.7%)",
+          am: "3,194 → 4,144 (+29.7%)",
+        },
+        context: {
+          he: 'מספר הסטודנטים יוצאי אתיופיה במוסדות להשכלה גבוהה גדל מ-3,194 (תשע"ז, 2016/17) ל-4,144 (תשפ"ד, 2023/24) — עלייה של 29.7% על פני 7 שנים, לעומת 3.9% בלבד בקרב שאר הסטודנטים היהודים והאחרים.',
+          en: "The number of Ethiopian-origin students in higher education grew from 3,194 (2016/17) to 4,144 (2023/24) — a 29.7% increase over 7 years, versus just 3.9% among other Jewish-and-other students.",
+          am: "የኢትዮጵያ ምንጭ ተማሪዎች ብዛት በከፍተኛ ትምህርት ከ3,194 (2016/17) ወደ 4,144 (2023/24) አድጓል — 29.7% ጭማሪ በ7 ዓመታት፣ ከ3.9% ጠቅላላ ጋር ሲነጻጸር።",
+        },
+        source: {
+          name: 'הלמ"ס, "לקט נתונים לרגל חג הסיגד 2024" (371/2024, 26.11.2024)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2024/371/11_24_371b.pdf",
         },
         publishedYear: 2024,
       },
       {
         id: "vocational-training",
-        heading: { he: "הכשרה מקצועית", en: "Vocational training", am: "የሙያ ስልጠና" },
-        figure: { he: "12%", en: "12%", am: "12%" },
-        context: {
-          he: "12% מבני הקהילה השלימו הכשרה מקצועית מסובסדת (חשמל, אינסטלציה, מכונאות) — נתון גבוה מהממוצע הארצי (8%).",
-          en: "12% of community members completed subsidized vocational training (electrical, plumbing, mechanics) — higher than the national average (8%).",
-          am: "12% የሙያ ስልጠና ተዘጋጀ።",
-        },
-        source: {
-          name: "Ministry of Labor Vocational Training Report 2024",
-          url: "https://www.gov.il/he/departments/employment",
-        },
-        publishedYear: 2024,
-      },
-      {
-        id: "phd-graduates",
-        heading: { he: "בעלי תואר שלישי", en: "PhD holders", am: "የዶክትሬት ምሩቃን" },
-        figure: { he: "~280", en: "~280", am: "~280" },
-        context: {
-          he: "כ-280 בני קהילה בעלי תואר שלישי בישראל (2024) — צמיחה של 40% מ-2020. יוזמת ISEF היא המנוע המרכזי.",
-          en: "~280 community members hold a PhD in Israel (2024) — 40% growth since 2020. The ISEF initiative is the main driver.",
-          am: "~280 ዶክተሮች በእስራኤል (2024) — ከ2020 40% እድገት።",
-        },
-        source: {
-          name: "ISEF Alumni Network Report 2024",
-          url: "https://www.isef.org.il",
-        },
-        publishedYear: 2024,
-      },
-      {
-        id: "school-dropout",
         heading: {
-          he: "שיעור נשירה",
-          en: "School dropout rate",
-          am: "የትምህርት ቤት ማቆም መጠን",
+          he: "תלמידים בקורסים להכשרות מקצועיות",
+          en: "Students in vocational training courses",
+          am: "በሙያ ስልጠና ኮርሶች ያሉ ተማሪዎች",
         },
-        figure: { he: "8.2%", en: "8.2%", am: "8.2%" },
+        figure: { he: "986", en: "986", am: "986" },
         context: {
-          he: "שיעור נשירה מבית הספר התיכון בקהילה: 8.2% (לעומת 4.5% בכלל האוכלוסייה היהודית). תכניות Hila ו-ENP מצמצמות את הפער.",
-          en: "Community high-school dropout rate: 8.2% (vs 4.5% nationally). Hila and ENP programs are closing the gap.",
-          am: "የማቆም መጠን: 8.2%።",
+          he: "986 תלמידים ממוצא אתיופי בקורסים להכשרות מקצועיות ב-2024 — 2.3% מכלל הלומדים בהכשרות באותה שנה.",
+          en: "986 Ethiopian-origin students enrolled in vocational training courses in 2024 — 2.3% of all vocational-training participants that year.",
+          am: "986 የኢትዮጵያ ምንጭ ተማሪዎች በሙያ ስልጠና ኮርሶች በ2024 — 2.3% ከጠቅላላ ተሳታፊዎች።",
         },
         source: {
-          name: "Ministry of Education — Dropout Tracking 2024",
-          url: "https://edu.gov.il",
+          name: 'הלמ"ס, "לקט נתונים לרגל חג הסיגד 2025" (367/2025)',
+          url: "https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf",
         },
         publishedYear: 2024,
       },
     ],
+    narrative: {
+      he: `## תמונת מצב
+
+פערי ההישגים הלימודיים בין יוצאי אתיופיה לכלל האוכלוסייה היהודית מצטמצמים באיטיות אך באופן עקבי לאורך זמן — הן בשיעורי הגשה לבחינות הבגרות והן בהמשך ללימודים אקדמיים, אם כי פער משמעותי עדיין קיים בזכאות לבגרות העומדת בדרישות הסף של האוניברסיטאות (נתון עדכני לפער הזה טרם אותר — ראו הערת מתודולוגיה למטה).
+
+## נקודה מעניינת: יתרון במכללות אקדמיות
+
+בניגוד למצופה, בקרב יוצאי אתיופיה יש נטייה **גבוהה יותר** יחסית להמשך לימודים במכללות אקדמיות (57.7%) בהשוואה לכלל הציבור (39.1%) — מגמה שקשורה כנראה להיצע ולנגישות של מכללות אזוריות בערים בהן מתגוררת הקהילה.
+
+## הקשר היסטורי (למגמה בלבד — לא נתון עדכני)
+
+בשנת 2017 עמד שיעור הזכאות לבגרות על כ-62% בקרב יוצאי אתיופיה לעומת 79% בכלל החינוך העברי (הלמ"ס, לקט נתונים לחג הסיגד 2018, כפי שצוטט ב-ynet). הנתון הזה **ישן ולא לשימוש כמספר נוכחי** — הוא מובא כאן רק כנקודת-ייחוס להמחשת מגמת השיפור לאורך זמן, ולא כמדד לשנת 2024/25.
+
+## הערת מתודולוגיה
+
+לא אותר נתון עדכני (2023-2025) לשיעור זכאות לבגרות "העומדת בדרישות הסף של האוניברסיטאות" בלבד (להבדיל משיעור "ניגשים לבחינות" המוצג למעלה) — הלמ"ס בפרסומי הסיגד האחרונים מדגישה שיעור ניגשים והמשך למכללות אקדמיות, אך לא פרסמה בבירור את שיעור הזכאות התואם דרישות-סף אוניברסיטה לשנה הנוכחית. איננו מציגים כאן מספר מוערך.`,
+      en: `## Snapshot
+
+Achievement gaps between Ethiopian-Israelis and the general Jewish population are narrowing slowly but consistently over time — both in matriculation exam-taking rates and in continuation to academic studies — though a meaningful gap likely still exists in eligibility for a matriculation certificate that meets university entrance thresholds (no current figure for this specific gap was found — see the methodology note below).
+
+## An interesting reversal: an edge at academic colleges
+
+Contrary to what one might expect, Ethiopian-Israelis show a **higher** relative rate of continuation to academic colleges (57.7%) compared to the general public (39.1%) — a trend likely linked to the availability and accessibility of regional colleges in cities where the community is concentrated.
+
+## Historical context (trend only — not a current figure)
+
+In 2017, the matriculation-eligibility rate stood at about 62% among Ethiopian-Israelis versus 79% across all Hebrew-medium education (CBS, 2018 Sigd data digest, as cited by Ynet). This figure is **outdated and should not be used as a current number** — it's included here only as a reference point illustrating the improvement trend over time, not as a 2024/25 measure.
+
+## Methodology note
+
+No current figure (2023-2025) was found for the rate of matriculation eligibility that specifically meets university entrance thresholds (as distinct from the "exam-taking rate" shown above) — CBS's recent Sigd publications emphasize exam-taking and continuation to academic colleges, but have not clearly published the entrance-threshold eligibility rate for the current year. We do not present an estimated number here.`,
+      am: `## አጠቃላይ እይታ
+
+በኢትዮጵያ-እስራኤላውያንና በጠቅላላ የአይሁድ ህዝብ መካከል ያለው የትምህርት ስኬት ልዩነት በዝግታ ግን ወጥ በሆነ መንገድ እየጠበበ ነው — በማትሪክ ፈተና ተሳታፊነትም ሆነ ወደ አካዳሚክ ትምህርት በመቀጠል። ነገር ግን ለዩኒቨርሲቲ መግቢያ መስፈርት የሚያሟላ የማትሪክ ብቃት ላይ ጉልህ ልዩነት ገና አለ ሊሆን ይችላል (ለዚህ የተለየ ልዩነት የቅርብ ጊዜ አሃዝ አልተገኘም)።
+
+## አስደሳች ግኝት: በአካዳሚክ ኮሌጆች ብልጫ
+
+የኢትዮጵያ-እስራኤላውያን ወደ አካዳሚክ ኮሌጆች የመቀጠል መጠን (57.7%) ከጠቅላላው ህዝብ (39.1%) የበለጠ ነው — ይህ አዝማሚያ ማህበረሰቡ በሚኖርባቸው ከተሞች ካሉ የክልል ኮሌጆች ተደራሽነት ጋር የተያያዘ ሊሆን ይችላል።
+
+## ታሪካዊ አውድ (ለአዝማሚያ ብቻ — የቅርብ ጊዜ አሃዝ አይደለም)
+
+በ2017፣ የማትሪክ ብቃት መጠን በኢትዮጵያ-እስራኤላውያን ~62% ነበር፣ ከጠቅላላ 79% ጋር ሲነጻጸር። ይህ አሃዝ **ያረጀ ነው እና እንደ የቅርብ ጊዜ አሃዝ መጠቀም የለበትም** — እዚህ የቀረበው ለንፅፅር አዝማሚያ ማሳያ ብቻ ነው።
+
+## የስልት ማስታወሻ
+
+ለዩኒቨርሲቲ መግቢያ መስፈርት የሚያሟላ የማትሪክ ብቃት ልዩ መጠን የቅርብ ጊዜ (2023-2025) አሃዝ አልተገኘም። እዚህ የተገመተ ቁጥር አናቀርብም።`,
+    },
   },
 
   // 3 — housing ---------------------------------------------------------
@@ -789,4 +1074,42 @@ export function pickFigure(
 ): string {
   const t = figure[key];
   return t[locale] ?? t[DEFAULT_LOCALE] ?? t.he;
+}
+
+export function pickFigureConfidenceNote(
+  figure: StatFigure,
+  locale: Locale,
+): string | null {
+  const t = figure.confidenceNote;
+  if (!t) return null;
+  return t[locale] ?? t[DEFAULT_LOCALE] ?? t.he;
+}
+
+export function statTopicNarrative(entry: StatTopicEntry, locale: Locale): string | null {
+  const t = entry.narrative;
+  if (!t) return null;
+  return t[locale] ?? t[DEFAULT_LOCALE] ?? t.he;
+}
+
+export function pickTranslatable(value: Translatable, locale: Locale): string {
+  return value[locale] ?? value[DEFAULT_LOCALE] ?? value.he;
+}
+
+export function pickBarChartLabel(item: StatBarChartItem, locale: Locale): string {
+  return pickTranslatable(item.label, locale);
+}
+
+/**
+ * ISO-8601-ish temporal coverage string for the Dataset JSON-LD, derived
+ * from the topic's figures. A single year if all figures share one; a
+ * "min/max" range string otherwise (e.g. education mixes 2024 and 2025
+ * data years).
+ */
+export function topicTemporalCoverage(entry: StatTopicEntry): string {
+  const years = Array.from(new Set(entry.figures.map((f) => f.publishedYear))).sort(
+    (a, b) => a - b,
+  );
+  if (years.length === 0) return "";
+  if (years.length === 1) return String(years[0]);
+  return `${years[0]}/${years[years.length - 1]}`;
 }
