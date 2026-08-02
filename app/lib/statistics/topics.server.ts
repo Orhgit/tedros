@@ -553,7 +553,7 @@ No current figure (2023-2025) was found for the rate of matriculation eligibilit
         figure: { he: "26.7% מול 24.8%", en: "26.7% vs 24.8%", am: "26.7% vs 24.8%" },
         context: {
           he: 'משקי בית של יוצאי אתיופיה מוציאים 3,475 ש"ח בחודש על דיור — 26.7% מתקציב הצריכה שלהם, לעומת 4,362 ש"ח (24.8%) בכלל האוכלוסייה. נתח יחסי גבוה יותר על סכום מוחלט נמוך יותר.',
-          en: 'Ethiopian-origin households spend ₪3,475/month on housing — 26.7% of their consumption budget, versus ₪4,362 (24.8%) for the general population. A higher relative share on a lower absolute amount.',
+          en: "Ethiopian-origin households spend ₪3,475/month on housing — 26.7% of their consumption budget, versus ₪4,362 (24.8%) for the general population. A higher relative share on a lower absolute amount.",
           am: "የኢትዮጵያ ምንጭ ቤተሰቦች በወር 3,475 ₪ በመኖሪያ ላይ ያወጣሉ — 26.7% ከፍጆታ በጀታቸው፣ ከ4,362 ₪ (24.8%) ጠቅላላ ህዝብ ጋር ሲነጻጸር።",
         },
         source: {
@@ -569,7 +569,11 @@ No current figure (2023-2025) was found for the rate of matriculation eligibilit
           en: "Household income and expenditure",
           am: "የቤተሰብ ገቢ እና ወጪ",
         },
-        figure: { he: '16,295 ש"ח הכנסה ברוטו', en: "₪16,295 gross income", am: "16,295 ₪ ገቢ" },
+        figure: {
+          he: '16,295 ש"ח הכנסה ברוטו',
+          en: "₪16,295 gross income",
+          am: "16,295 ₪ ገቢ",
+        },
         context: {
           he: 'הכנסה ברוטו למשק בית: 16,295 ש"ח (יוצאי אתיופיה) לעומת 22,013 ש"ח (כלל האוכלוסייה); הכנסה נטו: 14,676 לעומת 18,237; הוצאה לנפש: 2,749 לעומת 4,580 ש"ח — פער הכנסה משמעותי שמסביר את נתח ההוצאה הגבוה יותר על דיור.',
           en: "Gross household income: ₪16,295 (Ethiopian-origin) vs ₪22,013 (general population); net income: ₪14,676 vs ₪18,237; per-capita expenditure: ₪2,749 vs ₪4,580 — a substantial income gap that helps explain the higher housing-expenditure share.",
@@ -751,11 +755,15 @@ The only figure located for the Ethiopian-origin homeownership rate (60.5%) come
     figures: [
       {
         id: "life-expectancy",
-        heading: { he: "תוחלת חיים בלידה", en: "Life expectancy at birth", am: "የህይወት ዕድሜ" },
+        heading: {
+          he: "תוחלת חיים בלידה",
+          en: "Life expectancy at birth",
+          am: "የህይወት ዕድሜ",
+        },
         figure: { he: "83.8", en: "83.8", am: "83.8" },
         context: {
           he: "תוחלת חיים בלידה: 83.8 שנים ליוצאי אתיופיה, לעומת 83.4 ליהודים ואחרים ו-82.8 בכלל האוכלוסייה (ממוצע 2020-2022). הלמ״ס עצמה מציינת שההבדל בעל מובהקות גבולית בלבד, בשל אוכלוסייה קטנה ורווח סמך רחב — אין להציג כ״קהילה חיה יותר שנים״ ללא ההסתייגות.",
-          en: "Life expectancy at birth: 83.8 years for Ethiopian-origin Israelis, versus 83.4 for Jews-and-others and 82.8 for the general population (2020-2022 average). CBS itself notes the difference has only borderline statistical significance, given the small population and wide confidence interval — this should not be presented as \"the community lives longer\" without that caveat.",
+          en: 'Life expectancy at birth: 83.8 years for Ethiopian-origin Israelis, versus 83.4 for Jews-and-others and 82.8 for the general population (2020-2022 average). CBS itself notes the difference has only borderline statistical significance, given the small population and wide confidence interval — this should not be presented as "the community lives longer" without that caveat.',
           am: "የህይወት ዕድሜ: 83.8 ዓመታት ለኢትዮጵያ ምንጭ፣ ከ82.8 ጠቅላላ ህዝብ ጋር ሲነጻጸር (2020-2022 አማካይ)።",
         },
         source: {
@@ -771,7 +779,11 @@ The only figure located for the Ethiopian-origin homeownership rate (60.5%) come
       },
       {
         id: "infant-mortality",
-        heading: { he: "שיעור תמותת תינוקות", en: "Infant mortality rate", am: "የህጻናት ሞት መጠን" },
+        heading: {
+          he: "שיעור תמותת תינוקות",
+          en: "Infant mortality rate",
+          am: "የህጻናት ሞት መጠን",
+        },
         figure: { he: "2.2 ל-1,000", en: "2.2 per 1,000", am: "2.2 በ1,000" },
         context: {
           he: "2.2 פטירות ל-1,000 לידות חי בקרב תינוקות לאם ילידת אתיופיה (או ילידת ישראל שאביה יליד אתיופיה) — נמוך מהשיעור בכלל האוכלוסייה (2.7) ומעט גבוה מיהודים ואחרים (1.9). ממוצע 2020-2022.",
@@ -865,7 +877,7 @@ The only figure located for the Ethiopian-origin homeownership rate (60.5%) come
           am: "67%-69% ከኢትዮጵያ የተወለዱ ሴቶች ዕድሜ 50-74 የማሞግራፊ ምርመራ አድርገዋል።",
         },
         source: {
-          name: 'משרד הבריאות, מצוטט ב: מרכז המחקר והמידע של הכנסת (10.7.2024)',
+          name: "משרד הבריאות, מצוטט ב: מרכז המחקר והמידע של הכנסת (10.7.2024)",
           url: "https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf",
         },
         publishedYear: 2022,
@@ -897,11 +909,24 @@ The only figure located for the Ethiopian-origin homeownership rate (60.5%) come
         am: "የስኳር በሽታ በሀገር ውስጥ በቆዩባቸው ዓመታት",
       },
       items: [
-        { label: { he: "בעת העלייה", en: "At time of aliyah", am: "ወደ ሀገር ሲገቡ" }, valuePercent: 0.4 },
-        { label: { he: "אחרי 4 שנים", en: "After 4 years", am: "ከ4 ዓመታት በኋላ" }, valuePercent: 8.6 },
-        { label: { he: "אחרי 7 שנים", en: "After 7 years", am: "ከ7 ዓመታት በኋላ" }, valuePercent: 9.6 },
         {
-          label: { he: "אחרי 10-16 שנים", en: "After 10-16 years", am: "ከ10-16 ዓመታት በኋላ" },
+          label: { he: "בעת העלייה", en: "At time of aliyah", am: "ወደ ሀገር ሲገቡ" },
+          valuePercent: 0.4,
+        },
+        {
+          label: { he: "אחרי 4 שנים", en: "After 4 years", am: "ከ4 ዓመታት በኋላ" },
+          valuePercent: 8.6,
+        },
+        {
+          label: { he: "אחרי 7 שנים", en: "After 7 years", am: "ከ7 ዓመታት በኋላ" },
+          valuePercent: 9.6,
+        },
+        {
+          label: {
+            he: "אחרי 10-16 שנים",
+            en: "After 10-16 years",
+            am: "ከ10-16 ዓመታት በኋላ",
+          },
           valuePercent: 17.6,
         },
       ],
@@ -1024,7 +1049,7 @@ Per the research brief's explicit instruction, this page **does not include a ce
         },
         publishedYear: 2010,
         confidenceNote: {
-          he: 'סקר 2009-2010 (פורסם 2012), דור העולים בלבד — אין נתון עדכני לשיעור השלמת אולפן בעשור האחרון.',
+          he: "סקר 2009-2010 (פורסם 2012), דור העולים בלבד — אין נתון עדכני לשיעור השלמת אולפן בעשור האחרון.",
           en: "2009-2010 survey (published 2012), immigrant generation only — no current figure for ulpan completion rates in the last decade was found.",
           am: "የ2009-2010 ጥናት (2012 ታትሟል)፣ ለስደተኛ ትውልድ ብቻ።",
         },
@@ -1086,9 +1111,18 @@ Per the research brief's explicit instruction, this page **does not include a ce
       },
       items: [
         { label: { he: "בעבודה", en: "At work", am: "በስራ ቦታ" }, valuePercent: 64 },
-        { label: { he: "עם הילדים", en: "With children", am: "ከልጆች ጋር" }, valuePercent: 41 },
-        { label: { he: "עם בן/בת הזוג", en: "With spouse", am: "ከትዳር አጋር ጋር" }, valuePercent: 24 },
-        { label: { he: "עם חברים", en: "With friends", am: "ከጓደኞች ጋር" }, valuePercent: 22 },
+        {
+          label: { he: "עם הילדים", en: "With children", am: "ከልጆች ጋር" },
+          valuePercent: 41,
+        },
+        {
+          label: { he: "עם בן/בת הזוג", en: "With spouse", am: "ከትዳር አጋር ጋር" },
+          valuePercent: 24,
+        },
+        {
+          label: { he: "עם חברים", en: "With friends", am: "ከጓደኞች ጋር" },
+          valuePercent: 22,
+        },
       ],
       source: {
         name: 'מכון מאיירס-ג\'וינט-ברוקדייל, "לאחר עשרים שנה בישראל: סקר יוצאי אתיופיה הוותיקים" (2012), לוח 46',
@@ -1216,8 +1250,8 @@ The data gap is itself a finding: there is currently no official source examinin
         },
         publishedYear: 2023,
         confidenceNote: {
-          he: "סתירה חשבונית פנימית במקור (2,000+1,550≠5,000) — אין לפרסם \"5,000\" כמספר סופי.",
-          en: "An internal arithmetic discrepancy in the source (2,000+1,550≠5,000) — \"5,000\" is not published as a final total.",
+          he: 'סתירה חשבונית פנימית במקור (2,000+1,550≠5,000) — אין לפרסם "5,000" כמספר סופי.',
+          en: 'An internal arithmetic discrepancy in the source (2,000+1,550≠5,000) — "5,000" is not published as a final total.',
           am: "የምንጭ ውስጣዊ የሂሳብ ልዩነት — “5,000” እንደ መጨረሻ ድምር አይታተምም።",
         },
       },
@@ -1249,8 +1283,8 @@ The data gap is itself a finding: there is currently no official source examinin
         },
         figure: { he: "18-24 חודשים", en: "18-24 months", am: "18-24 ወራት" },
         context: {
-          he: "מסלול הקליטה הטיפוסי לעולי אתיופיה כולל שהייה של כ-18-24 חודשים במרכזי/אתרי קליטה — בשונה מ\"קליטה ישירה\" (ללא מרכז קליטה) הנפוצה יותר בקרב עולים ממדינות רווחה.",
-          en: "The typical absorption track for Ethiopian olim includes a stay of about 18-24 months in absorption centers — unlike the \"direct absorption\" (no absorption center) more common among olim from Western countries.",
+          he: 'מסלול הקליטה הטיפוסי לעולי אתיופיה כולל שהייה של כ-18-24 חודשים במרכזי/אתרי קליטה — בשונה מ"קליטה ישירה" (ללא מרכז קליטה) הנפוצה יותר בקרב עולים ממדינות רווחה.',
+          en: 'The typical absorption track for Ethiopian olim includes a stay of about 18-24 months in absorption centers — unlike the "direct absorption" (no absorption center) more common among olim from Western countries.',
           am: "የተለመደው መቀበያ መንገድ ለኢትዮጵያ ስደተኞች 18-24 ወራት በመቀበያ ማዕከላት መቆየትን ያካትታል።",
         },
         source: {
@@ -1378,7 +1412,11 @@ Ethiopian olim go through a distinct absorption track — a stay of about 18-24 
           en: "Ethiopian-origin marriages",
           am: "የኢትዮጵያ ምንጭ ጋብቻ",
         },
-        figure: { he: "740 חתנים · 766 כלות", en: "740 grooms · 766 brides", am: "740 ሙሽሮች · 766 ሙሽሪት" },
+        figure: {
+          he: "740 חתנים · 766 כלות",
+          en: "740 grooms · 766 brides",
+          am: "740 ሙሽሮች · 766 ሙሽሪት",
+        },
         context: {
           he: "740 חתנים ו-766 כלות ממוצא אתיופי נישאו במוסדות הדת המורשים בישראל ב-2023 — 92% מהם נישאו לראשונה. נתוני נישואין/גירושין בלקט הסיגד מתפרסמים בפיגור של כשנתיים לעומת נתוני הדמוגרפיה הכללית.",
           en: "740 grooms and 766 brides of Ethiopian origin married through recognized religious institutions in Israel in 2023 — 92% for the first time. Marriage/divorce data in the Sigd digest lags about two years behind the general demographics figures.",
@@ -1397,7 +1435,11 @@ Ethiopian olim go through a distinct absorption track — a stay of about 18-24 
           en: "In-community marriage — intergenerational gap",
           am: "በማህበረሰቡ ውስጥ ጋብቻ — በትውልድ መካከል ልዩነት",
         },
-        figure: { he: "82% (88% מול 74%)", en: "82% (88% vs 74%)", am: "82% (88% vs 74%)" },
+        figure: {
+          he: "82% (88% מול 74%)",
+          en: "82% (88% vs 74%)",
+          am: "82% (88% vs 74%)",
+        },
         context: {
           he: '82% מהנישאים ממוצא אתיופי נישאו לבן/בת זוג מאותו המוצא — במגמת ירידה עקבית מאז 2015. הפער בין הדורות בולט: 88% מילידי אתיופיה נישאו "פנימה", לעומת 74% בלבד מילידי ישראל (דור שני) — מגמת "החוצה" חזקה משמעותית בדור השני.',
           en: '82% of Ethiopian-origin newlyweds married a spouse of the same origin — a consistent downward trend since 2015. The intergenerational gap is stark: 88% of Ethiopia-born olim married "in," versus only 74% of Israeli-born (2nd generation) — a significantly stronger "out-marriage" trend in the 2nd generation.',
@@ -1416,7 +1458,11 @@ Ethiopian olim go through a distinct absorption track — a stay of about 18-24 
           en: "Average age at first marriage",
           am: "አማካይ የመጀመሪያ ጋብቻ ዕድሜ",
         },
-        figure: { he: "30.4 (גברים) · 28.6 (נשים)", en: "30.4 (men) · 28.6 (women)", am: "30.4 (ወንዶች) · 28.6 (ሴቶች)" },
+        figure: {
+          he: "30.4 (גברים) · 28.6 (נשים)",
+          en: "30.4 (men) · 28.6 (women)",
+          am: "30.4 (ወንዶች) · 28.6 (ሴቶች)",
+        },
         context: {
           he: "גיל נישואין ראשון: 30.4 לגברים (גבוה ב-3.4 שנים מהממוצע היהודי) ו-28.6 לנשים (גבוה ב-3.2 שנים). בקרב בני 25-29, 86% מהגברים ו-70% מהנשים בקהילה עדיין רווקים, לעומת 64%/51% בכלל האוכלוסייה.",
           en: "Age at first marriage: 30.4 for men (3.4 years higher than the Jewish average) and 28.6 for women (3.2 years higher). Among 25-29 year-olds, 86% of men and 70% of women in the community are still single, versus 64%/51% in the general population.",
@@ -1452,7 +1498,7 @@ Ethiopian olim go through a distinct absorption track — a stay of about 18-24 
         },
         figure: { he: "3.70", en: "3.70", am: "3.70" },
         context: {
-          he: '46.3 אלף משקי בית ממוצא אתיופי (ממוצע 2022-2024) בגודל ממוצע של 3.70 נפשות — לעומת 2.99 בכלל האוכלוסייה. 82% מהם משקי בית משפחתיים (לעומת 74% בכלל האוכלוסייה).',
+          he: "46.3 אלף משקי בית ממוצא אתיופי (ממוצע 2022-2024) בגודל ממוצע של 3.70 נפשות — לעומת 2.99 בכלל האוכלוסייה. 82% מהם משקי בית משפחתיים (לעומת 74% בכלל האוכלוסייה).",
           en: "46.3 thousand Ethiopian-origin households (2022-2024 average), averaging 3.70 people — versus 2.99 in the general population. 82% of them are family households (versus 74% in the general population).",
           am: "46.3 ሺህ የኢትዮጵያ ምንጭ ቤተሰቦች፣ አማካይ 3.70 ሰዎች — ከ2.99 ጠቅላላ ጋር ሲነጻጸር።",
         },
@@ -1464,7 +1510,11 @@ Ethiopian olim go through a distinct absorption track — a stay of about 18-24 
       },
       {
         id: "single-parent-families",
-        heading: { he: "שיעור משפחות חד-הוריות", en: "Single-parent family rate", am: "ብቸኛ ወላጅ ቤተሰብ መጠን" },
+        heading: {
+          he: "שיעור משפחות חד-הוריות",
+          en: "Single-parent family rate",
+          am: "ብቸኛ ወላጅ ቤተሰብ መጠን",
+        },
         figure: { he: "26%", en: "26%", am: "26%" },
         context: {
           he: "26% ממשפחות יוצאי אתיופיה (מתוך 38.4 אלף משפחות) הן משפחות חד-הוריות — כמעט פי 2 מהאחוז בקרב משפחות יהודיות ואחרות (13%). המגמה בעלייה: 24% ב-2022/23.",
@@ -1490,11 +1540,19 @@ Ethiopian olim go through a distinct absorption track — a stay of about 18-24 
           valuePercent: 63,
         },
         {
-          label: { he: "משפחות חד-הוריות", en: "Single-parent families", am: "ብቸኛ ወላጅ ቤተሰቦች" },
+          label: {
+            he: "משפחות חד-הוריות",
+            en: "Single-parent families",
+            am: "ብቸኛ ወላጅ ቤተሰቦች",
+          },
           valuePercent: 26,
         },
         {
-          label: { he: "זוג ללא ילדים", en: "Couple without children", am: "ልጆች የሌሏቸው ጥንዶች" },
+          label: {
+            he: "זוג ללא ילדים",
+            en: "Couple without children",
+            am: "ልጆች የሌሏቸው ጥንዶች",
+          },
           valuePercent: 11,
         },
       ],
@@ -1566,10 +1624,10 @@ The starkest gap is between generations: 88% of Ethiopia-born Ethiopian-Israelis
           en: "Knesset representation (25th Knesset)",
           am: "በክኔሴት ውክልና (25ኛ ክኔሴት)",
         },
-        figure: { he: "3 ח\"כים", en: "3 MKs", am: "3 የፓርላማ አባላት" },
+        figure: { he: '3 ח"כים', en: "3 MKs", am: "3 የፓርላማ አባላት" },
         context: {
           he: '3 חברי כנסת יוצאי אתיופיה בכנסת ה-25 (מכהנת מנוב׳ 2022) — גידול מ-2 ח"כים בכנסות ה-21-22. שיעור הייצוג (3 מתוך 120 = 2.5%) קרוב לשיעור באוכלוסייה היהודית (~2.2%) — בשונה מהפער הבולט בתעסוקה הציבורית.',
-          en: '3 Ethiopian-origin MKs in the 25th Knesset (serving since Nov. 2022) — up from 2 MKs in the 21st-22nd Knessets. The representation rate (3 of 120 = 2.5%) is close to the share of the Jewish population (~2.2%) — unlike the pronounced gap in public-sector employment.',
+          en: "3 Ethiopian-origin MKs in the 25th Knesset (serving since Nov. 2022) — up from 2 MKs in the 21st-22nd Knessets. The representation rate (3 of 120 = 2.5%) is close to the share of the Jewish population (~2.2%) — unlike the pronounced gap in public-sector employment.",
           am: "3 የኢትዮጵያ ምንጭ የፓርላማ አባላት በ25ኛው ክኔሴት — ከ21-22ኛ ክኔሴት 2 አባላት ጭማሪ።",
         },
         source: {
@@ -1587,8 +1645,8 @@ The starkest gap is between generations: 88% of Ethiopia-born Ethiopian-Israelis
         },
         figure: { he: "2.44%", en: "2.44%", am: "2.44%" },
         context: {
-          he: 'ב-2023 היוו יוצאי אתיופיה 2.44% מעובדי החברות הממשלתיות (1,273 מתוך 52,181) ו-2.44% מעובדי התאגידים הציבוריים — מעל היעד המנהלי (כ-1.81%, לפי שיעורם באוכלוסייה). עלייה הדרגתית מ-1.78% ב-2016. עם זאת, ב-2022-2023 היה עובד בכיר יוצא-אתיופיה אחד בלבד בכלל 32 החברות הממשלתיות המחויבות בדיווח.',
-          en: 'In 2023, Ethiopian-origin employees made up 2.44% of government-company staff (1,273 of 52,181) and 2.44% of public-corporation staff — above the administrative target (~1.81%, based on their population share). A gradual rise from 1.78% in 2016. However, in 2022-2023 there was only one senior Ethiopian-origin employee across all 32 reporting government companies.',
+          he: "ב-2023 היוו יוצאי אתיופיה 2.44% מעובדי החברות הממשלתיות (1,273 מתוך 52,181) ו-2.44% מעובדי התאגידים הציבוריים — מעל היעד המנהלי (כ-1.81%, לפי שיעורם באוכלוסייה). עלייה הדרגתית מ-1.78% ב-2016. עם זאת, ב-2022-2023 היה עובד בכיר יוצא-אתיופיה אחד בלבד בכלל 32 החברות הממשלתיות המחויבות בדיווח.",
+          en: "In 2023, Ethiopian-origin employees made up 2.44% of government-company staff (1,273 of 52,181) and 2.44% of public-corporation staff — above the administrative target (~1.81%, based on their population share). A gradual rise from 1.78% in 2016. However, in 2022-2023 there was only one senior Ethiopian-origin employee across all 32 reporting government companies.",
           am: "በ2023 የኢትዮጵያ ምንጭ ሠራተኞች 2.44% የመንግስት ኩባንያ ሠራተኞች ነበሩ — ከ1.81% ኢላማ በላይ።",
         },
         source: {
@@ -1628,10 +1686,14 @@ The starkest gap is between generations: 88% of Ethiopia-born Ethiopian-Israelis
           en: "Meeting the representation target in the civil service",
           am: "በመንግስት አገልግሎት ውክልና ኢላማ ማሟላት",
         },
-        figure: { he: "63% / 79% לא עמדו ביעד", en: "63% / 79% missed target", am: "63% / 79% ኢላማ አላሟሉም" },
+        figure: {
+          he: "63% / 79% לא עמדו ביעד",
+          en: "63% / 79% missed target",
+          am: "63% / 79% ኢላማ አላሟሉም",
+        },
         context: {
-          he: '88% מעובדי שירות המדינה יוצאי אתיופיה הועסקו בדרג הזוטר ביותר; 63% ממשרדי הממשלה ו-79% מיחידות הסמך לא עמדו ביעד הממשלתי לייצוג הולם (2019). זהו הנתון העדכני ביותר שאותר לשירות המדינה עצמו (להבדיל מחברות ממשלתיות, שלגביהן יש נתוני 2023).',
-          en: '88% of Ethiopian-origin civil-service employees were in the most junior rank; 63% of government ministries and 79% of statutory units missed the government\'s representation target (2019). This is the most recent figure located for the civil service itself (as distinct from government companies, for which 2023 data exists).',
+          he: "88% מעובדי שירות המדינה יוצאי אתיופיה הועסקו בדרג הזוטר ביותר; 63% ממשרדי הממשלה ו-79% מיחידות הסמך לא עמדו ביעד הממשלתי לייצוג הולם (2019). זהו הנתון העדכני ביותר שאותר לשירות המדינה עצמו (להבדיל מחברות ממשלתיות, שלגביהן יש נתוני 2023).",
+          en: "88% of Ethiopian-origin civil-service employees were in the most junior rank; 63% of government ministries and 79% of statutory units missed the government's representation target (2019). This is the most recent figure located for the civil service itself (as distinct from government companies, for which 2023 data exists).",
           am: "88% የኢትዮጵያ ምንጭ የመንግስት ሠራተኞች በጀማሪ ደረጃ ላይ ነበሩ፤ 63% ሚኒስቴሮች ኢላማውን አላሟሉም (2019)።",
         },
         source: {
@@ -1664,7 +1726,7 @@ The starkest gap is between generations: 88% of Ethiopia-born Ethiopian-Israelis
         },
         publishedYear: 2023,
         confidenceNote: {
-          he: 'ייצוג-יתר בנתוני אכיפה — לא שיעור פשיעה. המקור מדגיש שקשה לדעת אם זה משקף עבירות בפועל או דפוסי שיטור.',
+          he: "ייצוג-יתר בנתוני אכיפה — לא שיעור פשיעה. המקור מדגיש שקשה לדעת אם זה משקף עבירות בפועל או דפוסי שיטור.",
           en: "Over-representation in enforcement data — not a crime rate. The source stresses it's hard to know if this reflects actual offenses or policing patterns.",
           am: "በአፈጻጸም መረጃ ውስጥ ከመጠን በላይ ውክልና — የወንጀል መጠን አይደለም።",
         },
@@ -1678,7 +1740,7 @@ The starkest gap is between generations: 88% of Ethiopia-born Ethiopian-Israelis
         },
         figure: { he: "אין נתון קיים", en: "No data exists", am: "መረጃ የለም" },
         context: {
-          he: 'בישראל אין תיוג אתני בפנקסי הבוחרים, ולכן ועדת הבחירות המרכזית אינה מפרסמת (ואינה יכולה לפרסם) נתוני הצבעה מפולחים לפי מוצא אתיופי — לא ברמת הפרט וגם לא ברמת יישוב, כי אין יישוב יהודי בישראל עם רוב יוצאי אתיופיה. זו עובדה מבנית של מערכת הבחירות בישראל, לא פער מחקר שניתן לסגור.',
+          he: "בישראל אין תיוג אתני בפנקסי הבוחרים, ולכן ועדת הבחירות המרכזית אינה מפרסמת (ואינה יכולה לפרסם) נתוני הצבעה מפולחים לפי מוצא אתיופי — לא ברמת הפרט וגם לא ברמת יישוב, כי אין יישוב יהודי בישראל עם רוב יוצאי אתיופיה. זו עובדה מבנית של מערכת הבחירות בישראל, לא פער מחקר שניתן לסגור.",
           en: "Israel does not tag voter rolls by ethnicity, so the Central Elections Committee does not publish (and structurally cannot publish) voter-turnout data broken down by Ethiopian origin — neither at the individual level nor by locality, since no Jewish locality in Israel has an Ethiopian-origin majority. This is a structural fact about Israel's electoral system, not a research gap that could be closed.",
           am: "እስራኤል የድምጽ መስጫ መዝገቦችን በዘር አይለይም፣ ስለዚህ የማዕከላዊ ምርጫ ኮሚቴ በኢትዮጵያ ምንጭ የተከፋፈለ የድምጽ አሰጣጥ መረጃ አያትምም — ይህ የስርዓት እውነታ ነው፣ ሊዘጋ የሚችል የምርምር ክፍተት አይደለም።",
         },
@@ -1702,7 +1764,11 @@ The starkest gap is between generations: 88% of Ethiopia-born Ethiopian-Israelis
       },
       items: [
         {
-          label: { he: "חברות ממשלתיות", en: "Government companies", am: "የመንግስት ኩባንያዎች" },
+          label: {
+            he: "חברות ממשלתיות",
+            en: "Government companies",
+            am: "የመንግስት ኩባንያዎች",
+          },
           valuePercent: 2.44,
         },
         {
@@ -1727,7 +1793,7 @@ The starkest gap is between generations: 88% of Ethiopia-born Ethiopian-Israelis
         },
       ],
       source: {
-        name: 'מרכז המחקר והמידע של הכנסת (6.3.2025) ומשרד מבקר המדינה (יולי 2024)',
+        name: "מרכז המחקר והמידע של הכנסת (6.3.2025) ומשרד מבקר המדינה (יולי 2024)",
         url: "https://fs.knesset.gov.il/25/Committees/25_cs_mmm_5850929.pdf",
       },
     },
