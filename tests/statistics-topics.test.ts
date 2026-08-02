@@ -337,7 +337,9 @@ describe("verified data — language (TED-99)", () => {
 
   it("the narrative prominently discloses that the data covers the immigrant generation only", () => {
     const heNarrative = statTopicNarrative(language, "he")!;
-    expect(heNarrative).toContain("הנתונים הבאים מתייחסים לדור העולים בלבד ואינם משקפים את הדור הישראלי-ילידי");
+    expect(heNarrative).toContain(
+      "הנתונים הבאים מתייחסים לדור העולים בלבד ואינם משקפים את הדור הישראלי-ילידי",
+    );
   });
 });
 
