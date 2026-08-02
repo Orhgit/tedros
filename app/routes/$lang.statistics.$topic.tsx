@@ -13,14 +13,20 @@ import { breadcrumbJsonLd, statTopicJsonLd } from "~/lib/statistics/schema";
 import {
   STAT_TOPICS,
   findStatTopic,
+  pickBarChartLabel,
   pickFigure,
+  pickFigureConfidenceNote,
+  pickTranslatable,
   statTopicDescription,
   statTopicName,
+  statTopicNarrative,
+  topicTemporalCoverage,
 } from "~/lib/statistics/topics.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+import { renderMarkdown } from "~/lib/utils/markdown";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -39,6 +45,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     context: pickFigure(f, locale, "context"),
     source: f.source,
     publishedYear: f.publishedYear,
+    confidenceNote: pickFigureConfidenceNote(f, locale),
   }));
 
   // Sibling topics for the cross-link footer.
@@ -51,8 +58,24 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}/statistics/${topic.slug}`;
+  const csvUrl = `${shareUrl}.csv`;
   const name = statTopicName(topic, locale);
   const description = statTopicDescription(topic, locale);
+  const temporalCoverage = topicTemporalCoverage(topic);
+
+  const narrativeMarkdown = statTopicNarrative(topic, locale);
+  const narrativeHtml = narrativeMarkdown ? renderMarkdown(narrativeMarkdown) : null;
+
+  const barChart = topic.barChart
+    ? {
+        heading: pickTranslatable(topic.barChart.heading, locale),
+        items: topic.barChart.items.map((item) => ({
+          label: pickBarChartLabel(item, locale),
+          valuePercent: item.valuePercent,
+        })),
+        source: topic.barChart.source,
+      }
+    : null;
 
   return {
     locale,
@@ -60,15 +83,19 @@ export async function loader({ params }: Route.LoaderArgs) {
     figures,
     siblings,
     shareUrl,
+    csvUrl,
     publicUrl: PUBLIC_URL,
     name,
     description,
+    temporalCoverage,
+    narrativeHtml,
+    barChart,
   };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, topic, publicUrl, name, description } = data;
+  const { locale, topic, publicUrl, name, description, temporalCoverage } = data;
   const _url = `${publicUrl}/${locale}/statistics/${topic.slug}`;
 
   const datasetJsonLd = statTopicJsonLd(
@@ -77,7 +104,11 @@ export const meta: Route.MetaFunction = ({ data }) => {
       topicSlug: topic.slug,
       name,
       description,
-      temporalCoverage: "2024",
+      temporalCoverage,
+      ...(topic.slug === "demographics" || topic.slug === "education"
+        ? { creatorName: "הלשכה המרכזית לסטטיסטיקה (הלמ״ס) / CBS Israel" }
+        : {}),
+      includeCsvDistribution: true,
       keywords: [
         "Ethiopian-Israeli",
         "Beta Israel",
@@ -107,7 +138,18 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function StatisticsTopicDetail({ loaderData }: Route.ComponentProps) {
-  const { locale, topic, figures, siblings, shareUrl, name, description } = loaderData;
+  const {
+    locale,
+    topic,
+    figures,
+    siblings,
+    shareUrl,
+    csvUrl,
+    name,
+    description,
+    narrativeHtml,
+    barChart,
+  } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -180,12 +222,79 @@ export default function StatisticsTopicDetail({ loaderData }: Route.ComponentPro
                 </a>{" "}
                 · {f.publishedYear}
               </p>
+              {f.confidenceNote && (
+                <p className="mt-2 rounded-md bg-amber-50 px-3 py-2 text-xs text-amber-900">
+                  ⚠️ {f.confidenceNote}
+                </p>
+              )}
             </li>
           ))}
         </ul>
 
-        <div className="mt-10 rounded-lg border border-earth-200 bg-earth-50 p-5 text-sm text-ink-700">
+        {/* Energy-light CSS bar chart — no chart library (TED-20). */}
+        {barChart && (
+          <section className="mt-10 rounded-2xl border border-earth-200 bg-card p-5 sm:p-6">
+            <h2 className="font-display text-lg font-semibold text-earth-900">
+              {barChart.heading}
+            </h2>
+            <ul className="mt-4 space-y-3">
+              {barChart.items.map((item) => (
+                <li key={item.label}>
+                  <div className="mb-1 flex items-baseline justify-between gap-3 text-sm">
+                    <span className="text-ink-700">{item.label}</span>
+                    <span className="font-display font-semibold text-earth-800">
+                      {item.valuePercent}%
+                    </span>
+                  </div>
+                  <div
+                    className="h-2.5 w-full overflow-hidden rounded-full bg-earth-100"
+                    role="img"
+                    aria-label={`${item.label}: ${item.valuePercent}%`}
+                  >
+                    <div
+                      className="h-full rounded-full bg-earth-600"
+                      style={{ width: `${Math.min(item.valuePercent, 100)}%` }}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs text-ink-600">
+              {t(locale, "statistics_source_label")}:{" "}
+              <a
+                href={barChart.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-earth-800 underline hover:no-underline"
+              >
+                {barChart.source.name}
+              </a>
+            </p>
+          </section>
+        )}
+
+        {narrativeHtml && (
+          <section className="mt-10">
+            <h2 className="font-display text-xl font-semibold text-earth-900">
+              {t(locale, "statistics_narrative_heading")}
+            </h2>
+            <div
+              className="prose prose-ink mt-4 max-w-none"
+              dangerouslySetInnerHTML={{ __html: narrativeHtml }}
+            />
+          </section>
+        )}
+
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-earth-200 bg-earth-50 p-5 text-sm text-ink-700">
           <p>{t(locale, "statistics_methodology_note")}</p>
+          <a
+            href={csvUrl}
+            download
+            className="inline-flex shrink-0 items-center gap-2 rounded-md border border-earth-300 bg-card px-3 py-2 text-sm font-medium text-earth-800 transition hover:border-earth-500 hover:bg-earth-100"
+          >
+            <span aria-hidden="true">⬇</span>
+            {t(locale, "statistics_csv_download_label")}
+          </a>
         </div>
 
         <div className="mt-6">
