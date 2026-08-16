@@ -6913,4 +6913,423 @@ When calling any government body, say immediately: **"Amharic please"** — most
 - ቆሎ ለብሪዩት: 1-700-500-400`,
     },
   },
+
+  // ── Wave 6 — sourced from Ministry of Education (mosdot.education.gov.il),
+  // Kol-Zchut and the Freedom-of-Information portal (foi.gov.il). The exact
+  // shekel amount is NOT published here: it varies per student by aliyah
+  // date, education stage and country of origin (per all three sources),
+  // and the only concrete figures we found in search (626/907/1,125 ₪) trace
+  // back to a 2015–2016 Director-General circular — not current, so they are
+  // deliberately omitted per the "no fabricated/stale numbers" policy. Users
+  // are pointed to the school/Ministry of Education to get the current,
+  // correct figure for their case. AM fields are HE-fallback + TODO pending
+  // professional review (see file header + CLAUDE.md language policy).
+  {
+    title: {
+      he: "סל קליטה לתלמידים עולים",
+      en: "Absorption Basket for Immigrant Students",
+      am: "[TODO: תרגום מקצועי נדרש] סל קליטה לתלמידים עולים",
+    },
+    slug: {
+      he: "student-absorption-basket",
+      en: "student-absorption-basket",
+      am: "student-absorption-basket",
+    },
+    govUrl: "https://mosdot.education.gov.il/students/immigrants/absorption_basket",
+    eligibilitySummary: {
+      he: "לכל תלמיד/ה עולה חדש/ה, כולל יוצאי אתיופיה. הסכום משתנה לפי תאריך העלייה, שכבת הגיל וארץ המוצא — בדקו את הסכום המדויק מול בית הספר או משרד החינוך.",
+      en: "For every new immigrant student, including Ethiopian-Israelis. The amount varies by aliyah date, age group and country of origin — check the exact figure with the school or Ministry of Education.",
+      am: "[TODO: תרגום מקצועי נדרש] לכל תלמיד/ה עולה חדש/ה, כולל יוצאי אתיופיה. הסכום משתנה לפי תאריך העלייה, שכבת הגיל וארץ המוצא — בדקו את הסכום המדויק מול בית הספר או משרד החינוך.",
+    },
+    tags: ["new_immigrant", "education"],
+    bodies: {
+      he: `## מה זה סל קליטה?
+
+סל קליטה — הנקרא גם "אגרת חינוך" — הוא סיוע כספי שמעביר משרד החינוך למוסד הלימודים של כל תלמיד/ה עולה, כדי לסייע במימון הוצאות חינוך בתחילת השנה: ספרי לימוד, פעילויות תרבות, טיולים ואירועים שהורים של תלמידים ותיקים בדרך כלל נדרשים לממן בעצמם.
+
+## למי זה מיועד?
+
+לכל תלמיד/ה עולה חדש/ה במערכת החינוך הישראלית, כולל תלמידים יוצאי אתיופיה. גובה הסיוע נקבע לכל תלמיד/ה **באופן פרטני**, לפי שלושה משתנים:
+
+- **תאריך העלייה** ארצה
+- **שכבת הגיל/החינוך** — יסודי, חטיבת ביניים או חטיבה עליונה
+- **ארץ המוצא**
+
+בשל כך, אין סכום אחיד שמתאים לכולם — והוא גם משתנה משנה לשנה.
+
+## מה כלול בסל?
+
+- מימון ספרי לימוד לקראת תחילת שנת הלימודים
+- מימון פעילויות שבבתי ספר רבים ההורים נדרשים לממן בעצמם — טיולים, סל תרבות, אירועים בית-ספריים
+- הכסף מועבר מהמדינה לרשות המקומית / לבעלות על בית הספר, שמעבירה אותו הלאה לבית הספר עבור התלמיד/ה
+
+**חשוב:** הסכום המדויק בשקלים תלוי בתאריך העלייה, בשכבת הגיל ובארץ המוצא של כל תלמיד/ה — יש לבדוק את הסכום הרלוונטי מול בית הספר או משרד החינוך, ולא להסתמך על מספר קבוע שמופיע באתר כלשהו (כולל מספרים ישנים שעדיין מסתובבים ברשת מחוזרי עבר).
+
+## איך פונים ובודקים זכאות?
+
+1. ברוב המקרים אין צורך בהגשת בקשה נפרדת — בית הספר מקבל את הסל ומחויב ליידע את ההורים על הסכום שהתקבל ועל מה הוא הוצא, וההורים חותמים על קבלתו.
+2. אם בית הספר גבה מכם כסף מראש (על טיולים, ספרים וכד') ולאחר קבלת סל הקליטה נותרה יתרה לזכות התלמיד/ה — בית הספר **חייב** להחזיר את היתרה להורים.
+3. לבירור הזכאות והסכום המדויק לתלמיד/ה שלכם — פנו למזכירות בית הספר, למחוז משרד החינוך, או עיינו במקורות הרשמיים:
+   - משרד החינוך: [סל קליטה לתלמידים עולים](https://mosdot.education.gov.il/students/immigrants/absorption_basket)
+   - כל-זכות: [תשלום אגרת חינוך (סל קליטה) לתלמידים יוצאי אתיופיה](https://www.kolzchut.org.il/he/%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%90%D7%92%D7%A8%D7%AA_%D7%97%D7%99%D7%A0%D7%95%D7%9A_(%D7%A1%D7%9C_%D7%A7%D7%9C%D7%99%D7%98%D7%94)_%D7%9C%D7%AA%D7%9C%D7%9E%D7%99%D7%93%D7%99%D7%9D_%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94)
+   - חוק חופש המידע: [סל קליטה לעולים יוצאי אתיופיה](https://foi.gov.il/he/node/1780)`,
+      en: `## What is the absorption basket?
+
+The absorption basket — also called "education fee" — is financial support the Ministry of Education transfers to every immigrant student's school, to help cover start-of-year education costs: textbooks, cultural activities, trips and events that parents of veteran students usually have to pay for themselves.
+
+## Who is it for?
+
+Every new immigrant student in the Israeli education system, including Ethiopian-Israelis. The support amount is set **individually per student**, based on three factors:
+
+- **Aliyah (immigration) date**
+- **Education stage** — elementary, middle school or high school
+- **Country of origin**
+
+Because of this, there is no single amount that applies to everyone, and it also changes from year to year.
+
+## What's included?
+
+- Funding for textbooks at the start of the school year
+- Funding for activities that parents at many schools are otherwise expected to pay for themselves — trips, cultural programs, school events
+- The money is transferred from the state to the local authority / school ownership entity, which passes it on to the school for the student
+
+**Important:** the exact shekel amount depends on the student's aliyah date, education stage and country of origin — check the relevant figure with the school or Ministry of Education directly, rather than relying on a fixed number found online (including outdated figures still circulating from old circulars).
+
+## How to apply / check eligibility
+
+1. In most cases there's no separate application — the school receives the basket and is required to inform parents of the amount received and what it was spent on; parents sign to acknowledge receipt.
+2. If the school charged you in advance (for trips, books, etc.) and a balance remains after the basket is received, the school **must** refund the balance to parents.
+3. To check eligibility and the exact amount for your child — contact the school office, the local Ministry of Education district, or the official sources:
+   - Ministry of Education: [Absorption basket for immigrant students](https://mosdot.education.gov.il/students/immigrants/absorption_basket)
+   - Kol-Zchut: [Education fee (absorption basket) for Ethiopian-Israeli students](https://www.kolzchut.org.il/he/%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%90%D7%92%D7%A8%D7%AA_%D7%97%D7%99%D7%A0%D7%95%D7%9A_(%D7%A1%D7%9C_%D7%A7%D7%9C%D7%99%D7%98%D7%94)_%D7%9C%D7%AA%D7%9C%D7%9E%D7%99%D7%93%D7%99%D7%9D_%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94)
+   - Freedom of Information portal: [Absorption basket for Ethiopian-Israeli immigrants](https://foi.gov.il/he/node/1780)`,
+      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית]
+
+## מה זה סל קליטה?
+
+סל קליטה — הנקרא גם "אגרת חינוך" — הוא סיוע כספי שמעביר משרד החינוך למוסד הלימודים של כל תלמיד/ה עולה, כדי לסייע במימון הוצאות חינוך בתחילת השנה: ספרי לימוד, פעילויות תרבות, טיולים ואירועים.
+
+## למי זה מיועד?
+
+לכל תלמיד/ה עולה חדש/ה, כולל יוצאי אתיופיה. הסכום נקבע פרטנית לפי תאריך העלייה, שכבת הגיל וארץ המוצא — ולכן משתנה מתלמיד לתלמיד.
+
+## מה כלול?
+
+ספרי לימוד, טיולים, סל תרבות ואירועים בית-ספריים. הסכום המדויק בשקלים משתנה — יש לבדוק מול בית הספר או משרד החינוך.
+
+## איך פונים?
+
+פנו למזכירות בית הספר או למחוז משרד החינוך. מקור רשמי: mosdot.education.gov.il/students/immigrants/absorption_basket
+
+📞 משרד החינוך`,
+    },
+  },
+
+  // ── Wave 6 (cont'd) — sourced from the Employment Service (מינהל
+  // התעסוקה, משרד העבודה) official briefing page for the "Lamerchak"
+  // ("Toward Distance") program, and a gov.il tender that confirms the
+  // program is an active, ongoing national initiative (not a one-off
+  // pilot). The briefing page is aimed at program operators/managers, not
+  // participants, and has no explicit "last updated" date, no direct
+  // registration flow and no published stipend/budget figures — none of
+  // these are invented here. Users are pointed to the Employment Service
+  // (מינהל תעסוקת אוכלוסיות ייחודיות) to ask about enrollment in their
+  // area. AM field is HE-fallback + TODO pending professional review (see
+  // file header + CLAUDE.md language policy).
+  {
+    title: {
+      he: 'תוכנית "למרחק" — הכוון תעסוקתי ליוצאי אתיופיה',
+      en: '"Lamerchak" — Employment Guidance for Ethiopian-Israeli Youth',
+      am: '[TODO: תרגום מקצועי נדרש] תוכנית "למרחק" — הכוון תעסוקתי ליוצאי אתיופיה',
+    },
+    slug: { he: "lamerchak", en: "lamerchak", am: "lamerchak" },
+    govUrl:
+      "https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5",
+    eligibilitySummary: {
+      he: "לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית. התוכנית מופעלת באמצעות מרכזי הכוון תעסוקתי, בהפעלת מינהל התעסוקה במשרד העבודה.",
+      en: "For young Ethiopian-Israelis seeking career advancement and professional education. The program runs through employment-guidance centers, operated by the Employment Service at the Ministry of Labor.",
+      am: "[TODO: תרגום מקצועי נדרש] לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית. התוכנית מופעלת באמצעות מרכזי הכוון תעסוקתי, בהפעלת מינהל התעסוקה במשרד העבודה.",
+    },
+    tags: ["employment", "youth"],
+    bodies: {
+      he: `## מה זה "למרחק"?
+
+"למרחק" היא תוכנית תעסוקה ייעודית של מינהל התעסוקה במשרד העבודה, שמטרתה לסייע לצעירים יוצאי אתיופיה לפתח קריירה, לרכוש השכלה מקצועית ולהשתלב בתפקידים מתגמלים בשוק העבודה הישראלי. התוכנית פועלת באמצעות **מרכזי הכוון תעסוקתי** ייעודיים.
+
+## למי זה מיועד?
+
+לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי — מי שמעוניינים לבנות מסלול קריירה, לרכוש הכשרה מקצועית ולהתמקם בתפקידים איכותיים ובעלי סיכויי קידום.
+
+## מה כוללת התוכנית?
+
+התוכנית מבוססת על רשת של מרכזי הכוון תעסוקתי, שתפקידם ללוות את המשתתפים בתהליך של פיתוח קריירה והשכלה מקצועית לקראת שילוב בתפקידים מתגמלים. פרטים מלאים על תוכן הליווי, משך התוכנית והמענים הספציפיים במרכז הקרוב אליכם מתפרסמים דרך מרכזי ההכוון עצמם ואינם מפורטים באתר מינהל התעסוקה.
+
+**לתשומת לבכם:** אין באתר הרשמי פירוט של סכומי סיוע, מלגות או תאריכי הרשמה — אם נתקלתם במידע כזה במקור אחר, כדאי לוודא אותו ישירות מול הגורם המפעיל לפני שאתם מסתמכים עליו.
+
+## איך פונים?
+
+התוכנית אינה כוללת טופס הרשמה מקוון ישיר באתר. לבירור זכאות, מיקום מרכזי ההכוון הפעילים ותהליך ההצטרפות בפועל — פנו ישירות למינהל תעסוקת אוכלוסיות ייחודיות באתר gov.il, או למרכז ההכוון התעסוקתי הקרוב לאזור מגוריכם:
+
+- מינהל התעסוקה — דף התוכנית: [taasukada.labor.gov.il](https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5)
+- לפנייה כללית למינהל תעסוקת אוכלוסיות ייחודיות: אתר [gov.il](https://www.gov.il)`,
+      en: `## What is "Lamerchak"?
+
+"Lamerchak" is a dedicated employment program run by Israel's Employment Service (מינהל התעסוקה) at the Ministry of Labor, designed to help young Ethiopian-Israelis build a career, acquire professional education and move into rewarding positions in the Israeli labor market. The program operates through dedicated **employment-guidance centers**.
+
+## Who is it for?
+
+Young Ethiopian-Israelis seeking career advancement — people who want to build a career path, gain professional training and move into quality positions with real advancement potential.
+
+## What does the program include?
+
+The program is built around a network of employment-guidance centers, whose role is to accompany participants through career development and professional education toward placement in rewarding positions. Full details on the guidance content, program duration, and the specific offerings at the center nearest you are published by the guidance centers themselves and are not detailed on the Employment Service's page.
+
+**Note:** the official page does not publish support amounts, stipends or registration dates — if you come across such figures elsewhere, verify them directly with the operating body before relying on them.
+
+## How to apply
+
+The program has no direct online registration form on its official page. To check eligibility, find your nearest active guidance center, and learn the actual enrollment process — contact the Employment Service for unique populations (מינהל תעסוקת אוכלוסיות ייחודיות) directly via gov.il, or reach out to the employment-guidance center nearest your area:
+
+- Employment Service — program page: [taasukada.labor.gov.il](https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5)
+- General inquiries to the Employment Service for unique populations: [gov.il](https://www.gov.il)`,
+      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית]
+
+## מה זה "למרחק"?
+
+"למרחק" היא תוכנית תעסוקה ייעודית של מינהל התעסוקה במשרד העבודה, שמטרתה לסייע לצעירים יוצאי אתיופיה לפתח קריירה, לרכוש השכלה מקצועית ולהשתלב בתפקידים מתגמלים. התוכנית פועלת באמצעות מרכזי הכוון תעסוקתי.
+
+## למי זה מיועד?
+
+לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית.
+
+## מה כוללת התוכנית?
+
+ליווי במרכזי הכוון תעסוקתי לקראת שילוב בתפקידים מתגמלים. אין באתר פירוט סכומים או תאריכים — יש לבדוק פרטים מדויקים מול הגורם המפעיל.
+
+## איך פונים?
+
+אין טופס הרשמה מקוון. פנו למינהל תעסוקת אוכלוסיות ייחודיות דרך gov.il, או למרכז ההכוון התעסוקתי הקרוב אליכם.
+
+📞 מינהל התעסוקה, משרד העבודה`,
+    },
+  },
+
+  // ── Wave 6 (cont'd) — sourced from the Small and Medium Business Authority
+  // (sba.org.il/hb/AidPrograms/Pages/pr4.aspx and
+  // sba.org.il/hb/MaofServices/courses/Pages/9910.aspx). This is a GENERAL
+  // entrepreneurship course open to any Israeli citizen — NOT a
+  // community-specific track. Kol-Zchut and several AI-generated summaries
+  // describe it as "dedicated to Ethiopian-Israelis" and cite a discounted
+  // price of ₪336; neither claim is confirmed by the primary source, so
+  // both are deliberately omitted here per the "no fabricated/unverified
+  // data" policy. The community angle is phrased softly as "open to every
+  // citizen, including members of the Ethiopian-Israeli community" without
+  // implying an exclusive track or discount that doesn't exist. AM field is
+  // HE-fallback + TODO pending professional review.
+  {
+    title: {
+      he: "יוזמים עסק — קורס יזמות עסקית (הסוכנות לעסקים קטנים ובינוניים)",
+      en: "Yozmim Esek — Business Entrepreneurship Course (Small & Medium Business Authority)",
+      am: "[TODO: תרגום מקצועי נדרש] יוזמים עסק — קורס יזמות עסקית",
+    },
+    slug: {
+      he: "yozmim-esek-business-course",
+      en: "yozmim-esek-business-course",
+      am: "yozmim-esek-business-course",
+    },
+    govUrl: "https://www.sba.org.il/hb/AidPrograms/Pages/pr4.aspx",
+    eligibilitySummary: {
+      he: "קורס יזמות כללי ליזמים בתחילת דרכם — 70 שעות (14 מפגשים), עלות 728 ₪. פתוח לכל אזרח/ית, כולל יוצאי הקהילה האתיופית-ישראלית המעוניינים לפתוח עסק.",
+      en: "General entrepreneurship course for early-stage entrepreneurs — 70 hours (14 sessions), cost ₪728. Open to every citizen, including members of the Ethiopian-Israeli community who want to start a business.",
+      am: "[TODO: תרגום מקצועי נדרש] קורס יזמות כללי ליזמים בתחילת דרכם — 70 שעות (14 מפגשים), עלות 728 ₪. פתוח לכל אזרח/ית.",
+    },
+    tags: ["small_business", "entrepreneurship", "employment"],
+    bodies: {
+      he: `## מה זה "יוזמים עסק"?
+
+"יוזמים עסק" הוא קורס יזמות עסקית של הסוכנות לעסקים קטנים ובינוניים (מעוף), המיועד למי שנמצא/ת בתחילת הדרך בהקמת עסק. הקורס מלמד חשיבה עסקית ויזמותית, ומסייע למשתתפים לבחון את כדאיות הרעיון העסקי שלהם לפני שמשקיעים בו זמן וכסף.
+
+## למי זה מיועד?
+
+לכל מי שיש לו/ה "חלום או רעיון לפתיחת עסק" — אין דרישות קדם מיוחדות. הקורס פתוח לכל אזרח/ית ישראלי/ת, כולל יוצאי הקהילה האתיופית-ישראלית המעוניינים לפתוח עסק. אין מסלול נפרד או הנחה ייעודית לקבוצת אוכלוסייה מסוימת — התנאים זהים לכל הנרשמים.
+
+## מה כולל הקורס?
+
+- **היקף**: 70 שעות אקדמיות, פרוסות על פני 14 מפגשים
+- **עלות**: 728 ₪ לכלל הקורס
+- **תוכן**: גיבוש רעיון עסקי ממוקד (כולל שימוש בכלים כמו Business Model Canvas), אסטרטגיית שיווק, זיהוי קהל לקוחות, ניהול פיננסי ותזרים מזומנים, ושיווק דיגיטלי
+- **מיומנויות**: חשיבה עסקית, יזמות, יצירתיות, קבלת החלטות ופתרון בעיות
+- **פורמט**: המפגשים מתקיימים בסניפי הסוכנות ברחבי הארץ (חלקם באמצעות Zoom); הפורמט המדויק, הימים והשעות משתנים בין סניף לסניף — יש לבדוק מול הסניף הרלוונטי לפני ההרשמה
+
+## איך נרשמים?
+
+1. נכנסים למערכת הלמידה המקוונת של הסוכנות בכתובת [lms.sba.org.il](https://lms.sba.org.il), או
+2. פונים ישירות לסניף הסוכנות לעסקים קטנים ובינוניים הקרוב אליכם
+3. בטרם ההרשמה כדאי לוודא מול הסניף את התאריכים, הפורמט (פרונטלי / Zoom) והזמינות למחזור הקרוב
+
+מקור: [הסוכנות לעסקים קטנים ובינוניים — יוזמים עסק](https://www.sba.org.il/hb/AidPrograms/Pages/pr4.aspx)`,
+      en: `## What is "Yozmim Esek"?
+
+"Yozmim Esek" (Business Initiators) is a business entrepreneurship course run by Israel's Small and Medium Business Authority (Maof), designed for people who are at the very start of setting up a business. The course teaches business and entrepreneurial thinking and helps participants assess the viability of their business idea before investing time and money in it.
+
+## Who is it for?
+
+Anyone with "a dream or an idea for opening a business" — there are no special prerequisites. The course is open to every Israeli citizen, including members of the Ethiopian-Israeli community who want to start a business. There is no separate track or dedicated discount for any specific population group — the terms are the same for all registrants.
+
+## What does the course include?
+
+- **Scope**: 70 academic hours, spread over 14 sessions
+- **Cost**: ₪728 for the full course
+- **Content**: shaping a focused business idea (including tools such as the Business Model Canvas), marketing strategy, identifying your customer base, financial management and cash flow, and digital marketing
+- **Skills**: business thinking, entrepreneurship, creativity, decision-making and problem-solving
+- **Format**: sessions run at Authority branches around the country (some via Zoom); the exact format, days and hours vary by branch — check with the relevant branch before registering
+
+## How to register
+
+1. Go to the Authority's online learning system at [lms.sba.org.il](https://lms.sba.org.il), or
+2. Contact your nearest Small and Medium Business Authority branch directly
+3. Before registering, confirm dates, format (in-person / Zoom) and availability for the upcoming cohort with the branch
+
+Source: [Small and Medium Business Authority — Yozmim Esek](https://www.sba.org.il/hb/AidPrograms/Pages/pr4.aspx)`,
+      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית]
+
+## מה זה "יוזמים עסק"?
+
+"יוזמים עסק" הוא קורס יזמות עסקית של הסוכנות לעסקים קטנים ובינוניים (מעוף), המיועד למי שנמצא/ת בתחילת הדרך בהקמת עסק.
+
+## למי זה מיועד?
+
+לכל מי שיש לו/ה חלום או רעיון לפתיחת עסק — פתוח לכל אזרח/ית ישראלי/ת, כולל יוצאי הקהילה האתיופית-ישראלית.
+
+## מה כולל הקורס?
+
+70 שעות אקדמיות ב-14 מפגשים, בעלות 728 ₪. תוכן: גיבוש רעיון עסקי, שיווק, ניהול פיננסי ושיווק דיגיטלי.
+
+## איך נרשמים?
+
+דרך lms.sba.org.il או בפנייה לסניף הסוכנות הקרוב.
+
+📞 הסוכנות לעסקים קטנים ובינוניים`,
+    },
+  },
+
+  // ── Wave 6 (cont'd) — sourced from the Knesset Research and Information
+  // Center ("נתונים על יוצאי אתיופיה וסקירת תכניות סיוע בדיור", 10.8.2025,
+  // pp. 4-5): https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf
+  // Verified facts from the source:
+  //   - Operating body: Ministry of Construction and Housing (משרד הבינוי
+  //     והשיכון) — NOT the Jewish Agency. The Knesset doc's own footnote 12
+  //     cites the primary publication: "משרד הבינוי והשיכון, תוכנית מענקי
+  //     הדיור לעולים מאתיופיה המתגוררים במרכזי קליטה או אתרי קליטה,
+  //     26 באפריל 2022."
+  //   - Legal basis: Government Decision 1103 of the 36th government,
+  //     10.2.2022 (footnote 11, citing the PM's Office).
+  //   - Valid through end of 2031.
+  //   - Eligibility: a family, a senior citizen, or an individual who
+  //     immigrated from Ethiopia and is leaving an absorption center/site,
+  //     and who meets the Ministry of Construction and Housing's "lacking
+  //     housing" (חסרי דירה) definition.
+  //   - INTERNAL ONLY — do not surface in public copy: the source states a
+  //     grant range of ₪235,000 (couple, no children) to ₪650,000 (couples
+  //     with 9+ children), as of the source's 10.8.2025 publication date.
+  //     Per explicit user instruction, the exact figures are deliberately
+  //     omitted from all public-facing text below (risk of the range
+  //     changing without the site being updated). If re-verifying later,
+  //     check this figure against a fresh primary source before republishing
+  //     it. Public copy instead points users to the Ministry to confirm the
+  //     current amount for their family composition.
+  //   - A gov.il page with a similar name ("Government Decision 1668") was
+  //     found via search but could not be accessed directly (WebFetch/curl
+  //     blocked by gov.il) — its content is NOT quoted here, only its
+  //     existence is softly acknowledged in the body text.
+  //   - No specific gov.il program URL could be independently verified
+  //     (gov.il returns 403 to automated fetches), so govUrl below points to
+  //     the verified Knesset source document rather than a guessed ministry
+  //     URL that might not resolve. AM field is HE-fallback + TODO pending
+  //     professional review (see file header + CLAUDE.md language policy) —
+  //     this is a sensitive, money-related topic where an imprecise
+  //     community-language translation could cause real harm.
+  {
+    title: {
+      he: "מענקי דיור לעולים מאתיופיה המתגוררים במרכזי קליטה או אתרי קליטה",
+      en: "Housing Grants for Ethiopian Immigrants Living in Absorption Centers or Absorption Sites",
+      am: "[TODO: תרגום מקצועי נדרש] מענקי דיור לעולים מאתיופיה המתגוררים במרכזי קליטה או אתרי קליטה",
+    },
+    slug: {
+      he: "housing-grant-klita-centers",
+      en: "housing-grant-klita-centers",
+      am: "housing-grant-klita-centers",
+    },
+    govUrl:
+      "https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf",
+    eligibilitySummary: {
+      he: 'למשפחה, אזרח ותיק או יחיד שעלו מאתיופיה ומתפנים ממרכז קליטה או אתר קליטה, ועונים להגדרת "חסרי דירה" לפי כללי משרד הבינוי והשיכון. התוכנית מבוססת על החלטת ממשלה 1103 (10.2.2022) ובתוקף עד סוף 2031.',
+      en: 'For a family, senior citizen or individual who immigrated from Ethiopia and is leaving an absorption center or absorption site, and meets the Ministry of Construction and Housing\'s "lacking housing" definition. Based on Government Decision 1103 (10.2.2022), valid through end of 2031.',
+      am: '[TODO: תרגום מקצועי נדרש] למשפחה, אזרח ותיק או יחיד שעלו מאתיופיה ומתפנים ממרכז קליטה או אתר קליטה, ועונים להגדרת "חסרי דירה" לפי כללי משרד הבינוי והשיכון.',
+    },
+    tags: ["housing", "new_immigrant", "grants", "family"],
+    bodies: {
+      he: `## מה זה המענק?
+
+מענק דיור ייעודי לעולים מאתיופיה המתגוררים במרכזי קליטה או באתרי קליטה, שנועד לסייע לכם לרכוש דירה בבעלות פרטית בעת היציאה מהמרכז/אתר. התוכנית מבוססת על **החלטת ממשלה מס' 1103** של הממשלה ה-36 (10 בפברואר 2022), ובתוקף **עד סוף שנת 2031**.
+
+## למי זה מיועד? (הבהרה חשובה)
+
+התוכנית מופעלת על ידי **משרד הבינוי והשיכון** — לא הסוכנות היהודית. יש בלבול נפוץ בין שני הגופים: הסוכנות היהודית מלווה את תהליך העלייה ואת החיים במרכזי הקליטה עצמם, אך את מענק הדיור לרכישת דירה מעניק ומנהל משרד הבינוי והשיכון, לפי כללי הזכאות שלו.
+
+זכאים למענק: **משפחה, אזרח/ית ותיק/ה או יחיד/ה** שעלו מאתיופיה ומתפנים ממרכז קליטה או מאתר קליטה, ועונים להגדרת **"חסרי דירה"** לפי כללי משרד הבינוי והשיכון.
+
+## מה כלול במענק?
+
+סכום המענק **משמעותי ונקבע לפי הרכב המשפחה** (בין היתר מספר הילדים ומצב משפחתי) — לבדיקת הסכום המדויק והעדכני ביותר עבור המצב האישי שלכם, יש לפנות ישירות למשרד הבינוי והשיכון. בנוסף למענק, ייתכן שתהיו זכאים גם להלוואה משלימה מבנק למשכנתאות, בהתאם לכללי הבנק.
+
+יש גם עמוד רשמי נוסף באתר gov.il המתייחס לתוכנית זו (במסגרת החלטת ממשלה אחרת) — אם נתקלתם בו, מומלץ לוודא את הפרטים מול משרד הבינוי והשיכון ישירות, שכן לא כל המידע המקוון תמיד מעודכן.
+
+## איך פונים ובודקים זכאות?
+
+התוכנית אינה כוללת טופס הרשמה מקוון פומבי. לבדיקת זכאות, קבלת הסכום המדויק לפי הרכב המשפחה שלכם, ופרטים על המסמכים הנדרשים — יש לפנות ישירות ל**משרד הבינוי והשיכון** (לא לסוכנות היהודית), דרך נציג המשרד באזור מרכז/אתר הקליטה שבו אתם מתגוררים, או דרך אתר [gov.il](https://www.gov.il).
+
+מקור: [מרכז המחקר והמידע של הכנסת — נתונים על יוצאי אתיופיה וסקירת תכניות סיוע בדיור (10.8.2025)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf)`,
+      en: `## What is this grant?
+
+A dedicated housing grant for Ethiopian immigrants living in absorption centers or absorption sites, designed to help you purchase a privately-owned apartment when you leave the center/site. The program is based on **Government Decision 1103** of the 36th government (February 10, 2022), and is valid **through the end of 2031**.
+
+## Who is it for? (Important clarification)
+
+The program is run by the **Ministry of Construction and Housing** — not the Jewish Agency. There is common confusion between the two bodies: the Jewish Agency accompanies the aliyah process and life at the absorption centers themselves, but the housing-purchase grant is awarded and managed by the Ministry of Construction and Housing, under its own eligibility rules.
+
+Eligible: a **family, a senior citizen, or an individual** who immigrated from Ethiopia and is leaving an absorption center or absorption site, and who meets the Ministry of Construction and Housing's **"lacking housing"** (חסרי דירה) definition.
+
+## What does the grant include?
+
+The grant amount is **significant and is set according to family composition** (among other factors, number of children and family status) — to check the exact, current amount for your personal situation, contact the Ministry of Construction and Housing directly. In addition to the grant, you may also be eligible for a supplementary mortgage loan from a bank, subject to the bank's own rules.
+
+There is also an additional official gov.il page referencing this program (under a different government decision) — if you come across it, we recommend verifying the details directly with the Ministry of Construction and Housing, since not all online information is always current.
+
+## How to apply and check eligibility
+
+The program has no public online registration form. To check eligibility, get the exact amount for your family composition, and learn what documents are required — contact the **Ministry of Construction and Housing** directly (not the Jewish Agency), through the ministry representative in the area of the absorption center/site where you live, or via [gov.il](https://www.gov.il).
+
+Source: [Knesset Research and Information Center — Data on Ethiopian Israelis and a Review of Housing Assistance Programs (10.8.2025)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf)`,
+      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית. זהו נושא רגיש וכספי — חשוב במיוחד לא להסתפק בתרגום מכונה]
+
+## מה זה המענק?
+
+מענק דיור ייעודי לעולים מאתיופיה המתגוררים במרכזי קליטה או באתרי קליטה, שנועד לסייע לכם לרכוש דירה בבעלות פרטית בעת היציאה מהמרכז/אתר. התוכנית מבוססת על החלטת ממשלה מס' 1103 של הממשלה ה-36 (10 בפברואר 2022), ובתוקף עד סוף שנת 2031.
+
+## למי זה מיועד?
+
+התוכנית מופעלת על ידי משרד הבינוי והשיכון — לא הסוכנות היהודית. זכאים למענק: משפחה, אזרח/ית ותיק/ה או יחיד/ה שעלו מאתיופיה ומתפנים ממרכז קליטה או מאתר קליטה, ועונים להגדרת "חסרי דירה" לפי כללי משרד הבינוי והשיכון.
+
+## מה כלול במענק?
+
+סכום המענק משמעותי ונקבע לפי הרכב המשפחה. לבדיקת הסכום המדויק יש לפנות ישירות למשרד הבינוי והשיכון.
+
+## איך פונים?
+
+אין טופס הרשמה מקוון פומבי. יש לפנות ישירות למשרד הבינוי והשיכון, דרך נציג המשרד באזור מרכז/אתר הקליטה, או דרך אתר gov.il.
+
+📞 משרד הבינוי והשיכון`,
+    },
+  },
 ];

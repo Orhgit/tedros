@@ -108,6 +108,14 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
 
 יש זכות ממשלתית של סבסוד פעילויות סיגד מקומיות (טקסים, חינוך, תחבורה). ראו [מימון סיגד — זכות](/he/rights/sigd-funding) לפרטים.
 
+## תפריט הסיגד — מה אוכלים בסיום הצום
+
+לאחר התפילות והצום מהבוקר ועד הצהריים, מגיע רגע שבירת הצום — סביב השעה 12:00 (ראו לוח הטקס למעלה). מסורתית, המשתתפים נושאים עימם צידה לשבירת הצום מיד לאחר התפילה, ובכפרים באתיופיה נהגו לחתום את היום בסעודת מצווה חגיגית. הכנסת אורחים היא מנהג בעל משמעות מיוחדת סביב חג הסיגד — הארוחה המשותפת היא חלק מהחיבור הקהילתי של החג, לא רק ארוחה לשובע.
+
+הארוחה החגיגית של הסיגד, כמו רוב הארוחות החגיגיות במטבח האתיופי, מבוססת על אינג'רה — לחם ספוגי מקמח טף המשמש גם כ"צלחת" וגם כלחם. עליה מוגשים תבשילים כמו דורו ווט (תבשיל עוף חריף, לעיתים עם ביצה קשה), תבשיל עדשים חריף (קיי מסר ווט) ותבשיל ירקות עדין יותר (אלצ'ה) — לצד תבלין הברברה, שמעניק לתבשילים את הצבע האדום והחריפות האופייניים. בקהילות מסוימות מוגשים גם קייסר (תבשיל סלק) ואגוואט (גבינה ביתית) לצד דאבו (לחם עגול אפוי).
+
+חשוב להדגיש: אלה מאכלים אתיופיים מסורתיים שמלווים בדרך כלל את חגיגות הסיגד — לא תפריט אחיד או "רשמי", והמנהג משתנה ממשפחה למשפחה ומקהילה לקהילה.
+
 ## ראו גם
 
 - [סיגד — מילון](/he/glossary/sigd)
@@ -164,6 +172,14 @@ The Kessim are the rabbis of Ethiopian Judaism — they grew into their role bef
 
 There is a government right subsidizing local Sigd activities (ceremonies, education, transportation). See [Sigd funding — right](/en/rights/sigd-funding) for details.
 
+## The Sigd table — what's eaten after the fast
+
+After the morning-to-noon prayers and fast, the fast is broken — around 12:00 (see the ceremony schedule above). Traditionally, participants carried provisions with them to break the fast right after the prayers, and in villages in Ethiopia the day historically closed with a festive communal meal. Hospitality carries special significance around Sigd — the shared meal is as much about community as it is about food.
+
+Like most festive meals in Ethiopian cuisine, the Sigd feast is built around injera — a spongy teff-flour flatbread that serves as both plate and bread. It's topped with stews such as doro wat (a spicy chicken stew, often served with a hard-boiled egg), a spicy lentil stew (kai misir wat), and a milder vegetable stew (alicha) — all seasoned with berbere, the spice blend that gives the dishes their characteristic red colour and heat. In some communities the table also includes kaysar (a beet stew) and agwat (homemade cheese) alongside dabo (round baked bread).
+
+Worth noting: these are traditional Ethiopian dishes commonly associated with Sigd celebrations — not a fixed or "official" menu, and customs vary by family and community.
+
 ## See also
 
 - [Sigd — glossary](/en/glossary/sigd)
@@ -198,6 +214,14 @@ There is a government right subsidizing local Sigd activities (ceremonies, educa
 ## ለሰግድ ዝግጅቶች ገንዘብ ድጋፍ
 
 ለሰግድ ዝግጅቶች (ስነ-ስርዓቶች፣ ትምህርት፣ ትራንስፖርት) መንግሥታዊ ድጎማ አለ። ዝርዝር ለማወቅ [ሰግድ ፋይናንሲንግ](/am/rights/sigd-funding) ይዩ።
+
+## የሰግድ ምግቦች — ከጾም በኋላ ምን ይበላል
+
+ከጠዋት እስከ ቀትር ከጸሎትና ከጾም በኋላ፣ ጾሙ ይሰበራል — በግምት ከቀኑ 12:00 ላይ (ከላይ ያለውን የስነ-ስርዓት ሰዓት ይመልከቱ)። በባህል፣ ተሳታፊዎች ጾም ወዲያውኑ ለመስበር ስንቅ ይዘው ይመጣሉ፤ በኢትዮጵያ መንደሮችም ቀኑ በበዓል የማህበረሰብ ምግብ ይዘጋ ነበር። እንግዳ ተቀባይነት በሰግድ ወቅት ልዩ ትርጉም አለው — የጋራ ምግቡ ስለ ማህበረሰብ ትስስር እንጂ ስለ ምግብ ብቻ አይደለም።
+
+እንደ አብዛኛው የኢትዮጵያ ባህላዊ በዓል ምግቦች፣ የሰግድ ምግብም በእንጀራ ላይ የተመሰረተ ነው — ሁለቱም እንደ ሳህንም እንደ ዳቦም የሚያገለግል የጤፍ ዱቄት ምግብ። ከላይ ዶሮ ወጥ (በርበሬ የበዛበት፣ ብዙ ጊዜ ከእንቁላል ጋር)፣ ምስር ወጥ (ቅመም የበዛበት የምስር ወጥ) እና አልጫ (ለስላሳ የአትክልት ወጥ) ይቀርባል — ሁሉም በርበሬ በተባለው ቅመም ተለውሰው። በአንዳንድ ማህበረሰቦች ውስጥ ቂጣ (ካይሰር) እና አጓት (የቤት ውስጥ አይብ) ከዳቦ ጋር ይቀርባሉ።
+
+[TODO: תרגום מקצועי נדרש — יש לוודא דיוק מונחים קולינריים באמהרית (בפרט "ካይሰር"/"ቂጣ" עבור תבשיל סלק) מול דובר/ת אמהרית שפת אם]
 
 ## ተጨማሪ
 

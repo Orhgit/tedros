@@ -18,6 +18,7 @@ import { DEFAULT_LOCALE } from "../i18n/config";
 import type { NewsTag } from "./categories";
 import { ARTICLES_WAVE4 } from "./articles-wave4.server";
 import { ARTICLES_WAVE5 } from "./articles-wave5.server";
+import { ARTICLES_WAVE6 } from "./articles-wave6.server";
 
 export interface NewsArticleEntry {
   slug: string;
@@ -5860,6 +5861,7 @@ If you're drafting a will, contract, or any binding legal document, make sure:
   },
   ...ARTICLES_WAVE4,
   ...ARTICLES_WAVE5,
+  ...ARTICLES_WAVE6,
 ];
 
 // ── lookup helpers ─────────────────────────────────────────────────────────
