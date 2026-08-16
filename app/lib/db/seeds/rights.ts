@@ -6922,13 +6922,13 @@ When calling any government body, say immediately: **"Amharic please"** — most
   // back to a 2015–2016 Director-General circular — not current, so they are
   // deliberately omitted per the "no fabricated/stale numbers" policy. Users
   // are pointed to the school/Ministry of Education to get the current,
-  // correct figure for their case. AM fields are HE-fallback + TODO pending
-  // professional review (see file header + CLAUDE.md language policy).
+  // correct figure for their case. AM fields are AI-translated (not yet
+  // reviewed by a native Amharic speaker) — see in-body disclaimer.
   {
     title: {
       he: "סל קליטה לתלמידים עולים",
       en: "Absorption Basket for Immigrant Students",
-      am: "[TODO: תרגום מקצועי נדרש] סל קליטה לתלמידים עולים",
+      am: "የመቀበያ ቅርጫት ለስደተኛ ተማሪዎች",
     },
     slug: {
       he: "student-absorption-basket",
@@ -6939,7 +6939,7 @@ When calling any government body, say immediately: **"Amharic please"** — most
     eligibilitySummary: {
       he: "לכל תלמיד/ה עולה חדש/ה, כולל יוצאי אתיופיה. הסכום משתנה לפי תאריך העלייה, שכבת הגיל וארץ המוצא — בדקו את הסכום המדויק מול בית הספר או משרד החינוך.",
       en: "For every new immigrant student, including Ethiopian-Israelis. The amount varies by aliyah date, age group and country of origin — check the exact figure with the school or Ministry of Education.",
-      am: "[TODO: תרגום מקצועי נדרש] לכל תלמיד/ה עולה חדש/ה, כולל יוצאי אתיופיה. הסכום משתנה לפי תאריך העלייה, שכבת הגיל וארץ המוצא — בדקו את הסכום המדויק מול בית הספר או משרד החינוך.",
+      am: "ኢትዮጵያዊ ተወላጆችን ጨምሮ ለሁሉም አዲስ ስደተኛ ተማሪ። መጠኑ እንደ የዓሊያ ቀን፣ የትምህርት ደረጃ እና የትውልድ ሀገር ይለያያል — ትክክለኛውን መጠን ከትምህርት ቤቱ ወይም ከትምህርት ሚኒስቴር ያረጋግጡ።",
     },
     tags: ["new_immigrant", "education"],
     bodies: {
@@ -7003,25 +7003,38 @@ Because of this, there is no single amount that applies to everyone, and it also
    - Ministry of Education: [Absorption basket for immigrant students](https://mosdot.education.gov.il/students/immigrants/absorption_basket)
    - Kol-Zchut: [Education fee (absorption basket) for Ethiopian-Israeli students](https://www.kolzchut.org.il/he/%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%90%D7%92%D7%A8%D7%AA_%D7%97%D7%99%D7%A0%D7%95%D7%9A_(%D7%A1%D7%9C_%D7%A7%D7%9C%D7%99%D7%98%D7%94)_%D7%9C%D7%AA%D7%9C%D7%9E%D7%99%D7%93%D7%99%D7%9D_%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94)
    - Freedom of Information portal: [Absorption basket for Ethiopian-Israeli immigrants](https://foi.gov.il/he/node/1780)`,
-      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית]
+      am: `## የመቀበያ ቅርጫት ምንድን ነው?
 
-## מה זה סל קליטה?
+የመቀበያ ቅርጫት — "የትምህርት ክፍያ" ተብሎም ይጠራል — የትምህርት ሚኒስቴር ለእያንዳንዱ ስደተኛ ተማሪ ትምህርት ቤት የሚያስተላልፈው የገንዘብ ድጋፍ ነው፣ በዓመቱ መጀመሪያ የትምህርት ወጪዎችን ለመሸፈን የሚረዳ፦ የመማሪያ መጻሕፍት፣ የባህል እንቅስቃሴዎች፣ ጉዞዎች እና ዝግጅቶች — በተለምዶ የቆዩ ተማሪዎች ወላጆች ራሳቸው የሚከፍሏቸው ወጪዎች።
 
-סל קליטה — הנקרא גם "אגרת חינוך" — הוא סיוע כספי שמעביר משרד החינוך למוסד הלימודים של כל תלמיד/ה עולה, כדי לסייע במימון הוצאות חינוך בתחילת השנה: ספרי לימוד, פעילויות תרבות, טיולים ואירועים.
+## ለማን የተዘጋጀ ነው?
 
-## למי זה מיועד?
+በእስራኤል የትምህርት ሥርዓት ውስጥ ላለ ለማንኛውም አዲስ ስደተኛ ተማሪ፣ የኢትዮጵያ ተወላጆችን ጨምሮ። የድጋፉ መጠን ለእያንዳንዱ ተማሪ **በተናጠል** በሦስት ተለዋዋጮች መሠረት ይወሰናል፦
 
-לכל תלמיד/ה עולה חדש/ה, כולל יוצאי אתיופיה. הסכום נקבע פרטנית לפי תאריך העלייה, שכבת הגיל וארץ המוצא — ולכן משתנה מתלמיד לתלמיד.
+- **የዓሊያ (ስደት) ቀን**
+- **የትምህርት ደረጃ** — አንደኛ ደረጃ፣ መካከለኛ ወይም ሁለተኛ ደረጃ
+- **የትውልድ ሀገር**
 
-## מה כלול?
+በዚህ ምክንያት፣ ለሁሉም የሚስማማ አንድ ወጥ መጠን የለም — እና ከዓመት ወደ ዓመትም ይለያያል።
 
-ספרי לימוד, טיולים, סל תרבות ואירועים בית-ספריים. הסכום המדויק בשקלים משתנה — יש לבדוק מול בית הספר או משרד החינוך.
+## ምን ይካተታል?
 
-## איך פונים?
+- ለትምህርት ዓመት መጀመሪያ የመማሪያ መጻሕፍት ፋይናንስ
+- በብዙ ትምህርት ቤቶች ወላጆች ራሳቸው እንዲከፍሉ የሚጠየቁ እንቅስቃሴዎች ፋይናንስ — ጉዞዎች፣ የባህል ፕሮግራሞች፣ የትምህርት ቤት ዝግጅቶች
+- ገንዘቡ ከመንግስት ወደ አካባቢው ባለስልጣን / የትምህርት ቤት ባለቤትነት አካል ይተላለፋል፣ እሱም ለተማሪው ወደ ትምህርት ቤቱ ያስተላልፋል
 
-פנו למזכירות בית הספר או למחוז משרד החינוך. מקור רשמי: mosdot.education.gov.il/students/immigrants/absorption_basket
+**አስፈላጊ፦** ትክክለኛው የሸቀል መጠን እንደ ተማሪው የዓሊያ ቀን፣ የትምህርት ደረጃ እና የትውልድ ሀገር ይወሰናል — ትክክለኛውን መጠን ከትምህርት ቤቱ ወይም ከትምህርት ሚኒስቴር ጋር በቀጥታ ያረጋግጡ፣ በመስመር ላይ በሚገኝ ቋሚ ቁጥር ላይ (ከአሮጌ ዑደቶች የቀሩ ቁጥሮችን ጨምሮ) አይተማመኑ።
 
-📞 משרד החינוך`,
+## እንዴት ማመልከት / ብቁነትን ማረጋገጥ
+
+1. በአብዛኛዎቹ ሁኔታዎች የተለየ ማመልከቻ አያስፈልግም — ትምህርት ቤቱ ቅርጫቱን ይቀበላል እና የተቀበለውን መጠን እና በምን እንደ ወጣ ወላጆችን የማሳወቅ ግዴታ አለበት፤ ወላጆች መቀበላቸውን ለማረጋገጥ ይፈርማሉ።
+2. ትምህርት ቤቱ አስቀድሞ ገንዘብ ከጠየቀዎት (ለጉዞዎች፣ መጻሕፍት፣ ወዘተ) እና ቅርጫቱ ከተቀበለ በኋላ ለተማሪው ቀሪ ገንዘብ ካለ — ትምህርት ቤቱ ቀሪውን ለወላጆች **መመለስ አለበት**።
+3. ለልጅዎ ትክክለኛውን ብቁነት እና መጠን ለማረጋገጥ — ወደ ትምህርት ቤት ጽሕፈት ቤት፣ የትምህርት ሚኒስቴር ወረዳ ይደውሉ፣ ወይም ኦፊሴላዊ ምንጮችን ይመልከቱ፦
+   - የትምህርት ሚኒስቴር፦ mosdot.education.gov.il/students/immigrants/absorption_basket
+   - ኮል-ዝኹት (Kol-Zchut)፦ ለኢትዮጵያ ተወላጅ ተማሪዎች የትምህርት ክፍያ (የመቀበያ ቅርጫት)
+   - የመረጃ ነጻነት ፖርታል፦ foi.gov.il/he/node/1780
+
+*[የAI ትርጉም — ከንግድ/ገንዘብ ጋር በተያያዙ ዝርዝሮች ላይ ከመተማመንዎ በፊት በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*`,
     },
   },
 
@@ -7034,13 +7047,13 @@ Because of this, there is no single amount that applies to everyone, and it also
   // registration flow and no published stipend/budget figures — none of
   // these are invented here. Users are pointed to the Employment Service
   // (מינהל תעסוקת אוכלוסיות ייחודיות) to ask about enrollment in their
-  // area. AM field is HE-fallback + TODO pending professional review (see
-  // file header + CLAUDE.md language policy).
+  // area. AM field is AI-translated (not yet reviewed by a native Amharic
+  // speaker) — see in-body disclaimer.
   {
     title: {
       he: 'תוכנית "למרחק" — הכוון תעסוקתי ליוצאי אתיופיה',
       en: '"Lamerchak" — Employment Guidance for Ethiopian-Israeli Youth',
-      am: '[TODO: תרגום מקצועי נדרש] תוכנית "למרחק" — הכוון תעסוקתי ליוצאי אתיופיה',
+      am: 'ፕሮግራም "ላመርቻክ" — የስራ ስምሪት መመሪያ ለኢትዮጵያ ተወላጅ ወጣቶች',
     },
     slug: { he: "lamerchak", en: "lamerchak", am: "lamerchak" },
     govUrl:
@@ -7048,7 +7061,7 @@ Because of this, there is no single amount that applies to everyone, and it also
     eligibilitySummary: {
       he: "לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית. התוכנית מופעלת באמצעות מרכזי הכוון תעסוקתי, בהפעלת מינהל התעסוקה במשרד העבודה.",
       en: "For young Ethiopian-Israelis seeking career advancement and professional education. The program runs through employment-guidance centers, operated by the Employment Service at the Ministry of Labor.",
-      am: "[TODO: תרגום מקצועי נדרש] לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית. התוכנית מופעלת באמצעות מרכזי הכוון תעסוקתי, בהפעלת מינהל התעסוקה במשרד העבודה.",
+      am: "ለስራ እድገት እና ሙያዊ ትምህርት የሚፈልጉ ኢትዮጵያዊ ተወላጅ ወጣቶች። ፕሮግራሙ በስራ ስምሪት መመሪያ ማዕከላት አማካኝነት፣ በስራ ሚኒስቴር የስራ ስምሪት አስተዳደር ይመራል።",
     },
     tags: ["employment", "youth"],
     bodies: {
@@ -7092,25 +7105,30 @@ The program has no direct online registration form on its official page. To chec
 
 - Employment Service — program page: [taasukada.labor.gov.il](https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5)
 - General inquiries to the Employment Service for unique populations: [gov.il](https://www.gov.il)`,
-      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית]
+      am: `## "ላመርቻክ" ምንድን ነው?
 
-## מה זה "למרחק"?
+"ላመርቻክ" በስራ ሚኒስቴር የስራ ስምሪት አስተዳደር የሚመራ ልዩ የስራ ስምሪት ፕሮግራም ሲሆን፣ ኢትዮጵያዊ ተወላጅ ወጣቶች ስራቸውን እንዲያሳድጉ፣ ሙያዊ ትምህርት እንዲያገኙ እና በእስራኤል የስራ ገበያ ውስጥ ጠቃሚ ቦታዎች ላይ እንዲሰማሩ ለመርዳት የተነደፈ ነው። ፕሮግራሙ ልዩ **የስራ ስምሪት መመሪያ ማዕከላት** በኩል ይሰራል።
 
-"למרחק" היא תוכנית תעסוקה ייעודית של מינהל התעסוקה במשרד העבודה, שמטרתה לסייע לצעירים יוצאי אתיופיה לפתח קריירה, לרכוש השכלה מקצועית ולהשתלב בתפקידים מתגמלים. התוכנית פועלת באמצעות מרכזי הכוון תעסוקתי.
+## ለማን የተዘጋጀ ነው?
 
-## למי זה מיועד?
+ለስራ እድገት የሚፈልጉ ኢትዮጵያዊ ተወላጅ ወጣቶች — የስራ መንገድ መገንባት፣ ሙያዊ ስልጠና ማግኘት እና በጥራት ያላቸው እና የእድገት እድል ያላቸው ቦታዎች ላይ መስፈር የሚፈልጉ ሰዎች።
 
-לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית.
+## ፕሮግራሙ ምን ያካትታል?
 
-## מה כוללת התוכנית?
+ፕሮግራሙ በስራ ስምሪት መመሪያ ማዕከላት አውታረ መረብ ላይ የተመሰረተ ነው፣ ተሳታፊዎችን በስራ እድገት እና ሙያዊ ትምህርት ሂደት ውስጥ ወደ ጠቃሚ ቦታዎች ውህደት እንዲደርሱ የመምራት ሚና አላቸው። ስለ አጃቢነቱ ይዘት፣ የፕሮግራሙ ርዝመት እና ወደ እርስዎ ቅርብ በሆነው ማዕከል ስላሉ ልዩ አቅርቦቶች ሙሉ ዝርዝሮች በራሳቸው በመመሪያ ማዕከላት ይታተማሉ እንጂ በስራ ስምሪት አስተዳደር ገጽ ላይ በዝርዝር አልተገለጹም።
 
-ליווי במרכזי הכוון תעסוקתי לקראת שילוב בתפקידים מתגמלים. אין באתר פירוט סכומים או תאריכים — יש לבדוק פרטים מדויקים מול הגורם המפעיל.
+**ማስታወሻ፦** ኦፊሴላዊው ገጽ የድጋፍ መጠኖችን፣ ስቲፕንዶችን ወይም የምዝገባ ቀናትን አያትምም — በሌላ ቦታ እንደዚህ ዓይነት ቁጥሮች ካጋጠሙዎት፣ በእነሱ ላይ ከመተማመንዎ በፊት በቀጥታ ከሚያንቀሳቅሰው አካል ጋር ያረጋግጡ።
 
-## איך פונים?
+## እንዴት ማመልከት
 
-אין טופס הרשמה מקוון. פנו למינהל תעסוקת אוכלוסיות ייחודיות דרך gov.il, או למרכז ההכוון התעסוקתי הקרוב אליכם.
+ፕሮግራሙ በኦፊሴላዊ ገጹ ላይ ቀጥተኛ የመስመር ላይ ምዝገባ ቅጽ የለውም። ብቁነትን ለማረጋገጥ፣ ወደ እርስዎ ቅርብ የሆነውን ንቁ የመመሪያ ማዕከል ለማግኘት እና ትክክለኛውን የምዝገባ ሂደት ለማወቅ — በቀጥታ ወደ ልዩ ህዝቦች የስራ ስምሪት አስተዳደር (מינהל תעסוקת אוכלוסיות ייחודיות) በ gov.il በኩል ያግኙ፣ ወይም ወደ አካባቢዎ ቅርብ የሆነውን የስራ ስምሪት መመሪያ ማዕከል ያነጋግሩ፦
 
-📞 מינהל התעסוקה, משרד העבודה`,
+- የስራ ስምሪት አስተዳደር — የፕሮግራም ገጽ፦ taasukada.labor.gov.il
+- ለልዩ ህዝቦች የስራ ስምሪት አስተዳደር አጠቃላይ ጥያቄዎች፦ gov.il
+
+📞 የስራ ስምሪት አስተዳደር፣ የስራ ሚኒስቴር
+
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*`,
     },
   },
 
@@ -7125,12 +7143,13 @@ The program has no direct online registration form on its official page. To chec
   // data" policy. The community angle is phrased softly as "open to every
   // citizen, including members of the Ethiopian-Israeli community" without
   // implying an exclusive track or discount that doesn't exist. AM field is
-  // HE-fallback + TODO pending professional review.
+  // AI-translated (not yet reviewed by a native Amharic speaker) — see
+  // in-body disclaimer.
   {
     title: {
       he: "יוזמים עסק — קורס יזמות עסקית (הסוכנות לעסקים קטנים ובינוניים)",
       en: "Yozmim Esek — Business Entrepreneurship Course (Small & Medium Business Authority)",
-      am: "[TODO: תרגום מקצועי נדרש] יוזמים עסק — קורס יזמות עסקית",
+      am: '"ዮዝሚም ኤሴክ" — የንግድ ስራ ፈጠራ ኮርስ (ለአነስተኛና መካከለኛ ንግድ ድርጅት)',
     },
     slug: {
       he: "yozmim-esek-business-course",
@@ -7141,7 +7160,7 @@ The program has no direct online registration form on its official page. To chec
     eligibilitySummary: {
       he: "קורס יזמות כללי ליזמים בתחילת דרכם — 70 שעות (14 מפגשים), עלות 728 ₪. פתוח לכל אזרח/ית, כולל יוצאי הקהילה האתיופית-ישראלית המעוניינים לפתוח עסק.",
       en: "General entrepreneurship course for early-stage entrepreneurs — 70 hours (14 sessions), cost ₪728. Open to every citizen, including members of the Ethiopian-Israeli community who want to start a business.",
-      am: "[TODO: תרגום מקצועי נדרש] קורס יזמות כללי ליזמים בתחילת דרכם — 70 שעות (14 מפגשים), עלות 728 ₪. פתוח לכל אזרח/ית.",
+      am: "ስራቸውን ገና ለጀመሩ ስራ ፈጣሪዎች የተዘጋጀ አጠቃላይ የስራ ፈጠራ ኮርስ — 70 ሰዓታት (14 ስብሰባዎች)፣ ዋጋ 728 ₪። ለሁሉም ዜጋ ክፍት፣ ንግድ ለመክፈት የሚፈልጉ የኢትዮጵያ-እስራኤል ማህበረሰብ አባላትን ጨምሮ።",
     },
     tags: ["small_business", "entrepreneurship", "employment"],
     bodies: {
@@ -7191,25 +7210,31 @@ Anyone with "a dream or an idea for opening a business" — there are no special
 3. Before registering, confirm dates, format (in-person / Zoom) and availability for the upcoming cohort with the branch
 
 Source: [Small and Medium Business Authority — Yozmim Esek](https://www.sba.org.il/hb/AidPrograms/Pages/pr4.aspx)`,
-      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית]
+      am: `## "ዮዝሚም ኤሴክ" ምንድን ነው?
 
-## מה זה "יוזמים עסק"?
+"ዮዝሚም ኤሴክ" (የንግድ ጀማሪዎች) በአነስተኛና መካከለኛ ንግድ ድርጅት (מעוף) የሚመራ የንግድ ስራ ፈጠራ ኮርስ ሲሆን፣ ንግድ ማቋቋም በጀመሩበት መጀመሪያ ደረጃ ላይ ላሉ ሰዎች የተዘጋጀ ነው። ኮርሱ የንግድ እና የስራ ፈጠራ አስተሳሰብን ያስተምራል፣ ተሳታፊዎች ጊዜ እና ገንዘብ ከማፍሰሳቸው በፊት የንግድ ሃሳባቸውን ተግባራዊነት እንዲመዝኑ ይረዳል።
 
-"יוזמים עסק" הוא קורס יזמות עסקית של הסוכנות לעסקים קטנים ובינוניים (מעוף), המיועד למי שנמצא/ת בתחילת הדרך בהקמת עסק.
+## ለማን የተዘጋጀ ነው?
 
-## למי זה מיועד?
+ንግድ ለመክፈት "ህልም ወይም ሃሳብ" ላለው ለማንኛውም ሰው — ልዩ ቅድመ ሁኔታዎች የሉም። ኮርሱ ለሁሉም እስራኤላዊ ዜጋ ክፍት ነው፣ ንግድ ለመክፈት የሚፈልጉ የኢትዮጵያ-እስራኤል ማህበረሰብ አባላትን ጨምሮ። ለተወሰነ የህዝብ ቡድን የተለየ መስመር ወይም ልዩ ቅናሽ የለም — ሁኔታዎቹ ለሁሉም ተመዝጋቢዎች እኩል ናቸው።
 
-לכל מי שיש לו/ה חלום או רעיון לפתיחת עסק — פתוח לכל אזרח/ית ישראלי/ת, כולל יוצאי הקהילה האתיופית-ישראלית.
+## ኮርሱ ምን ያካትታል?
 
-## מה כולל הקורס?
+- **ስፋት**፦ 70 የትምህርት ሰዓታት፣ በ14 ስብሰባዎች ውስጥ
+- **ዋጋ**፦ ለጠቅላላ ኮርሱ 728 ₪
+- **ይዘት**፦ ትኩረት ያለው የንግድ ሃሳብ መቅረጽ (እንደ Business Model Canvas ያሉ መሳሪያዎችን መጠቀምን ጨምሮ)፣ የግብይት ስትራቴጂ፣ የደንበኛ ቡድን መለየት፣ የገንዘብ አስተዳደር እና የገንዘብ ፍሰት፣ እና ዲጂታል ግብይት
+- **ክህሎቶች**፦ የንግድ አስተሳሰብ፣ ስራ ፈጠራ፣ ፈጠራ፣ ውሳኔ አሰጣጥ እና ችግር መፍታት
+- **ቅርፀት**፦ ስብሰባዎቹ በሀገር ዙሪያ ባሉ የድርጅቱ ቅርንጫፎች ይካሄዳሉ (አንዳንዶቹ በ Zoom)፤ ትክክለኛው ቅርፀት፣ ቀናት እና ሰዓቶች እንደ ቅርንጫፉ ይለያያሉ — ከመመዝገብዎ በፊት ከሚመለከተው ቅርንጫፍ ጋር ያረጋግጡ
 
-70 שעות אקדמיות ב-14 מפגשים, בעלות 728 ₪. תוכן: גיבוש רעיון עסקי, שיווק, ניהול פיננסי ושיווק דיגיטלי.
+## እንዴት መመዝገብ
 
-## איך נרשמים?
+1. በ lms.sba.org.il ወደ ድርጅቱ የመስመር ላይ ትምህርት ስርዓት ይግቡ፣ ወይም
+2. ወደ እርስዎ ቅርብ ወደ አነስተኛና መካከለኛ ንግድ ድርጅት ቅርንጫፍ በቀጥታ ያግኙ
+3. ከመመዝገብዎ በፊት ቀናትን፣ ቅርፀትን (በአካል / Zoom) እና ለሚቀጥለው ዙር ያለውን ተገኝነት ከቅርንጫፉ ጋር ያረጋግጡ
 
-דרך lms.sba.org.il או בפנייה לסניף הסוכנות הקרוב.
+ምንጭ፦ አነስተኛና መካከለኛ ንግድ ድርጅት — ዮዝሚም ኤሴክ (sba.org.il)
 
-📞 הסוכנות לעסקים קטנים ובינוניים`,
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*`,
     },
   },
 
@@ -7245,15 +7270,16 @@ Source: [Small and Medium Business Authority — Yozmim Esek](https://www.sba.or
   //   - No specific gov.il program URL could be independently verified
   //     (gov.il returns 403 to automated fetches), so govUrl below points to
   //     the verified Knesset source document rather than a guessed ministry
-  //     URL that might not resolve. AM field is HE-fallback + TODO pending
-  //     professional review (see file header + CLAUDE.md language policy) —
-  //     this is a sensitive, money-related topic where an imprecise
-  //     community-language translation could cause real harm.
+  //     URL that might not resolve. AM field is AI-translated, NOT yet
+  //     reviewed by a native Amharic speaker — this is a sensitive,
+  //     money-related topic where an imprecise community-language
+  //     translation could cause real harm; native review is a hard
+  //     prerequisite before treating this AM copy as final.
   {
     title: {
       he: "מענקי דיור לעולים מאתיופיה המתגוררים במרכזי קליטה או אתרי קליטה",
       en: "Housing Grants for Ethiopian Immigrants Living in Absorption Centers or Absorption Sites",
-      am: "[TODO: תרגום מקצועי נדרש] מענקי דיור לעולים מאתיופיה המתגוררים במרכזי קליטה או אתרי קליטה",
+      am: "ከመቀበያ ማዕከላት ወይም ጣቢያዎች ለሚወጡ ከኢትዮጵያ ለመጡ ስደተኞች የመኖሪያ ቤት ድጎማዎች",
     },
     slug: {
       he: "housing-grant-klita-centers",
@@ -7265,7 +7291,7 @@ Source: [Small and Medium Business Authority — Yozmim Esek](https://www.sba.or
     eligibilitySummary: {
       he: 'למשפחה, אזרח ותיק או יחיד שעלו מאתיופיה ומתפנים ממרכז קליטה או אתר קליטה, ועונים להגדרת "חסרי דירה" לפי כללי משרד הבינוי והשיכון. התוכנית מבוססת על החלטת ממשלה 1103 (10.2.2022) ובתוקף עד סוף 2031.',
       en: 'For a family, senior citizen or individual who immigrated from Ethiopia and is leaving an absorption center or absorption site, and meets the Ministry of Construction and Housing\'s "lacking housing" definition. Based on Government Decision 1103 (10.2.2022), valid through end of 2031.',
-      am: '[TODO: תרגום מקצועי נדרש] למשפחה, אזרח ותיק או יחיד שעלו מאתיופיה ומתפנים ממרכז קליטה או אתר קליטה, ועונים להגדרת "חסרי דירה" לפי כללי משרד הבינוי והשיכון.',
+      am: "ከኢትዮጵያ የመጡ እና ከመቀበያ ማዕከል ወይም ጣቢያ ለሚወጡ ቤተሰብ፣ አዛውንት ወይም ግለሰብ፣ በግንባታና ቤቶች ሚኒስቴር ደንብ መሰረት 'ቤት የሌላቸው' በሚል ትርጉም ውስጥ ለሚገቡ። መርሃ ግብሩ በመንግስት ውሳኔ 1103 (10.2.2022) ላይ የተመሰረተ ሲሆን እስከ 2031 መጨረሻ ድረስ የሚቆይ ነው።",
     },
     tags: ["housing", "new_immigrant", "grants", "family"],
     bodies: {
@@ -7311,25 +7337,31 @@ There is also an additional official gov.il page referencing this program (under
 The program has no public online registration form. To check eligibility, get the exact amount for your family composition, and learn what documents are required — contact the **Ministry of Construction and Housing** directly (not the Jewish Agency), through the ministry representative in the area of the absorption center/site where you live, or via [gov.il](https://www.gov.il).
 
 Source: [Knesset Research and Information Center — Data on Ethiopian Israelis and a Review of Housing Assistance Programs (10.8.2025)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf)`,
-      am: `[TODO: תרגום מקצועי נדרש — הטקסט הבא הוא נפילה (fallback) לעברית עד לתרגום מקצועי לאמהרית. זהו נושא רגיש וכספי — חשוב במיוחד לא להסתפק בתרגום מכונה]
+      am: `## ይህ ድጎማ ምንድን ነው?
 
-## מה זה המענק?
+በመቀበያ ማዕከላት ወይም በመቀበያ ጣቢያዎች ውስጥ ለሚኖሩ ከኢትዮጵያ ለመጡ ስደተኞች የተዘጋጀ ልዩ የመኖሪያ ቤት ድጎማ ሲሆን፣ ከማዕከሉ/ጣቢያው ሲወጡ የግል ባለቤትነት ያለው ቤት እንዲገዙ ለመርዳት የተነደፈ ነው። መርሃ ግብሩ የ36ኛው መንግስት **የመንግስት ውሳኔ ቁጥር 1103**ን (የካቲት 10፣ 2022) መሰረት ያደረገ ሲሆን፣ **እስከ 2031 መጨረሻ ድረስ** የሚቆይ ነው።
 
-מענק דיור ייעודי לעולים מאתיופיה המתגוררים במרכזי קליטה או באתרי קליטה, שנועד לסייע לכם לרכוש דירה בבעלות פרטית בעת היציאה מהמרכז/אתר. התוכנית מבוססת על החלטת ממשלה מס' 1103 של הממשלה ה-36 (10 בפברואר 2022), ובתוקף עד סוף שנת 2031.
+## ለማን የተዘጋጀ ነው? (አስፈላጊ ማብራሪያ)
 
-## למי זה מיועד?
+ፕሮግራሙ የሚመራው በ**ግንባታና ቤቶች ሚኒስቴር** ነው — በአይሁድ ኤጀንሲ አይደለም። በሁለቱ አካላት መካከል የተለመደ ግራ መጋባት አለ፦ የአይሁድ ኤጀንሲ የዓሊያ ሂደትን እና በመቀበያ ማዕከላት ውስጥ ያለውን ኑሮ ይታጀባል፣ ነገር ግን ቤት ለመግዛት የሚሆነው ድጎማ የሚሰጠውና የሚተዳደረው በግንባታና ቤቶች ሚኒስቴር ነው፣ በራሱ የብቁነት ደንቦች መሰረት።
 
-התוכנית מופעלת על ידי משרד הבינוי והשיכון — לא הסוכנות היהודית. זכאים למענק: משפחה, אזרח/ית ותיק/ה או יחיד/ה שעלו מאתיופיה ומתפנים ממרכז קליטה או מאתר קליטה, ועונים להגדרת "חסרי דירה" לפי כללי משרד הבינוי והשיכון.
+ብቁ የሆኑት፦ ከኢትዮጵያ የመጡ እና ከመቀበያ ማዕከል ወይም ከመቀበያ ጣቢያ የሚወጡ **ቤተሰብ፣ አዛውንት ወይም ግለሰብ**፣ በግንባታና ቤቶች ሚኒስቴር ደንብ መሰረት **"ቤት የሌላቸው"** በሚል ትርጉም ውስጥ የሚገቡ።
 
-## מה כלול במענק?
+## ድጎማው ምን ያካትታል?
 
-סכום המענק משמעותי ונקבע לפי הרכב המשפחה. לבדיקת הסכום המדויק יש לפנות ישירות למשרד הבינוי והשיכון.
+የድጎማው መጠን **ከፍተኛ እና እንደ ቤተሰብ አወቃቀር** (ከሌሎች ነገሮች መካከል የልጆች ብዛት እና የቤተሰብ ሁኔታ) የሚወሰን ነው — ለግል ሁኔታዎ ትክክለኛውን እና የቅርብ ጊዜውን መጠን ለማወቅ በቀጥታ ወደ ግንባታና ቤቶች ሚኒስቴር ያግኙ። ከድጎማው በተጨማሪ፣ እንደ ባንኩ ደንቦች ተጨማሪ የሞርጌጅ ብድር ብቁ ሊሆኑ ይችላሉ።
 
-## איך פונים?
+ስለዚህ ፕሮግራም (በሌላ የመንግስት ውሳኔ ስር) የሚያመለክት ተጨማሪ ኦፊሴላዊ የ gov.il ገጽ አለ — ካጋጠመዎት፣ ሁሉም የመስመር ላይ መረጃ ሁልጊዜ የቅርብ ጊዜ ስላልሆነ በቀጥታ ከግንባታና ቤቶች ሚኒስቴር ጋር ዝርዝሮቹን እንዲያረጋግጡ እንመክራለን።
 
-אין טופס הרשמה מקוון פומבי. יש לפנות ישירות למשרד הבינוי והשיכון, דרך נציג המשרד באזור מרכז/אתר הקליטה, או דרך אתר gov.il.
+## እንዴት ማመልከት እና ብቁነትን ማረጋገጥ
 
-📞 משרד הבינוי והשיכון`,
+ፕሮግራሙ የህዝብ የመስመር ላይ ምዝገባ ቅጽ የለውም። ብቁነትን ለማረጋገጥ፣ እንደ ቤተሰብ አወቃቀርዎ ትክክለኛውን መጠን ለማግኘት እና ስለሚያስፈልጉ ሰነዶች ለማወቅ — በቀጥታ ወደ **ግንባታና ቤቶች ሚኒስቴር** ያግኙ (ወደ አይሁድ ኤጀንሲ አይደለም)፣ በሚኖሩበት የመቀበያ ማዕከል/ጣቢያ አካባቢ በሚገኝ የሚኒስቴሩ ተወካይ በኩል፣ ወይም በ gov.il በኩል።
+
+ምንጭ፦ የክኔሴት ምርምርና መረጃ ማዕከል — ስለ ኢትዮጵያ ተወላጆች መረጃ እና የመኖሪያ ቤት ድጋፍ ፕሮግራሞች ግምገማ (10.8.2025)
+
+📞 ግንባታና ቤቶች ሚኒስቴር
+
+*[⚠️ የAI ትርጉም — ይህ ስሜታዊ እና ከገንዘብ ጋር የተያያዘ ርዕስ ነው። እባክዎ ከመታተሙ በፊት በአማርኛ ቋንቋ ተወላጅ ተናጋሪ በጥንቃቄ እንዲገመግመው እንመክራለን።]*`,
     },
   },
 ];
