@@ -19,6 +19,10 @@ import type { NewsTag } from "./categories";
 import { ARTICLES_WAVE4 } from "./articles-wave4.server";
 import { ARTICLES_WAVE5 } from "./articles-wave5.server";
 import { ARTICLES_WAVE6 } from "./articles-wave6.server";
+import { ARTICLES_WAVE7A } from "./articles-wave7a.server";
+import { ARTICLES_WAVE7B } from "./articles-wave7b.server";
+import { ARTICLES_WAVE7C } from "./articles-wave7c.server";
+import { ARTICLES_WAVE7D } from "./articles-wave7d.server";
 
 export interface NewsArticleEntry {
   slug: string;
@@ -5862,7 +5866,23 @@ If you're drafting a will, contract, or any binding legal document, make sure:
   ...ARTICLES_WAVE4,
   ...ARTICLES_WAVE5,
   ...ARTICLES_WAVE6,
+  ...ARTICLES_WAVE7A,
+  ...ARTICLES_WAVE7B,
+  ...ARTICLES_WAVE7C,
+  ...ARTICLES_WAVE7D,
 ];
+
+// TODO(data/architect): the "Marom" scholarship entry embedded above (~line
+// 733, slug-less section titled "מלגת מרום — המועצה להשכלה גבוהה (CHE)", and
+// its EN mirror at ~line 800 with "₪8,000–₪20,000/year... Deadline
+// January–March") predates the verified `marom-che` rights page
+// (app/lib/education/scholarships.server.ts) and contradicts it: the
+// verified page states a flat ₪10,000/year with registration opening
+// 2026-09-09 directly via che.org.il/scholarships/marom (verified 2026-07,
+// per TED-95). This old wave5-era block was NOT touched here (out of scope
+// for the wave7 wiring task) — it should be corrected or removed to match
+// the verified `marom-che` page. See also the new wave7d article
+// `marom-scholarship-tashpav-cycle`, which correctly defers to `marom-che`.
 
 // ── lookup helpers ─────────────────────────────────────────────────────────
 
