@@ -42,6 +42,19 @@ export interface ProfessionalSlot {
   relatedOrgs: string[];
   /** Markdown body × 3 locales. */
   bodies: Record<Locale, string>;
+  /**
+   * Present only for slots that list a real, named professional (as opposed
+   * to the anonymous "what to expect" slots below). When set, the profile
+   * route emits a real `Person` schema and a contact block instead of the
+   * anonymous disclaimer + join-CTA.
+   */
+  listedProfessional?: {
+    name: string;
+    phone: string;
+    licenseNumber?: string;
+    /** BCP-47 language codes, e.g. ["am", "he"]. */
+    languages: string[];
+  };
 }
 
 // --- Reusable body fragments ------------------------------------------------
@@ -116,6 +129,97 @@ ${JOIN_CTA[loc]}
     relatedRights: args.relatedRights ?? [],
     relatedTerms: args.relatedTerms ?? [],
     relatedOrgs: args.relatedOrgs ?? [],
+    bodies: {
+      he: body("he", {
+        when: "מתי לפנות?",
+        check: "מה לבדוק לפני שמסתייעים",
+        fee: "עלויות אופייניות",
+      }),
+      en: body("en", {
+        when: "When to seek help",
+        check: "What to verify before choosing",
+        fee: "Typical fees",
+      }),
+      am: body("am", {
+        when: "መቼ እርዳታ መፈለግ",
+        check: "ከመምረጥ በፊት ምን ማረጋገጥ",
+        fee: "የተለመዱ ክፍያዎች",
+      }),
+    },
+  };
+}
+
+// --- Listed-professional factory --------------------------------------------
+// For slots that name a real, verified professional (owner-supplied contact
+// details — never invented). Skips the anonymous DISCLAIMER/JOIN_CTA in
+// favor of a real contact block. Keep the same whenSeek/whatToCheck/feeNote
+// shape as `slot()` so both render through the same profile template.
+function listedSlot(args: {
+  profession: Profession;
+  citySlug: string;
+  specialty: string;
+  title: Translatable;
+  shortDescription: Translatable;
+  listedProfessional: NonNullable<ProfessionalSlot["listedProfessional"]>;
+  serviceAreaNote: Record<Locale, string>;
+  whenSeek: Record<Locale, string>;
+  whatToCheck: Record<Locale, string>;
+  feeNote: Record<Locale, string>;
+  relatedRights?: string[];
+  relatedTerms?: string[];
+  relatedOrgs?: string[];
+}): ProfessionalSlot {
+  const slug = `${args.profession}-${args.citySlug}-${args.specialty}`;
+  const { name, phone, licenseNumber } = args.listedProfessional;
+
+  function contactBlock(loc: Locale): string {
+    const license = licenseNumber
+      ? loc === "he"
+        ? `\n- מספר רישיון תיווך: ${licenseNumber}`
+        : loc === "am"
+          ? `\n- የደላላ ፈቃድ ቁጥር: ${licenseNumber}`
+          : `\n- Broker license number: ${licenseNumber}`
+      : "";
+    if (loc === "he") {
+      return `## ${name}\n\n📞 [${phone}](tel:${phone})${license}\n\n${args.serviceAreaNote.he}`;
+    }
+    if (loc === "am") {
+      return `## ${name}\n\n📞 [${phone}](tel:${phone})${license}\n\n${args.serviceAreaNote.am}`;
+    }
+    return `## ${name}\n\n📞 [${phone}](tel:${phone})${license}\n\n${args.serviceAreaNote.en}`;
+  }
+
+  function body(
+    loc: Locale,
+    headings: { when: string; check: string; fee: string },
+  ): string {
+    return `${contactBlock(loc)}
+
+## ${headings.when}
+
+${args.whenSeek[loc]}
+
+## ${headings.check}
+
+${args.whatToCheck[loc]}
+
+## ${headings.fee}
+
+${args.feeNote[loc]}
+`;
+  }
+
+  return {
+    slug,
+    profession: args.profession,
+    citySlug: args.citySlug,
+    specialty: args.specialty,
+    title: args.title,
+    shortDescription: args.shortDescription,
+    relatedRights: args.relatedRights ?? [],
+    relatedTerms: args.relatedTerms ?? [],
+    relatedOrgs: args.relatedOrgs ?? [],
+    listedProfessional: args.listedProfessional,
     bodies: {
       he: body("he", {
         when: "מתי לפנות?",
@@ -1162,6 +1266,101 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       he: 'מכירה: 2% + מע"מ. שכירות: דמי-שכירות-חודשי + מע"מ.',
       en: "Sale: 2% + VAT. Rent: monthly rent + VAT.",
       am: "ሽያጭ: 2% + VAT።",
+    },
+    relatedRights: ["600k-mortgage"],
+    relatedTerms: [],
+    relatedOrgs: [],
+  }),
+
+  // --- Listed real estate agent: מניאלה מולה (2 entries) -------------------
+  // Owner-supplied real contact, 2026-08-19. Primary service area: Jerusalem
+  // + Maale Adumim + the Gush Adumim bloc. Broker license number as supplied
+  // by the owner — not independently verified against the government
+  // registry (gov.il "פנקס מתווכים מורשים" blocks automated lookups).
+  listedSlot({
+    profession: "real-estate-agent",
+    citySlug: "jerusalem",
+    specialty: "buy-rent",
+    title: {
+      he: 'מתווך נדל"ן דובר אמהרית — ירושלים — קנייה, שכירות וייעוץ מקרקעין',
+      en: "Amharic-speaking Real Estate Broker — Jerusalem — Buy, Rent & Property Advice",
+      am: "አማርኛ ተናጋሪ የንብረት ደላላ — ኢየሩሳሌም — ግዢ፣ ኪራይና የንብረት ምክር",
+    },
+    shortDescription: {
+      he: 'מניאלה מולה — מתווך/יועץ נדל"ן דובר אמהרית, פעיל בירושלים וסביבתה.',
+      en: "Maniela Mula — Amharic-speaking real estate broker/advisor, active in Jerusalem and the surrounding area.",
+      am: "ማኒኤላ ሙላ — አማርኛ ተናጋሪ የንብረት ደላላ/አማካሪ፣ በኢየሩሳሌም እና አካባቢው ንቁ።",
+    },
+    listedProfessional: {
+      name: "מניאלה מולה",
+      phone: "055-4543814",
+      licenseNumber: "31925980",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: ירושלים, מעלה אדומים וגוש אדומים. זמין/ה גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Jerusalem, Maale Adumim, and the Gush Adumim bloc. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ኢየሩሳሌም፣ ማአሌ አዱሚም እና ጉሽ አዱሚም። በስምምነት በሌላ የእስራኤል ቦታዎችም ይገኛል/ትገኛለች።",
+    },
+    whenSeek: {
+      he: "משפחה שמחפשת דירה לקנייה או שכירות בירושלים או באזור גוש אדומים, ומעוניינת בליווי דובר אמהרית שמכיר את הצרכים של הקהילה.",
+      en: "A family searching for an apartment to buy or rent in Jerusalem or the Gush Adumim area, and interested in Amharic-speaking guidance familiar with community needs.",
+      am: "በኢየሩሳሌም ወይም በጉሽ አዱሚም አካባቢ ቤት ለመግዛት ወይም ለመከራየት የሚፈልግ ቤተሰብ።",
+    },
+    whatToCheck: {
+      he: "- רישיון תיווך בתוקף (ניתן לאימות מול רשם המתווכים, gov.il)\n- הסכם תיווך בכתב לפני תחילת עבודה\n- שקיפות לגבי דמי-תיווך",
+      en: "- Valid broker license (verifiable against the government broker registry, gov.il)\n- Written brokerage agreement before work begins\n- Transparency on brokerage fees",
+      am: "- ሕጋዊ የደላላ ፈቃድ (በመንግስት ደላላ መዝገብ ሊረጋገጥ ይችላል)\n- ስራ ከመጀመሩ በፊት የጽሁፍ ስምምነት",
+    },
+    feeNote: {
+      he: 'מכירה: 2% ממחיר-העסקה + מע"מ (משלם הקונה והמוכר ביחד). שכירות: דמי-שכירות-של-חודש + מע"מ. יש לוודא את התנאים מול המתווך לפני חתימה.',
+      en: "Sale: 2% of transaction + VAT (paid by buyer and seller together). Rent: one month's rent + VAT. Confirm terms with the broker before signing.",
+      am: "ሽያጭ: ከግብይት 2% + VAT። ኪራይ: የአንድ ወር ኪራይ + VAT።",
+    },
+    relatedRights: ["600k-mortgage"],
+    relatedTerms: [],
+    relatedOrgs: [],
+  }),
+
+  listedSlot({
+    profession: "real-estate-agent",
+    citySlug: "maale-adumim",
+    specialty: "buy-rent",
+    title: {
+      he: 'מתווך נדל"ן דובר אמהרית — מעלה אדומים וגוש אדומים — יועץ מקרקעין',
+      en: "Amharic-speaking Real Estate Broker — Maale Adumim & Gush Adumim — Property Advisor",
+      am: "አማርኛ ተናጋሪ የንብረት ደላላ — ማአሌ አዱሚም እና ጉሽ አዱሚም",
+    },
+    shortDescription: {
+      he: 'מניאלה מולה — מתווך/יועץ נדל"ן דובר אמהרית. עיקר הפעילות במעלה אדומים וגוש אדומים.',
+      en: "Maniela Mula — Amharic-speaking real estate broker/advisor. Primarily active in Maale Adumim and Gush Adumim.",
+      am: "ማኒኤላ ሙላ — አማርኛ ተናጋሪ የንብረት ደላላ/አማካሪ። በዋናነት በማአሌ አዱሚም እና ጉሽ አዱሚም ንቁ።",
+    },
+    listedProfessional: {
+      name: "מניאלה מולה",
+      phone: "055-4543814",
+      licenseNumber: "31925980",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: מעלה אדומים, גוש אדומים וירושלים. זמין/ה גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Maale Adumim, Gush Adumim, and Jerusalem. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ማአሌ አዱሚም፣ ጉሽ አዱሚም እና ኢየሩሳሌም።",
+    },
+    whenSeek: {
+      he: "משפחה שמחפשת דירה או בית לקנייה או שכירות במעלה אדומים או ביישובי גוש אדומים, ומעוניינת בליווי דובר אמהרית.",
+      en: "A family searching for a home to buy or rent in Maale Adumim or the Gush Adumim settlements, interested in Amharic-speaking guidance.",
+      am: "በማአሌ አዱሚም ወይም በጉሽ አዱሚም ሰፈሮች ቤት ለመግዛት ወይም ለመከራየት የሚፈልግ ቤተሰብ።",
+    },
+    whatToCheck: {
+      he: "- רישיון תיווך בתוקף (ניתן לאימות מול רשם המתווכים, gov.il)\n- הסכם תיווך בכתב לפני תחילת עבודה\n- שקיפות לגבי דמי-תיווך",
+      en: "- Valid broker license (verifiable against the government broker registry, gov.il)\n- Written brokerage agreement before work begins\n- Transparency on brokerage fees",
+      am: "- ሕጋዊ የደላላ ፈቃድ (በመንግስት ደላላ መዝገብ ሊረጋገጥ ይችላል)\n- ስራ ከመጀመሩ በፊት የጽሁፍ ስምምነት",
+    },
+    feeNote: {
+      he: 'מכירה: 2% ממחיר-העסקה + מע"מ (משלם הקונה והמוכר ביחד). שכירות: דמי-שכירות-של-חודש + מע"מ. יש לוודא את התנאים מול המתווך לפני חתימה.',
+      en: "Sale: 2% of transaction + VAT (paid by buyer and seller together). Rent: one month's rent + VAT. Confirm terms with the broker before signing.",
+      am: "ሽያጭ: ከግብይት 2% + VAT። ኪራይ: የአንድ ወር ኪራይ + VAT።",
     },
     relatedRights: ["600k-mortgage"],
     relatedTerms: [],

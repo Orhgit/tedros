@@ -74,6 +74,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
   const { locale, slot, publicUrl } = data;
   const description = slot.shortDescription;
+  const listed = slot.listedProfessional;
   return [
     { title: `${slot.title} — Tedros` },
     { name: "description", content: description },
@@ -86,8 +87,22 @@ export const meta: Route.MetaFunction = ({ data }) => {
       "script:ld+json": {
         "@context": "https://schema.org",
         "@type": "Person",
-        name: slot.title,
+        // Real listed professionals get their actual name/contact; the
+        // anonymous "what to expect" slots use the page title as a stand-in
+        // (see file header on professionals.server.ts).
+        name: listed?.name ?? slot.title,
         jobTitle: slot.profession,
+        ...(listed?.phone ? { telephone: listed.phone } : {}),
+        ...(listed?.languages ? { knowsLanguage: listed.languages } : {}),
+        ...(listed?.licenseNumber
+          ? {
+              hasCredential: {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "license",
+                identifier: listed.licenseNumber,
+              },
+            }
+          : {}),
         address: {
           "@type": "PostalAddress",
           addressLocality: slot.citySlug,
@@ -253,23 +268,40 @@ export default function ProfessionalProfile({ loaderData }: Route.ComponentProps
           </section>
         )}
 
-        <aside
-          className={`mt-10 overflow-hidden rounded-lg border p-5 ${tone.softBg} ${tone.border}`}
-        >
-          <h2 className="text-sm font-medium text-earth-900">
-            {t(locale, "professionals_join_cta_heading")}
-          </h2>
-          <p className="mt-2 text-sm text-ink-700">
-            {t(locale, "professionals_join_cta_body")}
-          </p>
-          <Link
-            to={`/${locale}/about`}
-            className={`mt-3 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:opacity-90 ${tone.accentBg}`}
+        {slot.listedProfessional ? (
+          <aside
+            className={`mt-10 overflow-hidden rounded-lg border p-5 ${tone.softBg} ${tone.border}`}
           >
-            <span aria-hidden="true">→</span>
-            {t(locale, "professionals_join_cta_link")}
-          </Link>
-        </aside>
+            <h2 className="text-sm font-medium text-earth-900">
+              {slot.listedProfessional.name}
+            </h2>
+            <a
+              href={`tel:${slot.listedProfessional.phone}`}
+              className={`mt-3 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:opacity-90 ${tone.accentBg}`}
+            >
+              <span aria-hidden="true">📞</span>
+              {slot.listedProfessional.phone}
+            </a>
+          </aside>
+        ) : (
+          <aside
+            className={`mt-10 overflow-hidden rounded-lg border p-5 ${tone.softBg} ${tone.border}`}
+          >
+            <h2 className="text-sm font-medium text-earth-900">
+              {t(locale, "professionals_join_cta_heading")}
+            </h2>
+            <p className="mt-2 text-sm text-ink-700">
+              {t(locale, "professionals_join_cta_body")}
+            </p>
+            <Link
+              to={`/${locale}/about`}
+              className={`mt-3 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:opacity-90 ${tone.accentBg}`}
+            >
+              <span aria-hidden="true">→</span>
+              {t(locale, "professionals_join_cta_link")}
+            </Link>
+          </aside>
+        )}
       </article>
       <SiteFooter locale={locale} />
     </div>
