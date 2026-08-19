@@ -63,13 +63,13 @@ export interface ProfessionalSlot {
 const JOIN_CTA: Record<Locale, string> = {
   he: `## הצטרפות לקטלוג
 
-האם אתה איש מקצוע מהקהילה האתיופית-ישראלית או דובר אמהרית? הקטלוג נמצא בשלבי הקמה ראשוניים. **לרישום עתידי**, פנו לטדרוס דרך [טופס הצטרפות](/he/about) ונחזור אליכם כשנפתח.`,
+האם אתה איש מקצוע מהקהילה האתיופית-ישראלית או דובר אמהרית? הקטלוג נמצא בשלבי הקמה ראשוניים. **הצטרפו** דרך [טופס הצטרפות](/he/professionals/join) — הצוות שלנו יבדוק ויחזור אליכם.`,
   en: `## Join the directory
 
-Are you an Ethiopian-Israeli or Amharic-speaking professional? The directory is in early build. **For future listing**, reach out via [the join form](/en/about) and we'll get back to you when onboarding opens.`,
+Are you an Ethiopian-Israeli or Amharic-speaking professional? The directory is in early build. **Join** via [the application form](/en/professionals/join) — our team will review and get back to you.`,
   am: `## ወደ ካታሎግ መግባት
 
-የኢትዮጵያ-እስራኤል ወይም አማርኛ-ተናጋሪ ባለሙያ ነዎት? ካታሎጉ በቅድመ-ግንባታ ላይ ነው። **ለወደፊት ምዝገባ**፣ በ[የመግቢያ ቅጽ](/am/about) በኩል ያግኙን፣ ምዝገባ ሲከፈት እንመለስልዎታለን።`,
+የኢትዮጵያ-እስራኤል ወይም አማርኛ-ተናጋሪ ባለሙያ ነዎት? ካታሎጉ በቅድመ-ግንባታ ላይ ነው። **ይቀላቀሉ** በ[የመግቢያ ቅጽ](/am/professionals/join) — ቡድናችን ገምግሞ ይመልስልዎታል።`,
 };
 
 const DISCLAIMER: Record<Locale, string> = {

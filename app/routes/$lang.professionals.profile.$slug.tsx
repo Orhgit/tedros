@@ -294,7 +294,7 @@ export default function ProfessionalProfile({ loaderData }: Route.ComponentProps
               {t(locale, "professionals_join_cta_body")}
             </p>
             <Link
-              to={`/${locale}/about`}
+              to={`/${locale}/professionals/join`}
               className={`mt-3 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:opacity-90 ${tone.accentBg}`}
             >
               <span aria-hidden="true">→</span>
