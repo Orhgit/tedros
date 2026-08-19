@@ -47,9 +47,27 @@ export async function loader({ request }: Route.LoaderArgs) {
     segment === "he" || segment === "en" || segment === "am" ? segment : undefined;
   const cookieLocale = await readLocaleCookie(request);
   const locale: Locale = (fromUrl ?? cookieLocale ?? DEFAULT_LOCALE) as Locale;
-  const { GA_MEASUREMENT_ID } = getEnv();
-  return { locale, gaId: GA_MEASUREMENT_ID ?? null };
+  const { GA_MEASUREMENT_ID, PUBLIC_URL } = getEnv();
+  return { locale, gaId: GA_MEASUREMENT_ID ?? null, publicUrl: PUBLIC_URL };
 }
+
+/**
+ * Site-wide og:image/twitter:image fallback — no route currently sets its own,
+ * so social shares and AI-engine link previews rendered blank. Route-level meta
+ * (returned from a child route's `meta` export) overrides these by key when present,
+ * per React Router's meta merging.
+ */
+export const meta: Route.MetaFunction = ({ data }) => {
+  const publicUrl = data?.publicUrl ?? "https://tedros.co.il";
+  const ogImage = `${publicUrl}/og-default.jpg`;
+  return [
+    { property: "og:image", content: ogImage },
+    { property: "og:image:width", content: "1280" },
+    { property: "og:image:height", content: "853" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: ogImage },
+  ];
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const data = useLoaderData<typeof loader>() ?? {

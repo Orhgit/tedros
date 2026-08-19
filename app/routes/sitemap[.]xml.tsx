@@ -16,6 +16,7 @@ export function loader() {
     "sitemap-health.xml",
     "sitemap-content.xml",
     "sitemap-news.xml",
+    "sitemap-listings.xml",
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

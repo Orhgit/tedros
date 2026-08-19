@@ -31,6 +31,9 @@ const COPY: Record<
     openSourceHeading: string;
     openSourceBody: string;
     openSourceCta: string;
+    sourcesHeading: string;
+    sourcesBody: string;
+    sourcesCta: string;
     rightsCta: string;
     realestateCta: string;
     homeBreadcrumb: string;
@@ -52,6 +55,10 @@ const COPY: Record<
     openSourceBody:
       "כל הקוד, ה-ADRs (החלטות אדריכלות), והמחקר הקהילתי גלויים ב-GitHub. הפרויקט בנוי כשרשרת פתוחה כדי שיוכל לשמש מודל לפרויקטים דומים בקהילות אחרות.",
     openSourceCta: "ראו את הקוד ב-GitHub",
+    sourcesHeading: "איך אנחנו מאמתים עובדות",
+    sourcesBody:
+      "כל נתון בטדרוס מגובה במקור ראשוני — גופי ממשלה (gov.il), הלשכה המרכזית לסטטיסטיקה, ביטוח לאומי וכדומה. אנחנו לא מפרסמים הערכות או נתונים לא מאומתים על הקהילה. תהליך המחקר, כולל המקורות שנבדקו ונפסלו בגלל חוסר עיגון עובדתי, מתועד בפומבי.",
+    sourcesCta: "מסמכי המחקר ב-GitHub",
     rightsCta: "מדריך הזכויות",
     realestateCta: 'פילר נדל"ן',
     homeBreadcrumb: "בית",
@@ -72,6 +79,10 @@ const COPY: Record<
     openSourceBody:
       "All the code, ADRs (architecture decisions), and community research live on GitHub. The project is built in the open so it can serve as a model for similar community-portal projects.",
     openSourceCta: "View the source on GitHub",
+    sourcesHeading: "How we verify facts",
+    sourcesBody:
+      "Every figure on Tedros is backed by a primary source — government bodies (gov.il), the Central Bureau of Statistics, the National Insurance Institute, and similar authorities. We don't publish estimates or unverified statistics about the community. The research process, including sources that were checked and rejected for lacking a documented factual anchor, is publicly recorded.",
+    sourcesCta: "Research documents on GitHub",
     rightsCta: "Rights catalog",
     realestateCta: "Real Estate pillar",
     homeBreadcrumb: "Home",
@@ -91,6 +102,10 @@ const COPY: Record<
     openSourceBody:
       "ሁሉም ኮድ፣ ADR ዎች (የስነ-ህንፃ ውሳኔዎች) እና የማህበረሰብ ምርምር በ GitHub ላይ ናቸው። ፕሮጀክቱ በግልፅ የተገነባ ነው።",
     openSourceCta: "ኮዱን በ GitHub ይመልከቱ",
+    sourcesHeading: "እውነታዎችን እንዴት እናረጋግጣለን",
+    sourcesBody:
+      "በ Tedros ላይ ያለ እያንዳንዱ መረጃ ከመንግስት አካላት (gov.il)፣ ከማዕከላዊ የስታቲስቲክስ ቢሮ እና ከመሳሰሉት ኦፊሴላዊ ምንጮች የተረጋገጠ ነው። ስለ ማህበረሰቡ ያልተረጋገጡ ግምቶችን አናወጣም።",
+    sourcesCta: "የምርምር ሰነዶች በ GitHub",
     rightsCta: "የመብቶች ካታሎግ",
     realestateCta: "የሪል እስቴት ምሰሶ",
     homeBreadcrumb: "መነሻ",
@@ -201,6 +216,23 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
           >
             <span aria-hidden="true">↗</span>
             {c.openSourceCta}
+          </a>
+        </section>
+
+        {/* Sources & methodology */}
+        <section className="mb-12 rounded-2xl border border-earth-200 bg-earth-50 p-6 sm:p-8">
+          <h2 className="font-display text-2xl font-semibold tracking-tight text-earth-900">
+            {c.sourcesHeading}
+          </h2>
+          <p className="mt-3 text-base leading-relaxed text-ink-700">{c.sourcesBody}</p>
+          <a
+            href="https://github.com/Orhgit/tedros/tree/main/docs/research"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground shadow-sm transition hover:bg-earth-700"
+          >
+            <span aria-hidden="true">↗</span>
+            {c.sourcesCta}
           </a>
         </section>
 
