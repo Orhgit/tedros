@@ -153,12 +153,12 @@ Based on a report published on Tel Aviv Online on September 17, 2025: [Tel Aviv 
     updatedAt: "2025-11-16",
     tags: ["community", "education"],
     title: {
-      he: "הלמ\"ס: 177,600 בני העדה האתיופית בישראל — נתוני חג הסיגד 2025",
+      he: 'הלמ"ס: 177,600 בני העדה האתיופית בישראל — נתוני חג הסיגד 2025',
       en: "CBS: 177,600 Ethiopian-Israelis — updated Sigd 2025 data",
       am: "ማዕከላዊ ስታቲስቲክስ ቢሮ፦ 177,600 የኢትዮጵያ ማህበረሰብ አባላት በእስራኤል — የ2025 ሲግድ በዓል መረጃ",
     },
     excerpt: {
-      he: "לרגל חג הסיגד פרסמה הלמ\"ס נתונים מעודכנים על דמוגרפיה, פיזור גיאוגרפי, השכלה גבוהה וילודה בקרב הקהילה האתיופית-ישראלית.",
+      he: 'לרגל חג הסיגד פרסמה הלמ"ס נתונים מעודכנים על דמוגרפיה, פיזור גיאוגרפי, השכלה גבוהה וילודה בקרב הקהילה האתיופית-ישראלית.',
       en: "Ahead of Sigd, Israel's Central Bureau of Statistics published updated figures on the Ethiopian-Israeli community's size, geographic distribution, higher education and births.",
       am: "ማዕከላዊ ስታቲስቲክስ ቢሮ ለሲግድ በዓል የኢትዮጵያ-እስራኤላውያን ማህበረሰብ መጠን፣ የጂኦግራፊያዊ ስርጭት፣ ከፍተኛ ትምህርት እና ልደት ላይ የተዘመነ መረጃ አውጥቷል።",
     },
@@ -363,7 +363,7 @@ Based on three reports published on ynet between December 8-11, 2025 and the fol
       am: "ቴቤካ ሌላ የፖሊስ ጥቃት ጉዳይ ገለጠ — ለክስ ጠበቆች ቢሮ ይግባኝ",
     },
     excerpt: {
-      he: "העמותה טוענת לשימוש בכוח מופרז ולא מידתי נגד צעיר יוצא אתיופיה בדרום הארץ, והגישה ערר לפתיחה מחדש של התיק לאחר שמח\"ש סגר אותו.",
+      he: 'העמותה טוענת לשימוש בכוח מופרז ולא מידתי נגד צעיר יוצא אתיופיה בדרום הארץ, והגישה ערר לפתיחה מחדש של התיק לאחר שמח"ש סגר אותו.',
       en: "The organization alleges the use of excessive and disproportionate force against a young Ethiopian-Israeli man in southern Israel, and has appealed to reopen the case after the police internal affairs unit closed it.",
       am: "ድርጅቱ በደቡብ እስራኤል በኢትዮጵያ ተወላጅ ወጣት ላይ ከልክ ያለፈ እና ተመጣጣኝ ያልሆነ ኃይል ጥቅም ላይ መዋሉን ተከራክሯል።",
     },
@@ -435,7 +435,7 @@ Based on a Tebeka publication from December 29, 2025: [Tebeka](https://www.tebek
     updatedAt: "2026-06-19",
     tags: ["rights", "civic", "community"],
     title: {
-      he: "תחקיר ynet: \"גזענות המשטרה נגד יוצאי אתיופיה לא נעלמה — היא רק שינתה צורה\"",
+      he: 'תחקיר ynet: "גזענות המשטרה נגד יוצאי אתיופיה לא נעלמה — היא רק שינתה צורה"',
       en: "ynet investigation: 'Police racism against Ethiopian-Israelis hasn't disappeared — it just changed form'",
       am: "የynet ምርመራ፦ 'የፖሊስ ዘረኝነት በኢትዮጵያ ተወላጆች ላይ አልጠፋም — ቅርጹን ብቻ ቀይሯል'",
     },
