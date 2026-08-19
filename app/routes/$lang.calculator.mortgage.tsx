@@ -19,7 +19,13 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   const locale = data?.locale ?? DEFAULT_LOCALE;
-  return [{ title: `${t(locale, "lead_form_title")} — Tedros` }];
+  // Mock/skeleton stub (see file header) — the real calculator lives at
+  // /calculator/mortgage-ethiopian-immigrants. Keep this out of the index
+  // so it doesn't compete with (or duplicate) that page.
+  return [
+    { title: `${t(locale, "lead_form_title")} — Tedros` },
+    { name: "robots", content: "noindex" },
+  ];
 };
 
 export default function MortgageCalculator({ loaderData }: Route.ComponentProps) {

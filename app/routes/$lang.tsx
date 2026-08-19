@@ -38,20 +38,14 @@ export async function loader({ params, request }: Route.LoaderArgs) {
 // loader-attached headers without an explicit `headers` export.
 export const headers: Route.HeadersFunction = ({ loaderHeaders }) => loaderHeaders;
 
-export const meta: Route.MetaFunction = ({ data }) => {
-  const base = data?.publicUrl ?? "http://localhost:3000";
-  return [
-    {
-      tagName: "link",
-      rel: "canonical",
-      href: `${base}/${data?.locale ?? DEFAULT_LOCALE}`,
-    },
-    { tagName: "link", rel: "alternate", hrefLang: "he", href: `${base}/he` },
-    { tagName: "link", rel: "alternate", hrefLang: "en", href: `${base}/en` },
-    { tagName: "link", rel: "alternate", hrefLang: "am", href: `${base}/am` },
-    { tagName: "link", rel: "alternate", hrefLang: "x-default", href: `${base}/he` },
-  ];
-};
+// Canonical + hreflang for each page are owned by the leaf route (see
+// `hreflangMeta` in ~/lib/i18n/hreflang.ts). This layout used to also emit
+// its own canonical/hreflang pointing at the locale root, which duplicated
+// (and conflicted with) the leaf route's tags on every child page — Google
+// ignores or arbitrarily picks between multiple canonical tags. Leaf routes
+// that intentionally skip hreflangMeta are noindex (admin/CRUD, dashboard,
+// login, design, subscribe tokens) or action-only endpoints, so nothing
+// needs a fallback here.
 
 export default function LocaleLayout() {
   return <Outlet />;
