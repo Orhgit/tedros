@@ -43,7 +43,9 @@ export function loader({ params }: Route.LoaderArgs) {
     })
     .join("\n");
 
-  const lastBuildDate = articles[0] ? toRfc822(articles[0].publishedAt) : new Date(0).toUTCString();
+  const lastBuildDate = articles[0]
+    ? toRfc822(articles[0].publishedAt)
+    : new Date(0).toUTCString();
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">

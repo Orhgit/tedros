@@ -278,7 +278,7 @@ Because this detail **contradicts** the directly verified information above (whi
     updatedAt: "2026-02-27",
     tags: ["community"],
     title: {
-      he: 'גשאו איילה ניצח בחצי-מרתון תל אביב 2026',
+      he: "גשאו איילה ניצח בחצי-מרתון תל אביב 2026",
       en: "Gesahegn Ayele wins the 2026 Tel Aviv half-marathon",
       am: "ገሳህኝ አየለ በ2026 ቴል አቪቭ ግማሽ ማራቶን አሸነፈ",
     },
@@ -343,7 +343,7 @@ An athletic achievement like Ayele's joins a growing list of community figures s
     updatedAt: "2026-06-19",
     tags: ["civic", "community"],
     title: {
-      he: 'לראשונה במשטרה: בן הקהילה האתיופית בראש מדור יוצאי אתיופיה',
+      he: "לראשונה במשטרה: בן הקהילה האתיופית בראש מדור יוצאי אתיופיה",
       en: "A first for the police: a member of the Ethiopian community leads the Ethiopian-Israeli desk",
       am: "ለፖሊስ ለመጀመሪያ ጊዜ፦ የኢትዮጵያ ማህበረሰብ አባል የኢትዮጵያ-እስራኤላውያን ክፍልን ይመራል",
     },
