@@ -751,7 +751,7 @@
   "promo_banner_dismiss": "סגור באנר",
   "professional_apply_seo_title": "הצטרפות לקטלוג אנשי המקצוע — טדרוס",
   "professional_apply_hero_title": "רוצים חשיפה לקהילה?",
-  "professional_apply_hero_subtitle": "הצטרפו לקטלוג אנשי המקצוע דוברי האמהרית של טדרוס. מילוי הטופס לוקח 2 דקות — הצוות שלנו יבדוק ויחזור אליכם.",
+  "professional_apply_hero_subtitle": "הצטרפו לקטלוג אנשי המקצוע דוברי האמהרית וקבלו חשיפה ישירה לקהל הזה. מילוי הטופס לוקח 2 דקות — הצוות שלנו יבדוק ויחזור אליכם.",
   "professional_apply_field_name": "שם מלא",
   "professional_apply_field_profession": "תחום עיסוק",
   "professional_apply_field_profession_placeholder": "בחרו תחום",
@@ -783,5 +783,6 @@
   "professional_apply_error_languages_required": "בחרו לפחות שפה אחת",
   "professional_apply_error_rate_limited": "יותר מדי בקשות. נסו שוב בעוד כמה דקות.",
   "professional_apply_error_turnstile_failed": "אימות אנטי-ספאם נכשל. נסו שוב.",
-  "professional_apply_error_generic": "משהו השתבש. נסו שוב."
+  "professional_apply_error_generic": "משהו השתבש. נסו שוב.",
+  "professional_apply_hero_intro": "טדרוס הוא הפורטל המקיף ביותר לקהילה האתיופית-ישראלית — אלפי בני קהילה מוצאים כאן מדי חודש זכויות, מידע ואנשי מקצוע."
 }

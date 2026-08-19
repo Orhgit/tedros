@@ -60,7 +60,10 @@ export default function ProfessionalsJoin({ loaderData }: Route.ComponentProps) 
             {t(locale, "professionals_breadcrumb")}
           </Link>
         </p>
-        <h1 className="mt-3 font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
+        <p className="mt-3 text-sm font-medium text-earth-700">
+          {t(locale, "professional_apply_hero_intro")}
+        </p>
+        <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
           {t(locale, "professional_apply_hero_title")}
         </h1>
         <p className="mt-3 text-base leading-relaxed text-ink-700">

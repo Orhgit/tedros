@@ -751,7 +751,7 @@
   "promo_banner_dismiss": "Close banner",
   "professional_apply_seo_title": "Join the Professionals Directory — Tedros",
   "professional_apply_hero_title": "Want exposure to the community?",
-  "professional_apply_hero_subtitle": "Join Tedros' directory of Amharic-speaking professionals. The form takes 2 minutes — our team will review and get back to you.",
+  "professional_apply_hero_subtitle": "Join the directory of Amharic-speaking professionals and get direct exposure to this audience. The form takes 2 minutes — our team will review and get back to you.",
   "professional_apply_field_name": "Full name",
   "professional_apply_field_profession": "Profession",
   "professional_apply_field_profession_placeholder": "Select a profession",
@@ -783,5 +783,6 @@
   "professional_apply_error_languages_required": "Choose at least one language",
   "professional_apply_error_rate_limited": "Too many requests. Please try again in a few minutes.",
   "professional_apply_error_turnstile_failed": "Anti-spam verification failed. Please try again.",
-  "professional_apply_error_generic": "Something went wrong. Please try again."
+  "professional_apply_error_generic": "Something went wrong. Please try again.",
+  "professional_apply_hero_intro": "Tedros is the most comprehensive portal for the Ethiopian-Israeli community — thousands of community members find rights, information, and professionals here every month."
 }
