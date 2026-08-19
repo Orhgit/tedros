@@ -58,6 +58,13 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
+    {
+      tagName: "link",
+      rel: "alternate",
+      type: "application/rss+xml",
+      title: `${title} — RSS`,
+      href: `${publicUrl}/${locale}/news.rss`,
+    },
     ...hreflangMeta(publicUrl, locale, "/news"),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
