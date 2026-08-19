@@ -1366,6 +1366,99 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
     relatedTerms: [],
     relatedOrgs: [],
   }),
+
+  // --- Listed lawyer: דוד אבבה (2 entries) ----------------------------------
+  // Owner-supplied real contact, 2026-08-19. Owner confirmed the license
+  // exists but asked not to publish the number, so `licenseNumber` is
+  // intentionally omitted. Same service area as Maniela Mula (Jerusalem +
+  // Maale Adumim + Gush Adumim), per owner instruction.
+  listedSlot({
+    profession: "lawyer",
+    citySlug: "jerusalem",
+    specialty: "general-practice",
+    title: {
+      he: 'עו"ד דובר אמהרית — ירושלים — ייעוץ וייצוג משפטי',
+      en: "Amharic-speaking Lawyer — Jerusalem — Legal Advice & Representation",
+      am: "አማርኛ ተናጋሪ ጠበቃ — ኢየሩሳሌም — ሕጋዊ ምክርና ውክልና",
+    },
+    shortDescription: {
+      he: 'דוד אבבה — עו"ד דובר אמהרית, פעיל בירושלים וסביבתה.',
+      en: "David Abeba — Amharic-speaking lawyer, active in Jerusalem and the surrounding area.",
+      am: "ዳዊት አበባ — አማርኛ ተናጋሪ ጠበቃ፣ በኢየሩሳሌም እና አካባቢው ንቁ።",
+    },
+    listedProfessional: {
+      name: "דוד אבבה",
+      phone: "055-4543809",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: ירושלים, מעלה אדומים וגוש אדומים. זמין גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Jerusalem, Maale Adumim, and the Gush Adumim bloc. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ኢየሩሳሌም፣ ማአሌ አዱሚም እና ጉሽ አዱሚም።",
+    },
+    whenSeek: {
+      he: 'כשנדרש סיוע משפטי ויש העדפה לליווי בשפה אמהרית — מעמד אישי, זכויות עולים, ענייני משפחה ועוד. עו"ד דובר אמהרית מבטיח הבנה מלאה של הניסוחים המשפטיים.',
+      en: "When you need legal assistance and prefer Amharic-language support — personal status, immigrant rights, family matters, and more. An Amharic-speaking lawyer ensures full comprehension of legal phrasing.",
+      am: "ሕጋዊ እርዳታ ሲፈልጉና በአማርኛ ድጋፍ ሲመርጡ — የግል ሁኔታ፣ የስደተኛ መብቶች፣ የቤተሰብ ጉዳዮች እና ሌሎችም።",
+    },
+    whatToCheck: {
+      he: 'לפני תחילת עבודה מומלץ לוודא רישיון עריכת דין בתוקף (אתר לשכת עוה"ד), ולסכם בכתב את היקף הטיפול ושכר-הטרחה.',
+      en: "Before starting work, verify an active bar license (Bar Association website) and agree in writing on the scope of work and fees.",
+      am: "ስራ ከመጀመርዎ በፊት ሕያው የሕግ ፈቃድ ማረጋገጥ እና የስራውን ወሰን እና ክፍያ በጽሁፍ መስማማት ይመከራል።",
+    },
+    feeNote: {
+      he: "עלויות משתנות לפי סוג התיק. יש לוודא מראש מול עורך הדין. עולים זכאים עשויים לקבל סיוע ממשרד המשפטים (סיוע משפטי) או מ-Tebeka.",
+      en: "Costs vary by case type — confirm with the lawyer in advance. Eligible olim may qualify for assistance from the Ministry of Justice (Legal Aid) or Tebeka.",
+      am: "ወጪዎች እንደ ጉዳዩ ዓይነት ይለያያሉ። ብቁ የሆኑ ተመላሾች ከፍትህ ሚኒስቴር ወይም ከጠበቃ እርዳታ ማግኘት ይችላሉ።",
+    },
+    relatedRights: ["tebeka-legal-aid"],
+    relatedTerms: ["tebeka"],
+    relatedOrgs: ["tebeka"],
+  }),
+
+  listedSlot({
+    profession: "lawyer",
+    citySlug: "maale-adumim",
+    specialty: "general-practice",
+    title: {
+      he: 'עו"ד דובר אמהרית — מעלה אדומים וגוש אדומים — ייעוץ וייצוג משפטי',
+      en: "Amharic-speaking Lawyer — Maale Adumim & Gush Adumim — Legal Advice & Representation",
+      am: "አማርኛ ተናጋሪ ጠበቃ — ማአሌ አዱሚም እና ጉሽ አዱሚም",
+    },
+    shortDescription: {
+      he: 'דוד אבבה — עו"ד דובר אמהרית. עיקר הפעילות במעלה אדומים וגוש אדומים.',
+      en: "David Abeba — Amharic-speaking lawyer. Primarily active in Maale Adumim and Gush Adumim.",
+      am: "ዳዊት አበባ — አማርኛ ተናጋሪ ጠበቃ። በዋናነት በማአሌ አዱሚም እና ጉሽ አዱሚም ንቁ።",
+    },
+    listedProfessional: {
+      name: "דוד אבבה",
+      phone: "055-4543809",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: מעלה אדומים, גוש אדומים וירושלים. זמין גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Maale Adumim, Gush Adumim, and Jerusalem. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ማአሌ አዱሚም፣ ጉሽ አዱሚም እና ኢየሩሳሌም።",
+    },
+    whenSeek: {
+      he: "משפחה במעלה אדומים או ביישובי גוש אדומים שנדרשת לה עזרה משפטית עם ליווי דובר אמהרית — מעמד אישי, זכויות עולים, ענייני משפחה ועוד.",
+      en: "A family in Maale Adumim or the Gush Adumim settlements needing legal help with Amharic-speaking support — personal status, immigrant rights, family matters, and more.",
+      am: "በማአሌ አዱሚም ወይም በጉሽ አዱሚም ሰፈሮች ያለ ቤተሰብ በአማርኛ ድጋፍ ሕጋዊ እርዳታ የሚፈልግ።",
+    },
+    whatToCheck: {
+      he: 'לפני תחילת עבודה מומלץ לוודא רישיון עריכת דין בתוקף (אתר לשכת עוה"ד), ולסכם בכתב את היקף הטיפול ושכר-הטרחה.',
+      en: "Before starting work, verify an active bar license (Bar Association website) and agree in writing on the scope of work and fees.",
+      am: "ስራ ከመጀመርዎ በፊት ሕያው የሕግ ፈቃድ ማረጋገጥ እና የስራውን ወሰን እና ክፍያ በጽሁፍ መስማማት ይመከራል።",
+    },
+    feeNote: {
+      he: "עלויות משתנות לפי סוג התיק. יש לוודא מראש מול עורך הדין. עולים זכאים עשויים לקבל סיוע ממשרד המשפטים (סיוע משפטי) או מ-Tebeka.",
+      en: "Costs vary by case type — confirm with the lawyer in advance. Eligible olim may qualify for assistance from the Ministry of Justice (Legal Aid) or Tebeka.",
+      am: "ወጪዎች እንደ ጉዳዩ ዓይነት ይለያያሉ። ብቁ የሆኑ ተመላሾች ከፍትህ ሚኒስቴር ወይም ከጠበቃ እርዳታ ማግኘት ይችላሉ።",
+    },
+    relatedRights: ["tebeka-legal-aid"],
+    relatedTerms: ["tebeka"],
+    relatedOrgs: ["tebeka"],
+  }),
 ];
 
 // --- Helpers ----------------------------------------------------------------
