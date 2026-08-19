@@ -3,9 +3,11 @@
 
 import { sql } from "drizzle-orm";
 import {
+  boolean,
   check,
   index,
   integer,
+  jsonb,
   pgTable,
   primaryKey,
   text,
@@ -128,5 +130,43 @@ export const professionalReviews = pgTable(
       "professional_reviews_rating_check",
       sql`${t.rating} BETWEEN 1 AND 5`,
     ),
+  }),
+);
+
+// --- Applications ------------------------------------------------------
+// Public self-serve intake ("join the directory") — TED-26. Every
+// submission lands here as `pending` for manual owner review; nothing
+// here is ever shown on the public site directly. An approved application
+// gets promoted into a real `listedSlot()` entry by hand (see
+// `app/lib/professionals/professionals.server.ts`).
+
+export const professionalApplications = pgTable(
+  "professional_applications",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    name: varchar("name", { length: 200 }).notNull(),
+    profession: varchar("profession", { length: 40 }).notNull(),
+    phone: varchar("phone", { length: 32 }).notNull(),
+    email: varchar("email", { length: 320 }),
+    licenseNumber: varchar("license_number", { length: 64 }),
+    publishLicenseNumber: boolean("publish_license_number").notNull().default(false),
+    /** Up to 2 city slugs — the applicant's main coverage. */
+    primaryRegions: jsonb("primary_regions").$type<string[]>().notNull().default([]),
+    /** Additional city slugs served, lower priority than primary. */
+    secondaryRegions: jsonb("secondary_regions").$type<string[]>().notNull().default([]),
+    /** Set for professions that don't require a physical presence
+     * (accountant, career-counselor, mortgage-advisor, psychologist) when
+     * the applicant serves the whole country remotely. */
+    nationwideRemote: boolean("nationwide_remote").notNull().default(false),
+    bio: text("bio"),
+    languages: jsonb("languages").$type<string[]>().notNull().default([]),
+    /** Which locale the applicant filled the form in — helps triage. */
+    locale: varchar("locale", { length: 2 }).notNull(),
+    consentToPublish: boolean("consent_to_publish").notNull().default(false),
+    status: verificationStatusEnum("status").notNull().default("pending"),
+    ...timestamps,
+  },
+  (t) => ({
+    statusIdx: index("professional_applications_status_idx").on(t.status),
   }),
 );
