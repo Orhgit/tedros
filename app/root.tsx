@@ -52,10 +52,12 @@ export async function loader({ request }: Route.LoaderArgs) {
 }
 
 /**
- * Site-wide og:image/twitter:image fallback — no route currently sets its own,
- * so social shares and AI-engine link previews rendered blank. Route-level meta
- * (returned from a child route's `meta` export) overrides these by key when present,
- * per React Router's meta merging.
+ * og:image/twitter:image fallback for routes with no `meta` export of their own.
+ * In this app, a child route's `meta` export REPLACES parent meta entirely —
+ * it does not merge by key (confirmed in docs/seo/technical-audit-2026-05-30.md
+ * finding #3). Every content route therefore sets its own og:image/twitter:image
+ * explicitly (see app/routes/$lang.rights.$slug.tsx etc.) rather than relying on
+ * this; this export only fires for the rare route that defines no meta at all.
  */
 export const meta: Route.MetaFunction = ({ data }) => {
   const publicUrl = data?.publicUrl ?? "https://tedros.co.il";
