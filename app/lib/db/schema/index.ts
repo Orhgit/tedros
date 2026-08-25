@@ -14,5 +14,6 @@ export * from "./realestate";
 export * from "./rights";
 export * from "./professionals";
 export * from "./content";
+export * from "./news-drafts";
 export * from "./audit";
 export * from "./subscribers";

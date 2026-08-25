@@ -62,6 +62,14 @@ const envSchema = z.object({
   // IndexNow — submit new/updated URLs to search engines immediately
   // Generate: openssl rand -hex 16
   INDEXNOW_KEY: z.string().optional(),
+
+  // News autopilot (TED-114 / ADR-016) — bearer secret gating
+  // POST /api/internal/news-autopilot/ingest. Called by the Claude Code
+  // routine (owner's subscription runtime, see ADR-016 §1 Amendment 1) and
+  // by the GitHub Actions watchdog's read-only status check. Not set in
+  // dev by default; the route 503s until configured.
+  // Generate: openssl rand -hex 32
+  AUTOPILOT_SECRET: z.string().min(32).optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;

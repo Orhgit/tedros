@@ -1,0 +1,126 @@
+name: News autopilot watchdog
+
+# TED-114 / ADR-016 §1 (Amendment 2) — notify-only watchdog for the daily
+# Claude Code routine documented in docs/ops/news-autopilot-routine.md.
+#
+# This workflow does NOT run the autopilot. It only asks the app "did any
+# fresh news_drafts rows land today?" (GET /api/internal/news-autopilot/ingest,
+# the same bearer-gated route the routine POSTs to) and, if not, sends one
+# Resend email to ADMIN_NOTIFICATIONS_EMAIL. Per Amendment 2 there is no paid
+# execution fallback anywhere in this design — if the routine missed a day,
+# this workflow's only action is to make that visible, never to retry the
+# autopilot or spend money on an alternative model call.
+#
+# IMPORTANT — intentionally `workflow_dispatch`-only for now, no `schedule:`
+# trigger. The moment a `schedule:` trigger is added and this file is on
+# `main`, GitHub will start running it automatically and it WILL try to send
+# a real email (once the secrets below exist) the first time it finds no
+# drafts. That should only happen after:
+#   1. The owner has actually created+enabled the Claude Code routine
+#      (docs/ops/news-autopilot-routine.md's activation checklist).
+#   2. The secrets listed below are added in GitHub → Settings → Secrets.
+# Until both are true, this workflow can only be triggered manually
+# (Actions tab → "Run workflow") to test connectivity/notification wiring
+# without any risk of a false "routine is broken" alert firing on a schedule
+# before the routine even exists. Adding the `schedule:` trigger back is a
+# one-line, separate, owner-approved change — see this repo's DevOps report.
+on:
+  workflow_dispatch:
+  # schedule:
+  #   # Runs 09:00 UTC — ~2-6h after the routine's 03:00 UTC daily run
+  #   # (docs/ops/news-autopilot-routine.md), giving it a generous window to
+  #   # finish before we call "no drafts today" a real miss. Uncomment only
+  #   # after the activation checklist above is fully done.
+  #   - cron: "0 9 * * *"
+
+concurrency:
+  group: news-autopilot-watchdog
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Check for fresh drafts, notify on a miss
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Query freshDraftsToday
+        id: status
+        env:
+          AUTOPILOT_SECRET: ${{ secrets.AUTOPILOT_SECRET }}
+          STATUS_URL: ${{ vars.NEWS_AUTOPILOT_STATUS_URL || 'https://tedros.co.il/api/internal/news-autopilot/ingest' }}
+        run: |
+          set -euo pipefail
+          if [ -z "${AUTOPILOT_SECRET:-}" ]; then
+            echo "AUTOPILOT_SECRET is not set — cannot query the status endpoint." >&2
+            exit 1
+          fi
+
+          http_code=$(curl -sS -o response.json -w "%{http_code}" \
+            -H "Authorization: Bearer ${AUTOPILOT_SECRET}" \
+            "${STATUS_URL}")
+
+          echo "HTTP status: ${http_code}"
+          cat response.json
+
+          if [ "${http_code}" != "200" ]; then
+            echo "Status endpoint returned ${http_code}, not 200 — treating as a miss so it gets surfaced." >&2
+            echo "fresh=0" >> "$GITHUB_OUTPUT"
+            echo "endpoint_error=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          fresh=$(node -e "console.log(JSON.parse(require('fs').readFileSync('response.json','utf8')).freshDraftsToday ?? 0)")
+          echo "fresh=${fresh}" >> "$GITHUB_OUTPUT"
+          echo "endpoint_error=false" >> "$GITHUB_OUTPUT"
+
+      - name: Notify via Resend — no fresh drafts today
+        if: steps.status.outputs.fresh == '0'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM: ${{ vars.RESEND_FROM }}
+          ADMIN_NOTIFICATIONS_EMAIL: ${{ vars.ADMIN_NOTIFICATIONS_EMAIL }}
+          ENDPOINT_ERROR: ${{ steps.status.outputs.endpoint_error }}
+        run: |
+          set -euo pipefail
+          if [ -z "${RESEND_API_KEY:-}" ] || [ -z "${ADMIN_NOTIFICATIONS_EMAIL:-}" ] || [ -z "${RESEND_FROM:-}" ]; then
+            echo "RESEND_API_KEY / RESEND_FROM / ADMIN_NOTIFICATIONS_EMAIL not fully configured — cannot send the watchdog notification." >&2
+            exit 1
+          fi
+
+          if [ "${ENDPOINT_ERROR}" = "true" ]; then
+            subject="News autopilot watchdog: status check failed"
+            body_text="The news-autopilot-watchdog workflow could not read a clean 200 from the ingest status endpoint today. This could mean the endpoint is down, misconfigured, or AUTOPILOT_SECRET is stale — check the workflow run log. No new drafts were confirmed either way. No paid fallback runs automatically (ADR-016 Amendment 2) — this is notify-only."
+          else
+            subject="News autopilot: no new drafts today"
+            body_text="The daily Claude Code news-autopilot routine did not produce any fresh news_drafts rows today (checked via GET /api/internal/news-autopilot/ingest). This may mean the routine failed, was paused, hit a quota/availability issue, or genuinely found nothing relevant today. No paid fallback runs automatically (ADR-016 Amendment 2) — if this persists, check the routine's run history at https://claude.ai/code/routines and re-run manually if needed (docs/ops/news-autopilot-routine.md)."
+          fi
+
+          payload=$(node -e "
+            const body = { text: process.argv[1] };
+            console.log(JSON.stringify({
+              from: process.env.RESEND_FROM,
+              to: [process.env.ADMIN_NOTIFICATIONS_EMAIL],
+              subject: process.argv[2],
+              text: body.text,
+              html: '<p>' + body.text.replace(/\n/g, '<br/>') + '</p>',
+              tags: [{ name: 'kind', value: 'news-autopilot-watchdog' }],
+            }));
+          " "$body_text" "$subject")
+
+          http_code=$(curl -sS -o send-response.json -w "%{http_code}" \
+            -X POST "https://api.resend.com/emails" \
+            -H "Authorization: Bearer ${RESEND_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d "${payload}")
+
+          echo "Resend HTTP status: ${http_code}"
+          cat send-response.json
+
+          if [ "${http_code}" -ge 300 ]; then
+            echo "Resend send failed." >&2
+            exit 1
+          fi
+
+      - name: Fresh drafts found — nothing to do
+        if: steps.status.outputs.fresh != '0'
+        run: echo "freshDraftsToday=${{ steps.status.outputs.fresh }} — no notification needed."

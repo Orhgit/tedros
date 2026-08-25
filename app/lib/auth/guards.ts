@@ -1,4 +1,7 @@
+import { eq } from "drizzle-orm";
 import { redirect } from "react-router";
+import { db } from "../db.server";
+import { users } from "../db/schema/identity";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "../i18n/config";
 import { getSession, type SessionUser } from "./auth.server";
 
@@ -36,15 +39,23 @@ export async function requireUser(request: Request): Promise<SessionUser> {
 /**
  * Require the active user to have at least the given role.
  *
- * Note: the actual role lookup against `users.role` will be wired once Data lands
- * the schema. For now this is shape-correct but role defaults to "user".
+ * Role is looked up against `users.role` (per ADR-016's note that the admin
+ * review surface depends on this lookup actually being wired, not just
+ * shape-correct). Auth.js's session only carries `id`/`email`/`name`/`image`
+ * (see `SessionUser`), so the role itself always comes from this DB read —
+ * a session can't self-report its own role.
  */
 export async function requireRole(
   request: Request,
   minimum: Role,
 ): Promise<SessionUser & { role: Role }> {
   const user = await requireUser(request);
-  const userRole: Role = "user";
+  const [row] = await db
+    .select({ role: users.role })
+    .from(users)
+    .where(eq(users.id, user.id))
+    .limit(1);
+  const userRole: Role = row?.role ?? "user";
   if (roleRank[userRole] < roleRank[minimum]) {
     throw new Response("Forbidden", { status: 403 });
   }
