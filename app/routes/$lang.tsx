@@ -3,13 +3,14 @@ import type { Route } from "./+types/$lang";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, LOCALE_DIRECTION } from "~/lib/i18n/config";
 import { readLocaleCookie, serializeLocaleCookie } from "~/lib/i18n/cookie.server";
+import { localePrefixTarget } from "~/lib/i18n/locale-redirect";
 
 export async function loader({ params, request }: Route.LoaderArgs) {
   const candidate = params.lang;
   if (!isLocale(candidate)) {
     const url = new URL(request.url);
-    const target = url.pathname.replace(/^\/[^/]+/, `/${DEFAULT_LOCALE}`);
-    throw redirect(`${target}${url.search}`, 308);
+    const target = localePrefixTarget(url.pathname, url.search);
+    throw redirect(target ?? `/${DEFAULT_LOCALE}`, 308);
   }
   const cookieLocale = await readLocaleCookie(request);
   const headers: HeadersInit = { "Content-Language": candidate };
