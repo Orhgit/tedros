@@ -664,7 +664,7 @@ function CitySection({
         id={titleKey}
         className="text-xl font-semibold text-gray-900 dark:text-gray-100"
       >
-        {t(locale, titleKey)}
+        {t(locale, titleKey, { name })}
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
         {t(locale, emptyKey, { name })}
