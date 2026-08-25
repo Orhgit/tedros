@@ -30,4 +30,4 @@ This is redundant with the wildcard rule today — the point is to make the poli
 ## Alternatives considered
 
 1. **Leave the blanket rule as-is, no explicit list.** Rejected: works today, but the decision to welcome AI crawlers stays undocumented and un-reviewable — exactly the ambiguity this ADR exists to remove.
-2. **Disallow AI-training crawlers (e.g. `Google-Extended`, `GPTBot`) while allowing AI-*answer* crawlers.** Rejected: Tedros's content is meant to be found and cited by AI assistants; blocking training crawlers would not meaningfully protect any content asset here (all pages are already public and meant to be indexed) and would work against the GEO/AEO goal.
+2. **Disallow AI-training crawlers (e.g. `Google-Extended`, `GPTBot`) while allowing AI-_answer_ crawlers.** Rejected: Tedros's content is meant to be found and cited by AI assistants; blocking training crawlers would not meaningfully protect any content asset here (all pages are already public and meant to be indexed) and would work against the GEO/AEO goal.
