@@ -128,12 +128,34 @@ export default function JobsLanding({ loaderData }: Route.ComponentProps) {
             <p className="mt-2 text-sm text-ink-700">
               {t(locale, "careers_jobs_empty_body")}
             </p>
-            <Link
-              to={`/${locale}/careers/affirmative-action`}
-              className="mt-4 inline-flex items-center gap-2 text-sm text-earth-800 hover:underline"
-            >
-              {t(locale, "careers_jobs_empty_cta")} →
-            </Link>
+            {/* Empty-state used to offer a single link on an almost-blank
+                page — surface the concrete alternatives instead (TED-125). */}
+            <div className="mt-5 flex flex-wrap justify-center gap-2">
+              <Link
+                to={`/${locale}/careers/affirmative-action`}
+                className="inline-flex items-center gap-1 rounded-full border border-earth-300 bg-white px-4 py-1.5 text-sm text-earth-900 transition hover:bg-earth-100"
+              >
+                {t(locale, "careers_jobs_empty_cta")}
+              </Link>
+              <Link
+                to={`/${locale}/careers`}
+                className="inline-flex items-center gap-1 rounded-full border border-earth-300 bg-white px-4 py-1.5 text-sm text-earth-900 transition hover:bg-earth-100"
+              >
+                {t(locale, "careers_jobs_empty_cta_tracks")}
+              </Link>
+              <Link
+                to={`/${locale}/orgs/olim-beyahad`}
+                className="inline-flex items-center gap-1 rounded-full border border-earth-300 bg-white px-4 py-1.5 text-sm text-earth-900 transition hover:bg-earth-100"
+              >
+                Olim Beyahad
+              </Link>
+              <Link
+                to={`/${locale}/orgs/tebeka`}
+                className="inline-flex items-center gap-1 rounded-full border border-earth-300 bg-white px-4 py-1.5 text-sm text-earth-900 transition hover:bg-earth-100"
+              >
+                Tebeka
+              </Link>
+            </div>
           </section>
         ) : (
           <section

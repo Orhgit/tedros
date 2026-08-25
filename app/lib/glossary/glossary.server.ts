@@ -844,9 +844,8 @@ The U.S. intervened — Operation Joshua ("Sheba") airlifted an additional 800 p
 
 ## רלוונטיות לקהילה
 
-- אנקור-קהילתי ל-Phase 6 (Health) של פורטל טדרוס — ראה ADR-011
-- שותף חיוני בכל מהלך-בריאות-קהילתי
-- ה-Default יחיד לאנשים שלא יודעים מי לשאול
+- הכתובת המרכזית לכל נושא בריאות בקהילה — גם כשלא יודעים למי לפנות
+- שותף חיוני בכל מהלך בריאות קהילתי
 
 ## ראו גם
 
@@ -873,7 +872,7 @@ Tene Briut is an NGO dedicated to the health of Ethiopian-Israelis. The model is
 
 ## Community relevance
 
-- The community anchor for Tedros Phase 6 (Health) — see ADR-011
+- The community's central address for any health matter — even when you don't know whom to ask
 - Essential partner in any community health initiative
 - The default ask for anyone who doesn't know whom to ask
 
@@ -902,7 +901,7 @@ Tene Briut is an NGO dedicated to the health of Ethiopian-Israelis. The model is
 
 ## የማህበረሰቡ ጠቀሜታ
 
-- ለቴድሮስ ምዕራፍ 6 (ጤና) የማህበረሰብ መሰረት — ADR-011 ይመልከቱ
+- ለማንኛውም የጤና ጉዳይ የማህበረሰቡ ዋና አድራሻ — ማንን መጠየቅ እንዳለ ባያውቁም
 - በማንኛውም የማህበረሰብ ጤና ኢኒሽዬቲቭ ውስጥ አስፈላጊ አጋር
 - ለሚጠይቁ ወዴት እንደማይታወቅ ሰዎች ብቸኛው አማራጭ
 
@@ -949,7 +948,7 @@ Tene Briut is an NGO dedicated to the health of Ethiopian-Israelis. The model is
 
 ## רלוונטיות לקהילה
 
-- אנקור-קהילתי ל-Phase 8 (Voice) של פורטל טדרוס — ראה ADR-011
+- הכתובת המרכזית בקהילה לזכויות משפטיות ולמאבק בגזענות
 - בריר-Default ראשון לכל מקרה אכיפה או אפליה
 - מקור-מידע מוסמך לתחום משפטי
 
@@ -978,7 +977,7 @@ Tebeka ("vindicator" / "advocate" in Amharic) is a legal aid center for Ethiopia
 
 ## Community relevance
 
-- Community anchor for Tedros Phase 8 (Voice) — see ADR-011
+- The community's central address for legal rights and anti-racism advocacy
 - First default for any law-enforcement or discrimination incident
 - Authoritative source on legal matters in the community
 
@@ -1007,7 +1006,7 @@ Tebeka ("vindicator" / "advocate" in Amharic) is a legal aid center for Ethiopia
 
 ## የማህበረሰቡ ጠቀሜታ
 
-- ለቴድሮስ ምዕራፍ 8 (ድምጽ) የማህበረሰብ መሰረት — ADR-011 ይመልከቱ
+- ለህጋዊ መብቶችና ፀረ-ዘረኝነት ተሟጋችነት የማህበረሰቡ ዋና አድራሻ
 - ለማንኛውም የሕግ አስከባሪ ወይም መድሎ ክስተት የመጀመሪያ አማራጭ
 - በማህበረሰቡ ለሕግ ጉዳዮች የሚታወቅ ምንጭ
 

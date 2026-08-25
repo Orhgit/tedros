@@ -84,6 +84,47 @@ export function renderMarkdown(source: string): string {
       continue;
     }
 
+    // GFM table — a `| … |` row followed by a `|---|` separator. Heritage
+    // event bodies shipped tables that rendered as one raw text line before
+    // this existed (TED-125).
+    if (trimmed.startsWith("|") && /^\|?[\s:|-]+\|?$/.test((lines[i + 1] ?? "").trim())) {
+      const splitRow = (row: string): string[] =>
+        row
+          .trim()
+          .replace(/^\|/, "")
+          .replace(/\|$/, "")
+          .split("|")
+          .map((c) => c.trim());
+
+      const headers = splitRow(trimmed);
+      i += 2; // skip header + separator rows
+      const rows: string[][] = [];
+      while (i < lines.length && (lines[i] ?? "").trim().startsWith("|")) {
+        rows.push(splitRow((lines[i] ?? "").trim()));
+        i += 1;
+      }
+      const thead = `<thead><tr>${headers
+        .map(
+          (h) =>
+            `<th class="border-b border-earth-200 px-3 py-2 text-start font-semibold">${renderInline(h)}</th>`,
+        )
+        .join("")}</tr></thead>`;
+      const tbody = `<tbody>${rows
+        .map(
+          (r) =>
+            `<tr>${r
+              .map(
+                (c) => `<td class="border-b border-earth-100 px-3 py-2">${renderInline(c)}</td>`,
+              )
+              .join("")}</tr>`,
+        )
+        .join("")}</tbody>`;
+      blocks.push(
+        `<div class="my-4 overflow-x-auto"><table class="w-full min-w-max border-collapse text-sm">${thead}${tbody}</table></div>`,
+      );
+      continue;
+    }
+
     // Ordered list — consecutive lines starting with "<digit>. " or
     // "<digit>+. " etc.
     if (/^\d+\.\s/.test(trimmed)) {
@@ -106,6 +147,7 @@ export function renderMarkdown(source: string): string {
         t.startsWith("## ") ||
         t.startsWith("### ") ||
         t.startsWith("- ") ||
+        t.startsWith("|") ||
         /^\d+\.\s/.test(t)
       ) {
         break;
