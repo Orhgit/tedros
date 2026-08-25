@@ -1,4 +1,4 @@
-// AM urgent-override rate-limit tests (TED-114 / ADR-016 §4, Amendment 2).
+// AM urgent-override rate-limit tests (TED-114 / ADR-019 §4, Amendment 2).
 //
 // Covers the rolling-7-day "~2/week" hard cap: under the limit is allowed,
 // exactly at the limit is locked, and timestamps outside the 7-day window

@@ -1,4 +1,4 @@
-# ADR-016: News autopilot — collection, AI drafting, and human-approval pipeline
+# ADR-019: News autopilot — collection, AI drafting, and human-approval pipeline
 
 **Status**: Accepted (2026-08-24). **Amended 2026-08-24 (×2)** — see [Amendment 1](#amendment-1-2026-08-24--owner-approved-subscription-runtime-am-urgent-override-fast-track-promotion) (subscription-based runtime, AM urgent-override, fast-track promotion) and [Amendment 2](#amendment-2-2026-08-24--owner-approved-no-paid-fallback-am-override-rate-limit) (no paid fallback under any circumstance; AM urgent-override capped at ~2/week) below.
 **Owner**: Tedros Architect (this decision); Tedros Engineer (route + pipeline code); Tedros Data & Integrations (`news_drafts` schema + migration); Tedros Content & SEO (draft review + promotion).
@@ -21,7 +21,7 @@ Constraints going in:
 
 ### 1. Runtime: a Claude Code **cloud routine** does the fetch+classify+draft work under the owner's existing subscription; GitHub Actions stays as the orchestration/fallback layer — not host cron, not the Multica autopilot scheduler
 
-**Amendment 1 (owner-approved, 2026-08-24)**: replace the pay-per-token `ANTHROPIC_API_KEY` calls as the *primary* mechanism with a Claude Code **routine** (`claude.ai/code/routines` — created via the `RemoteTrigger` API / the `schedule` skill) running under the owner's existing Claude Code/claude.ai Pro or Max subscription, to eliminate the recurring ~$6–12/month API line item in the common case. This is not a drop-in "run the same code for free" swap — see the trade-offs below, which is why the pay-per-token path stays wired as an automatic fallback rather than being deleted.
+**Amendment 1 (owner-approved, 2026-08-24)**: replace the pay-per-token `ANTHROPIC_API_KEY` calls as the _primary_ mechanism with a Claude Code **routine** (`claude.ai/code/routines` — created via the `RemoteTrigger` API / the `schedule` skill) running under the owner's existing Claude Code/claude.ai Pro or Max subscription, to eliminate the recurring ~$6–12/month API line item in the common case. This is not a drop-in "run the same code for free" swap — see the trade-offs below, which is why the pay-per-token path stays wired as an automatic fallback rather than being deleted.
 
 **How a routine actually works, and why that shapes the design** (verified against the `schedule` skill / `RemoteTrigger` API, not assumed):
 
@@ -29,15 +29,15 @@ Constraints going in:
 - Critically: **a routine cannot access local files, local services, or local environment variables on the prod server.** It has no path to `127.0.0.1:5432` (Postgres is not network-reachable outside the host — see Context). So a routine cannot write to the production DB directly, the same constraint that ruled out a bare GitHub Actions runner in the original design.
 - The fix is the same one already in this ADR: the routine does the **reasoning** (fetch RSS via `WebFetch`, normalize, do the relevance-triage + HE/EN/AM drafting itself, as one agentic session rather than two separate API tiers), then makes an **outbound HTTPS call** to the same authenticated internal route this ADR already specified — `POST /api/internal/news-autopilot/ingest` (renamed from `/run`; same `AUTOPILOT_SECRET` bearer-token gate) — which persists the result into `news_drafts` exactly as before. **The DB write path does not change** — only what produces the payload changes, from "Node process calling the Anthropic SDK" to "cloud routine calling the app's own API."
 
-**GitHub Actions' role, per Amendment 2, is watchdog-and-notify only — never an execution fallback.** `news-autopilot.yml` runs ~1–2h *after* the routine's own daily schedule and checks (via a lightweight status query on the internal route) whether fresh `news_drafts` rows landed today. If not, it sends a **notification, and does nothing else** — see the Amendment 2 note below for why the original design's paid fallback was removed entirely, not just deprioritized.
+**GitHub Actions' role, per Amendment 2, is watchdog-and-notify only — never an execution fallback.** `news-autopilot.yml` runs ~1–2h _after_ the routine's own daily schedule and checks (via a lightweight status query on the internal route) whether fresh `news_drafts` rows landed today. If not, it sends a **notification, and does nothing else** — see the Amendment 2 note below for why the original design's paid fallback was removed entirely, not just deprioritized.
 
 **Explicitly rejected variant: a headless CLI (`claude -p`) with a persisted personal login on the prod server.** This was considered (it's technically capable of shelling out to `psql` directly, since it runs on the box) but rejected: it requires storing a long-lived personal OAuth session inside a shared production Docker container (a real credential-exposure surface), and it's a less-documented usage pattern than routines, which are Anthropic's own first-party product for exactly this "scheduled cloud agent" use case. Routines are the supported mechanism; a locally-persisted CLI login is a workaround.
 
 **The trade-off, stated plainly (per owner's request — this is not a magic free solution):**
 
 - **Shared usage pool, not a separate meter.** Routine runs draw from the same Pro/Max subscription usage allowance the owner's own interactive Claude Code/claude.ai sessions use — there is no documented separate "automation quota." Expected daily volume here is small (a handful of relevant items, one classify+draft session), but it is a real, shared, less-visible budget, not literally free. A burst in source volume, or a stuck/looping routine, could measurably eat into the pool on a given day and compete with the owner's own interactive usage that day.
-- **Cost shifts from a metered dollar amount to a shared capacity budget — and per Amendment 2, that's the *only* cost there is.** There is no paid fallback of any kind (see below): the trade is entirely in availability, never in an unexpected bill.
-- **This needs a monitoring signal, since there's no fallback to quietly absorb a failure.** Silent quota exhaustion would otherwise mean the feed goes stale with nobody noticing — the GH Actions watchdog run (above) is the *only* safety net in this design: it turns "routine quietly stopped working" into a visible signal, nothing more.
+- **Cost shifts from a metered dollar amount to a shared capacity budget — and per Amendment 2, that's the _only_ cost there is.** There is no paid fallback of any kind (see below): the trade is entirely in availability, never in an unexpected bill.
+- **This needs a monitoring signal, since there's no fallback to quietly absorb a failure.** Silent quota exhaustion would otherwise mean the feed goes stale with nobody noticing — the GH Actions watchdog run (above) is the _only_ safety net in this design: it turns "routine quietly stopped working" into a visible signal, nothing more.
 
 **Amendment 2 (owner-approved, 2026-08-24) — no paid fallback, under any circumstance.** The owner was explicit: "לא רוצה לשלם תוספת כסף" (don't want to pay anything extra). Amendment 1's original design kept the pay-per-token Haiku/Sonnet path wired as an automatic fallback the watchdog could invoke; that fallback is **removed entirely**, not merely deprioritized — there is no code path in this design that spends money automatically, or at all, under any failure mode. In its place: the GH Actions watchdog's only action on a missed day is a **notification**, reusing the Resend adapter already provisioned in this codebase (`RESEND_API_KEY`/`RESEND_FROM` in `app/lib/env.server.ts`, TED-22) and the `ADMIN_NOTIFICATIONS_EMAIL` address already used for other admin alerts — no new integration, no new secret. This makes the cost ceiling **exactly $0/month**, not a worst-case dollar figure (see Cost). The consequence, accepted explicitly by the owner, is that a routine outage means a real gap — zero new drafts that day — rather than degraded-but-continuous service; see Consequences and Open Questions.
 
@@ -52,12 +52,12 @@ Constraints going in:
 
 New module `app/lib/news/autopilot/sources.server.ts` — a typed array of sources (RSS first; source-specific API adapters added only if a source has no feed):
 
-| Source type | Examples | Why |
-|---|---|---|
-| Government RSS | gov.il press releases (Ministry of Welfare, Ministry of Housing/רמ"י, Ministry of Aliyah and Integration) | Primary-source, matches R14's govt-program-change mitigation |
-| Knesset RSS | Committee announcements touching housing/rights/immigration | Same |
-| NGO/anchor blogs | ENP, Tene Briut, Tebeka (if they publish a feed) | Community-relevant by construction; reinforces the anchor-partnership content strategy (ADR-011) |
-| News-outlet tag feeds | Ynet/Haaretz/N12 RSS filtered by keyword (יוצאי אתיופיה, התחדשות עירונית, קהילה) | Broader net; needs the strongest relevance filter (stage 3) |
+| Source type           | Examples                                                                                                  | Why                                                                                              |
+| --------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Government RSS        | gov.il press releases (Ministry of Welfare, Ministry of Housing/רמ"י, Ministry of Aliyah and Integration) | Primary-source, matches R14's govt-program-change mitigation                                     |
+| Knesset RSS           | Committee announcements touching housing/rights/immigration                                               | Same                                                                                             |
+| NGO/anchor blogs      | ENP, Tene Briut, Tebeka (if they publish a feed)                                                          | Community-relevant by construction; reinforces the anchor-partnership content strategy (ADR-011) |
+| News-outlet tag feeds | Ynet/Haaretz/N12 RSS filtered by keyword (יוצאי אתיופיה, התחדשות עירונית, קהילה)                          | Broader net; needs the strongest relevance filter (stage 3)                                      |
 
 Normalization output (not persisted yet — ephemeral, in-memory for the run):
 
@@ -83,7 +83,7 @@ If the routine fails to produce fresh drafts on a given day, the GH Actions watc
 ### 4. Translation stage — EN auto-drafted, AM auto-drafted but gated behind human review
 
 - **EN**: generated in the same Sonnet call (or an immediate follow-up) as a genuine translation, not a second independent draft — kept as part of the same draft row, `enStatus: "machine_draft"`. Lower risk than AM (large training corpus, no dedicated risk entry), but still gated by the same human-approval step before promotion (§5) — nothing publishes untouched.
-- **AM**: generated too (better than a placeholder, and the reviewer needs *something* to check against), but the draft row carries `amStatus: "machine_draft"` and the promotion script **refuses** to promote a draft's AM body unless `amStatus` is `human_reviewed`, **or** the exceptional urgent-override path below is explicitly invoked. A draft can always promote with HE+EN live and AM pending, matching how partial-locale entries already work elsewhere in the seed (`am` excerpts today are visibly shorter/summarized versions in the existing `ARTICLES` seed — same graceful-degradation pattern).
+- **AM**: generated too (better than a placeholder, and the reviewer needs _something_ to check against), but the draft row carries `amStatus: "machine_draft"` and the promotion script **refuses** to promote a draft's AM body unless `amStatus` is `human_reviewed`, **or** the exceptional urgent-override path below is explicitly invoked. A draft can always promote with HE+EN live and AM pending, matching how partial-locale entries already work elsewhere in the seed (`am` excerpts today are visibly shorter/summarized versions in the existing `ARTICLES` seed — same graceful-degradation pattern).
 
 **Amendment 1 (owner-approved, 2026-08-24) — AM urgent-override path.** For genuinely time-sensitive news (e.g. a program deadline), the owner may publish a machine-only AM translation without waiting for human review, as an explicit exception — never the default. This is a dedicated, audited field on `news_drafts`, not a third value silently accepted by the normal `amStatus` check: `amUrgentOverride: boolean` (default `false`), `amUrgentOverrideReason: text` (required when the flag is set — a one-line justification, e.g. "מועד הגשה 3 ימים"), `amUrgentOverrideByUserId` FK → `users` (must be `admin`), `amUrgentOverrideAt: timestamptz`. The promotion script's AM gate becomes: promote AM if `amStatus = 'human_reviewed'` **or** (`amUrgentOverride = true` **and** `amUrgentOverrideReason` is non-empty **and** `amUrgentOverrideByUserId` is set) — i.e. the override requires the same admin who'd otherwise do the human review to make a deliberate, logged, reasoned decision to skip it, not a checkbox that quietly becomes the default path. Content & SEO should render an internal (non-public) marker on any AM body promoted via override, so a later human pass can find and re-review it — the exact rendering is an Engineer/Content-SEO implementation detail, not specified here.
 
@@ -91,12 +91,12 @@ If the routine fails to produce fresh drafts on a given day, the GH Actions watc
 
 ### 5. Human-in-the-loop & data model — new `news_drafts` table for the queue; static seed stays the publish surface
 
-**Drafts live in Postgres, not a file or a PR-per-candidate.** A dedicated `news_drafts` Drizzle table, *not* a reuse of the existing (unused) `articles`/`article_translations` scaffold in `content.ts`:
+**Drafts live in Postgres, not a file or a PR-per-candidate.** A dedicated `news_drafts` Drizzle table, _not_ a reuse of the existing (unused) `articles`/`article_translations` scaffold in `content.ts`:
 
 - `articles` is shaped for a generic editorial CMS (single `authorUserId`, no source-attribution, no per-locale review-status, no relevance score). Bending it to fit autopilot-specific fields (`sourceUrl`, `relevanceScore`, `amStatus`, raw source snapshot for audit) would either pollute a shared table other future content types might use, or require a second sidecar anyway — at which point a dedicated table is simpler and keeps `content.ts` free for whatever it was originally scaffolded for.
-- This *is* the write-path ADR-015's boundary rule anticipates ("does an external party need to write? If yes, move to DB") — the autopilot is exactly that external party. But the rule's scope is the **queue**, not the public surface.
+- This _is_ the write-path ADR-015's boundary rule anticipates ("does an external party need to write? If yes, move to DB") — the autopilot is exactly that external party. But the rule's scope is the **queue**, not the public surface.
 
-**Published articles stay in the static `ARTICLES` seed** (`articles.server.ts` + wave files) — no change to how the News routes read data. Promotion has two paths, both starting from an already `approved` (human-content-reviewed) `news_drafts` row — the review step in §5 is never skipped, only the *second*, redundant PR-level review is optional:
+**Published articles stay in the static `ARTICLES` seed** (`articles.server.ts` + wave files) — no change to how the News routes read data. Promotion has two paths, both starting from an already `approved` (human-content-reviewed) `news_drafts` row — the review step in §5 is never skipped, only the _second_, redundant PR-level review is optional:
 
 - **Standard path**: Content & SEO (agent or owner) runs `pnpm run news:promote --draft <id>`, a script that reads the row and prints/writes a ready-to-paste `NewsArticleEntry` object literal into the next wave file, then a normal PR is opened and manually reviewed/merged like any other change. `promotionMethod` is recorded as `manual_pr`.
 - **Amendment 1 (owner-approved, 2026-08-24) — fast-track path** (`pnpm run news:promote --draft <id> --fast-track`, or the equivalent button in the review UI): opens the same PR, but instead of waiting for a human to click "approve" on GitHub, it enables GitHub's **auto-merge** on that PR. The PR still runs the full CI suite (lint, typecheck, tests — including ADR-015's integrity tests for dead internal links/word-count gates) and only merges if CI is green; it does not force-push or bypass branch protection's status-check requirement, only the "a human must click approve" requirement. Safeguards: (1) only available for drafts already `status = 'approved'` in the review UI — content has already had a human's eyes on it, this step only removes a second look at the same content re-rendered as a diff; (2) gated by the same `requireRole(request, "admin")` as the review route itself; (3) `promotionMethod` is recorded as `fast_track` for audit, distinct from `manual_pr`; (4) the AM urgent-override gate above still applies unchanged — fast-track promotion does not imply AM override, they're independent decisions. This addresses the "manual PR review is too slow for time-sensitive items" gap without reintroducing unreviewed-content risk (risk R12/R18) — what's skipped is process latency, not content review.
@@ -171,7 +171,7 @@ flowchart LR
 New file `app/lib/db/schema/news-drafts.ts`, following the existing `columns.ts` helpers (`translatable`, `timestamps`) and the enum-per-status convention already used in `identity.ts`:
 
 ```ts
-// News autopilot draft queue (TED-114 / ADR-016).
+// News autopilot draft queue (TED-114 / ADR-019).
 // Published articles remain the static ARTICLES seed in app/lib/news/ —
 // this table is the review queue only, per the ADR-015 static-vs-DB rule.
 
@@ -241,7 +241,7 @@ export const newsDrafts = pgTable(
     enBody: text("en_body"),
     enStatus: newsDraftLocaleStatusEnum("en_status").notNull().default("machine_draft"),
 
-    // --- AM (gated — see ADR-016 §4) ----------------------------------------
+    // --- AM (gated — see ADR-019 §4) ----------------------------------------
     amTitle: translatableNullable("am_title"),
     amExcerpt: translatableNullable("am_excerpt"),
     amBody: text("am_body"),
@@ -295,12 +295,12 @@ Note: `heTitle`/`heExcerpt` use `translatableNullable` (JSONB `{he,en,am}`) even
 
 Estimated daily volume: ~6–10 RSS sources, ~10–40 raw items/day after fetch, most filtered out at triage — handled entirely inside the routine's single daily session.
 
-| Scenario | Mechanism | Direct cost |
-|---|---|---|
-| Routine runs normally | Subscription usage pool (Pro/Max), not metered per token | $0 |
-| Routine fails / misses a day | GH Actions watchdog sends a notification (Resend, existing `ADMIN_NOTIFICATIONS_EMAIL` adapter) — no draft produced | $0 |
+| Scenario                     | Mechanism                                                                                                           | Direct cost |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------- |
+| Routine runs normally        | Subscription usage pool (Pro/Max), not metered per token                                                            | $0          |
+| Routine fails / misses a day | GH Actions watchdog sends a notification (Resend, existing `ADMIN_NOTIFICATIONS_EMAIL` adapter) — no draft produced | $0          |
 
-**Direct cost: $0/month, full stop, including every failure mode.** What this does *not* eliminate — restated from §1 because it's the actual trade-off, not a dollar figure — is the shared-usage-pool cost: the subscription's usage allowance is not a separate metered automation budget, and a stuck or high-volume routine run competes with the owner's own interactive Claude Code/claude.ai usage that day. CLAUDE.md's free-tier list doesn't have a category for "shared, non-dollar capacity," which is exactly why it's called out explicitly here and in Open Questions #1 rather than folded into an unqualified "$0, no trade-offs" claim.
+**Direct cost: $0/month, full stop, including every failure mode.** What this does _not_ eliminate — restated from §1 because it's the actual trade-off, not a dollar figure — is the shared-usage-pool cost: the subscription's usage allowance is not a separate metered automation budget, and a stuck or high-volume routine run competes with the owner's own interactive Claude Code/claude.ai usage that day. CLAUDE.md's free-tier list doesn't have a category for "shared, non-dollar capacity," which is exactly why it's called out explicitly here and in Open Questions #1 rather than folded into an unqualified "$0, no trade-offs" claim.
 
 ## Consequences
 
@@ -355,7 +355,7 @@ The owner approved three changes to the original decision, applied in place thro
 
 1. **Runtime (§1, §3, Cost)**: primary execution moves from a pay-per-token `ANTHROPIC_API_KEY` call inside the Node app to a Claude Code **cloud routine** running under the owner's existing subscription, eliminating the ~$6–12/month line item in the expected case. Verified against the `schedule` skill / `RemoteTrigger` API that routines are isolated cloud sessions with **no access to local files, services, or env vars** — they cannot reach the prod Postgres directly, so the DB write path is unchanged (routine → authenticated HTTPS call to the app's own internal route, same as before). GitHub Actions' role changes from primary trigger to a watchdog/fallback that invokes the original pay-per-token path if the routine fails or exhausts its quota, so the worst-case cost ceiling is unchanged even though the expected cost drops. The shared-usage-pool trade-off is documented explicitly (§1, Cost) rather than presented as a free win, per the owner's instruction — and the exact commercial terms for scheduled routine usage vs. interactive use are flagged as an open question (Open Questions #1), not asserted as verified.
 2. **AM override (§4, schema)**: added an explicit, audited exception path (`amUrgentOverride` + reason + admin id + timestamp) allowing machine-only Amharic publication for genuinely urgent items, while leaving the default (human review required) unchanged for the ordinary case.
-3. **Fast-track promotion (§5, schema)**: added a CI-gated auto-merge path that skips the *human* PR re-review step for drafts already content-approved in `news_drafts`, without skipping CI or the original content-review gate. Recorded via a new `promotionMethod` column for audit.
+3. **Fast-track promotion (§5, schema)**: added a CI-gated auto-merge path that skips the _human_ PR re-review step for drafts already content-approved in `news_drafts`, without skipping CI or the original content-review gate. Recorded via a new `promotionMethod` column for audit.
 
 The cost open question from the original ADR is resolved (owner accepted the subscription-runtime trade-off); new open questions from this amendment are listed in Open Questions #1, #2, #4 above.
 

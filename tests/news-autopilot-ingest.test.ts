@@ -1,4 +1,4 @@
-// News autopilot ingest route tests (TED-114 / ADR-016).
+// News autopilot ingest route tests (TED-114 / ADR-019).
 //
 // Covers: bearer-secret auth (missing/wrong/unconfigured -> 401), Zod payload
 // validation (missing fields, invalid tags, bad URL -> 422 / malformed JSON
@@ -234,7 +234,9 @@ describe("payload validation", () => {
   });
 
   it("accepts a minimal HE-only payload (EN/AM omitted)", async () => {
-    const result = await action({ request: req("POST", { body: validPayload() }) } as AnyArgs);
+    const result = await action({
+      request: req("POST", { body: validPayload() }),
+    } as AnyArgs);
     expect(result.init?.status).toBe(201);
     expect(mockState.insertCaptured).toHaveLength(1);
   });
@@ -269,7 +271,9 @@ describe("the routine cannot self-certify human_reviewed", () => {
   });
 
   it("sets amStatus=skipped when no AM body was produced", async () => {
-    const result = await action({ request: req("POST", { body: validPayload() }) } as AnyArgs);
+    const result = await action({
+      request: req("POST", { body: validPayload() }),
+    } as AnyArgs);
     expect(result.init?.status).toBe(201);
     expect(mockState.insertCaptured[0]!.amStatus).toBe("skipped");
   });
@@ -280,14 +284,18 @@ describe("the routine cannot self-certify human_reviewed", () => {
 describe("sourceUrl dedup (onConflictDoNothing)", () => {
   it("reports duplicate:true and 200-ish response when the insert is a no-op", async () => {
     mockState.insertReturning = []; // simulates the unique index conflict
-    const result = await action({ request: req("POST", { body: validPayload() }) } as AnyArgs);
+    const result = await action({
+      request: req("POST", { body: validPayload() }),
+    } as AnyArgs);
     expect(result.data).toEqual({ ok: true, duplicate: true });
     expect(result.init).toBeNull();
   });
 
   it("reports duplicate:false and 201 with the new id on first ingest", async () => {
     mockState.insertReturning = [{ id: "abc-123" }];
-    const result = await action({ request: req("POST", { body: validPayload() }) } as AnyArgs);
+    const result = await action({
+      request: req("POST", { body: validPayload() }),
+    } as AnyArgs);
     expect(result.init?.status).toBe(201);
     expect(result.data).toEqual({ ok: true, duplicate: false, id: "abc-123" });
   });

@@ -1,4 +1,4 @@
-// Wave 9 articles — News autopilot promotions (TED-114 / ADR-016).
+// Wave 9 articles — News autopilot promotions (TED-114 / ADR-019).
 //
 // Unlike waves 3-8 (hand-authored by Content & SEO), entries here are
 // appended by `scripts/news-promote.ts` from an approved `news_drafts` row.

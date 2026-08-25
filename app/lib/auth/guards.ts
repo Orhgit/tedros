@@ -39,7 +39,7 @@ export async function requireUser(request: Request): Promise<SessionUser> {
 /**
  * Require the active user to have at least the given role.
  *
- * Role is looked up against `users.role` (per ADR-016's note that the admin
+ * Role is looked up against `users.role` (per ADR-019's note that the admin
  * review surface depends on this lookup actually being wired, not just
  * shape-correct). Auth.js's session only carries `id`/`email`/`name`/`image`
  * (see `SessionUser`), so the role itself always comes from this DB read —

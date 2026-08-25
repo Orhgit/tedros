@@ -1,5 +1,5 @@
 #!/usr/bin/env -S node --import tsx
-// News autopilot promotion script (TED-114 / ADR-016 §5).
+// News autopilot promotion script (TED-114 / ADR-019 §5).
 //
 // Reads one `status = 'approved'` row from `news_drafts` and appends a
 // `NewsArticleEntry` object literal into `app/lib/news/articles-wave9.server.ts`
@@ -17,7 +17,7 @@
 // the operator/agent to review and push, same as any other hand-authored
 // content change).
 //
-// --fast-track (Amendment 1, ADR-016 §5): only skips the *human* PR-review
+// --fast-track (Amendment 1, ADR-019 §5): only skips the *human* PR-review
 // click — never content review (already done in the admin UI before a draft
 // reaches `approved`) and never CI. This script marks
 // `promotionMethod = "fast_track"` for audit and prints the `gh pr create`
@@ -25,7 +25,7 @@
 // invoke `gh` itself, so nothing ships without an explicit, separate,
 // reviewable step even on the fast-track path.
 //
-// AM gate (ADR-016 §4): the AM body is promoted only if
+// AM gate (ADR-019 §4): the AM body is promoted only if
 // `amStatus = "human_reviewed"`, OR the AM urgent-override quadruplet is
 // fully set (`amUrgentOverride && amUrgentOverrideReason && amUrgentOverrideByUserId`).
 // Otherwise the promoted entry ships with HE+EN only — AM stays pending,
@@ -34,7 +34,7 @@
 // an error).
 //
 // TODO(DevOps): once `.github/workflows/news-autopilot.yml` exists (not
-// created by this change — see ADR-016 implementation handoff), the
+// created by this change — see ADR-019 implementation handoff), the
 // fast-track branch here is what that workflow's "promote" job shells out
 // to; for now this stays a manually-invoked script.
 
@@ -177,7 +177,7 @@ async function main() {
     process.exit(1);
   }
 
-  // AM gate (ADR-016 §4, Amendment 1) — human review, or a fully-set,
+  // AM gate (ADR-019 §4, Amendment 1) — human review, or a fully-set,
   // audited urgent override. Never a bare flag.
   const amOverrideValid =
     row.amUrgentOverride &&

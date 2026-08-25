@@ -1,4 +1,4 @@
-// News autopilot draft queue (TED-114 / ADR-016).
+// News autopilot draft queue (TED-114 / ADR-019).
 // Published articles remain the static ARTICLES seed in app/lib/news/ —
 // this table is the review queue only, per the ADR-015 static-vs-DB rule.
 
@@ -36,7 +36,7 @@ export const newsDraftLocaleStatusEnum = pgEnum("news_draft_locale_status", [
 
 // Amendment 1 (2026-08-24): how a draft reached the static seed — for audit,
 // distinguishing the standard human-PR-reviewed path from the CI-gated
-// fast-track path that skips the *human* PR review only (ADR-016 §5).
+// fast-track path that skips the *human* PR review only (ADR-019 §5).
 export const newsDraftPromotionMethodEnum = pgEnum("news_draft_promotion_method", [
   "manual_pr",
   "fast_track",
@@ -68,7 +68,7 @@ export const newsDrafts = pgTable(
     enBody: text("en_body"),
     enStatus: newsDraftLocaleStatusEnum("en_status").notNull().default("machine_draft"),
 
-    // --- AM (gated — see ADR-016 §4) ----------------------------------------
+    // --- AM (gated — see ADR-019 §4) ----------------------------------------
     amTitle: translatableNullable("am_title"),
     amExcerpt: translatableNullable("am_excerpt"),
     amBody: text("am_body"),
@@ -103,7 +103,7 @@ export const newsDrafts = pgTable(
       .on(t.createdAt)
       .where(sql`${t.status} = 'pending'`),
     // Amendment 2 (2026-08-24): supports the action-layer rolling-7-day
-    // count that enforces the ~2/week AM urgent-override cap (ADR-016 §4). A
+    // count that enforces the ~2/week AM urgent-override cap (ADR-019 §4). A
     // rolling window can't be a CHECK constraint, so this index just makes
     // the per-admin COUNT(*) WHERE am_urgent_override_at >= now() - interval
     // '7 days' query cheap at the route layer.

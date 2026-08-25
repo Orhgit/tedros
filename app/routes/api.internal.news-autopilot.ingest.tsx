@@ -1,6 +1,6 @@
-// News autopilot ingest endpoint (TED-114 / ADR-016 §1, §3, §5).
+// News autopilot ingest endpoint (TED-114 / ADR-019 §1, §3, §5).
 //
-// This route is the ONLY write path into `news_drafts`. Per ADR-016
+// This route is the ONLY write path into `news_drafts`. Per ADR-019
 // Amendment 1/2, the AI work (fetch → normalize → dedup → triage → HE/EN/AM
 // draft) happens *outside* this codebase, inside a Claude Code cloud
 // routine running under the owner's own subscription (no ANTHROPIC_API_KEY
@@ -8,7 +8,7 @@
 // ADR). The routine POSTs its finished draft here over plain HTTPS with a
 // bearer secret; this route does nothing but validate + persist.
 //
-// TODO(DevOps, per ADR-016 implementation handoff): wire the actual
+// TODO(DevOps, per ADR-019 implementation handoff): wire the actual
 // scheduling —
 //   1. Create the Claude Code routine itself (RemoteTrigger / `schedule`
 //      skill) — daily cron, `tedros` repo checkout, prompt covering
@@ -58,7 +58,7 @@ function authorized(request: Request): boolean {
 
 // --- payload validation --------------------------------------------------------
 
-// Single-locale-populated Translatable fragments (see ADR-016's note on the
+// Single-locale-populated Translatable fragments (see ADR-019's note on the
 // Drizzle schema: each column stores the full `{he,en,am}` shape so the
 // promotion script can merge them into `NewsArticleEntry.title`/`.excerpt`
 // without reshaping, but at ingest time only the one relevant key is set).
@@ -75,7 +75,7 @@ const ingestSchema = z.object({
   sourceUrl: z.string().url(),
   sourceName: z.string().trim().min(1),
   publishedAtSource: z.string().datetime({ offset: true }).optional(),
-  // Verbatim fetched title+snippet, for audit/liability (ADR-016 data model).
+  // Verbatim fetched title+snippet, for audit/liability (ADR-019 data model).
   rawSnapshot: z.string().trim().min(1),
 
   // --- AI processing metadata ------------------------------------------------
@@ -94,7 +94,7 @@ const ingestSchema = z.object({
   enBody: z.string().trim().min(1).optional(),
 
   // --- AM (machine-drafted; gated behind human review before promotion,
-  // ADR-016 §4 — same rule) -------------------------------------------------
+  // ADR-019 §4 — same rule) -------------------------------------------------
   amTitle: amFragment.optional(),
   amExcerpt: amFragment.optional(),
   amBody: z.string().trim().min(1).optional(),
@@ -150,7 +150,7 @@ export async function action({ request }: Route.ActionArgs) {
     // The `translatable*` column helper types every locale column as the
     // full `{he,en,am}` shape (`he` required) so the promotion script can
     // read each one as a self-contained `Translatable` without reshaping
-    // (ADR-016's note on `heTitle`/`heExcerpt`) — `he` is carried into the
+    // (ADR-019's note on `heTitle`/`heExcerpt`) — `he` is carried into the
     // en/am columns for that reason, not because the routine drafted HE
     // text into those fields again.
     heTitle: draft.heTitle,
@@ -176,7 +176,7 @@ export async function action({ request }: Route.ActionArgs) {
   const [row] = await db
     .insert(newsDrafts)
     .values(insertValues)
-    // Dedup vs `news_drafts.sourceUrl` (any status) per ADR-016 §2 — the
+    // Dedup vs `news_drafts.sourceUrl` (any status) per ADR-019 §2 — the
     // routine does its own dedup too, but the unique index is the source of
     // truth. A conflict here means the routine re-fetched something it (or
     // a previous run) already ingested; treat it as a no-op, not an error.
@@ -190,7 +190,7 @@ export async function action({ request }: Route.ActionArgs) {
   return data({ ok: true, duplicate: false, id: row.id }, { status: 201 });
 }
 
-// --- loader (GET — watchdog status check, ADR-016 §1) --------------------------
+// --- loader (GET — watchdog status check, ADR-019 §1) --------------------------
 //
 // "N fresh drafts today?" for the GH Actions watchdog — avoids needing a
 // second authenticated route just to answer that one question.

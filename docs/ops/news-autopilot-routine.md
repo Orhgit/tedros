@@ -1,7 +1,7 @@
-# News autopilot — Claude Code routine spec (TED-114 / ADR-016)
+# News autopilot — Claude Code routine spec (TED-114 / ADR-019)
 
 **Status: NOT created yet.** This document is the spec/prompt for the daily
-Claude Code cloud routine described in [ADR-016](../adr/016-news-autopilot-pipeline.md)
+Claude Code cloud routine described in [ADR-019](../adr/019-news-autopilot-pipeline.md)
 §1/§3 (see Amendment 1 + Amendment 2 — read those, they change the design
 materially from the original decision). Nobody has run `RemoteTrigger
 action: "create"` against this spec yet — that is a deliberate, separate,
@@ -23,11 +23,11 @@ existing Claude Code subscription), and POSTs each accepted candidate to
 (`app/routes/api.internal.news-autopilot.ingest.tsx`) validates against a
 Zod schema and inserts into `news_drafts` as `status: "pending"`. Nothing
 publishes automatically — a human approves in `admin.news-drafts.tsx` before
-anything reaches the static `ARTICLES` seed (ADR-016 §5).
+anything reaches the static `ARTICLES` seed (ADR-019 §5).
 
 ## Why a routine and not GitHub Actions / host cron
 
-Already decided in ADR-016 §1 — do not relitigate here. Short version: a
+Already decided in ADR-019 §1 — do not relitigate here. Short version: a
 routine is the only mechanism that does the _reasoning_ (fetch + triage +
 draft) under the owner's subscription instead of a metered API bill, and per
 Amendment 2 there is **no paid fallback of any kind** — GitHub Actions' only
@@ -50,7 +50,7 @@ doc), never an execution path.
 ## Secret handling — read this before creating the routine
 
 **A routine cannot read this repo's `.env` / GH Secrets / any host environment
-variable** (ADR-016 §1, verified against the `schedule` skill: "It cannot
+variable** (ADR-019 §1, verified against the `schedule` skill: "It cannot
 access local files, local services, or local environment variables"). There
 is no `env:` field in the `RemoteTrigger` create body. That means
 `AUTOPILOT_SECRET` — the same bearer token `getEnv()` checks in
@@ -81,7 +81,7 @@ Consequences, stated plainly so nobody is surprised later:
 ## The prompt (verbatim — this is what goes in `events[].data.message.content`)
 
 ```
-You are the Tedros News Autopilot, a scheduled daily job (TED-114 / ADR-016).
+You are the Tedros News Autopilot, a scheduled daily job (TED-114 / ADR-019).
 You run once, do the work below, and stop — you never modify this repo, you
 only read from it and make one outbound HTTPS call per accepted news item.
 
@@ -271,7 +271,7 @@ the very next scheduled run with zero routine reconfiguration.
 6. Flip `enabled: true` only after the owner has reviewed at least one
    run's output for HE/EN/AM quality and confirmed the admin review UI
    (`admin.news-drafts.tsx`) is reachable and its `requireRole(admin)`
-   check is actually wired (ADR-016 Consequences flags this as a
+   check is actually wired (ADR-019 Consequences flags this as a
    prerequisite, not guaranteed yet).
 7. Add the GitHub Actions watchdog's required secrets (see
    `.github/workflows/news-autopilot-watchdog.yml` and the secrets list

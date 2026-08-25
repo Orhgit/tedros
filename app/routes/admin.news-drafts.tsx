@@ -1,9 +1,9 @@
-// News autopilot — admin draft review queue (TED-114 / ADR-016 §4/§5).
+// News autopilot — admin draft review queue (TED-114 / ADR-019 §4/§5).
 //
 // Lists `news_drafts` rows in `pending`/`approved` status for a human to
 // review: HE (source of truth) side by side with the EN/AM machine drafts,
 // the source link, and approve/reject actions. AM gets its own two-path
-// workflow per ADR-016 §4:
+// workflow per ADR-019 §4:
 //   - the ordinary path: mark the AM draft human-reviewed
 //     (`amStatus: "human_reviewed"`), unlimited, no special gate.
 //   - the exceptional path: "urgent override" — publish the machine AM draft
@@ -16,7 +16,7 @@
 // Promotion to the static seed (`scripts/news-promote.ts`) is a separate,
 // manually-invoked step once a draft is `status: "approved"` — this route
 // does not call it. Gated end-to-end by `requireRole(request, "admin")`,
-// per ADR-016's note that the admin surface depends on the DB-backed role
+// per ADR-019's note that the admin surface depends on the DB-backed role
 // lookup actually being wired (app/lib/auth/guards.ts).
 
 import { and, desc, eq, gte, inArray } from "drizzle-orm";
@@ -131,7 +131,7 @@ export async function action({ request }: Route.ActionArgs) {
     }
 
     // Hard block, re-checked server-side regardless of what the form showed
-    // (per ADR-016 Amendment 2 — "המערכת חייבת לסרב", not a soft warning).
+    // (per ADR-019 Amendment 2 — "המערכת חייבת לסרב", not a soft warning).
     const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
     const recentOverrides = await db
       .select({ at: newsDrafts.amUrgentOverrideAt })

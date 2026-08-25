@@ -1,7 +1,7 @@
-// News autopilot — source registry + normalize (TED-114 / ADR-016 §2).
+// News autopilot — source registry + normalize (TED-114 / ADR-019 §2).
 //
 // This module is the shared config + fetch/normalize/dedup layer both the
-// daily Claude Code routine (ADR-016 §1 — its own agentic session calls
+// daily Claude Code routine (ADR-019 §1 — its own agentic session calls
 // `WebFetch` against these same URLs and reasons over the result) and any
 // future server-side ingester can rely on. It does not itself run on a
 // schedule inside this app — no cron/worker imports this at request time —
@@ -46,7 +46,7 @@ export interface NormalizedNewsItem {
   /**
    * Verbatim excerpt/snippet as fetched — becomes `news_drafts.raw_snapshot`.
    * Never edited or summarized here; drafting/summarizing is the routine's
-   * job (ADR-016 §3), not this module's.
+   * job (ADR-019 §3), not this module's.
    */
   rawExcerpt: string;
 }
@@ -163,7 +163,7 @@ async function fetchMechirLamishtaken(): Promise<NormalizedNewsItem[]> {
 // `news.google.com/rss/search?q=...&hl=iw&gl=IL&ceid=IL:iw`. Verified in
 // research: 200 OK, valid RSS 2.0, 50+ relevant results for the first query.
 // Links returned are Google redirect URLs, not direct source URLs — kept
-// as-is here (resolving them is a triage-stage concern per ADR-016 §2,
+// as-is here (resolving them is a triage-stage concern per ADR-019 §2,
 // "dedup against sourceUrl" only needs a *stable* URL, which the redirect
 // URL is).
 
@@ -287,7 +287,7 @@ export const NEWS_AUTOPILOT_SOURCES: NewsSourceConfig[] = [
 // Fetches every configured source, tags each result with its source config,
 // and dedups by `sourceUrl` (first occurrence wins). A single source
 // throwing (e.g. one RSS feed temporarily down) does not fail the whole
-// batch — per ADR-016 §3 the routine still needs whatever the other sources
+// batch — per ADR-019 §3 the routine still needs whatever the other sources
 // returned. Callers that need per-source error visibility should inspect
 // `NewsAutopilotFetchResult.errors`.
 
@@ -316,7 +316,10 @@ export async function fetchAllNewsAutopilotSources(): Promise<NewsAutopilotFetch
 
   for (const outcome of settled) {
     if (outcome.status === "rejected") {
-      const { source, err } = outcome.reason as { source: NewsSourceConfig; err: unknown };
+      const { source, err } = outcome.reason as {
+        source: NewsSourceConfig;
+        err: unknown;
+      };
       errors.push({
         sourceId: source.id,
         message: err instanceof Error ? err.message : String(err),

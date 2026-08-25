@@ -1,4 +1,4 @@
-// News autopilot source registry tests (TED-114 / ADR-016 §2).
+// News autopilot source registry tests (TED-114 / ADR-019 §2).
 //
 // Covers: normalizing the CKAN "מחיר למשתכן" JSON response (incl. filtering
 // to community-relevant cities), normalizing RSS into NormalizedNewsItem[],
@@ -129,11 +129,15 @@ describe("fetchAllNewsAutopilotSources", () => {
 
   it("normalizes the CKAN response and filters to community-relevant cities", async () => {
     const { items } = await fetchAllNewsAutopilotSources();
-    const ckanItems = items.filter((i) => i.sourceId === "data-gov-il-mechir-lamishtaken");
+    const ckanItems = items.filter(
+      (i) => i.sourceId === "data-gov-il-mechir-lamishtaken",
+    );
     expect(ckanItems).toHaveLength(1);
     expect(ckanItems[0]!.title).toContain("נתניה");
     expect(ckanItems[0]!.title).not.toContain("תל אביב");
-    expect(ckanItems[0]!.sourceUrl).toBe("https://data.gov.il/dataset/mechir-lamishtaken#row-1");
+    expect(ckanItems[0]!.sourceUrl).toBe(
+      "https://data.gov.il/dataset/mechir-lamishtaken#row-1",
+    );
     expect(ckanItems[0]!.rawExcerpt).toContain("14000");
   });
 

@@ -1,10 +1,10 @@
-// AM urgent-override rate limit (TED-114 / ADR-016 §4, Amendment 2).
+// AM urgent-override rate limit (TED-114 / ADR-019 §4, Amendment 2).
 //
 // "~2 overrides per rolling 7 days", enforced at the action layer (a rolling
 // window can't be a Postgres CHECK constraint — see the comment on
 // `news_drafts_am_override_at_idx` in app/lib/db/schema/news-drafts.ts).
 // This is a hard block per the owner's explicit phrasing ("המערכת חייבת
-// לסרב"), not a soft warning — see ADR-016 Amendment 2, Open Question #4.
+// לסרב"), not a soft warning — see ADR-019 Amendment 2, Open Question #4.
 //
 // Pure and DB-free by design (mirrors the pattern in
 // app/lib/leads/rate-limit.ts) so the windowing logic is unit-testable
@@ -44,7 +44,7 @@ export function isAmOverrideAllowed(
  * When the cap next frees up a slot (the oldest in-window override's
  * timestamp + the window length), or `null` if an override is allowed right
  * now. For the admin UI's "the weekly limit is reached and when it resets"
- * message (ADR-016 §4, Amendment 2).
+ * message (ADR-019 §4, Amendment 2).
  */
 export function amOverrideResetAt(
   recentTimestamps: Date[],
