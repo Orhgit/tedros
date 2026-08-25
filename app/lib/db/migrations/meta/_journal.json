@@ -29,6 +29,13 @@
       "when": 1787151343401,
       "tag": "0003_mature_diamondback",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1787661207197,
+      "tag": "0004_wise_jigsaw",
+      "breakpoints": true
     }
   ]
 }
