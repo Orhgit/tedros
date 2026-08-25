@@ -114,7 +114,8 @@ export function renderMarkdown(source: string): string {
           (r) =>
             `<tr>${r
               .map(
-                (c) => `<td class="border-b border-earth-100 px-3 py-2">${renderInline(c)}</td>`,
+                (c) =>
+                  `<td class="border-b border-earth-100 px-3 py-2">${renderInline(c)}</td>`,
               )
               .join("")}</tr>`,
         )
