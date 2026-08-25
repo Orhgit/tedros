@@ -40,7 +40,11 @@ describe("scholarship-relevance", () => {
   });
 
   it("V1 cell budget — scholarships × 5 cities", () => {
+    // Not hardcoded: the seed has grown across waves (12 → 38 → 51) and
+    // will keep growing. Assert the invariant (5 relevance cities) instead
+    // of a specific product that goes stale every time content ships.
     const cells = SCHOLARSHIPS.length * SCHOLARSHIP_RELEVANCE_CITIES.length;
-    expect(cells).toBe(190);
+    expect(cells).toBe(SCHOLARSHIPS.length * 5);
+    expect(SCHOLARSHIP_RELEVANCE_CITIES.length).toBe(5);
   });
 });

@@ -38,6 +38,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
     ...hreflangMeta(publicUrl, locale, `/education/tracks/${detail.slug}`),
     { property: "og:title", content: detail.name },
     { property: "og:description", content: detail.shortDescription },
+    { property: "og:image", content: `${publicUrl}/og-default.jpg` },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: `${publicUrl}/og-default.jpg` },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
     {

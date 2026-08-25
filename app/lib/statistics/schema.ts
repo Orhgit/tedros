@@ -44,6 +44,12 @@ export interface StatTopicJsonLdInput {
   temporalCoverage?: string;
   /** Free-form keywords (mix of HE and EN ok — Google picks up both). */
   keywords?: string[];
+  /** The organization(s) that produced the underlying figures (e.g. CBS —
+   * הלמ"ס). Falls back to Tedros itself when omitted. */
+  creatorName?: string;
+  /** When true, emits a `distribution` DataDownload pointing at the
+   * topic's CSV export (`/:lang/statistics/:topic.csv`). */
+  includeCsvDistribution?: boolean;
 }
 
 export function statTopicJsonLd(ctx: SchemaContext, input: StatTopicJsonLdInput): JsonLd {
@@ -57,7 +63,7 @@ export function statTopicJsonLd(ctx: SchemaContext, input: StatTopicJsonLdInput)
     description: input.description,
     creator: {
       "@type": "Organization",
-      name: "Tedros",
+      name: input.creatorName ?? "Tedros",
       url: ctx.publicUrl,
     },
     license: "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -65,5 +71,16 @@ export function statTopicJsonLd(ctx: SchemaContext, input: StatTopicJsonLdInput)
     spatialCoverage: { "@type": "Country", name: "Israel" },
     ...(input.temporalCoverage ? { temporalCoverage: input.temporalCoverage } : {}),
     ...(input.keywords && input.keywords.length > 0 ? { keywords: input.keywords } : {}),
+    ...(input.includeCsvDistribution
+      ? {
+          distribution: [
+            {
+              "@type": "DataDownload",
+              encodingFormat: "text/csv",
+              contentUrl: `${url}.csv`,
+            },
+          ],
+        }
+      : {}),
   };
 }

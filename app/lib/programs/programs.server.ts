@@ -98,7 +98,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Ethiopian-Israeli high-school students",
       am: "የኢትዮጵያ-እስራኤል ሁለተኛ ደረጃ ተማሪዎች",
     },
-    relatedRights: ["bagrut-grant"],
+    relatedRights: ["matriculation-grant"],
     relatedTerms: ["enp", "beta-israel"],
     bodies: {
       he: makeBody("he", {
@@ -194,7 +194,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Outstanding Ethiopian-Israeli HS students",
       am: "ብቁ የኢትዮጵያ-እስራኤል ሁለተኛ ደረጃ ተማሪዎች",
     },
-    relatedRights: ["bagrut-grant"],
+    relatedRights: ["matriculation-grant"],
     relatedTerms: ["enp"],
     bodies: {
       he: makeBody("he", {
@@ -296,7 +296,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Any Ethiopian-Israeli needing health navigation",
       am: "የጤና አጃቢ የሚያስፈልጋቸው",
     },
-    relatedRights: ["medical-translation-services", "chronic-disease-prevention"],
+    relatedRights: ["medical-translation", "chronic-disease-prevention"],
     relatedTerms: ["tene-briut"],
     bodies: {
       he: makeBody("he", {
@@ -344,7 +344,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Ethiopian-Israeli patients",
       am: "የኢትዮጵያ-እስራኤል ታካሚዎች",
     },
-    relatedRights: ["medical-translation-services"],
+    relatedRights: ["medical-translation"],
     relatedTerms: ["tene-briut"],
     bodies: {
       he: makeBody("he", {
@@ -540,7 +540,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Ethiopian-Israeli BA graduates",
       am: "የBA ምሩቃን",
     },
-    relatedRights: ["mentorship-program-graduates"],
+    relatedRights: ["youth-mentorship"],
     relatedTerms: ["olim-beyahad"],
     bodies: {
       he: makeBody("he", {
@@ -592,7 +592,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "BA graduates in tech fields or post-Tech-Career",
       am: "የBA ምሩቃን",
     },
-    relatedRights: ["mentorship-program-graduates", "tech-career-bootcamp"],
+    relatedRights: ["youth-mentorship", "tech-career-bootcamp"],
     relatedTerms: ["olim-beyahad"],
     bodies: {
       he: makeBody("he", {
@@ -642,7 +642,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Outstanding Ethiopian-Israeli BA students",
       am: "ምርጥ የBA ተማሪዎች",
     },
-    relatedRights: ["scholarship-aggregator"],
+    relatedRights: ["unconditional-scholarships-7-sources"],
     relatedTerms: ["hesegim-isef", "beta-israel"],
     bodies: {
       he: makeBody("he", {
@@ -686,7 +686,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "ISEF BA alumni",
       am: "የISEF ምሩቃን",
     },
-    relatedRights: ["scholarship-aggregator"],
+    relatedRights: ["unconditional-scholarships-7-sources"],
     relatedTerms: ["hesegim-isef"],
     bodies: {
       he: makeBody("he", {
@@ -784,7 +784,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Ethiopian-Israeli parents of grades 1-12 children",
       am: "የ1-12 ክፍል ልጆች ወላጆች",
     },
-    relatedRights: ["bagrut-grant"],
+    relatedRights: ["matriculation-grant"],
     relatedTerms: [],
     bodies: {
       he: makeBody("he", {
@@ -976,7 +976,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Families with functionally at-risk children",
       am: "ቤተሰቦች",
     },
-    relatedRights: ["domestic-violence-support", "summer-camp-subsidies"],
+    relatedRights: ["domestic-violence-support", "summer-camps-subsidy"],
     relatedTerms: [],
     bodies: {
       he: makeBody("he", {
@@ -1024,7 +1024,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Any Ethiopian-Israeli needing health navigation",
       am: "ሁሉም",
     },
-    relatedRights: ["chronic-disease-prevention", "medical-translation-services"],
+    relatedRights: ["chronic-disease-prevention", "medical-translation"],
     relatedTerms: ["tene-briut"],
     bodies: {
       he: makeBody("he", {
@@ -1070,7 +1070,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Ethiopian-Israeli youth 12-18",
       am: "ወጣቶች 12-18",
     },
-    relatedRights: ["summer-camp-subsidies"],
+    relatedRights: ["summer-camps-subsidy"],
     relatedTerms: [],
     bodies: {
       he: makeBody("he", {
@@ -1208,7 +1208,7 @@ export const PROGRAMS: ProgramEntry[] = [
       en: "Seniors 65+ of Ethiopian origin",
       am: "65+ አዛውንቶች",
     },
-    relatedRights: ["senior-stipend"],
+    relatedRights: ["senior-pension"],
     relatedTerms: ["beta-israel"],
     bodies: {
       he: makeBody("he", {

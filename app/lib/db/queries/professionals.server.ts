@@ -24,6 +24,7 @@ export interface ProfessionalDetail extends ProfessionalSummary {
   relatedRights: string[];
   relatedTerms: string[];
   relatedOrgs: string[];
+  listedProfessional?: ProfessionalSlot["listedProfessional"];
 }
 
 function summarize(entry: ProfessionalSlot, locale: Locale): ProfessionalSummary {
@@ -76,6 +77,7 @@ export function getProfessionalSlot(
     relatedRights: entry.relatedRights,
     relatedTerms: entry.relatedTerms,
     relatedOrgs: entry.relatedOrgs,
+    listedProfessional: entry.listedProfessional,
   };
 }
 

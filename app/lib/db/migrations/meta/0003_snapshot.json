@@ -1,5 +1,5 @@
 {
-  "id": "c96d7f39-8636-49ef-8bf9-ee57716b9720",
+  "id": "f73002c3-9f23-4765-8827-4f983a2b3c36",
   "prevId": "c7a0b3eb-aef3-4bd9-bc8c-8051bbc1d07f",
   "version": "7",
   "dialect": "postgresql",
@@ -2012,6 +2012,148 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
+    "public.professional_applications": {
+      "name": "professional_applications",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(200)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "profession": {
+          "name": "profession",
+          "type": "varchar(40)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phone": {
+          "name": "phone",
+          "type": "varchar(32)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(320)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "license_number": {
+          "name": "license_number",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "publish_license_number": {
+          "name": "publish_license_number",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "primary_regions": {
+          "name": "primary_regions",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "secondary_regions": {
+          "name": "secondary_regions",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "nationwide_remote": {
+          "name": "nationwide_remote",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "bio": {
+          "name": "bio",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "languages": {
+          "name": "languages",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "locale": {
+          "name": "locale",
+          "type": "varchar(2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "consent_to_publish": {
+          "name": "consent_to_publish",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "status": {
+          "name": "status",
+          "type": "verification_status",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'pending'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "professional_applications_status_idx": {
+          "name": "professional_applications_status_idx",
+          "columns": [
+            {
+              "expression": "status",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
     "public.professional_categories": {
       "name": "professional_categories",
       "schema": "",
@@ -2887,301 +3029,6 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.news_drafts": {
-      "name": "news_drafts",
-      "schema": "",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "uuid",
-          "primaryKey": true,
-          "notNull": true,
-          "default": "gen_random_uuid()"
-        },
-        "source_url": {
-          "name": "source_url",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "source_name": {
-          "name": "source_name",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "published_at_source": {
-          "name": "published_at_source",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "raw_snapshot": {
-          "name": "raw_snapshot",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "relevance_score": {
-          "name": "relevance_score",
-          "type": "numeric(3, 2)",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "tags": {
-          "name": "tags",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'[]'::jsonb"
-        },
-        "he_title": {
-          "name": "he_title",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "he_excerpt": {
-          "name": "he_excerpt",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "he_body": {
-          "name": "he_body",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "en_title": {
-          "name": "en_title",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "en_excerpt": {
-          "name": "en_excerpt",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "en_body": {
-          "name": "en_body",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "en_status": {
-          "name": "en_status",
-          "type": "news_draft_locale_status",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'machine_draft'"
-        },
-        "am_title": {
-          "name": "am_title",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "am_excerpt": {
-          "name": "am_excerpt",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "am_body": {
-          "name": "am_body",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "am_status": {
-          "name": "am_status",
-          "type": "news_draft_locale_status",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'machine_draft'"
-        },
-        "am_urgent_override": {
-          "name": "am_urgent_override",
-          "type": "boolean",
-          "primaryKey": false,
-          "notNull": true,
-          "default": false
-        },
-        "am_urgent_override_reason": {
-          "name": "am_urgent_override_reason",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "am_urgent_override_by_user_id": {
-          "name": "am_urgent_override_by_user_id",
-          "type": "uuid",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "am_urgent_override_at": {
-          "name": "am_urgent_override_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "status": {
-          "name": "status",
-          "type": "news_draft_status",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'pending'"
-        },
-        "reviewer_user_id": {
-          "name": "reviewer_user_id",
-          "type": "uuid",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "reviewed_at": {
-          "name": "reviewed_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "promoted_slug": {
-          "name": "promoted_slug",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "promotion_method": {
-          "name": "promotion_method",
-          "type": "news_draft_promotion_method",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        },
-        "updated_at": {
-          "name": "updated_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        }
-      },
-      "indexes": {
-        "news_drafts_source_url_unique": {
-          "name": "news_drafts_source_url_unique",
-          "columns": [
-            {
-              "expression": "source_url",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": true,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "news_drafts_status_idx": {
-          "name": "news_drafts_status_idx",
-          "columns": [
-            {
-              "expression": "status",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "news_drafts_pending_idx": {
-          "name": "news_drafts_pending_idx",
-          "columns": [
-            {
-              "expression": "created_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "where": "\"news_drafts\".\"status\" = 'pending'",
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "news_drafts_am_override_at_idx": {
-          "name": "news_drafts_am_override_at_idx",
-          "columns": [
-            {
-              "expression": "am_urgent_override_by_user_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "am_urgent_override_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "where": "\"news_drafts\".\"am_urgent_override\" = true",
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
-      "foreignKeys": {
-        "news_drafts_am_urgent_override_by_user_id_users_id_fk": {
-          "name": "news_drafts_am_urgent_override_by_user_id_users_id_fk",
-          "tableFrom": "news_drafts",
-          "tableTo": "users",
-          "columnsFrom": [
-            "am_urgent_override_by_user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "set null",
-          "onUpdate": "no action"
-        },
-        "news_drafts_reviewer_user_id_users_id_fk": {
-          "name": "news_drafts_reviewer_user_id_users_id_fk",
-          "tableFrom": "news_drafts",
-          "tableTo": "users",
-          "columnsFrom": [
-            "reviewer_user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "set null",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
     "public.audit_log": {
       "name": "audit_log",
       "schema": "",
@@ -3755,33 +3602,6 @@
         "video",
         "floorplan",
         "tour_3d"
-      ]
-    },
-    "public.news_draft_locale_status": {
-      "name": "news_draft_locale_status",
-      "schema": "public",
-      "values": [
-        "machine_draft",
-        "human_reviewed",
-        "skipped"
-      ]
-    },
-    "public.news_draft_promotion_method": {
-      "name": "news_draft_promotion_method",
-      "schema": "public",
-      "values": [
-        "manual_pr",
-        "fast_track"
-      ]
-    },
-    "public.news_draft_status": {
-      "name": "news_draft_status",
-      "schema": "public",
-      "values": [
-        "pending",
-        "approved",
-        "rejected",
-        "promoted"
       ]
     },
     "public.actor_type": {

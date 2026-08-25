@@ -19,6 +19,12 @@ import type { NewsTag } from "./categories";
 import { ARTICLES_WAVE4 } from "./articles-wave4.server";
 import { ARTICLES_WAVE5 } from "./articles-wave5.server";
 import { ARTICLES_WAVE6 } from "./articles-wave6.server";
+import { ARTICLES_WAVE7A } from "./articles-wave7a.server";
+import { ARTICLES_WAVE7B } from "./articles-wave7b.server";
+import { ARTICLES_WAVE7C } from "./articles-wave7c.server";
+import { ARTICLES_WAVE7D } from "./articles-wave7d.server";
+import { ARTICLES_WAVE8 } from "./articles-wave8.server";
+import { ARTICLES_WAVE9 } from "./articles-wave9.server";
 
 export interface NewsArticleEntry {
   slug: string;
@@ -5586,10 +5592,301 @@ High demand for Amharic speakers — Ethiopian-Israeli patients feel more comfor
 📞 02-5081408 | 03-5368944`,
     },
   },
+  {
+    slug: "tech-innovation-authority-funding-lod-campus-2026",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    tags: ["employment", "cities"],
+    title: {
+      he: "מימון רשות החדשנות להכשרה טכנולוגית + קמפוס חדש בלוד — מה חדש ב-2026",
+      en: "Israel Innovation Authority tech-training funding + new Lod campus — what's new in 2026",
+      am: "የእስራኤል ኢኖቬሽን ባለስልጣን የቴክኖሎጂ ስልጠና ፈንድ + አዲስ የሎድ ካምፓስ — በ2026 ምን አዲስ ነገር አለ",
+    },
+    excerpt: {
+      he: "משרד העבודה ורשות החדשנות מממנים תוכנית הכשרה טכנולוגית ייעודית לקהילה בתקציב 10 מיליון ₪, לצד קמפוס טכנולוגי חדש בלוד וזווית יזמות/ניהול לבוגרי יחידה 8200.",
+      en: "The Ministry of Labor and the Israel Innovation Authority are funding a dedicated tech-training program for the community with a 10M ILS budget, alongside a new tech campus in Lod and an entrepreneurship/management track for Unit 8200 alumni.",
+      am: 'የስራ ሚኒስቴር እና የእስራኤል ኢኖቬሽን ባለስልጣን ለማህበረሰቡ ልዩ የቴክኖሎጂ ስልጠና ፕሮግራም በ10 ሚሊዮን ሺ"ል በጀት ይደግፋሉ፣ ከአዲስ የሎድ ቴክኖሎጂ ካምፓስ ጎን ለጎን።',
+    },
+    bodies: {
+      he: `## מימון ממשלתי ייעודי להכשרה טכנולוגית
+
+משרד העבודה ורשות החדשנות משיקים תוכנית הכשרה טכנולוגית ממוקדת קהילה, בתקציב של **10 מיליון ₪**, ביעד להכשיר **כ-500 גברים ונשים** מקהילת יוצאי אתיופיה בתוך שנתיים. התוכנית שונה מתוכניות ההכשרה הפרטיות הקיימות (כמו טק-קריירה) — זהו תקצוב ממשלתי-רוחבי ולא תוכנית של ארגון בודד.
+
+## קמפוס טכנולוגי חדש בלוד
+
+לצד התקצוב, נבנה בלוד קמפוס הכשרה ויזמות טכנולוגית ייעודי, עם סיום בנייה מתוכנן לסוף 2026. לוד היא גם אחת מערי היעד המרכזיות בתוכנית ההתחדשות העירונית של הקהילה (ראו [התחדשות עירונית ברמת אשכול, לוד](/he/urban-renewal/ramat-ashkol-lod)) — הקמת הקמפוס בעיר יוצרת זיקה ישירה בין שיפור הדיור לשיפור ההזדמנויות התעסוקתיות באותה עיר.
+
+## תוכנית יזמות וניהול — בוגרי יחידה 8200
+
+עמותת בוגרי יחידת 8200 מפעילה תוכנית ייעודית לקידום יזמות וניהול (לא רק הכשרה טכנית) בקרב יוצאי אתיופיה — זווית שונה מהמסלולים הטכניים הקיימים, בהתמקדות בכישורי ניהול, בניית סטארטאפים, וחיבור למנטורים בכירים בהייטק.
+
+## ראו גם
+
+- [טק-קריירה — מדריך הכשרה טכנולוגית](/he/news/tech-career-bootcamp-guide)
+- [התחדשות עירונית בלוד](/he/urban-renewal/ramat-ashkol-lod)`,
+      en: `## Dedicated government funding for tech training
+
+The Ministry of Labor and the Israel Innovation Authority are launching a community-focused tech-training program with a **10 million ILS** budget, aiming to train roughly **500 men and women** from the Ethiopian-Israeli community within two years. This differs from existing private training programs (like Tech-Career) — it is a cross-cutting government allocation, not a single organization's program.
+
+## New tech campus in Lod
+
+Alongside the funding, a dedicated tech training and entrepreneurship campus is being built in Lod, with construction completion planned for the end of 2026. Lod is also one of the key target cities in the community's urban-renewal plan (see [urban renewal in Ramat Ashkol, Lod](/en/urban-renewal/ramat-ashkol-lod)) — the campus creates a direct link between improved housing and improved employment opportunities in the same city.
+
+## Entrepreneurship and management track — Unit 8200 alumni
+
+The Unit 8200 alumni association runs a dedicated program advancing entrepreneurship and management (not just technical training) among Ethiopian-Israelis — a different angle from the existing technical tracks, focused on management skills, building startups, and connections to senior hi-tech mentors.
+
+## See also
+
+- [Tech-Career — training guide](/en/news/tech-career-bootcamp-guide)
+- [Urban renewal in Lod](/en/urban-renewal/ramat-ashkol-lod)`,
+      am: `## ልዩ የመንግስት የቴክኖሎጂ ስልጠና ፈንድ
+
+የስራ ሚኒስቴር እና የእስራኤል ኢኖቬሽን ባለስልጣን በ**10 ሚሊዮን ሺ"ል** በጀት ለማህበረሰቡ ልዩ የቴክኖሎጂ ስልጠና ፕሮግራም እያስጀመሩ ነው፣ በ2 ዓመት ውስጥ ወደ **500 ወንዶች እና ሴቶች** ለማሰልጠን ያለመ።
+
+## በሎድ አዲስ የቴክኖሎጂ ካምፓስ
+
+ከፈንዱ ጎን ለጎን፣ በሎድ ልዩ የቴክኖሎጂ ስልጠና እና ስራ ፈጠራ ካምፓስ እየተገነባ ነው፣ ግንባታው በ2026 መጨረሻ ይጠናቀቃል ተብሎ ይጠበቃል። ሎድ ደግሞ ለማህበረሰቡ የከተማ ዕድሳት ዕቅድ ካሉት ዋና ዋና ከተሞች አንዷ ናት።
+
+## የስራ ፈጠራ እና አመራር ትራክ — የ8200 ክፍል ምሩቃን
+
+የ8200 ክፍል ምሩቃን ማህበር ለኢትዮጵያ-እስራኤላውያን የስራ ፈጠራ እና አመራር ልዩ ፕሮግራም ያካሂዳል — ከነባር የቴክኒክ ትራኮች የተለየ አቅጣጫ፣ በአመራር ክህሎቶች እና በስታርትአፕ ግንባታ ላይ ያተኮረ።`,
+    },
+  },
+  {
+    slug: "police-traffic-light-model-2026-investigation",
+    publishedAt: "2026-06-19",
+    updatedAt: "2026-06-19",
+    tags: ["civic", "policy"],
+    title: {
+      he: 'חקירת "7 ימים": המשטרה מיינה תחנות לפי "מודל רמזור" — 5 תחנות סווגו "אדום"',
+      en: '"7 Days" investigation: police sorted stations by a "traffic-light model" — 5 stations rated "red"',
+      am: 'የ"7 ቀናት" ምርመራ፦ ፖሊስ ጣቢያዎችን በ"ትራፊክ መብራት ሞዴል" መድቧል — 5 ጣቢያዎች "ቀይ" ተብለው ተመድበዋል',
+    },
+    excerpt: {
+      he: 'חקירה עיתונאית של ynet חשפה שהמשטרה מיינה 26 תחנות עם אוכלוסיית יוצאי אתיופיה משמעותית לפי "מודל רמזור" — 5 מהן, כולל קריית גת וקריית מלאכי, סווגו "אדום". נתוני אכיפה לא פורסמו מאז 2023.',
+      en: 'A ynet investigation revealed police sorted 26 stations with significant Ethiopian-Israeli populations by a "traffic-light model" — 5, including Kiryat Gat and Kiryat Malakhi, rated "red." Enforcement data hasn\'t been published since 2023.',
+      am: 'የynet ምርመራ እንደገለጸው ፖሊስ ጉልህ የኢትዮጵያ-እስራኤላውያን ህዝብ ባላቸው 26 ጣቢያዎች ላይ "ትራፊክ መብራት ሞዴል" ተጠቅሟል — ቂርያት ጋት እና ቂርያት ማላኪን ጨምሮ 5ቱ "ቀይ" ተብለው ተመድበዋል።',
+    },
+    bodies: {
+      he: `## מה חשפה החקירה
+
+חקירה עיתונאית של מדור "7 ימים" ב-ynet (19.6.2026) חשפה שמשטרת ישראל מיינה 26 תחנות משטרה עם אוכלוסיית יוצאי אתיופיה משמעותית לפי "מודל רמזור" פנימי — ירוק, צהוב, אדום — לפי הערכת רמת המתח בין השוטרים לקהילה. **5 תחנות סווגו "אדום"**, המחייבות התערבות מעמיקה יותר: קריית גת, רחובות, יבנה, עפולה, וקריית מלאכי — כולן ערים עם ריכוזי קהילה משמעותיים, חלקן כבר מוכרות מפרויקטי ההתחדשות העירונית באתר זה.
+
+## הפער בנתונים
+
+נקודה מרכזית שעלתה בחקירה: **נתוני האכיפה כלפי יוצאי אתיופיה לא פורסמו מאז 2023** — מה שהקשה על נציגי המשטרה שהגיעו לדיון בכנסת (בראשות ח"כ מיכאל ביטון) להציג תמונה עדכנית. היעדר שקיפות בנתונים הוא עצמו נושא לביקורת חוזרת מצד ארגוני הקהילה.
+
+## מה זה אומר עבורך
+
+אם אתה מתגורר באחת מהערים שסווגו "אדום" — קריית גת, רחובות, יבנה, עפולה, קריית מלאכי — כדאי להכיר את הזכויות שלך מול המשטרה. ראו [הדרכה מלאה בעמוד Voice](/he/voice/police-conduct): מה מותר/אסור לשוטר לבקש, איך מגישים תלונה, וקו הסיוע המשפטי החינמי של תבקה (1-800-20-20-16).
+
+## ראו גם
+
+- [זכויות מול משטרה — מדריך אזרחי](/he/voice/police-conduct)
+- [קול הקהילה — דיווח על גזענות](/he/voice)`,
+      en: `## What the investigation found
+
+A ynet "7 Days" investigative report (19.6.2026) revealed that Israel Police sorted 26 stations with significant Ethiopian-Israeli populations using an internal "traffic-light model" — green, yellow, red — based on assessed tension levels between officers and the community. **5 stations were rated "red,"** requiring deeper intervention: Kiryat Gat, Rehovot, Yavne, Afula, and Kiryat Malakhi — all cities with significant community concentrations, several already familiar from this site's urban-renewal coverage.
+
+## The data gap
+
+A key point raised in the investigation: **enforcement data regarding Ethiopian-Israelis hasn't been published since 2023** — making it difficult for police representatives who appeared before a Knesset discussion (chaired by MK Michael Biton) to present an up-to-date picture. This lack of data transparency is itself a recurring point of criticism from community organizations.
+
+## What this means for you
+
+If you live in one of the "red"-rated cities — Kiryat Gat, Rehovot, Yavne, Afula, Kiryat Malakhi — it's worth knowing your rights when dealing with police. See the [full guide on the Voice page](/en/voice/police-conduct): what an officer can and can't ask, how to file a complaint, and Tebeka's free legal-aid line (1-800-20-20-16).
+
+## See also
+
+- [Rights vs. police — civic guide](/en/voice/police-conduct)
+- [Community Voice — report racism](/en/voice)`,
+      am: `## ምርመራው ምን አሳየ
+
+የynet "7 ቀናት" የምርመራ ዘገባ (19.6.2026) እንደገለጸው የእስራኤል ፖሊስ ጉልህ የኢትዮጵያ-እስራኤላውያን ህዝብ ባላቸው 26 ጣቢያዎች ላይ የውስጥ "ትራፊክ መብራት ሞዴል" — አረንጓዴ፣ ቢጫ፣ ቀይ — ተጠቅሟል፣ በፖሊሶች እና በማህበረሰቡ መካከል ባለው ውጥረት ደረጃ ግምገማ ላይ ተመስርቶ። **5 ጣቢያዎች "ቀይ"** ተብለው ተመድበዋል፣ ጥልቅ ጣልቃ ገብነት የሚያስፈልጋቸው፦ ቂርያት ጋት፣ ረሆቮት፣ ያቭኔ፣ አፉላ እና ቂርያት ማላኪ።
+
+## የመረጃ ክፍተት
+
+በምርመራው የተነሳ ቁልፍ ነጥብ፦ ስለ ኢትዮጵያ-እስራኤላውያን የአፈጻጸም መረጃ ከ2023 ወዲህ አልታተመም።
+
+## ይህ ለእርስዎ ምን ማለት ነው
+
+ከ"ቀይ" ከተሞች በአንዷ የሚኖሩ ከሆነ፣ ከፖሊስ ጋር በተያያዘ መብቶችዎን ማወቅ ጠቃሚ ነው። [በVoice ገጽ ላይ ያለውን ሙሉ መመሪያ ይመልከቱ](/am/voice/police-conduct)።
+
+## ተመልከቱ
+
+- [ከፖሊስ ጋር መብቶች — የዜግነት መመሪያ](/am/voice/police-conduct)
+- [የማህበረሰብ ድምጽ — ዘረኝነት ሪፖርት ያድርጉ](/am/voice)`,
+    },
+  },
+  {
+    slug: "holegav-festival-17-2026",
+    publishedAt: "2026-06-25",
+    updatedAt: "2026-06-25",
+    tags: ["community", "cities"],
+    title: {
+      he: 'פסטיבל "הולגאב" ה-17 ליצירה ישראלית-אתיופית — הדור הצעיר עולה לבמה',
+      en: "The 17th Holegav Festival of Ethiopian-Israeli creativity — the younger generation takes the stage",
+      am: "17ኛው የሆለጋቭ ፌስቲቫል የኢትዮጵያ-እስራኤላዊ ፈጠራ — ወጣቱ ትውልድ መድረክ ላይ ወጣ",
+    },
+    excerpt: {
+      he: "המהדורה ה-17 של פסטיבל הולגאב (23–25.6.2026, בית הקונפדרציה בירושלים) התמקדה השנה ביוצרים הצעירים של הקהילה — היפ-הופ, רגאיי, אפרוביטס ודאנסהול, ב-15 מופעים.",
+      en: "The 17th edition of the Holegav Festival (23–25.6.2026, Confederation House, Jerusalem) focused this year on the community's younger creators — hip-hop, reggae, afrobeats and dancehall, across 15 performances.",
+      am: "17ኛው የሆለጋቭ ፌስቲቫል (23–25.6.2026, ኮንፌደሬሽን ሃውስ ኢየሩሳሌም) በዚህ ዓመት በማህበረሰቡ ወጣት ፈጣሪዎች ላይ አተኩሮ ነበር።",
+    },
+    bodies: {
+      he: `## מה זה הולגאב
+
+הולגאב הוא פסטיבל התרבות המרכזי המוקדש ליצירה ישראלית-אתיופית — מוזיקה, מחול, אמנות חזותית וספרות. המהדורה ה-17 (23–25.6.2026) התקיימה בבית הקונפדרציה בירושלים, עם מופעים נוספים בצוללת הצהובה, המזקקה ופרגמון.
+
+## דגש על הדור הצעיר
+
+בניגוד למהדורות קודמות שהתמקדו במורשת ובמוזיקה מסורתית, מהדורת 2026 שמה דגש מובהק על יוצרים צעירים מהדור השני והשלישי של הקהילה — עם 15 מופעים בשלושה ימים בז'אנרים עכשוויים: היפ-הופ, רגאיי, אפרוביטס ודאנסהול. זו נקודת מפנה: תרבות הקהילה לא נשארת "ארכיונית" אלא ממשיכה להתפתח דרך אמנים צעירים שיוצרים משהו חדש.
+
+## למה זה חשוב
+
+פסטיבלים כמו הולגאב הם חלק ממה שמחזיק את הזהות התרבותית של הקהילה חיה עבור הדורות הצעירים יותר — לצד אירועים רשמיים כמו סיגד. אם אתם מחפשים דרך להתחבר לתרבות הקהילה מעבר להיסטוריה, זה בדיוק סוג האירוע לעקוב אחריו.
+
+## ראו גם
+
+- [מורשת יהדות אתיופיה](/he/heritage/events)
+- [סיגד 2026](/he/heritage/events/sigd)`,
+      en: `## What is Holegav
+
+Holegav is the flagship cultural festival dedicated to Ethiopian-Israeli creativity — music, dance, visual art, and literature. The 17th edition (23–25.6.2026) took place at Confederation House in Jerusalem, with additional performances at the Yellow Submarine, HaMazkeka, and Pargod.
+
+## A focus on the younger generation
+
+Unlike previous editions centered on heritage and traditional music, the 2026 edition placed a clear emphasis on young second- and third-generation creators — 15 performances over three days spanning contemporary genres: hip-hop, reggae, afrobeats, and dancehall. This marks a turning point: the community's culture isn't staying "archival" — it keeps evolving through young artists creating something new.
+
+## Why it matters
+
+Festivals like Holegav are part of what keeps the community's cultural identity alive for younger generations, alongside official events like Sigd. If you're looking for a way to connect with the community's culture beyond its history, this is exactly the kind of event to follow.
+
+## See also
+
+- [Ethiopian-Jewish heritage](/en/heritage/events)
+- [Sigd 2026](/en/heritage/events/sigd)`,
+      am: `## ሆለጋቭ ምንድን ነው
+
+ሆለጋቭ ለኢትዮጵያ-እስራኤላዊ ፈጠራ የተወሰነ ዋና የባህል ፌስቲቫል ነው — ሙዚቃ፣ ዳንስ፣ የእይታ ጥበብ እና ስነ-ጽሁፍ። 17ኛው ዕትም (23–25.6.2026) በኢየሩሳሌም ኮንፌደሬሽን ሃውስ ተካሂዷል።
+
+## በወጣት ትውልድ ላይ ትኩረት
+
+የ2026 ዕትም በማህበረሰቡ ወጣት ፈጣሪዎች ላይ ግልጽ ትኩረት አድርጓል — በ3 ቀናት 15 ትርኢቶች በዘመናዊ ዘውጎች፦ ሂፕ-ሆፕ፣ ሬጌ፣ አፍሮቢትስ እና ዳንስሆል።
+
+## ለምን አስፈላጊ ነው
+
+እንደ ሆለጋቭ ያሉ ፌስቲቫሎች ለወጣት ትውልዶች የማህበረሰቡን የባህል ማንነት ህያው ከሚያደርጉት አካል ናቸው።
+
+## ተመልከቱ
+
+- [የኢትዮጵያ አይሁድ ቅርስ](/am/heritage/events)
+- [ሲግድ 2026](/am/heritage/events/sigd)`,
+    },
+  },
+  {
+    slug: "kiryat-gat-court-annuls-will-no-amharic-translation",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    tags: ["rights", "family"],
+    title: {
+      he: "בית משפט בקריית גת ביטל צוואה של עולה מאתיופיה — כי לא תורגמה לה לאמהרית",
+      en: "Kiryat Gat court annuls an Ethiopian immigrant's will — because it was never actually translated to Amharic for her",
+      am: "የቂርያት ጋት ፍርድ ቤት የኢትዮጵያ ተወላጅ ኑዛዜን ሰረዘ — ወደ አማርኛ ስላልተተረጎመላት",
+    },
+    excerpt: {
+      he: 'בית המשפט לענייני משפחה בקריית גת ביטל צוואה של עולה מאתיופיה (עלתה 1998, נפטרה 2021 בגיל 93) אחרי שהעד שהוצג כ"מתרגם" הודה בעדותו שרק חתם ולא באמת תרגם לה את המסמך. השופטת חייבה את הנכד הזוכה ב-35,000 ₪ הוצאות.',
+      en: 'The Kiryat Gat family court annulled the will of an Ethiopian immigrant (arrived 1998, died 2021 at 93) after the witness listed as "translator" admitted in testimony that he only signed and never actually translated the document to her. The judge ordered the beneficiary grandchild to pay 35,000 ILS in costs.',
+      am: 'የቂርያት ጋት የቤተሰብ ፍርድ ቤት የኢትዮጵያ ተወላጅ ኑዛዜን ሰረዘ፣ "ተርጓሚ" ተብሎ የተቀመጠው ምስክር በምስክርነቱ ብቻ እንደፈረመ እና በትክክል እንዳልተረጎመላት ካመነ በኋላ።',
+    },
+    bodies: {
+      he: `## מה קרה
+
+בית המשפט לענייני משפחה בקריית גת, בפסיקת השופטת דיאנה פסו-ואגו, ביטל צוואה שערכה עולה מאתיופיה — אם לחמישה ילדים שעלתה ב-1998 ונפטרה בדצמבר 2021 בגיל 93. הצוואה, שנערכה במאי 2015, הורישה את רכוש המנוחה לטובת נכד אחד בלבד, תוך נישול שאר הילדים והנכדים.
+
+## למה הצוואה בוטלה
+
+הנקודה המכריעה: העד שהוצג בעת עריכת הצוואה כ"מתרגם" לאמהרית — כדי לוודא שהמנוחה מבינה את מה שהיא חותמת עליו — **הודה בעדותו בבית המשפט שהוא רק חתם על המסמך ולא באמת תרגם** אותו בעל-פה עבורה. בית המשפט קיבל את ההתנגדות שהגישו יתר היורשים, ביטל את הצוואה במלואה, וחייב את הנכד שהיה אמור להיות הזוכה היחיד ב-35,000 ₪ הוצאות משפט.
+
+## למה זה חשוב לקהילה
+
+המקרה מדגיש סיכון אמיתי וחוזר: מסמכים משפטיים (צוואות, חוזים, הסכמים) הנחתמים ללא תרגום אמיתי ומלא לאמהרית עלולים להתבטל בדיעבד — גם שנים אחרי החתימה — אם מתברר שהחותם/ת לא הבינ/ה בפועל את תוכנם. זו תזכורת לחשיבות של **תרגום משפטי אמיתי, לא פורמלי בלבד**, בכל מסמך מחייב.
+
+## מה עושים
+
+אם את/ה עורך/ת צוואה, חוזה, או כל מסמך משפטי מחייב, ודא/י:
+- תרגום בעל-פה מלא ומובן, לא רק חתימה של "מתרגם" פורמלי
+- אפשר לבקש נוכחות עורך דין דובר אמהרית או מתורגמן מוסמך
+- תבקה (1-800-20-20-16) מספקת סיוע משפטי חינם, כולל בנושאי ירושה וצוואות
+
+## ראו גם
+
+- [תבקה — סיוע משפטי חינם](/he/orgs/tebeka)
+- [זכויות דוברי אמהרית מול הרשויות](/he/rights)`,
+      en: `## What happened
+
+The Kiryat Gat family court, in a ruling by Judge Diana Passo-Vago, annulled a will made by an Ethiopian immigrant — a mother of five who arrived in Israel in 1998 and died in December 2021 at 93. The will, drawn up in May 2015, left the deceased's estate to a single grandchild, disinheriting the other children and grandchildren.
+
+## Why the will was annulled
+
+The decisive point: the witness listed at the time of drafting as the Amharic "translator" — meant to ensure the deceased understood what she was signing — **admitted in court testimony that he only signed the document and never actually translated it** for her verbally. The court accepted the objection filed by the other heirs, fully annulled the will, and ordered the grandchild who stood to be sole beneficiary to pay 35,000 ILS in legal costs.
+
+## Why this matters for the community
+
+The case highlights a real, recurring risk: legal documents (wills, contracts, agreements) signed without a genuine, full Amharic translation can later be annulled — even years after signing — if it turns out the signer didn't actually understand their content. It's a reminder of the importance of **real legal translation, not merely formal sign-off**, for any binding document.
+
+## What to do
+
+If you're drafting a will, contract, or any binding legal document, make sure:
+- There's a full, understood verbal translation — not just a formal "translator" signature
+- You can request the presence of an Amharic-speaking lawyer or certified interpreter
+- Tebeka (1-800-20-20-16) provides free legal aid, including on inheritance and wills
+
+## See also
+
+- [Tebeka — free legal aid](/en/orgs/tebeka)
+- [Amharic-speakers' rights with authorities](/en/rights)`,
+      am: `## ምን ተከሰተ
+
+የቂርያት ጋት የቤተሰብ ፍርድ ቤት፣ በዳኛ ዲያና ፓሶ-ቫጎ ውሳኔ፣ በ1998 ወደ እስራኤል የመጣች እና በ2021 በ93 ዓመቷ የሞተች የኢትዮጵያ ተወላጅ ኑዛዜን ሰረዘ። ኑዛዜው ንብረቷን ለአንድ የልጅ ልጅ ብቻ ትቶ ነበር።
+
+## ኑዛዜው ለምን ተሰረዘ
+
+ወሳኙ ነጥብ፦ "ተርጓሚ" ተብሎ የቀረበው ምስክር በፍርድ ቤት ምስክርነቱ ብቻ እንደፈረመ እና በትክክል እንዳልተረጎመላት አምኗል። ፍርድ ቤቱ ኑዛዜውን ሙሉ በሙሉ ሰርዞ የልጅ ልጁ 35,000 ሺ"ል ወጪ እንዲከፍል አዟል።
+
+## ለማህበረሰቡ ለምን አስፈላጊ ነው
+
+ይህ ጉዳይ ትክክለኛ አደጋን ያጎላል፦ ያለ ትክክለኛ የአማርኛ ትርጉም የተፈረሙ ህጋዊ ሰነዶች (ኑዛዜዎች፣ ውሎች) በኋላ ላይ ሊሰረዙ ይችላሉ።
+
+## ተመልከቱ
+
+- [ተቤካ — ነፃ የህግ ድጋፍ](/am/orgs/tebeka)
+- [የአማርኛ ተናጋሪዎች መብቶች](/am/rights)`,
+    },
+  },
   ...ARTICLES_WAVE4,
   ...ARTICLES_WAVE5,
   ...ARTICLES_WAVE6,
+  ...ARTICLES_WAVE7A,
+  ...ARTICLES_WAVE7B,
+  ...ARTICLES_WAVE7C,
+  ...ARTICLES_WAVE7D,
+  ...ARTICLES_WAVE8,
+  ...ARTICLES_WAVE9,
 ];
+
+// TODO(data/architect): the "Marom" scholarship entry embedded above (~line
+// 733, slug-less section titled "מלגת מרום — המועצה להשכלה גבוהה (CHE)", and
+// its EN mirror at ~line 800 with "₪8,000–₪20,000/year... Deadline
+// January–March") predates the verified `marom-che` rights page
+// (app/lib/education/scholarships.server.ts) and contradicts it: the
+// verified page states a flat ₪10,000/year with registration opening
+// 2026-09-09 directly via che.org.il/scholarships/marom (verified 2026-07,
+// per TED-95). This old wave5-era block was NOT touched here (out of scope
+// for the wave7 wiring task) — it should be corrected or removed to match
+// the verified `marom-che` page. See also the new wave7d article
+// `marom-scholarship-tashpav-cycle`, which correctly defers to `marom-che`.
 
 // ── lookup helpers ─────────────────────────────────────────────────────────
 

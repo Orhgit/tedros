@@ -138,7 +138,7 @@ export const COMPARISONS: ComparisonEntry[] = [
         b: { he: "לא רגילה", en: "Not standard", am: "መደበኛ አይደለም" },
       },
     ],
-    relatedRights: ["scholarship-aggregator", "bagrut-grant"],
+    relatedRights: ["unconditional-scholarships-7-sources", "matriculation-grant"],
     relatedTerms: ["hesegim-isef", "beta-israel"],
     relatedOrgs: ["isef", "enp"],
     bodies: {
@@ -303,7 +303,7 @@ Both tracks are the primary defaults for outstanding Ethiopian-Israeli students.
         },
       },
     ],
-    relatedRights: ["bagrut-grant", "scholarship-aggregator"],
+    relatedRights: ["matriculation-grant", "unconditional-scholarships-7-sources"],
     relatedTerms: ["enp"],
     relatedOrgs: ["enp", "fidel", "hila"],
     bodies: {
@@ -450,7 +450,7 @@ ENP and Fidel solve different problems. Personal decisions hinge on timing and c
         },
       },
     ],
-    relatedRights: ["mentorship-program-graduates", "tech-career-bootcamp"],
+    relatedRights: ["youth-mentorship", "tech-career-bootcamp"],
     relatedTerms: ["olim-beyahad", "enp"],
     relatedOrgs: ["olim-beyahad", "enp"],
     bodies: {
@@ -578,7 +578,7 @@ Two leading routes to tech, but the models are very different.
         b: { he: "כל הארץ", en: "Nationwide", am: "በመላ ሀገሪቱ" },
       },
     ],
-    relatedRights: ["chronic-disease-prevention", "medical-translation-services"],
+    relatedRights: ["chronic-disease-prevention", "medical-translation"],
     relatedTerms: ["tene-briut", "beta-israel"],
     relatedOrgs: ["tene-briut"],
     bodies: {
@@ -1215,7 +1215,7 @@ Other Ethiopian-Israeli olim (Operation Moses, Solomon, etc.) get only the stand
         },
       },
     ],
-    relatedRights: ["funding-sigd-events"],
+    relatedRights: ["sigd-funding"],
     relatedTerms: ["sigd", "kessim", "beta-israel"],
     relatedOrgs: ["iaej"],
     bodies: {
@@ -1355,7 +1355,7 @@ Jerusalem, Netanya, Rehovot, Rishon LeZion, Beersheba, Haifa — each with diffe
         },
       },
     ],
-    relatedRights: ["bagrut-grant"],
+    relatedRights: ["matriculation-grant"],
     relatedTerms: [],
     relatedOrgs: ["fidel", "hila", "enp"],
     bodies: {

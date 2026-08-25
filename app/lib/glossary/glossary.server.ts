@@ -49,7 +49,7 @@ const GLOSSARY_WAVE1: GlossaryEntry[] = [
       en: "An Ethiopian-Jewish community holiday observed on the 29th of Heshvan. Law 5774-2008 recognizes it as an official Israeli holiday.",
       am: "በ29ኛው የሄሽቫን ቀን የሚከበር የኢትዮጵያ-አይሁድ ማህበረሰብ በዓል። የ5774-2008 ሕግ በእስራኤል ብሔራዊ በዓል አድርጎ ያውቀዋል።",
     },
-    relatedRights: ["funding-sigd-events"],
+    relatedRights: ["sigd-funding"],
     relatedTerms: ["beta-israel", "kessim"],
     sources: [
       {
@@ -356,7 +356,7 @@ In the 1990s, the question of Falash Mura aliyah rights came to the fore. In 200
       en: "The traditional religious leaders of Beta Israel. In Israel today they are recognized as religious-cultural authorities but are not integrated into the official Chief Rabbinate.",
       am: "የቤታ እስራኤል ባህላዊ ሃይማኖት መሪዎች። ዛሬ በእስራኤል እንደ ሃይማኖት-ባህል ባለስልጣናት ይታወቃሉ ግን በይፋ የዋና ራቢነት መዋቅር ውስጥ አይደሉም።",
     },
-    relatedRights: ["kessim-stipend", "funding-sigd-events"],
+    relatedRights: ["kessim-religious-support", "sigd-funding"],
     relatedTerms: ["beta-israel", "sigd"],
     bodies: {
       he: `## מה זה?
@@ -820,7 +820,7 @@ The U.S. intervened — Operation Joshua ("Sheba") airlifted an additional 800 p
       en: "Israel's only community-health organization focused on Ethiopian-Israelis. Runs health navigators, medical translation, and prevention projects.",
       am: "በኢትዮጵያ-እስራኤላውያን ላይ ያተኮረች በእስራኤል ብቸኛዋ የማህበረሰብ ጤና ድርጅት። የጤና አማካሪዎች፣ የህክምና ትርጉም እና የመከላከያ ፕሮጀክቶችን ያካሂዳል።",
     },
-    relatedRights: ["chronic-disease-prevention", "medical-translation-services"],
+    relatedRights: ["chronic-disease-prevention", "medical-translation"],
     relatedTerms: ["beta-israel"],
     sources: [{ title: "tene-briut.org.il", url: "https://www.tene-briut.org.il" }],
     bodies: {
@@ -1028,7 +1028,7 @@ Tebeka ("vindicator" / "advocate" in Amharic) is a legal aid center for Ethiopia
       en: "A career-mentorship organization for Ethiopian-Israeli university graduates. Connects students with senior mentors in industry.",
       am: "ለኢትዮጵያ-እስራኤል ባችለር ምሩቃን የሥራ መንገድ የሚመራ ድርጅት። ተማሪዎችን ከኢንዱስትሪ መሪዎች ጋር ያገናኛል።",
     },
-    relatedRights: ["mentorship-program-graduates"],
+    relatedRights: ["youth-mentorship"],
     relatedTerms: ["beta-israel"],
     sources: [{ title: "olim-beyahad.org.il", url: "https://www.olim-beyahad.org.il" }],
     bodies: {
@@ -1127,7 +1127,7 @@ Olim Beyahad ("Rising Together") is an NGO focused on the career advancement of 
       en: "A national partnership framework for advancing the Ethiopian-Israeli community, operating programs in education, youth, and excellence funding.",
       am: "የኢትዮጵያ-እስራኤል ማህበረሰብን ለማራመድ ብሔራዊ ሽርክና ማዕቀፍ፣ የትምህርት፣ የወጣቶችና የልህቀት ፋይናንስ ፕሮግራሞችን ያካሂዳል።",
     },
-    relatedRights: ["bagrut-grant", "tech-career-bootcamp"],
+    relatedRights: ["matriculation-grant", "tech-career-bootcamp"],
     relatedTerms: ["beta-israel"],
     sources: [{ title: "enp.org.il", url: "https://www.enp.org.il" }],
     bodies: {
@@ -1235,7 +1235,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
       en: "Funding programs for excellent Ethiopian-Israeli students pursuing a B.A. or M.A. Tuition coverage + monthly stipend.",
       am: "ለBA ወይም MA ለሚማሩ ምርጥ የኢትዮጵያ-እስራኤል ተማሪዎች የፋይናንስ ፕሮግራሞች። የትምህርት ክፍያ ሽፋን + ወርሃዊ ድጎማ።",
     },
-    relatedRights: ["scholarship-aggregator"],
+    relatedRights: ["unconditional-scholarships-7-sources"],
     relatedTerms: ["beta-israel", "enp"],
     sources: [
       { title: "isef.org.il", url: "https://www.isef.org.il" },

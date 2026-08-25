@@ -42,6 +42,19 @@ export interface ProfessionalSlot {
   relatedOrgs: string[];
   /** Markdown body × 3 locales. */
   bodies: Record<Locale, string>;
+  /**
+   * Present only for slots that list a real, named professional (as opposed
+   * to the anonymous "what to expect" slots below). When set, the profile
+   * route emits a real `Person` schema and a contact block instead of the
+   * anonymous disclaimer + join-CTA.
+   */
+  listedProfessional?: {
+    name: string;
+    phone: string;
+    licenseNumber?: string;
+    /** BCP-47 language codes, e.g. ["am", "he"]. */
+    languages: string[];
+  };
 }
 
 // --- Reusable body fragments ------------------------------------------------
@@ -50,13 +63,13 @@ export interface ProfessionalSlot {
 const JOIN_CTA: Record<Locale, string> = {
   he: `## הצטרפות לקטלוג
 
-האם אתה איש מקצוע מהקהילה האתיופית-ישראלית או דובר אמהרית? הקטלוג נמצא בשלבי הקמה ראשוניים. **לרישום עתידי**, פנו לטדרוס דרך [טופס הצטרפות](/he/about) ונחזור אליכם כשנפתח.`,
+האם אתה איש מקצוע מהקהילה האתיופית-ישראלית או דובר אמהרית? הקטלוג נמצא בשלבי הקמה ראשוניים. **הצטרפו** דרך [טופס הצטרפות](/he/professionals/join) — הצוות שלנו יבדוק ויחזור אליכם.`,
   en: `## Join the directory
 
-Are you an Ethiopian-Israeli or Amharic-speaking professional? The directory is in early build. **For future listing**, reach out via [the join form](/en/about) and we'll get back to you when onboarding opens.`,
+Are you an Ethiopian-Israeli or Amharic-speaking professional? The directory is in early build. **Join** via [the application form](/en/professionals/join) — our team will review and get back to you.`,
   am: `## ወደ ካታሎግ መግባት
 
-የኢትዮጵያ-እስራኤል ወይም አማርኛ-ተናጋሪ ባለሙያ ነዎት? ካታሎጉ በቅድመ-ግንባታ ላይ ነው። **ለወደፊት ምዝገባ**፣ በ[የመግቢያ ቅጽ](/am/about) በኩል ያግኙን፣ ምዝገባ ሲከፈት እንመለስልዎታለን።`,
+የኢትዮጵያ-እስራኤል ወይም አማርኛ-ተናጋሪ ባለሙያ ነዎት? ካታሎጉ በቅድመ-ግንባታ ላይ ነው። **ይቀላቀሉ** በ[የመግቢያ ቅጽ](/am/professionals/join) — ቡድናችን ገምግሞ ይመልስልዎታል።`,
 };
 
 const DISCLAIMER: Record<Locale, string> = {
@@ -116,6 +129,97 @@ ${JOIN_CTA[loc]}
     relatedRights: args.relatedRights ?? [],
     relatedTerms: args.relatedTerms ?? [],
     relatedOrgs: args.relatedOrgs ?? [],
+    bodies: {
+      he: body("he", {
+        when: "מתי לפנות?",
+        check: "מה לבדוק לפני שמסתייעים",
+        fee: "עלויות אופייניות",
+      }),
+      en: body("en", {
+        when: "When to seek help",
+        check: "What to verify before choosing",
+        fee: "Typical fees",
+      }),
+      am: body("am", {
+        when: "መቼ እርዳታ መፈለግ",
+        check: "ከመምረጥ በፊት ምን ማረጋገጥ",
+        fee: "የተለመዱ ክፍያዎች",
+      }),
+    },
+  };
+}
+
+// --- Listed-professional factory --------------------------------------------
+// For slots that name a real, verified professional (owner-supplied contact
+// details — never invented). Skips the anonymous DISCLAIMER/JOIN_CTA in
+// favor of a real contact block. Keep the same whenSeek/whatToCheck/feeNote
+// shape as `slot()` so both render through the same profile template.
+function listedSlot(args: {
+  profession: Profession;
+  citySlug: string;
+  specialty: string;
+  title: Translatable;
+  shortDescription: Translatable;
+  listedProfessional: NonNullable<ProfessionalSlot["listedProfessional"]>;
+  serviceAreaNote: Record<Locale, string>;
+  whenSeek: Record<Locale, string>;
+  whatToCheck: Record<Locale, string>;
+  feeNote: Record<Locale, string>;
+  relatedRights?: string[];
+  relatedTerms?: string[];
+  relatedOrgs?: string[];
+}): ProfessionalSlot {
+  const slug = `${args.profession}-${args.citySlug}-${args.specialty}`;
+  const { name, phone, licenseNumber } = args.listedProfessional;
+
+  function contactBlock(loc: Locale): string {
+    const license = licenseNumber
+      ? loc === "he"
+        ? `\n- מספר רישיון תיווך: ${licenseNumber}`
+        : loc === "am"
+          ? `\n- የደላላ ፈቃድ ቁጥር: ${licenseNumber}`
+          : `\n- Broker license number: ${licenseNumber}`
+      : "";
+    if (loc === "he") {
+      return `## ${name}\n\n📞 [${phone}](tel:${phone})${license}\n\n${args.serviceAreaNote.he}`;
+    }
+    if (loc === "am") {
+      return `## ${name}\n\n📞 [${phone}](tel:${phone})${license}\n\n${args.serviceAreaNote.am}`;
+    }
+    return `## ${name}\n\n📞 [${phone}](tel:${phone})${license}\n\n${args.serviceAreaNote.en}`;
+  }
+
+  function body(
+    loc: Locale,
+    headings: { when: string; check: string; fee: string },
+  ): string {
+    return `${contactBlock(loc)}
+
+## ${headings.when}
+
+${args.whenSeek[loc]}
+
+## ${headings.check}
+
+${args.whatToCheck[loc]}
+
+## ${headings.fee}
+
+${args.feeNote[loc]}
+`;
+  }
+
+  return {
+    slug,
+    profession: args.profession,
+    citySlug: args.citySlug,
+    specialty: args.specialty,
+    title: args.title,
+    shortDescription: args.shortDescription,
+    relatedRights: args.relatedRights ?? [],
+    relatedTerms: args.relatedTerms ?? [],
+    relatedOrgs: args.relatedOrgs ?? [],
+    listedProfessional: args.listedProfessional,
     bodies: {
       he: body("he", {
         when: "מתי לפנות?",
@@ -306,7 +410,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "Consultation: ₪400-700. Dismissal claim: ₪3,500-12,000 or 25% contingency. Disciplinary committee: ₪1,500-3,000.",
       am: "ምክክር: ₪400-700። የመባረር ጥያቄ: ₪3,500-12,000 ወይም 25% ውሎ። የዲሲፕሊን ኮሚቴ: ₪1,500-3,000።",
     },
-    relatedRights: ["affirmative-action-public-sector"],
+    relatedRights: ["public-sector-representation"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["tebeka"],
   }),
@@ -477,7 +581,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "HMO: ₪30-60 co-pay. Private: ₪300-500. Subsidy via JDC-Ashalim / Friends by Nature for eligible.",
       am: "ኤች.ኤም.ኦ: ₪30-60 ድርሻ። የግል: ₪300-500።",
     },
-    relatedRights: ["summer-camp-subsidies", "domestic-violence-support"],
+    relatedRights: ["summer-camps-subsidy", "domestic-violence-support"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["friends-by-nature", "atid-bamidbar", "jdc-ashalim"],
   }),
@@ -580,7 +684,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "HMO: ₪32 co-pay. House call: ₪80-150 co-pay. Private: ₪400-600 per visit.",
       am: "ኤች.ኤም.ኦ: ₪32 ድርሻ። የቤት ጉብኝት: ₪80-150 ድርሻ።",
     },
-    relatedRights: ["chronic-disease-prevention", "medical-translation-services"],
+    relatedRights: ["chronic-disease-prevention", "medical-translation"],
     relatedTerms: ["tene-briut"],
     relatedOrgs: ["tene-briut"],
   }),
@@ -682,7 +786,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "HMO: ₪32 co-pay. Private: ₪500-700.",
       am: "ኤች.ኤም.ኦ: ₪32 ድርሻ።",
     },
-    relatedRights: ["chronic-disease-prevention", "medical-translation-services"],
+    relatedRights: ["chronic-disease-prevention", "medical-translation"],
     relatedTerms: [],
     relatedOrgs: ["tene-briut"],
   }),
@@ -717,7 +821,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "Opening a business: ₪500-1,500. Monthly bookkeeping: ₪300-800. Annual return: ₪1,500-3,000.",
       am: "ንግድ መክፈት: ₪500-1,500። ወርሃዊ የመጻሕፍት አያያዝ: ₪300-800።",
     },
-    relatedRights: ["small-business-grant-misrad-haaliyah"],
+    relatedRights: ["ujia-kiedf-business-loans"],
     relatedTerms: ["beta-israel"],
     relatedOrgs: ["olim-beyahad", "atid-bamidbar"],
   }),
@@ -820,7 +924,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "Welfare-office services: free for eligible. Private social worker: ₪300-500 per session.",
       am: "የደህንነት ቢሮ አገልግሎቶች: ለብቁ ነጻ።",
     },
-    relatedRights: ["domestic-violence-support", "summer-camp-subsidies"],
+    relatedRights: ["domestic-violence-support", "summer-camps-subsidy"],
     relatedTerms: [],
     relatedOrgs: ["jdc-ashalim", "iaej"],
   }),
@@ -854,7 +958,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "Welfare-office service: free. Private consultation: ₪300-500.",
       am: "የደህንነት ቢሮ አገልግሎት: ነጻ።",
     },
-    relatedRights: ["senior-stipend", "kessim-stipend"],
+    relatedRights: ["senior-pension", "kessim-religious-support"],
     relatedTerms: ["beta-israel", "kessim"],
     relatedOrgs: ["iaej", "jdc-ashalim"],
   }),
@@ -888,7 +992,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "Municipal service: free. Private accompaniment: ₪400-600.",
       am: "የከተማ አገልግሎት: ነጻ።",
     },
-    relatedRights: ["domestic-violence-support", "summer-camp-subsidies"],
+    relatedRights: ["domestic-violence-support", "summer-camps-subsidy"],
     relatedTerms: [],
     relatedOrgs: ["friends-by-nature", "jdc-ashalim"],
   }),
@@ -1060,7 +1164,7 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
       en: "Scholarship advice: free via foundations. Private consultation: ₪400-600.",
       am: "የስኮላርሺፕ ምክር: በፋውንዴሽን ነጻ።",
     },
-    relatedRights: ["scholarship-aggregator", "bagrut-grant"],
+    relatedRights: ["unconditional-scholarships-7-sources", "matriculation-grant"],
     relatedTerms: ["hesegim-isef", "enp"],
     relatedOrgs: ["isef", "enp", "fidel"],
   }),
@@ -1166,6 +1270,194 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
     relatedRights: ["600k-mortgage"],
     relatedTerms: [],
     relatedOrgs: [],
+  }),
+
+  // --- Listed real estate agent: מניאלה מולה (2 entries) -------------------
+  // Owner-supplied real contact, 2026-08-19. Primary service area: Jerusalem
+  // + Maale Adumim + the Gush Adumim bloc. Broker license number as supplied
+  // by the owner — not independently verified against the government
+  // registry (gov.il "פנקס מתווכים מורשים" blocks automated lookups).
+  listedSlot({
+    profession: "real-estate-agent",
+    citySlug: "jerusalem",
+    specialty: "buy-rent",
+    title: {
+      he: 'מתווך נדל"ן דובר אמהרית — ירושלים — קנייה, שכירות וייעוץ מקרקעין',
+      en: "Amharic-speaking Real Estate Broker — Jerusalem — Buy, Rent & Property Advice",
+      am: "አማርኛ ተናጋሪ የንብረት ደላላ — ኢየሩሳሌም — ግዢ፣ ኪራይና የንብረት ምክር",
+    },
+    shortDescription: {
+      he: 'מניאלה מולה — מתווך/יועץ נדל"ן דובר אמהרית, פעיל בירושלים וסביבתה.',
+      en: "Maniela Mula — Amharic-speaking real estate broker/advisor, active in Jerusalem and the surrounding area.",
+      am: "ማኒኤላ ሙላ — አማርኛ ተናጋሪ የንብረት ደላላ/አማካሪ፣ በኢየሩሳሌም እና አካባቢው ንቁ።",
+    },
+    listedProfessional: {
+      name: "מניאלה מולה",
+      phone: "055-4543814",
+      licenseNumber: "31925980",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: ירושלים, מעלה אדומים וגוש אדומים. זמין/ה גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Jerusalem, Maale Adumim, and the Gush Adumim bloc. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ኢየሩሳሌም፣ ማአሌ አዱሚም እና ጉሽ አዱሚም። በስምምነት በሌላ የእስራኤል ቦታዎችም ይገኛል/ትገኛለች።",
+    },
+    whenSeek: {
+      he: "משפחה שמחפשת דירה לקנייה או שכירות בירושלים או באזור גוש אדומים, ומעוניינת בליווי דובר אמהרית שמכיר את הצרכים של הקהילה.",
+      en: "A family searching for an apartment to buy or rent in Jerusalem or the Gush Adumim area, and interested in Amharic-speaking guidance familiar with community needs.",
+      am: "በኢየሩሳሌም ወይም በጉሽ አዱሚም አካባቢ ቤት ለመግዛት ወይም ለመከራየት የሚፈልግ ቤተሰብ።",
+    },
+    whatToCheck: {
+      he: "- רישיון תיווך בתוקף (ניתן לאימות מול רשם המתווכים, gov.il)\n- הסכם תיווך בכתב לפני תחילת עבודה\n- שקיפות לגבי דמי-תיווך",
+      en: "- Valid broker license (verifiable against the government broker registry, gov.il)\n- Written brokerage agreement before work begins\n- Transparency on brokerage fees",
+      am: "- ሕጋዊ የደላላ ፈቃድ (በመንግስት ደላላ መዝገብ ሊረጋገጥ ይችላል)\n- ስራ ከመጀመሩ በፊት የጽሁፍ ስምምነት",
+    },
+    feeNote: {
+      he: 'מכירה: 2% ממחיר-העסקה + מע"מ (משלם הקונה והמוכר ביחד). שכירות: דמי-שכירות-של-חודש + מע"מ. יש לוודא את התנאים מול המתווך לפני חתימה.',
+      en: "Sale: 2% of transaction + VAT (paid by buyer and seller together). Rent: one month's rent + VAT. Confirm terms with the broker before signing.",
+      am: "ሽያጭ: ከግብይት 2% + VAT። ኪራይ: የአንድ ወር ኪራይ + VAT።",
+    },
+    relatedRights: ["600k-mortgage"],
+    relatedTerms: [],
+    relatedOrgs: [],
+  }),
+
+  listedSlot({
+    profession: "real-estate-agent",
+    citySlug: "maale-adumim",
+    specialty: "buy-rent",
+    title: {
+      he: 'מתווך נדל"ן דובר אמהרית — מעלה אדומים וגוש אדומים — יועץ מקרקעין',
+      en: "Amharic-speaking Real Estate Broker — Maale Adumim & Gush Adumim — Property Advisor",
+      am: "አማርኛ ተናጋሪ የንብረት ደላላ — ማአሌ አዱሚም እና ጉሽ አዱሚም",
+    },
+    shortDescription: {
+      he: 'מניאלה מולה — מתווך/יועץ נדל"ן דובר אמהרית. עיקר הפעילות במעלה אדומים וגוש אדומים.',
+      en: "Maniela Mula — Amharic-speaking real estate broker/advisor. Primarily active in Maale Adumim and Gush Adumim.",
+      am: "ማኒኤላ ሙላ — አማርኛ ተናጋሪ የንብረት ደላላ/አማካሪ። በዋናነት በማአሌ አዱሚም እና ጉሽ አዱሚም ንቁ።",
+    },
+    listedProfessional: {
+      name: "מניאלה מולה",
+      phone: "055-4543814",
+      licenseNumber: "31925980",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: מעלה אדומים, גוש אדומים וירושלים. זמין/ה גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Maale Adumim, Gush Adumim, and Jerusalem. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ማአሌ አዱሚም፣ ጉሽ አዱሚም እና ኢየሩሳሌም።",
+    },
+    whenSeek: {
+      he: "משפחה שמחפשת דירה או בית לקנייה או שכירות במעלה אדומים או ביישובי גוש אדומים, ומעוניינת בליווי דובר אמהרית.",
+      en: "A family searching for a home to buy or rent in Maale Adumim or the Gush Adumim settlements, interested in Amharic-speaking guidance.",
+      am: "በማአሌ አዱሚም ወይም በጉሽ አዱሚም ሰፈሮች ቤት ለመግዛት ወይም ለመከራየት የሚፈልግ ቤተሰብ።",
+    },
+    whatToCheck: {
+      he: "- רישיון תיווך בתוקף (ניתן לאימות מול רשם המתווכים, gov.il)\n- הסכם תיווך בכתב לפני תחילת עבודה\n- שקיפות לגבי דמי-תיווך",
+      en: "- Valid broker license (verifiable against the government broker registry, gov.il)\n- Written brokerage agreement before work begins\n- Transparency on brokerage fees",
+      am: "- ሕጋዊ የደላላ ፈቃድ (በመንግስት ደላላ መዝገብ ሊረጋገጥ ይችላል)\n- ስራ ከመጀመሩ በፊት የጽሁፍ ስምምነት",
+    },
+    feeNote: {
+      he: 'מכירה: 2% ממחיר-העסקה + מע"מ (משלם הקונה והמוכר ביחד). שכירות: דמי-שכירות-של-חודש + מע"מ. יש לוודא את התנאים מול המתווך לפני חתימה.',
+      en: "Sale: 2% of transaction + VAT (paid by buyer and seller together). Rent: one month's rent + VAT. Confirm terms with the broker before signing.",
+      am: "ሽያጭ: ከግብይት 2% + VAT። ኪራይ: የአንድ ወር ኪራይ + VAT።",
+    },
+    relatedRights: ["600k-mortgage"],
+    relatedTerms: [],
+    relatedOrgs: [],
+  }),
+
+  // --- Listed lawyer: דוד אבבה (2 entries) ----------------------------------
+  // Owner-supplied real contact, 2026-08-19. Owner confirmed the license
+  // exists but asked not to publish the number, so `licenseNumber` is
+  // intentionally omitted. Same service area as Maniela Mula (Jerusalem +
+  // Maale Adumim + Gush Adumim), per owner instruction.
+  listedSlot({
+    profession: "lawyer",
+    citySlug: "jerusalem",
+    specialty: "general-practice",
+    title: {
+      he: 'עו"ד דובר אמהרית — ירושלים — ייעוץ וייצוג משפטי',
+      en: "Amharic-speaking Lawyer — Jerusalem — Legal Advice & Representation",
+      am: "አማርኛ ተናጋሪ ጠበቃ — ኢየሩሳሌም — ሕጋዊ ምክርና ውክልና",
+    },
+    shortDescription: {
+      he: 'דוד אבבה — עו"ד דובר אמהרית, פעיל בירושלים וסביבתה.',
+      en: "David Abeba — Amharic-speaking lawyer, active in Jerusalem and the surrounding area.",
+      am: "ዳዊት አበባ — አማርኛ ተናጋሪ ጠበቃ፣ በኢየሩሳሌም እና አካባቢው ንቁ።",
+    },
+    listedProfessional: {
+      name: "דוד אבבה",
+      phone: "055-4543809",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: ירושלים, מעלה אדומים וגוש אדומים. זמין גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Jerusalem, Maale Adumim, and the Gush Adumim bloc. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ኢየሩሳሌም፣ ማአሌ አዱሚም እና ጉሽ አዱሚም።",
+    },
+    whenSeek: {
+      he: 'כשנדרש סיוע משפטי ויש העדפה לליווי בשפה אמהרית — מעמד אישי, זכויות עולים, ענייני משפחה ועוד. עו"ד דובר אמהרית מבטיח הבנה מלאה של הניסוחים המשפטיים.',
+      en: "When you need legal assistance and prefer Amharic-language support — personal status, immigrant rights, family matters, and more. An Amharic-speaking lawyer ensures full comprehension of legal phrasing.",
+      am: "ሕጋዊ እርዳታ ሲፈልጉና በአማርኛ ድጋፍ ሲመርጡ — የግል ሁኔታ፣ የስደተኛ መብቶች፣ የቤተሰብ ጉዳዮች እና ሌሎችም።",
+    },
+    whatToCheck: {
+      he: 'לפני תחילת עבודה מומלץ לוודא רישיון עריכת דין בתוקף (אתר לשכת עוה"ד), ולסכם בכתב את היקף הטיפול ושכר-הטרחה.',
+      en: "Before starting work, verify an active bar license (Bar Association website) and agree in writing on the scope of work and fees.",
+      am: "ስራ ከመጀመርዎ በፊት ሕያው የሕግ ፈቃድ ማረጋገጥ እና የስራውን ወሰን እና ክፍያ በጽሁፍ መስማማት ይመከራል።",
+    },
+    feeNote: {
+      he: "עלויות משתנות לפי סוג התיק. יש לוודא מראש מול עורך הדין. עולים זכאים עשויים לקבל סיוע ממשרד המשפטים (סיוע משפטי) או מ-Tebeka.",
+      en: "Costs vary by case type — confirm with the lawyer in advance. Eligible olim may qualify for assistance from the Ministry of Justice (Legal Aid) or Tebeka.",
+      am: "ወጪዎች እንደ ጉዳዩ ዓይነት ይለያያሉ። ብቁ የሆኑ ተመላሾች ከፍትህ ሚኒስቴር ወይም ከጠበቃ እርዳታ ማግኘት ይችላሉ።",
+    },
+    relatedRights: ["tebeka-legal-aid"],
+    relatedTerms: ["tebeka"],
+    relatedOrgs: ["tebeka"],
+  }),
+
+  listedSlot({
+    profession: "lawyer",
+    citySlug: "maale-adumim",
+    specialty: "general-practice",
+    title: {
+      he: 'עו"ד דובר אמהרית — מעלה אדומים וגוש אדומים — ייעוץ וייצוג משפטי',
+      en: "Amharic-speaking Lawyer — Maale Adumim & Gush Adumim — Legal Advice & Representation",
+      am: "አማርኛ ተናጋሪ ጠበቃ — ማአሌ አዱሚም እና ጉሽ አዱሚም",
+    },
+    shortDescription: {
+      he: 'דוד אבבה — עו"ד דובר אמהרית. עיקר הפעילות במעלה אדומים וגוש אדומים.',
+      en: "David Abeba — Amharic-speaking lawyer. Primarily active in Maale Adumim and Gush Adumim.",
+      am: "ዳዊት አበባ — አማርኛ ተናጋሪ ጠበቃ። በዋናነት በማአሌ አዱሚም እና ጉሽ አዱሚም ንቁ።",
+    },
+    listedProfessional: {
+      name: "דוד אבבה",
+      phone: "055-4543809",
+      languages: ["am", "he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות עיקרי: מעלה אדומים, גוש אדומים וירושלים. זמין גם למקומות נוספים בארץ לפי תיאום.",
+      en: "Primary service area: Maale Adumim, Gush Adumim, and Jerusalem. Also available elsewhere in Israel by arrangement.",
+      am: "ዋና የአገልግሎት አካባቢ: ማአሌ አዱሚም፣ ጉሽ አዱሚም እና ኢየሩሳሌም።",
+    },
+    whenSeek: {
+      he: "משפחה במעלה אדומים או ביישובי גוש אדומים שנדרשת לה עזרה משפטית עם ליווי דובר אמהרית — מעמד אישי, זכויות עולים, ענייני משפחה ועוד.",
+      en: "A family in Maale Adumim or the Gush Adumim settlements needing legal help with Amharic-speaking support — personal status, immigrant rights, family matters, and more.",
+      am: "በማአሌ አዱሚም ወይም በጉሽ አዱሚም ሰፈሮች ያለ ቤተሰብ በአማርኛ ድጋፍ ሕጋዊ እርዳታ የሚፈልግ።",
+    },
+    whatToCheck: {
+      he: 'לפני תחילת עבודה מומלץ לוודא רישיון עריכת דין בתוקף (אתר לשכת עוה"ד), ולסכם בכתב את היקף הטיפול ושכר-הטרחה.',
+      en: "Before starting work, verify an active bar license (Bar Association website) and agree in writing on the scope of work and fees.",
+      am: "ስራ ከመጀመርዎ በፊት ሕያው የሕግ ፈቃድ ማረጋገጥ እና የስራውን ወሰን እና ክፍያ በጽሁፍ መስማማት ይመከራል።",
+    },
+    feeNote: {
+      he: "עלויות משתנות לפי סוג התיק. יש לוודא מראש מול עורך הדין. עולים זכאים עשויים לקבל סיוע ממשרד המשפטים (סיוע משפטי) או מ-Tebeka.",
+      en: "Costs vary by case type — confirm with the lawyer in advance. Eligible olim may qualify for assistance from the Ministry of Justice (Legal Aid) or Tebeka.",
+      am: "ወጪዎች እንደ ጉዳዩ ዓይነት ይለያያሉ። ብቁ የሆኑ ተመላሾች ከፍትህ ሚኒስቴር ወይም ከጠበቃ እርዳታ ማግኘት ይችላሉ።",
+    },
+    relatedRights: ["tebeka-legal-aid"],
+    relatedTerms: ["tebeka"],
+    relatedOrgs: ["tebeka"],
   }),
 ];
 

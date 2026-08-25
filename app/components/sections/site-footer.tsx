@@ -51,6 +51,9 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <FooterLink to={`${base}/heritage/events`}>
               {t(locale, "pillar_heritage_title")}
             </FooterLink>
+            <FooterLink to={`${base}/urban-renewal`}>
+              {t(locale, "pillar_urban_renewal_title")}
+            </FooterLink>
             <FooterLink to={`${base}/news`}>{t(locale, "pillar_news_title")}</FooterLink>
             <FooterLink to={`${base}/statistics`}>
               {t(locale, "statistics_landing_title")}

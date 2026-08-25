@@ -48,6 +48,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
     ...hreflangMeta(publicUrl, locale, "/family/women-empowerment"),
     { property: "og:title", content: title },
     { property: "og:description", content: subtitle },
+    { property: "og:image", content: `${publicUrl}/og-default.jpg` },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: `${publicUrl}/og-default.jpg` },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
     {

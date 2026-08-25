@@ -6,6 +6,24 @@
 
 ---
 
+## Update — 2026-08-19
+
+Re-verified against the live codebase as part of [TED-101](https://linear.app/ringo1/issue/TED-101) (SEO/GEO visibility plan). Status of each finding below; unlisted findings are still open as originally described.
+
+| # | Finding | Status |
+| - | ------- | ------ |
+| 3 | Canonical tags — missing on 21 content routes | **RESOLVED.** All 81 `$lang.*` routes now call `hreflangMeta()` (which includes canonical) except 11 legitimate noindex/utility routes (dashboard, login, agency.*, subscribe tokens, mortgage stub). |
+| 4 | hreflang — missing on ~46 content routes | **RESOLVED.** Same fix as #3 — `hreflangMeta()` is now used consistently. |
+| 5 | PUBLIC_URL localhost guard | Not re-verified in this pass — re-check `app/lib/env.server.ts` before relying on this being fixed. |
+| — | og:image missing site-wide | **RESOLVED** (2026-08-19, [TED-102](https://linear.app/ringo1/issue/TED-102)). Default `og:image`/`twitter:image` fallback added in `app/root.tsx`, backed by `public/og-default.jpg`. Not one of the original 10 findings — added here because it's the same class of issue (social/AI-preview metadata). |
+| — | llms.txt absent | **RESOLVED** (2026-08-19, [TED-103](https://linear.app/ringo1/issue/TED-103)). Added at `app/routes/llms[.]txt.tsx`. Not one of the original 10 findings — GEO/AEO-focused addition. |
+
+Findings #2 (sitemap sections), #6 (internal linking), #7 (LCP/preconnect), #8 (structured data gaps), #9 (302 redirect) were **not** re-verified in this pass — treat their status as unknown, not resolved, until independently checked.
+
+Full current-state GEO/AEO plan: https://claude.ai/code/artifact/2c23f232-1b27-4eb7-a4ff-d7facc9ba51d
+
+---
+
 ## Executive Summary
 
 The portal has solid SEO foundations (robots.txt is clean, sitemap is comprehensive, structured data is present on most pages), but three issue clusters block significant indexing:

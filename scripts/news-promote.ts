@@ -2,7 +2,7 @@
 // News autopilot promotion script (TED-114 / ADR-016 §5).
 //
 // Reads one `status = 'approved'` row from `news_drafts` and appends a
-// `NewsArticleEntry` object literal into `app/lib/news/articles-wave6.server.ts`
+// `NewsArticleEntry` object literal into `app/lib/news/articles-wave9.server.ts`
 // — the static seed stays the publish surface (ADR-015's static-vs-DB rule);
 // this script never writes to the News routes' read path directly, only to
 // the wave file a normal PR then carries.
@@ -49,7 +49,7 @@ import { newsDrafts } from "../app/lib/db/schema/news-drafts";
 import { isNewsTag, type NewsTag } from "../app/lib/news/categories";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const WAVE_FILE = path.join(__dirname, "..", "app/lib/news/articles-wave6.server.ts");
+const WAVE_FILE = path.join(__dirname, "..", "app/lib/news/articles-wave9.server.ts");
 const INSERTION_MARKER = "// news:promote appends new entries above this line.";
 
 // --- CLI args ------------------------------------------------------------------

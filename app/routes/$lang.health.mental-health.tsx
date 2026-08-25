@@ -143,6 +143,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
     ...hreflangMeta(publicUrl, locale, "/health/mental-health"),
     { property: "og:title", content: title },
     { property: "og:description", content: description },
+    { property: "og:image", content: `${publicUrl}/og-default.jpg` },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: `${publicUrl}/og-default.jpg` },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
     {

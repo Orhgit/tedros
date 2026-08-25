@@ -1,5 +1,6 @@
 // /:lang/education/scholarships — Scholarships list (RIN-504 / Phase 5 Wave 1).
-// Lists 12 scholarships with search + level filter.
+// Lists all scholarships (count is dynamic, see SCHOLARSHIPS registry) with
+// search + level filter.
 
 import { Link, useSearchParams } from "react-router";
 
@@ -35,6 +36,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
     ...hreflangMeta(publicUrl, locale, "/education/scholarships"),
     { property: "og:title", content: t(locale, "scholarships_landing_title") },
     { property: "og:description", content: t(locale, "scholarships_landing_subtitle") },
+    { property: "og:image", content: `${publicUrl}/og-default.jpg` },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: `${publicUrl}/og-default.jpg` },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
   ];

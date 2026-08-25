@@ -18,6 +18,7 @@ import {
 import { readLocaleCookie } from "./lib/i18n/cookie.server";
 import { getEnv } from "./lib/env.server";
 import { AccessibilityWidget } from "./components/ui/accessibility-widget";
+import { PromoBanner } from "./components/sections/promo-banner";
 import "./app.css";
 
 const MulaChat = lazy(() =>
@@ -32,7 +33,12 @@ const MulaChat = lazy(() =>
  * The previous Google Fonts <link> was render-blocking on Slow 4G and pushed
  * LCP past 2000ms in CI Lighthouse.
  */
-export const links: Route.LinksFunction = () => [{ rel: "icon", href: "/favicon.ico" }];
+export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+  { rel: "icon", href: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+  { rel: "icon", href: "/favicon.ico", sizes: "any" },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+];
 
 export async function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
@@ -41,9 +47,29 @@ export async function loader({ request }: Route.LoaderArgs) {
     segment === "he" || segment === "en" || segment === "am" ? segment : undefined;
   const cookieLocale = await readLocaleCookie(request);
   const locale: Locale = (fromUrl ?? cookieLocale ?? DEFAULT_LOCALE) as Locale;
-  const { GA_MEASUREMENT_ID } = getEnv();
-  return { locale, gaId: GA_MEASUREMENT_ID ?? null };
+  const { GA_MEASUREMENT_ID, PUBLIC_URL } = getEnv();
+  return { locale, gaId: GA_MEASUREMENT_ID ?? null, publicUrl: PUBLIC_URL };
 }
+
+/**
+ * og:image/twitter:image fallback for routes with no `meta` export of their own.
+ * In this app, a child route's `meta` export REPLACES parent meta entirely —
+ * it does not merge by key (confirmed in docs/seo/technical-audit-2026-05-30.md
+ * finding #3). Every content route therefore sets its own og:image/twitter:image
+ * explicitly (see app/routes/$lang.rights.$slug.tsx etc.) rather than relying on
+ * this; this export only fires for the rare route that defines no meta at all.
+ */
+export const meta: Route.MetaFunction = ({ data }) => {
+  const publicUrl = data?.publicUrl ?? "https://tedros.co.il";
+  const ogImage = `${publicUrl}/og-default.jpg`;
+  return [
+    { property: "og:image", content: ogImage },
+    { property: "og:image:width", content: "1280" },
+    { property: "og:image:height", content: "853" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: ogImage },
+  ];
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const data = useLoaderData<typeof loader>() ?? {
@@ -75,6 +101,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         )}
       </head>
       <body className="min-h-screen antialiased">
+        <PromoBanner locale={locale} />
         {children}
         <Suspense fallback={null}>
           <MulaChat />
