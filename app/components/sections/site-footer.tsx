@@ -99,6 +99,12 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             >
               {t(locale, "footer_about")}
             </Link>
+            <Link
+              to={`${base}/privacy`}
+              className="rounded-xs hover:text-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              {t(locale, "footer_privacy")}
+            </Link>
           </div>
           <p className="text-xs">{t(locale, "footer_made_with")}</p>
         </div>

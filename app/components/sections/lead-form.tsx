@@ -11,6 +11,8 @@ import { Select } from "../ui/select";
 import { Textarea } from "../ui/textarea";
 
 export interface LeadFormProps {
+  /** Locale for the submit endpoint + privacy link. */
+  locale?: "he" | "en" | "am";
   action?: string;
   method?: "post" | "get";
   topic?: "listing" | "right" | "professional";
@@ -21,15 +23,20 @@ export interface LeadFormProps {
  * Page-level lead/contact form. Pure markup — wire submission via React Router
  * <Form> in Phase 3. Already accessible: labels, descriptions, error slots,
  * keyboard nav, native validation.
+ *
+ * Default action is the real lead endpoint (/$lang/lead) — it used to point
+ * at /api/leads, a route that never existed (TED-119).
  */
 export function LeadForm({
-  action = "/api/leads",
+  locale = "he",
+  action,
   method = "post",
   topic = "listing",
   topicLabel,
 }: LeadFormProps) {
+  const submitAction = action ?? `/${locale}/lead`;
   return (
-    <form action={action} method={method} className="grid gap-5">
+    <form action={submitAction} method={method} className="grid gap-5">
       <input type="hidden" name="topic" value={topic} />
       {topicLabel && (
         <p className="rounded-sm bg-muted px-3 py-2 text-sm text-muted-foreground">
@@ -108,7 +115,7 @@ export function LeadForm({
         />
         <span>
           קראתי את{" "}
-          <a href="/he/privacy" className="underline hover:text-foreground">
+          <a href={`/${locale}/privacy`} className="underline hover:text-foreground">
             מדיניות הפרטיות
           </a>{" "}
           ואני מאשר/ת שייצרו איתי קשר.

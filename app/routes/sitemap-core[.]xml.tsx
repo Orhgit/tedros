@@ -17,8 +17,10 @@ export function loader() {
   const paths = [
     "",
     "/calculator/mortgage-ethiopian-immigrants",
-    "/calculator/mortgage",
+    // NOTE: /calculator/mortgage is a noindex lead-form stub (TED-22 mock) —
+    // listing it here contradicted its robots meta (TED-119).
     "/about",
+    "/privacy",
     "/rights",
     "/careers",
     "/education",

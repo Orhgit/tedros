@@ -145,7 +145,13 @@ export function LeadForm({ locale, source, turnstileSiteKey, className }: LeadFo
       ) : null}
 
       <p className="text-xs text-gray-500 dark:text-gray-400">
-        {t(locale, "lead_form_consent")}
+        {t(locale, "lead_form_consent")}{" "}
+        <a
+          href={`/${locale}/privacy`}
+          className="underline hover:text-gray-700 dark:hover:text-gray-200"
+        >
+          {t(locale, "footer_privacy")}
+        </a>
       </p>
 
       {formError ? (
