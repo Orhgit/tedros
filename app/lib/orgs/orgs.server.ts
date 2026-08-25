@@ -83,7 +83,7 @@ export const ORGS: OrgEntry[] = [
 ## ראו גם
 
 - [מניעת מחלות כרוניות](/he/rights/chronic-disease-prevention) — Right בשיתוף הארגון
-- [שירותי תרגום רפואי](/he/rights/medical-translation-services) — Right
+- [שירותי תרגום רפואי](/he/rights/medical-translation) — Right
 - [מילון: טנא בריאות](/he/glossary/tene-briut) — הקשר רחב יותר
 - [JDC-ג׳וינט](/he/orgs/jdc-ashalim) — שותף-מימון מרכזי
 `,
@@ -115,7 +115,7 @@ Tene Briut is an NGO dedicated to advancing the health of the Ethiopian-Israeli 
 ## See also
 
 - [Chronic disease prevention](/en/rights/chronic-disease-prevention) — Right operated in partnership
-- [Medical translation services](/en/rights/medical-translation-services) — Right
+- [Medical translation services](/en/rights/medical-translation) — Right
 - [Glossary: Tene Briut](/en/glossary/tene-briut) — broader context
 - [JDC-Ashalim](/en/orgs/jdc-ashalim) — major funding partner
 `,
@@ -147,7 +147,7 @@ Tene Briut is an NGO dedicated to advancing the health of the Ethiopian-Israeli 
 ## ይህንንም ይመልከቱ
 
 - [ሥር-ሰደድ በሽታ መከላከል](/am/rights/chronic-disease-prevention) — በሽርክና የሚሰራ Right
-- [የህክምና ትርጉም አገልግሎቶች](/am/rights/medical-translation-services) — Right
+- [የህክምና ትርጉም አገልግሎቶች](/am/rights/medical-translation) — Right
 - [መዝገብ፦ ቴኔ ብሪዩት](/am/glossary/tene-briut) — ሰፊ ዝርዝር
 - [JDC-አሻሊም](/am/orgs/jdc-ashalim) — ዋና የፋይናንስ አጋር
 `,
@@ -316,7 +316,7 @@ ENP — Ethiopian National Project — היא מסגרת שותפות בין מ�
 
 ## ראו גם
 
-- [מענק בגרות](/he/rights/bagrut-grant) — Right
+- [מענק בגרות](/he/rights/matriculation-grant) — Right
 - [Tech-Career bootcamp](/he/rights/tech-career-bootcamp) — Right
 - [מילון: ENP](/he/glossary/enp) — הקשר
 - [Fidel](/he/orgs/fidel), [Hila](/he/orgs/hila) — שותפות-חינוך
@@ -348,7 +348,7 @@ ENP — Ethiopian National Project — is a partnership framework between the Go
 
 ## See also
 
-- [Bagrut grant](/en/rights/bagrut-grant) — Right
+- [Bagrut grant](/en/rights/matriculation-grant) — Right
 - [Tech-Career bootcamp](/en/rights/tech-career-bootcamp) — Right
 - [Glossary: ENP](/en/glossary/enp) — context
 - [Fidel](/en/orgs/fidel), [Hila](/en/orgs/hila) — education partners
@@ -380,7 +380,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
 
 ## ይህንንም ይመልከቱ
 
-- [የባግሩት ስጦታ](/am/rights/bagrut-grant) — Right
+- [የባግሩት ስጦታ](/am/rights/matriculation-grant) — Right
 - [የቴክ-ሥራ ቦትካምፕ](/am/rights/tech-career-bootcamp) — Right
 - [መዝገብ፦ ENP](/am/glossary/enp) — ዝርዝር
 - [Fidel](/am/orgs/fidel)፣ [Hila](/am/orgs/hila) — የትምህርት አጋሮች
@@ -434,7 +434,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
 
 ## ראו גם
 
-- [מנטורינג לבוגרים](/he/rights/mentorship-program-graduates) — Right
+- [מנטורינג לבוגרים](/he/rights/excellence-employment) — Right
 - [מילון: עולים ביחד](/he/glossary/olim-beyahad) — הקשר
 - [ENP](/he/orgs/enp) — שותפת-מימון
 `,
@@ -465,7 +465,7 @@ Olim Beyahad ("Rising Together") is an NGO focused on the career advancement of 
 
 ## See also
 
-- [Graduate mentorship](/en/rights/mentorship-program-graduates) — Right
+- [Graduate mentorship](/en/rights/excellence-employment) — Right
 - [Glossary: Olim Beyahad](/en/glossary/olim-beyahad) — context
 - [ENP](/en/orgs/enp) — funding partner
 `,
@@ -496,7 +496,7 @@ Olim Beyahad ("Rising Together") is an NGO focused on the career advancement of 
 
 ## ይህንንም ይመልከቱ
 
-- [የምሩቅ አማካሪነት](/am/rights/mentorship-program-graduates) — Right
+- [የምሩቅ አማካሪነት](/am/rights/excellence-employment) — Right
 - [መዝገብ፦ ኦሊም በያሐድ](/am/glossary/olim-beyahad) — ዝርዝር
 - [ENP](/am/orgs/enp) — የፋይናንስ አጋር
 `,
@@ -554,7 +554,7 @@ ISEF (Israel Sephardi Education Fund) הוקמה ב-1977 כקרן פילנתרו
 
 ## ראו גם
 
-- [סוכן מילגות לסטודנטים](/he/rights/scholarship-aggregator) — Right
+- [סוכן מילגות לסטודנטים](/he/rights/unconditional-scholarships-7-sources) — Right
 - [מילון: הישגים / ISEF](/he/glossary/hesegim-isef) — הקשר
 - [ENP](/he/orgs/enp), [Fidel](/he/orgs/fidel) — שותפות-חינוך
 `,
@@ -587,7 +587,7 @@ ISEF (Israel Sephardi Education Fund) was founded in 1977 as a philanthropic fou
 
 ## See also
 
-- [Scholarship aggregator for students](/en/rights/scholarship-aggregator) — Right
+- [Scholarship aggregator for students](/en/rights/unconditional-scholarships-7-sources) — Right
 - [Glossary: Hesegim / ISEF](/en/glossary/hesegim-isef) — context
 - [ENP](/en/orgs/enp), [Fidel](/en/orgs/fidel) — education partners
 `,
@@ -620,7 +620,7 @@ ISEF (Israel Sephardi Education Fund) የተገለሉ ማህበረሰቦችን �
 
 ## ይህንንም ይመልከቱ
 
-- [ለተማሪዎች የስኮላርሺፕ ሰብሳቢ](/am/rights/scholarship-aggregator) — Right
+- [ለተማሪዎች የስኮላርሺፕ ሰብሳቢ](/am/rights/unconditional-scholarships-7-sources) — Right
 - [መዝገብ፦ ሄሰጊም / ISEF](/am/glossary/hesegim-isef) — ዝርዝር
 - [ENP](/am/orgs/enp)፣ [Fidel](/am/orgs/fidel) — የትምህርት አጋሮች
 `,
@@ -670,8 +670,8 @@ ISEF (Israel Sephardi Education Fund) የተገለሉ ማህበረሰቦችን �
 
 ## ראו גם
 
-- [מענק בגרות](/he/rights/bagrut-grant) — Right
-- [סוכן מילגות](/he/rights/scholarship-aggregator) — Right
+- [מענק בגרות](/he/rights/matriculation-grant) — Right
+- [סוכן מילגות](/he/rights/unconditional-scholarships-7-sources) — Right
 - [ENP](/he/orgs/enp), [Hila](/he/orgs/hila) — שותפות-חינוך
 `,
       en: `## About
@@ -700,8 +700,8 @@ Fidel ("alphabet" in Amharic) is the Ethiopian-Israeli parents-students associat
 
 ## See also
 
-- [Bagrut grant](/en/rights/bagrut-grant) — Right
-- [Scholarship aggregator](/en/rights/scholarship-aggregator) — Right
+- [Bagrut grant](/en/rights/matriculation-grant) — Right
+- [Scholarship aggregator](/en/rights/unconditional-scholarships-7-sources) — Right
 - [ENP](/en/orgs/enp), [Hila](/en/orgs/hila) — education partners
 `,
       am: `## ስለ ድርጅቱ
@@ -730,8 +730,8 @@ Fidel ("alphabet" in Amharic) is the Ethiopian-Israeli parents-students associat
 
 ## ይህንንም ይመልከቱ
 
-- [የባግሩት ስጦታ](/am/rights/bagrut-grant) — Right
-- [የስኮላርሺፕ ሰብሳቢ](/am/rights/scholarship-aggregator) — Right
+- [የባግሩት ስጦታ](/am/rights/matriculation-grant) — Right
+- [የስኮላርሺፕ ሰብሳቢ](/am/rights/unconditional-scholarships-7-sources) — Right
 - [ENP](/am/orgs/enp)፣ [Hila](/am/orgs/hila) — የትምህርት አጋሮች
 `,
     },
@@ -780,7 +780,7 @@ Fidel ("alphabet" in Amharic) is the Ethiopian-Israeli parents-students associat
 
 ## ראו גם
 
-- [מענק בגרות](/he/rights/bagrut-grant) — Right
+- [מענק בגרות](/he/rights/matriculation-grant) — Right
 - [Fidel](/he/orgs/fidel), [ENP](/he/orgs/enp) — שותפות-חינוך
 `,
       en: `## About
@@ -809,7 +809,7 @@ Hila (Education for Ethiopian-Israeli Children) was founded in 1998 by graduates
 
 ## See also
 
-- [Bagrut grant](/en/rights/bagrut-grant) — Right
+- [Bagrut grant](/en/rights/matriculation-grant) — Right
 - [Fidel](/en/orgs/fidel), [ENP](/en/orgs/enp) — education partners
 `,
       am: `## ስለ ድርጅቱ
@@ -838,7 +838,7 @@ Hila (Education for Ethiopian-Israeli Children) was founded in 1998 by graduates
 
 ## ይህንንም ይመልከቱ
 
-- [የባግሩት ስጦታ](/am/rights/bagrut-grant) — Right
+- [የባግሩት ስጦታ](/am/rights/matriculation-grant) — Right
 - [Fidel](/am/orgs/fidel)፣ [ENP](/am/orgs/enp) — የትምህርት አጋሮች
 `,
     },
@@ -1005,7 +1005,7 @@ Ashalim ("Children and Youth at Risk in Israel") is a division of JDC-Israel (Am
 ## ראו גם
 
 - [סיוע במצבי אלימות במשפחה](/he/rights/domestic-violence-support) — Right
-- [קייטנות קיץ סובסידיות](/he/rights/summer-camp-subsidies) — Right
+- [קייטנות קיץ סובסידיות](/he/rights/summer-camps-subsidy) — Right
 - [JDC-אשלים](/he/orgs/jdc-ashalim) — שותפת-מימון
 `,
       en: `## About
@@ -1035,7 +1035,7 @@ Friends by Nature was founded in 1996 in response to rising dropout rates and yo
 ## See also
 
 - [Domestic violence support](/en/rights/domestic-violence-support) — Right
-- [Summer-camp subsidies](/en/rights/summer-camp-subsidies) — Right
+- [Summer-camp subsidies](/en/rights/summer-camps-subsidy) — Right
 - [JDC-Ashalim](/en/orgs/jdc-ashalim) — funding partner
 `,
       am: `## ስለ ድርጅቱ
@@ -1065,7 +1065,7 @@ Friends by Nature was founded in 1996 in response to rising dropout rates and yo
 ## ይህንንም ይመልከቱ
 
 - [የቤተሰብ ብጥብጥ ድጋፍ](/am/rights/domestic-violence-support) — Right
-- [የክረምት ካምፕ ድጎማ](/am/rights/summer-camp-subsidies) — Right
+- [የክረምት ካምፕ ድጎማ](/am/rights/summer-camps-subsidy) — Right
 - [JDC-አሻሊም](/am/orgs/jdc-ashalim) — የፋይናንስ አጋር
 `,
     },
@@ -1343,7 +1343,7 @@ Beta Israel of North America (BINA) is an umbrella organization of ~5,000 Beta I
 ## ראו גם
 
 - [Tech-Career bootcamp](/he/rights/tech-career-bootcamp) — Right (במקביל ל-ENP)
-- [קייטנות-קיץ](/he/rights/summer-camp-subsidies) — Right
+- [קייטנות-קיץ](/he/rights/summer-camps-subsidy) — Right
 - [ENP](/he/orgs/enp) — שותפת-מימון
 `,
       en: `## About
@@ -1373,7 +1373,7 @@ Atid B'midbar ("Future in the Desert") was founded in 2003 in Beersheba by a gro
 ## See also
 
 - [Tech-Career bootcamp](/en/rights/tech-career-bootcamp) — Right (parallel to ENP)
-- [Summer camps](/en/rights/summer-camp-subsidies) — Right
+- [Summer camps](/en/rights/summer-camps-subsidy) — Right
 - [ENP](/en/orgs/enp) — funding partner
 `,
       am: `## ስለ ድርጅቱ
@@ -1403,7 +1403,7 @@ Atid B'midbar ("Future in the Desert") was founded in 2003 in Beersheba by a gro
 ## ይህንንም ይመልከቱ
 
 - [የቴክ-ሥራ ቦትካምፕ](/am/rights/tech-career-bootcamp) — Right (ከENP ጋር በትይዩ)
-- [የክረምት ካምፖች](/am/rights/summer-camp-subsidies) — Right
+- [የክረምት ካምፖች](/am/rights/summer-camps-subsidy) — Right
 - [ENP](/am/orgs/enp) — የፋይናንስ አጋር
 `,
     },

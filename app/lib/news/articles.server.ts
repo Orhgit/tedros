@@ -670,7 +670,7 @@ ERAN emotional first aid: **1201** (24/7). BTL mental health: **1222** (Sun-Thu 
 - [סיגד — דף הסבר מלא](/he/heritage/events/sigd)
 - [סיגד × ערים](/he/heritage/events/sigd/jerusalem)
 - [מימון פעילויות סיגד — זכות](/he/rights/sigd-funding)
-- [הקֵּס — מילון](/he/glossary/kes)`,
+- [הקֵּס — מילון](/he/glossary/kessim)`,
       en: `## What is Sigd
 
 Sigd (Ge'ez: "to prostrate") is the Beta Israel holiday celebrated exactly 50 days after Yom Kippur. In 2026 this falls on 29 Cheshvan — **Monday, 9 November 2026**. The holiday marks a renewal of the covenant with God and the longing for Jerusalem. It has been a national Israeli holiday since 2008 (Sigd Day Law).
@@ -799,8 +799,8 @@ The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the
 ## ראו גם
 
 - [מסלולי לימוד מומלצים](/he/education/tracks)
-- [מלגות ייעודיות — דף זכות](/he/education/scholarships/marom)
-- [עולים ביחד — פרופיל ארגון](/he/orgs/olim-beyachad)`,
+- [מלגות ייעודיות — דף זכות](/he/education/scholarships/marom-che)
+- [עולים ביחד — פרופיל ארגון](/he/orgs/olim-beyahad)`,
       en: `## Key scholarships at a glance
 
 **Marom (CHE)**: ₪8,000–₪20,000/year for first-degree students with Ethiopian parentage. Deadline January–March. Apply via [che.org.il](https://www.che.org.il).
@@ -825,7 +825,7 @@ Olim BeYachad offers free personal advising and scholarship-writing workshops. O
 
 ## See also
 
-- [Marom scholarship — rights page](/en/education/scholarships/marom)
+- [Marom scholarship — rights page](/en/education/scholarships/marom-che)
 - [Education tracks](/en/education/tracks)`,
       am: `## ዋና ዕርዳታዎች
 
@@ -934,7 +934,7 @@ Olim BeYachad offers free personal advising and scholarship-writing workshops. O
 
 ## ראו גם
 
-- [תעסוקה הולמת — זכות](/he/rights/employment-equality)
+- [תעסוקה הולמת — זכות](/he/rights/employment-discrimination-rights)
 - [ENP — פרופיל ארגון](/he/orgs/enp)
 - [מסלול הייטק — קריירה](/he/careers/tech)`,
       en: `## The employment gap — why it matters
@@ -963,7 +963,7 @@ Employment Service (taasuka.gov.il), ORT Israel (Netanya/Lod/Beersheba), Olim Be
 
 ## See also
 
-- [Employment equality — rights page](/en/rights/employment-equality)
+- [Employment equality — rights page](/en/rights/employment-discrimination-rights)
 - [ENP — organization profile](/en/orgs/enp)`,
       am: `## ዋና ነጥቦች
 
@@ -1053,7 +1053,7 @@ Employment Service (taasuka.gov.il), ORT Israel (Netanya/Lod/Beersheba), Olim Be
 
 ## ראו גם
 
-- [זכויות דיור — דף מלא](/he/rights/housing-rights)
+- זכויות דיור — דף מלא
 - [טבקה — פרופיל ארגון](/he/orgs/tebeka)
 - [סטטיסטיקות דיור](/he/statistics/housing)`,
       en: `## What pinui-binui means legally
@@ -1074,7 +1074,7 @@ Tebeka — Lawyers for the Advancement of Justice provides free legal advice on 
 
 ## See also
 
-- [Housing rights — full page](/en/rights/housing-rights)
+- Housing rights — full page
 - [Tebeka — organization profile](/en/orgs/tebeka)`,
       am: `## ፒኑዪ-ቢኑዪ ምን ማለት ነው
 
@@ -1309,9 +1309,9 @@ HbA1c ምርመራ በዓመት ሁለት ጊዜ ያለ ወጪ ይፈቀዳል�
 
 ## ראו גם
 
-- [זכויות אזרחיות — דף מלא](/he/rights/civil-rights)
+- זכויות אזרחיות — דף מלא
 - [טבקה — פרופיל ארגון](/he/orgs/tebeka)
-- [ACRI — ארגון](/he/orgs/acri)`,
+- ACRI — ארגון`,
       en: `## Background — 2015 and 2019 protests
 
 In 2015, **Demas Farada** was killed by police officers, triggering nationwide protests. In 2019, a further wave followed the fatal shooting of 18-year-old **Solomon Teka** by an off-duty officer. Both events drove policy changes, including new stop-and-search guidelines — though enforcement remains incomplete.
@@ -1340,7 +1340,7 @@ Mahash (police investigation department): [mahash.gov.il](https://www.mahash.gov
 
 ## See also
 
-- [Civil rights — full page](/en/rights/civil-rights)
+- Civil rights — full page
 - [Tebeka — organization profile](/en/orgs/tebeka)`,
       am: `## ዋና መብቶች
 
@@ -1531,7 +1531,7 @@ Three hearings in the Economics Committee (Jan–Mar 2025) found: no effective p
 
 ## פינוי-בינוי בקרית נורדאו
 
-שכונת קרית נורדאו בתכנון פינוי-בינוי מואץ. שלבים 1 ו-2 כוללים כ-800 יחידות דיור ישנות המיועדות להריסה ובנייה מחדש. בני הקהילה בעלי זכויות בדירות זכאים לסיוע מיוחד — ראו [מדריך פינוי-בינוי](/he/rights/pinui-binui).
+שכונת קרית נורדאו בתכנון פינוי-בינוי מואץ. שלבים 1 ו-2 כוללים כ-800 יחידות דיור ישנות המיועדות להריסה ובנייה מחדש. בני הקהילה בעלי זכויות בדירות זכאים לסיוע מיוחד — ראו [מדריך פינוי-בינוי](/he/rights/pinui-binui-tenant-rights).
 
 ## ציון הסיגד בנתניה
 
@@ -1540,7 +1540,7 @@ Three hearings in the Economics Committee (Jan–Mar 2025) found: no effective p
 ## ראו גם
 
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [פינוי-בינוי — מדריך הזכות](/he/rights/pinui-binui)
+- [פינוי-בינוי — מדריך הזכות](/he/rights/pinui-binui-tenant-rights)
 - [סיגד 2026 — תאריכים ופרטים](/he/news/sigd-2026-dates-and-details)`,
       en: `## Netanya — Israel's largest Ethiopian community hub
 
@@ -1564,7 +1564,7 @@ Beta Israel Netanya Synagogue (Shmarya Levin 8) — Torah study, community eveni
 
 ## Kiryat Nordau urban renewal
 
-Phases 1–2 affect ~800 older units. Community flat-owners are entitled to special assistance — see the [urban-renewal guide](/en/rights/pinui-binui).
+Phases 1–2 affect ~800 older units. Community flat-owners are entitled to special assistance — see the [urban-renewal guide](/en/rights/pinui-binui-tenant-rights).
 
 ## See also
 
@@ -1742,7 +1742,7 @@ BGU ኢትዮጵያ ተማሪዎች ማህበር ~280 አባላት። ~6% BGU �
 
 ## ראו גם
 
-- [פינוי-בינוי — מדריך](/he/rights/pinui-binui)
+- [פינוי-בינוי — מדריך](/he/rights/pinui-binui-tenant-rights)
 - [כל הערים — קהילות](/he/cities)
 - [סיגד 2026](/he/news/sigd-2026-dates-and-details)`,
       en: `## Kiryat Malachi — highest proportional concentration
@@ -1844,9 +1844,9 @@ One of the largest Sigd celebrations outside Jerusalem — Tel Yitzhak Park, ~1,
 
 ## ראו גם
 
-- [מחאה כנגד גזענות — מדריך](/he/rights/racism-report)
-- [נציב שוויון הזדמנויות](/he/orgs/equal-opportunities-commissioner)
-- [היסטוריה — מילון](/he/glossary/ethiopian-israeli-history)`,
+- [מחאה כנגד גזענות — מדריך](/he/voice/racism-report)
+- [נציב שוויון הזדמנויות](/he/rights/employment-discrimination-rights)
+- היסטוריה — מילון`,
       en: `## What happened — background
 
 During the 1990s, Magen David Adom blood centres were quietly discarding Ethiopian-Israeli blood donations, citing a claimed high HIV risk — without testing, without notifying donors. The practice was unofficial but internally known.
@@ -1875,8 +1875,8 @@ Anti-racism activists cite the Blood Affair as a case study in covert institutio
 
 ## See also
 
-- [Racism report — rights guide](/en/rights/racism-report)
-- [Ethiopian-Israeli community history](/en/glossary/ethiopian-israeli-history)`,
+- [Racism report — rights guide](/en/voice/racism-report)
+- Ethiopian-Israeli community history`,
       am: `## ምን ሆነ — ዳራ
 
 በ1990ዎቹ MDA የደም ማዕከሎች የኢትዮጵያ-እስራኤላውያን ደም ልገሳዎችን ሲጥሉ ነበር — ምርመራ ሳይደረግ፣ ለለጋሾቹ ሳይነዘር።
@@ -1971,7 +1971,7 @@ Tech-Career היא עמותה שנוסדה על-ידי בני הקהילה הא�
 
 - [ENP Tech-Career — סבב הרשמה 2026](/he/news/enp-tech-career-2026-cohort)
 - [קריירות בהייטק — מסלולים](/he/careers/tech)
-- [לשכת התעסוקה — מדריך](/he/rights/employment-service)`,
+- לשכת התעסוקה — מדריך`,
       en: `## What is Tech-Career
 
 Tech-Career is an NGO founded by Ethiopian-Israeli community members, specialising in accelerated tech reskilling. Programmes are largely free for eligible applicants through Employment Service funding.
@@ -2107,8 +2107,8 @@ Tech-Career በኢትዮጵያ-እስራኤላውያን ማህበረሰብ አ�
 ## ראו גם
 
 - [אלימות במשפחה — מידע כללי](/he/family/domestic-violence)
-- [פקיד סעד — מה הסמכות שלו](/he/glossary/welfare-officer)
-- [ELEM — פרופיל ארגון](/he/orgs/elem)`,
+- פקיד סעד — מה הסמכות שלו
+- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
       en: `## 2022 inter-ministerial committee
 
 An inter-ministerial committee was formed in 2022 following femicides in the Ethiopian-Israeli community. The 2023 report identified specific gaps: Amharic-speaking responder shortage, shelter access barriers, cultural risk factors.
@@ -2146,7 +2146,7 @@ Delete browsing history after reading. If phone may be monitored, use an alterna
 ## See also
 
 - [Domestic violence — general info](/en/family/domestic-violence)
-- [ELEM — organisation profile](/en/orgs/elem)`,
+- [ELEM — organisation profile](/en/education/scholarships/elem-youth-at-risk)`,
       am: `## 2022 ሚኒስቴሮች ኮሚቴ
 
 ከማህበረሰቡ ሴቶች ሞት ቀጥሎ 2022 ሚኒስቴሮች ኮሚቴ ተቋቁሟል። ዋና ክፍተቶች: አማርኛ ምላሽ እጥረት፣ መጠለያ ተደራሽነት ችግር።
@@ -2194,7 +2194,7 @@ Delete browsing history after reading. If phone may be monitored, use an alterna
 
 ## שכונות עיקריות
 
-**נווה אלון** — הריכוז הגדול ביותר, עם תשתית קהילתית ותיקה. חלק מהשכונה כלול בתכניות פינוי-בינוי שאושרו בשנים 2023-2024 — בעלי דירות זכאים לסיוע ייחודי (ראו [מדריך פינוי-בינוי](/he/rights/pinui-binui)).
+**נווה אלון** — הריכוז הגדול ביותר, עם תשתית קהילתית ותיקה. חלק מהשכונה כלול בתכניות פינוי-בינוי שאושרו בשנים 2023-2024 — בעלי דירות זכאים לסיוע ייחודי (ראו [מדריך פינוי-בינוי](/he/rights/pinui-binui-tenant-rights)).
 
 **רמת אשכול** — שכונה מעורבת עם צמיחה בשנים האחרונות; קרבה לתחנת רכבת לוד מקלה על נסיעות לתל-אביב.
 
@@ -2245,7 +2245,7 @@ Delete browsing history after reading. If phone may be monitored, use an alterna
 ## ראו גם
 
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [פינוי-בינוי — מדריך הזכות](/he/rights/pinui-binui)
+- [פינוי-בינוי — מדריך הזכות](/he/rights/pinui-binui-tenant-rights)
 - [Tech-Career — הכשרה טכנולוגית](/he/news/tech-career-bootcamp-guide)`,
       en: `## Lod — a growing community hub
 
@@ -2278,7 +2278,7 @@ Annual regional Sigd ceremony at Gan HaShalom, Ramat Eshkol — joint with Ramla
 ## See also
 
 - [All cities — community guides](/en/cities)
-- [Pinui-binui guide](/en/rights/pinui-binui)`,
+- [Pinui-binui guide](/en/rights/pinui-binui-tenant-rights)`,
       am: `## ሎድ — ዋና ድርጅቶች
 
 ~7,000 ኢትዮጵያ-እስራኤላውያን ሎድ ይኖራሉ (CBS 2024)። ኔቬ ኤሎን እና ራማት አሽኮል ዋና ሰፈሮች ናቸው።
@@ -2363,7 +2363,7 @@ Annual regional Sigd ceremony at Gan HaShalom, Ramat Eshkol — joint with Ramla
 
 - [מדריך קהילת לוד](/he/news/lod-ethiopian-community-guide)
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [אלם — פרופיל ארגון](/he/orgs/elem)`,
+- [אלם — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
       en: `## Ramla — twin-city community
 
 ~5,500 Ethiopian-Israeli community members live in Ramla (CBS 2024). Heaviest concentration in Shikun Vatikim. Ramla and Lod together form one of the largest Ethiopian-Israeli clusters in central Israel.
@@ -2608,7 +2608,7 @@ Regional Sigd ceremony at Gan HaPa'amon amphitheatre, organised by IAEJ Rishon a
 
 - [טבקה — פרופיל ארגון](/he/orgs/tebeka)
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [ORT ישראל — תכניות](/he/education/tracks/ort)`,
+- ORT ישראל — תכניות`,
       en: `## Petah Tikva — community overview
 
 ~6,500 Ethiopian-Israeli community members in Petah Tikva (CBS 2024). Main concentration: Kiryat Matalon (~2,800).
@@ -2735,7 +2735,7 @@ ORT ፔታህ ቲኳ — ሃናሲ 30። ለኢትዮጵያ ተማሪዎች ል�
 
 - [פלאשמורה — זכויות קליטה](/he/news/falash-mura-rights-guide-2026)
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [ELEM — פרופיל ארגון](/he/orgs/elem)`,
+- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
       en: `## Ashdod — port city and Falash Mura gateway
 
 ~9,000 Ethiopian-Israeli community members in Ashdod (CBS 2024). Main concentration: neighbourhoods 9 (Tet) and 10 (Yod). Ashdod also hosts an active Falash Mura absorption centre — "Gav Yam" — accommodating first-year arrivals from Gondar and Addis Ababa.
@@ -2866,7 +2866,7 @@ Annual ceremony at Ashdod-Yad National Park — IAEJ Ashdod and city hall.
 
 - [כל הערים — קהילות אתיופיות](/he/cities)
 - [תנה בריאות — פרופיל ארגון](/he/orgs/tene-briut)
-- [ELEM — פרופיל ארגון](/he/orgs/elem)`,
+- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
       en: `## Hadera — a veteran community
 
 Hadera is one of Israel's oldest Ethiopian-Israeli absorption cities. Families arrived from the early 1980s, including Operation Moses (1984) arrivals. ~5,000 community members today (CBS 2024). Main neighbourhood: Givat Olga (~2,000 residents).
@@ -3275,7 +3275,7 @@ Annual ceremony at Weizmann Park — IAEJ Rehovot and Yadid Rehovot.
 ## ראו גם
 
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [ELEM — פרופיל ארגון](/he/orgs/elem)
+- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)
 - [תנה בריאות — פרופיל ארגון](/he/orgs/tene-briut)`,
       en: `## Bat Yam — metropolitan advantage
 
@@ -3310,7 +3310,7 @@ Bat Yam community participates in the central Gush Dan Sigd at Yarkon Park, Tel 
 ## See also
 
 - [All cities — community guides](/en/cities)
-- [ELEM — organisation profile](/en/orgs/elem)`,
+- [ELEM — organisation profile](/en/education/scholarships/elem-youth-at-risk)`,
       am: `## ባት ያም — ሜትሮፖሊታን ጠቀሜታ
 
 ~4,500 ኢትዮጵያ-እስራኤላውያን ባት ያም ይኖራሉ (CBS 2024)። ቴል አቪቭ ደቡባዊ ጎረቤት — የጉሽ ዳን ሥራ ገበያ ቀላል ተደራሽነት።
@@ -3535,7 +3535,7 @@ Annual ceremony at the city park — ~500 participants. Cultural centre and Beta
 
 - [Falash Mura — עדכון עלייה 2024](/he/news/falash-mura-aliyah-2024-update)
 - [Falash Mura — מילון](/he/glossary/falash-mura)
-- [זכויות עולים — מסלולים](/he/rights/aliyah-tracks)`,
+- [זכויות עולים — מסלולים](/he/rights/falash-mura-direct-absorption)`,
       en: `## Who are the Falash Mura
 
 The Falash Mura are descendants of Ethiopian Jews (Beta Israel) who converted to Christianity under missionary coercion and now seek to return to their Jewish identity and make aliyah.
@@ -3674,8 +3674,8 @@ Under Halacha: not defined as Jewish until conversion is complete, but historica
 
 ## ראו גם
 
-- [מסלולי קריירה — בריאות](/he/careers/health)
-- [שירות התעסוקה — הכשרות מסובסדות](/he/rights/employment-service)
+- [מסלולי קריירה — בריאות](/he/careers/healthcare)
+- [שירות התעסוקה — הכשרות מסובסדות](/he/rights/vocational-training-vouchers-immigrants)
 - [טבקה — פרופיל ארגון](/he/orgs/tebeka)`,
       en: `## Why nursing fits the community
 
@@ -3699,8 +3699,8 @@ Charge Nurse (3–5 years): ₪13,000–₪18,000. Head Nurse (8–10 years): �
 
 ## See also
 
-- [Career paths — health](/en/careers/health)
-- [Employment Service — subsidised training](/en/rights/employment-service)`,
+- [Career paths — health](/en/careers/healthcare)
+- [Employment Service — subsidised training](/en/rights/vocational-training-vouchers-immigrants)`,
       am: `## ስለምን ነርሲንግ
 
 ነርሲንግ ለቤተሰብ ሕይወት ተስማሚ ፈረቃ፣ ጠንካራ ደመወዝ፣ እና ከፍተኛ ፍላጎት ይሰጣል። የጤና ሚኒስቴር 2024 እስከ 2030 18,000 ነርሶች ያስፈልጋሉ ይላል።
@@ -3785,8 +3785,8 @@ ELEM מעסיק 90+ מטפלים ועובדי נוער. אהרי מפעיל תכ
 ## ראו גם
 
 - [ייצוג הולם — הוראה](/he/careers/affirmative-action)
-- [ELEM — פרופיל ארגון](/he/orgs/elem)
-- [אהרי — פרופיל ארגון](/he/orgs/aharai)`,
+- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)
+- [אהרי — פרופיל ארגון](/he/rights/aharai-pre-army)`,
       en: `## Why the community is needed in education
 
 Around 320 Israeli schools have 20%+ Ethiopian-Israeli students (Education Ministry 2024). These schools report a critical shortage of Ethiopian-origin teachers and counsellors who serve as cultural role models and reduce dropout rates. The Ministry of Education gives official recruitment preference to Ethiopian-origin graduates for community-concentrated schools.
@@ -3810,7 +3810,7 @@ Youth worker → BA in Education → teaching certification → homeroom teacher
 ## See also
 
 - [Affirmative action — education](/en/careers/affirmative-action)
-- [ELEM — organisation profile](/en/orgs/elem)`,
+- [ELEM — organisation profile](/en/education/scholarships/elem-youth-at-risk)`,
       am: `## ማህበረሰቡ ለምን ያስፈልጋል
 
 ~320 ትምህርት ቤቶች 20%+ ኢትዮጵያ-እስራኤላዊ ተማሪዎች አሏቸው። ሁሉም የኢትዮጵያ ዝርያ አስተማሪዎች ከፍተኛ ፍላጎት ይፈለጋሉ።
@@ -4092,7 +4092,7 @@ ENP እና Tech-Career 2025: ቴክ ክፍሎች ምሩቃን 2.3 እጥፍ ፈ�
 
 - [ייצוג הולם — מצב 2025](/he/news/affirmative-action-2025-update)
 - [ייצוג הולם — דף הזכות המלא](/he/careers/affirmative-action)
-- [שירות התעסוקה — מדריך](/he/rights/employment-service)`,
+- שירות התעסוקה — מדריך`,
       en: `## How affirmative representation works
 
 The 2000 Affirmative Representation Law requires government bodies to give preference to Ethiopian-origin candidates when two candidates are equally qualified. Committees must also actively advertise in community-facing channels.
@@ -4187,9 +4187,9 @@ BizMax ירושלים: אינקובטור לעסקים חברתיים — 70% ס
 
 ## ראו גם
 
-- [שירות התעסוקה — מדריך לעצמאים](/he/rights/employment-service)
-- [עולים ביחד — פרופיל ארגון](/he/orgs/olim-beyachad)
-- [JDC ישראל — פרופיל](/he/orgs/jdc-israel)`,
+- שירות התעסוקה — מדריך לעצמאים
+- [עולים ביחד — פרופיל ארגון](/he/orgs/olim-beyahad)
+- [JDC ישראל — פרופיל](/he/orgs/jdc-ashalim)`,
       en: `## Ethiopian-owned businesses in Israel
 
 Leading sectors: catering and restaurants (injera, doro-wot), construction subcontracting, translation and cultural mediation, IT services.
@@ -4212,8 +4212,8 @@ Hebrew contracts — use Bar Association legal clinics for free review. Register
 
 ## See also
 
-- [Olim BeYachad — organisation profile](/en/orgs/olim-beyachad)
-- [JDC Israel — profile](/en/orgs/jdc-israel)`,
+- [Olim BeYachad — organisation profile](/en/orgs/olim-beyahad)
+- [JDC Israel — profile](/en/orgs/jdc-ashalim)`,
       am: `## ኢትዮጵያ ባለቤቶች ዋና ዘርፎች
 
 ምግብ አቅርቦት (ኢንጀራ፣ ዶሮ ወጥ)፣ ግንባታ፣ ትርጉም፣ IT።
@@ -4306,9 +4306,9 @@ economy.gov.il — ₪50,000 ድጎማ ለ3 ዓመት ያልሞሉ. ₪500,000 �
 
 ## ראו גם
 
-- [שירות התעסוקה — מדריך](/he/rights/employment-service)
+- שירות התעסוקה — מדריך
 - [מצב אבטלה לתעסוקה](/he/news/unemployment-to-employment-roadmap)
-- [JDC ישראל — פרופיל ארגון](/he/orgs/jdc-israel)`,
+- [JDC ישראל — פרופיל ארגון](/he/orgs/jdc-ashalim)`,
       en: `## What is Lamarkhak
 
 Lamarkhak is a JDC Israel programme helping working-age adults who are unemployed or underemployed return to suitable full employment. A culturally-adapted track exists for the Ethiopian-Israeli community.
@@ -4335,7 +4335,7 @@ Walk in directly or get a referral from the Employment Service, social worker, w
 
 ## See also
 
-- [Employment Service guide](/en/rights/employment-service)
+- Employment Service guide
 - [Unemployment-to-employment roadmap](/en/news/unemployment-to-employment-roadmap)`,
       am: `## ላምርሃቅ ምንድን ነው
 
@@ -4414,8 +4414,8 @@ ORT מפעיל מסלולי בנייה בנתניה, לוד, ב"ש וירושל�
 
 ## ראו גם
 
-- [ORT ישראל — פרופיל ארגון](/he/orgs/ort-israel)
-- [זכויות עובד — מדריך](/he/rights/worker-rights)
+- ORT ישראל — פרופיל ארגון
+- זכויות עובד — מדריך
 - [יזמות — פתיחת עסק](/he/news/entrepreneurship-guide-ethiopian-community)`,
       en: `## Employment data
 
@@ -4439,8 +4439,8 @@ Worker → qualified tradesperson (ORT cert) → sub-contractor (Housing Ministr
 
 ## See also
 
-- [ORT Israel — organisation profile](/en/orgs/ort-israel)
-- [Worker rights guide](/en/rights/worker-rights)`,
+- ORT Israel — organisation profile
+- Worker rights guide`,
       am: `## ደመወዝ (2026)
 
 ኤሌክትሪሺያን: ₪15,000-22,000 ሠራተኛ. ሳንቴሪ: ₪12,000-18,000. HVAC: ₪13,000-20,000. ክሬን: ₪18,000-25,000.
@@ -4652,7 +4652,7 @@ Intern: ₪4,000–₪7,000. Year 1–2: ₪8,000–₪12,000. After 5 years: �
 
 - [תוכנית למרחק — הג'וינט](/he/news/lamarkhak-joint-program-guide)
 - [Tech-Career — מדריך הכשרה](/he/news/tech-career-bootcamp-guide)
-- [שירות התעסוקה — זכויות](/he/rights/employment-service)`,
+- [שירות התעסוקה — זכויות](/he/rights/unemployment-benefit-guide)`,
       en: `## Step 1 — register at the Employment Service (within 14 days)
 
 Register within 14 days of job loss at taasuka.gov.il. Every day of delay means additional waiting days on unemployment benefits. Bring national ID and Form 161 from employer.
@@ -4689,7 +4689,7 @@ Without training: 2–4 months. With training: 9–14 months (but higher salary 
 
 - [Lamarkhak — JDC programme guide](/en/news/lamarkhak-joint-program-guide)
 - [Tech-Career — training guide](/en/news/tech-career-bootcamp-guide)
-- [Employment Service — rights](/en/rights/employment-service)`,
+- [Employment Service — rights](/en/rights/unemployment-benefit-guide)`,
       am: `## ደረጃ 1 — በ14 ቀናት ውስጥ ይመዝገቡ
 
 taasuka.gov.il ወይም ቅርቡ ቢሮ። ምዝገባ ሳይኖር = ደሞዝ ድጋፍ የለም።
