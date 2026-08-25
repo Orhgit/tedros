@@ -110,7 +110,7 @@ export function MulaChat({ locale }: { locale: Locale }) {
         aria-label={t(locale, open ? "mula_close_chat" : "mula_open_chat")}
         aria-expanded={open}
         className={cn(
-          "fixed bottom-6 end-6 z-50 transition-all duration-300 hover:scale-110 active:scale-95",
+          "fixed end-6 bottom-6 z-50 transition-all duration-300 hover:scale-110 active:scale-95",
           open ? "scale-105" : "",
         )}
         style={{ animation: open ? "none" : "mula-float 3s ease-in-out infinite" }}
@@ -144,7 +144,7 @@ export function MulaChat({ locale }: { locale: Locale }) {
       {/* ── Chat panel — only mounted when open to keep focusables out of DOM ── */}
       {open && (
         <div
-          className="fixed bottom-24 end-6 z-50 flex w-[min(92vw,400px)] origin-bottom flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10 sm:bottom-28"
+          className="fixed end-6 bottom-24 z-50 flex w-[min(92vw,400px)] origin-bottom flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10 sm:bottom-28"
           dir={LOCALE_DIRECTION[locale]}
           role="dialog"
           aria-label={t(locale, "mula_dialog_label")}
