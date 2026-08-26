@@ -1,4 +1,4 @@
-import { Form, Link } from "react-router";
+import { Form, Link, redirect } from "react-router";
 import type { Route } from "./+types/$lang.login";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -6,10 +6,16 @@ import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params, request }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
+  const googleEnabled = Boolean(getEnv().GOOGLE_CLIENT_ID);
+  // Owner decision (TED-132): while OAuth isn't configured in production the
+  // page only showed a "login isn't set up" error — send visitors home
+  // instead. Configuring GOOGLE_CLIENT_ID re-enables the page automatically.
+  if (!googleEnabled) {
+    throw redirect(`/${locale}`, 302);
+  }
   const url = new URL(request.url);
   const status = url.searchParams.get("status") ?? null;
   const redirectTo = url.searchParams.get("redirectTo") ?? `/${locale}/dashboard`;
-  const googleEnabled = Boolean(getEnv().GOOGLE_CLIENT_ID);
   return { locale, status, redirectTo, googleEnabled };
 }
 

@@ -13,7 +13,7 @@
 // professionals, AND rights cells, the loader emits a noindex + canonical
 // → track-page hint via the `thinFallback` flag.
 
-import { Link, data } from "react-router";
+import { Link, data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.careers.$track.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
@@ -49,12 +49,23 @@ function prepFor(locale: Locale): string {
   return locale === "en" ? "in " : locale === "am" ? "በ" : "ב";
 }
 
+// Owner decision (TED-132, 26.8): the ~408 track×city cells rendered the
+// exact same body as their parent track page (verified byte-identical in
+// production) — duplicate content that also contradicted the copy ("active
+// in Tel-Aviv/Beer-Sheva/Haifa" on a Jerusalem page). Until real city-level
+// content ships, every cell 301s to its track page. Flip this to true when
+// the cells get city-specific content.
+const CITY_CELLS_ENABLED = false;
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const trackParam = params.track;
   const cityParam = params.city;
   if (!trackParam || !cityParam || !isCareerTrack(trackParam)) {
     throw data({ error: "not-found" }, { status: 404 });
+  }
+  if (!CITY_CELLS_ENABLED) {
+    throw redirect(`/${locale}${trackPath(trackParam)}`, 301);
   }
   const track = findCareerTrack(trackParam);
   const city = findCityBySlug(cityParam);
