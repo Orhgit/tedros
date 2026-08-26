@@ -146,7 +146,10 @@ export default function FaqDetail({ loaderData }: Route.ComponentProps) {
               to={`/${locale}${trackPath(track.slug)}`}
               className="inline-flex items-center rounded-full border border-earth-200 bg-card px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-50"
             >
-              {track.name[locale] ?? track.name.he} →
+              {track.name[locale] ?? track.name.he}{" "}
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
             </Link>
           )}
           <span className="text-xs text-ink-600">

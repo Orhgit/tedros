@@ -159,7 +159,10 @@ export default function HealthLanding({ loaderData }: Route.ComponentProps) {
                   to={`/${locale}${conditionsPath()}`}
                   className="text-sm font-medium text-earth-700 hover:underline"
                 >
-                  {t(locale, "health_conditions_title")} →
+                  {t(locale, "health_conditions_title")}{" "}
+                  <span aria-hidden="true" className="icon-flip inline-block">
+                    →
+                  </span>
                 </Link>
               </div>
             </section>

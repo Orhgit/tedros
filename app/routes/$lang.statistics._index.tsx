@@ -121,7 +121,10 @@ export default function StatisticsLanding({ loaderData }: Route.ComponentProps) 
             to={`/${locale}/careers/statistics`}
             className="mt-3 inline-flex items-center gap-2 text-sm text-earth-800 hover:underline"
           >
-            {t(locale, "statistics_employment_link_cta")} →
+            {t(locale, "statistics_employment_link_cta")}{" "}
+            <span aria-hidden="true" className="icon-flip inline-block">
+              →
+            </span>
           </Link>
         </section>
       </main>

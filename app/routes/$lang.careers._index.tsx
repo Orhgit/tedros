@@ -323,7 +323,10 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
               to={`/${locale}/careers/affirmative-action`}
               className="text-sm text-earth-700 hover:underline"
             >
-              {t(locale, "careers_affirmative_action_breadcrumb")} →
+              {t(locale, "careers_affirmative_action_breadcrumb")}{" "}
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
             </Link>
           </div>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -354,7 +357,10 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
               to={`/${locale}/careers/faq`}
               className="text-sm text-earth-700 hover:underline"
             >
-              {t(locale, "careers_view_all_faqs")} →
+              {t(locale, "careers_view_all_faqs")}{" "}
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
             </Link>
           </div>
           <ul className="space-y-2">

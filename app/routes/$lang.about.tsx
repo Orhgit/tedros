@@ -248,7 +248,7 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
             <span className="font-display text-lg font-semibold text-earth-900">
               {c.rightsCta}
             </span>
-            <span aria-hidden="true" className="text-earth-700">
+            <span aria-hidden="true" className="icon-flip inline-block text-earth-700">
               →
             </span>
           </Link>
@@ -259,7 +259,7 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
             <span className="font-display text-lg font-semibold text-earth-900">
               {c.realestateCta}
             </span>
-            <span aria-hidden="true" className="text-earth-700">
+            <span aria-hidden="true" className="icon-flip inline-block text-earth-700">
               →
             </span>
           </Link>

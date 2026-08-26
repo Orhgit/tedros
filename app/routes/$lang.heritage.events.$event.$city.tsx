@@ -198,7 +198,9 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
                 <p className="text-xs font-semibold tracking-wide text-earth-700 uppercase">
                   {t(locale, "heritage_events_next_observance_label")}
                 </p>
-                <p className="mt-1 font-medium text-earth-800">{next}</p>
+                <p className="mt-1 font-medium text-earth-800">
+                  {formatDate(locale, next)}
+                </p>
               </div>
             )}
           </div>

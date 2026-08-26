@@ -198,7 +198,10 @@ export default function NutritionHub({ loaderData }: Route.ComponentProps) {
               to={`/${locale}/statistics/health`}
               className="text-xs font-medium text-amber-900 underline hover:text-amber-700"
             >
-              {t(locale, "health_nutrition_stats_link_label")} →
+              {t(locale, "health_nutrition_stats_link_label")}{" "}
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
             </Link>
           </div>
         </section>

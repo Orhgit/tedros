@@ -404,7 +404,10 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
                       to={`/${locale}/professionals/${g.profession}/${city.slug}`}
                       className="hover:underline"
                     >
-                      {t(locale, `profession_${g.profession.replace(/-/g, "_")}`)} →
+                      {t(locale, `profession_${g.profession.replace(/-/g, "_")}`)}{" "}
+                      <span aria-hidden="true" className="icon-flip inline-block">
+                        →
+                      </span>
                     </Link>
                   </p>
                   <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">

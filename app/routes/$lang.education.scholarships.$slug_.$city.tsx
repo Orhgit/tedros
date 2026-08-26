@@ -221,7 +221,10 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
               rel="noopener noreferrer"
               className="w-full rounded-md bg-earth-800 px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-earth-700"
             >
-              {t(locale, "scholarship_apply_cta")} →
+              {t(locale, "scholarship_apply_cta")}{" "}
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
             </a>
           </div>
         </aside>
