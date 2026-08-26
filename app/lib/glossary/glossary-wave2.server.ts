@@ -180,87 +180,6 @@ Ge'ez is virtually no longer anyone's native tongue. In Israel it survives mainl
     },
   },
 
-  // 3. טנא בריאות — ארגון בריאות (new slug to avoid collision with "tene-briut")
-  {
-    slug: "tene-health-org",
-    category: "organization",
-    term: { he: "טנא בריאות", en: "Tene Briut", am: "ጤና ብሪኡት" },
-    summary: {
-      he: "עמותה לקידום בריאות בקהילת יוצאי אתיופיה — מתאמי בריאות דוברי אמהרית, מניעת סוכרת ולחץ דם וקידום מודעות.",
-      en: "A nonprofit promoting health in the Ethiopian-Israeli community — Amharic-speaking health mediators, diabetes and hypertension prevention.",
-      am: "በኢትዮጵያ-እስራኤል ማህበረሰብ ጤናን የሚያስፋፋ ድርጅት — አማርኛ ተናጋሪ የጤና አስታራቂዎች፣ የስኳርና ደም ግፊት መከላከል።",
-    },
-    relatedRights: [],
-    relatedTerms: ["hba1c", "gimlat-siud"],
-    sources: [{ title: "טנא בריאות — אתר רשמי", url: "https://www.tene-briut.org.il/" }],
-    bodies: {
-      he: `## מה זה טנא בריאות?
-
-**טנא בריאות** היא עמותה ותיקה הפועלת לקידום הבריאות בקרב יוצאי אתיופיה בישראל. השם "טנא" באמהרית פירושו "בריאות". העמותה גושרת בין מערכת הבריאות הישראלית לבין הקהילה, תוך התאמה תרבותית ולשונית.
-
-## מה הם עושים?
-
-- **מתאמי בריאות (מגשרים)** דוברי אמהרית, המלווים מטופלים מול קופות החולים והמרפאות
-- תוכניות **מניעת סוכרת ולחץ דם** — שתי מחלות נפוצות בקהילה
-- סדנאות תזונה, פעילות גופנית ובריאות נפש
-- הכשרות לצוותי רפואה על רגישות תרבותית
-
-## למה זה חשוב?
-
-מחסומי שפה ופערי אמון מול הממסד הרפואי עלולים לפגוע בטיפול. מתאם בריאות דובר אמהרית מסייע להבין אבחנות, הוראות תרופתיות ומדדים כמו [HbA1c](/he/glossary/hba1c) בניהול סוכרת.
-
-## איך פונים?
-
-ניתן לפנות לטנא בריאות דרך האתר הרשמי, ולברר על שירותי גישור ותוכניות במחוז המגורים.
-
-> אזהרה: המידע כאן כללי בלבד ואינו תחליף לייעוץ רפואי. בכל בעיה רפואית פנו לרופא/ה או לקופת החולים.
-
-## ראו גם
-
-- [HbA1c](/he/glossary/hba1c) — מדד מרכזי בניהול סוכרת
-`,
-      en: `## What is Tene Briut?
-
-**Tene Briut** ("Tene" means "health" in Amharic) is a veteran nonprofit promoting health among Ethiopian-Israelis. It bridges the Israeli healthcare system and the community with cultural and linguistic adaptation.
-
-## What do they do?
-
-- **Amharic-speaking health mediators** who accompany patients at HMOs and clinics
-- **Diabetes and hypertension prevention** programs — two conditions common in the community
-- Workshops on nutrition, physical activity and mental health
-- Cultural-competency training for medical staff
-
-## Why it matters
-
-Language barriers and mistrust of the medical establishment can harm care. An Amharic-speaking health mediator helps patients understand diagnoses, medication instructions and metrics such as [HbA1c](/en/glossary/hba1c) in diabetes management.
-
-## How to reach them
-
-Contact Tene Briut through their official website to ask about mediation services and programs in your district.
-
-> Disclaimer: This information is general only and is not a substitute for medical advice. For any medical issue, consult a doctor or your HMO.
-
-## See also
-
-- [HbA1c](/en/glossary/hba1c) — a key metric in diabetes management
-`,
-      am: `## ጤና ብሪኡት ምንድ ነው?
-
-**ጤና ብሪኡት** ("ጤና" በአማርኛ ጤንነት ማለት ነው) በኢትዮጵያ-እስራኤላውያን መካከል ጤናን የሚያስፋፋ ድርጅት ነው። የእስራኤልን የጤና ሥርዓትና ማህበረሰቡን ያገናኛል።
-
-## ምን ይሰራሉ?
-
-- አማርኛ ተናጋሪ **የጤና አስታራቂዎች** በሆስፒታልና ክሊኒክ ታካሚዎችን ይረዳሉ
-- የ**ስኳርና ደም ግፊት** መከላከል ፕሮግራሞች
-- የአመጋገብ፣ የአካል ብቃትና የአእምሮ ጤና ስልጠናዎች
-
-ቋንቋ መሰናክልና እምነት ማጣት ሕክምናን ሊጎዳ ይችላል። አስታራቂ የ[HbA1c](/am/glossary/hba1c) ያሉ መለኪያዎችን ለመረዳት ይረዳል።
-
-> ማስጠንቀቂያ፦ ይህ መረጃ አጠቃላይ ነው፤ የሕክምና ምክር ምትክ አይደለም።
-`,
-    },
-  },
-
   // 4. IAEJ — אגודת יהודי אתיופיה
   {
     slug: "iaej",
@@ -736,7 +655,7 @@ The **Absorption Basket (Sal Klita)** is a cash grant the state — through the 
       am: "በዕለታዊ እንቅስቃሴ የሌላ ሰው እርዳታ ለሚያስፈልጋቸው አዛውንቶች ከብሔራዊ ኢንሹራንስ የሚሰጥ ጥቅም።",
     },
     relatedRights: [],
-    relatedTerms: ["btl", "tene-health-org"],
+    relatedTerms: ["btl", "tene-briut"],
     sources: [
       {
         title: "ביטוח לאומי — גמלת סיעוד",
@@ -832,7 +751,7 @@ Determined by a dependency (ADL) test and an income test. The greater the depend
       am: "ባለፉት 3 ወራት የስኳር አማካይ መጠን የሚያሳይ የደም ምርመራ — ለስኳር በሽታ ቁጥጥር ዋናው መለኪያ።",
     },
     relatedRights: [],
-    relatedTerms: ["tene-health-org", "gimlat-siud"],
+    relatedTerms: ["tene-briut", "gimlat-siud"],
     sources: [
       {
         title: "משרד הבריאות — סוכרת",
@@ -859,13 +778,13 @@ Determined by a dependency (ADL) test and an income test. The greater the depend
 
 - בדיקת HbA1c תקופתית בקופת החולים
 - תזונה מאוזנת, פעילות גופנית והפחתת סוכר
-- ליווי של מתאם בריאות דובר אמהרית ([טנא בריאות](/he/glossary/tene-health-org))
+- ליווי של מתאם בריאות דובר אמהרית ([טנא בריאות](/he/glossary/tene-briut))
 
 > אזהרה: המידע כללי ואינו תחליף לייעוץ רפואי. התייעצו עם הרופא/ה לגבי היעדים האישיים שלכם.
 
 ## ראו גם
 
-- [טנא בריאות](/he/glossary/tene-health-org) — תוכניות מניעת סוכרת בקהילה
+- [טנא בריאות](/he/glossary/tene-briut) — תוכניות מניעת סוכרת בקהילה
 `,
       en: `## What is HbA1c?
 
@@ -886,13 +805,13 @@ Diabetes prevalence is relatively high among Ethiopian-Israelis, partly due to r
 
 - Periodic HbA1c testing at your HMO
 - A balanced diet, physical activity and reduced sugar
-- Support from an Amharic-speaking health mediator ([Tene Briut](/en/glossary/tene-health-org))
+- Support from an Amharic-speaking health mediator ([Tene Briut](/en/glossary/tene-briut))
 
 > Disclaimer: This information is general and not a substitute for medical advice. Consult your doctor about your personal targets.
 
 ## See also
 
-- [Tene Briut](/en/glossary/tene-health-org) — community diabetes-prevention programs
+- [Tene Briut](/en/glossary/tene-briut) — community diabetes-prevention programs
 `,
       am: `## HbA1c ምንድ ነው?
 
@@ -905,7 +824,7 @@ Diabetes prevalence is relatively high among Ethiopian-Israelis, partly due to r
 - **6.5% እና ከዚያ በላይ** — ስኳር በሽታ
 - በሕክምና ላይ ያሉ ብዙ ጊዜ ከ7% በታች ይፈልጋሉ
 
-አማርኛ ተናጋሪ አስታራቂ ([ጤና ብሪኡት](/am/glossary/tene-health-org)) ይረዳዎታል።
+አማርኛ ተናጋሪ አስታራቂ ([ጤና ብሪኡት](/am/glossary/tene-briut)) ይረዳዎታል።
 
 > ማስጠንቀቂያ፦ የሕክምና ምክር ምትክ አይደለም።
 `,
