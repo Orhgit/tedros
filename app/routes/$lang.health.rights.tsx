@@ -24,6 +24,7 @@ import { breadcrumbJsonLd, faqJsonLd } from "~/lib/health/schema";
 import { healthPath } from "~/lib/health/links";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -173,7 +174,8 @@ export default function HealthRights({ loaderData }: Route.ComponentProps) {
 
                   {/* Last reviewed */}
                   <p className="mt-2 text-xs text-ink-500">
-                    {t(locale, "health_rights_last_reviewed_label")}: {right.lastReviewed}
+                    {t(locale, "health_rights_last_reviewed_label")}:{" "}
+                    {formatDate(locale, right.lastReviewed)}
                   </p>
                 </div>
               </div>
@@ -191,7 +193,9 @@ export default function HealthRights({ loaderData }: Route.ComponentProps) {
             className="inline-flex items-center gap-2 rounded-lg bg-earth-800 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-earth-900"
           >
             {t(locale, "health_rights_back_to_rights_cta")}
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
           </Link>
         </div>
 
@@ -201,7 +205,9 @@ export default function HealthRights({ loaderData }: Route.ComponentProps) {
             to={`/${locale}${healthPath()}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "health_back_to_hub")}
           </Link>
         </div>

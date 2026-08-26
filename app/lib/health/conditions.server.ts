@@ -321,7 +321,7 @@ FAST ምልክቶች — ፊት (መዛባት)፣ ክንድ (ድክመት)፣ �
 
 אחת החסמות הקריטיות ביותר היא העדר מוחלט של פסיכיאטרים דוברי אמהרית בישראל — אפס — למרות שאמהרית היא שפת האם של עשרות אלפי בני קהילה. בנוסף, קיימת סטיגמה תרבותית עמוקה סביב בריאות הנפש, שנובעת חלקית מהאמונה המסורתית שמצוקה נפשית היא עניין רוחני (Zar, Balezar) ולא רפואי. מחקרים מראים ש-43% בלבד מבני הקהילה מאמינים שהמערכת הרפואית יכולה לעזור להם.
 
-המצוקה הנפשית היא אמיתית, לגיטימית, וניתנת לטיפול. שירות ERAN (1201) מספק מענה בעברית, ערבית, ורוסית — אך לא באמהרית. ארגוניm כמו NATAL, Elem, ותנה בריאות עובדים לגשר על הפער, ויש כיום פסיכולוגים ועובדים סוציאליים מהקהילה שמבינים את ההקשר התרבותי. פנייה לעזרה היא מעשה אומץ, לא חולשה.
+המצוקה הנפשית היא אמיתית, לגיטימית, וניתנת לטיפול. שירות ERAN (1201) מספק מענה בעברית, ערבית, ורוסית — אך לא באמהרית. ארגונים כמו NATAL,‏ Elem וטנא בריאות עובדים לגשר על הפער, ויש כיום פסיכולוגים ועובדים סוציאליים מהקהילה שמבינים את ההקשר התרבותי. פנייה לעזרה היא מעשה אומץ, לא חולשה.
 
 אם אתם חווים מחשבות אובדניות או מצוקה נפשית קשה, התקשרו לERAN 1201 עכשיו. במקרי חירום — בבית חולים הקרוב ביותר. אתם לא לבד.`,
       en: `Mental health represents one of the most urgent challenges within the Ethiopian-Israeli community. Research shows psychiatric hospitalization rates twice the general average, and an alarming suicide rate of 24.5 per 100,000 — four times the general population rate of 5.9 per 100,000. Behind these difficult numbers lie complex factors: unprocessed immigration trauma, integration challenges, discrimination, and intergenerational disconnection.
