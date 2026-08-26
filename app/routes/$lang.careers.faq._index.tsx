@@ -3,7 +3,7 @@
 // search input. Emits a top-level `FAQPage` JSON-LD with summarized
 // Q&A pairs (rich-snippet eligible).
 
-import { Link, useSearchParams } from "react-router";
+import { Link } from "react-router";
 
 import type { Route } from "./+types/$lang.careers.faq._index";
 import { SiteFooter } from "~/components/sections/site-footer";
@@ -15,6 +15,7 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+import { SearchField, useSearchQuery } from "~/components/ui/search-field";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -70,8 +71,8 @@ export const meta: Route.MetaFunction = ({ data }) => {
 
 export default function FaqLanding({ loaderData }: Route.ComponentProps) {
   const { locale, faqs } = loaderData;
-  const [searchParams, setSearchParams] = useSearchParams();
-  const q = searchParams.get("q")?.toLowerCase() ?? "";
+  const [qInput, setQInput] = useSearchQuery();
+  const q = qInput.toLowerCase();
 
   const filtered = q
     ? faqs.filter(
@@ -104,18 +105,11 @@ export default function FaqLanding({ loaderData }: Route.ComponentProps) {
         </header>
 
         <section className="mb-6">
-          <input
-            type="search"
-            value={q}
-            onChange={(e) => {
-              const params = new URLSearchParams(searchParams);
-              if (e.target.value) params.set("q", e.target.value);
-              else params.delete("q");
-              setSearchParams(params, { replace: true });
-            }}
+          <SearchField
+            locale={locale}
+            value={qInput}
+            onChange={setQInput}
             placeholder={t(locale, "careers_faq_search_placeholder")}
-            className="w-full rounded-md border border-input bg-card px-4 py-2.5 text-base text-foreground placeholder:text-muted-foreground focus:border-ring focus:ring-2 focus:ring-ring/20 focus:outline-none"
-            aria-label={t(locale, "careers_faq_search_placeholder")}
           />
         </section>
 
