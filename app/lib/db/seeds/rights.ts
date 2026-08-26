@@ -3863,7 +3863,7 @@ Falash Mura olim who arrived from 2016 are entitled to a separate basket includi
 
 ## קישורים רלוונטיים
 
-- [זכויות עובד — שכר מינימום](/he/rights/minimum-wage)
+- זכויות עובד — שכר מינימום
 - [זכויות עולה — סל קליטה](/he/rights/klita-basket-ethiopia)`,
 
       en: `## Equal Employment Opportunity Law
@@ -3917,7 +3917,7 @@ Histadrut membership grants representation and legal support in labor disputes.
 
 ## Related Rights
 
-- [Worker's rights — minimum wage](/en/rights/minimum-wage)
+- Worker's rights — minimum wage
 - [Olim rights — klita basket](/en/rights/klita-basket-ethiopia)`,
 
       am: `## የሥራ ዕድል እኩልነት ሕግ
@@ -3949,7 +3949,7 @@ Histadrut membership grants representation and legal support in labor disputes.
 
 ## ተያያዥ መብቶች
 
-- [የሠራተኛ መብቶች](/am/rights/minimum-wage)
+- የሠራተኛ መብቶች
 - [የዓሊያ ሰል ቅሊታ](/am/rights/klita-basket-ethiopia)`,
     },
   },

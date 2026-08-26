@@ -79,7 +79,7 @@ const GLOSSARY_WAVE1: GlossaryEntry[] = [
 - אירוע מרכזי לזהות תרבותית — מועבר מדור לדור
 - הקייסים (כהני הדת) מובילים את התפילה והקריאה בתורה
 - בכל עיר עם קהילה גדולה (נתניה, רחובות, ראשון לציון, חיפה) מתקיים אירוע מקומי
-- מועצות מקומיות תומכות במימון אירועים ([מימון אירועי סיגד](/he/rights/funding-sigd-events))
+- מועצות מקומיות תומכות במימון אירועים ([מימון אירועי סיגד](/he/rights/sigd-funding))
 
 ## ראו גם
 
@@ -104,7 +104,7 @@ On July 30, 2008, the Knesset passed the Sigd Holiday Law (5769-2008), recognizi
 - Anchor cultural-identity event — transmitted across generations
 - The Kessim (religious leaders) lead the prayers and the Torah recitation
 - Every city with a sizeable community (Netanya, Rehovot, Rishon LeZion, Haifa) holds a local ceremony
-- Municipalities subsidize venue and logistics ([Sigd event funding](/en/rights/funding-sigd-events))
+- Municipalities subsidize venue and logistics ([Sigd event funding](/en/rights/sigd-funding))
 
 ## See also
 
@@ -129,7 +129,7 @@ On July 30, 2008, the Knesset passed the Sigd Holiday Law (5769-2008), recognizi
 - የዓመቱ ዋነኛ የባህል-ማንነት ክንውን — ከትውልድ ወደ ትውልድ ይተላለፋል
 - ቄሶቹ ጸሎቱንና የቶራህ ንባቡን ይመራሉ
 - ብዙ ማህበረሰብ ያላቸው ከተሞች ሁሉ (ነታንያ፣ ሬሆቮት፣ ሪሾን ለጽዮን፣ ሐይፋ) የራሳቸውን ሥነ-ሥርዓት ያካሂዳሉ
-- ማዘጋጃ ቤቶች የቦታና ሎጂስቲክስ ድጎማ ይሰጣሉ ([የሰግድ ክንውን ድጎማ](/am/rights/funding-sigd-events))
+- ማዘጋጃ ቤቶች የቦታና ሎጂስቲክስ ድጎማ ይሰጣሉ ([የሰግድ ክንውን ድጎማ](/am/rights/sigd-funding))
 
 ## ይህንንም ይመልከቱ
 
@@ -374,7 +374,7 @@ In the 1990s, the question of Falash Mura aliyah rights came to the fore. In 200
 
 - כ-50 קייסים פעילים בישראל
 - קיימים מרכזי תפילה קהילתיים בנתניה, רחובות, באר שבע, ועוד
-- הקייסים אינם מוכרים על-ידי הרבנות הראשית כרבני קהילה רשמיים, אך כן מקבלים מענק חודשי ממשרד הדתות ([מענק קייסים](/he/rights/kessim-stipend))
+- הקייסים אינם מוכרים על-ידי הרבנות הראשית כרבני קהילה רשמיים, אך כן מקבלים מענק חודשי ממשרד הדתות ([מענק קייסים](/he/rights/kessim-religious-support))
 - צעירים שעולים לרבנות מסורתית עוברים את מסלול הסמיכה הרבני הסטנדרטי, מצב שגורם לעיתים למתח בין-דורי
 
 ## רלוונטיות לקהילה
@@ -403,7 +403,7 @@ The Kessim (singular: "Kes" / "Kahen") are the traditional religious leaders of 
 
 - ~50 active Kessim in Israel
 - Community prayer centers in Netanya, Rehovot, Beersheba, and more
-- The Kessim are not recognized by the Chief Rabbinate as official communal rabbis, but do receive a monthly stipend from the Ministry of Religious Services ([Kessim stipend](/en/rights/kessim-stipend))
+- The Kessim are not recognized by the Chief Rabbinate as official communal rabbis, but do receive a monthly stipend from the Ministry of Religious Services ([Kessim stipend](/en/rights/kessim-religious-support))
 - Young community members entering the rabbinate go through the standard rabbinic ordination track — this sometimes creates intergenerational tension
 
 ## Community relevance
@@ -432,7 +432,7 @@ The Kessim (singular: "Kes" / "Kahen") are the traditional religious leaders of 
 
 - በእስራኤል ~50 ንቁ ቄሶች
 - በነታንያ፣ ሬሆቮት፣ ቤርሼባ እና በሌሎችም የማህበረሰብ ጸሎት ማዕከላት አሉ
-- ቄሶች በዋና ራቢነት እንደ ይፋዊ የማህበረሰብ ራቢ አይታወቁም፣ ግን ከሃይማኖት አገልግሎት ሚኒስቴር ወርሃዊ ድጎማ ያገኛሉ ([የቄሶች ድጎማ](/am/rights/kessim-stipend))
+- ቄሶች በዋና ራቢነት እንደ ይፋዊ የማህበረሰብ ራቢ አይታወቁም፣ ግን ከሃይማኖት አገልግሎት ሚኒስቴር ወርሃዊ ድጎማ ያገኛሉ ([የቄሶች ድጎማ](/am/rights/kessim-religious-support))
 - ወደ ራቢነት የሚገቡ ወጣት የማህበረሰብ አባላት መደበኛውን የራቢነት መሾም ይከተላሉ — ይህ አንዳንድ ጊዜ የትውልዶች መካከል ውጥረት ያስከትላል
 
 ## የማህበረሰቡ ጠቀሜታ
@@ -850,7 +850,7 @@ The U.S. intervened — Operation Joshua ("Sheba") airlifted an additional 800 p
 ## ראו גם
 
 - [Right: מניעת מחלות כרוניות](/he/rights/chronic-disease-prevention) — שתופית עם טנא בריאות
-- [Right: שירותי תרגום רפואי](/he/rights/medical-translation-services)
+- [Right: שירותי תרגום רפואי](/he/rights/medical-translation)
 `,
       en: `## What is it?
 
@@ -879,7 +879,7 @@ Tene Briut is an NGO dedicated to the health of Ethiopian-Israelis. The model is
 ## See also
 
 - [Right: chronic disease prevention](/en/rights/chronic-disease-prevention) — partnered with Tene Briut
-- [Right: medical translation services](/en/rights/medical-translation-services)
+- [Right: medical translation services](/en/rights/medical-translation)
 `,
       am: `## ምንድ ነው?
 
@@ -908,7 +908,7 @@ Tene Briut is an NGO dedicated to the health of Ethiopian-Israelis. The model is
 ## ይህንንም ይመልከቱ
 
 - [Right: ሥር-ሰደድ በሽታ መከላከል](/am/rights/chronic-disease-prevention) — ከቴኔ ብሪዩት ጋር በአጋርነት
-- [Right: የህክምና ትርጉም አገልግሎቶች](/am/rights/medical-translation-services)
+- [Right: የህክምና ትርጉም አገልግሎቶች](/am/rights/medical-translation)
 `,
     },
   },
@@ -1055,7 +1055,7 @@ Tebeka ("vindicator" / "advocate" in Amharic) is a legal aid center for Ethiopia
 
 ## ראו גם
 
-- [Right: מנטורינג לבוגרים](/he/rights/mentorship-program-graduates)
+- [Right: מנטורינג לבוגרים](/he/rights/excellence-employment)
 `,
       en: `## What is it?
 
@@ -1081,7 +1081,7 @@ Olim Beyahad ("Rising Together") is an NGO focused on the career advancement of 
 
 ## See also
 
-- [Right: graduate mentorship](/en/rights/mentorship-program-graduates)
+- [Right: graduate mentorship](/en/rights/excellence-employment)
 `,
       am: `## ምንድ ነው?
 
@@ -1107,7 +1107,7 @@ Olim Beyahad ("Rising Together") is an NGO focused on the career advancement of 
 
 ## ይህንንም ይመልከቱ
 
-- [Right: የምሩቅ አማካሪነት](/am/rights/mentorship-program-graduates)
+- [Right: የምሩቅ አማካሪነት](/am/rights/excellence-employment)
 `,
     },
   },
@@ -1156,7 +1156,7 @@ ENP — Ethiopian National Project — היא שותפות-מסגרת בין מ�
 
 ## ראו גם
 
-- [Right: מענק בגרות](/he/rights/bagrut-grant) — ENP ב-Tier-1
+- [Right: מענק בגרות](/he/rights/matriculation-grant) — ENP ב-Tier-1
 - [Right: Tech-Career bootcamp](/he/rights/tech-career-bootcamp)
 `,
       en: `## What is it?
@@ -1185,7 +1185,7 @@ ENP — Ethiopian National Project — is a partnership framework between the Go
 
 ## See also
 
-- [Right: Bagrut grant](/en/rights/bagrut-grant) — operated by ENP at Tier-1
+- [Right: Bagrut grant](/en/rights/matriculation-grant) — operated by ENP at Tier-1
 - [Right: Tech-Career bootcamp](/en/rights/tech-career-bootcamp)
 `,
       am: `## ምንድ ነው?
@@ -1214,7 +1214,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
 
 ## ይህንንም ይመልከቱ
 
-- [Right: የባግሩት ስጦታ](/am/rights/bagrut-grant) — በENP በTier-1 ይካሄዳል
+- [Right: የባግሩት ስጦታ](/am/rights/matriculation-grant) — በENP በTier-1 ይካሄዳል
 - [Right: የቴክ-ሥራ ቦትካምፕ](/am/rights/tech-career-bootcamp)
 `,
     },
@@ -1277,7 +1277,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
 
 ## ראו גם
 
-- [Right: סוכן מילגות לסטודנטים](/he/rights/scholarship-aggregator) — מאגד את כל האופציות
+- [Right: סוכן מילגות לסטודנטים](/he/rights/unconditional-scholarships-7-sources) — מאגד את כל האופציות
 - [ENP](/he/glossary/enp) — שותף עיקרי במימון
 `,
       en: `## What is it?
@@ -1313,7 +1313,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
 
 ## See also
 
-- [Right: scholarship aggregator for students](/en/rights/scholarship-aggregator) — combines all options
+- [Right: scholarship aggregator for students](/en/rights/unconditional-scholarships-7-sources) — combines all options
 - [ENP](/en/glossary/enp) — primary funding partner
 `,
       am: `## ምንድ ነው?
@@ -1349,7 +1349,7 @@ ENP — የኢትዮጵያ ብሔራዊ ፕሮጀክት — በእስራኤል �
 
 ## ይህንንም ይመልከቱ
 
-- [Right: ለተማሪዎች የስኮላርሺፕ ሰብሳቢ](/am/rights/scholarship-aggregator) — ሁሉንም አማራጮች ያጣምራል
+- [Right: ለተማሪዎች የስኮላርሺፕ ሰብሳቢ](/am/rights/unconditional-scholarships-7-sources) — ሁሉንም አማራጮች ያጣምራል
 - [ENP](/am/glossary/enp) — ዋና የፋይናንስ አጋር
 `,
     },
