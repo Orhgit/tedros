@@ -8,6 +8,14 @@
  */
 
 @theme {
+  /* ── z-index scale — components reference these via z-(--z-*); they were
+        used but never defined, so the sticky header rendered at z-index:auto
+        and page content painted over it while scrolling (TED-126).
+        Skip-link sits above everything at 1700 (hardcoded below). ── */
+  --z-sticky: 100;
+  --z-tooltip: 1500;
+  --z-toast: 1600;
+
   /* ── Brand: Earth (terra-cotta / חימר אתיופי) ── */
   --color-earth-50: oklch(0.98 0.012 60);
   --color-earth-100: oklch(0.95 0.018 55);
@@ -158,7 +166,10 @@
   h5,
   h6 {
     font-family: var(--font-display);
-    color: var(--color-foreground);
+    /* inherit, not --color-foreground: the fixed color overrode text-white on
+       dark surfaces, rendering CTA headings near-invisible (TED-126). Body
+       already sets the foreground color, so plain headings look the same. */
+    color: inherit;
     line-height: 1.15;
     letter-spacing: -0.015em;
   }
