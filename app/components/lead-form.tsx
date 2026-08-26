@@ -124,11 +124,10 @@ export function LeadForm({ locale, source, turnstileSiteKey, className }: LeadFo
       </div>
 
       {/* Honeypot — must remain visually hidden but present in DOM and
-          tab-out of the natural focus order. */}
-      <div
-        aria-hidden="true"
-        className="absolute top-auto -left-[9999px] h-px w-px overflow-hidden"
-      >
+          tab-out of the natural focus order. Hidden via sr-only (clip-based):
+          a physical -left offset extends the scrollable area on RTL pages
+          instead of being cut off (TED-120). */}
+      <div aria-hidden="true" className="sr-only">
         <label htmlFor={`${formId}-website`}>Website</label>
         <input
           id={`${formId}-website`}
