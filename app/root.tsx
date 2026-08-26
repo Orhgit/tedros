@@ -104,7 +104,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <PromoBanner locale={locale} />
         {children}
         <Suspense fallback={null}>
-          <MulaChat />
+          <MulaChat locale={locale} />
         </Suspense>
         <AccessibilityWidget locale={locale} />
         <ScrollRestoration />
