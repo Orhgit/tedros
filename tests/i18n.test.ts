@@ -59,7 +59,10 @@ describe("t() interpolation", () => {
     expect(t("am", "homepage_title")).toBeTruthy();
   });
 
-  it("returns the key when the key does not exist anywhere", () => {
-    expect(t("he", "totally_unknown_key")).toBe("totally_unknown_key");
+  it("humanizes a key that does not exist anywhere (TED-117)", () => {
+    // Never render a raw snake_case key to users — drop the namespace
+    // segment and space out the rest as a last resort.
+    expect(t("he", "totally_unknown_key")).toBe("unknown key");
+    expect(t("he", "rights_tag_some_new_tag")).toBe("some new tag");
   });
 });
