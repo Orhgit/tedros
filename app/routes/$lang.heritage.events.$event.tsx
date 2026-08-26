@@ -292,7 +292,9 @@ export default function HeritageEventDetail({ loaderData }: Route.ComponentProps
             to={`/${locale}${eventsLandingPath()}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "heritage_events_back_to_landing")}
           </Link>
         </div>

@@ -63,3 +63,33 @@ describe("renderMarkdown", () => {
     expect(out).toContain("<ul");
   });
 });
+
+describe("GFM tables (TED-125)", () => {
+  it("renders a pipe table as an HTML table in a scroll container", () => {
+    const src = `## לוח אירועים
+
+| עיר | אירוע |
+|-----|-------|
+| ירושלים | טקס מרכזי |
+| נתניה | חגיגה קהילתית |
+`;
+    const html = renderMarkdown(src);
+    expect(html).toContain("<table");
+    expect(html).toContain("overflow-x-auto");
+    expect(html).toContain("<th");
+    expect(html).toContain("ירושלים");
+    expect(html).toContain("נתניה");
+    expect(html).not.toContain("|-----|");
+  });
+
+  it("keeps a paragraph followed by a table separate", () => {
+    const src = `פסקה רגילה
+| א | ב |
+|---|---|
+| 1 | 2 |
+`;
+    const html = renderMarkdown(src);
+    expect(html).toContain("<p");
+    expect(html).toContain("<table");
+  });
+});

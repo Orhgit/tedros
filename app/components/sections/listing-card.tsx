@@ -1,10 +1,14 @@
 import { Link } from "react-router";
+import type { Locale } from "~/lib/i18n/config";
+import { t } from "~/lib/i18n/messages";
 import { Badge } from "../ui/badge";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Icon } from "../ui/icon";
 import { cn } from "~/lib/utils";
 
 export interface ListingCardProps {
+  /** Locale for the spec labels (default he) — was hardcoded Hebrew (TED-128). */
+  locale?: Locale;
   href: string;
   title: string;
   city: string;
@@ -23,11 +27,17 @@ export interface ListingCardProps {
   shareLabel?: string;
   /** Accessible label for the contact-broker button. */
   contactLabel?: string;
+  /** Handlers/targets — the footer actions render only when these exist,
+      so the library card never ships dead buttons (TED-130). */
+  onFavorite?: () => void;
+  onShare?: () => void;
+  contactHref?: string;
 }
 
 const formatNumber = (n: number) => new Intl.NumberFormat("he-IL").format(n);
 
 export function ListingCard({
+  locale = "he",
   href,
   title,
   city,
@@ -43,6 +53,9 @@ export function ListingCard({
   favoriteLabel = "הוסף למועדפים",
   shareLabel = "שתף",
   contactLabel = "פנייה למתווך",
+  onFavorite,
+  onShare,
+  contactHref,
 }: ListingCardProps) {
   return (
     <Card
@@ -90,7 +103,9 @@ export function ListingCard({
         </Link>
         <dl className="mt-4 grid grid-cols-3 gap-3 text-sm">
           <div>
-            <dt className="text-xs text-muted-foreground">חדרים</dt>
+            <dt className="text-xs text-muted-foreground">
+              {t(locale, "listing_rooms_label")}
+            </dt>
             <dd className="font-medium">
               <bdi>{rooms}</bdi>
             </dd>
@@ -120,29 +135,39 @@ export function ListingCard({
         </dl>
       </CardContent>
 
-      <CardFooter className="border-t border-border px-4 pt-3">
-        <button
-          type="button"
-          aria-label={favoriteLabel}
-          className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted hover:text-destructive focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-        >
-          <Icon name="heart" />
-        </button>
-        <button
-          type="button"
-          aria-label={shareLabel}
-          className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-        >
-          <Icon name="share" />
-        </button>
-        <button
-          type="button"
-          className="ms-auto inline-flex h-9 items-center gap-1.5 rounded-sm bg-primary px-3 text-sm font-medium text-primary-foreground hover:bg-earth-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-        >
-          <Icon name="phone" className="size-4" />
-          {contactLabel}
-        </button>
-      </CardFooter>
+      {(onFavorite || onShare || contactHref) && (
+        <CardFooter className="border-t border-border px-4 pt-3">
+          {onFavorite && (
+            <button
+              type="button"
+              onClick={onFavorite}
+              aria-label={favoriteLabel}
+              className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted hover:text-destructive focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <Icon name="heart" />
+            </button>
+          )}
+          {onShare && (
+            <button
+              type="button"
+              onClick={onShare}
+              aria-label={shareLabel}
+              className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <Icon name="share" />
+            </button>
+          )}
+          {contactHref && (
+            <a
+              href={contactHref}
+              className="ms-auto inline-flex h-9 items-center gap-1.5 rounded-sm bg-primary px-3 text-sm font-medium text-primary-foreground hover:bg-earth-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <Icon name="phone" className="size-4" />
+              {contactLabel}
+            </a>
+          )}
+        </CardFooter>
+      )}
     </Card>
   );
 }

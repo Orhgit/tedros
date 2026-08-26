@@ -23,6 +23,7 @@ import { CITIES, cityName } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
@@ -263,7 +264,8 @@ export default function StoryDetail({ loaderData }: Route.ComponentProps) {
         )}
 
         <p className="mt-10 text-xs text-ink-600">
-          {t(locale, "careers_stories_disclaimer")} · {story.publishedAt}
+          {t(locale, "careers_stories_disclaimer")} ·{" "}
+          {formatDate(locale, story.publishedAt)}
         </p>
 
         <div className="mt-12 border-t border-earth-200 pt-6">
@@ -271,7 +273,9 @@ export default function StoryDetail({ loaderData }: Route.ComponentProps) {
             to={`/${locale}/careers/stories`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "careers_stories_back_to_landing")}
           </Link>
         </div>

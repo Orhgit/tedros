@@ -13,6 +13,7 @@ import { breadcrumbJsonLd } from "~/lib/news/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -175,7 +176,9 @@ export default function NewsLanding({ loaderData }: Route.ComponentProps) {
                   to={`/${locale}/news/${a.slug}`}
                   className="block rounded-lg border border-earth-200 bg-card p-5 shadow-xs transition-all hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-md"
                 >
-                  <p className="text-xs text-ink-600">{a.publishedAt}</p>
+                  <p className="text-xs text-ink-600">
+                    {formatDate(locale, a.publishedAt)}
+                  </p>
                   <h3 className="mt-1 font-display text-lg font-semibold text-earth-900">
                     {a.title}
                   </h3>

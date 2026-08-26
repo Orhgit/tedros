@@ -532,7 +532,9 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
             to={`/${locale}${trackPath(track.slug)}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "careers_track_back_to_hub")} {trackName}
           </Link>
         </div>

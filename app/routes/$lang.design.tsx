@@ -781,7 +781,7 @@ function BreadcrumbShowcase({ locale }: { locale: Locale }) {
       items={[
         { label: t(locale, "nav_home"), href: `/${locale}` },
         { label: t(locale, "nav_listings"), href: `/${locale}/listings` },
-        { label: "נתניה", href: `/${locale}/listings/netanya` },
+        { label: "נתניה", href: `/${locale}/cities/netanya` },
         { label: "דורה" },
       ]}
     />
@@ -1010,7 +1010,7 @@ function ListingShowcase() {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <ListingCard
-        href="#"
+        href="/he/cities/netanya"
         title="דירת 4 חדרים, התחדשות עירונית"
         city="נתניה"
         neighborhood="דורה"
@@ -1023,7 +1023,7 @@ function ListingShowcase() {
         ]}
       />
       <ListingCard
-        href="#"
+        href="/he/cities/netanya"
         title="דירת 3 חדרים להשכרה"
         city="רחובות"
         neighborhood="קרית משה"
@@ -1033,7 +1033,7 @@ function ListingShowcase() {
         badges={[{ label: "השכרה", variant: "default" }]}
       />
       <ListingCard
-        href="#"
+        href="/he/cities/netanya"
         title="פנטהאוז 5 חדרים"
         city="ראשון לציון"
         neighborhood="רמת אליהו"
@@ -1062,7 +1062,7 @@ function ArticleShowcase() {
       readTimeMin={7}
       breadcrumbs={[
         { label: "בית", href: "/he" },
-        { label: "מאמרים", href: "/he/articles" },
+        { label: "חדשות", href: "/he/news" },
         { label: "דיור" },
       ]}
       body={
@@ -1093,6 +1093,7 @@ function ArticleShowcase() {
 function ProfileShowcase() {
   return (
     <ProfileTemplate
+      ctaHref="mailto:info@tedros.co.il"
       name="יוסי טדלה"
       initials="י"
       profession="מתווך דירות בכיר"

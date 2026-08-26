@@ -2,7 +2,7 @@
 // Renders a single term with markdown body, related rights/terms cross-links,
 // and DefinedTerm + BreadcrumbList JSON-LD for SEO.
 
-import { Link, data } from "react-router";
+import { Link, data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.glossary.$slug";
 import { SiteFooter } from "~/components/sections/site-footer";
@@ -18,10 +18,20 @@ import { t } from "~/lib/i18n/messages";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
+// Slugs that were merged into a canonical entry — 301 preserves inbound
+// links and consolidates SEO signals (TED-125: "טנא בריאות" existed twice).
+const MERGED_SLUGS: Record<string, string> = {
+  "tene-health-org": "tene-briut",
+};
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   if (!params.slug) {
     throw data({ error: "missing-slug" }, { status: 404 });
+  }
+  const merged = MERGED_SLUGS[params.slug];
+  if (merged) {
+    throw redirect(`/${locale}/glossary/${merged}`, 301);
   }
   const entry = getGlossaryEntry(params.slug, locale);
   if (!entry) {

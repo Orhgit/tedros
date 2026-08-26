@@ -80,14 +80,27 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}${familyPath()}`} />
       <main id="main-content" className="container-default mx-auto max-w-4xl py-10">
-        {/* Emergency banner */}
+        {/* Emergency banner. Phone numbers are tel: links wrapped dir="ltr" +
+            nowrap — at 375px the bidi algorithm used to split 1-800-22-0000
+            across two lines with the hyphen on the wrong side (TED-121). */}
         <div className="mb-6 rounded-xl border border-red-200 bg-red-50 p-4">
           <p className="text-sm font-semibold text-red-800">
-            {locale === "he"
-              ? "בסכנה מיידית? חייגי 100 (משטרה) או 1-800-22-0000 (WIZO — חינם 24/7)"
-              : locale === "am"
-                ? "ቅጽበታዊ አደጋ? 100 (ፖሊስ) ወይም 1-800-22-0000 (WIZO — ነፃ 24/7) ይደውሉ"
-                : "Immediate danger? Call 100 (police) or 1-800-22-0000 (WIZO — free 24/7)"}
+            {locale === "he" ? (
+              <>
+                בסכנה מיידית? חייגי <EmergencyTel number="100" /> (משטרה) או{" "}
+                <EmergencyTel number="1-800-22-0000" /> (WIZO — חינם 24/7)
+              </>
+            ) : locale === "am" ? (
+              <>
+                ቅጽበታዊ አደጋ? <EmergencyTel number="100" /> (ፖሊስ) ወይም{" "}
+                <EmergencyTel number="1-800-22-0000" /> (WIZO — ነፃ 24/7) ይደውሉ
+              </>
+            ) : (
+              <>
+                Immediate danger? Call <EmergencyTel number="100" /> (police) or{" "}
+                <EmergencyTel number="1-800-22-0000" /> (WIZO — free 24/7)
+              </>
+            )}
           </p>
         </div>
 
@@ -239,12 +252,26 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
             to={`/${locale}${familyPath()}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "family_breadcrumb_family")}
           </Link>
         </div>
       </main>
       <SiteFooter locale={locale} />
     </div>
+  );
+}
+
+function EmergencyTel({ number }: { number: string }) {
+  return (
+    <a
+      href={`tel:${number.replace(/-/g, "")}`}
+      dir="ltr"
+      className="font-bold whitespace-nowrap underline decoration-red-400 underline-offset-2"
+    >
+      {number}
+    </a>
   );
 }

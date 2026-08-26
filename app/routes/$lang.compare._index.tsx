@@ -60,7 +60,7 @@ export default function ComparisonsLanding({ loaderData }: Route.ComponentProps)
       <div className="flag-stripe h-1.5" aria-hidden="true" />
       <SiteHeader locale={locale} currentPath={`/${locale}/compare`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
-        <header className="relative isolate mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-red/5 px-6 py-8 sm:px-10 sm:py-12">
+        <header className="relative isolate mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-red/5 px-6 pt-8 pb-12 sm:px-10 sm:py-12">
           <img
             src="https://images.unsplash.com/photo-1734865934450-719ef6f59a37?fm=webp&q=70&w=1200&fit=crop"
             alt=""

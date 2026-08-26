@@ -11,6 +11,7 @@ import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { voicePath, communityActionPath } from "~/lib/voice/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/voice/schema";
@@ -156,7 +157,7 @@ export default function CommunityAction({ loaderData }: Route.ComponentProps) {
             })}
           </div>
           <p className="mt-6 text-xs text-ink-500">
-            {t(locale, "voice_last_reviewed_label")}: {lastReviewed}
+            {t(locale, "voice_last_reviewed_label")}: {formatDate(locale, lastReviewed)}
           </p>
         </article>
 
@@ -211,7 +212,9 @@ export default function CommunityAction({ loaderData }: Route.ComponentProps) {
             to={`/${locale}${voicePath()}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "voice_back_to_hub")}
           </Link>
         </div>

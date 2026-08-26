@@ -199,7 +199,9 @@ export default function ComparisonDetail({ loaderData }: Route.ComponentProps) {
                 <h2 className="mt-1 font-display text-lg font-semibold text-earth-900">
                   {side.name}
                 </h2>
-                <p className="mt-1 text-sm text-ink-600">{side.tagline}</p>
+                <p className="mt-1 text-sm text-ink-600">
+                  <bdi>{side.tagline}</bdi>
+                </p>
               </div>
             );
             return href ? (

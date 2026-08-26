@@ -1,20 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { LOCALE_DIRECTION, type Locale } from "~/lib/i18n/config";
+import { t } from "~/lib/i18n/messages";
 import { cn } from "~/lib/utils";
 import { MulaDigitalHuman } from "./mula-3d";
 
 type Message = { role: "user" | "assistant"; content: string };
 type AvatarState = "idle" | "thinking" | "talking";
 
-const QUICK_QUESTIONS = [
-  "מה הזכויות שלי כשוכר?",
-  "איך מוצאים עבודה?",
-  "אירועי קהילה",
-  "מה יש באתר?",
-];
+const QUICK_QUESTION_KEYS = ["mula_q1", "mula_q2", "mula_q3", "mula_q4"] as const;
 
-export function MulaChat() {
+// Positioned with logical properties (end-*) on purpose: the accessibility
+// widget sits at start-*, so the two floating buttons land in OPPOSITE
+// corners in every writing direction. The old physical left-6 collided with
+// it on LTR locales (en/am) and fully covered its click target (TED-122).
+export function MulaChat({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -23,24 +24,19 @@ export function MulaChat() {
   const [error, setError] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const launcherRef = useRef<HTMLButtonElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open && messages.length === 0) {
       setAvatarState("talking");
       const timer = setTimeout(() => {
-        setMessages([
-          {
-            role: "assistant",
-            content:
-              "שלום! אני מולה 👋\nאני העוזר החכם של Tedros — פה לעזור לך למצוא כל מה שתצטרך. שאל אותי!",
-          },
-        ]);
+        setMessages([{ role: "assistant", content: t(locale, "mula_greeting") }]);
         setAvatarState("idle");
       }, 900);
       return () => clearTimeout(timer);
     }
-  }, [open, messages.length]);
+  }, [open, messages.length, locale]);
 
   useEffect(() => {
     if (open) bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -48,6 +44,20 @@ export function MulaChat() {
 
   useEffect(() => {
     if (open) inputRef.current?.focus();
+  }, [open]);
+
+  // Close on Escape and hand focus back to the launcher (same pattern as
+  // the accessibility widget).
+  useEffect(() => {
+    if (!open) return;
+    function handle(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setOpen(false);
+        launcherRef.current?.focus();
+      }
+    }
+    document.addEventListener("keydown", handle);
+    return () => document.removeEventListener("keydown", handle);
   }, [open]);
 
   async function sendMessage(text: string) {
@@ -68,14 +78,16 @@ export function MulaChat() {
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
-        throw new Error((err as { error?: string }).error ?? "שגיאה בשרת");
+        throw new Error(
+          (err as { error?: string }).error ?? t(locale, "mula_error_server"),
+        );
       }
       const { reply } = (await res.json()) as { reply: string };
       setAvatarState("talking");
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
       setTimeout(() => setAvatarState("idle"), Math.min(reply.length * 30, 3500));
     } catch (e) {
-      setError(e instanceof Error ? e.message : "שגיאה לא צפויה");
+      setError(e instanceof Error ? e.message : t(locale, "mula_error_unexpected"));
       setAvatarState("idle");
     } finally {
       setLoading(false);
@@ -93,16 +105,18 @@ export function MulaChat() {
     <>
       {/* ── Floating launcher ── */}
       <button
+        ref={launcherRef}
         onClick={() => setOpen((v) => !v)}
-        aria-label={open ? "סגור צ'אט" : "פתח צ'אט עם מולה"}
+        aria-label={t(locale, open ? "mula_close_chat" : "mula_open_chat")}
+        aria-expanded={open}
         className={cn(
-          "fixed bottom-6 left-6 z-50 transition-all duration-300 hover:scale-110 active:scale-95",
+          "fixed end-6 bottom-6 z-50 transition-all duration-300 hover:scale-110 active:scale-95",
           open ? "scale-105" : "",
         )}
         style={{ animation: open ? "none" : "mula-float 3s ease-in-out infinite" }}
       >
         {open ? (
-          <div className="flex size-16 items-center justify-center rounded-full bg-amber-500 shadow-xl ring-2 ring-amber-300">
+          <div className="flex size-14 items-center justify-center rounded-full bg-amber-500 shadow-xl ring-2 ring-amber-300 sm:size-16">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="size-7 text-white"
@@ -120,7 +134,9 @@ export function MulaChat() {
           </div>
         ) : (
           <div data-mula-scene className="relative" ref={sceneRef}>
-            <MulaDigitalHuman state="idle" size={64} />
+            {/* 56px keeps the launcher from covering content lines on 375px
+                screens (TED-122) — the panel avatar stays large. */}
+            <MulaDigitalHuman state="idle" size={56} />
           </div>
         )}
       </button>
@@ -128,10 +144,10 @@ export function MulaChat() {
       {/* ── Chat panel — only mounted when open to keep focusables out of DOM ── */}
       {open && (
         <div
-          className="fixed bottom-28 left-6 z-50 flex w-[min(92vw,400px)] origin-bottom-left flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10"
-          dir="rtl"
+          className="fixed end-6 bottom-24 z-50 flex w-[min(92vw,400px)] origin-bottom flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10 sm:bottom-28"
+          dir={LOCALE_DIRECTION[locale]}
           role="dialog"
-          aria-label="צ'אט עם מולה"
+          aria-label={t(locale, "mula_dialog_label")}
           style={{ animation: "mula-slide-up 0.3s ease-out" }}
         >
           {/* ── Header — big live avatar ── */}
@@ -157,23 +173,28 @@ export function MulaChat() {
             <MulaDigitalHuman state={avatarState} size={140} />
 
             <div className="relative flex items-center gap-2 pb-1">
-              <p className="text-base leading-tight font-bold text-white">מולה</p>
+              <p className="text-base leading-tight font-bold text-white">
+                {t(locale, "mula_name")}
+              </p>
               <span className="rounded-full bg-amber-500/30 px-2 py-0.5 text-[10px] font-semibold text-amber-300 ring-1 ring-amber-500/40">
                 AI
               </span>
             </div>
             <p className="relative -mt-1 pb-1 text-xs text-amber-200/70">
               {avatarState === "thinking"
-                ? "⋯ חושב"
+                ? `⋯ ${t(locale, "mula_status_thinking")}`
                 : avatarState === "talking"
-                  ? "▶ מדבר"
-                  : "עוזר קהילתי · Tedros"}
+                  ? `▶ ${t(locale, "mula_status_talking")}`
+                  : t(locale, "mula_status_idle")}
             </p>
 
             <button
-              onClick={() => setOpen(false)}
-              aria-label="סגור"
-              className="absolute top-3 left-3 rounded-full p-1 text-white/50 transition-colors hover:bg-white/10 hover:text-white"
+              onClick={() => {
+                setOpen(false);
+                launcherRef.current?.focus();
+              }}
+              aria-label={t(locale, "mula_close")}
+              className="absolute end-3 top-3 rounded-full p-2 text-white/50 transition-colors hover:bg-white/10 hover:text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -255,15 +276,18 @@ export function MulaChat() {
           {/* Quick questions */}
           {messages.length <= 1 && !loading && (
             <div className="flex flex-wrap gap-1.5 px-4 pb-3">
-              {QUICK_QUESTIONS.map((q) => (
-                <button
-                  key={q}
-                  onClick={() => sendMessage(q)}
-                  className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700 transition-colors hover:border-amber-300 hover:bg-amber-100"
-                >
-                  {q}
-                </button>
-              ))}
+              {QUICK_QUESTION_KEYS.map((key) => {
+                const q = t(locale, key);
+                return (
+                  <button
+                    key={key}
+                    onClick={() => sendMessage(q)}
+                    className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700 transition-colors hover:border-amber-300 hover:bg-amber-100"
+                  >
+                    {q}
+                  </button>
+                );
+              })}
             </div>
           )}
 
@@ -275,15 +299,15 @@ export function MulaChat() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="שאל את מולה..."
-              aria-label="שאלה למולה"
+              placeholder={t(locale, "mula_placeholder")}
+              aria-label={t(locale, "mula_input_label")}
               disabled={loading}
               className="flex-1 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-800 transition-all placeholder:text-gray-400 focus:border-amber-400 focus:ring-2 focus:ring-amber-100 focus:outline-none disabled:opacity-60"
             />
             <button
               onClick={() => sendMessage(input)}
               disabled={loading || !input.trim()}
-              aria-label="שלח"
+              aria-label={t(locale, "mula_send")}
               className="flex size-9 shrink-0 items-center justify-center rounded-full bg-amber-500 text-white shadow-md transition-all hover:bg-amber-600 active:scale-95 disabled:opacity-40"
             >
               <svg

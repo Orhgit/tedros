@@ -87,6 +87,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="google-site-verification" content="2279d081ccbfa4c2" />
+        {/* Ge'ez glyphs: app.css declares "Noto Sans Ethiopic" on
+            html[lang^="am"] but nothing ever loaded it, so Amharic rendered
+            in a random per-OS fallback (TED-128). Served as a static
+            stylesheet ONLY on /am — keeps the he/en bundle and the
+            Lighthouse/size budgets untouched. */}
+        {locale === "am" && (
+          <link rel="stylesheet" href="/fonts/noto-sans-ethiopic.css" />
+        )}
         <Meta />
         <Links />
         {gaId && (
@@ -104,7 +112,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <PromoBanner locale={locale} />
         {children}
         <Suspense fallback={null}>
-          <MulaChat />
+          <MulaChat locale={locale} />
         </Suspense>
         <AccessibilityWidget locale={locale} />
         <ScrollRestoration />

@@ -53,28 +53,16 @@ export default function Dashboard({ loaderData }: Route.ComponentProps) {
           </div>
         </header>
 
-        {/* Tabs */}
+        {/* Tabs — Overview/Reports were empty "coming soon" shells; hidden
+            until they carry real content (TED-130). Restore the TabsTrigger +
+            TabsContent pairs when they do. */}
         <Tabs defaultValue="citizen-inbox">
           <TabsList className="mb-6 border border-zinc-800 bg-zinc-900 text-zinc-400">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="citizen-inbox">Citizen Inbox</TabsTrigger>
-            <TabsTrigger value="reports">Reports</TabsTrigger>
           </TabsList>
-
-          <TabsContent value="overview">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-8 text-center text-sm text-zinc-500">
-              Overview content coming soon.
-            </div>
-          </TabsContent>
 
           <TabsContent value="citizen-inbox">
             <CitizenInbox />
-          </TabsContent>
-
-          <TabsContent value="reports">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-8 text-center text-sm text-zinc-500">
-              Reports content coming soon.
-            </div>
           </TabsContent>
         </Tabs>
       </div>

@@ -1,6 +1,7 @@
 import { Form, Link, useNavigation } from "react-router";
 import type { Route } from "./+types/$lang._index";
 import { SiteFooter } from "~/components/sections/site-footer";
+import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -144,6 +145,9 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Global header — the homepage used to render only a logo span and a
+          language switcher, leaving it with no navigation at all (TED-124). */}
+      <SiteHeader locale={locale} currentPath={`/${locale}`} />
       {/* ── HERO ── full-bleed, community background image */}
       <section
         className="relative isolate flex min-h-[85vh] flex-col overflow-hidden"
@@ -206,27 +210,8 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
         {/* Ethiopian flag stripe at the very top */}
         <div className="flag-stripe h-1.5 w-full" aria-hidden="true" />
 
-        {/* Header — site title + language switcher */}
-        <div className="container-default flex items-center justify-between pt-5">
-          <span className="font-display text-2xl font-bold tracking-tight text-white drop-shadow">
-            {t(locale, "homepage_title")}
-          </span>
-          <nav
-            className="flex gap-1 text-sm"
-            aria-label={t(locale, "lang_switcher_label")}
-          >
-            {(["he", "en", "am"] as const).map((lang) => (
-              <Link
-                key={lang}
-                to={`/${lang}`}
-                hrefLang={lang}
-                className="rounded-md bg-black/40 px-3 py-1.5 text-white hover:bg-black/60"
-              >
-                {t(locale, `lang_${lang}`)}
-              </Link>
-            ))}
-          </nav>
-        </div>
+        {/* Brand + language switching now live in the global SiteHeader above
+            the hero (TED-124) — the old in-hero duplicate row was removed. */}
 
         {/* Hero content */}
         <div className="container-default flex flex-1 flex-col justify-end pt-10 pb-16">
@@ -254,7 +239,7 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
       </section>
 
       {/* ── PILLARS GRID ── */}
-      <main className="container-default py-14">
+      <main id="main-content" className="container-default py-14">
         <section>
           <h2 className="font-display text-xl font-semibold tracking-tight text-earth-900">
             {t(locale, "pillars_heading")}

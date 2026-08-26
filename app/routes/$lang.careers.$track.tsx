@@ -67,6 +67,10 @@ export async function loader({ params }: Route.LoaderArgs) {
   const relatedTerms = entry.relatedTerms
     .map((slug) => getGlossaryEntry(slug, locale))
     .filter((g): g is NonNullable<typeof g> => g !== null)
+    // Skip glossary entries that duplicate an org card already rendered in
+    // the "leading orgs" section right above (ENP and Olim Beyahad appeared
+    // twice with near-identical text, TED-130).
+    .filter((g) => !relatedOrgs.some((o) => o.slug === g.slug || o.name === g.term))
     .map((g) => ({ slug: g.slug, term: g.term, summary: g.summary }))
     .slice(0, 4);
 
@@ -345,7 +349,9 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
             to={`/${locale}/professionals/career-counselor`}
             className={`mt-2 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:opacity-90 ${tone.accentBg}`}
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              →
+            </span>
             {t(locale, "careers_explore_counselors_cta")}
           </Link>
         </section>
@@ -403,7 +409,9 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
             to={`/${locale}/careers`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "careers_track_back_to_hub")}
           </Link>
         </div>
