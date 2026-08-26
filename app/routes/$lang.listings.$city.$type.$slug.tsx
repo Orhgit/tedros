@@ -282,15 +282,20 @@ function AttributesGrid({
   const a = listing.attributes as Record<string, unknown>;
   const items: Array<{ label: string; value: string }> = [];
   if (typeof a.rooms === "number")
-    items.push({ label: t(locale, "listings_filter_min_rooms"), value: String(a.rooms) });
-  if (typeof a.areaM2 === "number") items.push({ label: "m²", value: String(a.areaM2) });
+    items.push({ label: t(locale, "listing_attr_rooms"), value: String(a.rooms) });
+  if (typeof a.areaM2 === "number")
+    items.push({ label: t(locale, "listing_attr_area"), value: String(a.areaM2) });
   if (typeof a.bedrooms === "number")
-    items.push({ label: "bedrooms", value: String(a.bedrooms) });
-  if (typeof a.floor === "number") items.push({ label: "floor", value: String(a.floor) });
+    items.push({ label: t(locale, "listing_attr_bedrooms"), value: String(a.bedrooms) });
+  if (typeof a.floor === "number")
+    items.push({ label: t(locale, "listing_attr_floor"), value: String(a.floor) });
   if (typeof a.parkingSpots === "number")
-    items.push({ label: "parking", value: String(a.parkingSpots) });
+    items.push({
+      label: t(locale, "listing_attr_parking"),
+      value: String(a.parkingSpots),
+    });
   if (typeof a.yearBuilt === "number")
-    items.push({ label: "year", value: String(a.yearBuilt) });
+    items.push({ label: t(locale, "listing_attr_year"), value: String(a.yearBuilt) });
 
   if (items.length === 0) return null;
   return (

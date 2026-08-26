@@ -68,7 +68,7 @@ const FAQ_CONTENT: Array<{
       am: "ቤት ውስጥ ያለ stigma ዕርዳታ መፈለግ ሲያቆም ምን ላድርግ?",
     },
     answer: {
-      he: "ניתן לפנות לERAN (1201) בצינעה לחלוטין — השיחות חסויות. ניתן גם להגיע ישירות לרופא משפחה ולדבר על מצוקה נפשית — הרופא מחויב לחיסיון. ארגון NATAL וElem מציעים פגישות וירטואליות.",
+      he: "ניתן לפנות לERAN (1201) בצינעה לחלוטין — השיחות חסויות. ניתן גם להגיע ישירות לרופא משפחה ולדבר על מצוקה נפשית — הרופא מחויב לחיסיון. הארגונים NATAL ו-Elem מציעים פגישות וירטואליות.",
       en: "You can call ERAN (1201) completely privately — all calls are confidential. You can also speak directly with your family doctor about psychological distress — bound by confidentiality. NATAL and Elem offer virtual sessions.",
       am: "ERAN 1201 ሙሉ ሚስጥራዊ ነው። ሐኪምዎ ሚስጥር የመጠበቅ ግዴታ አለበት። NATAL እና Elem ምናባዊ ስብሰባዎችን ያቀርባሉ።",
     },
