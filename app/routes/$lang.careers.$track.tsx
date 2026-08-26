@@ -16,7 +16,7 @@ import {
   isCareerTrack,
 } from "~/lib/careers/categories";
 import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
-import { bootcampPath, storyPath, trackCityPath, trackPath } from "~/lib/careers/links";
+import { bootcampPath, storyPath, trackPath } from "~/lib/careers/links";
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
 import { storiesForTrack } from "~/lib/careers/stories.server";
@@ -317,7 +317,8 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
           </section>
         )}
 
-        {/* Top cities (RIN-473 — links to /careers/$track/$city cells) ---- */}
+        {/* Top cities — link to the city hub pages while the track×city
+            cells 301 to the track page (TED-132) ---- */}
         {topCities.length > 0 && (
           <section className="mt-10">
             <h2 className="font-display text-xl font-semibold text-earth-900">
@@ -327,7 +328,7 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
               {topCities.map((city) => (
                 <li key={city.slug}>
                   <Link
-                    to={`/${locale}${trackCityPath(entry.slug, city.slug)}`}
+                    to={`/${locale}/cities/${city.slug}`}
                     className="inline-flex items-center rounded-full border border-earth-200 bg-card px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-50"
                   >
                     {city.name}

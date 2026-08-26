@@ -31,7 +31,9 @@ export function loader() {
     ...CAREER_TRACKS.map((t) => `/careers/${t.slug}`),
     "/careers/affirmative-action",
     ...BOOTCAMPS.map((b) => `/careers/programs/${b.slug}`),
-    ...cellPaths,
+    // Track×city cells 301 to their track page while CITY_CELLS_ENABLED is
+    // false (TED-132) — redirecting URLs don't belong in a sitemap.
+    // ...cellPaths,
     "/careers/jobs",
     ...jobs.map((j) => `/careers/jobs/${j.slug}`),
     "/careers/statistics",
