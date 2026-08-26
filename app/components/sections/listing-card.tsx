@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { Badge } from "../ui/badge";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Icon } from "../ui/icon";
+import { formatRooms } from "~/lib/listings/display";
 import { cn } from "~/lib/utils";
 
 export interface ListingCardProps {
@@ -53,17 +54,22 @@ export function ListingCard({
     >
       <Link to={href} className="block focus-visible:outline-none">
         <div className="relative aspect-[16/10] bg-muted">
-          {imageSrc ? (
+          {/* Placeholder always rendered underneath: source photos can vanish
+              (e.g. removed from merkaz-h.co.il) and the <img> then hides
+              itself via onError instead of showing a broken-image icon. */}
+          <div className="grid h-full place-items-center text-muted-foreground">
+            <Icon name="home" className="size-10" />
+          </div>
+          {imageSrc && (
             <img
               src={imageSrc}
               alt={imageAlt ?? ""}
               loading="lazy"
-              className="size-full object-cover transition-transform duration-(--motion-base) group-hover/card:scale-[1.02]"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
+              className="absolute inset-0 size-full object-cover transition-transform duration-(--motion-base) group-hover/card:scale-[1.02]"
             />
-          ) : (
-            <div className="grid h-full place-items-center text-muted-foreground">
-              <Icon name="home" className="size-10" />
-            </div>
           )}
           {badges.length > 0 && (
             <div className="absolute start-3 top-3 flex flex-wrap gap-1.5">
@@ -92,7 +98,7 @@ export function ListingCard({
           <div>
             <dt className="text-xs text-muted-foreground">חדרים</dt>
             <dd className="font-medium">
-              <bdi>{rooms}</bdi>
+              <bdi>{formatRooms(rooms) ?? "—"}</bdi>
             </dd>
           </div>
           <div>

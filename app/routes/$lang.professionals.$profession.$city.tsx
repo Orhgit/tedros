@@ -16,6 +16,7 @@ import { t } from "~/lib/i18n/messages";
 import {
   PROFESSION_TO_TAG,
   glyphForProfession,
+  heroImageForProfession,
   isProfession,
   professionMessageKey,
 } from "~/lib/professionals/categories";
@@ -104,8 +105,11 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
         <header
           className={`relative isolate mb-10 overflow-hidden rounded-2xl border p-6 sm:p-10 ${tone.border}`}
         >
+          {/* Per-profession hero (TED-129) — a medical photo used to appear on
+              every profession page; the map in lib/professionals/categories
+              picks an appropriate image per category. */}
           <img
-            src="https://images.unsplash.com/photo-1666887360742-974c8fce8e6b?fm=webp&q=70&w=1200&fit=crop"
+            src={heroImageForProfession(profession)}
             alt=""
             aria-hidden="true"
             className="absolute inset-0 -z-20 h-full w-full object-cover"

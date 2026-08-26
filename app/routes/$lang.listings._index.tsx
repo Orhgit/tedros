@@ -16,6 +16,11 @@ import {
   type ListingType,
   type PublicListingSummary,
 } from "~/lib/db/queries/listings.server";
+import {
+  cleanListingTitle,
+  effectiveListingType,
+  formatRooms,
+} from "~/lib/listings/display";
 
 const LISTING_TYPES: ListingType[] = [
   "sale",
@@ -233,11 +238,15 @@ export default function ListingsIndex({ loaderData }: Route.ComponentProps) {
 }
 
 function ListingCard({ item, locale }: { item: PublicListingSummary; locale: Locale }) {
-  const title = pickLocale(item.title, locale);
+  const title = cleanListingTitle(pickLocale(item.title, locale));
   const slug = pickLocale(item.slug, locale) || item.slug.he;
   const cityName = pickLocale(item.city.name, locale);
-  const href = `/${locale}/listings/${item.city.slugHe}/${item.type}/${slug}`;
+  // Deal-type guard (TED-129): synced "sale" rows with monthly-rent-sized
+  // prices are displayed (label + URL) as rentals. See lib/listings/display.
+  const displayType = effectiveListingType(item.type, item.price);
+  const href = `/${locale}/listings/${item.city.slugHe}/${displayType}/${slug}`;
   const rooms = (item.attributes as { rooms?: number }).rooms;
+  const roomsLabel = formatRooms(rooms);
   const areaM2 = (item.attributes as { areaM2?: number }).areaM2;
   const currency =
     ((item.attributes as { currency?: string }).currency as
@@ -252,21 +261,25 @@ function ListingCard({ item, locale }: { item: PublicListingSummary; locale: Loc
       className="block h-full rounded-lg border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-sm dark:border-gray-800 dark:hover:border-gray-600"
     >
       <span className="inline-block rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
-        {t(locale, `listings_type_${item.type}`)}
+        {t(locale, `listings_type_${displayType}`)}
       </span>
       <h3 className="mt-2 text-lg leading-snug font-semibold">{title}</h3>
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
         {cityName}
         {item.neighborhood ? ` · ${pickLocale(item.neighborhood.name, locale)}` : ""}
       </p>
-      <p className="mt-3 text-xl font-bold">
-        {item.price === null
-          ? "—"
-          : `${t(locale, `listing_price_currency_${currency.toLowerCase()}` as const)}${item.price.toLocaleString()}`}
-      </p>
+      {item.price === null ? (
+        <p className="mt-3 text-base font-medium text-gray-500 dark:text-gray-400">
+          {t(locale, "listing_price_on_request")}
+        </p>
+      ) : (
+        <p className="mt-3 text-xl font-bold">
+          {`${t(locale, `listing_price_currency_${currency.toLowerCase()}` as const)}${item.price.toLocaleString()}`}
+        </p>
+      )}
       <p className="mt-1 text-sm text-gray-500">
         {[
-          rooms !== undefined ? t(locale, "listing_rooms", { rooms }) : null,
+          roomsLabel !== null ? t(locale, "listing_rooms", { rooms: roomsLabel }) : null,
           areaM2 !== undefined ? t(locale, "listing_area_m2", { area: areaM2 }) : null,
         ]
           .filter(Boolean)

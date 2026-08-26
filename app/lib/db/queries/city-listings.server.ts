@@ -5,6 +5,7 @@
 import { and, desc, eq, isNull, sql } from "drizzle-orm";
 
 import { db } from "../../db.server";
+import { dedupeListings } from "../../listings/display";
 import { cities, listings } from "../schema/realestate";
 
 export type CityListingPreview = {
@@ -52,9 +53,11 @@ export async function listCityListingPreviews(
       sql`CASE WHEN (${listings.attributes} ->> 'featuredImageUrl') != '' AND (${listings.attributes} ->> 'featuredImageUrl') IS NOT NULL THEN 0 ELSE 1 END`,
       desc(listings.publishedAt),
     )
-    .limit(limit);
+    // Over-fetch so duplicates removed below still leave `limit` results
+    // (the merkaz-h sync can carry the same property twice — TED-129).
+    .limit(limit * 4);
 
-  return rows.map((r) => {
+  const mapped = rows.map((r) => {
     const price = r.price ? Number(r.price) : null;
     return {
       id: r.id,
@@ -66,4 +69,6 @@ export async function listCityListingPreviews(
       attributes: (r.attributes ?? {}) as Record<string, unknown>,
     };
   });
+
+  return dedupeListings(mapped).slice(0, limit);
 }

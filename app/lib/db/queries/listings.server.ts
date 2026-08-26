@@ -19,6 +19,7 @@ import {
 
 import { db } from "../../db.server";
 import type { Locale } from "../../i18n/config";
+import { dedupeListings } from "../../listings/display";
 import { AGENCY_ROLES, agencies, agencyMembers } from "../schema/identity";
 import {
   cities,
@@ -62,6 +63,14 @@ export type ListingFilters = {
 };
 
 const PAGE_SIZE = 24;
+
+// The merkaz-h.co.il sync can produce the same property twice (once with a
+// price, once without — TED-129). The dedupe key lives inside the JSONB
+// `attributes` column, so de-duplication happens in memory over a bounded
+// window instead of a SQL page. 500 comfortably covers the synced inventory;
+// if it is ever exceeded, `total` undercounts and pages beyond the window are
+// empty — an acceptable trade-off for a data-quality safety net.
+const DEDUPE_SCAN_LIMIT = 500;
 
 function priceAsNumber(raw: string | null): number | null {
   if (raw === null) return null;
@@ -119,15 +128,9 @@ export async function listPublicListings(
     .leftJoin(neighborhoods, eq(listings.neighborhoodId, neighborhoods.id))
     .where(whereClause)
     .orderBy(desc(listings.publishedAt))
-    .limit(PAGE_SIZE)
-    .offset(page * PAGE_SIZE);
+    .limit(DEDUPE_SCAN_LIMIT);
 
-  const totalRow = await db
-    .select({ count: sql<number>`count(*)::int` })
-    .from(listings)
-    .where(whereClause);
-
-  const items: PublicListingSummary[] = rows.map((r) => ({
+  const allItems: PublicListingSummary[] = rows.map((r) => ({
     id: r.id,
     type: r.type as ListingType,
     title: r.title as PublicListingSummary["title"],
@@ -148,7 +151,9 @@ export async function listPublicListings(
     publishedAt: r.publishedAt ? r.publishedAt.toISOString() : null,
   }));
 
-  return { items, total: totalRow[0]?.count ?? items.length };
+  const deduped = dedupeListings(allItems);
+  const items = deduped.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
+  return { items, total: deduped.length };
 }
 
 /** Fetch up to `limit` listings for a city, images-first, for city landing pages. */
@@ -187,9 +192,10 @@ export async function listCityListingsWithImages(
       sql`CASE WHEN (${listings.attributes} ->> 'featuredImageUrl') != '' AND (${listings.attributes} ->> 'featuredImageUrl') IS NOT NULL THEN 0 ELSE 1 END`,
       desc(listings.publishedAt),
     )
-    .limit(limit);
+    // Over-fetch so duplicates removed below still leave `limit` results.
+    .limit(limit * 4);
 
-  return rows.map((r) => ({
+  const mapped = rows.map((r) => ({
     id: r.id,
     type: r.type as PublicListingSummary["type"],
     title: r.title as PublicListingSummary["title"],
@@ -204,6 +210,8 @@ export async function listCityListingsWithImages(
     attributes: (r.attributes ?? {}) as Record<string, unknown>,
     publishedAt: r.publishedAt ? r.publishedAt.toISOString() : null,
   }));
+
+  return dedupeListings(mapped).slice(0, limit);
 }
 
 export type PublicListingDetail = PublicListingSummary & {
