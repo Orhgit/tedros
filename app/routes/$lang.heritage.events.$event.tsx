@@ -24,6 +24,7 @@ import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -189,7 +190,9 @@ export default function HeritageEventDetail({ loaderData }: Route.ComponentProps
                 <p className="text-xs font-semibold tracking-wide text-earth-700 uppercase">
                   {t(locale, "heritage_events_next_observance_label")}
                 </p>
-                <p className="mt-1 font-medium text-earth-800">{next}</p>
+                <p className="mt-1 font-medium text-earth-800">
+                  {formatDate(locale, next)}
+                </p>
               </div>
             )}
           </div>

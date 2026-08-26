@@ -193,7 +193,10 @@ export default function JobDetail({ loaderData }: Route.ComponentProps) {
                 to={`/${locale}${trackPath(track.slug)}`}
                 className="inline-flex items-center rounded-full border border-earth-200 bg-card px-2.5 py-0.5 text-xs text-earth-800 hover:border-earth-400"
               >
-                {trackName} →
+                {trackName}{" "}
+                <span aria-hidden="true" className="icon-flip inline-block">
+                  →
+                </span>
               </Link>
             )}
           </div>
