@@ -15,6 +15,11 @@ import {
   listCityListingPreviews,
   type CityListingPreview,
 } from "~/lib/db/queries/city-listings.server";
+import {
+  cleanListingTitle,
+  effectiveListingType,
+  formatRooms,
+} from "~/lib/listings/display";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
 import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
@@ -426,11 +431,14 @@ function ListingCard({
   locale: Locale;
   citySlug: string;
 }) {
-  const title = (listing.title as { he: string }).he;
+  const title = cleanListingTitle((listing.title as { he: string }).he);
   const slug = (listing.slug as { he: string }).he;
   const attrs = listing.attributes as Record<string, unknown>;
+  // Deal-type guard (TED-129): synced "sale" rows with monthly-rent-sized
+  // prices are displayed (label + URL) as rentals. See lib/listings/display.
+  const displayType = effectiveListingType(listing.type, listing.price);
   const externalUrl = attrs.externalSourceUrl as string | undefined;
-  const href = externalUrl ?? `/${locale}/listings/${citySlug}/${listing.type}/${slug}`;
+  const href = externalUrl ?? `/${locale}/listings/${citySlug}/${displayType}/${slug}`;
   const isExternal = !!externalUrl;
 
   const featuredUrl = attrs.featuredImageUrl as string | undefined;
@@ -438,7 +446,7 @@ function ListingCard({
     ? [`/media/proxy?url=${encodeURIComponent(featuredUrl)}`]
     : [];
 
-  const rooms = typeof attrs.rooms === "number" ? attrs.rooms : undefined;
+  const roomsLabel = formatRooms(attrs.rooms);
   const area = typeof attrs.areaM2 === "number" ? attrs.areaM2 : undefined;
   const floor = typeof attrs.floor === "number" ? attrs.floor : undefined;
   const propType = typeof attrs.propertyType === "string" ? attrs.propertyType : null;
@@ -446,10 +454,10 @@ function ListingCard({
   const price = listing.price
     ? `₪${Number(listing.price).toLocaleString("he-IL")}`
     : null;
-  const isRent = listing.type === "rent";
+  const isRent = displayType === "rent";
 
   const typeBadgeColor =
-    listing.type === "rent"
+    displayType === "rent"
       ? "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200"
       : "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200";
   const typeLabel = isRent ? "להשכרה" : "למכירה";
@@ -461,32 +469,27 @@ function ListingCard({
       rel={isExternal ? "noopener noreferrer" : undefined}
       className="group flex h-105 flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950"
     >
-      {/* Image */}
+      {/* Image (placeholder always rendered underneath — the source photo may
+          have been removed from merkaz-h.co.il, in which case /media/proxy
+          404s and the <img> hides itself via onError; TED-129) */}
       <div className="relative h-52 w-full overflow-hidden bg-gray-100 dark:bg-gray-900">
-        {previewImgs.length > 0 ? (
+        <div
+          aria-hidden="true"
+          className="flex h-full items-center justify-center text-4xl text-gray-300 dark:text-gray-700"
+        >
+          🏢
+        </div>
+        {previewImgs.length > 0 && (
           <img
             src={previewImgs[0]}
             alt={title}
             loading="lazy"
             referrerPolicy="no-referrer"
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+            }}
+            className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />
-        ) : (
-          <div className="flex h-full items-center justify-center text-gray-300 dark:text-gray-700">
-            <svg
-              className="h-16 w-16"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1}
-                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
-          </div>
         )}
         {/* Gradient overlay for readability */}
         <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
@@ -538,7 +541,7 @@ function ListingCard({
           <p className="text-xl font-bold text-gray-900 dark:text-gray-100">
             {price ?? (
               <span className="text-sm font-normal text-gray-400">
-                {t(locale, "listing_price_not_specified")}
+                {t(locale, "listing_price_on_request")}
               </span>
             )}
             {price && isRent && (
@@ -551,9 +554,9 @@ function ListingCard({
 
           {/* Specs chips */}
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {rooms !== undefined && (
+            {roomsLabel !== null && (
               <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
-                🛏 {rooms} חד׳
+                🛏 {roomsLabel} חד׳
               </span>
             )}
             {area !== undefined && (

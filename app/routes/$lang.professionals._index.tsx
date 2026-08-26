@@ -63,8 +63,10 @@ export default function ProfessionalsLanding({ loaderData }: Route.ComponentProp
       <SiteHeader locale={locale} currentPath={`/${locale}/professionals`} />
       <main id="main-content" className="container-default mx-auto max-w-5xl py-10">
         <header className="relative isolate mb-10 overflow-hidden rounded-2xl border border-earth-200 bg-linear-to-br from-earth-50 via-background to-accent-yellow/5 px-6 py-8 sm:px-10 sm:py-12">
+          {/* Neutral professional hero (TED-129) — the directory covers all
+              professions, so no medical imagery here. */}
           <img
-            src="https://images.unsplash.com/photo-1666887360742-974c8fce8e6b?fm=webp&q=70&w=1200&fit=crop"
+            src="https://images.unsplash.com/photo-1691820776176-fcfbd25096c9?fm=webp&q=70&w=1200&fit=crop"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 -z-20 h-full w-full object-cover"
