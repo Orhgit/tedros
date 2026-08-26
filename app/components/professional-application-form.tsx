@@ -261,11 +261,10 @@ export function ProfessionalApplicationForm({
         </p>
       ) : null}
 
-      {/* Honeypot — must remain visually hidden but present in DOM. */}
-      <div
-        aria-hidden="true"
-        className="absolute top-auto -left-[9999px] h-px w-px overflow-hidden"
-      >
+      {/* Honeypot — must remain visually hidden but present in DOM. Hidden via
+          sr-only (clip-based): a physical -left offset extends the scrollable
+          area on RTL pages instead of being cut off (TED-120). */}
+      <div aria-hidden="true" className="sr-only">
         <label htmlFor={`${formId}-website`}>Website</label>
         <input
           id={`${formId}-website`}

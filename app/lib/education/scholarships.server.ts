@@ -224,7 +224,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [הסגים — Org profile](/he/orgs/hesegim)
+- [הסגים — Org profile](/he/glossary/hesegim-isef)
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship) — לתואר שני/שלישי
 - [Atidim — מכינה אקדמית](/he/education/scholarships/atidim-pre-academic)
 `,
@@ -255,7 +255,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## See also
 
-- [Hesegim — provider org](/en/orgs/hesegim)
+- [Hesegim — provider org](/en/glossary/hesegim-isef)
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship) — for master's/PhD
 - [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
 `,
@@ -286,7 +286,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ይህንንም ይመልከቱ
 
-- [ሄሰጊም — የሰጪው ድርጅት](/am/orgs/hesegim)
+- [ሄሰጊም — የሰጪው ድርጅት](/am/glossary/hesegim-isef)
 - [የISEF ህብረት](/am/education/scholarships/isef-fellowship)
 - [Atidim ቅድመ-አካዳሚክ](/am/education/scholarships/atidim-pre-academic)
 `,
@@ -348,7 +348,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [ENP — שותפות לאומית לקהילה](/he/orgs/enp)
 - [מכינת אתידים](/he/education/scholarships/atidim-pre-academic) — צעד הבא לאחר הבגרות
-- [מענק בגרות לתלמידי תיכון — ממשלתי](/he/rights/bagrut-completion-bonus)
+- [מענק בגרות לתלמידי תיכון — ממשלתי](/he/rights/matriculation-grant)
 `,
       en: `## Who is it for?
 
@@ -376,7 +376,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [ENP — provider organization](/en/orgs/enp)
 - [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
-- [Bagrut completion bonus — government](/en/rights/bagrut-completion-bonus)
+- [Bagrut completion bonus — government](/en/rights/matriculation-grant)
 `,
       am: `## ለማን ነው?
 
@@ -453,7 +453,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [Mossad Maxim — Org profile](/he/orgs/mossad-maxim)
+- Mossad Maxim — Org profile
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship)
 - [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
 `,
@@ -477,7 +477,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## See also
 
-- [Mossad Maxim — provider org](/en/orgs/mossad-maxim)
+- Mossad Maxim — provider org
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
 - [Hesegim Undergraduate](/en/education/scholarships/hesegim-undergraduate)
 `,
@@ -495,7 +495,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ይህንንም ይመልከቱ
 
-- [Mossad Maxim — የሰጪው ድርጅት](/am/orgs/mossad-maxim)
+- Mossad Maxim — የሰጪው ድርጅት
 `,
     },
   },
@@ -556,7 +556,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [Atidim — Org profile](/he/orgs/atidim)
+- Atidim — Org profile
 - [מענק בגרות ENP](/he/education/scholarships/enp-bagrut-grant)
 - [Tech-Career bootcamp](/he/education/scholarships/tech-career-bootcamp-stipend) — מסלול חלופי לקריירה
 `,
@@ -587,7 +587,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## See also
 
-- [Atidim — provider org](/en/orgs/atidim)
+- Atidim — provider org
 - [ENP Bagrut Grant](/en/education/scholarships/enp-bagrut-grant)
 - [Tech-Career bootcamp](/en/education/scholarships/tech-career-bootcamp-stipend)
 `,
@@ -607,7 +607,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ይህንንም ይመልከቱ
 
-- [Atidim — የሰጪው ድርጅት](/am/orgs/atidim)
+- Atidim — የሰጪው ድርጅት
 - [የENP ባግሩት ድጋፍ](/am/education/scholarships/enp-bagrut-grant)
 `,
     },
@@ -664,7 +664,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [Cogito — Org profile](/he/orgs/cogito)
+- Cogito — Org profile
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship)
 `,
       en: `## Who is it for?
@@ -689,7 +689,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## See also
 
-- [Cogito — provider org](/en/orgs/cogito)
+- Cogito — provider org
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
 `,
       am: `## ለማን ነው?
@@ -706,7 +706,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ይህንንም ይመልከቱ
 
-- [Cogito — የሰጪው ድርጅት](/am/orgs/cogito)
+- Cogito — የሰጪው ድርጅት
 - [የISEF ህብረት](/am/education/scholarships/isef-fellowship)
 `,
     },
@@ -761,7 +761,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [פרח — Org profile](/he/orgs/perach)
+- פרח — Org profile
 - [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate) — מלגת תואר ראשון מקבילה
 `,
       en: `## Who is it for?
@@ -784,7 +784,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## See also
 
-- [PERACH — provider org](/en/orgs/perach)
+- PERACH — provider org
 - [Hesegim Undergraduate](/en/education/scholarships/hesegim-undergraduate)
 `,
       am: `## ለማን ነው?
@@ -801,7 +801,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ይህንንም ይመልከቱ
 
-- [PERACH — የሰጪው ድርጅት](/am/orgs/perach)
+- PERACH — የሰጪው ድርጅት
 `,
     },
   },
@@ -857,7 +857,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [Tech-Career — Org profile](/he/orgs/tech-career)
+- [Tech-Career — Org profile](/he/education/scholarships/tech-career-org)
 - [Atidim מכינה](/he/education/scholarships/atidim-pre-academic) — מסלול אקדמי חלופי
 - [ייעוץ קריירה — Olim Beyahad](/he/education/scholarships/olim-beyahad-career-mentorship)
 `,
@@ -883,7 +883,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## See also
 
-- [Tech-Career — provider org](/en/orgs/tech-career)
+- [Tech-Career — provider org](/en/education/scholarships/tech-career-org)
 - [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
 - [Olim Beyahad Career Mentorship](/en/education/scholarships/olim-beyahad-career-mentorship)
 `,
@@ -902,7 +902,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ይህንንም ይመልከቱ
 
-- [Tech-Career — የሰጪው ድርጅት](/am/orgs/tech-career)
+- [Tech-Career — የሰጪው ድርጅት](/am/education/scholarships/tech-career-org)
 `,
     },
   },
@@ -1384,8 +1384,6 @@ The Marom Scholarship is a national scholarship program of the Council for Highe
 - Enrolled in a CHE-recognized academic program (undergraduate or master's)
 - From 2026-27: applicants may apply in any standard year of the degree, not just year 1
 - From 2026-27: socio-economic status is no longer a strict eligibility gate but is weighted into the overall score; the previous volunteering requirement has been dropped
-
-> **Editorial note**: the above was verified against che.org.il/scholarships/marom (July 2026). Exact master's-level criteria (whether amount/requirements differ from undergraduate) were not detailed on the page checked — confirm with CHE before any paid campaign.
 
 ## How much?
 

@@ -106,9 +106,11 @@ export function AccessibilityWidget({ locale }: Props) {
       {/* Panel */}
       {open && (
         <div
+          // Non-modal panel: focus is not trapped, so aria-modal would lie to
+          // screen readers (TED-122). id matches the trigger's aria-controls.
+          id="a11y-panel"
           ref={panelRef}
           role="dialog"
-          aria-modal="true"
           aria-label={t(locale, "a11y_panel_label")}
           className="w-72 rounded-lg border border-border bg-card shadow-lg"
         >

@@ -13,6 +13,7 @@ import { breadcrumbJsonLd } from "~/lib/news/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -80,11 +81,11 @@ export default function NewsByTag({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <p className="text-sm font-medium text-earth-700">
@@ -119,7 +120,9 @@ export default function NewsByTag({ loaderData }: Route.ComponentProps) {
                   to={`/${locale}/news/${a.slug}`}
                   className="block rounded-lg border border-earth-200 bg-card p-5 transition hover:border-earth-400 hover:shadow-sm"
                 >
-                  <p className="text-xs text-ink-600">{a.publishedAt}</p>
+                  <p className="text-xs text-ink-600">
+                    {formatDate(locale, a.publishedAt)}
+                  </p>
                   <h3 className="mt-1 font-display text-lg font-semibold text-earth-900">
                     {a.title}
                   </h3>
@@ -135,7 +138,9 @@ export default function NewsByTag({ loaderData }: Route.ComponentProps) {
             to={`/${locale}/news`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "news_back_to_landing")}
           </Link>
         </div>

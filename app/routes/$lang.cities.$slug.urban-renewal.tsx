@@ -145,19 +145,25 @@ export default function CityUrbanRenewalPage({ loaderData }: Route.ComponentProp
                 {t(locale, "urw_breadcrumb_home")}
               </Link>
             </li>
-            <li aria-hidden>›</li>
+            <li aria-hidden className="icon-flip">
+              ›
+            </li>
             <li>
               <Link to={`/${locale}/cities`} className="hover:underline">
                 {t(locale, "cities_index_title")}
               </Link>
             </li>
-            <li aria-hidden>›</li>
+            <li aria-hidden className="icon-flip">
+              ›
+            </li>
             <li>
               <Link to={cityPath(locale, city.slug)} className="hover:underline">
                 {cityDisplayName}
               </Link>
             </li>
-            <li aria-hidden>›</li>
+            <li aria-hidden className="icon-flip">
+              ›
+            </li>
             <li aria-current="page" className="text-earth-900">
               {t(locale, "city_section_urban_renewal_title")}
             </li>

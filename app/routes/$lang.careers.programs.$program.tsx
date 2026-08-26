@@ -183,11 +183,11 @@ export default function BootcampDetail({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <span
@@ -364,7 +364,9 @@ export default function BootcampDetail({ loaderData }: Route.ComponentProps) {
             to={`/${locale}${trackPath(track.slug)}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "careers_program_back_to_track", { track: trackName })}
           </Link>
         </div>

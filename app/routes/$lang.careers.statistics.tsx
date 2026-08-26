@@ -100,11 +100,11 @@ export default function CareersStatistics({ loaderData }: Route.ComponentProps) 
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <p className="text-sm font-medium text-earth-700">
@@ -137,7 +137,10 @@ export default function CareersStatistics({ loaderData }: Route.ComponentProps) 
                 <h2 className="font-display text-lg font-semibold text-earth-900">
                   {s.heading}
                 </h2>
-                <span className="font-display text-2xl font-bold text-earth-700 sm:text-3xl">
+                <span
+                  className="font-display text-2xl font-bold text-earth-700 sm:text-3xl"
+                  dir="ltr"
+                >
                   {s.figure}
                 </span>
               </div>
@@ -171,7 +174,9 @@ export default function CareersStatistics({ loaderData }: Route.ComponentProps) 
             to={`/${locale}/careers`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "careers_track_back_to_hub")}
           </Link>
         </div>

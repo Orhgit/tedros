@@ -138,11 +138,11 @@ export default function ComparisonDetail({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <span
@@ -199,7 +199,9 @@ export default function ComparisonDetail({ loaderData }: Route.ComponentProps) {
                 <h2 className="mt-1 font-display text-lg font-semibold text-earth-900">
                   {side.name}
                 </h2>
-                <p className="mt-1 text-sm text-ink-600">{side.tagline}</p>
+                <p className="mt-1 text-sm text-ink-600">
+                  <bdi>{side.tagline}</bdi>
+                </p>
               </div>
             );
             return href ? (

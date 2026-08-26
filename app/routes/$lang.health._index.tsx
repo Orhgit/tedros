@@ -92,11 +92,11 @@ export default function HealthLanding({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
@@ -188,7 +188,9 @@ export default function HealthLanding({ loaderData }: Route.ComponentProps) {
                 </div>
                 <p className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-earth-700">
                   {t(locale, "health_mental_health_crisis_cta")}
-                  <span aria-hidden="true">←</span>
+                  <span aria-hidden="true" className="icon-flip inline-block">
+                    ←
+                  </span>
                 </p>
               </Link>
             </section>
@@ -228,7 +230,9 @@ export default function HealthLanding({ loaderData }: Route.ComponentProps) {
                 className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-earth-700 hover:underline"
               >
                 {t(locale, "health_rights_link_label")}
-                <span aria-hidden="true">←</span>
+                <span aria-hidden="true" className="icon-flip inline-block">
+                  ←
+                </span>
               </Link>
             </div>
 

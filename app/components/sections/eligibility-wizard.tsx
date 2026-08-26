@@ -98,11 +98,21 @@ export function EligibilityWizard({
               <div className="space-y-4">
                 {questions.map((q) => (
                   <div key={q.id}>
-                    <p className="mb-2 text-sm font-medium text-foreground">
+                    {/* aria-labelledby ties each radiogroup to its question —
+                        screen readers announced bare "radio, not checked"
+                        with no context before this (TED-127). */}
+                    <p
+                      id={`wizard-q-${q.id}`}
+                      className="mb-2 text-sm font-medium text-foreground"
+                    >
                       {q.label[locale]}
                     </p>
                     {q.type === "boolean" ? (
-                      <div className="flex gap-3" role="radiogroup">
+                      <div
+                        className="flex gap-3"
+                        role="radiogroup"
+                        aria-labelledby={`wizard-q-${q.id}`}
+                      >
                         {(["true", "false"] as const).map((val) => {
                           const active = answers[q.id] === val;
                           return (
@@ -128,7 +138,11 @@ export function EligibilityWizard({
                         })}
                       </div>
                     ) : (
-                      <div className="space-y-2" role="radiogroup">
+                      <div
+                        className="space-y-2"
+                        role="radiogroup"
+                        aria-labelledby={`wizard-q-${q.id}`}
+                      >
                         {q.options.map((opt) => {
                           const active = answers[q.id] === opt.value;
                           return (

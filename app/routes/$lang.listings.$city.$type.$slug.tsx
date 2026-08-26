@@ -18,6 +18,11 @@ import {
   type PublicListingDetail,
 } from "~/lib/db/queries/listings.server";
 import { getEnv } from "~/lib/env.server";
+import {
+  cleanListingTitle,
+  effectiveListingType,
+  formatRooms,
+} from "~/lib/listings/display";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
@@ -49,11 +54,25 @@ export async function loader({ params }: Route.LoaderArgs) {
     throw new Response("Not found", { status: 404 });
   }
 
-  const listing = await getPublicListingByPath({
+  let listing = await getPublicListingByPath({
     citySlugHe: city,
     type: type as ListingType,
     slugHe: slug,
   });
+  // Deal-type guard (TED-129): cards link mislabelled "sale" rows under
+  // /rent/ when the price is monthly-rent-sized (see lib/listings/display).
+  // The row is still stored as "sale", so fall back to that lookup — but only
+  // when the heuristic really classifies it as a rental.
+  if (!listing && type === "rent") {
+    const saleRow = await getPublicListingByPath({
+      citySlugHe: city,
+      type: "sale",
+      slugHe: slug,
+    });
+    if (saleRow && effectiveListingType(saleRow.type, saleRow.price) === "rent") {
+      listing = saleRow;
+    }
+  }
   if (!listing) {
     throw new Response("Not found", { status: 404 });
   }
@@ -127,7 +146,7 @@ export async function action({ request, params }: Route.ActionArgs) {
 export const meta: Route.MetaFunction = ({ data, params }) => {
   if (!data) return [{ title: "Not found" }];
   const locale = data.locale ?? DEFAULT_LOCALE;
-  const title = pickLocale(data.listing.title, locale);
+  const title = cleanListingTitle(pickLocale(data.listing.title, locale));
   const cityName = pickLocale(data.listing.city.name, locale);
   const description = (data.listing.body[locale] ?? data.listing.body.he ?? title).slice(
     0,
@@ -151,7 +170,7 @@ export const meta: Route.MetaFunction = ({ data, params }) => {
 
 export default function ListingDetail({ loaderData, actionData }: Route.ComponentProps) {
   const { locale, listing, publicUrl } = loaderData;
-  const title = pickLocale(listing.title, locale);
+  const title = cleanListingTitle(pickLocale(listing.title, locale));
   const cityName = pickLocale(listing.city.name, locale);
   const body = listing.body[locale] ?? listing.body.he ?? "";
 
@@ -165,7 +184,7 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
   return (
     <>
       <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
-      <article className="mx-auto max-w-3xl px-6 py-10">
+      <article id="main-content" className="mx-auto max-w-3xl px-6 py-10">
         <p className="mb-4 text-sm">
           <Link
             to={`/${locale}/listings`}
@@ -177,7 +196,11 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
 
         <header>
           <span className="inline-block rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
-            {t(locale, `listings_type_${listing.type}`)}
+            {/* Deal-type guard (TED-129) — see lib/listings/display */}
+            {t(
+              locale,
+              `listings_type_${effectiveListingType(listing.type, listing.price)}`,
+            )}
           </span>
           <h1 className="mt-2 text-3xl font-bold tracking-tight">{title}</h1>
           <p className="mt-1 text-gray-600 dark:text-gray-400">
@@ -265,10 +288,17 @@ function PriceLine({
       | "EUR"
       | undefined) ?? "ILS";
   const prefix = t(locale, `listing_price_currency_${currency.toLowerCase()}` as const);
+  if (listing.price === null) {
+    // No price from the source — show a proper "price on request" label
+    // instead of a bare em-dash (TED-129).
+    return (
+      <p className="mt-6 text-xl font-semibold text-gray-600 dark:text-gray-400">
+        {t(locale, "listing_price_on_request")}
+      </p>
+    );
+  }
   return (
-    <p className="mt-6 text-3xl font-bold">
-      {listing.price === null ? "—" : `${prefix}${listing.price.toLocaleString()}`}
-    </p>
+    <p className="mt-6 text-3xl font-bold">{`${prefix}${listing.price.toLocaleString()}`}</p>
   );
 }
 
@@ -281,16 +311,23 @@ function AttributesGrid({
 }) {
   const a = listing.attributes as Record<string, unknown>;
   const items: Array<{ label: string; value: string }> = [];
-  if (typeof a.rooms === "number")
-    items.push({ label: t(locale, "listings_filter_min_rooms"), value: String(a.rooms) });
-  if (typeof a.areaM2 === "number") items.push({ label: "m²", value: String(a.areaM2) });
+  // formatRooms drops the "4.0" decimal and hides 0/absent room counts.
+  const roomsLabel = formatRooms(a.rooms);
+  if (roomsLabel !== null)
+    items.push({ label: t(locale, "listing_attr_rooms"), value: roomsLabel });
+  if (typeof a.areaM2 === "number")
+    items.push({ label: t(locale, "listing_attr_area"), value: String(a.areaM2) });
   if (typeof a.bedrooms === "number")
-    items.push({ label: "bedrooms", value: String(a.bedrooms) });
-  if (typeof a.floor === "number") items.push({ label: "floor", value: String(a.floor) });
+    items.push({ label: t(locale, "listing_attr_bedrooms"), value: String(a.bedrooms) });
+  if (typeof a.floor === "number")
+    items.push({ label: t(locale, "listing_attr_floor"), value: String(a.floor) });
   if (typeof a.parkingSpots === "number")
-    items.push({ label: "parking", value: String(a.parkingSpots) });
+    items.push({
+      label: t(locale, "listing_attr_parking"),
+      value: String(a.parkingSpots),
+    });
   if (typeof a.yearBuilt === "number")
-    items.push({ label: "year", value: String(a.yearBuilt) });
+    items.push({ label: t(locale, "listing_attr_year"), value: String(a.yearBuilt) });
 
   if (items.length === 0) return null;
   return (
@@ -406,7 +443,7 @@ function buildRealEstateJsonLd({
   locale: Locale;
   publicUrl: string;
 }) {
-  const title = pickLocale(listing.title, locale);
+  const title = cleanListingTitle(pickLocale(listing.title, locale));
   const cityName = pickLocale(listing.city.name, locale);
   const slug = pickLocale(listing.slug, locale) || listing.slug.he;
   const url = `${publicUrl}/${locale}/listings/${listing.city.slugHe}/${listing.type}/${slug}`;
@@ -452,8 +489,10 @@ function buildRealEstateJsonLd({
           },
         }
       : {}),
-    ...(typeof a.bedrooms === "number" ? { numberOfBedrooms: a.bedrooms } : {}),
-    ...(typeof a.rooms === "number" ? { numberOfRooms: a.rooms } : {}),
+    ...(typeof a.bedrooms === "number" && a.bedrooms > 0
+      ? { numberOfBedrooms: a.bedrooms }
+      : {}),
+    ...(typeof a.rooms === "number" && a.rooms > 0 ? { numberOfRooms: a.rooms } : {}),
     provider: {
       "@type": "RealEstateAgent",
       name: pickLocale(listing.agency.name, locale),

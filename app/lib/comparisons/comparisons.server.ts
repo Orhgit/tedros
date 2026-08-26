@@ -888,7 +888,13 @@ The aliyah grant can be requested up to 10 years after aliyah. Many families don
     sideA: {
       name: { he: "המשכנתא הקהילתית", en: "Community Mortgage", am: "የማህበረሰብ ብድር" },
       link: { type: "right", slug: "600k-mortgage" },
-      tagline: { he: "₪600K, 25 שנה", en: "₪600K, 25 years", am: "₪600K፣ 25 ዓመት" },
+      tagline: {
+        // Spelled out in Hebrew — "₪600K" bidi-scrambled to "600K, 25₪" in
+        // RTL context (TED-128).
+        he: "600 אלף ₪, ל-25 שנה",
+        en: "₪600K, 25 years",
+        am: "600 ሺህ ₪፣ ለ25 ዓመት",
+      },
     },
     sideB: {
       name: { he: "מענק דירה-ראשונה", en: "First-Home Grant", am: "የመጀመሪያ ቤት ስጦታ" },

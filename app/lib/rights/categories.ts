@@ -110,6 +110,19 @@ const TAG_TO_TONE: Record<string, Tone> = {
   domestic_violence: "red",
   summer_camp: "green",
   language_learning: "gold",
+  // TED-117 — tags present in the rights seed but missing here:
+  army: "ink",
+  benefits: "green",
+  btl: "earth",
+  civic: "ink",
+  disability: "red",
+  heritage: "sigd",
+  immigration: "green",
+  income: "gold",
+  insurance: "earth",
+  property: "earth",
+  rights: "red",
+  social_welfare: "earth",
 };
 
 export function toneForTag(tag: string): Tone {
@@ -172,6 +185,19 @@ const TAG_GLYPH: Record<string, string> = {
   domestic_violence: "🆘",
   summer_camp: "🏕️",
   language_learning: "🔤",
+  // TED-117 — tags present in the rights seed but missing here:
+  army: "🪖",
+  benefits: "🎁",
+  btl: "🏛️",
+  civic: "🗳️",
+  disability: "♿",
+  heritage: "🕯️",
+  immigration: "✈️",
+  income: "💰",
+  insurance: "🛡️",
+  property: "🏠",
+  rights: "📜",
+  social_welfare: "🛟",
 };
 
 export function glyphForTag(tag: string): string {
