@@ -4,8 +4,12 @@ import { localePrefixTarget } from "~/lib/i18n/locale-redirect";
 describe("localePrefixTarget (TED-118)", () => {
   it("prefixes the default locale for section paths shared without one", () => {
     expect(localePrefixTarget("/rights")).toBe("/he/rights");
-    expect(localePrefixTarget("/rights/advanced-ulpan")).toBe("/he/rights/advanced-ulpan");
-    expect(localePrefixTarget("/careers/tech/jerusalem")).toBe("/he/careers/tech/jerusalem");
+    expect(localePrefixTarget("/rights/advanced-ulpan")).toBe(
+      "/he/rights/advanced-ulpan",
+    );
+    expect(localePrefixTarget("/careers/tech/jerusalem")).toBe(
+      "/he/careers/tech/jerusalem",
+    );
   });
 
   it("swaps an unsupported language tag instead of stacking prefixes", () => {
