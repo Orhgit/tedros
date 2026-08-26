@@ -119,11 +119,11 @@ export default function RacismReport({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">

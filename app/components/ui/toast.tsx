@@ -50,7 +50,9 @@ export function Toast({
           type="button"
           onClick={onDismiss}
           aria-label="סגור"
-          className="rounded-xs text-current/70 hover:text-current focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+          // -m-2 keeps layout identical while p-2 grows the ~16px glyph to a
+          // usable touch target (TED-127).
+          className="-m-2 rounded-xs p-2 text-current/70 hover:text-current focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
         >
           ✕
         </button>

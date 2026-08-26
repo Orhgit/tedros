@@ -46,7 +46,7 @@ export function SiteHeader({
       className="sticky top-0 z-(--z-sticky) border-b border-border bg-background/85 backdrop-blur-md"
     >
       <a href="#main-content" className="sr-skip">
-        {t(locale, "nav_home")}
+        {t(locale, "skip_to_content")}
       </a>
       <div className="container-default flex h-16 items-center justify-between gap-4">
         <div className="flex items-center gap-6">
@@ -58,7 +58,7 @@ export function SiteHeader({
             <span>{t(locale, "homepage_title")}</span>
           </Link>
           <div className="hidden md:block">
-            <NavMenu items={items} ariaLabel={t(locale, "nav_home")} />
+            <NavMenu items={items} ariaLabel={t(locale, "nav_main_label")} />
           </div>
         </div>
 
@@ -82,14 +82,14 @@ export function SiteHeader({
           always inline above. */}
       <nav
         className="container-default flex gap-2 overflow-x-auto pb-2 md:hidden"
-        aria-label={t(locale, "nav_home")}
+        aria-label={t(locale, "nav_main_label")}
       >
         {items.map((item) => (
           <Link
             key={item.href}
             to={item.href}
             aria-current={item.current ? "page" : undefined}
-            className={`inline-flex shrink-0 items-center rounded-md px-3 py-1.5 text-sm transition ${
+            className={`inline-flex min-h-10 shrink-0 items-center rounded-md px-3 py-2 text-sm transition ${
               item.current ? "bg-earth-800 text-white" : "text-foreground hover:bg-muted"
             }`}
           >

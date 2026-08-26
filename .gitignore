@@ -163,3 +163,4 @@ drizzle/
 
 # macOS
 .DS_Store
+.claude/worktrees/
