@@ -229,7 +229,9 @@ export default function WomenEmpowermentPage({ loaderData }: Route.ComponentProp
             to={`/${locale}${familyPath()}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "family_breadcrumb_family")}
           </Link>
         </div>

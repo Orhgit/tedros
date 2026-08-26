@@ -329,7 +329,9 @@ export default function StatisticsTopicDetail({ loaderData }: Route.ComponentPro
             to={`/${locale}/statistics`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "statistics_back_to_landing")}
           </Link>
         </div>

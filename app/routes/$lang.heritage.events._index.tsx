@@ -14,6 +14,7 @@ import { breadcrumbJsonLd } from "~/lib/heritage/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -101,7 +102,7 @@ export default function HeritageEventsLanding({ loaderData }: Route.ComponentPro
                   {e.nextObservance && (
                     <p className="font-medium text-earth-800">
                       {t(locale, "heritage_events_next_observance_label")}:{" "}
-                      {e.nextObservance}
+                      {formatDate(locale, e.nextObservance)}
                     </p>
                   )}
                 </div>

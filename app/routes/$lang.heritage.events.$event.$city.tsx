@@ -24,6 +24,7 @@ import { cityName, cityOverview, findCityBySlug } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -244,7 +245,11 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
                     className="flex items-center justify-between rounded-lg border border-earth-200 bg-white p-3 text-sm transition hover:border-earth-400"
                   >
                     <span className="text-ink-800">{e.name}</span>
-                    {e.next && <span className="text-xs text-earth-600">{e.next}</span>}
+                    {e.next && (
+                      <span className="text-xs text-earth-600">
+                        {formatDate(locale, e.next)}
+                      </span>
+                    )}
                   </Link>
                 </li>
               ))}
@@ -257,7 +262,9 @@ export default function HeritageEventCityCell({ loaderData }: Route.ComponentPro
             to={`/${locale}${eventPath(event.slug)}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "heritage_events_back_to_event", { event: eventName })}
           </Link>
         </div>

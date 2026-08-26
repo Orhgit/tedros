@@ -345,7 +345,9 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
             to={`/${locale}/professionals/career-counselor`}
             className={`mt-2 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:opacity-90 ${tone.accentBg}`}
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              →
+            </span>
             {t(locale, "careers_explore_counselors_cta")}
           </Link>
         </section>
@@ -403,7 +405,9 @@ export default function CareerTrackDetail({ loaderData }: Route.ComponentProps) 
             to={`/${locale}/careers`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "careers_track_back_to_hub")}
           </Link>
         </div>

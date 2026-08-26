@@ -1,10 +1,14 @@
 import { Link } from "react-router";
+import type { Locale } from "~/lib/i18n/config";
+import { t } from "~/lib/i18n/messages";
 import { Badge } from "../ui/badge";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Icon } from "../ui/icon";
 import { cn } from "~/lib/utils";
 
 export interface ListingCardProps {
+  /** Locale for the spec labels (default he) — was hardcoded Hebrew (TED-128). */
+  locale?: Locale;
   href: string;
   title: string;
   city: string;
@@ -28,6 +32,7 @@ export interface ListingCardProps {
 const formatNumber = (n: number) => new Intl.NumberFormat("he-IL").format(n);
 
 export function ListingCard({
+  locale = "he",
   href,
   title,
   city,
@@ -90,7 +95,9 @@ export function ListingCard({
         </Link>
         <dl className="mt-4 grid grid-cols-3 gap-3 text-sm">
           <div>
-            <dt className="text-xs text-muted-foreground">חדרים</dt>
+            <dt className="text-xs text-muted-foreground">
+              {t(locale, "listing_rooms_label")}
+            </dt>
             <dd className="font-medium">
               <bdi>{rooms}</bdi>
             </dd>

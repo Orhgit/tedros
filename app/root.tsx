@@ -20,6 +20,13 @@ import { getEnv } from "./lib/env.server";
 import { AccessibilityWidget } from "./components/ui/accessibility-widget";
 import { PromoBanner } from "./components/sections/promo-banner";
 import "./app.css";
+// Ge'ez glyphs for the /am locale — app.css declares "Noto Sans Ethiopic" on
+// html[lang^="am"] but nothing ever loaded the font, so Amharic rendered in a
+// random per-OS fallback (TED-128). Self-hosted via @fontsource (font-display:
+// swap); browsers download a face only when text actually uses it, so he/en
+// visitors pay nothing.
+import "@fontsource/noto-sans-ethiopic/400.css";
+import "@fontsource/noto-sans-ethiopic/700.css";
 
 const MulaChat = lazy(() =>
   import("./components/mula-chat").then((m) => ({ default: m.MulaChat })),

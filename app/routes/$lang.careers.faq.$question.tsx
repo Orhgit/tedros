@@ -16,6 +16,7 @@ import { breadcrumbJsonLd, faqJsonLd } from "~/lib/careers/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -149,7 +150,8 @@ export default function FaqDetail({ loaderData }: Route.ComponentProps) {
             </Link>
           )}
           <span className="text-xs text-ink-600">
-            {t(locale, "careers_faq_reviewed_label")}: {faq.reviewedAt}
+            {t(locale, "careers_faq_reviewed_label")}:{" "}
+            {formatDate(locale, faq.reviewedAt)}
           </span>
         </div>
 
@@ -182,7 +184,9 @@ export default function FaqDetail({ loaderData }: Route.ComponentProps) {
             to={`/${locale}/careers/faq`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "careers_faq_back_to_landing")}
           </Link>
         </div>

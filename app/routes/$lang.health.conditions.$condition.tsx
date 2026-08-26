@@ -21,6 +21,7 @@ import { breadcrumbJsonLd, healthConditionJsonLd } from "~/lib/health/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -157,7 +158,8 @@ export default function ConditionDetail({ loaderData }: Route.ComponentProps) {
             {condition.shortDescription}
           </p>
           <p className="mt-2 text-xs text-ink-500">
-            {t(locale, "health_condition_last_reviewed_label")}: {condition.lastReviewed}
+            {t(locale, "health_condition_last_reviewed_label")}:{" "}
+            {formatDate(locale, condition.lastReviewed)}
           </p>
         </header>
 
@@ -257,7 +259,9 @@ export default function ConditionDetail({ loaderData }: Route.ComponentProps) {
             to={`/${locale}${conditionsPath()}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "health_back_to_conditions")}
           </Link>
         </div>

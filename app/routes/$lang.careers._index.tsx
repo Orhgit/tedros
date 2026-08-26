@@ -302,7 +302,9 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
               to={`/${locale}/professionals/career-counselor`}
               className="inline-flex items-center gap-2 rounded-md bg-earth-800 px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:bg-earth-700 sm:self-start"
             >
-              <span aria-hidden="true">←</span>
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
               {t(locale, "careers_explore_counselors_cta")}
             </Link>
           </div>
