@@ -13,6 +13,7 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+import { SearchField, useSearchQuery } from "~/components/ui/search-field";
 import {
   ALL_PROFESSIONS,
   PROFESSION_TO_TAG,
@@ -49,7 +50,8 @@ export default function ProfessionalsLanding({ loaderData }: Route.ComponentProp
   const { locale, slots } = loaderData;
   const [searchParams, setSearchParams] = useSearchParams();
   const profession = searchParams.get("profession") ?? "";
-  const q = searchParams.get("q")?.toLowerCase() ?? "";
+  const [qInput, setQInput] = useSearchQuery();
+  const q = qInput.toLowerCase();
 
   const filtered = slots.filter((s) => {
     if (profession && s.profession !== profession) return false;
@@ -106,18 +108,11 @@ export default function ProfessionalsLanding({ loaderData }: Route.ComponentProp
         </header>
 
         <section className="mb-8 space-y-4">
-          <input
-            type="search"
-            value={q}
-            onChange={(e) => {
-              const params = new URLSearchParams(searchParams);
-              if (e.target.value) params.set("q", e.target.value);
-              else params.delete("q");
-              setSearchParams(params, { replace: true });
-            }}
+          <SearchField
+            locale={locale}
+            value={qInput}
+            onChange={setQInput}
             placeholder={t(locale, "professionals_search_placeholder")}
-            className="w-full max-w-md rounded-md border border-input bg-card px-4 py-2.5 text-base text-foreground placeholder:text-muted-foreground focus:border-ring focus:ring-2 focus:ring-ring/20 focus:outline-none"
-            aria-label={t(locale, "professionals_search_placeholder")}
           />
           <div
             className="flex flex-wrap gap-2"
