@@ -1385,8 +1385,6 @@ The Marom Scholarship is a national scholarship program of the Council for Highe
 - From 2026-27: applicants may apply in any standard year of the degree, not just year 1
 - From 2026-27: socio-economic status is no longer a strict eligibility gate but is weighted into the overall score; the previous volunteering requirement has been dropped
 
-> **Editorial note**: the above was verified against che.org.il/scholarships/marom (July 2026). Exact master's-level criteria (whether amount/requirements differ from undergraduate) were not detailed on the page checked — confirm with CHE before any paid campaign.
-
 ## How much?
 
 A flat ₪10,000 per academic year, through the standard duration of the degree.

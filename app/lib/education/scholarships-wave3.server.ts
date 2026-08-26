@@ -1,10 +1,12 @@
-// Scholarships Wave 3 — TED-95 education hub (13 entries).
+// Scholarships Wave 3 — TED-95 education hub (12 entries).
 //
 // Follows the same ScholarshipEntry shape as scholarships.server.ts.
 // Sourced from the TED-95 org/program list (Linear). Facts are used verbatim
-// from the ticket brief; anything not independently verified is marked with
-// an "EDITORIAL NOTE" inside the Hebrew body and should be checked by
-// Researcher/Content before any paid promotion of that page.
+// from the ticket brief. Internal review markers must NOT appear in bodies —
+// they leaked to production once (TED-121); tests/content-markers.test.ts
+// blocks them. Unverified figures carry a user-facing "verify with the
+// institution" note instead. The Maccabim Fund entry was removed entirely:
+// the source page did not match the described scholarship (W3-11).
 //
 // EN/AM bodies are drafted for structural completeness (same headings,
 // shorter prose) but have NOT had native-speaker review — per CLAUDE.md
@@ -53,8 +55,6 @@ export const SCHOLARSHIPS_WAVE3: ScholarshipEntry[] = [
 - סטודנטים ממוצא אתיופי בעלי הישגים אקדמיים בולטים
 - לומדים במוסד אקדמי מוכר על-ידי מל"ג/ות"ת
 
-> **EDITORIAL NOTE**: פרטי תהליך ההרשמה, קריטריוני הסף המדויקים, ומספר המשתתפים בשנה לא אומתו באופן עצמאי במסגרת כתיבת עמוד זה (מקור: che.org.il, ללא URL ספציפי לתת-עמוד התוכנית). מומלץ ל-Researcher לאתר את דף התוכנית הספציפי לפני שיווק ממומן.
-
 ## מה כלול?
 
 - הצמדת מנטור אקדמי בכיר (חבר סגל) לאורך תקופת הלימודים
@@ -77,8 +77,6 @@ A VATAT (Planning and Budgeting Committee — the CHE's budgetary arm) program p
 
 - Students of Ethiopian origin with strong academic achievement
 - Enrolled in a CHE/VATAT-recognized institution
-
-> **EDITORIAL NOTE**: exact application process, eligibility thresholds, and annual participant numbers were not independently verified while drafting this page (source: che.org.il, no specific program sub-page located). Researcher should locate the specific program page before paid promotion.
 
 ## What's included?
 
@@ -140,8 +138,8 @@ Contact the Dean of Students / diversity office at your academic institution, or
     amountMinIls: 0,
     amountMaxIls: 0,
     amountNote: {
-      he: "סכום מדויק לא אומת עצמאית — ראו EDITORIAL NOTE בגוף העמוד. מקור החיפוש: אתר הדיקנאט של האוניברסיטה העברית (social.huji.ac.il).",
-      en: "Exact amount not independently verified — see EDITORIAL NOTE in the body. Source lead: HUJI Faculty of Social Sciences dean's office site (social.huji.ac.il).",
+      he: "סכום מדויק לא אומת עצמאית — מומלץ לאמת מול המוסד לפני ההגשה. מקור החיפוש: אתר הדיקנאט של האוניברסיטה העברית (social.huji.ac.il).",
+      en: "Exact amount not independently verified — verify with the institution before applying. Source lead: HUJI Faculty of Social Sciences dean's office site (social.huji.ac.il).",
       am: "ትክክለኛ መጠን በገለልተኝነት አልተረጋገጠም።",
     },
     deadline: "rolling",
@@ -163,8 +161,6 @@ Contact the Dean of Students / diversity office at your academic institution, or
 
 - חוקרים יוצאי אתיופיה המתקבלים לתכנית דוקטורט או משרת בתר-דוקטורט באוניברסיטה מחקרית בישראל
 
-> **EDITORIAL NOTE**: לא אותר עמוד ות"ת ארצי ייעודי לתוכנית זו בזמן כתיבת העמוד; המידע מבוסס על אזכור בדף הדיקנאט של האוניברסיטה העברית (social.huji.ac.il, לפי מונח חיפוש "מלגות ותת לבתר דוקטורנטים מצטיינים יוצאי אתיופיה"). **סכום המלגה, מספר הזוכים בשנה, ותהליך ההגשה המדויק דורשים אימות מול הדיקנאט של כל מוסד** לפני פרסום שיווקי. אין להציג סכום משוער עד לאימות.
-
 ## איך פונים?
 
 יש לפנות לדיקנאט הסטודנטים או לביה"ס ללימודי תואר שלישי במוסד האקדמי הרלוונטי, ולציין שמדובר במלגת ות"ת ליוצאי אתיופיה.
@@ -182,8 +178,6 @@ VATAT scholarships for Ethiopian-Israeli researchers across two tracks: **doctor
 ## Who is eligible?
 
 - Ethiopian-Israeli researchers accepted into a PhD program or a post-doctoral position at an Israeli research university
-
-> **EDITORIAL NOTE**: no dedicated national VATAT page for this program was located while drafting this page; the lead is a mention on the HUJI dean's office site (social.huji.ac.il). **Scholarship amount, number of annual recipients, and the exact application process require verification with each institution's dean's office** before marketing publication. Do not display an estimated amount until verified.
 
 ## How to apply
 
@@ -254,8 +248,6 @@ Contact the Dean of Students or the graduate school at the relevant academic ins
 
 - בני קהילת יוצאי אתיופיה בשלב מעבר מתיכון ללימודים גבוהים, הזקוקים להשלמת פערים אקדמיים לפני תואר
 
-> **EDITORIAL NOTE**: תנאי סף מדויקים (גיל, בגרות מינימלית, איזור מגורים) וגובה מלגת המעונות בפועל לא אומתו עצמאית מול chiburim.org.il בזמן כתיבת עמוד זה — לוודא לפני קמפיין.
-
 ## מה כלול?
 
 - שנת מכינה קדם-אקדמית
@@ -278,8 +270,6 @@ A Chiburim association program combining three elements for Ethiopian-Israeli co
 ## Who is eligible?
 
 - Ethiopian-Israeli community members transitioning from high school to higher education who need to close academic gaps before a degree
-
-> **EDITORIAL NOTE**: exact eligibility criteria (age, minimum matriculation, residence area) and the actual value of the dormitory scholarship were not independently verified against chiburim.org.il while drafting this page — confirm before campaigning.
 
 ## What's included?
 
@@ -360,8 +350,6 @@ Register via chiburim.org.il.
 
 - בוגרי תיכון יוצאי אתיופיה המעוניינים בלימודים אקדמיים בבר-אילן או במוסד אחר לאחר המכינה
 
-> **EDITORIAL NOTE**: תנאי קבלה מדויקים, משך המכינה, וגובה מלגת המעונות בפועל לא אומתו עצמאית מול mechina-kda.biu.ac.il בזמן כתיבת עמוד זה.
-
 ## מה כלול?
 
 - תגבור אנגלית ומתמטיקה ברמה הנדרשת לתואר ראשון
@@ -383,8 +371,6 @@ A dedicated pre-academic prep program at Bar-Ilan University for Ethiopian-Israe
 ## Who is eligible?
 
 - Ethiopian-Israeli high-school graduates interested in academic study at Bar-Ilan or elsewhere after the prep year
-
-> **EDITORIAL NOTE**: exact admission criteria, program length, and the actual value of the dormitory scholarship were not independently verified against mechina-kda.biu.ac.il while drafting this page.
 
 ## What's included?
 
@@ -629,8 +615,8 @@ See the [full organization profile](/en/orgs/fidel) for contact details, foundin
     amountMinIls: 0,
     amountMaxIls: 0,
     amountNote: {
-      he: "סכום המלגה בפועל לא אומת עצמאית מול tebeka.org.il/kolzchut.org.il בזמן כתיבת עמוד זה — ראו EDITORIAL NOTE.",
-      en: "The actual scholarship amount was not independently verified against tebeka.org.il/kolzchut.org.il while drafting this page — see EDITORIAL NOTE.",
+      he: "סכום המלגה בפועל לא אומת עצמאית מול tebeka.org.il/kolzchut.org.il בזמן כתיבת עמוד זה — מומלץ לאמת מול המקור לפני ההגשה.",
+      en: "The actual scholarship amount was not independently verified against tebeka.org.il/kolzchut.org.il while drafting this page — verify with the source before applying.",
       am: "ትክክለኛ የድጋፍ መጠን በገለልተኝነት አልተረጋገጠም።",
     },
     deadline: "rolling",
@@ -647,8 +633,6 @@ See the [full organization profile](/en/orgs/fidel) for contact details, foundin
 ## מי זכאי?
 
 - סטודנטים למשפטים מקהילת יוצאי אתיופיה, בשלבי תואר או לקראת התמחות
-
-> **EDITORIAL NOTE**: גובה המלגה, מספר הזוכים, ותנאי הסף המדויקים לא אומתו עצמאית בזמן כתיבת עמוד זה (מקור מוצע: kolzchut.org.il / tebeka.org.il — יש לאתר את הדף הספציפי ולעדכן).
 
 ## מה כלול?
 
@@ -671,8 +655,6 @@ Tebeka — a legal-aid and equality-advocacy association for the Ethiopian-Israe
 ## Who is eligible?
 
 - Ethiopian-Israeli law students, at any degree stage or approaching internship
-
-> **EDITORIAL NOTE**: scholarship amount, number of recipients, and exact eligibility terms were not independently verified while drafting this page (suggested source: kolzchut.org.il / tebeka.org.il — locate the specific page and update).
 
 ## What's included?
 
@@ -754,8 +736,6 @@ Via tebeka.org.il, or see the [full org profile](/en/orgs/tebeka) for contact de
 - לתואר ראשון/שני/דוקטורט: סטודנטים יוצאי אתיופיה בישראל
 - לעמיתי אייסף: חוקרים בעלי דוקטורט המבקשים לבצע מחקר בתר-דוקטורט במוסד מחקר מחוץ לישראל
 
-> **EDITORIAL NOTE**: הסכום 10,000$ (לפוסט-דוקטורט בחו"ל) מדווח כפי שמופיע במקור המבוקש (isef.org.il); לא בוצע המרה לשקלים כדי לא לעוות נתון שמקורו בדולרים. סכומי המלגות לתואר ראשון/שני/דוקטורט לא אומתו עצמאית.
-
 ## איך פונים?
 
 הרשמה דרך isef.org.il — יש להבחין בין מסלול "עמיתי אייסף" (בתר-דוקטורט בחו"ל) לבין מלגות התואר הרגילות.
@@ -776,8 +756,6 @@ The ISEF Fund runs **more than one track**. The portal already has "ISEF Fellows
 
 - For bachelor's/master's/PhD: Ethiopian-Israeli students in Israel
 - For ISEF Fellows: PhD holders seeking to conduct post-doctoral research at a research institution outside Israel
-
-> **EDITORIAL NOTE**: the $10,000 figure (post-doc abroad) is reported as it appears in the requested source (isef.org.il); it was not converted to shekels to avoid distorting a dollar-denominated figure. Bachelor's/master's/PhD scholarship amounts were not independently verified.
 
 ## How to apply
 
@@ -850,8 +828,6 @@ Register via isef.org.il — distinguish between the "ISEF Fellows" track (post-
 
 - נשים יוצאות אתיופיה, בכל שלב לימודים (תיכון, מכינה, תואר)
 
-> **EDITORIAL NOTE**: גובה המלגה, קריטריוני הסף המדויקים, ותהליך ההגשה לא אומתו עצמאית מול maatzimot.org.il בזמן כתיבת עמוד זה.
-
 ## מה כלול?
 
 - מלגה / תמיכה כלכלית לנשים מהקהילה
@@ -872,8 +848,6 @@ Register via isef.org.il — distinguish between the "ISEF Fellows" track (post-
 ## Who is eligible?
 
 - Ethiopian-Israeli women, at any study stage (high school, prep year, degree)
-
-> **EDITORIAL NOTE**: scholarship amount, exact eligibility criteria, and the application process were not independently verified against maatzimot.org.il while drafting this page.
 
 ## What's included?
 
@@ -1007,88 +981,6 @@ Via olim-beyahad.org.il, or see the [full org profile](/en/orgs/olim-beyahad).
     },
   },
 
-  // W3-11. Maccabim Fund
-  {
-    slug: "maccabim-scholarship",
-    level: "undergrad",
-    providerOrgSlug: "maccabim",
-    name: {
-      he: "קרן מכבים",
-      en: "Maccabim Fund",
-      am: "የማካቢም ፈንድ",
-    },
-    shortDescription: {
-      he: "מלגה עם קהל יעד כפול — יוצאי אתיופיה ואיראן — לפי הרשומה ב-milgapo.co.il (ראו הערת עריכה לגבי אימות).",
-      en: "A scholarship with a dual target audience — Ethiopian and Iranian immigrants — per the milgapo.co.il listing (see editorial note on verification).",
-      am: "ድርብ ዒላማ ያለው ድጋፍ — ኢትዮጵያውያንና ኢራናውያን ኦሊም — በmilgapo.co.il መሠረት።",
-    },
-    amountMinIls: 0,
-    amountMaxIls: 0,
-    amountNote: {
-      he: "סכום המלגה לא אומת עצמאית. בבדיקה שבוצעה במסגרת כתיבת עמוד זה, גרסה שנצפתה של milgapo.co.il הציגה תוכן שונה (מלגת בריאות עם קריטריוני מילואים/פינוי, ללא אזכור יוצאי אתיופיה/איראן) — ייתכן שזה עמוד אחר באתר או תוכן דינמי לפי query. יש לאמת עם Researcher לפני פרסום.",
-      en: "Scholarship amount not independently verified. A check performed while drafting this page found the milgapo.co.il listing showing different content (a healthcare scholarship with reserve-duty/evacuee criteria, no mention of Ethiopian/Iranian immigrants) — this may be a different page on the site or dynamic per-query content. Verify with Researcher before publishing.",
-      am: "የድጋፍ መጠን በገለልነት አልተረጋገጠም። ማረጋገጥ ያስፈልጋል።",
-    },
-    deadline: "rolling",
-    applicationUrl: "https://milgapo.co.il/?milga=_maccabim",
-    tags: ["undergrad", "community", "olim"],
-    communityPriority: true,
-    relatedScholarships: ["jewish-agency-aliyah"],
-    relatedRights: [],
-    bodies: {
-      he: `## מה זאת קרן מכבים?
-
-לפי הרשומה במאגר milgapo.co.il, קרן מכבים מציעה מלגה עם **קהל יעד כפול**: יוצאי אתיופיה ויוצאי איראן.
-
-> **EDITORIAL NOTE — חשוב**: בבדיקה שבוצעה במסגרת כתיבת עמוד זה מול milgapo.co.il/?milga=_maccabim, התוכן שנצפה תיאר מלגה לתחומי בריאות עם קריטריונים של מילואים/פינוי — **ללא** אזכור של יוצאי אתיופיה או איראן. ייתכן שמדובר בתוכן דינמי המשתנה, בעמוד לא-נכון, או שהמידע באתר עודכן. **אין לפרסם עמוד זה כמלגה מאומתת עד שContent & SEO / Researcher יאשרו את הפרטים מול המקור בפועל.**
-
-## מי זכאי? (לפי הבריף המקורי — טעון אימות)
-
-- יוצאי אתיופיה או יוצאי איראן
-
-## איך פונים?
-
-milgapo.co.il/?milga=_maccabim — לבדוק תוכן עדכני בזמן אמת לפני הפניית משתמשים.
-
-## ראו גם
-
-- [מלגת לימודים — סוכנות יהודית](/he/education/scholarships/jewish-agency-aliyah)
-`,
-      en: `## What is the Maccabim Fund?
-
-Per the milgapo.co.il listing, the Maccabim Fund offers a scholarship with a **dual target audience**: Ethiopian and Iranian immigrants.
-
-> **EDITORIAL NOTE — important**: a check performed while drafting this page against milgapo.co.il/?milga=_maccabim showed content describing a healthcare-field scholarship with reserve-duty/evacuee criteria — **no** mention of Ethiopian or Iranian immigrants. This may be dynamic content, the wrong page, or the site may have been updated. **Do not publish this page as a verified scholarship until Content & SEO / Researcher confirm the details against the live source.**
-
-## Who is eligible? (per the original brief — needs verification)
-
-- Ethiopian or Iranian immigrants
-
-## How to apply
-
-milgapo.co.il/?milga=_maccabim — check current live content before referring users.
-
-## See also
-
-- [Jewish Agency Study Scholarship](/en/education/scholarships/jewish-agency-aliyah)
-`,
-      am: `## የማካቢም ፈንድ ምንድን ነው?
-
-በmilgapo.co.il መሠረት፣ የማካቢም ፈንድ ድርብ ዒላማ ድጋፍ ያቀርባል፦ ኢትዮጵያውያንና ኢራናውያን ኦሊም።
-
-*(ማስታወሻ — ወሳኝ፦ ይህ ገጽ ከመታተሙ በፊት ከትክክለኛው ምንጭ ጋር ማረጋገጥ ያስፈልጋል — በምርመራ ጊዜ የተለየ ይዘት ታይቷል።)*
-
-## እንዴት ማመልከት ይቻላል?
-
-milgapo.co.il/?milga=_maccabim
-
-## ይህንንም ይዩ
-
-- [የአይሁድ ኤጀንሲ የጥናት ድጋፍ](/am/education/scholarships/jewish-agency-aliyah)
-`,
-    },
-  },
-
   // W3-12. HUJI Dean of Students — Ethiopian-Israeli Students Office
   {
     slug: "huji-dean-ethiopian-students",
@@ -1127,8 +1019,6 @@ milgapo.co.il/?milga=_maccabim
 
 - סטודנטים יוצאי אתיופיה הלומדים באוניברסיטה העברית (כל הקמפוסים)
 
-> **EDITORIAL NOTE**: היקף השירות (ליווי אישי? מלגות מקומיות? שתיהן?) לא אומת לעומק מול studean.huji.ac.il בזמן כתיבת עמוד זה — יש לעדכן לאחר סקירה ישירה של הדף.
-
 ## מה כלול?
 
 - ליווי מוסדי לסטודנטים מהקהילה בקמפוס האוניברסיטה העברית
@@ -1150,8 +1040,6 @@ The Hebrew University of Jerusalem's Dean of Students runs a dedicated service f
 ## Who is eligible?
 
 - Ethiopian-Israeli students studying at the Hebrew University (any campus)
-
-> **EDITORIAL NOTE**: the scope of the service (personal mentorship? local scholarships? both?) was not deeply verified against studean.huji.ac.il while drafting this page — update after a direct review of that page.
 
 ## What's included?
 
@@ -1228,8 +1116,6 @@ studean.huji.ac.il
 
 - סטודנטים יוצאי אתיופיה הלומדים באוניברסיטה הפתוחה
 
-> **EDITORIAL NOTE**: גובה המלגה המדויק ותנאי הסף לא אומתו עצמאית מול openu.ac.il/dean-students/scholarships בזמן כתיבת עמוד זה.
-
 ## למה זה שונה מהתוכניות האחרות בעמוד?
 
 בניגוד למכינות/מלגות הדורשות מגורים בקמפוס, מודל הלימוד המרחוק מתאים למי שלא יכול/ה לעזוב עבודה או משפחה לצורך לימודים מסורתיים.
@@ -1249,8 +1135,6 @@ An Open University of Israel scholarship for Ethiopian-Israeli students. The dis
 ## Who is eligible?
 
 - Ethiopian-Israeli students studying at the Open University
-
-> **EDITORIAL NOTE**: the exact scholarship amount and eligibility terms were not independently verified against openu.ac.il/dean-students/scholarships while drafting this page.
 
 ## Why is this different from the other programs on this page?
 
