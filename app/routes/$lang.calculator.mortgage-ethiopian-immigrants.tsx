@@ -249,7 +249,7 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
 
         <ActiveLotteryDisclaimer locale={locale} />
 
-        <main className="mt-10 flex-1">
+        <main id="main-content" className="mt-10 flex-1">
           <Form
             method="post"
             aria-labelledby="mortgage-calc-heading"

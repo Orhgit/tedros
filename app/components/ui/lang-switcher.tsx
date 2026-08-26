@@ -28,7 +28,7 @@ export function LangSwitcher({ current, hrefFor, className }: LangSwitcherProps)
             hrefLang={locale}
             aria-current={active ? "true" : undefined}
             className={cn(
-              "inline-flex h-8 items-center rounded-sm px-3 transition-colors",
+              "inline-flex h-10 items-center rounded-sm px-3 transition-colors",
               "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
               active
                 ? "bg-primary text-primary-foreground"

@@ -165,7 +165,7 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
   return (
     <>
       <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
-      <article className="mx-auto max-w-3xl px-6 py-10">
+      <article id="main-content" className="mx-auto max-w-3xl px-6 py-10">
         <p className="mb-4 text-sm">
           <Link
             to={`/${locale}/listings`}
