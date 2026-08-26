@@ -19,6 +19,9 @@ export interface ProfileTemplateProps {
   contactPhone?: string;
   contactEmail?: string;
   ctaLabel?: string;
+  /** CTA target (e.g. mailto:). The button is a dead control without one, so
+      it only renders when provided (TED-130). */
+  ctaHref?: string;
 }
 
 export function ProfileTemplate({
@@ -35,6 +38,7 @@ export function ProfileTemplate({
   contactPhone,
   contactEmail,
   ctaLabel = "שליחת פנייה",
+  ctaHref,
 }: ProfileTemplateProps) {
   return (
     <article className="container-narrow py-10">
@@ -79,10 +83,14 @@ export function ProfileTemplate({
               )}
             </div>
             <div className="flex w-full flex-col gap-2 sm:w-auto">
-              <Button>
-                <Icon name="mail" />
-                {ctaLabel}
-              </Button>
+              {ctaHref && (
+                <Button asChild>
+                  <a href={ctaHref}>
+                    <Icon name="mail" />
+                    {ctaLabel}
+                  </a>
+                </Button>
+              )}
               {contactPhone && (
                 <Button asChild variant="outline">
                   <a href={`tel:${contactPhone}`} dir="ltr">

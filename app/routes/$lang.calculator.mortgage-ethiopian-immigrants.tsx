@@ -1,5 +1,6 @@
 import { Form, Link, useActionData, useNavigation } from "react-router";
 import type { Route } from "./+types/$lang.calculator.mortgage-ethiopian-immigrants";
+import { LeadForm } from "~/components/lead-form";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
@@ -93,8 +94,12 @@ function readBool(raw: Record<string, string>, key: string): boolean {
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
-  const { PUBLIC_URL } = getEnv();
-  return { locale, publicUrl: PUBLIC_URL };
+  const env = getEnv();
+  return {
+    locale,
+    publicUrl: env.PUBLIC_URL,
+    turnstileSiteKey: env.TURNSTILE_SITE_KEY ?? null,
+  };
 }
 
 export async function action({ request, params }: Route.ActionArgs) {
@@ -212,7 +217,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function MortgageCalculatorPage({ loaderData }: Route.ComponentProps) {
-  const { locale } = loaderData;
+  const { locale, turnstileSiteKey } = loaderData;
   const actionData = useActionData<typeof action>() as ActionData | undefined;
   const navigation = useNavigation();
   const submitting = navigation.state === "submitting";
@@ -244,7 +249,7 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
 
         <ActiveLotteryDisclaimer locale={locale} />
 
-        <main className="mt-10 flex-1">
+        <main id="main-content" className="mt-10 flex-1">
           <Form
             method="post"
             aria-labelledby="mortgage-calc-heading"
@@ -332,7 +337,7 @@ export default function MortgageCalculatorPage({ loaderData }: Route.ComponentPr
           <ProcessExplainer locale={locale} />
           <DocumentsChecklist locale={locale} />
           <MortgageCitiesSection locale={locale} />
-          <LeadCta locale={locale} />
+          <LeadCta locale={locale} turnstileSiteKey={turnstileSiteKey} />
         </main>
       </div>
       <SiteFooter locale={locale} />
@@ -510,20 +515,34 @@ function ProcessExplainer({ locale }: { locale: Locale }) {
   );
 }
 
-function LeadCta({ locale }: { locale: Locale }) {
+function LeadCta({
+  locale,
+  turnstileSiteKey,
+}: {
+  locale: Locale;
+  turnstileSiteKey: string | null;
+}) {
+  // The CTA used to link to /$lang/contact — a route that never existed, so
+  // the page's main conversion button 404ed (TED-119). The lead form now
+  // lives inline, submitting to /$lang/lead like the other lead surfaces.
   return (
     <>
-      <section className="mt-10 rounded-lg border border-gray-900 bg-gray-900 p-6 text-white dark:border-white dark:bg-white dark:text-gray-900">
-        <h2 className="text-xl font-semibold">{t(locale, "mortgage_lead_cta_title")}</h2>
-        <p className="mt-2 text-sm opacity-90">
+      <section
+        id="lead"
+        className="mt-10 rounded-lg border border-earth-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-950"
+      >
+        <h2 className="text-xl font-semibold text-earth-900">
+          {t(locale, "mortgage_lead_cta_title")}
+        </h2>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
           {t(locale, "mortgage_lead_cta_description")}
         </p>
-        <Link
-          to={`/${locale}/contact`}
-          className="mt-4 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800"
-        >
-          {t(locale, "mortgage_lead_cta_button")}
-        </Link>
+        <LeadForm
+          locale={locale}
+          source={{ kind: "mortgage-calc" }}
+          className="mt-6"
+          {...(turnstileSiteKey ? { turnstileSiteKey } : {})}
+        />
       </section>
 
       <section className="mt-12 border-t border-border pt-8">

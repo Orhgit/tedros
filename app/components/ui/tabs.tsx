@@ -47,10 +47,44 @@ export function Tabs({
   );
 }
 
-export function TabsList({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+export function TabsList({
+  className,
+  onKeyDown,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) {
+  // Roving tabindex needs actual key handling — the header comment promised
+  // Arrow/Home/End but nothing implemented it, so keyboard users could never
+  // switch tabs (WCAG 2.1.1, TED-127). Arrows follow the writing direction:
+  // "next" is ArrowLeft in RTL and ArrowRight in LTR.
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    onKeyDown?.(e);
+    const keys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+    if (!keys.includes(e.key)) return;
+
+    const list = e.currentTarget;
+    const tabs = Array.from(
+      list.querySelectorAll<HTMLButtonElement>('[role="tab"]:not([disabled])'),
+    );
+    if (tabs.length === 0) return;
+    const current = tabs.indexOf(document.activeElement as HTMLButtonElement);
+    const isRtl = getComputedStyle(list).direction === "rtl";
+    const forward = isRtl ? "ArrowLeft" : "ArrowRight";
+
+    let next: number;
+    if (e.key === "Home") next = 0;
+    else if (e.key === "End") next = tabs.length - 1;
+    else if (e.key === forward) next = (current + 1 + tabs.length) % tabs.length;
+    else next = (current - 1 + tabs.length) % tabs.length;
+
+    e.preventDefault();
+    tabs[next]?.focus();
+    tabs[next]?.click();
+  };
+
   return (
     <div
       role="tablist"
+      onKeyDown={handleKeyDown}
       className={cn(
         "inline-flex h-10 items-center gap-1 rounded-md bg-muted p-1 text-muted-foreground",
         className,

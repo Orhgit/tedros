@@ -184,7 +184,7 @@ export default function ListingDetail({ loaderData, actionData }: Route.Componen
   return (
     <>
       <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
-      <article className="mx-auto max-w-3xl px-6 py-10">
+      <article id="main-content" className="mx-auto max-w-3xl px-6 py-10">
         <p className="mb-4 text-sm">
           <Link
             to={`/${locale}/listings`}
@@ -314,15 +314,20 @@ function AttributesGrid({
   // formatRooms drops the "4.0" decimal and hides 0/absent room counts.
   const roomsLabel = formatRooms(a.rooms);
   if (roomsLabel !== null)
-    items.push({ label: t(locale, "listings_filter_min_rooms"), value: roomsLabel });
-  if (typeof a.areaM2 === "number") items.push({ label: "m²", value: String(a.areaM2) });
+    items.push({ label: t(locale, "listing_attr_rooms"), value: roomsLabel });
+  if (typeof a.areaM2 === "number")
+    items.push({ label: t(locale, "listing_attr_area"), value: String(a.areaM2) });
   if (typeof a.bedrooms === "number")
-    items.push({ label: "bedrooms", value: String(a.bedrooms) });
-  if (typeof a.floor === "number") items.push({ label: "floor", value: String(a.floor) });
+    items.push({ label: t(locale, "listing_attr_bedrooms"), value: String(a.bedrooms) });
+  if (typeof a.floor === "number")
+    items.push({ label: t(locale, "listing_attr_floor"), value: String(a.floor) });
   if (typeof a.parkingSpots === "number")
-    items.push({ label: "parking", value: String(a.parkingSpots) });
+    items.push({
+      label: t(locale, "listing_attr_parking"),
+      value: String(a.parkingSpots),
+    });
   if (typeof a.yearBuilt === "number")
-    items.push({ label: "year", value: String(a.yearBuilt) });
+    items.push({ label: t(locale, "listing_attr_year"), value: String(a.yearBuilt) });
 
   if (items.length === 0) return null;
   return (

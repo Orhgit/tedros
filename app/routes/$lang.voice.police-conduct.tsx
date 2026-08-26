@@ -11,6 +11,7 @@ import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { voicePath, policeConductPath } from "~/lib/voice/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/voice/schema";
@@ -119,11 +120,11 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
@@ -235,7 +236,7 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
             })}
           </div>
           <p className="mt-6 text-xs text-ink-500">
-            {t(locale, "voice_last_reviewed_label")}: {lastReviewed}
+            {t(locale, "voice_last_reviewed_label")}: {formatDate(locale, lastReviewed)}
           </p>
         </article>
 
@@ -290,7 +291,9 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
             to={`/${locale}${voicePath()}`}
             className="inline-flex items-center gap-2 text-sm text-earth-700 hover:underline"
           >
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true" className="icon-flip inline-block">
+              ←
+            </span>
             {t(locale, "voice_back_to_hub")}
           </Link>
         </div>

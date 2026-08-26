@@ -13,6 +13,7 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
+import { matchesQuery } from "~/lib/rights/search";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -50,7 +51,13 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
 
   const filtered = rights.filter((r) => {
     if (tag && !r.tags.includes(tag)) return false;
-    if (q && !`${r.title} ${r.summary}`.toLowerCase().includes(q)) return false;
+    if (q) {
+      // Include translated tag labels so a search for a tag name ("מלגה")
+      // finds rights tagged with it, not only literal title/summary hits.
+      const tagLabels = r.tags.map((tg) => t(locale, `rights_tag_${tg}`)).join(" ");
+      const haystack = `${r.title} ${r.summary} ${tagLabels}`.toLowerCase();
+      if (!matchesQuery(haystack, q)) return false;
+    }
     return true;
   });
 
@@ -70,11 +77,11 @@ export default function RightsLanding({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div

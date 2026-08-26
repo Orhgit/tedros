@@ -124,11 +124,10 @@ export function LeadForm({ locale, source, turnstileSiteKey, className }: LeadFo
       </div>
 
       {/* Honeypot — must remain visually hidden but present in DOM and
-          tab-out of the natural focus order. */}
-      <div
-        aria-hidden="true"
-        className="absolute top-auto -left-[9999px] h-px w-px overflow-hidden"
-      >
+          tab-out of the natural focus order. Hidden via sr-only (clip-based):
+          a physical -left offset extends the scrollable area on RTL pages
+          instead of being cut off (TED-120). */}
+      <div aria-hidden="true" className="sr-only">
         <label htmlFor={`${formId}-website`}>Website</label>
         <input
           id={`${formId}-website`}
@@ -145,7 +144,13 @@ export function LeadForm({ locale, source, turnstileSiteKey, className }: LeadFo
       ) : null}
 
       <p className="text-xs text-gray-500 dark:text-gray-400">
-        {t(locale, "lead_form_consent")}
+        {t(locale, "lead_form_consent")}{" "}
+        <a
+          href={`/${locale}/privacy`}
+          className="underline hover:text-gray-700 dark:hover:text-gray-200"
+        >
+          {t(locale, "footer_privacy")}
+        </a>
       </p>
 
       {formError ? (

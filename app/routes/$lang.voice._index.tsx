@@ -161,11 +161,8 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
                   </p>
                   <p className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-earth-700">
                     {t(locale, "voice_card_read_more")}
-                    <span
-                      aria-hidden="true"
-                      className={locale === "en" ? "inline-block rotate-180" : ""}
-                    >
-                      ←
+                    <span aria-hidden="true" className="icon-flip inline-block">
+                      →
                     </span>
                   </p>
                 </Link>

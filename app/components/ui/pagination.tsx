@@ -1,6 +1,10 @@
+import type { Locale } from "~/lib/i18n/config";
+import { t } from "~/lib/i18n/messages";
 import { cn } from "~/lib/utils";
 
 export interface PaginationProps {
+  /** Locale for the prev/next labels — they were hardcoded Hebrew (TED-128). */
+  locale?: Locale;
   page: number;
   pageCount: number;
   hrefFor: (page: number) => string;
@@ -11,11 +15,12 @@ export interface PaginationProps {
 }
 
 export function Pagination({
+  locale = "he",
   page,
   pageCount,
   hrefFor,
   className,
-  ariaLabel = "Pagination",
+  ariaLabel,
   window = 1,
 }: PaginationProps) {
   if (pageCount <= 1) return null;
@@ -32,7 +37,10 @@ export function Pagination({
   if (pageCount > 1) add(pageCount);
 
   return (
-    <nav aria-label={ariaLabel} className={cn("flex justify-center", className)}>
+    <nav
+      aria-label={ariaLabel ?? t(locale, "pagination_label")}
+      className={cn("flex justify-center", className)}
+    >
       <ul className="flex items-center gap-1">
         <li>
           <a
@@ -47,7 +55,7 @@ export function Pagination({
             <span className="icon-flip" aria-hidden>
               ←
             </span>
-            <span className="ms-1">קודם</span>
+            <span className="ms-1">{t(locale, "pagination_prev")}</span>
           </a>
         </li>
         {pages.map((p, i) =>
@@ -83,7 +91,7 @@ export function Pagination({
               page >= pageCount && "pointer-events-none opacity-50",
             )}
           >
-            <span className="me-1">הבא</span>
+            <span className="me-1">{t(locale, "pagination_next")}</span>
             <span className="icon-flip" aria-hidden>
               →
             </span>

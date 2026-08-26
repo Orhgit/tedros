@@ -172,11 +172,11 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
@@ -302,7 +302,9 @@ export default function CareersLanding({ loaderData }: Route.ComponentProps) {
               to={`/${locale}/professionals/career-counselor`}
               className="inline-flex items-center gap-2 rounded-md bg-earth-800 px-5 py-2.5 text-base font-medium text-white shadow-sm transition hover:bg-earth-700 sm:self-start"
             >
-              <span aria-hidden="true">←</span>
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
               {t(locale, "careers_explore_counselors_cta")}
             </Link>
           </div>

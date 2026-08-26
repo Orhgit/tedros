@@ -180,13 +180,17 @@ export default function UrbanRenewalNeighborhoodPage({
                 {t(locale, "urw_breadcrumb_home")}
               </Link>
             </li>
-            <li aria-hidden>›</li>
+            <li aria-hidden className="icon-flip">
+              ›
+            </li>
             <li>
               <Link to={cityPath(locale, city.slug)} className="hover:underline">
                 {cityDisplayName}
               </Link>
             </li>
-            <li aria-hidden>›</li>
+            <li aria-hidden className="icon-flip">
+              ›
+            </li>
             <li aria-current="page" className="text-earth-900">
               {name}
             </li>

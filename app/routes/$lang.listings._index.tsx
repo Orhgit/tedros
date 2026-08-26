@@ -110,7 +110,7 @@ export default function ListingsIndex({ loaderData }: Route.ComponentProps) {
   return (
     <>
       <SiteHeader locale={locale} currentPath={`/${locale}/listings`} />
-      <div className="mx-auto max-w-6xl px-6 py-10">
+      <div id="main-content" className="mx-auto max-w-6xl px-6 py-10">
         <header className="mb-6">
           <h1 className="text-3xl font-bold tracking-tight">
             {t(locale, "listings_title")}

@@ -26,6 +26,7 @@ import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
 import { isRelevant as isHeritageRelevant } from "~/lib/heritage/relevance";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
+import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { glyphForTag } from "~/lib/rights/categories";
 import { isRelevant as isRightRelevant } from "~/lib/rights/relevance";
@@ -145,11 +146,11 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
             decoding="async"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/80 to-transparent"
+            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
           <nav
@@ -162,13 +163,17 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                   {t(locale, "homepage_title")}
                 </Link>
               </li>
-              <li aria-hidden>›</li>
+              <li aria-hidden className="icon-flip">
+                ›
+              </li>
               <li>
                 <Link to={`/${locale}${CITY_PATH_PREFIX}`} className="hover:underline">
                   {t(locale, "cities_index_title")}
                 </Link>
               </li>
-              <li aria-hidden>›</li>
+              <li aria-hidden className="icon-flip">
+                ›
+              </li>
               <li aria-current="page" className="text-gray-700 dark:text-gray-300">
                 {name}
               </li>
@@ -182,7 +187,7 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
           </p>
         </header>
 
-        <main className="mt-10 grid gap-10">
+        <main id="main-content" className="mt-10 grid gap-10">
           <CityOverviewSection locale={locale} city={city} />
           {city.communityStats && city.communityStats.length > 0 && (
             <CommunityStatsSection locale={locale} city={city} />
@@ -253,7 +258,9 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                         >
                           <span>{e.name}</span>
                           {e.next && (
-                            <span className="text-xs text-earth-500">{e.next}</span>
+                            <span className="text-xs text-earth-500">
+                              {formatDate(locale, e.next)}
+                            </span>
                           )}
                         </Link>
                       </li>
@@ -295,7 +302,9 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                   className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-earth-700 hover:underline"
                 >
                   {t(locale, "city_section_urban_renewal_aggregate_cta", { name })}
-                  <span aria-hidden="true">←</span>
+                  <span aria-hidden="true" className="icon-flip inline-block">
+                    →
+                  </span>
                 </Link>
               )}
             </section>
@@ -374,7 +383,9 @@ function CommunityStatsSection({ locale, city }: { locale: Locale; city: City })
             <dt className="text-xs font-medium text-earth-600">
               {s.label[locale] ?? s.label.he}
             </dt>
-            <dd className="mt-1 text-base font-semibold text-earth-900">{s.value}</dd>
+            <dd className="mt-1 text-base font-semibold text-earth-900" dir="ltr">
+              {s.value}
+            </dd>
           </div>
         ))}
       </dl>
@@ -534,7 +545,10 @@ function ListingCard({
               </span>
             )}
             {price && isRent && (
-              <span className="text-sm font-normal text-gray-500"> / חודש</span>
+              <span className="text-sm font-normal text-gray-500">
+                {" "}
+                {t(locale, "listing_per_month")}
+              </span>
             )}
           </p>
 
@@ -669,7 +683,7 @@ function CitySection({
         id={titleKey}
         className="text-xl font-semibold text-gray-900 dark:text-gray-100"
       >
-        {t(locale, titleKey)}
+        {t(locale, titleKey, { name })}
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
         {t(locale, emptyKey, { name })}

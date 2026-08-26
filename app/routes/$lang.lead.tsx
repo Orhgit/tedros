@@ -3,13 +3,17 @@
 // the success state inline. A direct GET returns 405 (avoids exposing an
 // empty page from a search engine snapshot).
 
-import { data } from "react-router";
+import { data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.lead";
+import { DEFAULT_LOCALE, isLocale } from "~/lib/i18n/config";
 import { submitLeadFromRequest } from "~/lib/leads/submit-lead.server";
 
-export async function loader() {
-  throw data("Method Not Allowed", { status: 405 });
+// A direct GET (browser history, mistyped link) used to render a bare
+// "Method Not Allowed" page — send the visitor home instead (TED-119).
+export async function loader({ params }: Route.LoaderArgs) {
+  const locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
+  throw redirect(`/${locale}`, 302);
 }
 
 export async function action({ request }: Route.ActionArgs) {
