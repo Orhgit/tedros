@@ -1367,6 +1367,59 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
     relatedOrgs: [],
   }),
 
+  // --- Listed real estate agent: אורלי מנדפרו (1 entry) ---------------------
+  // Owner-supplied real contact, 2026-08-26. Service area: all of the
+  // Jerusalem area — Pisgat Ze'ev, Neve Yaakov, Anatot, Geva Binyamin, etc.
+  // Anatot / Geva Binyamin are not CITIES entries, so they live in the
+  // service-area note under the Jerusalem page. Specialty differs from
+  // Maniela Mula's Jerusalem slot to keep slugs unique. No license number
+  // supplied. Owner did not state whether Orly speaks Amharic, so `languages`
+  // lists Hebrew only and the title carries no Amharic-speaking claim —
+  // extend to ["am", "he"] once the owner confirms.
+  listedSlot({
+    profession: "real-estate-agent",
+    citySlug: "jerusalem",
+    specialty: "north-jerusalem",
+    title: {
+      he: 'מתווכת נדל"ן — צפון ירושלים והסביבה — פסגת זאב, נווה יעקב, ענתות וגבע בנימין',
+      en: "Real Estate Agent — North Jerusalem & Surroundings — Pisgat Ze'ev, Neve Yaakov, Anatot & Geva Binyamin",
+      am: "የንብረት ደላላ — ሰሜን ኢየሩሳሌም እና አካባቢው — ፒስጋት ዜኤቭ፣ ነቬ ያዕቆብ፣ ዓናቶት እና ገቫ ቢንያሚን",
+    },
+    shortDescription: {
+      he: 'אורלי מנדפרו — מתווכת נדל"ן הפעילה בכל אזור ירושלים: פסגת זאב, נווה יעקב, ענתות, גבע בנימין ועוד.',
+      en: "Orly Mendefro — real estate agent active across the Jerusalem area: Pisgat Ze'ev, Neve Yaakov, Anatot, Geva Binyamin, and more.",
+      am: "ኦርሊ መንደፍሮ — በመላው የኢየሩሳሌም አካባቢ ንቁ የንብረት ደላላ: ፒስጋት ዜኤቭ፣ ነቬ ያዕቆብ፣ ዓናቶት፣ ገቫ ቢንያሚን እና ሌሎችም።",
+    },
+    listedProfessional: {
+      name: "אורלי מנדפרו",
+      phone: "055-4543819",
+      languages: ["he"],
+    },
+    serviceAreaNote: {
+      he: "אזור שירות: כל אזור ירושלים — פסגת זאב, נווה יעקב, ענתות, גבע בנימין ועוד.",
+      en: "Service area: the entire Jerusalem area — Pisgat Ze'ev, Neve Yaakov, Anatot, Geva Binyamin, and more.",
+      am: "የአገልግሎት አካባቢ: መላው የኢየሩሳሌም አካባቢ — ፒስጋት ዜኤቭ፣ ነቬ ያዕቆብ፣ ዓናቶት፣ ገቫ ቢንያሚን እና ሌሎችም።",
+    },
+    whenSeek: {
+      he: "משפחה שמחפשת דירה לקנייה או שכירות בצפון ירושלים (פסגת זאב, נווה יעקב) או ביישובי הסביבה (ענתות, גבע בנימין), ומעוניינת בליווי אישי שמכיר את הצרכים של הקהילה.",
+      en: "A family searching for an apartment to buy or rent in north Jerusalem (Pisgat Ze'ev, Neve Yaakov) or the surrounding communities (Anatot, Geva Binyamin), interested in personal guidance familiar with community needs.",
+      am: "በሰሜን ኢየሩሳሌም (ፒስጋት ዜኤቭ፣ ነቬ ያዕቆብ) ወይም በአካባቢው ሰፈሮች (ዓናቶት፣ ገቫ ቢንያሚን) ቤት ለመግዛት ወይም ለመከራየት የሚፈልግ ቤተሰብ።",
+    },
+    whatToCheck: {
+      he: "- רישיון תיווך בתוקף (ניתן לאימות מול רשם המתווכים, gov.il)\n- הסכם תיווך בכתב לפני תחילת עבודה\n- שקיפות לגבי דמי-תיווך",
+      en: "- Valid broker license (verifiable against the government broker registry, gov.il)\n- Written brokerage agreement before work begins\n- Transparency on brokerage fees",
+      am: "- ሕጋዊ የደላላ ፈቃድ (በመንግስት ደላላ መዝገብ ሊረጋገጥ ይችላል)\n- ስራ ከመጀመሩ በፊት የጽሁፍ ስምምነት",
+    },
+    feeNote: {
+      he: 'מכירה: 2% ממחיר-העסקה + מע"מ (משלם הקונה והמוכר ביחד). שכירות: דמי-שכירות-של-חודש + מע"מ. יש לוודא את התנאים מול המתווכת לפני חתימה.',
+      en: "Sale: 2% of transaction + VAT (paid by buyer and seller together). Rent: one month's rent + VAT. Confirm terms with the agent before signing.",
+      am: "ሽያጭ: ከግብይት 2% + VAT። ኪራይ: የአንድ ወር ኪራይ + VAT።",
+    },
+    relatedRights: ["600k-mortgage"],
+    relatedTerms: [],
+    relatedOrgs: [],
+  }),
+
   // --- Listed lawyer: דוד אבבה (2 entries) ----------------------------------
   // Owner-supplied real contact, 2026-08-19. Owner confirmed the license
   // exists but asked not to publish the number, so `licenseNumber` is

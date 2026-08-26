@@ -16,7 +16,7 @@ import {
   isCareerTrack,
 } from "~/lib/careers/categories";
 import { careerTrackBody, findCareerTrack } from "~/lib/careers/careers.server";
-import { bootcampPath, storyPath, trackCityPath, trackPath } from "~/lib/careers/links";
+import { bootcampPath, storyPath, trackPath } from "~/lib/careers/links";
 import { relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd, careerTrackJsonLd } from "~/lib/careers/schema";
 import { storiesForTrack } from "~/lib/careers/stories.server";
