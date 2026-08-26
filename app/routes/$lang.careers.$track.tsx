@@ -67,6 +67,10 @@ export async function loader({ params }: Route.LoaderArgs) {
   const relatedTerms = entry.relatedTerms
     .map((slug) => getGlossaryEntry(slug, locale))
     .filter((g): g is NonNullable<typeof g> => g !== null)
+    // Skip glossary entries that duplicate an org card already rendered in
+    // the "leading orgs" section right above (ENP and Olim Beyahad appeared
+    // twice with near-identical text, TED-130).
+    .filter((g) => !relatedOrgs.some((o) => o.slug === g.slug || o.name === g.term))
     .map((g) => ({ slug: g.slug, term: g.term, summary: g.summary }))
     .slice(0, 4);
 

@@ -81,7 +81,10 @@ describe("careers track loader — happy path", () => {
     // Law track references tebeka org + tebeka-legal-aid right + tebeka term.
     expect(data.relatedOrgs.find((o) => o.slug === "tebeka")).toBeDefined();
     expect(data.relatedRights.find((r) => r.slug === "tebeka-legal-aid")).toBeDefined();
-    expect(data.relatedTerms.find((g) => g.slug === "tebeka")).toBeDefined();
+    // The tebeka glossary term is deliberately absent: an entry that already
+    // renders as an org card is filtered out of related terms so the same
+    // organization doesn't appear twice on the page (TED-130).
+    expect(data.relatedTerms.find((g) => g.slug === "tebeka")).toBeUndefined();
   });
 
   it("returns top cities matching the relevance scope", async () => {

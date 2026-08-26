@@ -23,6 +23,11 @@ export interface ListingCardProps {
   shareLabel?: string;
   /** Accessible label for the contact-broker button. */
   contactLabel?: string;
+  /** Handlers/targets — the footer actions render only when these exist,
+      so the library card never ships dead buttons (TED-130). */
+  onFavorite?: () => void;
+  onShare?: () => void;
+  contactHref?: string;
 }
 
 const formatNumber = (n: number) => new Intl.NumberFormat("he-IL").format(n);
@@ -43,6 +48,9 @@ export function ListingCard({
   favoriteLabel = "הוסף למועדפים",
   shareLabel = "שתף",
   contactLabel = "פנייה למתווך",
+  onFavorite,
+  onShare,
+  contactHref,
 }: ListingCardProps) {
   return (
     <Card
@@ -120,29 +128,39 @@ export function ListingCard({
         </dl>
       </CardContent>
 
-      <CardFooter className="border-t border-border px-4 pt-3">
-        <button
-          type="button"
-          aria-label={favoriteLabel}
-          className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted hover:text-destructive focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-        >
-          <Icon name="heart" />
-        </button>
-        <button
-          type="button"
-          aria-label={shareLabel}
-          className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-        >
-          <Icon name="share" />
-        </button>
-        <button
-          type="button"
-          className="ms-auto inline-flex h-9 items-center gap-1.5 rounded-sm bg-primary px-3 text-sm font-medium text-primary-foreground hover:bg-earth-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-        >
-          <Icon name="phone" className="size-4" />
-          {contactLabel}
-        </button>
-      </CardFooter>
+      {(onFavorite || onShare || contactHref) && (
+        <CardFooter className="border-t border-border px-4 pt-3">
+          {onFavorite && (
+            <button
+              type="button"
+              onClick={onFavorite}
+              aria-label={favoriteLabel}
+              className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted hover:text-destructive focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <Icon name="heart" />
+            </button>
+          )}
+          {onShare && (
+            <button
+              type="button"
+              onClick={onShare}
+              aria-label={shareLabel}
+              className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <Icon name="share" />
+            </button>
+          )}
+          {contactHref && (
+            <a
+              href={contactHref}
+              className="ms-auto inline-flex h-9 items-center gap-1.5 rounded-sm bg-primary px-3 text-sm font-medium text-primary-foreground hover:bg-earth-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            >
+              <Icon name="phone" className="size-4" />
+              {contactLabel}
+            </a>
+          )}
+        </CardFooter>
+      )}
     </Card>
   );
 }
