@@ -806,7 +806,7 @@
   "mula_q4": "በዚህ ጣቢያ ምን አለ?",
   "professional_apply_seo_title": "ወደ ባለሙያዎች ካታሎግ ይግቡ — Tedros",
   "professional_apply_hero_title": "ለማህበረሰቡ መጋለጥ ይፈልጋሉ?",
-  "professional_apply_hero_subtitle": "የቴድሮስ አማርኛ ተናጋሪ ባለሙያዎች ካታሎግ ይቀላቀሉ። ቅጹን መሙላት 2 ደቂቃ ይወስዳል — ቡድናችን ገምግሞ ይመልስልዎታል።",
+  "professional_apply_hero_subtitle": "የአማርኛ ተናጋሪ ባለሙያዎች ካታሎግ ይቀላቀሉ እና ለዚህ ታዳሚ ቀጥተኛ ተጋላጭነት ያግኙ። ቅጹን መሙላት 2 ደቂቃ ይወስዳል — ቡድናችን ገምግሞ ይመልስልዎታል።",
   "professional_apply_field_name": "ሙሉ ስም",
   "professional_apply_field_profession": "ሙያ",
   "professional_apply_field_profession_placeholder": "ሙያ ይምረጡ",
@@ -838,5 +838,6 @@
   "professional_apply_error_languages_required": "ቢያንስ አንድ ቋንቋ ይምረጡ",
   "professional_apply_error_rate_limited": "በጣም ብዙ ጥያቄዎች። እባክዎ ከጥቂት ደቂቃዎች በኋላ እንደገና ይሞክሩ።",
   "professional_apply_error_turnstile_failed": "ፀረ-አይፈለጌ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።",
-  "professional_apply_error_generic": "የሆነ ችግር ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።"
+  "professional_apply_error_generic": "የሆነ ችግር ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።",
+  "professional_apply_hero_intro": "ቴድሮስ ለኢትዮጵያ-እስራኤል ማህበረሰብ በጣም ሰፊው መግቢያ ነው — በየወሩ ሺዎች የማህበረሰብ አባላት እዚህ መብቶችን፣ መረጃን እና ባለሙያዎችን ያገኛሉ።"
 }
