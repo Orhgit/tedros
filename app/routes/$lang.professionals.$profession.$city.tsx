@@ -13,14 +13,31 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+import { AmharicBadge } from "~/components/ui/amharic-badge";
 import {
   PROFESSION_TO_TAG,
   glyphForProfession,
   heroImageForProfession,
   isProfession,
   professionMessageKey,
+  speaksAmharic,
 } from "~/lib/professionals/categories";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
+
+// "עורכי דין דוברי אמהרית בנתניה" instead of "עורכי דין בנתניה" whenever the
+// pair actually contains an Amharic-speaking entry (TED-136) — the query
+// surface this whole cell exists to capture. Word order differs per locale,
+// so it goes through the professionals_amharic_pattern message.
+function professionLabel(
+  locale: Locale,
+  profession: Parameters<typeof professionMessageKey>[0],
+  slots: Array<{ languages: string[] }>,
+): string {
+  const base = t(locale, professionMessageKey(profession));
+  return slots.some((s) => speaksAmharic(s.languages))
+    ? t(locale, "professionals_amharic_pattern", { profession: base })
+    : base;
+}
 
 // Locale-specific HE/AM prefix attaches; EN uses a separator. Mirrors the
 // approach in $lang.rights.$slug_.$city for a consistent reading experience.
@@ -57,7 +74,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
   const { locale, profession, city, slots, publicUrl } = data;
-  const profTitle = t(locale, professionMessageKey(profession));
+  const profTitle = professionLabel(locale, profession, slots);
   const cName = cityName(city, locale);
   const title = `${profTitle} ${inCity(locale, cName)}`;
   const description = `${title} — ${t(locale, "professionals_landing_subtitle").replace(/\*\*/g, "")}`;
@@ -95,6 +112,7 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
   const tag = PROFESSION_TO_TAG[profession];
   const tone = classesForTag(tag);
   const profTitle = t(locale, professionMessageKey(profession));
+  const headline = professionLabel(locale, profession, slots);
   const cName = cityName(city, locale);
 
   return (
@@ -150,7 +168,7 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
             </span>
             <div className="flex-1">
               <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-                {profTitle} {inCity(locale, cName)}
+                {headline} {inCity(locale, cName)}
               </h1>
               <p className="mt-3 text-base text-ink-700">{cityOverview(city, locale)}</p>
             </div>
@@ -175,6 +193,11 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
               <p className="mt-2 text-sm leading-relaxed text-ink-600">
                 {s.shortDescription}
               </p>
+              {speaksAmharic(s.languages) && (
+                <div className="mt-3">
+                  <AmharicBadge locale={locale} />
+                </div>
+              )}
             </Link>
           ))}
         </section>

@@ -43,6 +43,15 @@ export interface ProfessionalSlot {
   /** Markdown body × 3 locales. */
   bodies: Record<Locale, string>;
   /**
+   * BCP-47 language codes the professional(s) behind this entry serve in
+   * (TED-136). Anonymous "what to expect" slots default to ["am", "he"] —
+   * the entire slot describes an Amharic-speaking professional type and the
+   * titles carry that claim. Listed (real) professionals mirror their own
+   * `listedProfessional.languages` and NEVER get "am" without explicit owner
+   * confirmation (see אורלי מנדפרו below — open owner question).
+   */
+  languages: string[];
+  /**
    * Present only for slots that list a real, named professional (as opposed
    * to the anonymous "what to expect" slots below). When set, the profile
    * route emits a real `Person` schema and a contact block instead of the
@@ -94,6 +103,8 @@ function slot(args: {
   relatedRights?: string[];
   relatedTerms?: string[];
   relatedOrgs?: string[];
+  /** Override only when a slot is NOT about Amharic-speaking professionals. */
+  languages?: string[];
 }): ProfessionalSlot {
   const slug = `${args.profession}-${args.citySlug}-${args.specialty}`;
 
@@ -129,6 +140,9 @@ ${JOIN_CTA[loc]}
     relatedRights: args.relatedRights ?? [],
     relatedTerms: args.relatedTerms ?? [],
     relatedOrgs: args.relatedOrgs ?? [],
+    // Anonymous slots exist to capture "דובר אמהרית" queries — the titles
+    // all claim Amharic — so the default carries that claim structurally.
+    languages: args.languages ?? ["am", "he"],
     bodies: {
       he: body("he", {
         when: "מתי לפנות?",
@@ -219,6 +233,9 @@ ${args.feeNote[loc]}
     relatedRights: args.relatedRights ?? [],
     relatedTerms: args.relatedTerms ?? [],
     relatedOrgs: args.relatedOrgs ?? [],
+    // Real people: the slot-level languages mirror the person's own claim —
+    // never widened editorially (TED-136).
+    languages: args.listedProfessional.languages,
     listedProfessional: args.listedProfessional,
     bodies: {
       he: body("he", {
@@ -1375,7 +1392,8 @@ export const PROFESSIONALS: ProfessionalSlot[] = [
   // Maniela Mula's Jerusalem slot to keep slugs unique. No license number
   // supplied. Owner did not state whether Orly speaks Amharic, so `languages`
   // lists Hebrew only and the title carries no Amharic-speaking claim —
-  // extend to ["am", "he"] once the owner confirms.
+  // extend to ["am", "he"] once the owner confirms. This also keeps her OFF
+  // the /professionals/amharic landing + badge surfaces (TED-136).
   listedSlot({
     profession: "real-estate-agent",
     citySlug: "jerusalem",
