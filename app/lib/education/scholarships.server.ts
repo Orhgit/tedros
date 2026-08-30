@@ -1262,7 +1262,8 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     deadline: null,
     status: "tba",
     lastVerified: "2026-08-30",
-    applicationUrl: "https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority",
+    applicationUrl:
+      "https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority",
     tags: ["undergrad", "olim", "academic", "rights"],
     communityPriority: true,
     relatedScholarships: ["jewish-agency-aliyah", "atidim-pre-academic"],
@@ -1627,7 +1628,8 @@ The Siket Scholarship is a Ministry of Aliyah & Integration scholarship for new 
     deadline: null,
     status: "tba",
     lastVerified: "2026-08-30",
-    applicationUrl: "https://www.openu.ac.il/dean-students/scholarships/pages/sc_for_ethiopia.aspx",
+    applicationUrl:
+      "https://www.openu.ac.il/dean-students/scholarships/pages/sc_for_ethiopia.aspx",
     tags: ["undergrad", "community", "flexible", "working-students"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "klita-tuition-grant"],

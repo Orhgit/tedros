@@ -235,15 +235,13 @@ export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps
                   {s.status !== "tba" && (
                     <div className="mt-3">
                       <ScholarshipStatusBadge locale={locale} status={s.status} />
-                      {s.status === "open" &&
-                        s.deadline &&
-                        s.deadline !== "rolling" && (
-                          <span className="ms-2 text-xs font-medium text-green-800 dark:text-green-200">
-                            {t(locale, "scholarship_deadline_until", {
-                              date: formatDate(locale, s.deadline),
-                            })}
-                          </span>
-                        )}
+                      {s.status === "open" && s.deadline && s.deadline !== "rolling" && (
+                        <span className="ms-2 text-xs font-medium text-green-800 dark:text-green-200">
+                          {t(locale, "scholarship_deadline_until", {
+                            date: formatDate(locale, s.deadline),
+                          })}
+                        </span>
+                      )}
                     </div>
                   )}
                   <div className="mt-3 flex items-center justify-between gap-2">

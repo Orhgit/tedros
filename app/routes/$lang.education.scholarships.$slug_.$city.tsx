@@ -28,10 +28,7 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
-import {
-  ScholarshipStatusBadge,
-  deadlineText,
-} from "~/components/ui/scholarship-status";
+import { ScholarshipStatusBadge, deadlineText } from "~/components/ui/scholarship-status";
 import { formatDate } from "~/lib/i18n/format";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";

@@ -1126,7 +1126,8 @@ studean.huji.ac.il
     deadline: null,
     status: "tba",
     lastVerified: "2026-08-30",
-    applicationUrl: "https://www.openu.ac.il/dean-students/scholarships/pages/sc_for_ethiopia.aspx",
+    applicationUrl:
+      "https://www.openu.ac.il/dean-students/scholarships/pages/sc_for_ethiopia.aspx",
     tags: ["undergrad", "flexible-study", "community"],
     communityPriority: true,
     relatedScholarships: ["klita-tuition-grant"],
