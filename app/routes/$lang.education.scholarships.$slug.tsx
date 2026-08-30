@@ -2,7 +2,7 @@
 // Renders a single scholarship with markdown body, EducationalOccupationalProgram
 // JSON-LD, related scholarships + provider org cross-links.
 
-import { Link, data } from "react-router";
+import { Link, data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.education.scholarships.$slug";
 import { SiteFooter } from "~/components/sections/site-footer";
@@ -18,6 +18,7 @@ import {
   SCHOLARSHIP_LEVEL_TO_TAG,
   glyphForScholarshipLevel,
 } from "~/lib/education/categories";
+import { LEGACY_SCHOLARSHIP_REDIRECTS } from "~/lib/education/scholarships.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -31,6 +32,11 @@ export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   if (!params.slug) {
     throw data({ error: "missing-slug" }, { status: 404 });
+  }
+  // TED-152 — merged duplicates keep their link equity via a permanent redirect.
+  const canonical = LEGACY_SCHOLARSHIP_REDIRECTS[params.slug];
+  if (canonical) {
+    throw redirect(`/${locale}/education/scholarships/${canonical}`, 301);
   }
   const entry = getScholarshipBySlug(params.slug, locale);
   if (!entry) {

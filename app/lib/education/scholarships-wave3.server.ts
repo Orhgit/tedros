@@ -150,11 +150,7 @@ Contact the Dean of Students / diversity office at your academic institution, or
     applicationUrl: "https://graduate.haifa.ac.il/מלגות-בתר-דוקטורט/",
     tags: ["phd", "postdoc", "academic", "community"],
     communityPriority: true,
-    relatedScholarships: [
-      "vatat-excellence-mentoring",
-      "isef-fellowship",
-      "cogito-stem-phd",
-    ],
+    relatedScholarships: ["vatat-excellence-mentoring", "isef-fellowship"],
     relatedRights: [],
     bodies: {
       he: `## מה כוללת התוכנית?
@@ -173,7 +169,6 @@ Contact the Dean of Students / diversity office at your academic institution, or
 
 - [ות"ת — מצוינות ומנטורינג](/he/education/scholarships/vatat-excellence-mentoring)
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship)
-- [Cogito Scholars — דוקטורנטים STEM](/he/education/scholarships/cogito-stem-phd)
 `,
       en: `## What does the program cover?
 
@@ -191,7 +186,6 @@ Contact the Dean of Students or the graduate school at the relevant academic ins
 
 - [VATAT — Excellence & Mentoring](/en/education/scholarships/vatat-excellence-mentoring)
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
-- [Cogito Scholars — STEM PhD](/en/education/scholarships/cogito-stem-phd)
 `,
       am: `## ፕሮግራሙ ምን ይሸፍናል?
 
@@ -215,110 +209,6 @@ Contact the Dean of Students or the graduate school at the relevant academic ins
     },
   },
 
-  // W3-3. Yoel Program (Chiburim Association)
-  {
-    slug: "yoel-program-chiburim",
-    level: "pre-academic",
-    providerOrgSlug: "chiburim",
-    name: {
-      he: "תוכנית יואל — עמותת חיבורים",
-      en: "Yoel Program — Chiburim Association",
-      am: "የዮኤል ፕሮግራም — ቺቡሪም ማህበር",
-    },
-    shortDescription: {
-      he: "מכינה קדם-אקדמית + ליווי אישי וחברתי + מלגת מעונות לבני קהילת יוצאי אתיופיה, מטעם עמותת חיבורים.",
-      en: "A pre-academic prep track + personal/social mentorship + dormitory scholarship for Ethiopian-Israeli community members, run by the Chiburim association.",
-      am: "ከቺቡሪም ማህበር ለኢትዮጵያ-ተወላጅ ማህበረሰብ አባላት ቅድመ-አካዳሚክ ዝግጅት + የግልና ማህበራዊ ምክር + የመኖሪያ ድጋፍ።",
-    },
-    amountMinIls: 0,
-    amountMaxIls: 0,
-    amountNote: {
-      he: "מלגת המעונות ניתנת בעין (מגורים), לא כסכום כספי מפורסם — נדרש אימות מול חיבורים.org.il לגובה מדויק אם קיים.",
-      en: "The dormitory scholarship is in-kind (housing), not a published cash figure — verify with chiburim.org.il for an exact amount if one exists.",
-      am: "የመኖሪያ ድጋፍ በዓይነት (መኖሪያ) እንጂ የታተመ የገንዘብ መጠን አይደለም።",
-    },
-    deadline: null,
-    status: "open",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://chiburim.org.il",
-    tags: ["pre-academic", "mentorship", "community", "housing"],
-    communityPriority: true,
-    relatedScholarships: ["atidim-pre-academic", "biu-mechina-ethiopian"],
-    relatedRights: [],
-    bodies: {
-      he: `## מה זאת תוכנית יואל?
-
-תוכנית של עמותת חיבורים המשלבת שלושה מרכיבים לבני קהילת יוצאי אתיופיה: **מכינה קדם-אקדמית**, **ליווי אישי וחברתי** לאורך התקופה, ו-**מלגת מעונות** (מגורים מסובסדים/בעין).
-
-## מי זכאי?
-
-- בני קהילת יוצאי אתיופיה בשלב מעבר מתיכון ללימודים גבוהים, הזקוקים להשלמת פערים אקדמיים לפני תואר
-
-## מה כלול?
-
-- שנת מכינה קדם-אקדמית
-- ליווי אישי-חברתי (מנטור/ית) לאורך התקופה
-- מלגת מעונות (מגורים)
-
-## איך פונים?
-
-הרשמה דרך chiburim.org.il.
-
-## ראו גם
-
-- [Atidim — מכינה קדם-אקדמית](/he/education/scholarships/atidim-pre-academic)
-- [מכינה קדם-אקדמית, בר-אילן](/he/education/scholarships/biu-mechina-ethiopian)
-`,
-      en: `## What is the Yoel Program?
-
-A Chiburim association program combining three elements for Ethiopian-Israeli community members: a **pre-academic prep year**, **personal/social mentorship** throughout, and a **dormitory scholarship** (subsidized/in-kind housing).
-
-## Who is eligible?
-
-- Ethiopian-Israeli community members transitioning from high school to higher education who need to close academic gaps before a degree
-
-## What's included?
-
-- A pre-academic prep year
-- Personal/social mentorship throughout
-- Dormitory (housing) scholarship
-
-## How to apply
-
-Register via chiburim.org.il.
-
-## See also
-
-- [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
-- [Bar-Ilan Pre-Academic Prep](/en/education/scholarships/biu-mechina-ethiopian)
-`,
-      am: `## የዮኤል ፕሮግራም ምንድን ነው?
-
-ከቺቡሪም ማህበር ለኢትዮጵያ-ተወላጅ ማህበረሰብ አባላት ሶስት ነገሮችን የሚያጣምር ፕሮግራም፦ **ቅድመ-አካዳሚክ ዝግጅት ዓመት**፣ **የግልና ማህበራዊ ምክር**፣ እና **የመኖሪያ ድጋፍ**።
-
-## ለማን ይሆናል?
-
-- ከሁለተኛ ደረጃ ወደ ከፍተኛ ትምህርት የሚሸጋገሩ ኢትዮጵያ-ተወላጅ ማህበረሰብ አባላት
-
-*(ትክክለኛ ብቁነት መስፈርቶች በገለልተኝነት አልተረጋገጡም።)*
-
-## ምን ይካተታል?
-
-- ቅድመ-አካዳሚክ ዝግጅት ዓመት
-- የግልና ማህበራዊ ምክር
-- የመኖሪያ ድጋፍ
-
-## እንዴት ማመልከት ይቻላል?
-
-በchiburim.org.il ይመዝገቡ።
-
-## ይህንንም ይዩ
-
-- [Atidim ቅድመ-አካዳሚክ](/am/education/scholarships/atidim-pre-academic)
-`,
-    },
-  },
-
   // W3-4. Bar-Ilan Pre-Academic Prep for Ethiopian-Israeli students
   {
     slug: "biu-mechina-ethiopian",
@@ -330,9 +220,9 @@ Register via chiburim.org.il.
       am: "የባር-ኢላን ልዩ ቅድመ-አካዳሚክ ዝግጅት ፕሮግራም",
     },
     shortDescription: {
-      he: "מכינה קדם-אקדמית של אוניברסיטת בר-אילן ליוצאי אתיופיה — תגבור אנגלית ומתמטיקה + מלגת מעונות.",
-      en: "Bar-Ilan University's dedicated pre-academic program for Ethiopian-Israeli students — English/math reinforcement + dormitory scholarship.",
-      am: "ለኢትዮጵያ-ተወላጅ ተማሪዎች የባር-ኢላን ዩኒቨርሲቲ ቅድመ-አካዳሚክ ፕሮግራም — እንግሊዝኛና ሂሳብ ማጠናከሪያ + የመኖሪያ ድጋፍ።",
+      he: "מכינה קדם-אקדמית של אוניברסיטת בר-אילן ליוצאי אתיופיה — תגבור אנגלית ומתמטיקה, מלגת מעונות וליווי תוכנית יואל (עמותת חיבורים).",
+      en: "Bar-Ilan University's dedicated pre-academic program for Ethiopian-Israeli students — English/math reinforcement, dormitory scholarship, and Yoel Program (Chiburim) mentorship.",
+      am: "ለኢትዮጵያ-ተወላጅ ተማሪዎች የባር-ኢላን ዩኒቨርሲቲ ቅድመ-አካዳሚክ ፕሮግራም — እንግሊዝኛና ሂሳብ ማጠናከሪያ፣ የመኖሪያ ድጋፍ እና የዮኤል ፕሮግራም (ቺቡሪም) ምክር።",
     },
     amountMinIls: 0,
     amountMaxIls: 0,
@@ -347,7 +237,7 @@ Register via chiburim.org.il.
     applicationUrl: "https://mechina-kda.biu.ac.il",
     tags: ["pre-academic", "housing", "community"],
     communityPriority: true,
-    relatedScholarships: ["atidim-pre-academic", "yoel-program-chiburim"],
+    relatedScholarships: ["atidim-pre-academic"],
     relatedRights: [],
     bodies: {
       he: `## מה זאת המכינה?
@@ -363,6 +253,18 @@ Register via chiburim.org.il.
 - תגבור אנגלית ומתמטיקה ברמה הנדרשת לתואר ראשון
 - מלגת מעונות (מגורים בקמפוס בר-אילן)
 
+## תוכנית יואל (עמותת חיבורים)
+
+לצד המכינה פועלת **תוכנית יואל** — "יוצאי אתיופיה לאקדמיה איכותית" — שהוקמה ומופעלת על-ידי עמותת חיבורים ומלווה את תלמידי המכינה:
+
+- מלגת השתתפות במימון מעונות
+- תגבור לימודי יומי אחרי שעות המכינה
+- העשרה, גיבוש והעצמה אישית
+- ליווי אישי (מנטורינג) גם במהלך התואר
+- הכוונה וסיוע בהשתלבות בתעסוקה מתאימה
+
+פתיחת התוכנית מותנית במספר המשתתפים — פרטים והרשמה בעמוד המכינה.
+
 ## איך פונים?
 
 הרשמה דרך mechina-kda.biu.ac.il.
@@ -370,7 +272,6 @@ Register via chiburim.org.il.
 ## ראו גם
 
 - [Atidim — מכינה קדם-אקדמית](/he/education/scholarships/atidim-pre-academic)
-- [תוכנית יואל — חיבורים](/he/education/scholarships/yoel-program-chiburim)
 `,
       en: `## What is this program?
 
@@ -385,6 +286,18 @@ A dedicated pre-academic prep program at Bar-Ilan University for Ethiopian-Israe
 - English and math reinforcement to the level required for an undergraduate degree
 - Dormitory scholarship (housing on the Bar-Ilan campus)
 
+## The Yoel Program (Chiburim association)
+
+Alongside the mechina runs the **Yoel Program** — "Ethiopian-Israelis to quality academia" — established and operated by the Chiburim association, supporting mechina students with:
+
+- A scholarship contributing to dormitory financing
+- Daily academic reinforcement after mechina hours
+- Enrichment, group bonding, and personal empowerment
+- Individual mentoring that continues into the degree
+- Guidance and assistance toward suitable employment
+
+Opening of the program depends on participant numbers — details and registration on the mechina page.
+
 ## How to apply
 
 Register via mechina-kda.biu.ac.il.
@@ -392,7 +305,6 @@ Register via mechina-kda.biu.ac.il.
 ## See also
 
 - [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
-- [Yoel Program — Chiburim](/en/education/scholarships/yoel-program-chiburim)
 `,
       am: `## ይህ ፕሮግራም ምንድን ነው?
 
@@ -406,6 +318,16 @@ Register via mechina-kda.biu.ac.il.
 
 - እንግሊዝኛና ሂሳብ ማጠናከሪያ
 - የመኖሪያ ድጋፍ (በባር-ኢላን ካምፓስ)
+
+## የዮኤል ፕሮግራም (ቺቡሪም ማህበር)
+
+ከመኪና ጎን የ**ዮኤል ፕሮግራም** ይሰራል — በቺቡሪም ማህበር የተመሰረተና የሚንቀሳቀስ፣ የመኪና ተማሪዎችን የሚደግፍ፦
+
+- የመኖሪያ ፋይናንስ ድጋፍ ስኮላርሺፕ
+- ከመኪና ሰዓታት በኋላ ዕለታዊ የትምህርት ማጠናከሪያ
+- ማበልጸግ፣ የቡድን ትስስርና የግል ማብቃት
+- በዲግሪ ጊዜም የሚቀጥል የግል ምክር (ሜንቶሪንግ)
+- ለተስማሚ ስራ መቀላቀል መመሪያና እገዛ
 
 ## እንዴት ማመልከት ይቻላል?
 
@@ -737,7 +659,7 @@ Via tebeka.org.il, or see the [full org profile](/en/orgs/tebeka) for contact de
       "https://www.isef.org.il/%D7%9E%D7%9C%D7%92%D7%95%D7%AA-%D7%9C%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D/%D7%9E%D7%9C%D7%92%D7%94-%D7%9C%D7%93%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%98",
     tags: ["phd", "postdoc", "academic", "community"],
     communityPriority: true,
-    relatedScholarships: ["isef-fellowship", "cogito-stem-phd"],
+    relatedScholarships: ["isef-fellowship"],
     relatedRights: [],
     bodies: {
       he: `## במה שונה עמוד זה מ"מלגת ISEF" הקיימת?
@@ -759,7 +681,6 @@ Via tebeka.org.il, or see the [full org profile](/en/orgs/tebeka) for contact de
 ## ראו גם
 
 - [מלגת ISEF — תואר שני/שלישי בארץ](/he/education/scholarships/isef-fellowship)
-- [Cogito Scholars — דוקטורנטים STEM](/he/education/scholarships/cogito-stem-phd)
 `,
       en: `## How is this different from the existing "ISEF Fellowship" page?
 
@@ -780,7 +701,6 @@ Register via isef.org.il — distinguish between the "ISEF Fellows" track (post-
 ## See also
 
 - [ISEF Fellowship — domestic master's/PhD](/en/education/scholarships/isef-fellowship)
-- [Cogito Scholars — STEM PhD](/en/education/scholarships/cogito-stem-phd)
 `,
       am: `## ይህ ገጽ ካለው "ISEF Fellowship" እንዴት ይለያል?
 
