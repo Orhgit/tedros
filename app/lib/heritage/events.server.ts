@@ -116,6 +116,8 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
 
 חשוב להדגיש: אלה מאכלים אתיופיים מסורתיים שמלווים בדרך כלל את חגיגות הסיגד — לא תפריט אחיד או "רשמי", והמנהג משתנה ממשפחה למשפחה ומקהילה לקהילה.
 
+להרחבה — מנה אחר מנה, משמעות הצום וקניות לקראת החג: [צום הסיגד ותפריט שבירת הצום — המדריך המלא](/he/culinary/sigd-menu).
+
 ## ראו גם
 
 - [סיגד — מילון](/he/glossary/sigd)
@@ -180,6 +182,8 @@ Like most festive meals in Ethiopian cuisine, the Sigd feast is built around inj
 
 Worth noting: these are traditional Ethiopian dishes commonly associated with Sigd celebrations — not a fixed or "official" menu, and customs vary by family and community.
 
+For more — dish by dish, the meaning of the fast, and shopping for the holiday: [The Sigd fast and the break-fast menu — the complete guide](/en/culinary/sigd-menu).
+
 ## See also
 
 - [Sigd — glossary](/en/glossary/sigd)
@@ -222,6 +226,8 @@ Worth noting: these are traditional Ethiopian dishes commonly associated with Si
 እንደ አብዛኛው የኢትዮጵያ ባህላዊ በዓል ምግቦች፣ የሰግድ ምግብም በእንጀራ ላይ የተመሰረተ ነው — ሁለቱም እንደ ሳህንም እንደ ዳቦም የሚያገለግል የጤፍ ዱቄት ምግብ። ከላይ ዶሮ ወጥ (በርበሬ የበዛበት፣ ብዙ ጊዜ ከእንቁላል ጋር)፣ ምስር ወጥ (ቅመም የበዛበት የምስር ወጥ) እና አልጫ (ለስላሳ የአትክልት ወጥ) ይቀርባል — ሁሉም በርበሬ በተባለው ቅመም ተለውሰው። በአንዳንድ ማህበረሰቦች ውስጥ ቂጣ (ካይሰር) እና አጓት (የቤት ውስጥ አይብ) ከዳቦ ጋር ይቀርባሉ።
 
 *[⚠️ የAI ትርጉም — የምግብ ስሞችን ትክክለኛነት (በተለይ "ካይሰር"/"ቂጣ") በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*
+
+ለተጨማሪ — የጾሙ ትርጉምና ለበዓሉ ግብይት፡ [የሰግድ ጾም እና የጾም መስበሪያ ምግብ — ሙሉ መመሪያ](/am/culinary/sigd-menu)።
 
 ## ተጨማሪ
 
