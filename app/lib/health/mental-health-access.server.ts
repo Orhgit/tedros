@@ -223,7 +223,7 @@ If the clinician refuses or "has no time": ask for the refusal in writing and ap
     ],
     sources: [
       {
-        name: 'משרד הבריאות — סיוע בתרגום בעל פה ממוקד התרגום הרפואי 5144*',
+        name: "משרד הבריאות — סיוע בתרגום בעל פה ממוקד התרגום הרפואי 5144*",
         url: "https://www.gov.il/he/service/medical-interpretation-center",
       },
       {
