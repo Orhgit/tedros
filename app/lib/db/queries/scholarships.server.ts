@@ -5,6 +5,7 @@
 import {
   SCHOLARSHIPS,
   type ScholarshipEntry,
+  type ScholarshipStatus,
   getScholarshipBodyForLocale,
   pickLocale,
 } from "../../education/scholarships.server";
@@ -20,7 +21,9 @@ export interface ScholarshipSummary {
   amountMinIls: number;
   amountMaxIls: number;
   amountNote: string;
-  deadline: "rolling" | string;
+  deadline: "rolling" | string | null;
+  status: ScholarshipStatus;
+  lastVerified: string;
   applicationUrl: string;
   communityPriority: boolean;
   tags: string[];
@@ -43,6 +46,8 @@ export function listScholarships(locale: Locale): ScholarshipSummary[] {
     amountMaxIls: e.amountMaxIls,
     amountNote: pickLocale(e.amountNote, locale),
     deadline: e.deadline,
+    status: e.status,
+    lastVerified: e.lastVerified,
     applicationUrl: e.applicationUrl,
     communityPriority: e.communityPriority,
     tags: e.tags,
@@ -65,6 +70,8 @@ export function getScholarshipBySlug(
     amountMaxIls: entry.amountMaxIls,
     amountNote: pickLocale(entry.amountNote, locale),
     deadline: entry.deadline,
+    status: entry.status,
+    lastVerified: entry.lastVerified,
     applicationUrl: entry.applicationUrl,
     communityPriority: entry.communityPriority,
     tags: entry.tags,
@@ -106,6 +113,8 @@ export function relatedScholarships(
     amountMaxIls: e.amountMaxIls,
     amountNote: pickLocale(e.amountNote, locale),
     deadline: e.deadline,
+    status: e.status,
+    lastVerified: e.lastVerified,
     applicationUrl: e.applicationUrl,
     communityPriority: e.communityPriority,
     tags: e.tags,

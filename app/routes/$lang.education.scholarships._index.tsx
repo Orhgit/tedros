@@ -19,13 +19,16 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { SearchField, useSearchQuery } from "~/components/ui/search-field";
+import { ScholarshipStatusBadge } from "~/components/ui/scholarship-status";
+import { formatDate } from "~/lib/i18n/format";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const scholarships = listScholarships(locale);
+  const todayIso = new Date().toISOString().slice(0, 10);
   const { PUBLIC_URL } = getEnv();
-  return { locale, scholarships, publicUrl: PUBLIC_URL };
+  return { locale, scholarships, todayIso, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -52,11 +55,24 @@ function formatAmount(min: number, max: number, locale: Locale): string {
 }
 
 export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps) {
-  const { locale, scholarships } = loaderData;
+  const { locale, scholarships, todayIso } = loaderData;
   const [searchParams, setSearchParams] = useSearchParams();
   const level = searchParams.get("level") as ScholarshipLevel | null;
   const [qInput, setQInput] = useSearchQuery();
   const q = qInput.toLowerCase();
+
+  // TED-139: verified-open scholarships with a concrete future deadline,
+  // soonest first — the "act now" strip for the Aug–Nov application season.
+  const upcoming = scholarships
+    .filter(
+      (s) =>
+        s.status === "open" &&
+        s.deadline !== null &&
+        s.deadline !== "rolling" &&
+        s.deadline >= todayIso,
+    )
+    .sort((a, b) => (a.deadline as string).localeCompare(b.deadline as string))
+    .slice(0, 6);
 
   const filtered = scholarships.filter((s) => {
     if (level && s.level !== level) return false;
@@ -89,6 +105,42 @@ export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps
             {scholarships.length} {t(locale, "scholarships_count_label")}
           </p>
         </header>
+
+        {upcoming.length > 0 && (
+          <section
+            className="mb-10 rounded-2xl border border-green-300 bg-green-50/60 p-5 sm:p-6 dark:border-green-800 dark:bg-green-950/40"
+            aria-label={t(locale, "scholarships_upcoming_heading")}
+          >
+            <h2 className="font-display text-xl font-bold text-earth-900">
+              <span aria-hidden="true" className="me-2">
+                ⏳
+              </span>
+              {t(locale, "scholarships_upcoming_heading")}
+            </h2>
+            <p className="mt-1 text-sm text-ink-600">
+              {t(locale, "scholarships_upcoming_subtitle")}
+            </p>
+            <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {upcoming.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    to={`/${locale}/education/scholarships/${s.slug}`}
+                    className="group block h-full rounded-lg border border-green-200 bg-card p-4 transition hover:border-green-400 dark:border-green-900"
+                  >
+                    <p className="text-xs font-bold text-green-800 dark:text-green-200">
+                      {t(locale, "scholarship_deadline_until", {
+                        date: formatDate(locale, s.deadline as string),
+                      })}
+                    </p>
+                    <p className="mt-1 font-display text-sm font-semibold text-earth-900 group-hover:text-earth-700">
+                      {s.name}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <section className="mb-8 space-y-4">
           <SearchField
@@ -180,6 +232,18 @@ export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps
                   <p className="mt-2 text-sm leading-relaxed text-ink-600">
                     {s.shortDescription}
                   </p>
+                  {s.status !== "tba" && (
+                    <div className="mt-3">
+                      <ScholarshipStatusBadge locale={locale} status={s.status} />
+                      {s.status === "open" && s.deadline && s.deadline !== "rolling" && (
+                        <span className="ms-2 text-xs font-medium text-green-800 dark:text-green-200">
+                          {t(locale, "scholarship_deadline_until", {
+                            date: formatDate(locale, s.deadline),
+                          })}
+                        </span>
+                      )}
+                    </div>
+                  )}
                   <div className="mt-3 flex items-center justify-between gap-2">
                     <span className={tagChipClasses(tag)}>
                       {t(locale, `scholarship_level_${s.level.replace(/-/g, "_")}`)}
