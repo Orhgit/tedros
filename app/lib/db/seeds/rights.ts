@@ -3598,7 +3598,7 @@ Vocational training vouchers (Shabbim) are a tool of the Ministry of Aliyah and 
 Yes — most accredited vocational courses offer evening tracks.
 
 **What if the course costs more than ₪12,000?**
-You can cover the difference through the Merom scholarship, a special fund, or personal payment.
+You can cover the difference through the Marom scholarship, a special fund, or personal payment.
 
 📞 **Ministry of Aliyah hotline**: 5454*
 `,

@@ -728,8 +728,8 @@ The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the
       am: "ለኢትዮጵያ-እስራኤል ተማሪዎች ዕርዳታ 2026 — ሙሉ መመሪያ",
     },
     excerpt: {
-      he: "מרום (CHE), שיקת, אוניברסיטה פתוחה, בר-אילן, JDC — כל המלגות ותאריכי הגשה במקום אחד.",
-      en: "Marom (CHE), Siket, Open University, Bar-Ilan, JDC — every scholarship and deadline in one place.",
+      he: "מרום (CHE), מינהל הסטודנטים, אוניברסיטה פתוחה, בר-אילן, JDC — כל המלגות ותאריכי הגשה במקום אחד.",
+      en: "Marom (CHE), the Student Authority, Open University, Bar-Ilan, JDC — every scholarship and deadline in one place.",
       am: "ሁሉም የትምህርት ዕርዳታዎች እና የማስረከቢያ ቀኖች በአንድ ቦታ።",
     },
     bodies: {
@@ -750,15 +750,15 @@ The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the
 
 **איך מגישים**: דרך [אתר ות"ת](https://www.che.org.il) → "מלגות → מרום" → מסמכים נדרשים: תעודת זכאות, אישור לימוד, אישור הכנסה.
 
-## מלגת שיקת — משרד הקליטה
+## מימון שכר לימוד — מינהל הסטודנטים, משרד העלייה והקליטה
 
-**סכום**: ₪6,000–₪15,000 בשנה.
+**מה מקבלים**: מימון שכר לימוד לתואר, לעולים העומדים בקריטריונים של מינהל הסטודנטים.
 
-**מי זכאי**: עולים ראשונים שנמצאים עד 7 שנים מהעלייה, לומדים לתואר ראשון.
+**מי זכאי**: סטודנטים עולים בתוך תקופת הזכאות מהעלייה, הלומדים במוסד מוכר.
 
-**מסמכים**: תעודת עולה, אישור לימוד, אישור מגורים.
+**מסמכים**: תעודת עולה, אישור לימודים.
 
-**הגשה**: דרך [אתר משרד הקליטה](https://www.moia.gov.il) — חפשו "מלגות לסטודנטים".
+**הגשה**: בקשה מקוונת דרך [gov.il — מלגה ממינהל הסטודנטים](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority).
 
 ## מלגת סטודנטים יוצאי אתיופיה — האוניברסיטה העברית
 
@@ -795,7 +795,7 @@ The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the
 - **קאנל (ANEL)**: ארגון סטודנטים יוצאי אתיופיה — עמיתים שעברו תהליך.
 
 ### שילוב מלגות
-ניתן לשלב מלגת מרום עם מלגת שיקת — הן אינן שוללות זו את זו. עם JDC יש לבדוק עם הנציג אם מותר לשלב עם מלגות אחרות.
+ניתן לשלב את מלגת מרום עם מימון מינהל הסטודנטים — בכפוף לכללי המינהל. עם JDC יש לבדוק עם הנציג אם מותר לשלב עם מלגות אחרות.
 
 ## ראו גם
 
@@ -806,7 +806,7 @@ The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the
 
 **Marom (CHE)**: ₪8,000–₪20,000/year for first-degree students with Ethiopian parentage. Deadline January–March. Apply via [che.org.il](https://www.che.org.il).
 
-**Siket (Absorption Ministry)**: ₪6,000–₪15,000/year for immigrants within 7 years of aliyah. Apply via [moia.gov.il](https://www.moia.gov.il).
+**Student Authority tuition funding (Ministry of Aliyah and Integration)**: degree tuition funding for eligible olim students. Apply via [gov.il — Student Authority scholarship](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority).
 
 **Hebrew University Ethiopian Students Fund**: ₪7,000–₪14,000. Contact the scholarships office at [huji.ac.il](https://www.huji.ac.il/scholarships).
 
@@ -818,7 +818,7 @@ The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the
 
 ## Combining scholarships
 
-Marom and Siket can be combined — they do not exclude each other. JDC requires individual clarification with the program representative.
+Marom and Student Authority tuition funding can be combined, subject to the Authority's rules. JDC requires individual clarification with the program representative.
 
 ## Organizations that help you apply
 
@@ -832,13 +832,13 @@ Olim BeYachad offers free personal advising and scholarship-writing workshops. O
 
 **ማሮም (CHE)**: ₪8,000–₪20,000 በዓመት። ቀነ-ገደቡ ጥር–መጋቢት።
 
-**ሲኬት (የመሰብሰቢያ ሚኒስቴር)**: ₪6,000–₪15,000 በዓመት ለ7 ዓመት ባልሞሉ ስደተኞች።
+**የተማሪዎች አስተዳደር (የዐሊያና ቅሊጣ ሚኒስቴር)**: ብቁ ለሆኑ ኦሊም ተማሪዎች የትምህርት ክፍያ ድጋፍ — በgov.il በመስመር ላይ ያመልክቱ።
 
 **JDC እስራኤል**: ₪10,000–₪18,000 + የአመራር ፕሮግራም።
 
 ## ዕርዳታዎችን ማጣመር
 
-ማሮምና ሲኬት አብረው ሊጠቀሙ ይችላሉ።
+ማሮምና የተማሪዎች አስተዳደር ድጋፍ አብረው ሊጠቀሙ ይችላሉ — በአስተዳደሩ ህጎች መሠረት።
 
 ## የሚረዱ ድርጅቶች
 
