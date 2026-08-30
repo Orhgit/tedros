@@ -1,7 +1,11 @@
 // Scholarships seed (RIN-504 / Phase 5 Education Hub Wave 1).
 //
-// 17 scholarships Wave 1 + 20 scholarships Wave 2 + 13 scholarships Wave 3
-// (TED-95 education hub — org/scholarship pages) = 50 total.
+// 13 scholarships Wave 1 + 16 scholarships Wave 2 + 11 scholarships Wave 3
+// (TED-95 education hub — org/scholarship pages) = 40 total.
+// TED-152: 8 fabricated entries retired (orgs/domains that do not exist) and
+// 2 duplicates merged (merom-scholarship → marom-che,
+// yoel-program-chiburim → biu-mechina-ethiopian) — legacy slugs 301 via
+// LEGACY_SCHOLARSHIP_REDIRECTS below.
 // Captures high-intent "{scholarship name}", "מלגה לבני קהילת יוצאי אתיופיה",
 // "Ethiopian Israeli scholarship" queries and routes applicants to providers.
 //
@@ -60,6 +64,20 @@ export interface ScholarshipEntry {
   bodies: Record<Locale, string>;
 }
 
+/**
+ * Slugs retired in TED-152 that had an indexable canonical successor.
+ * Detail + city routes 301 these to the canonical slug (same pattern as the
+ * careers track×city 301s, TED-132). Purely-fabricated entries were removed
+ * without a redirect — they 404/410 by design.
+ */
+export const LEGACY_SCHOLARSHIP_REDIRECTS: Record<string, string> = {
+  // Same CHE מרום program; the merom entry carried invented details (merom.org.il).
+  "merom-scholarship": "marom-che",
+  // Same program stack: תוכנית יואל (עמותת חיבורים) is the support wrap around
+  // the Bar-Ilan dedicated mechina — merged into the BIU entry.
+  "yoel-program-chiburim": "biu-mechina-ethiopian",
+};
+
 export const SCHOLARSHIPS: ScholarshipEntry[] = [
   // 1. ISEF Fellowship
   {
@@ -85,7 +103,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     applicationUrl: "https://www.isef.org.il/",
     tags: ["masters", "phd", "academic", "community"],
     communityPriority: true,
-    relatedScholarships: ["hesegim-undergraduate", "cogito-stem-phd"],
+    relatedScholarships: ["hesegim-undergraduate", "vatat-doctoral-postdoc-scholarship"],
     relatedRights: ["student-aid"],
     bodies: {
       he: `## למי המלגה?
@@ -117,7 +135,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [קרן ע"ש איסף — ISEF](/he/orgs/isef) — הארגון המספק
 - [הסגים — מלגות תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
-- [קוגיטו — מלגת דוקטורנטים STEM](/he/education/scholarships/cogito-stem-phd)
 `,
       en: `## Who is it for?
 
@@ -148,7 +165,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [ISEF — provider organization](/en/orgs/isef)
 - [Hesegim undergraduate scholarship](/en/education/scholarships/hesegim-undergraduate)
-- [Cogito STEM PhD scholarship](/en/education/scholarships/cogito-stem-phd)
 `,
       am: `## ለማን ነው?
 
@@ -179,7 +195,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [ISEF — የሰጪው ድርጅት](/am/orgs/isef)
 - [ሄሰጊም የመጀመሪያ ዲግሪ ድጋፍ](/am/education/scholarships/hesegim-undergraduate)
-- [ኮጊቶ STEM ዶክትሬት ድጋፍ](/am/education/scholarships/cogito-stem-phd)
 `,
     },
   },
@@ -424,104 +439,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     },
   },
 
-  // 4. Mossad Maxim Lefael
-  {
-    slug: "mossad-maxim-academic",
-    level: "undergrad",
-    providerOrgSlug: "mossad-maxim",
-    name: {
-      he: "מלגת מקסים לפעל",
-      en: "Mossad Maxim Lefael Scholarship",
-      am: "የMossad Maxim Lefael ድጋፍ",
-    },
-    shortDescription: {
-      he: "מלגות שכר לימוד לסטודנטים מצטיינים מהקהילה במגוון תחומי לימוד באוניברסיטאות בארץ.",
-      en: "Tuition scholarships for outstanding community students across study fields at Israeli universities.",
-      am: "ለላቁ የማህበረሰብ ተማሪዎች በተለያዩ የጥናት ዘርፎች በእስራኤል ዩኒቨርሲቲዎች የትምህርት ክፍያ ድጋፍ።",
-    },
-    amountMinIls: 10000,
-    amountMaxIls: 25000,
-    amountNote: {
-      he: "מלגת שכר לימוד שנתית; ניתן לחדש לפי הישגים.",
-      en: "Annual tuition scholarship; renewable based on academic performance.",
-      am: "ዓመታዊ የትምህርት ክፍያ ድጋፍ፤ በአካዳሚክ አፈጻጸም ላይ የሚታደስ።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://maximlefael.org.il/scholarships",
-    tags: ["undergrad", "academic", "community"],
-    communityPriority: true,
-    relatedScholarships: ["isef-fellowship", "hesegim-undergraduate"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## למי המלגה?
-
-- סטודנטים יוצאי אתיופיה לתואר ראשון או שני
-- ממוצע גבוה (תלוי תחום) — בדרך כלל 85+
-- מצב סוציו-אקונומי משוקלל
-
-## מה כלול?
-
-- מלגת שכר לימוד שנתית ₪10,000–₪25,000
-- אפשרות חידוש בכל שנה לפי הישגים
-- אירועי networking של בוגרי הקרן
-
-## איך פוני?
-
-1. טופס באתר הקרן
-2. גליון ציונים אקדמי + מכתב מוטיבציה
-3. ראיון (לעיתים)
-
-## ראו גם
-
-- Mossad Maxim — Org profile
-- [מלגת ISEF](/he/education/scholarships/isef-fellowship)
-- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
-`,
-      en: `## Who is it for?
-
-- Ethiopian-Israeli undergraduate or master's students
-- Strong GPA (typically 85+, varies by field)
-- Socio-economic factors weighted
-
-## What's included?
-
-- Annual tuition scholarship ₪10,000–₪25,000
-- Renewable per year based on performance
-- Networking events with foundation alumni
-
-## How to apply
-
-1. Application on foundation website
-2. Academic transcript + statement of purpose
-3. Interview (sometimes)
-
-## See also
-
-- Mossad Maxim — provider org
-- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
-- [Hesegim Undergraduate](/en/education/scholarships/hesegim-undergraduate)
-`,
-      am: `## ለማን ነው?
-
-- ለመጀመሪያ ወይም ሁለተኛ ዲግሪ የሚማሩ ኢትዮጵያ-እስራኤላውያን
-- ጠንካራ GPA (በተለምዶ 85+)
-- ማህበራዊ-ኢኮኖሚያዊ ሁኔታ ይመዘናል
-
-## ምን ይካተታል?
-
-- ዓመታዊ የትምህርት ክፍያ ድጋፍ ₪10,000–₪25,000
-- በዓመት የሚታደስ
-- ከፋውንዴሽን የቀድሞ ተማሪዎች ጋር የመረብ ግንኙነት
-
-## ይህንንም ይመልከቱ
-
-- Mossad Maxim — የሰጪው ድርጅት
-`,
-    },
-  },
-
   // 5. Atidim Pre-Academic
   {
     slug: "atidim-pre-academic",
@@ -633,107 +550,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - Atidim — የሰጪው ድርጅት
 - [የENP ባግሩት ድጋፍ](/am/education/scholarships/enp-bagrut-grant)
-`,
-    },
-  },
-
-  // 6. Cogito STEM PhD
-  {
-    slug: "cogito-stem-phd",
-    level: "phd",
-    providerOrgSlug: "cogito",
-    name: {
-      he: "Cogito Scholars — דוקטורנטים STEM",
-      en: "Cogito Scholars — STEM PhD",
-      am: "Cogito Scholars — STEM ዶክትሬት",
-    },
-    shortDescription: {
-      he: "מלגות דוקטורט בתחומי STEM (מדעים, טכנולוגיה, הנדסה, מתמטיקה) לחוקרים מהקהילה.",
-      en: "PhD scholarships in STEM fields (sciences, technology, engineering, math) for community researchers.",
-      am: "በSTEM ዘርፎች ለማህበረሰብ ተመራማሪዎች የዶክትሬት ድጋፍ።",
-    },
-    amountMinIls: 60000,
-    amountMaxIls: 120000,
-    amountNote: {
-      he: "סטיפנדיה שנתית מלאה למשך 4 שנות דוקטורט; שכר לימוד מלא בנפרד.",
-      en: "Full annual stipend for 4 years of PhD; tuition covered separately.",
-      am: "ለ4 ዓመት ዶክትሬት ሙሉ ዓመታዊ ድጋፍ፤ የትምህርት ክፍያ በተናጥል።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://cogito.org.il/apply",
-    tags: ["phd", "stem", "academic", "community"],
-    communityPriority: true,
-    relatedScholarships: ["isef-fellowship"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## למי המלגה?
-
-- חוקרים יוצאי אתיופיה לדוקטורט בתחומי STEM
-- מועמדים מאושרים בתכנית דוקטורט באוניברסיטה מחקרית בישראל
-- בעלי תזה מאושרת על-ידי מנחה מוכר
-
-## מה כלול?
-
-- סטיפנדיית דוקטורט מלאה (~₪80,000–₪120,000 לשנה)
-- שכר לימוד מלא
-- כיסוי הוצאות כנסים אקדמיים
-- חיבור לרשת חוקרים מהקהילה
-
-## איך פוני?
-
-1. אישור קבלה לדוקטורט באוניברסיטה ראשון
-2. הגשת בקשה לקרן Cogito עם תזה ומכתב מנחה
-3. ראיון
-4. אישור תוך 4–6 שבועות
-
-## ראו גם
-
-- Cogito — Org profile
-- [מלגת ISEF](/he/education/scholarships/isef-fellowship)
-`,
-      en: `## Who is it for?
-
-- Ethiopian-Israeli PhD researchers in STEM fields
-- Accepted to a PhD program at an Israeli research university
-- Thesis approved by recognized advisor
-
-## What's included?
-
-- Full PhD stipend (~₪80,000–₪120,000/year)
-- Full tuition
-- Conference travel coverage
-- Connection to community researcher network
-
-## How to apply
-
-1. Get accepted to the PhD program first
-2. Apply to Cogito with thesis + advisor letter
-3. Interview
-4. Decision within 4–6 weeks
-
-## See also
-
-- Cogito — provider org
-- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
-`,
-      am: `## ለማን ነው?
-
-- በSTEM ዘርፎች ለሚሰሩ ኢትዮጵያ-እስራኤላዊ የዶክትሬት ተመራማሪዎች
-- በእስራኤል የምርምር ዩኒቨርሲቲ የዶክትሬት ፕሮግራም ተቀብለዋል
-- በታወቀ አማካሪ የጸደቀ ቴዚስ
-
-## ምን ይካተታል?
-
-- ሙሉ የዶክትሬት ድጋፍ (~₪80,000–₪120,000/ዓመት)
-- ሙሉ የትምህርት ክፍያ
-- የጉባኤ ጉዞ ሽፋን
-
-## ይህንንም ይመልከቱ
-
-- Cogito — የሰጪው ድርጅት
-- [የISEF ህብረት](/am/education/scholarships/isef-fellowship)
 `,
     },
   },
@@ -1141,102 +957,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     },
   },
 
-  // 11. Falash Mura Yeshiva Stipend
-  {
-    slug: "falash-mura-yeshiva-stipend",
-    level: "vocational",
-    providerOrgSlug: "ministry-religious-services",
-    name: {
-      he: "מלגת ישיבת קליטה — פלשמורה",
-      en: "Falash Mura Absorption-Yeshiva Stipend",
-      am: "የፋላሽ ሙራ ቅዳሴ-ሥልጠና ድጋፍ",
-    },
-    shortDescription: {
-      he: "סטיפנדיית מחיה ללומדים בישיבת קליטה במסגרת תהליך קליטה דתי לפלשמורה החדשים.",
-      en: "Living stipend for those studying in absorption-yeshivot as part of religious-absorption for new Falash Mura.",
-      am: "በቅዳሴ-ሥልጠና ለሚማሩ የኑሮ ድጋፍ።",
-    },
-    amountMinIls: 12000,
-    amountMaxIls: 24000,
-    amountNote: {
-      he: "סטיפנדיה חודשית של ₪1,000–₪2,000 לאורך תקופת הלימודים בישיבה.",
-      en: "Monthly stipend of ₪1,000–₪2,000 throughout yeshiva studies.",
-      am: "በቅዳሴ-ሥልጠና ጊዜ ሁሉ ወርሃዊ ድጋፍ ₪1,000–₪2,000።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.gov.il/he/departments/ministry_of_religious_services",
-    tags: ["vocational", "religious", "olim", "falash-mura"],
-    communityPriority: true,
-    relatedScholarships: ["jewish-agency-aliyah"],
-    relatedRights: ["falash-mura-direct-absorption"],
-    bodies: {
-      he: `## למי המלגה?
-
-- פלשמורה שעלו לאחרונה ובמסגרת תהליך השלמת גיור
-- לומדים בישיבת קליטה מוכרת על-ידי הרבנות הראשית
-- ללא הכנסה אחרת מספקת
-
-## מה כלול?
-
-- סטיפנדיה חודשית ₪1,000–₪2,000
-- כיסוי הוצאות לימודים בישיבה
-- ליווי דתי-תרבותי
-
-## איך פוני?
-
-1. הרשמה לישיבה מוכרת
-2. בקשה דרך משרד השירותים הדתיים
-3. אישור הזכאות
-
-## ראו גם
-
-- [פלשמורה — מילון](/he/glossary/falash-mura)
-- [סוכנות יהודית — מלגת לימודים](/he/education/scholarships/jewish-agency-aliyah)
-`,
-      en: `## Who is it for?
-
-- Falash Mura who recently made aliyah and are completing conversion
-- Studying in an absorption-yeshiva recognized by the Chief Rabbinate
-- Without sufficient alternative income
-
-## What's included?
-
-- Monthly stipend ₪1,000–₪2,000
-- Yeshiva tuition coverage
-- Religious-cultural mentorship
-
-## How to apply
-
-1. Register at a recognized yeshiva
-2. Apply through Ministry of Religious Services
-3. Eligibility confirmation
-
-## See also
-
-- [Falash Mura — glossary](/en/glossary/falash-mura)
-- [Jewish Agency Study Scholarship](/en/education/scholarships/jewish-agency-aliyah)
-`,
-      am: `## ለማን ነው?
-
-- ቅርብ ጊዜ የመጡ ፋላሽ ሙራ
-- በዋናው ራቢናት የተቀበለች ቅዳሴ-ሥልጠና ያሉ
-- በቂ ሌላ ገቢ የሌላቸው
-
-## ምን ይካተታል?
-
-- ወርሃዊ ድጋፍ ₪1,000–₪2,000
-- የቅዳሴ-ሥልጠና ሽፋን
-- ሃይማኖታዊ-ባህላዊ ምክር
-
-## ይህንንም ይመልከቱ
-
-- [ፋላሽ ሙራ — መዝገብ](/am/glossary/falash-mura)
-`,
-    },
-  },
-
   // 12. Ministry of Aliyah — Tuition Grant
   {
     slug: "klita-tuition-grant",
@@ -1473,132 +1193,6 @@ A flat ₪10,000 per academic year, through the standard duration of the degree.
 - [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
 - [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
 - [VATAT — ልቀትና አማካሪነት](/am/education/scholarships/vatat-excellence-mentoring)
-`,
-    },
-  },
-
-  // 14. מלגת שיקת — משרד הקליטה (slug: siket-absorption)
-  {
-    slug: "siket-absorption",
-    level: "undergrad",
-    providerOrgSlug: "ministry-aliyah",
-    name: {
-      he: "מלגת שיקת — משרד העלייה והקליטה",
-      en: "Siket Scholarship — Ministry of Aliyah & Integration",
-      am: "ሲቀት ስኮላርሺፕ — የዐሊያ ሚኒስቴር",
-    },
-    shortDescription: {
-      he: "מלגה ממשלתית לסטודנטים עולים חדשים המשלימה את סל הקליטה — תמיכה ייחודית ללומדים שנות ראשונות.",
-      en: "Government scholarship for new immigrant students complementing the absorption basket — dedicated support for first-year students.",
-      am: "ለአዳዲስ ኦሊም ተማሪዎች የቅሊታ ቅርጫትን የሚሟሉ የመንግስት ስኮላርሺፕ።",
-    },
-    amountMinIls: 6000,
-    amountMaxIls: 15000,
-    amountNote: {
-      he: "מענק חד-שנתי (שנת לימודים א') — ניתן להאריך עד 3 שנים בהתאם לתנאים.",
-      en: "Single-year grant (first academic year) — extendable up to 3 years based on conditions.",
-      am: "1ኛ ዓመት ድጋፍ — ሁኔታ ሲሟሉ እስከ 3 ዓመታት ሊዘረጋ ይችላል።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.gov.il/he/departments/Units/students_authority_maya",
-    tags: ["undergrad", "olim", "government", "academic"],
-    communityPriority: true,
-    relatedScholarships: ["klita-tuition-grant", "jewish-agency-aliyah", "marom-che"],
-    relatedRights: ["klita-basket-ethiopia"],
-    bodies: {
-      he: `## מה זאת מלגת שיקת?
-
-מלגת שיקת היא מלגה של משרד העלייה והקליטה המיועדת לסטודנטים עולים חדשים. שמה נגזר מהמילה "שיקום" — והיא נועדה לאפשר לעולים לממן לימודים אקדמיים בשנים הראשונות, שבהן ההכנסה המשפחתית עדיין נמוכה ומוגבלת.
-
-## מי זכאי?
-
-- עולה חדש מאתיופיה (ולים אחרים) עם ותק עלייה של עד 10 שנים
-- לומד לתואר ראשון או שני במוסד אקדמי מוכר
-- אינו מקבל מלגת שכר לימוד מלאה ממקור ממלכתי אחר
-- הכנסה משפחתית עד 200% מקו העוני
-
-## מה כלול?
-
-- מענק שנתי לשכר לימוד: ₪6,000–₪15,000 (בהתאם להכנסה ומסלול)
-- ליווי מנהל מקרה בקליטה אקדמית
-- גישה לשירות ייעוץ לימודי של משרד הקליטה
-
-## שלבי ההגשה
-
-1. כניסה לפורטל gov.il — חיפוש "מלגת שיקת"
-2. מילוי בקשה מקוונת (ניתן גם לפנות ישירות למשרד הקליטה הקרוב)
-3. צירוף תעודת עולה, אישור רישום, ואישור הכנסה
-4. אישור תוך 3–5 שבועות
-5. תשלום ישיר לחשבון או לאוניברסיטה
-
-## תאריכים חשובים
-
-- הגשה פתוחה כל השנה (rolling) — מומלץ לפנות לפני תחילת הסמסטר הראשון
-
-## ראו גם
-
-- [מענק שכר לימוד — משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
-- [מלגת סוכנות יהודית](/he/education/scholarships/jewish-agency-aliyah)
-- [מלגת מרום — מל"ג](/he/education/scholarships/marom-che)
-`,
-      en: `## What is the Siket Scholarship?
-
-The Siket Scholarship is a Ministry of Aliyah & Integration scholarship for new immigrant students. Its name derives from the word "rehabilitation" — it is designed to enable olim to fund academic studies in the first years, when family income is still low and limited.
-
-## Who is eligible?
-
-- New immigrant from Ethiopia (and other countries) with up to 10 years since aliyah
-- Studying for an undergraduate or master's degree at a recognized institution
-- Not receiving a full tuition scholarship from another government source
-- Family income up to 200% of the poverty line
-
-## What's included?
-
-- Annual tuition grant: ₪6,000–₪15,000 (based on income and study track)
-- Academic absorption case management
-- Access to Ministry of Aliyah academic counseling service
-
-## Application steps
-
-1. Access gov.il portal — search for "מלגת שיקת"
-2. Complete online application (can also contact the nearest Absorption Ministry office)
-3. Attach olim certificate, enrollment confirmation, income verification
-4. Decision within 3–5 weeks
-5. Payment directly to account or university
-
-## Important dates
-
-- Rolling admissions — recommended to apply before the first semester
-
-## See also
-
-- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
-- [Jewish Agency Scholarship](/en/education/scholarships/jewish-agency-aliyah)
-- [Marom CHE Scholarship](/en/education/scholarships/marom-che)
-`,
-      am: `## ሲቀት ስኮላርሺፕ ምንድን ነው?
-
-ሲቀት ስኮላርሺፕ ለአዳዲስ ኦሊም ተማሪዎች ቀደምት ዓመታት የምርምር ክፍያ እንዲሞሉ ያስችላቸዋል።
-
-## ለማን ይሆናል?
-
-- ከ10 ዓመት ባነሰ ዐሊያ ያላቸው ኢትዮጵያ ኦሊም
-- ታወቀ ተቋም ያሉ
-- ሌላ ሙሉ ዐሊያ ስኮላርሺፕ ያልተቀበሉ
-- ቤተሰብ ገቢ ≤ 200% ከድህነት ወሰን
-
-## ምን ይካተታል?
-
-- ዓመታዊ ₪6,000–₪15,000
-- ቅሊታ ምክር
-- gov.il ፖርታል ወይም ቅሊታ ሚኒስቴር ቢሮ
-
-## ይህንንም ይዩ
-
-- [ቅሊታ ሚኒስቴር ድጋፍ](/am/education/scholarships/klita-tuition-grant)
-- [ማሮም CHE ስኮላርሺፕ](/am/education/scholarships/marom-che)
 `,
     },
   },
@@ -1985,160 +1579,6 @@ JDC (American Jewish Joint Distribution Committee) ፋይናንሺያል ስኮ�
 - [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
 - [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
 - [ማሮም CHE](/am/education/scholarships/marom-che)
-`,
-    },
-  },
-
-  // 13. מלגת מרום — TED-64
-  {
-    slug: "merom-scholarship",
-    level: "undergrad",
-    providerOrgSlug: "merom",
-    name: {
-      he: "מלגת מרום",
-      en: "Merom Scholarship",
-      am: "ሜሮም ስኮላርሺፕ",
-    },
-    shortDescription: {
-      he: "מלגה ייחודית לסטודנטים ממוצא אתיופי — עד ₪20,000 לשנה, לתואר ראשון בכל תחום לימוד.",
-      en: "Scholarship exclusively for students of Ethiopian origin — up to ₪20,000 per year for any undergraduate field.",
-      am: 'ለኢትዮጵያ ዜግነት ተማሪዎች ብቻ — እስከ 20,000 ሺ"ል ዓመታዊ፣ ለማንኛውም የጥናት ዘርፍ።',
-    },
-    amountMinIls: 10000,
-    amountMaxIls: 20000,
-    amountNote: {
-      he: "לפי מצב כלכלי ומצטיינות אקדמית",
-      en: "Based on financial need and academic excellence",
-      am: "በኢኮኖሚ ሁኔታ እና የትምህርት ልቀት ላይ ተመስርቶ",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://che.org.il/scholarships/marom/",
-    tags: ["community", "undergraduate", "needs-based"],
-    communityPriority: true,
-    relatedScholarships: ["isef-fellowship", "hesegim-undergraduate"],
-    relatedRights: ["student-aid", "klita-basket-ethiopia"],
-    bodies: {
-      he: `## מה זה מלגת מרום?
-
-מלגת מרום היא מלגת הצטיינות-ומחסור המיועדת **אך ורק לסטודנטים ממוצא אתיופי** הלומדים לתואר ראשון במוסד אקדמי מוכר בישראל. המלגה ניתנת לחידוש שנתי בתנאי שמירה על ממוצע מינימלי.
-
-## מי זכאי?
-
-- סטודנט/ית ממוצא אתיופי (הורה שנולד באתיופיה, או עלייה ישירה)
-- לומד/ת תואר ראשון באוניברסיטה, מכללה או מכון טכנולוגי מוכר
-- ממוצע ציונים ≥ 75 בשנה הקודמת (לחידוש)
-- הכנסה משפחתית עד 150% מקו העוני (נבדק מול נתוני ביטוח לאומי)
-
-## כמה מקבלים?
-
-| רמה | סכום שנתי |
-|-----|-----------|
-| מצוינות בסיסית (ממוצע 75–84) | ₪10,000 |
-| מצוינות גבוהה (ממוצע 85–94) | ₪15,000 |
-| מצוינות יוצאת דופן (ממוצע 95+) | ₪20,000 |
-
-## שלבי ההגשה
-
-1. **מילוי טופס מקוון** באתר merom.org.il — עד 30 באפריל מדי שנה
-2. **צירוף מסמכים**: ת"ז, אישור לימודים, גיליון ציונים, אסמכתא למוצא אתיופי, אישור הכנסת משפחה
-3. **ראיון** (לסטודנטים שעברו סינון ראשוני) — מרץ–אפריל
-4. **הודעה על זכייה**: תוך 45 יום
-5. **העברת הכסף**: ישירות לחשבון הבנק של הסטודנט
-
-## שאלות נפוצות
-
-**האם ניתן לצבור עם מלגות אחרות?**
-כן — מלגת מרום ניתנת לצבירה עם מלגת הצטיינות אחרת, אך לא עם מלגת ISEF (מלאה) בו-זמנית.
-
-**האם מלגת מרום מחייבת עבודה בתחום מסוים אחרי הסיום?**
-לא — אין התחייבות תעסוקתית.
-
-**מה קורה אם הממוצע ירד מתחת ל-75?**
-המלגה מושהית לשנה אחת. ניתן לחדשה אם הממוצע חוזר לעלות.
-
-## ראו גם
-
-- [מלגת ISEF — תואר שני](/he/education/scholarships/isef-fellowship)
-- [מלגת הסגים — תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
-- [סל קליטה לעולים מאתיופיה — זכות](/he/rights/klita-basket-ethiopia)
-`,
-      en: `## What is the Merom Scholarship?
-
-The Merom Scholarship is a merit-and-need award designed **exclusively for students of Ethiopian origin** studying for an undergraduate degree at a recognised Israeli academic institution. It is renewed annually subject to maintaining a minimum grade average.
-
-## Who is eligible?
-
-- Student of Ethiopian origin (parent born in Ethiopia, or direct aliyah)
-- Studying for an undergraduate degree at an accredited university, college, or technological institute
-- Grade average ≥ 75 in the previous year (for renewal)
-- Family income up to 150% of the poverty line (verified against National Insurance data)
-
-## How much?
-
-| Level | Annual award |
-|-------|-------------|
-| Basic excellence (average 75–84) | ₪10,000 |
-| High excellence (average 85–94) | ₪15,000 |
-| Outstanding excellence (average 95+) | ₪20,000 |
-
-## Application steps
-
-1. **Complete the online form** at merom.org.il — by 30 April each year
-2. **Attach documents**: ID, study confirmation, transcript, proof of Ethiopian origin, family income statement
-3. **Interview** (for applicants passing the initial filter) — March–April
-4. **Award notification**: within 45 days
-5. **Payment**: transferred directly to the student's bank account
-
-## FAQ
-
-**Can it be combined with other scholarships?**
-Yes — Merom can be combined with another merit scholarship, but not simultaneously with a full ISEF grant.
-
-**Does the Merom Scholarship require working in a specific field after graduation?**
-No — there is no employment commitment.
-
-**What happens if my average falls below 75?**
-The scholarship is suspended for one year. It can be renewed if the average rises again.
-
-## See also
-
-- [ISEF Fellowship — master's degree](/en/education/scholarships/isef-fellowship)
-- [Hesegim Scholarship — undergraduate](/en/education/scholarships/hesegim-undergraduate)
-- [Klita basket for Ethiopian olim — right](/en/rights/klita-basket-ethiopia)
-`,
-      am: `## ሜሮም ስኮላርሺፕ ምንድን ነው?
-
-ሜሮም ስኮላርሺፕ **ለኢትዮጵያ ዜግነት ተማሪዎች ብቻ** ያለ ሙሉ የትምህርት ዘርፍ ለማስቀጠል የሚያስፈልግ ስኮላርሺፕ ነው። ዓመት አዲስ ሊታደስ ይችላል።
-
-## ለማን ይሆናል?
-
-- ከኢትዮጵያ ዜግነት ተማሪ (ወላጅ ኢትዮጵያ ወይም ቀጥታ ዓሊያ)
-- በታወቀ ዩኒቨርሲቲ ወይም ኮሌጅ የባቸለር ሲያጠኑ
-- ያለፈው ዓመት ምዝናዬ ≥ 75
-- የቤተሰብ ገቢ ከድህነት ወሰን 150% በታች
-
-## ስንት ያገኛሉ?
-
-| ደረጃ | ዓመታዊ ሽልማት |
-|-----|------------|
-| 75–84 ምዝናዬ | 10,000 ሺ"ል |
-| 85–94 ምዝናዬ | 15,000 ሺ"ል |
-| 95+ ምዝናዬ | 20,000 ሺ"ል |
-
-## ደረጃዎች
-
-1. merom.org.il ላይ ቅጽ ይሙሉ — ዓመት አፕሪ 30 በፊት
-2. ሰነዶች ያቅርቡ፦ መታወቂያ፣ ምዝናዬ ቅጽ፣ የዓሊያ ማረጋገጫ
-3. ቃለ-ምርምር (ከዋና ምርጫ በኋላ)
-4. ማሳወቂያ፦ ከ45 ቀናት ውስጥ
-5. ወደ ባንክ ሂሳብ ቀጥታ ይተላለፋል
-
-## ይህንንም ይዩ
-
-- [ISEF Fellowship — ሁለተኛ ዲግሪ](/am/education/scholarships/isef-fellowship)
-- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
 `,
     },
   },
