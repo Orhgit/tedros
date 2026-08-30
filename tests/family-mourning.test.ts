@@ -78,9 +78,7 @@ describe("mourning topic seed shape", () => {
     for (const r of MOURNING_TOPIC.resources) {
       if (r.url) expect(r.url).toMatch(/^https:\/\//);
       for (const locale of LOCALES) {
-        expect(r.description[locale].length, `${r.name} [${locale}]`).toBeGreaterThan(
-          10,
-        );
+        expect(r.description[locale].length, `${r.name} [${locale}]`).toBeGreaterThan(10);
       }
     }
   });
@@ -135,7 +133,10 @@ describe("mourning checklist", () => {
     for (const step of MOURNING_CHECKLIST) {
       if (!step.internalPath) continue;
       const slug = step.internalPath.match(/^\/rights\/([a-z0-9-]+)$/)?.[1];
-      expect(slug, `${step.id}: unexpected internalPath ${step.internalPath}`).toBeTruthy();
+      expect(
+        slug,
+        `${step.id}: unexpected internalPath ${step.internalPath}`,
+      ).toBeTruthy();
       expect(
         rightsSlugs.has(slug ?? ""),
         `${step.id}: /rights/${slug} does not exist in the rights seed`,

@@ -197,7 +197,7 @@ export const MOURNING_CHECKLIST: MourningChecklistStep[] = [
       am: "የሞት ማስታወቂያ ያግኙ",
     },
     detail: {
-      he: "בבית חולים — הצוות מנפיק אותה. בבית — מזמינים רופא, או מד\"א (101) ופרמדיק מוסמך ינפיק את ההודעה. בלי הודעת פטירה אי-אפשר לקבל רישיון קבורה.",
+      he: 'בבית חולים — הצוות מנפיק אותה. בבית — מזמינים רופא, או מד"א (101) ופרמדיק מוסמך ינפיק את ההודעה. בלי הודעת פטירה אי-אפשר לקבל רישיון קבורה.',
       en: "In a hospital the staff issues it. At home, call a doctor or MDA (101) — a certified paramedic will issue the notification. Without it a burial permit cannot be issued.",
       am: "በሆስፒታል — ሠራተኞቹ ያወጣሉ። በቤት — ሐኪም ይጥሩ ወይም መዳ (101)፤ የተመሰከረለት ፓራሜዲክ ማስታወቂያውን ያወጣል። ያለሱ የቀብር ፈቃድ ማግኘት አይቻልም።",
     },
@@ -336,7 +336,7 @@ export const MOURNING_GUEST_TIPS: MourningGuestTip[] = [
       am: "መገኘት ራሱ ማጽናናት ነው",
     },
     detail: {
-      he: "במסורת האתיופית האבל הוא עניין קהילתי — נוכחות רחבה מכבדת את הנפטר ואת משפחתו. אינכם צריכים לדעת מה לומר; מספיק לבוא, ללחוץ יד ולשבת עם המשפחה. ברכת \"המקום ינחם\" המקובלת מתאימה לגמרי.",
+      he: 'במסורת האתיופית האבל הוא עניין קהילתי — נוכחות רחבה מכבדת את הנפטר ואת משפחתו. אינכם צריכים לדעת מה לומר; מספיק לבוא, ללחוץ יד ולשבת עם המשפחה. ברכת "המקום ינחם" המקובלת מתאימה לגמרי.',
       en: "In the Ethiopian tradition mourning is communal — a broad presence honors the deceased and the family. You don't need to know what to say; coming, shaking hands, and sitting with the family is enough. The customary Hebrew condolence greeting is entirely appropriate.",
       am: "በኢትዮጵያ ባህል ሐዘን የማኅበረሰብ ጉዳይ ነው — ሰፊ መገኘት ሟቹንና ቤተሰቡን ያከብራል። ምን እንደሚሉ ማወቅ አያስፈልግዎትም፤ መምጣት፣ እጅ መጨበጥ እና ከቤተሰቡ ጋር መቀመጥ በቂ ነው።",
     },
