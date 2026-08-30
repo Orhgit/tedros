@@ -1,5 +1,6 @@
 // /:lang/family — Family & Support pillar landing.
-// 3-card hub linking to domestic-violence, elderly, and women-empowerment sub-pages.
+// 4-card hub linking to domestic-violence, elderly, women-empowerment, and
+// mourning sub-pages.
 // JSON-LD: BreadcrumbList + WebPage.
 
 import { Link } from "react-router";
@@ -11,6 +12,7 @@ import {
   familyPath,
   domesticViolencePath,
   elderlyPath,
+  mourningPath,
   womenEmpowermentPath,
 } from "~/lib/family/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/family/schema";
@@ -51,6 +53,13 @@ const CARDS: FamilyCard[] = [
     titleKey: "family_women_title",
     subtitleKey: "family_women_subtitle",
     icon: "🌸",
+  },
+  {
+    slug: "mourning",
+    path: mourningPath(),
+    titleKey: "family_mourning_title",
+    subtitleKey: "family_mourning_subtitle",
+    icon: "🕯️",
   },
 ];
 
@@ -129,7 +138,7 @@ export default function FamilyLanding({ loaderData }: Route.ComponentProps) {
           </p>
         </header>
 
-        {/* 3-card grid */}
+        {/* topic-card grid */}
         <section aria-labelledby="family-topics-heading">
           <h2
             id="family-topics-heading"
@@ -137,7 +146,7 @@ export default function FamilyLanding({ loaderData }: Route.ComponentProps) {
           >
             {t(locale, "family_landing_title")}
           </h2>
-          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {CARDS.map((card) => (
               <li key={card.slug}>
                 <Link

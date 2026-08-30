@@ -38,6 +38,7 @@ export function loader() {
     "/family/domestic-violence",
     "/family/elderly",
     "/family/women-empowerment",
+    "/family/mourning",
     "/voice",
     "/voice/community-action",
     "/voice/police-conduct",

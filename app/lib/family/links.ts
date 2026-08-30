@@ -16,3 +16,7 @@ export function elderlyPath(): string {
 export function womenEmpowermentPath(): string {
   return "/family/women-empowerment";
 }
+
+export function mourningPath(): string {
+  return "/family/mourning";
+}

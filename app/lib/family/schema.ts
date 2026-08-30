@@ -55,6 +55,44 @@ export interface WebPageJsonLdInput {
   description: string;
 }
 
+// ── Article (long-form guide pages, e.g. the mourning guide) ──────────────
+
+export interface ArticleJsonLdInput {
+  path: string;
+  headline: string;
+  description: string;
+  /** ISO date the guide was first published. */
+  datePublished: string;
+  /** ISO date of the last substantive update. */
+  dateModified?: string;
+}
+
+export function articleJsonLd(ctx: SchemaContext, input: ArticleJsonLdInput): JsonLd {
+  const url = urlFor(ctx, input.path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Article",
+    "@id": url,
+    url,
+    mainEntityOfPage: url,
+    headline: input.headline,
+    description: input.description,
+    datePublished: input.datePublished,
+    dateModified: input.dateModified ?? input.datePublished,
+    inLanguage: ctx.locale,
+    author: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
+  };
+}
+
 export function webPageJsonLd(ctx: SchemaContext, input: WebPageJsonLdInput): JsonLd {
   const url = urlFor(ctx, input.path);
   return {
