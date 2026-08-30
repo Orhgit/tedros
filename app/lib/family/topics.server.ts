@@ -1,9 +1,12 @@
-// Family & Support pillar — typed topic data for the 3 sub-pages.
+// Family & Support pillar — typed topic data for the sub-pages.
+// The mourning guide topic (TED-138) lives in ./mourning.server.ts and is
+// registered in FAMILY_TOPICS below.
 //
 // HE is the source-of-truth locale (CLAUDE.md). EN + AM are mirrors.
 // Server-only module — do not import in client bundles.
 
 import type { Locale } from "../i18n/config";
+import { MOURNING_TOPIC } from "./mourning.server";
 
 export interface FamilyResource {
   name: string;
@@ -41,7 +44,8 @@ export interface FamilyTopic {
     | "welfare-services-overview"
     | "community-kiryat-gat-paz"
     | "community-services-ashkelon"
-    | "community-services-rishon-lezion";
+    | "community-services-rishon-lezion"
+    | "mourning";
   title: Record<Locale, string>;
   subtitle: Record<Locale, string>;
   body: Record<Locale, string>;
@@ -356,6 +360,7 @@ export const FAMILY_TOPICS: FamilyTopic[] = [
   DOMESTIC_VIOLENCE,
   ELDERLY,
   WOMEN_EMPOWERMENT,
+  MOURNING_TOPIC,
 ];
 
 export function getFamilyTopic(slug: string): FamilyTopic | undefined {
