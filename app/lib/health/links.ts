@@ -17,6 +17,12 @@ export function mentalHealthPath(): string {
   return "/health/mental-health";
 }
 
+// TED-144 — Mental-health access guides (interpreter / hospitalization /
+// culturally-competent care)
+export function mentalHealthAccessPath(slug: string): string {
+  return `/health/mental-health/${slug}`;
+}
+
 // RIN-656 — Health Services Directory
 export function servicesPath(): string {
   return "/health/services";

@@ -7,7 +7,7 @@ import type { Route } from "./+types/$lang.health.mental-health";
 import { HealthDisclaimer } from "~/components/health/health-disclaimer";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
-import { healthPath } from "~/lib/health/links";
+import { healthPath, mentalHealthAccessPath } from "~/lib/health/links";
 import { breadcrumbJsonLd, faqJsonLd, webPageJsonLd } from "~/lib/health/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -377,6 +377,51 @@ export default function MentalHealthHub({ loaderData }: Route.ComponentProps) {
               </li>
             ))}
           </ol>
+        </section>
+
+        {/* Access guides (TED-144) */}
+        <section className="mb-10" aria-labelledby="mh-guides-heading">
+          <h2
+            id="mh-guides-heading"
+            className="mb-4 font-display text-xl font-semibold text-earth-900"
+          >
+            {t(locale, "health_mh_guides_label")}
+          </h2>
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {(
+              [
+                {
+                  slug: "interpreter",
+                  titleKey: "health_mh_interpreter_title",
+                  subtitleKey: "health_mh_interpreter_subtitle",
+                },
+                {
+                  slug: "hospitalization-rights",
+                  titleKey: "health_mh_hospitalization_title",
+                  subtitleKey: "health_mh_hospitalization_subtitle",
+                },
+                {
+                  slug: "culturally-competent-care",
+                  titleKey: "health_mh_cultural_title",
+                  subtitleKey: "health_mh_cultural_subtitle",
+                },
+              ] as const
+            ).map((guide) => (
+              <li key={guide.slug}>
+                <Link
+                  to={`/${locale}${mentalHealthAccessPath(guide.slug)}`}
+                  className="block h-full rounded-xl border border-earth-200 bg-card p-5 transition hover:border-earth-400 hover:bg-earth-50"
+                >
+                  <h3 className="font-display text-base font-semibold text-earth-900">
+                    {t(locale, guide.titleKey)}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-600">
+                    {t(locale, guide.subtitleKey)}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* Youth at-risk */}
