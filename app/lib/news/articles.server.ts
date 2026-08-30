@@ -25,6 +25,7 @@ import { ARTICLES_WAVE7C } from "./articles-wave7c.server";
 import { ARTICLES_WAVE7D } from "./articles-wave7d.server";
 import { ARTICLES_WAVE8 } from "./articles-wave8.server";
 import { ARTICLES_WAVE9 } from "./articles-wave9.server";
+import { ARTICLES_WAVE10 } from "./articles-wave10.server";
 
 export interface NewsArticleEntry {
   slug: string;
@@ -5874,6 +5875,7 @@ If you're drafting a will, contract, or any binding legal document, make sure:
   ...ARTICLES_WAVE7D,
   ...ARTICLES_WAVE8,
   ...ARTICLES_WAVE9,
+  ...ARTICLES_WAVE10,
 ];
 
 // TODO(data/architect): the "Marom" scholarship entry embedded above (~line
