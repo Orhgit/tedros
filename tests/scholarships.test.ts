@@ -59,6 +59,38 @@ describe("scholarships seed integrity", () => {
     }
   });
 
+  // TED-139 — freshness fields
+  it("every scholarship has a valid status", () => {
+    for (const e of SCHOLARSHIPS) {
+      expect(["open", "closed", "tba"], `${e.slug} → ${e.status}`).toContain(e.status);
+    }
+  });
+
+  it("every scholarship has an ISO lastVerified date", () => {
+    for (const e of SCHOLARSHIPS) {
+      expect(e.lastVerified, `${e.slug}`).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(Number.isNaN(new Date(e.lastVerified).getTime())).toBe(false);
+    }
+  });
+
+  it("deadline is rolling, an ISO date, or null", () => {
+    for (const e of SCHOLARSHIPS) {
+      const ok =
+        e.deadline === "rolling" ||
+        e.deadline === null ||
+        /^\d{4}-\d{2}-\d{2}$/.test(e.deadline);
+      expect(ok, `${e.slug} → ${e.deadline}`).toBe(true);
+    }
+  });
+
+  it("tba entries never carry a concrete deadline (unverified → null)", () => {
+    for (const e of SCHOLARSHIPS) {
+      if (e.status === "tba") {
+        expect(e.deadline, `${e.slug}`).toBeNull();
+      }
+    }
+  });
+
   it("relatedScholarships point at valid slugs", () => {
     const slugs = new Set(allScholarshipSlugs());
     for (const e of SCHOLARSHIPS) {
@@ -87,6 +119,13 @@ describe("listScholarships", () => {
     const isef = listScholarships("he").find((s) => s.slug === "isef-fellowship");
     expect(isef?.amountNote).toContain("שכר לימוד");
   });
+
+  it("exposes status + lastVerified on summaries (TED-139)", () => {
+    for (const s of listScholarships("he")) {
+      expect(["open", "closed", "tba"]).toContain(s.status);
+      expect(s.lastVerified).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    }
+  });
 });
 
 describe("getScholarshipBySlug", () => {
@@ -101,6 +140,12 @@ describe("getScholarshipBySlug", () => {
 
   it("returns null for unknown slug", () => {
     expect(getScholarshipBySlug("does-not-exist", "he")).toBeNull();
+  });
+
+  it("exposes status + lastVerified on detail (TED-139)", () => {
+    const isef = getScholarshipBySlug("isef-fellowship", "he");
+    expect(isef?.status).toBe("closed");
+    expect(isef?.lastVerified).toBe("2026-08-30");
   });
 
   it("returns body in requested locale", () => {

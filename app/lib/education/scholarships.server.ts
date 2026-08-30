@@ -17,6 +17,13 @@ import { SCHOLARSHIPS_WAVE3 } from "./scholarships-wave3.server";
 
 export type { ScholarshipLevel } from "./categories";
 
+/**
+ * Registration status for the current (תשפ"ז / 2026-27) cycle (TED-139).
+ * `open` is only set with a verified primary source (org / gov / university
+ * site); anything unverifiable stays `tba` and renders no badge.
+ */
+export type ScholarshipStatus = "open" | "closed" | "tba";
+
 export interface ScholarshipEntry {
   slug: string;
   level: ScholarshipLevel;
@@ -31,8 +38,15 @@ export interface ScholarshipEntry {
   amountMaxIls: number;
   /** Free-text amount note when range alone is misleading (e.g. "tuition + stipend"). */
   amountNote: Translatable;
-  /** "rolling" or ISO date string of the next deadline. */
-  deadline: "rolling" | string;
+  /**
+   * "rolling", ISO date string of the next verified deadline, or null when
+   * the next cycle's deadline has not been announced (TED-139).
+   */
+  deadline: "rolling" | string | null;
+  /** Registration status for the current cycle — see ScholarshipStatus. */
+  status: ScholarshipStatus;
+  /** ISO date this entry's deadline/status/link were last verified (TED-139). */
+  lastVerified: string;
   /** External application URL — opens in new tab. */
   applicationUrl: string;
   /** Tags for cross-linking + filtering. */
@@ -65,8 +79,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Full tuition + annual stipend; varies by program.",
       am: "ሙሉ የትምህርት ክፍያ + ዓመታዊ የኑሮ ድጋፍ፤ እንደ ፕሮግራሙ ይለያያል።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.isef.org.il/he/apply",
+    deadline: null,
+    status: "closed",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.isef.org.il/",
     tags: ["masters", "phd", "academic", "community"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "cogito-stem-phd"],
@@ -190,8 +206,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Annual scholarship for 3–4 years of the degree; includes living stipend.",
       am: "ለ3–4 ዓመታት ዲግሪ ዓመታዊ ድጋፍ፤ የኑሮ ድጋፍ ያካትታል።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://hesegim.org.il/apply",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://hesegim.org.il/",
     tags: ["undergrad", "academic", "community", "mentorship"],
     communityPriority: true,
     relatedScholarships: ["isef-fellowship", "atidim-pre-academic"],
@@ -315,8 +333,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "One-time grant on matriculation completion; amount varies with achievement.",
       am: "ባግሩት ሲጠናቀቅ የአንድ ጊዜ ድጋፍ፤ መጠን እንደ ውጤት ይለያያል።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.enp.org.il/he/apply-bagrut",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.enp.org.il/he/programs/Scholastic_Assistance/",
     tags: ["high-school", "community", "rights"],
     communityPriority: true,
     relatedScholarships: ["atidim-pre-academic"],
@@ -426,7 +446,9 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Annual tuition scholarship; renewable based on academic performance.",
       am: "ዓመታዊ የትምህርት ክፍያ ድጋፍ፤ በአካዳሚክ አፈጻጸም ላይ የሚታደስ።",
     },
-    deadline: "rolling",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
     applicationUrl: "https://maximlefael.org.il/scholarships",
     tags: ["undergrad", "academic", "community"],
     communityPriority: true,
@@ -522,8 +544,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Free for eligible students; includes housing, meals, and pocket stipend.",
       am: "ለብቁዎች ነጻ ነው፤ መኖሪያ፣ ምግብና ኪስ ድጋፍ ያካትታል።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.atidim.org/apply-pre-academic",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://atidim.org/המכינה-הקדם-אקדמית/",
     tags: ["pre-academic", "community", "academic"],
     communityPriority: true,
     relatedScholarships: ["enp-bagrut-grant", "tech-career-bootcamp-stipend"],
@@ -635,7 +659,9 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Full annual stipend for 4 years of PhD; tuition covered separately.",
       am: "ለ4 ዓመት ዶክትሬት ሙሉ ዓመታዊ ድጋፍ፤ የትምህርት ክፍያ በተናጥል።",
     },
-    deadline: "rolling",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
     applicationUrl: "https://cogito.org.il/apply",
     tags: ["phd", "stem", "academic", "community"],
     communityPriority: true,
@@ -734,8 +760,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Annual stipend per tutoring hour (~4 hours/week × 30 weeks).",
       am: "በማስተማሪያ ሰዓት ዓመታዊ ድጋፍ።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.perach.org.il/apply",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.perach.org.il/",
     tags: ["undergrad", "mentorship", "community", "side-income"],
     communityPriority: false,
     relatedScholarships: ["hesegim-undergraduate"],
@@ -829,7 +857,9 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       am: "6–9 ወር ቡት ካምፕ ነጻ + በሙሉ ጊዜ የኑሮ ድጋፍ።",
     },
     deadline: "rolling",
-    applicationUrl: "https://www.tech-career.org/apply",
+    status: "open",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.tech-career.org/items",
     tags: ["vocational", "tech", "career-shift", "community"],
     communityPriority: true,
     relatedScholarships: ["atidim-pre-academic", "olim-beyahad-career-mentorship"],
@@ -930,7 +960,9 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       am: "ስራ ሲጀምሩ የአንድ ጊዜ ተጨማሪ ድጋፍ፤ ተጓዳኝ አገልግሎቶች ነጻ።",
     },
     deadline: "rolling",
-    applicationUrl: "https://www.olim-beyahad.org.il/apply",
+    status: "open",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.olim-beyahad.org.il/",
     tags: ["undergrad", "career-shift", "community", "mentorship"],
     communityPriority: true,
     relatedScholarships: ["tech-career-bootcamp-stipend", "isef-fellowship"],
@@ -1032,8 +1064,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Annual tuition scholarship; in addition to standard absorption basket.",
       am: "ዓመታዊ የትምህርት ክፍያ ድጋፍ፤ ከተለመደው የመግባት ቅርጫት በተጨማሪ።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.jewishagency.org/il/aliyah/scholarships",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.jewishagency.org/",
     tags: ["undergrad", "olim", "academic"],
     communityPriority: true,
     relatedScholarships: ["klita-tuition-grant", "atidim-pre-academic"],
@@ -1129,8 +1163,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Monthly stipend of ₪1,000–₪2,000 throughout yeshiva studies.",
       am: "በቅዳሴ-ሥልጠና ጊዜ ሁሉ ወርሃዊ ድጋፍ ₪1,000–₪2,000።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.dat.gov.il/he/scholarships",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.gov.il/he/departments/ministry_of_religious_services",
     tags: ["vocational", "religious", "olim", "falash-mura"],
     communityPriority: true,
     relatedScholarships: ["jewish-agency-aliyah"],
@@ -1223,8 +1259,10 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Annual grant covering 100% of tuition; not merit-based.",
       am: "100% የትምህርት ክፍያ የሚሸፍን ዓመታዊ ድጋፍ።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.gov.il/he/departments/integration_program/scholarship",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority",
     tags: ["undergrad", "olim", "academic", "rights"],
     communityPriority: true,
     relatedScholarships: ["jewish-agency-aliyah", "atidim-pre-academic"],
@@ -1331,7 +1369,9 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "A flat ₪10,000 per academic year, from year 1 through the standard duration of the degree (corrected — not tiered by year or field as previously written here).",
       am: "₪10,000 ቋሚ በዓመት፣ ከ1ኛ ዓመት እስከ መደበኛ የዲግሪ ዓመታት ፍጻሜ ድረስ።",
     },
-    deadline: "2026-09-09",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
     applicationUrl: "https://che.org.il/scholarships/marom/",
     tags: ["undergrad", "masters", "community", "government"],
     communityPriority: true,
@@ -1458,8 +1498,10 @@ A flat ₪10,000 per academic year, through the standard duration of the degree.
       en: "Single-year grant (first academic year) — extendable up to 3 years based on conditions.",
       am: "1ኛ ዓመት ድጋፍ — ሁኔታ ሲሟሉ እስከ 3 ዓመታት ሊዘረጋ ይችላል።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.gov.il/he/departments/integration_program/siket",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.gov.il/he/departments/Units/students_authority_maya",
     tags: ["undergrad", "olim", "government", "academic"],
     communityPriority: true,
     relatedScholarships: ["klita-tuition-grant", "jewish-agency-aliyah", "marom-che"],
@@ -1582,8 +1624,10 @@ The Siket Scholarship is a Ministry of Aliyah & Integration scholarship for new 
       en: "Scholarship based on number of study units; automatic annual renewal if GPA ≥ 65.",
       am: "ዓማካኝ ≥ 65 ሲጠበቅ ዓመታዊ ታዳሽ።",
     },
-    deadline: "rolling",
-    applicationUrl: "https://www.openu.ac.il/scholarships/community",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.openu.ac.il/dean-students/scholarships/pages/sc_for_ethiopia.aspx",
     tags: ["undergrad", "community", "flexible", "working-students"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "klita-tuition-grant"],
@@ -1705,7 +1749,9 @@ The community scholarship is for Ethiopian-community students studying at least 
       en: "Annual scholarship; renewable up to 4 years with GPA ≥ 72.",
       am: "GPA ≥ 72 ሲሟሉ እስከ 4 ዓመታት ዓመታዊ ታዳሽ።",
     },
-    deadline: "2026-03-15",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
     applicationUrl: "https://www.biu.ac.il/scholarships/community",
     tags: ["undergrad", "community", "needs-based", "social-work"],
     communityPriority: true,
@@ -1821,8 +1867,10 @@ Bar-Ilan University offers scholarships for students of Ethiopian origin through
       en: "Annual scholarship + free participation in JDC leadership activities.",
       am: "ዓመታዊ ስኮላርሺፕ + ነጻ JDC አመራር ፕሮግራም ተሳትፎ።",
     },
-    deadline: "2026-02-28",
-    applicationUrl: "https://www.jdc.org.il/youth-excellence",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://www.thejoint.org.il/",
     tags: ["undergrad", "community", "leadership", "youth"],
     communityPriority: true,
     relatedScholarships: ["hesegim-undergraduate", "isef-fellowship", "marom-che"],
@@ -1961,8 +2009,10 @@ JDC (American Jewish Joint Distribution Committee) ፋይናንሺያል ስኮ�
       en: "Based on financial need and academic excellence",
       am: "በኢኮኖሚ ሁኔታ እና የትምህርት ልቀት ላይ ተመስርቶ",
     },
-    deadline: "2026-04-30",
-    applicationUrl: "https://www.merom.org.il/scholarships",
+    deadline: null,
+    status: "tba",
+    lastVerified: "2026-08-30",
+    applicationUrl: "https://che.org.il/scholarships/marom/",
     tags: ["community", "undergraduate", "needs-based"],
     communityPriority: true,
     relatedScholarships: ["isef-fellowship", "hesegim-undergraduate"],

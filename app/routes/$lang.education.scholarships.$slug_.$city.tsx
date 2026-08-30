@@ -28,6 +28,11 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+import {
+  ScholarshipStatusBadge,
+  deadlineText,
+} from "~/components/ui/scholarship-status";
+import { formatDate } from "~/lib/i18n/format";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -185,8 +190,11 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
               {entry.name} {prep}
               {cityNameLocal}
             </h1>
-            <span className={tagChipClasses(tag)}>
-              {t(locale, `scholarship_level_${entry.level.replace(/-/g, "_")}`)}
+            <span className="flex flex-wrap items-center gap-2">
+              <ScholarshipStatusBadge locale={locale} status={entry.status} />
+              <span className={tagChipClasses(tag)}>
+                {t(locale, `scholarship_level_${entry.level.replace(/-/g, "_")}`)}
+              </span>
             </span>
           </div>
           <p className="mt-3 text-base leading-relaxed text-ink-700">
@@ -209,9 +217,12 @@ export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps
               {t(locale, "scholarship_deadline_label")}
             </p>
             <p className="mt-1 font-display text-lg font-semibold text-earth-900">
-              {entry.deadline === "rolling"
-                ? t(locale, "scholarship_deadline_rolling")
-                : entry.deadline}
+              {deadlineText(locale, entry.deadline)}
+            </p>
+            <p className="mt-1 text-xs text-ink-600">
+              {t(locale, "scholarship_last_verified", {
+                date: formatDate(locale, entry.lastVerified),
+              })}
             </p>
           </div>
           <div className="flex items-end">
