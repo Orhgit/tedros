@@ -42,6 +42,7 @@ export function loader() {
     "/voice/community-action",
     "/voice/police-conduct",
     "/voice/racism-report",
+    "/voice/street-stop",
     "/listings",
     CITY_PATH_PREFIX,
     ...CITIES.map((c) => `${CITY_PATH_PREFIX}/${c.slug}`),

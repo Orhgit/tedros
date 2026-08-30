@@ -1,11 +1,16 @@
-// /:lang/voice/police-conduct — Rights during police stops and how to file
-// a complaint with the Police Internal Investigations Department (מח"ש).
+// /:lang/voice/street-stop — "Stopped on the street? Your rights" (TED-137).
 //
-// Schema.org: WebPage + BreadcrumbList.
+// Zooms into the street stop (עיכוב) itself, complementing
+// /voice/police-conduct (the full stop→search→arrest→complaint arc) — the
+// two pages cross-link both ways. Also cross-promotes the record-expungement
+// wizard (/rights/criminal-record-expungement).
+//
+// Schema.org: WebPage + Article + FAQPage + BreadcrumbList.
+// A full Amharic summary section renders in EVERY locale (TED-137).
 
 import { Link } from "react-router";
 
-import type { Route } from "./+types/$lang.voice.police-conduct";
+import type { Route } from "./+types/$lang.voice.street-stop";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
@@ -16,12 +21,23 @@ import { t } from "~/lib/i18n/messages";
 import {
   voicePath,
   policeConductPath,
+  racismReportPath,
   streetStopPath,
   expungementWizardPath,
 } from "~/lib/voice/links";
-import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/voice/schema";
 import {
-  POLICE_CONDUCT_TOPIC,
+  articleJsonLd,
+  breadcrumbJsonLd,
+  faqJsonLd,
+  webPageJsonLd,
+} from "~/lib/voice/schema";
+import {
+  STREET_STOP_TOPIC,
+  STREET_STOP_FAQS,
+  STREET_STOP_AM_SUMMARY,
+  STREET_STOP_AM_SUMMARY_TITLE,
+} from "~/lib/voice/street-stop.server";
+import {
   topicTitle,
   topicSubtitle,
   topicBody,
@@ -31,30 +47,91 @@ import {
 const VOICE_HERO_IMG =
   "https://images.unsplash.com/photo-1764145144753-922ae256714b?fm=webp&q=70&w=1200&fit=crop";
 
+// Section chrome authored per-locale on the server — keeping the two unused
+// locales out of the client chunk (the 375 kB budget is already breached).
+const CHROME = {
+  he: {
+    glanceTitle: "עיכוב — בקצרה",
+    glanceItems: [
+      "עיכוב אינו מעצר — והוא מותר רק כשיש יסוד סביר לחשד.",
+      "השוטר חייב להזדהות ולהסביר את סיבת העיכוב.",
+      "עיכוב מוגבל לשלוש שעות (בחריגים — עד שש).",
+      "לתחנה — רק כשלא ניתן לברר במקום.",
+      "אל תתנגדו פיזית; תעדו הכל: שם, תג, שעה, מקום, עדים.",
+    ],
+    promoLead: "נשאר לכם רישום מעיכוב או הפגנה? ",
+    promoCta: "בדקו באשף מחיקת הרישום אם הוא נמחק אוטומטית לפי חוק 2024",
+    stepsHeading: "הזכויות שלכם, צעד אחר צעד",
+    faqHeading: "שאלות נפוצות",
+  },
+  en: {
+    glanceTitle: "A street stop — at a glance",
+    glanceItems: [
+      "A stop is not an arrest — it is allowed only on reasonable suspicion.",
+      "The officer must identify themselves and state the reason.",
+      "A stop is capped at three hours (in exceptional cases — up to six).",
+      "To the station — only when it cannot be clarified on the spot.",
+      "Do not physically resist; document everything: name, badge, time, place, witnesses.",
+    ],
+    promoLead: "Left with a record from a stop or a protest? ",
+    promoCta:
+      "Check in the expungement wizard whether the 2024 law deletes it automatically",
+    stepsHeading: "Your rights, step by step",
+    faqHeading: "Frequently asked questions",
+  },
+  am: {
+    glanceTitle: "ማቆም — በአጭሩ",
+    glanceItems: [
+      "ማቆም እስር አይደለም — የሚፈቀደው ምክንያታዊ ጥርጣሬ ሲኖር ብቻ ነው።",
+      "ፖሊሱ ራሱን ማስተዋወቅ እና ምክንያቱን ማስረዳት አለበት።",
+      "ማቆም በሦስት ሰዓታት የተገደበ ነው (በልዩ ሁኔታ — እስከ ስድስት)።",
+      "ወደ ጣቢያ — በቦታው ሊጣራ በማይችልበት ጊዜ ብቻ።",
+      "አካላዊ ተቃውሞ አያድርጉ፤ ሁሉንም ይመዝግቡ: ስም፣ መለያ፣ ሰዓት፣ ቦታ፣ ምስክሮች።",
+    ],
+    promoLead: "ከማቆም ወይም ከሰልፍ መዝገብ ቀርቶልዎታል? ",
+    promoCta: "በ2024 ሕግ በራስ-ሰር እንደተሰረዘ በስረዛ አዋቂው ይመርምሩ",
+    stepsHeading: "መብቶችዎ፣ ደረጃ በደረጃ",
+    faqHeading: "ተደጋጋሚ ጥያቄዎች",
+  },
+} as const;
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const { PUBLIC_URL } = getEnv();
 
-  const title = topicTitle(POLICE_CONDUCT_TOPIC, locale);
-  const subtitle = topicSubtitle(POLICE_CONDUCT_TOPIC, locale);
-  const body = topicBody(POLICE_CONDUCT_TOPIC, locale);
+  const title = topicTitle(STREET_STOP_TOPIC, locale);
+  const subtitle = topicSubtitle(STREET_STOP_TOPIC, locale);
+  const body = topicBody(STREET_STOP_TOPIC, locale);
 
-  const resources = POLICE_CONDUCT_TOPIC.resources.map((r) => ({
+  const resources = STREET_STOP_TOPIC.resources.map((r) => ({
     name: r.name,
     phone: r.phone,
     url: r.url,
     description: resourceDescription(r, locale),
   }));
 
-  const webPage = webPageJsonLd(
-    { publicUrl: PUBLIC_URL, locale },
-    { path: policeConductPath(), name: title, description: subtitle },
-  );
+  const faqs = STREET_STOP_FAQS.map((f) => ({
+    question: f.question[locale] ?? f.question.he,
+    answer: f.answer[locale] ?? f.answer.he,
+  }));
 
-  const breadcrumb = breadcrumbJsonLd({ publicUrl: PUBLIC_URL, locale }, [
+  const ctx = { publicUrl: PUBLIC_URL, locale };
+  const webPage = webPageJsonLd(ctx, {
+    path: streetStopPath(),
+    name: title,
+    description: subtitle,
+  });
+  const article = articleJsonLd(ctx, {
+    path: streetStopPath(),
+    headline: title,
+    description: subtitle,
+    dateModified: STREET_STOP_TOPIC.lastReviewed,
+  });
+  const faqPage = faqJsonLd(ctx, faqs);
+  const breadcrumb = breadcrumbJsonLd(ctx, [
     { name: t(locale, "voice_breadcrumb_home"), path: "/" },
     { name: t(locale, "voice_breadcrumb_voice"), path: "/voice" },
-    { name: title, path: policeConductPath() },
+    { name: title, path: streetStopPath() },
   ]);
 
   return {
@@ -64,21 +141,28 @@ export async function loader({ params }: Route.LoaderArgs) {
     subtitle,
     body,
     resources,
-    lastReviewed: POLICE_CONDUCT_TOPIC.lastReviewed,
+    faqs,
+    chrome: CHROME[locale],
+    amSummary: STREET_STOP_AM_SUMMARY,
+    amSummaryTitle: STREET_STOP_AM_SUMMARY_TITLE,
+    lastReviewed: STREET_STOP_TOPIC.lastReviewed,
     webPage,
+    article,
+    faqPage,
     breadcrumb,
   };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, publicUrl, title, subtitle, webPage, breadcrumb } = data;
-  const url = `${publicUrl}/${locale}${policeConductPath()}`;
+  const { locale, publicUrl, title, subtitle, webPage, article, faqPage, breadcrumb } =
+    data;
+  const url = `${publicUrl}/${locale}${streetStopPath()}`;
 
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: subtitle },
-    ...hreflangMeta(publicUrl, locale, policeConductPath()),
+    ...hreflangMeta(publicUrl, locale, streetStopPath()),
     { tagName: "link", rel: "canonical", href: url },
     { property: "og:title", content: title },
     { property: "og:description", content: subtitle },
@@ -88,12 +172,25 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
     { "script:ld+json": webPage },
+    { "script:ld+json": article },
+    { "script:ld+json": faqPage },
     { "script:ld+json": breadcrumb },
   ];
 };
 
-export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
-  const { locale, title, subtitle, body, resources, lastReviewed } = loaderData;
+export default function StreetStop({ loaderData }: Route.ComponentProps) {
+  const {
+    locale,
+    title,
+    subtitle,
+    body,
+    resources,
+    faqs,
+    chrome,
+    amSummary,
+    amSummaryTitle,
+    lastReviewed,
+  } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -128,100 +225,91 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
             className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
             aria-hidden="true"
           />
-          <div
-            className="absolute inset-0 -z-10 bg-linear-to-br from-earth-50/95 via-earth-50/80 to-earth-50/45"
-            aria-hidden="true"
-          />
           <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
             {title}
           </h1>
           <p className="mt-3 text-lg leading-relaxed text-ink-700">{subtitle}</p>
         </header>
 
-        {/* Your rights at a glance */}
+        {/* At a glance */}
         <section
           className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-5"
-          aria-labelledby="rights-glance-heading"
+          aria-labelledby="street-stop-glance-heading"
         >
           <h2
-            id="rights-glance-heading"
+            id="street-stop-glance-heading"
             className="mb-3 font-display text-base font-semibold text-amber-900"
           >
-            {locale === "he"
-              ? "הזכויות שלכם בעצירה — בקצרה"
-              : locale === "am"
-                ? "ቆምቻ ወቅት መብቶችዎ"
-                : "Your rights during a stop — at a glance"}
+            {chrome.glanceTitle}
           </h2>
           <ul className="space-y-1.5 text-sm text-amber-900">
-            {(locale === "he"
-              ? [
-                  'שאלו: "האם אני עצור? האם אני חופשי ללכת?" — השוטר חייב לענות.',
-                  "אין חובה להציג תעודת זהות אלא אם יש חשד סביר לעבירה.",
-                  "זכות לשתיקה — אל תחתמו על כלום בלי עורך דין.",
-                  "זכות לעורך דין לפני חקירה — ועל-ידי עורך דין מהקהילה.",
-                  "זכות לתרגום — אם אינכם דוברי עברית, המשטרה חייבת מתורגמן.",
-                  "תעדו הכל: שם שוטר, מספר תג, שעה ומיקום.",
-                ]
-              : locale === "am"
-                ? [
-                    "'ታሰርኩ? ሊሄድ እችላለሁ?' — ፖሊሱ ሊመልስ ይገደዳል።",
-                    "ምን ማድረግ እንዳለቦት ሳይፈቀድ ታሰሩ አይደሉም።",
-                    "ዝምታ መብት — ያለ ጠበቃ ምንም አትፈርሙ።",
-                    "ቃለ-ምርመራ በፊት ጠበቃ መብት አሎት።",
-                    "ትርጉም መብት — ዕብራይስጥ ካልተናገሩ ፖሊስ ተርጓሚ ሊያቀርብ ይገደዳል።",
-                  ]
-                : [
-                    "Ask: 'Am I under arrest? Am I free to go?' — the officer must answer directly.",
-                    "You are not required to present ID unless there is reasonable suspicion of an offence.",
-                    "Right to silence — do not sign anything without a lawyer.",
-                    "Right to a lawyer before interrogation.",
-                    "Right to interpretation — if you do not speak Hebrew, the police must provide an interpreter.",
-                    "Document everything: officer name, badge number, time and location.",
-                  ]
-            ).map((right, i) => (
+            {chrome.glanceItems.map((item, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span aria-hidden className="mt-0.5 font-bold text-amber-700">
                   ✓
                 </span>
-                {right}
+                {item}
               </li>
             ))}
           </ul>
         </section>
 
-        {/* TEBEKA callout */}
-        <div className="mb-8 rounded-xl border border-earth-300 bg-earth-50 p-5">
+        {/* Full Amharic summary — rendered in every locale (TED-137) */}
+        <section
+          className="mb-8 rounded-xl border border-earth-300 bg-earth-50 p-5"
+          aria-labelledby="street-stop-am-summary-heading"
+          lang="am"
+          dir="ltr"
+        >
+          <h2
+            id="street-stop-am-summary-heading"
+            className="mb-3 font-display text-base font-semibold text-earth-900"
+          >
+            {amSummaryTitle}
+          </h2>
+          <ul className="space-y-1.5 text-sm text-earth-900">
+            {amSummary.map((line, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span aria-hidden className="mt-0.5 font-bold text-earth-700">
+                  •
+                </span>
+                {line}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Expungement wizard cross-promo */}
+        <aside className="mb-8 rounded-xl border border-accent-green/30 bg-accent-green/5 p-5">
           <p className="text-sm font-semibold text-earth-900">
-            {locale === "he"
-              ? "האם חווית אלימות שוטרים או עצירה על רקע גזעני? "
-              : locale === "am"
-                ? "ፖሊሳዊ ጥቃት ወይም ዘረኝነት አጋጠምዎ? "
-                : "Did you experience police violence or ethnic profiling? "}
-            <a
-              href="https://www.tebeka.org.il"
-              target="_blank"
-              rel="noopener noreferrer"
+            {chrome.promoLead}
+            <Link
+              to={`/${locale}${expungementWizardPath()}`}
               className="underline underline-offset-2 hover:text-earth-700"
             >
-              TEBEKA
-            </a>
-            {locale === "he"
-              ? " מציעה ייעוץ משפטי חינם לקהילה האתיופית."
-              : locale === "am"
-                ? " ለኢትዮጵያ ማህበረሰብ ነጻ የሕግ ምክር ይሰጣሉ።"
-                : " offers free legal advice for the Ethiopian community."}
+              {chrome.promoCta}
+            </Link>
           </p>
-        </div>
+        </aside>
 
         {/* Body content */}
         <article className="mb-10 rounded-2xl border border-earth-200 bg-card p-6 sm:p-8">
           <h2 className="mb-4 font-display text-xl font-semibold text-earth-900">
-            {t(locale, "voice_report_steps_heading")}
+            {chrome.stepsHeading}
           </h2>
           <div className="space-y-4">
             {body.split("\n\n").map((para, idx) => {
               const trimmed = para.trim();
+              if (trimmed.startsWith("> ")) {
+                return (
+                  <p
+                    key={idx}
+                    className="border-s-4 border-earth-300 ps-3 text-xs leading-relaxed text-ink-500"
+                  >
+                    {trimmed.replace(/^>\s*/, "").replace(/\*\*/g, "")}
+                  </p>
+                );
+              }
               const boldMatch = trimmed.match(/^\*\*(.+?)\*\*(.*)$/s);
               if (boldMatch) {
                 return (
@@ -245,10 +333,33 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
           </p>
         </article>
 
-        {/* Resources */}
-        <section className="mb-10" aria-labelledby="police-resources-heading">
+        {/* FAQ */}
+        <section className="mb-10" aria-labelledby="street-stop-faq-heading">
           <h2
-            id="police-resources-heading"
+            id="street-stop-faq-heading"
+            className="mb-4 font-display text-xl font-semibold text-earth-900"
+          >
+            {chrome.faqHeading}
+          </h2>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-xl border border-earth-200 bg-card p-5"
+              >
+                <summary className="cursor-pointer list-none font-display text-base font-semibold text-earth-900">
+                  {faq.question}
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-ink-700">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* Resources */}
+        <section className="mb-10" aria-labelledby="street-stop-resources-heading">
+          <h2
+            id="street-stop-resources-heading"
             className="mb-4 font-display text-xl font-semibold text-earth-900"
           >
             {t(locale, "voice_resources_heading")}
@@ -290,10 +401,10 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
           </ul>
         </section>
 
-        {/* Related: street-stop deep-dive + expungement wizard (TED-137) */}
-        <section className="mb-10" aria-labelledby="police-conduct-related-heading">
+        {/* Related guides */}
+        <section className="mb-10" aria-labelledby="street-stop-related-heading">
           <h2
-            id="police-conduct-related-heading"
+            id="street-stop-related-heading"
             className="mb-4 font-display text-xl font-semibold text-earth-900"
           >
             {t(locale, "voice_related_heading")}
@@ -301,18 +412,18 @@ export default function PoliceConduct({ loaderData }: Route.ComponentProps) {
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <li>
               <Link
-                to={`/${locale}${streetStopPath()}`}
+                to={`/${locale}${policeConductPath()}`}
                 className="block h-full rounded-xl border border-earth-200 bg-card p-4 text-sm font-medium text-earth-900 transition hover:border-earth-400"
               >
-                {t(locale, "voice_street_title")}
+                {t(locale, "voice_police_title")}
               </Link>
             </li>
             <li>
               <Link
-                to={`/${locale}${expungementWizardPath()}`}
+                to={`/${locale}${racismReportPath()}`}
                 className="block h-full rounded-xl border border-earth-200 bg-card p-4 text-sm font-medium text-earth-900 transition hover:border-earth-400"
               >
-                {t(locale, "voice_expungement_link")}
+                {t(locale, "voice_racism_title")}
               </Link>
             </li>
           </ul>

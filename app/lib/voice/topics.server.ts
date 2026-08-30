@@ -5,6 +5,7 @@
 // Wave 2 (18 topics) added: 2026-06-02.
 
 import type { Translatable } from "../db/columns";
+import { STREET_STOP_TOPIC } from "./street-stop.server";
 import { VOICE_TOPICS_WAVE2 } from "./topics-wave2.server";
 
 // ── Shared types ─────────────────────────────────────────────────────────────
@@ -344,12 +345,13 @@ export function resourceDescription(
   return resource.description[locale] ?? resource.description.he;
 }
 
-// ── All topics — wave 1 + wave 2 ─────────────────────────────────────────────
+// ── All topics — wave 1 + street-stop (TED-137) + wave 2 ─────────────────────
 
 export const ALL_VOICE_TOPICS: VoiceTopic[] = [
   RACISM_REPORT_TOPIC,
   POLICE_CONDUCT_TOPIC,
   COMMUNITY_ACTION_TOPIC,
+  STREET_STOP_TOPIC,
   ...VOICE_TOPICS_WAVE2,
 ];
 

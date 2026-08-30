@@ -83,6 +83,11 @@ const RELEVANCE_BY_SLUG: Record<string, Relevance> = {
   // Klita basket for Ethiopian olim — community cities only (the relevant
   // population lives there; shipping 38 thin pages nationally adds no value).
   "klita-basket-ethiopia": { kind: "community-cities" },
+
+  // Record expungement (TED-137) — a national statute applied identically
+  // everywhere by the Israel Police. City cells would be pure doorway pages
+  // (zero local variance), so ship none.
+  "criminal-record-expungement": { kind: "list", cities: [] },
 };
 
 export function relevanceFor(slug: string): Relevance {
