@@ -47,6 +47,55 @@ export function breadcrumbJsonLd(ctx: SchemaContext, items: BreadcrumbItem[]): J
   };
 }
 
+// ── FAQPage (street-stop guide — TED-137) ──────────────────────────────────
+
+export interface FaqEntry {
+  question: string;
+  answer: string;
+}
+
+export function faqJsonLd(ctx: SchemaContext, entries: FaqEntry[]): JsonLd {
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "FAQPage",
+    inLanguage: ctx.locale,
+    mainEntity: entries.map((e) => ({
+      "@type": "Question",
+      name: e.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: e.answer,
+      },
+    })),
+  };
+}
+
+// ── Article (street-stop guide — TED-137) ──────────────────────────────────
+
+export interface ArticleJsonLdInput {
+  path: string;
+  headline: string;
+  description: string;
+  /** ISO date (YYYY-MM-DD) — the topic's lastReviewed. */
+  dateModified: string;
+}
+
+export function articleJsonLd(ctx: SchemaContext, input: ArticleJsonLdInput): JsonLd {
+  const url = urlFor(ctx, input.path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Article",
+    "@id": url,
+    mainEntityOfPage: url,
+    headline: input.headline,
+    description: input.description,
+    inLanguage: ctx.locale,
+    dateModified: input.dateModified,
+    author: { "@type": "Organization", name: "Tedros" },
+    publisher: { "@type": "Organization", name: "Tedros", url: ctx.publicUrl },
+  };
+}
+
 // ── WebPage ────────────────────────────────────────────────────────────────
 
 export interface WebPageJsonLdInput {

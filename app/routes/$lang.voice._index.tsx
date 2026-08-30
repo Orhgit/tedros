@@ -17,6 +17,7 @@ import {
   racismReportPath,
   policeConductPath,
   communityActionPath,
+  streetStopPath,
 } from "~/lib/voice/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/voice/schema";
 
@@ -45,6 +46,13 @@ const VOICE_CARDS: VoiceCard[] = [
     subtitleKey: "voice_police_subtitle",
     href: policeConductPath(),
     glyph: "⚖️",
+  },
+  {
+    slug: "street-stop",
+    titleKey: "voice_street_title",
+    subtitleKey: "voice_street_subtitle",
+    href: streetStopPath(),
+    glyph: "🛑",
   },
   {
     slug: "community-action",
@@ -143,7 +151,7 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
           >
             {t(locale, "voice_landing_title")}
           </h2>
-          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {VOICE_CARDS.map((card) => (
               <li key={card.slug}>
                 <Link

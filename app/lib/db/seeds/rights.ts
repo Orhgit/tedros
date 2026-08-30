@@ -7364,4 +7364,320 @@ Source: [Knesset Research and Information Center — Data on Ethiopian Israelis 
 *[⚠️ የAI ትርጉም — ይህ ስሜታዊ እና ከገንዘብ ጋር የተያያዘ ርዕስ ነው። እባክዎ ከመታተሙ በፊት በአማርኛ ቋንቋ ተወላጅ ተናጋሪ በጥንቃቄ እንዲገመግመው እንመክራለን።]*`,
     },
   },
+
+  // TED-137 — Criminal/police record expungement for Ethiopian-Israelis.
+  //
+  // Legal basis verified against the statute text itself (Wikisource + Nevo
+  // copies of חוק מחיקת רישומים פליליים ומשטרתיים של יוצאי אתיופיה,
+  // התשפ"ד-2024, ס"ח התשפ"ד עמ' 1094). Key verified facts:
+  //   - definition: the person or one of their parents was born in Ethiopia (§1)
+  //   - offenses: only those in the חוק's תוספת (Penal Law §§151–158, 216,
+  //     275, 287(א), 288, 288א, 382א(א); CPO (Arrest & Search) §47(א);
+  //     Police Ordinance §79(1)(ב))
+  //   - committed until 31.12.2020 (ט"ז בטבת התשפ"א) (§2)
+  //   - no actual imprisonment for that offense + no additional record (§2)
+  //   - deletion is AUTOMATIC (no application); police report to the Knesset
+  //     Constitution Committee within six months (§3)
+  // Assault of a police officer (חוק העונשין §273) is NOT in the schedule.
+  {
+    title: {
+      he: "מחיקת רישום פלילי ומשטרתי ליוצאי אתיופיה — בדיקת זכאות",
+      en: "Criminal & Police Record Expungement for Ethiopian-Israelis — Eligibility Check",
+      am: "ለኢትዮጵያ-እስራኤላውያን የወንጀል እና የፖሊስ መዝገብ ስረዛ — የብቁነት ምርመራ",
+    },
+    slug: {
+      he: "criminal-record-expungement",
+      en: "criminal-record-expungement",
+      am: "criminal-record-expungement",
+    },
+    govUrl: "https://www.gov.il/he/service/request-for-criminal-information-certificate",
+    eligibilitySummary: {
+      he: 'חוק מחיקת רישומים פליליים ומשטרתיים של יוצאי אתיופיה (התשפ"ד-2024) קובע מחיקה אוטומטית של רישומים בעבירות הפרת סדר ציבורי שנעברו עד 31.12.2020 — למי שלא נדון למאסר בפועל ואין לו רישום נוסף.',
+      en: "The Expungement of Criminal and Police Records of Ethiopian-Israelis Law (2024) mandates automatic deletion of records for public-order offenses committed until 31.12.2020 — for those not sentenced to actual imprisonment and with no additional record.",
+      am: "የኢትዮጵያ-እስራኤላውያን የወንጀል እና የፖሊስ መዝገቦች ስረዛ ሕግ (2024) እስከ 31.12.2020 ድረስ ለተፈጸሙ የሕዝብ ሥርዓት ጥሰት ወንጀሎች መዝገቦች በራስ-ሰር እንዲሰረዙ ይደነግጋል — ለታሰሩ ላልተፈረደባቸው እና ተጨማሪ መዝገብ ለሌላቸው።",
+    },
+    tags: ["legal"],
+    bodies: {
+      he: `## מה קובע החוק?
+
+בשנת 2024 עבר בכנסת **חוק מחיקת רישומים פליליים ומשטרתיים של יוצאי אתיופיה, התשפ"ד-2024** (ס"ח התשפ"ד, עמ' 1094). החוק נחקק בעקבות דוח ועדת פלמור ודוח מבקר המדינה, שהצביעו על שיטור-יתר כלפי הקהילה האתיופית בעבירות הפרת סדר ציבורי — בין היתר סביב מחאות 2015 ו-2019.
+
+החוק קובע: פרט רישום פלילי של יוצא אתיופיה בעבירה של הפרת סדר ציבורי המנויה בתוספת לחוק, שנעברה **עד יום ט"ז בטבת התשפ"א (31 בדצמבר 2020)** — יימחק מהמרשם הפלילי, ורישום משטרתי מקביל יבוטל.
+
+## מי נחשב "יוצא אתיופיה"?
+
+לפי סעיף 1 לחוק: מי **שהוא או אחד מהוריו נולדו באתיופיה**.
+
+## תנאי הזכאות
+
+המחיקה חלה כשמתקיימים כל התנאים:
+
+1. העבירה היא עבירת הפרת סדר ציבורי **המנויה בתוספת לחוק** (ראו בהמשך)
+2. העבירה נעברה **עד 31 בדצמבר 2020**
+3. **לא הוטל** בשל אותה עבירה עונש **מאסר בפועל**
+4. **אין רישום פלילי או משטרתי נוסף**
+
+## אילו עבירות נמחקות?
+
+התוספת לחוק מונה עבירות לפי סעיפי חוק מדויקים:
+
+- **חוק העונשין, התשל"ז-1977**: סעיפים 151 עד 158, 216, 275, 287(א), 288, 288א ו-382א(א) — ובהן התקהלות אסורה, התפרעות, הפרעה לשוטר במילוי תפקידו, העלבת עובד ציבור והפרעה לעובד ציבור
+- **פקודת סדר הדין הפלילי (מעצר וחיפוש) [נוסח חדש], התשכ"ט-1969**: סעיף 47(א)
+- **פקודת המשטרה [נוסח חדש], התשל"א-1971**: סעיף 79(1)(ב)
+
+**חשוב**: עבירת **תקיפת שוטר** אינה מנויה בתוספת — רישום בגינה אינו נמחק מכוח החוק הזה.
+
+## איך זה עובד בפועל?
+
+**המחיקה אוטומטית — אין צורך להגיש בקשה.** משטרת ישראל היא שמבצעת את המחיקה, והחוק מחייב אותה לדווח לוועדת החוקה, חוק ומשפט של הכנסת בתוך שישה חודשים על היישום ועל מספר הרישומים שנמחקו או בוטלו (סעיף 3).
+
+## איך בודקים שהרישום אכן נמחק?
+
+1. כל אדם רשאי **לעיין במידע הפלילי על עצמו** — ללא תשלום, בתחנת משטרה, לאחר הזדהות
+2. אפשר גם להגיש [בקשה להנפקת תעודת מידע פלילי](https://www.gov.il/he/service/request-for-criminal-information-certificate) באתר משטרת ישראל ב-gov.il
+3. אם הרישום עדיין מופיע ולדעתכם הוא עומד בתנאי החוק — פנו לייעוץ משפטי (ראו בהמשך)
+
+## הרישום לא נמחק? לא בטוחים?
+
+**טבקה — מרכז הסיוע המשפטי לקהילה האתיופית** מציעה ייעוץ משפטי חינם: 03-5103538, [tebeka.org.il](https://www.tebeka.org.il). כדאי לפנות גם אם אינכם בטוחים אם העבירה שלכם כלולה בתוספת, או אם יש לכם רישום נוסף שמונע מחיקה — ייתכנו מסלולים אחרים (למשל בקשת חנינה או התיישנות ומחיקה לפי חוק המרשם הפלילי הכללי).
+
+עוכבתם או נעצרתם ברחוב? הכירו את הזכויות שלכם — [עוכבו אתכם ברחוב? הזכויות שלכם](/he/voice/street-stop) ו[זכויות מול המשטרה וכיצד להתלונן](/he/voice/police-conduct).
+
+> **הבהרה משפטית:** מידע זה כללי ואינו ייעוץ משפטי. בדיקת הזכאות באשף שלמטה מבוססת על לשון החוק בלבד ואינה קביעה מחייבת. למקרה קונקרטי פנו לעורך-דין או לטבקה.
+
+## מקורות
+
+- [חוק מחיקת רישומים פליליים ומשטרתיים של יוצאי אתיופיה — נוסח החוק (ויקיטקסט)](https://he.wikisource.org/wiki/חוק_מחיקת_רישומים_פליליים_ומשטרתיים_של_יוצאי_אתיופיה)
+- [נוסח החוק — נבו](https://www.nevo.co.il/law_html/law00/228942.htm)
+- [בקשה להנפקת תעודת מידע פלילי — משטרת ישראל, gov.il](https://www.gov.il/he/service/request-for-criminal-information-certificate)
+- [מידע פלילי (מרשם פלילי, מרשם משטרתי) — כל-זכות](https://www.kolzchut.org.il/he/מידע_פלילי_(מרשם_פלילי,_מרשם_משטרתי))
+`,
+      en: `## What does the law say?
+
+In 2024 the Knesset passed the **Expungement of Criminal and Police Records of Ethiopian-Israelis Law, 5784-2024** (Sefer HaChukim 5784, p. 1094). The law followed the Palmor Committee report and a State Comptroller report that documented over-policing of the Ethiopian community in public-order offenses — including around the 2015 and 2019 protests.
+
+The law establishes: a criminal-record entry of an Ethiopian-Israeli for a public-order offense listed in the law's schedule, committed **until December 31, 2020 (16 Tevet 5781)** — shall be deleted from the criminal register, and the parallel police record shall be cancelled.
+
+## Who counts as an "Ethiopian-Israeli"?
+
+Per section 1 of the law: a person **who was born in Ethiopia, or one of whose parents was born in Ethiopia**.
+
+## Eligibility conditions
+
+The deletion applies when all of the following hold:
+
+1. The offense is a public-order offense **listed in the law's schedule** (see below)
+2. The offense was committed **until December 31, 2020**
+3. **No actual imprisonment** was imposed for that offense
+4. **There is no additional criminal or police record**
+
+## Which offenses are deleted?
+
+The schedule lists offenses by exact statutory sections:
+
+- **Penal Law, 5737-1977**: sections 151-158, 216, 275, 287(a), 288, 288a and 382a(a) — including unlawful assembly, rioting, obstructing a police officer, insulting a public servant and obstructing a public servant
+- **Criminal Procedure Ordinance (Arrest and Search) [New Version], 5729-1969**: section 47(a)
+- **Police Ordinance [New Version], 5731-1971**: section 79(1)(b)
+
+**Important**: **assault of a police officer** is not listed in the schedule — such a record is not deleted under this law.
+
+## How does it work in practice?
+
+**Deletion is automatic — no application is required.** The Israel Police carries out the deletion, and the law requires it to report to the Knesset's Constitution, Law and Justice Committee within six months on implementation and the number of records deleted or cancelled (section 3).
+
+## How to verify your record was deleted
+
+1. Every person may **review their own criminal information** — free of charge, at a police station, after identification
+2. You can also submit a [request for a criminal information certificate](https://www.gov.il/he/service/request-for-criminal-information-certificate) via the Israel Police page on gov.il
+3. If the record still appears and you believe it meets the law's conditions — seek legal advice (below)
+
+## Record not deleted? Not sure?
+
+**Tebeka — the legal-aid center for the Ethiopian community** offers free legal advice: 03-5103538, [tebeka.org.il](https://www.tebeka.org.il). Contact them also if you are unsure whether your offense is in the schedule, or if an additional record blocks deletion — other tracks may exist (e.g. a pardon request, or expiry and deletion under the general Criminal Register Law).
+
+Stopped or detained on the street? Know your rights — [Stopped on the street? Your rights](/en/voice/street-stop) and [Rights in police encounters and how to complain](/en/voice/police-conduct).
+
+> **Legal note:** This is general information, not legal advice. The eligibility check below follows the statute's wording only and is not a binding determination. For a concrete case, consult a lawyer or Tebeka.
+
+## Sources
+
+- [The law's text (Wikisource, Hebrew)](https://he.wikisource.org/wiki/חוק_מחיקת_רישומים_פליליים_ומשטרתיים_של_יוצאי_אתיופיה)
+- [The law's text — Nevo](https://www.nevo.co.il/law_html/law00/228942.htm)
+- [Criminal information certificate request — Israel Police, gov.il](https://www.gov.il/he/service/request-for-criminal-information-certificate)
+- [Criminal information (criminal & police registers) — Kol Zchut](https://www.kolzchut.org.il/he/מידע_פלילי_(מרשם_פלילי,_מרשם_משטרתי))
+`,
+      am: `## ሕጉ ምን ይላል?
+
+በ2024 ክነሴቱ **የኢትዮጵያ-እስራኤላውያን የወንጀል እና የፖሊስ መዝገቦች ስረዛ ሕግ (2024)** አጽድቋል። ሕጉ የፓልሞር ኮሚቴ ሪፖርት እና የመንግሥት ኦዲተር ሪፖርት ተከትሎ የመጣ ነው — በኢትዮጵያ ማህበረሰብ ላይ በሕዝብ ሥርዓት ጥሰት ወንጀሎች ከመጠን በላይ ፖሊስ መጠቀሙን ያሳዩ ሪፖርቶች፣ በተለይ በ2015 እና 2019 ሰልፎች ዙሪያ።
+
+ሕጉ ይደነግጋል: በሕጉ ዝርዝር (ተጨማሪ ሰንጠረዥ) ውስጥ የተጠቀሰ የሕዝብ ሥርዓት ጥሰት ወንጀል፣ **እስከ ታኅሣሥ 31፣ 2020 ድረስ** የተፈጸመ — ከወንጀል መዝገብ ይሰረዛል፣ እና ተመሳሳዩ የፖሊስ መዝገብ ይሰረዛል።
+
+## "የኢትዮጵያ ተወላጅ" ማን ነው?
+
+በሕጉ አንቀጽ 1 መሠረት: **እሱ ራሱ ወይም ከወላጆቹ አንዱ በኢትዮጵያ የተወለደ** ሰው።
+
+## የብቁነት ሁኔታዎች
+
+ስረዛው የሚፈጸመው እነዚህ ሁሉ ሲሟሉ ነው:
+
+1. ወንጀሉ **በሕጉ ዝርዝር ውስጥ የተጠቀሰ** የሕዝብ ሥርዓት ጥሰት ወንጀል ነው
+2. ወንጀሉ **እስከ ታኅሣሥ 31፣ 2020 ድረስ** ተፈጽሟል
+3. ለዚያ ወንጀል **የእስር ቅጣት አልተፈረደም**
+4. **ተጨማሪ የወንጀል ወይም የፖሊስ መዝገብ የለም**
+
+## የትኞቹ ወንጀሎች ይሰረዛሉ?
+
+ዝርዝሩ በትክክለኛ የሕግ አንቀጾች ወንጀሎችን ይጠቅሳል — ከእነሱም መካከል: ሕገ-ወጥ ስብሰባ፣ ሁከት፣ ፖሊስን በሥራው ማደናቀፍ፣ የሕዝብ ሠራተኛን መስደብ እና የሕዝብ ሠራተኛን ማደናቀፍ (የቅጣት ሕግ አንቀጾች 151–158፣ 216፣ 275፣ 287(א)፣ 288፣ 288א፣ 382א(א) እና ተጨማሪ ሁለት አንቀጾች)።
+
+**አስፈላጊ**: **ፖሊስን ማጥቃት** በዝርዝሩ ውስጥ የለም — በዚህ ሕግ አይሰረዝም።
+
+## በተግባር እንዴት ይሰራል?
+
+**ስረዛው በራስ-ሰር ነው — ማመልከቻ ማቅረብ አያስፈልግም።** የእስራኤል ፖሊስ ስረዛውን ይፈጽማል፣ እና በስድስት ወራት ውስጥ ለክነሴት ሕገ-መንግሥት ኮሚቴ ስለ ትግበራው ሪፖርት ማቅረብ አለበት።
+
+## መዝገብዎ እንደተሰረዘ እንዴት ማረጋገጥ ይቻላል?
+
+1. እያንዳንዱ ሰው **ስለራሱ ያለውን የወንጀል መረጃ ማየት** ይችላል — ያለ ክፍያ፣ በፖሊስ ጣቢያ፣ ከመታወቂያ ማረጋገጫ በኋላ
+2. በ-gov.il በኩል [የወንጀል መረጃ የምስክር ወረቀት ጥያቄ](https://www.gov.il/he/service/request-for-criminal-information-certificate) ማቅረብም ይቻላል
+3. መዝገቡ አሁንም ከታየ እና የሕጉን ሁኔታዎች እንደሚያሟላ ካመኑ — የሕግ ምክር ይጠይቁ
+
+## መዝገቡ አልተሰረዘም? እርግጠኛ አይደሉም?
+
+**ቴቤካ — ለኢትዮጵያ ማህበረሰብ የሕግ ድጋፍ ማዕከል** ነጻ የሕግ ምክር ይሰጣል: 03-5103538፣ [tebeka.org.il](https://www.tebeka.org.il)።
+
+በመንገድ ላይ ቆሙዎት? መብቶችዎን ይወቁ — [በመንገድ ላይ ቆሙዎት? መብቶችዎ](/am/voice/street-stop) እና [ከፖሊስ ጋር ባለ ግንኙነት ያሉ መብቶች](/am/voice/police-conduct)።
+
+> **የሕግ ማስታወሻ:** ይህ አጠቃላይ መረጃ ነው፣ የሕግ ምክር አይደለም። ለተጨባጭ ጉዳይ ጠበቃ ወይም ቴቤካን ያማክሩ።
+
+## ምንጮች
+
+- [የሕጉ ጽሑፍ (Wikisource፣ በዕብራይስጥ)](https://he.wikisource.org/wiki/חוק_מחיקת_רישומים_פליליים_ומשטרתיים_של_יוצאי_אתיופיה)
+- [የወንጀል መረጃ የምስክር ወረቀት — የእስራኤል ፖሊስ፣ gov.il](https://www.gov.il/he/service/request-for-criminal-information-certificate)
+
+*[⚠️ የAI ትርጉም — ይህ ስሜታዊ የሕግ ርዕስ ነው። እባክዎ ከመታተሙ በፊት በአማርኛ ቋንቋ ተወላጅ ተናጋሪ በጥንቃቄ እንዲገመግመው እንመክራለን።]*`,
+    },
+    wizard: {
+      questions: [
+        {
+          id: "ethiopianOrigin",
+          type: "boolean",
+          label: {
+            he: "האם אתם, או לפחות אחד מהוריכם, נולדתם באתיופיה?",
+            en: "Were you, or at least one of your parents, born in Ethiopia?",
+            am: "እርስዎ ወይም ቢያንስ ከወላጆችዎ አንዱ በኢትዮጵያ ተወልደዋል?",
+          },
+        },
+        {
+          id: "offenseType",
+          type: "radio",
+          label: {
+            he: "מה סוג העבירה שבגינה קיים הרישום?",
+            en: "What kind of offense is the record for?",
+            am: "መዝገቡ ለየትኛው ዓይነት ወንጀል ነው?",
+          },
+          options: [
+            {
+              value: "public-order",
+              label: {
+                he: "עבירת הפרת סדר ציבורי — למשל התקהלות אסורה, התפרעות, הפרעה לשוטר, העלבת עובד ציבור",
+                en: "A public-order offense — e.g. unlawful assembly, rioting, obstructing a police officer, insulting a public servant",
+                am: "የሕዝብ ሥርዓት ጥሰት ወንጀል — ለምሳሌ ሕገ-ወጥ ስብሰባ፣ ሁከት፣ ፖሊስን ማደናቀፍ",
+              },
+            },
+            {
+              value: "police-assault",
+              label: {
+                he: "תקיפת שוטר",
+                en: "Assault of a police officer",
+                am: "ፖሊስን ማጥቃት",
+              },
+            },
+            {
+              value: "other",
+              label: {
+                he: "עבירה אחרת (רכוש, אלימות, סמים וכדומה)",
+                en: "Another offense (property, violence, drugs, etc.)",
+                am: "ሌላ ወንጀል (ንብረት፣ ጥቃት፣ አደንዛዥ ዕፅ ወዘተ)",
+              },
+            },
+          ],
+        },
+        {
+          id: "offenseBefore2021",
+          type: "boolean",
+          label: {
+            he: "האם העבירה נעברה עד 31 בדצמבר 2020 (כולל)?",
+            en: "Was the offense committed on or before December 31, 2020?",
+            am: "ወንጀሉ እስከ ታኅሣሥ 31፣ 2020 ድረስ ተፈጽሟል?",
+          },
+        },
+        {
+          id: "sentencedToPrison",
+          type: "boolean",
+          label: {
+            he: "האם הוטל עליכם עונש מאסר בפועל בשל אותה עבירה?",
+            en: "Was actual imprisonment imposed on you for that offense?",
+            am: "ለዚያ ወንጀል የእስር ቅጣት ተፈርዶብዎታል?",
+          },
+        },
+        {
+          id: "hasOtherRecords",
+          type: "boolean",
+          label: {
+            he: "האם יש לכם פרטי רישום נוספים במרשם הפלילי או המשטרתי?",
+            en: "Do you have additional entries in the criminal or police register?",
+            am: "በወንጀል ወይም በፖሊስ መዝገብ ውስጥ ተጨማሪ ምዝገባዎች አሉዎት?",
+          },
+        },
+      ],
+      rules: [
+        {
+          kind: "require-true",
+          questionId: "ethiopianOrigin",
+          reason: {
+            he: 'החוק חל רק על "יוצא אתיופיה" — מי שהוא או אחד מהוריו נולדו באתיופיה (סעיף 1 לחוק).',
+            en: 'The law applies only to an "Ethiopian-Israeli" — a person who was born in Ethiopia or one of whose parents was (section 1).',
+            am: "ሕጉ የሚመለከተው እሱ ራሱ ወይም ከወላጆቹ አንዱ በኢትዮጵያ የተወለደን ሰው ብቻ ነው (አንቀጽ 1)።",
+          },
+        },
+        {
+          kind: "require-one-of",
+          questionId: "offenseType",
+          values: ["public-order"],
+          reason: {
+            he: "החוק מוחק רק עבירות הפרת סדר ציבורי המנויות בתוספת. תקיפת שוטר ועבירות אחרות אינן כלולות — התייעצו עם טבקה על מסלולים אחרים (חנינה, מחיקה לפי חוק המרשם הפלילי).",
+            en: "The law deletes only public-order offenses listed in its schedule. Assault of a police officer and other offenses are not included — consult Tebeka about other tracks (pardon, deletion under the general Criminal Register Law).",
+            am: "ሕጉ የሚሰርዘው በዝርዝሩ ውስጥ የተጠቀሱ የሕዝብ ሥርዓት ጥሰት ወንጀሎችን ብቻ ነው። ፖሊስን ማጥቃት አይካተትም — ስለ ሌሎች መንገዶች ቴቤካን ያማክሩ።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "offenseBefore2021",
+          reason: {
+            he: 'החוק חל רק על עבירות שנעברו עד יום 31 בדצמבר 2020 (ט"ז בטבת התשפ"א) — סעיף 2 לחוק.',
+            en: "The law covers only offenses committed until December 31, 2020 (section 2).",
+            am: "ሕጉ የሚሸፍነው እስከ ታኅሣሥ 31፣ 2020 ድረስ የተፈጸሙ ወንጀሎችን ብቻ ነው (አንቀጽ 2)።",
+          },
+        },
+        {
+          kind: "require-false",
+          questionId: "sentencedToPrison",
+          reason: {
+            he: "המחיקה חלה רק כשלא הוטל מאסר בפועל בשל העבירה (סעיף 2 לחוק). אם נדונתם למאסר — התייעצו עם עורך-דין על מסלול חנינה.",
+            en: "Deletion applies only when no actual imprisonment was imposed for the offense (section 2). If you were sentenced to prison — consult a lawyer about a pardon track.",
+            am: "ስረዛው የሚፈጸመው ለወንጀሉ የእስር ቅጣት ካልተፈረደ ብቻ ነው (አንቀጽ 2)። እስር ከተፈረደ — ስለ ይቅርታ መንገድ ጠበቃ ያማክሩ።",
+          },
+        },
+        {
+          kind: "require-false",
+          questionId: "hasOtherRecords",
+          reason: {
+            he: "המחיקה מותנית בכך שאין רישום פלילי או משטרתי נוסף (סעיף 2 לחוק). אם יש רישום נוסף — פנו לטבקה לבדיקת המקרה הפרטני.",
+            en: "Deletion is conditional on there being no additional criminal or police record (section 2). If you have one — contact Tebeka to review your specific case.",
+            am: "ስረዛው ተጨማሪ የወንጀል ወይም የፖሊስ መዝገብ አለመኖሩ ላይ የተመሠረተ ነው (አንቀጽ 2)። ተጨማሪ መዝገብ ካለ — ቴቤካን ያነጋግሩ።",
+          },
+        },
+      ],
+    },
+  },
 ];

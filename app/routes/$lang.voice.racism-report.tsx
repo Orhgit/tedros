@@ -13,7 +13,12 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
-import { voicePath, racismReportPath } from "~/lib/voice/links";
+import {
+  voicePath,
+  racismReportPath,
+  streetStopPath,
+  expungementWizardPath,
+} from "~/lib/voice/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/voice/schema";
 import {
   RACISM_REPORT_TOPIC,
@@ -217,6 +222,34 @@ export default function RacismReport({ loaderData }: Route.ComponentProps) {
                 </div>
               </li>
             ))}
+          </ul>
+        </section>
+
+        {/* Related: street-stop rights + expungement wizard (TED-137) */}
+        <section className="mb-10" aria-labelledby="racism-related-heading">
+          <h2
+            id="racism-related-heading"
+            className="mb-4 font-display text-xl font-semibold text-earth-900"
+          >
+            {t(locale, "voice_related_heading")}
+          </h2>
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <li>
+              <Link
+                to={`/${locale}${streetStopPath()}`}
+                className="block h-full rounded-xl border border-earth-200 bg-card p-4 text-sm font-medium text-earth-900 transition hover:border-earth-400"
+              >
+                {t(locale, "voice_street_title")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={`/${locale}${expungementWizardPath()}`}
+                className="block h-full rounded-xl border border-earth-200 bg-card p-4 text-sm font-medium text-earth-900 transition hover:border-earth-400"
+              >
+                {t(locale, "voice_expungement_link")}
+              </Link>
+            </li>
           </ul>
         </section>
 
