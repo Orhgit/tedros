@@ -54,6 +54,16 @@ export function isProfession(slug: string): slug is Profession {
   return (ALL_PROFESSIONS as string[]).includes(slug);
 }
 
+// --- Languages (TED-136) ----------------------------------------------------
+// Client-safe: card badges + filters check the summary's language codes.
+
+/** BCP-47 code for Amharic — the filter/landing/badge language. */
+export const AMHARIC_LANG = "am";
+
+export function speaksAmharic(languages: string[]): boolean {
+  return languages.includes(AMHARIC_LANG);
+}
+
 // Per-profession hero images (TED-129). Previously every profession hero
 // hardcoded a single medical photo, which looked wrong on lawyer/accountant/
 // real-estate pages. All URLs below are already used elsewhere in the repo

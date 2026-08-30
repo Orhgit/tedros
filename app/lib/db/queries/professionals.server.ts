@@ -7,7 +7,7 @@ import {
   getProfessionalBodyForLocale,
   pickLocale,
 } from "../../professionals/professionals.server";
-import type { Profession } from "../../professionals/categories";
+import { speaksAmharic, type Profession } from "../../professionals/categories";
 import type { Locale } from "../../i18n/config";
 
 export interface ProfessionalSummary {
@@ -17,6 +17,8 @@ export interface ProfessionalSummary {
   specialty: string;
   title: string;
   shortDescription: string;
+  /** BCP-47 language codes served (TED-136). */
+  languages: string[];
 }
 
 export interface ProfessionalDetail extends ProfessionalSummary {
@@ -35,6 +37,7 @@ function summarize(entry: ProfessionalSlot, locale: Locale): ProfessionalSummary
     specialty: entry.specialty,
     title: pickLocale(entry.title, locale),
     shortDescription: pickLocale(entry.shortDescription, locale),
+    languages: entry.languages,
   };
 }
 
@@ -61,6 +64,16 @@ export function listByProfessionAndCity(
   return PROFESSIONALS.filter(
     (e) => e.profession === profession && e.citySlug === citySlug,
   )
+    .map((e) => summarize(e, locale))
+    .sort((a, b) => a.title.localeCompare(b.title, locale));
+}
+
+// All Amharic-speaking entries — the /professionals/amharic landing surface
+// (TED-136). Anonymous slots qualify by design; listed (real) professionals
+// only when their own languages claim includes "am" (אורלי מנדפרו is
+// excluded until the owner confirms — open question).
+export function listAmharicSpeaking(locale: Locale): ProfessionalSummary[] {
+  return PROFESSIONALS.filter((e) => speaksAmharic(e.languages))
     .map((e) => summarize(e, locale))
     .sort((a, b) => a.title.localeCompare(b.title, locale));
 }

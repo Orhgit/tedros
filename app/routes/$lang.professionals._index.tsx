@@ -14,11 +14,14 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { SearchField, useSearchQuery } from "~/components/ui/search-field";
+import { AmharicBadge } from "~/components/ui/amharic-badge";
 import {
   ALL_PROFESSIONS,
+  AMHARIC_LANG,
   PROFESSION_TO_TAG,
   glyphForProfession,
   professionMessageKey,
+  speaksAmharic,
 } from "~/lib/professionals/categories";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 
@@ -50,11 +53,14 @@ export default function ProfessionalsLanding({ loaderData }: Route.ComponentProp
   const { locale, slots } = loaderData;
   const [searchParams, setSearchParams] = useSearchParams();
   const profession = searchParams.get("profession") ?? "";
+  // ?language=am — Amharic-speaker filter (TED-136).
+  const language = searchParams.get("language") ?? "";
   const [qInput, setQInput] = useSearchQuery();
   const q = qInput.toLowerCase();
 
   const filtered = slots.filter((s) => {
     if (profession && s.profession !== profession) return false;
+    if (language && !s.languages.includes(language)) return false;
     if (q && !`${s.title} ${s.shortDescription}`.toLowerCase().includes(q)) return false;
     return true;
   });
@@ -154,7 +160,35 @@ export default function ProfessionalsLanding({ loaderData }: Route.ComponentProp
                 </Link>
               );
             })}
+            {/* Amharic-speaker toggle (TED-136) — query-param filter like the
+                profession chips, so it composes with them. */}
+            <button
+              type="button"
+              aria-pressed={language === AMHARIC_LANG}
+              onClick={() => {
+                const params = new URLSearchParams(searchParams);
+                if (language === AMHARIC_LANG) params.delete("language");
+                else params.set("language", AMHARIC_LANG);
+                setSearchParams(params, { replace: true });
+              }}
+              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm transition ${
+                language === AMHARIC_LANG
+                  ? "bg-earth-800 text-white"
+                  : "bg-accent-yellow/20 text-earth-900 hover:bg-accent-yellow/35"
+              }`}
+            >
+              <span aria-hidden="true">🗣️</span>
+              {t(locale, "professionals_filter_amharic")}
+            </button>
           </div>
+          <p className="text-sm">
+            <Link
+              to={`/${locale}/professionals/amharic`}
+              className="font-medium text-earth-700 hover:underline"
+            >
+              {t(locale, "professionals_amharic_landing_link")}
+            </Link>
+          </p>
         </section>
 
         <section
@@ -199,6 +233,7 @@ export default function ProfessionalsLanding({ loaderData }: Route.ComponentProp
                     <span className={tagChipClasses(tag)}>
                       {t(locale, professionMessageKey(s.profession))}
                     </span>
+                    {speaksAmharic(s.languages) && <AmharicBadge locale={locale} />}
                     {city && (
                       <span className="text-xs text-ink-600">
                         📍 {cityName(city, locale)}

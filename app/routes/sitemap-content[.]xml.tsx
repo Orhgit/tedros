@@ -66,6 +66,7 @@ export function loader() {
     // Statistics
     ...STAT_TOPICS.map((t) => `/statistics/${t.slug}`),
     // Professionals
+    "/professionals/amharic", // Amharic-speaker landing (TED-136)
     ...ALL_PROFESSIONS.map((p) => `/professionals/${p}`),
     ...professionalCells,
     ...PROFESSIONALS.map((e) => `/professionals/profile/${e.slug}`),
