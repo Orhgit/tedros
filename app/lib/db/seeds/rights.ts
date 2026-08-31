@@ -155,7 +155,7 @@ Quick eligibility check — [mortgage calculator](/en/calculator/mortgage-ethiop
     slug: { he: "klita-basket", en: "klita-basket", am: "klita-basket" },
     govUrl: "https://www.gov.il/he/Departments/General/absorption_basket",
     eligibilitySummary: {
-      he: "סיוע כספי של משרד העלייה והקליטה לתקופת ההתארגנות הראשונה — תשלום ראשון בנתב\"ג, השלמה לחשבון הבנק ועוד 6 תשלומים חודשיים. הסכום נקבע לפי מצב משפחתי, גיל ומספר ילדים.",
+      he: 'סיוע כספי של משרד העלייה והקליטה לתקופת ההתארגנות הראשונה — תשלום ראשון בנתב"ג, השלמה לחשבון הבנק ועוד 6 תשלומים חודשיים. הסכום נקבע לפי מצב משפחתי, גיל ומספר ילדים.',
       en: "Financial aid from the Ministry of Aliyah and Integration for an oleh's first period in Israel — a first payment at the airport, a bank top-up and 6 further monthly payments. The amount is set by family status, age and number of children.",
       am: "በእስራኤል ለመጀመሪያው ጊዜ ከዓሊያና መቀበያ ሚኒስቴር የሚሰጥ የገንዘብ ድጋፍ — በአየር ማረፊያ የመጀመሪያ ክፍያ፣ የባንክ ማሟያ እና ተጨማሪ 6 ወርሃዊ ክፍያዎች። መጠኑ በቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት ይወሰናል።",
     },
@@ -7151,97 +7151,186 @@ Because of this, there is no single amount that applies to everyone, and it also
     },
   },
 
-  // ── Wave 6 (cont'd) — sourced from the Employment Service (מינהל
-  // התעסוקה, משרד העבודה) official briefing page for the "Lamerchak"
-  // ("Toward Distance") program, and a gov.il tender that confirms the
-  // program is an active, ongoing national initiative (not a one-off
-  // pilot). The briefing page is aimed at program operators/managers, not
-  // participants, and has no explicit "last updated" date, no direct
-  // registration flow and no published stipend/budget figures — none of
-  // these are invented here. Users are pointed to the Employment Service
-  // (מינהל תעסוקת אוכלוסיות ייחודיות) to ask about enrollment in their
-  // area. AM field is AI-translated (not yet reviewed by a native Amharic
-  // speaker) — see in-body disclaimer.
+  // ── "Lamerchak" employment guidance (Wave 6; expanded TED-148).
+  //
+  // The Wave-6 version was sourced only from the Employment Service's
+  // operator-facing briefing page (taasukada.labor.gov.il), which is aimed
+  // at programme managers rather than participants, and therefore said the
+  // official source publishes no eligibility criteria or service list.
+  //
+  // TED-148 located the participant-facing primary source: the Labour
+  // Branch's own guide page, "המטה לקידום תעסוקת אוכלוסיות ייחודיות"
+  // (https://www.gov.il/he/Departments/Guides/special-populations-employment), fetched 2026-08-31 through a reader
+  // proxy because gov.il 403s WebFetch and curl. That page names Lamerchak
+  // as a current, live programme, states its joint operation by זרוע העבודה
+  // and ג'וינט ישראל, and publishes the age band, the three alternative
+  // entry conditions and the service list reproduced below — all quoted
+  // from it rather than inferred.
+  //
+  // Deliberately NOT reproduced: the page's coordinator table, which is
+  // headed "רכזי תכנית למרחק 2020" and lists named staff, personal Gmail
+  // addresses and phone numbers. Six-year-old individual contact details
+  // are exactly the kind of content that rots into a dead end, so users are
+  // sent to the official page's own "find your coordinator" link instead.
+  // The page is also internally inconsistent about coverage — one paragraph
+  // says 12 localities, another says 11, and the table lists 11 — so the
+  // copy below says "כ-11-12" rather than picking a number the source does
+  // not agree with itself on.
+  //
+  // Kol-Zchut gives the age band as 20-44; the gov.il page says 18-45. The
+  // primary source wins. No stipend, budget or grant figures are published
+  // by either, and none are invented here. AM is AI-translated and not yet
+  // reviewed by a native Amharic speaker — see the in-body disclaimer.
   {
     title: {
       he: 'תוכנית "למרחק" — הכוון תעסוקתי ליוצאי אתיופיה',
-      en: '"Lamerchak" — Employment Guidance for Ethiopian-Israeli Youth',
-      am: 'ፕሮግራም "ላመርቻክ" — የስራ ስምሪት መመሪያ ለኢትዮጵያ ተወላጅ ወጣቶች',
+      en: '"Lamerchak" — Employment Guidance for Ethiopian-Israelis',
+      am: 'ፕሮግራም "ላመርቻክ" — የስራ ስምሪት መመሪያ ለኢትዮጵያ ተወላጆች',
     },
     slug: { he: "lamerchak", en: "lamerchak", am: "lamerchak" },
-    govUrl:
-      "https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5",
+    govUrl: "https://www.gov.il/he/Departments/Guides/special-populations-employment",
     eligibilitySummary: {
-      he: "לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית. התוכנית מופעלת באמצעות מרכזי הכוון תעסוקתי, בהפעלת מינהל התעסוקה במשרד העבודה.",
-      en: "For young Ethiopian-Israelis seeking career advancement and professional education. The program runs through employment-guidance centers, operated by the Employment Service at the Ministry of Labor.",
-      am: "ለስራ እድገት እና ሙያዊ ትምህርት የሚፈልጉ ኢትዮጵያዊ ተወላጅ ወጣቶች። ፕሮግራሙ በስራ ስምሪት መመሪያ ማዕከላት አማካኝነት፣ በስራ ሚኒስቴር የስራ ስምሪት አስተዳደር ይመራል።",
+      he: "תוכנית של זרוע העבודה וג'וינט ישראל ליוצאי אתיופיה בגילי 18-45 שאינם בשירות: בעלי השכלה או תעודת מקצוע שעובדים בעבודה לא מקצועית, מי שאינם עובדים ובעלי מוטיבציה לקידום, וחיילים משוחררים. ליווי אישי ומימון הכשרות — ללא עלות.",
+      en: "A programme of Israel's Labour Branch and JDC Israel for Ethiopian-Israelis aged 18-45 not in service: those with education or a professional certificate working in unskilled jobs, those not working but motivated to advance, and discharged soldiers. Personal mentoring and funded training — free of charge.",
+      am: "ለ18-45 ዕድሜ ላሉ ኢትዮጵያዊ ተወላጆች የስራ ዘርፍና የጆይንት እስራኤል ፕሮግራም፦ ትምህርት ወይም ሙያዊ የምስክር ወረቀት ኖሯቸው ሙያዊ ባልሆነ ስራ ለሚሰሩ፣ ለማይሰሩና ለማደግ ተነሳሽነት ላላቸው፣ እና ለተሰናበቱ ወታደሮች። የግል አጃቢነትና የተደገፈ ስልጠና — ያለ ክፍያ።",
     },
     tags: ["employment", "youth"],
     bodies: {
       he: `## מה זה "למרחק"?
 
-"למרחק" היא תוכנית תעסוקה ייעודית של מינהל התעסוקה במשרד העבודה, שמטרתה לסייע לצעירים יוצאי אתיופיה לפתח קריירה, לרכוש השכלה מקצועית ולהשתלב בתפקידים מתגמלים בשוק העבודה הישראלי. התוכנית פועלת באמצעות **מרכזי הכוון תעסוקתי** ייעודיים.
+"למרחק" היא תוכנית לקידום תעסוקה איכותית ליוצאי אתיופיה, **מיסודם של זרוע העבודה וג'וינט ישראל**. המטרה המוצהרת שלה היא לא "למצוא עבודה" סתם, אלא להגיע לעבודה מפרנסת עם אופק תעסוקתי — כזו שהולמת את ההשכלה והכישורים שכבר יש לכם.
 
-## למי זה מיועד?
+זה חשוב, כי זו בדיוק הבעיה שהתוכנית נבנתה לפתור: לפי זרוע העבודה, שיעורי התעסוקה של יוצאי אתיופיה עלו משמעותית עם השנים, אבל רבים עדיין מועסקים בעבודות שאינן הולמות את ההכשרה, ההשכלה והניסיון שלהם — ולכן השכר הממוצע בקהילה נמוך משמעותית מהממוצע הארצי.
 
-לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי — מי שמעוניינים לבנות מסלול קריירה, לרכוש הכשרה מקצועית ולהתמקם בתפקידים איכותיים ובעלי סיכויי קידום.
+כל משתתף/ת מלווה על ידי **רכז/ת** מתוך צוות מקצועי הפרוס בכ-11-12 יישובים ברחבי הארץ.
 
-## מה כוללת התוכנית?
+## למי התוכנית מיועדת?
 
-התוכנית מבוססת על רשת של מרכזי הכוון תעסוקתי, שתפקידם ללוות את המשתתפים בתהליך של פיתוח קריירה והשכלה מקצועית לקראת שילוב בתפקידים מתגמלים. פרטים מלאים על תוכן הליווי, משך התוכנית והמענים הספציפיים במרכז הקרוב אליכם מתפרסמים דרך מרכזי ההכוון עצמם ואינם מפורטים באתר מינהל התעסוקה.
+ליוצאי אתיופיה בגילי עבודה, **בדגש על גילי 18 עד 45**, שאינם בשירות צבאי / אזרחי / לאומי, ועונים על **אחד** מהתנאים הבאים:
 
-**לתשומת לבכם:** אין באתר הרשמי פירוט של סכומי סיוע, מלגות או תאריכי הרשמה — אם נתקלתם במידע כזה במקור אחר, כדאי לוודא אותו ישירות מול הגורם המפעיל לפני שאתם מסתמכים עליו.
+- **בעלי השכלה גבוהה או תעודת מקצוע** שעובדים בעבודה לא מקצועית וזקוקים לסיוע במעבר לתעסוקה ההולמת את השכלתם
+- **אינם עובדים, או עובדים בעבודה לא מקצועית**, ובעלי מוטיבציה לקידום מקצועי
+- **חיילים משוחררים**
+
+אם אתם עונים על אחד מהשלושה — אתם בפנים. לא צריך לעמוד בכולם.
+
+## מה מקבלים בפועל?
+
+- **תוכנית אישית למסלול קריירה** וליווי תעסוקתי פרטני מול רכז/ת
+- **סיוע במימון** קורסי הכשרה מקצועית, שיעורי עזר, קורסי פסיכומטרי, אנגלית, מחשבים וקורסי השכלה בסיסיים
+- **סדנאות וקורסים** רלוונטיים לשוק העבודה העתידי (למשל מסחר אלקטרוני)
+- **סדנאות הכנה** למרכזי הערכה ולראיון אישי
+- **קשרי מעסיקים** — הנגשת משרות איכותיות בחברות מובילות, וקורסים בשיתוף מעסיקים הכוללים השמה בתום ההכשרה
 
 ## איך פונים?
 
-התוכנית אינה כוללת טופס הרשמה מקוון ישיר באתר. לבירור זכאות, מיקום מרכזי ההכוון הפעילים ותהליך ההצטרפות בפועל — פנו ישירות למינהל תעסוקת אוכלוסיות ייחודיות באתר gov.il, או למרכז ההכוון התעסוקתי הקרוב לאזור מגוריכם:
+אין טופס הרשמה מקוון. הדרך היא ליצור קשר עם הרכז/ת באזור מגוריכם:
 
-- מינהל התעסוקה — דף התוכנית: [taasukada.labor.gov.il](https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5)
-- לפנייה כללית למינהל תעסוקת אוכלוסיות ייחודיות: אתר [gov.il](https://www.gov.il)`,
+1. היכנסו ל[עמוד התוכנית באתר זרוע העבודה](https://www.gov.il/he/Departments/Guides/special-populations-employment) — שם מופיע קישור "ליצירת קשר עם רכז הקרוב לאזורך".
+2. אפשר גם לפנות דרך [עמוד הפייסבוק הארצי של התוכנית](https://www.facebook.com/lamerhak/).
+
+**שימו לב:** רשימת הרכזים המתפרסמת באתר הרשמי מסומנת כרשימת **2020**. לפני שאתם מסתמכים על טלפון או כתובת מייל משם — ודאו מול הרכז/ת שהפרטים עדכניים, או פנו דרך מרכז הצעירים / מרכז התעסוקה בעירכם.
+
+## מה **לא** מפורסם — ואל תאמינו למי שטוען אחרת
+
+באתר הרשמי **אין** סכומי מלגה, דמי קיום, תאריכי הרשמה או מכסות. אם נתקלתם במספרים כאלה במקור אחר — ודאו אותם מול הרכז/ת לפני שאתם בונים עליהם.
+
+## תוכניות נוספות של זרוע העבודה ליוצאי אתיופיה
+
+באותו עמוד רשמי מופיעות גם:
+
+- **מצוינות ומנהיגות בתעסוקה** (עם עמותת "עולים ביחד") — לאקדמאים ומצטיינים, כולל מסלולי "משפיעים במגזר הציבורי", "מרי — מורים לניהול", התמחות קיץ "טסה" ותוכנית היזמות "אנסש"
+- **שילוב בהיי-טק** — הכשרות של עמותת טק קריירה, ובוטקאמפ התכנות CodeIN
+
+מקור: [זרוע העבודה — המטה לקידום תעסוקת אוכלוסיות ייחודיות](https://www.gov.il/he/Departments/Guides/special-populations-employment)`,
       en: `## What is "Lamerchak"?
 
-"Lamerchak" is a dedicated employment program run by Israel's Employment Service (מינהל התעסוקה) at the Ministry of Labor, designed to help young Ethiopian-Israelis build a career, acquire professional education and move into rewarding positions in the Israeli labor market. The program operates through dedicated **employment-guidance centers**.
+"Lamerchak" is a programme for advancing quality employment among Ethiopian-Israelis, **founded jointly by Israel's Labour Branch (זרוע העבודה) and JDC Israel**. Its stated goal is not simply "find a job" but reaching work that pays a living with a career horizon — work that matches the education and skills you already have.
+
+That framing matters, because it is the problem the programme was built to solve. Per the Labour Branch, employment rates among Ethiopian-Israelis have risen substantially over the years, but many are still employed in jobs that do not match their training, education and experience — which is why average pay in the community remains significantly below the national average.
+
+Each participant is accompanied by a **coordinator** from a professional team spread across roughly 11-12 localities nationwide.
 
 ## Who is it for?
 
-Young Ethiopian-Israelis seeking career advancement — people who want to build a career path, gain professional training and move into quality positions with real advancement potential.
+Ethiopian-Israelis of working age, **with an emphasis on ages 18 to 45**, who are not in military / civil / national service and meet **one** of the following:
 
-## What does the program include?
+- **Hold higher education or a professional certificate** but work in an unskilled job, and need help moving into work that matches their education
+- **Are not working, or work in an unskilled job**, and are motivated to advance professionally
+- **Are discharged soldiers**
 
-The program is built around a network of employment-guidance centers, whose role is to accompany participants through career development and professional education toward placement in rewarding positions. Full details on the guidance content, program duration, and the specific offerings at the center nearest you are published by the guidance centers themselves and are not detailed on the Employment Service's page.
+Meeting any one of the three is enough — you do not need all of them.
 
-**Note:** the official page does not publish support amounts, stipends or registration dates — if you come across such figures elsewhere, verify them directly with the operating body before relying on them.
+## What you actually get
+
+- A **personal career-path plan** and one-on-one employment mentoring with a coordinator
+- **Funding assistance** for vocational training courses, tutoring, psychometric-exam prep, English, computing and basic-education courses
+- **Workshops and courses** aimed at the future labour market (e-commerce, for example)
+- **Preparation workshops** for assessment centres and interviews
+- **Employer relations** — access to quality roles at leading companies, and employer-partnered courses that include placement on completion
 
 ## How to apply
 
-The program has no direct online registration form on its official page. To check eligibility, find your nearest active guidance center, and learn the actual enrollment process — contact the Employment Service for unique populations (מינהל תעסוקת אוכלוסיות ייחודיות) directly via gov.il, or reach out to the employment-guidance center nearest your area:
+There is no online registration form. The route is to contact the coordinator for your area:
 
-- Employment Service — program page: [taasukada.labor.gov.il](https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5)
-- General inquiries to the Employment Service for unique populations: [gov.il](https://www.gov.il)`,
+1. Go to the [programme's page on the Labour Branch site](https://www.gov.il/he/Departments/Guides/special-populations-employment), which carries a "contact the coordinator nearest you" link.
+2. You can also reach out through the [programme's national Facebook page](https://www.facebook.com/lamerhak/).
+
+**Note:** the coordinator list published on the official page is labelled as the **2020** list. Before relying on a phone number or email address from it, confirm the details are current with the coordinator, or approach your city's youth centre / employment centre instead.
+
+## What is **not** published — and don't believe anyone who says otherwise
+
+The official page carries **no** stipend amounts, subsistence payments, registration dates or quotas. If you find such figures elsewhere, verify them with a coordinator before planning around them.
+
+## Other Labour Branch programmes for Ethiopian-Israelis
+
+The same official page also lists:
+
+- **Excellence and Leadership in Employment** (with the Olim Beyahad association) — for academics and high achievers, including the "Influencers in the Public Sector", "Mary — Teachers into Management", "Tesa" summer internship and "Ansesh" entrepreneurship tracks
+- **Hi-tech integration** — training run by the Tech-Career association, and the CodeIN programming bootcamp
+
+Source: [Labour Branch — Headquarters for Advancing Employment of Special Populations](https://www.gov.il/he/Departments/Guides/special-populations-employment)`,
       am: `## "ላመርቻክ" ምንድን ነው?
 
-"ላመርቻክ" በስራ ሚኒስቴር የስራ ስምሪት አስተዳደር የሚመራ ልዩ የስራ ስምሪት ፕሮግራም ሲሆን፣ ኢትዮጵያዊ ተወላጅ ወጣቶች ስራቸውን እንዲያሳድጉ፣ ሙያዊ ትምህርት እንዲያገኙ እና በእስራኤል የስራ ገበያ ውስጥ ጠቃሚ ቦታዎች ላይ እንዲሰማሩ ለመርዳት የተነደፈ ነው። ፕሮግራሙ ልዩ **የስራ ስምሪት መመሪያ ማዕከላት** በኩል ይሰራል።
+"ላመርቻክ" ለኢትዮጵያዊ ተወላጆች ጥራት ያለው ስራ ለማሳደግ የተዘጋጀ ፕሮግራም ሲሆን፣ **በእስራኤል የስራ ዘርፍ (זרוע העבודה) እና በጆይንት እስራኤል በጋራ የተመሠረተ** ነው። ግቡ በቀላሉ "ስራ ማግኘት" ሳይሆን፣ ካለዎት ትምህርትና ክህሎት ጋር የሚመጣጠን፣ የሚያስተዳድርና የእድገት አድማስ ያለው ስራ ላይ መድረስ ነው።
+
+እያንዳንዱ ተሳታፊ በመላ ሀገሪቱ በ11-12 ገደማ ከተሞች ውስጥ ካለ ሙያዊ ቡድን በ**አስተባባሪ** ይታጀባል።
 
 ## ለማን የተዘጋጀ ነው?
 
-ለስራ እድገት የሚፈልጉ ኢትዮጵያዊ ተወላጅ ወጣቶች — የስራ መንገድ መገንባት፣ ሙያዊ ስልጠና ማግኘት እና በጥራት ያላቸው እና የእድገት እድል ያላቸው ቦታዎች ላይ መስፈር የሚፈልጉ ሰዎች።
+በስራ ዕድሜ ላይ ላሉ ኢትዮጵያዊ ተወላጆች፣ **በተለይ ከ18 እስከ 45 ዕድሜ**፣ በወታደራዊ / ሲቪል / ብሔራዊ አገልግሎት ላይ ላልሆኑ እና ከሚከተሉት **አንዱን** ለሚያሟሉ፦
 
-## ፕሮግራሙ ምን ያካትታል?
+- **ከፍተኛ ትምህርት ወይም ሙያዊ የምስክር ወረቀት** ኖሯቸው ሙያዊ ባልሆነ ስራ ለሚሰሩ
+- **የማይሰሩ ወይም ሙያዊ ባልሆነ ስራ የሚሰሩ**፣ ለሙያዊ እድገት ተነሳሽነት ያላቸው
+- **የተሰናበቱ ወታደሮች**
 
-ፕሮግራሙ በስራ ስምሪት መመሪያ ማዕከላት አውታረ መረብ ላይ የተመሰረተ ነው፣ ተሳታፊዎችን በስራ እድገት እና ሙያዊ ትምህርት ሂደት ውስጥ ወደ ጠቃሚ ቦታዎች ውህደት እንዲደርሱ የመምራት ሚና አላቸው። ስለ አጃቢነቱ ይዘት፣ የፕሮግራሙ ርዝመት እና ወደ እርስዎ ቅርብ በሆነው ማዕከል ስላሉ ልዩ አቅርቦቶች ሙሉ ዝርዝሮች በራሳቸው በመመሪያ ማዕከላት ይታተማሉ እንጂ በስራ ስምሪት አስተዳደር ገጽ ላይ በዝርዝር አልተገለጹም።
+ከሦስቱ አንዱን ማሟላት በቂ ነው።
 
-**ማስታወሻ፦** ኦፊሴላዊው ገጽ የድጋፍ መጠኖችን፣ ስቲፕንዶችን ወይም የምዝገባ ቀናትን አያትምም — በሌላ ቦታ እንደዚህ ዓይነት ቁጥሮች ካጋጠሙዎት፣ በእነሱ ላይ ከመተማመንዎ በፊት በቀጥታ ከሚያንቀሳቅሰው አካል ጋር ያረጋግጡ።
+## በተግባር ምን ያገኛሉ?
+
+- **የግል የሙያ መንገድ ዕቅድ** እና ከአስተባባሪ ጋር የአንድ ለአንድ የስራ አጃቢነት
+- ለሙያ ስልጠና ኮርሶች፣ ለተጨማሪ ትምህርት፣ ለሳይኮሜትሪክ ፈተና ዝግጅት፣ ለእንግሊዝኛ፣ ለኮምፒውተርና ለመሠረታዊ ትምህርት ኮርሶች **የገንዘብ ድጋፍ**
+- ለወደፊቱ የስራ ገበያ የሚያገለግሉ **ወርክሾፖችና ኮርሶች**
+- ለምዘና ማዕከላትና ለቃለ መጠይቅ **የዝግጅት ወርክሾፖች**
+- **የአሠሪ ግንኙነቶች** — በመሪ ኩባንያዎች ውስጥ ጥራት ያላቸው ስራዎች፣ እና ስልጠናው ሲጠናቀቅ ምደባን የሚያካትቱ ከአሠሪዎች ጋር የተጣመሩ ኮርሶች
 
 ## እንዴት ማመልከት
 
-ፕሮግራሙ በኦፊሴላዊ ገጹ ላይ ቀጥተኛ የመስመር ላይ ምዝገባ ቅጽ የለውም። ብቁነትን ለማረጋገጥ፣ ወደ እርስዎ ቅርብ የሆነውን ንቁ የመመሪያ ማዕከል ለማግኘት እና ትክክለኛውን የምዝገባ ሂደት ለማወቅ — በቀጥታ ወደ ልዩ ህዝቦች የስራ ስምሪት አስተዳደር (מינהל תעסוקת אוכלוסיות ייחודיות) በ gov.il በኩል ያግኙ፣ ወይም ወደ አካባቢዎ ቅርብ የሆነውን የስራ ስምሪት መመሪያ ማዕከል ያነጋግሩ፦
+የመስመር ላይ ምዝገባ ቅጽ የለም። መንገዱ በአካባቢዎ ካለው አስተባባሪ ጋር መገናኘት ነው፦
 
-- የስራ ስምሪት አስተዳደር — የፕሮግራም ገጽ፦ taasukada.labor.gov.il
-- ለልዩ ህዝቦች የስራ ስምሪት አስተዳደር አጠቃላይ ጥያቄዎች፦ gov.il
+1. ወደ [የስራ ዘርፍ ድረ-ገጽ የፕሮግራሙ ገጽ](https://www.gov.il/he/Departments/Guides/special-populations-employment) ይሂዱ — "ወደ እርስዎ ቅርብ ያለውን አስተባባሪ ያግኙ" የሚል አገናኝ አለው።
+2. በ[የፕሮግራሙ ብሔራዊ የፌስቡክ ገጽ](https://www.facebook.com/lamerhak/) በኩልም መገናኘት ይችላሉ።
 
-📞 የስራ ስምሪት አስተዳደር፣ የስራ ሚኒስቴር
+**ማስታወሻ፦** በኦፊሴላዊው ገጽ ላይ የታተመው የአስተባባሪዎች ዝርዝር የ**2020** ዝርዝር ተብሎ ተለይቷል። ከዚያ ስልክ ቁጥር ወይም ኢሜይል ከመጠቀምዎ በፊት ወቅታዊ መሆኑን ያረጋግጡ።
 
-*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*`,
+## **ያልታተመው** ነገር
+
+ኦፊሴላዊው ገጽ የስቲፕንድ መጠኖችን፣ የመተዳደሪያ ክፍያዎችን፣ የምዝገባ ቀናትን ወይም ኮታዎችን **አያትምም**። እንደዚህ ዓይነት ቁጥሮች ሌላ ቦታ ካገኙ፣ ከማቀድዎ በፊት ከአስተባባሪ ጋር ያረጋግጡ።
+
+ምንጭ፦ የስራ ዘርፍ — ለልዩ ህዝቦች ስራ ማሳደጊያ ዋና መሥሪያ ቤት (gov.il)
+
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*
+`,
     },
   },
 
