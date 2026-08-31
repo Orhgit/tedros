@@ -74,7 +74,7 @@ export const LONE_SOLDIER_TOPIC: SoldierTopic = {
 > לא פירטנו כאן סכומים בשקלים. המקורות הרשמיים הזמינים נותנים מספרים סותרים לאותו מענק, וחלקם ללא תאריך עדכון. שאלו את המש"קית ת"ש מה הסכום העדכני — היא הגורם המוסמך.
 
 **עולים — וזכות ייעודית ליוצאי אתיופיה**
-למשרד העלייה והקליטה נוהל ייעודי לחיילים עולים ("נוהל חיילים עולים", 11.186), והוא מגדיר את **החיילים יוצאי אתיופיה כאוכלוסייה ייחודית**. הנוהל מבחין בין חייל יוצא אתיופיה שהוריו בארץ לבין חייל שהוריו אינם בארץ — לשניים אלה נקבעות רמות סיוע שונות — וקובע ליוצאי אתיופיה **תקופת זכאות מורחבת** למענק החודשי לעומת עולים אחרים. זו זכות נפרדת מהמענק הצה"לי ומשולמת בנוסף לו. את הסכום ואת אורך התקופה בררו במוקד המשרד, **2994\*** — המקורות הפומביים חלוקים ביניהם, ולא נצטט כאן מספר שאיננו בטוחים בו.
+למשרד העלייה והקליטה נוהל ייעודי לחיילים עולים ("נוהל חיילים עולים", 11.186), והוא מגדיר את **החיילים יוצאי אתיופיה כאוכלוסייה ייחודית**. הנוהל מבחין בין חייל יוצא אתיופיה שהוריו בארץ לבין חייל שהוריו אינם בארץ — לשניים אלה נקבעות רמות סיוע שונות — וקובע ליוצאי אתיופיה **תקופת זכאות מורחבת** למענק החודשי לעומת עולים אחרים. זו זכות נפרדת מהמענק הצה"לי ומשולמת בנוסף לו. את הסכום ואת אורך התקופה בררו במוקד המשרד (2994*) — המקורות הפומביים חלוקים ביניהם, ולא נצטט כאן מספר שאיננו בטוחים בו.
 
 **והמקרה השני: המשפחה כאן, אבל המצב קשה**
 אם יש הורים בארץ אבל המשפחה מתקשה כלכלית, המסלול אינו "חייל בודד" אלא **תשמ"ש — תשלומי משפחה**. הוא נועד להבטיח את קיומה המינימלי של משפחת החייל. הבקשה מוגשת למש"קית ת"ש — בלשכת הגיוס לפני הגיוס, וביחידה במהלך השירות — ואפשר לבקש תשלום עבור ההורים (שניהם או אחד מהם), עבור בן או בת זוג, עבור ילדים, ועבור אחים ואחיות אם החייל הוא האפוטרופוס שלהם. **בדקו זכאות באשף ת"ש שלנו.**
@@ -114,7 +114,7 @@ Recognized entitlements include a monthly grant, food grants and subsistence pay
 > We have not listed shekel amounts here. The available official sources give conflicting numbers for the same grant, and some carry no update date. Ask your family-support NCO for the current figure — they are the authoritative source.
 
 **Olim — and a dedicated entitlement for Ethiopian-Israelis**
-The Ministry of Aliyah and Integration has a dedicated procedure for immigrant soldiers ("Immigrant Soldiers Procedure", 11.186), and it defines **Ethiopian-Israeli soldiers as a distinct population**. The procedure distinguishes an Ethiopian-origin soldier whose parents are in Israel from one whose parents are not — setting different levels of assistance for each — and establishes an **extended eligibility period** for the monthly grant for Ethiopian-Israelis compared with other olim. This is separate from, and paid in addition to, the IDF grant. Check the amount and the length of the period with the ministry hotline, **\*2994** — the public sources disagree, and we will not quote a number we are not sure of.
+The Ministry of Aliyah and Integration has a dedicated procedure for immigrant soldiers ("Immigrant Soldiers Procedure", 11.186), and it defines **Ethiopian-Israeli soldiers as a distinct population**. The procedure distinguishes an Ethiopian-origin soldier whose parents are in Israel from one whose parents are not — setting different levels of assistance for each — and establishes an **extended eligibility period** for the monthly grant for Ethiopian-Israelis compared with other olim. This is separate from, and paid in addition to, the IDF grant. Check the amount and the length of the period with the ministry hotline (*2994) — the public sources disagree, and we will not quote a number we are not sure of.
 
 **And the second case: the family is here, but times are hard**
 If there are parents in Israel but the family is struggling financially, the track is not "lone soldier" but **תשמ"ש — family payments**. Its purpose is to secure the minimum subsistence of the soldier's family. The application goes to the family-support NCO — at the recruitment office before enlistment, and in the unit during service — and payment may be requested for the parents (both or one), a spouse, children, and siblings where the soldier is their guardian. **Check your eligibility in our family-support wizard.**
@@ -154,7 +154,7 @@ A paper prepared by the Knesset Research and Information Center (December 2015) 
 > እዚህ የሸቀል መጠኖችን አልዘረዘርንም። የሚገኙት ኦፊሴላዊ ምንጮች ለአንድ ድጎማ የሚጋጩ ቁጥሮች ይሰጣሉ፣ አንዳንዶቹም የዘመነበት ቀን የላቸውም። ወቅታዊውን መጠን ከמש"קית ת"ש ይጠይቁ — ሥልጣን ያለው አካል እሷ ናት።
 
 **ዓሊያ ያደረጉ — እና ለኢትዮጵያ ተወላጆች የተለየ መብት**
-የዓሊያ እና መቀበል ሚኒስቴር ለስደተኛ ወታደሮች የተለየ መመሪያ አለው ("የስደተኛ ወታደሮች መመሪያ"፣ 11.186)፣ እና **የኢትዮጵያ ተወላጅ ወታደሮችን እንደ ልዩ ሕዝብ** ይተረጉማል። መመሪያው ወላጆቹ በአገር ውስጥ ያሉትን የኢትዮጵያ ተወላጅ ወታደር ወላጆቹ በአገር ውስጥ ከሌሉት ይለያል — ለሁለቱም የተለያየ የድጋፍ ደረጃ ይወስናል — እና ለኢትዮጵያ ተወላጆች ከሌሎች ስደተኞች የተለየ **የተራዘመ የብቁነት ጊዜ** ይደነግጋል። ይህ ከጦር ኃይሉ ድጎማ የተለየ ነው እና በተጨማሪ ይከፈላል። መጠኑንና የጊዜውን ርዝመት ከሚኒስቴሩ ማዕከል **2994\*** ያረጋግጡ — የሕዝብ ምንጮች ይጋጫሉ፣ እኛም እርግጠኛ ያልሆንንበትን ቁጥር አንጠቅስም።
+የዓሊያ እና መቀበል ሚኒስቴር ለስደተኛ ወታደሮች የተለየ መመሪያ አለው ("የስደተኛ ወታደሮች መመሪያ"፣ 11.186)፣ እና **የኢትዮጵያ ተወላጅ ወታደሮችን እንደ ልዩ ሕዝብ** ይተረጉማል። መመሪያው ወላጆቹ በአገር ውስጥ ያሉትን የኢትዮጵያ ተወላጅ ወታደር ወላጆቹ በአገር ውስጥ ከሌሉት ይለያል — ለሁለቱም የተለያየ የድጋፍ ደረጃ ይወስናል — እና ለኢትዮጵያ ተወላጆች ከሌሎች ስደተኞች የተለየ **የተራዘመ የብቁነት ጊዜ** ይደነግጋል። ይህ ከጦር ኃይሉ ድጎማ የተለየ ነው እና በተጨማሪ ይከፈላል። መጠኑንና የጊዜውን ርዝመት ከሚኒስቴሩ ማዕከል (2994*) ያረጋግጡ — የሕዝብ ምንጮች ይጋጫሉ፣ እኛም እርግጠኛ ያልሆንንበትን ቁጥር አንጠቅስም።
 
 **ሁለተኛው ጉዳይ: ቤተሰቡ እዚህ ነው፣ ግን ሁኔታው ከብዷል**
 በአገር ውስጥ ወላጆች ካሉ ግን ቤተሰቡ በገንዘብ የሚቸገር ከሆነ፣ መንገዱ "ብቸኛ ወታደር" ሳይሆን **תשמ"ש — የቤተሰብ ክፍያዎች** ነው። ዓላማው የወታደሩን ቤተሰብ ዝቅተኛ ኑሮ ማረጋገጥ ነው። ማመልከቻው ለמש"קית ת"ש ይቀርባል — ከምዝገባ በፊት በምልመላ ጽሕፈት ቤት፣ በአገልግሎት ወቅት በክፍሉ — እና ለወላጆች (ለሁለቱም ወይም ለአንዱ)፣ ለትዳር አጋር፣ ለልጆች፣ እና ወታደሩ አሳዳጊያቸው ከሆነ ለወንድሞችና እህቶች ክፍያ መጠየቅ ይቻላል። **በת"ש አዋቂያችን ብቁነትዎን ይመርምሩ።**
@@ -221,7 +221,7 @@ export const LONE_SOLDIER_FAQS: SoldierFaq[] = [
     },
     answer: {
       he: 'ייתכן. הקטגוריה נקראת "חסר עורף משפחתי", והיא חלה גם כשיש קשר עם ההורים אך החייל אינו יכול לשהות אצלם והם אינם מהווים תא משפחתי תומך. זו הקטגוריה הדורשת את התיעוד הרב ביותר: דוח עובד סוציאלי, אישור יועץ בית ספר ומסמכים כלכליים. פנו למש"קית ת"ש.',
-      en: 'Possibly. The category is "without family backing", and it applies also where contact with the parents exists but the soldier cannot stay with them and they do not constitute a supportive family unit. It is the category requiring the most documentation: a social worker\'s report, a school counselor\'s statement and financial documents. Speak to your family-support NCO.',
+      en: "Possibly. The category is \"without family backing\", and it applies also where contact with the parents exists but the soldier cannot stay with them and they do not constitute a supportive family unit. It is the category requiring the most documentation: a social worker's report, a school counselor's statement and financial documents. Speak to your family-support NCO.",
       am: 'ሊሆን ይችላል። ምድቡ "የቤተሰብ ድጋፍ የሌለው" ይባላል፣ ከወላጆች ጋር ግንኙነት ቢኖርም ወታደሩ ከእነሱ ጋር መቆየት ካልቻለ እና ደጋፊ የቤተሰብ ክፍል ካልሆኑ ይሠራል። ብዙ ሰነድ የሚጠይቀው ምድብ ነው። ወደ מש"קית ת"ש ይሂዱ።',
     },
   },
@@ -246,7 +246,7 @@ export const LONE_SOLDIER_FAQS: SoldierFaq[] = [
     answer: {
       he: 'לא נרשמים, כי המעמד הזה אינו קיים. הביטוי מסתובב ברשת אך אין לו בסיס בפקודות המטכ"ל. הקטגוריות המוכרות הן שלוש: בודד מובהק, חסר עורף משפחתי, ויתום. אם הקשר עם ההורים נותק — הקטגוריה הרלוונטית היא "חסר עורף משפחתי".',
       en: 'You do not, because that status does not exist. The term circulates online but has no basis in the General Staff orders. There are three recognized categories: clear-cut lone soldier, without family backing, and orphan. If contact with the parents has broken down, the relevant category is "without family backing".',
-      am: "አይመዘገቡም፣ ምክንያቱም ያ ደረጃ የለም። ቃሉ በኢንተርኔት ይዘዋወራል ግን በትዕዛዞቹ መሠረት የለውም። የታወቁት ሦስት ምድቦች ናቸው። ግንኙነት ከተቋረጠ ተገቢው ምድብ \"የቤተሰብ ድጋፍ የሌለው\" ነው።",
+      am: 'አይመዘገቡም፣ ምክንያቱም ያ ደረጃ የለም። ቃሉ በኢንተርኔት ይዘዋወራል ግን በትዕዛዞቹ መሠረት የለውም። የታወቁት ሦስት ምድቦች ናቸው። ግንኙነት ከተቋረጠ ተገቢው ምድብ "የቤተሰብ ድጋፍ የሌለው" ነው።',
     },
   },
   {
@@ -270,12 +270,12 @@ export const LONE_SOLDIER_FAQS: SoldierFaq[] = [
     answer: {
       he: 'לא נצטט כאן סכום. המקורות הרשמיים הזמינים סותרים זה את זה לגבי אותו מענק, וחלקם אינם נושאים תאריך עדכון — ומספר שגוי כאן עלול להוביל להחלטה שגויה אצלכם. המש"קית ת"ש היא הגורם המוסמך למסור את הסכום העדכני.',
       en: "We will not quote a figure here. The available official sources contradict one another on the same grant, and some carry no update date — and a wrong number here could drive a wrong decision on your side. The family-support NCO is the authoritative source for the current amount.",
-      am: "እዚህ መጠን አንጠቅስም። የሚገኙት ኦፊሴላዊ ምንጮች ስለ አንድ ድጎማ እርስ በርስ ይጋጫሉ፣ አንዳንዶቹም የዘመነበት ቀን የላቸውም። ወቅታዊውን መጠን ለመስጠት ሥልጣን ያለው አካል የמש\"קית ת\"ש ናት።",
+      am: 'እዚህ መጠን አንጠቅስም። የሚገኙት ኦፊሴላዊ ምንጮች ስለ አንድ ድጎማ እርስ በርስ ይጋጫሉ፣ አንዳንዶቹም የዘመነበት ቀን የላቸውም። ወቅታዊውን መጠን ለመስጠት ሥልጣን ያለው አካል የמש"קית ת"ש ናት።',
     },
   },
   {
     question: {
-      he: "אני עולה מאתיופיה — יש לי זכות נוספת מעבר למענק הצה\"לי?",
+      he: 'אני עולה מאתיופיה — יש לי זכות נוספת מעבר למענק הצה"לי?',
       en: "I am an immigrant from Ethiopia — do I have an entitlement beyond the IDF grant?",
       am: "ከኢትዮጵያ የመጣሁ ስደተኛ ነኝ — ከጦር ኃይሉ ድጎማ በተጨማሪ መብት አለኝ?",
     },
@@ -287,17 +287,16 @@ export const LONE_SOLDIER_FAQS: SoldierFaq[] = [
   },
 ];
 
-export const LONE_SOLDIER_AM_SUMMARY_TITLE =
-  "ማጠቃለያ በአማርኛ ለወላጆች — ብቸኛ ወታደር እና የቤተሰብ ድጋፍ";
+export const LONE_SOLDIER_AM_SUMMARY_TITLE = "ማጠቃለያ በአማርኛ ለወላጆች — ብቸኛ ወታደር እና የቤተሰብ ድጋፍ";
 
 export const LONE_SOLDIER_AM_SUMMARY: string[] = [
   'ለሁሉም ነገር የመጀመሪያው አድራሻ አንድ ነው: የמש"קית ת"ש — ከምዝገባ በፊት በምልመላ ጽሕፈት ቤት፣ በኋላ በክፍሉ።',
   "ብቸኛ ወታደር ማለት በአገር ውስጥ የወላጅ ድጋፍ የሌለው ወታደር ነው። ሦስት ምድቦች: ወላጆች በውጭ አገር፣ የቤተሰብ ድጋፍ የሌለው፣ እና ወላጅ አልባ።",
   "ወላጆች ከአገር ከወጡ፣ ልጅዎ ብቻውን ከመጣ፣ ወይም ወላጆች ከሞቱ — ምንም ሰነድ አያስፈልግም። ወረቀት ስለሌለ አያዘግዩ።",
-  "ከምዝገባ በፊት ቅጽ 7304፤ በአገልግሎት ወቅት ቅጽ 62። ሁለቱም ከמש\"קית ת\"ש ጋር ይሞላሉ።",
+  'ከምዝገባ በፊት ቅጽ 7304፤ በአገልግሎት ወቅት ቅጽ 62። ሁለቱም ከמש"קית ת"ש ጋር ይሞላሉ።',
   "ዕውቅና ካገኘ ወርሃዊው ድጎማ በራስ-ሰር ይመጣል — ተጨማሪ ማመልከቻ አያስፈልግም።",
   'ቤተሰቡ እዚህ ሆኖ በገንዘብ ከተቸገረ: መንገዱ תשמ"ש (የቤተሰብ ክፍያዎች) ነው — ለወላጆች፣ ለትዳር አጋር፣ ለልጆች።',
-  "ለתשמ\"ש ማምጣት: የሦስት ወር የደመወዝ ወረቀት፣ የባንክ ወረቀት፣ የመታወቂያ ቅጂ ከሰፍሕ ጋር፣ የብድር ዝርዝሮች።",
+  'ለתשמ"ש ማምጣት: የሦስት ወር የደመወዝ ወረቀት፣ የባንክ ወረቀት፣ የመታወቂያ ቅጂ ከሰፍሕ ጋር፣ የብድር ዝርዝሮች።',
   "ውድቅ ከተደረጉ የይግባኝ መብት አለ። ተስፋ አይቁረጡ።",
   "የኢትዮጵያ ተወላጅ ወታደሮች በሚኒስቴሩ መመሪያ 11.186 እንደ ልዩ ሕዝብ ይታወቃሉ — ተጨማሪ ድጎማ አለ። 2994* ይደውሉ።",
   'የወታደር ደህንነት ማህበር እርዳታ በמש"קית ת"ש በኩል ይጠየቃል፣ በቀጥታ አይደለም። 072-2702222።',

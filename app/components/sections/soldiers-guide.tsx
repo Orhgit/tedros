@@ -40,7 +40,12 @@ export interface SoldiersGuideProps {
   /** Markdown-lite body: `\n\n`-separated paragraphs, `**bold lead**`, `> note`. */
   body: string;
 
-  breadcrumb: { homeLabel: string; homeTo: string; parentLabel: string; parentTo: string };
+  breadcrumb: {
+    homeLabel: string;
+    homeTo: string;
+    parentLabel: string;
+    parentTo: string;
+  };
 
   glanceTitle: string;
   glanceItems: readonly string[];

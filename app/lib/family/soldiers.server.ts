@@ -218,7 +218,7 @@ Section 545(b) of the Military Justice Law gives an **imprisoned or detained** s
       phone: "073-310-3300",
       url: "https://www.idf.il/אתרי-יחידות/הפרקליטות-הצבאית/הסנגוריה-הצבאית/",
       description: {
-        he: "ייצוג והגנה על חיילים במשפט הפלילי-הצבאי — חינם, בכל שעות היממה כולל שבתות וחגים, גם לפני החקירה ובמהלכה. עונה גם לבני משפחה. דוא\"ל: sanegorya@idf.il",
+        he: 'ייצוג והגנה על חיילים במשפט הפלילי-הצבאי — חינם, בכל שעות היממה כולל שבתות וחגים, גם לפני החקירה ובמהלכה. עונה גם לבני משפחה. דוא"ל: sanegorya@idf.il',
         en: "Representation and defence of soldiers in military criminal law — free, around the clock including Shabbat and holidays, before and during interrogation. Answers family members too. Email: sanegorya@idf.il",
         am: "ወታደሮችን በወታደራዊ የወንጀል ሕግ መከላከል — ነጻ፣ 24 ሰዓት በሰንበትና በበዓላትም፣ ከምርመራ በፊትና በምርመራ ወቅት። ለቤተሰብ አባላትም ይመልሳል። ኢሜይል: sanegorya@idf.il",
       },
@@ -238,8 +238,8 @@ Section 545(b) of the Military Justice Law gives an **imprisoned or detained** s
       url: "https://form.mod.gov.il/NakhalComplaint/form",
       description: {
         he: 'קבילות על עוולות בשירות, מכוח פרק י"א לחוק השיפוט הצבאי. רשאים להגיש גם הורים, בן/בת זוג ואחים או ילדים מגיל 16. לחייל כלוא או עצור — ערוץ "מעטפה סגורה" לפי סעיף 545(ב): הקבילה מועברת לנציב מבלי שתיפתח. הנציב אינו מטפל בעניינים משמעתיים או פליליים. דוא"ל: nakhal@mod.gov.il',
-        en: "Complaints about service grievances, under Chapter XI of the Military Justice Law. Parents, a spouse, and siblings or children aged 16+ may also file. For an imprisoned or detained soldier — a \"sealed envelope\" channel under section 545(b): the complaint reaches the Commissioner unopened. The Commissioner does not handle disciplinary or criminal matters. Email: nakhal@mod.gov.il",
-        am: "በአገልግሎት ውስጥ ስላሉ በደሎች ቅሬታ። ወላጆች፣ የትዳር አጋር እና ከ16 ዓመት በላይ ወንድሞች/እህቶች ወይም ልጆችም ማቅረብ ይችላሉ። ለታሰረ ወታደር — በአንቀጽ 545(ב) መሠረት የ\"ታሸገ ፖስታ\" መንገድ: ቅሬታው ሳይከፈት ወደ ኮሚሽነሩ ይደርሳል። ኢሜይል: nakhal@mod.gov.il",
+        en: 'Complaints about service grievances, under Chapter XI of the Military Justice Law. Parents, a spouse, and siblings or children aged 16+ may also file. For an imprisoned or detained soldier — a "sealed envelope" channel under section 545(b): the complaint reaches the Commissioner unopened. The Commissioner does not handle disciplinary or criminal matters. Email: nakhal@mod.gov.il',
+        am: 'በአገልግሎት ውስጥ ስላሉ በደሎች ቅሬታ። ወላጆች፣ የትዳር አጋር እና ከ16 ዓመት በላይ ወንድሞች/እህቶች ወይም ልጆችም ማቅረብ ይችላሉ። ለታሰረ ወታደር — በአንቀጽ 545(ב) መሠረት የ"ታሸገ ፖስታ" መንገድ: ቅሬታው ሳይከፈት ወደ ኮሚሽነሩ ይደርሳል። ኢሜይል: nakhal@mod.gov.il',
       },
     },
     {
@@ -249,7 +249,7 @@ Section 545(b) of the Military Justice Law gives an **imprisoned or detained** s
       description: {
         he: 'סיוע חומרי לחיילים ממשפחות מעוטות יכולה ולחיילים בודדים — "קופת הידידות" (ריהוט ומוצרי חשמל) ותווי חג. הבקשה מוגשת דרך מש"קית ת"ש ביחידה, לא ישירות.',
         en: 'Material assistance for soldiers from low-income families and lone soldiers — the "Kupat HaYedidut" fund (furniture and appliances) and holiday vouchers. Requests are submitted through the unit\'s family-support NCO, not directly.',
-        am: "ከዝቅተኛ ገቢ ቤተሰቦች ለሆኑ ወታደሮች እና ለብቸኛ ወታደሮች ቁሳዊ እርዳታ — የቤት ዕቃና የኤሌክትሪክ ዕቃዎች እና የበዓል ቫውቸሮች። ጥያቄው በክፍሉ በኩል በמש\"קית ת\"ש ይቀርባል፣ በቀጥታ አይደለም።",
+        am: 'ከዝቅተኛ ገቢ ቤተሰቦች ለሆኑ ወታደሮች እና ለብቸኛ ወታደሮች ቁሳዊ እርዳታ — የቤት ዕቃና የኤሌክትሪክ ዕቃዎች እና የበዓል ቫውቸሮች። ጥያቄው በክፍሉ በኩል በמש"קית ת"ש ይቀርባል፣ በቀጥታ አይደለም።',
       },
     },
   ],
@@ -264,9 +264,9 @@ export const DETENTION_FAQS: SoldierFaq[] = [
       am: "የወታደራዊ ጠበቃ ስንት ያስከፍላል?",
     },
     answer: {
-      he: "כלום. חייל שנחקר על ידי מצ\"ח או משטרת ישראל ומבקש סנגור — יועמד לרשותו עורך דין מטעם הסנגוריה הצבאית ללא חיוב בעלות כספית כלשהי, והייצוג ממשיך גם בבית הדין אם יוגש כתב אישום.",
+      he: 'כלום. חייל שנחקר על ידי מצ"ח או משטרת ישראל ומבקש סנגור — יועמד לרשותו עורך דין מטעם הסנגוריה הצבאית ללא חיוב בעלות כספית כלשהי, והייצוג ממשיך גם בבית הדין אם יוגש כתב אישום.',
       en: "Nothing. A soldier questioned by the Military Police CID or the Israel Police who requests a defender will be assigned a lawyer from the Military Public Defender's Office at no financial cost whatsoever, and the representation continues in court if an indictment is filed.",
-      am: "ምንም። በמצ\"ח ወይም በእስራኤል ፖሊስ የሚመረመር ወታደር ጠበቃ ከጠየቀ ያለ ምንም ክፍያ ይመደብለታል፣ ክስ ከቀረበም ውክልናው በፍርድ ቤት ይቀጥላል።",
+      am: 'ምንም። በמצ"ח ወይም በእስራኤል ፖሊስ የሚመረመር ወታደር ጠበቃ ከጠየቀ ያለ ምንም ክፍያ ይመደብለታል፣ ክስ ከቀረበም ውክልናው በፍርድ ቤት ይቀጥላል።',
     },
   },
   {
@@ -300,7 +300,7 @@ export const DETENTION_FAQS: SoldierFaq[] = [
       am: "ወታደሩ ከአገልግሎት ቀርቷል — ራስን ማቅረብ ይሻላል ወይስ መጠበቅ?",
     },
     answer: {
-      he: 'להתייצב, ורצוי אחרי שיחה עם הסנגוריה. לפי עדכון מדיניות האכיפה מנובמבר 2023, חייל שטרם נגרע לעריקות ייקלט בכלא רק אם נעדר 30 יום או יותר; יתר החיילים נשפטים בדין משמעתי ביחידה. מדובר במדיניות שנקבעה לתקופת המלחמה — בדקו מה תקף היום.',
+      he: "להתייצב, ורצוי אחרי שיחה עם הסנגוריה. לפי עדכון מדיניות האכיפה מנובמבר 2023, חייל שטרם נגרע לעריקות ייקלט בכלא רק אם נעדר 30 יום או יותר; יתר החיילים נשפטים בדין משמעתי ביחידה. מדובר במדיניות שנקבעה לתקופת המלחמה — בדקו מה תקף היום.",
       en: "Present, preferably after speaking with the defender's office. Under the November 2023 enforcement-policy update, a soldier not yet classified as a deserter is taken into the prison only if absent for 30 days or more; other soldiers are judged in a disciplinary proceeding in their unit. This policy was set for the wartime period — check what applies today.",
       am: "ራስን ማቅረብ፣ በተለይም ከጠበቃው ጋር ከተነጋገሩ በኋላ። በኅዳር 2023 ማሻሻያ መሠረት ገና እንደ ሸሽቶ ያልተመዘገበ ወታደር 30 ቀናት ወይም ከዚያ በላይ ከቀረ ብቻ ወደ እስር ቤት ይገባል። ይህ የጦርነት ጊዜ ፖሊሲ ነው — ዛሬ ምን እንደሚሠራ ያረጋግጡ።",
     },
@@ -340,11 +340,11 @@ export const DETENTION_AM_SUMMARY: string[] = [
   "ምርመራው **ከመጀመሩ በፊት** ማማከር ይቻላል — እና ይሻላል። ጥያቄው ሚስጥራዊ ነው እና ጥፋተኛነትን አያመለክትም።",
   "ጠበቃው ለአዛዦቹ ተገዥ አይደለም — የልጅዎ ወገን ነው።",
   "ልጅዎ ከአገልግሎት ከቀረ: ራሱን ቶሎ ማቅረብ መዝገቡን ያሳንሳል። ግን አስቀድመው ጠበቃውን ያማክሩ።",
-  "כלא 4 እና כלא 6 ተዘግተዋል። ተቋሙ አሁን \"נווה צדק\" ይባላል፣ ከבית ליד አጠገብ።",
+  'כלא 4 እና כלא 6 ተዘግተዋል። ተቋሙ አሁን "נווה צדק" ይባላል፣ ከבית ליד አጠገብ።',
   "የጉብኝት ቀናትና ሰዓታት እርግጠኛ ኦፊሴላዊ ምንጭ ስለሌለን አልጻፍንም — ደውለው ይጠይቁ።",
   "የወታደሮች ቅሬታ ኮሚሽነር (03-6977374) የዲሲፕሊን ወይም የወንጀል ጉዳዮችን አያስተናግድም — ለእነዚያ ጠበቃው ነው።",
-  "የገንዘብ ችግር ከቤት ጀርባ ካለ: የת\"ש መዝገብ ይክፈቱ። ይህ በጣም የተለመደው ምክንያት ነው።",
-  "ልጅዎ በእስር ላይ ሆኖ ስለ አያያዝ ቅሬታ ካለው: በ\"ታሸገ ፖስታ\" መንገድ ወደ ኮሚሽነሩ መላክ ይችላል — ማንም ሳይከፍተው።",
+  'የገንዘብ ችግር ከቤት ጀርባ ካለ: የת"ש መዝገብ ይክፈቱ። ይህ በጣም የተለመደው ምክንያት ነው።',
+  'ልጅዎ በእስር ላይ ሆኖ ስለ አያያዝ ቅሬታ ካለው: በ"ታሸገ ፖስታ" መንገድ ወደ ኮሚሽነሩ መላክ ይችላል — ማንም ሳይከፍተው።',
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -554,7 +554,7 @@ export const HUB_CHROME: Record<Locale, HubChrome> = {
   he: {
     title: "חיילים ומשפחות — כליאה, תשלומי משפחה, חייל בודד",
     subtitle:
-      "מה עושים כשחייל נעצר או נכלא, איך פותחים תיק ת\"ש לפני שהמצב מידרדר, ומה מגיע לחייל בודד ולחייל ממשפחה מתקשה.",
+      'מה עושים כשחייל נעצר או נכלא, איך פותחים תיק ת"ש לפני שהמצב מידרדר, ומה מגיע לחייל בודד ולחייל ממשפחה מתקשה.',
     intro:
       'שיעור הגיוס בקהילה גבוה מהממוצע הארצי — ודווקא אחרי הגיוס נפתח פער. מבקר המדינה תיאר את נתוני הכליאה של חיילים יוצאי אתיופיה כ"נורת אזהרה חברתית", והרקע השכיח מתועד: קשיים כלכליים בבית שמובילים לנפקדות. שלושת הדפים כאן נועדו לתת מענה מעשי — לפני שזה קורה, ואחרי.',
     cardsHeading: "שלושה מדריכים",
@@ -573,7 +573,7 @@ export const HUB_CHROME: Record<Locale, HubChrome> = {
         key: "wizard",
         title: 'אשף ת"ש — תשלומי משפחה',
         description:
-          "בדיקה קצרה שאומרת אם אפשר להגיש בקשה לתשמ\"ש, ומה להביא למש\"קית ת\"ש.",
+          'בדיקה קצרה שאומרת אם אפשר להגיש בקשה לתשמ"ש, ומה להביא למש"קית ת"ש.',
         icon: "🧭",
       },
       {

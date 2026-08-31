@@ -7706,7 +7706,7 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
   {
     title: {
       he: 'תשלומי משפחה לחיילים (ת"ש / תשמ"ש) — סיוע כלכלי בשירות חובה',
-      en: "Family Payments for Soldiers (ת\"ש / תשמ\"ש) — Financial Support in Compulsory Service",
+      en: 'Family Payments for Soldiers (ת"ש / תשמ"ש) — Financial Support in Compulsory Service',
       am: 'የወታደሮች የቤተሰብ ክፍያዎች (ת"ש / תשמ"ש) — በግዴታ አገልግሎት የገንዘብ ድጋፍ',
     },
     slug: {
@@ -7936,7 +7936,7 @@ The wizard below therefore checks **whether the route to apply is open to you** 
             {
               value: "pre-enlist",
               label: {
-                he: 'מלש\"ב — לפני גיוס',
+                he: 'מלש"ב — לפני גיוס',
                 en: "Pre-recruit — before enlistment",
                 am: "ተመዝጋቢ — ከምዝገባ በፊት",
               },
@@ -7980,7 +7980,7 @@ The wizard below therefore checks **whether the route to apply is open to you** 
           id: "noParentalSupport",
           type: "boolean",
           label: {
-            he: "האם אין לכם תמיכה הורית בארץ — הורים בחו\"ל, ניתוק קשר, או יתמות?",
+            he: 'האם אין לכם תמיכה הורית בארץ — הורים בחו"ל, ניתוק קשר, או יתמות?',
             en: "Do you have no parental support in Israel — parents abroad, no contact, or orphanhood?",
             am: "በአገር ውስጥ የወላጅ ድጋፍ የለዎትም — ወላጆች በውጭ አገር፣ ግንኙነት መቋረጥ፣ ወይም ወላጅ አልባነት?",
           },
@@ -8002,7 +8002,7 @@ The wizard below therefore checks **whether the route to apply is open to you** 
           values: ["conscript", "pre-enlist"],
           reason: {
             he: 'תשמ"ש מיועד למלש"בים ולחיילים בשירות חובה בלבד (פ"מ 35.0210). לשירות קבע, מילואים ומשוחררים קיימים מסלולים אחרים — למשוחררים ראו הפיקדון האישי ומענק השחרור.',
-            en: "תשמ\"ש is for pre-recruits and compulsory-service soldiers only (Order 35.0210). Career service, reserves and discharged soldiers have other tracks — for the discharged, see the personal deposit and discharge grant.",
+            en: 'תשמ"ש is for pre-recruits and compulsory-service soldiers only (Order 35.0210). Career service, reserves and discharged soldiers have other tracks — for the discharged, see the personal deposit and discharge grant.',
             am: 'תשמ"ש ለተመዝጋቢዎችና ለግዴታ አገልግሎት ወታደሮች ብቻ ነው (ትዕዛዝ 35.0210)። ለቋሚ አገልግሎት፣ ለመጠባበቂያና ለተሰናበቱ ሌሎች መንገዶች አሉ።',
           },
         },
