@@ -128,18 +128,25 @@ describe("mourning checklist", () => {
     }
   });
 
-  it("internal rights links resolve to slugs that exist in the rights seed", () => {
+  it("internal links resolve to a rights slug or a known non-rights page", () => {
     const rightsSlugs = new Set(PRIORITY_RIGHTS.map((r) => r.slug.he));
+    // Non-rights internal targets the checklist is allowed to link to.
+    // Keep this list explicit so a typo still fails the build.
+    const allowedOtherPaths = new Set(["/heritage/kessim"]);
+
     for (const step of MOURNING_CHECKLIST) {
       if (!step.internalPath) continue;
       const slug = step.internalPath.match(/^\/rights\/([a-z0-9-]+)$/)?.[1];
+      if (slug) {
+        expect(
+          rightsSlugs.has(slug),
+          `${step.id}: /rights/${slug} does not exist in the rights seed`,
+        ).toBe(true);
+        continue;
+      }
       expect(
-        slug,
+        allowedOtherPaths.has(step.internalPath),
         `${step.id}: unexpected internalPath ${step.internalPath}`,
-      ).toBeTruthy();
-      expect(
-        rightsSlugs.has(slug ?? ""),
-        `${step.id}: /rights/${slug} does not exist in the rights seed`,
       ).toBe(true);
     }
   });

@@ -26,6 +26,7 @@ export function loader() {
     "/education",
     "/health",
     "/heritage/events",
+    "/heritage/marriage",
     "/news",
     "/glossary",
     "/orgs",
