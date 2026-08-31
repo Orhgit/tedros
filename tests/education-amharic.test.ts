@@ -246,12 +246,13 @@ describe("family phrases", () => {
     // Amharic inflects for the gender of the person addressed. Shipping only
     // one form is the mistake a grandmother notices first.
     const byId = new Map(allPhrases.map((p) => [p.id, p]));
-    for (const [f, m] of [
+    const pairs: Array<[string, string]> = [
       ["love-f", "love-m"],
       ["how-are-you-f", "how-are-you-m"],
       ["welcome-f", "welcome-m"],
       ["morning-f", "morning-m"],
-    ]) {
+    ];
+    for (const [f, m] of pairs) {
       expect(byId.get(f), `${f} missing`).toBeTruthy();
       expect(byId.get(m), `${m} missing`).toBeTruthy();
       expect(byId.get(f)!.am).not.toBe(byId.get(m)!.am);
