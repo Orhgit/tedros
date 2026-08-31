@@ -40,8 +40,8 @@
 
 import type { Locale } from "../i18n/config";
 
-/** First published — bump `dateModified` in the route on substantive edits. */
-export const MARRIAGE_PUBLISHED_AT = "2026-08-30";
+// NOTE: the publication date lives in the route, not here — `meta` is not
+// stripped from the client bundle, so it cannot reference this module.
 
 export interface MarriageGuideStep {
   id: string;
@@ -220,7 +220,7 @@ export const MARRIAGE_STEPS: MarriageGuideStep[] = [
       am: "የማጣራት ስብሰባውና የይሁዲነት ማረጋገጫ መቀበል",
     },
     detail: {
-      he: "הרב עשוי לבקש מסמכים נוספים או פגישה עם קרובי משפחה — כדאי לבוא עם האם או הסבתא. אישור היהדות מתקבל לרוב תוך כחודש. מקרים מורכבים מועברים ללשכת הרב הראשי ליהודי אתיופיה בירושלים. בבירור המתנהל בבית הדין הרבני האזורי פותחים תיק בדוא\"ל yahadut@rbc.gov.il או בטלפון *5889 שלוחה 3, ובסופו מתקיים דיון קצר בפני דיין.",
+      he: 'הרב עשוי לבקש מסמכים נוספים או פגישה עם קרובי משפחה — כדאי לבוא עם האם או הסבתא. אישור היהדות מתקבל לרוב תוך כחודש. מקרים מורכבים מועברים ללשכת הרב הראשי ליהודי אתיופיה בירושלים. בבירור המתנהל בבית הדין הרבני האזורי פותחים תיק בדוא"ל yahadut@rbc.gov.il או בטלפון *5889 שלוחה 3, ובסופו מתקיים דיון קצר בפני דיין.',
       en: "The rabbi may ask for further documents or a meeting with relatives — it helps to bring your mother or grandmother. The certificate usually arrives within about a month. Complex cases go to the Bureau of the Chief Rabbi of Ethiopian Jewry in Jerusalem. Where the verification runs through the regional rabbinical court, the file is opened at yahadut@rbc.gov.il or by phone at *5889 ext. 3, and concludes with a short hearing before a dayan.",
       am: "ረቢው ተጨማሪ ሰነዶች ወይም ከዘመዶች ጋር ስብሰባ ሊጠይቅ ይችላል — እናትዎን ወይም አያትዎን ይዘው መምጣት ይረዳል። ማረጋገጫው በአብዛኛው በአንድ ወር ገደማ ይደርሳል። ውስብስብ ጉዳዮች በኢየሩሳሌም ወደሚገኘው የኢትዮጵያ አይሁዶች ዋና ረቢ ጽሕፈት ቤት ይሄዳሉ። ማጣራቱ በክልል የረቢ ፍርድ ቤት ሲካሄድ መዝገቡ በ yahadut@rbc.gov.il ወይም በስልክ *5889 ቅጥያ 3 ይከፈታል፣ በዳያን ፊት በአጭር ችሎት ይጠናቀቃል።",
     },
@@ -408,7 +408,7 @@ export const MARRIAGE_RESOURCES: MarriageResource[] = [
     phone: "*5889",
     url: "https://www.gov.il/he/departments/rabbinical_courts",
     description: {
-      he: "פתיחת תיק בירור יהדות בבית הדין האזורי — בדוא\"ל yahadut@rbc.gov.il או בטלפון *5889 (שלוחה 3). ההליך אינו כרוך בתשלום.",
+      he: 'פתיחת תיק בירור יהדות בבית הדין האזורי — בדוא"ל yahadut@rbc.gov.il או בטלפון *5889 (שלוחה 3). ההליך אינו כרוך בתשלום.',
       en: "Opening a birur yahadut file at the regional court — by email at yahadut@rbc.gov.il or by phone at *5889 (extension 3). The procedure is free of charge.",
       am: "በክልል ፍርድ ቤት የይሁዲነት ማጣራት መዝገብ መክፈት — በኢሜይል yahadut@rbc.gov.il ወይም በስልክ *5889 (ቅጥያ 3)። ሂደቱ ክፍያ የለውም።",
     },
@@ -423,6 +423,28 @@ export const MARRIAGE_RESOURCES: MarriageResource[] = [
     },
   },
 ];
+
+// ── long-form page copy ────────────────────────────────────────────────────
+//
+// Kept out of `messages/*.json` on purpose — message files ship whole to the
+// client, and this prose only ever renders server-side (TED-115 budget).
+
+export const MARRIAGE_COPY: Record<string, Record<Locale, string>> = {
+  kessimCrosslinkBody: {
+    he: "המדריך לפי עיר מרכז את הרשימה הרשמית של הקייסים והרבנים של העדה האתיופית המכהנים במועצות הדתיות.",
+    en: "The city directory collects the official list of kessim and Ethiopian-community rabbis serving in the religious councils.",
+    am: "የከተማ ማውጫው በሃይማኖት ምክር ቤቶች የሚያገለግሉ ቄሶችንና የኢትዮጵያ ማኅበረሰብ ረቢዎችን ይፋዊ ዝርዝር ያሰባስባል።",
+  },
+  disclaimer: {
+    he: "המדריך מתאר את הנוהל כפי שהוא מפורסם במקורות הרשמיים ואינו מהווה ייעוץ משפטי או הלכתי. נהלים, אגרות ורשימות רבנים משתנים — אמתו מול הלשכה שבה אתם פותחים את התיק.",
+    en: "This guide describes the procedure as published in official sources and is not legal or halachic advice. Procedures, fees, and rabbi lists change — verify with the office where you open your file.",
+    am: "ይህ መመሪያ ሂደቱን በይፋዊ ምንጮች እንደታተመው ይገልጻል እንጂ የሕግ ወይም የሃላካ ምክር አይደለም። ሂደቶች፣ ክፍያዎችና የረቢዎች ዝርዝሮች ይለወጣሉ — መዝገብዎን በሚከፍቱበት ቢሮ ያረጋግጡ።",
+  },
+};
+
+export function marriageCopy(key: keyof typeof MARRIAGE_COPY, locale: Locale): string {
+  return MARRIAGE_COPY[key]![locale];
+}
 
 // ── sources (rendered on-page) ─────────────────────────────────────────────
 

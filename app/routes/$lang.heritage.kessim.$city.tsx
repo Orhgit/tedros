@@ -16,6 +16,7 @@ import {
   KESSIM_SOURCE,
   findKessimCity,
   kessimByCity,
+  kessimCopy,
   kessimDisplayName,
   kessimPositionLabel,
 } from "~/lib/heritage/kessim.server";
@@ -57,6 +58,9 @@ export async function loader({ params }: Route.LoaderArgs) {
   return {
     locale,
     citySlug: city.slug,
+    // Server-module copy — keeps this prose out of the client bundle.
+    phoneNote: kessimCopy("phoneNote", locale),
+    sourceCaveat: kessimCopy("sourceCaveat", locale),
     cityName: city.names[locale] ?? city.names.he,
     inRegistry: city.inRegistry,
     overview,
@@ -125,6 +129,8 @@ export default function KessimCityPage({ loaderData }: Route.ComponentProps) {
     overview,
     entries,
     otherCities,
+    phoneNote,
+    sourceCaveat,
     source,
   } = loaderData;
 
@@ -205,7 +211,7 @@ export default function KessimCityPage({ loaderData }: Route.ComponentProps) {
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-xs text-ink-600">{t(locale, "kessim_phone_note")}</p>
+          <p className="mt-3 text-xs text-ink-600">{phoneNote}</p>
         </section>
 
         {/* Cross-links — marriage guide, mourning guide, the right. */}
@@ -293,7 +299,7 @@ export default function KessimCityPage({ loaderData }: Route.ComponentProps) {
               </a>
             </li>
           </ul>
-          <p className="mt-3 text-xs text-ink-600">{t(locale, "kessim_source_caveat")}</p>
+          <p className="mt-3 text-xs text-ink-600">{sourceCaveat}</p>
         </section>
 
         <div className="mt-10 border-t border-earth-200 pt-6">

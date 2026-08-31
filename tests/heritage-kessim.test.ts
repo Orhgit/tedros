@@ -17,6 +17,7 @@ beforeAll(() => {
 
 import {
   KESSIM_CITIES,
+  KESSIM_COPY,
   KESSIM_DIRECTORY,
   KESSIM_SOURCE,
   findKessimCity,
@@ -25,6 +26,7 @@ import {
 } from "../app/lib/heritage/kessim.server";
 import {
   MARRIAGE_BODY,
+  MARRIAGE_COPY,
   MARRIAGE_FAQ,
   MARRIAGE_RESOURCES,
   MARRIAGE_SOURCES,
@@ -32,7 +34,11 @@ import {
   MARRIAGE_SUBTITLE,
   MARRIAGE_TITLE,
 } from "../app/lib/heritage/marriage.server";
-import { kessimCityPath, kessimLandingPath, marriagePath } from "../app/lib/heritage/links";
+import {
+  kessimCityPath,
+  kessimLandingPath,
+  marriagePath,
+} from "../app/lib/heritage/links";
 import {
   faqPageJsonLd,
   heritageArticleJsonLd,
@@ -135,10 +141,9 @@ describe("marriage guide seed", () => {
     for (const locale of LOCALES) {
       expect(MARRIAGE_TITLE[locale].length).toBeGreaterThan(10);
       expect(MARRIAGE_SUBTITLE[locale].length).toBeGreaterThan(30);
-      expect(
-        MARRIAGE_BODY[locale].length,
-        `body[${locale}] too short`,
-      ).toBeGreaterThan(1500);
+      expect(MARRIAGE_BODY[locale].length, `body[${locale}] too short`).toBeGreaterThan(
+        1500,
+      );
     }
   });
 
@@ -184,7 +189,9 @@ describe("marriage guide seed", () => {
         expect(item.question[locale].length, `${item.id} q [${locale}]`).toBeGreaterThan(
           8,
         );
-        expect(item.answer[locale].length, `${item.id} a [${locale}]`).toBeGreaterThan(60);
+        expect(item.answer[locale].length, `${item.id} a [${locale}]`).toBeGreaterThan(
+          60,
+        );
       }
     }
   });
@@ -235,14 +242,12 @@ describe("i18n coverage for the new pages", () => {
 
   const KEYS = [
     "kessim_landing_title",
-    "kessim_landing_subtitle",
     "kessim_totals",
     "kessim_cities_heading",
     "kessim_city_counts",
     "kessim_city_title",
     "kessim_city_description",
     "kessim_city_list_heading",
-    "kessim_phone_note",
     "kessim_related_heading",
     "kessim_related_marriage",
     "kessim_related_mourning",
@@ -251,17 +256,13 @@ describe("i18n coverage for the new pages", () => {
     "kessim_source_note",
     "kessim_source_gov_label",
     "kessim_source_data_label",
-    "kessim_source_caveat",
     "kessim_marriage_crosslink_heading",
-    "kessim_marriage_crosslink_body",
     "kessim_marriage_crosslink_cta",
     "marriage_steps_heading",
     "marriage_body_heading",
     "marriage_faq_heading",
     "marriage_kessim_crosslink_heading",
-    "marriage_kessim_crosslink_body",
     "marriage_kessim_crosslink_cta",
-    "marriage_disclaimer",
     "heritage_lifecycle_heading",
   ];
 
@@ -269,6 +270,39 @@ describe("i18n coverage for the new pages", () => {
     for (const key of KEYS) {
       for (const [locale, dict] of dictionaries) {
         expect(dict[key], `${key} missing from messages/${locale}.json`).toBeTruthy();
+      }
+    }
+  });
+
+  it("localizes the server-module copy that stays out of the client bundle", () => {
+    // These paragraphs live in the server modules rather than messages/*.json
+    // so they never ship to the client (TED-115 size budget). They still need
+    // full trilingual coverage.
+    for (const [key, translations] of Object.entries({
+      ...KESSIM_COPY,
+      ...MARRIAGE_COPY,
+    })) {
+      for (const locale of LOCALES) {
+        expect(translations[locale]?.length, `${key} [${locale}]`).toBeGreaterThan(40);
+      }
+    }
+  });
+
+  it("keeps that copy out of messages/*.json", () => {
+    const moved = [
+      "kessim_landing_subtitle",
+      "kessim_phone_note",
+      "kessim_source_caveat",
+      "kessim_marriage_crosslink_body",
+      "marriage_kessim_crosslink_body",
+      "marriage_disclaimer",
+    ];
+    for (const key of moved) {
+      for (const [locale, dict] of dictionaries) {
+        expect(
+          dict[key],
+          `${key} moved to a server module but is still in messages/${locale}.json`,
+        ).toBeUndefined();
       }
     }
   });
@@ -322,12 +356,13 @@ describe("kessim city loader", () => {
   });
 
   it("404s for a city that is not in the directory", async () => {
-    await expect(
-      kessimCityLoader(fakeArgs({ lang: "he", city: "eilat" })),
-    ).rejects.toMatchObject({ status: 404 });
-    await expect(
-      kessimCityLoader(fakeArgs({ lang: "he", city: "no-such-city" })),
-    ).rejects.toMatchObject({ status: 404 });
+    // A registry city with no ministry entries (Eilat) must 404 too — the
+    // directory only covers cities that appear in the official list.
+    for (const city of ["eilat", "no-such-city"]) {
+      await expect(
+        kessimCityLoader(fakeArgs({ lang: "he", city })),
+      ).rejects.toMatchObject({ init: { status: 404 } });
+    }
   });
 });
 
@@ -364,8 +399,8 @@ describe("JSON-LD", () => {
     expect(jsonLd["@type"]).toBe("ItemList");
     expect(jsonLd.numberOfItems).toBe(31);
     const items = jsonLd.itemListElement as Array<Record<string, unknown>>;
-    expect(items[0].position).toBe(1);
-    expect(items[0].url).toBe("https://tedros.co.il/he/heritage/kessim/afula");
+    expect(items[0]!.position).toBe(1);
+    expect(items[0]!.url).toBe("https://tedros.co.il/he/heritage/kessim/afula");
   });
 
   it("emits an Article for the marriage guide", () => {
@@ -389,10 +424,10 @@ describe("JSON-LD", () => {
     expect(jsonLd["@type"]).toBe("FAQPage");
     const questions = jsonLd.mainEntity as Array<Record<string, unknown>>;
     expect(questions).toHaveLength(MARRIAGE_FAQ.length);
-    expect(questions[0]["@type"]).toBe("Question");
-    expect(
-      (questions[0].acceptedAnswer as Record<string, unknown>).text,
-    ).toBe(MARRIAGE_FAQ[0].answer.he);
+    expect(questions[0]!["@type"]).toBe("Question");
+    expect((questions[0]!.acceptedAnswer as Record<string, unknown>).text).toBe(
+      MARRIAGE_FAQ[0]!.answer.he,
+    );
   });
 });
 
@@ -419,9 +454,7 @@ describe("sitemaps", () => {
 
 describe("cross-links", () => {
   it("links the kessim right from the marriage guide and the directory", () => {
-    const right = PRIORITY_RIGHTS.find(
-      (r) => r.slug.he === "kessim-religious-support",
-    );
+    const right = PRIORITY_RIGHTS.find((r) => r.slug.he === "kessim-religious-support");
     expect(right, "the kessim right must exist in the seed").toBeTruthy();
   });
 

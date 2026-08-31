@@ -13,6 +13,7 @@ import {
   KESSIM_DIRECTORY,
   KESSIM_SOURCE,
   kessimByCity,
+  kessimCopy,
 } from "~/lib/heritage/kessim.server";
 import { kessimCityPath, kessimLandingPath, marriagePath } from "~/lib/heritage/links";
 import { breadcrumbJsonLd, itemListJsonLd } from "~/lib/heritage/schema";
@@ -40,6 +41,11 @@ export async function loader({ params }: Route.LoaderArgs) {
   return {
     locale,
     cities,
+    // Long-form copy comes from the server module, not messages/*.json —
+    // it would otherwise ship in the client message bundle (TED-115).
+    subtitle: kessimCopy("landingSubtitle", locale),
+    crosslinkBody: kessimCopy("marriageCrosslinkBody", locale),
+    sourceCaveat: kessimCopy("sourceCaveat", locale),
     totalEntries: KESSIM_DIRECTORY.length,
     totalKessim: KESSIM_DIRECTORY.filter((e) => e.position === "kes").length,
     totalRabbis: KESSIM_DIRECTORY.filter((e) => e.position !== "kes").length,
@@ -55,9 +61,9 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, cities, publicUrl } = data;
+  const { locale, cities, subtitle, publicUrl } = data;
   const title = t(locale, "kessim_landing_title");
-  const description = t(locale, "kessim_landing_subtitle");
+  const description = subtitle;
 
   return [
     { title: `${title} — Tedros` },
@@ -94,7 +100,17 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function KessimLanding({ loaderData }: Route.ComponentProps) {
-  const { locale, cities, totalEntries, totalKessim, totalRabbis, source } = loaderData;
+  const {
+    locale,
+    cities,
+    subtitle,
+    crosslinkBody,
+    sourceCaveat,
+    totalEntries,
+    totalKessim,
+    totalRabbis,
+    source,
+  } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -110,9 +126,7 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
           <h1 className="mt-3 font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
             {t(locale, "kessim_landing_title")}
           </h1>
-          <p className="mt-3 text-lg leading-relaxed text-ink-700">
-            {t(locale, "kessim_landing_subtitle")}
-          </p>
+          <p className="mt-3 text-lg leading-relaxed text-ink-700">{subtitle}</p>
           <p className="mt-4 text-sm text-ink-600">
             {t(locale, "kessim_totals", {
               total: totalEntries,
@@ -129,9 +143,7 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
           <h2 className="font-display text-base font-semibold text-earth-900">
             {t(locale, "kessim_marriage_crosslink_heading")}
           </h2>
-          <p className="mt-1 text-sm leading-relaxed text-ink-700">
-            {t(locale, "kessim_marriage_crosslink_body")}
-          </p>
+          <p className="mt-1 text-sm leading-relaxed text-ink-700">{crosslinkBody}</p>
           <Link
             to={`/${locale}${marriagePath()}`}
             className="mt-3 inline-block text-sm font-medium text-earth-700 underline hover:text-earth-900"
@@ -202,7 +214,7 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
               </a>
             </li>
           </ul>
-          <p className="mt-3 text-xs text-ink-600">{t(locale, "kessim_source_caveat")}</p>
+          <p className="mt-3 text-xs text-ink-600">{sourceCaveat}</p>
         </section>
       </main>
       <SiteFooter locale={locale} />

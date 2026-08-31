@@ -11,12 +11,12 @@ import { SiteHeader } from "~/components/sections/site-header";
 import {
   MARRIAGE_BODY,
   MARRIAGE_FAQ,
-  MARRIAGE_PUBLISHED_AT,
   MARRIAGE_RESOURCES,
   MARRIAGE_SOURCES,
   MARRIAGE_STEPS,
   MARRIAGE_SUBTITLE,
   MARRIAGE_TITLE,
+  marriageCopy,
 } from "~/lib/heritage/marriage.server";
 import { kessimLandingPath, marriagePath } from "~/lib/heritage/links";
 import {
@@ -28,6 +28,14 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+
+/**
+ * First published — bump `dateModified` in `meta` on substantive edits.
+ * Declared here rather than imported from the server module: `meta` is not
+ * stripped from the client bundle, so anything it references must be
+ * client-safe.
+ */
+const PUBLISHED_AT = "2026-08-30";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -59,6 +67,9 @@ export async function loader({ params }: Route.LoaderArgs) {
       description: r.description[locale],
     })),
     sources: MARRIAGE_SOURCES.map((s) => ({ name: s.name[locale], url: s.url })),
+    // Server-module copy — never reaches the client message bundle.
+    kessimCrosslinkBody: marriageCopy("kessimCrosslinkBody", locale),
+    disclaimer: marriageCopy("disclaimer", locale),
     publicUrl: PUBLIC_URL,
   };
 }
@@ -85,7 +96,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
           path: marriagePath(),
           headline: title,
           description: subtitle,
-          datePublished: MARRIAGE_PUBLISHED_AT,
+          datePublished: PUBLISHED_AT,
         },
       ),
     },
@@ -106,7 +117,18 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function MarriageGuidePage({ loaderData }: Route.ComponentProps) {
-  const { locale, title, subtitle, body, steps, faq, resources, sources } = loaderData;
+  const {
+    locale,
+    title,
+    subtitle,
+    body,
+    steps,
+    faq,
+    resources,
+    sources,
+    kessimCrosslinkBody,
+    disclaimer,
+  } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -225,7 +247,7 @@ export default function MarriageGuidePage({ loaderData }: Route.ComponentProps) 
             {t(locale, "marriage_kessim_crosslink_heading")}
           </h2>
           <p className="mt-1 text-sm leading-relaxed text-ink-700">
-            {t(locale, "marriage_kessim_crosslink_body")}
+            {kessimCrosslinkBody}
           </p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
@@ -321,7 +343,7 @@ export default function MarriageGuidePage({ loaderData }: Route.ComponentProps) 
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-xs text-ink-600">{t(locale, "marriage_disclaimer")}</p>
+          <p className="mt-3 text-xs text-ink-600">{disclaimer}</p>
         </section>
       </main>
       <SiteFooter locale={locale} />
