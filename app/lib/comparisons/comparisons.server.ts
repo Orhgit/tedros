@@ -764,7 +764,7 @@ It's not really a comparison — it's a clarification of roles. Community member
       am: "የክሊታ ቅርጫት በተቃራኒ የዐሊያህ ስጦታ",
     },
     shortDescription: {
-      he: "סל-קליטה = תשלום בנתב\"ג + השלמה + 6 תשלומים חודשיים. מענק משרד העלייה = תשלום-חד-פעמי + סיוע במצבים חריגים.",
+      he: 'סל-קליטה = תשלום בנתב"ג + השלמה + 6 תשלומים חודשיים. מענק משרד העלייה = תשלום-חד-פעמי + סיוע במצבים חריגים.',
       en: "Klita basket = airport payment + top-up + 6 monthly payments. Aliyah grant = one-time payment + help in special cases.",
       am: "የክሊታ ቅርጫት = የአየር ማረፊያ ክፍያ + ማሟያ + 6 ወርሃዊ ክፍያዎች።",
     },
@@ -787,7 +787,7 @@ It's not really a comparison — it's a clarification of roles. Community member
         // TED-148: the ministry's own table is airport card + bank top-up +
         // 6 monthly payments, not 12 monthly payments.
         a: {
-          he: "נתב\"ג + השלמה + 6 תשלומים חודשיים",
+          he: 'נתב"ג + השלמה + 6 תשלומים חודשיים',
           en: "Airport + top-up + 6 monthly payments",
           am: "አየር ማረፊያ + ማሟያ + 6 ወርሃዊ ክፍያዎች",
         },
@@ -808,7 +808,7 @@ It's not really a comparison — it's a clarification of roles. Community member
       {
         label: { he: "אוכלוסיית-יעד", en: "Eligible", am: "ብቁ" },
         a: {
-          he: "כל עולה זכאי — התשלום הראשון כבר בנתב\"ג",
+          he: 'כל עולה זכאי — התשלום הראשון כבר בנתב"ג',
           en: "Every eligible oleh — the first payment lands at the airport",
           am: "ብቁ የሆነ እያንዳንዱ ኦሌ — የመጀመሪያው ክፍያ በአየር ማረፊያ",
         },

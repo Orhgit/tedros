@@ -174,8 +174,7 @@ describe("klita-basket-ethiopia — the 2026 table, and an honest framing", () =
 
 describe("lamerchak — sourced from the participant-facing gov.il guide", () => {
   const seed = bySlug("lamerchak");
-  const GOV =
-    "https://www.gov.il/he/Departments/Guides/special-populations-employment";
+  const GOV = "https://www.gov.il/he/Departments/Guides/special-populations-employment";
 
   it("points at the guide page rather than the operator briefing", () => {
     expect(seed).toBeDefined();
