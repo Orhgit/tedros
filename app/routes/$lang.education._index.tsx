@@ -8,10 +8,45 @@ import type { Route } from "./+types/$lang.education._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { listScholarships } from "~/lib/db/queries/scholarships.server";
+import {
+  eligibilityCommitteePath,
+  parentRightsPath,
+  registrationDiscriminationPath,
+} from "~/lib/education/links";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+
+/**
+ * The parents-vs-the-school-system trio (TED-145). Message keys, not prose —
+ * these are short card labels, which is what `messages/*` is for (ADR-020 §3).
+ */
+const PARENT_CARDS: Array<{
+  href: string;
+  glyph: string;
+  titleKey: string;
+  subtitleKey: string;
+}> = [
+  {
+    href: eligibilityCommitteePath(),
+    glyph: "🧩",
+    titleKey: "education_committee_title",
+    subtitleKey: "education_committee_subtitle",
+  },
+  {
+    href: registrationDiscriminationPath(),
+    glyph: "⚖️",
+    titleKey: "education_discrimination_title",
+    subtitleKey: "education_discrimination_subtitle",
+  },
+  {
+    href: parentRightsPath(),
+    glyph: "👪",
+    titleKey: "education_parent_rights_title",
+    subtitleKey: "education_parent_rights_subtitle",
+  },
+];
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -127,6 +162,29 @@ export default function EducationPillar({ loaderData }: Route.ComponentProps) {
               </div>
             </div>
           </Link>
+
+          {/* Parents vs. the school system (TED-145) */}
+          {PARENT_CARDS.map((card) => (
+            <Link
+              key={card.href}
+              to={`/${locale}${card.href}`}
+              className="group block rounded-lg border border-earth-200 bg-card p-6 shadow-xs transition-all hover:-translate-y-0.5 hover:border-earth-400 hover:shadow-md"
+            >
+              <div className="flex items-start gap-3">
+                <span aria-hidden="true" className="text-3xl">
+                  {card.glyph}
+                </span>
+                <div className="flex-1">
+                  <h3 className="font-display text-lg font-semibold text-earth-900 group-hover:text-earth-700">
+                    {t(locale, card.titleKey)}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-600">
+                    {t(locale, card.subtitleKey)}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))}
         </section>
       </main>
       <SiteFooter locale={locale} />
