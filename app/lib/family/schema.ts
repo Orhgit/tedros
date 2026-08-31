@@ -47,6 +47,29 @@ export function breadcrumbJsonLd(ctx: SchemaContext, items: BreadcrumbItem[]): J
   };
 }
 
+// ── FAQPage (long-form guide pages, e.g. the soldiers hub — TED-142) ──────
+
+export interface FaqEntry {
+  question: string;
+  answer: string;
+}
+
+export function faqJsonLd(ctx: SchemaContext, entries: FaqEntry[]): JsonLd {
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "FAQPage",
+    inLanguage: ctx.locale,
+    mainEntity: entries.map((e) => ({
+      "@type": "Question",
+      name: e.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: e.answer,
+      },
+    })),
+  };
+}
+
 // ── WebPage (pillar + sub-page landing) ───────────────────────────────────
 
 export interface WebPageJsonLdInput {

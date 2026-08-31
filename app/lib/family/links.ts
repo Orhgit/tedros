@@ -20,3 +20,22 @@ export function womenEmpowermentPath(): string {
 export function mourningPath(): string {
   return "/family/mourning";
 }
+
+// ── Soldiers & families hub (TED-142) ─────────────────────────────────────
+
+export function soldiersPath(): string {
+  return "/family/soldiers";
+}
+
+export function soldierDetentionPath(): string {
+  return "/family/soldiers/detention";
+}
+
+export function loneSoldierPath(): string {
+  return "/family/soldiers/lone-soldier";
+}
+
+/** The ת"ש eligibility wizard lives on the Rights Hub (wizard-engine). */
+export function familySupportWizardPath(): string {
+  return "/rights/idf-family-support";
+}
