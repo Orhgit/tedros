@@ -130,7 +130,22 @@ Quick eligibility check — [mortgage calculator](/en/calculator/mortgage-ethiop
     },
   },
 
-  // 2 — Klita basket
+  // 2 — Absorption basket (RIN-336; corrected TED-148).
+  //
+  // TED-148 audit: the original body listed basket components that do not
+  // appear on the Ministry of Aliyah and Integration's own page — a
+  // "one-time first-home grant", "transportation cost coverage in the first
+  // year" and "extended health coverage for six months" — and described the
+  // payment as running for a year. Per
+  // https://www.gov.il/he/Departments/General/absorption_basket (fetched
+  // 2026-08-31) the basket is subsistence money for the six-month ulpan
+  // period, paid as an airport prepaid card, a bank top-up and 6 monthly
+  // payments. Unverifiable components removed; structure, the 24-month
+  // prior-residence rule, the one-year claim window and the
+  // income-independence of eligibility taken from that page. The 2026
+  // amounts live on the sibling entry `klita-basket-ethiopia` rather than
+  // being duplicated here. Hotline corrected from "*2994" (not the
+  // Ministry's number) to *2994 / 03-9733333.
   {
     title: {
       he: "סל קליטה לעולים חדשים",
@@ -138,76 +153,111 @@ Quick eligibility check — [mortgage calculator](/en/calculator/mortgage-ethiop
       am: "የመመለሻ ቅርጫት — ለአዲስ ስደተኞች",
     },
     slug: { he: "klita-basket", en: "klita-basket", am: "klita-basket" },
-    govUrl: "https://www.gov.il/he/departments/integration_program/govil-landing-page",
+    govUrl: "https://www.gov.il/he/Departments/General/absorption_basket",
     eligibilitySummary: {
-      he: "תשלום מזומן חודשי לעולים חדשים בשנה הראשונה לאחר העלייה. סכום משתנה לפי מצב משפחתי וגיל.",
-      en: "Monthly cash payment to new immigrants during the first year post-aliyah. Amount varies by family status and age.",
-      am: "ለአዲስ ስደተኞች በመጀመሪያ ዓመት ከደረሰ በኋላ ወርሃዊ የጥሬ ገንዘብ ክፍያ። መጠኑ በቤተሰብ ሁኔታ እና በዕድሜ ይለያያል።",
+      he: 'סיוע כספי של משרד העלייה והקליטה לתקופת ההתארגנות הראשונה — תשלום ראשון בנתב"ג, השלמה לחשבון הבנק ועוד 6 תשלומים חודשיים. הסכום נקבע לפי מצב משפחתי, גיל ומספר ילדים.',
+      en: "Financial aid from the Ministry of Aliyah and Integration for an oleh's first period in Israel — a first payment at the airport, a bank top-up and 6 further monthly payments. The amount is set by family status, age and number of children.",
+      am: "በእስራኤል ለመጀመሪያው ጊዜ ከዓሊያና መቀበያ ሚኒስቴር የሚሰጥ የገንዘብ ድጋፍ — በአየር ማረፊያ የመጀመሪያ ክፍያ፣ የባንክ ማሟያ እና ተጨማሪ 6 ወርሃዊ ክፍያዎች። መጠኑ በቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት ይወሰናል።",
     },
     tags: ["new_immigrant", "grants", "monthly_payment"],
     bodies: {
       he: `## למי מיועד?
 
-עולים חדשים שנרשמו במשרד הקליטה תוך 12 חודשים מהעלייה.
+- הנכנסים לראשונה לישראל באשרת "עולה", בעלי זכאות מלאה כעולים
+- מי ששהו בישראל **לא יותר מ-24 חודשים** רצופים או מצטברים בשלוש השנים שקדמו לקבלת מעמד עולה
+- וכן מי שנקבע לפי נוהלי המשרד כי דינו כדין עולה
+
+הזכאות **אינה תלויה בגובה ההכנסה**.
 
 ## מה כולל הסל?
 
-- תשלום חודשי קבוע (לפי גודל משפחה)
-- מענק חד-פעמי לבית ראשון
-- כיסוי הוצאות הסעות בשנה הראשונה
-- שובר אולפן (לימוד עברית)
-- כיסוי בריאות מורחב לחצי שנה
+סל הקליטה הוא **דמי מחיה** לתקופת ההתארגנות הראשונה — הסיוע ניתן לתקופת הלימודים באולפן, במשך שישה חודשים. הוא משולם כך:
+
+1. **תשלום ראשון** — למגיעים באשרת עלייה מחו"ל, ב[כרטיס נטען](https://www.gov.il/he/pages/sal-klita-card) בנמל התעופה. למי שמשנה מעמד בארץ — בהפקדה בנקאית.
+2. **השלמה** לחשבון הבנק.
+3. **6 תשלומים חודשיים** נוספים.
+
+בתום ששת החודשים אפשר לבדוק זכאות להבטחת הכנסה בביטוח לאומי כהמשך סיוע לצרכי קיום.
+
+הסכומים המדויקים לפי מצב משפחתי, גיל ומספר ילדים מתפרסמים בלוחות הרשמיים — ראו [סל קליטה לעולים מאתיופיה — הסכומים והתהליך](/he/rights/klita-basket-ethiopia) לפירוט לוח 2026, או ישירות ב[אתר המשרד](https://www.gov.il/he/Departments/General/absorption_basket).
+
+## חלון הזמן
+
+את הסל אפשר לקבל **בתוך שנה** מיום קבלת מעמד עולה. **יציאה לחו"ל עוצרת את התשלומים** — חידוש אפשרי רק למי ששב בתוך שנת העלייה הראשונה, ויש לפנות ללשכת המשרד כדי לוודא את חידושם.
 
 ## איך מגישים?
 
-1. הרשמה במחלקת קליטה במשרד הקליטה — תוך 30 ימים מהגעה
-2. הצגת ת"ז עולה + אישור עלייה
-3. פתיחת חשבון בנק לתשלומים החודשיים
-4. בחירת אולפן ותחילת לימודים (חובה לצורך תשלום מלא)
+1. פותחים **חשבון בנק משותף לשני בני הזוג** באחד הבנקים המסחריים — נדרשת נוכחות של שניהם. מומלץ לעשות זאת בימים הראשונים בארץ.
+2. מוסרים את פרטי החשבון בלשכת משרד העלייה והקליטה באזור מגוריכם.
+3. לא משנים את מספר החשבון בשנים הראשונות לעלייה; אם בכל זאת — מדווחים למשרד מיד.
 
-📞 **מוקד משרד הקליטה**: 5454* (חיוג בעברית/אנגלית/אמהרית)
+📞 **מוקד משרד העלייה והקליטה**: *2994 או 03-9733333 — א׳–ה׳, 8:30–16:00. השירות ניתן גם **באמהרית**.
 `,
       en: `## Who is eligible?
 
-New immigrants who registered with the Ministry of Aliyah within 12 months of arrival.
+- Those entering Israel for the first time on an "oleh" visa, with full oleh entitlement
+- Those who stayed in Israel **no more than 24 months**, consecutive or cumulative, in the three years before receiving oleh status
+- Plus anyone the Ministry's procedures treat as an oleh
+
+Eligibility **does not depend on income**.
 
 ## What does the basket include?
 
-- Fixed monthly payment (scaled by family size)
-- One-time first-home grant
-- Transportation cost coverage in the first year
-- Ulpan (Hebrew study) voucher
-- Extended health coverage for six months
+The absorption basket is **subsistence money** for the first period in Israel — aid for the six-month ulpan study period. It is paid as:
+
+1. A **first payment** — for those arriving from abroad on an aliyah visa, on a [prepaid card](https://www.gov.il/he/pages/sal-klita-card) at the airport. For those changing status in Israel — by bank deposit.
+2. A **top-up** to the bank account.
+3. **6 further monthly payments.**
+
+After the six months you can check eligibility for income support (הבטחת הכנסה) at the National Insurance Institute as continued subsistence aid.
+
+Exact amounts by family status, age and number of children are published in the official tables — see [absorption basket for Ethiopian olim — amounts and process](/en/rights/klita-basket-ethiopia) for the 2026 table, or the [Ministry's page](https://www.gov.il/he/Departments/General/absorption_basket) directly.
+
+## The time window
+
+The basket must be claimed **within one year** of receiving oleh status. **Leaving the country stops the payments** — renewal is possible only for those returning within the first aliyah year, and you must contact a Ministry bureau to confirm it.
 
 ## How to apply
 
-1. Register at the Ministry of Aliyah absorption desk — within 30 days of arrival
-2. Present immigrant ID + aliyah confirmation
-3. Open a bank account for the monthly payments
-4. Choose an ulpan and start classes (required for full payment)
+1. Open a **joint bank account for both spouses** at a commercial bank — both must be present. Do this in your first days in the country.
+2. Give the account details to the Ministry of Aliyah and Integration bureau in your area.
+3. Do not change the account number in the first years after aliyah; if you must, report it to the Ministry immediately.
 
-📞 **Ministry of Aliyah hotline**: 5454* (Hebrew/English/Amharic)
+📞 **Ministry of Aliyah and Integration hotline**: *2994 or 03-9733333 — Sun–Thu, 8:30–16:00. Service is also available **in Amharic**.
 `,
-      am: `## ለማን ይሆናል?
+      am: `## ማን ብቁ ነው?
 
-ከደረሱ ከ12 ወራት ውስጥ በሕክምና መሰብሰብ ሚኒስቴር የተመዘገቡ አዲስ ስደተኞች።
+- በ"ኦሌ" ቪዛ ለመጀመሪያ ጊዜ ወደ እስራኤል የሚገቡ፣ ሙሉ የኦሌ ብቁነት ያላቸው
+- የኦሌ ደረጃ ከማግኘታቸው በፊት በነበሩት ሦስት ዓመታት በእስራኤል **ከ24 ወራት ያልበለጠ** የቆዩ
+- እንዲሁም በሚኒስቴሩ ሥርዓት እንደ ኦሌ የሚቆጠር ማንኛውም ሰው
+
+ብቁነቱ **በገቢ መጠን ላይ አይመሠረትም**።
 
 ## ቅርጫቱ ምን ይዟል?
 
-- ቋሚ ወርሃዊ ክፍያ (በቤተሰብ መጠን ይለካል)
-- አንድ ጊዜ የመጀመሪያ ቤት ስጦታ
-- በመጀመሪያ ዓመት የትራንስፖርት ወጪ ሽፋን
-- የኡልፓን (የዕብራይስጥ ጥናት) ኩፖን
-- ለስድስት ወራት የተራዘመ የጤና ሽፋን
+የመቀበያ ቅርጫት በእስራኤል ለመጀመሪያው ጊዜ የሚሰጥ **የመተዳደሪያ ገንዘብ** ነው — ለስድስት ወር የኡልፓን ትምህርት ጊዜ። እንዲህ ይከፈላል፦
 
-## እንዴት ማመልከት ይቻላል?
+1. **የመጀመሪያ ክፍያ** — ከውጭ በዓሊያ ቪዛ ለሚደርሱ፣ በአየር ማረፊያ በቅድመ-ክፍያ ካርድ። በእስራኤል ውስጥ ደረጃቸውን ለሚቀይሩ — በባንክ ተቀማጭ።
+2. ወደ ባንክ ሂሳብ **ማሟያ**።
+3. ተጨማሪ **6 ወርሃዊ ክፍያዎች**።
 
-1. ከደረሱ በ30 ቀን ውስጥ በመሰብሰብ ሚኒስቴር ቢሮ ይመዝገቡ
-2. የስደተኛ መታወቂያ + የአሊያ ማረጋገጫ ያቅርቡ
-3. ለወርሃዊ ክፍያዎች ባንክ አካውንት ይክፈቱ
-4. ኡልፓን ይምረጡ እና ትምህርት ይጀምሩ (ለሙሉ ክፍያ የግድ ያስፈልጋል)
+ከስድስቱ ወራት በኋላ በብሔራዊ መድን ተቋም የገቢ ድጋፍ ብቁነትዎን ማረጋገጥ ይችላሉ።
 
-📞 **የመሰብሰብ ሚኒስቴር መስመር**: *5454 (ዕብራይስጥ / እንግሊዝኛ / አማርኛ)
+በቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት የተወሰኑ ትክክለኛ መጠኖች በኦፊሴላዊ ሰንጠረዦች ይታተማሉ — የ2026 ሰንጠረዥ [ለኢትዮጵያ ኦሊሞች የመቀበያ ቅርጫት](/am/rights/klita-basket-ethiopia) ላይ ይመልከቱ።
+
+## የጊዜ መስኮት
+
+ቅርጫቱ የኦሌ ደረጃ ካገኙበት ቀን ጀምሮ **በአንድ ዓመት ውስጥ** መጠየቅ አለበት። **ወደ ውጭ ሀገር መሄድ ክፍያዎቹን ያቆማል** — እንደገና መጀመር የሚቻለው በመጀመሪያው የዓሊያ ዓመት ውስጥ ለሚመለሱ ብቻ ነው።
+
+## እንዴት ማመልከት
+
+1. በንግድ ባንክ **ለሁለቱም ባለትዳሮች የጋራ የባንክ ሂሳብ** ይክፈቱ — ሁለቱም መገኘት አለባቸው።
+2. የሂሳብ ዝርዝሮችን በአካባቢዎ ላለው የሚኒስቴሩ ቢሮ ይስጡ።
+3. በመጀመሪያዎቹ ዓመታት የሂሳብ ቁጥሩን አይቀይሩ፤ ከቀየሩ ወዲያውኑ ያሳውቁ።
+
+📞 **የዓሊያና መቀበያ ሚኒስቴር መስመር**፦ *2994 ወይም 03-9733333 — እሁድ–ሐሙስ፣ 8:30–16:00። አገልግሎቱ **በአማርኛም** ይሰጣል።
+
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*
 `,
     },
     wizard: {
@@ -230,13 +280,19 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
             am: "ትክክለኛ የስደተኛ መታወቂያ (የኡለ መታወቂያ) አለዎት?",
           },
         },
+        // TED-148: replaced an "are you enrolled in ulpan?" require-true
+        // rule. The Ministry describes the basket as subsistence money *for*
+        // the ulpan period but nowhere makes enrolment a condition of
+        // payment, so gating eligibility on it was inventing a requirement.
+        // The 24-month prior-residence rule below is stated on the official
+        // page and is a genuine hard condition.
         {
-          id: "enrolledInUlpan",
+          id: "under24MonthsPriorResidence",
           type: "boolean",
           label: {
-            he: "נרשמתם / מתכוונים להירשם לאולפן עברית?",
-            en: "Are you enrolled (or planning to enroll) in a Hebrew ulpan?",
-            am: "በዕብራይስጥ ኡልፓን ተመዝግበዋል (ወይም ለመመዝገብ ያስባሉ)?",
+            he: 'שהיתם בישראל פחות מ-24 חודשים (רצופים או מצטברים) בשלוש השנים שקדמו לקבלת מעמד "עולה"?',
+            en: 'Were you in Israel for less than 24 months (consecutive or cumulative) in the three years before receiving "oleh" status?',
+            am: 'የ"ኦሌ" ደረጃ ከማግኘትዎ በፊት በነበሩት ሦስት ዓመታት በእስራኤል ከ24 ወራት ያነሰ (ተከታታይ ወይም ተደማሪ) ቆይተዋል?',
           },
         },
       ],
@@ -261,11 +317,11 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
         },
         {
           kind: "require-true",
-          questionId: "enrolledInUlpan",
+          questionId: "under24MonthsPriorResidence",
           reason: {
-            he: "תשלום מלא של סל הקליטה מותנה בלימוד באולפן.",
-            en: "Full klita-basket payment is conditional on ulpan enrollment.",
-            am: "የመመለሻ ቅርጫት ሙሉ ክፍያ በኡልፓን ምዝገባ ላይ የተመሰረተ ነው።",
+            he: 'מי ששהה בישראל יותר מ-24 חודשים בשלוש השנים שקדמו לקבלת מעמד "עולה" אינו זכאי לסל קליטה.',
+            en: 'Those who were in Israel more than 24 months in the three years before receiving "oleh" status are not eligible for the absorption basket.',
+            am: 'የ"ኦሌ" ደረጃ ከማግኘታቸው በፊት በነበሩት ሦስት ዓመታት በእስራኤል ከ24 ወራት በላይ የቆዩ ለመቀበያ ቅርጫት ብቁ አይደሉም።',
           },
         },
       ],
@@ -1390,7 +1446,7 @@ Public-housing companies (Amidar, Amigor, Halamish, Shikmona) manage the apartme
 3. **ליווי קהילתי**: התחברות לארגון מקומי (ENP / Fidel / Tene Briut)
 4. **דיווח חודשי**: עדכון על מצב הסתגלות ל-12 חודשים
 
-📞 **מוקד הקליטה**: 5454*
+📞 **מוקד הקליטה**: *2994
 `,
       en: `## What changed in 2026?
 
@@ -1419,7 +1475,7 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 3. **Community attachment**: connect to a local org (ENP / Fidel / Tene Briut)
 4. **Monthly check-ins**: integration progress updates for 12 months
 
-📞 **Aliyah hotline**: *5454
+📞 **Aliyah hotline**: *2994
 `,
       am: `## በ2026 ምን ተለወጠ?
 
@@ -1448,7 +1504,7 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 3. **ማህበረሰባዊ ግንኙነት**: ከአካባቢ ድርጅት (ENP / Fidel / Tene Briut) ጋር ይገናኙ
 4. **ወርሃዊ መግባባት**: ለ12 ወራት የመተባበር ሂደት ዝመናዎች
 
-📞 **የመመለሻ መስመር**: *5454
+📞 **የመመለሻ መስመር**: *2994
 `,
     },
   },
@@ -3558,7 +3614,7 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 **האם שובר מכסה גם רישיון נהיגה?**
 כן — קורסי נהיגה מקצועיים (כבד/מונית) כלולים ברשימה.
 
-📞 **מוקד משרד הקליטה**: 5454*
+📞 **מוקד משרד הקליטה**: *2994
 🔗 [gov.il — שוברי הכשרה](https://www.gov.il/he/departments/topics/vocational_training/govil-landing-page)
 `,
       en: `## What are vocational training vouchers?
@@ -3600,7 +3656,7 @@ Yes — most accredited vocational courses offer evening tracks.
 **What if the course costs more than ₪12,000?**
 You can cover the difference through the Marom scholarship, a special fund, or personal payment.
 
-📞 **Ministry of Aliyah hotline**: 5454*
+📞 **Ministry of Aliyah hotline**: *2994
 `,
       am: `## ሙያ ስልጠና ቫዎቸሮች ምንድን ናቸው?
 
@@ -3625,169 +3681,226 @@ You can cover the difference through the Marom scholarship, a special fund, or p
 - ሚኒስቴሩ ተመዝጋቢ
 - ዕድሜ ገደብ የለም
 
-📞 **ሚኒስቴሩ ሞቅዳ**: 5454*
+📞 **ሚኒስቴሩ ሞቅዳ**: *2994
 `,
     },
   },
 
-  // 24 — Klita basket specific to Ethiopian-Israelis (TED-60)
+  // 24 — Absorption basket, Ethiopian-oleh angle (TED-60; corrected TED-148).
+  //
+  // TED-148 audit: the TED-60 version of this entry published a detailed
+  // "extended basket for Ethiopian olim" — ~₪3,500/mo single, ₪6,200/mo
+  // couple, a ₪2,500 "cultural adjustment grant (unique to immigrants from
+  // Africa)", a ₪3,000–7,500 furniture grant, 500 free ulpan hours, 12 free
+  // employment-counselling sessions, ₪12,000 vocational vouchers, and a
+  // 24-month Falash Mura basket. **None of it appears on the Ministry of
+  // Aliyah and Integration's own page**, and the framing itself (an
+  // origin-dependent basket) is contradicted by that page, which states the
+  // basket is paid "לעולים ... מכל מדינות העולם" with amounts set by family
+  // status and age. Treated as fabricated per the TED-152 precedent and
+  // removed wholesale.
+  //
+  // Replacement figures are transcribed from the official 2026 tables at
+  // https://www.gov.il/he/Departments/General/absorption_basket (fetched
+  // 2026-08-31; gov.il 403s WebFetch/curl, so it was read through a reader
+  // proxy). Structure (airport prepaid card → bank top-up → 6 monthly
+  // payments), the 24-month prior-residence rule, the one-year claim window
+  // and the income-independence of eligibility all come from that page.
+  // Hotline *2994 / 03-9733333 verified on the Ministry's own appointment
+  // service page — the "*2994" this entry used to print is not the
+  // Ministry's number. The body states its own verification month so a
+  // future reader can tell how stale the figures are.
+  //
+  // AM is AI-translated and not yet reviewed by a native Amharic speaker —
+  // see the in-body disclaimer. This is money-related copy; native review is
+  // a prerequisite before treating the AM text as final.
   {
     title: {
-      he: "סל קליטה לעולים מאתיופיה — המדריך המלא",
-      en: "Klita Basket for Ethiopian Olim — Complete Guide",
-      am: "የኢትዮጵያ ዓሊያ ቅርጫት — ሙሉ መመሪያ",
+      he: "סל קליטה לעולים מאתיופיה — הסכומים והתהליך (2026)",
+      en: "Absorption Basket for Ethiopian Olim — Amounts and Process (2026)",
+      am: "ለኢትዮጵያ ኦሊሞች የመቀበያ ቅርጫት — መጠኖችና ሂደት (2026)",
     },
     slug: {
       he: "klita-basket-ethiopia",
       en: "klita-basket-ethiopia",
       am: "klita-basket-ethiopia",
     },
-    govUrl: "https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page",
+    govUrl: "https://www.gov.il/he/Departments/General/absorption_basket",
     eligibilitySummary: {
-      he: "עולים מאתיופיה ועולי פלשמורה זכאים לסל קליטה מורחב: תשלום חודשי, מענקי הסתגלות, שובר אולפן, כיסוי בריאות ל-6 חודשים ולימודי השכלה מקצועית.",
-      en: "Ethiopian olim and Falash Mura immigrants receive an extended klita basket: monthly stipend, adjustment grants, ulpan voucher, 6-month health coverage, and vocational training.",
-      am: "ኢትዮጵያ ዓሊያ እና ፋላሽ ሙራ ስደተኞች የተሻሻለ ቅርጫት ያገኛሉ፦ ወርሃዊ ክፍያ፣ የማስተካከያ ድጎማ፣ ኡልፓን ቫዎቸር፣ ለ6 ወር ጤና ሽፋን፣ እና ሙያ ስልጠና።",
+      he: "סל הקליטה ניתן לעולים מכל מדינות העולם; הסכום נקבע לפי מצב משפחתי, גיל ומספר ילדים — לא לפי ארץ מוצא. יחיד: 21,694 ₪ בסך הכל (לוח רשמי 2026). לעולי אתיופיה יש מסלולים נוספים סביב מרכזי הקליטה.",
+      en: "The absorption basket is paid to olim from every country; the amount is set by family status, age and number of children — not by country of origin. Single: ₪21,694 in total (official 2026 table). Ethiopian olim have additional tracks around absorption centres.",
+      am: "የመቀበያ ቅርጫት ከዓለም ሁሉ ሀገራት ለመጡ ኦሊሞች ይከፈላል፤ መጠኑ በቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት ይወሰናል — በትውልድ ሀገር አይደለም። ነጠላ፦ በጠቅላላ 21,694 ₪ (ኦፊሴላዊ የ2026 ሰንጠረዥ)።",
     },
     tags: ["new_immigrant", "grants", "monthly_payment", "employment"],
     bodies: {
-      he: `## מה ייחודי בסל הקליטה של עולים מאתיופיה?
+      he: `## סל הקליטה — סיוע לאומי, לא מסלול נפרד לקהילה
 
-עולים מאתיופיה (כולל עולי פלשמורה) זכאים לסל קליטה **מורחב** שונה מהסל הרגיל, מכיוון שהממשלה הכירה בצורך בתמיכה מוגברת עקב מרחק גאוגרפי ותרבותי גדול מישראל.
+סל הקליטה הוא סיוע כספי של **משרד העלייה והקליטה** לתקופת ההתארגנות הראשונה בארץ. לפי הפרסום הרשמי של המשרד, הסל ניתן לעולים שנמצאו זכאים על פי נוהל המשרד **מכל מדינות העולם**, וסכומיו נקבעים לפי **מצב משפחתי, גיל ומספר הילדים** — לא לפי ארץ המוצא.
 
-## מה כולל הסל?
+**חשוב לדעת:** מסתובבים ברשת פירוטים של "סל מורחב ליוצאי אתיופיה" הכוללים מענקים כמו "מענק הסתגלות תרבותית" או "מענק ריהוט". **הפירוטים האלה אינם מופיעים בלוחות הרשמיים של משרד העלייה והקליטה** ואין להסתמך עליהם. מה שכן ייחודי לעולי אתיופיה — קליטה במרכזי קליטה ומענקי הדיור ביציאה מהם — מפורט בהמשך העמוד.
 
-### תשלומים חודשיים
-- **רווק**: כ-₪3,500 לחודש בשנה הראשונה
-- **זוג ללא ילדים**: כ-₪6,200 לחודש
-- **זוג עם ילדים**: תוספת של כ-₪800 לכל ילד
-- **הורה יחיד**: כ-₪5,400 + תוספות לילדים
+## הסכומים הרשמיים לשנת 2026
 
-### מענקים חד-פעמיים
-- **מענק קליטה ראשוני** (הגעה): ₪9,000–₪19,000 לפי גודל משפחה
-- **מענק הסתגלות תרבותית**: ₪2,500 (ייחודי לעולים מאפריקה)
-- **מענק ריהוט**: ₪3,000–₪7,500 לפי גודל משפחה
+לפי [לוח הסיוע הכספי בסל הקליטה](https://www.gov.il/he/Departments/General/absorption_basket) באתר משרד העלייה והקליטה:
 
-### שירותים נוספים
-- **שובר אולפן**: עד 500 שעות לימוד עברית (Aleph–Dalet) — חינם
-- **כיסוי בריאות מורחב**: 6 חודשים עם קופת חולים ללא תשלום נוסף
-- **ייעוץ תעסוקתי**: 12 פגישות חינם עם יועץ משרד הקליטה
-- **שוברי הכשרה מקצועית**: עד ₪12,000 לקורסים מוכרים
+| תשלום | יחיד | משפחה חד-הורית | זוג |
+| --- | --- | --- | --- |
+| נתב"ג (כרטיס נטען) | 1,250 ₪ | 2,300 ₪ | 2,500 ₪ |
+| השלמה לחשבון בנק | 1,544 ₪ | 1,631 ₪ | 4,023 ₪ |
+| כל אחד מ-6 התשלומים החודשיים | 3,150 ₪ | 5,190 ₪ | 5,806 ₪ |
+| **סך הכל** | **21,694 ₪** | **35,071 ₪** | **41,359 ₪** |
+
+**תוספות לילדים (סך הכל לכל ילד/ה):** ילד/ה עד גיל 4 — 12,831 ₪; ילד/ה 4–18 — 8,521 ₪; בן/בת 18–21 — 11,039 ₪; תוספת למשפחה בת 6 נפשות ומעלה — 5,918 ₪.
+
+קיימים לוחות נפרדים ל**גמלאים** ול**טרום־פנסיה** (מי שיגיע לגיל פרישה בתוך 5 שנים מהעלייה) — הסכומים שם גבוהים יותר. בדקו את הלוח הרלוונטי לכם בקישור למעלה.
+
+**הסכומים מתעדכנים.** נבדקו מול האתר הרשמי באוגוסט 2026 — לפני שאתם מתכננים תקציב, ודאו את הסכום העדכני בלוח הרשמי או מול לשכת המשרד.
+
+## איך משולם הסל?
+
+- **תשלום ראשון** — למגיעים באשרת עלייה מחו"ל, ב[כרטיס נטען](https://www.gov.il/he/pages/sal-klita-card) בנמל התעופה. למי שמשנה מעמד בארץ — בהפקדה בנקאית.
+- **השלמה** לחשבון הבנק.
+- **6 תשלומים חודשיים** נוספים.
+
+בתום ששת החודשים אפשר לבדוק זכאות ל[הבטחת הכנסה](https://www.btl.gov.il) כהמשך סיוע לצרכי קיום.
 
 ## מי זכאי?
 
-- עולה מאתיופיה שעלה מ-1984 (מבצע משה / שלמה / שבטי ישראל)
-- עולי פלשמורה שעלו דרך מסלול הכינוס
-- ילדים ובני זוג שעלו יחד
+- הנכנסים לראשונה לישראל באשרת "עולה", בעלי זכאות מלאה כעולים
+- מי ששהו בישראל **לא יותר מ-24 חודשים** רצופים או מצטברים בשלוש השנים שקדמו לקבלת מעמד עולה
+- הזכאות **אינה תלויה בגובה ההכנסה**
 
-## שלבי קבלת הסל
+**חלון הזמן:** את הסל אפשר לקבל **בתוך שנה** מיום קבלת מעמד עולה. יציאה לחו"ל עוצרת את התשלומים; חידוש אפשרי רק למי ששב בתוך שנת העלייה הראשונה.
 
-1. **הרשמה** — תוך 30 ימים מהגעה, בלשכת משרד הקליטה הקרובה
-2. **הצגת מסמכים**: ת"ז עולה, אישור עלייה, מסמך מוצא אתיופי
-3. **פתיחת חשבון בנק** לתשלומים האוטומטיים
-4. **בחירת אולפן** (חובה לקבלת מלוא הסל)
-5. **פגישת ייעוץ** עם עובד סוציאלי מהקהילה
+## מה שכן ייחודי לעולים מאתיופיה
 
-## פלשמורה — מסלול מיוחד
+- **קליטה במרכז קליטה** — בשונה מרוב העולים הנקלטים קליטה ישירה, עולים מאתיופיה נקלטים דרך מרכזי קליטה. ראו [קליטה ישירה לעולי פלשמורה](/he/rights/falash-mura-direct-absorption).
+- **מענקי דיור ביציאה ממרכז קליטה** — תוכנית ייעודית של משרד הבינוי והשיכון. ראו [מענקי דיור לעולים מאתיופיה במרכזי קליטה](/he/rights/housing-grant-klita-centers).
+- **סל קליטה לתלמידים** (אגרת חינוך) — סיוע נפרד של משרד החינוך. ראו [סל קליטה לתלמידים עולים](/he/rights/student-absorption-basket).
 
-עולי פלשמורה שעלו מ-2016 זכאים לסל נפרד הכולל:
-- **תקופת סל מורחבת**: 24 חודשים (לעומת 12 לעולה רגיל)
-- **תמיכה פסיכו-סוציאלית**: פגישות עם מטפל מהקהילה
-- **הכרה רשמית בהשכלה קודמת** — ועדת הכרה מקצועית
+## איך פונים?
+
+1. פותחים **חשבון בנק משותף לשני בני הזוג** בבנק מסחרי — נדרשת נוכחות של שניהם. מומלץ לעשות זאת בימים הראשונים בארץ.
+2. מוסרים את פרטי החשבון בלשכת משרד העלייה והקליטה באזור מגוריכם.
+3. לא משנים את מספר החשבון בשנים הראשונות; אם שיניתם — מדווחים מיד למשרד.
 
 ## קישורים רשמיים
 
-- [משרד הקליטה — סל קליטה](https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page)
-- [מוקד ייעוץ: 5454*](tel:5454) — זמין בעברית, אנגלית ואמהרית
+- [משרד העלייה והקליטה — סל קליטה (כולל לוחות הסכומים)](https://www.gov.il/he/Departments/General/absorption_basket)
+- [זימון תור ליועץ קליטה](https://www.gov.il/he/service/scheduling_an_appointment_to_the_ministry_of_aliyah_and_integration)
 
-📞 **מוקד משרד הקליטה**: 5454*
+📞 **מוקד משרד העלייה והקליטה**: *2994 או 03-9733333 — א׳–ה׳, 8:30–16:00. השירות ניתן גם **באמהרית**.
 `,
-      en: `## What makes the Ethiopian-Israelis' klita basket unique?
+      en: `## The absorption basket is national — not a separate community track
 
-Ethiopian olim (including Falash Mura) receive an **extended** klita basket that differs from the standard one. The government recognised the need for increased support given the large geographic and cultural distance from Israel.
+The absorption basket (סל קליטה) is financial support from the **Ministry of Aliyah and Integration** for an oleh's first period in Israel. Per the Ministry's own publication, it is given to olim found eligible under Ministry procedure **from every country in the world**, and the amounts are set by **family status, age and number of children** — not by country of origin.
 
-## What the basket includes
+**Important:** breakdowns of an "extended basket for Ethiopian olim" circulate online, listing grants such as a "cultural adjustment grant" or a "furniture grant". **Those items do not appear in the Ministry of Aliyah and Integration's official tables** and should not be relied on. What genuinely is community-specific — absorption-centre intake and the housing grants paid on leaving one — is set out further down this page.
 
-### Monthly payments
-- **Single**: approx. ₪3,500/month in the first year
-- **Couple without children**: approx. ₪6,200/month
-- **Couple with children**: approx. ₪800 extra per child
-- **Single parent**: approx. ₪5,400 + child additions
+## The official 2026 amounts
 
-### One-time grants
-- **Initial absorption grant** (on arrival): ₪9,000–₪19,000 by family size
-- **Cultural adjustment grant**: ₪2,500 (unique to immigrants from Africa)
-- **Furniture grant**: ₪3,000–₪7,500 by family size
+Per the [absorption basket financial-aid table](https://www.gov.il/he/Departments/General/absorption_basket) on the Ministry's site:
 
-### Additional services
-- **Ulpan voucher**: up to 500 Hebrew study hours (Aleph–Dalet) — free
-- **Extended health coverage**: 6 months with health fund at no extra charge
-- **Employment counselling**: 12 free sessions with a Ministry of Aliyah adviser
-- **Vocational training vouchers**: up to ₪12,000 for accredited courses
+| Payment | Single | Single-parent family | Couple |
+| --- | --- | --- | --- |
+| Ben Gurion Airport (prepaid card) | ₪1,250 | ₪2,300 | ₪2,500 |
+| Bank-account top-up | ₪1,544 | ₪1,631 | ₪4,023 |
+| Each of the 6 monthly payments | ₪3,150 | ₪5,190 | ₪5,806 |
+| **Total** | **₪21,694** | **₪35,071** | **₪41,359** |
+
+**Per-child additions (total per child):** child under 4 — ₪12,831; child 4–18 — ₪8,521; young adult 18–21 — ₪11,039; addition for a household of 6+ — ₪5,918.
+
+Separate tables exist for **pensioners** and **pre-pension** olim (those reaching retirement age within 5 years of aliyah), where amounts are higher. Check the table that applies to you via the link above.
+
+**These amounts change.** They were checked against the official site in August 2026 — before budgeting, confirm the current figure in the official table or with a Ministry bureau.
+
+## How the basket is paid
+
+- **First payment** — for those arriving from abroad on an aliyah visa, on a [prepaid card](https://www.gov.il/he/pages/sal-klita-card) at the airport. For those changing status in Israel — by bank deposit.
+- A **top-up** to the bank account.
+- **6 further monthly payments.**
+
+After the six months you can check eligibility for income support (הבטחת הכנסה) at the National Insurance Institute as continued subsistence aid.
 
 ## Who is eligible?
 
-- An oleh from Ethiopia who immigrated from 1984 (Operation Moses / Solomon / Shivtei Israel)
-- Falash Mura olim who arrived via the ingathering track
-- Children and spouses who immigrated together
+- Those entering Israel for the first time on an "oleh" visa, with full oleh entitlement
+- Those who stayed in Israel **no more than 24 months**, consecutive or cumulative, in the three years before receiving oleh status
+- Eligibility **does not depend on income**
 
-## Steps to receive the basket
+**The time window:** the basket must be claimed **within one year** of receiving oleh status. Leaving the country stops the payments; renewal is possible only for those returning within the first aliyah year.
 
-1. **Register** — within 30 days of arrival, at the nearest Ministry of Aliyah office
-2. **Present documents**: immigrant ID, aliyah confirmation, proof of Ethiopian origin
-3. **Open a bank account** for the automatic payments
-4. **Choose an ulpan** (required for the full basket)
-5. **Counselling session** with a community social worker
+## What genuinely is specific to Ethiopian olim
 
-## Falash Mura — special track
+- **Absorption-centre intake** — unlike most olim, who go through direct absorption, olim from Ethiopia are absorbed via absorption centres. See [direct absorption for Falash Mura olim](/en/rights/falash-mura-direct-absorption).
+- **Housing grants on leaving an absorption centre** — a dedicated Ministry of Construction and Housing programme. See [housing grants for Ethiopian olim in absorption centres](/en/rights/housing-grant-klita-centers).
+- **The student absorption basket** (education fee) — separate support from the Ministry of Education. See [absorption basket for immigrant students](/en/rights/student-absorption-basket).
 
-Falash Mura olim who arrived from 2016 are entitled to a separate basket including:
-- **Extended basket period**: 24 months (vs. 12 for a standard oleh)
-- **Psycho-social support**: sessions with a community therapist
-- **Official recognition of prior qualifications** — professional recognition committee
+## How to apply
+
+1. Open a **joint bank account for both spouses** at a commercial bank — both must be present. Do this in your first days in the country.
+2. Give the account details to the Ministry of Aliyah and Integration bureau in your area.
+3. Do not change the account number in the first years; if you must, report it to the Ministry immediately.
 
 ## Official links
 
-- [Ministry of Aliyah — klita basket](https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page)
-- [Advice hotline: 5454*](tel:5454) — available in Hebrew, English, and Amharic
+- [Ministry of Aliyah and Integration — absorption basket (incl. amount tables)](https://www.gov.il/he/Departments/General/absorption_basket)
+- [Book an appointment with an absorption adviser](https://www.gov.il/he/service/scheduling_an_appointment_to_the_ministry_of_aliyah_and_integration)
+
+📞 **Ministry of Aliyah and Integration hotline**: *2994 or 03-9733333 — Sun–Thu, 8:30–16:00. Service is also available **in Amharic**.
 `,
-      am: `## የኢትዮጵያ ዓሊያ ቅርጫት ምን ያህል ልዩ ነው?
+      am: `## የመቀበያ ቅርጫት — ብሔራዊ ድጋፍ እንጂ የተለየ የማህበረሰብ መስመር አይደለም
 
-ኢትዮጵያ ዓሊያ (ፋላሽ ሙራ ጨምሮ) **የተሻሻለ** ቅርጫት ያገኛሉ — ይህ ከሌሎቹ ስደተኞች ቅርጫት ለየት ይላል። ከኢትዮጵያ እና ከእስራኤል መካከል ያለው ጂኦግራፊያዊ እና ባህላዊ ርቀት ከፍ ያለ ስለሆነ የበለጠ ድጋፍ ያስፈልጋል።
+የመቀበያ ቅርጫት (סל קליטה) በእስራኤል ለመጀመሪያው ጊዜ ለሚደረግ ዝግጅት **በዓሊያና መቀበያ ሚኒስቴር** የሚሰጥ የገንዘብ ድጋፍ ነው። በሚኒስቴሩ ኦፊሴላዊ ህትመት መሠረት፣ በሚኒስቴሩ ሥርዓት ብቁ ሆነው ለተገኙ **ከዓለም ሁሉ ሀገራት** ለመጡ ኦሊሞች ይሰጣል፣ መጠኖቹም በ**የቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት** ይወሰናሉ — በትውልድ ሀገር አይደለም።
 
-## ቅርጫቱ ምን ይዟል?
+**አስፈላጊ፦** "ለኢትዮጵያ ኦሊሞች የተስፋፋ ቅርጫት" የሚሉ ዝርዝሮች በበይነመረብ ይሰራጫሉ — እንደ "የባህል ማስተካከያ ስጦታ" ወይም "የቤት ዕቃ ስጦታ" ያሉ። **እነዚህ ነገሮች በዓሊያና መቀበያ ሚኒስቴር ኦፊሴላዊ ሰንጠረዦች ውስጥ የሉም** እና በእነሱ ላይ መተማመን የለብዎትም።
 
-### ወርሃዊ ክፍያዎች
-- **ነጠላ**: በዓመቱ አንደኛ ሩብ ወደ 3,500 ሺ"ል/ወር
-- **ጥንዶች ያለ ልጆች**: ወደ 6,200 ሺ"ል/ወር
-- **ጥንዶች ከልጆች ጋር**: ለእያንዳንዱ ልጅ ወደ 800 ሺ"ል ተጨማሪ
-- **ነጠላ ወላጅ**: ወደ 5,400 ሺ"ል + ለልጆች ተጨማሪ
+## ኦፊሴላዊ የ2026 መጠኖች
 
-### አንድ ጊዜ ስጦታዎች
-- **የመጀመሪያ ስጦታ** (ሲደርሱ): 9,000–19,000 ሺ"ል በቤተሰብ መጠን
-- **ባህላዊ ማስተካከያ ስጦታ**: 2,500 ሺ"ል (ለአፍሪካ ስደተኞች ብቻ)
-- **የቤት ዕቃ ስጦታ**: 3,000–7,500 ሺ"ል
+| ክፍያ | ነጠላ | ነጠላ ወላጅ ቤተሰብ | ጥንዶች |
+| --- | --- | --- | --- |
+| ቤን ጉሪዮን አየር ማረፊያ (ካርድ) | 1,250 ₪ | 2,300 ₪ | 2,500 ₪ |
+| የባንክ ሂሳብ ማሟያ | 1,544 ₪ | 1,631 ₪ | 4,023 ₪ |
+| ከ6ቱ ወርሃዊ ክፍያዎች እያንዳንዱ | 3,150 ₪ | 5,190 ₪ | 5,806 ₪ |
+| **ጠቅላላ** | **21,694 ₪** | **35,071 ₪** | **41,359 ₪** |
 
-### ተጨማሪ አገልግሎቶች
-- **ኡልፓን ቫዎቸር**: እስከ 500 ሰዓት ዕብራይስጥ (Aleph–Dalet) — ነፃ
-- **የጤና ሽፋን**: ለ6 ወር ተጨማሪ ክፍያ ሳይኖር
-- **የሥራ ምክር**: 12 ነፃ ስብሰባዎች
-- **ሙያ ስልጠና ቫዎቸሮች**: እስከ 12,000 ሺ"ል
+**ለልጆች ተጨማሪ (ለእያንዳንዱ ልጅ ጠቅላላ)፦** ከ4 ዓመት በታች — 12,831 ₪፤ 4–18 — 8,521 ₪፤ 18–21 — 11,039 ₪፤ ለ6+ ሰው ቤተሰብ ተጨማሪ — 5,918 ₪።
 
-## ለማን ይሆናል?
+ለ**ጡረተኞች** እና ለ**ቅድመ-ጡረታ** የተለዩ ሰንጠረዦች አሉ። **መጠኖቹ ይለወጣሉ** — በነሐሴ 2026 ተረጋግጠዋል፤ ከማቀድዎ በፊት ወቅታዊውን መጠን ያረጋግጡ።
 
-- ከ1984 ጀምሮ ኢትዮጵያ ዓሊያ (ሞሴ / ሰሎሞን / ሽቭቲ ዮስራኤል)
-- ፋላሽ ሙራ ዓሊያ
-- አብረው የደረሱ ልጆች እና ባልቶ/ሚስቶ
+## ቅርጫቱ እንዴት ይከፈላል?
 
-## ቅርጫቱን ለማግኘት ደረጃዎች
+- **የመጀመሪያ ክፍያ** — በአየር ማረፊያ በቅድመ-ክፍያ ካርድ (ከውጭ በዓሊያ ቪዛ ለሚደርሱ)፤ በእስራኤል ውስጥ ደረጃቸውን ለሚቀይሩ — በባንክ ተቀማጭ።
+- ወደ ባንክ ሂሳብ **ማሟያ**።
+- ተጨማሪ **6 ወርሃዊ ክፍያዎች**።
 
-1. **ምዝገባ** — ሲደርሱ ከ30 ቀናት ውስጥ፣ ቅርብ በሆነ ሚኒስቴር ጽ/ቤት
-2. **ሰነዶችን ያቅርቡ**: የስደተኛ መታወቂያ፣ የዓሊያ ማረጋገጫ
-3. **ባንክ ሂሳብ ይክፈቱ**
-4. **ኡልፓን ይምረጡ** (ሙሉ ቅርጫት ለማግኘት ግዴታ)
-5. **ከማህበረሰብ ሠራተኛ ጋር ስብሰባ**
+## ማን ብቁ ነው?
 
-📞 **የሚኒስቴሩ ሞቅዳ**: 5454*
+- በ"ኦሌ" ቪዛ ለመጀመሪያ ጊዜ ወደ እስራኤል የሚገቡ፣ ሙሉ የኦሌ ብቁነት ያላቸው
+- የኦሌ ደረጃ ከማግኘታቸው በፊት በነበሩት ሦስት ዓመታት በእስራኤል **ከ24 ወራት ያልበለጠ** የቆዩ
+- ብቁነቱ **በገቢ መጠን ላይ አይመሠረትም**
+
+**የጊዜ መስኮት፦** ቅርጫቱ የኦሌ ደረጃ ካገኙበት ቀን ጀምሮ **በአንድ ዓመት ውስጥ** መጠየቅ አለበት።
+
+## ለኢትዮጵያ ኦሊሞች በእውነት ልዩ የሆነው
+
+- **በመቀበያ ማዕከል መቀበል** — ከኢትዮጵያ የመጡ ኦሊሞች በመቀበያ ማዕከላት በኩል ይቀበላሉ። [ለፋላሽ ሙራ ቀጥተኛ መቀበያ](/am/rights/falash-mura-direct-absorption) ይመልከቱ።
+- **ከመቀበያ ማዕከል ሲወጡ የመኖሪያ ቤት ድጎማዎች** — [የመኖሪያ ቤት ድጎማዎች](/am/rights/housing-grant-klita-centers) ይመልከቱ።
+- **የተማሪ መቀበያ ቅርጫት** — [ለስደተኛ ተማሪዎች መቀበያ ቅርጫት](/am/rights/student-absorption-basket) ይመልከቱ።
+
+## እንዴት ማመልከት
+
+1. በንግድ ባንክ **ለሁለቱም ባለትዳሮች የጋራ የባንክ ሂሳብ** ይክፈቱ — ሁለቱም መገኘት አለባቸው።
+2. የሂሳብ ዝርዝሮችን በአካባቢዎ ላለው የዓሊያና መቀበያ ሚኒስቴር ቢሮ ይስጡ።
+3. በመጀመሪያዎቹ ዓመታት የሂሳብ ቁጥሩን አይቀይሩ፤ ከቀየሩ ወዲያውኑ ለሚኒስቴሩ ያሳውቁ።
+
+## ኦፊሴላዊ አገናኞች
+
+- [የዓሊያና መቀበያ ሚኒስቴር — መቀበያ ቅርጫት](https://www.gov.il/he/Departments/General/absorption_basket)
+
+📞 **የዓሊያና መቀበያ ሚኒስቴር መስመር**፦ *2994 ወይም 03-9733333 — እሁድ–ሐሙስ፣ 8:30–16:00። አገልግሎቱ **በአማርኛም** ይሰጣል።
+
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*
 `,
     },
   },
@@ -4164,7 +4277,7 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
 | **IEWA** (עמותה ישראלית יהודים אתיופים) | ייעוץ, מלגות, הכשרות | iewa.org.il |
 | **עמותת "בצלאל"** | אמנויות, עיצוב, מדיה | צרו קשר ישיר |
 | **טבקה** | ייעוץ משפטי, תביעת זכויות | 072-2424622 |
-| **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | *5454 |
+| **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | *2994 |
 
 ---
 
@@ -5119,7 +5232,7 @@ BTL፦ *6050 | btl.gov.il
 - **מרכז עולים**: ניתן לבקש פגישה עם מתורגמן — להודיע מראש
 - **תעודת זהות, דרכון, רישום**: ניתן להביא מלווה דובר עברית
 
-### משרד הקליטה (*5454)
+### משרד הקליטה (*2994)
 - יש נציגים דוברי אמהרית — לציין בפנייה
 
 ---
@@ -5170,7 +5283,7 @@ The Courts Administration maintains a registry of certified Amharic interpreters
 ## Government Offices
 
 - **BTL (*6050):** Amharic telephone service available — select "Amharic service."
-- **Ministry of Aliyah (*5454):** Amharic-speaking representatives — specify when calling.
+- **Ministry of Aliyah (*2994):** Amharic-speaking representatives — specify when calling.
 - **Ministry of Interior:** Request an appointment with an interpreter in advance.
 
 ## If an Interpreter Is Refused
@@ -5192,7 +5305,7 @@ The right is free — the state pays for court interpreters. If you are ever ask
 ## የመንግስት ቢሮዎች
 
 - **BTL (*6050):** "የአማርኛ አገልግሎት" ምረጡ
-- **ቅያሴ ሚኒስቴር (*5454):** አስቀድሞ ይጠቁሙ
+- **ቅያሴ ሚኒስቴር (*2994):** አስቀድሞ ይጠቁሙ
 
 ## ወጪ
 
@@ -7038,97 +7151,186 @@ Because of this, there is no single amount that applies to everyone, and it also
     },
   },
 
-  // ── Wave 6 (cont'd) — sourced from the Employment Service (מינהל
-  // התעסוקה, משרד העבודה) official briefing page for the "Lamerchak"
-  // ("Toward Distance") program, and a gov.il tender that confirms the
-  // program is an active, ongoing national initiative (not a one-off
-  // pilot). The briefing page is aimed at program operators/managers, not
-  // participants, and has no explicit "last updated" date, no direct
-  // registration flow and no published stipend/budget figures — none of
-  // these are invented here. Users are pointed to the Employment Service
-  // (מינהל תעסוקת אוכלוסיות ייחודיות) to ask about enrollment in their
-  // area. AM field is AI-translated (not yet reviewed by a native Amharic
-  // speaker) — see in-body disclaimer.
+  // ── "Lamerchak" employment guidance (Wave 6; expanded TED-148).
+  //
+  // The Wave-6 version was sourced only from the Employment Service's
+  // operator-facing briefing page (taasukada.labor.gov.il), which is aimed
+  // at programme managers rather than participants, and therefore said the
+  // official source publishes no eligibility criteria or service list.
+  //
+  // TED-148 located the participant-facing primary source: the Labour
+  // Branch's own guide page, "המטה לקידום תעסוקת אוכלוסיות ייחודיות"
+  // (https://www.gov.il/he/Departments/Guides/special-populations-employment), fetched 2026-08-31 through a reader
+  // proxy because gov.il 403s WebFetch and curl. That page names Lamerchak
+  // as a current, live programme, states its joint operation by זרוע העבודה
+  // and ג'וינט ישראל, and publishes the age band, the three alternative
+  // entry conditions and the service list reproduced below — all quoted
+  // from it rather than inferred.
+  //
+  // Deliberately NOT reproduced: the page's coordinator table, which is
+  // headed "רכזי תכנית למרחק 2020" and lists named staff, personal Gmail
+  // addresses and phone numbers. Six-year-old individual contact details
+  // are exactly the kind of content that rots into a dead end, so users are
+  // sent to the official page's own "find your coordinator" link instead.
+  // The page is also internally inconsistent about coverage — one paragraph
+  // says 12 localities, another says 11, and the table lists 11 — so the
+  // copy below says "כ-11-12" rather than picking a number the source does
+  // not agree with itself on.
+  //
+  // Kol-Zchut gives the age band as 20-44; the gov.il page says 18-45. The
+  // primary source wins. No stipend, budget or grant figures are published
+  // by either, and none are invented here. AM is AI-translated and not yet
+  // reviewed by a native Amharic speaker — see the in-body disclaimer.
   {
     title: {
       he: 'תוכנית "למרחק" — הכוון תעסוקתי ליוצאי אתיופיה',
-      en: '"Lamerchak" — Employment Guidance for Ethiopian-Israeli Youth',
-      am: 'ፕሮግራም "ላመርቻክ" — የስራ ስምሪት መመሪያ ለኢትዮጵያ ተወላጅ ወጣቶች',
+      en: '"Lamerchak" — Employment Guidance for Ethiopian-Israelis',
+      am: 'ፕሮግራም "ላመርቻክ" — የስራ ስምሪት መመሪያ ለኢትዮጵያ ተወላጆች',
     },
     slug: { he: "lamerchak", en: "lamerchak", am: "lamerchak" },
-    govUrl:
-      "https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5",
+    govUrl: "https://www.gov.il/he/Departments/Guides/special-populations-employment",
     eligibilitySummary: {
-      he: "לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי ולרכישת השכלה מקצועית. התוכנית מופעלת באמצעות מרכזי הכוון תעסוקתי, בהפעלת מינהל התעסוקה במשרד העבודה.",
-      en: "For young Ethiopian-Israelis seeking career advancement and professional education. The program runs through employment-guidance centers, operated by the Employment Service at the Ministry of Labor.",
-      am: "ለስራ እድገት እና ሙያዊ ትምህርት የሚፈልጉ ኢትዮጵያዊ ተወላጅ ወጣቶች። ፕሮግራሙ በስራ ስምሪት መመሪያ ማዕከላት አማካኝነት፣ በስራ ሚኒስቴር የስራ ስምሪት አስተዳደር ይመራል።",
+      he: "תוכנית של זרוע העבודה וג'וינט ישראל ליוצאי אתיופיה בגילי 18-45 שאינם בשירות: בעלי השכלה או תעודת מקצוע שעובדים בעבודה לא מקצועית, מי שאינם עובדים ובעלי מוטיבציה לקידום, וחיילים משוחררים. ליווי אישי ומימון הכשרות — ללא עלות.",
+      en: "A programme of Israel's Labour Branch and JDC Israel for Ethiopian-Israelis aged 18-45 not in service: those with education or a professional certificate working in unskilled jobs, those not working but motivated to advance, and discharged soldiers. Personal mentoring and funded training — free of charge.",
+      am: "ለ18-45 ዕድሜ ላሉ ኢትዮጵያዊ ተወላጆች የስራ ዘርፍና የጆይንት እስራኤል ፕሮግራም፦ ትምህርት ወይም ሙያዊ የምስክር ወረቀት ኖሯቸው ሙያዊ ባልሆነ ስራ ለሚሰሩ፣ ለማይሰሩና ለማደግ ተነሳሽነት ላላቸው፣ እና ለተሰናበቱ ወታደሮች። የግል አጃቢነትና የተደገፈ ስልጠና — ያለ ክፍያ።",
     },
     tags: ["employment", "youth"],
     bodies: {
       he: `## מה זה "למרחק"?
 
-"למרחק" היא תוכנית תעסוקה ייעודית של מינהל התעסוקה במשרד העבודה, שמטרתה לסייע לצעירים יוצאי אתיופיה לפתח קריירה, לרכוש השכלה מקצועית ולהשתלב בתפקידים מתגמלים בשוק העבודה הישראלי. התוכנית פועלת באמצעות **מרכזי הכוון תעסוקתי** ייעודיים.
+"למרחק" היא תוכנית לקידום תעסוקה איכותית ליוצאי אתיופיה, **מיסודם של זרוע העבודה וג'וינט ישראל**. המטרה המוצהרת שלה היא לא "למצוא עבודה" סתם, אלא להגיע לעבודה מפרנסת עם אופק תעסוקתי — כזו שהולמת את ההשכלה והכישורים שכבר יש לכם.
 
-## למי זה מיועד?
+זה חשוב, כי זו בדיוק הבעיה שהתוכנית נבנתה לפתור: לפי זרוע העבודה, שיעורי התעסוקה של יוצאי אתיופיה עלו משמעותית עם השנים, אבל רבים עדיין מועסקים בעבודות שאינן הולמות את ההכשרה, ההשכלה והניסיון שלהם — ולכן השכר הממוצע בקהילה נמוך משמעותית מהממוצע הארצי.
 
-לצעירים יוצאי אתיופיה החותרים לקידום תעסוקתי — מי שמעוניינים לבנות מסלול קריירה, לרכוש הכשרה מקצועית ולהתמקם בתפקידים איכותיים ובעלי סיכויי קידום.
+כל משתתף/ת מלווה על ידי **רכז/ת** מתוך צוות מקצועי הפרוס בכ-11-12 יישובים ברחבי הארץ.
 
-## מה כוללת התוכנית?
+## למי התוכנית מיועדת?
 
-התוכנית מבוססת על רשת של מרכזי הכוון תעסוקתי, שתפקידם ללוות את המשתתפים בתהליך של פיתוח קריירה והשכלה מקצועית לקראת שילוב בתפקידים מתגמלים. פרטים מלאים על תוכן הליווי, משך התוכנית והמענים הספציפיים במרכז הקרוב אליכם מתפרסמים דרך מרכזי ההכוון עצמם ואינם מפורטים באתר מינהל התעסוקה.
+ליוצאי אתיופיה בגילי עבודה, **בדגש על גילי 18 עד 45**, שאינם בשירות צבאי / אזרחי / לאומי, ועונים על **אחד** מהתנאים הבאים:
 
-**לתשומת לבכם:** אין באתר הרשמי פירוט של סכומי סיוע, מלגות או תאריכי הרשמה — אם נתקלתם במידע כזה במקור אחר, כדאי לוודא אותו ישירות מול הגורם המפעיל לפני שאתם מסתמכים עליו.
+- **בעלי השכלה גבוהה או תעודת מקצוע** שעובדים בעבודה לא מקצועית וזקוקים לסיוע במעבר לתעסוקה ההולמת את השכלתם
+- **אינם עובדים, או עובדים בעבודה לא מקצועית**, ובעלי מוטיבציה לקידום מקצועי
+- **חיילים משוחררים**
+
+אם אתם עונים על אחד מהשלושה — אתם בפנים. לא צריך לעמוד בכולם.
+
+## מה מקבלים בפועל?
+
+- **תוכנית אישית למסלול קריירה** וליווי תעסוקתי פרטני מול רכז/ת
+- **סיוע במימון** קורסי הכשרה מקצועית, שיעורי עזר, קורסי פסיכומטרי, אנגלית, מחשבים וקורסי השכלה בסיסיים
+- **סדנאות וקורסים** רלוונטיים לשוק העבודה העתידי (למשל מסחר אלקטרוני)
+- **סדנאות הכנה** למרכזי הערכה ולראיון אישי
+- **קשרי מעסיקים** — הנגשת משרות איכותיות בחברות מובילות, וקורסים בשיתוף מעסיקים הכוללים השמה בתום ההכשרה
 
 ## איך פונים?
 
-התוכנית אינה כוללת טופס הרשמה מקוון ישיר באתר. לבירור זכאות, מיקום מרכזי ההכוון הפעילים ותהליך ההצטרפות בפועל — פנו ישירות למינהל תעסוקת אוכלוסיות ייחודיות באתר gov.il, או למרכז ההכוון התעסוקתי הקרוב לאזור מגוריכם:
+אין טופס הרשמה מקוון. הדרך היא ליצור קשר עם הרכז/ת באזור מגוריכם:
 
-- מינהל התעסוקה — דף התוכנית: [taasukada.labor.gov.il](https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5)
-- לפנייה כללית למינהל תעסוקת אוכלוסיות ייחודיות: אתר [gov.il](https://www.gov.il)`,
+1. היכנסו ל[עמוד התוכנית באתר זרוע העבודה](https://www.gov.il/he/Departments/Guides/special-populations-employment) — שם מופיע קישור "ליצירת קשר עם רכז הקרוב לאזורך".
+2. אפשר גם לפנות דרך [עמוד הפייסבוק הארצי של התוכנית](https://www.facebook.com/lamerhak/).
+
+**שימו לב:** רשימת הרכזים המתפרסמת באתר הרשמי מסומנת כרשימת **2020**. לפני שאתם מסתמכים על טלפון או כתובת מייל משם — ודאו מול הרכז/ת שהפרטים עדכניים, או פנו דרך מרכז הצעירים / מרכז התעסוקה בעירכם.
+
+## מה **לא** מפורסם — ואל תאמינו למי שטוען אחרת
+
+באתר הרשמי **אין** סכומי מלגה, דמי קיום, תאריכי הרשמה או מכסות. אם נתקלתם במספרים כאלה במקור אחר — ודאו אותם מול הרכז/ת לפני שאתם בונים עליהם.
+
+## תוכניות נוספות של זרוע העבודה ליוצאי אתיופיה
+
+באותו עמוד רשמי מופיעות גם:
+
+- **מצוינות ומנהיגות בתעסוקה** (עם עמותת "עולים ביחד") — לאקדמאים ומצטיינים, כולל מסלולי "משפיעים במגזר הציבורי", "מרי — מורים לניהול", התמחות קיץ "טסה" ותוכנית היזמות "אנסש"
+- **שילוב בהיי-טק** — הכשרות של עמותת טק קריירה, ובוטקאמפ התכנות CodeIN
+
+מקור: [זרוע העבודה — המטה לקידום תעסוקת אוכלוסיות ייחודיות](https://www.gov.il/he/Departments/Guides/special-populations-employment)`,
       en: `## What is "Lamerchak"?
 
-"Lamerchak" is a dedicated employment program run by Israel's Employment Service (מינהל התעסוקה) at the Ministry of Labor, designed to help young Ethiopian-Israelis build a career, acquire professional education and move into rewarding positions in the Israeli labor market. The program operates through dedicated **employment-guidance centers**.
+"Lamerchak" is a programme for advancing quality employment among Ethiopian-Israelis, **founded jointly by Israel's Labour Branch (זרוע העבודה) and JDC Israel**. Its stated goal is not simply "find a job" but reaching work that pays a living with a career horizon — work that matches the education and skills you already have.
+
+That framing matters, because it is the problem the programme was built to solve. Per the Labour Branch, employment rates among Ethiopian-Israelis have risen substantially over the years, but many are still employed in jobs that do not match their training, education and experience — which is why average pay in the community remains significantly below the national average.
+
+Each participant is accompanied by a **coordinator** from a professional team spread across roughly 11-12 localities nationwide.
 
 ## Who is it for?
 
-Young Ethiopian-Israelis seeking career advancement — people who want to build a career path, gain professional training and move into quality positions with real advancement potential.
+Ethiopian-Israelis of working age, **with an emphasis on ages 18 to 45**, who are not in military / civil / national service and meet **one** of the following:
 
-## What does the program include?
+- **Hold higher education or a professional certificate** but work in an unskilled job, and need help moving into work that matches their education
+- **Are not working, or work in an unskilled job**, and are motivated to advance professionally
+- **Are discharged soldiers**
 
-The program is built around a network of employment-guidance centers, whose role is to accompany participants through career development and professional education toward placement in rewarding positions. Full details on the guidance content, program duration, and the specific offerings at the center nearest you are published by the guidance centers themselves and are not detailed on the Employment Service's page.
+Meeting any one of the three is enough — you do not need all of them.
 
-**Note:** the official page does not publish support amounts, stipends or registration dates — if you come across such figures elsewhere, verify them directly with the operating body before relying on them.
+## What you actually get
+
+- A **personal career-path plan** and one-on-one employment mentoring with a coordinator
+- **Funding assistance** for vocational training courses, tutoring, psychometric-exam prep, English, computing and basic-education courses
+- **Workshops and courses** aimed at the future labour market (e-commerce, for example)
+- **Preparation workshops** for assessment centres and interviews
+- **Employer relations** — access to quality roles at leading companies, and employer-partnered courses that include placement on completion
 
 ## How to apply
 
-The program has no direct online registration form on its official page. To check eligibility, find your nearest active guidance center, and learn the actual enrollment process — contact the Employment Service for unique populations (מינהל תעסוקת אוכלוסיות ייחודיות) directly via gov.il, or reach out to the employment-guidance center nearest your area:
+There is no online registration form. The route is to contact the coordinator for your area:
 
-- Employment Service — program page: [taasukada.labor.gov.il](https://www.taasukada.labor.gov.il/itam/42221b5c-92cd-4b80-b550-dd9720637ae5)
-- General inquiries to the Employment Service for unique populations: [gov.il](https://www.gov.il)`,
+1. Go to the [programme's page on the Labour Branch site](https://www.gov.il/he/Departments/Guides/special-populations-employment), which carries a "contact the coordinator nearest you" link.
+2. You can also reach out through the [programme's national Facebook page](https://www.facebook.com/lamerhak/).
+
+**Note:** the coordinator list published on the official page is labelled as the **2020** list. Before relying on a phone number or email address from it, confirm the details are current with the coordinator, or approach your city's youth centre / employment centre instead.
+
+## What is **not** published — and don't believe anyone who says otherwise
+
+The official page carries **no** stipend amounts, subsistence payments, registration dates or quotas. If you find such figures elsewhere, verify them with a coordinator before planning around them.
+
+## Other Labour Branch programmes for Ethiopian-Israelis
+
+The same official page also lists:
+
+- **Excellence and Leadership in Employment** (with the Olim Beyahad association) — for academics and high achievers, including the "Influencers in the Public Sector", "Mary — Teachers into Management", "Tesa" summer internship and "Ansesh" entrepreneurship tracks
+- **Hi-tech integration** — training run by the Tech-Career association, and the CodeIN programming bootcamp
+
+Source: [Labour Branch — Headquarters for Advancing Employment of Special Populations](https://www.gov.il/he/Departments/Guides/special-populations-employment)`,
       am: `## "ላመርቻክ" ምንድን ነው?
 
-"ላመርቻክ" በስራ ሚኒስቴር የስራ ስምሪት አስተዳደር የሚመራ ልዩ የስራ ስምሪት ፕሮግራም ሲሆን፣ ኢትዮጵያዊ ተወላጅ ወጣቶች ስራቸውን እንዲያሳድጉ፣ ሙያዊ ትምህርት እንዲያገኙ እና በእስራኤል የስራ ገበያ ውስጥ ጠቃሚ ቦታዎች ላይ እንዲሰማሩ ለመርዳት የተነደፈ ነው። ፕሮግራሙ ልዩ **የስራ ስምሪት መመሪያ ማዕከላት** በኩል ይሰራል።
+"ላመርቻክ" ለኢትዮጵያዊ ተወላጆች ጥራት ያለው ስራ ለማሳደግ የተዘጋጀ ፕሮግራም ሲሆን፣ **በእስራኤል የስራ ዘርፍ (זרוע העבודה) እና በጆይንት እስራኤል በጋራ የተመሠረተ** ነው። ግቡ በቀላሉ "ስራ ማግኘት" ሳይሆን፣ ካለዎት ትምህርትና ክህሎት ጋር የሚመጣጠን፣ የሚያስተዳድርና የእድገት አድማስ ያለው ስራ ላይ መድረስ ነው።
+
+እያንዳንዱ ተሳታፊ በመላ ሀገሪቱ በ11-12 ገደማ ከተሞች ውስጥ ካለ ሙያዊ ቡድን በ**አስተባባሪ** ይታጀባል።
 
 ## ለማን የተዘጋጀ ነው?
 
-ለስራ እድገት የሚፈልጉ ኢትዮጵያዊ ተወላጅ ወጣቶች — የስራ መንገድ መገንባት፣ ሙያዊ ስልጠና ማግኘት እና በጥራት ያላቸው እና የእድገት እድል ያላቸው ቦታዎች ላይ መስፈር የሚፈልጉ ሰዎች።
+በስራ ዕድሜ ላይ ላሉ ኢትዮጵያዊ ተወላጆች፣ **በተለይ ከ18 እስከ 45 ዕድሜ**፣ በወታደራዊ / ሲቪል / ብሔራዊ አገልግሎት ላይ ላልሆኑ እና ከሚከተሉት **አንዱን** ለሚያሟሉ፦
 
-## ፕሮግራሙ ምን ያካትታል?
+- **ከፍተኛ ትምህርት ወይም ሙያዊ የምስክር ወረቀት** ኖሯቸው ሙያዊ ባልሆነ ስራ ለሚሰሩ
+- **የማይሰሩ ወይም ሙያዊ ባልሆነ ስራ የሚሰሩ**፣ ለሙያዊ እድገት ተነሳሽነት ያላቸው
+- **የተሰናበቱ ወታደሮች**
 
-ፕሮግራሙ በስራ ስምሪት መመሪያ ማዕከላት አውታረ መረብ ላይ የተመሰረተ ነው፣ ተሳታፊዎችን በስራ እድገት እና ሙያዊ ትምህርት ሂደት ውስጥ ወደ ጠቃሚ ቦታዎች ውህደት እንዲደርሱ የመምራት ሚና አላቸው። ስለ አጃቢነቱ ይዘት፣ የፕሮግራሙ ርዝመት እና ወደ እርስዎ ቅርብ በሆነው ማዕከል ስላሉ ልዩ አቅርቦቶች ሙሉ ዝርዝሮች በራሳቸው በመመሪያ ማዕከላት ይታተማሉ እንጂ በስራ ስምሪት አስተዳደር ገጽ ላይ በዝርዝር አልተገለጹም።
+ከሦስቱ አንዱን ማሟላት በቂ ነው።
 
-**ማስታወሻ፦** ኦፊሴላዊው ገጽ የድጋፍ መጠኖችን፣ ስቲፕንዶችን ወይም የምዝገባ ቀናትን አያትምም — በሌላ ቦታ እንደዚህ ዓይነት ቁጥሮች ካጋጠሙዎት፣ በእነሱ ላይ ከመተማመንዎ በፊት በቀጥታ ከሚያንቀሳቅሰው አካል ጋር ያረጋግጡ።
+## በተግባር ምን ያገኛሉ?
+
+- **የግል የሙያ መንገድ ዕቅድ** እና ከአስተባባሪ ጋር የአንድ ለአንድ የስራ አጃቢነት
+- ለሙያ ስልጠና ኮርሶች፣ ለተጨማሪ ትምህርት፣ ለሳይኮሜትሪክ ፈተና ዝግጅት፣ ለእንግሊዝኛ፣ ለኮምፒውተርና ለመሠረታዊ ትምህርት ኮርሶች **የገንዘብ ድጋፍ**
+- ለወደፊቱ የስራ ገበያ የሚያገለግሉ **ወርክሾፖችና ኮርሶች**
+- ለምዘና ማዕከላትና ለቃለ መጠይቅ **የዝግጅት ወርክሾፖች**
+- **የአሠሪ ግንኙነቶች** — በመሪ ኩባንያዎች ውስጥ ጥራት ያላቸው ስራዎች፣ እና ስልጠናው ሲጠናቀቅ ምደባን የሚያካትቱ ከአሠሪዎች ጋር የተጣመሩ ኮርሶች
 
 ## እንዴት ማመልከት
 
-ፕሮግራሙ በኦፊሴላዊ ገጹ ላይ ቀጥተኛ የመስመር ላይ ምዝገባ ቅጽ የለውም። ብቁነትን ለማረጋገጥ፣ ወደ እርስዎ ቅርብ የሆነውን ንቁ የመመሪያ ማዕከል ለማግኘት እና ትክክለኛውን የምዝገባ ሂደት ለማወቅ — በቀጥታ ወደ ልዩ ህዝቦች የስራ ስምሪት አስተዳደር (מינהל תעסוקת אוכלוסיות ייחודיות) በ gov.il በኩል ያግኙ፣ ወይም ወደ አካባቢዎ ቅርብ የሆነውን የስራ ስምሪት መመሪያ ማዕከል ያነጋግሩ፦
+የመስመር ላይ ምዝገባ ቅጽ የለም። መንገዱ በአካባቢዎ ካለው አስተባባሪ ጋር መገናኘት ነው፦
 
-- የስራ ስምሪት አስተዳደር — የፕሮግራም ገጽ፦ taasukada.labor.gov.il
-- ለልዩ ህዝቦች የስራ ስምሪት አስተዳደር አጠቃላይ ጥያቄዎች፦ gov.il
+1. ወደ [የስራ ዘርፍ ድረ-ገጽ የፕሮግራሙ ገጽ](https://www.gov.il/he/Departments/Guides/special-populations-employment) ይሂዱ — "ወደ እርስዎ ቅርብ ያለውን አስተባባሪ ያግኙ" የሚል አገናኝ አለው።
+2. በ[የፕሮግራሙ ብሔራዊ የፌስቡክ ገጽ](https://www.facebook.com/lamerhak/) በኩልም መገናኘት ይችላሉ።
 
-📞 የስራ ስምሪት አስተዳደር፣ የስራ ሚኒስቴር
+**ማስታወሻ፦** በኦፊሴላዊው ገጽ ላይ የታተመው የአስተባባሪዎች ዝርዝር የ**2020** ዝርዝር ተብሎ ተለይቷል። ከዚያ ስልክ ቁጥር ወይም ኢሜይል ከመጠቀምዎ በፊት ወቅታዊ መሆኑን ያረጋግጡ።
 
-*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*`,
+## **ያልታተመው** ነገር
+
+ኦፊሴላዊው ገጽ የስቲፕንድ መጠኖችን፣ የመተዳደሪያ ክፍያዎችን፣ የምዝገባ ቀናትን ወይም ኮታዎችን **አያትምም**። እንደዚህ ዓይነት ቁጥሮች ሌላ ቦታ ካገኙ፣ ከማቀድዎ በፊት ከአስተባባሪ ጋር ያረጋግጡ።
+
+ምንጭ፦ የስራ ዘርፍ — ለልዩ ህዝቦች ስራ ማሳደጊያ ዋና መሥሪያ ቤት (gov.il)
+
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*
+`,
     },
   },
 

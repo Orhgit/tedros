@@ -759,14 +759,14 @@ It's not really a comparison — it's a clarification of roles. Community member
     slug: "klita-basket-vs-aliyah-grant",
     category: "absorption",
     title: {
-      he: "סל קליטה מול מענק-אקשרים — שתי דרכי-עזרה לעולה חדש",
+      he: "סל קליטה מול מענק משרד-העלייה — שתי דרכי-עזרה לעולה חדש",
       en: "Klita Basket vs Aliyah Grant — Two Tracks for New Olim",
       am: "የክሊታ ቅርጫት በተቃራኒ የዐሊያህ ስጦታ",
     },
     shortDescription: {
-      he: "סל-קליטה = תשלום-חודשי קבוע ל-12 חודשים. מענק-אקשרים = תשלום-חד-פעמי + סיוע במצבים חריגים.",
-      en: "Klita basket = fixed monthly payment for 12 months. Aliyah grant = one-time payment + help in special cases.",
-      am: "የክሊታ ቅርጫት = ለ12 ወር ቋሚ ወርሃዊ ክፍያ።",
+      he: 'סל-קליטה = תשלום בנתב"ג + השלמה + 6 תשלומים חודשיים. מענק משרד העלייה = תשלום-חד-פעמי + סיוע במצבים חריגים.',
+      en: "Klita basket = airport payment + top-up + 6 monthly payments. Aliyah grant = one-time payment + help in special cases.",
+      am: "የክሊታ ቅርጫት = የአየር ማረፊያ ክፍያ + ማሟያ + 6 ወርሃዊ ክፍያዎች።",
     },
     sideA: {
       name: { he: "סל-קליטה", en: "Klita Basket", am: "የክሊታ ቅርጫት" },
@@ -784,15 +784,23 @@ It's not really a comparison — it's a clarification of roles. Community member
     criteria: [
       {
         label: { he: "סוג-תשלום", en: "Payment type", am: "የክፍያ ዓይነት" },
-        a: { he: "12 תשלומים חודשיים", en: "12 monthly payments", am: "12 ወርሃዊ ክፍያዎች" },
+        // TED-148: the ministry's own table is airport card + bank top-up +
+        // 6 monthly payments, not 12 monthly payments.
+        a: {
+          he: 'נתב"ג + השלמה + 6 תשלומים חודשיים',
+          en: "Airport + top-up + 6 monthly payments",
+          am: "አየር ማረፊያ + ማሟያ + 6 ወርሃዊ ክፍያዎች",
+        },
         b: { he: "תשלום-חד-פעמי", en: "One-time payment", am: "የአንድ ጊዜ ክፍያ" },
       },
       {
         label: { he: "סכום-כולל", en: "Total amount", am: "ጠቅላላ መጠን" },
+        // TED-148: exact totals from the ministry's 2026 table (checked
+        // 2026-08-31) rather than a rounded band.
         a: {
-          he: "₪20,000-30,000 (לפני נישואין)",
-          en: "₪20,000-30,000 (single)",
-          am: "₪20,000-30,000",
+          he: "₪21,694 (יחיד) — ₪41,359 (זוג), לוח 2026",
+          en: "₪21,694 (single) — ₪41,359 (couple), 2026 table",
+          am: "₪21,694 (ነጠላ) — ₪41,359 (ጥንዶች)",
         },
         b: { he: "₪3,000-7,000", en: "₪3,000-7,000", am: "₪3,000-7,000" },
         winner: "a",
@@ -800,9 +808,9 @@ It's not really a comparison — it's a clarification of roles. Community member
       {
         label: { he: "אוכלוסיית-יעד", en: "Eligible", am: "ብቁ" },
         a: {
-          he: "כל עולה-חדש מ-3 חודשים אחרי עלייה",
-          en: "Every new immigrant from 3 months post-aliyah",
-          am: "ሁሉም አዲስ ስደተኛ",
+          he: 'כל עולה זכאי — התשלום הראשון כבר בנתב"ג',
+          en: "Every eligible oleh — the first payment lands at the airport",
+          am: "ብቁ የሆነ እያንዳንዱ ኦሌ — የመጀመሪያው ክፍያ በአየር ማረፊያ",
         },
         b: {
           he: "מצבי-קליטה חריגים (אם משפחה ללא הורה, וכו')",
@@ -812,7 +820,13 @@ It's not really a comparison — it's a clarification of roles. Community member
       },
       {
         label: { he: "תקופת-זכאות", en: "Eligibility period", am: "የብቁነት ጊዜ" },
-        a: { he: "12 חודשים", en: "12 months", am: "12 ወራት" },
+        // TED-148: the claim window is one year from receiving oleh status;
+        // the payments themselves run over six months.
+        a: {
+          he: "לתבוע בתוך שנה; 6 חודשי תשלום",
+          en: "Claim within a year; 6 months of payments",
+          am: "በአንድ ዓመት ውስጥ ይጠይቁ፤ 6 ወር ክፍያ",
+        },
         b: { he: "10 שנות-קליטה", en: "10 years post-aliyah", am: "10 ዓመታት" },
       },
       {
@@ -832,17 +846,17 @@ It's not really a comparison — it's a clarification of roles. Community member
     bodies: {
       he: `## שני התשלומים, לא תחליף זה לזה
 
-זו לא באמת "השוואה" — שניהם זמינים. סל-קליטה הוא ה-default; מענק-אקשרים הוא תוספת-מקרים-מיוחדים.
+זו לא באמת "השוואה" — שניהם זמינים. סל-קליטה הוא ה-default; מענק משרד-העלייה הוא תוספת-מקרים-מיוחדים.
 
 ## רצף-פעולה
 
-1. **חודשים 1-3 אחרי עלייה**: רישום ב-משרד-העלייה — סל-קליטה מתחיל.
-2. **חודשים 4-15**: 12 תשלומים חודשיים זורמים.
-3. **בכל מצב-חריג** (אם משפחה ללא הורה, מקרה-בריאות, אובדן-עבודה): פנו ל-משרד-העלייה למענק-אקשרים.
+1. **בהגעה**: התשלום הראשון בנתב"ג (כרטיס נטען), ואחריו השלמה לחשבון הבנק.
+2. **6 החודשים הבאים**: 6 תשלומים חודשיים. את הסל יש לתבוע בתוך שנה מקבלת מעמד עולה.
+3. **בכל מצב-חריג** (אם משפחה ללא הורה, מקרה-בריאות, אובדן-עבודה): פנו ל-משרד-העלייה למענק משרד-העלייה.
 
 ## אל תחמיצו
 
-מענק-אקשרים ניתן לבקש עד 10 שנים אחרי עלייה. הרבה משפחות לא יודעות עליו.
+מענק משרד-העלייה ניתן לבקש עד 10 שנים אחרי עלייה. הרבה משפחות לא יודעות עליו.
 `,
       en: `## Both, not either-or
 
@@ -850,8 +864,8 @@ Not really a "comparison" — both are available. Klita basket is the default; t
 
 ## Sequence
 
-1. **Months 1-3 post-aliyah**: register at Ministry of Aliyah — klita basket starts.
-2. **Months 4-15**: 12 monthly payments flow.
+1. **On arrival**: the first payment at the airport (prepaid card), then a top-up to the bank account.
+2. **The next 6 months**: 6 monthly payments. The basket must be claimed within a year of receiving oleh status.
 3. **In any special situation** (single parent, health, job loss): contact the ministry for the aliyah grant.
 
 ## Don't miss
