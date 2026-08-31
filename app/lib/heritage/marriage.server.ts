@@ -155,3 +155,145 @@ Delays in the birur yahadut are the most familiar frustration in the process. Ke
 አንድ ነገር ከተጣበቀ
 በማጣራቱ ሂደት መዘግየት በጣም የታወቀው ብስጭት ነው። ያስገቡትን እያንዳንዱን ሰነድ ቅጂ ይያዙ፣ እያንዳንዱን ውሳኔ በጽሑፍ ይጠይቁ፣ ቀኖችንና ስሞችን ይመዝግቡ። በ30 ቀናት ውስጥ ይግባኝ ማለት ይችላሉ፣ ነፃ አጃቢነትም አለ፡ የዒቲም ተቋም በረቢነትና በረቢ ፍርድ ቤቶች ያጅባል፣ ጠበቃ (ተቤካ) ለማኅበረሰቡ አባላት የሕግ ድጋፍ ይሰጣል፣ የዘረኝነትን ትግል የማስተባበር መንግሥታዊ ክፍል መስመርም አድሏዊ አያያዝ ላይ ቅሬታ ይቀበላል። ሙሉ ዝርዝሩ ከዚህ ገጽ በታች ይገኛል።`,
 };
+
+// ── step-by-step checklist ─────────────────────────────────────────────────
+
+export const MARRIAGE_STEPS: MarriageGuideStep[] = [
+  {
+    id: "check-parents-documents",
+    title: {
+      he: "בדקו קודם: יש להורים תעודת נישואין מהרבנות?",
+      en: "First check: do your parents have a Rabbanut marriage certificate?",
+      am: "መጀመሪያ ያረጋግጡ፡ ወላጆችዎ ከረቢነት የጋብቻ ምስክር ወረቀት አላቸው?",
+    },
+    detail: {
+      he: "זו השאלה שקובעת את כל המסלול. תעודת נישואין או כתובה מהרבנות בישראל — לרוב אין צורך בבירור יהדות. גם אח או אחות שכבר עברו בירור ואושרו יכולים לחסוך לכם את התהליך. נישאו ההורים באתיופיה או בטקס שלא נרשם ברבנות? עברו לשלב הבא.",
+      en: "This is the question that determines the whole route. A marriage certificate or ketubah from the Rabbanut in Israel usually means no verification is needed. A sibling who already completed a verification can also spare you the process. Did your parents marry in Ethiopia or in a ceremony never registered with the Rabbanut? Go to the next step.",
+      am: "መላውን መንገድ የሚወስነው ጥያቄ ይህ ነው። በእስራኤል ከረቢነት የተሰጠ የጋብቻ ምስክር ወረቀት ወይም ኩቱባ በአብዛኛው ማጣራት አያስፈልግም ማለት ነው። ማጣራቱን አልፎ የጸደቀ ወንድም ወይም እህትም ሂደቱን ሊያድንልዎ ይችላል። ወላጆችዎ በኢትዮጵያ ወይም ባልተመዘገበ ሥነ ሥርዓት ካገቡ — ወደሚቀጥለው ደረጃ ይሂዱ።",
+    },
+    officialUrl:
+      "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%A8%D7%95%D7%A8_%D7%99%D7%94%D7%93%D7%95%D7%AA",
+    officialLabel: {
+      he: "כל-זכות — בירור יהדות (מתי נדרש)",
+      en: "Kol Zchut — birur yahadut (when it is required)",
+      am: "ኮል ዝኹት — ቢሩር የሁዱት (መቼ እንደሚያስፈልግ)",
+    },
+  },
+  {
+    id: "expert-rabbi",
+    title: {
+      he: "פנו לרב המומחה ליהדות אתיופיה באזורכם",
+      en: "Apply to the rabbi who is an expert in Ethiopian Jewry in your area",
+      am: "በአካባቢዎ ወዳለው በኢትዮጵያ አይሁዳዊነት ልዩ እውቀት ላለው ረቢ ይሂዱ",
+    },
+    detail: {
+      he: "ליוצאי אתיופיה יש מסלול ייעודי: הבירור מתנהל מול רב מומחה המשרת את אזור המגורים, ולא בהליך הכללי. הרשימה העדכנית של הרבנים המוסמכים לכך מתפרסמת בכל-זכות ובאתר המשרד לשירותי דת — בקשו אותה בלשכת רישום הנישואין. ההליך אינו כרוך בתשלום.",
+      en: "Ethiopian-Israelis have a dedicated route: the verification is handled by an expert rabbi serving your area of residence, not through the general procedure. The current list of authorized rabbis is published on Kol Zchut and by the Ministry of Religious Services — ask for it at the marriage registration office. The procedure is free of charge.",
+      am: "ለኢትዮጵያ ተወላጆች የተለየ መንገድ አለ፡ ማጣራቱ በአካባቢዎ በሚያገለግል ልዩ እውቀት ባለው ረቢ ይከናወናል እንጂ በአጠቃላዩ ሂደት አይደለም። ወቅታዊው የተፈቀዱ ረቢዎች ዝርዝር በኮል ዝኹትና በሃይማኖት አገልግሎት ሚኒስቴር ይታተማል — በጋብቻ ምዝገባ ቢሮ ይጠይቁት። ሂደቱ ክፍያ የለውም።",
+    },
+    officialUrl:
+      "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%A8%D7%95%D7%A8_%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94",
+    officialLabel: {
+      he: "כל-זכות — בירור יהדות ליוצאי אתיופיה",
+      en: "Kol Zchut — birur yahadut for Ethiopian-Israelis",
+      am: "ኮል ዝኹት — ለኢትዮጵያ ተወላጆች ቢሩር የሁዱት",
+    },
+  },
+  {
+    id: "gather-documents",
+    title: {
+      he: "אספו את המסמכים — מקוריים, לא צילומים",
+      en: "Gather the documents — originals, not copies",
+      am: "ሰነዶቹን ያሰባስቡ — ዋናዎቹን እንጂ ቅጂ አይደለም",
+    },
+    detail: {
+      he: "תעודות לידה מקוריות שלכם, של האם ושל הסבתא מצד האם; תעודות זהות; מסמכים המעידים על קרבת המשפחה; ואם היו במשפחה גיור או השבה ליהדות — מעשה בית הדין המקורי. תמונות משפחתיות עם סממנים יהודיים ומסמכי קהילה מסייעים גם הם. סרקו הכול לעצמכם לפני ההגשה.",
+      en: "Original birth certificates for you, your mother, and your maternal grandmother; identity documents; papers establishing the family relationship; and, if anyone in the family underwent conversion or return to Judaism, the original rabbinical-court record. Family photographs showing Jewish elements and community records help too. Scan everything for yourself before submitting.",
+      am: "የእርስዎ፣ የእናትዎና የእናትዎ እናት ዋና የልደት ምስክር ወረቀቶች፤ የመታወቂያ ሰነዶች፤ የቤተሰብ ዝምድናን የሚያሳዩ ሰነዶች፤ በቤተሰብ ውስጥ ጊዩር ወይም ወደ አይሁድነት መመለስ ከነበረ ደግሞ ዋናው የፍርድ ቤት ሰነድ። የአይሁድ ምልክቶች ያሏቸው የቤተሰብ ፎቶዎችና የማኅበረሰብ መዝገቦችም ይረዳሉ። ከማስገባትዎ በፊት ሁሉንም ለራስዎ ይቅዱ።",
+    },
+  },
+  {
+    id: "meeting-and-certificate",
+    title: {
+      he: "פגישת הבירור וקבלת אישור היהדות",
+      en: "The verification meeting and receiving the certificate",
+      am: "የማጣራት ስብሰባውና የይሁዲነት ማረጋገጫ መቀበል",
+    },
+    detail: {
+      he: "הרב עשוי לבקש מסמכים נוספים או פגישה עם קרובי משפחה — כדאי לבוא עם האם או הסבתא. אישור היהדות מתקבל לרוב תוך כחודש. מקרים מורכבים מועברים ללשכת הרב הראשי ליהודי אתיופיה בירושלים. בבירור המתנהל בבית הדין הרבני האזורי פותחים תיק בדוא\"ל yahadut@rbc.gov.il או בטלפון *5889 שלוחה 3, ובסופו מתקיים דיון קצר בפני דיין.",
+      en: "The rabbi may ask for further documents or a meeting with relatives — it helps to bring your mother or grandmother. The certificate usually arrives within about a month. Complex cases go to the Bureau of the Chief Rabbi of Ethiopian Jewry in Jerusalem. Where the verification runs through the regional rabbinical court, the file is opened at yahadut@rbc.gov.il or by phone at *5889 ext. 3, and concludes with a short hearing before a dayan.",
+      am: "ረቢው ተጨማሪ ሰነዶች ወይም ከዘመዶች ጋር ስብሰባ ሊጠይቅ ይችላል — እናትዎን ወይም አያትዎን ይዘው መምጣት ይረዳል። ማረጋገጫው በአብዛኛው በአንድ ወር ገደማ ይደርሳል። ውስብስብ ጉዳዮች በኢየሩሳሌም ወደሚገኘው የኢትዮጵያ አይሁዶች ዋና ረቢ ጽሕፈት ቤት ይሄዳሉ። ማጣራቱ በክልል የረቢ ፍርድ ቤት ሲካሄድ መዝገቡ በ yahadut@rbc.gov.il ወይም በስልክ *5889 ቅጥያ 3 ይከፈታል፣ በዳያን ፊት በአጭር ችሎት ይጠናቀቃል።",
+    },
+  },
+  {
+    id: "open-marriage-file",
+    title: {
+      he: "פתחו תיק נישואין במועצה הדתית",
+      en: "Open the marriage file at the religious council",
+      am: "በሃይማኖት ምክር ቤት የጋብቻ መዝገብ ይክፈቱ",
+    },
+    detail: {
+      he: "פותחים במועצה הדתית במקום המגורים של אחד מבני הזוג, בדרך כלל בין שלושה חודשים ל-45 יום לפני החתונה. מביאים תעודות זהות עם ספח, תמונות, תעודת הנישואין של ההורים או אישור היהדות, ושני עדי רווקות בגירים שאינם קרובי משפחה מדרגה ראשונה. גרוש או אלמן — גם מסמכי הגירושין או תעודת הפטירה המקוריים.",
+      en: "Open it at the religious council where one partner lives, generally between three months and 45 days before the wedding. Bring identity cards with the addendum, photographs, the parents' marriage certificate or the Jewish-status certificate, and two adult single-status witnesses who are not first-degree relatives. If divorced or widowed — the original divorce papers or death certificate as well.",
+      am: "ከጥንዶቹ አንዱ በሚኖርበት ቦታ ባለው የሃይማኖት ምክር ቤት ይክፈቱ፣ በአብዛኛው ከሠርጉ ከሦስት ወር በፊት እስከ 45 ቀናት ባለው ጊዜ። መታወቂያዎችን ከአባሪው ጋር፣ ፎቶዎችን፣ የወላጆችን የጋብቻ ምስክር ወረቀት ወይም የይሁዲነት ማረጋገጫን፣ እና የመጀመሪያ ደረጃ ዘመድ ያልሆኑ ሁለት ጎልማሳ የነጠላነት ምስክሮችን ይዘው ይምጡ። የተፋቱ ወይም ባል/ሚስት የሞተባቸው — ዋናውን የፍቺ ሰነድ ወይም የሞት ምስክር ወረቀትም።",
+    },
+  },
+  {
+    id: "fee-discount",
+    title: {
+      he: "בקשו את ההנחה באגרה — 40% למי שזכאי",
+      en: "Ask for the fee discount — 40% for those eligible",
+      am: "የክፍያ ቅናሹን ይጠይቁ — ለብቁዎች 40%",
+    },
+    detail: {
+      he: "אם אחד מבני הזוג הוא חייל בשירות חובה, בשירות לאומי, סטודנט או תלמיד ישיבה עד גיל 30, עולה בשנתיים הראשונות לעלייה, בעל תעודת נכות או מטופל ברווחה — מגיעה הנחה של 40% באגרת רישום הנישואין. ההנחה ניתנת בהצגת מסמך מתאים בלשכה, ולא תמיד מציעים אותה יזומה — בקשו.",
+      en: "If one partner is a conscript soldier, in national service, a student or yeshiva student under 30, an oleh within the first two years of aliyah, a disability-certificate holder, or supported by welfare services — a 40% discount on the registration fee applies. It is granted on presenting the relevant document at the office and is not always offered proactively — ask for it.",
+      am: "ከጥንዶቹ አንዱ የግዴታ ውትድርና ወታደር፣ በብሔራዊ አገልግሎት፣ ከ30 ዓመት በታች ተማሪ ወይም የየሺቫ ተማሪ፣ በመጀመሪያዎቹ ሁለት የዓሊያ ዓመታት ያለ ኦሌ፣ የአካል ጉዳት ምስክር ወረቀት ያለው ወይም በማኅበራዊ አገልግሎት የሚደገፍ ከሆነ — በምዝገባ ክፍያው ላይ 40% ቅናሽ አለ። ተገቢውን ሰነድ በቢሮው በማሳየት ይሰጣል፤ ሁልጊዜ በራሳቸው ስለማያቀርቡት — ይጠይቁ።",
+    },
+    officialUrl:
+      "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%90%D7%92%D7%A8%D7%AA_%D7%A8%D7%99%D7%A9%D7%95%D7%9D_%D7%A0%D7%99%D7%A9%D7%95%D7%90%D7%99%D7%9F_%D7%91%D7%A8%D7%91%D7%A0%D7%95%D7%AA",
+    officialLabel: {
+      he: "כל-זכות — הנחה באגרת רישום נישואין",
+      en: "Kol Zchut — marriage registration fee discount",
+      am: "ኮል ዝኹት — የጋብቻ ምዝገባ ክፍያ ቅናሽ",
+    },
+  },
+  {
+    id: "choose-officiant",
+    title: {
+      he: "בחרו מי עורך את החופה — קס, רב, או שניהם",
+      en: "Choose who officiates — a kes, a rabbi, or both",
+      am: "ማን እንደሚያገባ ይምረጡ — ቄስ፣ ረቢ ወይም ሁለቱም",
+    },
+    detail: {
+      he: "מאז 2018 הקייסים מוכרים, משולבים במועצות הדתיות ומוסמכים לערוך חופה וקידושין. אפשר לבקש שקס יערוך את הטקס, ואפשר לשלב — רישום מול המועצה הדתית וליווי הקס בטקס ובברכות. שני המסלולים רשמיים באותה מידה; זו בחירה של המשפחה. אמרו זאת כבר בפתיחת התיק ובררו מי מהקייסים באזורכם רשום כעורך חופה.",
+      en: "Since 2018 the kessim have been recognized, integrated into the religious councils, and authorized to officiate weddings. You can ask a kes to conduct the ceremony, or combine the two — registration with the religious council and the kes leading the ceremony and the blessings. Both tracks are equally official; it is the family's choice. Say so when opening the file and check which kessim in your area are registered to officiate.",
+      am: "ከ2018 ጀምሮ ቄሶች ታውቀዋል፣ በሃይማኖት ምክር ቤቶች ተካተዋል፣ ሠርግ የመፈጸም ሥልጣንም አላቸው። ቄስ ሥነ ሥርዓቱን እንዲመራ መጠየቅ ይችላሉ፣ ወይም ሁለቱን ማዋሃድ ይችላሉ — ምዝገባው ከሃይማኖት ምክር ቤቱ ጋር፣ ቄሱ ደግሞ ሥነ ሥርዓቱንና ቡራኬዎቹን ይመራል። ሁለቱም መንገዶች እኩል ይፋዊ ናቸው፤ የቤተሰብ ምርጫ ነው። መዝገቡን ሲከፍቱ ይናገሩ፣ በአካባቢዎ የትኞቹ ቄሶች እንደተመዘገቡ ያጣሩ።",
+    },
+    internalPath: "/heritage/kessim",
+    internalLabel: {
+      he: "מדריך הקייסים והרבנים לפי עיר",
+      en: "The kessim and rabbis directory by city",
+      am: "የቄሶችና ረቢዎች ማውጫ በከተማ",
+    },
+  },
+  {
+    id: "if-stuck",
+    title: {
+      he: "נתקעתם? תעדו, ערערו, ובקשו ליווי",
+      en: "Stuck? Document it, appeal, and get accompaniment",
+      am: "ተጣበቁ? ይመዝግቡ፣ ይግባኝ ይበሉ፣ አጃቢ ይጠይቁ",
+    },
+    detail: {
+      he: "שמרו עותק של כל מסמך שהגשתם, בקשו כל החלטה בכתב, ורשמו תאריכים ושמות. על החלטה בבירור יהדות אפשר לערער תוך 30 יום לבית הדין הרבני הגדול בירושלים. ליווי חינם: מכון עתים (*8083) מול הרבנות ובתי הדין, וטבקה לסיוע משפטי לבני הקהילה.",
+      en: "Keep a copy of every document you submit, ask for every decision in writing, and note dates and names. A birur yahadut decision can be appealed within 30 days to the Supreme Rabbinical Court in Jerusalem. Free accompaniment: Itim (*8083) for the Rabbanut and the courts, and Tebeka for legal aid to community members.",
+      am: "ያስገቡትን እያንዳንዱን ሰነድ ቅጂ ይያዙ፣ እያንዳንዱን ውሳኔ በጽሑፍ ይጠይቁ፣ ቀኖችንና ስሞችን ይመዝግቡ። በማጣራት ውሳኔ ላይ በ30 ቀናት ውስጥ በኢየሩሳሌም ላለው ከፍተኛ የረቢ ፍርድ ቤት ይግባኝ ማለት ይቻላል። ነፃ አጃቢነት፡ ዒቲም (*8083) በረቢነትና በፍርድ ቤቶች፣ ተቤካ ደግሞ ለማኅበረሰቡ አባላት የሕግ ድጋፍ።",
+    },
+    internalPath: "/orgs/tebeka",
+    internalLabel: {
+      he: "טבקה — סיוע משפטי לבני הקהילה",
+      en: "Tebeka — legal aid for community members",
+      am: "ተቤካ — ለማኅበረሰቡ አባላት የሕግ ድጋፍ",
+    },
+  },
+];
