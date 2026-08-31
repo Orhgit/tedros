@@ -18,6 +18,7 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { cityName, cityPath, findCityBySlug } from "~/lib/cities/registry";
 import { cityOverview } from "~/lib/cities/content.server";
+import { hydrateNeighborhoods } from "~/lib/urban-renewal/content.server";
 import {
   aggregateUnits,
   citySources,
@@ -49,7 +50,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   if (!city) {
     throw new Response("City not found", { status: 404 });
   }
-  const neighborhoods = neighborhoodsByCity(city.slug);
+  const neighborhoods = hydrateNeighborhoods(neighborhoodsByCity(city.slug));
   if (neighborhoods.length === 0) {
     // No T3 neighborhoods registered for this city — this aggregate page
     // has nothing non-thin to render (would be a doorway page). 404s
