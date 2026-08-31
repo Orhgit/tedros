@@ -3630,164 +3630,221 @@ You can cover the difference through the Marom scholarship, a special fund, or p
     },
   },
 
-  // 24 — Klita basket specific to Ethiopian-Israelis (TED-60)
+  // 24 — Absorption basket, Ethiopian-oleh angle (TED-60; corrected TED-148).
+  //
+  // TED-148 audit: the TED-60 version of this entry published a detailed
+  // "extended basket for Ethiopian olim" — ~₪3,500/mo single, ₪6,200/mo
+  // couple, a ₪2,500 "cultural adjustment grant (unique to immigrants from
+  // Africa)", a ₪3,000–7,500 furniture grant, 500 free ulpan hours, 12 free
+  // employment-counselling sessions, ₪12,000 vocational vouchers, and a
+  // 24-month Falash Mura basket. **None of it appears on the Ministry of
+  // Aliyah and Integration's own page**, and the framing itself (an
+  // origin-dependent basket) is contradicted by that page, which states the
+  // basket is paid "לעולים ... מכל מדינות העולם" with amounts set by family
+  // status and age. Treated as fabricated per the TED-152 precedent and
+  // removed wholesale.
+  //
+  // Replacement figures are transcribed from the official 2026 tables at
+  // https://www.gov.il/he/Departments/General/absorption_basket (fetched
+  // 2026-08-31; gov.il 403s WebFetch/curl, so it was read through a reader
+  // proxy). Structure (airport prepaid card → bank top-up → 6 monthly
+  // payments), the 24-month prior-residence rule, the one-year claim window
+  // and the income-independence of eligibility all come from that page.
+  // Hotline *2994 / 03-9733333 verified on the Ministry's own appointment
+  // service page — the "*5454" this entry used to print is not the
+  // Ministry's number. The body states its own verification month so a
+  // future reader can tell how stale the figures are.
+  //
+  // AM is AI-translated and not yet reviewed by a native Amharic speaker —
+  // see the in-body disclaimer. This is money-related copy; native review is
+  // a prerequisite before treating the AM text as final.
   {
     title: {
-      he: "סל קליטה לעולים מאתיופיה — המדריך המלא",
-      en: "Klita Basket for Ethiopian Olim — Complete Guide",
-      am: "የኢትዮጵያ ዓሊያ ቅርጫት — ሙሉ መመሪያ",
+      he: "סל קליטה לעולים מאתיופיה — הסכומים והתהליך (2026)",
+      en: "Absorption Basket for Ethiopian Olim — Amounts and Process (2026)",
+      am: "ለኢትዮጵያ ኦሊሞች የመቀበያ ቅርጫት — መጠኖችና ሂደት (2026)",
     },
     slug: {
       he: "klita-basket-ethiopia",
       en: "klita-basket-ethiopia",
       am: "klita-basket-ethiopia",
     },
-    govUrl: "https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page",
+    govUrl: "https://www.gov.il/he/Departments/General/absorption_basket",
     eligibilitySummary: {
-      he: "עולים מאתיופיה ועולי פלשמורה זכאים לסל קליטה מורחב: תשלום חודשי, מענקי הסתגלות, שובר אולפן, כיסוי בריאות ל-6 חודשים ולימודי השכלה מקצועית.",
-      en: "Ethiopian olim and Falash Mura immigrants receive an extended klita basket: monthly stipend, adjustment grants, ulpan voucher, 6-month health coverage, and vocational training.",
-      am: "ኢትዮጵያ ዓሊያ እና ፋላሽ ሙራ ስደተኞች የተሻሻለ ቅርጫት ያገኛሉ፦ ወርሃዊ ክፍያ፣ የማስተካከያ ድጎማ፣ ኡልፓን ቫዎቸር፣ ለ6 ወር ጤና ሽፋን፣ እና ሙያ ስልጠና።",
+      he: "סל הקליטה ניתן לעולים מכל מדינות העולם; הסכום נקבע לפי מצב משפחתי, גיל ומספר ילדים — לא לפי ארץ מוצא. יחיד: 21,694 ₪ בסך הכל (לוח רשמי 2026). לעולי אתיופיה יש מסלולים נוספים סביב מרכזי הקליטה.",
+      en: "The absorption basket is paid to olim from every country; the amount is set by family status, age and number of children — not by country of origin. Single: ₪21,694 in total (official 2026 table). Ethiopian olim have additional tracks around absorption centres.",
+      am: "የመቀበያ ቅርጫት ከዓለም ሁሉ ሀገራት ለመጡ ኦሊሞች ይከፈላል፤ መጠኑ በቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት ይወሰናል — በትውልድ ሀገር አይደለም። ነጠላ፦ በጠቅላላ 21,694 ₪ (ኦፊሴላዊ የ2026 ሰንጠረዥ)።",
     },
     tags: ["new_immigrant", "grants", "monthly_payment", "employment"],
     bodies: {
-      he: `## מה ייחודי בסל הקליטה של עולים מאתיופיה?
+      he: `## סל הקליטה — סיוע לאומי, לא מסלול נפרד לקהילה
 
-עולים מאתיופיה (כולל עולי פלשמורה) זכאים לסל קליטה **מורחב** שונה מהסל הרגיל, מכיוון שהממשלה הכירה בצורך בתמיכה מוגברת עקב מרחק גאוגרפי ותרבותי גדול מישראל.
+סל הקליטה הוא סיוע כספי של **משרד העלייה והקליטה** לתקופת ההתארגנות הראשונה בארץ. לפי הפרסום הרשמי של המשרד, הסל ניתן לעולים שנמצאו זכאים על פי נוהל המשרד **מכל מדינות העולם**, וסכומיו נקבעים לפי **מצב משפחתי, גיל ומספר הילדים** — לא לפי ארץ המוצא.
 
-## מה כולל הסל?
+**חשוב לדעת:** מסתובבים ברשת פירוטים של "סל מורחב ליוצאי אתיופיה" הכוללים מענקים כמו "מענק הסתגלות תרבותית" או "מענק ריהוט". **הפירוטים האלה אינם מופיעים בלוחות הרשמיים של משרד העלייה והקליטה** ואין להסתמך עליהם. מה שכן ייחודי לעולי אתיופיה — קליטה במרכזי קליטה ומענקי הדיור ביציאה מהם — מפורט בהמשך העמוד.
 
-### תשלומים חודשיים
-- **רווק**: כ-₪3,500 לחודש בשנה הראשונה
-- **זוג ללא ילדים**: כ-₪6,200 לחודש
-- **זוג עם ילדים**: תוספת של כ-₪800 לכל ילד
-- **הורה יחיד**: כ-₪5,400 + תוספות לילדים
+## הסכומים הרשמיים לשנת 2026
 
-### מענקים חד-פעמיים
-- **מענק קליטה ראשוני** (הגעה): ₪9,000–₪19,000 לפי גודל משפחה
-- **מענק הסתגלות תרבותית**: ₪2,500 (ייחודי לעולים מאפריקה)
-- **מענק ריהוט**: ₪3,000–₪7,500 לפי גודל משפחה
+לפי [לוח הסיוע הכספי בסל הקליטה](https://www.gov.il/he/Departments/General/absorption_basket) באתר משרד העלייה והקליטה:
 
-### שירותים נוספים
-- **שובר אולפן**: עד 500 שעות לימוד עברית (Aleph–Dalet) — חינם
-- **כיסוי בריאות מורחב**: 6 חודשים עם קופת חולים ללא תשלום נוסף
-- **ייעוץ תעסוקתי**: 12 פגישות חינם עם יועץ משרד הקליטה
-- **שוברי הכשרה מקצועית**: עד ₪12,000 לקורסים מוכרים
+| תשלום | יחיד | משפחה חד-הורית | זוג |
+| --- | --- | --- | --- |
+| נתב"ג (כרטיס נטען) | 1,250 ₪ | 2,300 ₪ | 2,500 ₪ |
+| השלמה לחשבון בנק | 1,544 ₪ | 1,631 ₪ | 4,023 ₪ |
+| כל אחד מ-6 התשלומים החודשיים | 3,150 ₪ | 5,190 ₪ | 5,806 ₪ |
+| **סך הכל** | **21,694 ₪** | **35,071 ₪** | **41,359 ₪** |
+
+**תוספות לילדים (סך הכל לכל ילד/ה):** ילד/ה עד גיל 4 — 12,831 ₪; ילד/ה 4–18 — 8,521 ₪; בן/בת 18–21 — 11,039 ₪; תוספת למשפחה בת 6 נפשות ומעלה — 5,918 ₪.
+
+קיימים לוחות נפרדים ל**גמלאים** ול**טרום־פנסיה** (מי שיגיע לגיל פרישה בתוך 5 שנים מהעלייה) — הסכומים שם גבוהים יותר. בדקו את הלוח הרלוונטי לכם בקישור למעלה.
+
+**הסכומים מתעדכנים.** נבדקו מול האתר הרשמי באוגוסט 2026 — לפני שאתם מתכננים תקציב, ודאו את הסכום העדכני בלוח הרשמי או מול לשכת המשרד.
+
+## איך משולם הסל?
+
+- **תשלום ראשון** — למגיעים באשרת עלייה מחו"ל, ב[כרטיס נטען](https://www.gov.il/he/pages/sal-klita-card) בנמל התעופה. למי שמשנה מעמד בארץ — בהפקדה בנקאית.
+- **השלמה** לחשבון הבנק.
+- **6 תשלומים חודשיים** נוספים.
+
+בתום ששת החודשים אפשר לבדוק זכאות ל[הבטחת הכנסה](https://www.btl.gov.il) כהמשך סיוע לצרכי קיום.
 
 ## מי זכאי?
 
-- עולה מאתיופיה שעלה מ-1984 (מבצע משה / שלמה / שבטי ישראל)
-- עולי פלשמורה שעלו דרך מסלול הכינוס
-- ילדים ובני זוג שעלו יחד
+- הנכנסים לראשונה לישראל באשרת "עולה", בעלי זכאות מלאה כעולים
+- מי ששהו בישראל **לא יותר מ-24 חודשים** רצופים או מצטברים בשלוש השנים שקדמו לקבלת מעמד עולה
+- הזכאות **אינה תלויה בגובה ההכנסה**
 
-## שלבי קבלת הסל
+**חלון הזמן:** את הסל אפשר לקבל **בתוך שנה** מיום קבלת מעמד עולה. יציאה לחו"ל עוצרת את התשלומים; חידוש אפשרי רק למי ששב בתוך שנת העלייה הראשונה.
 
-1. **הרשמה** — תוך 30 ימים מהגעה, בלשכת משרד הקליטה הקרובה
-2. **הצגת מסמכים**: ת"ז עולה, אישור עלייה, מסמך מוצא אתיופי
-3. **פתיחת חשבון בנק** לתשלומים האוטומטיים
-4. **בחירת אולפן** (חובה לקבלת מלוא הסל)
-5. **פגישת ייעוץ** עם עובד סוציאלי מהקהילה
+## מה שכן ייחודי לעולים מאתיופיה
 
-## פלשמורה — מסלול מיוחד
+- **קליטה במרכז קליטה** — בשונה מרוב העולים הנקלטים קליטה ישירה, עולים מאתיופיה נקלטים דרך מרכזי קליטה. ראו [קליטה ישירה לעולי פלשמורה](/he/rights/falash-mura-direct-absorption).
+- **מענקי דיור ביציאה ממרכז קליטה** — תוכנית ייעודית של משרד הבינוי והשיכון. ראו [מענקי דיור לעולים מאתיופיה במרכזי קליטה](/he/rights/housing-grant-klita-centers).
+- **סל קליטה לתלמידים** (אגרת חינוך) — סיוע נפרד של משרד החינוך. ראו [סל קליטה לתלמידים עולים](/he/rights/student-absorption-basket).
 
-עולי פלשמורה שעלו מ-2016 זכאים לסל נפרד הכולל:
-- **תקופת סל מורחבת**: 24 חודשים (לעומת 12 לעולה רגיל)
-- **תמיכה פסיכו-סוציאלית**: פגישות עם מטפל מהקהילה
-- **הכרה רשמית בהשכלה קודמת** — ועדת הכרה מקצועית
+## איך פונים?
+
+1. פותחים **חשבון בנק משותף לשני בני הזוג** בבנק מסחרי — נדרשת נוכחות של שניהם. מומלץ לעשות זאת בימים הראשונים בארץ.
+2. מוסרים את פרטי החשבון בלשכת משרד העלייה והקליטה באזור מגוריכם.
+3. לא משנים את מספר החשבון בשנים הראשונות; אם שיניתם — מדווחים מיד למשרד.
 
 ## קישורים רשמיים
 
-- [משרד הקליטה — סל קליטה](https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page)
-- [מוקד ייעוץ: 5454*](tel:5454) — זמין בעברית, אנגלית ואמהרית
+- [משרד העלייה והקליטה — סל קליטה (כולל לוחות הסכומים)](https://www.gov.il/he/Departments/General/absorption_basket)
+- [זימון תור ליועץ קליטה](https://www.gov.il/he/service/scheduling_an_appointment_to_the_ministry_of_aliyah_and_integration)
 
-📞 **מוקד משרד הקליטה**: 5454*
+📞 **מוקד משרד העלייה והקליטה**: *2994 או 03-9733333 — א׳–ה׳, 8:30–16:00. השירות ניתן גם **באמהרית**.
 `,
-      en: `## What makes the Ethiopian-Israelis' klita basket unique?
+      en: `## The absorption basket is national — not a separate community track
 
-Ethiopian olim (including Falash Mura) receive an **extended** klita basket that differs from the standard one. The government recognised the need for increased support given the large geographic and cultural distance from Israel.
+The absorption basket (סל קליטה) is financial support from the **Ministry of Aliyah and Integration** for an oleh's first period in Israel. Per the Ministry's own publication, it is given to olim found eligible under Ministry procedure **from every country in the world**, and the amounts are set by **family status, age and number of children** — not by country of origin.
 
-## What the basket includes
+**Important:** breakdowns of an "extended basket for Ethiopian olim" circulate online, listing grants such as a "cultural adjustment grant" or a "furniture grant". **Those items do not appear in the Ministry of Aliyah and Integration's official tables** and should not be relied on. What genuinely is community-specific — absorption-centre intake and the housing grants paid on leaving one — is set out further down this page.
 
-### Monthly payments
-- **Single**: approx. ₪3,500/month in the first year
-- **Couple without children**: approx. ₪6,200/month
-- **Couple with children**: approx. ₪800 extra per child
-- **Single parent**: approx. ₪5,400 + child additions
+## The official 2026 amounts
 
-### One-time grants
-- **Initial absorption grant** (on arrival): ₪9,000–₪19,000 by family size
-- **Cultural adjustment grant**: ₪2,500 (unique to immigrants from Africa)
-- **Furniture grant**: ₪3,000–₪7,500 by family size
+Per the [absorption basket financial-aid table](https://www.gov.il/he/Departments/General/absorption_basket) on the Ministry's site:
 
-### Additional services
-- **Ulpan voucher**: up to 500 Hebrew study hours (Aleph–Dalet) — free
-- **Extended health coverage**: 6 months with health fund at no extra charge
-- **Employment counselling**: 12 free sessions with a Ministry of Aliyah adviser
-- **Vocational training vouchers**: up to ₪12,000 for accredited courses
+| Payment | Single | Single-parent family | Couple |
+| --- | --- | --- | --- |
+| Ben Gurion Airport (prepaid card) | ₪1,250 | ₪2,300 | ₪2,500 |
+| Bank-account top-up | ₪1,544 | ₪1,631 | ₪4,023 |
+| Each of the 6 monthly payments | ₪3,150 | ₪5,190 | ₪5,806 |
+| **Total** | **₪21,694** | **₪35,071** | **₪41,359** |
+
+**Per-child additions (total per child):** child under 4 — ₪12,831; child 4–18 — ₪8,521; young adult 18–21 — ₪11,039; addition for a household of 6+ — ₪5,918.
+
+Separate tables exist for **pensioners** and **pre-pension** olim (those reaching retirement age within 5 years of aliyah), where amounts are higher. Check the table that applies to you via the link above.
+
+**These amounts change.** They were checked against the official site in August 2026 — before budgeting, confirm the current figure in the official table or with a Ministry bureau.
+
+## How the basket is paid
+
+- **First payment** — for those arriving from abroad on an aliyah visa, on a [prepaid card](https://www.gov.il/he/pages/sal-klita-card) at the airport. For those changing status in Israel — by bank deposit.
+- A **top-up** to the bank account.
+- **6 further monthly payments.**
+
+After the six months you can check eligibility for income support (הבטחת הכנסה) at the National Insurance Institute as continued subsistence aid.
 
 ## Who is eligible?
 
-- An oleh from Ethiopia who immigrated from 1984 (Operation Moses / Solomon / Shivtei Israel)
-- Falash Mura olim who arrived via the ingathering track
-- Children and spouses who immigrated together
+- Those entering Israel for the first time on an "oleh" visa, with full oleh entitlement
+- Those who stayed in Israel **no more than 24 months**, consecutive or cumulative, in the three years before receiving oleh status
+- Eligibility **does not depend on income**
 
-## Steps to receive the basket
+**The time window:** the basket must be claimed **within one year** of receiving oleh status. Leaving the country stops the payments; renewal is possible only for those returning within the first aliyah year.
 
-1. **Register** — within 30 days of arrival, at the nearest Ministry of Aliyah office
-2. **Present documents**: immigrant ID, aliyah confirmation, proof of Ethiopian origin
-3. **Open a bank account** for the automatic payments
-4. **Choose an ulpan** (required for the full basket)
-5. **Counselling session** with a community social worker
+## What genuinely is specific to Ethiopian olim
 
-## Falash Mura — special track
+- **Absorption-centre intake** — unlike most olim, who go through direct absorption, olim from Ethiopia are absorbed via absorption centres. See [direct absorption for Falash Mura olim](/en/rights/falash-mura-direct-absorption).
+- **Housing grants on leaving an absorption centre** — a dedicated Ministry of Construction and Housing programme. See [housing grants for Ethiopian olim in absorption centres](/en/rights/housing-grant-klita-centers).
+- **The student absorption basket** (education fee) — separate support from the Ministry of Education. See [absorption basket for immigrant students](/en/rights/student-absorption-basket).
 
-Falash Mura olim who arrived from 2016 are entitled to a separate basket including:
-- **Extended basket period**: 24 months (vs. 12 for a standard oleh)
-- **Psycho-social support**: sessions with a community therapist
-- **Official recognition of prior qualifications** — professional recognition committee
+## How to apply
+
+1. Open a **joint bank account for both spouses** at a commercial bank — both must be present. Do this in your first days in the country.
+2. Give the account details to the Ministry of Aliyah and Integration bureau in your area.
+3. Do not change the account number in the first years; if you must, report it to the Ministry immediately.
 
 ## Official links
 
-- [Ministry of Aliyah — klita basket](https://www.gov.il/he/departments/topics/klita_grants/govil-landing-page)
-- [Advice hotline: 5454*](tel:5454) — available in Hebrew, English, and Amharic
+- [Ministry of Aliyah and Integration — absorption basket (incl. amount tables)](https://www.gov.il/he/Departments/General/absorption_basket)
+- [Book an appointment with an absorption adviser](https://www.gov.il/he/service/scheduling_an_appointment_to_the_ministry_of_aliyah_and_integration)
+
+📞 **Ministry of Aliyah and Integration hotline**: *2994 or 03-9733333 — Sun–Thu, 8:30–16:00. Service is also available **in Amharic**.
 `,
-      am: `## የኢትዮጵያ ዓሊያ ቅርጫት ምን ያህል ልዩ ነው?
+      am: `## የመቀበያ ቅርጫት — ብሔራዊ ድጋፍ እንጂ የተለየ የማህበረሰብ መስመር አይደለም
 
-ኢትዮጵያ ዓሊያ (ፋላሽ ሙራ ጨምሮ) **የተሻሻለ** ቅርጫት ያገኛሉ — ይህ ከሌሎቹ ስደተኞች ቅርጫት ለየት ይላል። ከኢትዮጵያ እና ከእስራኤል መካከል ያለው ጂኦግራፊያዊ እና ባህላዊ ርቀት ከፍ ያለ ስለሆነ የበለጠ ድጋፍ ያስፈልጋል።
+የመቀበያ ቅርጫት (סל קליטה) በእስራኤል ለመጀመሪያው ጊዜ ለሚደረግ ዝግጅት **በዓሊያና መቀበያ ሚኒስቴር** የሚሰጥ የገንዘብ ድጋፍ ነው። በሚኒስቴሩ ኦፊሴላዊ ህትመት መሠረት፣ በሚኒስቴሩ ሥርዓት ብቁ ሆነው ለተገኙ **ከዓለም ሁሉ ሀገራት** ለመጡ ኦሊሞች ይሰጣል፣ መጠኖቹም በ**የቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት** ይወሰናሉ — በትውልድ ሀገር አይደለም።
 
-## ቅርጫቱ ምን ይዟል?
+**አስፈላጊ፦** "ለኢትዮጵያ ኦሊሞች የተስፋፋ ቅርጫት" የሚሉ ዝርዝሮች በበይነመረብ ይሰራጫሉ — እንደ "የባህል ማስተካከያ ስጦታ" ወይም "የቤት ዕቃ ስጦታ" ያሉ። **እነዚህ ነገሮች በዓሊያና መቀበያ ሚኒስቴር ኦፊሴላዊ ሰንጠረዦች ውስጥ የሉም** እና በእነሱ ላይ መተማመን የለብዎትም።
 
-### ወርሃዊ ክፍያዎች
-- **ነጠላ**: በዓመቱ አንደኛ ሩብ ወደ 3,500 ሺ"ል/ወር
-- **ጥንዶች ያለ ልጆች**: ወደ 6,200 ሺ"ል/ወር
-- **ጥንዶች ከልጆች ጋር**: ለእያንዳንዱ ልጅ ወደ 800 ሺ"ል ተጨማሪ
-- **ነጠላ ወላጅ**: ወደ 5,400 ሺ"ል + ለልጆች ተጨማሪ
+## ኦፊሴላዊ የ2026 መጠኖች
 
-### አንድ ጊዜ ስጦታዎች
-- **የመጀመሪያ ስጦታ** (ሲደርሱ): 9,000–19,000 ሺ"ል በቤተሰብ መጠን
-- **ባህላዊ ማስተካከያ ስጦታ**: 2,500 ሺ"ል (ለአፍሪካ ስደተኞች ብቻ)
-- **የቤት ዕቃ ስጦታ**: 3,000–7,500 ሺ"ል
+| ክፍያ | ነጠላ | ነጠላ ወላጅ ቤተሰብ | ጥንዶች |
+| --- | --- | --- | --- |
+| ቤን ጉሪዮን አየር ማረፊያ (ካርድ) | 1,250 ₪ | 2,300 ₪ | 2,500 ₪ |
+| የባንክ ሂሳብ ማሟያ | 1,544 ₪ | 1,631 ₪ | 4,023 ₪ |
+| ከ6ቱ ወርሃዊ ክፍያዎች እያንዳንዱ | 3,150 ₪ | 5,190 ₪ | 5,806 ₪ |
+| **ጠቅላላ** | **21,694 ₪** | **35,071 ₪** | **41,359 ₪** |
 
-### ተጨማሪ አገልግሎቶች
-- **ኡልፓን ቫዎቸር**: እስከ 500 ሰዓት ዕብራይስጥ (Aleph–Dalet) — ነፃ
-- **የጤና ሽፋን**: ለ6 ወር ተጨማሪ ክፍያ ሳይኖር
-- **የሥራ ምክር**: 12 ነፃ ስብሰባዎች
-- **ሙያ ስልጠና ቫዎቸሮች**: እስከ 12,000 ሺ"ል
+**ለልጆች ተጨማሪ (ለእያንዳንዱ ልጅ ጠቅላላ)፦** ከ4 ዓመት በታች — 12,831 ₪፤ 4–18 — 8,521 ₪፤ 18–21 — 11,039 ₪፤ ለ6+ ሰው ቤተሰብ ተጨማሪ — 5,918 ₪።
 
-## ለማን ይሆናል?
+ለ**ጡረተኞች** እና ለ**ቅድመ-ጡረታ** የተለዩ ሰንጠረዦች አሉ። **መጠኖቹ ይለወጣሉ** — በነሐሴ 2026 ተረጋግጠዋል፤ ከማቀድዎ በፊት ወቅታዊውን መጠን ያረጋግጡ።
 
-- ከ1984 ጀምሮ ኢትዮጵያ ዓሊያ (ሞሴ / ሰሎሞን / ሽቭቲ ዮስራኤል)
-- ፋላሽ ሙራ ዓሊያ
-- አብረው የደረሱ ልጆች እና ባልቶ/ሚስቶ
+## ቅርጫቱ እንዴት ይከፈላል?
 
-## ቅርጫቱን ለማግኘት ደረጃዎች
+- **የመጀመሪያ ክፍያ** — በአየር ማረፊያ በቅድመ-ክፍያ ካርድ (ከውጭ በዓሊያ ቪዛ ለሚደርሱ)፤ በእስራኤል ውስጥ ደረጃቸውን ለሚቀይሩ — በባንክ ተቀማጭ።
+- ወደ ባንክ ሂሳብ **ማሟያ**።
+- ተጨማሪ **6 ወርሃዊ ክፍያዎች**።
 
-1. **ምዝገባ** — ሲደርሱ ከ30 ቀናት ውስጥ፣ ቅርብ በሆነ ሚኒስቴር ጽ/ቤት
-2. **ሰነዶችን ያቅርቡ**: የስደተኛ መታወቂያ፣ የዓሊያ ማረጋገጫ
-3. **ባንክ ሂሳብ ይክፈቱ**
-4. **ኡልፓን ይምረጡ** (ሙሉ ቅርጫት ለማግኘት ግዴታ)
-5. **ከማህበረሰብ ሠራተኛ ጋር ስብሰባ**
+## ማን ብቁ ነው?
 
-📞 **የሚኒስቴሩ ሞቅዳ**: 5454*
+- በ"ኦሌ" ቪዛ ለመጀመሪያ ጊዜ ወደ እስራኤል የሚገቡ፣ ሙሉ የኦሌ ብቁነት ያላቸው
+- የኦሌ ደረጃ ከማግኘታቸው በፊት በነበሩት ሦስት ዓመታት በእስራኤል **ከ24 ወራት ያልበለጠ** የቆዩ
+- ብቁነቱ **በገቢ መጠን ላይ አይመሠረትም**
+
+**የጊዜ መስኮት፦** ቅርጫቱ የኦሌ ደረጃ ካገኙበት ቀን ጀምሮ **በአንድ ዓመት ውስጥ** መጠየቅ አለበት።
+
+## ለኢትዮጵያ ኦሊሞች በእውነት ልዩ የሆነው
+
+- **በመቀበያ ማዕከል መቀበል** — ከኢትዮጵያ የመጡ ኦሊሞች በመቀበያ ማዕከላት በኩል ይቀበላሉ። [ለፋላሽ ሙራ ቀጥተኛ መቀበያ](/am/rights/falash-mura-direct-absorption) ይመልከቱ።
+- **ከመቀበያ ማዕከል ሲወጡ የመኖሪያ ቤት ድጎማዎች** — [የመኖሪያ ቤት ድጎማዎች](/am/rights/housing-grant-klita-centers) ይመልከቱ።
+- **የተማሪ መቀበያ ቅርጫት** — [ለስደተኛ ተማሪዎች መቀበያ ቅርጫት](/am/rights/student-absorption-basket) ይመልከቱ።
+
+## እንዴት ማመልከት
+
+1. በንግድ ባንክ **ለሁለቱም ባለትዳሮች የጋራ የባንክ ሂሳብ** ይክፈቱ — ሁለቱም መገኘት አለባቸው።
+2. የሂሳብ ዝርዝሮችን በአካባቢዎ ላለው የዓሊያና መቀበያ ሚኒስቴር ቢሮ ይስጡ።
+3. በመጀመሪያዎቹ ዓመታት የሂሳብ ቁጥሩን አይቀይሩ፤ ከቀየሩ ወዲያውኑ ለሚኒስቴሩ ያሳውቁ።
+
+## ኦፊሴላዊ አገናኞች
+
+- [የዓሊያና መቀበያ ሚኒስቴር — መቀበያ ቅርጫት](https://www.gov.il/he/Departments/General/absorption_basket)
+
+📞 **የዓሊያና መቀበያ ሚኒስቴር መስመር**፦ *2994 ወይም 03-9733333 — እሁድ–ሐሙስ፣ 8:30–16:00። አገልግሎቱ **በአማርኛም** ይሰጣል።
+
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*
 `,
     },
   },
