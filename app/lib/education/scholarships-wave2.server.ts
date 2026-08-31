@@ -140,7 +140,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     applicationUrl: "https://dean.technion.ac.il/financeaid/מלגות-והלוואות/",
     tags: ["undergrad", "stem", "engineering", "community"],
     communityPriority: true,
-    relatedScholarships: ["cogito-stem-phd", "isef-fellowship"],
+    relatedScholarships: ["isef-fellowship"],
     relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
@@ -165,7 +165,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [Cogito Scholars — STEM PhD](/he/education/scholarships/cogito-stem-phd)
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship)
 `,
       en: `## Who is eligible?
@@ -190,7 +189,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## See also
 
-- [Cogito Scholars STEM PhD](/en/education/scholarships/cogito-stem-phd)
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
 `,
       am: `## ለማን ይሆናል?
@@ -215,7 +213,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## ይህንንም ይዩ
 
-- [Cogito STEM ዶክትሬት](/am/education/scholarships/cogito-stem-phd)
 `,
     },
   },
@@ -971,7 +968,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     applicationUrl: "https://www.yadhanadiv.org.il/rothschild-fellows/",
     tags: ["phd", "post-doc", "research", "community", "social-policy"],
     communityPriority: true,
-    relatedScholarships: ["cogito-stem-phd", "isef-fellowship"],
+    relatedScholarships: ["isef-fellowship"],
     relatedRights: ["student-aid"],
     bodies: {
       he: `## מי זכאי?
@@ -997,7 +994,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [Cogito Scholars STEM PhD](/he/education/scholarships/cogito-stem-phd)
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship)
 `,
       en: `## Who is eligible?
@@ -1023,7 +1019,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## See also
 
-- [Cogito Scholars STEM PhD](/en/education/scholarships/cogito-stem-phd)
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
 `,
       am: `## ለማን ይሆናል?
@@ -1045,112 +1040,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## ይህንንም ይዩ
 
-- [Cogito STEM PhD](/am/education/scholarships/cogito-stem-phd)
-`,
-    },
-  },
-
-  // W2-11. Peles Foundation Vocational Training Grant
-  {
-    slug: "peles-vocational-training",
-    level: "vocational",
-    providerOrgSlug: "peles-foundation",
-    name: {
-      he: "מלגת הכשרה מקצועית — קרן פלס",
-      en: "Peles Foundation Vocational Training Grant",
-      am: "ፔሌስ ፋውንዴሽን የሙያ ስልጠና ድጋፍ",
-    },
-    shortDescription: {
-      he: "מימון הכשרה מקצועית לבני קהילת יוצאי אתיופיה בתחומים כגון חשמל, אינסטלציה, מיזוג אוויר ובניין.",
-      en: "Funding for vocational training for Ethiopian-community members in fields such as electrical, plumbing, air conditioning, and construction.",
-      am: "ለኢትዮጵያ ማህበረሰብ — ኤሌክትሪክ፣ ቧምቧ፣ ኤርኮንዲሽን፣ ግንባታ ሙያ ስልጠና ድጋፍ።",
-    },
-    amountMinIls: 8000,
-    amountMaxIls: 20000,
-    amountNote: {
-      he: "כיסוי מלא לעלות קורס; כולל ציוד וחומרים.",
-      en: "Full coverage of course cost; includes equipment and materials.",
-      am: "ሙሉ ኮርስ ወጪ ሽፋን፤ ቁሳቁስ ያካትታል።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.peles.org.il/vocational",
-    tags: ["vocational", "community", "career-shift"],
-    communityPriority: true,
-    relatedScholarships: ["tech-career-bootcamp-stipend"],
-    relatedRights: ["vocational-training-vouchers-immigrants"],
-    bodies: {
-      he: `## מי זכאי?
-
-- בני/ות קהילה אתיופית בגיל 18–50
-- ללא הכנסה מספקת
-- אינם לומדים כרגע באוניברסיטה
-- מוכנים להשקיע 6–18 חודשי הכשרה
-
-## מה כלול?
-
-- כיסוי מלא של שכר לימוד קורס מקצועי
-- ציוד עבודה ראשוני
-- הכנסה בסיסית חודשית במהלך ההכשרה (עד ₪2,500)
-
-## שלבי ההגשה
-
-1. פנייה לקרן פלס
-2. ראיון הערכה
-3. בחירת מסגרת הכשרה
-4. תחילת קורס תוך 4 שבועות
-
-## ראו גם
-
-- [Tech-Career Bootcamp](/he/education/scholarships/tech-career-bootcamp-stipend)
-`,
-      en: `## Who is eligible?
-
-- Ethiopian community members aged 18–50
-- Without sufficient income
-- Not currently studying at a university
-- Willing to invest 6–18 months in training
-
-## What's included?
-
-- Full coverage of vocational course tuition
-- Initial work equipment
-- Basic monthly income during training (up to ₪2,500)
-
-## Application steps
-
-1. Contact Peles Foundation
-2. Assessment interview
-3. Select training framework
-4. Course start within 4 weeks
-
-## See also
-
-- [Tech-Career Bootcamp](/en/education/scholarships/tech-career-bootcamp-stipend)
-`,
-      am: `## ለማን ይሆናል?
-
-- 18–50 ዓመት ኢትዮጵያ ማህበረሰብ
-- ዩኒቨርሲቲ ያልሄዱ
-- 6–18 ወር ስልጠና ቁርጠኛ
-
-## ምን ይካተታል?
-
-- ሙሉ ኮርስ ክፍያ
-- የስራ ቁሳቁስ
-- ወርሃዊ ₪2,500 ድረስ
-
-## ደረጃዎች
-
-1. Peles ያነጋግሩ
-2. ቃለ-ምርምር
-3. ኮርስ ምርጫ
-4. 4 ሳምንታት ውስጥ ይጀምራሉ
-
-## ይህንንም ይዩ
-
-- [Tech-Career Bootcamp](/am/education/scholarships/tech-career-bootcamp-stipend)
 `,
     },
   },
@@ -1481,111 +1370,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     },
   },
 
-  // W2-15. Ethiopian Israeli Educators Association Grant
-  {
-    slug: "eiea-educators-grant",
-    level: "masters",
-    providerOrgSlug: "eiea",
-    name: {
-      he: "מענק אנשי חינוך — עמותת מחנכים יוצאי אתיופיה",
-      en: "Ethiopian-Israeli Educators Association Grant",
-      am: "የኢትዮጵያ-እስራኤላዊ አስተማሪዎች ማህበር ድጋፍ",
-    },
-    shortDescription: {
-      he: "מענק לסטודנטים להוראה ממוצא אתיופי — חיזוק ייצוג הקהילה בקרב מחנכים ומנהלי בתי ספר.",
-      en: "Grant for teaching students of Ethiopian origin — strengthening community representation among educators and school principals.",
-      am: "አስተማሪ ሆኖ ለሚሰለጥኑ ኢትዮጵያ ዜጎች — ት/ቤቶች ውስጥ ማህበረሰብ ውክልና ለማጠናከር።",
-    },
-    amountMinIls: 8000,
-    amountMaxIls: 16000,
-    amountNote: {
-      he: "מענק שנתי; לסטודנטים בתכנית הכשרת מורים (כולל תואר שני בחינוך).",
-      en: "Annual grant; for students in teacher training programs (including education master's).",
-      am: "ዓመታዊ፤ ለስልጠና-ፕሮግራም (ሁለተኛ ዲግሪ ትምህርትም ይካተታል)።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.eiea.org.il/grants",
-    tags: ["masters", "education", "teachers", "community"],
-    communityPriority: true,
-    relatedScholarships: ["bgu-social-work-community", "isef-fellowship"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## מי זכאי?
-
-- סטודנט/ית ממוצא אתיופי בתכנית הכשרת מורים, תעודת הוראה, או תואר שני בחינוך
-- מחויבות ללמד בבית ספר ממוצא אתיופי גבוה לפחות 3 שנים לאחר הכשרה
-- ממוצע ≥ 75
-
-## מה כלול?
-
-- מענק שנתי ₪8,000–₪16,000
-- הדרכה פדגוגית מקצועית
-- גישה לרשת מחנכים מהקהילה
-- תמיכה בקבלת כתב מינוי מהמשרד לחינוך
-
-## שלבי ההגשה
-
-1. פנייה לעמותה
-2. גיליון ציונים + הצהרת מחויבות
-3. ראיון קצר
-4. אישור תוך 3 שבועות
-
-## ראו גם
-
-- [מלגת עבודה סוציאלית BGU](/he/education/scholarships/bgu-social-work-community)
-- [מלגת ISEF](/he/education/scholarships/isef-fellowship)
-`,
-      en: `## Who is eligible?
-
-- Student of Ethiopian origin in a teacher training program, teaching certificate, or education master's
-- Commitment to teach at a high-Ethiopian-origin school for at least 3 years after training
-- GPA ≥ 75
-
-## What's included?
-
-- Annual grant ₪8,000–₪16,000
-- Professional pedagogical guidance
-- Access to community educators network
-- Support in receiving Ministry of Education appointment
-
-## Application steps
-
-1. Contact the association
-2. Transcript + commitment declaration
-3. Short interview
-4. Decision within 3 weeks
-
-## See also
-
-- [BGU Social Work Scholarship](/en/education/scholarships/bgu-social-work-community)
-- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
-`,
-      am: `## ለማን ይሆናል?
-
-- አስተማሪ ሆኖ ለሚሰለጥኑ ኢትዮጵያ ዜጎች
-- GPA ≥ 75
-- ₪8,000–₪16,000 ዓመታዊ
-
-## ምን ይካተታል?
-
-- ዓመታዊ ድጋፍ
-- ፔዳጎጂካል ምክር
-- አስተማሪዎች አውታረ መረብ
-
-## ደረጃዎች
-
-1. ማህበሩን ያነጋግሩ
-2. ሰነዶች + ቁርጠኝነት ደብዳቤ
-
-## ይህንንም ይዩ
-
-- [BGU ማህበራዊ ስራ](/am/education/scholarships/bgu-social-work-community)
-`,
-    },
-  },
-
   // W2-16. Masa Israel Journey — Young Professionals
   {
     slug: "masa-young-professionals",
@@ -1794,111 +1578,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     },
   },
 
-  // W2-18. Nevet Immigrant Women Scholarship
-  {
-    slug: "nevet-women",
-    level: "undergrad",
-    providerOrgSlug: "nevet",
-    name: {
-      he: "מלגת נווט — נשים עולות",
-      en: "Nevet Immigrant Women Scholarship",
-      am: "ነቬት — ኦሊም ሴቶች ስኮላርሺፕ",
-    },
-    shortDescription: {
-      he: "מלגות לנשים עולות מאתיופיה ללימודים אקדמיים — תמיכה ייחודית למגדר בהשכלה גבוהה.",
-      en: "Scholarships for immigrant women from Ethiopia pursuing academic studies — gender-specific support for higher education.",
-      am: "ከኢትዮጵያ ለመጡ ኦሊም ሴቶች — ከፍተኛ ትምህርት ጾታ-ተኮር ድጋፍ።",
-    },
-    amountMinIls: 9000,
-    amountMaxIls: 18000,
-    amountNote: {
-      he: "מלגה שנתית; ניתן לחדש; כוללת ליווי ותמיכה רגשית.",
-      en: "Annual scholarship; renewable; includes mentorship and emotional support.",
-      am: "ዓመታዊ ታዳሽ፤ ምክርና ስሜታዊ ድጋፍ ያካትታል።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.nevet.org.il/scholarships",
-    tags: ["undergrad", "women", "olim", "community"],
-    communityPriority: true,
-    relatedScholarships: ["klita-tuition-grant", "hesegim-undergraduate"],
-    relatedRights: ["klita-basket-ethiopia"],
-    bodies: {
-      he: `## מי זכאית?
-
-- אישה עולה מאתיופיה (ולד 1, 2, 3)
-- לומדת לתואר ראשון במוסד אקדמי מוכר
-- הכנסה משפחתית עד 200% מקו העוני
-
-## מה כלול?
-
-- מלגה שנתית ₪9,000–₪18,000
-- מנטורית אישית (אישה מהקהילה עם ניסיון אקדמי)
-- קבוצת תמיכה חודשית
-- סיוע בהתמודדות עם ממסד בירוקרטי
-
-## שלבי ההגשה
-
-1. בקשה מקוונת באתר nevet.org.il
-2. צירוף: ת"ז, תעודת עולה, אישור לימודים, אישור הכנסה
-3. פגישת הכרה עם רכזת
-4. אישור תוך 2–3 שבועות
-
-## ראו גם
-
-- [מענק שכר לימוד משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
-- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
-`,
-      en: `## Who is eligible?
-
-- Immigrant woman from Ethiopia (generation 1, 2, or 3)
-- Studying for an undergraduate degree at a recognized institution
-- Family income up to 200% of the poverty line
-
-## What's included?
-
-- Annual scholarship ₪9,000–₪18,000
-- Personal female mentor (community woman with academic experience)
-- Monthly support group
-- Assistance navigating bureaucracy
-
-## Application steps
-
-1. Online application at nevet.org.il
-2. Attach: ID, olim certificate, enrollment confirmation, income proof
-3. Introductory meeting with coordinator
-4. Decision within 2–3 weeks
-
-## See also
-
-- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
-- [Hesegim Undergraduate](/en/education/scholarships/hesegim-undergraduate)
-`,
-      am: `## ለማን ይሆናል?
-
-- ከኢትዮጵያ የመጡ ኦሊም ሴቶች
-- ቤተሰብ ገቢ ≤ 200%
-
-## ምን ይካተታል?
-
-- ₪9,000–₪18,000 ዓመታዊ
-- ሴት አማካሪ
-- ወርሃዊ ድጋፍ ቡድን
-
-## ደረጃዎች
-
-1. nevet.org.il ቅጽ
-2. ሰነዶች
-3. ከ2–3 ሳምንት ምላሽ
-
-## ይህንንም ይዩ
-
-- [ቅሊታ ሚኒስቴር](/am/education/scholarships/klita-tuition-grant)
-`,
-    },
-  },
-
   // W2-19. Na'amat Single-Parent Academic Stipend
   {
     slug: "naamat-single-parent",
@@ -1927,7 +1606,7 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
     applicationUrl: "https://naamat.org.il/מלגות-לסטודנטיות/",
     tags: ["undergrad", "single-parent", "women", "community"],
     communityPriority: true,
-    relatedScholarships: ["nevet-women", "klita-tuition-grant"],
+    relatedScholarships: ["klita-tuition-grant", "maatzimot-women-scholarship"],
     relatedRights: ["rights-for-single-mothers"],
     bodies: {
       he: `## מי זכאי/ת?
@@ -1953,7 +1632,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [מלגת נווט — נשים עולות](/he/education/scholarships/nevet-women)
 - [מענק שכר לימוד משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
 `,
       en: `## Who is eligible?
@@ -1979,7 +1657,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## See also
 
-- [Nevet Immigrant Women Scholarship](/en/education/scholarships/nevet-women)
 - [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
 `,
       am: `## ለማን ይሆናል?
@@ -2002,116 +1679,6 @@ export const SCHOLARSHIPS_WAVE2: ScholarshipEntry[] = [
 
 ## ይህንንም ይዩ
 
-- [ነቬት ሴቶች](/am/education/scholarships/nevet-women)
-`,
-    },
-  },
-
-  // W2-20. Ministry of Finance — Poverty Reduction Study Grant
-  {
-    slug: "mof-poverty-study-grant",
-    level: "undergrad",
-    providerOrgSlug: "ministry-finance",
-    name: {
-      he: "מענק לימודים להפחתת עוני — משרד האוצר",
-      en: "Ministry of Finance — Poverty Reduction Study Grant",
-      am: "የፋይናንስ ሚኒስቴር — ድህነት ቅነሳ የጥናት ድጋፍ",
-    },
-    shortDescription: {
-      he: "מענק ממשלתי לסטודנטים ממשפחות עוני המאפשר גישה להשכלה גבוהה — כולל רכיב ייחודי לקהילה האתיופית.",
-      en: "Government grant for students from poverty-level families enabling higher education access — includes a dedicated component for the Ethiopian community.",
-      am: "ድህነት ደረጃ ቤተሰቦች ተማሪዎች ከፍተኛ ትምህርት ተደራሽነት — ለኢትዮጵያ ማህበረሰብ ልዩ ክፍል ይካተታል።",
-    },
-    amountMinIls: 6000,
-    amountMaxIls: 14000,
-    amountNote: {
-      he: "מענק שנתי לפי מדד עוני; אין צורך בממוצע ציונים מינימלי.",
-      en: "Annual grant based on poverty index; no minimum GPA required.",
-      am: "የድህነት ደረጃ ላይ ተመስርቶ ዓመታዊ ድጋፍ፤ ምዝናዬ ቅድመ-ሁኔታ የለም።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.gov.il/he/departments/mof/poverty-study-grant",
-    tags: ["undergrad", "needs-based", "community", "government"],
-    communityPriority: true,
-    relatedScholarships: ["klita-tuition-grant", "marom-che", "siket-absorption"],
-    relatedRights: ["klita-basket-ethiopia", "student-aid"],
-    bodies: {
-      he: `## מי זכאי?
-
-- סטודנט/ית מכל רקע; עם רכיב עדיפות לקהילה האתיופית
-- הכנסה משפחתית מתחת לקו העוני (100%)
-- לומד/ת בתואר ראשון במוסד אקדמי מוכר
-- אין דרישת ממוצע ציונים
-
-## מה כלול?
-
-- מענק שנתי ₪6,000–₪14,000
-- אפשרות לצבירה עם מלגת מרום ומלגות קהילתיות
-- ייעוץ רווחה דרך ביטוח לאומי
-
-## שלבי ההגשה
-
-1. הגשה דרך פורטל gov.il — חיפוש "מענק לימודים עוני"
-2. מסמכים: ת"ז, תלושי שכר / אישור ביטוח לאומי, אישור לימודים
-3. אישור תוך 3–4 שבועות
-4. תשלום ישיר לחשבון
-
-## ראו גם
-
-- [מענק שכר לימוד משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
-- [מלגת מרום מל"ג](/he/education/scholarships/marom-che)
-- [מלגת שיקת](/he/education/scholarships/siket-absorption)
-`,
-      en: `## Who is eligible?
-
-- Student from any background; Ethiopian community has priority component
-- Family income below the poverty line (100%)
-- Studying for an undergraduate degree at a recognized institution
-- No GPA requirement
-
-## What's included?
-
-- Annual grant ₪6,000–₪14,000
-- Can be combined with Marom and community scholarships
-- Welfare counseling through National Insurance
-
-## Application steps
-
-1. Apply via gov.il portal — search "poverty study grant"
-2. Documents: ID, pay stubs / National Insurance confirmation, enrollment proof
-3. Decision within 3–4 weeks
-4. Direct payment to account
-
-## See also
-
-- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
-- [Marom CHE Scholarship](/en/education/scholarships/marom-che)
-- [Siket Scholarship](/en/education/scholarships/siket-absorption)
-`,
-      am: `## ለማን ይሆናል?
-
-- ከድህነት ወሰን በታች ቤተሰቦች ተማሪዎች
-- ለኢትዮጵያ ማህበረሰብ ቅድሚያ ይሰጣል
-- ምንም GPA ቅድመ-ሁኔታ
-
-## ምን ይካተታል?
-
-- ₪6,000–₪14,000 ዓመታዊ
-- ከሌሎች ስኮላርሺፖች ጋር ሊጣመር ይችላል
-
-## ደረጃዎች
-
-1. gov.il ፖርታል
-2. ሰነዶች
-3. ከ3–4 ሳምንት ምላሽ
-
-## ይህንንም ይዩ
-
-- [ቅሊታ ሚኒስቴር](/am/education/scholarships/klita-tuition-grant)
-- [ማሮም CHE](/am/education/scholarships/marom-che)
-- [ሲቀት](/am/education/scholarships/siket-absorption)
 `,
     },
   },

@@ -6,12 +6,70 @@ import {
   listScholarships,
   relatedScholarships,
 } from "../app/lib/db/queries/scholarships.server";
-import { SCHOLARSHIPS, pickLocale } from "../app/lib/education/scholarships.server";
+import {
+  LEGACY_SCHOLARSHIP_REDIRECTS,
+  SCHOLARSHIPS,
+  pickLocale,
+} from "../app/lib/education/scholarships.server";
 import { SCHOLARSHIP_LEVELS } from "../app/lib/education/categories";
 
 describe("scholarships seed integrity", () => {
-  it("has at least 12 scholarships", () => {
-    expect(SCHOLARSHIPS.length).toBeGreaterThanOrEqual(12);
+  it("has exactly 40 scholarships after the TED-152 cleanup", () => {
+    expect(SCHOLARSHIPS.length).toBe(40);
+  });
+
+  // TED-152 — fabricated entries retired, duplicates merged
+  it("carries no retired slug", () => {
+    const retired = [
+      "mossad-maxim-academic",
+      "cogito-stem-phd",
+      "falash-mura-yeshiva-stipend",
+      "siket-absorption",
+      "peles-vocational-training",
+      "eiea-educators-grant",
+      "nevet-women",
+      "mof-poverty-study-grant",
+      "merom-scholarship",
+      "yoel-program-chiburim",
+    ];
+    const slugs = new Set(SCHOLARSHIPS.map((e) => e.slug));
+    for (const s of retired) {
+      expect(slugs.has(s), s).toBe(false);
+    }
+  });
+
+  it("legacy redirects point merged slugs at existing canonical entries", () => {
+    const slugs = new Set(SCHOLARSHIPS.map((e) => e.slug));
+    expect(LEGACY_SCHOLARSHIP_REDIRECTS["merom-scholarship"]).toBe("marom-che");
+    expect(LEGACY_SCHOLARSHIP_REDIRECTS["yoel-program-chiburim"]).toBe(
+      "biu-mechina-ethiopian",
+    );
+    for (const [from, to] of Object.entries(LEGACY_SCHOLARSHIP_REDIRECTS)) {
+      expect(slugs.has(from), `${from} must stay retired`).toBe(false);
+      expect(slugs.has(to), `${from} → ${to}`).toBe(true);
+    }
+  });
+
+  it("no body links to a retired scholarship page", () => {
+    const retiredLinks = [
+      "/education/scholarships/mossad-maxim-academic",
+      "/education/scholarships/cogito-stem-phd",
+      "/education/scholarships/falash-mura-yeshiva-stipend",
+      "/education/scholarships/siket-absorption",
+      "/education/scholarships/peles-vocational-training",
+      "/education/scholarships/eiea-educators-grant",
+      "/education/scholarships/nevet-women",
+      "/education/scholarships/mof-poverty-study-grant",
+      "/education/scholarships/merom-scholarship",
+      "/education/scholarships/yoel-program-chiburim",
+    ];
+    for (const e of SCHOLARSHIPS) {
+      for (const body of Object.values(e.bodies)) {
+        for (const link of retiredLinks) {
+          expect(body.includes(link), `${e.slug} links ${link}`).toBe(false);
+        }
+      }
+    }
   });
 
   it("every scholarship has a unique slug", () => {

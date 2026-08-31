@@ -1,5 +1,6 @@
 import { CITIES } from "~/lib/cities/registry";
 import { COMPARISONS } from "~/lib/comparisons/comparisons.server";
+import { CITY_SHOPPING } from "~/lib/culinary/shops.server";
 import { EDUCATION_TRACKS } from "~/lib/education/tracks";
 import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
 import { SCHOLARSHIP_RELEVANCE_CITIES } from "~/lib/education/scholarship-relevance";
@@ -59,6 +60,10 @@ export function loader() {
     // Kessim directory (TED-140)
     "/heritage/kessim",
     ...KESSIM_CITIES.map((c) => `/heritage/kessim/${c.slug}`),
+    // Culinary (TED-146)
+    "/culinary",
+    "/culinary/sigd-menu",
+    ...CITY_SHOPPING.map((c) => `/culinary/shopping/${c.citySlug}`),
     // Glossary
     ...GLOSSARY.map((e) => `/glossary/${e.slug}`),
     // Orgs

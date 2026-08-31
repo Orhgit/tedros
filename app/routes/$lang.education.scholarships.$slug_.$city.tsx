@@ -6,7 +6,7 @@
 // city's community context. Long-tail SEO that targets searches like
 // "מלגת ISEF בנתניה" — Kol-Zchut and competitor sites don't index these.
 
-import { Link, data } from "react-router";
+import { Link, data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.education.scholarships.$slug_.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
@@ -24,6 +24,7 @@ import {
   glyphForScholarshipLevel,
 } from "~/lib/education/categories";
 import { isScholarshipCellRelevant } from "~/lib/education/scholarship-relevance";
+import { LEGACY_SCHOLARSHIP_REDIRECTS } from "~/lib/education/scholarships.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -37,6 +38,11 @@ export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   if (!params.slug || !params.city) {
     throw data({ error: "missing-params" }, { status: 404 });
+  }
+  // TED-152 — merged duplicates keep their link equity via a permanent redirect.
+  const canonical = LEGACY_SCHOLARSHIP_REDIRECTS[params.slug];
+  if (canonical) {
+    throw redirect(`/${locale}/education/scholarships/${canonical}/${params.city}`, 301);
   }
   const entry = getScholarshipBySlug(params.slug, locale);
   const city = findCityBySlug(params.city);
