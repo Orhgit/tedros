@@ -153,6 +153,16 @@
     line-height: 1.7;
   }
 
+  /* An Amharic block embedded in a Hebrew or English page needs the Ge'ez face
+     too. The rule above only fires on /am/* pages, so the standalone Amharic
+     summary cards (TED-144, TED-145) and the fidel chart (TED-147) were
+     rendering Ge'ez in Heebo/Inter and falling back glyph by glyph. Ge'ez is
+     LTR inside an RTL page (ADR-008), so these blocks also carry dir="ltr". */
+  [lang="am"]:not(html) {
+    font-family: var(--font-ethiopic);
+    line-height: 1.7;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
