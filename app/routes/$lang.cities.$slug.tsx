@@ -6,11 +6,11 @@ import { isRelevant as isCareerRelevant } from "~/lib/careers/relevance";
 import {
   CITY_PATH_PREFIX,
   cityName,
-  cityOverview,
   cityPath,
   findCityBySlug,
   type City,
 } from "~/lib/cities/registry";
+import { cityCommunityStats, cityOverview } from "~/lib/cities/content.server";
 import {
   listCityListingPreviews,
   type CityListingPreview,
@@ -66,10 +66,20 @@ export async function loader({ params }: Route.LoaderArgs) {
     name: neighborhoodName(n, locale),
   }));
 
+  // Long-form prose is resolved to the one locale we are rendering (ADR-020)
+  // so the other two never reach the client bundle.
+  const overview = cityOverview(city.slug, locale);
+  const communityStats = cityCommunityStats(city.slug).map((s) => ({
+    label: s.label[locale] ?? s.label.he,
+    value: s.value,
+  }));
+
   return {
     locale,
     city,
     publicUrl: PUBLIC_URL,
+    overview,
+    communityStats,
     cityRights,
     cityTracks,
     cityHeritage,
@@ -124,6 +134,8 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
   const {
     locale,
     city,
+    overview,
+    communityStats,
     cityRights,
     cityTracks,
     cityHeritage,
@@ -188,9 +200,9 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
         </header>
 
         <main id="main-content" className="mt-10 grid gap-10">
-          <CityOverviewSection locale={locale} city={city} />
-          {city.communityStats && city.communityStats.length > 0 && (
-            <CommunityStatsSection locale={locale} city={city} />
+          <CityOverviewSection locale={locale} city={city} overview={overview} />
+          {communityStats.length > 0 && (
+            <CommunityStatsSection locale={locale} city={city} stats={communityStats} />
           )}
 
           {(cityRights.length > 0 ||
@@ -342,7 +354,15 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
   );
 }
 
-function CityOverviewSection({ locale, city }: { locale: Locale; city: City }) {
+function CityOverviewSection({
+  locale,
+  city,
+  overview,
+}: {
+  locale: Locale;
+  city: City;
+  overview: string;
+}) {
   const name = cityName(city, locale);
   return (
     <section
@@ -356,15 +376,22 @@ function CityOverviewSection({ locale, city }: { locale: Locale; city: City }) {
         {t(locale, "city_section_overview_title", { name })}
       </h2>
       <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-        {cityOverview(city, locale)}
+        {overview}
       </p>
     </section>
   );
 }
 
-function CommunityStatsSection({ locale, city }: { locale: Locale; city: City }) {
+function CommunityStatsSection({
+  locale,
+  city,
+  stats,
+}: {
+  locale: Locale;
+  city: City;
+  stats: { label: string; value: string }[];
+}) {
   const name = cityName(city, locale);
-  const stats = city.communityStats ?? [];
   return (
     <section
       aria-labelledby="community-stats-heading"
@@ -380,9 +407,7 @@ function CommunityStatsSection({ locale, city }: { locale: Locale; city: City })
       <dl className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {stats.map((s, i) => (
           <div key={i} className="rounded-md border border-earth-100 bg-white px-4 py-3">
-            <dt className="text-xs font-medium text-earth-600">
-              {s.label[locale] ?? s.label.he}
-            </dt>
+            <dt className="text-xs font-medium text-earth-600">{s.label}</dt>
             <dd className="mt-1 text-base font-semibold text-earth-900" dir="ltr">
               {s.value}
             </dd>

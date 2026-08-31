@@ -7,9 +7,14 @@
  *  3. Which neighbourhoods are most relevant (from communityStats)
  *
  * All answers are unique per cell — prevents near-duplicate detection.
+ *
+ * SERVER ONLY (ADR-020): it reads long-form city content and emits prose in a
+ * single locale. Routes call it from `loader` and pass the result through
+ * loader data; nothing here may be imported from a component or from `meta`.
  */
 
 import type { City } from "~/lib/cities/registry";
+import { cityStatValue } from "~/lib/cities/content.server";
 import type { Locale } from "~/lib/i18n/config";
 
 export interface FaqItem {
@@ -23,7 +28,7 @@ interface RightLike {
 }
 
 function statVal(city: City, idx: number): string {
-  return city.communityStats?.[idx]?.value ?? "";
+  return cityStatValue(city.slug, idx);
 }
 
 export function generateCityFaq(right: RightLike, city: City, locale: Locale): FaqItem[] {

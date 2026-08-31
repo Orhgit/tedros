@@ -10,7 +10,14 @@ import {
   citySources,
   distinctUnitNotes,
 } from "../app/lib/urban-renewal/city-aggregate";
-import { neighborhoodsByCity } from "../app/lib/urban-renewal/registry";
+import { neighborhoodsByCity as neighborhoodIndexByCity } from "../app/lib/urban-renewal/registry";
+import { hydrateNeighborhoods } from "../app/lib/urban-renewal/content.server";
+
+// The aggregation helpers read `units.note` and `sources`, which live in the
+// server-only content module since ADR-020. Routes hydrate in their loader;
+// these tests do the same so the assertions below are unchanged.
+const neighborhoodsByCity = (citySlug: string) =>
+  hydrateNeighborhoods(neighborhoodIndexByCity(citySlug));
 
 describe("CITY_URBAN_RENEWAL_SLUGS (TED-94)", () => {
   it("is exactly the 7 cities with a T3 neighborhood registered", () => {

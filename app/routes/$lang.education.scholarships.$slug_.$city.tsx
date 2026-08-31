@@ -12,7 +12,8 @@ import type { Route } from "./+types/$lang.education.scholarships.$slug_.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import { findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
+import { findCityBySlug, cityName } from "~/lib/cities/registry";
+import { cityOverview } from "~/lib/cities/content.server";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
 import {
   getScholarshipBySlug,
@@ -64,6 +65,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     locale,
     entry,
     city,
+    overview: cityOverview(city.slug, locale),
     html,
     related,
     provider,
@@ -129,11 +131,19 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function ScholarshipCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, entry, city, html, related, provider, shareUrl, cityScholarships } =
-    loaderData;
+  const {
+    locale,
+    entry,
+    city,
+    overview,
+    html,
+    related,
+    provider,
+    shareUrl,
+    cityScholarships,
+  } = loaderData;
   const cityNameLocal = cityName(city, locale);
   const prep = prepFor(locale);
-  const overview = cityOverview(city, locale);
   const tag = SCHOLARSHIP_LEVEL_TO_TAG[entry.level];
   const tone = classesForTag(tag);
 

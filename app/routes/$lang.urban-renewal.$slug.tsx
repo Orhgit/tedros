@@ -26,6 +26,7 @@ import {
   URBAN_RENEWAL_PATH_PREFIX,
   type UrbanRenewalNeighborhood,
 } from "~/lib/urban-renewal/registry";
+import { hydrateNeighborhood } from "~/lib/urban-renewal/content.server";
 import {
   breadcrumbJsonLd,
   faqJsonLd,
@@ -37,10 +38,14 @@ import {
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const slug = params.slug ?? "";
-  const neighborhood = findNeighborhoodBySlug(slug);
-  if (!neighborhood) {
+  const indexEntry = findNeighborhoodBySlug(slug);
+  if (!indexEntry) {
     throw new Response("Neighborhood not found", { status: 404 });
   }
+  // Re-attach the long-form prose here (ADR-020) so it travels as loader
+  // data. `meta` below reads it off `data` — it must not import the server
+  // module itself.
+  const neighborhood = hydrateNeighborhood(indexEntry);
   const city = findCityBySlug(neighborhood.citySlug);
   if (!city) {
     // Registry integrity guard — every neighborhood must reference a real city.

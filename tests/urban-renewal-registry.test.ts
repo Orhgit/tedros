@@ -10,6 +10,15 @@ import {
   URBAN_RENEWAL_NEIGHBORHOODS,
   URBAN_RENEWAL_PATH_PREFIX,
 } from "../app/lib/urban-renewal/registry";
+import {
+  hydrateNeighborhood,
+  hydrateNeighborhoods,
+} from "../app/lib/urban-renewal/content.server";
+
+// status / authority / communityContext / sources moved to the server-only
+// content module under ADR-020. Hydrating here keeps the content-coverage
+// assertions below byte-for-byte identical to what they were.
+const HYDRATED = hydrateNeighborhoods(URBAN_RENEWAL_NEIGHBORHOODS);
 
 describe("urban-renewal registry", () => {
   it("includes the 5 original priority neighborhoods plus 9 TED-93 + 1 TED-97 (15 total)", () => {
@@ -54,7 +63,7 @@ describe("urban-renewal registry", () => {
   });
 
   it("has non-empty name, status, authority, and communityContext in every locale", () => {
-    for (const n of URBAN_RENEWAL_NEIGHBORHOODS) {
+    for (const n of HYDRATED) {
       for (const loc of SUPPORTED_LOCALES) {
         expect(n.name[loc]).toBeTruthy();
         expect(n.status[loc]).toBeTruthy();
@@ -67,7 +76,7 @@ describe("urban-renewal registry", () => {
   });
 
   it("has at least one source per neighborhood", () => {
-    for (const n of URBAN_RENEWAL_NEIGHBORHOODS) {
+    for (const n of HYDRATED) {
       expect(n.sources.length).toBeGreaterThan(0);
     }
   });
@@ -79,7 +88,7 @@ describe("urban-renewal registry", () => {
   });
 
   it("either has before+after unit counts or a descriptive note, never neither", () => {
-    for (const n of URBAN_RENEWAL_NEIGHBORHOODS) {
+    for (const n of HYDRATED) {
       const hasNumbers = n.units.before !== undefined || n.units.after !== undefined;
       const hasNote = !!n.units.note;
       expect(hasNumbers || hasNote, `neighborhood ${n.slug} has no unit info`).toBe(true);
@@ -123,7 +132,7 @@ describe("neighborhoodsByCity", () => {
 });
 
 describe("neighborhoodName / neighborhoodPath / localized helpers", () => {
-  const dora = findNeighborhoodBySlug("dora-netanya")!;
+  const dora = hydrateNeighborhood(findNeighborhoodBySlug("dora-netanya")!);
 
   it("returns the locale-specific name", () => {
     expect(neighborhoodName(dora, "he")).toBe("דורה");

@@ -20,7 +20,8 @@ import {
 import { eventCityPath, eventPath, eventsLandingPath } from "~/lib/heritage/links";
 import { isRelevant } from "~/lib/heritage/relevance";
 import { breadcrumbJsonLd, heritageEventJsonLd } from "~/lib/heritage/schema";
-import { cityName, cityOverview, findCityBySlug } from "~/lib/cities/registry";
+import { cityName, findCityBySlug } from "~/lib/cities/registry";
+import { cityOverview } from "~/lib/cities/content.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -51,7 +52,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   const html = renderMarkdown(heritageEventBody(event, locale));
   const next = nextDate(event);
   const cityNameLocal = cityName(city, locale);
-  const cityOverviewLocal = cityOverview(city, locale);
+  const cityOverviewLocal = cityOverview(city.slug, locale);
 
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}${eventCityPath(event.slug, city.slug)}`;
