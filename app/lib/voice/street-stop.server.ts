@@ -112,7 +112,7 @@ The Expungement of Criminal and Police Records of Ethiopian-Israelis Law (2024) 
   resources: [
     {
       name: "טבקה — ארגון זכויות לקהילה האתיופית",
-      phone: "03-5103538",
+      phone: "072-2424622",
       url: "https://www.tebeka.org.il",
       description: {
         he: "ייעוץ משפטי חינמי וליווי בתיקי עיכוב, אלימות משטרתית ואפליה עדתית — קו ישיר לקהילה.",
@@ -193,9 +193,9 @@ export const STREET_STOP_FAQS: StreetStopFaq[] = [
       am: "ተገቢ ያልሆነ ማቆም በኋላ ምን ማድረግ አለብኝ?",
     },
     answer: {
-      he: 'תעדו מיד את כל הפרטים (שוטר, שעה, מקום, עדים), הגישו תלונה למח"ש — ישירות, בתחנת משטרה או באתר משרד המשפטים — ופנו לטבקה (03-5103538) לליווי משפטי חינם.',
-      en: "Document every detail immediately (officer, time, place, witnesses), file a complaint with MAHASH — directly, at a police station or via the Ministry of Justice website — and contact Tebeka (03-5103538) for free legal accompaniment.",
-      am: 'ሁሉንም ዝርዝሮች ወዲያውኑ ይመዝግቡ፣ ለ-מח"ש ቅሬታ ያቅርቡ እና ለነጻ የሕግ ድጋፍ ቴቤካን (03-5103538) ያነጋግሩ።',
+      he: 'תעדו מיד את כל הפרטים (שוטר, שעה, מקום, עדים), הגישו תלונה למח"ש — ישירות, בתחנת משטרה או באתר משרד המשפטים — ופנו לטבקה (072-2424622) לליווי משפטי חינם.',
+      en: "Document every detail immediately (officer, time, place, witnesses), file a complaint with MAHASH — directly, at a police station or via the Ministry of Justice website — and contact Tebeka (072-2424622) for free legal accompaniment.",
+      am: 'ሁሉንም ዝርዝሮች ወዲያውኑ ይመዝግቡ፣ ለ-מח"ש ቅሬታ ያቅርቡ እና ለነጻ የሕግ ድጋፍ ቴቤካን (072-2424622) ያነጋግሩ።',
     },
   },
   {
@@ -227,6 +227,6 @@ export const STREET_STOP_AM_SUMMARY: string[] = [
   "ወደ ጣቢያ መውሰድ የሚፈቀደው ጉዳዩ በቦታው ሊጣራ በማይችልበት ጊዜ ብቻ ነው።",
   "አካላዊ ተቃውሞ አያድርጉ። የዝምታ መብት አለዎት — ከመታወቂያ በላይ ማስረዳት ግዴታ የለብዎትም።",
   "ዝርዝሮችን ይመዝግቡ: የፖሊሱ ስም፣ የመለያ ቁጥር፣ ሰዓት፣ ቦታ፣ ምስክሮች።",
-  'ቅሬታ ለ-מח"ש ያቅርቡ (በ6 ወራት ውስጥ ይመከራል)። ቴቤካ በነጻ ያግዛል: 03-5103538።',
+  'ቅሬታ ለ-מח"ש ያቅርቡ (በ6 ወራት ውስጥ ይመከራል)። ቴቤካ በነጻ ያግዛል: 072-2424622።',
   "እስከ 31.12.2020 ድረስ ከሕዝብ ሥርዓት ጥሰት የቀረ የወንጀል መዝገብ በ2024 ሕግ በራስ-ሰር ይሰረዛል — ብቁነትዎን በስረዛ አዋቂው ይመርምሩ።",
 ];

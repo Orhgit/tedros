@@ -1306,7 +1306,7 @@ HbA1c ምርመራ በዓመት ሁለት ጊዜ ያለ ወጪ ይፈቀዳል�
 מייצגת בני קהילה בתיקים של אפליה משטרתית — **ללא עלות**. **טלפון**: 03-629-4040.
 
 ### עמותת האגודה לזכויות האזרח בישראל (אקי"ם/ACRI)
-קו חינם לתלונות על הפרות זכויות: **1-800-20-20-16**.
+קו חינם לתלונות על הפרות זכויות: **072-2424622**.
 
 ## ראו גם
 
@@ -1337,7 +1337,7 @@ Hebrew University research (2022) found Ethiopian-Israelis are stopped and searc
 
 ## Filing a complaint
 
-Mahash (police investigation department): [mahash.gov.il](https://www.mahash.gov.il), 02-541-8888. Tebeka legal aid: 03-629-4040. ACRI hotline: 1-800-20-20-16.
+Mahash (police investigation department): [mahash.gov.il](https://www.mahash.gov.il), 02-541-8888. Tebeka legal aid: 03-629-4040. ACRI hotline: 072-2424622.
 
 ## See also
 
@@ -1355,7 +1355,7 @@ Mahash (police investigation department): [mahash.gov.il](https://www.mahash.gov
 
 ## ቅሬታ ማቅረብ
 
-ማሃሽ: [mahash.gov.il](https://www.mahash.gov.il)። ቴቤካ: 03-629-4040። ACRI: 1-800-20-20-16።`,
+ማሃሽ: [mahash.gov.il](https://www.mahash.gov.il)። ቴቤካ: 03-629-4040። ACRI: 072-2424622።`,
     },
   },
 
@@ -5680,7 +5680,7 @@ The Unit 8200 alumni association runs a dedicated program advancing entrepreneur
 
 ## מה זה אומר עבורך
 
-אם אתה מתגורר באחת מהערים שסווגו "אדום" — קריית גת, רחובות, יבנה, עפולה, קריית מלאכי — כדאי להכיר את הזכויות שלך מול המשטרה. ראו [הדרכה מלאה בעמוד Voice](/he/voice/police-conduct): מה מותר/אסור לשוטר לבקש, איך מגישים תלונה, וקו הסיוע המשפטי החינמי של תבקה (1-800-20-20-16).
+אם אתה מתגורר באחת מהערים שסווגו "אדום" — קריית גת, רחובות, יבנה, עפולה, קריית מלאכי — כדאי להכיר את הזכויות שלך מול המשטרה. ראו [הדרכה מלאה בעמוד Voice](/he/voice/police-conduct): מה מותר/אסור לשוטר לבקש, איך מגישים תלונה, וקו הסיוע המשפטי החינמי של טבקה (072-2424622).
 
 ## ראו גם
 
@@ -5696,7 +5696,7 @@ A key point raised in the investigation: **enforcement data regarding Ethiopian-
 
 ## What this means for you
 
-If you live in one of the "red"-rated cities — Kiryat Gat, Rehovot, Yavne, Afula, Kiryat Malakhi — it's worth knowing your rights when dealing with police. See the [full guide on the Voice page](/en/voice/police-conduct): what an officer can and can't ask, how to file a complaint, and Tebeka's free legal-aid line (1-800-20-20-16).
+If you live in one of the "red"-rated cities — Kiryat Gat, Rehovot, Yavne, Afula, Kiryat Malakhi — it's worth knowing your rights when dealing with police. See the [full guide on the Voice page](/en/voice/police-conduct): what an officer can and can't ask, how to file a complaint, and Tebeka's free legal-aid line (072-2424622).
 
 ## See also
 
@@ -5819,11 +5819,11 @@ Festivals like Holegav are part of what keeps the community's cultural identity 
 אם את/ה עורך/ת צוואה, חוזה, או כל מסמך משפטי מחייב, ודא/י:
 - תרגום בעל-פה מלא ומובן, לא רק חתימה של "מתרגם" פורמלי
 - אפשר לבקש נוכחות עורך דין דובר אמהרית או מתורגמן מוסמך
-- תבקה (1-800-20-20-16) מספקת סיוע משפטי חינם, כולל בנושאי ירושה וצוואות
+- טבקה (072-2424622) מספקת סיוע משפטי חינם, כולל בנושאי ירושה וצוואות
 
 ## ראו גם
 
-- [תבקה — סיוע משפטי חינם](/he/orgs/tebeka)
+- [טבקה — סיוע משפטי חינם](/he/orgs/tebeka)
 - [זכויות דוברי אמהרית מול הרשויות](/he/rights)`,
       en: `## What happened
 
@@ -5842,7 +5842,7 @@ The case highlights a real, recurring risk: legal documents (wills, contracts, a
 If you're drafting a will, contract, or any binding legal document, make sure:
 - There's a full, understood verbal translation — not just a formal "translator" signature
 - You can request the presence of an Amharic-speaking lawyer or certified interpreter
-- Tebeka (1-800-20-20-16) provides free legal aid, including on inheritance and wills
+- Tebeka (072-2424622) provides free legal aid, including on inheritance and wills
 
 ## See also
 

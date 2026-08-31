@@ -196,17 +196,17 @@ export default function VoiceLanding({ loaderData }: Route.ComponentProps) {
                 : "For racism, discrimination, and police-violence complaints — contact Tebeka directly."}
           </p>
           <a
-            href="tel:035103538"
+            href="tel:0722424622"
             className="mt-3 inline-flex items-center gap-2 font-display text-2xl font-bold text-earth-700 hover:underline"
             aria-label={
               locale === "he"
-                ? "התקשרו לטבקה 03-5103538"
+                ? "התקשרו לטבקה 072-2424622"
                 : locale === "am"
-                  ? "ቴቤካን ይደውሉ 03-5103538"
-                  : "Call Tebeka 03-5103538"
+                  ? "ቴቤካን ይደውሉ 072-2424622"
+                  : "Call Tebeka 072-2424622"
             }
           >
-            03-5103538
+            072-2424622
           </a>
         </aside>
       </main>

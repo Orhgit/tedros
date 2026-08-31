@@ -630,11 +630,11 @@ Up to 50,000 protesters in Tel Aviv alone; roads blocked across the country; the
 ## זכויות הנפגעות
 
 אם קיבלת Depo-Provera ללא הסבר מלא לפני 2013 — זכותך לפנות ל:
-- **תבקה** לייעוץ משפטי: 1-800-20-20-16
+- **טבקה** לייעוץ משפטי: 072-2424622
 - **מאצימות** (ארגון נשים אתיופיות): maatzimot.org.il
 - **ועדת זכויות האישה בכנסת**: pnia@knesset.gov.il
 
-📞 תבקה: 1-800-20-20-16 | מאצימות: maatzimot.org.il`,
+📞 טבקה: 072-2424622 | מאצימות: maatzimot.org.il`,
       en: `## What Happened?
 
 In 2012, Channel 1 and investigative journalist Efrat Yerday exposed that Ethiopian-Israeli women — particularly in transit camps — were injected with **Depo-Provera** (a progesterone contraceptive shot) every three months. Many women did not know it was contraception and did not give informed consent.
@@ -650,10 +650,10 @@ According to bioethicist Dr. Ricki Shalev (Tel Aviv) who researched the issue, p
 ## Rights of Victims
 
 If you received Depo-Provera before 2013 without full explanation:
-- Tebeka (free legal advice): 1-800-20-20-16
+- Tebeka (free legal advice): 072-2424622
 - Maatzimot (Ethiopian women's org): maatzimot.org.il
 
-📞 1-800-20-20-16 | maatzimot.org.il`,
+📞 072-2424622 | maatzimot.org.il`,
       am: `## ምን ሆነ?
 
 2012 ዓ.ም. ቀደም ሲል በማጓጓዝ ካምፖቸ ሴቶቸ ሳያውቁ Depo-Provera ቉打 ነበር።
@@ -661,7 +661,7 @@ If you received Depo-Provera before 2013 without full explanation:
 ## ዛሬ ምን ማድረግ ይቻላል?
 
 ቤፎሬ 2013 ያለ ፈቃድ ካገኙ:
-- ቴቤቃ: 1-800-20-20-16
+- ቴቤቃ: 072-2424622
 - ማጽሚሞት: maatzimot.org.il`,
     },
   },
@@ -856,10 +856,10 @@ Maatzimot (mentoring, training, small business): maatzimot.org.il | ENP (courses
 ## עגינות — פתרונות
 
 - **מאצימות**: תמיכה לנשים עגונות — maatzimot.org.il
-- **תבקה**: ייעוץ משפטי חינם — 1-800-20-20-16
+- **טבקה**: ייעוץ משפטי חינם — 072-2424622
 - **בית הדין הרבני**: ניתן לתבוע גט בכפייה בנסיבות מסוימות
 
-📞 יד לאחים: 02-5374111 | ITIM: itim.org.il | תבקה: 1-800-20-20-16`,
+📞 יד לאחים: 02-5374111 | ITIM: itim.org.il | טבקה: 072-2424622`,
       en: `## Traditional Marriage Customs
 
 In traditional Beta Israel, marriage is a covenant between two families. Key customs: Shimagile (elder negotiations over dowry), a week of celebrations, Kes blessing with Ge'ez prayers.
@@ -874,9 +874,9 @@ Divorce rate in the Ethiopian-Israeli community: ~35% (vs. 22% national average)
 
 **Get (Jewish divorce)** must pass through the Rabbinical Court. Women whose husbands refuse a get become "agunot" (chained women) — a serious community problem.
 
-**Support**: Maatzimot (maatzimot.org.il) | Tebeka free legal advice: 1-800-20-20-16
+**Support**: Maatzimot (maatzimot.org.il) | Tebeka free legal advice: 072-2424622
 
-📞 02-5374111 | 1-800-20-20-16`,
+📞 02-5374111 | 072-2424622`,
       am: `## ባህላዊ ጋብቻ
 
 ሺማጊሌ (ቤተሰቦቸ ይገናኛሉ)፣ 7 ቀን ክብረ-በዓሎቸ፣ ቄሶቸ ጸሎት።
@@ -885,7 +885,7 @@ Divorce rate in the Ethiopian-Israeli community: ~35% (vs. 22% national average)
 
 በኢትዮጵያ የተደረጉ ጋብቻዎቸ ራቢናዊ ማስረጃ ይፈልጋሉ — 1-3 ዓመት።
 
-📞 1-800-20-20-16 | itim.org.il`,
+📞 072-2424622 | itim.org.il`,
     },
   },
   {
@@ -1409,7 +1409,7 @@ All public bodies with 25+ employees: government ministries, state companies (el
 ### שלב 3: פנו
 | גוף | טלפון | מה עושים |
 |-----|-------|----------|
-| **תבקה** | 1-800-20-20-16 | ייצוג משפטי חינם |
+| **טבקה** | 072-2424622 | ייצוג משפטי חינם |
 | **ACRI** | 03-6936893 | תלונה לגוף זכויות |
 | **נציב תלונות** | 03-7633xxx | תלונה רשמית |
 | **משטרה** | 100 | תלונה פלילית |
@@ -1424,7 +1424,7 @@ All public bodies with 25+ employees: government ministries, state companies (el
 - לא לוותר מיד — תיעוד טוב = כוח משפטי
 - לא לאיים — שמרו על רוגע ותעדו
 
-📞 תבקה: 1-800-20-20-16 | ACRI: 03-6936893`,
+📞 טבקה: 072-2424622 | ACRI: 03-6936893`,
       en: `## The Law
 
 The Anti-Discrimination in Products, Services and Public Entertainment Law (2000) prohibits rental discrimination on grounds of **race, national origin, community, gender, sexual orientation, religion and more**.
@@ -1435,13 +1435,13 @@ Section 5 makes advertising "not suitable for Ethiopians" a criminal offence.
 
 1. **Document everything**: Save ads, WhatsApp messages, emails; note time, date, exact words said.
 2. **Test**: Ask a non-Ethiopian friend to enquire about the same apartment — success = evidence of discrimination.
-3. **Report**: Tebeka (free legal): 1-800-20-20-16 | ACRI: 03-6936893 | Police: 100
+3. **Report**: Tebeka (free legal): 072-2424622 | ACRI: 03-6936893 | Police: 100
 
 ## Compensation
 
 A successful claim can yield **up to 120,000 ILS** without proving actual damage.
 
-📞 Tebeka: 1-800-20-20-16 | ACRI: 03-6936893`,
+📞 Tebeka: 072-2424622 | ACRI: 03-6936893`,
       am: `## ሕጉ
 
 ዘር ወይም ምንጭ ምክንያት ቤት ለመከራየት መከልከል ወንጀል ነው።
@@ -1449,7 +1449,7 @@ A successful claim can yield **up to 120,000 ILS** without proving actual damage
 ## ምን ማድረግ?
 
 1. ሁሉ ነገር ቅዳ/ፎቶ ቅዳ
-2. ቴቤቃ: 1-800-20-20-16
+2. ቴቤቃ: 072-2424622
 3. ACRI: 03-6936893`,
     },
   },
@@ -1974,9 +1974,9 @@ Duolingo Amharic (ነፃ) | Amharic Alphabet (ነፃ)`,
 
 ## איך מגישים?
 
-1. **בדיקת זכאות**: פנו ל**תבקה** — ייעוץ חינם: 1-800-20-20-16
+1. **בדיקת זכאות**: פנו ל**טבקה** — ייעוץ חינם: 072-2424622
 2. **הגשת בקשה**: לשר המשפטים דרך פרקליטות המחוז
-3. **תמיכה משפטית**: תבקה מלווה את התהליך
+3. **תמיכה משפטית**: טבקה מלווה את התהליך
 
 ## עלות ולוח זמנים
 
@@ -1984,7 +1984,7 @@ Duolingo Amharic (ነፃ) | Amharic Alphabet (ነፃ)`,
 - תשובה: 3-6 חודשים
 - ערעור: ניתן לבית-משפט מחוזי
 
-📞 תבקה: 1-800-20-20-16 | משרד המשפטים: justice.gov.il`,
+📞 טבקה: 072-2424622 | משרד המשפטים: justice.gov.il`,
       en: `## The New Law (2024 Amendment)
 
 The Criminal Record and Rehabilitation of Offenders Law (2024 Amendment) expands expungement conditions. Minor offences committed more than 10 years ago can now be erased.
@@ -1999,16 +1999,16 @@ People who participated in the 2019 protests (Ethiopian-Israeli community protes
 
 ## How to Apply
 
-Free legal advice: Tebeka 1-800-20-20-16. Submit to the District Prosecutor via the Ministry of Justice. Cost: **free**. Response: 3-6 months.
+Free legal advice: Tebeka 072-2424622. Submit to the District Prosecutor via the Ministry of Justice. Cost: **free**. Response: 3-6 months.
 
-📞 Tebeka: 1-800-20-20-16 | justice.gov.il`,
+📞 Tebeka: 072-2424622 | justice.gov.il`,
       am: `## አዲሱ ሕግ (2024)
 
 ቀደምት ወንጀሎቸ (10+ ዓመታት) ማጥፋት ይቻላል።
 
 ## ማን ሊጠቀም ይችላል?
 
-2019 ሰልፍ ቅጣት ያለባቸው — ቴቤቃ ያናግሩ: 1-800-20-20-16`,
+2019 ሰልፍ ቅጣት ያለባቸው — ቴቤቃ ያናግሩ: 072-2424622`,
     },
   },
   {
@@ -2042,7 +2042,7 @@ Free legal advice: Tebeka 1-800-20-20-16. Submit to the District Prosecutor via 
 - קבוצת WhatsApp לשיתוף לקוחות ועסקים
 
 ### 3. תמיכה משפטית
-שיתוף עם **תבקה** לייעוץ בנושאים: גירושין, עגינות, אלימות במשפחה, זכויות עבודה.
+שיתוף עם **טבקה** לייעוץ בנושאים: גירושין, עגינות, אלימות במשפחה, זכויות עבודה.
 
 ### 4. קבוצות תמיכה
 - קבוצות לנשים עגונות
