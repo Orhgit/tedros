@@ -105,8 +105,10 @@ describe("the Ge'ez fidel chart", () => {
     for (const row of FIDEL_ROWS) {
       for (let order = 0; order < FIDEL_ORDER_COUNT; order += 1) {
         const cp = fidelChar(row, order).codePointAt(0)!;
-        expect(cp, `row ${row.latin} order ${order} escaped U+1200–U+137F`)
-          .toBeGreaterThanOrEqual(0x1200);
+        expect(
+          cp,
+          `row ${row.latin} order ${order} escaped U+1200–U+137F`,
+        ).toBeGreaterThanOrEqual(0x1200);
         expect(cp).toBeLessThanOrEqual(0x137f);
       }
     }
@@ -126,8 +128,10 @@ describe("the Ge'ez fidel chart", () => {
     // Every consonant occupies 8 code points in the block. A base that is not
     // 8-aligned would make `base + order` walk into a neighbouring letter.
     for (const row of FIDEL_ROWS) {
-      expect(row.base % 8, `${row.latin} base U+${row.base.toString(16)} is misaligned`)
-        .toBe(0);
+      expect(
+        row.base % 8,
+        `${row.latin} base U+${row.base.toString(16)} is misaligned`,
+      ).toBe(0);
     }
   });
 
@@ -226,9 +230,7 @@ describe("family phrases", () => {
       expect(p.am, `${p.id} is not in Ge'ez script`).toMatch(/^[ሀ-፿\s]+$/);
       expect(p.translit, `${p.id} has no transliteration`).toBeTruthy();
       // A transliteration containing Ge'ez means the two columns got swapped.
-      expect(p.translit, `${p.id} transliteration contains Ge'ez`).not.toMatch(
-        /[ሀ-፿]/,
-      );
+      expect(p.translit, `${p.id} transliteration contains Ge'ez`).not.toMatch(/[ሀ-፿]/);
     }
   });
 

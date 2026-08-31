@@ -124,9 +124,9 @@ export function FidelGrid({ labels }: { labels: FidelGridLabels }) {
       {/* The chart. Scrolls inside its own container on narrow screens so the
           page body never scrolls sideways. */}
       <div className="overflow-x-auto rounded-2xl border border-earth-200 bg-card">
-        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions --
-            every interactive descendant is a real <button>, which carries its
-            own keyboard semantics; this wrapper only delegates their clicks. */}
+        {/* This wrapper is not itself interactive — every clickable descendant
+            is a real <button> with its own keyboard semantics. The handler
+            lives here only so 238 cells share one closure. */}
         <div onClick={handleGridClick}>
           <table dir="ltr" className="w-full border-collapse text-center">
             <caption className="sr-only">{labels.heading}</caption>
@@ -152,10 +152,7 @@ export function FidelGrid({ labels }: { labels: FidelGridLabels }) {
             <tbody>
               {FIDEL_ROWS.map((row, rowIndex) => (
                 <tr key={row.base} className="border-t border-earth-100">
-                  <th
-                    scope="row"
-                    className="px-2 py-1 text-xs font-medium text-ink-600"
-                  >
+                  <th scope="row" className="px-2 py-1 text-xs font-medium text-ink-600">
                     {row.latin}
                   </th>
                   {FIDEL_ORDERS.map((_, order) => (

@@ -397,7 +397,10 @@ export default function AmharicHub({ loaderData }: Route.ComponentProps) {
           </h2>
           <ul className="space-y-4">
             {faq.map((item) => (
-              <li key={item.id} className="rounded-xl border border-earth-200 bg-card p-5">
+              <li
+                key={item.id}
+                className="rounded-xl border border-earth-200 bg-card p-5"
+              >
                 <h3 className="font-display text-base font-semibold text-earth-900">
                   {item.question}
                 </h3>

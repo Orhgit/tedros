@@ -514,7 +514,11 @@ export const AMHARIC_PHRASES: AmharicPhraseGroup[] = [
         id: "love-f",
         am: "እወድሻለሁ",
         translit: "əwäddəšallähu",
-        meaning: { he: "אני אוהב/ת אותך — לאישה", en: "I love you — to a woman", am: "ለሴት" },
+        meaning: {
+          he: "אני אוהב/ת אותך — לאישה",
+          en: "I love you — to a woman",
+          am: "ለሴት",
+        },
         note: {
           he: "המשפט שהכי שווה לתרגל. לאמא, לסבתא, לאחות.",
           en: "The sentence most worth practising. To a mother, a grandmother, a sister.",
@@ -525,7 +529,11 @@ export const AMHARIC_PHRASES: AmharicPhraseGroup[] = [
         id: "love-m",
         am: "እወድሃለሁ",
         translit: "əwäddəhallähu",
-        meaning: { he: "אני אוהב/ת אותך — לגבר", en: "I love you — to a man", am: "ለወንድ" },
+        meaning: {
+          he: "אני אוהב/ת אותך — לגבר",
+          en: "I love you — to a man",
+          am: "ለወንድ",
+        },
       },
       {
         id: "how-are-you-f",
@@ -749,7 +757,7 @@ export const AMHARIC_HUB_COPY: Record<string, L> = {
     en: "Every entry here was checked and read on the publication date. We state only what the provider's own site says.",
     am: "እያንዳንዱ ግቤት በታተመበት ቀን ተረጋግጧል።",
   },
-  audienceLabel: { he: "למי מיועד", en: "Who it is for", am: "ለማን", },
+  audienceLabel: { he: "למי מיועד", en: "Who it is for", am: "ለማን" },
   costLabel: { he: "עלות", en: "Cost", am: "ዋጋ" },
   contactLabel: { he: "יצירת קשר", en: "Contact", am: "ግንኙነት" },
   visitLabel: { he: "לאתר", en: "Visit site", am: "ወደ ድረ-ገጽ" },
@@ -768,7 +776,10 @@ export const AMHARIC_HUB_COPY: Record<string, L> = {
   lastReviewedLabel: { he: "עודכן לאחרונה", en: "Last reviewed", am: "የመጨረሻ ክለሳ" },
 };
 
-export function amharicHubCopy(key: keyof typeof AMHARIC_HUB_COPY, locale: Locale): string {
+export function amharicHubCopy(
+  key: keyof typeof AMHARIC_HUB_COPY,
+  locale: Locale,
+): string {
   return AMHARIC_HUB_COPY[key]![locale];
 }
 
