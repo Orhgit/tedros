@@ -94,7 +94,7 @@ Low turnout at the ballot box translates into low political power. Voting — na
       },
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "מלווה פניות ציבוריות ודרישות מדיניות מול נבחרי ציבור בשם הקהילה.",
@@ -184,7 +184,7 @@ The protests brought governmental recognition, the creation of monitoring units,
       },
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "ליווי משפטי וייצוג של מפגינים ושל נפגעי אלימות משטרתית במהלך מחאות.",
@@ -450,7 +450,7 @@ Civil suit, organisational accompaniment (Tebeka, ACRI), and public documentatio
       },
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "ייצוג וליווי משפטי בתיקי אלימות משטרתית, כולל תביעות אזרחיות ועררים.",
@@ -524,7 +524,7 @@ File a complaint, sue for civil damages (no proof of damage needed under the 200
     resources: [
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "ייעוץ משפטי חינמי וייצוג בתביעות אפליה והסתה לגזענות.",
@@ -937,7 +937,7 @@ Change takes time. Document progress and celebrate small wins.`,
       },
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "מלווה יוזמות קהילתיות בנושאי זכויות ואפליה ומספק ייעוץ משפטי.",
@@ -1065,7 +1065,7 @@ As early as possible — criminal cases and complaints have limitation periods.`
     resources: [
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "ייעוץ וייצוג משפטי חינמי בתיקי אפליה, אלימות משטרתית וזכויות אזרח לקהילה.",
@@ -1159,7 +1159,7 @@ Physical assault, property damage with racist graffiti, threats and harassment, 
       },
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "ליווי משפטי ותמיכה בקורבנות עבירות שנאה על רקע גזעני.",
@@ -1237,7 +1237,7 @@ Over-policing may leave young people with records for minor offences. Knowing th
       },
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "ייעוץ וליווי משפטי בנושאי רישום פלילי וזכויות, במיוחד בעקבות שיטור-יתר.",
@@ -1280,7 +1280,7 @@ Over-policing may leave young people with records for minor offences. Knowing th
 - זקוקים לייעוץ בזכויות אזרח.
 
 ## כיצד פונים?
-טלפון: **03-5103538** | אתר: tebeka.org.il. תארו בקצרה את הבעיה, התאריך, והמסמכים שברשותכם. הייעוץ הראשוני ניתן ללא עלות.
+טלפון: **072-2424622** | אתר: tebeka.org.il. תארו בקצרה את הבעיה, התאריך, והמסמכים שברשותכם. הייעוץ הראשוני ניתן ללא עלות.
 
 ## מסקנה
 אם חוויתם פגיעה בזכויות — אל תישארו לבד. טבקה כאן בדיוק בשביל זה.`,
@@ -1297,16 +1297,16 @@ Over-policing may leave young people with records for minor offences. Knowing th
 Discrimination at work or in public, police violence, dismissal based on origin, racism or incitement, civil rights advice.
 
 ## How to approach
-Phone: **03-5103538** | Website: tebeka.org.il. Initial advice is free.
+Phone: **072-2424622** | Website: tebeka.org.il. Initial advice is free.
 
 ## Conclusion
 If you have experienced a rights violation — do not stay alone. Tebeka is here for exactly that.`,
-      am: `"ቴቤካ" — "ለፍትህ መከራከር" ማለት ነው። ነጻ ምክር እና ውክልና፣ ስትራቴጂካዊ ሙግት፣ ሕዝባዊ ተሟጋችነት እና ትምህርት ይሰጣሉ። ስልክ: 03-5103538። መብትዎ ከተጣሰ ብቻዎን አይቆዩ።`,
+      am: `"ቴቤካ" — "ለፍትህ መከራከር" ማለት ነው። ነጻ ምክር እና ውክልና፣ ስትራቴጂካዊ ሙግት፣ ሕዝባዊ ተሟጋችነት እና ትምህርት ይሰጣሉ። ስልክ: 072-2424622። መብትዎ ከተጣሰ ብቻዎን አይቆዩ።`,
     },
     resources: [
       {
         name: "טבקה — ארגון זכויות לקהילה האתיופית",
-        phone: "03-5103538",
+        phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
           he: "מוקד הפניות המרכזי לייעוץ וייצוג משפטי חינמי בתיקי אפליה וזכויות אזרח.",
