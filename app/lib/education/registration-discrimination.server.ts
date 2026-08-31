@@ -115,7 +115,7 @@ export const DISCRIMINATION_TITLE: Record<Locale, string> = {
 
 export const DISCRIMINATION_SUBTITLE: Record<Locale, string> = {
   he: 'סעיף 5 לחוק זכויות התלמיד אוסר על אפליה ברישום "מטעמים עדתיים" ו"מטעמים של ארץ מוצא" — גם בבתי ספר מוכרים שאינם רשמיים. כאן מה בדיוק אסור, אילו מועדי ערר קצובים בתקנות, ולמי פונים.',
-  en: 'Section 5 of the Student Rights Law prohibits discrimination in registration on communal and country-of-origin grounds — in recognised non-official schools too. Here is exactly what is prohibited, the appeal deadlines set in the regulations, and whom to contact.',
+  en: "Section 5 of the Student Rights Law prohibits discrimination in registration on communal and country-of-origin grounds — in recognised non-official schools too. Here is exactly what is prohibited, the appeal deadlines set in the regulations, and whom to contact.",
   am: "የተማሪ መብቶች ሕግ አንቀጽ 5 በምዝገባ ላይ በጎሳና በትውልድ ሀገር ምክንያት አድሎ ማድረግን ይከለክላል — በተመዘገቡ የግል ትምህርት ቤቶችም ጭምር። እዚህ ላይ በትክክል የተከለከለው ምንድን ነው፣ በደንቦቹ የተቀመጡት የይግባኝ ጊዜያት፣ እና ማንን ማነጋገር እንዳለብዎ።",
 };
 
@@ -306,8 +306,8 @@ export const DISCRIMINATION_STEPS: LocalizedStep[] = [
       am: "በተመሳሳይ ጊዜ፦ ለትምህርት ሚኒስቴር የሕዝብ አቤቱታ ክፍል ቅሬታ",
     },
     detail: {
-      he: 'רישום תלמידים הוא נושא מפורש בפניות הציבור המחוזיות. הגישו בפורטל הפניות, בחרו את המחוז שלכם, וצרפו את ההתכתבות. אפשר גם להתקשר למוקד השירות והמידע הארצי להורים ב-6552*. הטופס שואל אם כבר פניתם להנהלת בית הספר — לכן שלב 1 חשוב.',
-      en: 'Student registration is an explicitly listed topic for district public inquiries. File through the inquiries portal, choose your district, and attach the correspondence. You can also call the national parents\' service and information line at *6552. The form asks whether you already approached the school administration — which is why step 1 matters.',
+      he: "רישום תלמידים הוא נושא מפורש בפניות הציבור המחוזיות. הגישו בפורטל הפניות, בחרו את המחוז שלכם, וצרפו את ההתכתבות. אפשר גם להתקשר למוקד השירות והמידע הארצי להורים ב-6552*. הטופס שואל אם כבר פניתם להנהלת בית הספר — לכן שלב 1 חשוב.",
+      en: "Student registration is an explicitly listed topic for district public inquiries. File through the inquiries portal, choose your district, and attach the correspondence. You can also call the national parents' service and information line at *6552. The form asks whether you already approached the school administration — which is why step 1 matters.",
       am: "የተማሪ ምዝገባ በአውራጃ የሕዝብ አቤቱታዎች ውስጥ በግልጽ የተዘረዘረ ርዕስ ነው። በአቤቱታ ፖርታሉ ያስገቡ፣ አውራጃዎን ይምረጡ፣ እና ደብዳቤዎቹን ያያይዙ። በ*6552 መደወልም ይችላሉ።",
     },
     officialUrl: "https://pnzportal.education.gov.il/?machoz",
@@ -444,7 +444,7 @@ export const DISCRIMINATION_RESOURCES: LocalizedResource[] = [
     phone: "*3406",
     url: "https://www.gov.il/he/service/complaint-about-racism",
     description: {
-      he: "תלונות על אפליה על רקע גזעני, ובכללן במערכת החינוך. הטופס המקוון קיים גם באמהרית. דוא\"ל: antiracismunit@justice.gov.il. היחידה מנתבת את התלונה לגורם המוסמך ועוקבת אחר הטיפול.",
+      he: 'תלונות על אפליה על רקע גזעני, ובכללן במערכת החינוך. הטופס המקוון קיים גם באמהרית. דוא"ל: antiracismunit@justice.gov.il. היחידה מנתבת את התלונה לגורם המוסמך ועוקבת אחר הטיפול.',
       en: "Complaints of racially motivated discrimination, including in the education system. The online form is also available in Amharic. Email: antiracismunit@justice.gov.il. The unit routes the complaint to the competent body and tracks its handling.",
       am: "በዘር ላይ የተመሠረተ አድሎ ቅሬታዎች፣ በትምህርት ሥርዓት ውስጥ ያሉትንም ጨምሮ። የመስመር ላይ ቅጹ በአማርኛም አለ። ኢሜይል፦ antiracismunit@justice.gov.il።",
     },
@@ -465,7 +465,7 @@ export const DISCRIMINATION_RESOURCES: LocalizedResource[] = [
     description: {
       he: 'הגשת תלונה רשמית למחוז. "רישום תלמידים" הוא נושא מפורש בפניות הציבור המחוזיות. הטופס שואל אם כבר פניתם להנהלת המוסד — צרפו את ההתכתבות.',
       en: 'Filing a formal complaint with the district. "Student registration" is an expressly listed topic for district public inquiries. The form asks whether you already approached the institution\'s administration — attach the correspondence.',
-      am: "ለአውራጃው መደበኛ ቅሬታ ማቅረቢያ። \"የተማሪ ምዝገባ\" በአውራጃ የሕዝብ አቤቱታዎች ውስጥ ግልጽ ርዕስ ነው። ደብዳቤዎቹን ያያይዙ።",
+      am: 'ለአውራጃው መደበኛ ቅሬታ ማቅረቢያ። "የተማሪ ምዝገባ" በአውራጃ የሕዝብ አቤቱታዎች ውስጥ ግልጽ ርዕስ ነው። ደብዳቤዎቹን ያያይዙ።',
     },
   },
   {
@@ -473,7 +473,7 @@ export const DISCRIMINATION_RESOURCES: LocalizedResource[] = [
     phone: "072-2424622",
     url: "https://www.tebeka.org.il",
     description: {
-      he: "ייצוג וייעוץ משפטי חינם בתחומי אפליה וגזענות, ובכללם חינוך. שירות בעברית ובאמהרית. דוא\"ל: general@tebeka.org.il. גיבורי ישראל 2, רחובות.",
+      he: 'ייצוג וייעוץ משפטי חינם בתחומי אפליה וגזענות, ובכללם חינוך. שירות בעברית ובאמהרית. דוא"ל: general@tebeka.org.il. גיבורי ישראל 2, רחובות.',
       en: "Free legal representation and advice on discrimination and racism, education included. Service in Hebrew and Amharic. Email: general@tebeka.org.il. Giborei Israel 2, Rehovot.",
       am: "በአድሎና በዘረኝነት ጉዳዮች ነጻ የሕግ ውክልናና ምክር፣ ትምህርትንም ጨምሮ። በዕብራይስጥና በአማርኛ አገልግሎት። ኢሜይል፦ general@tebeka.org.il።",
     },
@@ -623,7 +623,7 @@ export const DISCRIMINATION_COPY: Record<string, Record<Locale, string>> = {
   sourcesHeading: { he: "מקורות", en: "Sources", am: "ምንጮች" },
   websiteLabel: { he: "לאתר", en: "Website", am: "ድህረ ገጽ" },
   disclaimer: {
-    he: "המדריך מתאר את הדין ואת הנהלים כפי שהם מפורסמים במקורות רשמיים, ואינו ייעוץ משפטי. מועדי רישום, כתובות ונהלים משתנים — אמתו מול הרשות המקומית ומול מחוז משרד החינוך. תוכן פסק הדין בבג\"ץ 7426/08 לא אומת ממקור ראשוני ולכן אינו מתואר כאן.",
+    he: 'המדריך מתאר את הדין ואת הנהלים כפי שהם מפורסמים במקורות רשמיים, ואינו ייעוץ משפטי. מועדי רישום, כתובות ונהלים משתנים — אמתו מול הרשות המקומית ומול מחוז משרד החינוך. תוכן פסק הדין בבג"ץ 7426/08 לא אומת ממקור ראשוני ולכן אינו מתואר כאן.',
     en: "This guide describes the law and procedures as published in official sources and is not legal advice. Registration dates, addresses and procedures change — verify with the local authority and the Ministry of Education district. The content of the judgment in HCJ 7426/08 was not verified from a primary source and is therefore not described here.",
     am: "ይህ መመሪያ ሕጉንና ሂደቶቹን በይፋዊ ምንጮች እንደታተሙት ይገልጻል እንጂ የሕግ ምክር አይደለም። የምዝገባ ቀኖች፣ አድራሻዎችና ሂደቶች ይለወጣሉ — ከአካባቢው ባለሥልጣንና ከትምህርት ሚኒስቴር አውራጃ ያረጋግጡ።",
   },
@@ -676,7 +676,7 @@ export function discriminationCrosslinks(locale: Locale): GuideCrosslink[] {
     {
       path: eligibilityCommitteePath(),
       label: {
-        he: 'הופנה לוועדת השמה? מה זו ועדת זכאות ואפיון ואיך מגישים השגה',
+        he: "הופנה לוועדת השמה? מה זו ועדת זכאות ואפיון ואיך מגישים השגה",
         en: "Referred to a placement committee? The eligibility committee and how to object",
         am: "ወደ ኮሚቴ ተልኳል? የብቁነት ኮሚቴውና አቤቱታ እንዴት ማቅረብ እንደሚቻል",
       }[locale],
