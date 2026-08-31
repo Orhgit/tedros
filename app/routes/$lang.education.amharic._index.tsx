@@ -29,7 +29,6 @@ import {
   AMHARIC_HUB_SUMMARY,
   AMHARIC_HUB_TITLE,
   AMHARIC_PHRASES,
-  AMHARIC_PUBLISHED_AT,
   AMHARIC_SUPPLY_GAP,
   amharicHubCopy,
 } from "~/lib/education/amharic.server";
@@ -44,6 +43,15 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { formatDate } from "~/lib/i18n/format";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+
+/**
+ * First published — bump on substantive edits. Declared here rather than
+ * imported from the content module: `meta` is NOT stripped from the client
+ * bundle, so a `.server` import reached from it fails the build outright
+ * (ADR-020 §4). This is the same reason `$lang.education.parent-rights.tsx`
+ * keeps its own `PUBLISHED_AT`.
+ */
+const PUBLISHED_AT = "2026-08-31";
 
 /**
  * The Ge'ez webfont is normally linked only on /am (TED-128). This page renders
@@ -153,7 +161,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
           path,
           headline: title,
           description: subtitle,
-          datePublished: AMHARIC_PUBLISHED_AT,
+          datePublished: PUBLISHED_AT,
         },
       ),
     },
@@ -214,7 +222,7 @@ export default function AmharicHub({ loaderData }: Route.ComponentProps) {
           </h1>
           <p className="mt-3 text-lg leading-relaxed text-ink-700">{subtitle}</p>
           <p className="mt-3 text-xs text-ink-500">
-            {copy.lastReviewedLabel}: {formatDate(locale, AMHARIC_PUBLISHED_AT)}
+            {copy.lastReviewedLabel}: {formatDate(locale, PUBLISHED_AT)}
           </p>
         </header>
 

@@ -52,8 +52,9 @@ import { amharicHubPath, amharicUlpanPath } from "./links";
 
 type L = Record<Locale, string>;
 
-/** First published — bump on substantive edits. */
-export const AMHARIC_PUBLISHED_AT = "2026-08-31";
+// NOTE: the published-at date is declared in each route module, not here.
+// `meta` needs it and `meta` is not stripped from the client bundle, so a
+// `.server` import reached from it fails the build (ADR-020 §4).
 
 // ═══════════════════════════════════════════════════════════════════════════
 // Shared: the verified places to learn

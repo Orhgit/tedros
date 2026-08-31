@@ -28,7 +28,6 @@ import { GuidePage } from "~/components/sections/guide-page";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import {
-  AMHARIC_PUBLISHED_AT,
   ULPAN_AMHARIC_SUMMARY,
   ULPAN_BODY,
   ULPAN_SUBTITLE,
@@ -50,6 +49,15 @@ import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+
+/**
+ * First published — bump on substantive edits. Declared here rather than
+ * imported from the content module: `meta` is NOT stripped from the client
+ * bundle, so a `.server` import reached from it fails the build outright
+ * (ADR-020 §4). This is the same reason `$lang.education.parent-rights.tsx`
+ * keeps its own `PUBLISHED_AT`.
+ */
+const PUBLISHED_AT = "2026-08-31";
 
 /**
  * The standalone Amharic summary is the whole point of this page for its
@@ -114,7 +122,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
           path,
           headline: title,
           description: subtitle,
-          datePublished: AMHARIC_PUBLISHED_AT,
+          datePublished: PUBLISHED_AT,
         },
       ),
     },
