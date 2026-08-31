@@ -152,6 +152,45 @@ export function faqJsonLd(ctx: SchemaContext, entries: FaqEntry[]): JsonLd {
   };
 }
 
+// ── Article (mental-health access guides — TED-144) ────────────────────────
+
+export interface ArticleJsonLdInput {
+  path: string;
+  headline: string;
+  description: string;
+  /** ISO date of last editorial review, e.g. "2026-08-30". */
+  lastReviewed: string;
+}
+
+export function articleJsonLd(ctx: SchemaContext, input: ArticleJsonLdInput): JsonLd {
+  const url = urlFor(ctx, input.path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Article",
+    "@id": url,
+    url,
+    headline: input.headline,
+    description: input.description,
+    inLanguage: ctx.locale,
+    dateModified: input.lastReviewed,
+    author: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      url: ctx.publicUrl,
+      name: "Tedros",
+    },
+  };
+}
+
 // ── LocalBusiness (health services directory — RIN-656) ────────────────────
 
 export interface LocalBusinessJsonLdInput {
