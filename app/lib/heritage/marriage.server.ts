@@ -297,3 +297,174 @@ export const MARRIAGE_STEPS: MarriageGuideStep[] = [
     },
   },
 ];
+
+// ── FAQ (rendered + emitted as FAQPage JSON-LD) ────────────────────────────
+
+export const MARRIAGE_FAQ: MarriageFaqItem[] = [
+  {
+    id: "who-needs-birur",
+    question: {
+      he: "כל יוצא אתיופיה חייב בבירור יהדות?",
+      en: "Does every Ethiopian-Israeli have to undergo a birur yahadut?",
+      am: "እያንዳንዱ የኢትዮጵያ ተወላጅ ቢሩር የሁዱት ማድረግ አለበት?",
+    },
+    answer: {
+      he: "לא. מי שלהוריו יש תעודת נישואין או כתובה מהרבנות בישראל — לרוב אינו נדרש לבירור. גם אח או אחות שכבר עברו בירור ואושרו יכולים לשמש בסיס לתיק. הבירור נדרש בעיקר כשההורים לא נישאו ברבנות בישראל.",
+      en: "No. If your parents hold a marriage certificate or ketubah from the Rabbanut in Israel, a verification is usually not required. A sibling who already completed one and was approved can also serve as the basis for your file. Verification is mainly required when the parents did not marry through the Rabbanut in Israel.",
+      am: "አይደለም። ወላጆችዎ በእስራኤል ከረቢነት የጋብቻ ምስክር ወረቀት ወይም ኩቱባ ካላቸው በአብዛኛው ማጣራት አያስፈልግም። ማጣራቱን አልፎ የጸደቀ ወንድም ወይም እህትም ለመዝገብዎ መሠረት ሊሆን ይችላል። ማጣራት በዋናነት የሚያስፈልገው ወላጆች በእስራኤል በረቢነት ካላገቡ ነው።",
+    },
+  },
+  {
+    id: "id-card-enough",
+    question: {
+      he: 'רשום "יהודי" בתעודת הזהות — זה לא מספיק?',
+      en: 'My ID card says "Jewish" — isn\'t that enough?',
+      am: 'መታወቂያዬ "አይሁዳዊ" ይላል — ይህ አይበቃም?',
+    },
+    answer: {
+      he: "לא. רישום הלאום במשרד הפנים ובתעודת הזהות אינו נחשב הוכחת יהדות לצורכי רישום נישואין ברבנות. זהו כלל ארצי החל על כל מי שנרשם לנישואין ללא מסמכי רבנות של המשפחה, ואינו ייחודי ליוצאי אתיופיה.",
+      en: "No. The nationality registration at the Interior Ministry and on the ID card does not count as proof of Jewish status for marriage registration at the Rabbanut. This is a nationwide rule applying to anyone registering to marry without family Rabbanut documents, and it is not specific to Ethiopian-Israelis.",
+      am: "አይበቃም። በአገር ውስጥ ሚኒስቴርና በመታወቂያ ላይ ያለው የብሔር ምዝገባ ለረቢነት የጋብቻ ምዝገባ እንደ የይሁዲነት ማስረጃ አይቆጠርም። ይህ የቤተሰብ የረቢነት ሰነድ ሳይኖረው ለጋብቻ የሚመዘገብ ሁሉ ላይ የሚሠራ ሀገር አቀፍ ሕግ ነው እንጂ ለኢትዮጵያ ተወላጆች ብቻ የተለየ አይደለም።",
+    },
+  },
+  {
+    id: "how-long-cost",
+    question: {
+      he: "כמה זמן לוקח הבירור וכמה הוא עולה?",
+      en: "How long does the verification take and what does it cost?",
+      am: "ማጣራቱ ምን ያህል ጊዜ ይወስዳል? ስንት ያስከፍላል?",
+    },
+    answer: {
+      he: "ההליך אינו כרוך בתשלום. במסלול הייעודי ליוצאי אתיופיה מתקבל אישור היהדות לרוב תוך כחודש מהפגישה עם הרב; מקרים מורכבים, המועברים ללשכת הרב הראשי ליהודי אתיופיה, עשויים להימשך יותר. משך הטיפול בפועל משתנה בין לשכות.",
+      en: "The procedure is free of charge. On the dedicated Ethiopian-Israeli track the certificate is usually issued within about a month of the meeting with the rabbi; complex cases referred to the Bureau of the Chief Rabbi of Ethiopian Jewry can take longer. Actual processing times vary between offices.",
+      am: "ሂደቱ ክፍያ የለውም። ለኢትዮጵያ ተወላጆች በተዘጋጀው መንገድ ማረጋገጫው በአብዛኛው ከረቢው ጋር ከተገናኙ በአንድ ወር ገደማ ይሰጣል፤ ወደ ኢትዮጵያ አይሁዶች ዋና ረቢ ጽሕፈት ቤት የሚተላለፉ ውስብስብ ጉዳዮች ግን ሊረዝሙ ይችላሉ። ትክክለኛው የአገልግሎት ጊዜ ከቢሮ ቢሮ ይለያያል።",
+    },
+  },
+  {
+    id: "kes-can-marry",
+    question: {
+      he: "קס יכול לחתן אותנו באופן רשמי?",
+      en: "Can a kes officiate our wedding officially?",
+      am: "ቄስ ሠርጋችንን በይፋ ሊፈጽም ይችላል?",
+    },
+    answer: {
+      he: "כן. בהחלטת הממשלה מפברואר 2018 הוכר מעמדם של הקייסים, הם שולבו במועצות הדתיות והוסמכו לערוך חופה וקידושין. הרישום עצמו מתבצע במועצה הדתית כרגיל. בררו מול המועצה הדתית מי מהקייסים באזורכם רשום כעורך חופה, ואמרו על כך כבר בפתיחת התיק.",
+      en: "Yes. The government decision of February 2018 recognized the status of the kessim, integrated them into the religious councils, and authorized them to officiate weddings. The registration itself is done at the religious council as usual. Check with the council which kessim in your area are registered to officiate, and mention it when opening the file.",
+      am: "አዎ። የየካቲት 2018 የመንግሥት ውሳኔ የቄሶችን ደረጃ አውቆ በሃይማኖት ምክር ቤቶች አካቷቸዋል፣ ሠርግ የመፈጸም ሥልጣንም ሰጥቷቸዋል። ምዝገባው ራሱ እንደተለመደው በሃይማኖት ምክር ቤቱ ይከናወናል። በአካባቢዎ የትኞቹ ቄሶች እንደተመዘገቡ ከምክር ቤቱ ያጣሩ፣ መዝገቡን ሲከፍቱም ይናገሩ።",
+    },
+  },
+  {
+    id: "falash-mura",
+    question: {
+      he: "עלינו במסגרת פלשמורה — מה שונה אצלנו?",
+      en: "We immigrated under the Falash Mura framework — what is different for us?",
+      am: "በፈላሽ ሙራ ማዕቀፍ ነው የመጣነው — ለእኛ የተለየው ምንድን ነው?",
+    },
+    answer: {
+      he: "הבירור עשוי לכלול גם מסמכי גיור או השבה ליהדות, נוסף על תעודות הלידה ומסמכי הקרבה. אם עברתם או עברו ההורים גיור לחומרה בארץ — מעשה בית הדין המקורי הוא המסמך המרכזי שיתבקש. שמרו עליו והגישו עותק בלבד כשאפשר.",
+      en: "The verification may also involve conversion or return-to-Judaism documents, in addition to birth certificates and proof of family relationship. If you or your parents underwent a stringency conversion (giyur le-chumra) in Israel, the original rabbinical-court record is the central document that will be requested. Keep it safe and submit a copy where possible.",
+      am: "ማጣራቱ ከልደት ምስክር ወረቀቶችና ከዝምድና ማስረጃዎች በተጨማሪ የጊዩር ወይም ወደ አይሁድነት የመመለስ ሰነዶችንም ሊያካትት ይችላል። እርስዎ ወይም ወላጆችዎ በእስራኤል ጊዩር ለሑምራ ካደረጉ፣ ዋናው የፍርድ ቤት ሰነድ የሚጠየቀው ዋነኛ ሰነድ ነው። በጥንቃቄ ይያዙት፣ በተቻለ መጠን ቅጂ ያስገቡ።",
+    },
+  },
+  {
+    id: "refused",
+    question: {
+      he: "סירבו לבקשה שלנו — מה עושים?",
+      en: "Our request was refused — what now?",
+      am: "ጥያቄያችን ተከልክሏል — አሁን ምን እናድርግ?",
+    },
+    answer: {
+      he: "אפשר לערער תוך 30 יום לבית הדין הרבני הגדול בירושלים. בקשו את ההחלטה בכתב, ופנו לליווי חינם: מכון עתים (*8083) מתמחה בהתנהלות מול הרבנות ובתי הדין, וטבקה מסייעת משפטית לבני הקהילה. תלונה על יחס מפלה אפשר להגיש גם ליחידה הממשלתית לתיאום המאבק בגזענות.",
+      en: "You may appeal within 30 days to the Supreme Rabbinical Court in Jerusalem. Ask for the decision in writing, and seek free accompaniment: Itim (*8083) specializes in dealings with the Rabbanut and the courts, and Tebeka provides legal aid to community members. A complaint about discriminatory treatment can also be filed with the government Unit for Coordinating the Struggle Against Racism.",
+      am: "በ30 ቀናት ውስጥ በኢየሩሳሌም ላለው ከፍተኛ የረቢ ፍርድ ቤት ይግባኝ ማለት ይችላሉ። ውሳኔውን በጽሑፍ ይጠይቁ፣ ነፃ አጃቢነትም ይፈልጉ፡ ዒቲም (*8083) ከረቢነትና ከፍርድ ቤቶች ጋር በሚደረግ ግንኙነት የተካነ ነው፣ ተቤካም ለማኅበረሰቡ አባላት የሕግ ድጋፍ ይሰጣል። አድሏዊ አያያዝ ላይ ቅሬታ ለዘረኝነት ትግል ማስተባበሪያ መንግሥታዊ ክፍልም ማቅረብ ይቻላል።",
+    },
+  },
+];
+
+// ── resources ──────────────────────────────────────────────────────────────
+
+export const MARRIAGE_RESOURCES: MarriageResource[] = [
+  {
+    name: "מכון עתים — ליווי מול הרבנות ובתי הדין",
+    phone: "*8083",
+    url: "https://itim.org.il",
+    description: {
+      he: "ייעוץ וליווי חינם בהוכחת יהדות, ברישום נישואין ובהתנהלות מול בתי הדין הרבניים — כולל במקרים של עיכוב או סירוב.",
+      en: "Free guidance in proving Jewish status, marriage registration, and dealings with the rabbinical courts — including cases of delay or refusal.",
+      am: "የይሁዲነት ማረጋገጥ፣ የጋብቻ ምዝገባና ከረቢ ፍርድ ቤቶች ጋር በሚደረግ ግንኙነት ነፃ ምክርና አጃቢነት — መዘግየት ወይም እምቢታ ሲያጋጥም ጭምር።",
+    },
+  },
+  {
+    name: "טבקה — סיוע משפטי ליוצאי אתיופיה",
+    url: "https://www.tebeka.org.il",
+    description: {
+      he: "ייעוץ וייצוג משפטי לבני הקהילה, בין היתר במקרים של אפליה או קושי מול רשויות הדת. ייעוץ ראשוני ללא עלות.",
+      en: "Legal advice and representation for community members, including cases of discrimination or difficulty with religious authorities. First consultation free of charge.",
+      am: "ለማኅበረሰቡ አባላት የሕግ ምክርና ውክልና፣ ከሃይማኖት ባለሥልጣናት ጋር መድሎ ወይም ችግር ሲያጋጥም ጭምር። የመጀመሪያ ምክክር ነፃ።",
+    },
+  },
+  {
+    name: "בתי הדין הרבניים — פתיחת תיק בירור יהדות",
+    phone: "*5889",
+    url: "https://www.gov.il/he/departments/rabbinical_courts",
+    description: {
+      he: "פתיחת תיק בירור יהדות בבית הדין האזורי — בדוא\"ל yahadut@rbc.gov.il או בטלפון *5889 (שלוחה 3). ההליך אינו כרוך בתשלום.",
+      en: "Opening a birur yahadut file at the regional court — by email at yahadut@rbc.gov.il or by phone at *5889 (extension 3). The procedure is free of charge.",
+      am: "በክልል ፍርድ ቤት የይሁዲነት ማጣራት መዝገብ መክፈት — በኢሜይል yahadut@rbc.gov.il ወይም በስልክ *5889 (ቅጥያ 3)። ሂደቱ ክፍያ የለውም።",
+    },
+  },
+  {
+    name: "המשרד לשירותי דת",
+    url: "https://www.gov.il/he/departments/ministry_of_religious_services",
+    description: {
+      he: "טפסי בירור יהדות, רשימות הרבנים והקייסים בשירות המדינה, ופרטי המועצות הדתיות שבהן פותחים תיק נישואין.",
+      en: "Jewish-status verification forms, the lists of state-employed rabbis and kessim, and details of the religious councils where a marriage file is opened.",
+      am: "የይሁዲነት ማጣሪያ ቅጾች፣ በመንግሥት አገልግሎት ያሉ ረቢዎችና ቄሶች ዝርዝሮች፣ እና የጋብቻ መዝገብ የሚከፈትባቸው የሃይማኖት ምክር ቤቶች መረጃ።",
+    },
+  },
+];
+
+// ── sources (rendered on-page) ─────────────────────────────────────────────
+
+export const MARRIAGE_SOURCES: MarriageSource[] = [
+  {
+    name: {
+      he: "כל-זכות — בירור יהדות ליוצאי אתיופיה (הליך)",
+      en: "Kol Zchut — birur yahadut for Ethiopian-Israelis (procedure)",
+      am: "ኮል ዝኹት — ለኢትዮጵያ ተወላጆች ቢሩር የሁዱት (ሂደት)",
+    },
+    url: "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%A8%D7%95%D7%A8_%D7%99%D7%94%D7%93%D7%95%D7%AA_%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94",
+  },
+  {
+    name: {
+      he: "כל-זכות — בירור יהדות (ההליך הכללי בבתי הדין)",
+      en: "Kol Zchut — birur yahadut (the general court procedure)",
+      am: "ኮል ዝኹት — ቢሩር የሁዱት (አጠቃላዩ የፍርድ ቤት ሂደት)",
+    },
+    url: "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%A8%D7%95%D7%A8_%D7%99%D7%94%D7%93%D7%95%D7%AA",
+  },
+  {
+    name: {
+      he: "כל-זכות — הנחה בתשלום אגרת רישום נישואין ברבנות",
+      en: "Kol Zchut — discount on the Rabbanut marriage registration fee",
+      am: "ኮል ዝኹት — በረቢነት የጋብቻ ምዝገባ ክፍያ ቅናሽ",
+    },
+    url: "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%90%D7%92%D7%A8%D7%AA_%D7%A8%D7%99%D7%A9%D7%95%D7%9D_%D7%A0%D7%99%D7%A9%D7%95%D7%90%D7%99%D7%9F_%D7%91%D7%A8%D7%91%D7%A0%D7%95%D7%AA",
+  },
+  {
+    name: {
+      he: "מכון עתים — הוכחת יהדות לנישואין",
+      en: "Itim — proving Jewish status for marriage",
+      am: "ዒቲም — ለጋብቻ የይሁዲነት ማረጋገጥ",
+    },
+    url: "https://itim.org.il/guides-and-info/%D7%94%D7%95%D7%9B%D7%97%D7%AA-%D7%99%D7%94%D7%93%D7%95%D7%AA-%D7%9C%D7%A0%D7%99%D7%A9%D7%95%D7%90%D7%99%D7%9F/",
+  },
+  {
+    name: {
+      he: "המשרד לשירותי דת — רבני העדה האתיופית (הרשימה הרשמית)",
+      en: "Ministry of Religious Services — Ethiopian community rabbis (the official list)",
+      am: "የሃይማኖት አገልግሎት ሚኒስቴር — የኢትዮጵያ ማኅበረሰብ ረቢዎች (ይፋዊው ዝርዝር)",
+    },
+    url: "https://www.gov.il/he/departments/dynamiccollectors/ethiopian_rabbinical_list",
+  },
+];
