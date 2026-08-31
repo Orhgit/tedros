@@ -16,7 +16,11 @@ beforeAll(() => {
 });
 
 import { CITIES } from "../app/lib/cities/registry";
-import { culinaryPath, culinaryShoppingCityPath, sigdMenuPath } from "../app/lib/culinary/links";
+import {
+  culinaryPath,
+  culinaryShoppingCityPath,
+  sigdMenuPath,
+} from "../app/lib/culinary/links";
 import {
   articleJsonLd,
   breadcrumbJsonLd,

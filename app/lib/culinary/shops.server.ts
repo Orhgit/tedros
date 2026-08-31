@@ -128,7 +128,8 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
           en: "Ethiopian spices, medicinal herbs and natural oils",
           am: "የኢትዮጵያ ቅመሞች፣ የመድኃኒት ዕፅዋትና ተፈጥሯዊ ዘይቶች",
         },
-        sourceUrl: "https://www.ksn.co.il/%D7%90%D7%93%D7%95%D7%9F-%D7%94%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D/",
+        sourceUrl:
+          "https://www.ksn.co.il/%D7%90%D7%93%D7%95%D7%9F-%D7%94%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D/",
         sourceLabel: {
           he: "כתבה בנתניה און ליין (2016)",
           en: "Netanya Online feature (2016)",
@@ -186,19 +187,19 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
     citySlug: "rishon-lezion",
     status: "verified",
     marketArea: {
-      he: "רחוב תרמ\"ב, מרכז העיר",
+      he: 'רחוב תרמ"ב, מרכז העיר',
       en: "Tarmav Street, city centre",
       am: "የታርማብ ጎዳና፣ የከተማው መሃል",
     },
     intro: {
-      he: "בראשון לציון, העסקים האתיופיים המתועדים מתרכזים ברחוב תרמ\"ב שבמרכז העיר. חנות התבלינים המאומתת בעיר יושבת שם, במרחק הליכה מהשוק העירוני. בשכונת רמת אליהו — הריכוז ההיסטורי של הקהילה — לא אותרה חנות מתועדת במקורות פומביים, אף שפועל בה מרכז מסחרי שכונתי.",
+      he: 'בראשון לציון, העסקים האתיופיים המתועדים מתרכזים ברחוב תרמ"ב שבמרכז העיר. חנות התבלינים המאומתת בעיר יושבת שם, במרחק הליכה מהשוק העירוני. בשכונת רמת אליהו — הריכוז ההיסטורי של הקהילה — לא אותרה חנות מתועדת במקורות פומביים, אף שפועל בה מרכז מסחרי שכונתי.',
       en: "In Rishon LeZion, documented Ethiopian businesses cluster on Tarmav Street in the city centre. The city's verified spice shop sits there, within walking distance of the municipal market. In Ramat Eliyahu — the community's historic concentration — no shop could be located in public sources, although the neighbourhood has its own commercial centre.",
       am: "በሪሾን ለጽዮን የተመዘገቡ የኢትዮጵያ ንግዶች በከተማው መሃል በታርማብ ጎዳና ላይ ይሰበሰባሉ። የተረጋገጠው የቅመም ሱቅ እዚያ ነው።",
     },
     shops: [
       {
         name: "תבליני סלמון",
-        area: { he: "רחוב תרמ\"ב 18", en: "18 Tarmav St.", am: "ታርማብ ጎዳና 18" },
+        area: { he: 'רחוב תרמ"ב 18', en: "18 Tarmav St.", am: "ታርማብ ጎዳና 18" },
         sells: {
           he: "תבלינים אתיופיים אותנטיים — ברברה, מיטמיטה, קוררימה, בסובילה — ופולי קפה אתיופיים",
           en: "Authentic Ethiopian spices — berbere, mitmita, korarima, besobela — and Ethiopian coffee beans",
@@ -367,7 +368,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
       am: "አሮጌው የንግድ ማዕከል",
     },
     intro: {
-      he: "קריית מלאכי היא העיר עם השיעור הגבוה בישראל של יוצאי אתיופיה מכלל האוכלוסייה (13.8% לפי הלמ\"ס), אבל דווקא בה קשה לאמת חנויות במקורות פומביים. החנות היחידה שנזכרת בשמה בעיתונות הארצית פועלת במרכז המסחרי הישן, והמקור עליה הוא מ-2020 — התקשרו לפני שמגיעים במיוחד. אם אתם מהעיר ויודעים מה פתוח היום — נשמח לעדכון.",
+      he: 'קריית מלאכי היא העיר עם השיעור הגבוה בישראל של יוצאי אתיופיה מכלל האוכלוסייה (13.8% לפי הלמ"ס), אבל דווקא בה קשה לאמת חנויות במקורות פומביים. החנות היחידה שנזכרת בשמה בעיתונות הארצית פועלת במרכז המסחרי הישן, והמקור עליה הוא מ-2020 — התקשרו לפני שמגיעים במיוחד. אם אתם מהעיר ויודעים מה פתוח היום — נשמח לעדכון.',
       en: "Kiryat Malakhi has Israel's highest share of Ethiopian-Israelis in the total population (13.8% per CBS), yet it is precisely here that shops are hard to verify in public sources. The only shop named in national press operates in the old commercial centre, and the source dates to 2020 — call before making a special trip. If you live in the city and know what is open today — we would love an update.",
       am: "ቂርያት ማላኪ በእስራኤል ከፍተኛው የማህበረሰብ ድርሻ ያላት ከተማ ናት (13.8%)፣ ግን ሱቆችን በይፋዊ ምንጮች ማረጋገጥ ከባድ ነው። በጋዜጣ የተጠቀሰው ሱቅ በአሮጌው የንግድ ማዕከል ነው፤ ምንጩ ከ2020 ነው — ከመሄድዎ በፊት ይደውሉ።",
     },

@@ -13,7 +13,11 @@ import { Link, data } from "react-router";
 import type { Route } from "./+types/$lang.culinary.shopping.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
-import { culinaryPath, culinaryShoppingCityPath, sigdMenuPath } from "~/lib/culinary/links";
+import {
+  culinaryPath,
+  culinaryShoppingCityPath,
+  sigdMenuPath,
+} from "~/lib/culinary/links";
 import { breadcrumbJsonLd, shopItemListJsonLd, type JsonLd } from "~/lib/culinary/schema";
 import {
   ONLINE_SELLERS,

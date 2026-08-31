@@ -154,7 +154,9 @@ export function sigdMenuTitle(locale: Locale): string {
 }
 
 export function sigdMenuDescription(locale: Locale): string {
-  return SIGD_MENU_GUIDE.description[locale] ?? SIGD_MENU_GUIDE.description[DEFAULT_LOCALE];
+  return (
+    SIGD_MENU_GUIDE.description[locale] ?? SIGD_MENU_GUIDE.description[DEFAULT_LOCALE]
+  );
 }
 
 export function sigdMenuBody(locale: Locale): string {
