@@ -13,6 +13,7 @@ import {
   domesticViolencePath,
   elderlyPath,
   mourningPath,
+  soldiersPath,
   womenEmpowermentPath,
 } from "~/lib/family/links";
 import { breadcrumbJsonLd, webPageJsonLd } from "~/lib/family/schema";
@@ -60,6 +61,13 @@ const CARDS: FamilyCard[] = [
     titleKey: "family_mourning_title",
     subtitleKey: "family_mourning_subtitle",
     icon: "🕯️",
+  },
+  {
+    slug: "soldiers",
+    path: soldiersPath(),
+    titleKey: "family_soldiers_title",
+    subtitleKey: "family_soldiers_subtitle",
+    icon: "🎗️",
   },
 ];
 
