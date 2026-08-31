@@ -50,7 +50,7 @@ describe("expungement right — seed integrity (TED-137)", () => {
     // Disclaimer + Tebeka referral (HE source of truth).
     expect(seed.bodies.he).toContain("הבהרה משפטית");
     expect(seed.bodies.he).toContain("טבקה");
-    expect(seed.bodies.he).toContain("03-5103538");
+    expect(seed.bodies.he).toContain("072-2424622");
     // The statutory cutoff date is stated, not paraphrased.
     expect(seed.bodies.he).toContain("31 בדצמבר 2020");
   });

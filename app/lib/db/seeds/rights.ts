@@ -294,7 +294,7 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
     bodies: {
       he: `## למה הדף הזה חשוב ליוצאי אתיופיה?
 
-נתונים של עמותת תבקה ושל המרכז לרב-תרבותיות ודמוקרטיה מציגים תמונה עקבית: צעירים יוצאי אתיופיה מדווחים על בדיקות שוטרים יזומות (profiling) בשיעור גבוה באופן לא-פרופורציונלי ביחס לנתח האוכלוסייה שלהם. מחאות 2015 ו-2019 יצאו בדיוק מהצטברות אירועים כאלה. הדרך הטובה ביותר להגן על עצמך היא לדעת את זכויותיך לפני שתצטרך להשתמש בהן.
+נתונים של עמותת טבקה ושל המרכז לרב-תרבותיות ודמוקרטיה מציגים תמונה עקבית: צעירים יוצאי אתיופיה מדווחים על בדיקות שוטרים יזומות (profiling) בשיעור גבוה באופן לא-פרופורציונלי ביחס לנתח האוכלוסייה שלהם. מחאות 2015 ו-2019 יצאו בדיוק מהצטברות אירועים כאלה. הדרך הטובה ביותר להגן על עצמך היא לדעת את זכויותיך לפני שתצטרך להשתמש בהן.
 
 ---
 
@@ -321,7 +321,7 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
 על-פי חוק סדר הדין הפלילי (נוסח משולב), כל נחקר זכאי לפגישה עם עורך דין **לפני** שהחקירה מתחילה. המשטרה חייבת לאפשר זאת, למעט מקרים חריגים (ביטחון המדינה, פגיעה בחקירה בהסכמת קצין בכיר).
 
 **אם אין לך עורך דין**: התקשר לתורן הלילה של לשכת עורכי הדין: **03-6200600** (24/7).
-**תבקה** — עמותת יוצאי אתיופיה: **1-800-20-20-16** (שעות משרד).
+**טבקה** — עמותת יוצאי אתיופיה: **072-2424622** (שעות משרד).
 
 ---
 
@@ -353,8 +353,8 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
 1. **אל תתעמת פיזית** — זה מסוכן ולא יועיל.
 2. **תעד** — צלם (מותר בשטח ציבורי), שמור הודעות.
 3. **הגש תלונה במח"ש** — [mahash.gov.il](https://www.mahash.gov.il) (ראה גם דף "איך מגישים תלונה על שוטר").
-4. **פנה לתבקה** — 1-800-20-20-16 / tebeka.org.il
-5. **עמותת האגודה לזכויות האזרח (עכ"א)** — 1-800-20-20-16 | acri.org.il
+4. **פנה לטבקה** — 072-2424622 / tebeka.org.il
+5. **עמותת האגודה לזכויות האזרח (עכ"א)** — 072-2424622 | acri.org.il
 
 ---
 
@@ -373,8 +373,8 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
 ## מספרי חירום
 
 - **מח"ש (תלונות על שוטרים)**: 1553 | mahash.gov.il
-- **תבקה**: 1-800-20-20-16 | [tebeka.org.il](https://tebeka.org.il)
-- **עכ"א**: 1-800-20-20-16 | [acri.org.il](https://www.acri.org.il)
+- **טבקה**: 072-2424622 | [tebeka.org.il](https://tebeka.org.il)
+- **עכ"א**: 072-2424622 | [acri.org.il](https://www.acri.org.il)
 - **לשכת עורכי הדין (תורן 24/7)**: 03-6200600
 `,
       en: `## Why This Matters for Ethiopian-Israelis
@@ -396,7 +396,7 @@ Studies and reports by TEBEKA and human-rights organisations document disproport
 ## Complaint Hotlines
 
 - **MAHASH (police complaints)**: 1553 | mahash.gov.il
-- **TEBEKA**: 1-800-20-20-16 | tebeka.org.il
+- **TEBEKA**: 072-2424622 | tebeka.org.il
 - **ACRI**: acri.org.il
 - **Bar Association duty lawyer**: 03-6200600
 `,
@@ -415,7 +415,7 @@ Studies and reports by TEBEKA and human-rights organisations document disproport
 ## አስቸኳይ ስልኮች
 
 - **MAHASH**: 1553 | mahash.gov.il
-- **TEBEKA**: 1-800-20-20-16 | tebeka.org.il
+- **TEBEKA**: 072-2424622 | tebeka.org.il
 - **የጠበቃ ፍርድ ቤት ተረኛ**: 03-6200600
 `,
     },
@@ -489,14 +489,14 @@ Studies and reports by TEBEKA and human-rights organisations document disproport
 
 ---
 
-## תבקה — ליווי חינם
+## טבקה — ליווי חינם
 
-עמותת **תבקה** (האגודה הישראלית ליהודים אתיופים) מספקת ליווי חינמי בתלונות על שוטרים, כולל:
+עמותת **טבקה** (האגודה הישראלית ליהודים אתיופים) מספקת ליווי חינמי בתלונות על שוטרים, כולל:
 - ניסוח כתב התלונה
 - ייצוג בפני מח"ש
 - ניטור התיק
 
-📞 **1-800-20-20-16** | [tebeka.org.il](https://tebeka.org.il)
+📞 **072-2424622** | [tebeka.org.il](https://tebeka.org.il)
 
 ---
 
@@ -518,7 +518,7 @@ Studies and reports by TEBEKA and human-rights organisations document disproport
 אם התיק נסגר ואתה לא מסכים:
 1. פנה בכתב לראש מח"ש לביקורת הפיקוח
 2. פנה לנציב תלונות הציבור (הוא עצמאי ממח"ש)
-3. שקול תביעה אזרחית — תבקה יכולה להעריך סיכויים
+3. שקול תביעה אזרחית — טבקה יכולה להעריך סיכויים
 
 ---
 
@@ -526,7 +526,7 @@ Studies and reports by TEBEKA and human-rights organisations document disproport
 
 - מח"ש: [mahash.gov.il](https://www.mahash.gov.il)
 - נציב תלונות הציבור: [ombudsman.gov.il](https://www.ombudsman.gov.il)
-- תבקה: [tebeka.org.il](https://tebeka.org.il)
+- טבקה: [tebeka.org.il](https://tebeka.org.il)
 - עכ"א: [acri.org.il](https://www.acri.org.il)
 `,
       en: `## Two Complaint Bodies
@@ -545,7 +545,7 @@ Filing with both is often advisable.
 
 **Step 3 — File with the Ombudsman.** Online or by registered mail at ombudsman.gov.il. The Ombudsman must notify you of any decision and its reasoning.
 
-**Free support from TEBEKA.** TEBEKA provides free complaint drafting, representation before MAHASH, and case monitoring. Call 1-800-20-20-16 or visit tebeka.org.il.
+**Free support from TEBEKA.** TEBEKA provides free complaint drafting, representation before MAHASH, and case monitoring. Call 072-2424622 or visit tebeka.org.il.
 
 ## Realistic Outcomes
 
@@ -562,7 +562,7 @@ Most files are closed without action, but documented complaints build a record. 
 2. MAHASH ላይ ያቅርቡ፦ mahash.gov.il ወይም ቢሮ። ጊዜ ገደብ፦ 30 ቀናት።
 3. ለኮሚሽነሩ ያቅርቡ፦ ombudsman.gov.il
 
-**TEBEKA ነፃ እርዳታ ይሰጣል።** 1-800-20-20-16 | tebeka.org.il
+**TEBEKA ነፃ እርዳታ ይሰጣል።** 072-2424622 | tebeka.org.il
 `,
     },
   },
@@ -3841,7 +3841,7 @@ Falash Mura olim who arrived from 2016 are entitled to a separate basket includi
 ### מסלול 2 — בית הדין לעבודה
 - ניתן להגיש תביעה עצמאית — ממליצים להיוועץ עם עורך דין.
 - **פיצוי**: עד 120,000 ₪ ללא הוכחת נזק ממשי.
-- **תבקה** — מחלקת עבודה: [tebeka.org.il](https://tebeka.org.il)
+- **טבקה** — מחלקת עבודה: [tebeka.org.il](https://tebeka.org.il)
 
 ### מסלול 3 — ההסתדרות
 חברות בהסתדרות מקנה ייצוג וסיוע משפטי בסכסוכי עבודה.
@@ -3856,7 +3856,7 @@ Falash Mura olim who arrived from 2016 are entitled to a separate basket includi
 
 | ארגון | שירות | קשר |
 |-------|--------|------|
-| **תבקה** | ייעוץ משפטי חינמי | tebeka.org.il |
+| **טבקה** | ייעוץ משפטי חינמי | tebeka.org.il |
 | **ממונה שוויון הזדמנויות** | חקירה ממלכתית | gov.il |
 | **הסתדרות** | ייצוג עובד | histadrut.org.il |
 | **IAEJ** | ליווי קהילתי | iaej.org.il |
@@ -4030,7 +4030,7 @@ Histadrut membership grants representation and legal support in labor disputes.
 
 אם הועדה קבעה אחוז נמוך מהצפוי, יש לך **60 יום** להגיש ערעור לוועדה רפואית לעררים. לאחר מכן ניתן לפנות לבית-דין לעבודה.
 
-**תבקה** מסייעת בייצוג מול ביטוח לאומי: 1-800-20-20-16.
+**טבקה** מסייעת בייצוג מול ביטוח לאומי: 072-2424622.
 
 ---
 
@@ -4060,7 +4060,7 @@ Ethiopian immigrants with a recognised medical disability of at least 25% that r
 
 ## Appeal Rights
 
-If the committee sets too low a percentage, you have 60 days to appeal to the Medical Appeals Committee, then to the Labour Court. TEBEKA offers free representation: 1-800-20-20-16.
+If the committee sets too low a percentage, you have 60 days to appeal to the Medical Appeals Committee, then to the Labour Court. TEBEKA offers free representation: 072-2424622.
 `,
       am: `## ብቁ የሆኑት ማን ናቸው?
 
@@ -4073,7 +4073,7 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
 3. ወደ ቅርቡ BTL ቅርንጫፍ ወይም ኦንላይን ያስገቡ።
 4. ለሕክምና ኮሚቴ ይሂዱ — አስተርጓሚ ይጠይቁ።
 
-**ቅሬታ:** 60 ቀናት ውስጥ ይቃወሙ። TEBEKA ይረዳዎታል፦ 1-800-20-20-16።
+**ቅሬታ:** 60 ቀናት ውስጥ ይቃወሙ። TEBEKA ይረዳዎታል፦ 072-2424622።
 `,
     },
   },
@@ -4128,7 +4128,7 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
 | "נתיב לעתיד" | הייטק, פיתוח תוכנה | IEWA + משרד הקליטה |
 | "הכשרות קיבוץ" | חקלאות, תיירות | תנועות קיבוציות |
 | "מסלול בטחון" | שמירה, לוגיסטיקה | NESS Technologies / G4S |
-| "מהנדסים בהתהוות" | מכונאות, חשמל | עמותת תבקה + ORT |
+| "מהנדסים בהתהוות" | מכונאות, חשמל | עמותת טבקה + ORT |
 
 לרשימת תוכניות עדכנית: פנה לממשיל משרד הקליטה בעיר מגוריך.
 
@@ -4163,7 +4163,7 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
 |-------|-------|-----|
 | **IEWA** (עמותה ישראלית יהודים אתיופים) | ייעוץ, מלגות, הכשרות | iewa.org.il |
 | **עמותת "בצלאל"** | אמנויות, עיצוב, מדיה | צרו קשר ישיר |
-| **תבקה** | ייעוץ משפטי, תביעת זכויות | 1-800-20-20-16 |
+| **טבקה** | ייעוץ משפטי, תביעת זכויות | 072-2424622 |
 | **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | *5454 |
 
 ---
@@ -4189,7 +4189,7 @@ Government resolutions establish special benefit tracks for soldiers of Ethiopia
 
 **Housing priority:** Ethiopian-Israeli veterans receive priority points on public-housing and state housing-program waiting lists. Apply via your city's Ethiopian-community liaison (Mamshil) with your discharge certificate.
 
-Contact IEWA (iewa.org.il) or TEBEKA (1-800-20-20-16) for guidance.
+Contact IEWA (iewa.org.il) or TEBEKA (072-2424622) for guidance.
 `,
       am: `## ምን ልዩ ነው?
 
@@ -4201,7 +4201,7 @@ Contact IEWA (iewa.org.il) or TEBEKA (1-800-20-20-16) for guidance.
 
 **ቤት ቅደምተከተል:** ከተማዎ ማምሺል (Mamshil) ጋር ይቀናጁ።
 
-IEWA (iewa.org.il) ወይም TEBEKA (1-800-20-20-16) ያነጋግሩ።
+IEWA (iewa.org.il) ወይም TEBEKA (072-2424622) ያነጋግሩ።
 `,
     },
   },
@@ -4287,7 +4287,7 @@ IEWA (iewa.org.il) ወይም TEBEKA (1-800-20-20-16) ያነጋግሩ።
 
 - בקש פגישה עם **עובד-סוציאלי דובר אמהרית** (קיים בסניפי תל-אביב, ירושלים, נתניה, ב"ש).
 - פנה ל**ממשיל יוצאי אתיופיה** בעירייה — הם יכולים להפנות ולהאיץ.
-- תבקה יכולה לסייע בייצוג מול ביטוח לאומי: **1-800-20-20-16**.
+- טבקה יכולה לסייע בייצוג מול ביטוח לאומי: **072-2424622**.
 
 📞 **ביטוח לאומי**: *6050
 🔗 [btl.gov.il](https://www.btl.gov.il)
@@ -4315,7 +4315,7 @@ New-immigrant women who give birth are entitled to a one-time birth grant (appro
 
 Immigrants with no minimum income are entitled to income-support (Havtachat Hachnasah) — approx. ₪3,100–4,800/month depending on family composition.
 
-Contact BTL: *6050 | btl.gov.il | TEBEKA: 1-800-20-20-16
+Contact BTL: *6050 | btl.gov.il | TEBEKA: 072-2424622
 `,
       am: `## ከ3 ወራት ውስጥ ይመዝገቡ
 
@@ -4332,7 +4332,7 @@ Contact BTL: *6050 | btl.gov.il | TEBEKA: 1-800-20-20-16
 - አካል ጉዳት፦ 6 ወራት
 - ስራ አጥ፦ 6 ወራት + 12 ወራት ሥራ
 
-BTL፦ *6050 | btl.gov.il | TEBEKA፦ 1-800-20-20-16
+BTL፦ *6050 | btl.gov.il | TEBEKA፦ 072-2424622
 `,
     },
   },
@@ -4419,7 +4419,7 @@ BTL፦ *6050 | btl.gov.il | TEBEKA፦ 1-800-20-20-16
 
 ניתן לבקש רופא או אחות ספציפי בקופה. מומלץ לבקש בפה מלא: "יש לי קושי עם עברית, האם יש רופא/אחות דוברת אמהרית במרפאה?" — לעתים קרובות התשובה חיובית.
 
-**מאגר רופאים אתיופים** — תבקה עובדת על פרסום רשימה. ניתן לשאול ישירות.
+**מאגר רופאים אתיופים** — טבקה עובדת על פרסום רשימה. ניתן לשאול ישירות.
 
 ---
 
@@ -4571,7 +4571,7 @@ Tene Briut (תנא בריאות) is a Clalit program specifically for the Ethiop
 
 ## ארגונים שמסייעים
 
-- **תבקה**: 1-800-20-20-16 — ייצוג בגירושין, צווי הגנה, מזונות
+- **טבקה**: 072-2424622 — ייצוג בגירושין, צווי הגנה, מזונות
 - **קו חם ל-118**: 24/7, כולל אמהרית
 - **ל.א.ה**: ארגון ייחודי לנשים יוצאות אתיופיה — ירושלים ות"א
 - **הסיוע המשפטי הממשלתי**: 1-700-706-060
@@ -4594,7 +4594,7 @@ The order can include eviction of the abuser (even if the home is in his name), 
 - **Police: 100**
 - **WIZO shelters: 1-800-500-550**
 - **Na'amat shelters: 1-800-505-360**
-- **TEBEKA (legal):** 1-800-20-20-16
+- **TEBEKA (legal):** 072-2424622
 
 ## Financial Safety Net During Separation
 
@@ -4611,7 +4611,7 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 - **የቤተሰብ ጥቃት ስልክ: 118** (24/7፣ አማርኛ አለ)
 - **ፖሊስ: 100**
 - **WIZO: 1-800-500-550**
-- **TEBEKA: 1-800-20-20-16**
+- **TEBEKA: 072-2424622**
 
 ## ልዩነቶቹ
 
@@ -4708,7 +4708,7 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 | ארגון | שירות | קשר |
 |-------|-------|-----|
 | **IEWA (נשים יוצאות אתיופיה)** | ייעוץ, ליווי, קהילה | iewa.org.il |
-| **תבקה** | ייעוץ משפטי, מזונות, גירושין | 1-800-20-20-16 |
+| **טבקה** | ייעוץ משפטי, מזונות, גירושין | 072-2424622 |
 | **ויצ"ו** | מרכזי הורים, עזרה לגננות | 1-800-500-550 |
 | **ביטוח לאומי** | מזונות מובטחים, קצבת ילדים | *6050 |
 | **שירות התעסוקה** | הכשרות, קצבאות | המשרד הקרוב |
@@ -4742,7 +4742,7 @@ If the father is in Ethiopia or elsewhere, BTL will advance the court-ordered am
 
 - **BTL guaranteed alimony (Form 551):** btl.gov.il | *6050
 - **IEWA (Ethiopian women):** iewa.org.il
-- **TEBEKA (legal aid):** 1-800-20-20-16
+- **TEBEKA (legal aid):** 072-2424622
 - **Employment Service (retraining):** your nearest branch
 `,
       am: `## ዋስትና ያለው ምግብ ድጎማ
@@ -4757,7 +4757,7 @@ If the father is in Ethiopia or elsewhere, BTL will advance the court-ordered am
 
 አንድ-ወላጅ + ኢትዮጵያዊ = ድርብ ቅደምተከተሉ ነጥቦች። Amidar ይመዝገቡ።
 
-ዋና ቁጥሮች፦ BTL *6050 | TEBEKA 1-800-20-20-16 | IEWA iewa.org.il
+ዋና ቁጥሮች፦ BTL *6050 | TEBEKA 072-2424622 | IEWA iewa.org.il
 `,
     },
   },
@@ -4847,7 +4847,7 @@ If the father is in Ethiopia or elsewhere, BTL will advance the court-ordered am
 אם הביטוח הלאומי דחה את תביעתך:
 1. תוך **30 ימים**: הגש **ערעור לביטוח לאומי** (בכתב + הסבר)
 2. אם נדחה שנית: **בית-דין לעבודה** (חינם להגשה)
-3. **תבקה** מסייעת בייצוג: 1-800-20-20-16
+3. **טבקה** מסייעת בייצוג: 072-2424622
 
 **סיבות נפוצות לדחייה**:
 - נרשמת מאוחר מ-14 יום — ניתן לערער על נסיבות
@@ -4890,7 +4890,7 @@ Anyone who worked at least 12 of the last 18 months (with National Insurance con
 
 ## Appeal
 
-If rejected: appeal in writing within 30 days. TEBEKA (1-800-20-20-16) can assist with representation before BTL and the Labour Court.
+If rejected: appeal in writing within 30 days. TEBEKA (072-2424622) can assist with representation before BTL and the Labour Court.
 `,
       am: `## ብቁ ማን ነው?
 
@@ -4907,7 +4907,7 @@ If rejected: appeal in writing within 30 days. TEBEKA (1-800-20-20-16) can assis
 1. ከ14 ቀናት ውስጥ ወደ ሥራ አገልግሎት ቢሮ ሂዱ — እያንዳንዱ ዘገዬ ቀን ጥቅማ-ጥቅሙን ያጣል።
 2. ID፣ ማሰናበቻ ደብዳቤ፣ ለ3 ወር የደሞዝ ሰነዶች ያምጡ።
 
-ቅሬታ ካለ፦ TEBEKA 1-800-20-20-16
+ቅሬታ ካለ፦ TEBEKA 072-2424622
 `,
     },
   },
@@ -5131,7 +5131,7 @@ BTL፦ *6050 | btl.gov.il
 **במשרד ממשלתי**:
 1. ביקש בכתב ממנהל הסניף
 2. פנה לנציב תלונות הציבור: [ombudsman.gov.il](https://www.ombudsman.gov.il)
-3. **תבקה** — יטפל בתלונה: 1-800-20-20-16
+3. **טבקה** — יטפל בתלונה: 072-2424622
 
 ---
 
@@ -5143,7 +5143,7 @@ BTL፦ *6050 | btl.gov.il
 
 ## עלות
 
-**הזכות חינמית** — המדינה משלמת למתורגמן בהליכים משפטיים. בחלק מהמשרדים — אין תשלום. אם ביקשו ממך לשלם למתורגמן בהליך משפטי — **סרב** ופנה לתבקה.
+**הזכות חינמית** — המדינה משלמת למתורגמן בהליכים משפטיים. בחלק מהמשרדים — אין תשלום. אם ביקשו ממך לשלם למתורגמן בהליך משפטי — **סרב** ופנה לטבקה.
 
 ---
 
@@ -5154,7 +5154,7 @@ BTL፦ *6050 | btl.gov.il
 - **בקש אישור** שהמתורגמן תרגם במדויק אם אינך בטוח
 - **שמור עותק** מהפרוטוקול — זכות שלך
 
-📞 **תבקה**: 1-800-20-20-16
+📞 **טבקה**: 072-2424622
 🔗 **מינהלת בתי-המשפט**: [court.gov.il](https://www.court.gov.il)
 `,
       en: `## The Constitutional Basis
@@ -5175,7 +5175,7 @@ The Courts Administration maintains a registry of certified Amharic interpreters
 
 ## If an Interpreter Is Refused
 
-In court — state the objection on the record to the judge. In a government office — request in writing, then escalate to the Public Ombudsman (ombudsman.gov.il) or TEBEKA (1-800-20-20-16).
+In court — state the objection on the record to the judge. In a government office — request in writing, then escalate to the Public Ombudsman (ombudsman.gov.il) or TEBEKA (072-2424622).
 
 ## Cost
 
@@ -5196,7 +5196,7 @@ The right is free — the state pays for court interpreters. If you are ever ask
 
 ## ወጪ
 
-ነፃ ነው። ለሕጋዊ ሂደት ለአስተርጓሚ ሊከፈሉ ቢጠየቁ — ፈቃደኛ አትሁኑ፤ TEBEKA ያነጋግሩ፦ 1-800-20-20-16
+ነፃ ነው። ለሕጋዊ ሂደት ለአስተርጓሚ ሊከፈሉ ቢጠየቁ — ፈቃደኛ አትሁኑ፤ TEBEKA ያነጋግሩ፦ 072-2424622
 `,
     },
   },
@@ -5215,7 +5215,7 @@ The right is free — the state pays for court interpreters. If you are ever ask
     },
     govUrl: "https://tebeka.org.il",
     eligibilitySummary: {
-      he: "עמותת תבקה, הסיוע המשפטי הממשלתי, וקליניקות משפטיות באוניברסיטאות מספקים ייצוג ויעוץ חינמיים ליוצאי אתיופיה. אין צורך בהכנסה מוגדרת לפנייה לתבקה.",
+      he: "עמותת טבקה, הסיוע המשפטי הממשלתי, וקליניקות משפטיות באוניברסיטאות מספקים ייצוג ויעוץ חינמיים ליוצאי אתיופיה. אין צורך בהכנסה מוגדרת לפנייה לטבקה.",
       en: "TEBEKA association, the Government Legal Aid Bureau, and university law clinics provide free representation and advice to Ethiopian-Israelis. TEBEKA has no income test.",
       am: "TEBEKA ማህበር፣ የመንግስት የሕግ እርዳታ ቢሮ፣ እና የዩኒቨርሲቲ ሕግ ክሊኒኮች ለኢትዮጵያ-እስራኤሎች ነፃ ውክልና እና ምክር ይሰጣሉ።",
     },
@@ -5227,9 +5227,9 @@ The right is free — the state pays for court interpreters. If you are ever ask
 
 ---
 
-## 1. תבקה — האגודה הישראלית ליהודים אתיופים
+## 1. טבקה — האגודה הישראלית ליהודים אתיופים
 
-**תבקה** היא הארגון המרכזי למשפט ליוצאי אתיופיה בישראל. הם עוסקים ב:
+**טבקה** היא הארגון המרכזי למשפט ליוצאי אתיופיה בישראל. הם עוסקים ב:
 
 - **דיני עבודה**: אפליה, פיטורין שלא כדין, שכר לא שולם
 - **דיני ביטוח לאומי**: ערעורים על קצבאות
@@ -5237,8 +5237,8 @@ The right is free — the state pays for court interpreters. If you are ever ask
 - **זכויות אזרחיות**: פגיעה בידי משטרה, אפליה במוסדות ציבוריים
 - **הגנה מפני פינוי**: עזרה בסכסוכי דיור ורשויות
 
-**פנייה לתבקה**:
-- טלפון: **1-800-20-20-16** (שעות משרד — ראשון עד חמישי)
+**פנייה לטבקה**:
+- טלפון: **072-2424622** (שעות משרד — ראשון עד חמישי)
 - אתר: [tebeka.org.il](https://tebeka.org.il)
 - פגישה ראשונה חינמית תמיד — ללא תנאי הכנסה
 
@@ -5283,7 +5283,7 @@ The right is free — the state pays for court interpreters. If you are ever ask
 
 **המוקד להגנת הפרט (HaMoked)**: מתמחה בזכויות אזרחיות מול רשויות המדינה. hamoked.org.il
 
-**עדאלה — המרכז המשפטי לזכויות המיעוט הערבי**: עוסק גם בסוגיות כלל-מיעוטים, לעיתים בשיתוף עם תבקה.
+**עדאלה — המרכז המשפטי לזכויות המיעוט הערבי**: עוסק גם בסוגיות כלל-מיעוטים, לעיתים בשיתוף עם טבקה.
 
 ---
 
@@ -5307,7 +5307,7 @@ The right is free — the state pays for court interpreters. If you are ever ask
 `,
       en: `## TEBEKA — The Primary Resource
 
-TEBEKA (the Israeli Association for Ethiopian Jews) is the main legal organisation for Ethiopian-Israelis. They handle employment discrimination, BTL benefit appeals, family law, civil-rights cases, and housing disputes. The first meeting is always free with no income test. Call 1-800-20-20-16 or visit tebeka.org.il.
+TEBEKA (the Israeli Association for Ethiopian Jews) is the main legal organisation for Ethiopian-Israelis. They handle employment discrimination, BTL benefit appeals, family law, civil-rights cases, and housing disputes. The first meeting is always free with no income test. Call 072-2424622 or visit tebeka.org.il.
 
 ## Government Legal Aid Bureau
 
@@ -5323,7 +5323,7 @@ Bring your ID/teudat oleh, all relevant documents (contract, termination letter,
 `,
       am: `## TEBEKA — ዋናው ምንጭ
 
-TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት ነው። የሥራ አድልዎ፣ BTL ቅሬታዎች፣ የቤተሰብ ሕግ፣ የሲቪል መብቶች እና የቤት ሙግቶችን ይዳኛሉ። የመጀመሪያ ስብሰባ ሁሌም ነፃ ነው። 1-800-20-20-16 | tebeka.org.il
+TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት ነው። የሥራ አድልዎ፣ BTL ቅሬታዎች፣ የቤተሰብ ሕግ፣ የሲቪል መብቶች እና የቤት ሙግቶችን ይዳኛሉ። የመጀመሪያ ስብሰባ ሁሌም ነፃ ነው። 072-2424622 | tebeka.org.il
 
 ## የመንግስት የሕግ እርዳታ ቢሮ
 
@@ -5472,7 +5472,7 @@ gov.il/he/service/first-time-homebuyers ወይም *5442 ይደውሉ።`,
 3. ודאו שהפרויקט רשום ברשות להתחדשות עירונית: ir.gov.il
 4. בדקו מוניטין הקבלן ב-רשם הקבלנים
 
-📞 רשות להתחדשות עירונית: 03-7385777 | תבקה (ייעוץ משפטי חינם): 1-800-20-20-16`,
+📞 רשות להתחדשות עירונית: 03-7385777 | טבקה (ייעוץ משפטי חינם): 072-2424622`,
       en: `## What is Pinui-Binui?
 
 Pinui-binui (demolish-rebuild) is a government programme that demolishes old buildings and rebuilds taller modern ones. In return, apartment owners receive larger new apartments at no extra cost.
@@ -5494,7 +5494,7 @@ Pinui-binui (demolish-rebuild) is a government programme that demolishes old bui
 2. Confirm the new apartment includes: parking, storage room, safe room (mamad)
 3. Verify the project is registered at ir.gov.il
 
-📞 Urban Renewal Authority: 03-7385777 | Tebeka (free legal): 1-800-20-20-16`,
+📞 Urban Renewal Authority: 03-7385777 | Tebeka (free legal): 072-2424622`,
       am: `## ፒንואይ-ቢንዋይ ምንድን ነው?
 
 ፒንዋይ-ቢንዋይ ያሮጋቸ ሕንፃዎችን አፍርሶ አዲስ ለመገንባት የሚያስችል የመንግስት ፕሮግራም ነው። የቤት ባለቤቶቹ አዲስ ትልቅ ቤት ያገኛሉ።
@@ -5836,7 +5836,7 @@ Soldiers who developed PTSD during service qualify for IDF disability recognitio
 | עו"ד נדל"ן | 0.5-1% מהעסקה |
 | נוטריון (אם נדרש) | 400-800 ₪ |
 
-📞 לשכת רישום מקרקעין: 02-5028000 | לסיוע חינם: תבקה 1-800-20-20-16`,
+📞 לשכת רישום מקרקעין: 02-5028000 | לסיוע חינם: טבקה 072-2424622`,
       en: `## What is the Tabo?
 
 The Land Registry (Tabo) is the government body that manages Israel's property register. Every real estate transaction — buying, selling, inheriting, gifting — must be registered to be legally valid.
@@ -5859,7 +5859,7 @@ Without registration, you have **no legal protection** on your apartment, even i
 
 **Inheritance without a will**: Register via a family-court inheritance order.
 
-📞 Land Registry: 02-5028000 | Free advice: Tebeka 1-800-20-20-16`,
+📞 Land Registry: 02-5028000 | Free advice: Tebeka 072-2424622`,
       am: `## ታቦ ምንድን ነው?
 
 ታቦ ሁሉም የንብረት ልውውጦች የሚመዘገቡበት የመንግስት ቢሮ ነው። ምዝገባ ካልተደረገ ሕጋዊ ጥበቃ የለም።
@@ -5869,7 +5869,7 @@ Without registration, you have **no legal protection** on your apartment, even i
 - ምዝገባ ያልተደረገ ቤት — ሌላ ሰው ሊሸጥ ይችላል
 - ያልተመዘገበ ውርስ — ክርክር ሊፈጠር ይችላል
 
-📞 02-5028000 | ታቤቃ: 1-800-20-20-16`,
+📞 02-5028000 | ታቤቃ: 072-2424622`,
     },
   },
 
@@ -6031,10 +6031,10 @@ Income support (havtaat hakhnasa) guarantees everyone a minimum income. The NII 
 ## ייעוץ ותלונות
 
 - **נציב שוויון זכויות**: אם פוטרתם בגלל מוגבלות — הגישו תלונה בתוך 90 יום
-- **תבקה**: ייעוץ חינם לאנשים עם מוגבלות בקהילה האתיופית
+- **טבקה**: ייעוץ חינם לאנשים עם מוגבלות בקהילה האתיופית
 - **המוקד לזכויות נכים** (ביטוח לאומי): בדקו זכאות לכל הגמלאות
 
-📞 נציב שוויון זכויות: 02-6664444 | ביטוח לאומי: 08-6709709 | תבקה: 1-800-20-20-16`,
+📞 נציב שוויון זכויות: 02-6664444 | ביטוח לאומי: 08-6709709 | טבקה: 072-2424622`,
       en: `## Equal Rights Law for Persons with Disabilities
 
 Law 5758-1998 prohibits discrimination against people with disabilities in employment and requires employers to make **reasonable accommodations**.
@@ -6059,7 +6059,7 @@ People with movement disabilities are entitled to a monthly mobility allowance +
 
 If dismissed due to disability — file a complaint with the Equal Rights Commissioner within 90 days.
 
-📞 Equal Rights Commissioner: 02-6664444 | NII: 08-6709709 | Tebeka: 1-800-20-20-16`,
+📞 Equal Rights Commissioner: 02-6664444 | NII: 08-6709709 | Tebeka: 072-2424622`,
       am: `## የአካል ጉዳተኞች የሥራ ሕግ
 
 ሕጉ 5758 የሥራ ቦታ አድሎ ይከለክላል። ቀጣሪዎቹ ምቹ ሁኔታ ማዘጋጀት ይጠበቅባቸዋል።
@@ -6259,7 +6259,7 @@ Prohibition on dismissal while pregnant (requires committee approval). Prohibiti
 | **קו לעובד** | 1-800-354-354 | ייעוץ חינם |
 | **רשות האוכלוסין** | 3450* | מעמד חוקי |
 - **הסתדרות** | 03-6921111 | ייצוג עובדים |
-| **תבקה** | 1-800-20-20-16 | ייצוג משפטי |
+| **טבקה** | 072-2424622 | ייצוג משפטי |
 
 ## לעובדים אתיופים ספציפית
 
@@ -6280,7 +6280,7 @@ The Foreign Workers Law protects anyone filing a labour complaint — they canno
 
 ## Who to Contact
 
-Kav LaOved (free advice): 1-800-354-354 | Tebeka: 1-800-20-20-16 | UNHCR (refugee status): unhcr.org.il
+Kav LaOved (free advice): 1-800-354-354 | Tebeka: 072-2424622 | UNHCR (refugee status): unhcr.org.il
 
 📞 1-800-354-354`,
       am: `## ዋና ሕግ
@@ -6330,7 +6330,7 @@ Kav LaOved (free advice): 1-800-354-354 | Tebeka: 1-800-20-20-16 | UNHCR (refuge
 
 ## עם מי לדבר
 
-- **תבקה**: ייצוג חינם בפלילים — 1-800-20-20-16
+- **טבקה**: ייצוג חינם בפלילים — 072-2424622
 - **הסנגוריה הציבורית**: ייצוג חינם לנאשמים ללא אמצעים — 02-5453555
 - **ACRI**: תלונות על הפרת זכויות — 03-6936893
 
@@ -6338,7 +6338,7 @@ Kav LaOved (free advice): 1-800-354-354 | Tebeka: 1-800-20-20-16 | UNHCR (refuge
 
 רשימת מתרגמים לאמהרית מאושרים על-ידי בתי-המשפט: בקשו מהמזכירות.
 
-📞 תבקה: 1-800-20-20-16 | סנגוריה: 02-5453555`,
+📞 טבקה: 072-2424622 | סנגוריה: 02-5453555`,
       en: `## The Right to Translation
 
 The Code of Criminal Procedure and Supreme Court rulings establish: every person without command of Hebrew is entitled to a **free interpreter** in all criminal, civil and administrative proceedings.
@@ -6353,14 +6353,14 @@ Don't sign any document you haven't understood. Say: "I refuse to continue witho
 
 ## Who to Contact
 
-Tebeka (free criminal defence): 1-800-20-20-16 | Public Defender (free): 02-5453555 | ACRI (rights violations): 03-6936893
+Tebeka (free criminal defence): 072-2424622 | Public Defender (free): 02-5453555 | ACRI (rights violations): 03-6936893
 
-📞 1-800-20-20-16`,
+📞 072-2424622`,
       am: `## ትርጉም መብት
 
 ዕብራይስጥ የማይችሉ ሁሉ ነፃ ፍርድ ቤት ተርጓሚ ይፈቀዳቸዋል — ህጋዊ መብት።
 
-📞 ቴቤቃ: 1-800-20-20-16`,
+📞 ቴቤቃ: 072-2424622`,
     },
   },
   {
@@ -7439,7 +7439,7 @@ Source: [Knesset Research and Information Center — Data on Ethiopian Israelis 
 
 ## הרישום לא נמחק? לא בטוחים?
 
-**טבקה — מרכז הסיוע המשפטי לקהילה האתיופית** מציעה ייעוץ משפטי חינם: 03-5103538, [tebeka.org.il](https://www.tebeka.org.il). כדאי לפנות גם אם אינכם בטוחים אם העבירה שלכם כלולה בתוספת, או אם יש לכם רישום נוסף שמונע מחיקה — ייתכנו מסלולים אחרים (למשל בקשת חנינה או התיישנות ומחיקה לפי חוק המרשם הפלילי הכללי).
+**טבקה — מרכז הסיוע המשפטי לקהילה האתיופית** מציעה ייעוץ משפטי חינם: 072-2424622, [tebeka.org.il](https://www.tebeka.org.il). כדאי לפנות גם אם אינכם בטוחים אם העבירה שלכם כלולה בתוספת, או אם יש לכם רישום נוסף שמונע מחיקה — ייתכנו מסלולים אחרים (למשל בקשת חנינה או התיישנות ומחיקה לפי חוק המרשם הפלילי הכללי).
 
 עוכבתם או נעצרתם ברחוב? הכירו את הזכויות שלכם — [עוכבו אתכם ברחוב? הזכויות שלכם](/he/voice/street-stop) ו[זכויות מול המשטרה וכיצד להתלונן](/he/voice/police-conduct).
 
@@ -7493,7 +7493,7 @@ The schedule lists offenses by exact statutory sections:
 
 ## Record not deleted? Not sure?
 
-**Tebeka — the legal-aid center for the Ethiopian community** offers free legal advice: 03-5103538, [tebeka.org.il](https://www.tebeka.org.il). Contact them also if you are unsure whether your offense is in the schedule, or if an additional record blocks deletion — other tracks may exist (e.g. a pardon request, or expiry and deletion under the general Criminal Register Law).
+**Tebeka — the legal-aid center for the Ethiopian community** offers free legal advice: 072-2424622, [tebeka.org.il](https://www.tebeka.org.il). Contact them also if you are unsure whether your offense is in the schedule, or if an additional record blocks deletion — other tracks may exist (e.g. a pardon request, or expiry and deletion under the general Criminal Register Law).
 
 Stopped or detained on the street? Know your rights — [Stopped on the street? Your rights](/en/voice/street-stop) and [Rights in police encounters and how to complain](/en/voice/police-conduct).
 
@@ -7543,7 +7543,7 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
 
 ## መዝገቡ አልተሰረዘም? እርግጠኛ አይደሉም?
 
-**ቴቤካ — ለኢትዮጵያ ማህበረሰብ የሕግ ድጋፍ ማዕከል** ነጻ የሕግ ምክር ይሰጣል: 03-5103538፣ [tebeka.org.il](https://www.tebeka.org.il)።
+**ቴቤካ — ለኢትዮጵያ ማህበረሰብ የሕግ ድጋፍ ማዕከል** ነጻ የሕግ ምክር ይሰጣል: 072-2424622፣ [tebeka.org.il](https://www.tebeka.org.il)።
 
 በመንገድ ላይ ቆሙዎት? መብቶችዎን ይወቁ — [በመንገድ ላይ ቆሙዎት? መብቶችዎ](/am/voice/street-stop) እና [ከፖሊስ ጋር ባለ ግንኙነት ያሉ መብቶች](/am/voice/police-conduct)።
 

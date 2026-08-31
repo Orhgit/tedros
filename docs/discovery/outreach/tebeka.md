@@ -1,6 +1,6 @@
 # Outreach Draft — Tebeka (טבקה)
 
-**To**: info@tebeka.org.il (or executive director's direct address — Fentahun Assefa-Dawit, per [LinkedIn](https://www.linkedin.com/in/fentahun-assefa-dawit-aa72b146/))
+**To**: general@tebeka.org.il (or executive director's direct address — Fentahun Assefa-Dawit, per [LinkedIn](https://www.linkedin.com/in/fentahun-assefa-dawit-aa72b146/))
 **From**: Or Hazan (orosh87@gmail.com)
 **Subject**: שותפות אסטרטגית — פלטפורמת טדרוס לקהילה האתיופית-ישראלית
 **Status**: DRAFT — owner to adapt and send.

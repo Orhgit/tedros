@@ -448,19 +448,19 @@ export const PROGRAMS: ProgramEntry[] = [
       he: makeBody("he", {
         intro: `שירות מובילה בארץ למקרי-גזענות נגד הקהילה. ~600 תיקים בשנה. שיעור-זכייה גבוה במקרי-תביעה אזרחיים.`,
         whatsIncluded: `- ייעוץ ראשוני חינמי\n- ייצוג מלא בבית-משפט\n- תרגום-מסמכים ותמיכה-לשונית\n- ליווי-תקשורת אם המקרה הופך ציבורי`,
-        howToApply: `1. יצירת קשר ראשונה: info@tebeka.org.il או 02-XXX-XXXX\n2. הצגת המקרה במייל / טלפון\n3. ראיון-קבלה תוך 1-2 שבועות`,
+        howToApply: `1. יצירת קשר ראשונה: general@tebeka.org.il או 02-XXX-XXXX\n2. הצגת המקרה במייל / טלפון\n3. ראיון-קבלה תוך 1-2 שבועות`,
         eligibility: `- כל מקרה-גזענות עם ראיות-בסיסיות\n- חינמי לזכאים-כלכליים\n- אגרה-סמלית למקרים נוספים`,
       }),
       en: makeBody("en", {
         intro: `National-leading service for community racism cases. ~600 cases/year. High win rate on civil claims.`,
         whatsIncluded: `- Free initial consultation\n- Full court representation\n- Document translation and language support\n- Media accompaniment if case goes public`,
-        howToApply: `1. First contact: info@tebeka.org.il or 02-XXX-XXXX\n2. Present the case via email / phone\n3. Intake interview within 1-2 weeks`,
+        howToApply: `1. First contact: general@tebeka.org.il or 02-XXX-XXXX\n2. Present the case via email / phone\n3. Intake interview within 1-2 weeks`,
         eligibility: `- Any racism case with basic evidence\n- Free for income-eligible\n- Symbolic fee for others`,
       }),
       am: makeBody("am", {
         intro: `በዘረኝነት ጉዳዮች መሪ አገልግሎት።`,
         whatsIncluded: `- ነጻ የመጀመሪያ ምክክር`,
-        howToApply: `info@tebeka.org.il።`,
+        howToApply: `general@tebeka.org.il።`,
         eligibility: `- ለብቁ ነጻ`,
       }),
     },
