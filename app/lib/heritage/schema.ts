@@ -114,3 +114,109 @@ export function heritageEventJsonLd(
     },
   };
 }
+
+// ── ItemList (kessim directory — TED-140) ─────────────────────────────────
+
+export interface ItemListEntry {
+  name: string;
+  /** Locale-relative path, e.g. "/heritage/kessim/netanya". */
+  path: string;
+}
+
+export interface ItemListJsonLdInput {
+  /** Locale-relative path of the list page itself. */
+  path: string;
+  name: string;
+  description: string;
+  items: ItemListEntry[];
+}
+
+export function itemListJsonLd(ctx: SchemaContext, input: ItemListJsonLdInput): JsonLd {
+  const url = urlFor(ctx, input.path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "ItemList",
+    "@id": url,
+    url,
+    name: input.name,
+    description: input.description,
+    inLanguage: ctx.locale,
+    numberOfItems: input.items.length,
+    itemListElement: input.items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: urlFor(ctx, item.path),
+    })),
+  };
+}
+
+// ── Article (long-form heritage guides — TED-140) ─────────────────────────
+
+export interface HeritageArticleJsonLdInput {
+  path: string;
+  headline: string;
+  description: string;
+  /** ISO date the guide was first published. */
+  datePublished: string;
+  /** ISO date of the last substantive update. */
+  dateModified?: string;
+}
+
+export function heritageArticleJsonLd(
+  ctx: SchemaContext,
+  input: HeritageArticleJsonLdInput,
+): JsonLd {
+  const url = urlFor(ctx, input.path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Article",
+    "@id": url,
+    url,
+    mainEntityOfPage: url,
+    headline: input.headline,
+    description: input.description,
+    datePublished: input.datePublished,
+    dateModified: input.dateModified ?? input.datePublished,
+    inLanguage: ctx.locale,
+    author: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
+  };
+}
+
+// ── FAQPage (marriage guide — TED-140) ────────────────────────────────────
+
+export interface FaqEntry {
+  question: string;
+  answer: string;
+}
+
+export function faqPageJsonLd(
+  ctx: SchemaContext,
+  path: string,
+  entries: FaqEntry[],
+): JsonLd {
+  const url = urlFor(ctx, path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    inLanguage: ctx.locale,
+    mainEntity: entries.map((e) => ({
+      "@type": "Question",
+      name: e.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: e.answer,
+      },
+    })),
+  };
+}
