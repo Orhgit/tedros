@@ -88,6 +88,11 @@ const RELEVANCE_BY_SLUG: Record<string, Relevance> = {
   // everywhere by the Israel Police. City cells would be pure doorway pages
   // (zero local variance), so ship none.
   "criminal-record-expungement": { kind: "list", cities: [] },
+
+  // IDF family payments (TED-142) — governed by a General Staff order applied
+  // identically army-wide, and the point of contact is the soldier's unit,
+  // not their home city. City cells would carry zero local variance.
+  "idf-family-support": { kind: "list", cities: [] },
 };
 
 export function relevanceFor(slug: string): Relevance {

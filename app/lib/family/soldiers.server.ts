@@ -346,3 +346,311 @@ export const DETENTION_AM_SUMMARY: string[] = [
   "የገንዘብ ችግር ከቤት ጀርባ ካለ: የת\"ש መዝገብ ይክፈቱ። ይህ በጣም የተለመደው ምክንያት ነው።",
   "ልጅዎ በእስር ላይ ሆኖ ስለ አያያዝ ቅሬታ ካለው: በ\"ታሸገ ፖስታ\" መንገድ ወደ ኮሚሽነሩ መላክ ይችላል — ማንም ሳይከፍተው።",
 ];
+
+// ═══════════════════════════════════════════════════════════════════════════
+// Section chrome — per locale, resolved in the loader
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// These live here rather than in the route files on purpose. `messages/*.json`
+// is imported by `~/lib/i18n/messages`, which every route component pulls in,
+// so all three dictionaries ship to the client — each added key costs 3x in a
+// bundle with ~2.5 kB of headroom. Chrome authored here is read in the loader
+// and only the active locale's slice crosses to the client.
+
+export interface GuideChrome {
+  glanceTitle: string;
+  glanceItems: readonly string[];
+  bodyHeading: string;
+  faqHeading: string;
+  resourcesHeading: string;
+  relatedHeading: string;
+  backLabel: string;
+  lastReviewedLabel: string;
+  promoLead: string;
+  promoCta: string;
+  /** Labels for the two sibling guides + the wizard, used in "related". */
+  relatedDetention: string;
+  relatedLoneSoldier: string;
+  relatedWizard: string;
+  breadcrumbHome: string;
+  breadcrumbParent: string;
+}
+
+export const DETENTION_CHROME: Record<Locale, GuideChrome> = {
+  he: {
+    glanceTitle: "בקצרה — מה לעשות עכשיו",
+    glanceItems: [
+      "סניגור צבאי הוא חינם, 24/7, כולל שבתות וחגים: 073-310-3300.",
+      "מותר ורצוי להתייעץ עוד לפני החקירה — הפנייה חסויה ואינה מעידה על אשמה.",
+      "הסנגוריה עונה גם להורים. אל תחכו שהחייל יתקשר.",
+      "נעדר מהשירות? התייצבות מוקדמת מקטינה את התיק — התייעצו לפני.",
+      "כלא 4 וכלא 6 נסגרו. המתקן היום הוא 'נווה צדק' ליד בית ליד.",
+      "נציב קבילות החיילים אינו מטפל במשמעת ובפלילים — שם פונים לסנגוריה.",
+    ],
+    bodyHeading: "המדריך המלא",
+    faqHeading: "שאלות נפוצות",
+    resourcesHeading: "למי פונים",
+    relatedHeading: "מדריכים קשורים",
+    backLabel: "חזרה למרכז חיילים ומשפחות",
+    lastReviewedLabel: "נסקר לאחרונה",
+    promoLead: "מצוקה כלכלית במשפחה היא הסיבה השכיחה לנפקדות. ",
+    promoCta: 'בדקו זכאות לתשלומי משפחה באשף ת"ש',
+    relatedDetention: "חייל נעצר או נכלא — מה עושים",
+    relatedLoneSoldier: "חייל בודד וחייל ממשפחה מתקשה",
+    relatedWizard: 'אשף ת"ש — תשלומי משפחה',
+    breadcrumbHome: "דף הבית",
+    breadcrumbParent: "חיילים ומשפחות",
+  },
+  en: {
+    glanceTitle: "In brief — what to do now",
+    glanceItems: [
+      "A military defender is free, 24/7, including Shabbat and holidays: 073-310-3300.",
+      "You may and should consult before the interrogation — it is confidential and does not indicate guilt.",
+      "The defender's office answers parents too. Do not wait for the soldier to call.",
+      "Absent from service? Presenting early shrinks the case — consult first.",
+      "Prisons 4 and 6 are closed. The facility today is 'Neve Tzedek' near Beit Lid.",
+      "The Complaints Commissioner does not handle discipline or criminal matters — the defender does.",
+    ],
+    bodyHeading: "The full guide",
+    faqHeading: "Frequently asked questions",
+    resourcesHeading: "Who to contact",
+    relatedHeading: "Related guides",
+    backLabel: "Back to Soldiers & Families",
+    lastReviewedLabel: "Last reviewed",
+    promoLead: "Family financial hardship is the common cause of going AWOL. ",
+    promoCta: "Check your family-payments eligibility in the wizard",
+    relatedDetention: "A soldier was detained or jailed",
+    relatedLoneSoldier: "Lone soldiers and struggling families",
+    relatedWizard: "Family-payments wizard",
+    breadcrumbHome: "Home",
+    breadcrumbParent: "Soldiers & Families",
+  },
+  am: {
+    glanceTitle: "በአጭሩ — አሁን ምን ማድረግ",
+    glanceItems: [
+      "የወታደራዊ ጠበቃ ነጻ ነው፣ 24/7፣ በሰንበትና በበዓላትም: 073-310-3300።",
+      "ምርመራው ከመጀመሩ በፊት ማማከር ይቻላል — ሚስጥራዊ ነው እና ጥፋተኛነትን አያመለክትም።",
+      "ጽሕፈት ቤቱ ለወላጆችም ይመልሳል። ወታደሩ እስኪደውል አይጠብቁ።",
+      "ከአገልግሎት ቀርቷል? ቶሎ ራስን ማቅረብ መዝገቡን ያሳንሳል — በፊት ያማክሩ።",
+      "כלא 4 እና 6 ተዘግተዋል። ተቋሙ ዛሬ ከבית ליד አጠገብ 'נווה צדק' ነው።",
+      "የቅሬታ ኮሚሽነሩ የዲሲፕሊን ወይም የወንጀል ጉዳዮችን አያስተናግድም — ጠበቃው ነው።",
+    ],
+    bodyHeading: "ሙሉ መመሪያ",
+    faqHeading: "ተደጋጋሚ ጥያቄዎች",
+    resourcesHeading: "ለማን መደወል",
+    relatedHeading: "ተዛማጅ መመሪያዎች",
+    backLabel: "ወደ ወታደሮች እና ቤተሰቦች ተመለስ",
+    lastReviewedLabel: "የተገመገመው",
+    promoLead: "የቤተሰብ የገንዘብ ችግር ለנפקדות የተለመደው ምክንያት ነው። ",
+    promoCta: 'የቤተሰብ ክፍያ ብቁነትዎን በת"ש አዋቂ ይመርምሩ',
+    relatedDetention: "ወታደር ታሰረ ወይም ተከሰረ",
+    relatedLoneSoldier: "ብቸኛ ወታደር እና የተቸገሩ ቤተሰቦች",
+    relatedWizard: 'የת"ש አዋቂ — የቤተሰብ ክፍያዎች',
+    breadcrumbHome: "መነሻ",
+    breadcrumbParent: "ወታደሮች እና ቤተሰቦች",
+  },
+};
+
+export const LONE_SOLDIER_CHROME: Record<Locale, GuideChrome> = {
+  he: {
+    glanceTitle: "בקצרה — הכתובת אחת",
+    glanceItems: [
+      'לכל בקשה — הכרה, תשמ"ש, דיור — פונים למש"קית ת"ש.',
+      "חייל בודד = אין תמיכה הורית בארץ. שלוש קטגוריות מוכרות.",
+      "הורים שירדו מהארץ, עלייה לבד, או יתמות — אין צורך במסמכים בכלל.",
+      "טופס 7304 לפני הגיוס; טופס 62 במהלך השירות.",
+      "המענק החודשי ניתן אוטומטית למי שהוכר.",
+      'משפחה בארץ במצוקה? המסלול הוא תשמ"ש, לא "חייל בודד".',
+      "נדחיתם? יש זכות ערעור.",
+    ],
+    bodyHeading: "המדריך המלא",
+    faqHeading: "שאלות נפוצות",
+    resourcesHeading: "למי פונים",
+    relatedHeading: "מדריכים קשורים",
+    backLabel: "חזרה למרכז חיילים ומשפחות",
+    lastReviewedLabel: "נסקר לאחרונה",
+    promoLead: "לא בטוחים אם מגיע לכם? ",
+    promoCta: 'בדקו זכאות באשף ת"ש',
+    relatedDetention: "חייל נעצר או נכלא — מה עושים",
+    relatedLoneSoldier: "חייל בודד וחייל ממשפחה מתקשה",
+    relatedWizard: 'אשף ת"ש — תשלומי משפחה',
+    breadcrumbHome: "דף הבית",
+    breadcrumbParent: "חיילים ומשפחות",
+  },
+  en: {
+    glanceTitle: "In brief — one address",
+    glanceItems: [
+      "For every request — recognition, family payments, housing — go to the family-support NCO.",
+      "Lone soldier = no parental support in Israel. Three recognized categories.",
+      "Parents who emigrated, immigrating alone, or orphanhood — no documents needed at all.",
+      "Form 7304 before enlistment; Form 62 during service.",
+      "The monthly grant is given automatically once recognized.",
+      'Family in Israel and struggling? The track is family payments, not "lone soldier".',
+      "Rejected? There is a right of appeal.",
+    ],
+    bodyHeading: "The full guide",
+    faqHeading: "Frequently asked questions",
+    resourcesHeading: "Who to contact",
+    relatedHeading: "Related guides",
+    backLabel: "Back to Soldiers & Families",
+    lastReviewedLabel: "Last reviewed",
+    promoLead: "Not sure whether you qualify? ",
+    promoCta: "Check eligibility in the family-payments wizard",
+    relatedDetention: "A soldier was detained or jailed",
+    relatedLoneSoldier: "Lone soldiers and struggling families",
+    relatedWizard: "Family-payments wizard",
+    breadcrumbHome: "Home",
+    breadcrumbParent: "Soldiers & Families",
+  },
+  am: {
+    glanceTitle: "በአጭሩ — አንድ አድራሻ",
+    glanceItems: [
+      'ለሁሉም ጥያቄ — ዕውቅና፣ תשמ"ש፣ መኖሪያ — ወደ מש"קית ת"ש ይሂዱ።',
+      "ብቸኛ ወታደር = በአገር ውስጥ የወላጅ ድጋፍ የለም። ሦስት የታወቁ ምድቦች።",
+      "ወላጆች ከአገር ከወጡ፣ ብቻውን ከመጣ፣ ወይም ወላጅ አልባ ከሆነ — ምንም ሰነድ አያስፈልግም።",
+      "ከምዝገባ በፊት ቅጽ 7304፤ በአገልግሎት ወቅት ቅጽ 62።",
+      "ዕውቅና ካገኘ ወርሃዊው ድጎማ በራስ-ሰር ይሰጣል።",
+      'ቤተሰቡ በአገር ውስጥ ተቸግሯል? መንገዱ תשמ"ש ነው፣ "ብቸኛ ወታደር" አይደለም።',
+      "ውድቅ ተደረጉ? የይግባኝ መብት አለ።",
+    ],
+    bodyHeading: "ሙሉ መመሪያ",
+    faqHeading: "ተደጋጋሚ ጥያቄዎች",
+    resourcesHeading: "ለማን መደወል",
+    relatedHeading: "ተዛማጅ መመሪያዎች",
+    backLabel: "ወደ ወታደሮች እና ቤተሰቦች ተመለስ",
+    lastReviewedLabel: "የተገመገመው",
+    promoLead: "ብቁ መሆንዎን እርግጠኛ አይደሉም? ",
+    promoCta: 'በת"ש አዋቂ ብቁነትዎን ይመርምሩ',
+    relatedDetention: "ወታደር ታሰረ ወይም ተከሰረ",
+    relatedLoneSoldier: "ብቸኛ ወታደር እና የተቸገሩ ቤተሰቦች",
+    relatedWizard: 'የת"ש አዋቂ — የቤተሰብ ክፍያዎች',
+    breadcrumbHome: "መነሻ",
+    breadcrumbParent: "ወታደሮች እና ቤተሰቦች",
+  },
+};
+
+// ── Hub landing chrome ─────────────────────────────────────────────────────
+
+export interface HubCard {
+  /** "detention" | "lone-soldier" | "wizard" — drives the link target. */
+  key: "detention" | "lone-soldier" | "wizard";
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface HubChrome {
+  title: string;
+  subtitle: string;
+  intro: string;
+  cardsHeading: string;
+  cardCta: string;
+  breadcrumbHome: string;
+  breadcrumbFamily: string;
+  cards: HubCard[];
+}
+
+export const HUB_CHROME: Record<Locale, HubChrome> = {
+  he: {
+    title: "חיילים ומשפחות — כליאה, תשלומי משפחה, חייל בודד",
+    subtitle:
+      "מה עושים כשחייל נעצר או נכלא, איך פותחים תיק ת\"ש לפני שהמצב מידרדר, ומה מגיע לחייל בודד ולחייל ממשפחה מתקשה.",
+    intro:
+      'שיעור הגיוס בקהילה גבוה מהממוצע הארצי — ודווקא אחרי הגיוס נפתח פער. מבקר המדינה תיאר את נתוני הכליאה של חיילים יוצאי אתיופיה כ"נורת אזהרה חברתית", והרקע השכיח מתועד: קשיים כלכליים בבית שמובילים לנפקדות. שלושת הדפים כאן נועדו לתת מענה מעשי — לפני שזה קורה, ואחרי.',
+    cardsHeading: "שלושה מדריכים",
+    cardCta: "למידע נוסף",
+    breadcrumbHome: "דף הבית",
+    breadcrumbFamily: "משפחה ותמיכה",
+    cards: [
+      {
+        key: "detention",
+        title: "חייל נעצר או נכלא — מה עושים",
+        description:
+          'סניגור צבאי חינם 24/7, מה לעשות לפני החקירה, מסלול ההתייצבות, ולמי פונים — כולל ערוץ "המעטפה הסגורה" לחייל כלוא.',
+        icon: "⚖️",
+      },
+      {
+        key: "wizard",
+        title: 'אשף ת"ש — תשלומי משפחה',
+        description:
+          "בדיקה קצרה שאומרת אם אפשר להגיש בקשה לתשמ\"ש, ומה להביא למש\"קית ת\"ש.",
+        icon: "🧭",
+      },
+      {
+        key: "lone-soldier",
+        title: "חייל בודד וחייל ממשפחה מתקשה",
+        description:
+          "מי מוכר כחייל בודד, אילו מסמכים באמת נדרשים (לרוב — אף אחד), מה מקבלים, והזכות הייעודית ליוצאי אתיופיה.",
+        icon: "🎗️",
+      },
+    ],
+  },
+  en: {
+    title: "Soldiers & Families — Detention, Family Payments, Lone Soldiers",
+    subtitle:
+      "What to do when a soldier is detained or jailed, how to open a family-support case before things deteriorate, and what a lone soldier or a soldier from a struggling family is entitled to.",
+    intro:
+      'Enlistment in the community is above the national average — and it is precisely after enlistment that a gap opens. The State Comptroller described the incarceration figures for Ethiopian-Israeli soldiers as "a social warning lamp", and the common backdrop is documented: financial hardship at home leading to absence from service. The three guides here aim to give a practical answer — before it happens, and after.',
+    cardsHeading: "Three guides",
+    cardCta: "Learn more",
+    breadcrumbHome: "Home",
+    breadcrumbFamily: "Family & Support",
+    cards: [
+      {
+        key: "detention",
+        title: "A soldier was detained or jailed",
+        description:
+          'A free military defender 24/7, what to do before the interrogation, the self-presentation route, and who to contact — including the "sealed envelope" channel for a soldier in custody.',
+        icon: "⚖️",
+      },
+      {
+        key: "wizard",
+        title: "Family-payments wizard",
+        description:
+          "A short check that tells you whether a family-payments application is open to you, and what to bring to the family-support NCO.",
+        icon: "🧭",
+      },
+      {
+        key: "lone-soldier",
+        title: "Lone soldiers and struggling families",
+        description:
+          "Who is recognized as a lone soldier, which documents are actually required (usually none), what you receive, and the dedicated entitlement for Ethiopian-Israelis.",
+        icon: "🎗️",
+      },
+    ],
+  },
+  am: {
+    title: "ወታደሮች እና ቤተሰቦች — እስር፣ የቤተሰብ ክፍያዎች፣ ብቸኛ ወታደር",
+    subtitle:
+      'ወታደር ሲታሰር ወይም ሲከሰር ምን ማድረግ፣ ሁኔታው ከመባባሱ በፊት የת"ש መዝገብ እንዴት መክፈት፣ እና ለብቸኛ ወታደር እና ከተቸገረ ቤተሰብ ለመጣ ወታደር ምን እንደሚገባ።',
+    intro:
+      'በማህበረሰቡ ውስጥ የውትድርና ምዝገባ ከሀገራዊ አማካይ ከፍ ያለ ነው — ክፍተቱ የሚከፈተው ከምዝገባ በኋላ ነው። የመንግሥት ኦዲተር የኢትዮጵያ ተወላጅ ወታደሮችን የእስር መረጃ "ማህበራዊ የማስጠንቀቂያ መብራት" ብሎ ገልጾታል፣ የተለመደው ዳራም ተመዝግቧል: በቤት ውስጥ ያለ የገንዘብ ችግር ወደ נפקדות ይመራል። እዚህ ያሉት ሦስት መመሪያዎች ተግባራዊ ምላሽ ለመስጠት ነው — ከመከሰቱ በፊትም በኋላም።',
+    cardsHeading: "ሦስት መመሪያዎች",
+    cardCta: "ተጨማሪ",
+    breadcrumbHome: "መነሻ",
+    breadcrumbFamily: "ቤተሰብ እና ድጋፍ",
+    cards: [
+      {
+        key: "detention",
+        title: "ወታደር ታሰረ ወይም ተከሰረ",
+        description:
+          'ነጻ የወታደራዊ ጠበቃ 24/7፣ ከምርመራው በፊት ምን ማድረግ፣ የራስን ማቅረቢያ መንገድ፣ እና ለማን መደወል — ለታሰረ ወታደር የ"ታሸገ ፖስታ" መንገድን ጨምሮ።',
+        icon: "⚖️",
+      },
+      {
+        key: "wizard",
+        title: 'የת"ש አዋቂ — የቤተሰብ ክፍያዎች',
+        description:
+          'የתשמ"ש ማመልከቻ ማቅረብ እንደሚችሉ የሚነግርዎት አጭር ምርመራ፣ እና ለמש"קית ת"ש ምን ማምጣት እንዳለብዎት።',
+        icon: "🧭",
+      },
+      {
+        key: "lone-soldier",
+        title: "ብቸኛ ወታደር እና የተቸገሩ ቤተሰቦች",
+        description:
+          "ማን እንደ ብቸኛ ወታደር ይታወቃል፣ በእውነት የሚያስፈልጉ ሰነዶች (ብዙ ጊዜ — ምንም)፣ ምን እንደሚያገኙ፣ እና ለኢትዮጵያ ተወላጆች የተለየ መብት።",
+        icon: "🎗️",
+      },
+    ],
+  },
+};

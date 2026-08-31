@@ -7680,4 +7680,342 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
       ],
     },
   },
+
+  // 10 — תשמ"ש / תשלומי משפחה, with the ת"ש wizard (TED-142).
+  //
+  // DESIGN NOTE — this wizard is a ROUTER, not a calculator, and that is a
+  // deliberate constraint rather than a shortcut. The substantive means-test
+  // for תשמ"ש lives inside פקודת מטכ"ל 35.0210, whose text is not public.
+  // Kol Zchut states only that the level of support is set by the army "לאור
+  // המצב הכלכלי והסוציאלי של המבקש ומשפחתו", and explicitly notes that no
+  // thresholds are published. Verification turned up no income ceiling, no
+  // per-capita formula, and no documented weight for sibling count, lone
+  // parenthood, or parental unemployment.
+  //
+  // The required-documents list (payslips, bank statements, credit-card
+  // statements, vehicle ownership) implies that income and assets are
+  // assessed — but implication is not documentation, and turning a document
+  // checklist into a scoring rule would be inventing law. So the wizard
+  // encodes only the two conditions that ARE documented:
+  //   1. service type — תשמ"ש is for מלש"בים and compulsory service only
+  //   2. a qualifying situation — "קשיים כלכליים או סוציאליים", לרבות היעדר
+  //      תמיכה הורית (חייל בודד) או תלויים (בן/בת זוג, ילדים, אחים באפוטרופסות)
+  // and then routes the user to the משק"ית ת"ש with the document checklist.
+  // An "eligible" result therefore means "you may apply", never "you will
+  // receive X" — the body says so in every locale.
+  {
+    title: {
+      he: 'תשלומי משפחה לחיילים (ת"ש / תשמ"ש) — סיוע כלכלי בשירות חובה',
+      en: "Family Payments for Soldiers (ת\"ש / תשמ\"ש) — Financial Support in Compulsory Service",
+      am: 'የወታደሮች የቤተሰብ ክፍያዎች (ת"ש / תשמ"ש) — በግዴታ አገልግሎት የገንዘብ ድጋፍ',
+    },
+    slug: {
+      he: "idf-family-support",
+      en: "idf-family-support",
+      am: "idf-family-support",
+    },
+    govUrl: "https://www.idf.il/media/rlel3g1f/350210.pdf",
+    eligibilitySummary: {
+      he: 'תשמ"ש הוא תשלום חודשי שנועד להבטיח את קיומה המינימלי של משפחת החייל. זכאים לבקש מלש"בים וחיילים בשירות חובה שהם או משפחתם נתונים בקשיים כלכליים או סוציאליים. הבקשה מוגשת למש"קית ת"ש — בלשכת הגיוס לפני הגיוס, וביחידה במהלך השירות.',
+      en: "תשמ\"ש is a monthly payment intended to secure the minimum subsistence of a soldier's family. Pre-recruits and compulsory-service soldiers who — or whose families — face financial or social difficulties may apply. The application goes to the family-support NCO: at the recruitment office before enlistment, and in the unit during service.",
+      am: 'תשמ"ש የወታደሩን ቤተሰብ ዝቅተኛ ኑሮ ለማረጋገጥ የታሰበ ወርሃዊ ክፍያ ነው። እነሱ ወይም ቤተሰባቸው በገንዘብ ወይም በማህበራዊ ችግር ውስጥ ያሉ ተመዝጋቢዎችና የግዴታ አገልግሎት ወታደሮች ማመልከት ይችላሉ። ማመልከቻው ለמש"קית ת"ש ይቀርባል።',
+    },
+    tags: ["family", "grants", "army"],
+    bodies: {
+      he: `## למה זה חשוב דווקא בקהילה שלנו
+
+מסמך שהוכן במרכז המחקר והמידע של הכנסת לקראת דיון בוועדת העלייה, הקליטה והתפוצות (דצמבר 2015) קבע: **"רקע כלכלי — חלק ניכר מהחיילים סובלים מבעיות כלכליות בבתיהם ונאלצים לסייע בפרנסת המשפחה"**. זהו הרקע השכיח לנפקדות, ומשם לכליאה. פתיחת תיק ת"ש בזמן היא הדרך המוסדרת לשבור את השרשרת הזו — לפני שהיא מתחילה.
+
+## מה זה תשמ"ש
+
+תשמ"ש (תשלומי משפחה) הוא תשלום חודשי שנועד להבטיח את קיומה המינימלי של משפחת החייל. הוא מוסדר בפקודת מטכ"ל 35.0210, "חוקת התשלומים למשפחות חיילים בשירות חובה".
+
+## מי יכול לבקש
+
+מלש"בים (מיועדים לשירות ביטחון) וחיילים בשירות חובה **שהם או משפחתם נתונים בקשיים כלכליים או סוציאליים**. אפשר לבקש תשלום עבור:
+
+- ההורים — שניהם או אחד מהם
+- בן או בת זוג
+- ילדים
+- אחים ואחיות — אם החייל הוא האפוטרופוס שלהם
+
+למלש"בים התשלום ניתן רק לאחר הגיוס בפועל. חיילים בשירות קבע אינם בגדר הזכאות הזו.
+
+## איך מגישים — וזה לא טופס להורדה
+
+הבקשה מוגשת ל**מש"קית ת"ש**: בלשכת הגיוס לפני הגיוס, וביחידה במהלך השירות. קיים גם ערוץ דיגיטלי באזור האישי, אך **בקשה ראשונה מחייבת את מעורבות המש"קית**. אין טופס שממלאים לבד ושולחים — מתחילים בשיחה.
+
+## מה להביא
+
+- תלושי שכר של ההורים או בן/בת הזוג — שלושה חודשים
+- דפי חשבון בנק — שלושה חודשים
+- אישורי קצבאות מביטוח לאומי, אם יש
+- צילום תעודת זהות עם הספח שבו רשומים הילדים
+- דוח עובד סוציאלי, אם רלוונטי
+- אישור אפוטרופסות, אם רלוונטי
+- פרטי הלוואות ופיקדונות
+- דפי כרטיס אשראי — שלושה חודשים
+- אישור בעלות על רכב, אם יש
+
+ייתכן גם ביקור בית במסגרת בדיקת הבקשה.
+
+## מה כולל הסיוע
+
+מעבר לתשלום החודשי להורים או לבן/בת הזוג: תווי חג פעמיים בשנה (ראש השנה ופסח), מענקי ציוד ומוצרי חשמל, מענקים חד-פעמיים במצבי מצוקה דחופה, הלוואות, וחופשה מיוחדת. חיילים בודדים הזכאים לתשמ"ש מקבלים גם תווי מזון חודשיים.
+
+## נדחיתם?
+
+יש זכות ערעור — דרך לשכת הגיוס לפני השירות, או דרך המש"קית ת"ש ביחידה במהלכו.
+
+## מה לא כתוב כאן — ולמה
+
+**לא פירטנו סכומים.** המקורות הרשמיים הזמינים נותנים מספרים סותרים לאותם רכיבים, וחלקם ללא תאריך עדכון. **לא פירטנו תנאי סף כלכליים** — תקרות הכנסה, חישוב לנפש, או משקל של מספר האחים — משום שהקריטריונים המהותיים נמצאים בפקודת המטכ"ל, שאינה פומבית. כל-זכות מציין במפורש שהיקף הסיוע נקבע "לאור המצב הכלכלי והסוציאלי של המבקש ומשפחתו" ושלא מתפרסמים ספים.
+
+לכן האשף שלמטה בודק **אם פתוחה בפניכם הדרך להגיש בקשה** — לא אם תאושרו ולא כמה תקבלו. הגורם המוסמך היחיד לכך הוא המש"קית ת"ש.
+
+## קשור
+
+- [חייל נעצר או נכלא — מה עושים](/he/family/soldiers/detention)
+- [חייל בודד וחייל ממשפחה מתקשה](/he/family/soldiers/lone-soldier)
+
+> **הבהרה:** מידע זה כללי ואינו ייעוץ משפטי או פיננסי. תוצאת האשף מבוססת על התנאים המתועדים בלבד ואינה קביעה מחייבת.
+
+## מקורות
+
+- [פקודת מטכ"ל 35.0210 — חוקת התשלומים למשפחות חיילים בשירות חובה](https://www.idf.il/media/rlel3g1f/350210.pdf)
+- [תשמ"ש — תשלומי משפחה (סיוע כלכלי לחיילים), כל-זכות](https://www.kolzchut.org.il/he/תשמ%22ש_-_תשלומי_משפחה_(סיוע_כלכלי_לחיילים))
+- [ת"ש (תנאי שירות) — משרד הביטחון](https://9779.mod.gov.il/info/ת״ש-(תנאי-שירות))
+`,
+      en: `## Why this matters especially in our community
+
+A paper prepared by the Knesset Research and Information Center ahead of a session of the Immigration, Absorption and Diaspora Affairs Committee (December 2015) stated: **"Economic background — a considerable share of the soldiers suffer from financial problems at home and are compelled to help support the family."** This is the common backdrop to going AWOL, and from there to incarceration. Opening a family-support case in time is the formal way to break that chain — before it starts.
+
+## What תשמ"ש is
+
+תשמ"ש (family payments) is a monthly payment intended to secure the minimum subsistence of a soldier's family. It is governed by General Staff Order 35.0210, "The payments code for families of compulsory-service soldiers".
+
+## Who may apply
+
+Pre-recruits and compulsory-service soldiers **who, or whose families, face financial or social difficulties**. Payment may be requested for:
+
+- The parents — both or one of them
+- A spouse
+- Children
+- Siblings — where the soldier is their guardian
+
+For pre-recruits the payment is released only after actual enlistment. Career-service soldiers are outside this entitlement.
+
+## How to apply — and it is not a downloadable form
+
+The application goes to the **family-support NCO**: at the recruitment office before enlistment, and in the unit during service. A digital channel exists in the personal area, but **a first application requires the coordinator's involvement**. There is no form you fill in alone and send — it starts with a conversation.
+
+## What to bring
+
+- Payslips for the parents or spouse — three months
+- Bank statements — three months
+- National Insurance benefit confirmations, if any
+- A copy of the ID card with the appendix listing children
+- A social worker's report, if relevant
+- Guardianship confirmation, if relevant
+- Loan and deposit details
+- Credit-card statements — three months
+- Proof of vehicle ownership, if any
+
+A home visit may also form part of the assessment.
+
+## What the support includes
+
+Beyond the monthly payment to parents or spouse: holiday vouchers twice a year (Rosh Hashanah and Passover), equipment and electrical-appliance grants, one-off payments in urgent hardship, loans, and special leave. Lone soldiers eligible for תשמ"ש also receive monthly food vouchers.
+
+## Rejected?
+
+There is a right of appeal — through the recruitment office before service, or through the unit's family-support NCO during it.
+
+## What is not written here — and why
+
+**We have not listed amounts.** The available official sources give conflicting numbers for the same components, and some carry no update date. **We have not listed financial thresholds** — income ceilings, per-capita calculations, or the weight given to the number of siblings — because the substantive criteria sit in the General Staff order, which is not public. Kol Zchut states explicitly that the scope of support is set "in light of the economic and social situation of the applicant and their family" and that no thresholds are published.
+
+The wizard below therefore checks **whether the route to apply is open to you** — not whether you will be approved, and not how much you would receive. The only authoritative party for that is the family-support NCO.
+
+## Related
+
+- [A soldier was detained or jailed — what to do](/en/family/soldiers/detention)
+- [Lone soldiers and soldiers from struggling families](/en/family/soldiers/lone-soldier)
+
+> **Note:** This is general information, not legal or financial advice. The wizard's result reflects the documented conditions only and is not a binding determination.
+
+## Sources
+
+- [General Staff Order 35.0210 — the payments code for families of compulsory-service soldiers](https://www.idf.il/media/rlel3g1f/350210.pdf)
+- [תשמ"ש — family payments, Kol Zchut](https://www.kolzchut.org.il/he/תשמ%22ש_-_תשלומי_משפחה_(סיוע_כלכלי_לחיילים))
+- [ת"ש (service conditions) — Ministry of Defense](https://9779.mod.gov.il/info/ת״ש-(תנאי-שירות))
+`,
+      am: `## ይህ በተለይ በማህበረሰባችን ውስጥ ለምን አስፈላጊ ነው
+
+በክነሴት የምርምር እና መረጃ ማዕከል የተዘጋጀ ሰነድ (ታኅሣሥ 2015) እንዲህ ብሏል: **"የኢኮኖሚ ዳራ — ከወታደሮቹ ጉልህ ክፍል በቤታቸው የገንዘብ ችግር ይሰቃያሉ እና ቤተሰቡን ለመርዳት ይገደዳሉ"**። ይህ ለנפקדות የተለመደው ዳራ ነው፣ ከዚያም ወደ እስር። የת"ש መዝገብን በጊዜ መክፈት ይህን ሰንሰለት ለመስበር የተደራጀው መንገድ ነው።
+
+## תשמ"ש ምንድን ነው
+
+תשמ"ש (የቤተሰብ ክፍያዎች) የወታደሩን ቤተሰብ ዝቅተኛ ኑሮ ለማረጋገጥ የታሰበ ወርሃዊ ክፍያ ነው። በጠቅላይ ኤታማዦር ትዕዛዝ 35.0210 ይተዳደራል።
+
+## ማን ማመልከት ይችላል
+
+ተመዝጋቢዎች እና የግዴታ አገልግሎት ወታደሮች **እነሱ ወይም ቤተሰባቸው በገንዘብ ወይም በማህበራዊ ችግር ውስጥ ያሉ**። ክፍያ መጠየቅ የሚቻለው ለ:
+
+- ወላጆች — ለሁለቱም ወይም ለአንዱ
+- የትዳር አጋር
+- ልጆች
+- ወንድሞችና እህቶች — ወታደሩ አሳዳጊያቸው ከሆነ
+
+ለተመዝጋቢዎች ክፍያው የሚለቀቀው ከተመዘገቡ በኋላ ብቻ ነው። የቋሚ አገልግሎት ወታደሮች በዚህ መብት ውስጥ አይካተቱም።
+
+## እንዴት ማመልከት — የሚወርድ ቅጽ አይደለም
+
+ማመልከቻው ለ**מש"קית ת"ש** ይቀርባል: ከምዝገባ በፊት በምልመላ ጽሕፈት ቤት፣ በአገልግሎት ወቅት በክፍሉ። በግል አካባቢ ዲጂታል መንገድ አለ፣ ግን **የመጀመሪያው ማመልከቻ የአስተባባሪውን ተሳትፎ ይጠይቃል**። ብቻዎን ሞልተው የሚልኩት ቅጽ የለም — በንግግር ይጀምራል።
+
+## ምን ማምጣት
+
+- የወላጆች ወይም የትዳር አጋር የደመወዝ ወረቀቶች — ሦስት ወር
+- የባንክ ሂሳብ ወረቀቶች — ሦስት ወር
+- ካሉ የብሔራዊ ኢንሹራንስ አበል ማረጋገጫዎች
+- ልጆች የተመዘገቡበት ሰፍሕ ያለው የመታወቂያ ቅጂ
+- አግባብ ካለው የማህበራዊ ሠራተኛ ሪፖርት
+- አግባብ ካለው የአሳዳጊነት ማረጋገጫ
+- የብድርና የተቀማጭ ዝርዝሮች
+- የክሬዲት ካርድ ወረቀቶች — ሦስት ወር
+- ካለ የተሽከርካሪ ባለቤትነት ማረጋገጫ
+
+የቤት ጉብኝትም የግምገማው አካል ሊሆን ይችላል።
+
+## ድጋፉ ምን ያካትታል
+
+ከወርሃዊው ክፍያ በተጨማሪ: በዓመት ሁለት ጊዜ የበዓል ቫውቸሮች፣ የዕቃና የኤሌክትሪክ ዕቃ ድጎማዎች፣ በአስቸኳይ ችግር ጊዜ አንድ ጊዜ ክፍያዎች፣ ብድሮች፣ እና ልዩ ፈቃድ። ለתשמ"ש ብቁ የሆኑ ብቸኛ ወታደሮች ወርሃዊ የምግብ ቫውቸሮችም ያገኛሉ።
+
+## ውድቅ ተደረጉ?
+
+የይግባኝ መብት አለ — ከአገልግሎት በፊት በምልመላ ጽሕፈት ቤት፣ በአገልግሎት ወቅት በክፍሉ በמש"קית ת"ש በኩል።
+
+## እዚህ ያልተጻፈው — እና ለምን
+
+**መጠኖችን አልዘረዘርንም።** የሚገኙት ኦፊሴላዊ ምንጮች ለተመሳሳይ አካላት የሚጋጩ ቁጥሮች ይሰጣሉ። **የገንዘብ ገደቦችንም አልዘረዘርንም** — የገቢ ጣሪያዎች ወይም የነፍስ ወከፍ ስሌት — ምክንያቱም መሠረታዊዎቹ መስፈርቶች ይፋ ባልሆነው የጠቅላይ ኤታማዦር ትዕዛዝ ውስጥ ናቸው።
+
+ስለዚህ ከታች ያለው አዋቂ የሚመረምረው **ማመልከቻ የማቅረብ መንገዱ ለእርስዎ ክፍት መሆኑን** ነው — እንደሚጸድቅልዎት ወይም ስንት እንደሚያገኙ አይደለም። ለዚያ ሥልጣን ያለው ብቸኛው አካል የמש"קית ת"ש ናት።
+
+## ተዛማጅ
+
+- [ወታደር ታሰረ ወይም ተከሰረ — ምን ማድረግ](/am/family/soldiers/detention)
+- [ብቸኛ ወታደር እና ከተቸገረ ቤተሰብ የመጣ ወታደር](/am/family/soldiers/lone-soldier)
+
+> **ማስታወሻ:** ይህ አጠቃላይ መረጃ ነው፣ የሕግ ወይም የገንዘብ ምክር አይደለም። የአዋቂው ውጤት የተመዘገቡትን ሁኔታዎች ብቻ የሚያንጸባርቅ ነው።
+
+## ምንጮች
+
+- [የጠቅላይ ኤታማዦር ትዕዛዝ 35.0210](https://www.idf.il/media/rlel3g1f/350210.pdf)
+- [תשמ"ש — የቤተሰብ ክፍያዎች, כל-זכות](https://www.kolzchut.org.il/he/תשמ%22ש_-_תשלומי_משפחה_(סיוע_כלכלי_לחיילים))
+`,
+    },
+    wizard: {
+      questions: [
+        {
+          id: "serviceType",
+          type: "radio",
+          label: {
+            he: "מה סוג השירות שלכם כרגע?",
+            en: "What is your service status right now?",
+            am: "አሁን የአገልግሎት ሁኔታዎ ምንድን ነው?",
+          },
+          options: [
+            {
+              value: "conscript",
+              label: {
+                he: "שירות חובה (סדיר)",
+                en: "Compulsory service",
+                am: "የግዴታ አገልግሎት",
+              },
+            },
+            {
+              value: "pre-enlist",
+              label: {
+                he: 'מלש\"ב — לפני גיוס',
+                en: "Pre-recruit — before enlistment",
+                am: "ተመዝጋቢ — ከምዝገባ በፊት",
+              },
+            },
+            {
+              value: "career",
+              label: {
+                he: "שירות קבע",
+                en: "Career service",
+                am: "የቋሚ አገልግሎት",
+              },
+            },
+            {
+              value: "reserves",
+              label: {
+                he: "מילואים",
+                en: "Reserves",
+                am: "የመጠባበቂያ",
+              },
+            },
+            {
+              value: "discharged",
+              label: {
+                he: "משוחרר",
+                en: "Discharged",
+                am: "የተሰናበተ",
+              },
+            },
+          ],
+        },
+        {
+          id: "financialHardship",
+          type: "boolean",
+          label: {
+            he: "האם אתם או משפחתכם נתונים בקשיים כלכליים או סוציאליים?",
+            en: "Are you or your family facing financial or social difficulties?",
+            am: "እርስዎ ወይም ቤተሰብዎ በገንዘብ ወይም በማህበራዊ ችግር ውስጥ ናችሁ?",
+          },
+        },
+        {
+          id: "noParentalSupport",
+          type: "boolean",
+          label: {
+            he: "האם אין לכם תמיכה הורית בארץ — הורים בחו\"ל, ניתוק קשר, או יתמות?",
+            en: "Do you have no parental support in Israel — parents abroad, no contact, or orphanhood?",
+            am: "በአገር ውስጥ የወላጅ ድጋፍ የለዎትም — ወላጆች በውጭ አገር፣ ግንኙነት መቋረጥ፣ ወይም ወላጅ አልባነት?",
+          },
+        },
+        {
+          id: "hasDependents",
+          type: "boolean",
+          label: {
+            he: "האם יש לכם תלויים — בן/בת זוג, ילדים, או אחים שאתם האפוטרופוס שלהם?",
+            en: "Do you have dependents — a spouse, children, or siblings for whom you are the guardian?",
+            am: "ጥገኞች አሉዎት — የትዳር አጋር፣ ልጆች፣ ወይም አሳዳጊያቸው የሆኑ ወንድሞች/እህቶች?",
+          },
+        },
+      ],
+      rules: [
+        {
+          kind: "require-one-of",
+          questionId: "serviceType",
+          values: ["conscript", "pre-enlist"],
+          reason: {
+            he: 'תשמ"ש מיועד למלש"בים ולחיילים בשירות חובה בלבד (פ"מ 35.0210). לשירות קבע, מילואים ומשוחררים קיימים מסלולים אחרים — למשוחררים ראו הפיקדון האישי ומענק השחרור.',
+            en: "תשמ\"ש is for pre-recruits and compulsory-service soldiers only (Order 35.0210). Career service, reserves and discharged soldiers have other tracks — for the discharged, see the personal deposit and discharge grant.",
+            am: 'תשמ"ש ለተመዝጋቢዎችና ለግዴታ አገልግሎት ወታደሮች ብቻ ነው (ትዕዛዝ 35.0210)። ለቋሚ አገልግሎት፣ ለመጠባበቂያና ለተሰናበቱ ሌሎች መንገዶች አሉ።',
+          },
+        },
+        {
+          kind: "require-any",
+          questionIds: ["financialHardship", "noParentalSupport", "hasDependents"],
+          reason: {
+            he: 'הבקשה נפתחת כאשר החייל או משפחתו נתונים בקשיים כלכליים או סוציאליים, או כשיש היעדר תמיכה הורית או תלויים. אם המצב משתנה — אפשר לפנות למש"קית ת"ש בכל שלב של השירות.',
+            en: "The application opens where the soldier or their family faces financial or social difficulties, or where there is no parental support or there are dependents. If circumstances change, you may approach the family-support NCO at any stage of service.",
+            am: 'ማመልከቻው የሚከፈተው ወታደሩ ወይም ቤተሰቡ በገንዘብ ወይም በማህበራዊ ችግር ውስጥ ሲሆኑ፣ ወይም የወላጅ ድጋፍ ሲጠፋ ወይም ጥገኞች ሲኖሩ ነው። ሁኔታው ከተለወጠ በማንኛውም ጊዜ ወደ מש"קית ת"ש መቅረብ ይችላሉ።',
+          },
+        },
+      ],
+    },
+  },
 ];
