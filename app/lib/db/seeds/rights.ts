@@ -7680,4 +7680,493 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
       ],
     },
   },
+
+  // TED-145 — Special-education eligibility committee ("ועדת השמה" in the
+  // old, pre-2018 name) and the parent's right to object.
+  //
+  // Verified against the statute text and the Ministry's own parent booklet:
+  //   - חוק חינוך מיוחד, התשמ"ח-1988, consolidated text on Nevo
+  //     (www.nevo.co.il/law_html/law00/71999.htm), as amended by תיקון 11,
+  //     התשע"ח-2018. Section numbers used below are from that text:
+  //       §5   — the Minister appoints ועדות זכאות ואפיון
+  //       §6(א) — six-member composition, incl. a parent representative
+  //       §7(א) — the committee determines זכאות, רמת תפקוד, היקף סל השירותים
+  //       §7(ב)(1) — written information on the services available in each of
+  //                  the three framework types
+  //       §7(ב)(2) — THE PARENTS choose the framework, notifying within 14 days
+  //       §8   — who may refer a student to the committee
+  //       §9(ב)(3) — the committee must invite parents + student and let them
+  //                  (or their representative) argue; documents at least
+  //                  14 days before the hearing
+  //       §9(ג)(2) — protocol + decision within 14 days
+  //       §10(א) — דיון חוזר once every three years
+  //       §11  — quorum of four
+  //       §12(ב) — ועדת השגה composition, chaired by the district director
+  //       §13(א) — השגה within 21 days, by the student, a parent, or a public
+  //                organisation's representative
+  //       §13(ב) — powers: accept / return for re-hearing / reject
+  //       §13(ג) — the השגה is decided within 21 days
+  //   - משרד החינוך, המינהל הפדגוגי, אגף א' חינוך מיוחד — "יישום תיקון 11
+  //     לחוק החינוך המיוחד — דפי מידע להורים" (Feb 2020), which confirms:
+  //     referral by 31 March, hearings 1 Nov–15 May, the 14/14/21-day clocks,
+  //     the three framework types, the multi-professional-team route and its
+  //     own 21-day השגה heard by a ועדת השגה sitting as a ועדת זכאות ואפיון,
+  //     the district ועדת השגה chaired by the מנהל מחוז, the right to bring
+  //     one's own representatives, and — directly relevant here — that
+  //     "הורים הזקוקים להנגשה או לתרגום שפה, יודיעו על כך מראש לוועדה".
+  //   - כל-זכות — ועדת זכאות ואפיון, ועדת שיבוץ (the latter for the fact that
+  //     the local authority's placement committee, not the eligibility
+  //     committee, assigns the specific institution, and that parents are not
+  //     invited to it).
+  //
+  // DELIBERATELY EXCLUDED as unverifiable or time-limited: the 2020 booklet's
+  // disability × function-level table of who does and does not get a framework
+  // choice (published as a transitional arrangement for תש"ף/תשפ"א); any
+  // per-district contact person (the booklet's name list is from 2020); and
+  // any claim about how long a specific local authority takes in practice.
+  {
+    title: {
+      he: 'הילד שלי הופנה ל"ועדת השמה" — מה זו ועדת זכאות ואפיון ומה הזכויות שלכם',
+      en: "My child was referred to a placement committee — what the eligibility and characterization committee is, and your rights",
+      am: 'ልጄ ወደ "ኮሚቴ" ተላከ — የብቁነትና የአፈጻጸም ኮሚቴ ምንድን ነው እና መብቶችዎ ምንድናቸው',
+    },
+    slug: {
+      he: "special-education-eligibility-committee",
+      en: "special-education-eligibility-committee",
+      am: "special-education-eligibility-committee",
+    },
+    govUrl: "https://www.gov.il/he/pages/guide_rights_committees_special_ed_law",
+    eligibilitySummary: {
+      he: 'מאז תיקון 11 לחוק חינוך מיוחד (2018) אין יותר "ועדת השמה": הוועדה נקראת ועדת זכאות ואפיון, היא קובעת זכאות ורמת תפקוד — ואתם ההורים בוחרים את סוג המסגרת. על ההחלטה אפשר להגיש השגה תוך 21 יום.',
+      en: 'Since Amendment 11 to the Special Education Law (2018) there is no "placement committee": it is an eligibility and characterization committee, it determines entitlement and function level — and you, the parents, choose the type of framework. Its decision can be objected to within 21 days.',
+      am: "ከ2018 የልዩ ትምህርት ሕግ ማሻሻያ 11 ጀምሮ ኮሚቴው ብቁነትንና የአፈጻጸም ደረጃን ይወስናል — የትምህርት ማዕቀፉን ግን እናንተ ወላጆች ትመርጣላችሁ። በውሳኔው ላይ በ21 ቀናት ውስጥ አቤቱታ (השגה) ማቅረብ ይቻላል።",
+    },
+    tags: ["education"],
+    bodies: {
+      he: `## קודם כול — השם השתנה, והמשמעות איתו
+
+הרבה הורים עדיין מקבלים טלפון מבית הספר ושומעים "הילד מופנה לוועדת השמה". השם הזה כבר לא קיים בחוק. **תיקון מס' 11 לחוק חינוך מיוחד, התשע"ח-2018** שינה את השמות ואת מאזן הכוחות:
+
+| השם הישן | השם היום |
+| --- | --- |
+| ועדת השמה / ועדת שילוב | **ועדת זכאות ואפיון** |
+| ועדת ערר | **ועדת השגה** |
+
+העיקרון שמשרד החינוך עצמו מנסח בדפי המידע להורים: **"חינוך מיוחד — שירות ולא מקום."** הוועדה כבר לא "משימה" את הילד למקום. היא קובעת שהילד **זכאי** לשירותי חינוך מיוחדים ובאיזה **היקף** — ואתם בוחרים את סוג המסגרת שבה הוא ילמד.
+
+זה השינוי החשוב ביותר שאתם צריכים לדעת עליו לפני שאתם נכנסים לחדר.
+
+## מי מחליט מה — שלושה גופים שונים
+
+בלבול בין שלושת הגופים האלה הוא המקור הנפוץ ביותר לתסכול. הם אינם אותו דבר:
+
+1. **צוות רב-מקצועי** — מתכנס **בגן או בבית הספר** עצמו. יושב הראש הוא מנהל המוסד, ומשתתפים בו המחנך/ת, פסיכולוג או יועץ חינוכי, עובד הוראה מהחינוך המיוחד — ואתם, ההורים (סעיף 20ד לחוק). הוא דן בתמיכות מתוך "סל השילוב המוסדי" ובבניית התוכנית האישית.
+2. **ועדת זכאות ואפיון** — מתכנסת **ברשות המקומית** שבה הילד רשום. היא קובעת זכאות לשירותי חינוך מיוחדים, את רמת התפקוד ואת היקף סל השירותים.
+3. **ועדת שיבוץ** — של הרשות המקומית. **אחרי** שנקבעה הזכאות ואתם בחרתם סוג מסגרת, היא קובעת באיזה מוסד ספציפי הילד ילמד, לפי מקום פנוי, מרחק נסיעה והרכב הכיתה. **הורים אינם מוזמנים לוועדת שיבוץ** — ולכן חשוב לומר את שם המוסד שאתם מעדיפים כבר בוועדת הזכאות והאפיון, ולבקש שזה יירשם בפרוטוקול.
+
+## מה ועדת הזכאות והאפיון קובעת — ומה לא
+
+לפי **סעיף 7(א)** לחוק הוועדה קובעת שלושה דברים בלבד:
+
+- **זכאות** לשירותי חינוך מיוחדים — לילד עם מוגבלות מהמפורטות בתוספת הראשונה לחוק, המגבילה את תפקודו
+- **רמת התפקוד** של הילד (בתחומים לימודי, שפתי-תקשורתי, חברתי, רגשי ועצמאות אישית)
+- **היקף סל השירותים** שיינתן לו, בהתאם לרמת התפקוד
+
+היא **אינה** קובעת באיזה בית ספר הילד ילמד (זו ועדת שיבוץ), והיא **אינה** קובעת את הרכב התמיכות בפועל — כמה שעות הוראה, כמה טיפול, כמה סייעת. את פילוח הסל האישי קובע הצוות הרב-מקצועי בבית הספר, יחד אתכם.
+
+## הזכות המרכזית: אתם בוחרים את סוג המסגרת
+
+**סעיף 7(ב) לחוק** קובע שהוועדה חייבת למסור לכם **מידע בכתב** על השירותים שהילד יקבל בכל אחת משלוש האפשרויות:
+
+1. גן או כיתה רגילה במוסד חינוך רגיל
+2. כיתה לחינוך מיוחד בתוך מוסד חינוך רגיל
+3. גן או בית ספר לחינוך מיוחד
+
+**ואז אתם בוחרים.** סעיף 7(ב)(2): "הורי התלמיד יבחרו את המסגרת החינוכית... ויודיעו על בחירתם... בתוך 14 ימים."
+
+שלוש הסתייגויות שחשוב להכיר, כדי שלא תופתעו:
+
+- אם **לא הודעתם** על בחירתכם תוך 14 יום — הסמכות לבחור עוברת לוועדה, שתיתן עדיפות לשילוב בחינוך הרגיל.
+- יש צירופים של סוג מוגבלות ורמת תפקוד שבהם החוק וההנחיות אינם מקנים זכות בחירה, אלא קובעים לימודים בחינוך הרגיל עם תמיכה מהסל המוסדי. שאלו את יושב ראש הוועדה במפורש: "האם במקרה של הילד שלי יש לנו זכות בחירה?" — ובקשו שהתשובה תירשם בפרוטוקול.
+- במקרים שבהם קיים **חשש ממשי** שהמסגרת שבחרתם תביא לפגיעה ממשית בשלום הילד או בשלום אחרים, הדיון בזכות הבחירה מועבר למנהל/ת האגף לחינוך מיוחד במשרד החינוך. גם על החלטה כזו אפשר להגיש השגה.
+
+## הזכויות שלכם בתוך הדיון
+
+אלה זכויות מכוח החוק וההנחיות, לא טובות שמישהו עושה לכם:
+
+- **להיות מוזמנים ולהיות נוכחים.** הוועדה חייבת להזמין אתכם ואת התלמיד, ולאפשר לכם — או למי מטעמכם — להשמיע את טיעוניכם (סעיף 9(ב)(3)).
+- **להביא אנשים מטעמכם.** אתם רשאים להזמין לדיון מלווה, עורך דין, איש מקצוע פרטי, נציג ארגון או בן משפחה. אין צורך בהיתר.
+- **לקבל את כל המסמכים מראש.** כל מסמך שנמצא בידי הוועדה ועשוי לשמש בדיון — לפחות **14 ימים לפני** התכנסותה. אם לא קיבלתם, בקשו בכתב ובקשו לדחות את הדיון.
+- **לצרף מסמכים משלכם.** אבחונים, דוחות טיפוליים, חוות דעת פרטיות, מכתב חופשי. מילוי שאלון ההורים אינו חובה — אפשר להגיש מכתב בנוסח שלכם.
+- **לדבר ביחידות.** אתם והתלמיד רשאים לבקש להשמיע את דבריכם בפני חברי הוועדה בלבד, בלי שאר המוזמנים בחדר.
+- **לתרגום ולהנגשה.** ההנחיות של משרד החינוך קובעות במפורש: "הורים הזקוקים להנגשה או לתרגום שפה, יודיעו על כך מראש לוועדה." **אם עברית אינה שפת האם שלכם — בקשו מתורגמן לאמהרית מראש, בכתב.** אפשר לציין זאת בשאלון ההורים. זו לא בקשה חריגה.
+- **לדעת מי יושב מולכם.** בוועדה שישה חברים (סעיף 6(א)): נציג משרד החינוך כיושב ראש, נציג הרשות המקומית, פסיכולוג חינוכי, מפקח לחינוך מיוחד, מפקח לחינוך רגיל — **ונציג הורים**, שהוא בעצמו הורה לילד עם מוגבלות, ממונה על ידי שר החינוך. אתם רשאים לפנות לרכז נציגי ההורים באזורכם ולהיפגש עם נציג ההורים עוד לפני הדיון.
+- **לקבל פרוטוקול והחלטה בכתב** — תוך **14 ימים** (סעיף 9(ג)(2)). בלי פרוטוקול אין על מה להשיג, אז אל תוותרו עליו.
+
+## לוח הזמנים השנתי
+
+- **הפניה לוועדה: עד 31 במרץ** בכל שנה. הורים שהילד שלהם בתהליך אבחון ימציאו על כך אישור עד אותו תאריך.
+- **הדיונים מתקיימים** בין 1 בנובמבר ל-15 במאי באותה שנת לימודים, למעט מקרים חריגים.
+- **מי רשאי להפנות** (סעיף 8): ההורים, התלמיד, הצוות הרב-מקצועי, מוסד חינוך מוכר, הרשות המקומית, ארגון ציבורי או גורם שהוסמך לכך. **ההורים רשאים לפנות לוועדה בכל שלב** — אינכם תלויים בבית הספר.
+- **תוקף ההחלטה: שלוש שנים**, ודיון חוזר מתקיים אחת לשלוש שנים (סעיף 10(א)). אפשר לבקש דיון חוזר מוקדם יותר לאחר שחלפה שנה.
+
+## איך מגישים השגה
+
+זהו החלק שהורים מפספסים לרוב, כי השעון קצר.
+
+**מי רשאי** (סעיף 13(א)): התלמיד, הורה, או נציג של ארגון ציבורי.
+
+**תוך כמה זמן: 21 ימים** מקבלת ההחלטה **בכתב**. השעון מתחיל מהקבלה בכתב — לא מיום הדיון. אם עברו שבועיים ולא קיבלתם החלטה בכתב, דרשו אותה.
+
+**על מה אפשר להשיג**: על ההחלטה כולה או על חלק ממנה. אפשר להשיג רק על רמת התפקוד, או רק על היקף הסל, ולהשאיר את השאר.
+
+**מי דן**: ועדת השגה **מחוזית**, בראשות מנהל המחוז של משרד החינוך או מי מטעמו (סעיף 12(ב)). בוועדה יושבים גם פסיכולוג חינוכי מחוזי, מפקח לחינוך מיוחד, מפקח לחינוך רגיל, הורה לתלמיד עם צרכים מיוחדים ונציג ארגון ציבורי. **אתם רשאים להזמין נציגים מטעמכם.**
+
+**מה היא רשאית להחליט** (סעיף 13(ב)): לקבל את ההשגה ולשנות את ההחלטה, להחזיר את העניין לדיון חוזר בוועדת הזכאות והאפיון, או לדחות את ההשגה.
+
+**תוך כמה זמן היא מחליטה**: 21 ימים (סעיף 13(ג)).
+
+**איך מגישים בפועל**: ההשגה מוגשת למשרד החינוך — דרך [עמוד ההשגות ב-gov.il](https://www.gov.il/he/departments/general/special_education_appeals) ופורטל ההורים. הגישו **בכתב ומנומק**, וצרפו כל מסמך רלוונטי — כולל מסמכים חדשים שלא היו בפני הוועדה הראשונה. בקשו אישור על כך שההשגה התקבלה, ושמרו עותק.
+
+**גם על החלטת הצוות הרב-מקצועי** אפשר להגיש השגה, תוך 21 ימים מקבלתה בכתב. השגה כזו נדונה בוועדת השגה שמתכנסת במעמד ועדת זכאות ואפיון.
+
+## מה עושים כדי להיכנס מוכנים
+
+1. בקשו בכתב את כל מסמכי הוועדה — ובדקו שקיבלתם אותם 14 יום מראש.
+2. אם אתם צריכים מתורגמן לאמהרית — בקשו בכתב, מראש.
+3. רכזו מראש: אבחונים, דוחות טיפוליים, הערכות, בדיקות שמיעה וראייה עדכניות (נדרשות בהפניה ראשונה).
+4. כתבו מראש שלוש-חמש נקודות שאתם רוצים שייאמרו — ובקשו שיירשמו בפרוטוקול.
+5. שאלו במפורש: מהי רמת התפקוד שנקבעה? מהו היקף הסל? האם יש לנו זכות בחירת מסגרת?
+6. אל תחתמו על ויתור על נוכחות אלא אם אתם באמת מבינים על מה אתם מוותרים.
+7. סמנו ביומן את היום שבו קיבלתם את ההחלטה בכתב — ואת היום ה-21 אחריו.
+
+## אם אתם מרגישים שהיחס אליכם היה שונה
+
+תחושה של הורים שהם לא נשמעו, שדיברו מעל ראשם, או שההחלטה הייתה סגורה מראש — היא תחושה מוכרת ולגיטימית, ויש לה מסלולי טיפול. הליך ההשגה הוא המסלול הפורמלי לתקוף את ההחלטה עצמה. אם מדובר ביחס מפלה ולא רק בהחלטה שגויה — ראו את [המדריך לאפליה ברישום לבית ספר](/he/education/registration-discrimination) ואת [זכויות ההורה בבית הספר](/he/education/parent-rights), ואפשר לפנות ל[טבקה](https://www.tebeka.org.il) בטלפון 03-5103538.
+
+> **הבהרה משפטית:** המידע כאן כללי ואינו ייעוץ משפטי. בדיקת ההשגה באשף שלמטה מבוססת על לשון החוק והנחיות משרד החינוך בלבד, ואינה קביעה מחייבת. נהלים ותאריכים משתנים — אמתו מול הוועדה ומול המחוז.
+
+## מקורות
+
+- [חוק חינוך מיוחד, התשמ"ח-1988 — נוסח מלא (נבו)](https://www.nevo.co.il/law_html/law00/71999.htm)
+- [משרד החינוך — יישום תיקון 11 לחוק החינוך המיוחד, דפי מידע להורים (PDF)](https://meyda.education.gov.il/files/special/lows/parentsinformationtashaf.pdf)
+- [מדריך למימוש זכויות מתוקף חוק חינוך מיוחד — gov.il](https://www.gov.il/he/pages/guide_rights_committees_special_ed_law)
+- [השגה על החלטות בעניין זכאות ילד לשירותי חינוך מיוחד — gov.il](https://www.gov.il/he/departments/general/special_education_appeals)
+- [ועדת זכאות ואפיון — פורטל ההורים של משרד החינוך](https://parents.education.gov.il/prhnet/special-education/committees/entitelment-committee)
+- [ועדת זכאות ואפיון לשירותי חינוך מיוחדים — כל-זכות](https://www.kolzchut.org.il/he/%D7%95%D7%A2%D7%93%D7%AA_%D7%96%D7%9B%D7%90%D7%95%D7%AA_%D7%95%D7%90%D7%A4%D7%99%D7%95%D7%9F_%D7%9C%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99_%D7%97%D7%99%D7%A0%D7%95%D7%9A_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D)
+- [ועדת שיבוץ לחינוך המיוחד — כל-זכות](https://www.kolzchut.org.il/he/%D7%95%D7%A2%D7%93%D7%AA_%D7%A9%D7%99%D7%91%D7%95%D7%A5_%D7%9C%D7%97%D7%99%D7%A0%D7%95%D7%9A_%D7%94%D7%9E%D7%99%D7%95%D7%97%D7%93)
+`,
+      en: `## First — the name changed, and so did the balance of power
+
+Many parents still get a call from school saying "your child is being referred to a placement committee" (ועדת השמה). That body no longer exists under that name. **Amendment 11 to the Special Education Law, 5778-2018** renamed the committees and shifted the decision:
+
+| Old name | Name today |
+| --- | --- |
+| Placement committee / integration committee | **Eligibility and characterization committee** (ועדת זכאות ואפיון) |
+| Appeals committee (ערר) | **Objection committee** (ועדת השגה) |
+
+The principle the Ministry of Education states in its own parent booklet: **"special education is a service, not a place."** The committee no longer *places* the child. It determines that the child is **entitled** to special education services and at what **scope** — and you choose the type of framework.
+
+## Three different bodies — do not confuse them
+
+1. **Multi-professional team (צוות רב-מקצועי)** — convenes at the kindergarten or school itself, chaired by the principal, with the homeroom teacher, a psychologist or counsellor, a special-education teacher — and you, the parents (section 20d). It handles support from the institutional integration budget and builds the individual programme.
+2. **Eligibility and characterization committee** — convenes at the local authority where the child is registered. It determines entitlement, function level and the scope of the service basket.
+3. **Placement committee (ועדת שיבוץ)** — run by the local authority. *After* entitlement is set and you have chosen a framework type, it decides which specific institution, based on available places, travel distance and class composition. **Parents are not invited to it** — so name your preferred institution during the eligibility committee and ask for it to be recorded in the protocol.
+
+## What the committee decides — and what it does not
+
+Per **section 7(a)**, it determines exactly three things: **entitlement** to special education services; the child's **function level** (academic, language/communication, social, emotional, personal autonomy); and the **scope of the service basket**.
+
+It does **not** decide which school the child attends (that is the placement committee), and it does **not** decide the actual mix of support — how many teaching hours, how much therapy, how much aide time. The school's multi-professional team sets that with you.
+
+## The central right: you choose the type of framework
+
+**Section 7(b)** requires the committee to give you **written information** about the services available in each of three options: a regular kindergarten/class in a mainstream institution; a special-education class inside a mainstream institution; or a special-education kindergarten/school.
+
+**Then you choose.** Section 7(b)(2): the parents choose the framework and notify the committee **within 14 days**.
+
+Three caveats worth knowing:
+
+- If you do **not** notify within 14 days, the choice passes to the committee, which gives preference to integration in mainstream education.
+- Certain combinations of disability type and function level carry no choice under the law and directives. Ask the chair explicitly: "in my child's case, do we have a right of choice?" — and ask for the answer to go in the protocol.
+- Where there is a **substantial concern** that the framework you chose would cause real harm to the child or others, the question of your right to choose is referred to the head of the Special Education Division at the Ministry. That decision, too, can be objected to.
+
+## Your rights inside the hearing
+
+- **To be invited and present.** The committee must invite you and the student and let you — or your representative — present your arguments (section 9(b)(3)).
+- **To bring people of your choosing.** An escort, a lawyer, a private professional, an organisation's representative, a family member. No permission needed.
+- **To receive all documents in advance** — at least **14 days** before the hearing. If you did not, ask in writing and ask to postpone.
+- **To submit your own material.** Assessments, therapy reports, private opinions, a free-form letter. The parent questionnaire is not mandatory.
+- **To speak privately.** You and the student may ask to address the committee members alone, without the other invitees.
+- **To interpretation and accessibility.** The Ministry's directives state explicitly that parents needing accessibility or language translation should notify the committee in advance. **If Hebrew is not your first language, request an Amharic interpreter in advance, in writing.** This is not an unusual request.
+- **To know who is across the table.** Six members (section 6(a)): a Ministry representative as chair, a local-authority representative, an educational psychologist, a special-education inspector, a mainstream-education inspector — and a **parent representative**, themselves a parent of a child with a disability, appointed by the Minister. You may contact the regional parent-representative coordinator and meet them before the hearing.
+- **To a written protocol and decision** — within **14 days** (section 9(c)(2)). Without the protocol there is nothing to object to.
+
+## The annual timetable
+
+- **Referral: by 31 March** each year. If the child is mid-assessment, provide confirmation of that by the same date.
+- **Hearings** run from 1 November to 15 May of that school year, save exceptional cases.
+- **Who may refer** (section 8): the parents, the student, the multi-professional team, a recognised educational institution, the local authority, a public organisation, or an authorised body. **Parents may approach the committee at any stage** — you are not dependent on the school.
+- **The decision is valid for three years**, with a review hearing every three years (section 10(a)). An earlier review may be requested once a year has passed.
+
+## How to file an objection (השגה)
+
+**Who may file** (section 13(a)): the student, a parent, or a public organisation's representative.
+
+**By when: 21 days** from receiving the decision **in writing**. The clock runs from written receipt, not from the hearing date.
+
+**Against what**: the decision in whole or in part — you may contest only the function level, or only the basket scope.
+
+**Who hears it**: a **district** objection committee chaired by the Ministry's district director or their delegate (section 12(b)), alongside a district educational psychologist, a special-education inspector, a mainstream-education inspector, a parent of a child with special needs, and a public-organisation representative. **You may bring your own representatives.**
+
+**What it may decide** (section 13(b)): accept the objection and change the decision, return the matter to the eligibility committee for re-hearing, or reject it.
+
+**By when**: 21 days (section 13(c)).
+
+**How, in practice**: through the Ministry of Education — see the [gov.il objections page](https://www.gov.il/he/departments/general/special_education_appeals) and the parents' portal. File **in writing, with reasons**, attaching every relevant document, including new material the first committee did not see. Ask for confirmation of receipt and keep a copy.
+
+**A multi-professional team decision** may also be objected to, within 21 days of receiving it in writing; that objection is heard by an objection committee sitting as an eligibility and characterization committee.
+
+## Walking in prepared
+
+1. Ask in writing for all committee documents — check they arrived 14 days ahead.
+2. If you need an Amharic interpreter, request one in writing, in advance.
+3. Gather assessments, therapy reports, evaluations, and current hearing and vision tests (required on a first referral).
+4. Write down three to five points you want said — and ask for them to be recorded.
+5. Ask explicitly: what function level was set? what is the basket scope? do we have a right of framework choice?
+6. Do not sign a waiver of attendance unless you understand what you are waiving.
+7. Diary the date you received the written decision — and day 21 after it.
+
+## If you felt you were treated differently
+
+Feeling unheard, talked over, or that the decision was made in advance is a familiar and legitimate experience, and there are routes for it. The objection procedure is the formal way to challenge the decision itself. Where the issue is discriminatory treatment rather than a wrong decision — see the [school registration discrimination guide](/en/education/registration-discrimination) and [parent rights at school](/en/education/parent-rights), and you can contact [Tebeka](https://www.tebeka.org.il) at 03-5103538.
+
+> **Legal note:** general information, not legal advice. The check below follows the statute and the Ministry's directives only and is not a binding determination. Procedures and dates change — verify with the committee and the district.
+
+## Sources
+
+- [Special Education Law, 5748-1988 — full text (Nevo, Hebrew)](https://www.nevo.co.il/law_html/law00/71999.htm)
+- [Ministry of Education — implementing Amendment 11, parent information pages (PDF, Hebrew)](https://meyda.education.gov.il/files/special/lows/parentsinformationtashaf.pdf)
+- [Guide to exercising rights under the Special Education Law — gov.il](https://www.gov.il/he/pages/guide_rights_committees_special_ed_law)
+- [Objections on special-education entitlement decisions — gov.il](https://www.gov.il/he/departments/general/special_education_appeals)
+- [Eligibility and characterization committee — Ministry of Education parents' portal](https://parents.education.gov.il/prhnet/special-education/committees/entitelment-committee)
+`,
+      am: `## በመጀመሪያ — ስሙ ተቀይሯል፣ ከሱም ጋር ትርጉሙ
+
+ብዙ ወላጆች ከትምህርት ቤት ስልክ ደውሎላቸው "ልጅዎ ወደ ኮሚቴ (ועדת השמה) እየተላከ ነው" ይባላሉ። ያ ስም በሕግ ውስጥ የለም። **የልዩ ትምህርት ሕግ ማሻሻያ ቁጥር 11 (2018)** ስሞቹንም ሆነ የውሳኔውን ሚዛን ቀይሯል፦
+
+- የቀድሞ "ועדת השמה" → ዛሬ **ועדת זכאות ואפיון** (የብቁነትና የአፈጻጸም ኮሚቴ)
+- የቀድሞ "ועדת ערר" → ዛሬ **ועדת השגה** (የአቤቱታ ኮሚቴ)
+
+የትምህርት ሚኒስቴር ራሱ በወላጆች መረጃ ገጾቹ ላይ የሚያስቀምጠው መርህ፦ **"ልዩ ትምህርት — አገልግሎት እንጂ ቦታ አይደለም።"** ኮሚቴው ልጁን ወደ አንድ ቦታ አይመድብም። ልጁ ለልዩ ትምህርት አገልግሎቶች **ብቁ** መሆኑንና በምን ያህል **መጠን** እንደሆነ ይወስናል — **የማዕቀፉን ዓይነት ግን እናንተ ትመርጣላችሁ።**
+
+## ሦስት የተለያዩ አካላት
+
+1. **ባለብዙ-ሙያ ቡድን (צוות רב-מקצועי)** — በትምህርት ቤቱ ወይም በሕፃናት ማቆያው ውስጥ ይሰበሰባል፤ ሊቀመንበሩ የተቋሙ ኃላፊ ነው፣ እናንተም ወላጆች አባል ናችሁ (አንቀጽ 20ד)።
+2. **የብቁነትና የአፈጻጸም ኮሚቴ** — ልጁ በተመዘገበበት **የአካባቢው ማዘጋጃ ቤት** ይሰበሰባል። ብቁነትን፣ የአፈጻጸም ደረጃንና የአገልግሎት ቅርጫቱን መጠን ይወስናል።
+3. **የምደባ ኮሚቴ (ועדת שיבוץ)** — የማዘጋጃ ቤቱ ነው። ብቁነቱ ከተወሰነና እናንተ ማዕቀፍ ከመረጣችሁ **በኋላ**፣ የትኛው ተቋም እንደሚሆን ይወስናል። **ወላጆች ወደዚህ ኮሚቴ አይጋበዙም** — ስለዚህ የምትመርጡትን ተቋም ስም በብቁነት ኮሚቴው ውስጥ ተናገሩና በቃለ ጉባኤው እንዲመዘገብ ጠይቁ።
+
+## ኮሚቴው የሚወስነው
+
+በ**አንቀጽ 7(א)** መሠረት ሦስት ነገሮችን ብቻ፦ **ብቁነት**፣ የልጁ **የአፈጻጸም ደረጃ**፣ እና **የአገልግሎት ቅርጫቱ መጠን**።
+
+የትኛው ትምህርት ቤት እንደሚሆን **አይወስንም**፤ የድጋፎቹን ስብጥር (ስንት የማስተማሪያ ሰዓት፣ ስንት ሕክምና፣ ስንት ረዳት) **አይወስንም** — ያንን በትምህርት ቤቱ ያለው ባለብዙ-ሙያ ቡድን ከእናንተ ጋር ይወስናል።
+
+## ዋናው መብት፦ ማዕቀፉን እናንተ ትመርጣላችሁ
+
+**አንቀጽ 7(ב)** ኮሚቴው ስለ ሦስቱ አማራጮች **የጽሑፍ መረጃ** እንዲሰጣችሁ ያስገድዳል፦ (1) በመደበኛ ተቋም ውስጥ መደበኛ ክፍል፤ (2) በመደበኛ ተቋም ውስጥ የልዩ ትምህርት ክፍል፤ (3) የልዩ ትምህርት ትምህርት ቤት።
+
+**ከዚያም እናንተ ትመርጣላችሁ።** አንቀጽ 7(ב)(2)፦ ወላጆች ማዕቀፉን መርጠው **በ14 ቀናት ውስጥ** ማሳወቅ አለባቸው።
+
+በ14 ቀናት ውስጥ ካላሳወቃችሁ፣ የመምረጥ ሥልጣኑ ወደ ኮሚቴው ይተላለፋል። እንዲሁም በአንዳንድ የአካል ጉዳት ዓይነትና የአፈጻጸም ደረጃ ጥምረቶች የመምረጥ መብት የለም — ሊቀመንበሩን በግልጽ ጠይቁ፦ "በልጄ ሁኔታ የመምረጥ መብት አለን?"
+
+## በስብሰባው ውስጥ ያሏችሁ መብቶች
+
+- **መጋበዝና መገኘት** — ኮሚቴው እናንተንና ተማሪውን መጋበዝና ክርክራችሁን እንድታሰሙ መፍቀድ አለበት (አንቀጽ 9(ב)(3))።
+- **የራሳችሁን ሰዎች ማምጣት** — አጃቢ፣ ጠበቃ፣ የግል ባለሙያ፣ የድርጅት ተወካይ ወይም የቤተሰብ አባል። ፈቃድ አያስፈልግም።
+- **ሁሉንም ሰነዶች አስቀድሞ መቀበል** — ስብሰባው **ቢያንስ 14 ቀናት** በፊት።
+- **የራሳችሁን ሰነዶች ማቅረብ** — ምርመራዎች፣ የሕክምና ሪፖርቶች፣ የግል የባለሙያ አስተያየቶች፣ ወይም በራሳችሁ ቃል የተጻፈ ደብዳቤ።
+- **በተናጠል መናገር** — ሌሎቹ ተጋባዦች ሳይኖሩ ለኮሚቴው አባላት ብቻ መናገር መጠየቅ ትችላላችሁ።
+- **ትርጉምና ተደራሽነት** — የትምህርት ሚኒስቴር መመሪያዎች በግልጽ ይላሉ፦ "ተደራሽነት ወይም የቋንቋ ትርጉም የሚያስፈልጋቸው ወላጆች ለኮሚቴው አስቀድመው ያሳውቁ።" **ዕብራይስጥ የመጀመሪያ ቋንቋችሁ ካልሆነ — የአማርኛ አስተርጓሚ አስቀድማችሁ በጽሑፍ ጠይቁ።** ይህ ያልተለመደ ጥያቄ አይደለም።
+- **ማን እንደተቀመጠ ማወቅ** — ስድስት አባላት (አንቀጽ 6(א))፣ ከእነሱም አንዱ ራሱ የአካል ጉዳተኛ ልጅ ወላጅ የሆነ **የወላጆች ተወካይ** ነው። ከስብሰባው በፊት ልታገኙት ትችላላችሁ።
+- **ቃለ ጉባኤና ውሳኔ በጽሑፍ መቀበል** — በ**14 ቀናት** ውስጥ (አንቀጽ 9(ג)(2))። ያለ ቃለ ጉባኤ አቤቱታ ማቅረብ አይቻልም።
+
+## ዓመታዊ የጊዜ ሰሌዳ
+
+- **ወደ ኮሚቴው መላክ፦ እስከ መጋቢት 31** ድረስ በየዓመቱ።
+- **ስብሰባዎቹ** ከኅዳር 1 እስከ ግንቦት 15 ይካሄዳሉ።
+- **ወላጆች በማንኛውም ደረጃ ወደ ኮሚቴው መቅረብ ይችላሉ** — በትምህርት ቤቱ ላይ ጥገኛ አይደላችሁም (አንቀጽ 8)።
+- **ውሳኔው ለሦስት ዓመታት ይሠራል**፤ በየሦስት ዓመቱ ዳግም ውይይት ይካሄዳል (አንቀጽ 10(א))።
+
+## አቤቱታ (השגה) እንዴት ማቅረብ ይቻላል
+
+- **ማን** (አንቀጽ 13(א))፦ ተማሪው፣ ወላጅ፣ ወይም የሕዝብ ድርጅት ተወካይ።
+- **በስንት ጊዜ፦ 21 ቀናት** ውሳኔውን **በጽሑፍ** ከተቀበሉበት ቀን ጀምሮ። ሰዓቱ የሚጀምረው ከስብሰባው ቀን ሳይሆን ጽሑፉን ከተቀበላችሁበት ቀን ነው።
+- **በምን ላይ**፦ በሙሉ ውሳኔው ወይም በከፊሉ ላይ።
+- **ማን ይሰማዋል**፦ በትምህርት ሚኒስቴር የአውራጃ ኃላፊ የሚመራ **የአውራጃ የአቤቱታ ኮሚቴ** (አንቀጽ 12(ב))። **የራሳችሁን ተወካዮች ማምጣት ትችላላችሁ።**
+- **ምን ሊወስን ይችላል** (አንቀጽ 13(ב))፦ አቤቱታውን ተቀብሎ ውሳኔውን መለወጥ፣ ጉዳዩን ወደ ብቁነት ኮሚቴው ለዳግም ውይይት መመለስ፣ ወይም አቤቱታውን ውድቅ ማድረግ።
+- **በስንት ጊዜ ይወስናል**፦ 21 ቀናት (አንቀጽ 13(ג))።
+- **በተግባር እንዴት**፦ በትምህርት ሚኒስቴር በኩል — [የ-gov.il የአቤቱታ ገጽ](https://www.gov.il/he/departments/general/special_education_appeals)። **በጽሑፍና በምክንያት** አቅርቡ፣ ሁሉንም ሰነዶች አያይዙ፣ የደረሰኝ ማረጋገጫ ጠይቁና ቅጂ ያዙ።
+
+**የባለብዙ-ሙያ ቡድኑ ውሳኔም** በ21 ቀናት ውስጥ አቤቱታ ሊቀርብበት ይችላል።
+
+## ተዘጋጅታችሁ ለመግባት
+
+1. ሁሉንም የኮሚቴ ሰነዶች በጽሑፍ ጠይቁ — 14 ቀናት አስቀድመው መድረሳቸውን አረጋግጡ።
+2. የአማርኛ አስተርጓሚ የሚያስፈልጋችሁ ከሆነ — አስቀድማችሁ በጽሑፍ ጠይቁ።
+3. ምርመራዎችን፣ ሪፖርቶችንና ወቅታዊ የመስማትና የማየት ምርመራዎችን አሰባስቡ።
+4. ሊነገሩ የምትፈልጓቸውን ከሦስት እስከ አምስት ነጥቦች አስቀድማችሁ ጻፉ — በቃለ ጉባኤው እንዲመዘገቡ ጠይቁ።
+5. የተቀበላችሁበትን የጽሑፍ ውሳኔ ቀንና ከዚያ በኋላ ያለውን 21ኛ ቀን በቀን መቁጠሪያ ምልክት አድርጉ።
+
+## የተለየ አያያዝ እንደተደረገባችሁ ከተሰማችሁ
+
+ያልተደመጣችሁ መስሎ መሰማት የተለመደና ትክክለኛ ስሜት ነው፣ መንገዶችም አሉት። አድሎ ከሆነ — [የትምህርት ቤት ምዝገባ አድሎ መመሪያ](/am/education/registration-discrimination) እና [በትምህርት ቤት ውስጥ የወላጅ መብቶች](/am/education/parent-rights) ይመልከቱ፣ ወይም [ቴቤካን](https://www.tebeka.org.il) በ03-5103538 ያነጋግሩ።
+
+> **የሕግ ማስታወሻ፦** ይህ አጠቃላይ መረጃ ነው፣ የሕግ ምክር አይደለም። ከታች ያለው ምርመራ በሕጉና በሚኒስቴሩ መመሪያዎች ላይ ብቻ የተመሠረተ ሲሆን አስገዳጅ ውሳኔ አይደለም።
+
+## ምንጮች
+
+- [የልዩ ትምህርት ሕግ 1988 — ሙሉ ጽሑፍ (ነቮ፣ በዕብራይስጥ)](https://www.nevo.co.il/law_html/law00/71999.htm)
+- [የትምህርት ሚኒስቴር — ማሻሻያ 11 ትግበራ፣ ለወላጆች የመረጃ ገጾች (PDF)](https://meyda.education.gov.il/files/special/lows/parentsinformationtashaf.pdf)
+- [በልዩ ትምህርት ብቁነት ውሳኔዎች ላይ አቤቱታ — gov.il](https://www.gov.il/he/departments/general/special_education_appeals)
+
+*[⚠️ የAI ትርጉም — ይህ ሕጋዊ ርዕስ ነው። ከመታተሙ በፊት በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው እንመክራለን።]*`,
+    },
+    wizard: {
+      questions: [
+        {
+          id: "decisionInWriting",
+          type: "boolean",
+          label: {
+            he: "האם קיבלתם את החלטת הוועדה בכתב (פרוטוקול או הודעת החלטה)?",
+            en: "Have you received the committee's decision in writing (protocol or decision notice)?",
+            am: "የኮሚቴውን ውሳኔ በጽሑፍ ተቀብለዋል (ቃለ ጉባኤ ወይም የውሳኔ ማስታወቂያ)?",
+          },
+        },
+        {
+          id: "decidingBody",
+          type: "radio",
+          label: {
+            he: "איזה גוף קיבל את ההחלטה שאתם רוצים להשיג עליה?",
+            en: "Which body made the decision you want to object to?",
+            am: "አቤቱታ ማቅረብ የምትፈልጉበትን ውሳኔ የወሰነው የትኛው አካል ነው?",
+          },
+          options: [
+            {
+              value: "eligibility-committee",
+              label: {
+                he: "ועדת זכאות ואפיון (לשעבר ועדת השמה) — ברשות המקומית",
+                en: "Eligibility and characterization committee (formerly the placement committee) — at the local authority",
+                am: "የብቁነትና የአፈጻጸም ኮሚቴ (የቀድሞው ועדת השמה) — በማዘጋጃ ቤቱ",
+              },
+            },
+            {
+              value: "multi-professional-team",
+              label: {
+                he: "צוות רב-מקצועי — בגן או בבית הספר",
+                en: "Multi-professional team — at the kindergarten or school",
+                am: "ባለብዙ-ሙያ ቡድን — በሕፃናት ማቆያ ወይም በትምህርት ቤት",
+              },
+            },
+            {
+              value: "placement-committee",
+              label: {
+                he: "ועדת שיבוץ — הקצאת מוסד ספציפי על ידי הרשות המקומית",
+                en: "Placement committee — assignment to a specific institution by the local authority",
+                am: "የምደባ ኮሚቴ — በማዘጋጃ ቤቱ ወደ አንድ የተወሰነ ተቋም መመደብ",
+              },
+            },
+          ],
+        },
+        {
+          id: "filedBy",
+          type: "radio",
+          label: {
+            he: "מי מגיש את ההשגה?",
+            en: "Who is filing the objection?",
+            am: "አቤቱታውን የሚያቀርበው ማን ነው?",
+          },
+          options: [
+            {
+              value: "parent",
+              label: {
+                he: "הורה או אפוטרופוס של התלמיד",
+                en: "A parent or the student's guardian",
+                am: "የተማሪው ወላጅ ወይም አሳዳጊ",
+              },
+            },
+            {
+              value: "student",
+              label: { he: "התלמיד עצמו", en: "The student themselves", am: "ተማሪው ራሱ" },
+            },
+            {
+              value: "public-organisation",
+              label: {
+                he: "נציג של ארגון ציבורי",
+                en: "A public organisation's representative",
+                am: "የሕዝብ ድርጅት ተወካይ",
+              },
+            },
+            {
+              value: "other",
+              label: {
+                he: "גורם אחר (שכן, מורה פרטי, מכר של המשפחה)",
+                en: "Someone else (a neighbour, a private tutor, a family acquaintance)",
+                am: "ሌላ ሰው (ጎረቤት፣ የግል አስተማሪ፣ የቤተሰብ ወዳጅ)",
+              },
+            },
+          ],
+        },
+        {
+          id: "within21Days",
+          type: "boolean",
+          label: {
+            he: "האם עברו פחות מ-21 ימים מהיום שבו קיבלתם את ההחלטה בכתב?",
+            en: "Have fewer than 21 days passed since you received the decision in writing?",
+            am: "ውሳኔውን በጽሑፍ ከተቀበሉበት ቀን ጀምሮ ከ21 ቀናት ያነሰ አልፏል?",
+          },
+        },
+      ],
+      rules: [
+        {
+          kind: "require-true",
+          questionId: "decisionInWriting",
+          reason: {
+            he: "מניין 21 הימים להשגה מתחיל מקבלת ההחלטה בכתב (סעיף 13(א) לחוק). הוועדה חייבת למסור לכם פרוטוקול והחלטה תוך 14 ימים (סעיף 9(ג)(2)) — דרשו אותם בכתב מיושב ראש הוועדה או מהרשות המקומית לפני שתגישו.",
+            en: "The 21-day objection clock runs from receiving the decision in writing (section 13(a)). The committee must give you the protocol and decision within 14 days (section 9(c)(2)) — request them in writing from the chair or the local authority before filing.",
+            am: "የ21 ቀናት ጊዜ የሚጀምረው ውሳኔውን በጽሑፍ ከተቀበሉበት ነው (አንቀጽ 13(א))። ኮሚቴው ቃለ ጉባኤውንና ውሳኔውን በ14 ቀናት ውስጥ መስጠት አለበት (አንቀጽ 9(ג)(2)) — ከማቅረብዎ በፊት በጽሑፍ ይጠይቁ።",
+          },
+        },
+        {
+          kind: "require-not",
+          questionId: "decidingBody",
+          values: ["placement-committee"],
+          reason: {
+            he: "ההשגה לפי סעיף 13 לחוק היא על החלטת ועדת זכאות ואפיון (וכן על החלטת צוות רב-מקצועי, לפי הנחיות משרד החינוך). שיבוץ למוסד ספציפי נקבע בוועדת שיבוץ של הרשות המקומית, שאינה פועלת במסלול הזה — פנו למחלקת החינוך ברשות ולמפקח/ת הכולל/ת במחוז, ובקשו את נימוקי השיבוץ בכתב.",
+            en: "The section 13 objection covers eligibility-committee decisions (and, per the Ministry's directives, multi-professional-team decisions). Assignment to a specific institution is made by the local authority's placement committee, which is outside this track — approach the authority's education department and the district inspector, and ask for the placement reasoning in writing.",
+            am: "በአንቀጽ 13 መሠረት ያለው አቤቱታ የብቁነት ኮሚቴውን (እንዲሁም የባለብዙ-ሙያ ቡድኑን) ውሳኔ ይመለከታል። ወደ አንድ የተወሰነ ተቋም መመደብ በማዘጋጃ ቤቱ የምደባ ኮሚቴ ይወሰናል፣ ይህም ከዚህ መንገድ ውጭ ነው — የማዘጋጃ ቤቱን የትምህርት ክፍልና የአውራጃውን ተቆጣጣሪ ያነጋግሩ።",
+          },
+        },
+        {
+          kind: "require-not",
+          questionId: "filedBy",
+          values: ["other"],
+          reason: {
+            he: "סעיף 13(א) לחוק מקנה את זכות ההשגה לתלמיד, להורה ולנציג של ארגון ציבורי בלבד. מי שאינו אחד מאלה יכול ללוות אתכם לדיון ולסייע בהכנת המסמכים — אך ההשגה עצמה צריכה להיות מוגשת על ידי ההורה, התלמיד או ארגון ציבורי.",
+            en: "Section 13(a) grants the right to object to the student, a parent, and a public organisation's representative only. Anyone else may accompany you to the hearing and help prepare the material — but the objection itself must be filed by the parent, the student, or a public organisation.",
+            am: "አንቀጽ 13(א) የአቤቱታ መብቱን ለተማሪው፣ ለወላጅና ለሕዝብ ድርጅት ተወካይ ብቻ ይሰጣል። ሌላ ሰው ሊያጅብዎና ሰነዶችን ሊያዘጋጅ ይችላል — አቤቱታው ግን በወላጅ፣ በተማሪው ወይም በሕዝብ ድርጅት መቅረብ አለበት።",
+          },
+        },
+        {
+          kind: "require-true",
+          questionId: "within21Days",
+          reason: {
+            he: "המועד להגשת השגה הוא 21 ימים מקבלת ההחלטה בכתב (סעיף 13(א) לחוק). אם המועד חלף — עדיין אפשר לבקש דיון חוזר בוועדת זכאות ואפיון (סעיף 10 לחוק מאפשר בקשת דיון חוזר לאחר שחלפה שנה, ובנסיבות מסוימות מוקדם יותר באישור המחוז), ואפשר לפנות למחוז ולהתייעץ עם עורך דין או עם טבקה בטלפון 03-5103538.",
+            en: "The deadline for an objection is 21 days from receiving the decision in writing (section 13(a)). If it has passed, you can still request a review hearing at the eligibility committee (section 10 allows a request once a year has passed, and earlier in certain circumstances with district approval), approach the district, and consult a lawyer or Tebeka at 03-5103538.",
+            am: "አቤቱታ የማቅረቢያ ጊዜው ውሳኔውን በጽሑፍ ከተቀበሉ 21 ቀናት ነው (አንቀጽ 13(א))። ጊዜው ካለፈ — አሁንም በብቁነት ኮሚቴው ዳግም ውይይት መጠየቅ ይቻላል (አንቀጽ 10)፣ አውራጃውን ማነጋገርና ጠበቃ ወይም ቴቤካን በ03-5103538 ማማከር ይችላሉ።",
+          },
+        },
+      ],
+    },
+  },
 ];
