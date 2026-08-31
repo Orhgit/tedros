@@ -7714,6 +7714,17 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
   //     the district ועדת השגה chaired by the מנהל מחוז, the right to bring
   //     one's own representatives, and — directly relevant here — that
   //     "הורים הזקוקים להנגשה או לתרגום שפה, יודיעו על כך מראש לוועדה".
+  //   - חוזר מנכ"ל 0287, "יישום חוק החינוך המיוחד — ועדות מתוקף חוק"
+  //     (apps.education.gov.il/mankal/horaa.aspx?siduri=385), verified from the
+  //     circular text itself. Three provisions used here: linguistic accessibility
+  //     must be arranged IN ADVANCE for parents who do not speak Hebrew, and if it
+  //     was not provided a new date is set which does not count towards the
+  //     postponement limit; the student and parents may bring their own
+  //     interpreter to the ועדת השגה; and a new-immigrant student in their first
+  //     year is referred only on admissible evidence of a disability, "ולא על רקע
+  //     של קשיי קליטה ושפה בלבד".
+  //   - מרכז המחקר והמידע של הכנסת (11.8.2022) — 17.2% of Ethiopian-Israeli pupils
+  //     entitled to special-education services vs 12% system-wide.
   //   - כל-זכות — ועדת זכאות ואפיון, ועדת שיבוץ (the latter for the fact that
   //     the local authority's placement committee, not the eligibility
   //     committee, assigns the specific institution, and that parents are not
@@ -7799,7 +7810,8 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
 - **לקבל את כל המסמכים מראש.** כל מסמך שנמצא בידי הוועדה ועשוי לשמש בדיון — לפחות **14 ימים לפני** התכנסותה. אם לא קיבלתם, בקשו בכתב ובקשו לדחות את הדיון.
 - **לצרף מסמכים משלכם.** אבחונים, דוחות טיפוליים, חוות דעת פרטיות, מכתב חופשי. מילוי שאלון ההורים אינו חובה — אפשר להגיש מכתב בנוסח שלכם.
 - **לדבר ביחידות.** אתם והתלמיד רשאים לבקש להשמיע את דבריכם בפני חברי הוועדה בלבד, בלי שאר המוזמנים בחדר.
-- **לתרגום ולהנגשה.** ההנחיות של משרד החינוך קובעות במפורש: "הורים הזקוקים להנגשה או לתרגום שפה, יודיעו על כך מראש לוועדה." **אם עברית אינה שפת האם שלכם — בקשו מתורגמן לאמהרית מראש, בכתב.** אפשר לציין זאת בשאלון ההורים. זו לא בקשה חריגה.
+- **לתרגום ולהנגשה — וזו זכות חזקה מכפי שרוב ההורים מניחים.** חוזר מנכ"ל 0287, "יישום חוק החינוך המיוחד — ועדות מתוקף חוק", קובע: "בדיון שמשתתפים בו הורים עם מוגבלות, **הורים שאינם דוברי עברית**, או הורים הזקוקים לתיווך של התהליך, ידאג יו"ר הצוות הרב-מקצועי **מראש** להנגשה הנדרשת… כגון הנגשה פיזית של מקום המפגש, תרגום לשפת הסימנים, הקראת המסמכים, **תרגום לשפה המובנת להורים** וגישור. **אם לא סופקה ההנגשה, ייקבע מועד חדש** בתיאום עם ההורים, ובו יתקיים הדיון עם ההנגשה הנדרשת. דחיית הדיון במקרה זה **לא תיכלל במניין הדחיות**." כלומר: אם הגעתם ולא היה תרגום — אתם רשאים לבקש שהדיון יידחה, וזה לא ייזקף לחובתכם. הודיעו מראש ובכתב, וציינו זאת גם בשאלון ההורים.
+- **להביא מתורגמן משלכם לוועדת ההשגה.** אותו חוזר קובע שהתלמיד וההורים רשאים להביא לדיון בוועדת ההשגה מומחים או אנשים אחרים מטעמם, לרבות עורך דין, "**וכן מתורגמן מטעמם**".
 - **לדעת מי יושב מולכם.** בוועדה שישה חברים (סעיף 6(א)): נציג משרד החינוך כיושב ראש, נציג הרשות המקומית, פסיכולוג חינוכי, מפקח לחינוך מיוחד, מפקח לחינוך רגיל — **ונציג הורים**, שהוא בעצמו הורה לילד עם מוגבלות, ממונה על ידי שר החינוך. אתם רשאים לפנות לרכז נציגי ההורים באזורכם ולהיפגש עם נציג ההורים עוד לפני הדיון.
 - **לקבל פרוטוקול והחלטה בכתב** — תוך **14 ימים** (סעיף 9(ג)(2)). בלי פרוטוקול אין על מה להשיג, אז אל תוותרו עליו.
 
@@ -7809,6 +7821,16 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
 - **הדיונים מתקיימים** בין 1 בנובמבר ל-15 במאי באותה שנת לימודים, למעט מקרים חריגים.
 - **מי רשאי להפנות** (סעיף 8): ההורים, התלמיד, הצוות הרב-מקצועי, מוסד חינוך מוכר, הרשות המקומית, ארגון ציבורי או גורם שהוסמך לכך. **ההורים רשאים לפנות לוועדה בכל שלב** — אינכם תלויים בבית הספר.
 - **תוקף ההחלטה: שלוש שנים**, ודיון חוזר מתקיים אחת לשלוש שנים (סעיף 10(א)). אפשר לבקש דיון חוזר מוקדם יותר לאחר שחלפה שנה.
+
+## חשוב במיוחד: קשיי שפה וקליטה אינם עילה להפניה
+
+זו אולי השורה החשובה ביותר בעמוד הזה. חוזר מנכ"ל 0287 קובע במפורש: "**תלמיד עולה חדש בשנה הראשונה לעלייתו יופנה לדיון בצוות הרב-מקצועי כל עוד יש בידי הגורם המפנה מסמכים עדכניים וקבילים המעידים על מוגבלותו, ולא על רקע של קשיי קליטה ושפה בלבד.**"
+
+במילים אחרות: ילד שמתקשה בעברית, שהגיע לא מזמן, או שמתקשה להסתגל — אינו אמור להיות מופנה לוועדה בגלל זה. הפניה מחייבת מסמך קביל על אבחנת מוגבלות.
+
+זו לא נקודה תיאורטית. מסמך של מרכז המחקר והמידע של הכנסת משנת 2022 מצא ש-17.2% מהתלמידים יוצאי אתיופיה זכאים לשירותי חינוך מיוחדים, לעומת 12% בקרב כלל התלמידים — ושבארבע השנים שקדמו לו שיעור התלמידים יוצאי אתיופיה המשולבים בחינוך הרגיל ירד במידה ניכרת.
+
+לכן, אם הופנה ילדכם — שאלו במפורש, ובקשו שהתשובה תירשם בפרוטוקול: **על סמך איזה מסמך אבחנתי נעשתה ההפניה?** אם התשובה נוגעת לעברית, להסתגלות או להתנהגות בלבד — ציינו את הוראת החוזר.
 
 ## איך מגישים השגה
 
@@ -7842,7 +7864,7 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
 
 ## אם אתם מרגישים שהיחס אליכם היה שונה
 
-תחושה של הורים שהם לא נשמעו, שדיברו מעל ראשם, או שההחלטה הייתה סגורה מראש — היא תחושה מוכרת ולגיטימית, ויש לה מסלולי טיפול. הליך ההשגה הוא המסלול הפורמלי לתקוף את ההחלטה עצמה. אם מדובר ביחס מפלה ולא רק בהחלטה שגויה — ראו את [המדריך לאפליה ברישום לבית ספר](/he/education/registration-discrimination) ואת [זכויות ההורה בבית הספר](/he/education/parent-rights), ואפשר לפנות ל[טבקה](https://www.tebeka.org.il) בטלפון 03-5103538.
+תחושה של הורים שהם לא נשמעו, שדיברו מעל ראשם, או שההחלטה הייתה סגורה מראש — היא תחושה מוכרת ולגיטימית, ויש לה מסלולי טיפול. הליך ההשגה הוא המסלול הפורמלי לתקוף את ההחלטה עצמה. אם מדובר ביחס מפלה ולא רק בהחלטה שגויה — ראו את [המדריך לאפליה ברישום לבית ספר](/he/education/registration-discrimination) ואת [זכויות ההורה בבית הספר](/he/education/parent-rights), ואפשר לפנות ל[טבקה](https://www.tebeka.org.il) בטלפון 072-2424622.
 
 > **הבהרה משפטית:** המידע כאן כללי ואינו ייעוץ משפטי. בדיקת ההשגה באשף שלמטה מבוססת על לשון החוק והנחיות משרד החינוך בלבד, ואינה קביעה מחייבת. נהלים ותאריכים משתנים — אמתו מול הוועדה ומול המחוז.
 
@@ -7851,6 +7873,7 @@ Stopped or detained on the street? Know your rights — [Stopped on the street? 
 - [חוק חינוך מיוחד, התשמ"ח-1988 — נוסח מלא (נבו)](https://www.nevo.co.il/law_html/law00/71999.htm)
 - [משרד החינוך — יישום תיקון 11 לחוק החינוך המיוחד, דפי מידע להורים (PDF)](https://meyda.education.gov.il/files/special/lows/parentsinformationtashaf.pdf)
 - [מדריך למימוש זכויות מתוקף חוק חינוך מיוחד — gov.il](https://www.gov.il/he/pages/guide_rights_committees_special_ed_law)
+- [חוזר מנכ"ל 0287 — יישום חוק החינוך המיוחד, ועדות מתוקף חוק](https://apps.education.gov.il/mankal/horaa.aspx?siduri=385)
 - [השגה על החלטות בעניין זכאות ילד לשירותי חינוך מיוחד — gov.il](https://www.gov.il/he/departments/general/special_education_appeals)
 - [ועדת זכאות ואפיון — פורטל ההורים של משרד החינוך](https://parents.education.gov.il/prhnet/special-education/committees/entitelment-committee)
 - [ועדת זכאות ואפיון לשירותי חינוך מיוחדים — כל-זכות](https://www.kolzchut.org.il/he/%D7%95%D7%A2%D7%93%D7%AA_%D7%96%D7%9B%D7%90%D7%95%D7%AA_%D7%95%D7%90%D7%A4%D7%99%D7%95%D7%9F_%D7%9C%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99_%D7%97%D7%99%D7%A0%D7%95%D7%9A_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D)
@@ -7898,7 +7921,8 @@ Three caveats worth knowing:
 - **To receive all documents in advance** — at least **14 days** before the hearing. If you did not, ask in writing and ask to postpone.
 - **To submit your own material.** Assessments, therapy reports, private opinions, a free-form letter. The parent questionnaire is not mandatory.
 - **To speak privately.** You and the student may ask to address the committee members alone, without the other invitees.
-- **To interpretation and accessibility.** The Ministry's directives state explicitly that parents needing accessibility or language translation should notify the committee in advance. **If Hebrew is not your first language, request an Amharic interpreter in advance, in writing.** This is not an unusual request.
+- **To interpretation and accessibility — a stronger right than most parents assume.** Ministry circular 0287, "Implementing the Special Education Law — statutory committees", provides that where a hearing involves parents with a disability, **parents who do not speak Hebrew**, or parents who need the process mediated, the chair shall arrange the required accessibility **in advance** — including reading the documents aloud, **translation into a language the parents understand**, and mediation. **If the accessibility was not provided, a new date shall be set** and the hearing held with it — and that postponement **does not count towards the limit on postponements**. So if you arrived and there was no interpreter, you may ask for the hearing to be rescheduled, and it will not be held against you. Give notice in advance and in writing.
+- **To bring your own interpreter to the objection committee.** The same circular provides that the student and parents may bring experts or other people of their own to the objection hearing, including a lawyer, "**and an interpreter of their own**".
 - **To know who is across the table.** Six members (section 6(a)): a Ministry representative as chair, a local-authority representative, an educational psychologist, a special-education inspector, a mainstream-education inspector — and a **parent representative**, themselves a parent of a child with a disability, appointed by the Minister. You may contact the regional parent-representative coordinator and meet them before the hearing.
 - **To a written protocol and decision** — within **14 days** (section 9(c)(2)). Without the protocol there is nothing to object to.
 
@@ -7908,6 +7932,16 @@ Three caveats worth knowing:
 - **Hearings** run from 1 November to 15 May of that school year, save exceptional cases.
 - **Who may refer** (section 8): the parents, the student, the multi-professional team, a recognised educational institution, the local authority, a public organisation, or an authorised body. **Parents may approach the committee at any stage** — you are not dependent on the school.
 - **The decision is valid for three years**, with a review hearing every three years (section 10(a)). An earlier review may be requested once a year has passed.
+
+## Especially important: language and absorption difficulties are not grounds for referral
+
+This may be the most important line on this page. Ministry circular 0287 provides expressly that a new-immigrant student in their first year after aliyah shall be referred to a multi-professional team discussion **only** where the referring party holds current, admissible documents evidencing a disability — **and not on the basis of absorption and language difficulties alone**.
+
+In other words: a child who struggles with Hebrew, arrived recently, or is having trouble settling in should not be referred for that reason. A referral requires an admissible document of a diagnosed disability.
+
+This is not theoretical. A 2022 Knesset Research Center document found that 17.2% of Ethiopian-Israeli pupils are entitled to special education services, against 12% among pupils generally — and that over the preceding four years the share of Ethiopian-Israeli pupils integrated into mainstream education had fallen considerably.
+
+So if your child has been referred, ask explicitly, and ask for the answer to be recorded in the protocol: **on the basis of which diagnostic document was this referral made?** If the answer concerns Hebrew, adjustment or behaviour alone — cite the circular's provision.
 
 ## How to file an objection (השגה)
 
@@ -7939,7 +7973,7 @@ Three caveats worth knowing:
 
 ## If you felt you were treated differently
 
-Feeling unheard, talked over, or that the decision was made in advance is a familiar and legitimate experience, and there are routes for it. The objection procedure is the formal way to challenge the decision itself. Where the issue is discriminatory treatment rather than a wrong decision — see the [school registration discrimination guide](/en/education/registration-discrimination) and [parent rights at school](/en/education/parent-rights), and you can contact [Tebeka](https://www.tebeka.org.il) at 03-5103538.
+Feeling unheard, talked over, or that the decision was made in advance is a familiar and legitimate experience, and there are routes for it. The objection procedure is the formal way to challenge the decision itself. Where the issue is discriminatory treatment rather than a wrong decision — see the [school registration discrimination guide](/en/education/registration-discrimination) and [parent rights at school](/en/education/parent-rights), and you can contact [Tebeka](https://www.tebeka.org.il) at 072-2424622.
 
 > **Legal note:** general information, not legal advice. The check below follows the statute and the Ministry's directives only and is not a binding determination. Procedures and dates change — verify with the committee and the district.
 
@@ -7948,6 +7982,7 @@ Feeling unheard, talked over, or that the decision was made in advance is a fami
 - [Special Education Law, 5748-1988 — full text (Nevo, Hebrew)](https://www.nevo.co.il/law_html/law00/71999.htm)
 - [Ministry of Education — implementing Amendment 11, parent information pages (PDF, Hebrew)](https://meyda.education.gov.il/files/special/lows/parentsinformationtashaf.pdf)
 - [Guide to exercising rights under the Special Education Law — gov.il](https://www.gov.il/he/pages/guide_rights_committees_special_ed_law)
+- [Ministry circular 0287 — implementing the Special Education Law, statutory committees (Hebrew)](https://apps.education.gov.il/mankal/horaa.aspx?siduri=385)
 - [Objections on special-education entitlement decisions — gov.il](https://www.gov.il/he/departments/general/special_education_appeals)
 - [Eligibility and characterization committee — Ministry of Education parents' portal](https://parents.education.gov.il/prhnet/special-education/committees/entitelment-committee)
 `,
@@ -7987,7 +8022,8 @@ Feeling unheard, talked over, or that the decision was made in advance is a fami
 - **ሁሉንም ሰነዶች አስቀድሞ መቀበል** — ስብሰባው **ቢያንስ 14 ቀናት** በፊት።
 - **የራሳችሁን ሰነዶች ማቅረብ** — ምርመራዎች፣ የሕክምና ሪፖርቶች፣ የግል የባለሙያ አስተያየቶች፣ ወይም በራሳችሁ ቃል የተጻፈ ደብዳቤ።
 - **በተናጠል መናገር** — ሌሎቹ ተጋባዦች ሳይኖሩ ለኮሚቴው አባላት ብቻ መናገር መጠየቅ ትችላላችሁ።
-- **ትርጉምና ተደራሽነት** — የትምህርት ሚኒስቴር መመሪያዎች በግልጽ ይላሉ፦ "ተደራሽነት ወይም የቋንቋ ትርጉም የሚያስፈልጋቸው ወላጆች ለኮሚቴው አስቀድመው ያሳውቁ።" **ዕብራይስጥ የመጀመሪያ ቋንቋችሁ ካልሆነ — የአማርኛ አስተርጓሚ አስቀድማችሁ በጽሑፍ ጠይቁ።** ይህ ያልተለመደ ጥያቄ አይደለም።
+- **ትርጉምና ተደራሽነት — ብዙ ወላጆች ከሚገምቱት የበለጠ ጠንካራ መብት ነው።** የሚኒስቴሩ ሰርኩላር 0287 ይደነግጋል፦ የአካል ጉዳት ያለባቸው ወላጆች፣ **ዕብራይስጥ የማይናገሩ ወላጆች**፣ ወይም ሂደቱ እንዲተረጎምላቸው የሚያስፈልጋቸው ወላጆች በሚሳተፉበት ስብሰባ ላይ ሊቀመንበሩ **አስቀድሞ** የሚያስፈልገውን ተደራሽነት ማዘጋጀት አለበት — ሰነዶቹን ጮክ ብሎ ማንበብን፣ **ወላጆች ወደሚረዱት ቋንቋ መተርጎምን** እና ሽምግልናን ጨምሮ። **ተደራሽነቱ ካልተሰጠ አዲስ ቀን ይወሰናል**፣ እና ይህ መዘግየት **በመዘግየቶች ቁጥር ውስጥ አይካተትም**። ስለዚህ ደርሳችሁ አስተርጓሚ ካልነበረ፣ ስብሰባው እንዲተላለፍ መጠየቅ ትችላላችሁ። አስቀድማችሁ በጽሑፍ አሳውቁ።
+- **ወደ አቤቱታ ኮሚቴው የራሳችሁን አስተርጓሚ ማምጣት።** ተመሳሳዩ ሰርኩላር ተማሪውና ወላጆች ወደ አቤቱታ ስብሰባው ባለሙያዎችን ወይም ሌሎች ሰዎችን — ጠበቃንም ጨምሮ — "**እንዲሁም የራሳቸውን አስተርጓሚ**" ማምጣት እንደሚችሉ ይደነግጋል።
 - **ማን እንደተቀመጠ ማወቅ** — ስድስት አባላት (አንቀጽ 6(א))፣ ከእነሱም አንዱ ራሱ የአካል ጉዳተኛ ልጅ ወላጅ የሆነ **የወላጆች ተወካይ** ነው። ከስብሰባው በፊት ልታገኙት ትችላላችሁ።
 - **ቃለ ጉባኤና ውሳኔ በጽሑፍ መቀበል** — በ**14 ቀናት** ውስጥ (አንቀጽ 9(ג)(2))። ያለ ቃለ ጉባኤ አቤቱታ ማቅረብ አይቻልም።
 
@@ -7997,6 +8033,16 @@ Feeling unheard, talked over, or that the decision was made in advance is a fami
 - **ስብሰባዎቹ** ከኅዳር 1 እስከ ግንቦት 15 ይካሄዳሉ።
 - **ወላጆች በማንኛውም ደረጃ ወደ ኮሚቴው መቅረብ ይችላሉ** — በትምህርት ቤቱ ላይ ጥገኛ አይደላችሁም (አንቀጽ 8)።
 - **ውሳኔው ለሦስት ዓመታት ይሠራል**፤ በየሦስት ዓመቱ ዳግም ውይይት ይካሄዳል (አንቀጽ 10(א))።
+
+## በተለይ አስፈላጊ፦ የቋንቋና የመቀላቀል ችግሮች ለመላክ ምክንያት አይደሉም
+
+ይህ በዚህ ገጽ ላይ ካሉት ሁሉ በጣም አስፈላጊው መስመር ሊሆን ይችላል። የሚኒስቴሩ ሰርኩላር 0287 በግልጽ ይደነግጋል፦ አዲስ የመጣ ተማሪ በመጀመሪያው ዓመቱ ወደ ባለብዙ-ሙያ ቡድን ውይይት የሚላከው የአካል ጉዳቱን የሚያረጋግጡ ወቅታዊና ተቀባይነት ያላቸው ሰነዶች ሲኖሩ ብቻ ነው — **በመቀላቀልና በቋንቋ ችግሮች ምክንያት ብቻ አይደለም**።
+
+በሌላ አነጋገር፦ በዕብራይስጥ የሚቸገር፣ በቅርቡ የመጣ፣ ወይም ለመላመድ የሚቸገር ልጅ በዚህ ምክንያት መላክ የለበትም። መላክ የአካል ጉዳት ምርመራ ተቀባይነት ያለው ሰነድ ይጠይቃል።
+
+ይህ ንድፈ ሐሳባዊ አይደለም። የ2022 የክነሴት ምርምር ማዕከል ሰነድ ከኢትዮጵያ ተወላጅ ተማሪዎች 17.2% ለልዩ ትምህርት አገልግሎቶች ብቁ እንደሆኑ አግኝቷል — በአጠቃላይ ካሉት ተማሪዎች ካለው 12% ጋር ሲነጻጸር።
+
+ስለዚህ ልጅዎ ከተላከ በግልጽ ይጠይቁ፣ መልሱም በቃለ ጉባኤው እንዲመዘገብ ይጠይቁ፦ **ይህ መላክ የተደረገው በየትኛው የምርመራ ሰነድ መሠረት ነው?** መልሱ ስለ ዕብራይስጥ፣ ስለ መላመድ ወይም ስለ ባህሪ ብቻ ከሆነ — የሰርኩላሩን ድንጋጌ ይጥቀሱ።
 
 ## አቤቱታ (השגה) እንዴት ማቅረብ ይቻላል
 
@@ -8020,13 +8066,14 @@ Feeling unheard, talked over, or that the decision was made in advance is a fami
 
 ## የተለየ አያያዝ እንደተደረገባችሁ ከተሰማችሁ
 
-ያልተደመጣችሁ መስሎ መሰማት የተለመደና ትክክለኛ ስሜት ነው፣ መንገዶችም አሉት። አድሎ ከሆነ — [የትምህርት ቤት ምዝገባ አድሎ መመሪያ](/am/education/registration-discrimination) እና [በትምህርት ቤት ውስጥ የወላጅ መብቶች](/am/education/parent-rights) ይመልከቱ፣ ወይም [ቴቤካን](https://www.tebeka.org.il) በ03-5103538 ያነጋግሩ።
+ያልተደመጣችሁ መስሎ መሰማት የተለመደና ትክክለኛ ስሜት ነው፣ መንገዶችም አሉት። አድሎ ከሆነ — [የትምህርት ቤት ምዝገባ አድሎ መመሪያ](/am/education/registration-discrimination) እና [በትምህርት ቤት ውስጥ የወላጅ መብቶች](/am/education/parent-rights) ይመልከቱ፣ ወይም [ቴቤካን](https://www.tebeka.org.il) በ072-2424622 ያነጋግሩ።
 
 > **የሕግ ማስታወሻ፦** ይህ አጠቃላይ መረጃ ነው፣ የሕግ ምክር አይደለም። ከታች ያለው ምርመራ በሕጉና በሚኒስቴሩ መመሪያዎች ላይ ብቻ የተመሠረተ ሲሆን አስገዳጅ ውሳኔ አይደለም።
 
 ## ምንጮች
 
 - [የልዩ ትምህርት ሕግ 1988 — ሙሉ ጽሑፍ (ነቮ፣ በዕብራይስጥ)](https://www.nevo.co.il/law_html/law00/71999.htm)
+- [የሚኒስቴሩ ሰርኩላር 0287 — የልዩ ትምህርት ሕግ ትግበራ፣ በሕግ የተቋቋሙ ኮሚቴዎች](https://apps.education.gov.il/mankal/horaa.aspx?siduri=385)
 - [የትምህርት ሚኒስቴር — ማሻሻያ 11 ትግበራ፣ ለወላጆች የመረጃ ገጾች (PDF)](https://meyda.education.gov.il/files/special/lows/parentsinformationtashaf.pdf)
 - [በልዩ ትምህርት ብቁነት ውሳኔዎች ላይ አቤቱታ — gov.il](https://www.gov.il/he/departments/general/special_education_appeals)
 
@@ -8161,9 +8208,9 @@ Feeling unheard, talked over, or that the decision was made in advance is a fami
           kind: "require-true",
           questionId: "within21Days",
           reason: {
-            he: "המועד להגשת השגה הוא 21 ימים מקבלת ההחלטה בכתב (סעיף 13(א) לחוק). אם המועד חלף — עדיין אפשר לבקש דיון חוזר בוועדת זכאות ואפיון (סעיף 10 לחוק מאפשר בקשת דיון חוזר לאחר שחלפה שנה, ובנסיבות מסוימות מוקדם יותר באישור המחוז), ואפשר לפנות למחוז ולהתייעץ עם עורך דין או עם טבקה בטלפון 03-5103538.",
-            en: "The deadline for an objection is 21 days from receiving the decision in writing (section 13(a)). If it has passed, you can still request a review hearing at the eligibility committee (section 10 allows a request once a year has passed, and earlier in certain circumstances with district approval), approach the district, and consult a lawyer or Tebeka at 03-5103538.",
-            am: "አቤቱታ የማቅረቢያ ጊዜው ውሳኔውን በጽሑፍ ከተቀበሉ 21 ቀናት ነው (አንቀጽ 13(א))። ጊዜው ካለፈ — አሁንም በብቁነት ኮሚቴው ዳግም ውይይት መጠየቅ ይቻላል (አንቀጽ 10)፣ አውራጃውን ማነጋገርና ጠበቃ ወይም ቴቤካን በ03-5103538 ማማከር ይችላሉ።",
+            he: "המועד להגשת השגה הוא 21 ימים מקבלת ההחלטה בכתב (סעיף 13(א) לחוק). אם המועד חלף — עדיין אפשר לבקש דיון חוזר בוועדת זכאות ואפיון (סעיף 10 לחוק מאפשר בקשת דיון חוזר לאחר שחלפה שנה, ובנסיבות מסוימות מוקדם יותר באישור המחוז), ואפשר לפנות למחוז ולהתייעץ עם עורך דין או עם טבקה בטלפון 072-2424622.",
+            en: "The deadline for an objection is 21 days from receiving the decision in writing (section 13(a)). If it has passed, you can still request a review hearing at the eligibility committee (section 10 allows a request once a year has passed, and earlier in certain circumstances with district approval), approach the district, and consult a lawyer or Tebeka at 072-2424622.",
+            am: "አቤቱታ የማቅረቢያ ጊዜው ውሳኔውን በጽሑፍ ከተቀበሉ 21 ቀናት ነው (አንቀጽ 13(א))። ጊዜው ካለፈ — አሁንም በብቁነት ኮሚቴው ዳግም ውይይት መጠየቅ ይቻላል (አንቀጽ 10)፣ አውራጃውን ማነጋገርና ጠበቃ ወይም ቴቤካን በ072-2424622 ማማከር ይችላሉ።",
           },
         },
       ],
