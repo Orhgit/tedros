@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { findNeighborhoodBySlug } from "../app/lib/urban-renewal/registry";
+import { hydrateNeighborhood } from "../app/lib/urban-renewal/content.server";
 import {
   breadcrumbJsonLd,
   faqJsonLd,
@@ -11,7 +12,10 @@ import {
 } from "../app/lib/urban-renewal/schema";
 
 const ctx: SchemaContext = { publicUrl: "https://tedros.co.il", locale: "he" };
-const dora = findNeighborhoodBySlug("dora-netanya")!;
+// The JSON-LD builders read the long-form fields that moved to the
+// server-only content module under ADR-020 — hydrate exactly as the route
+// loader does, so the schema assertions below are unchanged.
+const dora = hydrateNeighborhood(findNeighborhoodBySlug("dora-netanya")!);
 
 describe("breadcrumbJsonLd", () => {
   it("produces a BreadcrumbList with 1-indexed positions and locale-aware URLs", () => {

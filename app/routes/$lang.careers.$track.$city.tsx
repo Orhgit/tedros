@@ -29,7 +29,8 @@ import { CAREER_TRACKS, findCareerTrack } from "~/lib/careers/careers.server";
 import { bootcampPath, trackCityPath, trackPath } from "~/lib/careers/links";
 import { isRelevant as isCareerRelevant, relevantCities } from "~/lib/careers/relevance";
 import { breadcrumbJsonLd } from "~/lib/careers/schema";
-import { CITIES, cityName, cityOverview, findCityBySlug } from "~/lib/cities/registry";
+import { CITIES, cityName, findCityBySlug } from "~/lib/cities/registry";
+import { cityCommunityStats, cityOverview } from "~/lib/cities/content.server";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
 import {
   type ProfessionalSummary,
@@ -155,7 +156,11 @@ export async function loader({ params }: Route.LoaderArgs) {
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}${trackCityPath(track.slug, city.slug)}`;
   const cityNameLocal = cityName(city, locale);
-  const cityOverviewLocal = cityOverview(city, locale);
+  const cityOverviewLocal = cityOverview(city.slug, locale);
+  const cityStats = cityCommunityStats(city.slug).map((s) => ({
+    label: s.label[locale] ?? s.label.he,
+    value: s.value,
+  }));
 
   return {
     locale,
@@ -163,6 +168,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     city,
     cityNameLocal,
     cityOverviewLocal,
+    cityStats,
     cellBootcamps,
     cellProfessionals,
     cellRights,
@@ -260,6 +266,7 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
     city,
     cityNameLocal,
     cityOverviewLocal,
+    cityStats,
     cellBootcamps,
     cellProfessionals,
     cellRights,
@@ -350,16 +357,14 @@ export default function CareerCityCell({ loaderData }: Route.ComponentProps) {
           <p className="mt-2 text-base leading-relaxed text-ink-700">
             {cityOverviewLocal}
           </p>
-          {city.communityStats && city.communityStats.length > 0 && (
+          {cityStats.length > 0 && (
             <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {city.communityStats.map((s, i) => (
+              {cityStats.map((s, i) => (
                 <div
                   key={i}
                   className="rounded-md border border-earth-100 bg-white px-3 py-2"
                 >
-                  <dt className="text-xs font-medium text-earth-600">
-                    {s.label[locale] ?? s.label.he}
-                  </dt>
+                  <dt className="text-xs font-medium text-earth-600">{s.label}</dt>
                   <dd className="mt-1 text-sm font-semibold text-earth-900">{s.value}</dd>
                 </div>
               ))}

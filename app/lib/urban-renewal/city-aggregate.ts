@@ -18,6 +18,9 @@
 // `~/lib/urban-renewal/registry.ts`'s header comment).
 
 import type { Locale } from "~/lib/i18n/config";
+// The three aggregation helpers below read `units.note` and `sources`, which
+// live in ./content.server.ts — callers must pass HYDRATED neighborhoods
+// (`hydrateNeighborhoods`), which in practice means calling them in a loader.
 import type { LocalizedText, UrbanRenewalNeighborhood } from "./registry";
 import { URBAN_RENEWAL_NEIGHBORHOODS } from "./registry";
 
