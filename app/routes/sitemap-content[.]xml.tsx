@@ -2,7 +2,12 @@ import { CITIES } from "~/lib/cities/registry";
 import { COMPARISONS } from "~/lib/comparisons/comparisons.server";
 import { CITY_SHOPPING } from "~/lib/culinary/shops.server";
 import { EDUCATION_TRACKS } from "~/lib/education/tracks";
-import { parentRightsPath, registrationDiscriminationPath } from "~/lib/education/links";
+import {
+  amharicHubPath,
+  amharicUlpanPath,
+  parentRightsPath,
+  registrationDiscriminationPath,
+} from "~/lib/education/links";
 import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
 import { SCHOLARSHIP_RELEVANCE_CITIES } from "~/lib/education/scholarship-relevance";
 import { getEnv } from "~/lib/env.server";
@@ -53,6 +58,9 @@ export function loader() {
     // Parents vs. the school system (TED-145)
     registrationDiscriminationPath(),
     parentRightsPath(),
+    // Learning Amharic (TED-147)
+    amharicHubPath(),
+    amharicUlpanPath(),
     ...SCHOLARSHIPS.flatMap((s) =>
       SCHOLARSHIP_RELEVANCE_CITIES.map(
         (city) => `/education/scholarships/${s.slug}/${city}`,
