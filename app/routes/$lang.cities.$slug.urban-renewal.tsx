@@ -3,7 +3,7 @@
 // `/cities/:slug/urban-renewal` aggregates a city's already-shipped T3
 // neighborhood pages (`~/lib/urban-renewal/registry.ts`, TED-93/ADR-016)
 // with real citywide context: the city's existing sourced `overview` from
-// `~/lib/cities/registry.ts`, a summed unit count over neighborhoods that
+// `~/lib/cities/content.server.ts`, a summed unit count over neighborhoods that
 // publish a numeric figure (never estimated — see
 // `~/lib/urban-renewal/city-aggregate.ts`), and links out to each
 // neighborhood's own page. Only resolves for cities that actually have a
@@ -16,7 +16,8 @@ import { Link, isRouteErrorResponse, useRouteError } from "react-router";
 import type { Route } from "./+types/$lang.cities.$slug.urban-renewal";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
-import { cityName, cityOverview, cityPath, findCityBySlug } from "~/lib/cities/registry";
+import { cityName, cityPath, findCityBySlug } from "~/lib/cities/registry";
+import { cityOverview } from "~/lib/cities/content.server";
 import {
   aggregateUnits,
   citySources,
@@ -68,6 +69,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   return {
     locale,
     city,
+    overview: cityOverview(city.slug, locale),
     neighborhoods,
     units,
     notes,
@@ -128,7 +130,8 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function CityUrbanRenewalPage({ loaderData }: Route.ComponentProps) {
-  const { locale, city, neighborhoods, units, notes, sources, legalRight } = loaderData;
+  const { locale, city, overview, neighborhoods, units, notes, sources, legalRight } =
+    loaderData;
   const cityDisplayName = cityName(city, locale);
   const keyword = cityUrbanRenewalKeyword(city.slug, locale);
   const path = `/${locale}/cities/${city.slug}/urban-renewal`;
@@ -192,9 +195,7 @@ export default function CityUrbanRenewalPage({ loaderData }: Route.ComponentProp
           >
             {t(locale, "city_urw_section_context_title", { city: cityDisplayName })}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-ink-700">
-            {cityOverview(city, locale)}
-          </p>
+          <p className="mt-3 text-sm leading-relaxed text-ink-700">{overview}</p>
         </section>
 
         <section

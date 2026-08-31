@@ -15,7 +15,8 @@ import { RelatedRights } from "~/components/sections/related-rights";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import { CITIES, findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
+import { CITIES, findCityBySlug, cityName } from "~/lib/cities/registry";
+import { cityCommunityStats, cityOverview } from "~/lib/cities/content.server";
 import {
   getRightBySlug,
   relatedRights,
@@ -26,7 +27,7 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag, glyphForTag, tagChipClasses } from "~/lib/rights/categories";
-import { generateCityFaq } from "~/lib/rights/city-faq";
+import { generateCityFaq } from "~/lib/rights/city-faq.server";
 import { isRelevant, relevantCities } from "~/lib/rights/relevance";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
@@ -54,10 +55,17 @@ export async function loader({ params }: Route.LoaderArgs) {
     .filter((c) => c.slug !== city.slug)
     .slice(0, 6);
   const cityFaq = generateCityFaq(right, city, locale);
+  const cityOverviewLocal = cityOverview(city.slug, locale);
+  const cityStats = cityCommunityStats(city.slug).map((s) => ({
+    label: s.label[locale] ?? s.label.he,
+    value: s.value,
+  }));
   return {
     locale,
     right,
     city,
+    cityOverviewLocal,
+    cityStats,
     html,
     publicUrl: PUBLIC_URL,
     related,
@@ -137,6 +145,8 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
     locale,
     right,
     city,
+    cityOverviewLocal,
+    cityStats,
     html,
     related,
     shareUrl,
@@ -147,7 +157,6 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
   const primaryTag = right.tags[0] ?? "housing";
   const tone = classesForTag(primaryTag);
   const cityNameLocal = cityName(city, locale);
-  const cityOverviewLocal = cityOverview(city, locale);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="flag-stripe h-1.5" aria-hidden="true" />
@@ -278,7 +287,7 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
         {/* Community stats for this city — unique data that differentiates
             each rights×city cell from duplicates. Only shown when the city
             registry has communityStats entries. */}
-        {city.communityStats && city.communityStats.length > 0 && (
+        {cityStats.length > 0 && (
           <section className="mt-10 rounded-2xl border border-earth-200 bg-earth-50/60 p-5">
             <h2 className="text-sm font-semibold tracking-wide text-earth-900 uppercase">
               {locale === "he"
@@ -288,14 +297,12 @@ export default function RightCityCell({ loaderData }: Route.ComponentProps) {
                   : `Ethiopian community in ${cityName(city, locale)}`}
             </h2>
             <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {city.communityStats.map((s, i) => (
+              {cityStats.map((s, i) => (
                 <div
                   key={i}
                   className="rounded-md border border-earth-100 bg-white px-3 py-2"
                 >
-                  <dt className="text-xs font-medium text-earth-600">
-                    {s.label[locale] ?? s.label.he}
-                  </dt>
+                  <dt className="text-xs font-medium text-earth-600">{s.label}</dt>
                   <dd className="mt-1 text-sm font-semibold text-earth-900">{s.value}</dd>
                 </div>
               ))}

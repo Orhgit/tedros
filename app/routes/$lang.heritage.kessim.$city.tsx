@@ -22,7 +22,8 @@ import {
 } from "~/lib/heritage/kessim.server";
 import { kessimCityPath, kessimLandingPath, marriagePath } from "~/lib/heritage/links";
 import { breadcrumbJsonLd, itemListJsonLd } from "~/lib/heritage/schema";
-import { cityOverview, findCityBySlug } from "~/lib/cities/registry";
+import { findCityBySlug } from "~/lib/cities/registry";
+import { cityOverview } from "~/lib/cities/content.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -46,7 +47,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   // City overview only exists for cities in the main registry.
   const registryCity = city.inRegistry ? findCityBySlug(city.slug) : undefined;
-  const overview = registryCity ? cityOverview(registryCity, locale) : null;
+  const overview = registryCity ? cityOverview(registryCity.slug, locale) : null;
 
   // Neighbouring entries in the directory, for internal linking.
   const otherCities = KESSIM_CITIES.filter((c) => c.slug !== city.slug)

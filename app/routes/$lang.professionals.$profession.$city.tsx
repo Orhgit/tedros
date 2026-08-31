@@ -7,7 +7,8 @@ import { Link, data } from "react-router";
 import type { Route } from "./+types/$lang.professionals.$profession.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
-import { findCityBySlug, cityName, cityOverview } from "~/lib/cities/registry";
+import { findCityBySlug, cityName } from "~/lib/cities/registry";
+import { cityOverview } from "~/lib/cities/content.server";
 import { listByProfessionAndCity } from "~/lib/db/queries/professionals.server";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -68,7 +69,14 @@ export async function loader({ params }: Route.LoaderArgs) {
     throw data({ error: "no-matches" }, { status: 404 });
   }
   const { PUBLIC_URL } = getEnv();
-  return { locale, profession, city, slots, publicUrl: PUBLIC_URL };
+  return {
+    locale,
+    profession,
+    city,
+    overview: cityOverview(city.slug, locale),
+    slots,
+    publicUrl: PUBLIC_URL,
+  };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -108,7 +116,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function ProfessionCityCell({ loaderData }: Route.ComponentProps) {
-  const { locale, profession, city, slots } = loaderData;
+  const { locale, profession, city, overview, slots } = loaderData;
   const tag = PROFESSION_TO_TAG[profession];
   const tone = classesForTag(tag);
   const profTitle = t(locale, professionMessageKey(profession));
@@ -170,7 +178,7 @@ export default function ProfessionCityCell({ loaderData }: Route.ComponentProps)
               <h1 className="font-display text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
                 {headline} {inCity(locale, cName)}
               </h1>
-              <p className="mt-3 text-base text-ink-700">{cityOverview(city, locale)}</p>
+              <p className="mt-3 text-base text-ink-700">{overview}</p>
             </div>
           </div>
           <div className="mt-5">

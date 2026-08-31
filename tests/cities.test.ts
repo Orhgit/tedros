@@ -3,10 +3,12 @@ import {
   CITIES,
   CITY_PATH_PREFIX,
   cityName,
-  cityOverview,
   cityPath,
   findCityBySlug,
 } from "../app/lib/cities/registry";
+// Long-form prose moved to a server-only module under ADR-020; the coverage
+// guarantees below are unchanged, they just read from its new home.
+import { CITY_CONTENT, cityOverview } from "../app/lib/cities/content.server";
 import { SUPPORTED_LOCALES } from "../app/lib/i18n/config";
 
 describe("city registry", () => {
@@ -57,9 +59,11 @@ describe("city registry", () => {
     // Each city page renders this paragraph as the primary unique content
     // (~280-340 chars). Guard against thin/duplicate-content regressions.
     for (const c of CITIES) {
+      const overview = CITY_CONTENT[c.slug]?.overview;
+      if (!overview) throw new Error(`no overview content for "${c.slug}"`);
       for (const loc of SUPPORTED_LOCALES) {
-        expect(c.overview[loc]).toBeTruthy();
-        expect(c.overview[loc].length).toBeGreaterThan(70);
+        expect(overview[loc]).toBeTruthy();
+        expect(overview[loc].length).toBeGreaterThan(70);
       }
     }
   });
@@ -104,8 +108,8 @@ describe("cityName / cityPath helpers", () => {
   });
 
   it("returns the locale-specific overview when present", () => {
-    expect(cityOverview(netanya, "he")).toContain("נתניה");
-    expect(cityOverview(netanya, "en")).toContain("Netanya");
-    expect(cityOverview(netanya, "am")).toContain("ነታንያ");
+    expect(cityOverview(netanya.slug, "he")).toContain("נתניה");
+    expect(cityOverview(netanya.slug, "en")).toContain("Netanya");
+    expect(cityOverview(netanya.slug, "am")).toContain("ነታንያ");
   });
 });
