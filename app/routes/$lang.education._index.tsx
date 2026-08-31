@@ -9,6 +9,8 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { listScholarships } from "~/lib/db/queries/scholarships.server";
 import {
+  amharicHubPath,
+  amharicUlpanPath,
   eligibilityCommitteePath,
   parentRightsPath,
   registrationDiscriminationPath,
@@ -45,6 +47,31 @@ const PARENT_CARDS: Array<{
     glyph: "👪",
     titleKey: "education_parent_rights_title",
     subtitleKey: "education_parent_rights_subtitle",
+  },
+];
+
+/**
+ * Learning Amharic, and learning Hebrew (TED-147) — the two directions of the
+ * same family language question. Short card labels, so message keys per
+ * ADR-020 §3; the page prose lives in `amharic.server.ts`.
+ */
+const LANGUAGE_CARDS: Array<{
+  href: string;
+  glyph: string;
+  titleKey: string;
+  subtitleKey: string;
+}> = [
+  {
+    href: amharicHubPath(),
+    glyph: "ፊ",
+    titleKey: "education_amharic_title",
+    subtitleKey: "education_amharic_subtitle",
+  },
+  {
+    href: amharicUlpanPath(),
+    glyph: "🗣️",
+    titleKey: "education_amharic_ulpan_title",
+    subtitleKey: "education_amharic_ulpan_subtitle",
   },
 ];
 
@@ -163,8 +190,8 @@ export default function EducationPillar({ loaderData }: Route.ComponentProps) {
             </div>
           </Link>
 
-          {/* Parents vs. the school system (TED-145) */}
-          {PARENT_CARDS.map((card) => (
+          {/* Parents vs. the school system (TED-145), then language (TED-147) */}
+          {[...PARENT_CARDS, ...LANGUAGE_CARDS].map((card) => (
             <Link
               key={card.href}
               to={`/${locale}${card.href}`}

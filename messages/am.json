@@ -923,5 +923,9 @@
   "education_discrimination_title": "በትምህርት ቤት ምዝገባ ላይ አድሎ",
   "education_discrimination_subtitle": "ሕጉ የሚከለክለው ምንድን ነው፣ በየትኞቹ ትምህርት ቤቶች ላይ ይሠራል፣ የይግባኝ ጊዜያቱስ።",
   "education_committee_title": "ወደ ኮሚቴ ተልኳል?",
-  "education_committee_subtitle": "የብቁነትና አፈጻጸም ኮሚቴ፦ ምን ይወስናል፣ በስብሰባው ያሉዎት መብቶች፣ በ21 ቀናት አቤቱታ እንዴት ማቅረብ እንደሚቻል።"
+  "education_committee_subtitle": "የብቁነትና አፈጻጸም ኮሚቴ፦ ምን ይወስናል፣ በስብሰባው ያሉዎት መብቶች፣ በ21 ቀናት አቤቱታ እንዴት ማቅረብ እንደሚቻል።",
+  "education_amharic_title": "አማርኛ መማር",
+  "education_amharic_subtitle": "ሙሉ የፊደል ሰንጠረዥ፣ የቤተሰብ ቃላት ከግልባጭ ጋር፣ እና የት እንደሚማሩ የተረጋገጠ ዝርዝር።",
+  "education_amharic_ulpan_title": "ለወላጆችና ለአያቶች የዕብራይስጥ ኡልፓን",
+  "education_amharic_ulpan_subtitle": "ኦፊሴላዊው የኡልፓን ዝርዝር፣ እና በስልክ ምን መጠየቅ እንዳለብዎ።"
 }

@@ -135,6 +135,7 @@ Immigration to Israel brought an encounter with Rabbinic Judaism and Hebrew. Man
 
 - [אוריית](/he/glossary/orit) — הספר הקדוש הכתוב בגעז
 - [קייסים](/he/glossary/kessim) — שומרי שפת התפילה
+- [ללמוד אמהרית](/he/education/amharic) — טבלת הפידל המלאה, אותו כתב בדיוק
 `,
       en: `## What is Ge'ez?
 
@@ -162,6 +163,7 @@ Ge'ez is virtually no longer anyone's native tongue. In Israel it survives mainl
 
 - [Orit](/en/glossary/orit) — the sacred book written in Ge'ez
 - [Kessim](/en/glossary/kessim) — keepers of the prayer language
+- [Learning Amharic](/en/education/amharic) — the full fidel chart, the very same script
 `,
       am: `## ግዕዝ ምንድ ነው?
 
@@ -366,6 +368,7 @@ Mainly youth and families in cities with a sizeable community. Participation is 
 
 - [ENP](/he/glossary/enp-national-project) — שותפות חינוך רחבה יותר
 - [געז](/he/glossary/geez) — מקור השם "פידל"
+- [ללמוד אמהרית](/he/education/amharic) — הפידל עצמו: טבלת האותיות המלאה
 `,
       en: `## What is Fidel?
 
@@ -386,6 +389,7 @@ Language and cultural gaps between parents and schools can lead to misunderstand
 
 - [ENP](/en/glossary/enp-national-project) — a broader education partnership
 - [Ge'ez](/en/glossary/geez) — origin of the name "Fidel"
+- [Learning Amharic](/en/education/amharic) — the fidel itself: the full letter chart
 `,
       am: `## ፊደል ምንድ ነው?
 
