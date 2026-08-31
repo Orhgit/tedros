@@ -89,6 +89,11 @@ const RELEVANCE_BY_SLUG: Record<string, Relevance> = {
   // (zero local variance), so ship none.
   "criminal-record-expungement": { kind: "list", cities: [] },
 
+  // IDF family payments (TED-142) — governed by a General Staff order applied
+  // identically army-wide, and the point of contact is the soldier's unit,
+  // not their home city. City cells would carry zero local variance.
+  "idf-family-support": { kind: "list", cities: [] },
+
   // Special-education eligibility committee (TED-145). Unlike the expungement
   // statute, this one genuinely varies by place: the ועדת זכאות ואפיון sits at
   // the רשות חינוך מקומית where the child is registered, and the ועדת שיבוץ
