@@ -144,7 +144,7 @@ Quick eligibility check — [mortgage calculator](/en/calculator/mortgage-ethiop
   // prior-residence rule, the one-year claim window and the
   // income-independence of eligibility taken from that page. The 2026
   // amounts live on the sibling entry `klita-basket-ethiopia` rather than
-  // being duplicated here. Hotline corrected from "*5454" (not the
+  // being duplicated here. Hotline corrected from "*2994" (not the
   // Ministry's number) to *2994 / 03-9733333.
   {
     title: {
@@ -1446,7 +1446,7 @@ Public-housing companies (Amidar, Amigor, Halamish, Shikmona) manage the apartme
 3. **ליווי קהילתי**: התחברות לארגון מקומי (ENP / Fidel / Tene Briut)
 4. **דיווח חודשי**: עדכון על מצב הסתגלות ל-12 חודשים
 
-📞 **מוקד הקליטה**: 5454*
+📞 **מוקד הקליטה**: *2994
 `,
       en: `## What changed in 2026?
 
@@ -1475,7 +1475,7 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 3. **Community attachment**: connect to a local org (ENP / Fidel / Tene Briut)
 4. **Monthly check-ins**: integration progress updates for 12 months
 
-📞 **Aliyah hotline**: *5454
+📞 **Aliyah hotline**: *2994
 `,
       am: `## በ2026 ምን ተለወጠ?
 
@@ -1504,7 +1504,7 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 3. **ማህበረሰባዊ ግንኙነት**: ከአካባቢ ድርጅት (ENP / Fidel / Tene Briut) ጋር ይገናኙ
 4. **ወርሃዊ መግባባት**: ለ12 ወራት የመተባበር ሂደት ዝመናዎች
 
-📞 **የመመለሻ መስመር**: *5454
+📞 **የመመለሻ መስመር**: *2994
 `,
     },
   },
@@ -3614,7 +3614,7 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 **האם שובר מכסה גם רישיון נהיגה?**
 כן — קורסי נהיגה מקצועיים (כבד/מונית) כלולים ברשימה.
 
-📞 **מוקד משרד הקליטה**: 5454*
+📞 **מוקד משרד הקליטה**: *2994
 🔗 [gov.il — שוברי הכשרה](https://www.gov.il/he/departments/topics/vocational_training/govil-landing-page)
 `,
       en: `## What are vocational training vouchers?
@@ -3656,7 +3656,7 @@ Yes — most accredited vocational courses offer evening tracks.
 **What if the course costs more than ₪12,000?**
 You can cover the difference through the Marom scholarship, a special fund, or personal payment.
 
-📞 **Ministry of Aliyah hotline**: 5454*
+📞 **Ministry of Aliyah hotline**: *2994
 `,
       am: `## ሙያ ስልጠና ቫዎቸሮች ምንድን ናቸው?
 
@@ -3681,7 +3681,7 @@ You can cover the difference through the Marom scholarship, a special fund, or p
 - ሚኒስቴሩ ተመዝጋቢ
 - ዕድሜ ገደብ የለም
 
-📞 **ሚኒስቴሩ ሞቅዳ**: 5454*
+📞 **ሚኒስቴሩ ሞቅዳ**: *2994
 `,
     },
   },
@@ -3707,7 +3707,7 @@ You can cover the difference through the Marom scholarship, a special fund, or p
   // payments), the 24-month prior-residence rule, the one-year claim window
   // and the income-independence of eligibility all come from that page.
   // Hotline *2994 / 03-9733333 verified on the Ministry's own appointment
-  // service page — the "*5454" this entry used to print is not the
+  // service page — the "*2994" this entry used to print is not the
   // Ministry's number. The body states its own verification month so a
   // future reader can tell how stale the figures are.
   //
@@ -4277,7 +4277,7 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
 | **IEWA** (עמותה ישראלית יהודים אתיופים) | ייעוץ, מלגות, הכשרות | iewa.org.il |
 | **עמותת "בצלאל"** | אמנויות, עיצוב, מדיה | צרו קשר ישיר |
 | **תבקה** | ייעוץ משפטי, תביעת זכויות | 1-800-20-20-16 |
-| **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | *5454 |
+| **ממשיל משרד הקליטה** | רכז יוצאי אתיופיה בעיר | *2994 |
 
 ---
 
@@ -5232,7 +5232,7 @@ BTL፦ *6050 | btl.gov.il
 - **מרכז עולים**: ניתן לבקש פגישה עם מתורגמן — להודיע מראש
 - **תעודת זהות, דרכון, רישום**: ניתן להביא מלווה דובר עברית
 
-### משרד הקליטה (*5454)
+### משרד הקליטה (*2994)
 - יש נציגים דוברי אמהרית — לציין בפנייה
 
 ---
@@ -5283,7 +5283,7 @@ The Courts Administration maintains a registry of certified Amharic interpreters
 ## Government Offices
 
 - **BTL (*6050):** Amharic telephone service available — select "Amharic service."
-- **Ministry of Aliyah (*5454):** Amharic-speaking representatives — specify when calling.
+- **Ministry of Aliyah (*2994):** Amharic-speaking representatives — specify when calling.
 - **Ministry of Interior:** Request an appointment with an interpreter in advance.
 
 ## If an Interpreter Is Refused
@@ -5305,7 +5305,7 @@ The right is free — the state pays for court interpreters. If you are ever ask
 ## የመንግስት ቢሮዎች
 
 - **BTL (*6050):** "የአማርኛ አገልግሎት" ምረጡ
-- **ቅያሴ ሚኒስቴር (*5454):** አስቀድሞ ይጠቁሙ
+- **ቅያሴ ሚኒስቴር (*2994):** አስቀድሞ ይጠቁሙ
 
 ## ወጪ
 
