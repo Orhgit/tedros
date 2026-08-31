@@ -9,7 +9,7 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { glyphForHeritageEvent } from "~/lib/heritage/categories";
 import { HERITAGE_EVENTS, nextDate } from "~/lib/heritage/events.server";
-import { eventPath } from "~/lib/heritage/links";
+import { eventPath, kessimLandingPath, marriagePath } from "~/lib/heritage/links";
 import { breadcrumbJsonLd } from "~/lib/heritage/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
@@ -110,6 +110,46 @@ export default function HeritageEventsLanding({ loaderData }: Route.ComponentPro
             </li>
           ))}
         </ul>
+
+        {/* Religion & life-cycle — the kessim directory and the marriage
+            guide (TED-140). */}
+        <section
+          className="mt-10 rounded-2xl border border-earth-200 bg-earth-50 p-5"
+          aria-labelledby="heritage-lifecycle-heading"
+        >
+          <h2
+            id="heritage-lifecycle-heading"
+            className="font-display text-base font-semibold text-earth-900"
+          >
+            {t(locale, "heritage_lifecycle_heading")}
+          </h2>
+          <ul className="mt-3 space-y-2 text-sm">
+            <li>
+              <Link
+                to={`/${locale}${kessimLandingPath()}`}
+                className="text-earth-700 underline hover:text-earth-900"
+              >
+                {t(locale, "kessim_landing_title")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={`/${locale}${marriagePath()}`}
+                className="text-earth-700 underline hover:text-earth-900"
+              >
+                {t(locale, "kessim_related_marriage")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={`/${locale}/family/mourning`}
+                className="text-earth-700 underline hover:text-earth-900"
+              >
+                {t(locale, "kessim_related_mourning")}
+              </Link>
+            </li>
+          </ul>
+        </section>
       </main>
       <SiteFooter locale={locale} />
     </div>

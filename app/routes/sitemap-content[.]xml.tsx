@@ -6,6 +6,7 @@ import { SCHOLARSHIP_RELEVANCE_CITIES } from "~/lib/education/scholarship-releva
 import { getEnv } from "~/lib/env.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { HERITAGE_EVENTS } from "~/lib/heritage/events.server";
+import { KESSIM_CITIES } from "~/lib/heritage/kessim.server";
 import { relevantCities as heritageRelevantCities } from "~/lib/heritage/relevance";
 import { ORGS } from "~/lib/orgs/orgs.server";
 import { ALL_PROFESSIONS } from "~/lib/professionals/categories";
@@ -55,6 +56,9 @@ export function loader() {
     // Heritage events
     ...HERITAGE_EVENTS.map((e) => `/heritage/events/${e.slug}`),
     ...heritageCells,
+    // Kessim directory (TED-140)
+    "/heritage/kessim",
+    ...KESSIM_CITIES.map((c) => `/heritage/kessim/${c.slug}`),
     // Glossary
     ...GLOSSARY.map((e) => `/glossary/${e.slug}`),
     // Orgs

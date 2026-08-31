@@ -297,6 +297,12 @@ export const MOURNING_CHECKLIST: MourningChecklistStep[] = [
       en: "First tezkar — about a week after the death; many also mark the shloshim; the year tezkar — at the one-year mark. Set a venue, invite a kes (and a rabbi if desired), and prepare the memorial meal. Full details in the guide above.",
       am: "የመጀመሪያ ተዝካር — ከሞት በኋላ በአንድ ሳምንት ገደማ፤ ብዙዎች ሠላሳኛውንም ያከብራሉ፤ የዓመት ተዝካር — ዓመት ሲሞላ። ቦታ ይወስኑ፣ ቄስ ይጋብዙ (ከፈለጉም ረቢ)፣ የመታሰቢያውን ምግብ ያዘጋጁ። ሙሉ ዝርዝር ከላይ ባለው መመሪያ ውስጥ።",
     },
+    internalPath: "/heritage/kessim",
+    internalLabel: {
+      he: "קייסים ורבני העדה האתיופית — לפי עיר",
+      en: "Kessim and Ethiopian community rabbis — by city",
+      am: "ቄሶችና የኢትዮጵያ ማኅበረሰብ ረቢዎች — በከተማ",
+    },
   },
   {
     id: "inheritance",
