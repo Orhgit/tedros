@@ -1,9 +1,17 @@
 // Article body for /:lang/careers/affirmative-action — SERVER ONLY (ADR-020).
 //
 // Markdown long-form copy in three locales. The route loader renders the one
-// locale being requested to HTML and returns it; nothing here reaches the
-// browser. `meta` must not import this module — `meta` is not stripped from
-// the client build and the build fails outright.
+// locale being requested to HTML and returns it.
+//
+// Measured note: moving this out of the route module saved zero bytes. It was
+// referenced only from `loader`, which the React Router Vite plugin strips
+// from the client route module, after which Rollup already dropped the const
+// as dead code. The file lives here to make that guarantee explicit rather
+// than incidental — a future edit that reads BODIES from the component or
+// from `meta` would otherwise silently ship all three locales.
+//
+// `meta` must not import this module — `meta` is not stripped from the client
+// build and the build fails outright.
 
 import type { Locale } from "~/lib/i18n/config";
 
