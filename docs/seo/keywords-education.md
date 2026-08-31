@@ -117,7 +117,7 @@ Every statutory claim was read from the statute or circular text itself, not fro
 
 ## 7. TODO (next round)
 
-- [ ] **Content & SEO (or Researcher): sweep 03-5103538 → 072-2424622** across `app/lib/voice/*.server.ts`, `app/routes/$lang.voice._index.tsx` and the expungement seed entry. Out of scope for TED-145, which touched only its own pages, but the site is now inconsistent and the old number is wrong on four files.
+- [x] **Sweep 03-5103538 → 072-2424622** across `app/lib/voice/*.server.ts`, `app/routes/$lang.voice._index.tsx` and the expungement seed entry. Done in TED-155, which also retired a second stale Tebeka number (1-800-20-20-16) and widened the guard to a repo-wide scan (`tests/content-contacts.test.ts`).
 - [ ] Researcher: open בג"ץ 7426/08 in a browser and confirm the holding, so the Petah Tikva paragraph can be expanded from "the matter was litigated" to what was actually decided.
 - [ ] Content & SEO: annual maintenance — הודעה 0379 is reissued each August, and הוראת שעה 0302 expires 31.8.2027. Re-verify the ₪69 figure and the scholarship ranges then.
 - [ ] Engineer: consider enriching the eligibility-committee city cells (scoped `community-cities`) with per-authority contact detail — the ועדת שיבוץ genuinely differs per authority, which would make those cells substantive rather than templated.

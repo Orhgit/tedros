@@ -79,7 +79,7 @@ describe("street-stop topic integrity (TED-137)", () => {
     const names = STREET_STOP_TOPIC.resources.map((r) => r.name).join(" ");
     expect(names).toContain("טבקה");
     expect(names).toContain('מח"ש');
-    expect(STREET_STOP_TOPIC.resources.some((r) => r.phone === "03-5103538")).toBe(true);
+    expect(STREET_STOP_TOPIC.resources.some((r) => r.phone === "072-2424622")).toBe(true);
   });
 });
 

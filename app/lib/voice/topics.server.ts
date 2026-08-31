@@ -93,7 +93,7 @@ A complainant in good faith is protected from counter-suits. The Whistleblower P
   resources: [
     {
       name: "טבקה — ארגון זכויות לקהילה האתיופית",
-      phone: "03-5103538",
+      phone: "072-2424622",
       url: "https://www.tebeka.org.il",
       description: {
         he: "ייעוץ משפטי חינמי ולוחמה בהפלייה — קו ישיר לקהילה האתיופית.",
@@ -199,7 +199,7 @@ Tebeka offers free advice in cases of police violence and ethnic-based discrimin
     },
     {
       name: "טבקה — ארגון זכויות לקהילה האתיופית",
-      phone: "03-5103538",
+      phone: "072-2424622",
       url: "https://www.tebeka.org.il",
       description: {
         he: "ייעוץ משפטי חינמי בתיקי אלימות משטרתית ואפליה עדתית — קו ישיר לקהילה.",

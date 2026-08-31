@@ -167,7 +167,7 @@ Tene Briut is an NGO dedicated to advancing the health of the Ethiopian-Israeli 
     foundedYear: 2000,
     websiteUrl: "https://www.tebeka.org.il",
     headquartersCity: { he: "ירושלים", en: "Jerusalem", am: "ኢየሩሳሌም" },
-    contactEmail: "info@tebeka.org.il",
+    contactEmail: "general@tebeka.org.il",
     relatedRights: ["tebeka-legal-aid"],
     relatedTerms: ["tebeka", "beta-israel"],
     relatedOrgs: ["iaej"],
@@ -193,7 +193,7 @@ Tene Briut is an NGO dedicated to advancing the health of the Ethiopian-Israeli 
 ## איך פונים?
 
 - אתר: [tebeka.org.il](https://www.tebeka.org.il)
-- אימייל: info@tebeka.org.il
+- אימייל: general@tebeka.org.il
 - מטה: ירושלים. נוכחות במחוזות נוספים לפי תיק.
 - ייעוץ ראשוני חינמי לכל פונה
 
@@ -224,7 +224,7 @@ Tebeka ("vindicator" / "advocate" in Amharic) is a community legal-aid center fo
 ## How to reach out
 
 - Website: [tebeka.org.il](https://www.tebeka.org.il)
-- Email: info@tebeka.org.il
+- Email: general@tebeka.org.il
 - HQ: Jerusalem. Presence in additional districts per case.
 - First consultation free for any caller
 
@@ -255,7 +255,7 @@ Tebeka ("vindicator" / "advocate" in Amharic) is a community legal-aid center fo
 ## እንዴት እንደሚደርሱ
 
 - ድረ-ገጽ፦ [tebeka.org.il](https://www.tebeka.org.il)
-- ኢሜይል፦ info@tebeka.org.il
+- ኢሜይል፦ general@tebeka.org.il
 - ዋና መሥሪያ ቤት፦ ኢየሩሳሌም። እንደ ጉዳዩ በሌሎች ክልሎች መገኘት።
 - ለማንኛውም ጠያቂ የመጀመሪያ ምክክር ነጻ
 

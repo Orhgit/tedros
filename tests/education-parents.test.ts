@@ -360,9 +360,10 @@ describe.each(guides)("$name guide — content integrity (TED-145)", (guide) => 
     expect(urls.join(" ")).not.toContain("edu.gov.il/heb/about/units");
   });
 
-  it("uses Tebeka's currently published phone number, never the stale one", () => {
-    const blob = JSON.stringify(guide);
-    expect(blob).not.toContain("03-5103538");
+  it("uses Tebeka's currently published phone number", () => {
+    // The stale-number guard now runs repo-wide in tests/content-contacts.test.ts
+    // (TED-155); this only pins that the page still carries the verified line.
+    expect(JSON.stringify(guide)).toContain("072-2424622");
   });
 });
 
