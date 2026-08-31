@@ -88,6 +88,14 @@ const RELEVANCE_BY_SLUG: Record<string, Relevance> = {
   // everywhere by the Israel Police. City cells would be pure doorway pages
   // (zero local variance), so ship none.
   "criminal-record-expungement": { kind: "list", cities: [] },
+
+  // Special-education eligibility committee (TED-145). Unlike the expungement
+  // statute, this one genuinely varies by place: the ועדת זכאות ואפיון sits at
+  // the רשות חינוך מקומית where the child is registered, and the ועדת שיבוץ
+  // that follows it is the authority's own. So city cells carry real
+  // information — but only where the community actually lives; 38 national
+  // cells would be thin.
+  "special-education-eligibility-committee": { kind: "community-cities" },
 };
 
 export function relevanceFor(slug: string): Relevance {
