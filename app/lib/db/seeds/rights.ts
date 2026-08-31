@@ -130,7 +130,22 @@ Quick eligibility check — [mortgage calculator](/en/calculator/mortgage-ethiop
     },
   },
 
-  // 2 — Klita basket
+  // 2 — Absorption basket (RIN-336; corrected TED-148).
+  //
+  // TED-148 audit: the original body listed basket components that do not
+  // appear on the Ministry of Aliyah and Integration's own page — a
+  // "one-time first-home grant", "transportation cost coverage in the first
+  // year" and "extended health coverage for six months" — and described the
+  // payment as running for a year. Per
+  // https://www.gov.il/he/Departments/General/absorption_basket (fetched
+  // 2026-08-31) the basket is subsistence money for the six-month ulpan
+  // period, paid as an airport prepaid card, a bank top-up and 6 monthly
+  // payments. Unverifiable components removed; structure, the 24-month
+  // prior-residence rule, the one-year claim window and the
+  // income-independence of eligibility taken from that page. The 2026
+  // amounts live on the sibling entry `klita-basket-ethiopia` rather than
+  // being duplicated here. Hotline corrected from "*5454" (not the
+  // Ministry's number) to *2994 / 03-9733333.
   {
     title: {
       he: "סל קליטה לעולים חדשים",
@@ -138,76 +153,111 @@ Quick eligibility check — [mortgage calculator](/en/calculator/mortgage-ethiop
       am: "የመመለሻ ቅርጫት — ለአዲስ ስደተኞች",
     },
     slug: { he: "klita-basket", en: "klita-basket", am: "klita-basket" },
-    govUrl: "https://www.gov.il/he/departments/integration_program/govil-landing-page",
+    govUrl: "https://www.gov.il/he/Departments/General/absorption_basket",
     eligibilitySummary: {
-      he: "תשלום מזומן חודשי לעולים חדשים בשנה הראשונה לאחר העלייה. סכום משתנה לפי מצב משפחתי וגיל.",
-      en: "Monthly cash payment to new immigrants during the first year post-aliyah. Amount varies by family status and age.",
-      am: "ለአዲስ ስደተኞች በመጀመሪያ ዓመት ከደረሰ በኋላ ወርሃዊ የጥሬ ገንዘብ ክፍያ። መጠኑ በቤተሰብ ሁኔታ እና በዕድሜ ይለያያል።",
+      he: "סיוע כספי של משרד העלייה והקליטה לתקופת ההתארגנות הראשונה — תשלום ראשון בנתב\"ג, השלמה לחשבון הבנק ועוד 6 תשלומים חודשיים. הסכום נקבע לפי מצב משפחתי, גיל ומספר ילדים.",
+      en: "Financial aid from the Ministry of Aliyah and Integration for an oleh's first period in Israel — a first payment at the airport, a bank top-up and 6 further monthly payments. The amount is set by family status, age and number of children.",
+      am: "በእስራኤል ለመጀመሪያው ጊዜ ከዓሊያና መቀበያ ሚኒስቴር የሚሰጥ የገንዘብ ድጋፍ — በአየር ማረፊያ የመጀመሪያ ክፍያ፣ የባንክ ማሟያ እና ተጨማሪ 6 ወርሃዊ ክፍያዎች። መጠኑ በቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት ይወሰናል።",
     },
     tags: ["new_immigrant", "grants", "monthly_payment"],
     bodies: {
       he: `## למי מיועד?
 
-עולים חדשים שנרשמו במשרד הקליטה תוך 12 חודשים מהעלייה.
+- הנכנסים לראשונה לישראל באשרת "עולה", בעלי זכאות מלאה כעולים
+- מי ששהו בישראל **לא יותר מ-24 חודשים** רצופים או מצטברים בשלוש השנים שקדמו לקבלת מעמד עולה
+- וכן מי שנקבע לפי נוהלי המשרד כי דינו כדין עולה
+
+הזכאות **אינה תלויה בגובה ההכנסה**.
 
 ## מה כולל הסל?
 
-- תשלום חודשי קבוע (לפי גודל משפחה)
-- מענק חד-פעמי לבית ראשון
-- כיסוי הוצאות הסעות בשנה הראשונה
-- שובר אולפן (לימוד עברית)
-- כיסוי בריאות מורחב לחצי שנה
+סל הקליטה הוא **דמי מחיה** לתקופת ההתארגנות הראשונה — הסיוע ניתן לתקופת הלימודים באולפן, במשך שישה חודשים. הוא משולם כך:
+
+1. **תשלום ראשון** — למגיעים באשרת עלייה מחו"ל, ב[כרטיס נטען](https://www.gov.il/he/pages/sal-klita-card) בנמל התעופה. למי שמשנה מעמד בארץ — בהפקדה בנקאית.
+2. **השלמה** לחשבון הבנק.
+3. **6 תשלומים חודשיים** נוספים.
+
+בתום ששת החודשים אפשר לבדוק זכאות להבטחת הכנסה בביטוח לאומי כהמשך סיוע לצרכי קיום.
+
+הסכומים המדויקים לפי מצב משפחתי, גיל ומספר ילדים מתפרסמים בלוחות הרשמיים — ראו [סל קליטה לעולים מאתיופיה — הסכומים והתהליך](/he/rights/klita-basket-ethiopia) לפירוט לוח 2026, או ישירות ב[אתר המשרד](https://www.gov.il/he/Departments/General/absorption_basket).
+
+## חלון הזמן
+
+את הסל אפשר לקבל **בתוך שנה** מיום קבלת מעמד עולה. **יציאה לחו"ל עוצרת את התשלומים** — חידוש אפשרי רק למי ששב בתוך שנת העלייה הראשונה, ויש לפנות ללשכת המשרד כדי לוודא את חידושם.
 
 ## איך מגישים?
 
-1. הרשמה במחלקת קליטה במשרד הקליטה — תוך 30 ימים מהגעה
-2. הצגת ת"ז עולה + אישור עלייה
-3. פתיחת חשבון בנק לתשלומים החודשיים
-4. בחירת אולפן ותחילת לימודים (חובה לצורך תשלום מלא)
+1. פותחים **חשבון בנק משותף לשני בני הזוג** באחד הבנקים המסחריים — נדרשת נוכחות של שניהם. מומלץ לעשות זאת בימים הראשונים בארץ.
+2. מוסרים את פרטי החשבון בלשכת משרד העלייה והקליטה באזור מגוריכם.
+3. לא משנים את מספר החשבון בשנים הראשונות לעלייה; אם בכל זאת — מדווחים למשרד מיד.
 
-📞 **מוקד משרד הקליטה**: 5454* (חיוג בעברית/אנגלית/אמהרית)
+📞 **מוקד משרד העלייה והקליטה**: *2994 או 03-9733333 — א׳–ה׳, 8:30–16:00. השירות ניתן גם **באמהרית**.
 `,
       en: `## Who is eligible?
 
-New immigrants who registered with the Ministry of Aliyah within 12 months of arrival.
+- Those entering Israel for the first time on an "oleh" visa, with full oleh entitlement
+- Those who stayed in Israel **no more than 24 months**, consecutive or cumulative, in the three years before receiving oleh status
+- Plus anyone the Ministry's procedures treat as an oleh
+
+Eligibility **does not depend on income**.
 
 ## What does the basket include?
 
-- Fixed monthly payment (scaled by family size)
-- One-time first-home grant
-- Transportation cost coverage in the first year
-- Ulpan (Hebrew study) voucher
-- Extended health coverage for six months
+The absorption basket is **subsistence money** for the first period in Israel — aid for the six-month ulpan study period. It is paid as:
+
+1. A **first payment** — for those arriving from abroad on an aliyah visa, on a [prepaid card](https://www.gov.il/he/pages/sal-klita-card) at the airport. For those changing status in Israel — by bank deposit.
+2. A **top-up** to the bank account.
+3. **6 further monthly payments.**
+
+After the six months you can check eligibility for income support (הבטחת הכנסה) at the National Insurance Institute as continued subsistence aid.
+
+Exact amounts by family status, age and number of children are published in the official tables — see [absorption basket for Ethiopian olim — amounts and process](/en/rights/klita-basket-ethiopia) for the 2026 table, or the [Ministry's page](https://www.gov.il/he/Departments/General/absorption_basket) directly.
+
+## The time window
+
+The basket must be claimed **within one year** of receiving oleh status. **Leaving the country stops the payments** — renewal is possible only for those returning within the first aliyah year, and you must contact a Ministry bureau to confirm it.
 
 ## How to apply
 
-1. Register at the Ministry of Aliyah absorption desk — within 30 days of arrival
-2. Present immigrant ID + aliyah confirmation
-3. Open a bank account for the monthly payments
-4. Choose an ulpan and start classes (required for full payment)
+1. Open a **joint bank account for both spouses** at a commercial bank — both must be present. Do this in your first days in the country.
+2. Give the account details to the Ministry of Aliyah and Integration bureau in your area.
+3. Do not change the account number in the first years after aliyah; if you must, report it to the Ministry immediately.
 
-📞 **Ministry of Aliyah hotline**: 5454* (Hebrew/English/Amharic)
+📞 **Ministry of Aliyah and Integration hotline**: *2994 or 03-9733333 — Sun–Thu, 8:30–16:00. Service is also available **in Amharic**.
 `,
-      am: `## ለማን ይሆናል?
+      am: `## ማን ብቁ ነው?
 
-ከደረሱ ከ12 ወራት ውስጥ በሕክምና መሰብሰብ ሚኒስቴር የተመዘገቡ አዲስ ስደተኞች።
+- በ"ኦሌ" ቪዛ ለመጀመሪያ ጊዜ ወደ እስራኤል የሚገቡ፣ ሙሉ የኦሌ ብቁነት ያላቸው
+- የኦሌ ደረጃ ከማግኘታቸው በፊት በነበሩት ሦስት ዓመታት በእስራኤል **ከ24 ወራት ያልበለጠ** የቆዩ
+- እንዲሁም በሚኒስቴሩ ሥርዓት እንደ ኦሌ የሚቆጠር ማንኛውም ሰው
+
+ብቁነቱ **በገቢ መጠን ላይ አይመሠረትም**።
 
 ## ቅርጫቱ ምን ይዟል?
 
-- ቋሚ ወርሃዊ ክፍያ (በቤተሰብ መጠን ይለካል)
-- አንድ ጊዜ የመጀመሪያ ቤት ስጦታ
-- በመጀመሪያ ዓመት የትራንስፖርት ወጪ ሽፋን
-- የኡልፓን (የዕብራይስጥ ጥናት) ኩፖን
-- ለስድስት ወራት የተራዘመ የጤና ሽፋን
+የመቀበያ ቅርጫት በእስራኤል ለመጀመሪያው ጊዜ የሚሰጥ **የመተዳደሪያ ገንዘብ** ነው — ለስድስት ወር የኡልፓን ትምህርት ጊዜ። እንዲህ ይከፈላል፦
 
-## እንዴት ማመልከት ይቻላል?
+1. **የመጀመሪያ ክፍያ** — ከውጭ በዓሊያ ቪዛ ለሚደርሱ፣ በአየር ማረፊያ በቅድመ-ክፍያ ካርድ። በእስራኤል ውስጥ ደረጃቸውን ለሚቀይሩ — በባንክ ተቀማጭ።
+2. ወደ ባንክ ሂሳብ **ማሟያ**።
+3. ተጨማሪ **6 ወርሃዊ ክፍያዎች**።
 
-1. ከደረሱ በ30 ቀን ውስጥ በመሰብሰብ ሚኒስቴር ቢሮ ይመዝገቡ
-2. የስደተኛ መታወቂያ + የአሊያ ማረጋገጫ ያቅርቡ
-3. ለወርሃዊ ክፍያዎች ባንክ አካውንት ይክፈቱ
-4. ኡልፓን ይምረጡ እና ትምህርት ይጀምሩ (ለሙሉ ክፍያ የግድ ያስፈልጋል)
+ከስድስቱ ወራት በኋላ በብሔራዊ መድን ተቋም የገቢ ድጋፍ ብቁነትዎን ማረጋገጥ ይችላሉ።
 
-📞 **የመሰብሰብ ሚኒስቴር መስመር**: *5454 (ዕብራይስጥ / እንግሊዝኛ / አማርኛ)
+በቤተሰብ ሁኔታ፣ ዕድሜና የልጆች ብዛት የተወሰኑ ትክክለኛ መጠኖች በኦፊሴላዊ ሰንጠረዦች ይታተማሉ — የ2026 ሰንጠረዥ [ለኢትዮጵያ ኦሊሞች የመቀበያ ቅርጫት](/am/rights/klita-basket-ethiopia) ላይ ይመልከቱ።
+
+## የጊዜ መስኮት
+
+ቅርጫቱ የኦሌ ደረጃ ካገኙበት ቀን ጀምሮ **በአንድ ዓመት ውስጥ** መጠየቅ አለበት። **ወደ ውጭ ሀገር መሄድ ክፍያዎቹን ያቆማል** — እንደገና መጀመር የሚቻለው በመጀመሪያው የዓሊያ ዓመት ውስጥ ለሚመለሱ ብቻ ነው።
+
+## እንዴት ማመልከት
+
+1. በንግድ ባንክ **ለሁለቱም ባለትዳሮች የጋራ የባንክ ሂሳብ** ይክፈቱ — ሁለቱም መገኘት አለባቸው።
+2. የሂሳብ ዝርዝሮችን በአካባቢዎ ላለው የሚኒስቴሩ ቢሮ ይስጡ።
+3. በመጀመሪያዎቹ ዓመታት የሂሳብ ቁጥሩን አይቀይሩ፤ ከቀየሩ ወዲያውኑ ያሳውቁ።
+
+📞 **የዓሊያና መቀበያ ሚኒስቴር መስመር**፦ *2994 ወይም 03-9733333 — እሁድ–ሐሙስ፣ 8:30–16:00። አገልግሎቱ **በአማርኛም** ይሰጣል።
+
+*[የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግመው ይመከራል።]*
 `,
     },
     wizard: {
@@ -230,13 +280,19 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
             am: "ትክክለኛ የስደተኛ መታወቂያ (የኡለ መታወቂያ) አለዎት?",
           },
         },
+        // TED-148: replaced an "are you enrolled in ulpan?" require-true
+        // rule. The Ministry describes the basket as subsistence money *for*
+        // the ulpan period but nowhere makes enrolment a condition of
+        // payment, so gating eligibility on it was inventing a requirement.
+        // The 24-month prior-residence rule below is stated on the official
+        // page and is a genuine hard condition.
         {
-          id: "enrolledInUlpan",
+          id: "under24MonthsPriorResidence",
           type: "boolean",
           label: {
-            he: "נרשמתם / מתכוונים להירשם לאולפן עברית?",
-            en: "Are you enrolled (or planning to enroll) in a Hebrew ulpan?",
-            am: "በዕብራይስጥ ኡልፓን ተመዝግበዋል (ወይም ለመመዝገብ ያስባሉ)?",
+            he: 'שהיתם בישראל פחות מ-24 חודשים (רצופים או מצטברים) בשלוש השנים שקדמו לקבלת מעמד "עולה"?',
+            en: 'Were you in Israel for less than 24 months (consecutive or cumulative) in the three years before receiving "oleh" status?',
+            am: 'የ"ኦሌ" ደረጃ ከማግኘትዎ በፊት በነበሩት ሦስት ዓመታት በእስራኤል ከ24 ወራት ያነሰ (ተከታታይ ወይም ተደማሪ) ቆይተዋል?',
           },
         },
       ],
@@ -261,11 +317,11 @@ New immigrants who registered with the Ministry of Aliyah within 12 months of ar
         },
         {
           kind: "require-true",
-          questionId: "enrolledInUlpan",
+          questionId: "under24MonthsPriorResidence",
           reason: {
-            he: "תשלום מלא של סל הקליטה מותנה בלימוד באולפן.",
-            en: "Full klita-basket payment is conditional on ulpan enrollment.",
-            am: "የመመለሻ ቅርጫት ሙሉ ክፍያ በኡልፓን ምዝገባ ላይ የተመሰረተ ነው።",
+            he: 'מי ששהה בישראל יותר מ-24 חודשים בשלוש השנים שקדמו לקבלת מעמד "עולה" אינו זכאי לסל קליטה.',
+            en: 'Those who were in Israel more than 24 months in the three years before receiving "oleh" status are not eligible for the absorption basket.',
+            am: 'የ"ኦሌ" ደረጃ ከማግኘታቸው በፊት በነበሩት ሦስት ዓመታት በእስራኤል ከ24 ወራት በላይ የቆዩ ለመቀበያ ቅርጫት ብቁ አይደሉም።',
           },
         },
       ],
