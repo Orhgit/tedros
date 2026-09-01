@@ -18,7 +18,7 @@ import {
   MARRIAGE_TITLE,
   marriageCopy,
 } from "~/lib/heritage/marriage.server";
-import { kessimLandingPath, marriagePath } from "~/lib/heritage/links";
+import { kessimLandingPath, marriagePath, weddingPath } from "~/lib/heritage/links";
 import {
   breadcrumbJsonLd,
   faqPageJsonLd,
@@ -69,6 +69,9 @@ export async function loader({ params }: Route.LoaderArgs) {
     sources: MARRIAGE_SOURCES.map((s) => ({ name: s.name[locale], url: s.url })),
     // Server-module copy — never reaches the client message bundle.
     kessimCrosslinkBody: marriageCopy("kessimCrosslinkBody", locale),
+    weddingCrosslinkHeading: marriageCopy("weddingCrosslinkHeading", locale),
+    weddingCrosslinkBody: marriageCopy("weddingCrosslinkBody", locale),
+    weddingCrosslinkCta: marriageCopy("weddingCrosslinkCta", locale),
     disclaimer: marriageCopy("disclaimer", locale),
     publicUrl: PUBLIC_URL,
   };
@@ -127,6 +130,9 @@ export default function MarriageGuidePage({ loaderData }: Route.ComponentProps) 
     resources,
     sources,
     kessimCrosslinkBody,
+    weddingCrosslinkHeading,
+    weddingCrosslinkBody,
+    weddingCrosslinkCta,
     disclaimer,
   } = loaderData;
 
@@ -275,6 +281,22 @@ export default function MarriageGuidePage({ loaderData }: Route.ComponentProps) 
               </Link>
             </li>
           </ul>
+        </section>
+
+        {/* The ceremony itself (TED-143) */}
+        <section className="mb-10 rounded-2xl border border-earth-200 bg-card p-5">
+          <h2 className="font-display text-base font-semibold text-earth-900">
+            {weddingCrosslinkHeading}
+          </h2>
+          <p className="mt-1 text-sm leading-relaxed text-ink-700">
+            {weddingCrosslinkBody}
+          </p>
+          <Link
+            to={`/${locale}${weddingPath()}`}
+            className="mt-3 inline-block text-sm font-medium text-earth-700 underline hover:text-earth-900"
+          >
+            {weddingCrosslinkCta}
+          </Link>
         </section>
 
         {/* Resources */}

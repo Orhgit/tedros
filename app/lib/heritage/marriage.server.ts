@@ -435,6 +435,24 @@ export const MARRIAGE_COPY: Record<string, Record<Locale, string>> = {
     en: "The city directory collects the official list of kessim and Ethiopian-community rabbis serving in the religious councils.",
     am: "የከተማ ማውጫው በሃይማኖት ምክር ቤቶች የሚያገለግሉ ቄሶችንና የኢትዮጵያ ማኅበረሰብ ረቢዎችን ይፋዊ ዝርዝር ያሰባስባል።",
   },
+  // Cross-link to the wedding & henna guide (TED-143). The registration track
+  // and the ceremony itself are the two halves of the same question, and
+  // people arrive at each of them looking for the other.
+  weddingCrosslinkHeading: {
+    he: "והחתונה עצמה?",
+    en: "And the wedding itself?",
+    am: "ሠርጉ ራሱስ?",
+  },
+  weddingCrosslinkBody: {
+    he: "הרישום הוא צד אחד. הטקס — האירוסין, החינה יומיים לפני, החופה והימים שאחריה — הוא צד שני, ולו יש מדריך נפרד, כולל ספקים מאומתים לחינה, לשמלות הבשה ולקייטרינג.",
+    en: "Registration is one side. The ceremony — the betrothal, the henna two days before, the chuppah and the days after it — is the other, and it has its own guide, including verified suppliers for the henna, habesha dresses and catering.",
+    am: "ምዝገባው አንዱ ጎን ነው። ሥነ ሥርዓቱ — እጮኝነቱ፣ ከሰርጉ ሁለት ቀን በፊት ያለው ሒና፣ ሠርጉና ከዚያ በኋላ ያሉት ቀናት — ሌላው ጎን ሲሆን የራሱ መመሪያ አለው።",
+  },
+  weddingCrosslinkCta: {
+    he: "מדריך החתונה והחינה האתיופית",
+    en: "The Ethiopian wedding and henna guide",
+    am: "የኢትዮጵያ ሰርግና ሒና መመሪያ",
+  },
   disclaimer: {
     he: "המדריך מתאר את הנוהל כפי שהוא מפורסם במקורות הרשמיים ואינו מהווה ייעוץ משפטי או הלכתי. נהלים, אגרות ורשימות רבנים משתנים — אמתו מול הלשכה שבה אתם פותחים את התיק.",
     en: "This guide describes the procedure as published in official sources and is not legal or halachic advice. Procedures, fees, and rabbi lists change — verify with the office where you open your file.",

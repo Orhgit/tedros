@@ -14,6 +14,13 @@ import { getEnv } from "~/lib/env.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
 import { HERITAGE_EVENTS } from "~/lib/heritage/events.server";
 import { KESSIM_CITIES } from "~/lib/heritage/kessim.server";
+import {
+  weddingPath,
+  weddingSupplierCategoryPath,
+  weddingSupplierCityPath,
+} from "~/lib/heritage/links";
+import { ALL_WEDDING_SUPPLIER_CATEGORIES } from "~/lib/heritage/wedding-categories";
+import { weddingSupplierCells } from "~/lib/heritage/wedding-suppliers.server";
 import { relevantCities as heritageRelevantCities } from "~/lib/heritage/relevance";
 import { ORGS } from "~/lib/orgs/orgs.server";
 import { ALL_PROFESSIONS } from "~/lib/professionals/categories";
@@ -72,6 +79,15 @@ export function loader() {
     // Kessim directory (TED-140)
     "/heritage/kessim",
     ...KESSIM_CITIES.map((c) => `/heritage/kessim/${c.slug}`),
+    // Wedding & henna hub + supplier directory (TED-143). Category pages are
+    // listed even when empty — "we looked and found nothing verifiable" is a
+    // real answer to the query. City cells exist only where a supplier states
+    // that city on its own page, so they come from the data, not a product.
+    weddingPath(),
+    ...ALL_WEDDING_SUPPLIER_CATEGORIES.map((c) => weddingSupplierCategoryPath(c)),
+    ...weddingSupplierCells().map((cell) =>
+      weddingSupplierCityPath(cell.category, cell.citySlug),
+    ),
     // Culinary (TED-146)
     "/culinary",
     "/culinary/sigd-menu",

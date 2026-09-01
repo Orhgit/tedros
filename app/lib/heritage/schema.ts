@@ -151,6 +151,65 @@ export function itemListJsonLd(ctx: SchemaContext, input: ItemListJsonLdInput): 
   };
 }
 
+// ── ItemList of LocalBusiness (wedding supplier directory — TED-143) ──────
+
+export interface SupplierListItem {
+  name: string;
+  description?: string;
+  /** City the business's own page states, when it states one. */
+  cityName?: string;
+  /** Street/area within the city, when the source gives one. */
+  area?: string;
+  /** The business's own public page. */
+  url: string;
+}
+
+export interface SupplierItemListJsonLdInput {
+  path: string;
+  name: string;
+  description: string;
+  suppliers: SupplierListItem[];
+}
+
+export function supplierItemListJsonLd(
+  ctx: SchemaContext,
+  input: SupplierItemListJsonLdInput,
+): JsonLd {
+  const url = urlFor(ctx, input.path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "ItemList",
+    "@id": url,
+    url,
+    name: input.name,
+    description: input.description,
+    inLanguage: ctx.locale,
+    numberOfItems: input.suppliers.length,
+    itemListElement: input.suppliers.map((supplier, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "LocalBusiness",
+        name: supplier.name,
+        url: supplier.url,
+        ...(supplier.description ? { description: supplier.description } : {}),
+        // `address` is emitted only when the business's own page states a
+        // location — never inferred (TED-143 verification policy).
+        ...(supplier.cityName
+          ? {
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: supplier.cityName,
+                addressCountry: "IL",
+                ...(supplier.area ? { streetAddress: supplier.area } : {}),
+              },
+            }
+          : {}),
+      },
+    })),
+  };
+}
+
 // ── Article (long-form heritage guides — TED-140) ─────────────────────────
 
 export interface HeritageArticleJsonLdInput {

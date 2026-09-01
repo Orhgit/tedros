@@ -530,6 +530,16 @@ export const WEDDING_COPY: Record<string, Record<Locale, string>> = {
     en: "The directory is built from businesses that can be verified. Fill in the details, we will check against a public source, and add you. The checking is what makes the directory worth anything.",
     am: "ማውጫው ሊረጋገጡ ከሚችሉ ንግዶች ተገንብቷል። ዝርዝሮቹን ይሙሉ፣ ከይፋዊ ምንጭ ጋር እናረጋግጣለን፣ እናከልዎታለን።",
   },
+  datedBadge: {
+    he: "לאימות",
+    en: "Verify",
+    am: "ማረጋገጫ ይፈልጋል",
+  },
+  checkedPrefix: {
+    he: "נבדק ב-",
+    en: "Checked ",
+    am: "የተመረመረው ",
+  },
   verifiedLabel: {
     he: "מקור ותאריך בדיקה",
     en: "Source and check date",
@@ -544,6 +554,51 @@ export const WEDDING_COPY: Record<string, Record<Locale, string>> = {
     he: "המדריך מפנה למקורות פומביים ואינו המלצה. אנחנו לא מקבלים תשלום מספקים, לא בודקים מחירים ולא ערבים לשירות — בררו ותאמו ישירות מול העסק.",
     en: "The directory points to public sources and is not a recommendation. We take no payment from suppliers, do not check prices and do not vouch for service — check and arrange directly with the business.",
     am: "ማውጫው ወደ ይፋዊ ምንጮች ይመራል እንጂ ምክረ ሐሳብ አይደለም። ከአቅራቢዎች ክፍያ አንቀበልም፣ ዋጋዎችን አንመረምርም።",
+  },
+  relatedHeading: {
+    he: "להמשך קריאה",
+    en: "Further reading",
+    am: "ተጨማሪ ንባብ",
+  },
+  relatedMarriage: {
+    he: "רישום נישואין ברבנות ליוצאי אתיופיה — המדריך המלא",
+    en: "Rabbanut marriage registration for Ethiopian-Israelis — the full guide",
+    am: "ለኢትዮጵያ-እስራኤላውያን የረቢነት የጋብቻ ምዝገባ — ሙሉ መመሪያ",
+  },
+  relatedKessim: {
+    he: "מדריך הקייסים ורבני העדה לפי עיר",
+    en: "The kessim and community rabbis directory, by city",
+    am: "የቄሶችና የማህበረሰብ ረቢዎች ማውጫ በከተማ",
+  },
+  relatedNews: {
+    he: "\"בת של מי את?\" — פרויקט האנימציה על מסורות החתונה האתיופית",
+    en: "\"Whose daughter are you?\" — the animation project on Ethiopian wedding traditions",
+    am: "«የማን ልጅ ነሽ?» — በኢትዮጵያ የሰርግ ወጎች ላይ የአኒሜሽን ፕሮጀክት",
+  },
+  backToHub: {
+    he: "חזרה למדריך החתונה והחינה",
+    en: "Back to the wedding and henna guide",
+    am: "ወደ የሰርግና ሒና መመሪያ ተመለስ",
+  },
+  otherCategoriesHeading: {
+    he: "קטגוריות נוספות",
+    en: "Other categories",
+    am: "ሌሎች ምድቦች",
+  },
+  citiesHeading: {
+    he: "לפי עיר",
+    en: "By city",
+    am: "በከተማ",
+  },
+  noCityNote: {
+    he: "חלק מהעסקים ברשימה אינם נוקבים בעיר בעמוד שלהם. לא שייכנו אותם לעיר שלא הם עצמם ציינו, ולכן הם מופיעים כאן ולא בעמודי הערים.",
+    en: "Some businesses in this list state no city on their own page. We did not assign them to a city they did not state themselves, so they appear here and not on the city pages.",
+    am: "በዚህ ዝርዝር ውስጥ አንዳንድ ንግዶች በገጻቸው ላይ ከተማ አይጠቅሱም። እነሱ ራሳቸው ወዳልጠቀሱት ከተማ አልመደብናቸውም።",
+  },
+  cityEmpty: {
+    he: "אין עדיין ספק מאומת בקטגוריה הזאת בעיר הזאת.",
+    en: "There is not yet a verified supplier in this category in this city.",
+    am: "በዚህ ከተማ በዚህ ምድብ ገና የተረጋገጠ አቅራቢ የለም።",
   },
   sourcesHeading: { he: "מקורות", en: "Sources", am: "ምንጮች" },
   disclaimer: {

@@ -360,7 +360,7 @@ export const CATEGORY_INTROS: Record<WeddingSupplierCategory, Translatable> = {
 // ── lookups ────────────────────────────────────────────────────────────────
 
 export function localized(value: Translatable, locale: Locale): string {
-  return value[locale] ?? value[DEFAULT_LOCALE];
+  return value[locale] ?? value[DEFAULT_LOCALE] ?? value.he;
 }
 
 export function suppliersByCategory(
@@ -411,6 +411,100 @@ export function categoryIntro(
   locale: Locale,
 ): string {
   return localized(CATEGORY_INTROS[category], locale);
+}
+
+/**
+ * "3 ספקים מאומתים · 2 ערים" / "אין עדיין ספק מאומת".
+ * Built here rather than from `messages/*` so the pluralisation and the
+ * honest zero-state stay next to the data they describe.
+ */
+export function supplierCountLabel(
+  count: number,
+  cityCount: number,
+  locale: Locale,
+): string {
+  if (count === 0) {
+    return locale === "he"
+      ? "אין עדיין ספק מאומת"
+      : locale === "am"
+        ? "ገና የተረጋገጠ አቅራቢ የለም"
+        : "No verified supplier yet";
+  }
+  const suppliers =
+    locale === "he"
+      ? `${count} ${count === 1 ? "ספק מאומת" : "ספקים מאומתים"}`
+      : locale === "am"
+        ? `${count} የተረጋገጡ አቅራቢዎች`
+        : `${count} verified ${count === 1 ? "supplier" : "suppliers"}`;
+  if (cityCount === 0) return suppliers;
+  const cities =
+    locale === "he"
+      ? `${cityCount} ${cityCount === 1 ? "עיר" : "ערים"}`
+      : locale === "am"
+        ? `${cityCount} ከተሞች`
+        : `${cityCount} ${cityCount === 1 ? "city" : "cities"}`;
+  return `${suppliers} · ${cities}`;
+}
+
+// ── page titles and meta descriptions ──────────────────────────────────────
+//
+// Built here rather than from `messages/*` because they interpolate the
+// category and city names and would otherwise need six more dictionary keys
+// shipped in three locales to every client (ADR-020 §3).
+
+export function categoryPageTitle(
+  category: WeddingSupplierCategory,
+  locale: Locale,
+): string {
+  const name = categoryName(category, locale);
+  if (locale === "he") return `${name} — ספקים לחתונה וחינה אתיופית`;
+  if (locale === "am") return `${name} — ለኢትዮጵያ ሰርግና ሒና አቅራቢዎች`;
+  return `${name} — suppliers for an Ethiopian wedding and henna`;
+}
+
+export function categoryPageDescription(
+  category: WeddingSupplierCategory,
+  count: number,
+  locale: Locale,
+): string {
+  const name = categoryName(category, locale);
+  if (count === 0) {
+    if (locale === "he")
+      return `${name}: עדיין לא אימתנו אף ספק בקטגוריה הזאת. אנחנו לא ממציאים רשומות — אם אתם מכירים עסק, הוסיפו אותו.`;
+    if (locale === "am")
+      return `${name}፡ በዚህ ምድብ ገና አንድም አቅራቢ አላረጋገጥንም። መዝገቦችን አንፈጥርም።`;
+    return `${name}: we have not yet verified a single supplier in this category. We do not invent entries — if you know a business, add it.`;
+  }
+  if (locale === "he")
+    return `${count} ספקים מאומתים ל${name} בישראל — כל אחד עם מקור פומבי ותאריך בדיקה. בלי רשומות מומצאות.`;
+  if (locale === "am")
+    return `በእስራኤል ${count} የተረጋገጡ አቅራቢዎች — እያንዳንዱ ይፋዊ ምንጭና የምርመራ ቀን ያለው።`;
+  return `${count} verified suppliers for ${name} in Israel — each with a public source and a check date. No invented entries.`;
+}
+
+export function cityPageTitle(
+  category: WeddingSupplierCategory,
+  city: string,
+  locale: Locale,
+): string {
+  const name = categoryName(category, locale);
+  if (locale === "he") return `${name} ב${city}`;
+  if (locale === "am") return `${name} በ${city}`;
+  return `${name} in ${city}`;
+}
+
+export function cityPageDescription(
+  category: WeddingSupplierCategory,
+  city: string,
+  count: number,
+  locale: Locale,
+): string {
+  const name = categoryName(category, locale);
+  if (locale === "he")
+    return `${count} ${count === 1 ? "ספק מאומת" : "ספקים מאומתים"} ל${name} ב${city} — עם מקור פומבי ותאריך בדיקה לכל רשומה.`;
+  if (locale === "am")
+    return `በ${city} ${count} የተረጋገጡ አቅራቢዎች — ለእያንዳንዱ መዝገብ ይፋዊ ምንጭና የምርመራ ቀን።`;
+  return `${count} verified ${count === 1 ? "supplier" : "suppliers"} for ${name} in ${city} — with a public source and check date for every entry.`;
 }
 
 /** Loader-shaped projection — resolves one locale, drops the rest. */
