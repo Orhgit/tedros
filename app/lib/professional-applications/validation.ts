@@ -3,7 +3,19 @@
 
 import { z } from "zod";
 
+import { isWeddingSupplierProfession } from "../heritage/wedding-categories";
 import { isProfession } from "../professionals/categories";
+
+/**
+ * The intake pipeline is shared by two directories (TED-143): the licensed
+ * professionals directory (`Profession` values) and the Ethiopian wedding
+ * & henna supplier directory (`wedding-*` values). Only the professionals
+ * vertical ever reads `Profession` back, so the namespaced supplier values
+ * cannot leak into it.
+ */
+function isAcceptedProfession(value: string): boolean {
+  return isProfession(value) || isWeddingSupplierProfession(value);
+}
 
 const PHONE_RE = /^\+?[\d\s\-()]{7,20}$/;
 
@@ -15,7 +27,7 @@ const regionsList = z
 export const professionalApplicationSchema = z
   .object({
     name: z.string().trim().min(2, "name_too_short").max(200, "name_too_long"),
-    profession: z.string().refine(isProfession, "profession_invalid"),
+    profession: z.string().refine(isAcceptedProfession, "profession_invalid"),
     phone: z.string().trim().regex(PHONE_RE, "phone_invalid").max(32, "phone_too_long"),
     email: z
       .string()

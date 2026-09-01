@@ -215,6 +215,10 @@ The piece runs against the backdrop of [the 32 kessim's letter to Netanyahu](/en
 
 הפרויקט של אינאו מצטרף לגל של יוצרים צעירים מהקהילה שמביאים את מורשת ביתא ישראל לקדמת הבמה התרבותית בישראל — הפעם דרך אנימציה, ומתוך סיפור אישי של דור שני שמתרגם בין העולמות.
 
+## מתכננים חתונה?
+
+המנהגים שהסרטונים מתעדים הם רק חלק מהרצף. [מדריך החתונה והחינה האתיופית](/he/heritage/wedding) מפרט את השלבים לפי הסדר — מבקשת יד הכלה ועד הימים שאחרי החופה — ומרכז ספקים מאומתים לחינה, לשמלות ולקייטרינג. את הצד הבירוקרטי מכסה [המדריך לרישום נישואין ברבנות](/he/heritage/marriage).
+
 ## מקורות
 
 - [ynet — ניצן פינקו, ‏3.8.2026](https://www.ynet.co.il/dating/weddings/article/rkqnx003rmg)`,
@@ -234,6 +238,10 @@ The piece runs against the backdrop of [the 32 kessim's letter to Netanyahu](/en
 
 Ainao's project joins a wave of young creators from the community bringing Beta Israel heritage to the front of Israel's cultural stage — this time through animation, and through a second-generation story of translating between worlds.
 
+## Planning a wedding?
+
+The customs the films document are only part of the sequence. [The Ethiopian wedding and henna guide](/en/heritage/wedding) sets out the stages in order — from the request for the bride's hand to the days after the chuppah — and collects verified suppliers for the henna, the dresses and the catering. The bureaucratic side is covered by [the Rabbanut marriage-registration guide](/en/heritage/marriage).
+
 ## Sources
 
 - [ynet — Nitzan Pinko, Aug 3, 2026](https://www.ynet.co.il/dating/weddings/article/rkqnx003rmg)`,
@@ -252,6 +260,10 @@ Ainao's project joins a wave of young creators from the community bringing Beta 
 ## ለምን ያስደስታል
 
 የአይናኦ ፕሮጀክት የቤታ እስራኤልን ቅርስ ወደ እስራኤል የባህል መድረክ ፊት የሚያመጡ ወጣት ፈጣሪዎች ማዕበል ይቀላቀላል — በዚህ ጊዜ በአኒሜሽን።
+
+## ሰርግ እያቀዱ ነው?
+
+ፊልሞቹ የሚመዘግቧቸው ወጎች የሂደቱ አካል ብቻ ናቸው። [የኢትዮጵያ ሰርግና ሒና መመሪያ](/am/heritage/wedding) ደረጃዎቹን በቅደም ተከተል ያቀርባል፣ ለሒና፣ ለቀሚሶችና ለምግብ አገልግሎት የተረጋገጡ አቅራቢዎችንም ያሰባስባል። የቢሮክራሲውን ጎን [የረቢነት የጋብቻ ምዝገባ መመሪያ](/am/heritage/marriage) ይሸፍናል።
 
 ## ምንጮች
 
