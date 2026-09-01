@@ -278,12 +278,18 @@ describe("i18n coverage for the new pages", () => {
     // These paragraphs live in the server modules rather than messages/*.json
     // so they never ship to the client (TED-115 size budget). They still need
     // full trilingual coverage.
+    // Headings and link labels are legitimately short; everything else in
+    // these maps is a paragraph and must read as one in all three locales.
+    const isShortLabel = (key: string) => /(Heading|Cta)$/.test(key);
     for (const [key, translations] of Object.entries({
       ...KESSIM_COPY,
       ...MARRIAGE_COPY,
     })) {
       for (const locale of LOCALES) {
-        expect(translations[locale]?.length, `${key} [${locale}]`).toBeGreaterThan(40);
+        const value = translations[locale];
+        expect(value, `${key} [${locale}] missing`).toBeTruthy();
+        if (isShortLabel(key)) continue;
+        expect(value?.length, `${key} [${locale}]`).toBeGreaterThan(40);
       }
     }
   });

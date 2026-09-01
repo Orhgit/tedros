@@ -17,46 +17,11 @@ import { CITIES } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { weddingJoinPath, weddingPath } from "~/lib/heritage/links";
 import { ALL_WEDDING_SUPPLIER_CATEGORIES } from "~/lib/heritage/wedding-categories";
-import { weddingCopy } from "~/lib/heritage/wedding.server";
+import { WEDDING_FORM_LABELS, weddingCopy } from "~/lib/heritage/wedding.server";
 import { categoryName } from "~/lib/heritage/wedding-suppliers.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
-
-const FORM_LABELS: Record<string, Record<Locale, string>> = {
-  businessName: {
-    he: "שם העסק",
-    en: "Business name",
-    am: "የንግድ ስም",
-  },
-  category: { he: "קטגוריה", en: "Category", am: "ምድብ" },
-  categoryPlaceholder: {
-    he: "בחרו קטגוריה",
-    en: "Choose a category",
-    am: "ምድብ ይምረጡ",
-  },
-  city: { he: "עיר", en: "City", am: "ከተማ" },
-  nationwide: {
-    he: "מגיעים לכל הארץ",
-    en: "We travel nationwide",
-    am: "በመላ አገሪቱ እንሄዳለን",
-  },
-  description: {
-    he: "מה אתם מספקים, וקישור לאתר או לעמוד העסקי",
-    en: "What you supply, and a link to your site or business page",
-    am: "ምን እንደሚያቀርቡ፣ እና ወደ ድህረ ገጽዎ ወይም የንግድ ገጽዎ አገናኝ",
-  },
-  descriptionHint: {
-    he: "הקישור הוא החלק החשוב. אנחנו מפרסמים רק עסקים שאפשר לאמת מול מקור פומבי — אתר, עמוד עסקי פעיל או כתבה שנוקבת בשמכם — ומפרסמים רק פרטי קשר שאתם עצמכם מפרסמים.",
-    en: "The link is the important part. We publish only businesses that can be verified against a public source — a site, an active business page, or an article naming you — and publish only contact details you publish yourself.",
-    am: "አገናኙ ዋናው ክፍል ነው። ከይፋዊ ምንጭ ጋር ሊረጋገጡ የሚችሉ ንግዶችን ብቻ እናትማለን።",
-  },
-  consent: {
-    he: "אני מאשר/ת פרסום פרטי העסק במדריך הציבורי, אחרי בדיקה.",
-    en: "I agree to publish the business details in the public directory, after checking.",
-    am: "ከምርመራ በኋላ የንግድ ዝርዝሮች በይፋዊ ማውጫ እንዲታተሙ እስማማለሁ።",
-  },
-};
 
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
@@ -74,14 +39,14 @@ export async function loader({ params }: Route.LoaderArgs) {
     subtitle: weddingCopy("joinSubtitle", locale),
     backToHub: weddingCopy("backToHub", locale),
     labels: {
-      businessName: FORM_LABELS.businessName![locale],
-      category: FORM_LABELS.category![locale],
-      categoryPlaceholder: FORM_LABELS.categoryPlaceholder![locale],
-      city: FORM_LABELS.city![locale],
-      nationwide: FORM_LABELS.nationwide![locale],
-      description: FORM_LABELS.description![locale],
-      descriptionHint: FORM_LABELS.descriptionHint![locale],
-      consent: FORM_LABELS.consent![locale],
+      businessName: WEDDING_FORM_LABELS.businessName![locale],
+      category: WEDDING_FORM_LABELS.category![locale],
+      categoryPlaceholder: WEDDING_FORM_LABELS.categoryPlaceholder![locale],
+      city: WEDDING_FORM_LABELS.city![locale],
+      nationwide: WEDDING_FORM_LABELS.nationwide![locale],
+      description: WEDDING_FORM_LABELS.description![locale],
+      descriptionHint: WEDDING_FORM_LABELS.descriptionHint![locale],
+      consent: WEDDING_FORM_LABELS.consent![locale],
       categoryNames,
     },
   };

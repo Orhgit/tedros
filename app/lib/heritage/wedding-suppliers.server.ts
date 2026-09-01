@@ -101,7 +101,7 @@ export const WEDDING_SUPPLIERS: WeddingSupplier[] = [
     categories: ["catering"],
     citySlug: "tel-aviv",
     area: {
-      he: "תל אביב — מל\"ן 4 / הכובשים 39",
+      he: 'תל אביב — מל"ן 4 / הכובשים 39',
       en: "Tel Aviv — Malan 4 / HaKovshim 39",
       am: "ቴል አቪቭ — ማላን 4 / ሃኮቭሺም 39",
     },
@@ -399,17 +399,11 @@ export function weddingSupplierCells(): Array<{
   return out;
 }
 
-export function categoryName(
-  category: WeddingSupplierCategory,
-  locale: Locale,
-): string {
+export function categoryName(category: WeddingSupplierCategory, locale: Locale): string {
   return localized(CATEGORY_NAMES[category], locale);
 }
 
-export function categoryIntro(
-  category: WeddingSupplierCategory,
-  locale: Locale,
-): string {
+export function categoryIntro(category: WeddingSupplierCategory, locale: Locale): string {
   return localized(CATEGORY_INTROS[category], locale);
 }
 
@@ -471,8 +465,7 @@ export function categoryPageDescription(
   if (count === 0) {
     if (locale === "he")
       return `${name}: עדיין לא אימתנו אף ספק בקטגוריה הזאת. אנחנו לא ממציאים רשומות — אם אתם מכירים עסק, הוסיפו אותו.`;
-    if (locale === "am")
-      return `${name}፡ በዚህ ምድብ ገና አንድም አቅራቢ አላረጋገጥንም። መዝገቦችን አንፈጥርም።`;
+    if (locale === "am") return `${name}፡ በዚህ ምድብ ገና አንድም አቅራቢ አላረጋገጥንም። መዝገቦችን አንፈጥርም።`;
     return `${name}: we have not yet verified a single supplier in this category. We do not invent entries — if you know a business, add it.`;
   }
   if (locale === "he")

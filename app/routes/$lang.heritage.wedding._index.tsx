@@ -282,9 +282,7 @@ export default function WeddingHub({ loaderData }: Route.ComponentProps) {
                   <span className="font-display text-base font-semibold text-earth-900">
                     <span aria-hidden="true">{c.glyph}</span> {c.name}
                   </span>
-                  <span className="mt-1 block text-xs text-ink-500">
-                    {c.countLabel}
-                  </span>
+                  <span className="mt-1 block text-xs text-ink-500">{c.countLabel}</span>
                   <span className="mt-2 block text-sm leading-relaxed text-ink-700">
                     {c.intro}
                   </span>
@@ -325,9 +323,7 @@ export default function WeddingHub({ loaderData }: Route.ComponentProps) {
                 <h3 className="font-display text-base font-semibold text-earth-900">
                   {item.question}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink-700">
-                  {item.answer}
-                </p>
+                <p className="mt-1 text-sm leading-relaxed text-ink-700">{item.answer}</p>
               </li>
             ))}
           </ul>
@@ -350,9 +346,7 @@ export default function WeddingHub({ loaderData }: Route.ComponentProps) {
                 <dt className="font-display text-sm font-semibold text-earth-900">
                   {x.term}
                 </dt>
-                <dd className="mt-1 text-sm leading-relaxed text-ink-700">
-                  {x.meaning}
-                </dd>
+                <dd className="mt-1 text-sm leading-relaxed text-ink-700">{x.meaning}</dd>
               </div>
             ))}
           </dl>
@@ -375,9 +369,7 @@ export default function WeddingHub({ loaderData }: Route.ComponentProps) {
                     <span className="ms-2 font-normal text-ink-500">{x.geez}</span>
                   ) : null}
                 </dt>
-                <dd className="mt-1 text-sm leading-relaxed text-ink-700">
-                  {x.meaning}
-                </dd>
+                <dd className="mt-1 text-sm leading-relaxed text-ink-700">{x.meaning}</dd>
               </div>
             ))}
           </dl>

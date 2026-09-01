@@ -47,6 +47,8 @@ import { GLOSSARY } from "../app/lib/glossary/glossary.server";
 import { CONDITIONS } from "../app/lib/health/conditions.server";
 import { HERITAGE_EVENTS } from "../app/lib/heritage/events.server";
 import { isRelevant as isHeritageCellRelevant } from "../app/lib/heritage/relevance";
+import { WEDDING_COPY, WEDDING_STAGES } from "../app/lib/heritage/wedding.server";
+import { weddingSupplierCells } from "../app/lib/heritage/wedding-suppliers.server";
 import { ARTICLES } from "../app/lib/news/articles.server";
 import { ALL_NEWS_TAGS } from "../app/lib/news/categories";
 import { ORGS } from "../app/lib/orgs/orgs.server";
@@ -66,6 +68,7 @@ const LINK_SOURCES: Record<string, unknown> = {
   "orgs/orgs.server": ORGS,
   "glossary/glossary.server (all waves)": GLOSSARY,
   "heritage/events.server": HERITAGE_EVENTS,
+  "heritage/wedding.server (stages + copy)": [WEDDING_STAGES, WEDDING_COPY],
   "db/seeds/rights": PRIORITY_RIGHTS,
   "family/topics.server": FAMILY_TOPICS,
   "careers/faqs.server": FAQS,
@@ -192,6 +195,12 @@ function dynamicPaths(): Set<string> {
 
   for (const a of ARTICLES) out.add(`/news/${a.slug}`);
   for (const tag of ALL_NEWS_TAGS) out.add(`/news/tag/${tag}`);
+
+  // Wedding supplier cells exist only where a verified supplier states the
+  // city itself (TED-143) — so they come from the data, not from a product.
+  for (const cell of weddingSupplierCells()) {
+    out.add(`/heritage/wedding/suppliers/${cell.category}/${cell.citySlug}`);
+  }
 
   for (const ev of HERITAGE_EVENTS) {
     out.add(`/heritage/events/${ev.slug}`);

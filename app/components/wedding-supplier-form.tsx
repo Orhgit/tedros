@@ -113,14 +113,16 @@ export function WeddingSupplierForm({
       </div>
 
       <div>
-        <label
-          htmlFor={`${formId}-category`}
-          className="mb-1 block text-sm font-medium"
-        >
+        <label htmlFor={`${formId}-category`} className="mb-1 block text-sm font-medium">
           {labels.category}
           <span aria-hidden="true"> *</span>
         </label>
-        <select id={`${formId}-category`} name="profession" required className={inputClass}>
+        <select
+          id={`${formId}-category`}
+          name="profession"
+          required
+          className={inputClass}
+        >
           <option value="">{labels.categoryPlaceholder}</option>
           {ALL_WEDDING_SUPPLIER_CATEGORIES.map((c) => (
             <option key={c} value={weddingSupplierProfession(c)}>

@@ -212,7 +212,7 @@ export const WEDDING_STAGES: WeddingStage[] = [
       am: "ከሠርግ በኋላ ያሉት ቀናት",
     },
     detail: {
-      he: "החגיגה של בני הזוג נגמרת למחרת, אבל של המשפחות ממשיכה. את האירועים האלה מכנים היום \"קבלת פנים\" — מונח שמבטא בעצמו את הרצון להמשיך את המסורת גם בצורה שהשתנתה. ביום שישי, עד כניסת השבת, החגיגה נערכת באוהל גדול בחצר בית הכלה או במועדון שכונתי, עם מוזיקה באמהרית ובתיגרינית ואוכל מסורתי. בשבת נערכת שבת חתן — מנהג שיוצאי אתיופיה אימצו מהחברה הדתית בישראל — שבה מתכנסים כל הקרובים ומעניקים מתנות; יוצאי תיגראי אימצו גם את אירוח משפחת הכלה בבית משפחת החתן באותה שבת. ממוצאי שבת החגיגה נמשכת בבית משפחת הכלה עד יום שני. חלוקת האחריות הכספית מתועדת במפורש: בני הזוג אחראים לטקס החתונה ומממנים אותו, וההורים אחראים לאירוח הקרובים והאורחים בימים שאחרי, לפי יכולתם הכלכלית.",
+      he: 'החגיגה של בני הזוג נגמרת למחרת, אבל של המשפחות ממשיכה. את האירועים האלה מכנים היום "קבלת פנים" — מונח שמבטא בעצמו את הרצון להמשיך את המסורת גם בצורה שהשתנתה. ביום שישי, עד כניסת השבת, החגיגה נערכת באוהל גדול בחצר בית הכלה או במועדון שכונתי, עם מוזיקה באמהרית ובתיגרינית ואוכל מסורתי. בשבת נערכת שבת חתן — מנהג שיוצאי אתיופיה אימצו מהחברה הדתית בישראל — שבה מתכנסים כל הקרובים ומעניקים מתנות; יוצאי תיגראי אימצו גם את אירוח משפחת הכלה בבית משפחת החתן באותה שבת. ממוצאי שבת החגיגה נמשכת בבית משפחת הכלה עד יום שני. חלוקת האחריות הכספית מתועדת במפורש: בני הזוג אחראים לטקס החתונה ומממנים אותו, וההורים אחראים לאירוח הקרובים והאורחים בימים שאחרי, לפי יכולתם הכלכלית.',
       en: "The celebration ends for the couple the next day, but continues for the families. These events are now called kabalat panim — a term that itself expresses the wish to continue the tradition even in an altered form. On Friday, until Shabbat comes in, the celebration is held in a large tent in the yard of the bride's home or at the neighbourhood club, with music in Amharic and Tigrinya and traditional food. On Shabbat comes Shabbat Chatan — a practice Ethiopian-Israelis adopted from Israeli religious society — where all the relatives gather and give gifts; those of Tigray origin also adopted hosting the bride's family at the groom's family's home on that Shabbat. From Motza'ei Shabbat the celebration continues at the bride's family's home until Monday. The division of financial responsibility is explicitly documented: the couple are responsible for the wedding ceremony and finance it, while the parents are responsible for hosting relatives and guests in the days afterwards, according to their means.",
       am: "የጥንዶቹ ክብረ በዓል በማግስቱ ያበቃል፣ የቤተሰቦቹ ግን ይቀጥላል። እነዚህ ዝግጅቶች ዛሬ «ቀባላት ፓኒም» ይባላሉ። ዓርብ እስከ ሰንበት መግቢያ ድረስ ክብረ በዓሉ በሙሽራዋ ቤት ግቢ በተተከለ ትልቅ ድንኳን ወይም በሰፈር ክበብ ይደረጋል፣ በአማርኛና በትግርኛ ሙዚቃና ባህላዊ ምግብ። በሰንበት «ሻባት ሓታን» ይደረጋል — ኢትዮጵያውያን-እስራኤላውያን ከእስራኤል ሃይማኖተኛ ማህበረሰብ የወሰዱት ልማድ። ከሰንበት መውጫ ጀምሮ ክብረ በዓሉ በሙሽራዋ ቤተሰብ ቤት እስከ ሰኞ ይቀጥላል። የገንዘብ ኃላፊነት ክፍፍል፡ ጥንዶቹ የሰርጉን ሥነ ሥርዓት ይሸፍናሉ፣ ወላጆች ደግሞ ከሰርግ በኋላ ያሉትን ቀናት እንግዳ ተቀባይነት ይሸፍናሉ።",
     },
@@ -318,8 +318,8 @@ export const HABESHA_TERMS: WeddingTerm[] = [
     term: { he: "שמגלה", en: "Shimagile", am: "ሽማግሌ" },
     geez: "ሽማግሌ",
     meaning: {
-      he: "\"זקן\" — הזקנים ששולחת משפחת החתן לבקש את יד הכלה. במסורת של ביתא ישראל המקורות מדברים על \"מכובדים\" או \"שליחים\", לא על שמגלה.",
-      en: "\"Elder\" — the elders the groom's family sends to ask for the bride's hand. In the Beta Israel tradition the sources speak of \"respected men\" or \"emissaries\", not shimagile.",
+      he: '"זקן" — הזקנים ששולחת משפחת החתן לבקש את יד הכלה. במסורת של ביתא ישראל המקורות מדברים על "מכובדים" או "שליחים", לא על שמגלה.',
+      en: '"Elder" — the elders the groom\'s family sends to ask for the bride\'s hand. In the Beta Israel tradition the sources speak of "respected men" or "emissaries", not shimagile.',
       am: "«ሽማግሌ» — የሙሽራው ቤተሰብ የሙሽራዋን እጅ ለመጠየቅ የሚልካቸው ሽማግሌዎች።",
     },
   },
@@ -327,8 +327,8 @@ export const HABESHA_TERMS: WeddingTerm[] = [
     term: { he: "גוּרְשָׁה", en: "Gursha", am: "ጉርሻ" },
     geez: "ጉርሻ",
     meaning: {
-      he: "\"פה מלא\" — הגשת נגיס אינג'רה עטוף בתבשיל ישירות לפיו של אדם אחר, כמחוות כבוד, אהבה והכרת תודה. נהוג במגוון אירועים, ובכללם חתונות.",
-      en: "\"A mouthful\" — feeding another person a morsel of injera wrapped around stew, as a gesture of honour, love and gratitude. Practised at many occasions, weddings among them.",
+      he: '"פה מלא" — הגשת נגיס אינג\'רה עטוף בתבשיל ישירות לפיו של אדם אחר, כמחוות כבוד, אהבה והכרת תודה. נהוג במגוון אירועים, ובכללם חתונות.',
+      en: '"A mouthful" — feeding another person a morsel of injera wrapped around stew, as a gesture of honour, love and gratitude. Practised at many occasions, weddings among them.',
       am: "«ጉርሻ» — በወጥ የተጠቀለለ እንጀራ በእጅ ለሌላ ሰው ማጉረስ፤ የክብር፣ የፍቅርና የምስጋና ምልክት።",
     },
   },
@@ -398,8 +398,8 @@ export const WEDDING_FAQ: WeddingFaqItem[] = [
       am: "በእርግጥ ስንት እንግዶች ይመጣሉ?",
     },
     answer: {
-      he: "הרבה יותר ממה שתכננתם. בכתבה מתועד זוג שתכנן כשלוש מאות, הזמין בסוף כשמונה מאות, הזמין אולם ל-550 ועוד 150 ברזרבה — והגיעו כשבע מאות. אבות כלה מדברים על \"אולי חמש מאות ואולי אלף\". הסיבה מבנית: ההזמנה קהילתית ולא אישית, ואישורי הגעה אינם נהוגים — לבקש אישור הגעה נחשב לא מכובד. תכננו לפי זה.",
-      en: "Many more than you planned for. One documented couple planned for about three hundred, ended up inviting about eight hundred, booked a venue for 550 with 150 in reserve — and about seven hundred came. Fathers of brides speak of \"maybe five hundred and maybe a thousand\". The reason is structural: the invitation is communal rather than personal, and RSVPs are not customary — asking for confirmation is considered disrespectful. Plan accordingly.",
+      he: 'הרבה יותר ממה שתכננתם. בכתבה מתועד זוג שתכנן כשלוש מאות, הזמין בסוף כשמונה מאות, הזמין אולם ל-550 ועוד 150 ברזרבה — והגיעו כשבע מאות. אבות כלה מדברים על "אולי חמש מאות ואולי אלף". הסיבה מבנית: ההזמנה קהילתית ולא אישית, ואישורי הגעה אינם נהוגים — לבקש אישור הגעה נחשב לא מכובד. תכננו לפי זה.',
+      en: 'Many more than you planned for. One documented couple planned for about three hundred, ended up inviting about eight hundred, booked a venue for 550 with 150 in reserve — and about seven hundred came. Fathers of brides speak of "maybe five hundred and maybe a thousand". The reason is structural: the invitation is communal rather than personal, and RSVPs are not customary — asking for confirmation is considered disrespectful. Plan accordingly.',
       am: "ካቀዱት በጣም ብዙ። አንድ የተመዘገበ ጥንድ ሦስት መቶ አቅዶ ስምንት መቶ ጋበዘ፣ አዳራሽ ለ550 ከ150 መጠባበቂያ ጋር ያዘ — ሰባት መቶ ያህል መጡ። የመምጣት ማረጋገጫ መጠየቅ አክብሮት እንደሌለው ይቆጠራል።",
     },
   },
@@ -571,8 +571,8 @@ export const WEDDING_COPY: Record<string, Record<Locale, string>> = {
     am: "የቄሶችና የማህበረሰብ ረቢዎች ማውጫ በከተማ",
   },
   relatedNews: {
-    he: "\"בת של מי את?\" — פרויקט האנימציה על מסורות החתונה האתיופית",
-    en: "\"Whose daughter are you?\" — the animation project on Ethiopian wedding traditions",
+    he: '"בת של מי את?" — פרויקט האנימציה על מסורות החתונה האתיופית',
+    en: '"Whose daughter are you?" — the animation project on Ethiopian wedding traditions',
     am: "«የማን ልጅ ነሽ?» — በኢትዮጵያ የሰርግ ወጎች ላይ የአኒሜሽን ፕሮጀክት",
   },
   backToHub: {
@@ -617,8 +617,8 @@ export function weddingCopy(key: keyof typeof WEDDING_COPY, locale: Locale): str
 export const WEDDING_SOURCES: WeddingSource[] = [
   {
     name: {
-      he: "רחל שרעבי, \"היבטים משפחתיים בטקסי הנישואים של יהודי אתיופיה\", פעמים 141, מכון בן-צבי (מחקר עמיתים; ראיונות ותצפיות בחתונות בישראל)",
-      en: "Rachel Sharabi, \"Family aspects in the marriage ceremonies of Ethiopian Jews\", Pe'amim 141, Ben-Zvi Institute (peer-reviewed; interviews and observation at weddings in Israel)",
+      he: 'רחל שרעבי, "היבטים משפחתיים בטקסי הנישואים של יהודי אתיופיה", פעמים 141, מכון בן-צבי (מחקר עמיתים; ראיונות ותצפיות בחתונות בישראל)',
+      en: 'Rachel Sharabi, "Family aspects in the marriage ceremonies of Ethiopian Jews", Pe\'amim 141, Ben-Zvi Institute (peer-reviewed; interviews and observation at weddings in Israel)',
       am: "ራሔል ሻራቢ፣ «በኢትዮጵያ አይሁዶች የጋብቻ ሥነ ሥርዓቶች የቤተሰብ ገጽታዎች»፣ ፔአሚም 141፣ የቤን-ጽvi ተቋም",
     },
     url: "https://files.ybz.org.il/periodicals/peamim/141/Pe'amim_141.4.pdf",
@@ -633,8 +633,8 @@ export const WEDDING_SOURCES: WeddingSource[] = [
   },
   {
     name: {
-      he: "ynet — ניצן פינקו, \"לחתונה אתיופית כולם מוזמנים\": הזמנה קהילתית ושמות הסבים",
-      en: "ynet — Nitzan Pinko, \"Everyone is invited to an Ethiopian wedding\": the communal invitation and the grandparents' names",
+      he: 'ynet — ניצן פינקו, "לחתונה אתיופית כולם מוזמנים": הזמנה קהילתית ושמות הסבים',
+      en: 'ynet — Nitzan Pinko, "Everyone is invited to an Ethiopian wedding": the communal invitation and the grandparents\' names',
       am: "ynet — ኒጻን ፒንኮ፣ «ወደ ኢትዮጵያ ሰርግ ሁሉም ተጋብዟል»",
     },
     url: "https://www.ynet.co.il/dating/weddings/article/rkqnx003rmg",
@@ -672,3 +672,46 @@ export const WEDDING_SOURCES: WeddingSource[] = [
     url: "https://www.undp.org/ethiopia/stories/shuruba-providing-healing-and-sanctuary-women-through-beauty-braids-and-cornrows",
   },
 ];
+
+// ── supplier intake form labels ────────────────────────────────────────────
+//
+// Trilingual content, so it lives here and not in the route module: module
+// scope in a route is NOT stripped from the client bundle, and it is one
+// edit away from being read by the component instead of the loader
+// (ADR-020 §5). Kept out of `messages/*` for the same reason as the rest of
+// this file — the dictionary ships whole to every client.
+
+export const WEDDING_FORM_LABELS: Record<string, Record<Locale, string>> = {
+  businessName: {
+    he: "שם העסק",
+    en: "Business name",
+    am: "የንግድ ስም",
+  },
+  category: { he: "קטגוריה", en: "Category", am: "ምድብ" },
+  categoryPlaceholder: {
+    he: "בחרו קטגוריה",
+    en: "Choose a category",
+    am: "ምድብ ይምረጡ",
+  },
+  city: { he: "עיר", en: "City", am: "ከተማ" },
+  nationwide: {
+    he: "מגיעים לכל הארץ",
+    en: "We travel nationwide",
+    am: "በመላ አገሪቱ እንሄዳለን",
+  },
+  description: {
+    he: "מה אתם מספקים, וקישור לאתר או לעמוד העסקי",
+    en: "What you supply, and a link to your site or business page",
+    am: "ምን እንደሚያቀርቡ፣ እና ወደ ድህረ ገጽዎ ወይም የንግድ ገጽዎ አገናኝ",
+  },
+  descriptionHint: {
+    he: "הקישור הוא החלק החשוב. אנחנו מפרסמים רק עסקים שאפשר לאמת מול מקור פומבי — אתר, עמוד עסקי פעיל או כתבה שנוקבת בשמכם — ומפרסמים רק פרטי קשר שאתם עצמכם מפרסמים.",
+    en: "The link is the important part. We publish only businesses that can be verified against a public source — a site, an active business page, or an article naming you — and publish only contact details you publish yourself.",
+    am: "አገናኙ ዋናው ክፍል ነው። ከይፋዊ ምንጭ ጋር ሊረጋገጡ የሚችሉ ንግዶችን ብቻ እናትማለን።",
+  },
+  consent: {
+    he: "אני מאשר/ת פרסום פרטי העסק במדריך הציבורי, אחרי בדיקה.",
+    en: "I agree to publish the business details in the public directory, after checking.",
+    am: "ከምርመራ በኋላ የንግድ ዝርዝሮች በይፋዊ ማውጫ እንዲታተሙ እስማማለሁ።",
+  },
+};
