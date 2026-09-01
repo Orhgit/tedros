@@ -103,3 +103,130 @@ describe("retired claims stay retired (TED-157)", () => {
 /** Phrases that mark a paragraph as warning about a claim rather than making it. */
 const DEBUNK_RE =
   /(אינם מופיעים|אינו מופיע|לא קיים|לא קיימת|אין תוכנית|do not appear|does not appear|no such|not a real)/;
+
+// ---------------------------------------------------------------------------
+// 2. Sourced money claims — ADR-021
+// ---------------------------------------------------------------------------
+
+import { CAREER_TRACKS } from "../app/lib/careers/careers.server";
+import { COMPARISONS } from "../app/lib/comparisons/comparisons.server";
+import { PRIORITY_RIGHTS } from "../app/lib/db/seeds/rights";
+import { ALL_SCHOLARSHIPS } from "../app/lib/education/scholarships.server";
+import { FAMILY_TOPICS } from "../app/lib/family/topics.server";
+import { PROGRAMS } from "../app/lib/programs/programs.server";
+
+/**
+ * Registries in scope for the sourcing rule. These are the ones that tell a
+ * reader what they are entitled to and how much it is worth — the pages where
+ * a wrong number sends someone to a counter to be refused.
+ *
+ * Deliberately NOT in scope: `news/articles.server` (dated reporting, which
+ * carries its own per-article source fields), `statistics/topics.server`
+ * (CBS/ENP figures cited inline), and `professionals` (market fee ranges,
+ * which are estimates and are labelled as such). Extending to those is its
+ * own issue.
+ */
+const CLAIM_REGISTRIES: ReadonlyArray<{
+  readonly label: string;
+  readonly entries: readonly unknown[];
+  /** Government-benefit content: the source must be a government domain. */
+  readonly requireGovSource: boolean;
+}> = [
+  { label: "db/seeds/rights", entries: PRIORITY_RIGHTS, requireGovSource: true },
+  {
+    label: "education/scholarships.server (all waves)",
+    entries: ALL_SCHOLARSHIPS,
+    requireGovSource: false,
+  },
+  { label: "programs/programs.server", entries: PROGRAMS, requireGovSource: false },
+  {
+    label: "comparisons/comparisons.server",
+    entries: COMPARISONS,
+    requireGovSource: false,
+  },
+  { label: "careers/careers.server", entries: CAREER_TRACKS, requireGovSource: false },
+  { label: "family/topics.server", entries: FAMILY_TOPICS, requireGovSource: false },
+];
+
+/** A shekel amount: "₪1,250", "1,250 ₪", '600,000 ש"ח'. */
+const MONEY_RE = /(₪\s*\d|\d[\d,.]*\s*₪|\d[\d,.]*\s*ש"ח)/;
+
+/** Any absolute URL. */
+const URL_RE = /https?:\/\/[^\s"'`)]+/g;
+
+/** Government / statutory primary sources. */
+const GOV_HOST_RE = /(^|\.)((gov|btl|knesset|court|mod)\.il|nevo\.co\.il)$/;
+
+/**
+ * A verification date the reader can see: "נבדק אוגוסט 2026", "verified August
+ * 2026", "נכון לספטמבר 2026", or a `lastVerified: "2026-08-30"` field on
+ * registries that already have one.
+ */
+const VERIFIED_RE =
+  /(נבדק[ווּ]?[^"\n]{0,40}20\d\d|נכון ל[^"\n]{0,30}20\d\d|verified[^"\n]{0,40}20\d\d|checked[^"\n]{0,40}20\d\d|"lastVerified":"20\d\d-\d\d-\d\d")/;
+
+/**
+ * Entries that state money and predate ADR-021, which TED-157 could not
+ * resolve against a primary source in the time it had. This list is a debt
+ * ledger: it may shrink, and an addition to it needs a reason and an issue.
+ * See the PR ledger for TED-157 for what was checked and what was not.
+ */
+const GRANDFATHERED: ReadonlyArray<{ readonly id: string; readonly why: string }> = [];
+
+function entryId(entry: unknown, index: number): string {
+  const e = entry as { slug?: string | { he?: string }; title?: { he?: string } };
+  if (typeof e?.slug === "string") return e.slug;
+  if (e?.slug && typeof e.slug === "object" && e.slug.he) return e.slug.he;
+  if (e?.title?.he) return e.title.he;
+  return `#${index}`;
+}
+
+describe("money claims carry a source and a verification date (ADR-021)", () => {
+  const grandfathered = new Set(GRANDFATHERED.map((g) => g.id));
+
+  it("scans a non-trivial number of entries", () => {
+    const total = CLAIM_REGISTRIES.reduce((n, r) => n + r.entries.length, 0);
+    expect(total).toBeGreaterThan(100);
+  });
+
+  it.each(CLAIM_REGISTRIES)("$label", ({ label, entries, requireGovSource }) => {
+    const offenders: string[] = [];
+
+    entries.forEach((entry, index) => {
+      const id = `${label}:${entryId(entry, index)}`;
+      if (grandfathered.has(id)) return;
+
+      const blob = JSON.stringify(entry);
+      if (!MONEY_RE.test(blob)) return;
+
+      const urls = blob.match(URL_RE) ?? [];
+      if (urls.length === 0) {
+        offenders.push(`${id} — states an amount with no source URL`);
+        return;
+      }
+      if (requireGovSource) {
+        const hasGov = urls.some((u) => {
+          try {
+            return GOV_HOST_RE.test(new URL(u).hostname);
+          } catch {
+            return false;
+          }
+        });
+        if (!hasGov) {
+          offenders.push(`${id} — states an amount with no government source URL`);
+          return;
+        }
+      }
+      if (!VERIFIED_RE.test(blob)) {
+        offenders.push(`${id} — states an amount with no visible verification date`);
+      }
+    });
+
+    expect(
+      offenders,
+      `ADR-021: every entry stating a shekel amount must print its source and ` +
+        `the month it was verified.\n  ${offenders.join("\n  ")}`,
+    ).toEqual([]);
+  });
+});
+
