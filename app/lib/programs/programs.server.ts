@@ -86,7 +86,7 @@ export const PROGRAMS: ProgramEntry[] = [
       am: "ENP SPACE — የአካዳሚክ ድጋፍ ለ7-12ኛ ክፍል",
     },
     shortDescription: {
-      he: "תכנית-תגבור-רב-שנתית בבתי-ספר תיכון. 5,635 תלמידים ב-32 יישובים (נתוני העמותה, תשפ"ו).",
+      he: "תכנית-תגבור-רב-שנתית בבתי-ספר תיכון. 5,635 תלמידים ב-32 יישובים (נתוני העמותה, 2025/26).",
       en: "Multi-year academic-support program in high schools. 5,635 pupils in 32 localities (ENP figures, 2025/26).",
       am: "በሁለተኛ ደረጃ ትምህርት ቤቶች የብዙ ዓመት የአካዳሚክ ድጋፍ።",
     },
@@ -438,9 +438,9 @@ export const PROGRAMS: ProgramEntry[] = [
       am: "የBA ስኮላርሺፕ — ISEF",
     },
     shortDescription: {
-      he: "סיוע בשכר לימוד לתואר ראשון, בשותפות עם המוסד האקדמי. אייס"ף אינה מפרסמת סכום אחיד — הסכום נקבע מול המוסד.",
+      he: 'סיוע בשכר לימוד לתואר ראשון, בשותפות עם המוסד האקדמי. אייס"ף אינה מפרסמת סכום אחיד — הסכום נקבע מול המוסד.',
       en: "Undergraduate tuition assistance, in partnership with the academic institution. ISEF publishes no single figure — the amount is set with the institution.",
-      am: "ሙሉ የትምህርት ክፍያ ሽፋን + ወርሃዊ ድጎማ።",
+      am: "የትምህርት ክፍያ ድጋፍ፤ መጠኑ ከተቋሙ ጋር ይወሰናል።",
     },
     duration: { he: "3 שנים (תואר ראשון מלא)", en: "3 years (full BA)", am: "3 ዓመታት" },
     location: {

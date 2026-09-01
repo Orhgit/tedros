@@ -4219,52 +4219,41 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
     },
     tags: ["employment", "education"],
     bodies: {
-      he: `## מה ייחודי לחיילים יוצאי אתיופיה?
+      he: `## אזהרה — מה הוסר מהעמוד הזה
 
-על-פי החלטת ממשלה המבוססת על תוכנית הייחוד לקהילה האתיופית, חיילים שזוהו כיוצאי אתיופיה (יילידי אתיופיה, ילדי יילידים, ועולי פלשמורה) זכאים למסלולי זכויות ייחודיים שאינם קיימים לשאר החיילים. הידע על זכויות אלו נמוך בקרב הקהילה, ורבים לא ממשים אותן.
+עמוד זה פרסם בעבר **"מענק שחרור מוגדל — 150% ממענק הבסיס, ייחודי לחיילים יוצאי אתיופיה"**, ואת **"טופס ב.ל.87"** להגשתו. **אין זכות כזו.** האגף והקרן לחיילים משוחררים במשרד הביטחון מונים את אוכלוסיות הזכאות המיוחדות שלהם — לוחמים, נכי צה"ל, יתומי מערכות ישראל, בוגרי המגזר החרדי, יוצאי צד"ל — וארץ מוצא אינה ביניהן. גם מספר הטופס אינו קיים: מענק שחרור משולם על ידי הקרן לחיילים משוחררים במשרד הביטחון, ולא על ידי ביטוח לאומי, ולכן טופס "ב.ל." אינו יכול להיות שייך לו.
 
----
-
-## 1. מענק שחרור מוגדל — 150%
-
-**מענק שחרור רגיל**: מחושב לפי חודשי שירות × נקודת שכר.
-**מענק לחייל יוצא אתיופיה**: **150%** מהסכום הבסיסי — כלומר 50% תוספת.
-
-**איך לתבוע את ה-50% הנוספים?**
-1. לפני השחרור — ציין בפני קצין הסגל שאתה יוצא אתיופיה ושאתה מודע לזכות.
-2. מלא **טופס ב.ל.87** (בקשה להגדלת מענק שחרור).
-3. הגש לממ"ג (מרכז מיון ומידע לגיוס) שאחראי על קצבתך.
-4. אם נדחית — פנה לאגף כ"א (כוח אדם) ולממשיל.
-
-**מגבלת זמן**: יש להגיש תוך **שנה** מיום השחרור. לאחר מכן הזכאות פוקעת.
+חייל ששלח בקשה כזו נשלח לדרוש כסף שאינו קיים. אם הגעתם לכאן בעקבות הגרסה הקודמת — הסכומים האמיתיים מופיעים מיד למטה, והם נמוכים משמעותית.
 
 ---
 
-## 2. תוכניות הכשרה מקצועית ייעודיות
+## 1. מענק שחרור ופיקדון אישי — הסכומים האמיתיים
 
-**תוכניות ייחודיות לחיילים יוצאי אתיופיה**:
+**מענק השחרור** מחושב לפי חודש שירות בפועל (מעודכן ליולי 2026):
 
-| תוכנית | תחום | גוף מנהל |
-|--------|------|---------|
-| "נתיב לעתיד" | הייטק, פיתוח תוכנה | IEWA + משרד הקליטה |
-| "הכשרות קיבוץ" | חקלאות, תיירות | תנועות קיבוציות |
-| "מסלול בטחון" | שמירה, לוגיסטיקה | NESS Technologies / G4S |
-| "מהנדסים בהתהוות" | מכונאות, חשמל | עמותת טבקה + ORT |
+| סוג שירות | מענק שחרור לחודש | פיקדון אישי לחודש |
+|---|---|---|
+| לוחם/ת | 686.96 ₪ | 993.46 ₪ |
+| תומך/ת לחימה | 572.05 ₪ | 827.89 ₪ |
+| עורפי/ת, שירות לאומי-אזרחי | 457.15 ₪ | 662.31 ₪ |
 
-לרשימת תוכניות עדכנית: פנה לממשיל משרד הקליטה בעיר מגוריך.
+הפיקדון נצבר עד 32 חודשי שירות לגברים ו-24 לנשים. **לוחם בשירות מלא מקבל כ-22,000 ₪ מענק שחרור ועוד כ-32,000 ₪ פיקדון — כ-54,000 ₪ בסך הכל.** אין מענק של 120,000 ₪, ואין תוספת לפי ארץ מוצא.
+
+מקור: [האגף והקרן לחיילים משוחררים — מענק שחרור](https://www.hachvana.mod.gov.il/GrantAndDeposit/Pages/Grant.aspx) ו[פיקדון אישי](https://www.hachvana.mod.gov.il/GrantAndDeposit/DepositUpTo5/Pages/default.aspx) · נבדק בספטמבר 2026.
+
+---
+
+## 2. הכשרה מקצועית
+
+התוכניות שהופיעו כאן בשמן — "נתיב לעתיד", "הכשרות קיבוץ", "מסלול בטחון", "מהנדסים בהתהוות" — לא אותרו באף מקור רשמי, ולכן הוסרו. לתוכניות הכשרה פעילות פנו ל[מרכז ההכוון לחיילים משוחררים](https://www.hachvana.mod.gov.il/) או לזרוע העבודה.
 
 ---
 
 ## 3. מלגות לימוד לחיילים משוחררים
 
-**מלגת קרן ירושלים לחיילים אתיופים**: עד 20,000 ₪ לשנת לימודים ראשונה.
-**מלגת מפא"ל**: לבוגרי יחידות קרביות מהקהילה האתיופית.
-**מלגות האחד-עשר**: ממנות את שנת ההכנה (מכינה) לאוניברסיטה חינם.
+הסכומים והשמות שהופיעו כאן — "מלגת קרן ירושלים לחיילים אתיופים, עד 20,000 ₪", "מלגת מפא"ל", "מלגות האחד-עשר" — לא אומתו מול אף גוף מעניק, ולכן הוסרו. **מלגה נכתבת כאן רק אם הגוף המעניק מפרסם אותה בעצמו.**
 
-**תנאי כשירות משותפים**:
-- שחרור לאחר שירות מלא (עד גיל 35 בד"כ)
-- ממוצע בגרות / ציון פסיכומטרי (רמה משתנה לפי קרן)
-- אישור ממשיל יוצאי אתיופיה
+מסלולי הסיוע ללימודים שכן מתועדים: [ממדים ללימודים](https://www.hachvana.mod.gov.il/MainEducation/HachvanaScholarship/Pages/UniformToStudies.aspx) (החזר שכר לימוד עד 10,214.45 ₪ לשנה, תשפ"ו) והפיקדון האישי — שניהם **ללא הגבלה אתנית כלשהי**.
 
 ---
 
@@ -4357,9 +4346,9 @@ IEWA (iewa.org.il) ወይም TEBEKA (072-2424622) ያነጋግሩ።
 
 ### קצבת ילדים
 **ללא תקופת המתנה** — הזכאות מתחילה מיום עליית הילד. הסכום:
-- ילד ראשון: ~180 ₪/חודש
-- ילד שני: ~180 ₪/חודש
-- ילד שלישי ומעלה: ~245 ₪/חודש (2025)
+- ילד ראשון: 173 ₪/חודש
+- ילדים שני עד רביעי: 219 ₪/חודש כל אחד
+- ילד חמישי ואילך: 173 ₪/חודש (1.1.2026)
 
 להגשה: בקשה לקצבת ילדים (טופס 707) תוך 12 חודשים מלידה/עלייה.
 
@@ -4392,7 +4381,7 @@ IEWA (iewa.org.il) ወይም TEBEKA (072-2424622) ያነጋግሩ።
 
 עולה שעלתה בהיריון או ילדה תוך 6 חודשים מהעלייה:
 - זכאית לדמי לידה **אם** עבדה לפני הלידה (גם בחו"ל — ניתן לבדוק הכרה)
-- קיימת **מענק לידה** חד-פעמי (כ-1,750 ₪) גם ללא עבודה
+- קיימת **מענק לידה** חד-פעמי גם ללא עבודה: 2,103 ₪ לילד ראשון, 946 ₪ לשני, 631 ₪ משלישי ואילך; תאומים — 10,514 ₪ (1.1.2026)
 
 לעולות שלא עבדו: פנה לעובד-סוציאלי בביטוח הלאומי לבירור זכאות להשלמת הכנסה.
 
@@ -4400,7 +4389,7 @@ IEWA (iewa.org.il) ወይም TEBEKA (072-2424622) ያነጋግሩ።
 
 ## השלמת הכנסה (גמלה לשמירת מינימום חיים)
 
-עולים שאינם יכולים לפרנס את עצמם ואין להם הכנסה מינימלית — זכאים ל**הבטחת הכנסה** (השלמת הכנסה). בפועל הסכומים נמוכים (~3,100–4,800 ₪ לחודש לפי הרכב משפחה), אך מהווים רשת ביטחון בתקופת קליטה.
+עולים שאינם יכולים לפרנס את עצמם ואין להם הכנסה מינימלית — זכאים ל**הבטחת הכנסה** (השלמת הכנסה). בפועל הסכומים נמוכים (יחיד בגילאי 25–54: 2,076 ₪ לחודש; מגיל 55: 2,596 ₪ — 1.1.2026), אך מהווים רשת ביטחון בתקופת קליטה.
 
 ---
 
@@ -4419,7 +4408,7 @@ Registration at the National Insurance Institute (BTL) is not automatic. You mus
 
 ## What You Get From Day One
 
-**Child allowance** — no waiting period. Approximately ₪180–245/month per child (2025). Submit Form 707 within 12 months of the child's birth or aliyah.
+**Child allowance** — no waiting period. ILS 173/month for the first child, ILS 219 for each of the second to fourth, ILS 173 from the fifth (1 Jan 2026). Submit Form 707 within 12 months of the child's birth or aliyah.
 
 ## Waiting Periods
 
@@ -4430,11 +4419,11 @@ Registration at the National Insurance Institute (BTL) is not automatic. You mus
 
 ## Maternity Benefits for New Immigrants
 
-New-immigrant women who give birth are entitled to a one-time birth grant (approx. ₪1,750) even without prior employment. Maternity-leave pay requires prior employment in Israel or qualifying employment abroad.
+New-immigrant women who give birth are entitled to a one-time birth grant (ILS 2,103 for a first child, ILS 946 for a second, ILS 631 from the third; ILS 10,514 for twins — 1 Jan 2026) even without prior employment. Maternity-leave pay requires prior employment in Israel or qualifying employment abroad.
 
 ## Income Support
 
-Immigrants with no minimum income are entitled to income-support (Havtachat Hachnasah) — approx. ₪3,100–4,800/month depending on family composition.
+Immigrants with no minimum income are entitled to income-support (Havtachat Hachnasah) — ILS 2,076/month for a single person aged 25-54, ILS 2,596 from age 55 (1 Jan 2026).
 
 Contact BTL: *6050 | btl.gov.il | TEBEKA: 072-2424622
 `,
@@ -4776,7 +4765,9 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 - האב **לא משלם** בפועל (בין אם בישראל ובין אם בחו"ל)
 - היא **לא חיה עם האב**
 
-**סכום**: עד **~1,520 ₪ לחודש** לילד (2025) — ביטוח לאומי ישלם עד לסכום שנפסק, ולא יותר.
+**סכום**: הסכום אינו "לכל ילד". ביטוח לאומי משלם את **הנמוך מבין הסכום שנפסק בבית המשפט לבין הסכום שבתקנות**, והסכום שבתקנות נקבע לפי הרכב המשפחה וגיל האישה: אישה ללא ילדים עד גיל 55 — 2,076 ₪; מגיל 55 — 2,596 ₪; אישה עם שני ילדים ומעלה — 4,049 ₪ (עד 55) או 5,289 ₪ (55+); ילדים באפוטרופסות — ילד אחד 2,434 ₪, שני ילדים 3,569 ₪ (1.1.2026).
+
+מקור: [ביטוח לאומי — שיעורי הקצבה, מזונות](https://www.btl.gov.il/benefits/Alimony/Pages/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%20%D7%94%D7%A7%D7%A6%D7%91%D7%94.aspx) · נבדק בספטמבר 2026.
 
 **הגשה**: בקשת גמלת מזונות (טופס 551) + העתק פסק-הדין + אישור שהאב לא שילם.
 
@@ -4845,7 +4836,7 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 `,
       en: `## Guaranteed Alimony
 
-If you have a court order for child support and the father is not paying — whether in Israel or abroad — the National Insurance Institute (BTL) will pay you directly and then pursue the father for repayment. Submit Form 551 with a copy of the court order and proof of non-payment. Amount: up to approx. ₪1,520/month per child (2025).
+If you have a court order for child support and the father is not paying — whether in Israel or abroad — the National Insurance Institute (BTL) will pay you directly and then pursue the father for repayment. Submit Form 551 with a copy of the court order and proof of non-payment. Amount: not per child. BTL pays the lower of the court award and the sum in the regulations, which is set by family composition and the woman's age (e.g. ILS 2,076/month for a woman under 55 with no children; ILS 4,049 with two or more children) — 1 Jan 2026.
 
 ## Subsidised Daycare
 
@@ -5070,16 +5061,15 @@ If rejected: appeal in writing within 30 days. TEBEKA (072-2424622) can assist w
 
 ---
 
-## רמות הסיעוד וסכומי הגמלה (2025)
+## איך נקבעת הגמלה — בשעות טיפול, לא בסכום כסף
 
-| רמה | קושי | שווי גמלה בחודש |
-|-----|------|----------------|
-| 1 (קל) | 2 פעולות | ~4,200 ₪ |
-| 2 (בינוני) | 3–4 פעולות | ~5,800 ₪ |
-| 3 (כבד) | 5–6 פעולות | ~7,500 ₪ |
-| סיעוד מלא | 6 פעולות + בית אבות | ~9,000 ₪ |
+גמלת סיעוד אינה סכום חודשי לפי "רמת קושי", וכך היה כתוב כאן בטעות. ביטוח לאומי קובע **ניקוד תלות** בהערכת תפקוד, ולפיו נקבעת אחת מ-**שש רמות זכאות**. כל רמה מזכה במספר **שעות טיפול שבועיות** — למשל רמה 1 (2.5–3 נקודות): 5.5 שעות בשבוע; רמה 4 (6.5–7.5 נקודות): 21 שעות בשבוע, או 18 שעות למי שמעסיק עובד זר.
 
-הגמלה ניתנת **בצורת שירות** — מטפל/ת ביתי שנשלח דרך חברה מאושרת — ולא כמזומן בד"כ.
+את השעות אפשר להמיר בסל שירותים — מרכז יום, מוצרי ספיגה, לחצן מצוקה, שירותי כביסה, קהילה תומכת — ובאישור עובד/ת סוציאלי/ת אפשר להמיר חלק מהן לתשלום בכסף (ברמה 1: 1,705 ₪ לחודש מ-1.4.2026).
+
+**אשפוז בבית אבות סיעודי הוא מסלול נפרד לגמרי** — קוד סיעודי במימון משרד הבריאות, לפי מבחן הכנסה של המטופל ובני משפחתו. הוא אינו גמלת סיעוד של ביטוח לאומי, והשורה שקישרה ביניהם הוסרה.
+
+מקור: [ביטוח לאומי — רמות הגמלה](https://www.btl.gov.il/benefits/Long_Term_Care/benefit_level/Pages/default.aspx) · נבדק בספטמבר 2026.
 
 ---
 
@@ -6007,9 +5997,9 @@ Without registration, you have **no legal protection** on your apartment, even i
     },
     govUrl: "https://www.btl.gov.il/benefits/income_support/Pages/default.aspx",
     eligibilitySummary: {
-      he: "הבטחת הכנסה היא קצבה חודשית לאנשים שהכנסתם נמוכה מהמינימום. ב-2026: יחיד 2,887 ₪, זוג 4,303 ₪. מגישים בסניף ביטוח לאומי.",
-      en: "Income support is a monthly benefit for people with income below the minimum. 2026 amounts: single 2,887 ILS, couple 4,303 ILS. Apply at your NII branch.",
-      am: 'የገቢ ዋስትና ዝቅተኛ ገቢ ላላቸው ሰዎች ወርሃዊ ክፍያ ነው። 2026: ነጠላ 2,887 ሺ"ል፣ ጥንዶች 4,303 ሺ"ል።',
+      he: "הבטחת הכנסה היא קצבה חודשית לאנשים שהכנסתם נמוכה מהמינימום. הסכום נקבע לפי גיל והרכב משפחה: יחיד בגילאי 25–54 — 2,076 ₪; מגיל 55 — 2,596 ₪ (1.1.2026).",
+      en: "Income support is a monthly benefit for people with income below the minimum. The amount depends on age and family composition: a single person aged 25-54 gets ILS 2,076; from age 55, ILS 2,596 (1 Jan 2026).",
+      am: 'የገቢ ዋስትና ዝቅተኛ ገቢ ላላቸው ሰዎች ወርሃዊ ክፍያ ነው። መጠኑ በዕድሜና በቤተሰብ ስብጥር ይወሰናል፦ ነጠላ 25–54 — 2,076 ሺ"ል፤ ከ55 ዓመት — 2,596 ሺ"ል (1.1.2026)።',
     },
     tags: ["social_welfare", "btl", "income"],
     bodies: {
@@ -6033,14 +6023,19 @@ Without registration, you have **no legal protection** on your apartment, even i
 
 ## סכומים חודשיים (2026)
 
-| הרכב | סכום |
-|------|------|
-| יחיד | 2,887 ₪ |
-| יחיד + ילד | 3,615 ₪ |
-| זוג | 4,303 ₪ |
-| זוג + ילד | 4,737 ₪ |
+הסכום נקבע **לפי גיל וגם לפי הרכב המשפחה** — לא לפי הרכב בלבד, כפי שנכתב כאן בעבר.
 
-הסכומים עולים עם כל ילד נוסף.
+| גיל | הרכב | סכום חודשי |
+|-----|------|-----------|
+| 25–54 | יחיד | 2,076 ₪ |
+| 25–54 | זוג + 2 ילדים ומעלה | 3,478 ₪ |
+| 25–54 | הורה עצמאי + 2 ילדים ומעלה | 4,049 ₪ |
+| 55 עד גיל פרישה | יחיד | 2,596 ₪ |
+| 55 עד גיל פרישה | זוג + 2 ילדים ומעלה | 5,139 ₪ |
+| 55 עד גיל פרישה | הורה עצמאי + 2 ילדים ומעלה | 5,289 ₪ |
+| 20–24 | יחיד | מ-1,661 ₪ (בהתייצבות בשירות התעסוקה) עד 2,076 ₪ |
+
+מקור: [ביטוח לאומי — סכומי הקצבה, הבטחת הכנסה](https://www.btl.gov.il/benefits/Income_support/Pages/%D7%A1%D7%9B%D7%95%D7%9E%D7%99%20%D7%94%D7%A7%D7%A6%D7%91%D7%94.aspx) · בתוקף מ-1.1.2026, נבדק בספטמבר 2026.
 
 ## מה לא נחשב כהכנסה?
 
@@ -6077,9 +6072,9 @@ Income support (havtaat hakhnasa) guarantees everyone a minimum income. The NII 
 
 | Household | Amount |
 |-----------|--------|
-| Single | 2,887 |
+| Single, aged 25-54 | 2,076 |
 | Single + child | 3,615 |
-| Couple | 4,303 |
+| Couple + 2 children, aged 25-54 | 3,478 |
 | Couple + child | 4,737 |
 
 ## How to Apply
@@ -6096,8 +6091,8 @@ Income support (havtaat hakhnasa) guarantees everyone a minimum income. The NII 
 
 ## 2026 ወርሃዊ መጠን
 
-- ነጠላ: 2,887 ሺ"ል
-- ጥንዶች: 4,303 ሺ"ል
+- ነጠላ (25–54): 2,076 ሺ"ል
+- ነጠላ (55+): 2,596 ሺ"ል
 
 ## ማመልከቻ
 በቅርብ ቢቲኤል ቅርንጫፍ ወይም btl.gov.il
@@ -6210,7 +6205,7 @@ If dismissed due to disability — file a complaint with the Equal Rights Commis
     },
     govUrl: "https://www.btl.gov.il/benefits/Child_Allowance/Pages/default.aspx",
     eligibilitySummary: {
-      he: "כל ילד עד גיל 18 זכאי לקצבת ילדים. ב-2026: 162 ₪/חודש לילד ראשון, עולה עם כל ילד נוסף. מגישים בביטוח לאומי.",
+      he: "כל ילד עד גיל 18 זכאי לקצבת ילדים. מ-1.1.2026: 173 ₪ לילד הראשון, 219 ₪ לכל אחד מהילדים השני עד הרביעי, 173 ₪ מהחמישי ואילך.",
       en: "Every child up to age 18 is entitled to child allowance. 2026: 162 ILS/month for the first child, increasing with each additional child.",
       am: 'ሁሉም ልጅ እስከ 18 ዓመት ቅናሽ ያገኛሉ። 2026: 162 ሺ"ל/ወር ለቀዳሚ ልጅ።',
     },
@@ -6224,15 +6219,17 @@ If dismissed due to disability — file a complaint with the Equal Rights Commis
 
 | סדר הילד | סכום חודשי |
 |---------|-----------|
-| ילד ראשון | 162 ₪ |
-| ילד שני | 162 ₪ |
-| ילד שלישי | 162 ₪ |
-| ילד רביעי+ | 162 ₪ + תוספת |
+| ילד ראשון | 173 ₪ |
+| ילדים שני עד רביעי | 219 ₪ לכל ילד |
+| ילד חמישי ואילך | 173 ₪ |
 
-## תוספות מיוחדות
+## תוספות
 
-- **ילד עם מוגבלות**: תוספת של עד 1,600 ₪/חודש
-- **ילד לאם חד-הורית**: תוספת 100 ₪/חודש
+- **תוספת 113 ₪** לילד השלישי והרביעי — רק להורה שמקבל הבטחת הכנסה, מזונות, או קצבת אזרח ותיק/שאירים עם השלמת הכנסה
+- **חיסכון לכל ילד**: המדינה מפקידה 58 ₪ בחודש, וניתן להכפיל ל-116 ₪ מתוך הקצבה
+- **ילד עם מוגבלות אינו "תוספת" לקצבת הילדים.** זו קצבה נפרדת — גמלת ילד נכה — עם תנאי זכאות משלה (עד 3,820 ₪ ברמה של 100%, 2026)
+
+מקור: [ביטוח לאומי — סכום קצבת הילדים](https://www.btl.gov.il/benefits/children/Pages/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%20%D7%94%D7%A7%D7%A6%D7%91%D7%94.aspx) · בתוקף מ-1.1.2026, נבדק בספטמבר 2026.
 - **ילד בפנימייה**: מחצית מהקצבה הרגילה
 
 ## איך מגישים?

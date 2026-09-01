@@ -2109,7 +2109,7 @@ Tech-Career በኢትዮጵያ-እስራኤላውያን ማህበረሰብ አ�
 
 - [אלימות במשפחה — מידע כללי](/he/family/domestic-violence)
 - פקיד סעד — מה הסמכות שלו
-- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
+`,
       en: `## 2022 inter-ministerial committee
 
 An inter-ministerial committee was formed in 2022 following femicides in the Ethiopian-Israeli community. The 2023 report identified specific gaps: Amharic-speaking responder shortage, shelter access barriers, cultural risk factors.
@@ -2147,7 +2147,7 @@ Delete browsing history after reading. If phone may be monitored, use an alterna
 ## See also
 
 - [Domestic violence — general info](/en/family/domestic-violence)
-- [ELEM — organisation profile](/en/education/scholarships/elem-youth-at-risk)`,
+`,
       am: `## 2022 ሚኒስቴሮች ኮሚቴ
 
 ከማህበረሰቡ ሴቶች ሞት ቀጥሎ 2022 ሚኒስቴሮች ኮሚቴ ተቋቁሟል። ዋና ክፍተቶች: አማርኛ ምላሽ እጥረት፣ መጠለያ ተደራሽነት ችግር።
@@ -2364,7 +2364,7 @@ Annual regional Sigd ceremony at Gan HaShalom, Ramat Eshkol — joint with Ramla
 
 - [מדריך קהילת לוד](/he/news/lod-ethiopian-community-guide)
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [אלם — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
+`,
       en: `## Ramla — twin-city community
 
 ~5,500 Ethiopian-Israeli community members live in Ramla (CBS 2024). Heaviest concentration in Shikun Vatikim. Ramla and Lod together form one of the largest Ethiopian-Israeli clusters in central Israel.
@@ -2736,7 +2736,7 @@ ORT ፔታህ ቲኳ — ሃናሲ 30። ለኢትዮጵያ ተማሪዎች ል�
 
 - [פלאשמורה — זכויות קליטה](/he/news/falash-mura-rights-guide-2026)
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
+`,
       en: `## Ashdod — port city and Falash Mura gateway
 
 ~9,000 Ethiopian-Israeli community members in Ashdod (CBS 2024). Main concentration: neighbourhoods 9 (Tet) and 10 (Yod). Ashdod also hosts an active Falash Mura absorption centre — "Gav Yam" — accommodating first-year arrivals from Gondar and Addis Ababa.
@@ -2867,7 +2867,7 @@ Annual ceremony at Ashdod-Yad National Park — IAEJ Ashdod and city hall.
 
 - [כל הערים — קהילות אתיופיות](/he/cities)
 - [תנה בריאות — פרופיל ארגון](/he/orgs/tene-briut)
-- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)`,
+`,
       en: `## Hadera — a veteran community
 
 Hadera is one of Israel's oldest Ethiopian-Israeli absorption cities. Families arrived from the early 1980s, including Operation Moses (1984) arrivals. ~5,000 community members today (CBS 2024). Main neighbourhood: Givat Olga (~2,000 residents).
@@ -3276,7 +3276,7 @@ Annual ceremony at Weizmann Park — IAEJ Rehovot and Yadid Rehovot.
 ## ראו גם
 
 - [כל הערים — קהילות אתיופיות](/he/cities)
-- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)
+
 - [תנה בריאות — פרופיל ארגון](/he/orgs/tene-briut)`,
       en: `## Bat Yam — metropolitan advantage
 
@@ -3311,7 +3311,7 @@ Bat Yam community participates in the central Gush Dan Sigd at Yarkon Park, Tel 
 ## See also
 
 - [All cities — community guides](/en/cities)
-- [ELEM — organisation profile](/en/education/scholarships/elem-youth-at-risk)`,
+`,
       am: `## ባት ያም — ሜትሮፖሊታን ጠቀሜታ
 
 ~4,500 ኢትዮጵያ-እስራኤላውያን ባት ያም ይኖራሉ (CBS 2024)። ቴል አቪቭ ደቡባዊ ጎረቤት — የጉሽ ዳን ሥራ ገበያ ቀላል ተደራሽነት።
@@ -3786,7 +3786,7 @@ ELEM מעסיק 90+ מטפלים ועובדי נוער. אהרי מפעיל תכ
 ## ראו גם
 
 - [ייצוג הולם — הוראה](/he/careers/affirmative-action)
-- [ELEM — פרופיל ארגון](/he/education/scholarships/elem-youth-at-risk)
+
 - [אהרי — פרופיל ארגון](/he/rights/aharai-pre-army)`,
       en: `## Why the community is needed in education
 
@@ -3811,7 +3811,7 @@ Youth worker → BA in Education → teaching certification → homeroom teacher
 ## See also
 
 - [Affirmative action — education](/en/careers/affirmative-action)
-- [ELEM — organisation profile](/en/education/scholarships/elem-youth-at-risk)`,
+`,
       am: `## ማህበረሰቡ ለምን ያስፈልጋል
 
 ~320 ትምህርት ቤቶች 20%+ ኢትዮጵያ-እስራኤላዊ ተማሪዎች አሏቸው። ሁሉም የኢትዮጵያ ዝርያ አስተማሪዎች ከፍተኛ ፍላጎት ይፈለጋሉ።

@@ -1,7 +1,13 @@
 // Scholarships seed (RIN-504 / Phase 5 Education Hub Wave 1).
 //
-// 13 scholarships Wave 1 + 16 scholarships Wave 2 + 11 scholarships Wave 3
-// (TED-95 education hub — org/scholarship pages) = 40 total.
+// Wave 1 + Wave 3 (TED-95 education hub — org/scholarship pages).
+//
+// TED-157: `scholarships-wave2.server.ts` was deleted in full — all 16 of its
+// entries named scholarships their funders do not run, on top of real
+// organizations (Technion, HUJI, TAU, Yad Hanadiv, Na'amat). TED-152 had
+// already removed four fabricated entries from that same file, selecting on
+// "does the named organization exist" — which is why the famous-org entries
+// survived it. Six further Wave 1 entries went the same way here.
 // TED-152: 8 fabricated entries retired (orgs/domains that do not exist) and
 // 2 duplicates merged (merom-scholarship → marom-che,
 // yoel-program-chiburim → biu-mechina-ethiopian) — legacy slugs 301 via
@@ -16,7 +22,6 @@ import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
 import { DEFAULT_LOCALE } from "../i18n/config";
 import type { ScholarshipLevel } from "./categories";
-import { SCHOLARSHIPS_WAVE2 } from "./scholarships-wave2.server";
 import { SCHOLARSHIPS_WAVE3 } from "./scholarships-wave3.server";
 
 export type { ScholarshipLevel } from "./categories";
@@ -90,33 +95,38 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Tuition and living-cost scholarships for Ethiopian-Israeli students in master's and PhD programs at Israeli universities.",
       am: "ለሁለተኛ ዲግሪና ለዶክትሬት ለሚማሩ የኢትዮጵያ-እስራኤል ተማሪዎች የትምህርት ክፍያና የኑሮ ወጪ ድጋፍ።",
     },
-    amountMinIls: 25000,
-    amountMaxIls: 70000,
+    // TED-157: the previous 25,000-70,000 range appears on no ISEF page. The
+    // two primary sources that do publish figures disagree with each other
+    // (a university dean's page and ISEF's own site), so no amount is stated
+    // here — the institution sets it with ISEF.
+    amountMinIls: 0,
+    amountMaxIls: 0,
     amountNote: {
-      he: "שכר לימוד מלא + סטיפנדיה שנתית; משתנה לפי תכנית.",
-      en: "Full tuition + annual stipend; varies by program.",
-      am: "ሙሉ የትምህርት ክፍያ + ዓመታዊ የኑሮ ድጋፍ፤ እንደ ፕሮግራሙ ይለያያል።",
+      he: 'אייס"ף אינה מפרסמת סכום אחיד. הסיוע בשכר הלימוד נקבע מול המוסד האקדמי — בררו מול דיקנט הסטודנטים.',
+      en: "ISEF publishes no single figure. Tuition assistance is set with the academic institution — check with the dean of students.",
+      am: "ISEF ወጥ የሆነ መጠን አያሳትምም። የትምህርት ክፍያ ድጋፍ ከተቋሙ ጋር ይወሰናል።",
     },
-    deadline: null,
+    deadline: "07-31",
     status: "closed",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-01",
     applicationUrl: "https://www.isef.org.il/",
-    tags: ["masters", "phd", "academic", "community"],
-    communityPriority: true,
-    relatedScholarships: ["hesegim-undergraduate", "vatat-doctoral-postdoc-scholarship"],
+    tags: ["masters", "phd", "academic", "periphery"],
+    // TED-157: ISEF selects on first-generation higher education and
+    // socio-economic periphery. It publishes no Ethiopian-origin criterion,
+    // so flagging it as a community scholarship was a mis-framing.
+    communityPriority: false,
+    relatedScholarships: ["vatat-doctoral-postdoc-scholarship"],
     relatedRights: ["student-aid"],
     bodies: {
       he: `## למי המלגה?
 
-- סטודנטים יוצאי אתיופיה (דור 1, 2 או 3) הלומדים לתואר שני או שלישי
-- אוניברסיטה מוכרת בישראל (תל אביב, האוניברסיטה העברית, טכניון, בר-אילן, BGU, חיפה, ויצמן)
-- ממוצע ציונים לפחות 80 בתואר ראשון
-- מצב כלכלי המוגדר על-ידי הקרן (לא בלעדי, אבל משוקלל)
+- **אין קריטריון של מוצא.** אייס"ף פונה לסטודנטים שהם דור ראשון להשכלה גבוהה במשפחה, מהפריפריה הגיאוגרפית והחברתית. בני הקהילה זכאים כמו כל מי שעונה על התנאים — אבל זו אינה מלגה ייעודית ליוצאי אתיופיה, וכך היה כתוב כאן בטעות
+- סטודנטים במוסד אקדמי מוכר בישראל
+- מצב כלכלי-חברתי נשקל
 
 ## מה כלול?
 
-- שכר לימוד מלא לאוניברסיטה
-- סטיפנדיית מחיה שנתית (~₪40,000–60,000 בהתאם לתכנית)
+- סיוע בשכר לימוד, בשותפות עם המוסד האקדמי. הסכום נקבע מול המוסד — אייס"ף אינה מפרסמת סכום אחיד, ושני מקורות רשמיים נוקבים בסכומים שונים, ולכן אין כאן מספר
 - ליווי אקדמי וקריירה דרך רשת בוגרי ISEF
 - גישה לרשת מנטורים בכירים מהקהילה
 
@@ -129,24 +139,24 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## תאריכים חשובים
 
-- הגשה פתוחה כל השנה (rolling) — מומלץ להגיש לפחות חודשיים לפני תחילת השנה האקדמית
+- ההרשמה נפתחת ב-1 ביוני ונסגרת בסוף יולי. המועד האחרון שמפורסם: **31 ביולי**.
+
+מקור: [isef.org.il](https://www.isef.org.il/) · נבדק בספטמבר 2026.
 
 ## ראו גם
 
 - [קרן ע"ש איסף — ISEF](/he/orgs/isef) — הארגון המספק
-- [הסגים — מלגות תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
+
 `,
       en: `## Who is it for?
 
-- Ethiopian-Israeli students (1st, 2nd or 3rd generation) in master's or PhD programs
-- Recognized Israeli universities (TAU, HUJI, Technion, Bar-Ilan, BGU, Haifa, Weizmann)
-- Minimum 80 GPA in undergraduate degree
-- Financial-need consideration (not exclusive, but weighted)
+- **No origin criterion.** ISEF selects first-generation higher-education students from the geographic and social periphery. Community members qualify like anyone meeting the conditions — but this is not an Ethiopian-specific scholarship, as this page previously stated in error
+- Students at a recognized Israeli academic institution
+- Socio-economic circumstances are weighed
 
 ## What's included?
 
-- Full university tuition
-- Annual living stipend (~₪40,000–60,000 depending on program)
+- Tuition assistance, in partnership with the academic institution. The amount is set with the institution — ISEF publishes no single figure, and two official sources give different numbers, so none is stated here
 - Academic and career mentorship via the ISEF alumni network
 - Access to senior community-network mentors
 
@@ -159,24 +169,26 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## Important dates
 
-- Rolling admissions — apply at least 2 months before the academic year starts
+- Registration opens 1 June and closes at the end of July. The published deadline is **31 July**.
+
+Source: [isef.org.il](https://www.isef.org.il/) · checked September 2026.
 
 ## See also
 
 - [ISEF — provider organization](/en/orgs/isef)
-- [Hesegim undergraduate scholarship](/en/education/scholarships/hesegim-undergraduate)
+
 `,
       am: `## ለማን ነው?
 
 - ለሁለተኛ ዲግሪ ወይም ለዶክትሬት የሚማሩ ኢትዮጵያ-እስራኤላውያን (1ኛ፣ 2ኛ ወይም 3ኛ ትውልድ)
 - በእስራኤል እውቅና ያላቸው ዩኒቨርሲቲዎች (TAU፣ HUJI፣ ቴክኒዮን፣ ባር-ኢላን፣ BGU፣ ሐይፋ፣ ዊይስማን)
-- በመጀመሪያ ዲግሪ ቢያንስ 80 GPA
+- **የትውልድ መስፈርት የለም** — ISEF በቤተሰብ ውስጥ የመጀመሪያ ትውልድ ተማሪዎችን ከዳርቻ ክልሎች ይመርጣል
 - የገንዘብ ፍላጎት ግምት ውስጥ ይገባል (ብቻ-ምክንያት አይደለም)
 
 ## ምን ይካተታል?
 
 - ሙሉ የዩኒቨርሲቲ ትምህርት ክፍያ
-- ዓመታዊ የኑሮ ድጋፍ (~₪40,000–60,000)
+- የትምህርት ክፍያ ድጋፍ (መጠኑ ከተቋሙ ጋር ይወሰናል፤ ISEF ወጥ መጠን አያሳትምም)
 - በISEF የቀድሞ ተማሪዎች አውታረ መረብ የአካዳሚክና የስራ ምክር
 - ለከፍተኛ የማህበረሰብ አማካሪዎች መዳረሻ
 
@@ -189,367 +201,12 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## አስፈላጊ ቀናት
 
-- ምዝገባ ዓመቱን ሙሉ ክፍት ነው — ቢያንስ ከትምህርት ዓመት መጀመሪያ 2 ወር በፊት ማመልከት ይመከራል
+- ምዝገባ ሰኔ 1 ይከፈታል፤ የመጨረሻ ቀን **ጁላይ 31**። ምንጭ፦ [isef.org.il](https://www.isef.org.il/) · በሴፕቴምበር 2026 ተረጋግጧል።
 
 ## ይህንንም ይመልከቱ
 
 - [ISEF — የሰጪው ድርጅት](/am/orgs/isef)
-- [ሄሰጊም የመጀመሪያ ዲግሪ ድጋፍ](/am/education/scholarships/hesegim-undergraduate)
-`,
-    },
-  },
 
-  // 2. Hesegim Undergraduate
-  {
-    slug: "hesegim-undergraduate",
-    level: "undergrad",
-    providerOrgSlug: "hesegim",
-    name: {
-      he: "מלגת הסגים — תואר ראשון",
-      en: "Hesegim Undergraduate Scholarship",
-      am: "የሄሰጊም የመጀመሪያ ዲግሪ ድጋፍ",
-    },
-    shortDescription: {
-      he: "מלגות תואר ראשון לבני הקהילה: שכר לימוד, סטיפנדיה ולווי אקדמי לאורך כל שנות התואר.",
-      en: "Undergraduate scholarships for community members: tuition, stipend, and academic mentorship through graduation.",
-      am: "ለማህበረሰቡ አባላት የመጀመሪያ ዲግሪ ድጋፍ፦ የትምህርት ክፍያ፣ የኑሮ ድጋፍና በዲግሪ ጊዜ ሁሉ የአካዳሚክ ምክር።",
-    },
-    amountMinIls: 15000,
-    amountMaxIls: 35000,
-    amountNote: {
-      he: "מלגה שנתית לאורך 3–4 שנות התואר; כוללת סטיפנדיית מחיה.",
-      en: "Annual scholarship for 3–4 years of the degree; includes living stipend.",
-      am: "ለ3–4 ዓመታት ዲግሪ ዓመታዊ ድጋፍ፤ የኑሮ ድጋፍ ያካትታል።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://hesegim.org.il/",
-    tags: ["undergrad", "academic", "community", "mentorship"],
-    communityPriority: true,
-    relatedScholarships: ["isef-fellowship", "atidim-pre-academic"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## למי המלגה?
-
-- סטודנטים יוצאי אתיופיה ב-3 שנות התואר הראשון
-- כל מוסד אקדמי מוכר בישראל (אוניברסיטה או מכללה אקדמית)
-- בעלי הישגים אקדמיים בולטים (פסיכומטרי / בגרות מוצלחים)
-- מחויבות לפעילות חברתית-קהילתית במהלך הלימודים
-
-## מה כלול?
-
-- מלגת לימודים שנתית של ₪15,000–₪35,000
-- סטיפנדיית מחיה
-- ליווי אישי של מנטור (בוגר הסגים) לאורך כל שנות התואר
-- שילוב באירועי קהילת בוגרי הסגים — networking וגיוס לקריירה
-
-## איך פוני?
-
-1. מילוי טופס ראשוני באתר הסגים
-2. הגשת מסמכים: גליון ציונים, מכתב מוטיבציה, פרטי לימודים
-3. ראיון
-4. בעת קבלה — חתימה על התחייבות לפעילות חברתית
-
-## תאריכים חשובים
-
-- פתוח כל השנה — מועדים מומלצים: יוני (לפני סמסטר א') וינואר (לפני סמסטר ב')
-
-## ראו גם
-
-- [הסגים — Org profile](/he/glossary/hesegim-isef)
-- [מלגת ISEF](/he/education/scholarships/isef-fellowship) — לתואר שני/שלישי
-- [Atidim — מכינה אקדמית](/he/education/scholarships/atidim-pre-academic)
-`,
-      en: `## Who is it for?
-
-- Ethiopian-Israeli students in 3 years of undergraduate study
-- Any recognized Israeli academic institution (university or college)
-- Strong academic record (psychometric / matriculation)
-- Commitment to community-social work during studies
-
-## What's included?
-
-- Annual scholarship of ₪15,000–₪35,000
-- Living stipend
-- Personal mentor (Hesegim alum) throughout the degree
-- Integration into Hesegim alumni network — networking and career placement
-
-## How to apply
-
-1. Initial form on Hesegim website
-2. Submit transcript, statement of purpose, study program details
-3. Interview
-4. Upon acceptance — sign commitment to community service
-
-## Important dates
-
-- Open year-round — recommended: June (before semester 1) and January (before semester 2)
-
-## See also
-
-- [Hesegim — provider org](/en/glossary/hesegim-isef)
-- [ISEF Fellowship](/en/education/scholarships/isef-fellowship) — for master's/PhD
-- [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
-`,
-      am: `## ለማን ነው?
-
-- በ3 ዓመታት የመጀመሪያ ዲግሪ ለሚማሩ ኢትዮጵያ-እስራኤላውያን
-- በእስራኤል እውቅና ባለው ማንኛውም አካዳሚክ ተቋም
-- ጠንካራ የአካዳሚክ ሰነድ
-- በትምህርት ጊዜ የማህበረሰብ-ማህበራዊ ስራ ቁርጠኝነት
-
-## ምን ይካተታል?
-
-- ዓመታዊ ድጋፍ ₪15,000–₪35,000
-- የኑሮ ድጋፍ
-- በዲግሪ ሁሉ የግል አማካሪ (የሄሰጊም ቀድሞ ተማሪ)
-- በሄሰጊም የቀድሞ ተማሪዎች አውታረ መረብ ውስጥ ማካተት
-
-## እንዴት ማመልከት ይቻላል?
-
-1. በሄሰጊም ድረ-ገጽ የመጀመሪያ ቅጽ መሙላት
-2. ምልክቶችን፣ የተነሳሽነት ደብዳቤና የትምህርት ፕሮግራም ዝርዝር ማስረከብ
-3. ቃለ-መጠይቅ
-4. ሲቀበሉ — ለማህበረሰብ አገልግሎት ቁርጠኝነት መፈረም
-
-## አስፈላጊ ቀናት
-
-- ዓመቱን ሙሉ ክፍት — የሚመከር፦ ሰኔ (ከ1ኛ ሴሚስተር በፊት) እና ጥር (ከ2ኛ ሴሚስተር በፊት)
-
-## ይህንንም ይመልከቱ
-
-- [ሄሰጊም — የሰጪው ድርጅት](/am/glossary/hesegim-isef)
-- [የISEF ህብረት](/am/education/scholarships/isef-fellowship)
-- [Atidim ቅድመ-አካዳሚክ](/am/education/scholarships/atidim-pre-academic)
-`,
-    },
-  },
-
-  // 3. ENP Bagrut Grant
-  {
-    slug: "enp-bagrut-grant",
-    level: "high-school",
-    providerOrgSlug: "enp",
-    name: {
-      he: "מענק בגרות — ENP",
-      en: "ENP Bagrut Grant",
-      am: "የENP ባግሩት ድጋፍ",
-    },
-    shortDescription: {
-      he: "מענק כספי לתלמידי תיכון יוצאי אתיופיה שמשלימים בגרות איכותית — חיזוק שיעור הזכאות בקהילה.",
-      en: "Cash grant for Ethiopian-Israeli high-school students completing high-quality matriculation — boosting community pass rates.",
-      am: "ጥራት ያለው ባግሩት ለሚያጠናቅቁ ኢትዮጵያ-እስራኤላውያን የሁለተኛ ደረጃ ተማሪዎች የገንዘብ ድጋፍ።",
-    },
-    amountMinIls: 3000,
-    amountMaxIls: 8000,
-    amountNote: {
-      he: "מענק חד-פעמי בסיום הבגרות; סכום משתנה לפי הישגים.",
-      en: "One-time grant on matriculation completion; amount varies with achievement.",
-      am: "ባግሩት ሲጠናቀቅ የአንድ ጊዜ ድጋፍ፤ መጠን እንደ ውጤት ይለያያል።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.enp.org.il/he/programs/Scholastic_Assistance/",
-    tags: ["high-school", "community", "rights"],
-    communityPriority: true,
-    relatedScholarships: ["atidim-pre-academic"],
-    relatedRights: ["matriculation-grant"],
-    bodies: {
-      he: `## למי המלגה?
-
-- תלמידי תיכון יוצאי אתיופיה בכיתות י"א–י"ב
-- מסיימים בגרות איכותית: לפחות 5 יחידות במתמטיקה או באנגלית, או יחידות מוגברות במקצוע אחר
-- משוקלל אוטומטית עם תכניות ENP בית-ספר (SPACE, תגבור)
-
-## מה כלול?
-
-- מענק חד-פעמי של ₪3,000–₪8,000
-- ייעוץ קריירה ומכינה אקדמית בחינם
-- חיבור לרשת בוגרי ENP — מנטורים מתחומי הקריירה הרלוונטיים
-
-## איך פוני?
-
-1. הרשמה דרך הצוות החינוכי בבית הספר (אם יש שיתוף פעולה עם ENP)
-2. או בקשה ישירה דרך טופס ENP
-3. אישור הזכאות בעת קבלת תעודת בגרות
-
-## תאריכים חשובים
-
-- הגשה: עד 30 בנובמבר בשנה שאחרי קבלת הבגרות
-
-## ראו גם
-
-- [ENP — שותפות לאומית לקהילה](/he/orgs/enp)
-- [מכינת אתידים](/he/education/scholarships/atidim-pre-academic) — צעד הבא לאחר הבגרות
-- [מענק בגרות לתלמידי תיכון — ממשלתי](/he/rights/matriculation-grant)
-`,
-      en: `## Who is it for?
-
-- Ethiopian-Israeli students in 11th–12th grade
-- Completing high-quality matriculation: 5 units in math/English, or extended units in another subject
-- Auto-eligible if enrolled in ENP school programs (SPACE, tutoring)
-
-## What's included?
-
-- One-time grant of ₪3,000–₪8,000
-- Free career counseling and pre-academic preparation
-- Connection to ENP alumni network — career mentors
-
-## How to apply
-
-1. Through the school's educational team (if partnered with ENP)
-2. Or direct request via ENP form
-3. Eligibility confirmed upon matriculation certificate receipt
-
-## Important dates
-
-- Apply by November 30 of the year after matriculation
-
-## See also
-
-- [ENP — provider organization](/en/orgs/enp)
-- [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
-- [Bagrut completion bonus — government](/en/rights/matriculation-grant)
-`,
-      am: `## ለማን ነው?
-
-- በ11ኛ–12ኛ ክፍል ላሉ ኢትዮጵያ-እስራኤላውያን
-- ጥራት ያለው ባግሩት የሚያጠናቅቁ
-- በENP ት/ቤት ፕሮግራም (SPACE፣ ድጋፍ ትምህርት) ላሉ ራስ-ገዝ ብቁ
-
-## ምን ይካተታል?
-
-- የአንድ ጊዜ ድጋፍ ₪3,000–₪8,000
-- ነጻ የስራ ምክርና ቅድመ-አካዳሚክ ዝግጅት
-- ለENP የቀድሞ ተማሪዎች አውታረ መረብ መገናኘት
-
-## እንዴት ማመልከት ይቻላል?
-
-1. በት/ቤት የትምህርት ቡድን (ከENP ጋር አጋርነት ካለ)
-2. ወይም በቀጥታ በENP ቅጽ
-3. የባግሩት ሰርተፊኬት ሲቀበሉ ብቁነት ያረጋግጣል
-
-## ይህንንም ይመልከቱ
-
-- [ENP — የሰጪው ድርጅት](/am/orgs/enp)
-- [Atidim ቅድመ-አካዳሚክ](/am/education/scholarships/atidim-pre-academic)
-`,
-    },
-  },
-
-  // 5. Atidim Pre-Academic
-  {
-    slug: "atidim-pre-academic",
-    level: "pre-academic",
-    providerOrgSlug: "atidim",
-    name: {
-      he: "מכינת אתידים — קדם-אקדמי",
-      en: "Atidim Pre-Academic Year",
-      am: "Atidim ቅድመ-አካዳሚክ ዓመት",
-    },
-    shortDescription: {
-      he: "שנת מכינה אקדמית מסובסדת לסטודנטים מהקהילה לפני תחילת תואר ראשון בטכניון, BGU או הטכניון.",
-      en: "Subsidized pre-academic year for community students before starting an undergraduate degree at Technion, BGU, or similar.",
-      am: "የመጀመሪያ ዲግሪ ከመጀመሩ በፊት ለማህበረሰብ ተማሪዎች ድጎማ የተደረገበት ቅድመ-አካዳሚክ ዓመት።",
-    },
-    amountMinIls: 0,
-    amountMaxIls: 0,
-    amountNote: {
-      he: "המכינה חינם לזכאים; כוללת מגורים, ארוחות וסטיפנדיית כיס.",
-      en: "Free for eligible students; includes housing, meals, and pocket stipend.",
-      am: "ለብቁዎች ነጻ ነው፤ መኖሪያ፣ ምግብና ኪስ ድጋፍ ያካትታል።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://atidim.org/המכינה-הקדם-אקדמית/",
-    tags: ["pre-academic", "community", "academic"],
-    communityPriority: true,
-    relatedScholarships: ["enp-bagrut-grant", "tech-career-bootcamp-stipend"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## למי המכינה?
-
-- בוגרי תיכון יוצאי אתיופיה (תוך שנתיים מסיום בית הספר)
-- בעלי בגרות חלקית או לא מספקת לדרישות אוניברסיטה
-- מעוניינים להשתלב במקצועות הנדסה / מדעים / רפואה
-
-## מה כלול?
-
-- שנת מכינה במוסד אקדמי שותף (אוניברסיטת בן-גוריון, הטכניון, ועוד)
-- מגורים בקמפוס + 3 ארוחות ביום
-- סטיפנדיית כיס שנתית
-- ליווי אישי לאורך השנה
-- "Soft landing" לתואר ראשון בסיומה
-
-## איך פוני?
-
-1. רישום באתר אתידים
-2. מבחני התאמה
-3. ראיון אישי
-4. הזמנה למכינה לפני שנת לימודים אקדמית
-
-## תאריכים חשובים
-
-- הגשה: ינואר–יוני בשנה שלפני המכינה
-
-## ראו גם
-
-- Atidim — Org profile
-- [מענק בגרות ENP](/he/education/scholarships/enp-bagrut-grant)
-- [Tech-Career bootcamp](/he/education/scholarships/tech-career-bootcamp-stipend) — מסלול חלופי לקריירה
-`,
-      en: `## Who is it for?
-
-- Ethiopian-Israeli high-school graduates (within 2 years of finishing)
-- Partial or insufficient matriculation for university requirements
-- Interest in engineering, sciences, or medicine
-
-## What's included?
-
-- Pre-academic year at partner institution (BGU, Technion, others)
-- Campus housing + 3 meals/day
-- Annual pocket stipend
-- Personal mentorship throughout the year
-- "Soft landing" into an undergraduate program at year-end
-
-## How to apply
-
-1. Registration on Atidim website
-2. Placement tests
-3. Personal interview
-4. Invitation to the year before academic start
-
-## Important dates
-
-- Apply: January–June of the year before the program
-
-## See also
-
-- Atidim — provider org
-- [ENP Bagrut Grant](/en/education/scholarships/enp-bagrut-grant)
-- [Tech-Career bootcamp](/en/education/scholarships/tech-career-bootcamp-stipend)
-`,
-      am: `## ለማን ነው?
-
-- ኢትዮጵያ-እስራኤላዊ የሁለተኛ ደረጃ ምሩቅ (ካጠናቀቀ 2 ዓመት ውስጥ)
-- ለዩኒቨርሲቲ ፍላጎት ያላሟላ ባግሩት
-- ኢንጂነሪንግ፣ ሳይንስ ወይም ህክምና ፍላጎት
-
-## ምን ይካተታል?
-
-- በአጋር ተቋም ቅድመ-አካዳሚክ ዓመት
-- የካምፓስ መኖሪያ + በቀን 3 ምግቦች
-- ዓመታዊ የኪስ ድጋፍ
-- በዓመቱ ሁሉ የግል ምክር
-- ለመጀመሪያ ዲግሪ "ለስላሳ ማረፊያ"
-
-## ይህንንም ይመልከቱ
-
-- Atidim — የሰጪው ድርጅት
-- [የENP ባግሩት ድጋፍ](/am/education/scholarships/enp-bagrut-grant)
 `,
     },
   },
@@ -569,31 +226,35 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "Stipend for students who tutor community children during the academic year. Side employment that fits study schedules.",
       am: "በትምህርት ዓመት ውስጥ የማህበረሰብ ልጆችን ለሚያስተምሩ ተማሪዎች ድጋፍ።",
     },
-    amountMinIls: 8000,
-    amountMaxIls: 12000,
+    // TED-157: PERACH publishes a flat 7,000 ILS for 100 tutoring hours, not
+    // a range. The 8,000-12,000 band appeared on no PERACH page.
+    amountMinIls: 7000,
+    amountMaxIls: 10000,
     amountNote: {
-      he: "סטיפנדיה שנתית לכל שעת חניכה (~4 שעות שבוע × 30 שבועות).",
-      en: "Annual stipend per tutoring hour (~4 hours/week × 30 weeks).",
-      am: "በማስተማሪያ ሰዓት ዓመታዊ ድጋፍ።",
+      he: "7,000 ₪ עבור 100 שעות חונכות. מלגה כפולה עבור 6 שעות שבועיות, ומלגות מוגדלות עד 10,000 ₪.",
+      en: "ILS 7,000 for 100 tutoring hours. A double stipend for 6 weekly hours, and enlarged stipends up to ILS 10,000.",
+      am: "ለ100 የማስተማሪያ ሰዓታት 7,000 ₪። ለ6 ሳምንታዊ ሰዓታት እጥፍ።",
     },
     deadline: null,
     status: "tba",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-01",
     applicationUrl: "https://www.perach.org.il/",
     tags: ["undergrad", "mentorship", "community", "side-income"],
     communityPriority: false,
-    relatedScholarships: ["hesegim-undergraduate"],
+    relatedScholarships: [],
     relatedRights: [],
     bodies: {
       he: `## למי המלגה?
 
 - סטודנטים לתואר ראשון בכל מוסד אקדמי בישראל
-- מוכנים להתחייב לחניכה של תלמיד אחד 4 שעות שבועיות לאורך שנת הלימודים
-- בעלי יכולת ואקדמית בסיסית (פסיכומטרי 550+ או ממוצע 80+)
+- מוכנים להתחייב ל-100 שעות חונכות בשנה — פעמיים בשבוע, שעה וחצי כל פעם
+- **אין דרישת ציון.** "פסיכומטרי 550+ או ממוצע 80+" נכתב כאן בעבר בטעות; פר"ח אינה מציבה סף אקדמי, והתנאי הזה הרתיע לשווא
 
 ## מה כלול?
 
-- סטיפנדיה שנתית של ₪8,000–₪12,000
+- מלגה בסך **7,000 ₪** עבור 100 שעות חונכות. מלגה כפולה עבור 6 שעות שבועיות, ומלגות מוגדלות עד 10,000 ₪
+
+מקור: [פר"ח — על המלגה](https://www.perach.org.il/about-the-scholarship.html) · נבדק בספטמבר 2026.
 - הכשרת מנטור פדגוגית
 - צבירת שעות עבודה מועילות לקריירה (חיוני לתעודת הוראה בעתיד)
 
@@ -606,7 +267,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 ## ראו גם
 
 - פרח — Org profile
-- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate) — מלגת תואר ראשון מקבילה
 `,
       en: `## Who is it for?
 
@@ -616,7 +276,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## What's included?
 
-- Annual stipend of ₪8,000–₪12,000
+- A stipend of **ILS 7,000** for 100 tutoring hours; double for 6 weekly hours, and enlarged stipends up to ILS 10,000. Source: [perach.org.il](https://www.perach.org.il/about-the-scholarship.html), checked September 2026
 - Pedagogical mentor training
 - Career-relevant work hours (essential for future teaching license)
 
@@ -629,17 +289,17 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 ## See also
 
 - PERACH — provider org
-- [Hesegim Undergraduate](/en/education/scholarships/hesegim-undergraduate)
+
 `,
       am: `## ለማን ነው?
 
 - በማንኛውም የእስራኤል አካዳሚክ ተቋም የመጀመሪያ ዲግሪ ተማሪዎች
-- በትምህርት ዓመት አንድ ልጅ በሳምንት 4 ሰዓት ለማስተማር ቁርጠኛ
-- መሰረታዊ የአካዳሚክ ችሎታ
+- በዓመት 100 የማስተማሪያ ሰዓታት — በሳምንት ሁለት ጊዜ
+- **የውጤት መስፈርት የለም**
 
 ## ምን ይካተታል?
 
-- ዓመታዊ ድጋፍ ₪8,000–₪12,000
+- ለ100 የማስተማሪያ ሰዓታት 7,000 ₪ (ምንጭ፦ perach.org.il፣ ሴፕቴምበር 2026)
 - ፔዳጎጂካል አማካሪ ስልጠና
 - ለስራ ጠቃሚ የስራ ሰዓቶች
 
@@ -678,7 +338,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     applicationUrl: "https://www.tech-career.org/items",
     tags: ["vocational", "tech", "career-shift", "community"],
     communityPriority: true,
-    relatedScholarships: ["atidim-pre-academic", "olim-beyahad-career-mentorship"],
+    relatedScholarships: ["olim-beyahad-career-mentorship"],
     relatedRights: ["tech-career-bootcamp"],
     bodies: {
       he: `## למי המלגה?
@@ -704,7 +364,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 ## ראו גם
 
 - [Tech-Career — Org profile](/he/education/scholarships/tech-career-org)
-- [Atidim מכינה](/he/education/scholarships/atidim-pre-academic) — מסלול אקדמי חלופי
 - [ייעוץ קריירה — Olim Beyahad](/he/education/scholarships/olim-beyahad-career-mentorship)
 `,
       en: `## Who is it for?
@@ -730,7 +389,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 ## See also
 
 - [Tech-Career — provider org](/en/education/scholarships/tech-career-org)
-- [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
+
 - [Olim Beyahad Career Mentorship](/en/education/scholarships/olim-beyahad-career-mentorship)
 `,
       am: `## ለማን ነው?
@@ -886,7 +545,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     applicationUrl: "https://www.jewishagency.org/",
     tags: ["undergrad", "olim", "academic"],
     communityPriority: true,
-    relatedScholarships: ["klita-tuition-grant", "atidim-pre-academic"],
+    relatedScholarships: ["klita-tuition-grant"],
     relatedRights: ["klita-basket-ethiopia"],
     bodies: {
       he: `## למי המלגה?
@@ -911,7 +570,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [סל קליטה לעולים מאתיופיה](/he/rights/klita-basket-ethiopia)
 - [מלגת משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
-- [Atidim — מכינה](/he/education/scholarships/atidim-pre-academic)
+
 `,
       en: `## Who is it for?
 
@@ -935,7 +594,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [Klita Basket for Ethiopian Olim](/en/rights/klita-basket-ethiopia)
 - [Ministry of Aliyah Scholarship](/en/education/scholarships/klita-tuition-grant)
-- [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
+
 `,
       am: `## ለማን ነው?
 
@@ -986,7 +645,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       "https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority",
     tags: ["undergrad", "olim", "academic", "rights"],
     communityPriority: true,
-    relatedScholarships: ["jewish-agency-aliyah", "atidim-pre-academic"],
+    relatedScholarships: ["jewish-agency-aliyah"],
     relatedRights: ["klita-basket-ethiopia"],
     bodies: {
       he: `## למי המלגה?
@@ -1012,7 +671,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [סל קליטה לעולים מאתיופיה](/he/rights/klita-basket-ethiopia)
 - [סוכנות יהודית — מלגת לימודים](/he/education/scholarships/jewish-agency-aliyah)
-- [Atidim — מכינה](/he/education/scholarships/atidim-pre-academic)
+
 `,
       en: `## Who is it for?
 
@@ -1037,7 +696,7 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 - [Klita Basket for Ethiopian Olim](/en/rights/klita-basket-ethiopia)
 - [Jewish Agency Study Scholarship](/en/education/scholarships/jewish-agency-aliyah)
-- [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
+
 `,
       am: `## ለማን ነው?
 
@@ -1097,7 +756,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     tags: ["undergrad", "masters", "community", "government"],
     communityPriority: true,
     relatedScholarships: [
-      "hesegim-undergraduate",
       "isef-fellowship",
       "klita-tuition-grant",
       "vatat-excellence-mentoring",
@@ -1130,7 +788,6 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
 
 ## ראו גם
 
-- [מלגת הסגים — תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship) — לתואר שני/שלישי
 - [מענק שכר לימוד — משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
 - [ות"ת — מצוינות ומנטורינג](/he/education/scholarships/vatat-excellence-mentoring)
@@ -1159,7 +816,6 @@ A flat ₪10,000 per academic year, through the standard duration of the degree.
 
 ## See also
 
-- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship) — for master's/PhD
 - [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
 - [VATAT — Excellence & Mentoring](/en/education/scholarships/vatat-excellence-mentoring)
@@ -1190,400 +846,12 @@ A flat ₪10,000 per academic year, through the standard duration of the degree.
 
 ## ይህንንም ይዩ
 
-- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
 - [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
 - [VATAT — ልቀትና አማካሪነት](/am/education/scholarships/vatat-excellence-mentoring)
 `,
     },
   },
 
-  // 15. מלגת האוניברסיטה הפתוחה לקהילה (slug: open-university-community)
-  {
-    slug: "open-university-community",
-    level: "undergrad",
-    providerOrgSlug: "open-university",
-    name: {
-      he: "מלגת האוניברסיטה הפתוחה — קהילה",
-      en: "Open University Community Scholarship",
-      am: "ክፍት ዩኒቨርሲቲ ማህበረሰብ ስኮላርሺፕ",
-    },
-    shortDescription: {
-      he: "מלגת שכר לימוד לסטודנטים מהקהילה האתיופית באוניברסיטה הפתוחה — גמישות לימודית ייחודית לעובדים.",
-      en: "Tuition scholarship for Ethiopian-community students at the Open University — unique study flexibility for working students.",
-      am: "ለኢትዮጵያ ማህበረሰብ ተማሪዎች ክፍት ዩኒቨርሲቲ ውስጥ — ለሰራተኛ ተማሪዎች ልዩ ተለዋዋጭነት።",
-    },
-    amountMinIls: 5000,
-    amountMaxIls: 12000,
-    amountNote: {
-      he: "מלגה לפי כמות יחידות לימוד; חידוש שנתי אוטומטי בתנאי ממוצע ≥ 65.",
-      en: "Scholarship based on number of study units; automatic annual renewal if GPA ≥ 65.",
-      am: "ዓማካኝ ≥ 65 ሲጠበቅ ዓመታዊ ታዳሽ።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl:
-      "https://www.openu.ac.il/dean-students/scholarships/pages/sc_for_ethiopia.aspx",
-    tags: ["undergrad", "community", "flexible", "working-students"],
-    communityPriority: true,
-    relatedScholarships: ["hesegim-undergraduate", "klita-tuition-grant"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## האוניברסיטה הפתוחה — מסלול ייחודי לקהילה
-
-האוניברסיטה הפתוחה מציעה לימודים גמישים לחלוטין — ניתן ללמוד בקצב אישי, ללא נוכחות פיזית חובה, ולשלב לימודים עם עבודה ומשפחה. עבור בני הקהילה האתיופית שלא יכולים לעזוב את שוק העבודה, זהו מסלול משמעותי.
-
-מלגת הקהילה מיועדת לסטודנטים מהקהילה האתיופית הלומדים לפחות 16 נקודות זכות בשנה.
-
-## מי זכאי?
-
-- סטודנט/ית ממוצא אתיופי (עצמאי/ת, הורה, או שני הורים ממוצא אתיופי)
-- רשום/ה לפחות ל-16 ש"ז בשנה אקדמית
-- ממוצע ≥ 65 (לחידוש)
-- אין הגבלת הכנסה — מלגה מבוססת מוצא
-
-## מה כלול?
-
-- כיסוי של ₪5,000–₪12,000 מהשכר לימוד
-- ייעוץ אקדמי אישי לסטודנטים בתכנית
-- גישה למרכזי הלמידה של האוניברסיטה ברחבי הארץ
-
-## איך פוני?
-
-1. רישום לאוניברסיטה הפתוחה
-2. הצהרה על מוצא אתיופי בטופס הרישום
-3. בקשה למלגת קהילה דרך המחלקה לקשרי סטודנטים
-4. אישור תוך 2–3 שבועות
-
-## תאריכים חשובים
-
-- הגשה פתוחה כל השנה (rolling) — מועדי הרשמה לסמסטרים: ינואר ויוני
-
-## ראו גם
-
-- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
-- [מענק שכר לימוד משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
-`,
-      en: `## Open University — unique pathway for the community
-
-The Open University offers completely flexible study — learn at your own pace, no mandatory physical attendance, and combine studies with work and family. For community members who cannot leave the workforce, this is a significant pathway.
-
-The community scholarship is for Ethiopian-community students studying at least 16 credit points per year.
-
-## Who is eligible?
-
-- Student of Ethiopian origin (self, parent, or both parents of Ethiopian origin)
-- Registered for at least 16 credit points per academic year
-- GPA ≥ 65 (for renewal)
-- No income restriction — origin-based scholarship
-
-## What's included?
-
-- ₪5,000–₪12,000 tuition coverage
-- Personal academic advising for program students
-- Access to Open University study centers nationwide
-
-## How to apply
-
-1. Register at the Open University
-2. Declare Ethiopian origin on the registration form
-3. Apply for the community scholarship through the student relations department
-4. Decision within 2–3 weeks
-
-## Important dates
-
-- Rolling admissions — semester registration: January and June
-
-## See also
-
-- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
-- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
-`,
-      am: `## ክፍት ዩኒቨርሲቲ — ለማህበረሰቡ ልዩ መንገድ
-
-ክፍት ዩኒቨርሲቲ ሙሉ ተለዋዋጭ ትምህርት ይሰጣል — ሰራ ሲሰሩ ትማሩ። ለቤተሰብ ያላቸው ሰዎች ተስማሚ ነው።
-
-## ለማን ይሆናል?
-
-- ከኢትዮጵያ ዜጎች
-- ≥ 16 ክሬዲት ዓመታዊ
-- GPA ≥ 65 ለታዳሽ
-- ምንም ገቢ ቅድመ-ሁኔታ የለም
-
-## ምን ይካተታል?
-
-- ₪5,000–₪12,000 ሽፋን
-- የግል አካዳሚክ ምክር
-
-## ይህንንም ይዩ
-
-- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
-- [ቅሊታ ሚኒስቴር ድጋፍ](/am/education/scholarships/klita-tuition-grant)
-`,
-    },
-  },
-
-  // 16. מלגת בר-אילן לקהילה (slug: bar-ilan-community)
-  {
-    slug: "bar-ilan-community",
-    level: "undergrad",
-    providerOrgSlug: "bar-ilan-university",
-    name: {
-      he: "מלגת בר-אילן — קהילות במצב צורך",
-      en: "Bar-Ilan University Community Scholarship",
-      am: "ቡ-ኢላን ዩኒቨርሲቲ ማህበረሰብ ስኮላርሺፕ",
-    },
-    shortDescription: {
-      he: 'מלגת שכר לימוד לסטודנטים מהקהילה האתיופית באוניברסיטת בר-אילן — מיועדת לתחומי חינוך, עו"ס ומשפטים.',
-      en: "Tuition scholarship for Ethiopian-community students at Bar-Ilan University — targeting education, social work, and law fields.",
-      am: "ቡ-ኢላን ዩኒቨርሲቲ ለኢትዮጵያ ማህበረሰብ — ትምህርት፣ ማህበራዊ ስራ፣ ህግ ዘርፎች።",
-    },
-    amountMinIls: 8000,
-    amountMaxIls: 18000,
-    amountNote: {
-      he: "מלגה שנתית; מחודשת עד 4 שנים בתנאי ממוצע ≥ 72.",
-      en: "Annual scholarship; renewable up to 4 years with GPA ≥ 72.",
-      am: "GPA ≥ 72 ሲሟሉ እስከ 4 ዓመታት ዓመታዊ ታዳሽ።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.biu.ac.il/scholarships/community",
-    tags: ["undergrad", "community", "needs-based", "social-work"],
-    communityPriority: true,
-    relatedScholarships: ["hesegim-undergraduate", "marom-che", "isef-fellowship"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## מלגת בר-אילן לקהילה
-
-אוניברסיטת בר-אילן מציעה מלגות ייחודיות לסטודנטים ממוצא אתיופי, במסגרת תכנית "קהילות במצב צורך". המלגה ממומנת משילוב של קרנות פרטיות ותמיכה אוניברסיטאית.
-
-## מי זכאי?
-
-- סטודנט/ית ממוצא אתיופי
-- לומד/ת לתואר ראשון בבר-אילן (כל הפקולטות, אך מועדפים: חינוך, עו"ס, משפטים, פסיכולוגיה)
-- הכנסה משפחתית עד 180% מקו העוני
-- ממוצע ≥ 72 (לחידוש)
-
-## מה כלול?
-
-- מלגת שכר לימוד שנתית ₪8,000–₪18,000
-- גישה לתכנית מנטורינג של אוניברסיטת בר-אילן
-- עדיפות בדיור סטודנטים בקמפוס
-
-## שלבי ההגשה
-
-1. הרשמה לאוניברסיטת בר-אילן
-2. בקשה למלגת קהילה דרך המדור למלגות ולצרכים מיוחדים
-3. צירוף: תעודת זהות, גיליון ציונים, אישור הכנסה, מכתב מוטיבציה קצר
-4. מועד אחרון: 15 במרץ
-5. אישור תוך 30 יום
-
-## ראו גם
-
-- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
-- [מלגת מרום — מל"ג](/he/education/scholarships/marom-che)
-- [מלגת ISEF — תואר שני](/he/education/scholarships/isef-fellowship)
-`,
-      en: `## Bar-Ilan Community Scholarship
-
-Bar-Ilan University offers scholarships for students of Ethiopian origin through its "Communities in Need" program. The scholarship is funded by a combination of private foundations and university support.
-
-## Who is eligible?
-
-- Student of Ethiopian origin
-- Studying for an undergraduate degree at Bar-Ilan (all faculties, with preference for: education, social work, law, psychology)
-- Family income up to 180% of the poverty line
-- GPA ≥ 72 (for renewal)
-
-## What's included?
-
-- Annual tuition scholarship ₪8,000–₪18,000
-- Access to Bar-Ilan mentorship program
-- Priority in campus student housing
-
-## Application steps
-
-1. Register at Bar-Ilan University
-2. Apply for the community scholarship through the scholarships and special needs department
-3. Attach: ID, transcript, income statement, short motivation letter
-4. Deadline: March 15
-5. Decision within 30 days
-
-## See also
-
-- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
-- [Marom CHE Scholarship](/en/education/scholarships/marom-che)
-- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
-`,
-      am: `## ቡ-ኢላን ማህበረሰብ ስኮላርሺፕ
-
-ቡ-ኢላን ዩኒቨርሲቲ "ፍላጎት ያለባቸው ማህበረሰቦች" ፕሮግራም ውስጥ ለኢትዮጵያ ዜጎች ስኮላርሺፕ ያቀርባል።
-
-## ለማን ይሆናል?
-
-- ከኢትዮጵያ ዜጎች
-- ቡ-ኢላን ዩኒቨርሲቲ (ሁሉም ዘርፎች፤ ትምህርት፣ ማህበራዊ ስራ ይመረጣሉ)
-- ቤተሰብ ገቢ ≤ 180% ከድህነት ወሰን
-- GPA ≥ 72 ለታዳሽ
-
-## ምን ይካተታል?
-
-- ዓመታዊ ₪8,000–₪18,000
-- Mentoring ፕሮግራም
-- ካምፓስ መኖሪያ ቅድሚያ
-
-## ይህንንም ይዩ
-
-- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
-- [ማሮም CHE](/am/education/scholarships/marom-che)
-`,
-    },
-  },
-
-  // 17. מלגת ג'וינט ישראל — JDC Youth Excellence (slug: jdc-youth-excellence)
-  {
-    slug: "jdc-youth-excellence",
-    level: "undergrad",
-    providerOrgSlug: "jdc-israel",
-    name: {
-      he: "מלגת ג'וינט ישראל — מצוינות נוער",
-      en: "JDC Israel — Youth Excellence Scholarship",
-      am: "ጄDC እስራኤል — የወጣቶች ልቀት ስኮላርሺፕ",
-    },
-    shortDescription: {
-      he: "מלגת ג'וינט לצעירים מצטיינים מהקהילה האתיופית — עד ₪18,000 לשנה, בשילוב תכנית מנהיגות.",
-      en: "JDC Israel scholarship for outstanding young adults from the Ethiopian community — up to ₪18,000/year, combined with a leadership program.",
-      am: 'ከኢትዮጵያ ማህበረሰብ ላቁ ወጣቶች — እስከ 18,000 ሺ"ል ዓመታዊ + አመራር ፕሮግራም።',
-    },
-    amountMinIls: 10000,
-    amountMaxIls: 18000,
-    amountNote: {
-      he: "מלגה שנתית + השתתפות בפעילויות מנהיגות ג'וינט ללא עלות.",
-      en: "Annual scholarship + free participation in JDC leadership activities.",
-      am: "ዓመታዊ ስኮላርሺፕ + ነጻ JDC አመራር ፕሮግራም ተሳትፎ።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.thejoint.org.il/",
-    tags: ["undergrad", "community", "leadership", "youth"],
-    communityPriority: true,
-    relatedScholarships: ["hesegim-undergraduate", "isef-fellowship", "marom-che"],
-    relatedRights: ["student-aid"],
-    bodies: {
-      he: `## תכנית מצוינות נוער — ג'וינט ישראל
-
-ג'וינט ישראל (American Jewish Joint Distribution Committee) מפעיל תכנית מצוינות נוער המשלבת מלגה כספית עם תכנית מנהיגות קהילתית. התכנית מיועדת לצעירים מהקהילה האתיופית שמדגימים פוטנציאל מנהיגות לצד הצטיינות אקדמית.
-
-## מי זכאי?
-
-- צעיר/ה בגיל 18–28 ממוצא אתיופי
-- לומד/ת לתואר ראשון במוסד אקדמי מוכר
-- ממוצע ≥ 80
-- מחויבות לפעילות קהילתית (הוכחה: ניסיון התנדבותי / חברה בארגון נוער)
-
-## מה כלול?
-
-- מלגת לימודים שנתית ₪10,000–₪18,000
-- השתתפות בתכנית מנהיגות ג'וינט (סמינרים, סיורי חקר, חו"ל)
-- רשת בוגרים בינלאומית של ג'וינט
-- ליווי מנטור בכיר מהתחום
-
-## שלבי ההגשה
-
-1. הרשמה מקוונת באתר jdc.org.il
-2. מילוי שאלון מנהיגות + מכתב מוטיבציה
-3. שני מכתבי המלצה (אקדמי + קהילתי)
-4. ראיון עמוק (כ-60 דקות)
-5. מועד אחרון: 28 בפברואר מדי שנה
-
-## תאריכים חשובים
-
-- פתיחת הגשה: ינואר
-- מועד אחרון: 28 בפברואר
-- הודעות: אפריל
-- תחילת תכנית: ספטמבר
-
-## ראו גם
-
-- [מלגת הסגים](/he/education/scholarships/hesegim-undergraduate)
-- [מלגת ISEF — תואר שני](/he/education/scholarships/isef-fellowship)
-- [מלגת מרום — מל"ג](/he/education/scholarships/marom-che)
-`,
-      en: `## Youth Excellence Program — JDC Israel
-
-JDC Israel (American Jewish Joint Distribution Committee) runs a Youth Excellence program that combines a financial scholarship with a community leadership program. The program targets young adults from the Ethiopian community who demonstrate leadership potential alongside academic excellence.
-
-## Who is eligible?
-
-- Young adult aged 18–28 of Ethiopian origin
-- Studying for an undergraduate degree at a recognized institution
-- GPA ≥ 80
-- Commitment to community activity (evidence: volunteer experience / youth organization membership)
-
-## What's included?
-
-- Annual study scholarship ₪10,000–₪18,000
-- JDC leadership program participation (seminars, study tours, international)
-- International JDC alumni network
-- Senior mentor from your field
-
-## Application steps
-
-1. Online registration at jdc.org.il
-2. Complete leadership questionnaire + motivation letter
-3. Two letters of recommendation (academic + community)
-4. In-depth interview (~60 minutes)
-5. Deadline: February 28 each year
-
-## Important dates
-
-- Applications open: January
-- Deadline: February 28
-- Notifications: April
-- Program start: September
-
-## See also
-
-- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
-- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
-- [Marom CHE Scholarship](/en/education/scholarships/marom-che)
-`,
-      am: `## JDC እስራኤል — የወጣቶች ልቀት ፕሮግራም
-
-JDC (American Jewish Joint Distribution Committee) ፋይናንሺያል ስኮላርሺፕ ከ አመራር ፕሮግራም ጋር ያጣምራል።
-
-## ለማን ይሆናል?
-
-- 18–28 ዓመት ኢትዮጵያ ዜጎች
-- ≥ 80 GPA
-- ማህበረሰብ እንቅስቃሴ ቁርጠኝነት
-
-## ምን ይካተታል?
-
-- ₪10,000–₪18,000 ዓመታዊ
-- JDC አመራር ፕሮግራም (ሴሚናር፣ ዓለምአቀፍ ጉዞ)
-- ዓለምአቀፍ JDC ቀደምት ተማሪዎች አውታረ መረብ
-
-## ደረጃዎች
-
-1. jdc.org.il ላይ ምዝገባ
-2. ቅጽ + ደብዳቤ
-3. ሁለት የምስክርነት ደብዳቤ
-4. ቃለ-ምርምር (~60 ደቂቃ)
-5. የካቲት 28 ቁርጠኛ ቀን
-
-## ይህንንም ይዩ
-
-- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
-- [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
-- [ማሮም CHE](/am/education/scholarships/marom-che)
-`,
-    },
-  },
-
-  ...SCHOLARSHIPS_WAVE2,
   ...SCHOLARSHIPS_WAVE3,
 ];
 

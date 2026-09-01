@@ -81,12 +81,12 @@ describe("listComparisons", () => {
 
 describe("getComparisonEntry", () => {
   it("returns full detail for known slug", () => {
-    const isef = getComparisonEntry("isef-vs-hesegim", "he");
-    expect(isef).not.toBeNull();
-    expect(isef?.criteria.length).toBeGreaterThanOrEqual(4);
-    expect(isef?.body.length).toBeGreaterThan(200);
-    expect(isef?.sideA.name).toBeTruthy();
-    expect(isef?.sideB.name).toBeTruthy();
+    const entry = getComparisonEntry("klita-basket-vs-aliyah-grant", "he");
+    expect(entry).not.toBeNull();
+    expect(entry?.criteria.length).toBeGreaterThanOrEqual(4);
+    expect(entry?.body.length).toBeGreaterThan(200);
+    expect(entry?.sideA.name).toBeTruthy();
+    expect(entry?.sideB.name).toBeTruthy();
   });
 
   it("returns null for unknown slug", () => {
@@ -94,9 +94,9 @@ describe("getComparisonEntry", () => {
   });
 
   it("resolves criterion winner correctly", () => {
-    const isef = getComparisonEntry("isef-vs-hesegim", "he");
-    expect(isef).not.toBeNull();
-    const hasWinner = isef!.criteria.some((c) => c.winner !== undefined);
+    const entry = getComparisonEntry("klita-basket-vs-aliyah-grant", "he");
+    expect(entry).not.toBeNull();
+    const hasWinner = entry!.criteria.some((c) => c.winner !== undefined);
     expect(hasWinner).toBe(true);
   });
 });
