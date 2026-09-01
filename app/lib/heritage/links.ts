@@ -27,3 +27,21 @@ export function kessimCityPath(citySlug: string): string {
 export function marriagePath(): string {
   return "/heritage/marriage";
 }
+
+// ── wedding & henna hub + supplier directory (TED-143) ─────────────────────
+
+export function weddingPath(): string {
+  return "/heritage/wedding";
+}
+
+export function weddingSupplierCategoryPath(category: string): string {
+  return `/heritage/wedding/suppliers/${category}`;
+}
+
+export function weddingSupplierCityPath(category: string, citySlug: string): string {
+  return `/heritage/wedding/suppliers/${category}/${citySlug}`;
+}
+
+export function weddingJoinPath(): string {
+  return "/heritage/wedding/join";
+}
