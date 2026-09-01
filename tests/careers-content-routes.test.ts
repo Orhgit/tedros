@@ -35,8 +35,12 @@ function fakeArgs(params: Record<string, string | undefined>): AnyArgs {
 // ── Statistics ─────────────────────────────────────────────────────────────
 
 describe("statistics seed integrity", () => {
-  it("contains 8 figures", () => {
-    expect(CAREERS_STATISTICS).toHaveLength(8);
+  // TED-157 emptied this seed. All 8 figures cited a homepage, a site-search
+  // URL, or a report that could not be located, and the page emits Dataset
+  // JSON-LD — so the site was asking Google to index unsourced statistics.
+  // Two were also inverted. Rebuild from the Knesset MMM PDFs, one at a time.
+  it("is empty until each figure is rebuilt from a cited document", () => {
+    expect(CAREERS_STATISTICS).toHaveLength(0);
   });
 
   it("every figure has HE/EN/AM heading + figure + context non-empty", () => {
@@ -59,11 +63,11 @@ describe("statistics seed integrity", () => {
 });
 
 describe("statistics route", () => {
-  it("loads in HE/EN/AM with all 8 stats", async () => {
+  it("loads in HE/EN/AM with an empty stat set", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await statsLoader(fakeArgs({ lang }));
       expect(data.locale).toBe(lang);
-      expect(data.stats).toHaveLength(8);
+      expect(data.stats).toHaveLength(0);
     }
   });
 });

@@ -54,163 +54,6 @@ export interface ComparisonEntry {
 // --- 10 comparison entries --------------------------------------------------
 
 export const COMPARISONS: ComparisonEntry[] = [
-  // 1. ISEF vs Hesegim — excellence scholarships
-  {
-    slug: "isef-vs-hesegim",
-    category: "education",
-    title: {
-      he: "ISEF מול הישגים — מלגות מצטיינים",
-      en: "ISEF vs Hesegim — Excellence Scholarships",
-      am: "ISEF በተቃራኒ ሄሰጊም — የብቃት ስኮላርሺፕ",
-    },
-    shortDescription: {
-      he: "שתי תוכניות מימון לסטודנטים מצטיינים יוצאי אתיופיה. ISEF פילנתרופית-בינלאומית; הישגים ממשלתית-ישראלית.",
-      en: "Two funding programs for outstanding Ethiopian-Israeli students. ISEF is philanthropic-international; Hesegim is government-Israeli.",
-      am: "ለብቁ የኢትዮጵያ-እስራኤል ተማሪዎች ሁለት የፋይናንስ ፕሮግራሞች።",
-    },
-    sideA: {
-      name: { he: "ISEF", en: "ISEF", am: "ISEF" },
-      link: { type: "org", slug: "isef" },
-      tagline: {
-        he: "קרן פילנתרופית",
-        en: "Philanthropic foundation",
-        am: "የበጎ አድራጎት ፋውንዴሽን",
-      },
-    },
-    sideB: {
-      name: { he: "הישגים", en: "Hesegim", am: "ሄሰጊም" },
-      link: { type: "glossary", slug: "hesegim-isef" },
-      tagline: { he: "תוכנית ממשלתית", en: "Government program", am: "የመንግስት ፕሮግራም" },
-    },
-    criteria: [
-      {
-        label: { he: "מקור-מימון", en: "Funding source", am: "የፋይናንስ ምንጭ" },
-        a: {
-          he: "פילנתרופיה (פדרציות אמריקאיות)",
-          en: "Philanthropy (American federations)",
-          am: "የበጎ አድራጎት (አሜሪካዊ ፌዴሬሽኖች)",
-        },
-        b: {
-          he: "משרד העלייה והקליטה",
-          en: "Ministry of Aliyah & Integration",
-          am: "የዐሊያህና መቀበል ሚኒስቴር",
-        },
-      },
-      {
-        label: { he: "סטודנטים בשנה", en: "Students/year", am: "በዓመት ተማሪዎች" },
-        a: { he: "~400", en: "~400", am: "~400" },
-        b: { he: "~600", en: "~600", am: "~600" },
-        winner: "b",
-      },
-      {
-        label: { he: "כיסוי שכר-לימוד", en: "Tuition coverage", am: "የትምህርት ክፍያ ሽፋን" },
-        a: { he: "100%", en: "100%", am: "100%" },
-        b: { he: "75%", en: "75%", am: "75%" },
-        winner: "a",
-      },
-      {
-        label: { he: "מענק חודשי", en: "Monthly stipend", am: "ወርሃዊ ድጎማ" },
-        a: { he: "₪3,000-3,500", en: "₪3,000-3,500", am: "₪3,000-3,500" },
-        b: { he: "₪2,500", en: "₪2,500", am: "₪2,500" },
-        winner: "a",
-      },
-      {
-        label: { he: "דרישת-ממוצע", en: "GPA requirement", am: "የውጤት ኣማካይ መስፈርት" },
-        a: { he: "85+", en: "85+", am: "85+" },
-        b: { he: "80+", en: "80+", am: "80+" },
-        winner: "b",
-      },
-      {
-        label: { he: "מסלולים", en: "Tracks", am: "መንገዶች" },
-        a: { he: "תואר ראשון, שני, ודוקטורט", en: "BA, MA, PhD", am: "BA፣ MA፣ PhD" },
-        b: { he: "תואר ראשון בלבד (כברירת-מחדל)", en: "BA only (default)", am: "BA ብቻ" },
-        winner: "a",
-      },
-      {
-        label: { he: "מנטור אקדמי", en: "Academic mentor", am: "የአካዳሚክ አማካሪ" },
-        a: { he: "כן", en: "Yes", am: "አዎ" },
-        b: { he: "לא רשמי", en: "Not formal", am: "መደበኛ አይደለም" },
-        winner: "a",
-      },
-      {
-        label: { he: "ראיון אישי", en: "Personal interview", am: "የግል ቃለ መጠይቅ" },
-        a: { he: "חובה", en: "Required", am: "ግዴታ" },
-        b: { he: "לא רגילה", en: "Not standard", am: "መደበኛ አይደለም" },
-      },
-    ],
-    relatedRights: ["unconditional-scholarships-7-sources", "matriculation-grant"],
-    relatedTerms: ["hesegim-isef", "beta-israel"],
-    relatedOrgs: ["isef", "enp"],
-    bodies: {
-      he: `## למה ההשוואה הזו
-
-שני המסלולים הם ה-default-ים העיקריים לסטודנטים מצטיינים יוצאי אתיופיה. ההבדלים פרקטיים — לא של איכות.
-
-## איך לבחור?
-
-- **ממוצע 85+, פוטנציאל מנהיגות, תואר שני/דוקטורט בעתיד**: ISEF נותנת יותר. הסכומים, המנטור האקדמי, והמסלול לתואר שני/דוקטורט מטיבים עם נתיב-קריירה ארוך.
-- **ממוצע 80-85, רוצה להתחיל בלי ראיון מורכב**: הישגים יותר נגישה. גם 75% של שכר-הלימוד + 2,500 ₪ חודשי משמעותיים, ופחות סטודנטים בקבוצה ⇒ פחות תחרות.
-- **שתיהן יחד?** לא. כפל-מילגות פוסל אחת מהן.
-
-## נקודות-מבט נוספות
-
-- ENP מנהלת את הישגים ב-Tier-1 ⇒ ערוץ-תקשורת ברור עם הקהילה.
-- ISEF מחייבת alumni-network פעילה — מי שלא מתאים לפעילות-קהילתית יישלל.
-- שתיהן מבוססות-אמת מקור-אתיופי (לפחות הורה אחד נולד באתיופיה).
-
-## תכנית-פעולה
-
-1. בדקו את הקריטריונים שלכם מול שתיהן.
-2. אם זכאים לשתיהן: חשבו lifetime-value של ISEF (תואר שני אם תמשיכו) מול תואר-ראשון בלבד של הישגים.
-3. הגישו תיק-בקשה ל-ISEF ב-מאי-יוני, להישגים בקיץ.
-`,
-      en: `## Why this comparison
-
-Both tracks are the primary defaults for outstanding Ethiopian-Israeli students. The differences are practical — not quality-related.
-
-## How to choose
-
-- **GPA 85+, leadership potential, planning MA/PhD**: ISEF gives more. Higher amounts, an academic mentor, and the MA/PhD track make for a longer career path.
-- **GPA 80-85, want to start without a complex interview**: Hesegim is more accessible. 75% tuition + ₪2,500 monthly is meaningful, and the larger cohort means less in-group competition.
-- **Both together?** No. Double-scholarship rules disqualify one.
-
-## Additional perspectives
-
-- ENP runs Hesegim at Tier-1 — a clear communication channel with the community.
-- ISEF requires an active alumni network — applicants without community-engagement potential are filtered out.
-- Both require Ethiopian origin (at least one parent born in Ethiopia).
-
-## Action plan
-
-1. Check your criteria against both.
-2. If eligible for both: weigh ISEF's lifetime value (MA/PhD if you continue) against Hesegim's BA-only coverage.
-3. Apply to ISEF in May-June, Hesegim in summer.
-`,
-      am: `## ይህ ንጽጽር ለምን
-
-ሁለቱም መንገዶች ለብቁ የኢትዮጵያ-እስራኤል ተማሪዎች ዋነኛ አማራጮች ናቸው። ልዩነቶቹ ተግባራዊ ናቸው።
-
-## እንዴት ለመምረጥ
-
-- **ኣማካይ 85+፣ መሪነት እምቅ፣ MA/PhD ለማቀድ**: ISEF ብዙ ይሰጣል።
-- **ኣማካይ 80-85፣ ቃለ መጠይቅ ሳይኖር መጀመር**: ሄሰጊም የበለጠ ተደራሽ ነው።
-- **ሁለቱም በአንድ ጊዜ?** አይቻልም።
-
-## ተጨማሪ እይታዎች
-
-- ENP ሄሰጊምን በTier-1 ያስተዳድራል።
-- ISEF ንቁ የቀድሞ ምሩቃን ኔትወርክ ይፈልጋል።
-- ሁለቱም የኢትዮጵያ ምንጭ ይፈልጋሉ።
-
-## የድርጊት እቅድ
-
-1. መስፈርቶችዎን ከሁለቱም ጋር ያረጋግጡ።
-2. ለሁለቱም ብቁ ከሆኑ: ISEF (MA/PhD) ከ ሄሰጊም (BA ብቻ) ጋር ያወዳድሩ።
-3. ለISEF በግንቦት-ሰኔ፣ ለሄሰጊም በበጋ ያመልክቱ።
-`,
-    },
-  },
-
   // 2. ENP vs Fidel — community education
   {
     slug: "enp-vs-fidel",
@@ -552,7 +395,11 @@ Two leading routes to tech, but the models are very different.
       {
         label: { he: "עלות-למטופל", en: "Cost to patient", am: "ለታካሚ ወጪ" },
         a: { he: "חינם", en: "Free", am: "ነጻ" },
-        b: { he: "₪32-150 השתתפות", en: "₪32-150 co-pay", am: "₪32-150 ድርሻ" },
+        b: {
+          he: "31–42 ₪ תקרה רבעונית לכל מקצוע (2026), לא לכל ביקור. אין השתתפות אצל רופא/ת המשפחה",
+          en: "ILS 31-42 quarterly cap per speciality (2026), not per visit. No co-pay for the family doctor",
+          am: "በሩብ ዓመት ለእያንዳንዱ ሙያ 31–42 ₪ (2026)፤ ለቤተሰብ ሐኪም ክፍያ የለም",
+        },
       },
       {
         label: { he: "שפת-תקשורת", en: "Communication language", am: "የመግባቢያ ቋንቋ" },
@@ -774,10 +621,14 @@ It's not really a comparison — it's a clarification of roles. Community member
       tagline: { he: "תשלום-חודשי", en: "Monthly payment", am: "ወርሃዊ ክፍያ" },
     },
     sideB: {
+      // TED-157: side B was unverified when TED-148 fixed side A. It is the
+      // "מענקים לעולים נזקקים (קרן מנהל מחוז)" grant, נוהל 4.063 של משרד
+      // העלייה והקליטה. The previous ₪3,000-7,000 and 10-year window were
+      // both wrong; the נוהל gives Ethiopian olim 15 years.
       name: {
-        he: "מענק-משרד-העלייה",
-        en: "Aliyah Ministry Grant",
-        am: "የዐሊያህ ሚኒስቴር ስጦታ",
+        he: "מענק לעולה נזקק (נוהל 4.063)",
+        en: "Grant for an oleh in need (procedure 4.063)",
+        am: "ለተቸገረ ኦሌ ስጦታ (ደንብ 4.063)",
       },
       tagline: { he: "תשלום-חד-פעמי", en: "One-time payment", am: "የአንድ ጊዜ ክፍያ" },
     },
@@ -802,7 +653,11 @@ It's not really a comparison — it's a clarification of roles. Community member
           en: "₪21,694 (single) — ₪41,359 (couple), 2026 table",
           am: "₪21,694 (ነጠላ) — ₪41,359 (ጥንዶች)",
         },
-        b: { he: "₪3,000-7,000", en: "₪3,000-7,000", am: "₪3,000-7,000" },
+        b: {
+          he: "עד 2 מענקים; הסכום נקבע לפי קבוצת הסיוע שבנוהל",
+          en: "Up to 2 grants; the amount is set by the procedure's aid group",
+          am: "እስከ 2 ስጦታ፤ መጠኑ በደንቡ የድጋፍ ቡድን ይወሰናል",
+        },
         winner: "a",
       },
       {
@@ -813,9 +668,9 @@ It's not really a comparison — it's a clarification of roles. Community member
           am: "ብቁ የሆነ እያንዳንዱ ኦሌ — የመጀመሪያው ክፍያ በአየር ማረፊያ",
         },
         b: {
-          he: "מצבי-קליטה חריגים (אם משפחה ללא הורה, וכו')",
-          en: "Special situations (single parent, etc.)",
-          am: "ልዩ ሁኔታዎች",
+          he: 'מוגדר "עולה נזקק" — עולה שנקלע למשבר, לרבות מקבלי הבטחת הכנסה. הבקשה מוגשת דרך יועץ הקליטה',
+          en: 'Defined as an "oleh in need" — an oleh in crisis, including income-support recipients. Filed through the absorption counsellor',
+          am: '"የተቸገረ ኦሌ" ተብሎ የተገለጸ — በችግር ውስጥ ያለ ኦሌ። በመቀበያ አማካሪ በኩል ይቀርባል',
         },
       },
       {
@@ -827,7 +682,11 @@ It's not really a comparison — it's a clarification of roles. Community member
           en: "Claim within a year; 6 months of payments",
           am: "በአንድ ዓመት ውስጥ ይጠይቁ፤ 6 ወር ክፍያ",
         },
-        b: { he: "10 שנות-קליטה", en: "10 years post-aliyah", am: "10 ዓመታት" },
+        b: {
+          he: "10 שנים ממעמד עולה — **וליוצאי אתיופיה 15 שנים**",
+          en: "10 years from oleh status — **15 years for olim from Ethiopia**",
+          am: "ከኦሌ ደረጃ 10 ዓመታት — **ከኢትዮጵያ ለመጡ 15 ዓመታት**",
+        },
       },
       {
         label: {
@@ -958,9 +817,9 @@ The aliyah grant can be requested up to 10 years after aliyah. Many families don
       {
         label: { he: "תהליך-קבלה", en: "Approval process", am: "የማጽደቅ ሂደት" },
         a: {
-          he: "הגרלה שנתית (~200 זוכים)",
-          en: "Annual lottery (~200 winners)",
-          am: "ዓመታዊ ዕጣ",
+          he: "ההרשמה סגורה — אין הגרלה פתוחה (הוקצו כ-800 משפחות בסך הכל)",
+          en: "Registration is closed — no open round (about 800 families in total)",
+          am: "ምዝገባ ተዘግቷል — ክፍት ዕጣ የለም",
         },
         b: { he: "אוטומטי בעת-רכישה", en: "Automatic at purchase", am: "ራሱ-ሰራሽ" },
         winner: "b",
@@ -985,7 +844,7 @@ The aliyah grant can be requested up to 10 years after aliyah. Many families don
 דירה ב-₪1.2M:
 - בלי תכניות: ₪240,000 הון-עצמי + הלוואה ב-₪960,000 ב-3% ⇒ החזר חודשי ~₪4,500.
 - עם משכנתא קהילתית בלבד: ₪240,000 הון-עצמי + ₪600,000 ב-0%/2% + ₪360,000 משלים ב-3% ⇒ החזר חודשי ~₪3,200.
-- עם שתיהן: גם חיסכון של ~₪84,000 במס-רכישה, מקטין את ההון-העצמי הנדרש.
+- **מס רכישה**: דירה ב-1.2 מיליון ₪ פטורה ממס רכישה ממילא לכל רוכש דירה יחידה — עד 1,978,745 ₪ לא משולם מס (הוראת ביצוע מיסוי מקרקעין 1/2026). מסלול העולה מתחיל להיות משמעותי רק מעל כ-2 מיליון ₪, ולכן אין כאן חיסכון. הסכום שנכתב כאן בעבר הוסר.
 
 ## תכנית-פעולה
 
@@ -1003,12 +862,12 @@ Buying a home? Both apply. Community mortgage = the loan. First-home grant = pur
 ₪1.2M apartment:
 - No programs: ₪240K equity + ₪960K loan @ 3% ⇒ ~₪4,500/mo.
 - Community mortgage only: ₪240K equity + ₪600K @ 0%/2% + ₪360K supplementary @ 3% ⇒ ~₪3,200/mo.
-- With both: also ~₪84K savings on purchase tax, reducing required equity.
+- **Purchase tax**: a ILS 1.2M apartment is exempt from purchase tax anyway for any single-home buyer — no tax up to ILS 1,978,745 (Tax Authority instruction 1/2026). The oleh track only starts to matter above roughly ILS 2M, so there is no saving here. The figure previously stated was removed.
 
 ## Action plan
 
 1. **Check eligibility for community mortgage** — [calculator](/en/calculator/mortgage-ethiopian-immigrants).
-2. **Register for annual lottery** — Leumi/Discount/Igud.
+2. **Registration is closed.** There is no open round; the ministry has removed the programme pages.
 3. **When you pick the apartment** — request first-home grant from your lawyer automatically.
 4. **Sign contract** with both aids in place.
 `,

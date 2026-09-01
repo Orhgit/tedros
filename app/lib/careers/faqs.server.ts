@@ -55,7 +55,6 @@ export const FAQS: CareerFaqEntry[] = [
 
 ## ראו גם
 
-- [ENP Tech-Career](/he/careers/programs/enp-tech-career)
 - [Olim Beyahad Mentorship](/he/careers/programs/olim-beyahad-mentorship)
 - [Tech track — סקירה כללית](/he/careers/tech)`,
       en: `## The first step
@@ -74,7 +73,6 @@ Prefer Olim Beyahad's Mentorship — 85% placement within 6 months.
 
 ## See also
 
-- [ENP Tech-Career](/en/careers/programs/enp-tech-career)
 - [Olim Beyahad Mentorship](/en/careers/programs/olim-beyahad-mentorship)
 - [Tech track — overview](/en/careers/tech)`,
       am: `## የመጀመሪያ ደረጃ
@@ -120,7 +118,6 @@ Prefer Olim Beyahad's Mentorship — 85% placement within 6 months.
 
 ## ראו גם
 
-- [Tech-Career bootcamp — דף תכנית מלא](/he/careers/programs/enp-tech-career)
 - [ENP — פרופיל ארגון](/he/orgs/enp)
 - [Tech-Career bootcamp — זכות ממשלתית](/he/rights/tech-career-bootcamp)`,
       en: `## Course content
@@ -139,7 +136,6 @@ Bachelor's grads in CS/math/engineering — or non-graduates with a clear self-l
 
 ## See also
 
-- [Tech-Career bootcamp — full program page](/en/careers/programs/enp-tech-career)
 - [ENP — organization profile](/en/orgs/enp)
 - [Tech-Career bootcamp — government right](/en/rights/tech-career-bootcamp)`,
       am: `## የኮርሱ ይዘት
@@ -402,7 +398,7 @@ Free up to 60 minutes. Includes aptitude assessment + mapping of relevant career
 
 - [סל קליטה — זכות](/he/rights/klita-basket)
 - [ITWorks Israel — תכנית](/he/careers/programs/itworks-israel)
-- [Place-IL — תכנית](/he/careers/programs/place-il)`,
+`,
       en: `## What you get automatically
 
 - **Klita basket** — monthly grant in the first year (~₪3,000-4,500)
@@ -419,7 +415,7 @@ Free up to 60 minutes. Includes aptitude assessment + mapping of relevant career
 
 - [Klita basket — right](/en/rights/klita-basket)
 - [ITWorks Israel — program](/en/careers/programs/itworks-israel)
-- [Place-IL — program](/en/careers/programs/place-il)`,
+`,
       am: `## ራስ-ሰር የሚያገኙት
 
 - **የመግቢያ ቅርጫት** — በመጀመሪያ ዓመት ወርሃዊ ስጦታ
@@ -458,7 +454,6 @@ Free up to 60 minutes. Includes aptitude assessment + mapping of relevant career
 
 ## ראו גם
 
-- [PRESEN — תכנית](/he/careers/programs/presen)
 - [רשת יועצי קריירה](/he/careers/programs/career-counselors-network)
 - [Olim Beyahad — תכנית](/he/careers/programs/olim-beyahad-mentorship)`,
       en: `## Recommended order
@@ -473,7 +468,6 @@ Research shows pre-screening bias — community members need to submit 30%+ more
 
 ## See also
 
-- [PRESEN — program](/en/careers/programs/presen)
 - [Career counselors network](/en/careers/programs/career-counselors-network)
 - [Olim Beyahad — program](/en/careers/programs/olim-beyahad-mentorship)`,
       am: `## የሚመከር ቅደም ተከተል
@@ -511,7 +505,6 @@ Research shows pre-screening bias — community members need to submit 30%+ more
 
 ## ראו גם
 
-- [Madrasa — תכנית](/he/careers/programs/madrasa-trades)
 - [Trades — סקירה כללית](/he/careers/trades)
 - [UJIA-KIEDF — הלוואות עסקים](/he/rights/ujia-kiedf-business-loans)`,
       en: `## Subsidized trades
@@ -527,7 +520,6 @@ Research shows pre-screening bias — community members need to submit 30%+ more
 
 ## See also
 
-- [Madrasa — program](/en/careers/programs/madrasa-trades)
 - [Trades — overview](/en/careers/trades)
 - [UJIA-KIEDF — business loans](/en/rights/ujia-kiedf-business-loans)`,
       am: `## የተደገፉ ሙያዎች
@@ -633,7 +625,7 @@ Bachelor's/master's grads in technological fields — CS, math, statistics, engi
 
 ## ראו גם
 
-- [PRESEN — תכנית](/he/careers/programs/presen)`,
+`,
       en: `## Who fits
 
 Graduates of any course/degree/bootcamp preparing for job search. Suitable also for new olim — basic Hebrew + technical/professional Hebrew is enough.
@@ -649,7 +641,7 @@ Graduates of any course/degree/bootcamp preparing for job search. Suitable also 
 
 ## See also
 
-- [PRESEN — program](/en/careers/programs/presen)`,
+`,
       am: `## ለማን
 
 ለሥራ ፍለጋ የሚዘጋጁ ሁሉ።
@@ -745,7 +737,6 @@ Graduates of any course/degree/bootcamp preparing for job search. Suitable also 
 ## ראו גם
 
 - [UJIA-KIEDF — זכות](/he/rights/ujia-kiedf-business-loans)
-- [ScaleUp Velocity — תכנית](/he/careers/programs/scaleup-velocity)
 - [Entrepreneurship — סקירה](/he/careers/entrepreneurship)`,
       en: `## Main funding options
 
@@ -762,7 +753,6 @@ Graduates of any course/degree/bootcamp preparing for job search. Suitable also 
 ## See also
 
 - [UJIA-KIEDF — right](/en/rights/ujia-kiedf-business-loans)
-- [ScaleUp Velocity — program](/en/careers/programs/scaleup-velocity)
 - [Entrepreneurship — overview](/en/careers/entrepreneurship)`,
       am: `## ዋና የገንዘብ አማራጮች
 
@@ -804,7 +794,6 @@ Graduates of any course/degree/bootcamp preparing for job search. Suitable also 
 
 ## ראו גם
 
-- [Madrasa — תכנית](/he/careers/programs/madrasa-trades)
 - [Trades — סקירה](/he/careers/trades)`,
       en: `## What the scholarship covers
 
@@ -824,7 +813,6 @@ Register through your regional Employment Service office — requires national I
 
 ## See also
 
-- [Madrasa — program](/en/careers/programs/madrasa-trades)
 - [Trades — overview](/en/careers/trades)`,
       am: `## በስኮላርሺፕ የሚካተት
 
@@ -916,7 +904,6 @@ Family + employment guidance — regional centers in Netanya, Rehovot, Beersheba
 
 ## ראו גם
 
-- [Hila bagrut-tech — תכנית](/he/careers/programs/hila-bagrut-tech)
 - [Matriculation grant — זכות](/he/rights/matriculation-grant)`,
       en: `## How it works
 
@@ -933,7 +920,6 @@ Living grant of ₪3,500/month (subject to Ministry of Education budget).
 
 ## See also
 
-- [Hila bagrut-tech — program](/en/careers/programs/hila-bagrut-tech)
 - [Matriculation grant — right](/en/rights/matriculation-grant)`,
       am: `## እንዴት ይሰራል
 
@@ -1023,7 +1009,6 @@ Identifying as "full service path" opens doors to management roles for 30+ years
 
 ## ראו גם
 
-- [Madrasa — תכנית](/he/careers/programs/madrasa-trades)
 - [Trades — סקירה](/he/careers/trades)`,
       en: `## Main sectors
 
@@ -1039,7 +1024,6 @@ First, get the professional license (3-9 months), then apprentice with a veteran
 
 ## See also
 
-- [Madrasa — program](/en/careers/programs/madrasa-trades)
 - [Trades — overview](/en/careers/trades)`,
       am: `## ዋና ዘርፎች
 
@@ -1078,7 +1062,6 @@ PRESEN של ENP מטפלת בנושא ספציפית — מלמדת איך לה�
 
 ## ראו גם
 
-- [PRESEN — תכנית](/he/careers/programs/presen)
 - [טבקה — פרופיל ארגון](/he/orgs/tebeka)
 - [Tebeka legal aid — זכות](/he/rights/tebeka-legal-aid)`,
       en: `## Preparation
@@ -1094,7 +1077,6 @@ ENP's PRESEN handles this specifically — teaches how to focus on skills and di
 
 ## See also
 
-- [PRESEN — program](/en/careers/programs/presen)
 - [Tebeka — organization profile](/en/orgs/tebeka)
 - [Tebeka legal aid — right](/en/rights/tebeka-legal-aid)`,
       am: `## ዝግጅት

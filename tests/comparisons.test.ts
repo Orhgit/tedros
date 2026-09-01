@@ -12,8 +12,11 @@ import {
 } from "../app/lib/db/queries/comparisons.server";
 
 describe("comparisons seed integrity", () => {
-  it("has at least 10 comparison entries", () => {
-    expect(COMPARISONS.length).toBeGreaterThanOrEqual(10);
+  // TED-157 deleted isef-vs-hesegim: "הישגים" is a grades 7-12 tutoring
+  // programme, not the government undergraduate scholarship that comparison
+  // described, so every numeric cell on its side B was invented.
+  it("has at least 9 comparison entries", () => {
+    expect(COMPARISONS.length).toBeGreaterThanOrEqual(9);
   });
 
   it("every entry has unique slug", () => {
@@ -81,12 +84,12 @@ describe("listComparisons", () => {
 
 describe("getComparisonEntry", () => {
   it("returns full detail for known slug", () => {
-    const isef = getComparisonEntry("isef-vs-hesegim", "he");
-    expect(isef).not.toBeNull();
-    expect(isef?.criteria.length).toBeGreaterThanOrEqual(4);
-    expect(isef?.body.length).toBeGreaterThan(200);
-    expect(isef?.sideA.name).toBeTruthy();
-    expect(isef?.sideB.name).toBeTruthy();
+    const entry = getComparisonEntry("klita-basket-vs-aliyah-grant", "he");
+    expect(entry).not.toBeNull();
+    expect(entry?.criteria.length).toBeGreaterThanOrEqual(4);
+    expect(entry?.body.length).toBeGreaterThan(200);
+    expect(entry?.sideA.name).toBeTruthy();
+    expect(entry?.sideB.name).toBeTruthy();
   });
 
   it("returns null for unknown slug", () => {
@@ -94,9 +97,9 @@ describe("getComparisonEntry", () => {
   });
 
   it("resolves criterion winner correctly", () => {
-    const isef = getComparisonEntry("isef-vs-hesegim", "he");
-    expect(isef).not.toBeNull();
-    const hasWinner = isef!.criteria.some((c) => c.winner !== undefined);
+    const entry = getComparisonEntry("klita-basket-vs-aliyah-grant", "he");
+    expect(entry).not.toBeNull();
+    const hasWinner = entry!.criteria.some((c) => c.winner !== undefined);
     expect(hasWinner).toBe(true);
   });
 });

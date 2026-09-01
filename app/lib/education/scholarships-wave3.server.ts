@@ -237,7 +237,7 @@ Contact the Dean of Students or the graduate school at the relevant academic ins
     applicationUrl: "https://mechina-kda.biu.ac.il",
     tags: ["pre-academic", "housing", "community"],
     communityPriority: true,
-    relatedScholarships: ["atidim-pre-academic"],
+    relatedScholarships: [],
     relatedRights: [],
     bodies: {
       he: `## מה זאת המכינה?
@@ -271,7 +271,6 @@ Contact the Dean of Students or the graduate school at the relevant academic ins
 
 ## ראו גם
 
-- [Atidim — מכינה קדם-אקדמית](/he/education/scholarships/atidim-pre-academic)
 `,
       en: `## What is this program?
 
@@ -304,7 +303,6 @@ Register via mechina-kda.biu.ac.il.
 
 ## See also
 
-- [Atidim Pre-Academic](/en/education/scholarships/atidim-pre-academic)
 `,
       am: `## ይህ ፕሮግራም ምንድን ነው?
 
@@ -335,7 +333,6 @@ Register via mechina-kda.biu.ac.il.
 
 ## ይህንንም ይዩ
 
-- [Atidim ቅድመ-አካዳሚክ](/am/education/scholarships/atidim-pre-academic)
 `,
     },
   },
@@ -470,7 +467,7 @@ Register via tech-career.org — see also the specific bootcamp program page for
     applicationUrl: "https://www.fidel.org.il",
     tags: ["high-school", "community", "identity"],
     communityPriority: true,
-    relatedScholarships: ["enp-bagrut-grant"],
+    relatedScholarships: [],
     relatedRights: [],
     bodies: {
       he: `## מי זאת פידל?
@@ -489,7 +486,6 @@ Register via tech-career.org — see also the specific bootcamp program page for
 
 ## ראו גם
 
-- [מענק בגרות — ENP](/he/education/scholarships/enp-bagrut-grant)
 - [עמוד ארגון פידל](/he/orgs/fidel)
 `,
       en: `## Who is Fidel?
@@ -508,7 +504,6 @@ See the [full organization profile](/en/orgs/fidel) for contact details, foundin
 
 ## See also
 
-- [ENP Bagrut Grant](/en/education/scholarships/enp-bagrut-grant)
 - [Fidel org profile](/en/orgs/fidel)
 `,
       am: `## ፊደል ማን ነው?
@@ -526,7 +521,6 @@ See the [full organization profile](/en/orgs/fidel) for contact details, foundin
 
 ## ይህንንም ይዩ
 
-- [የENP ባግሩት ድጋፍ](/am/education/scholarships/enp-bagrut-grant)
 `,
     },
   },
@@ -755,7 +749,7 @@ Register via isef.org.il — distinguish between the "ISEF Fellows" track (post-
     applicationUrl: "https://www.maatzimot.org.il",
     tags: ["undergrad", "women", "community"],
     communityPriority: true,
-    relatedScholarships: ["hesegim-undergraduate"],
+    relatedScholarships: [],
     relatedRights: [],
     bodies: {
       he: `## מה זאת התוכנית?
@@ -777,7 +771,6 @@ Register via isef.org.il — distinguish between the "ISEF Fellows" track (post-
 
 ## ראו גם
 
-- [מלגת הסגים — תואר ראשון](/he/education/scholarships/hesegim-undergraduate)
 `,
       en: `## What is this program?
 
@@ -798,7 +791,6 @@ Via maatzimot.org.il.
 
 ## See also
 
-- [Hesegim Undergraduate Scholarship](/en/education/scholarships/hesegim-undergraduate)
 `,
       am: `## ይህ ፕሮግራም ምንድን ነው?
 
@@ -819,7 +811,6 @@ Via maatzimot.org.il.
 
 ## ይህንንም ይዩ
 
-- [ሄሰጊም ስኮላርሺፕ](/am/education/scholarships/hesegim-undergraduate)
 `,
     },
   },

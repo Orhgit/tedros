@@ -48,7 +48,7 @@ export const CAREER_TRACKS: CareerTrackEntry[] = [
     relatedRights: ["tech-career-bootcamp", "student-aid"],
     relatedOrgs: ["enp", "olim-beyahad", "isef"],
     relatedTerms: ["enp", "olim-beyahad"],
-    recommendedBootcamps: ["enp-tech-career", "itworks-israel", "codeoved"],
+    recommendedBootcamps: ["itworks-israel", "codeoved"],
     relatedProfessions: ["career-counselor"],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -116,7 +116,7 @@ Israeli tech is the country's biggest wage and mobility engine — and Ethiopian
     ],
     relatedOrgs: ["tene-briut", "jdc-ashalim"],
     relatedTerms: ["tene-briut"],
-    recommendedBootcamps: ["enp-teaching-fellowship", "career-counselors-network"],
+    recommendedBootcamps: ["career-counselors-network"],
     relatedProfessions: ["doctor", "psychologist", "social-worker"],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -180,7 +180,7 @@ Israel's health system is severely under-staffed with Amharic-speaking health na
     relatedRights: ["matriculation-grant", "student-aid", "youth-mentorship"],
     relatedOrgs: ["enp", "fidel", "hila", "atid-bamidbar"],
     relatedTerms: ["enp"],
-    recommendedBootcamps: ["enp-teaching-fellowship", "hila-bagrut-tech"],
+    recommendedBootcamps: ["hila-bagrut-tech"],
     relatedProfessions: ["social-worker", "career-counselor"],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -308,7 +308,7 @@ Israel's Civil Service Commission Order ("Order 50") mandates representative emp
     relatedRights: ["ujia-kiedf-business-loans"],
     relatedOrgs: ["olim-beyahad", "iaej", "atid-bamidbar"],
     relatedTerms: [],
-    recommendedBootcamps: ["scaleup-velocity", "olim-beyahad-mentorship"],
+    recommendedBootcamps: ["olim-beyahad-mentorship"],
     relatedProfessions: ["accountant", "career-counselor"],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -372,7 +372,7 @@ Small businesses owned by Ethiopian-Israelis are a meaningful mobility path — 
     relatedRights: ["600k-mortgage"],
     relatedOrgs: ["isef", "olim-beyahad"],
     relatedTerms: [],
-    recommendedBootcamps: ["isef-excellence-employment", "presen"],
+    recommendedBootcamps: ["isef-excellence-employment"],
     relatedProfessions: ["accountant", "mortgage-advisor"],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -436,7 +436,7 @@ Finance roles offer stable pay, clear mobility (junior → senior → manager), 
     relatedRights: ["family-counseling", "domestic-violence-support", "youth-mentorship"],
     relatedOrgs: ["jdc-ashalim", "friends-by-nature", "iaej"],
     relatedTerms: [],
-    recommendedBootcamps: ["enp-teaching-fellowship", "career-counselors-network"],
+    recommendedBootcamps: ["career-counselors-network"],
     relatedProfessions: ["social-worker", "psychologist"],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -563,7 +563,7 @@ Community lawyers are needed to handle discrimination cases, rights advocacy, an
     relatedRights: ["ujia-kiedf-business-loans"],
     relatedOrgs: ["atid-bamidbar"],
     relatedTerms: [],
-    recommendedBootcamps: ["madrasa-trades", "ta-employment-academy"],
+    recommendedBootcamps: ["ta-employment-academy"],
     relatedProfessions: [],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -626,7 +626,7 @@ Trades offer a fast path to self-employment with steady demand — a well-establ
     relatedRights: [],
     relatedOrgs: ["olim-beyahad"],
     relatedTerms: [],
-    recommendedBootcamps: ["place-il", "presen"],
+    recommendedBootcamps: ["presen"],
     relatedProfessions: [],
     bodies: {
       he: `## למה זה רלוונטי לקהילה

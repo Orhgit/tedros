@@ -40,7 +40,7 @@ const PROFESSION_SLUGS = new Set(ALL_PROFESSIONS as readonly string[]);
 // validate the careers seed only references slugs from this canonical
 // list — anything else would be a typo.
 const PLANNED_BOOTCAMPS = new Set([
-  "enp-tech-career",
+  "itworks-israel",
   "olim-beyahad-mentorship",
   "isef-excellence-employment",
   "hila-bagrut-tech",
@@ -160,7 +160,7 @@ describe("per-track lookup helpers respect limits + parity with seed", () => {
   it("relatedOrgSlugs/relatedTermSlugs/recommendedBootcampSlugs return seed contents", () => {
     expect(relatedOrgSlugs("healthcare")).toContain("tene-briut");
     expect(relatedTermSlugs("law")).toContain("tebeka");
-    expect(recommendedBootcampSlugs("tech")).toContain("enp-tech-career");
+    expect(recommendedBootcampSlugs("tech")).toContain("itworks-israel");
   });
 
   it("relatedProfessionSlugs respects limit (default 3)", () => {
@@ -175,8 +175,8 @@ describe("reverse lookups", () => {
     expect(tracks).toContain("education");
   });
 
-  it("tracksForBootcamp('enp-tech-career') returns the tech track", () => {
-    expect(tracksForBootcamp("enp-tech-career")).toContain("tech");
+  it("tracksForBootcamp('itworks-israel') returns the tech track", () => {
+    expect(tracksForBootcamp("itworks-israel")).toContain("tech");
   });
 
   it("tracksForRight('tebeka-legal-aid') surfaces law", () => {
@@ -188,7 +188,7 @@ describe("path helpers", () => {
   it("trackPath/trackCityPath/bootcampPath/jobPath/storyPath/faqPath emit canonical paths", () => {
     expect(trackPath("tech")).toBe("/careers/tech");
     expect(trackCityPath("tech", "tel-aviv")).toBe("/careers/tech/tel-aviv");
-    expect(bootcampPath("enp-tech-career")).toBe("/careers/programs/enp-tech-career");
+    expect(bootcampPath("itworks-israel")).toBe("/careers/programs/itworks-israel");
     expect(jobPath("mentor-tech-career")).toBe("/careers/jobs/mentor-tech-career");
     expect(storyPath("daniel-tech-tel-aviv")).toBe(
       "/careers/stories/daniel-tech-tel-aviv",
@@ -198,9 +198,13 @@ describe("path helpers", () => {
 });
 
 describe("internalLinkCount + audit DoD", () => {
-  it("every track has ≥3 internal links (Sub-2 DoD floor)", () => {
+  // TED-157 lowered this floor from 3 to 2. Removing eight fabricated
+  // bootcamps took real cross-links out with them, and one track now has two.
+  // Restoring the floor to 3 means adding a verified programme to that track —
+  // it must not be met by re-adding an entry nobody could source.
+  it("every track has ≥2 internal links (TED-157: floor lowered from 3)", () => {
     for (const t of CAREER_TRACKS) {
-      expect(internalLinkCount(t.slug)).toBeGreaterThanOrEqual(3);
+      expect(internalLinkCount(t.slug), t.slug).toBeGreaterThanOrEqual(2);
     }
   });
 });
