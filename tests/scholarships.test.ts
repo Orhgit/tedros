@@ -14,8 +14,11 @@ import {
 import { SCHOLARSHIP_LEVELS } from "../app/lib/education/categories";
 
 describe("scholarships seed integrity", () => {
-  it("has exactly 40 scholarships after the TED-152 cleanup", () => {
-    expect(SCHOLARSHIPS.length).toBe(40);
+  // TED-152 left 40. TED-157 audited every remaining entry against the
+  // funder's own site and retired 22 more: the whole of wave 2 (16 entries,
+  // none of which the named funder runs) and 6 from wave 1.
+  it("has exactly 18 scholarships after the TED-157 sweep", () => {
+    expect(SCHOLARSHIPS.length).toBe(18);
   });
 
   // TED-152 — fabricated entries retired, duplicates merged
@@ -175,7 +178,8 @@ describe("listScholarships", () => {
 
   it("translates amountNote per locale", () => {
     const isef = listScholarships("he").find((s) => s.slug === "isef-fellowship");
-    expect(isef?.amountNote).toContain("שכר לימוד");
+    // TED-157: ISEF publishes no single figure, so the note says so.
+    expect(isef?.amountNote).toContain("סכום אחיד");
   });
 
   it("exposes status + lastVerified on summaries (TED-139)", () => {
@@ -203,11 +207,11 @@ describe("getScholarshipBySlug", () => {
   it("exposes status + lastVerified on detail (TED-139)", () => {
     const isef = getScholarshipBySlug("isef-fellowship", "he");
     expect(isef?.status).toBe("closed");
-    expect(isef?.lastVerified).toBe("2026-08-30");
+    expect(isef?.lastVerified).toBe("2026-09-01");
   });
 
   it("returns body in requested locale", () => {
-    const en = getScholarshipBySlug("hesegim-undergraduate", "en");
+    const en = getScholarshipBySlug("perach-tutoring-stipend", "en");
     expect(en?.body).toContain("Who is it for");
   });
 });
@@ -217,8 +221,10 @@ describe("relatedScholarships", () => {
     const out = relatedScholarships("isef-fellowship", "he", 3);
     expect(out.length).toBeLessThanOrEqual(3);
     const slugs = out.map((r) => r.slug);
-    // ISEF Fellowship curates Hesegim + Cogito.
-    expect(slugs).toContain("hesegim-undergraduate");
+    // TED-157 retired hesegim-undergraduate ("הישגים" is a grades 7-12
+    // tutoring programme, not a scholarship), so ISEF now curates the VATAT
+    // doctoral track.
+    expect(slugs).toContain("vatat-doctoral-postdoc-scholarship");
   });
 
   it("self never appears", () => {

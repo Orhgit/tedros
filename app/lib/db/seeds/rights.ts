@@ -47,8 +47,8 @@ export const PRIORITY_RIGHTS: RightSeed[] = [
     slug: { he: "600k-mortgage", en: "600k-mortgage", am: "600k-mortgage" },
     govUrl: "https://www.gov.il/he/departments/integration_program/govil-landing-page",
     eligibilitySummary: {
-      he: "משכנתא ליוצאי אתיופיה: הלוואת מדינה בסך ₪600,000 ל-25 שנה, 0% ריבית ב-10 שנים הראשונות, 2% ב-15 הבאות. הקצאה בהגרלה שנתית של כ-200 משפחות.",
-      en: "Mortgage for Ethiopian Israelis: govt loan of ₪600,000 over 25 years, 0% interest for the first 10, 2% for the next 15. Allocated by annual lottery (~200 families).",
+      he: "התכנית אמיתית אך **ההרשמה סגורה** — אין הגרלה פתוחה, ועמודי התכנית באתר משרד הבינוי הוסרו. התנאים שנקבעו: עד ₪600,000 ל-25 שנה, 0% ריבית ב-10 השנים הראשונות ו-2% ב-15 הבאות.",
+      en: "The programme is real but **registration is closed** — there is no open lottery, and the ministry has removed its programme pages. The terms as set: up to ILS 600,000 over 25 years, 0% interest for the first 10 years and 2% for the next 15.",
       am:
         "የመንግስት ብድር ለኢትዮጵያ-እስራኤላውያን ቤተሰቦች፦ 600,000 ሺ" +
         "ል ለ25 ዓመት፣ ለመጀመሪያዎቹ 10 ዓመታት 0% ወለድ፣ ለቀጣዮቹ 15 ዓመታት 2%። በዓመታዊ ዕጣ (~200 ቤተሰቦች) ይመደባል።",
@@ -62,20 +62,22 @@ export const PRIORITY_RIGHTS: RightSeed[] = [
 - אחד מההורים של בני הזוג נולד באתיופיה
 - בני הזוג מוגדרים בני "Falash Mura" שעלו לישראל
 
-## תנאי ההלוואה
+## חשוב לפני הכול — אין הגרלה פתוחה
 
-- **סכום**: ₪600,000
+התכנית אמיתית, והתנאים שלמטה הם התנאים שנקבעו לה. **אבל ההרשמה סגורה.** התכנית אושרה בתכנית החומש של סוף 2016 כהקצאה תקציבית מוגבלת בזמן — כ-120 מיליון ₪ בשנה, כ-200 משפחות בשנה, כ-800 משפחות בסך הכל — וסבב ההרשמה הראשון נערך ב-1.3.2017–18.4.2017. שני עמודי התכנית באתר משרד הבינוי והשיכון מחזירים היום **404**, וסקירת מרכז המחקר והמידע של הכנסת מאוגוסט 2025 מונה אותה בין התכניות "שהופעלו במהלך השנים" ואינה כוללת אותה בסיוע הפעיל.
+
+העמוד הזה שלח בעבר משפחות להירשם בסניף בנק. **אל תיסעו לסניף בשביל התכנית הזאת.** לסיוע פעיל בדיור ראו את מענק הדיור לעולי אתיופיה מעוזבי מרכזי קליטה (החלטה 1103), 235,000–650,000 ₪ לפי הרכב המשפחה.
+
+מקור: [סקירת מרכז המחקר והמידע של הכנסת, 10.8.2025](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) · נבדק בספטמבר 2026.
+
+## תנאי ההלוואה כפי שנקבעו
+
+- **סכום**: עד ₪600,000
 - **תקופה**: 25 שנה
 - **ריבית**: 0% ב-10 השנים הראשונות, 2% ב-15 הבאות
-- **השכנה (down payment)**: 5% מערך הנכס
-- **רישום**: 70 ₪ בסניף בנק משתתף (לוטריה שנתית)
+- **הקצאה**: בהגרלה בין הנרשמים
 
-## איך מגישים?
-
-1. נרשמים בסניף בנק משתתף (לאומי / דיסקונט / איגוד)
-2. ממתינים לתוצאות ההגרלה השנתית (~200 זוכים)
-3. אם זכיתם — בנק שולח אישור לחתימת חוזה רכישה
-4. ממציאים מסמכים: ת"ז, אישור הכנסה, אישור על-תכנית קליטה (אם רלוונטי)
+דמי רישום של 70 ₪ ותנאי הון עצמי של 5% הופיעו כאן בעבר. לא נמצא להם מקור רשמי, והם הוסרו. רשימת הבנקים המשתתפת שהופיעה כאן כללה את בנק איגוד, שאינו קיים כבנק עצמאי מאז 2020 — עוד סימן שהמידע לא היה עדכני.
 
 לחישוב זכאות מהיר — [מחשבון משכנתא](/he/calculator/mortgage-ethiopian-immigrants).
 `,
@@ -86,20 +88,22 @@ Any household where at least one criterion holds:
 - One of the spouses' parents was born in Ethiopia
 - The couple is defined as "Falash Mura" with confirmed aliyah
 
-## Loan terms
+## Before anything else — registration is closed
 
-- **Amount**: ₪600,000
+The programme is real and the terms below are the terms it was given. **But there is no open round.** It was approved in the end-2016 five-year plan as a time-limited budget allocation — about ILS 120M a year, roughly 200 families a year, about 800 families in total — and the first registration window ran 1 March to 18 April 2017. Both of the ministry's programme pages now return **404**, and the Knesset Research Centre's August 2025 review lists it among programmes "operated over the years" rather than among active housing aid.
+
+This page used to send families to a bank branch to register. **Do not make that trip for this programme.** For active housing aid see the grant for Ethiopian olim leaving absorption centres (Government Decision 1103) — ILS 235,000 to 650,000 by family composition.
+
+Source: [Knesset Research Centre review, 10 Aug 2025](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) · checked September 2026.
+
+## Loan terms as they were set
+
+- **Amount**: up to ₪600,000
 - **Term**: 25 years
 - **Rate**: 0% for the first 10 years, 2% for the next 15
-- **Down payment**: 5% of property value
-- **Registration**: ₪70 at a participating bank branch (annual lottery)
+- **Allocation**: by lottery among registrants
 
-## How to apply
-
-1. Register at a participating bank branch (Leumi / Discount / Igud)
-2. Wait for annual lottery results (~200 winners)
-3. On winning, the bank sends approval to sign a purchase contract
-4. Submit documents: ID, income proof, absorption-program confirmation (if relevant)
+A ₪70 registration fee and a 5% equity condition appeared here before. No official source was found for either, and they were removed. The list of participating banks named Bank Igud, which has not existed as an independent bank since 2020 — another sign the information was not current.
 
 Quick eligibility check — [mortgage calculator](/en/calculator/mortgage-ethiopian-immigrants).
 `,
@@ -1710,7 +1714,7 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
     bodies: {
       he: `## תכניות מומלצות
 
-- **פר״ח (PERACH)**: סטודנט/ית מקבלים מלגה (כ-5,000₪/שנה) תמורת חונכות 4 שעות שבועיות לתלמיד/ה. מתאים לבני 7-18.
+- **פר״ח (PERACH)**: סטודנט/ית מקבלים מלגה של 7,000 ₪ עבור 100 שעות חונכות בשנה (פעמיים בשבוע, שעה וחצי). מתאים לבני 7-18. מקור: [perach.org.il](https://www.perach.org.il/about-the-scholarship.html), נבדק בספטמבר 2026.
 - **ENP — Ethiopian National Project**: תכניות בית-ספריות (SPACE) ב-32 ערים. תוספת לימוד אחר הצהריים, הכנה לבגרות, מנטורים מהקהילה.
 - **Fidel**: מתמקדת במשפחה — מתווכים בבתי ספר, מועדוני נוער, ליווי הורים.
 
@@ -1731,7 +1735,7 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 `,
       en: `## Recommended programs
 
-- **PERACH**: A student receives a stipend (~₪5,000/year) in exchange for 4 weekly hours of mentoring a younger pupil. For ages 7-18.
+- **PERACH**: A student receives ILS 7,000 for 100 tutoring hours a year (twice weekly, 90 minutes). For ages 7-18. Source: perach.org.il, checked September 2026.
 - **ENP — Ethiopian National Project**: School-based programs (SPACE) across 32 cities. After-school tutoring, matriculation prep, community mentors.
 - **Fidel**: Family-focused — school mediators, youth clubs, parent guidance.
 
@@ -1890,10 +1894,17 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 - **פטור על פנסיה זרה**: עד תקרה
 - **דיווח מצומצם**: בשנים הראשונות, פטור מהדיווח על נכסים בחו"ל
 
-### נקודות זיכוי מוגדלות (5 שנים)
-- שנה ראשונה: 3 נקודות זיכוי נוספות (~9,000 ₪)
-- שנה שנייה: 2 נקודות
-- שנים 3-5: נקודה אחת לשנה
+### נקודות זיכוי לעולה
+
+**לעולה שעלה מ-1.1.2022** הסולם שונה מזה שהופיע כאן, והוא נמוך משמעותית בשנה הראשונה:
+- 12 החודשים הראשונים: 1/12 נקודה לחודש — **נקודה אחת בשנה**
+- חודשים 13–30: 1/4 נקודה לחודש — 4.5 נקודות
+- חודשים 31–42: 1/6 נקודה לחודש
+- חודשים 43–54: 1/12 נקודה לחודש
+
+סך הכל 4.5 שנים. שווי נקודת זיכוי ב-2026: 242 ₪ לחודש, 2,904 ₪ לשנה.
+
+השורה שהופיעה כאן — "שנה ראשונה: 3 נקודות (~9,000 ₪)" — הכפילה פי שלושה את ההטבה בשנה הראשונה עבור מי שעלה מ-2022 ואילך, כלומר עבור כמעט כל העולים החדשים בקהילה היום. הסולם מבוסס על סעיף 35 לפקודת מס הכנסה כפי שתוקן; **מומלץ לאמת מול רשות המסים לפני הגשה** — עמודי רשות המסים שנבדקו בספטמבר 2026 החזירו 404.
 
 ### פטורי מכס (3 שנים)
 - מטלטלין אישיים, רכב (תנאים), ציוד מקצועי
@@ -3091,17 +3102,13 @@ According to reporting (Davar newspaper, 2024), kessim still earn significantly 
 - **מכינות + ישיבות**: סדנאות סיגד למסיימי תיכון
 - **תרבות עירונית**: קונצרטים, תערוכות
 
-## תקציב טיפוסי
+## תקציב — מה שהוסר מהעמוד הזה
 
-- **אירוע שכונתי**: עד ₪10,000 (בית ספר/קהילה)
-- **אירוע עירוני**: ₪30,000-100,000 (לרוב בשכונות מרובות-קהילה)
-- **אירוע ארצי**: ₪500,000+ (טקס המרכזי בירושלים)
+העמוד פרסם כאן שלוש מדרגות תקציב (עד 10,000 ₪ לאירוע שכונתי, 30,000–100,000 ₪ לעירוני, 500,000 ₪+ לארצי) ולוח זמנים של קול קורא ממשלתי. **אין מבחני תמיכה ייעודיים לסיגד ואין קול קורא ממשלתי עם סכומים קבועים.** מאגר הפרסומים של gov.il מחזיר "0 תוצאות" לחיפוש "סיגד", ועמוד הסיגד באתר gov.il אינו כולל מידע על מימון כלל (נבדק בספטמבר 2026). הסכומים והמועדים הוסרו.
 
-## איך מקבלים?
+## איך מקבלים מימון בפועל
 
-1. **קריאה לקול קורא**: באתר משרד התרבות (יוני-יולי כל שנה)
-2. **הגשה דרך עירייה**: תכנית אירוע + תקציב
-3. **שותפות עם IAEJ**: לליווי תרבותי וקהל יעד
+מימון אירועי סיגד נעשה דרך **הרשות המקומית** — מחלקת התרבות או הרכז/ת לקליטת יוצאי אתיופיה — ולעיתים בשיתוף המרכז למורשת יהדות אתיופיה. פנו אליהם ישירות; אין מסלול ארצי אחיד להגיש אליו.
 4. **דדליין**: ספטמבר (לחג בנובמבר)
 `,
       en: `## What is Sigd?
@@ -3566,9 +3573,9 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
     govUrl:
       "https://www.gov.il/he/departments/topics/vocational_training/govil-landing-page",
     eligibilitySummary: {
-      he: "עולים חדשים זכאים לשוברי הכשרה מקצועית של עד ₪12,000 לקורסים מוכרים — לרכישת מקצוע ושילוב בשוק העבודה הישראלי.",
-      en: "New immigrants are entitled to vocational training vouchers worth up to ₪12,000 for accredited courses — to acquire a trade and integrate into the Israeli labour market.",
-      am: 'አዲስ ስደተኞች ለታወቁ ኮርሶች እስከ 12,000 ሺ"ል ሙያ ስልጠና ቫዎቸሮች ያገኛሉ — ሙያ ለማዳበርና ወደ ሥራ ገበያ ለመቀላቀል።',
+      he: "משרד העלייה והקליטה משתתף במימון קורס הכשרה מקצועית בשובר של עד 80% מהעלות, ולא יותר מ-7,000 ₪. הזכאות: 10 שנים ממעמד עולה, וליוצאי אתיופיה 15 שנים.",
+      en: "The Ministry of Aliyah funds vocational courses through a voucher covering up to 80% of the cost, capped at ILS 7,000. Eligibility runs 10 years from oleh status — 15 years for olim from Ethiopia.",
+      am: 'ሚኒስቴሩ እስከ 80% የኮርስ ወጪ፣ ከ7,000 ሺ"ል ያልበለጠ ይሸፍናል። ብቁነት፦ ከኦሌ ደረጃ 10 ዓመታት፤ ከኢትዮጵያ ለመጡ 15 ዓመታት።',
     },
     tags: ["employment", "education", "new_immigrant"],
     bodies: {
@@ -3578,9 +3585,11 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 
 ## כמה שווה השובר?
 
-- עד **₪12,000** לקורס אחד או מספר קורסים קצרים
-- ניתן לנצל ב-**4 שנים** מיום העלייה
-- כיסוי מלא או חלקי לפי סוג הקורס
+- המשרד משתתף ב**עד 80% מעלות הקורס, ולא יותר מ-7,000 ₪**. הסכום 12,000 ₪ שהופיע כאן אינו מופיע במקור הרשמי והוסר
+- הזכאות עומדת **10 שנים** ממועד קבלת מעמד עולה — **וליוצאי אתיופיה 15 שנים**
+- נדרשת רמת עברית של בוגר/ת אולפן א'
+
+מקור: [gov.il — פרויקט השוברים](https://www.gov.il/he/pages/voucher_project) · נבדק בספטמבר 2026.
 
 ## אילו קורסים מוכרים?
 
@@ -3592,9 +3601,9 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 
 ## מי זכאי?
 
-- עולה חדש שעלה ב-4 השנים האחרונות
-- רשום במשרד הקליטה
-- אין הגבלת גיל
+- עולה שקיבל מעמד עולה ב-10 השנים האחרונות — **וליוצאי אתיופיה: 15 השנים האחרונות**
+- רשום במשרד העלייה והקליטה
+- בוגר/ת אולפן א' לפחות
 
 ## איך מממשים?
 
@@ -3608,8 +3617,8 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 **האם ניתן לנצל את השובר לקורס שמתקיים בערב?**
 כן — מרבית קורסי הישובים המוכרים מציעים מסלולי ערב.
 
-**מה אם הקורס עולה יותר מ-₪12,000?**
-ניתן להשלים את ההפרש באמצעות מלגת מרום, קרן מיוחדת, או תשלום עצמי.
+**מה אם הקורס עולה יותר מהשובר?**
+השובר מכסה עד 80% מהעלות ולא יותר מ-7,000 ₪; את היתרה משלימים בעצמכם.
 
 **האם שובר מכסה גם רישיון נהיגה?**
 כן — קורסי נהיגה מקצועיים (כבד/מונית) כלולים ברשימה.
@@ -3623,7 +3632,7 @@ Vocational training vouchers (Shabbim) are a tool of the Ministry of Aliyah and 
 
 ## How much is the voucher worth?
 
-- Up to **₪12,000** for one course or several short courses
+- The ministry covers **up to 80% of the course cost, capped at ILS 7,000**. The ILS 12,000 figure previously stated here is not in the official source and was removed. Eligibility runs 10 years from oleh status — **15 years for olim from Ethiopia**
 - Can be used within **4 years** of aliyah
 - Full or partial coverage depending on the course type
 
@@ -3653,7 +3662,7 @@ Vocational training vouchers (Shabbim) are a tool of the Ministry of Aliyah and 
 **Can the voucher be used for an evening course?**
 Yes — most accredited vocational courses offer evening tracks.
 
-**What if the course costs more than ₪12,000?**
+**What if the course costs more than the voucher?**
 You can cover the difference through the Marom scholarship, a special fund, or personal payment.
 
 📞 **Ministry of Aliyah hotline**: *2994
@@ -3664,7 +3673,7 @@ You can cover the difference through the Marom scholarship, a special fund, or p
 
 ## ምን ያህል ይሸፍናሉ?
 
-- እስከ **12,000 ሺ"ል** ለአንድ ወይም ለብዙ ኮርሶች
+- እስከ 80% የኮርሱ ወጪ፣ ቢበዛ **7,000 ሺ"ል**። ከኢትዮጵያ ለመጡ ብቁነቱ 15 ዓመታት ነው
 - ከዓሊያ ቀን ጀምሮ **4 ዓመታት** ውስጥ ሊውሉ ይችላሉ
 
 ## ምን ኮርሶች?
@@ -4213,9 +4222,9 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
     },
     govUrl: "https://www.gov.il/he/departments/ministry-of-defense/govil-landing-page",
     eligibilitySummary: {
-      he: "חיילים יוצאי אתיופיה זכאים למענק שחרור מוגדל (150% ממענק הבסיס), תוכניות הכשרה מקצועית ייעודיות, מלגות לימוד ועדיפות בתורי דיור. כל הזכויות פעילות — חשוב לדעת לתבוע אותן.",
-      en: "Ethiopian-Israeli soldiers are entitled to an enhanced discharge grant (150% of the base grant), dedicated vocational-training programs, study scholarships, and priority on housing waiting lists.",
-      am: "የኢትዮጵያ-እስራኤላዊ ወታደሮች ከፍ ያለ የስራ ፈቃጃ ስጦታ (150%)፣ ሙያዊ ስልጠና ፕሮግራሞች፣ ትምህርት ምርጫ እና ቅደምተከተል በቤት ጥበቃ ዝርዝሮች ላይ የማግኘት መብት አላቸው።",
+      he: "אין מענק שחרור מוגדל ליוצאי אתיופיה — הטענה הזו פורסמה כאן בטעות. המענק האמיתי נצבר לפי חודש שירות: 686.96 ₪ לחודש ללוחם, בתוספת הפיקדון האישי.",
+      en: "There is no enhanced discharge grant for Ethiopian-Israeli soldiers — that claim was published here in error. The real grant accrues per month served (ILS 686.96/month for a combat soldier), plus the personal deposit.",
+      am: "ለኢትዮጵያ-እስራኤላውያን ወታደሮች ከፍ ያለ የፈቃድ ስጦታ የለም — ይህ በስህተት ታትሞ ነበር። ትክክለኛው ስጦታ በወር አገልግሎት ይሰላል።",
     },
     tags: ["employment", "education"],
     bodies: {
@@ -4287,29 +4296,29 @@ If the committee sets too low a percentage, you have 60 days to appeal to the Me
 | מלגות אקדמיות | לפני מועד הגשה של המוסד |
 | בקשה לעדיפות דיור | ניתן בכל עת |
 `,
-      en: `## What Is Unique to Ethiopian-Israeli Soldiers?
+      en: `## What this page used to claim, and what is actually true
 
-Government resolutions establish special benefit tracks for soldiers of Ethiopian origin. Awareness is low and many do not claim what they are entitled to.
+**What was removed from this page.** It previously advertised an "enhanced discharge grant — 150% of the base grant, unique to Ethiopian-Israeli soldiers", claimed via "Form B.L.87". **No such entitlement exists.** The Ministry of Defence's fund for discharged soldiers lists its special-entitlement populations — combat soldiers, disabled veterans, the bereaved, Haredi-sector graduates, SLA veterans — and country of origin is not among them. The form number is incoherent too: discharge grants are paid by the Ministry of Defence, not by National Insurance, so a "B.L." form cannot belong to one.
 
-**Enhanced discharge grant:** 150% of the standard base grant — 50% more. Submit Form B.L.87 before discharge, or within one year of release.
+**The real figures** (July 2026): the discharge grant accrues per month served — ILS 686.96 for a combat soldier, ILS 572.05 for combat support, ILS 457.15 for rear echelon. The personal deposit accrues at ILS 993.46 / 827.89 / 662.31 per month, up to 32 months for men and 24 for women. A combat soldier completing full service receives roughly ILS 22,000 in grant plus ILS 32,000 in deposit — about ILS 54,000 in total. There is no ILS 120,000 grant and no origin-based supplement. Source: [hachvana.mod.gov.il](https://www.hachvana.mod.gov.il/GrantAndDeposit/Pages/Grant.aspx), checked September 2026.
 
-**Dedicated vocational programs:** Tech training (Nativ LaAtid), logistics, agriculture, engineering — run jointly by IEWA, the Ministry of Aliyah, and partner organisations.
+**Vocational programmes:** the named programmes previously listed here could not be found in any official source and were removed. For active training, contact the [discharged-soldiers guidance centre](https://www.hachvana.mod.gov.il/).
 
-**Study scholarships:** Jerusalem Foundation grants (up to ₪20,000/year), Mapal grants for combat veterans, and free university-prep year programs.
+**Study scholarships:** the named scholarships and amounts previously listed here were not confirmed with any granting body and were removed. The documented route is [ממדים ללימודים](https://www.hachvana.mod.gov.il/MainEducation/HachvanaScholarship/Pages/UniformToStudies.aspx) — tuition reimbursement up to ILS 10,214.45/year (2025/26) — which carries no ethnic restriction.
 
-**Housing priority:** Ethiopian-Israeli veterans receive priority points on public-housing and state housing-program waiting lists. Apply via your city's Ethiopian-community liaison (Mamshil) with your discharge certificate.
+**Housing priority:** this claim was not verified against any published criterion and should not be relied on.
 
 Contact IEWA (iewa.org.il) or TEBEKA (072-2424622) for guidance.
 `,
       am: `## ምን ልዩ ነው?
 
-የኢትዮጵያ-እስራኤላዊ ወታደሮች ከፍ ያለ የስራ ፈቃጃ ስጦታ (150%)፣ ሙያዊ ስልጠና ፕሮግራሞች፣ ትምህርት ምርጫ እና ቅደምተከተል ዝርዝሮች ላይ ቤት የማግኘት መብት አላቸው።
+ይህ ገጽ ቀደም ሲል "ለኢትዮጵያ-እስራኤላውያን ወታደሮች ብቻ የሆነ 150% ከፍ ያለ የፈቃድ ስጦታ" ብሎ አሳትሞ ነበር። **እንዲህ ያለ መብት የለም።** የመከላከያ ሚኒስቴር ልዩ ብቁነት ዝርዝር ውስጥ የትውልድ ሀገር አልተካተተም።
 
-**ስጦታ:** 150% ማለት 50% ተጨማሪ ነው። ከፈቃጃ ሐ/ቀን ከ1 ዓመት ውስጥ ቅጽ B.L.87 ያስገቡ።
+**ትክክለኛው መጠን (ጁላይ 2026):** የፈቃድ ስጦታ በወር አገልግሎት ይሰላል — ተዋጊ 686.96 ሺ"ል፣ የውጊያ ድጋፍ 572.05፣ የኋላ 457.15። ሙሉ አገልግሎት ያጠናቀቀ ተዋጊ በጠቅላላ 54,000 ሺ"ል ያህል ያገኛል። የ120,000 ሺ"ል ስጦታ የለም።
 
-**ስልጠና:** Nativ LaAtid (ሃይቴክ)፣ ሎጂስቲክስ፣ ምህንድስና — IEWA እና ተሳታፊ ድርጅቶች ያሄዳሉ።
+**ስልጠና:** እዚህ የተዘረዘሩት ፕሮግራሞች በኦፊሴላዊ ምንጭ አልተገኙም፤ ተወግደዋል።
 
-**ቤት ቅደምተከተል:** ከተማዎ ማምሺል (Mamshil) ጋር ይቀናጁ።
+**የቤት ቅደምተከተል:** ይህ ማረጋገጫ አልተገኘም፤ በእሱ ላይ አይመኩ።
 
 IEWA (iewa.org.il) ወይም TEBEKA (072-2424622) ያነጋግሩ።
 `,
@@ -4684,7 +4693,7 @@ Tene Briut (תנא בריאות) is a Clalit program specifically for the Ethiop
 - **טבקה**: 072-2424622 — ייצוג בגירושין, צווי הגנה, מזונות
 - **קו חם ל-118**: 24/7, כולל אמהרית
 - **ל.א.ה**: ארגון ייחודי לנשים יוצאות אתיופיה — ירושלים ות"א
-- **הסיוע המשפטי הממשלתי**: 1-700-706-060
+- **הסיוע המשפטי הממשלתי**: *6405
 `,
       en: `## Why Ethiopian-Israeli Women Face Special Barriers
 
@@ -4914,7 +4923,7 @@ If the father is in Ethiopia or elsewhere, BTL will advance the court-ordered am
 | מחודש 4 ואילך | 45% |
 | עם ילדים / פרנס יחיד | 60–80% |
 
-**תקרת גמלה**: מחושבת עד שכר מקסימלי מוגדר — לא ניתן לקבל יותר מ~800 ₪/יום (2025).
+**תקרת גמלה** (2026): 550.76 ₪ ליום ב-125 ימי התשלום הראשונים, ו-367.17 ₪ ליום מהיום ה-126 ואילך. הסכום שנכתב כאן בעבר (~800 ₪) לא נמצא באף לוח רשמי.
 
 ---
 
@@ -5357,10 +5366,9 @@ The right is free — the state pays for court interpreters. If you are ever ask
 
 ## 2. הסיוע המשפטי הממשלתי
 
-**הסיוע המשפטי** (מנהלת הסיוע המשפטי, משרד המשפטים) מספק ייעוץ וייצוג חינמי לזכאים לפי **מבחן הכנסה**. ב-2025:
-- יחיד: הכנסה נטו עד ~7,000 ₪/חודש
-- זוג: עד ~10,500 ₪/חודש
-- ילדים: תוספת לכל ילד
+**הסיוע המשפטי** (מנהלת הסיוע המשפטי, משרד המשפטים) מספק ייעוץ וייצוג חינמי לזכאים. מבחן ההכנסה אינו סכום קבוע אלא **אחוז מהשכר הממוצע במשק**: ליחיד או למשפחה של עד 3 נפשות — הכנסה של עד **67% מהשכר הממוצע** (השכר הממוצע 13,316 ₪, כלומר כ-8,922 ₪), ותוספת של 6% לכל נפש נוספת. קיים גם מבחן נכסים.
+
+**בחלק מהנושאים אין מבחן הכנסה כלל**: ביטוח לאומי, ילדים ונוער, נפגעי עבירה, ניצולי שואה ועוד.
 
 **תחומים מכוסים**: פלילי (חובה), אזרחי (בשיקול-דעת), מנהלי, דיני משפחה.
 
@@ -5369,7 +5377,9 @@ The right is free — the state pays for court interpreters. If you are ever ask
 2. הצג ת"ז + אישור הכנסה
 3. אם אתה עולה חדש — הכנסה מסל הקליטה נחשבת
 
-📞 **מרכז השיחות**: 1-700-706-060
+📞 **מרכז השיחות**: *6405 (מחו"ל 972-77-3135162), א׳–ה׳ 08:00–16:00
+
+מקור: [gov.il — בקשה לסיוע משפטי](https://www.gov.il/he/service/legal_aid_application) · נבדק בספטמבר 2026.
 
 ---
 
@@ -5422,7 +5432,7 @@ TEBEKA (the Israeli Association for Ethiopian Jews) is the main legal organisati
 
 ## Government Legal Aid Bureau
 
-The Ministry of Justice Legal Aid Bureau provides free advice and representation based on an income test (single earner up to approx. ₪7,000 net/month in 2025). Covers criminal (mandatory), civil, administrative, and family law. Contact via any District Court or call 1-700-706-060.
+The Ministry of Justice Legal Aid Bureau provides free advice and representation based on an income test (income up to 67% of the average wage — about ILS 8,922 for a household of up to three, plus 6% per additional person). Covers criminal (mandatory), civil, administrative, and family law. Contact via any District Court or call *6405.
 
 ## University Law Clinics
 
@@ -5438,7 +5448,7 @@ TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት �
 
 ## የመንግስት የሕግ እርዳታ ቢሮ
 
-በሕክምና ሚኒስቴር የሕግ እርዳታ ቢሮ በገቢ ምርምር ነፃ ምክር እና ውክልና ይሰጣል (2025 ለ7,000 ሺ"ል/ወር ወይም ከዚያ ያነሰ ደሞዝ)። 1-700-706-060 ይደውሉ።
+የፍትህ ሚኒስቴር የሕግ እርዳታ ቢሮ ነፃ ምክርና ውክልና ይሰጣል። የገቢ መስፈርት፦ እስከ 3 ሰው ላለው ቤተሰብ ከአማካይ ደሞዝ 67% ድረስ (በግምት 8,922 ሺ"ል)። ስልክ፦ *6405።
 
 ## ምን ማምጣት አለብዎ?
 
@@ -5462,7 +5472,7 @@ TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት �
     },
     govUrl: "https://www.gov.il/he/departments/topics/housing-grants",
     eligibilitySummary: {
-      he: "מדריך מקיף לכל תוכניות המשכנתא הזמינות ליוצאי אתיופיה: תוכנית ה-600,000 ₪, מענק הומות, זכאות ל-90% מימון, ומסלולי ריבית מיוחדים.",
+      he: "מה קיים היום ומה נסגר: הלוואת ה-600,000 ₪ אינה פתוחה להרשמה, ומענק הדיור לעולי אתיופיה ממרכזי קליטה (החלטה 1103) הוא המסלול הפעיל — 235,000 עד 650,000 ₪ לפי הרכב המשפחה.",
       en: "Complete guide to all mortgage programs available to Ethiopian-Israelis: the 600K loan, Homot grant, 90% financing eligibility, and special interest tracks.",
       am: "ለኢትዮጵያ-እስራኤሎች ለሚገኙ ሁሉም የቤት ብድር ፕሮግራሞች ሙሉ መመሪያ።",
     },
@@ -5472,17 +5482,19 @@ TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት �
 
 ליוצאי אתיופיה עומדות מספר תוכניות ייחודיות שאינן קיימות לאוכלוסייה הכללית:
 
-### 1. הלוואת 600,000 ₪ (הגרלה שנתית)
-הלוואת מדינה ב-0% ריבית ל-10 שנים ראשונות, 2% ב-15 השנים הבאות. כ-200 משפחות זוכות מדי שנה. רישום בסניפי בנק לאומי, דיסקונט ואיגוד בינואר-פברואר.
+### 1. הלוואת 600,000 ₪ — **אין הגרלה פתוחה**
+התכנית אושרה בתכנית החומש של סוף 2016: הלוואת מדינה של עד 600,000 ₪ ל-25 שנה, 10 שנים ללא ריבית ו-15 שנים בריבית 2%, בהקצאה בהגרלה (כ-200 משפחות בשנה, כ-800 בסך הכל). **ההרשמה נסגרה.** שני עמודי התכנית באתר משרד הבינוי והשיכון מחזירים היום 404, וסקירת מרכז המחקר של הכנסת מאוגוסט 2025 מונה אותה בין התכניות "שהופעלו במהלך השנים". אל תיסעו לסניף בנק להירשם — אין למה.
 
-### 2. מענק "הומות" (משרד הבינוי)
-מענק חד-פעמי של 120,000–200,000 ₪ לרכישת דירה ראשונה. תנאים: הכנסה משפחתית עד ~18,000 ₪/חודש, דירה ראשונה, גיל 21+. ניתן לשלב עם הלוואת 600K.
+### 2. אין "מענק הומות"
+מענק בשם זה אינו קיים, והשם ככל הנראה משובש. המענק האמיתי הוא **מענק דיור לרכישת דירה לעולים מאתיופיה המתגוררים במרכזי קליטה או באתרי קליטה** (החלטת ממשלה 1103 מ-31.1.2022, בתוקף עד 31.12.2031). הסכום נקבע לפי הרכב המשפחה ונע בין **235,000 ₪ לזוג ללא ילדים ועד 650,000 ₪ לזוג עם 9 ילדים ומעלה**. התנאי: מגורים בפועל במרכז קליטה בעת אישור הזכאות, והגדרה כחסר/ת דירה. אין תנאי הכנסה של 18,000 ₪ ואין תנאי גיל 21.
 
-### 3. זכאות ל-90% מימון
-בנקים מוסמכים (לאומי, מזרחי, הפועלים) מאשרים עד 90% ערך הנכס — במקום 75% הסטנדרטי — לזכאים בתוכניות הממשלתיות.
+מקור: [משרד הבינוי והשיכון — מענקי דיור לעולי אתיופיה](https://www.gov.il/he/departments/guides/maanakey-diyur-leoley-ethiopia) · נבדק בספטמבר 2026.
+
+### 3. אין מסלול של 90% מימון
+הוראת בנק ישראל מגבילה רוכש/ת דירה ראשונה ל-75% מימון. לא נמצא מסלול המאשר 90% לזכאי תכניות ממשלתיות, והשורה שטענה זאת הוסרה.
 
 ### 4. נקודות זיכוי משכנתא לחיילים
-שירות צבאי מזכה בנקודות ריבית נוספות ובגמישות בתנאי ההחזר.
+לא אומת מול מקור רשמי; נבדק ולא אותר. אין לפעול על סמך שורה זו.
 
 ## שלבי הגשה
 1. בדיקת זכאות: gov.il/he/service/first-time-homebuyers
@@ -5569,7 +5581,9 @@ gov.il/he/service/first-time-homebuyers ወይም *5442 ይደውሉ።`,
 הקבלן מחויב לשלם דמי שכירות חודשיים בזמן שאתם גרים בדירה חלופית. הסכום מחושב לפי שוק השכירות המקומי.
 
 ### 3. פטור ממס שבח
-עסקת פינוי-בינוי פטורה ממס שבח (capital gains tax) — חיסכון של עשרות עד מאות אלפי ₪.
+הפטור ממס שבח בפינוי-בינוי **אינו גורף** — כך היה כתוב כאן, וזו טעות. לפי סעיף 49כב לחוק מיסוי מקרקעין הפטור מותנה ומוגבל ב**תקרת שווי**: הגבוה מבין 150% משווי הדירה הנמכרת (בניכוי זכויות בנייה), שווי דירה בת 120 מ"ר באותו מתחם, או שווי דירה בשטח של 150% מהדירה הנמכרת ולא יותר מ-200 מ"ר. כל תמורה מעבר לתקרה — "הפרש השווי" — **חייבת במס**. הפטור מותנה גם בהכרזה על המתחם כמתחם פינוי-בינוי ובמכירת כל הזכויות ליזם.
+
+מקור: [חוק מיסוי מקרקעין (שבח ורכישה), סעיף 49כב](https://www.nevo.co.il/law_html/law01/276_002.htm) · נבדק בספטמבר 2026.
 
 ### 4. הזכות לסרב
 אתם לא חייבים להסכים. אולם, אם 80% מבעלי הדירות מסכימים, בית המשפט יכול לאכוף את ההסכמה גם על המסרבים (תיקון 2006).
@@ -5717,9 +5731,9 @@ Under the National Health Insurance Law, every Israeli resident is entitled to r
     },
     govUrl: "https://www.gov.il/he/departments/topics/housing-new-immigrants",
     eligibilitySummary: {
-      he: "עולים חדשים זכאים לסיוע בשכר דירה עד 36 חודשים: יחיד 2,000 ₪/ח׳, זוג 3,100 ₪/ח׳, משפחה עם ילדים עד 4,400 ₪/ח׳. מגישים בסוכנות היהודית או משרד הקליטה.",
+      he: "סיוע בשכר דירה לעולים ניתן על ידי משרד הבינוי והשיכון — כ-363 ₪ לחודש לשנתיים לעולה שעלה ממארס 2024. יחידים וקשישים רשאים להמיר את מענק הדיור ב-1,500 ₪ לחודש ל-60 חודשים.",
       en: "New immigrants are entitled to rental assistance for up to 36 months: single 2,000 ILS/month, couple 3,100, family with children up to 4,400 ILS/month.",
-      am: 'አዲስ ስደተኞች እስከ 36 ወር የኪራይ ድጎማ ያገኛሉ። ነጠላ 2,000 ሺ"ል/ወር፣ ጥንዶች 3,100፣ ቤተሰቦች እስከ 4,400።',
+      am: 'የኪራይ ድጋፍ በቤቶች ሚኒስቴር ይሰጣል — ከመጋቢት 2024 ለመጡ በወር 363 ሺ"ል ያህል ለሁለት ዓመት። ነጠላዎችና አረጋውያን የቤት ስጦታውን በወር 1,500 ሺ"ል ለ60 ወራት መለወጥ ይችላሉ።',
     },
     tags: ["housing", "new_immigrant", "grants"],
     bodies: {
@@ -5727,24 +5741,13 @@ Under the National Health Insurance Law, every Israeli resident is entitled to r
 
 כל עולה חדש שעלה לישראל זכאי לסיוע בשכר דירה ממשרד הקליטה. הסיוע ניתן **במקום** גרות בדיור קליטה ממשלתי (מרכז קליטה), לא בנוסף לו.
 
-## הסכומים ל-2026 (בשקלים לחודש)
+## הסכומים
 
-| הרכב משפחה | סכום חודשי |
-|------------|------------|
-| יחיד | 2,000 ₪ |
-| זוג ללא ילדים | 3,100 ₪ |
-| זוג + ילד אחד | 3,700 ₪ |
-| זוג + 2 ילדים | 4,100 ₪ |
-| זוג + 3 ילדים ומעלה | 4,400 ₪ |
+הטבלה שהופיעה כאן (יחיד 2,000 ₪, זוג 3,100 ₪, עד 4,400 ₪ למשפחה) **הייתה גבוהה בסדר גודל מהמציאות** — פי חמישה בערך — והוסרה. הסיוע הבסיסי לעולה שעלה ממארס 2024 עומד על **כ-363 ₪ לחודש למשך שנתיים**, עם תוספות באזורי עדיפות לאומית.
 
-הסכומים משתנים לפי מדד — בדקו עדכון ב-gov.il.
+**יחידים וקשישים** רשאים להמיר את מענק הדיור בסיוע מוגדל של **1,500 ₪ לחודש למשך 60 חודשים**.
 
-## משך הסיוע
-
-- **שנה ראשונה**: סכום מלא
-- **שנה שנייה**: 75% מהסכום
-- **שנה שלישית**: 50% מהסכום
-- לאחר 36 חודשים: הסיוע מסתיים
+הסיוע ניתן על ידי **משרד הבינוי והשיכון**, לא על ידי משרד העלייה והקליטה כפי שנכתב כאן. לוח הסכומים המחייב הוא נוהל משרד הבינוי והשיכון — הסכומים שלמעלה נבדקו מול [מדריך המידע והזכויות ליוצאי אתיופיה של משרד העלייה והקליטה](https://www.gov.il/BlobFolder/reports/athiopian-jews-rights-guide-publication/he/Ethiopian-jews-rights-HE.pdf) בספטמבר 2026, ולוח התעריפים העדכני עצמו לא היה נגיש — בדקו מולם לפני שאתם מסתמכים על סכום.
 
 ## איך מגישים?
 
@@ -5927,7 +5930,7 @@ Soldiers who developed PTSD during service qualify for IDF disability recognitio
 1. **הסכם מכר/מתנה/ירושה** — חייב לכלול מספר גוש וחלקה
 2. **תשלום מס שבח/מס רכישה** — אישור ממשרד מיסוי מקרקעין
 3. **הגשה ללשכת רישום** — עם כל המסמכים (ת"ז, נסח טאבו נוכחי, חוזה, אישורים)
-4. **תשלום אגרה**: כ-700-2,000 ₪ תלוי בעסקה
+4. **תשלום אגרה**: 44 ₪ לרישום מכר (ראו טבלת האגרות למטה)
 5. **רישום**: 2-8 שבועות
 
 ## בעיות נפוצות בקהילה
@@ -5940,12 +5943,22 @@ Soldiers who developed PTSD during service qualify for IDF disability recognitio
 
 ## עלויות
 
-| שירות | עלות משוערת |
-|-------|------------|
-| נסח טאבו | 70 ₪ |
-| אגרת רישום בסיסית | 720 ₪ |
-| עו"ד נדל"ן | 0.5-1% מהעסקה |
-| נוטריון (אם נדרש) | 400-800 ₪ |
+האגרות שהופיעו כאן היו גבוהות פי עשרות מהמציאות. אלה האגרות בפועל, בתוקף מ-1.1.2026:
+
+| שירות | אגרה |
+|-------|------|
+| רישום מכר | 44 ₪ |
+| רישום משכנתה | 188 ₪ |
+| רישום ירושה | 188 ₪ |
+| רישום הערת אזהרה | 188 ₪ |
+| נסח אלקטרוני חתום | 18 ₪ |
+| העתק או נסח מאושר | 88 ₪ |
+| עיון / סריקה ממוחשבת | 39 ₪ |
+| עו"ד נדל"ן (מחיר שוק, לא אגרה) | 0.5-1% מהעסקה |
+
+אין אגרה בסך 720 ₪ ואין טווח של 700–2,000 ₪.
+
+מקור: [הודעת המקרקעין (אגרות), התשפ"ו-2025](https://www.gov.il/BlobFolder/news/fees-2026/he/files_fees-2026.pdf) · נבדק בספטמבר 2026.
 
 📞 לשכת רישום מקרקעין: 02-5028000 | לסיוע חינם: טבקה 072-2424622`,
       en: `## What is the Tabo?
@@ -6289,7 +6302,9 @@ Entitled from the date of registration in the population registry — not from b
 
 ## כמה מקבלים?
 
-**100% משכר העבודה** — עד תקרה של כ-1,750 ₪/יום (נכון 2026). אין ימי המתנה.
+**100% משכר העבודה** — עד תקרה של **350.47 ₪ ליום** (מ-1.1.2026). הסכום שנכתב כאן בעבר (~1,750 ₪ ליום) גבוה פי חמישה מהתקרה בפועל. החישוב: השכר ב-3 החודשים שקדמו להפסקת העבודה חלקי 90, או ב-6 חודשים חלקי 180 — הגבוה מביניהם. הטופס: בל/330.
+
+מקור: [ביטוח לאומי — סכום הקצבה, שמירת היריון](https://www.btl.gov.il/benefits/Risk_Pregnancy/Pages/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%20%D7%94%D7%A7%D7%A6%D7%91%D7%94.aspx) · נבדק בספטמבר 2026.
 
 ## תנאי זכאות
 
@@ -6360,7 +6375,7 @@ Prohibition on dismissal while pregnant (requires committee approval). Prohibiti
 
 ## זכויות בסיסיות
 
-- **שכר מינימום**: 35.17 ₪/שעה (2026) — אף מעסיק לא רשאי לשלם פחות
+- **שכר מינימום** (מ-1.4.2026): **6,443.85 ₪ לחודש** למשרה מלאה — 35.40 ₪ לשעה בבסיס 182 שעות, או 34.64 ₪ לשעה בבסיס 186 שעות. אף מעסיק אינו רשאי לשלם פחות. מקור: [ביטוח לאומי — שכר מינימום](https://www.btl.gov.il/Mediniyut/GeneralData/Pages/%D7%A9%D7%9B%D7%A8%20%D7%9E%D7%99%D7%A0%D7%99%D7%9E%D7%95%D7%9D.aspx), נבדק בספטמבר 2026
 - **ימי חופשה**: 12-24 ימים/שנה (תלוי ותק)
 - **מחלה**: 1.5 ימי מחלה לכל חודש עבודה
 - **פיצויי פיטורים**: לאחר שנה — חודש לכל שנת עבודה
@@ -6390,7 +6405,7 @@ In Israel, **labour rights apply to every worker** — regardless of legal statu
 
 ## Basic Rights
 
-Minimum wage: 35.17 ILS/hour (2026). Annual leave: 12-24 days/year. Sick pay: 1.5 days/month worked. Severance: after 1 year — 1 month per year worked. Maximum hours: 45/week.
+Minimum wage (from 1 Apr 2026): ILS 6,443.85/month for a full-time post — ILS 35.40/hour on a 182-hour base, ILS 34.64 on a 186-hour base. Annual leave: 12-24 days/year. Sick pay: 1.5 days/month worked. Severance: after 1 year — 1 month per year worked. Maximum hours: 45/week.
 
 ## Protection from Deportation
 
@@ -6506,12 +6521,15 @@ Tebeka (free criminal defence): 072-2424622 | Public Defender (free): 02-5453555
 
 ## כמה מקבלים?
 
-| תקופה | אחוז משכר |
-|-------|-----------|
-| חודש 1-4 | 70% |
-| חודש 5+ | 60% |
-| מקסימום יומי (2026) | 340 ₪ |
+דמי האבטלה אינם אחוז קבוע "70% ואז 60%", וכך היה כתוב כאן בטעות. הם מחושבים ב**מדרגות יורדות** מהשכר היומי הממוצע שלכם ביחס לסכום היומי הבסיסי (415 ₪ מ-1.1.2026): מגיל 28 — 80%, ואז 50%, 45% ו-30%; מתחת לגיל 28 — 60%, 40%, 35% ו-25%.
+
+| | 2026 |
+|---|---|
+| תקרה ב-125 ימי התשלום הראשונים | 550.76 ₪ ליום |
+| תקרה מהיום ה-126 ואילך | 367.17 ₪ ליום |
 | ימים מקסימליים | 175 ימים |
+
+מקור: [ביטוח לאומי — איך מחשבים את דמי האבטלה](https://www.btl.gov.il/benefits/Unemployment/Pages/hisuv.aspx) · נבדק בספטמבר 2026.
 
 ## תנאי זכאות
 
@@ -6870,9 +6888,9 @@ A discharged IDF soldier receives a "discharge certificate" — a critical docum
   },
   {
     title: {
-      he: "מלגות ללא תנאים — 7 מקורות פחות מוכרים",
-      en: "Unconditional Scholarships — 7 Lesser-Known Sources",
-      am: "ያለ ቅድመ ሁኔታ ዕርዳታ — 7 ያልታወቁ ምንጮቸ",
+      he: "מלגות — מה נבדק ומה הוסר מהעמוד הזה",
+      en: "Scholarships — what was checked, and what was removed",
+      am: "ስኮላርሺፖች — ምን ተመረመረ፣ ምን ተወገደ",
     },
     slug: {
       he: "unconditional-scholarships-7-sources",
@@ -6881,71 +6899,57 @@ A discharged IDF soldier receives a "discharge certificate" — a critical docum
     },
     govUrl: "https://che.org.il/scholarships",
     eligibilitySummary: {
-      he: "מלגות שלרוב לא ידועות: JDC, מנחם בגין, ברכה, ג'וינט, קרן שלם ועוד. חלקן ייחודיות ליוצאי אתיופיה.",
-      en: "Lesser-known scholarships: JDC, Menachem Begin, Bracha, Joint, Shalem Fund and more. Some are specific to Ethiopian-Israelis.",
-      am: "ብዙ ሰዎቸ የማያውቁ ዕርዳታዎቸ: JDC፣ Begin፣ ጆይንት፣ ሻሌም ፈንድ።",
+      he: "שבע ה\"מלגות הפחות מוכרות\" שפורסמו כאן הוסרו — ארבעה מששת הדומיינים שצוטטו אינם רשומים כלל. המסלול האמיתי: מלגת מרום והמדור לסיוע כלכלי במוסד שלכם.",
+      en: "The seven \"lesser-known scholarships\" published here were removed — four of the six domains cited are not registered at all. The real route: the Marom scholarship and your institution's financial-aid unit.",
+      am: "እዚህ የታተሙት ሰባቱ ስኮላርሺፖች ተወግደዋል — ከስድስቱ ድረ-ገጾች አራቱ አልተመዘገቡም።",
     },
     tags: ["education", "rights", "community"],
     bodies: {
-      he: `## למה מלגות "בלי תנאים"?
+      he: `## מה קרה לעמוד הזה
 
-רוב המלגות דורשות: ציון גבוה, מוצא ספציפי, שדה לימוד ספציפי. כאן — מלגות שפחות ידועות ודורשות פחות תנאים.
+עמוד זה פרסם שבעה "מקורות מלגה פחות מוכרים" עם סכומים מדויקים. **כולם הוסרו.** בבדיקה נמצא ש-**ארבעה מתוך שישה הדומיינים שצוטטו כאן אינם רשומים כלל** — לא "כתובת ישנה", אלא דומיין שמעולם לא נרשם — ומספר הטלפון שפורסם אינו שייך לאף אחד מהארגונים. תוכן אמיתי מתיישן ומשאיר אחריו כתובות שעברו; הוא אינו משאיר אחריו דומיינים שלא היו קיימים.
 
-## 7 מקורות מלגות
+מה שנבדק, אחד-אחד:
 
-### 1. JDC-Ashalim — מלגת "כישורים ייחודיים"
-עד **20,000 ₪/שנה** לסטודנטים מהפריפריה הסוציו-אקונומית. לא דורשת ציון מינימלי — דורשת מוטיבציה ומעורבות קהילתית.
-📞 jdc.org.il/ashalim | 03-9533420
+- **"JDC-Ashalim — מלגת כישורים ייחודיים, 20,000 ₪"** — לג'וינט-אשלים אין תוכנית בשם הזה. תחום העיסוק שלה הוא ילדים ונוער בסיכון מגיל 0 עד 25, לא מלגות אקדמיות.
+- **"קרן שלם — מלגת מנהיגות, 12,000 ₪"** — קרן שלם אמיתית, אבל היא מעבירה תקציבים ל**רשויות מקומיות** עבור שירותים לאנשים עם מוגבלות שכלית. אין לה מלגות אישיות ואין תוכנית מנהיגות. גם ההעדפה ליוצאי אתיופיה שנטענה כאן — אינה קיימת.
+- **"מלגת ראשית — אוניברסיטת ת"א, 10,000 ₪, ללא מחויבות"** — התוכנית הקיימת נקראת "מצטייני פריפריה", והיא **דורשת** כ-90 שעות מעורבות חברתית בשנה במשך שלוש שנים. כלומר מה שנכתב כאן היה הפוך.
+- **"קרן מנחם בגין, 8,000 ₪"** — מרכז מורשת מנחם בגין הוא מוזיאון וארכיון. אין לו תוכנית מלגות.
+- **"קק"ל — מלגות פיתוח, 6,000-12,000 ₪"** — קק"ל אכן מסייעת לסטודנטים, אבל דרך קרנות תרומה על שם, ולא בתוכנית בשם "מלגות פיתוח".
+- **"פנינה — מלגת ברכה, 5,000 ₪ ליוצאות אתיופיה"** — לא נמצא ארגון כזה.
+- **"מלגות פנימיות שלא מפורסמות — פנו לרפרנט הסוציאלי"** — אין תפקיד כזה במוסדות אקדמיים; היחידה הרלוונטית היא **המדור לסיוע כלכלי** בדיקנט הסטודנטים. וחשוב מזה: המלגות המוסדיות **כן** מפורסמות. המשפט הזה הרחיק קוראים מהמסלול האמיתי להגשה.
 
-### 2. קרן שלם — מלגת מנהיגות
-**12,000 ₪/שנה** למנהיגים צעירים בני 18-25 עם פוטנציאל הנהגה. מדגישה מגוון — יוצאי אתיופיה מועדפים.
-📞 shalemfund.org.il
+## איפה כן להתחיל
 
-### 3. מלגת "ראשית" — אוניברסיטת ת"א
-**10,000 ₪/שנה** לסטודנטים מצטיינים מהפריפריה. אין מחויבות לתחום לימוד.
-📞 tau.ac.il/scholarships
+- **מלגת מרום** (מל"ג / ות"ת), במסגרת התוכנית "בדרך לפסגה" — נרשמים דרך פר"ח. ראו [מלגת מרום](/he/education/scholarships/marom-che).
+- **המדור לסיוע כלכלי** בדיקנט הסטודנטים של המוסד שלכם — שם מרוכזות המלגות המוסדיות והחיצוניות, והן מפורסמות.
+- לרשימת המלגות באתר: [מלגות](/he/education/scholarships).
 
-### 4. קרן מנחם בגין
-**8,000 ₪/שנה** לסטודנטים מהפריפריה בכלל התחומים. אחת הגדולות — וסלקטיבית פחות.
-📞 beginheritage.co.il
+`,
+      en: `## What happened to this page
 
-### 5. JNF (קק"ל) — מלגות פיתוח
-**6,000-12,000 ₪/שנה** לתחומים: חקלאות, מדעי הסביבה, תכנון עירוני, הנדסה.
-📞 kkl-jnf.org.il
+This page listed seven "lesser-known scholarship sources" with precise amounts. **All of them were removed.** Four of the six domains cited here are not registered at all — never registered, not merely moved — and the phone number published here belongs to none of the organisations. Genuine content decays into stale addresses; it does not decay into domains that never existed.
 
-### 6. פנינה — מלגת ברכה
-מלגת **5,000 ₪** ספציפית ליוצאות אתיופיה לתואר ראשון. הגשה: אפריל בכל שנה.
-📞 brachafund.org.il
+Checked one by one: JDC-Ashalim runs no such scholarship (its remit is at-risk youth aged 0-25); Keren Shalem funds local authorities for disability services and awards no personal scholarships; TAU's real programme is "מצטייני פריפריה" and it *requires* about 90 hours of community involvement a year, the opposite of what was written here; the Menachem Begin Heritage Center is a museum and archive with no scholarship programme; KKL supports students through named donor funds, not a "development scholarship"; and no organisation matching "Penina — Bracha Fund" was found. The closing advice — that institutional scholarships are unpublished and you should ask a "social referent" — is wrong on both counts, and steered readers away from the real route.
 
-### 7. מלגות המוסד האקדמי עצמו
-כל אוניברסיטה מקיימת מלגות פנימיות שלא מפורסמות — פנו **ישירות לרפרנט הסוציאלי** של המוסד.
+## Where to actually start
 
-## איך להגיש?
+- **The Marom scholarship** (CHE/VATAT), within the "בדרך לפסגה" programme — registration runs through PERACH. See [Marom scholarship](/en/education/scholarships/marom-che).
+- **The financial-aid unit of your institution's dean of students**, where institutional and external scholarships are listed — and they are published.
+- The site's own list: [scholarships](/en/education/scholarships).
 
-1. בדקו תנאים ב: milgapo.co.il (מאגר מלגות)
-2. הכינו: ת.ז, תלוש הורים, אישור לימודים, מכתב מוטיבציה
-3. הגישו **מוקדם** — מרבית המלגות על בסיס "ראשון-ראשון"
+`,
+      am: `## ይህ ገጽ ምን ሆነ
 
-📞 milgapo.co.il | che.org.il`,
-      en: `## 7 Lesser-Known Scholarship Sources
+ይህ ገጽ ሰባት "ብዙም ያልታወቁ የስኮላርሺፕ ምንጮች" ከትክክለኛ መጠኖች ጋር አሳትሞ ነበር። **ሁሉም ተወግደዋል።** ከተጠቀሱት ስድስት ድረ-ገጾች አራቱ ጨርሶ አልተመዘገቡም፣ የታተመው ስልክ ቁጥርም የየትኛውም ድርጅት አይደለም።
 
-1. **JDC-Ashalim**: up to 20,000 ILS/year. No minimum grade required — requires community involvement. jdc.org.il/ashalim
-2. **Shalem Fund**: 12,000 ILS/year for young leaders aged 18-25. Ethiopian-Israelis preferred. shalemfund.org.il
-3. **Reshit (TAU)**: 10,000 ILS/year for high-achieving periphery students. No field restriction. tau.ac.il/scholarships
-4. **Menachem Begin Fund**: 8,000 ILS/year, all fields. beginheritage.co.il
-5. **JNF/KKL**: 6,000-12,000 ILS/year for agriculture, environment, engineering. kkl-jnf.org.il
-6. **Penina-Bracha Fund**: 5,000 ILS specifically for Ethiopian-Israeli women, first degree. brachafund.org.il
-7. **Internal university scholarships**: Every university has unpublicised internal grants — contact the social worker at your institution directly.
+## የት መጀመር እንዳለብዎ
 
-Scholarship database: milgapo.co.il | che.org.il`,
-      am: `## 7 ዕርዳታ ምንጮቸ
+- **የማሮም ስኮላርሺፕ** (מל"ג) — በፔራህ በኩል ይመዝገቡ፦ [מרום](/am/education/scholarships/marom-che)
+- በተቋምዎ የተማሪዎች ዲን ያለው የገንዘብ ድጋፍ ክፍል
+- [ስኮላርሺፖች](/am/education/scholarships)
 
-1. JDC-Ashalim: 20,000 ሺ"ል/ዓ | jdc.org.il
-2. Shalem Fund: 12,000 ሺ"ል | shalemfund.org.il
-3. Begin Fund: 8,000 ሺ"ል | beginheritage.co.il
-4. Bracha Fund (ሴቶቸ): 5,000 ሺ"ል | brachafund.org.il
-
-📞 milgapo.co.il`,
+`,
     },
   },
   {

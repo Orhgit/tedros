@@ -972,7 +972,7 @@ Ashalim ("Children and Youth at Risk in Israel") is a division of JDC-Israel (Am
       am: "ከኢትዮጵያ-እስራኤል ማህበረሰብ ለአደጋ የተጋለጡ ወጣቶች የሚሰራ ድርጅት። የወጣት ማዕከላት፣ የግል አጃቢነትና የቀውስ ምላሽ።",
     },
     foundedYear: 1996,
-    websiteUrl: "https://www.fbn.org.il",
+    websiteUrl: "https://www.friendsbynature.org",
     headquartersCity: { he: "ירושלים", en: "Jerusalem", am: "ኢየሩሳሌም" },
     relatedRights: ["domestic-violence-support", "summer-camps-subsidy"],
     relatedTerms: ["beta-israel"],
@@ -998,8 +998,8 @@ Ashalim ("Children and Youth at Risk in Israel") is a division of JDC-Israel (Am
 
 ## איך פונים?
 
-- אתר: [fbn.org.il](https://www.fbn.org.il)
-- קו-חירום 24/7: 1-800-XXX-XXX (הסתר במספר ברשימה לזכאים)
+- אתר: [friendsbynature.org](https://www.friendsbynature.org)
+- הארגון אינו מפרסם קו חירום. במצוקה מיידית: ער"ן 1201, נט"ל 1-800-363-363, משטרה 100, מד"א 101
 - מטה: ירושלים. בתי-נוער: בכל מרכזי הקהילה.
 
 ## ראו גם
@@ -1028,8 +1028,8 @@ Friends by Nature was founded in 1996 in response to rising dropout rates and yo
 
 ## How to reach out
 
-- Website: [fbn.org.il](https://www.fbn.org.il)
-- 24/7 crisis line: 1-800-XXX-XXX (concealed for safety)
+- Website: [friendsbynature.org](https://www.friendsbynature.org)
+- The organisation publishes no crisis line. In immediate distress: ERAN 1201, NATAL 1-800-363-363, police 100, MDA 101
 - HQ: Jerusalem. Youth centers: in every community center.
 
 ## See also
@@ -1058,8 +1058,8 @@ Friends by Nature was founded in 1996 in response to rising dropout rates and yo
 
 ## እንዴት እንደሚደርሱ
 
-- ድረ-ገጽ፦ [fbn.org.il](https://www.fbn.org.il)
-- 24/7 የቀውስ መስመር፦ 1-800-XXX-XXX (ለደህንነት የተደበቀ)
+- ድረ-ገጽ፦ [friendsbynature.org](https://www.friendsbynature.org)
+- ድርጅቱ የቀውስ መስመር አያሳትምም። በአስቸኳይ፦ ERAN 1201፣ ፖሊስ 100፣ MDA 101
 - ዋና መሥሪያ ቤት፦ ኢየሩሳሌም። የወጣት ማዕከላት፦ በሁሉም የማህበረሰብ ማዕከላት።
 
 ## ይህንንም ይመልከቱ
@@ -1203,7 +1203,7 @@ The Israeli Association for Ethiopian Jews (IAEJ) was founded in 1993 by a group
       am: "በሰሜን አሜሪካ የኢትዮጵያ-አይሁድ ማህበረሰብ ጥላ ድርጅት። የእስራኤል ፕሮጀክቶችን ይደግፋልና የማህበረሰብ መካከል ድልድይ ይገነባል።",
     },
     foundedYear: 2010,
-    websiteUrl: "https://www.bina-na.org",
+    websiteUrl: "https://binacf.org",
     headquartersCity: { he: "ניו יורק", en: "New York", am: "ኒው ዮርክ" },
     relatedRights: [],
     relatedTerms: ["beta-israel"],
@@ -1229,7 +1229,7 @@ The Israeli Association for Ethiopian Jews (IAEJ) was founded in 1993 by a group
 
 ## איך פונים?
 
-- אתר: [bina-na.org](https://www.bina-na.org)
+- אתר: [binacf.org](https://binacf.org)
 - מטה: ניו יורק. ועדות אזוריות: בוסטון, ל"א, מיאמי, טורונטו.
 - חברות: $50/שנה לסטודנטים, $150/שנה למבוגרים
 
@@ -1258,7 +1258,7 @@ Beta Israel of North America (BINA) is an umbrella organization of ~5,000 Beta I
 
 ## How to reach out
 
-- Website: [bina-na.org](https://www.bina-na.org)
+- Website: [binacf.org](https://binacf.org)
 - HQ: New York. Regional committees: Boston, LA, Miami, Toronto.
 - Membership: $50/year students, $150/year adults
 
@@ -1287,7 +1287,7 @@ Beta Israel of North America (BINA) is an umbrella organization of ~5,000 Beta I
 
 ## እንዴት እንደሚደርሱ
 
-- ድረ-ገጽ፦ [bina-na.org](https://www.bina-na.org)
+- ድረ-ገጽ፦ [binacf.org](https://binacf.org)
 - ዋና መሥሪያ ቤት፦ ኒው ዮርክ። የክልል ኮሚቴዎች፦ ቦስተን፣ ሎስ አንጀለስ፣ ማያሚ፣ ቶሮንቶ።
 - አባልነት፦ ለተማሪዎች በዓመት $50፣ ለጎልማሶች በዓመት $150
 
@@ -1310,7 +1310,7 @@ Beta Israel of North America (BINA) is an umbrella organization of ~5,000 Beta I
       am: "በነጎቭ ለኢትዮጵያ-እስራኤልና ለሌሎች ህዝቦች ያተኮረ የማህበረሰብ ልማት ድርጅት። የሥራ፣ የትምህርትና የመሪነት ፕሮግራሞች።",
     },
     foundedYear: 2003,
-    websiteUrl: "https://www.atidbamidbar.org.il",
+    websiteUrl: "https://www.bamidbar.org",
     headquartersCity: { he: "באר שבע", en: "Beersheba", am: "ቤርሼባ" },
     relatedRights: ["tech-career-bootcamp", "summer-camps-subsidy"],
     relatedTerms: ["beta-israel"],
@@ -1336,7 +1336,7 @@ Beta Israel of North America (BINA) is an umbrella organization of ~5,000 Beta I
 
 ## איך פונים?
 
-- אתר: [atidbamidbar.org.il](https://www.atidbamidbar.org.il)
+- אתר: [bamidbar.org](https://www.bamidbar.org)
 - מטה: באר שבע. נוכחות: כל ערי הנגב.
 - רישום: דרך טופס מקוון או דרך בית הספר / מרכז-הקהילה
 
@@ -1366,7 +1366,7 @@ Atid B'midbar ("Future in the Desert") was founded in 2003 in Beersheba by a gro
 
 ## How to reach out
 
-- Website: [atidbamidbar.org.il](https://www.atidbamidbar.org.il)
+- Website: [bamidbar.org](https://www.bamidbar.org)
 - HQ: Beersheba. Presence: all Negev cities.
 - Registration: online form or through your school / community center
 
@@ -1396,7 +1396,7 @@ Atid B'midbar ("Future in the Desert") was founded in 2003 in Beersheba by a gro
 
 ## እንዴት እንደሚደርሱ
 
-- ድረ-ገጽ፦ [atidbamidbar.org.il](https://www.atidbamidbar.org.il)
+- ድረ-ገጽ፦ [bamidbar.org](https://www.bamidbar.org)
 - ዋና መሥሪያ ቤት፦ ቤርሼባ። መገኘት፦ በሁሉም የነጎቭ ከተሞች።
 - ምዝገባ፦ የመስመር ላይ ቅጽ ወይም በትምህርት ቤትዎ / የማህበረሰብ ማዕከል በኩል
 

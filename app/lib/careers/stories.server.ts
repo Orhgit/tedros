@@ -55,7 +55,7 @@ export const STORIES: SuccessStoryEntry[] = [
       en: "From a 12-month ENP Tech-Career bootcamp to a junior role via Olim Beyahad, to a senior role in 4 years.",
       am: "ከ12 ወር ENP Tech-Career እስከ ሲኒየር በ4 ዓመት።",
     },
-    programsUsed: ["enp-tech-career", "olim-beyahad-mentorship"],
+    programsUsed: ["olim-beyahad-mentorship"],
     consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
@@ -81,7 +81,6 @@ Senior backend engineer ב-startup קצת יותר גדול, מנהל צוות �
 
 ## תכניות שהשתתף
 
-- [ENP Tech-Career](/he/careers/programs/enp-tech-career)
 - [Olim Beyahad mentorship](/he/careers/programs/olim-beyahad-mentorship)`,
       en: `## How it started
 
@@ -105,7 +104,6 @@ Senior backend engineer at a slightly larger startup, manages a team of 3. Salar
 
 ## Programs used
 
-- [ENP Tech-Career](/en/careers/programs/enp-tech-career)
 - [Olim Beyahad mentorship](/en/careers/programs/olim-beyahad-mentorship)`,
       am: `## እንዴት ጀመረ
 
@@ -251,7 +249,6 @@ Still at the Aliyah Ministry, now a team lead (4 coordinators under her). Salary
 
 ## תכניות שהשתתף
 
-- [Madrasa — מקצועות יד](/he/careers/programs/madrasa-trades)
 - [UJIA-KIEDF — הלוואות עסקים](/he/rights/ujia-kiedf-business-loans)`,
       en: `## How it started
 
@@ -275,7 +272,6 @@ Self-employed for 14 months. ~₪22K net per month on average (depending on work
 
 ## Programs used
 
-- [Madrasa — trades](/en/careers/programs/madrasa-trades)
 - [UJIA-KIEDF — business loans](/en/rights/ujia-kiedf-business-loans)`,
       am: `## እንዴት ጀመረ
 
@@ -336,7 +332,6 @@ Self-employed for 14 months. ~₪22K net per month on average (depending on work
 
 ## תכניות שהשתתפה
 
-- [ENP Teaching Fellowship](/he/careers/programs/enp-teaching-fellowship)
 - [ENP — פרופיל ארגון](/he/orgs/enp)`,
       en: `## How it started
 
@@ -360,7 +355,6 @@ Teacher + department head at the same school. Salary ~₪16K gross (including th
 
 ## Programs used
 
-- [ENP Teaching Fellowship](/en/careers/programs/enp-teaching-fellowship)
 - [ENP — organization profile](/en/orgs/enp)`,
       am: `## እንዴት ጀመረ
 
@@ -506,7 +500,6 @@ Still at Rambam, now senior cultural health navigator (a senior role in a team o
 
 ## תכניות שהשתתף
 
-- [ScaleUp Velocity](/he/careers/programs/scaleup-velocity)
 - [UJIA-KIEDF — הלוואות עסקים](/he/rights/ujia-kiedf-business-loans)`,
       en: `## How it started
 
@@ -530,7 +523,6 @@ With the seed — they hired their first developer (an ENP Tech-Career grad, Dav
 
 ## Programs used
 
-- [ScaleUp Velocity](/en/careers/programs/scaleup-velocity)
 - [UJIA-KIEDF — business loans](/en/rights/ujia-kiedf-business-loans)`,
       am: `## እንዴት ጀመረ
 
@@ -646,7 +638,7 @@ Director of that same city community center for 2 years. Salary ₪22K gross, te
       en: "From cashier at Shufersal to regional manager of 8 stores — via Place-IL to a first job and a 7-year management track.",
       am: "ከሽያጭ ሰራተኛ ወደ ክልላዊ ሥራ አስኪያጅ።",
     },
-    programsUsed: ["place-il", "ta-employment-academy"],
+    programsUsed: ["ta-employment-academy"],
     consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
@@ -672,8 +664,7 @@ Director of that same city community center for 2 years. Salary ₪22K gross, te
 
 ## תכניות שהשתתף
 
-- [Place-IL](/he/careers/programs/place-il)
-- [TA Employment Academy](/he/careers/programs/ta-employment-academy)`,
+`,
       en: `## How it started
 
 Avi was discharged from the IDF at 21 without full matriculation. 6 months of unemployment, then Place-IL connected him to Shufersal in Kiryat Malakhi as a cashier.
@@ -696,8 +687,7 @@ After 4 more years (shift-manager → assistant-manager → store-manager → re
 
 ## Programs used
 
-- [Place-IL](/en/careers/programs/place-il)
-- [TA Employment Academy](/en/careers/programs/ta-employment-academy)`,
+`,
       am: `## እንዴት ጀመረ
 
 አቪ በ21 ዕድሜ ከ IDF ተለቀቀ።

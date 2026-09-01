@@ -42,32 +42,30 @@ describe("bootcamp detail loader — happy path", () => {
 
   it("resolves the hosting org through the orgs query layer", async () => {
     const enp = await bootcampLoader(
-      fakeArgs({ lang: "he", program: "enp-tech-career" }),
+      fakeArgs({ lang: "he", program: "olim-beyahad-mentorship" }),
     );
     expect(enp.org).not.toBeNull();
-    expect(enp.org?.slug).toBe("enp");
+    expect(enp.org?.slug).toBe("olim-beyahad");
   });
 
   it("returns sibling bootcamps in the same track (≤3, excluding self)", async () => {
     const tech = await bootcampLoader(
-      fakeArgs({ lang: "he", program: "enp-tech-career" }),
+      fakeArgs({ lang: "he", program: "olim-beyahad-mentorship" }),
     );
     expect(tech.siblings.length).toBeLessThanOrEqual(3);
-    expect(tech.siblings.find((s) => s.slug === "enp-tech-career")).toBeUndefined();
+    expect(tech.siblings.find((s) => s.slug === "olim-beyahad-mentorship")).toBeUndefined();
   });
 
   it("surfaces relatedRights through the rights query layer", async () => {
     const enp = await bootcampLoader(
-      fakeArgs({ lang: "he", program: "enp-tech-career" }),
+      fakeArgs({ lang: "he", program: "olim-beyahad-mentorship" }),
     );
-    expect(
-      enp.relatedRights.find((r) => r.slug === "tech-career-bootcamp"),
-    ).toBeDefined();
+    expect(enp.relatedRights.find((r) => r.slug === "student-aid")).toBeDefined();
   });
 
   it("resolves cities into name/slug pairs", async () => {
     const enp = await bootcampLoader(
-      fakeArgs({ lang: "he", program: "enp-tech-career" }),
+      fakeArgs({ lang: "he", program: "olim-beyahad-mentorship" }),
     );
     expect(enp.cityNames.find((c) => c.slug === "tel-aviv")).toBeDefined();
   });

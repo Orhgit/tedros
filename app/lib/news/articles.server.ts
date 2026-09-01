@@ -88,7 +88,7 @@ export const ARTICLES: NewsArticleEntry[] = [
 - [סטטיסטיקות דיור](/he/statistics/housing)`,
       en: `## What this right is
 
-The community mortgage is a state loan dedicated to Ethiopian-Israelis — a fixed amount of ₪600,000 over 25 years, 0% interest for the first 10 years and 2% for the next 15. The loan is allocated by an annual lottery of ~200 families.
+The community mortgage is a state loan dedicated to Ethiopian-Israelis — a fixed amount of ₪600,000 over 25 years, 0% interest for the first 10 years and 2% for the next 15. The loan was allocated by lottery, about 200 families a year. **Registration is closed** — there is no open round, and the ministry's programme pages now return 404 (checked September 2026).
 
 ## Who fits
 
@@ -99,11 +99,12 @@ Any household meeting one of the following:
 
 ## How to register — step by step
 
-1. **Choose a participating bank**: Leumi / Discount / Igud
-2. **Submit an application at a branch** with national ID, marital status proof, income proof
-3. **Pay the ₪70 registration fee**
-4. **Wait for annual lottery results** (typically October-November)
-5. **If you win** — the bank sends an approval to sign a purchase contract within 30 days
+There is currently nothing to register for — see above. The steps below describe how the programme worked while it was open, and are kept for reference only:
+
+1. Choose a participating bank
+2. Submit an application at a branch with national ID, marital status proof, income proof
+3. Wait for the lottery results
+4. If selected, the bank sends an approval to sign a purchase contract
 
 ## Things to know
 
@@ -175,7 +176,6 @@ Bootcamp בן 12 חודשים שמכין בוגרי תואר/בלי תואר ל�
 
 ## ראו גם
 
-- [ENP Tech-Career — דף תכנית מלא](/he/careers/programs/enp-tech-career)
 - [Tech track — סקירה כללית](/he/careers/tech)
 - [ENP — פרופיל ארגון](/he/orgs/enp)`,
       en: `## What is ENP Tech-Career
@@ -202,7 +202,6 @@ Graduates with a bachelor's in CS / math / engineering — or non-graduates with
 
 ## See also
 
-- [ENP Tech-Career — full program page](/en/careers/programs/enp-tech-career)
 - [Tech track — overview](/en/careers/tech)
 - [ENP — organization profile](/en/orgs/enp)`,
       am: `## ENP Tech-Career ምንድን ነው

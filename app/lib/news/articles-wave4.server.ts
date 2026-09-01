@@ -302,7 +302,6 @@ ENP הוא נקודת כניסה מצוינת למיצוי הזדמנויות �
 
 ## ראו גם
 
-- [ENP Tech-Career](/he/careers/programs/enp-tech-career)
 - [תוכנית ENP SPACE](/he/education)`,
       en: `## Who ENP are
 
@@ -336,7 +335,6 @@ ENP is an excellent entry point for realizing opportunities — scholarships, tr
 
 ## See also
 
-- [ENP Tech-Career](/en/careers/programs/enp-tech-career)
 - [The ENP SPACE program](/en/education)`,
       am: `## ENP እነማን ናቸው
 

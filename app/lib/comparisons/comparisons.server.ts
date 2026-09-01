@@ -818,9 +818,9 @@ The aliyah grant can be requested up to 10 years after aliyah. Many families don
       {
         label: { he: "תהליך-קבלה", en: "Approval process", am: "የማጽደቅ ሂደት" },
         a: {
-          he: "הגרלה שנתית (~200 זוכים)",
-          en: "Annual lottery (~200 winners)",
-          am: "ዓመታዊ ዕጣ",
+          he: "ההרשמה סגורה — אין הגרלה פתוחה (הוקצו כ-800 משפחות בסך הכל)",
+          en: "Registration is closed — no open round (about 800 families in total)",
+          am: "ምዝገባ ተዘግቷል — ክፍት ዕጣ የለም",
         },
         b: { he: "אוטומטי בעת-רכישה", en: "Automatic at purchase", am: "ራሱ-ሰራሽ" },
         winner: "b",
@@ -868,7 +868,7 @@ Buying a home? Both apply. Community mortgage = the loan. First-home grant = pur
 ## Action plan
 
 1. **Check eligibility for community mortgage** — [calculator](/en/calculator/mortgage-ethiopian-immigrants).
-2. **Register for annual lottery** — Leumi/Discount/Igud.
+2. **Registration is closed.** There is no open round; the ministry has removed the programme pages.
 3. **When you pick the apartment** — request first-home grant from your lawyer automatically.
 4. **Sign contract** with both aids in place.
 `,

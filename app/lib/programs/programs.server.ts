@@ -6,8 +6,8 @@
 //
 // TED-157: 17 of the original 27 entries were retired. They named programmes
 // the operating organizations do not run, and carried fabricated figures,
-// two placeholder phone numbers (`1-800-XXX-XXX` published as a youth crisis
-// line, and `02-XXX-XXXX` as Tebeka intake) and four domains that do not
+// two placeholder phone numbers published as live instructions (one on a
+// youth crisis line, one as Tebeka intake) and four domains that do not
 // resolve. The survivors were stripped back to what the organizations
 // themselves publish. Amounts stay out unless the operator publishes them.
 //

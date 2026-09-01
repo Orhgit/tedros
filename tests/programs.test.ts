@@ -11,8 +11,12 @@ import { ALL_PROGRAM_TRACKS, glyphForProgramTrack } from "../app/lib/programs/ca
 import { PROGRAMS } from "../app/lib/programs/programs.server";
 
 describe("programs seed integrity", () => {
-  it("has at least 20 programs", () => {
-    expect(PROGRAMS.length).toBeGreaterThanOrEqual(20);
+  // TED-157 retired 17 of 27. Each named a programme its operating
+  // organization does not run; two published placeholder phone numbers as
+  // live instructions. The count is the honest one, not the planned one — and
+  // it must not be met by re-adding an entry nobody could source.
+  it("has exactly the 10 programs that survived the TED-157 audit", () => {
+    expect(PROGRAMS.length).toBe(10);
   });
 
   it("every program has unique slug", () => {

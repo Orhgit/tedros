@@ -1,7 +1,7 @@
 // Integrity tests for the BOOTCAMPS seed (RIN-472).
 //
 // Pins:
-//   - 15 bootcamps shipped (matches the RIN-469 epic plan)
+//   - 7 bootcamps shipped (15 planned; 8 retired as unverifiable, TED-157)
 //   - every slug is on the canonical list pinned by careers-links.test.ts
 //   - every cross-vertical ref resolves (no dead links to orgs / rights /
 //     professions / cities / canonical programs)
@@ -33,27 +33,24 @@ const CITY_SLUGS = new Set(CITIES.map((c) => c.slug));
 const PROGRAM_SLUGS = new Set(PROGRAMS.map((p) => p.slug));
 const PROFESSION_SLUGS = new Set(ALL_PROFESSIONS as readonly string[]);
 
+// TED-157 retired 8 of the original 15. They named programmes the operating
+// organizations do not run, three on domains that do not resolve
+// (scaleup-velocity.org, hila-equal-education.org.il, and a guessed municipal
+// URL), and two attributed to ENP programmes ENP does not have. A bootcamp
+// returns to this list only with a working link to the operator's own page.
 const PLANNED_BOOTCAMPS = [
-  "enp-tech-career",
   "olim-beyahad-mentorship",
   "isef-excellence-employment",
-  "hila-bagrut-tech",
   "itworks-israel",
   "codeoved",
-  "scaleup-velocity",
-  "presen",
   "career-counselors-network",
-  "enp-teaching-fellowship",
-  "madrasa-trades",
-  "ta-employment-academy",
   "atidim-academic",
   "atidim-military",
-  "place-il",
 ];
 
 describe("BOOTCAMPS seed shape", () => {
-  it("contains exactly 15 entries (RIN-469 epic plan)", () => {
-    expect(BOOTCAMPS).toHaveLength(15);
+  it("contains exactly 7 entries (15 planned, 8 retired by TED-157)", () => {
+    expect(BOOTCAMPS).toHaveLength(7);
   });
 
   it("every slug matches the canonical RIN-472 list", () => {
@@ -147,15 +144,19 @@ describe("BOOTCAMPS — coverage by track", () => {
     // Pin: every primary track has ≥1 bootcamp, except the few we
     // intentionally leave with cross-track or service-only entries
     // (healthcare currently has none — clinics handle their own training).
+    //
+    // TED-157 removed "education", "entrepreneurship", "trades" and
+    // "retail-services" from this list. Their
+    // entries — ENP Teaching Fellowship, Madrasa trades, ScaleUp Velocity,
+    // PRESEN — named programmes their supposed operators do not run, two of
+    // them on domains that do not resolve. Those tracks are now genuinely
+    // empty. The fix is a verified programme in each, not a re-added invented
+    // one; until then the gap is recorded here rather than papered over.
     const COVERED = [
       "tech",
-      "education",
       "public-sector",
-      "entrepreneurship",
       "finance",
       "social-work",
-      "trades",
-      "retail-services",
     ];
     for (const track of COVERED) {
       expect((counts.get(track) ?? 0) >= 1, `track ${track}: no bootcamp`).toBe(true);
@@ -166,17 +167,17 @@ describe("BOOTCAMPS — coverage by track", () => {
 describe("BOOTCAMPS lookup helpers", () => {
   it("findBootcamp returns null on unknown slug, entry on known", () => {
     expect(findBootcamp("does-not-exist")).toBeNull();
-    expect(findBootcamp("enp-tech-career")?.slug).toBe("enp-tech-career");
+    expect(findBootcamp("itworks-israel")?.slug).toBe("itworks-israel");
   });
 
   it("bootcampsForTrack/Org/City filter as expected", () => {
     expect(bootcampsForTrack("tech").length).toBeGreaterThan(0);
-    expect(bootcampsForOrg("enp").length).toBeGreaterThan(0);
+    expect(bootcampsForOrg("isef").length).toBeGreaterThan(0);
     expect(bootcampsForCity("tel-aviv").length).toBeGreaterThan(0);
   });
 
   it("bootcampBody falls back to HE for unknown locales", () => {
-    const enp = findBootcamp("enp-tech-career")!;
+    const enp = findBootcamp("itworks-israel")!;
     // @ts-expect-error — intentionally probe fallback
     expect(bootcampBody(enp, "xx")).toBe(enp.bodies.he);
   });

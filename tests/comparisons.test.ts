@@ -12,8 +12,11 @@ import {
 } from "../app/lib/db/queries/comparisons.server";
 
 describe("comparisons seed integrity", () => {
-  it("has at least 10 comparison entries", () => {
-    expect(COMPARISONS.length).toBeGreaterThanOrEqual(10);
+  // TED-157 deleted isef-vs-hesegim: "הישגים" is a grades 7-12 tutoring
+  // programme, not the government undergraduate scholarship that comparison
+  // described, so every numeric cell on its side B was invented.
+  it("has at least 9 comparison entries", () => {
+    expect(COMPARISONS.length).toBeGreaterThanOrEqual(9);
   });
 
   it("every entry has unique slug", () => {

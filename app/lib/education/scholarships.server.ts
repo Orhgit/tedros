@@ -76,7 +76,7 @@ export interface ScholarshipEntry {
  * without a redirect — they 404/410 by design.
  */
 export const LEGACY_SCHOLARSHIP_REDIRECTS: Record<string, string> = {
-  // Same CHE מרום program; the merom entry carried invented details (merom.org.il).
+  // Same CHE מרום program; the merom entry carried invented details on a domain that does not resolve.
   "merom-scholarship": "marom-che",
   // Same program stack: תוכנית יואל (עמותת חיבורים) is the support wrap around
   // the Bar-Ilan dedicated mechina — merged into the BIU entry.
@@ -106,7 +106,9 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
       en: "ISEF publishes no single figure. Tuition assistance is set with the academic institution — check with the dean of students.",
       am: "ISEF ወጥ የሆነ መጠን አያሳትምም። የትምህርት ክፍያ ድጋፍ ከተቋሙ ጋር ይወሰናል።",
     },
-    deadline: "07-31",
+    // Annual cycle: registration opens 1 June, closes 31 July. The field
+    // takes an ISO date or null; the cycle dates are stated in the body.
+    deadline: null,
     status: "closed",
     lastVerified: "2026-09-01",
     applicationUrl: "https://www.isef.org.il/",
