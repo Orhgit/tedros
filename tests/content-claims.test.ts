@@ -58,50 +58,45 @@ const RETIRED_CLAIMS: readonly RetiredClaim[] = [
   {
     label: "the 150% enhanced discharge grant for Ethiopian-Israeli soldiers",
     pattern: /מענק שחרור מוגדל|150% ממענק הבסיס|enhanced discharge grant/,
-    why:
-      "the MOD's discharged-soldiers fund lists its special-entitlement populations and country of origin is not among them; the form number given for it (ב.ל.87) is a National Insurance prefix on a Ministry of Defence payment",
+    why: "the MOD's discharged-soldiers fund lists its special-entitlement populations and country of origin is not among them; the form number given for it (ב.ל.87) is a National Insurance prefix on a Ministry of Defence payment",
   },
   {
     label: "form ב.ל.87 for a discharge grant",
     pattern: /ב\.ל\.87|B\.L\.87/,
-    why:
-      "no such form; discharge grants are not paid by ביטוח לאומי",
+    why: "no such form; discharge grants are not paid by ביטוח לאומי",
   },
   {
     label: "a ₪12,000 vocational-training voucher",
-    pattern: /12,000[^\n]{0,30}(שוברי|שובר|הכשרה)|vocational training vouchers worth up to ₪12,000/,
-    why:
-      "the ministry's voucher covers up to 80% of the course, capped at ₪7,000",
+    pattern:
+      /12,000[^\n]{0,30}(שוברי|שובר|הכשרה)|vocational training vouchers worth up to ₪12,000/,
+    why: "the ministry's voucher covers up to 80% of the course, capped at ₪7,000",
   },
   {
     label: "the fabricated scholarship domains",
-    pattern: /brachafund\.org\.il|shalemfund\.org\.il|beginheritage\.co\.il|kkl-jnf\.org\.il/,
-    why:
-      "all four are NXDOMAIN — never registered, not merely moved",
+    pattern:
+      /brachafund\.org\.il|shalemfund\.org\.il|beginheritage\.co\.il|kkl-jnf\.org\.il/,
+    why: "all four are NXDOMAIN — never registered, not merely moved",
   },
   {
     label: "placeholder phone numbers",
     pattern: /1-800-XXX-XXX|0\d-XXX-XXXX/,
-    why:
-      "two placeholders shipped as live instructions, one of them a youth crisis line",
+    why: "two placeholders shipped as live instructions, one of them a youth crisis line",
   },
   {
     label: "dead organisation domains",
-    pattern: /fbn\.org\.il|tech-career\.org\.il|atidbamidbar\.org\.il|bina-na\.org|scaleup-velocity\.org|hila-equal-education\.org\.il|acharai\.org\.il|merom\.org\.il/,
-    why:
-      "none resolve; the live addresses are friendsbynature.org, tech-career.org, bamidbar.org, binacf.org",
+    pattern:
+      /fbn\.org\.il|tech-career\.org\.il|atidbamidbar\.org\.il|bina-na\.org|scaleup-velocity\.org|hila-equal-education\.org\.il|acharai\.org\.il|merom\.org\.il/,
+    why: "none resolve; the live addresses are friendsbynature.org, tech-career.org, bamidbar.org, binacf.org",
   },
   {
     label: "a 90% mortgage financing track",
     pattern: /90% מימון|עד 90% ערך הנכס/,
-    why:
-      "Bank of Israel caps a first-home buyer at 75%; no 90% track was found",
+    why: "Bank of Israel caps a first-home buyer at 75%; no 90% track was found",
   },
   {
     label: "an open lottery for the ₪600,000 community mortgage",
     pattern: /הגרלה שנתית|annual lottery/,
-    why:
-      "registration closed after the 2017 round; both ministry programme pages now 404",
+    why: "registration closed after the 2017 round; both ministry programme pages now 404",
   },
 ];
 
@@ -395,4 +390,3 @@ describe("money claims carry a source and a verification date (ADR-021)", () => 
     ).toEqual([]);
   });
 });
-

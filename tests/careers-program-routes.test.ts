@@ -53,7 +53,9 @@ describe("bootcamp detail loader — happy path", () => {
       fakeArgs({ lang: "he", program: "olim-beyahad-mentorship" }),
     );
     expect(tech.siblings.length).toBeLessThanOrEqual(3);
-    expect(tech.siblings.find((s) => s.slug === "olim-beyahad-mentorship")).toBeUndefined();
+    expect(
+      tech.siblings.find((s) => s.slug === "olim-beyahad-mentorship"),
+    ).toBeUndefined();
   });
 
   it("surfaces relatedRights through the rights query layer", async () => {

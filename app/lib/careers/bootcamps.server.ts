@@ -43,23 +43,7 @@ export interface BootcampEntry {
   bodies: Record<Locale, string>;
 }
 
-// Cities where ENP runs school placements — see lib/orgs/orgs.server.ts.
-// Inlined here to avoid a circular import with relevance.ts.
-const ENP_TEACHING_CITIES = [
-  "netanya",
-  "rishon-lezion",
-  "rehovot",
-  "ashkelon",
-  "ashdod",
-  "beer-sheva",
-  "kiryat-malakhi",
-  "petach-tikva",
-  "haifa",
-  "jerusalem",
-];
-
 export const BOOTCAMPS: BootcampEntry[] = [
-
   // 2 — Olim Beyahad mentorship -----------------------------------------
   {
     slug: "olim-beyahad-mentorship",

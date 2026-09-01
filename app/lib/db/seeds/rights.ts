@@ -6899,8 +6899,8 @@ A discharged IDF soldier receives a "discharge certificate" — a critical docum
     },
     govUrl: "https://che.org.il/scholarships",
     eligibilitySummary: {
-      he: "שבע ה\"מלגות הפחות מוכרות\" שפורסמו כאן הוסרו — ארבעה מששת הדומיינים שצוטטו אינם רשומים כלל. המסלול האמיתי: מלגת מרום והמדור לסיוע כלכלי במוסד שלכם.",
-      en: "The seven \"lesser-known scholarships\" published here were removed — four of the six domains cited are not registered at all. The real route: the Marom scholarship and your institution's financial-aid unit.",
+      he: 'שבע ה"מלגות הפחות מוכרות" שפורסמו כאן הוסרו — ארבעה מששת הדומיינים שצוטטו אינם רשומים כלל. המסלול האמיתי: מלגת מרום והמדור לסיוע כלכלי במוסד שלכם.',
+      en: 'The seven "lesser-known scholarships" published here were removed — four of the six domains cited are not registered at all. The real route: the Marom scholarship and your institution\'s financial-aid unit.',
       am: "እዚህ የታተሙት ሰባቱ ስኮላርሺፖች ተወግደዋል — ከስድስቱ ድረ-ገጾች አራቱ አልተመዘገቡም።",
     },
     tags: ["education", "rights", "community"],

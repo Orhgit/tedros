@@ -8,8 +8,8 @@
 
 In one week this repo shipped three separate fabrication incidents, and **every one was found by accident, while someone was working on something else**:
 
-| Issue   | What was published                                                                                                                        | How it was found                        |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Issue   | What was published                                                                                                                         | How it was found                        |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
 | TED-152 | 8 scholarship entries naming organizations that do not exist. "קרן פלס" turned out to be a singer.                                         | Noticed while merging duplicate entries |
 | TED-155 | Two retired Tebeka phone numbers across 21 files, neither on Tebeka's site.                                                                | Noticed while fixing one guide          |
 | TED-148 | A rights page advertising "מענק הסתגלות תרבותית ₪2,500 — ייחודי לעולים מאפריקה", furniture grants, 500 free ulpan hours, ₪12,000 vouchers. | Noticed while adding an unrelated entry |
@@ -22,17 +22,17 @@ The audience makes the error asymmetric. This site is read by people deciding wh
 
 The content registries have no consistent place to record where a fact came from:
 
-| Registry              | Source field                        | Verification date         |
-| --------------------- | ----------------------------------- | ------------------------- |
-| `ScholarshipEntry`    | `applicationUrl` (often a homepage) | `lastVerified` ✅         |
-| `RightSeed`           | one `govUrl` for the whole page     | none                      |
-| `ProgramEntry`        | **none**                            | **none**                  |
-| `ComparisonEntry`     | **none**                            | **none**                  |
-| careers / family / …  | **none**                            | **none**                  |
+| Registry             | Source field                        | Verification date |
+| -------------------- | ----------------------------------- | ----------------- |
+| `ScholarshipEntry`   | `applicationUrl` (often a homepage) | `lastVerified` ✅ |
+| `RightSeed`          | one `govUrl` for the whole page     | none              |
+| `ProgramEntry`       | **none**                            | **none**          |
+| `ComparisonEntry`    | **none**                            | **none**          |
+| careers / family / … | **none**                            | **none**          |
 
 So a shekel figure enters a body as prose and there is nothing — no field, no review step, no test — that ever asks it where it came from. `lastVerified` on `ScholarshipEntry` shows why a field alone is not enough: 16 wave-2 entries carry `lastVerified: "2026-08-30"`, asserted on the same day TED-152 was deleting fabricated siblings out of that same file. **An unenforced field records a claim about verification, not verification.**
 
-TED-152 also shows how a partial sweep leaves a trap. Its selection criterion was "does the named organization exist" — so the entries that survived are the ones naming Technion, HUJI, TAU, Yad Hanadiv, Na'amat. They survived because the *org* is famous, not because anyone confirmed the *scholarship*. A future reader of that commit reasonably concludes the file was audited. It was not.
+TED-152 also shows how a partial sweep leaves a trap. Its selection criterion was "does the named organization exist" — so the entries that survived are the ones naming Technion, HUJI, TAU, Yad Hanadiv, Na'amat. They survived because the _org_ is famous, not because anyone confirmed the _scholarship_. A future reader of that commit reasonably concludes the file was audited. It was not.
 
 ## Decision
 
@@ -65,7 +65,7 @@ gov.il, btl.gov.il, ministry PDFs, statute text, or the operating organization's
 
 ## Why this mechanism and not a better-looking one
 
-**Rejected: a typed `sources: SourceRef[]` on every entry interface.** The obvious answer, and worse. It means changing seven unrelated interfaces and touching every entry in each, produces a large diff that reviewers skim, and — decisively — it puts the provenance somewhere the reader never sees. `lastVerified` already demonstrated that a field with no enforcement and no reader is a field that gets filled in by habit. Where a registry *already* has such a field, the guard accepts it; new ones are not worth the migration.
+**Rejected: a typed `sources: SourceRef[]` on every entry interface.** The obvious answer, and worse. It means changing seven unrelated interfaces and touching every entry in each, produces a large diff that reviewers skim, and — decisively — it puts the provenance somewhere the reader never sees. `lastVerified` already demonstrated that a field with no enforcement and no reader is a field that gets filled in by habit. Where a registry _already_ has such a field, the guard accepts it; new ones are not worth the migration.
 
 **Rejected: making the reviewer the check.** That is the status quo. It found nothing in three incidents.
 
@@ -85,6 +85,6 @@ gov.il, btl.gov.il, ministry PDFs, statute text, or the operating organization's
 **Costs, honestly**
 
 - **Writing content gets slower.** That is the intended effect. Producing an entry now requires reaching a primary source, and gov.il 403s automated fetches, so this is real friction on every future content wave. The alternative is the current speed, at the current accuracy.
-- **The grandfather list is a debt ledger.** Entries that predate this ADR and were not reachable in TED-157 are listed explicitly in the test. The list is visible in review and should only shrink. A content PR *can* add to it — nothing prevents that but a reviewer noticing, and a reviewer noticing is precisely what failed before. Mitigation: the list carries a per-entry reason and the issue that will clear it, so an addition without one is conspicuous.
+- **The grandfather list is a debt ledger.** Entries that predate this ADR and were not reachable in TED-157 are listed explicitly in the test. The list is visible in review and should only shrink. A content PR _can_ add to it — nothing prevents that but a reviewer noticing, and a reviewer noticing is precisely what failed before. Mitigation: the list carries a per-entry reason and the issue that will clear it, so an addition without one is conspicuous.
 - **The guard checks provenance, not truth.** It cannot tell a real source from a plausible URL. It raises the floor from "nobody asked" to "someone had to name a source"; it does not replace the audit.
 - **Regex over prose is approximate.** It will occasionally flag a non-claim (a fee in a worked example) and will miss claims phrased without a shekel sign. Both are tuned by adding cases, not by loosening the rule.

@@ -152,12 +152,7 @@ describe("BOOTCAMPS — coverage by track", () => {
     // them on domains that do not resolve. Those tracks are now genuinely
     // empty. The fix is a verified programme in each, not a re-added invented
     // one; until then the gap is recorded here rather than papered over.
-    const COVERED = [
-      "tech",
-      "public-sector",
-      "finance",
-      "social-work",
-    ];
+    const COVERED = ["tech", "public-sector", "finance", "social-work"];
     for (const track of COVERED) {
       expect((counts.get(track) ?? 0) >= 1, `track ${track}: no bootcamp`).toBe(true);
     }

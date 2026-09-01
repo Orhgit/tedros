@@ -54,7 +54,6 @@ export interface ComparisonEntry {
 // --- 10 comparison entries --------------------------------------------------
 
 export const COMPARISONS: ComparisonEntry[] = [
-
   // 2. ENP vs Fidel — community education
   {
     slug: "enp-vs-fidel",

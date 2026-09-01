@@ -40,7 +40,7 @@ export const CAREERS_STATISTICS: StatEntry[] = [
   //
   // Rebuild only from the Knesset MMM PDFs and the CBS abstract, one
   // entry at a time, each citing the document it came from.
-]; 
+];
 
 // ── lookup helpers ─────────────────────────────────────────────────────────
 
