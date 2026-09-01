@@ -277,6 +277,90 @@ export const WEDDING_SUPPLIERS: WeddingSupplier[] = [
       am: "ገጹ የመለጠፊያ ቀኖችን አላሳየም።",
     },
   },
+  // ── Music ───────────────────────────────────────────────────────────────
+  //
+  // This category was nearly published as empty. A first search found nothing
+  // and a second could not complete, and the honest conclusion looked like
+  // "no bookable Ethiopian music supplier exists". A third, wider search
+  // (~35 queries across three languages, plus internal searches on the event
+  // marketplaces) found that the supply is real and simply invisible to a
+  // normal wedding search: these suppliers have no website and appear on no
+  // Israeli vendor marketplace. They live on Instagram, YouTube and TikTok.
+  // Worth remembering the next time a category looks empty.
+  {
+    name: "DJ Awoke — דיג'יי אווקה",
+    categories: ["music"],
+    area: {
+      he: "העמוד אינו נוקב בעיר — מוזיקה לכל סוגי האירועים",
+      en: "The page states no city — music for events of all kinds",
+      am: "ገጹ ከተማ አይጠቅስም — ለሁሉም ዓይነት ዝግጅቶች ሙዚቃ",
+    },
+    offers: {
+      he: "דיג'יי למוזיקה אתיופית ואמהרית באירועים, כולל סטים לחתונות.",
+      en: "DJ for Ethiopian and Amharic music at events, including wedding sets.",
+      am: "ለዝግጅቶች የኢትዮጵያና የአማርኛ ሙዚቃ ዲጄ፣ የሠርግ ስብስቦችን ጨምሮ።",
+    },
+    sourceUrl: "https://www.instagram.com/dj_awoke/",
+    sourceLabel: {
+      he: "עמוד אינסטגרם עסקי; ערוץ יוטיוב עם סט מוזיקה אתיופית לחתונה והעלאה אחרונה במאי 2026",
+      en: "Business Instagram; YouTube channel with an Ethiopian wedding music set and a May 2026 upload",
+      am: "የንግድ ኢንስታግራም፤ የኢትዮጵያ የሠርግ ሙዚቃ ስብስብ ያለው የዩቲዩብ ቻናል",
+    },
+    sourceYear: 2026,
+    checkedAt: CHECKED,
+    confidence: "current",
+  },
+  {
+    name: "DJ Avi Chekol — אבי צ'קול",
+    categories: ["music"],
+    area: {
+      he: "העמוד אינו נוקב בעיר",
+      en: "The page does not state a city",
+      am: "ገጹ ከተማ አይጠቅስም",
+    },
+    offers: {
+      he: "דיג'יי לאירועים עם סטים באמהרית ובתיגרינית, כולל כניסת כאבה בחתונות.",
+      en: "Event DJ with sets in Amharic and Tigrinya, including the kaba entrance at weddings.",
+      am: "በአማርኛና በትግርኛ ስብስቦች ያለው የዝግጅት ዲጄ፣ በሠርግ ላይ የካባ አገባብን ጨምሮ።",
+    },
+    sourceUrl: "https://www.instagram.com/_avi_chokal_/",
+    sourceLabel: {
+      he: "עמוד אינסטגרם עסקי (פרסומים עד אמצע 2026); ערוץ יוטיוב עם סטים לחתונות, אחרון ביוני 2026",
+      en: "Business Instagram (posts to mid-2026); YouTube channel with wedding sets, most recent June 2026",
+      am: "የንግድ ኢንስታግራም (እስከ 2026 አጋማሽ ልጥፎች)፤ የሠርግ ስብስቦች ያሉት የዩቲዩብ ቻናል",
+    },
+    sourceYear: 2026,
+    checkedAt: CHECKED,
+    confidence: "current",
+  },
+  {
+    name: "פרויקט אזמרו",
+    categories: ["music"],
+    area: {
+      he: "הזמנות דרך חברת ההפקות עידן טולדנו",
+      en: "Booked through the Idan Toledano production company",
+      am: "በኢዳን ቶሌዳኖ የፕሮዳክሽን ኩባንያ በኩል ይያዛል",
+    },
+    offers: {
+      he: "מופע אקוסטי חי של מוזיקה אמהרית, עם אמנים יוצאי אתיופיה מכמה דורות, כלי נגינה מסורתיים, ריקוד ולבוש פולקלורי.",
+      en: "A live acoustic performance of Amharic music, with Ethiopian-origin artists from several generations, traditional instruments, dance and folkloric dress.",
+      am: "የቀጥታ የአማርኛ ሙዚቃ ትርኢት፣ ከተለያዩ ትውልዶች የመጡ የኢትዮጵያ ተወላጅ አርቲስቶች፣ ባህላዊ የሙዚቃ መሣሪያዎች፣ ዳንስና ባህላዊ አልባሳት።",
+    },
+    sourceUrl: "https://www.idantoledano.com/azmeroproject",
+    sourceLabel: {
+      he: "עמוד ההפקה באתר החברה",
+      en: "The production's page on the company's site",
+      am: "የፕሮዳክሽኑ ገጽ በኩባንያው ድህረ ገጽ ላይ",
+    },
+    checkedAt: CHECKED,
+    confidence: "dated",
+    note: {
+      he: "מוצג כמופע במה ולא כספק לחתונות או לחינה, ואין באתר תאריכים. אם אתם מחפשים מוזיקה חיה לאירוע — שאלו קודם אם ההרכב מגיע לאירועים פרטיים.",
+      en: "Presented as a stage show rather than a wedding or henna supplier, and the site carries no dates. If you are after live music for an event, ask first whether the ensemble plays private events at all.",
+      am: "እንደ የመድረክ ትርኢት እንጂ እንደ የሠርግ አቅራቢ አልቀረበም፣ ድህረ ገጹም ቀኖች የሉትም። መጀመሪያ ለግል ዝግጅቶች እንደሚመጡ ይጠይቁ።",
+    },
+  },
+
   {
     name: "AFRO BEAUTY HAIRSTYLE",
     categories: ["henna-styling"],
@@ -341,9 +425,9 @@ export const CATEGORY_INTROS: Record<WeddingSupplierCategory, Translatable> = {
     am: "ለሙሽሮች ካባ፣ በጥበብ የተጠለፉ ቀሚሶች፣ ባህላዊ ጌጣጌጥና የሥነ ሥርዓት ቁሳቁስ — ሁሉም ማለት ይቻላል ለኪራይ። በእስራኤል የሐበሻ ቀሚስ ችርቻሮ ሱቅ አልተገኘም።",
   },
   music: {
-    he: "אזמרי, מסינקו, כרר ותופים. מוזיקאים אתיופים בישראל מוזמנים כמעט אך ורק מפה לאוזן, ובחיפוש שלנו לא עלה אף עסק עם נוכחות מקוונת שאפשר לאמת. אם אתם מכירים אחד — או מנגנים בעצמכם — זה בדיוק המקום שבו רשומה אחת אמיתית תשנה משהו.",
-    en: "Azmari singers, masinko, krar and drums. Ethiopian musicians in Israel are booked almost entirely by word of mouth, and our search surfaced no business with a verifiable online presence. If you know one — or play yourself — this is exactly the place where one real entry would change something.",
-    am: "አዝማሪ፣ ማሲንቆ፣ ክራርና ከበሮ። በእስራኤል ያሉ የኢትዮጵያ ሙዚቀኞች ከአፍ ወደ አፍ ብቻ ይያዛሉ፤ በፍለጋችንም ሊረጋገጥ የሚችል የመስመር ላይ ንግድ አልተገኘም።",
+    he: "הדיג'ייז קיימים — הם פשוט לא נמצאים איפה שמחפשים. אף אחד מהם אינו מופיע ב-mit4mit או ב-engaged, לאף אחד אין אתר, והפורטל הקהילתי עצמו ממליץ על דיג'יי אתיופי מבלי לנקוב בשם. הם עובדים דרך אינסטגרם ויוטיוב, ושם מצאנו אותם. מוזיקה חיה מסורתית — אזמרי, מסינקו, כרר או הרכב תופים — עדיין ללא ספק שאפשר להזמין לאירוע.",
+    en: "The DJs exist — they are just not where people look. None of them appears on mit4mit or engaged, none has a website, and the community's own portal recommends an Ethiopian DJ without being able to name one. They work through Instagram and YouTube, and that is where we found them. Live traditional music — azmari, masinko, krar or a drum ensemble — still has no supplier you can book for an event.",
+    am: "ዲጄዎቹ አሉ — ሰዎች በሚፈልጉበት ቦታ ግን አይገኙም። አንዳቸውም በmit4mit ወይም በengaged ላይ አይታዩም፣ አንዳቸውም ድህረ ገጽ የላቸውም። በኢንስታግራምና በዩቲዩብ ይሠራሉ። ባህላዊ የቀጥታ ሙዚቃ — አዝማሪ፣ ማሲንቆ፣ ክራር — ግን ሊያዝ የሚችል አቅራቢ የለውም።",
   },
   "henna-styling": {
     he: "הפקת טקס החינה מקצה לקצה: הלבשת החתן, הכלה והמשפחה, עיצוב המרחב, כניסה מסורתית, וקליעת שורובה ותסרוקות כלה. זו הקטגוריה העשירה ביותר במדריך — ולא במקרה, כי החינה היא השלב שבו המסורת חיה היום.",

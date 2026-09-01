@@ -163,14 +163,23 @@ describe("WEDDING_SUPPLIERS verified-source policy", () => {
 });
 
 describe("empty categories are left empty, not padded", () => {
-  it("music and photography have no suppliers, and say so on the page", () => {
-    // If this ever fails because a real supplier was found, that is good news
-    // — update the assertion. It must never fail because one was invented.
-    expect(suppliersByCategory("music")).toHaveLength(0);
+  it("photography has no suppliers, and the page says so", () => {
+    // The only candidate found was a lead-generation aggregator with no
+    // identifiable photographer behind it. If this ever fails because a real
+    // studio was found, that is good news — update the assertion. It must
+    // never fail because one was invented.
     expect(suppliersByCategory("photography")).toHaveLength(0);
     for (const locale of LOCALES) {
       expect(WEDDING_COPY.emptyCategory![locale].length).toBeGreaterThan(30);
     }
+  });
+
+  it("music is not empty — the suppliers are just not on the marketplaces", () => {
+    // This category was nearly shipped as empty on the strength of two
+    // searches that found nothing. A third, wider one found bookable DJs with
+    // 2026-dated wedding work. Kept as a standing reminder that "we found
+    // nothing" is a claim about the search, not about the world.
+    expect(suppliersByCategory("music").length).toBeGreaterThan(0);
   });
 
   it("every category still has a name and an intro in all locales", () => {
