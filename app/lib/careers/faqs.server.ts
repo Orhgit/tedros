@@ -1,12 +1,72 @@
 // Career-FAQ seed (RIN-475 — Careers Hub Wave 5 / RIN-469).
 //
-// 20 long-tail Q&A entries authored in HE/EN/AM. Each FAQ targets a
+// 18 long-tail Q&A entries authored in HE/EN/AM. Each FAQ targets a
 // specific community-relevant search query and links into the existing
 // verticals (rights, orgs, bootcamps, professionals).
 //
 // HE source-of-truth (CLAUDE.md). EN + AM mirrored. The route layer at
 // `/$lang/careers/faq/$question` emits a `FAQPage` JSON-LD per entry —
 // rich snippet eligible (Google may render the Q&A inline in SERP).
+//
+// AUDIT: TED-158, 2026-09-02. See docs/adr/021-sourced-claims.md.
+//
+// This file entered the audit with ~25 percentage claims, a dozen shekel
+// figures, and ZERO source URLs — while emitting FAQPage structured data,
+// i.e. asking Google to surface unsourced numbers as answers. It was also
+// missing from CLAIM_REGISTRIES in tests/content-claims.test.ts, so the
+// ADR-021 sourcing rule had never applied to it. That gap is closed in
+// the same commit.
+//
+// VERIFIED AGAINST THE OPERATOR'S OWN SITE
+//   - טק-קריירה (tech-career.org): 88% השתלבות בתעשייה, 97% סיום הקורס,
+//     1,300 בוגרים, 40% נשים. עמותה עצמאית.
+//   - עולים ביחד (olim-beyahad.org.il): 87% השתלבות בתעסוקה איכותית,
+//     יותר מ-1,500 בוגרים.
+//   - תוכנית שוברים להכשרה מקצועית (משרד העבודה): יוצאי אתיופיה נמנים
+//     עם קבוצה א' — 90% למקצועות בביקוש גבוה, 80% לביקוש בינוני,
+//     בתקרה של כ-6,000-12,000 ₪ לקורס. תמיד בהשתתפות עצמית.
+//   - נקודות זיכוי לעולה (ס' 35 לפקודת מס הכנסה, עלייה מ-1.1.2022):
+//     חודשים 1-12 נקודה אחת; 13-30 ארבע וחצי; 31-42 שתיים; 43-54 אחת.
+//     שווי נקודה 2026: 242 ₪ לחודש.
+//   - סל קליטה 2026: יחיד 21,694 ₪, הורה עצמאי 35,071 ₪, זוג 41,359 ₪ —
+//     תשלום ראשון בנתב"ג ושישה תשלומים חודשיים בשנה הראשונה.
+//   - ייצוג הולם: חוק שירות המדינה (מינויים), ס' 15א.
+//
+// DELIBERATELY EXCLUDED — investigated, not published
+//   - "PRESEN של ENP": no such course. ENP runs no employment programme
+//     at all. One FAQ built entirely on it was deleted.
+//   - "Hila", an 18-24 month bagrut+bootcamp track paying ₪3,500/month:
+//     no such programme. Three real bodies are named Hila/היל"ה and none
+//     matches. That FAQ was deleted too.
+//   - "codeOved": no organisation, no site, no domain.
+//   - "JDC-Ashalim Strong Families" and its four regional centres: not a
+//     programme JDC publishes. Their real Ethiopian-family work is PACT.
+//   - "Tech-Career is an ENP bootcamp": Tech-Career is an independent
+//     עמותה. ENP works with ages 13-18 and runs no bootcamp.
+//   - "ENP 2024 report" as the source of a 78% placement rate: no such
+//     report; ENP publishes no placement data.
+//   - "Madrasa מנהלת את הרשת" of Ministry-of-Labour trades courses:
+//     Madrasa teaches spoken Arabic online.
+//   - ScaleUp Velocity "16 weeks + ₪50-150K seed to 3 teams": the
+//     organisation is real and is a training body, not an investor.
+//   - "צו 50": no instrument of that name. The basis is ס' 15א.
+//   - "סבסוד צהרון עד 80% לבני קהילה" and "28 שבועות חופשת לידה,
+//     שבועיים יותר מהסטנדרט": the exclusivity-fabrication pattern of
+//     TED-148 and TED-157. Daycare subsidy is means-tested with no
+//     ethnic criterion; statutory leave is 26 weeks (15 paid) with no
+//     28-week or community-specific variant anywhere.
+//   - Unpublished statistics, all removed rather than softened: Atidim
+//     95% / 100% / 70%; Olim Beyahad 70%-after-5-years; trades 90%
+//     completion and 60% self-employment; junior salary ₪16-22K;
+//     "30%+ more CVs"; ISEF ₪8-12K; "excellence-employment ₪3-5K".
+//   - "הישגים" as a full three-year government scholarship: TED-157
+//     established it is a grades 7-12 guidance programme awarding no
+//     money. Removed here, where it had survived.
+//   - The UJIA-KIEDF loan ceiling: the fund is real, neither UJIA nor
+//     KIEDF publishes a borrower cap, and our two files disagreed
+//     (₪200,000 vs ₪150,000). Both figures removed.
+//   - A living stipend figure for מלגת הכשרה / BOOST: the programme is
+//     real, the amount is not published by a primary source.
 
 import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
@@ -27,206 +87,247 @@ export const FAQS: CareerFaqEntry[] = [
     slug: "how-to-start-tech-career-ethiopian",
     orderIndex: 1,
     trackSlug: "tech",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "איך להתחיל קריירה בהייטק כיוצא אתיופיה?",
       en: "How to start a tech career as an Ethiopian-Israeli?",
       am: "እንደ ኢትዮጵያ-እስራኤላዊ የቴክ ሙያ እንዴት ይጀመራል?",
     },
     shortAnswer: {
-      he: "השלב הראשון הוא bootcamp 6-12 חודשים — ENP Tech-Career או ITWorks. הכניסה לתפקיד junior תוך 6-9 חודשים אחרי קורס ב-78%-70% מהבוגרים.",
-      en: "The first step is a 6-12 month bootcamp — ENP Tech-Career or ITWorks. Entry into a junior role within 6-9 months post-graduation in 70-78% of cases.",
-      am: "የመጀመሪያ ደረጃ የ6-12 ወር ቡት ካምፕ ነው።",
+      he: "המסלול הנפוץ הוא bootcamp שאינו דורש תואר. טק-קריירה היא העמותה הוותיקה שמתמחה בקהילה, ומדווחת באתרה על 88% השתלבות בתעשייה.",
+      en: "The common route is a bootcamp with no degree requirement. Tech-Career is the veteran nonprofit specialising in the community, and reports 88% integration into the industry on its own site.",
+      am: "የተለመደው መንገድ ዲግሪ የማይጠይቅ ቡት ካምፕ ነው። ቴክ-ካሪየር በድረ-ገጹ 88% የኢንዱስትሪ ውህደት ይዘግባል።",
     },
     bodies: {
       he: `## הצעד הראשון
 
-ל-bootcamp בלי דרישת תואר ראשון — ENP Tech-Career, ITWorks, codeOved. הם מסובסדים לגמרי או בעיקר לבני קהילה.
+bootcamp שאינו דורש תואר ראשון. הארגון הוותיק שמתמחה בקהילה הוא **טק-קריירה** — עמותה עצמאית (לא תוכנית של ENP, כפי שנכתב כאן בעבר).
 
-## איך לבחור bootcamp
+## מה טק-קריירה מפרסמת על עצמה
 
-- **ENP Tech-Career** — הכי סלקטיבי, שיעור placement הגבוה ביותר (~78%)
-- **ITWorks** — מתאים לעולים ולבני דור 1 שלא דוברים עברית ברמה אקדמית
-- **codeOved** — פתוח יותר, פחות סלקטיבי, מתאים לחסרי-תואר
+- **88%** מהבוגרות והבוגרים השתלבו בתעשיית ההייטק
+- **97%** מהסטודנטים מסיימים את הקורס
+- כ-**1,300** בוגרים מאז 2002, מהם **40%** נשים
 
-## אם יש לך כבר תואר ראשון רלוונטי
+שימו לב: הארגון אינו מפרסם חלון זמן להשתלבות, ואינו מבטיח השמה. הנתונים הם דיווח עצמי שלו.
 
-עדיף להירשם ל-Mentorship של Olim Beyahad — שיעור placement של 85% תוך 6 חודשים.
+## אם יש לכם כבר תואר ראשון רלוונטי
+
+**עולים ביחד** מפעילה תוכנית ליווי לאקדמאים יוצאי אתיופיה, ומדווחת על **87%** השתלבות בתעסוקה איכותית (ללא חלון זמן מפורסם).
 
 ## ראו גם
 
 - [Olim Beyahad Mentorship](/he/careers/programs/olim-beyahad-mentorship)
-- [Tech track — סקירה כללית](/he/careers/tech)`,
+- [Tech track — סקירה כללית](/he/careers/tech)
+
+מקורות: [טק-קריירה](https://www.tech-career.org/) · [עולים ביחד](https://www.olim-beyahad.org.il/) · נבדק ספטמבר 2026.`,
       en: `## The first step
 
-A bootcamp with no bachelor's requirement — ENP Tech-Career, ITWorks, codeOved. They are fully or mostly subsidized for community members.
+A bootcamp with no bachelor's requirement. The veteran organisation specialising in the community is **Tech-Career** — an independent nonprofit (not an ENP programme, as this page previously stated).
 
-## How to choose a bootcamp
+## What Tech-Career publishes about itself
 
-- **ENP Tech-Career** — most selective, highest placement rate (~78%)
-- **ITWorks** — fits olim and 1st-generation members without academic-level Hebrew
-- **codeOved** — more open, less selective, fits non-graduates
+- **88%** of graduates integrated into the high-tech industry
+- **97%** of students complete the course
+- around **1,300** graduates since 2002, **40%** of them women
+
+Note: the organisation publishes no time window for integration and does not guarantee placement. These are its own self-reported figures.
 
 ## If you already have a relevant bachelor's
 
-Prefer Olim Beyahad's Mentorship — 85% placement within 6 months.
+**Olim Beyahad** runs a mentorship programme for Ethiopian-Israeli graduates and reports **87%** integration into quality employment (no published time window).
 
 ## See also
 
 - [Olim Beyahad Mentorship](/en/careers/programs/olim-beyahad-mentorship)
-- [Tech track — overview](/en/careers/tech)`,
+- [Tech track — overview](/en/careers/tech)
+
+Sources: [Tech-Career](https://www.tech-career.org/) · [Olim Beyahad](https://www.olim-beyahad.org.il/) · verified September 2026.`,
       am: `## የመጀመሪያ ደረጃ
 
-ዲግሪ የማይጠይቅ ቡት ካምፕ — ENP Tech-Career፣ ITWorks፣ codeOved።
+ዲግሪ የማይጠይቅ ቡት ካምፕ። በማህበረሰቡ ላይ የተካነው ጥንታዊ ድርጅት **ቴክ-ካሪየር** ነው — ራሱን የቻለ ማህበር እንጂ የ ENP ፕሮግራም አይደለም።
 
-## ቡት ካምፑን እንዴት መምረጥ
+## ቴክ-ካሪየር ስለ ራሱ የሚያትመው
 
-- ENP Tech-Career — ከፍተኛ የቅጥር መጠን (~78%)
-- ITWorks — ለስደተኞችና ለ1ኛ ትውልድ
-- codeOved — ለምሩቃን-ያልሆኑ`,
+- **88%** ምሩቃን በሃይ-ቴክ ኢንዱስትሪ ተቀላቅለዋል
+- **97%** ኮርሱን ያጠናቅቃሉ
+- ከ2002 ጀምሮ ወደ **1,300** ምሩቃን
+
+ማስታወሻ: ድርጅቱ የጊዜ ገደብ አያትምም እና ቅጥርን አያረጋግጥም።
+
+## ዲግሪ ካለዎት
+
+**ኦሊም በያሐድ** **87%** የጥራት ቅጥር ውህደት ይዘግባል።
+
+ምንጮች: [ቴክ-ካሪየር](https://www.tech-career.org/) · በመስከረም 2026 ተረጋግጧል።`,
     },
   },
   {
     slug: "what-is-tech-career-bootcamp-enp",
     orderIndex: 2,
     trackSlug: "tech",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
-      he: "מה זה Tech-Career bootcamp של ENP?",
-      en: "What is the ENP Tech-Career bootcamp?",
-      am: "የ ENP Tech-Career ቡት ካምፕ ምንድን ነው?",
+      he: "מה זה טק-קריירה — והאם זו תוכנית של ENP?",
+      en: "What is Tech-Career — and is it an ENP programme?",
+      am: "ቴክ-ካሪየር ምንድን ነው — የ ENP ፕሮግራም ነው?",
     },
     shortAnswer: {
-      he: "Bootcamp 12 חודשים של עמותת ENP, מסובסד לבני קהילה — מכין לתפקידי junior developer ו-QA. שלוחות ב-תל-אביב, באר-שבע, חיפה.",
-      en: "12-month bootcamp by ENP, subsidized for community members — preparing for junior developer and QA roles. Campuses in Tel Aviv, Beersheba, Haifa.",
-      am: "ENP የ12 ወር ቡት ካምፕ ነው።",
+      he: "טק-קריירה היא עמותה עצמאית, לא תוכנית של ENP. היא מכשירה יוצאי אתיופיה למקצועות הייטק מאז 2002 ומדווחת על 88% השתלבות בתעשייה.",
+      en: "Tech-Career is an independent nonprofit, not an ENP programme. It has trained Ethiopian-Israelis for tech roles since 2002 and reports 88% integration into the industry.",
+      am: "ቴክ-ካሪየር ራሱን የቻለ ማህበር ነው እንጂ የ ENP ፕሮግራም አይደለም።",
     },
     bodies: {
-      he: `## תוכן הקורס
+      he: `## קודם כול — הבהרה
 
-- **6 חודשים ראשונים:** Full-stack JavaScript/TypeScript, מסדי נתונים, ניהול גרסאות, DevOps בסיסי
-- **6 חודשים אחרונים:** 2 פרויקטי portfolio בעלי לקוח-קצה, mock interviews, חיפוש עבודה
+דף זה קבע בעבר שטק-קריירה היא bootcamp של **ENP**. זו טעות: **טק-קריירה היא עמותה עצמאית** עם הנהלה וצוות משלה. ENP (הפרויקט הלאומי לקהילה האתיופית) עובד עם גילאי 13-18 ואינו מפעיל bootcamp או תוכנית תעסוקה כלשהי.
+
+## מה הארגון מפרסם
+
+- **88%** מהבוגרות והבוגרים השתלבו בתעשיית ההייטק
+- **97%** מסיימים את הקורס
+- כ-**1,300** בוגרים מאז 2002, מהם **40%** נשים
+
+הארגון אינו מפרסם חלון זמן להשתלבות ואינו מבטיח השמה.
 
 ## מי מתאים
 
-בוגרי תואר ראשון במדעי המחשב/מתמטיקה/הנדסה — או חסרי-תואר עם רקע self-learning ברור (פרויקטים ב-GitHub, MOOCs).
-
-## תוצאות מתועדות
-
-- שיעור placement: ~78% תוך 6 חודשים מסיום (דוח ENP 2024)
-- שכר חציוני junior: ₪16-22K בשנים האחרונות
+הקורס מיועד למי שמפגין יכולת אנליטית גבוהה — עם או בלי תואר. תנאי הקבלה, משך הקורס והשלוחות הפעילות מתעדכנים; בדקו באתר הארגון.
 
 ## ראו גם
 
 - [ENP — פרופיל ארגון](/he/orgs/enp)
 - [Tech-Career bootcamp — זכות ממשלתית](/he/rights/tech-career-bootcamp)`,
-      en: `## Course content
+      en: `## First, a correction
 
-- **First 6 months:** Full-stack JavaScript/TypeScript, databases, version control, basic DevOps
-- **Last 6 months:** 2 client-end portfolio projects, mock interviews, job search
+This page previously described Tech-Career as an **ENP** bootcamp. That is wrong: **Tech-Career is an independent nonprofit** with its own board and staff. ENP (the Ethiopian National Project) works with ages 13-18 and runs no bootcamp or employment programme of any kind.
+
+## What the organisation publishes
+
+- **88%** of graduates integrated into the high-tech industry
+- **97%** complete the course
+- around **1,300** graduates since 2002, **40%** of them women
+
+The organisation publishes no time window for integration and does not guarantee placement.
 
 ## Who fits
 
-Bachelor's grads in CS/math/engineering — or non-graduates with a clear self-learning track record (GitHub projects, MOOCs).
-
-## Documented outcomes
-
-- Placement rate: ~78% within 6 months of graduating (ENP 2024 report)
-- Median junior salary: ₪16-22K in recent years
+The course is aimed at people who show strong analytical ability — with or without a degree. Admission conditions, course length and active campuses change; check the organisation's own site.
 
 ## See also
 
 - [ENP — organization profile](/en/orgs/enp)
-- [Tech-Career bootcamp — government right](/en/rights/tech-career-bootcamp)`,
-      am: `## የኮርሱ ይዘት
+- [Tech-Career bootcamp — government right](/en/rights/tech-career-bootcamp)
 
-- የመጀመሪያ 6 ወር: Full-stack JavaScript፣ ዳታ ቤዝ
-- የመጨረሻ 6 ወር: 2 portfolio ፕሮጀክቶች
+Source: [Tech-Career](https://www.tech-career.org/) · verified September 2026.`,
+      am: `## መጀመሪያ — ማስተካከያ
 
-## ውጤቶች
+ይህ ገጽ ቀደም ሲል ቴክ-ካሪየርን የ **ENP** ቡት ካምፕ ብሎ ገልጾ ነበር። ይህ ስህተት ነው: **ቴክ-ካሪየር ራሱን የቻለ ማህበር ነው**። ENP ከ13-18 ዓመት ወጣቶች ጋር ይሰራል፤ ቡት ካምፕ አያካሂድም።
 
-- የቅጥር መጠን: ~78%
-- መካከለኛ ደመወዝ: ₪16-22K`,
+## ድርጅቱ የሚያትመው
+
+- **88%** በሃይ-ቴክ ኢንዱስትሪ ተቀላቅለዋል
+- **97%** ኮርሱን ያጠናቅቃሉ
+- ከ2002 ጀምሮ ወደ **1,300** ምሩቃን
+
+ምንጭ: [ቴክ-ካሪየር](https://www.tech-career.org/) · በመስከረም 2026 ተረጋግጧል።`,
     },
   },
   {
     slug: "are-there-employment-scholarships",
     orderIndex: 3,
     trackSlug: "tech",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "האם יש מלגות תעסוקה לבני העדה האתיופית?",
       en: "Are there employment scholarships for community members?",
       am: "ለማህበረሰብ አባላት የቅጥር ስኮላርሺፕ አለ?",
     },
     shortAnswer: {
-      he: "כן — מספר מלגות זמינות. הגדולות: ISEF (BA/MA, ~₪8-12K לשנה), Hesegim (תקצוב מלא ל-3 שנים), ENP Tech-Career (bootcamp חינם).",
-      en: "Yes — several scholarships are available. The biggest: ISEF (BA/MA, ~₪8-12K/year), Hesegim (full 3-year funding), ENP Tech-Career (free bootcamp).",
-      am: "አዎ — ብዙ ስኮላርሺፕዎች አሉ።",
+      he: "כן, אבל הסכומים משתנים ואינם מפורסמים במקום אחד. אל תסתמכו על סכום שראיתם באתר שאינו של הקרן עצמה — בקשו את התנאים בכתב מהקרן.",
+      en: "Yes, but the amounts vary and are not published in one place. Do not rely on a figure from anywhere other than the fund itself — ask the fund for its terms in writing.",
+      am: "አዎ፣ ነገር ግን መጠኖቹ ይለያያሉ እና በአንድ ቦታ አይታተሙም። ከፈንዱ ራሱ ውጭ ባለ ቦታ ያዩትን መጠን አይመኑ።",
     },
     bodies: {
-      he: `## המלגות העיקריות
+      he: `## מה באמת קיים
 
-- **ISEF excellence-employment** — מלגה משלימה ₪8-12K לשנה לתואר ראשון בחשבונאות/מימון/כלכלה
-- **Hesegim scholarships** — תקצוב מלא ל-3 שנים (זכות ממשלתית, מעל הסף הרגיל)
-- **ENP Tech-Career** — bootcamp 12 חודשים מסובסד מלא לבני קהילה
-- **excellence-employment** — תוספת ₪3-5K/שנה למצטיינים בענף הפיננסי
+- **ISEF** — קרן מלגות ותיקה. הקרן בוחרת על בסיס דור ראשון להשכלה גבוהה ופריפריה, **לא** על בסיס מוצא אתיופי. הסכום נקבע מול המוסד ואינו מפורסם כמספר אחיד — פנו לקרן.
+- **טק-קריירה** — הכשרת הייטק לבני הקהילה, בעמותה עצמאית (לא ENP).
+- **תוכנית שוברים להכשרה מקצועית** (משרד העבודה) — יוצאי אתיופיה נמנים עם קבוצה א', הזכאית לשיעור הסבסוד הגבוה. פירוט בשאלה על מקצועות היד.
+- **מלגות המוסדות עצמם** — לכל אוניברסיטה ומכללה דקאנט סטודנטים עם מלגות סיוע וקרנות ייעודיות. זה המקור שהכי כדאי להתחיל בו, והוא הנשכח ביותר.
+
+## שני דברים שהוסרו מהדף הזה
+
+בעבר הופיעו כאן "Hesegim — תקצוב מלא ל-3 שנים" ותוספת "excellence-employment של ₪3-5K לשנה". **"הישגים" אינה מלגה** — זו תוכנית ליווי והכוונה לתלמידי כיתות ז'-י"ב שאינה מעניקה כסף. תוספת ה-₪3-5K לא נמצאה בשום מקור. שניהם הוסרו.
 
 ## איך פונים
 
-לכל מלגה תהליך נפרד. ה-deadline המוקדם ביותר במאי-יוני (ISEF + Hesegim). הבטיחו ראיון אישי + תיק מסמכים.
+לכל קרן תהליך נפרד ומועדים משלה. בקשו תמיד את **תנאי הזכאות והסכום בכתב מהקרן עצמה** לפני שאתם בונים על סכום כלשהו.
 
 ## ראו גם
 
-- [ISEF excellence-employment — תכנית](/he/careers/programs/isef-excellence-employment)
-- [Hesegim scholarships — זכות](/he/rights/hesegim-scholarships)
-- [Student aid — זכות](/he/rights/student-aid)`,
-      en: `## Main scholarships
+- [Student aid — זכות](/he/rights/student-aid)
 
-- **ISEF excellence-employment** — top-up of ₪8-12K/year for bachelor's in accounting/finance/economics
-- **Hesegim scholarships** — full 3-year funding (government right, above the regular threshold)
-- **ENP Tech-Career** — 12-month bootcamp fully subsidized for community members
-- **excellence-employment** — additional ₪3-5K/year for high-performers in finance
+מקורות: [ISEF](https://www.isef.org.il/) · [טק-קריירה](https://www.tech-career.org/) · [תוכנית שוברים — משרד העבודה](https://www.gov.il/he/departments/units/manpower-training-bureau) · נבדק ספטמבר 2026.`,
+      en: `## What actually exists
+
+- **ISEF** — a veteran scholarship fund. It selects on first-generation-to-higher-education and periphery criteria, **not** on Ethiopian origin. The amount is set with the institution and is not published as a single figure — ask the fund.
+- **Tech-Career** — tech training for community members, run by an independent nonprofit (not ENP).
+- **The vocational training voucher scheme** (Ministry of Labour) — Ethiopian-origin applicants are in Group A, which carries the higher subsidy rate. Details in the trades question.
+- **The institutions' own scholarships** — every university and college has a dean of students with aid scholarships and dedicated funds. This is the best place to start and the most overlooked.
+
+## Two things removed from this page
+
+It previously listed "Hesegim — full 3-year funding" and an "excellence-employment" top-up of ₪3-5K/year. **"Hesegim" is not a scholarship** — it is a guidance programme for grades 7-12 that awards no money. The ₪3-5K top-up appears in no source. Both were removed.
 
 ## How to apply
 
-Each scholarship has a separate process. Earliest deadline in May-June (ISEF + Hesegim). Personal interview + portfolio required.
+Each fund has its own process and deadlines. Always ask for the **eligibility terms and the amount in writing from the fund itself** before counting on any figure.
 
 ## See also
 
-- [ISEF excellence-employment — program](/en/careers/programs/isef-excellence-employment)
-- [Hesegim scholarships — right](/en/rights/hesegim-scholarships)
 - [Student aid — right](/en/rights/student-aid)`,
-      am: `## ዋና ስኮላርሺፖች
+      am: `## በእውነት ያለው
 
-- **ISEF** — ₪8-12K በዓመት
-- **Hesegim** — የ3 ዓመት ሙሉ ድጋፍ
-- **ENP Tech-Career** — ሙሉ ለሙሉ የተደገፈ ቡት ካምፕ`,
+- **ISEF** — ጥንታዊ የስኮላርሺፕ ፈንድ። ምርጫው በመጀመሪያ ትውልድ ከፍተኛ ትምህርት እና በዳርቻ አካባቢ ላይ የተመሠረተ ነው እንጂ በኢትዮጵያ ተወላጅነት **አይደለም**።
+- **ቴክ-ካሪየር** — ራሱን የቻለ ማህበር።
+- **የሙያ ስልጠና ቫውቸር ፕሮግራም** (የሥራ ሚኒስቴር) — የኢትዮጵያ ተወላጆች በቡድን א ውስጥ ናቸው።
+- **የተቋማቱ የራሳቸው ስኮላርሺፖች** — ማንኛውም ዩኒቨርሲቲ የተማሪዎች ዲን አለው። ይህ ምርጡ መነሻ ነው።
+
+## ከዚህ ገጽ የተወገዱ ሁለት ነገሮች
+
+"ሄሰግም — የ3 ዓመት ሙሉ ድጋፍ" እና "የ₪3-5K ተጨማሪ" ቀደም ሲል እዚህ ነበሩ። **"ሄሰግም" ስኮላርሺፕ አይደለም** — ገንዘብ የማይሰጥ የ7-12 ክፍል መመሪያ ፕሮግራም ነው። ሁለቱም ተወግደዋል።`,
     },
   },
   {
     slug: "what-is-affirmative-representation-public-sector",
     orderIndex: 4,
     trackSlug: "public-sector",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "ייצוג הולם בשירות הציבורי — מה זה אומר בפועל?",
       en: "Affirmative representation in the civil service — what does it mean in practice?",
       am: "በመንግስት አገልግሎት ቅድሚያ ውክልና — በተግባር ምን ማለት ነው?",
     },
     shortAnswer: {
-      he: "צו 50 מחייב משרדים ממשלתיים לעדף בני קהילה כשיש שני מועמדים שווים. סימון flag צו-50 בעת הגשת מועמדות הוא המפתח.",
-      en: "Order 50 requires ministries to prefer community members when two candidates are equally qualified. Flagging Order-50 status when applying is the key.",
-      am: "ትዕዛዝ 50 በሁለት እኩል ብቁ አመልካቾች መካከል ቅድሚያ ይሰጣል።",
+      he: 'הבסיס הוא סעיף 15א לחוק שירות המדינה (מינויים) — לא "צו 50", שאינו קיים. כשכישורי המועמדים דומים, ניתן להעדיף מועמד מקבוצה שאינה מיוצגת כראוי.',
+      en: 'The basis is s.15A of the Civil Service (Appointments) Law — not "Order 50", which does not exist. Where qualifications are similar, preference may be given to a candidate from an under-represented group.',
+      am: 'መሠረቱ የመንግሥት አገልግሎት (ሹመቶች) ሕግ ክፍል 15א ነው — "ትዕዛዝ 50" የሚባል የለም።',
     },
     bodies: {
-      he: `## איך זה עובד בפועל
+      he: `## מה הבסיס החוקי
 
-ועדת קבלה משווה מועמדים. כשהיא מגיעה למצב של "שני שווים", סעיף הייצוג ההולם מחייב להעדיף את המועמד מקבוצת היעד (יוצאי אתיופיה).
+**סעיף 15א לחוק שירות המדינה (מינויים)**. אין מסמך בשם "צו 50" — הדף הזה השתמש בשם הזה בעבר, וזו הייתה טעות.
+
+## איך זה עובד בפועל — ומה ההבדל שחשוב להכיר
+
+הניסוח בחוק הוא **"כישורים דומים"**, לא "שני מועמדים שווים". זה סף נמוך יותר וטוב יותר עבורכם: אינכם צריכים להיות זהים למועמד אחר, אלא בעלי כישורים דומים.
+
+לצד זאת — **ההעדפה היא סמכות שבשיקול דעת, לא חובה אוטומטית**. ועדה רשאית להעדיף מועמד מקבוצה שאינה מיוצגת כראוי; היא אינה מחויבת לעשות זאת בכל מקרה. חשוב לדעת את זה מראש כדי לא להסתמך על תוצאה שאינה מובטחת.
 
 ## איך מסמנים
 
-בטופס המקוון של מסלול שירות המדינה — חפשו תיבת "ייצוג הולם / צו 50". לעיתים זה opt-in נסתר, פנו לאחראית הגיוס אם לא מוצאים.
+בטופסי המכרז של שירות המדינה יש סעיף המתייחס לייצוג הולם. אם אינכם מוצאים אותו — פנו לגורם המגייס ובקשו שהשתייכותכם תירשם, ושמרו עותק של הפנייה.
 
 ## ערעור
 
@@ -237,13 +338,19 @@ Each scholarship has a separate process. Earliest deadline in May-June (ISEF + H
 - [ייצוג הולם — דף הסבר מלא](/he/careers/affirmative-action)
 - [Public-sector representation — זכות](/he/rights/public-sector-representation)
 - [טבקה — פרופיל ארגון](/he/orgs/tebeka)`,
-      en: `## How it works in practice
+      en: `## The legal basis
 
-Selection committees compare candidates. When they reach a "two equally qualified" point, the affirmative-representation clause requires preference for the target-group candidate (Ethiopian-Israelis).
+**Section 15A of the Civil Service (Appointments) Law.** There is no document called "Order 50" — this page used that name, and it was wrong.
 
-## How to flag
+## How it works in practice — and the distinction that matters
 
-In civil-service online application forms — look for an "Affirmative representation / Order 50" checkbox. It's often opt-in and hidden; ask the recruiter if not visible.
+The statutory wording is **"similar qualifications"**, not "two equally qualified candidates". That is a lower and more favourable threshold: you do not have to be identical to another candidate, only similarly qualified.
+
+At the same time, **the preference is discretionary, not an automatic duty**. A committee may prefer a candidate from an under-represented group; it is not obliged to in every case. Knowing that in advance keeps you from relying on an outcome that is not guaranteed.
+
+## How to flag it
+
+Civil-service tender forms carry a clause on affirmative representation. If you cannot find it, ask the recruiting officer to record your status, and keep a copy of that request.
 
 ## Appeals
 
@@ -254,20 +361,24 @@ If rejected and you suspect the order wasn't applied — contact Tebeka for free
 - [Affirmative action — full explainer](/en/careers/affirmative-action)
 - [Public-sector representation — right](/en/rights/public-sector-representation)
 - [Tebeka — organization profile](/en/orgs/tebeka)`,
-      am: `## በተግባር እንዴት ይሰራል
+      am: `## የሕግ መሠረቱ
 
-ኮሚቴ አመልካቾችን ያወዳድራል። እኩል ብቁ ሲሆኑ ለማህበረሰብ አባል ቅድሚያ ይሰጣል።
+**የመንግሥት አገልግሎት (ሹመቶች) ሕግ ክፍል 15א**። "ትዕዛዝ 50" የሚባል ሰነድ የለም።
+
+## በተግባር እንዴት ይሰራል
+
+በሕጉ ውስጥ ያለው አገላለጽ **"ተመሳሳይ ብቃት"** ነው እንጂ "እኩል ብቁ" አይደለም — ይህ ለእርስዎ የተሻለ ዝቅተኛ መስፈርት ነው። ነገር ግን **ቅድሚያ መስጠቱ በውሳኔ ላይ የተመሠረተ ነው እንጂ ራስ-ሰር ግዴታ አይደለም**።
 
 ## እንዴት ምልክት ማድረግ
 
-በማመልከቻ ቅጽ "ትዕዛዝ 50" አማራጭ ይፈልጉ።`,
+በጨረታ ቅጾች ውስጥ ስለ ተመጣጣኝ ውክልና አንቀጽ አለ። ካላገኙት አመልማዩን ይጠይቁ እና ቅጂ ይያዙ።`,
     },
   },
   {
     slug: "order-50-eligibility",
     orderIndex: 5,
     trackSlug: "public-sector",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "צו 50 — מי זכאי, איך מממשים?",
       en: "Order 50 — who's eligible, how to claim it?",
@@ -282,14 +393,16 @@ If rejected and you suspect the order wasn't applied — contact Tebeka for free
       he: `## זכאות
 
 - אזרחות ישראלית
-- מוצא אתיופי (כל הדורות)
-- אין צורך להוכיח גנאלוגיה — הזיהוי הוא declaration עצמי
+- מוצא אתיופי
+- הייצוג ההולם מעוגן ב**סעיף 15א לחוק שירות המדינה (מינויים)** — לא ב"צו 50", שאינו קיים
 
 ## איך מממשים
 
 1. בחנו ב-[דף ייצוג הולם](/he/careers/affirmative-action) את הזכויות הספציפיות
-2. בעת הגשת מועמדות לתפקיד ציבורי — סמנו את ה-flag
+2. בעת הגשת מועמדות לתפקיד ציבורי — ציינו את השתייכותכם בסעיף הייצוג ההולם שבטופס. אם אין סעיף כזה, פנו לגורם המגייס בכתב
 3. שמרו עותק של ההגשה כראיה (במקרה של ערעור)
+
+**חשוב:** ההעדפה חלה כשהכישורים **דומים**, והיא סמכות שבשיקול דעת — לא תוצאה מובטחת.
 
 ## ראו גם
 
@@ -298,14 +411,16 @@ If rejected and you suspect the order wasn't applied — contact Tebeka for free
       en: `## Eligibility
 
 - Israeli citizenship
-- Ethiopian descent (any generation)
-- No need to prove genealogy — identification is self-declaration
+- Ethiopian descent
+- Affirmative representation rests on **s.15A of the Civil Service (Appointments) Law** — not on "Order 50", which does not exist
 
 ## How to claim
 
 1. Check the [affirmative-action page](/en/careers/affirmative-action) for specific rights
-2. When applying for a public-sector role — flag your status
+2. When applying for a public-sector role, state your status in the affirmative-representation clause of the form. If the form has none, write to the recruiting officer
 3. Keep a copy of the application as evidence (in case of appeal)
+
+**Important:** the preference applies where qualifications are **similar**, and it is discretionary — not a guaranteed outcome.
 
 ## See also
 
@@ -321,7 +436,7 @@ If rejected and you suspect the order wasn't applied — contact Tebeka for free
   {
     slug: "amharic-speaking-career-counselor-near-me",
     orderIndex: 6,
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "יועץ קריירה דובר אמהרית בקרבתי",
       en: "Amharic-speaking career counselor near me",
@@ -370,87 +485,123 @@ Free up to 60 minutes. Includes aptitude assessment + mapping of relevant career
   {
     slug: "employment-for-new-olim-2020-plus",
     orderIndex: 7,
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "תעסוקה לעולים חדשים מאתיופיה (2020+)",
       en: "Employment for new olim from Ethiopia (2020+)",
       am: "ለ2020+ የመጡ ለአዳዲስ ስደተኞች ቅጥር",
     },
     shortAnswer: {
-      he: "ITWorks הוא ה-bootcamp הייטק המוכוון לעולים חדשים — תמיכה בעברית בסיסית. סל קליטה מספק רשת ביטחון 18 חודשים ראשונים.",
-      en: "ITWorks is the tech bootcamp targeted at new olim — basic-Hebrew support. Klita basket provides a safety net for the first 18 months.",
-      am: "ITWorks ለአዳዲስ ስደተኞች የተዘጋጀ ቡት ካምፕ ነው።",
+      he: 'סל הקליטה משולם בתשלום ראשון בנתב"ג ועוד שישה תשלומים חודשיים בשנה הראשונה — לא כמענק חודשי לאורך כל השנה. האולפן הוא זכאות, לא חובה.',
+      en: "The absorption basket is paid as a first payment at the airport plus six monthly payments in the first year — not as a monthly grant across the whole year. Ulpan is an entitlement, not a requirement.",
+      am: "የመግቢያ ቅርጫት በአውሮፕላን ማረፊያ የመጀመሪያ ክፍያ እና በመጀመሪያው ዓመት ስድስት ወርሃዊ ክፍያዎች ይከፈላል። አልፓን ግዴታ ሳይሆን መብት ነው።",
     },
     bodies: {
       he: `## הסיוע שמגיע אוטומטית
 
-- **סל קליטה** — מענק חודשי בשנה הראשונה (~₪3,000-4,500)
-- **אולפן** — 5 חודשים מסובסדים, חובה
-- **בית מגורים זמני** — מרכזי קליטה אזוריים
+**סל קליטה** — סכומי 2026, לכל תקופת הזכאות (לא לחודש):
 
-## תכניות תעסוקה ייעודיות
+- יחיד — **21,694 ₪**
+- הורה עצמאי — **35,071 ₪**
+- זוג — **41,359 ₪**
 
-- **ITWorks** — bootcamp הייטק עם תמיכה בעברית בסיסית
-- **Place-IL** — השמה לתפקידי שירות, מתאים מאד לחודשים ראשונים
-- **Atidim צה"לי** — לבני 18 שעלו עם הוריהם
+בתוספת תוספות לילדים ולגמלאים. התשלום הראשון ניתן בנתב"ג, ואחריו **שישה תשלומים חודשיים** במהלך השנה הראשונה. הסל אינו מותנה בהכנסה.
+
+*הדף הזה קבע בעבר "מענק חודשי בשנה הראשונה (~₪3,000-4,500)". זה היה שגוי גם במבנה וגם בסכום.*
+
+**אולפן** — אולפן א' ניתן ללא תשלום. זו **זכאות, לא חובה** (הדף קבע קודם "חובה"). לעולים מאתיופיה חלון המימוש ארוך מהרגיל — בדקו במשרד העלייה והקליטה.
+
+**דיור זמני** — מרכזי קליטה.
+
+## תכניות תעסוקה
+
+- **Place-IL** — לא שירות השמה כללי: זו פלטפורמת התמחות בין-חברתית לסטודנטים ובוגרי מקצועות STEM, המיועדת לשש קבוצות בתת-ייצוג שיוצאי אתיופיה הם אחת מהן.
+- **ITWorks** — עמותה אמיתית, אך קבוצות היעד שהיא מפרסמת הן נשים שנפגעו מהמלחמה, ערבים אזרחי ישראל ועולים מרוסיה ואוקראינה. היא אינה מציינת את הקהילה האתיופית — בדקו מולה ישירות אם אתם מתאימים.
+- **עתידים** — מפעילה מסלולים בצה"ל ובתעשייה. שימו לב שהשמות "עתידים אקדמי" ו"עתידים צה"לי" שהופיעו כאן אינם שמות התוכניות שלה.
 
 ## ראו גם
 
 - [סל קליטה — זכות](/he/rights/klita-basket)
 - [ITWorks Israel — תכנית](/he/careers/programs/itworks-israel)
+
+מקור: [משרד העלייה והקליטה — סל קליטה](https://www.gov.il/he/pages/absorption_basket) · נבדק ספטמבר 2026.
 `,
       en: `## What you get automatically
 
-- **Klita basket** — monthly grant in the first year (~₪3,000-4,500)
-- **Ulpan** — 5 subsidized months, mandatory
-- **Temporary housing** — regional absorption centers
+**Absorption basket** — 2026 amounts, for the whole entitlement period (not per month):
 
-## Targeted employment programs
+- single — **₪21,694**
+- single parent — **₪35,071**
+- couple — **₪41,359**
 
-- **ITWorks** — tech bootcamp with basic-Hebrew support
-- **Place-IL** — placement into service roles, fits early-month olim well
-- **Atidim Military** — for 18-year-olds who arrived with their families
+Plus supplements for children and for pensioners. The first payment is made at the airport, followed by **six monthly payments** during the first year. The basket is not income-tested.
+
+*This page previously said "monthly grant in the first year (~₪3,000-4,500)". That was wrong in both structure and amount.*
+
+**Ulpan** — Ulpan Aleph is free. It is an **entitlement, not a requirement** (the page previously said "mandatory"). Olim from Ethiopia have a longer window to use it — check with the Ministry of Aliyah and Integration.
+
+**Temporary housing** — absorption centres.
+
+## Employment programmes
+
+- **Place-IL** — not a general placement service: it is a cross-company internship platform for STEM students and graduates, aimed at six under-represented groups of which Ethiopian-Israelis are one.
+- **ITWorks** — a real nonprofit, but the target groups it publishes are women affected by the war, Arab citizens of Israel, and olim from Russia and Ukraine. It does not name the Ethiopian community — check with them directly whether you fit.
+- **Atidim** — runs IDF and industry tracks. Note that "Atidim Academic" and "Atidim Military", which appeared here, are not the names of its programmes.
 
 ## See also
 
 - [Klita basket — right](/en/rights/klita-basket)
 - [ITWorks Israel — program](/en/careers/programs/itworks-israel)
+
+Source: [Ministry of Aliyah and Integration — absorption basket](https://www.gov.il/he/pages/absorption_basket) · verified September 2026.
 `,
       am: `## ራስ-ሰር የሚያገኙት
 
-- **የመግቢያ ቅርጫት** — በመጀመሪያ ዓመት ወርሃዊ ስጦታ
-- **አልፋን** — 5 ወር የተደገፈ
+**የመግቢያ ቅርጫት** — የ2026 መጠኖች፣ ለጠቅላላው የመብት ጊዜ (በወር አይደለም):
 
-## ልዩ ፕሮግራሞች
+- ነጠላ — **21,694 ₪**
+- ብቸኛ ወላጅ — **35,071 ₪**
+- ጥንዶች — **41,359 ₪**
 
-- **ITWorks** — የቴክ ቡት ካምፕ
-- **Place-IL** — የቅጥር አገልግሎት`,
+የመጀመሪያው ክፍያ በአውሮፕላን ማረፊያ ይሰጣል፤ ከዚያም በመጀመሪያው ዓመት **ስድስት ወርሃዊ ክፍያዎች**።
+
+**አልፓን** — አልፓን א ያለ ክፍያ ነው። **መብት እንጂ ግዴታ አይደለም**።
+
+## የቅጥር ፕሮግራሞች
+
+- **Place-IL** — አጠቃላይ የቅጥር አገልግሎት አይደለም፤ ለ STEM ተማሪዎች የኩባንያዎች መካከል የልምምድ መድረክ ነው።
+- **ITWorks** — እውነተኛ ማህበር ነው፣ ነገር ግን የሚያትማቸው ዒላማ ቡድኖች የኢትዮጵያ ማህበረሰብን አያካትቱም።
+
+ምንጭ: [የስደት ሚኒስቴር](https://www.gov.il/he/pages/absorption_basket) · በመስከረም 2026 ተረጋግጧል።`,
     },
   },
   {
     slug: "first-job-after-army-ethiopian",
     orderIndex: 8,
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "חיפוש עבודה ראשון אחרי צבא — בני קהילה אתיופית",
       en: "First job search after IDF — Ethiopian-Israeli community",
       am: "ከ IDF በኋላ የመጀመሪያ ሥራ ፍለጋ",
     },
     shortAnswer: {
-      he: "מומלץ להתחיל עם פגישת ייעוץ קריירה (חינמי), אז להירשם ל-PRESEN לקורס הכנה לראיונות. אחרי PRESEN — שוק העבודה פתוח עם 30%+ פחות bias.",
-      en: "Recommended: start with a free career consultation, then enroll in PRESEN for interview prep. After PRESEN — the job market opens with 30%+ less bias.",
-      am: "በነፃ ምክክር ይጀምሩ፣ ከዚያም PRESEN ኮርስ ይውሰዱ።",
+      he: "התחילו בפגישת ייעוץ קריירה חינמית ובבניית רשת קשרים. האפליה בשלב הסינון היא אמיתית ומתועדת — ולכן ערוץ פנייה אנושי שווה יותר מהגשה עיוורת.",
+      en: "Start with a free career consultation and with building a network. Screening-stage discrimination is real and documented — which is why a human route in is worth more than a blind application.",
+      am: "በነፃ የሙያ ምክክር እና አውታረ መረብ በመገንባት ይጀምሩ። በማጣሪያ ደረጃ ያለው አድሎ እውነተኛ ነው።",
     },
     bodies: {
       he: `## הסדר המומלץ
 
-1. **פגישת ייעוץ קריירה** (חינמי) — מיפוי תחומי עניין + יכולות
-2. **PRESEN** — קורס 8 שבועות להכנה לראיונות + מיומנויות הצגה
-3. **חיפוש עבודה פעיל** — Olim Beyahad mentor (אם יש תואר ראשון), Place-IL (אם לא)
+1. **פגישת ייעוץ קריירה** (חינמי) — מיפוי תחומי עניין ויכולות
+2. **חיפוש עבודה פעיל** — עולים ביחד (אם יש תואר ראשון), Place-IL (למקצועות STEM)
 
-## למה זה חשוב
+## למה רשת קשרים חשובה כאן במיוחד
 
-מחקרים מראים pre-screening bias — בני קהילה צריכים להגיש 30%+ יותר CVs כדי לקבל ראיון. PRESEN מבטל את הפער בעיקר דרך הכנה ספציפית + רשת קשרים.
+סקר מעסיקים של משרד הכלכלה מצא ש**רק 5.6% מהמעסיקים הביעו נכונות להעסיק יוצאי אתיופיה** — השיעור הנמוך ביותר מבין כל הקבוצות שנבדקו (חרדים 8.7%, ערבים 7.4%). המשמעות המעשית: החסם הגדול הוא **שלב הסינון**, לפני שמישהו בכלל קרא את קורות החיים לעומק.
+
+לכן פנייה דרך אדם — מנטור, בוגר, ממליץ — שווה יותר מהגשה עיוורת דרך אתר. זה לא טיפ "רך"; זו התאמה של האסטרטגיה לחסם האמיתי.
+
+*הערה: דף זה קבע בעבר שבני הקהילה "צריכים להגיש 30%+ יותר קורות חיים". הנתון הזה לא נמצא בשום מחקר על יוצאי אתיופיה. מחקר קורות החיים הישראלי הידוע השווה שמות אשכנזיים ומזרחיים, לא יוצאי אתיופיה.*
 
 ## ראו גם
 
@@ -458,13 +609,16 @@ Free up to 60 minutes. Includes aptitude assessment + mapping of relevant career
 - [Olim Beyahad — תכנית](/he/careers/programs/olim-beyahad-mentorship)`,
       en: `## Recommended order
 
-1. **Free career consultation** — interest mapping + skill assessment
-2. **PRESEN** — 8-week interview prep + presentation skills
-3. **Active job search** — Olim Beyahad mentor (with bachelor's), Place-IL (without)
+1. **Free career consultation** — interest mapping and skill assessment
+2. **Active job search** — Olim Beyahad (with a bachelor's), Place-IL (STEM fields)
 
-## Why this matters
+## Why a network matters especially here
 
-Research shows pre-screening bias — community members need to submit 30%+ more CVs to get an interview. PRESEN closes the gap mainly through specific prep + ally connections.
+A Ministry of Economy employer survey found that **only 5.6% of employers expressed willingness to employ Ethiopian-Israelis** — the lowest of any group surveyed (Haredim 8.7%, Arabs 7.4%). What that means in practice: the biggest barrier is the **screening stage**, before anyone has read your CV properly.
+
+So an approach through a person — a mentor, an alum, a referrer — is worth more than a blind application through a jobs site. That is not soft advice; it is matching the strategy to where the barrier actually is.
+
+*Note: this page previously said community members must "submit 30%+ more CVs". That figure appears in no study of Ethiopian-Israelis. The well-known Israeli CV experiment compared Ashkenazi and Mizrahi names, not Ethiopian-Israelis.*
 
 ## See also
 
@@ -473,23 +627,26 @@ Research shows pre-screening bias — community members need to submit 30%+ more
       am: `## የሚመከር ቅደም ተከተል
 
 1. ነፃ የሙያ ምክክር
-2. PRESEN — የቃለ-መጠይቅ ዝግጅት
-3. ንቁ ስራ ፍለጋ`,
+2. ንቁ ስራ ፍለጋ — ኦሊም በያሐድ (ዲግሪ ካለ)፣ Place-IL (ለ STEM)
+
+## አውታረ መረብ ለምን አስፈላጊ ነው
+
+የኢኮኖሚ ሚኒስቴር ጥናት **5.6% አሠሪዎች ብቻ** የኢትዮጵያ ተወላጆችን ለመቅጠር ፈቃደኛ መሆናቸውን አግኝቷል — ከሁሉም ቡድኖች ዝቅተኛው። ትልቁ እንቅፋት **የማጣሪያ ደረጃ** ነው። ስለዚህ በሰው በኩል መቅረብ ከዓይነ ስውር ማመልከቻ ይሻላል።`,
     },
   },
   {
     slug: "subsidized-career-pivot-tracks",
     orderIndex: 9,
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "מסלולי הסבה מקצועית מסובסדים",
       en: "Subsidized career-pivot tracks",
       am: "የተደገፉ የሙያ መለወጫ መንገዶች",
     },
     shortAnswer: {
-      he: "משרד העבודה מסבסד 100% של מקצועות יד (חשמל, אינסטלציה, ריתוך, מכונאות) לבני קהילה. תכנית Madrasa מנהלת את הרשת.",
-      en: "The Ministry of Labor 100%-subsidizes trades (electrical, plumbing, welding, mechanics) for community members. The Madrasa program runs the network.",
-      am: "የስራ ሚኒስቴር 100% የእጅ ሙያዎችን ይደግፋል።",
+      he: "משרד העבודה מסבסד הכשרה מקצועית בשוברים. יוצאי אתיופיה נמנים עם קבוצה א' — 90% למקצועות בביקוש גבוה, 80% לביקוש בינוני. תמיד בהשתתפות עצמית.",
+      en: "The Ministry of Labour subsidises vocational training through vouchers. Ethiopian-origin applicants are in Group A — 90% for high-demand trades, 80% for medium-demand. There is always a co-payment.",
+      am: "የሥራ ሚኒስቴር በቫውቸር ይደግፋል። የኢትዮጵያ ተወላጆች በቡድን א ውስጥ ናቸው — 90% ወይም 80%። ሁልጊዜ የራስ መዋጮ አለ።",
     },
     bodies: {
       he: `## מקצועות יד מסובסדים
@@ -499,14 +656,27 @@ Research shows pre-screening bias — community members need to submit 30%+ more
 - **ריתוך** — 3-6 חודשים
 - **מכונאי** — 4-8 חודשים
 
+## כמה זה עולה
+
+ההכשרה מסובסדת דרך **תוכנית השוברים** של משרד העבודה. יוצאי אתיופיה — מי שנולד באתיופיה או שאחד מהוריו נולד שם — נמנים עם **קבוצה א'**, בעלת שיעור הסבסוד הגבוה:
+
+- **90%** למקצועות בביקוש גבוה
+- **80%** למקצועות בביקוש בינוני
+
+בתקרה של כ-6,000-12,000 ₪ לקורס, ותמיד **בהשתתפות עצמית** — אין מסלול של 100%, כפי שנכתב כאן בעבר.
+
+בנוסף קיימת **מלגת הכשרה (BOOST)** של משרד העבודה עם הג'וינט, לעד 6 חודשים, המותנית בקריטריון נוסף מעבר להשתייכות הקבוצתית. הסכום אינו מפורסם במקור ראשוני, ולכן איננו נוקבים בו כאן.
+
 ## אחרי הקורס
 
-90% מסיימים את ההכשרה. ~60% פותחים עסק עצמאי תוך שנה (קישור ל-UJIA-KIEDF להלוואה). השאר משתלבים אצל מעסיקים — ענפי הבנייה והאחזקה דרושים אנשי מקצוע באופן קבוע.
+ענפי הבנייה והאחזקה זקוקים לאנשי מקצוע באופן קבוע. *(שיעורי הסיום וההשתלבות שהופיעו כאן בעבר — 90% ו-60% — אינם מפורסמים על ידי משרד העבודה ולא נמצא להם מקור, ולכן הוסרו.)*
 
 ## ראו גם
 
 - [Trades — סקירה כללית](/he/careers/trades)
-- [UJIA-KIEDF — הלוואות עסקים](/he/rights/ujia-kiedf-business-loans)`,
+- [UJIA-KIEDF — הלוואות עסקים](/he/rights/ujia-kiedf-business-loans)
+
+מקור: [מינהל הכשרות מקצועיות, משרד העבודה](https://www.gov.il/he/departments/units/manpower-training-bureau) · נבדק ספטמבר 2026.`,
       en: `## Subsidized trades
 
 - **Electrician** — 6-9 month course, Ministry of Labor license
@@ -514,9 +684,20 @@ Research shows pre-screening bias — community members need to submit 30%+ more
 - **Welder** — 3-6 months
 - **Mechanic** — 4-8 months
 
+## What it costs
+
+Training is subsidised through the Ministry of Labour's **voucher scheme**. Ethiopian-origin applicants — born in Ethiopia, or with one parent born there — are in **Group A**, which carries the higher subsidy rate:
+
+- **90%** for high-demand trades
+- **80%** for medium-demand trades
+
+capped at roughly ₪6,000-12,000 per course, and always with a **co-payment** — there is no 100% track, as this page previously stated.
+
+There is also a **training stipend (BOOST)**, run by the Ministry of Labour with JDC, for up to 6 months, conditional on a further criterion beyond group membership. Its amount is not published by a primary source, so we do not state one here.
+
 ## After the course
 
-90% complete the training. ~60% open a self-employed business within a year (link to UJIA-KIEDF loan). The rest join existing employers — construction and maintenance sectors have steady demand.
+Construction and maintenance have steady demand for qualified tradespeople. *(The completion and self-employment rates previously shown here — 90% and 60% — are not published by the Ministry of Labour and no source could be found, so they were removed.)*
 
 ## See also
 
@@ -533,15 +714,15 @@ Research shows pre-screening bias — community members need to submit 30%+ more
     slug: "tech-mentor-community-ethiopian",
     orderIndex: 10,
     trackSlug: "tech",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "מנטור בהייטק לבני קהילה אתיופית",
       en: "A tech mentor for Ethiopian-Israeli community members",
       am: "ለማህበረሰብ አባላት የቴክ አማካሪ",
     },
     shortAnswer: {
-      he: "Olim Beyahad מספקת mentorship 1:1 לבוגרי תואר. Mentor מהתעשייה (לא staff), פגישה שבועית/דו-שבועית, רשת alumni של 1,500+.",
-      en: "Olim Beyahad provides 1:1 mentorship for bachelor's grads. Industry mentor (not staff), weekly/bi-weekly meetings, 1,500+ alumni network.",
+      he: "עולים ביחד מספקת ליווי 1:1 לאקדמאים. מנטור מהתעשייה (מתנדב), פגישה שבועית או דו-שבועית, ורשת של יותר מ-1,500 בוגרים.",
+      en: "Olim Beyahad provides 1:1 mentorship for graduates. An industry mentor (a volunteer), weekly or bi-weekly meetings, and a network of more than 1,500 alumni.",
       am: "ኦሊም በያሐድ ለምሩቃን 1:1 አማካሪነት ይሰጣል።",
     },
     bodies: {
@@ -558,8 +739,10 @@ Research shows pre-screening bias — community members need to submit 30%+ more
 
 ## תוצאות
 
-- שיעור placement: ~85% תוך 6 חודשים
-- 70% מהבוגרים נשארים בקריירה אחרי 5 שנים
+- הארגון מדווח באתרו על **87%** השתלבות בתעסוקה איכותית (ללא חלון זמן מפורסם)
+- **יותר מ-1,500 בוגרים**
+
+*שיעור "70% נשארים בקריירה אחרי 5 שנים" שהופיע כאן אינו מפורסם על ידי הארגון והוסר.*
 
 ## ראו גם
 
@@ -578,8 +761,10 @@ Bachelor's/master's grads in technological fields — CS, math, statistics, engi
 
 ## Outcomes
 
-- Placement rate: ~85% within 6 months
-- 70% of alumni stay in their career after 5 years
+- The organisation reports **87%** integration into quality employment on its own site (no published time window)
+- **More than 1,500 alumni**
+
+*The "70% stay in their career after 5 years" figure that appeared here is not published by the organisation and was removed.*
 
 ## See also
 
@@ -595,193 +780,172 @@ Bachelor's/master's grads in technological fields — CS, math, statistics, engi
 - ሳምንታዊ/ሁለት-ሳምንታዊ ስብሰባ`,
     },
   },
-  {
-    slug: "interview-prep-basic-hebrew",
-    orderIndex: 11,
-    reviewedAt: "2026-05-01",
-    question: {
-      he: "קורס ראיונות עבודה בעברית בסיסית",
-      en: "Job interview prep in basic Hebrew",
-      am: "በመሰረታዊ ዕብራይስጥ የቃለ-መጠይቅ ኮርስ",
-    },
-    shortAnswer: {
-      he: "PRESEN של ENP — קורס 8 שבועות מתאים גם לעולים חדשים שלא דוברים עברית מתקדמת. כולל mock interviews עם מראיינים בכירים.",
-      en: "ENP's PRESEN — 8-week course suitable also for new olim without advanced Hebrew. Includes mock interviews with senior interviewers.",
-      am: "የ ENP PRESEN — የ8 ሳምንት ኮርስ።",
-    },
-    bodies: {
-      he: `## למי
-
-בוגרי כל קורס/תואר/bootcamp שמתכוננים לחיפוש עבודה. מתאים גם לעולים חדשים — מקובל פתיחת שיחה בעברית בסיסית + עברית טכנית מקצועית.
-
-## מה כלול
-
-- 8 שבועות × 4 שעות
-- כתיבת CV מותאם לתפקיד
-- ראיון התנהגותי + ראיון טכני
-- מצגות
-- Mock interviews עם מראיינים מ-15 חברות שותפות
-- ליווי אישי בכל ראיון בפועל בחודש שאחרי הקורס
-
-## ראו גם
-
-`,
-      en: `## Who fits
-
-Graduates of any course/degree/bootcamp preparing for job search. Suitable also for new olim — basic Hebrew + technical/professional Hebrew is enough.
-
-## What's included
-
-- 8 weeks × 4 hours
-- Role-specific CV writing
-- Behavioral + technical interview
-- Presentations
-- Mock interviews with interviewers from 15 partner companies
-- Personal coaching for each real interview in the month following the course
-
-## See also
-
-`,
-      am: `## ለማን
-
-ለሥራ ፍለጋ የሚዘጋጁ ሁሉ።
-
-## የሚካተት
-
-- 8 ሳምንት × 4 ሰዓት
-- Mock interviews ከ15 አጋር ኩባንያዎች ጋር`,
-    },
-  },
+  // TED-158: FAQ "interview-prep-basic-hebrew" deleted. The entire
+  // entry described "PRESEN של ENP" — an 8-week interview-prep course
+  // with "mock interviews with interviewers from 15 partner companies".
+  // No such course exists. ENP runs no employment programme at all, and
+  // the course is not attributable to any other operator.
   {
     slug: "civil-service-via-atidim",
-    orderIndex: 12,
+    orderIndex: 11,
     trackSlug: "public-sector",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "כניסה לשירות הציבורי דרך עתידים",
       en: "Civil-service entry via Atidim",
       am: "በ Atidim በኩል ወደ መንግስት አገልግሎት መግቢያ",
     },
     shortAnswer: {
-      he: "עתידים אקדמי — מסלול יוקרתי לבוגרי תיכון מצטיינים (90+ ממוצע). תקצוב מלא של תואר + 3 שנות שירות מובטחות במשרד מרכזי.",
-      en: "Atidim Academic — prestigious track for top high-school grads (90+ average). Full degree funding + 3 guaranteed years in a central ministry.",
-      am: "Atidim Academic — ለልዩ ምሩቃን (90+ መካከለኛ)።",
+      he: 'עתידים מפעילה מסלולים בצה"ל ובתעשייה. אך הכניסה לשירות המדינה עוברת דרך תוכנית אחרת — "צוערים לשירות המדינה".',
+      en: "Atidim runs IDF and industry tracks. But entry into the civil service runs through a different programme — the Civil Service Cadets.",
+      am: "አቲዲም በ IDF እና በኢንዱስትሪ መንገዶችን ያካሂዳል። ወደ መንግሥት አገልግሎት መግቢያ ግን በሌላ ፕሮግራም በኩል ነው።",
     },
     bodies: {
-      he: `## מסלולי עתידים
+      he: `## תיקון חשוב לדף הזה
 
-- **עתידים אקדמי** — תואר ראשון/שני בחסות מלאה (~₪40-60K לשנה) + 3 שנות שירות ציבורי מובטחות
-- **עתידים צה"לי** — תפקיד טכנולוגי בצה"ל (Mamram, 8200) → תואר אחרי שחרור → שירות ציבורי
+הדף תיאר בעבר "עתידים אקדמי" ו"עתידים צה"לי" כמסלולים המובילים לשירות הציבורי. שני השמות אינם שמות התוכניות של עתידים, וההנחה עצמה שגויה: **מסלולי עתידים בצה"ל מובילים ליחידות טכנולוגיות בצה"ל, לא לשירות המדינה.** הצינור לשירות המדינה הוא תוכנית נפרדת — **"צוערים לשירות המדינה"**.
 
-## תוצאות מתועדות
+## מה עתידים באמת מפעילה
 
-- 95% מסיימים את התואר במועד
-- 100% משולבים בשירות ציבורי תוך 6 חודשים מסיום הלימודים
-- 70% נשארים בשירות גם אחרי תקופת ההתחייבות
+- **עתידים בצה"ל** — ובתוכה העתודה האקדמית, מכינות קדם-אקדמיות, ו"פעמי עתידים"
+- **עתידים לתעשייה ולהייטק**
+- **לוחמים להייטק**
+- **עתידים להתגייס**
+
+## תנאי קבלה — מה שכן ומה שלא
+
+עתידים **אינה מפרסמת סף ממוצע בגרות מספרי**. הקבלה היא הערכה אישית, ולארגון יש מכינה קדם-אקדמית ייעודית למועמדים שצריכים לשפר את הרקע הלימודי שלהם — מה שסותר את הרעיון של רף קשיח.
+
+*"ממוצע 90+" ו"מימון של ₪40-60K לשנה" שהופיעו כאן אינם מפורסמים בשום מקום באתר הארגון והוסרו. כך גם השיעורים "95% / 100% / 70%" — עתידים אינה מפרסמת שיעורי סיום, השמה או שימור כלל.*
 
 ## ראו גם
 
 - [Atidim Academic — תכנית](/he/careers/programs/atidim-academic)
 - [Atidim Military — תכנית](/he/careers/programs/atidim-military)
-- [ייצוג הולם — דף הסבר](/he/careers/affirmative-action)`,
-      en: `## Atidim tracks
+- [ייצוג הולם — דף הסבר](/he/careers/affirmative-action)
 
-- **Atidim Academic** — fully-sponsored bachelor's/master's (~₪40-60K/year) + 3 guaranteed years of civil service
-- **Atidim Military** — technological role in IDF (Mamram, 8200) → degree post-release → civil service
+מקורות: [עתידים](https://www.atidim.org/) · [צוערים לשירות המדינה](https://www.gov.il/he/departments/general/cadets_for_state_service) · נבדק ספטמבר 2026.`,
+      en: `## An important correction to this page
 
-## Documented outcomes
+The page previously described "Atidim Academic" and "Atidim Military" as tracks leading to the civil service. Neither is the name of an Atidim programme, and the premise is wrong: **Atidim's IDF tracks lead to IDF technological units, not to the civil service.** The pipeline into the civil service is a separate programme — the **Civil Service Cadets** (צוערים לשירות המדינה).
 
-- 95% complete their degree on time
-- 100% placed in civil service within 6 months of graduating
-- 70% stay in service after the commitment period
+## What Atidim actually runs
+
+- **Atidim in the IDF** — including the academic reserve, pre-academic mechinot, and Pa'amei Atidim
+- **Atidim for Industry and High-Tech**
+- **Combat Soldiers to High-Tech**
+- **Atidim to Enlist**
+
+## Admission — what is and is not published
+
+Atidim **publishes no numeric matriculation threshold**. Admission is a personal assessment, and the organisation runs a pre-academic mechina specifically for candidates who need to improve their academic record — which cuts against the idea of a hard bar.
+
+*The "90+ average" and the "~₪40-60K/year" sponsorship figure that appeared here are published nowhere on the organisation's site and were removed. So were the "95% / 100% / 70%" rates — Atidim publishes no completion, placement or retention figures at all.*
 
 ## See also
 
 - [Atidim Academic — program](/en/careers/programs/atidim-academic)
 - [Atidim Military — program](/en/careers/programs/atidim-military)
 - [Affirmative action — explainer](/en/careers/affirmative-action)`,
-      am: `## የ Atidim መንገዶች
+      am: `## ለዚህ ገጽ አስፈላጊ ማስተካከያ
 
-- Atidim Academic — ሙሉ የተደገፈ ዲግሪ + 3 ዓመት የመንግስት አገልግሎት
-- Atidim Military — በ IDF ቴክኖሎጂ ሚና`,
+"Atidim Academic" እና "Atidim Military" የአቲዲም ፕሮግራሞች ስሞች አይደሉም። **የአቲዲም የ IDF መንገዶች ወደ IDF ቴክኖሎጂ ክፍሎች ይመራሉ እንጂ ወደ መንግሥት አገልግሎት አይደለም።** ወደ መንግሥት አገልግሎት የሚወስደው የተለየ ፕሮግራም ነው።
+
+## አቲዲም በእውነት የሚያካሂደው
+
+- **አቲዲም በ IDF**
+- **አቲዲም ለኢንዱስትሪ እና ሃይ-ቴክ**
+- **ተዋጊዎች ወደ ሃይ-ቴክ**
+
+## የመግቢያ መስፈርት
+
+አቲዲም **የቁጥር የባግሩት መስፈርት አያትምም**። መግቢያው የግል ግምገማ ነው። እዚህ የነበሩት "90+" እና "₪40-60K" እንዲሁም "95% / 100% / 70%" መጠኖች የትም አይታተሙም፤ ተወግደዋል።`,
     },
   },
   {
     slug: "entrepreneurship-funding-community",
-    orderIndex: 13,
+    orderIndex: 12,
     trackSlug: "entrepreneurship",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "יזמות לבני העדה — תוכניות ומימון",
       en: "Entrepreneurship for the community — programs and funding",
       am: "ለማህበረሰብ ስራ ፈጠራ — ፕሮግራሞችና ገንዘብ",
     },
     shortAnswer: {
-      he: "UJIA-KIEDF מספקת הלוואות עד ₪150K עם ריבית סובסידית. ScaleUp Velocity מציעה bootcamp 16 שבועות עם seed funding לזוכים.",
-      en: "UJIA-KIEDF offers loans up to ₪150K with subsidized interest. ScaleUp Velocity runs a 16-week bootcamp with seed funding for awardees.",
-      am: "UJIA-KIEDF እስከ ₪150K ብድር ይሰጣል።",
+      he: "קרן ההלוואות של UJIA-KIEDF לעסקים בקהילה קיימת, אך אף אחד מהגופים אינו מפרסם תקרת הלוואה — בקשו את התנאים מהקרן. הסכומים שהופיעו כאן הוסרו.",
+      en: "The UJIA-KIEDF loan fund for community businesses is real, but neither body publishes a loan ceiling — ask the fund for its terms. The figures that appeared here were removed.",
+      am: "የ UJIA-KIEDF ብድር ፈንድ አለ፣ ነገር ግን የብድር ጣሪያ የትም አይታተምም። ከፈንዱ ራሱ ውሉን ይጠይቁ።",
     },
     bodies: {
-      he: `## אופציות מימון עיקריות
+      he: `## אופציות מימון
 
-- **UJIA-KIEDF הלוואה** — עד ₪150K, ריבית סובסידית, ליווי 12 חודשים
-- **ScaleUp Velocity** — 16 שבועות + seed funding ל-3 צוותים מצטיינים: ₪50-150K לכל אחד
-- **מענק עסק קטן (משרד הכלכלה)** — עד ₪40K לעסק חדש בעל פוטנציאל גידול
+**קרן ההלוואות UJIA-KIEDF** — קרן הלוואות לעסקים של בני הקהילה, בשיתוף KIEDF (קרן קורת) וזרוע ההשקעות של UJIA. הקרן קיימת ופעילה.
 
-## איך לבחור
+**מה איננו יכולים לומר לכם:** לא UJIA ולא KIEDF מפרסמים תקרת הלוואה ללווה. האתר הזה נקב בעבר ב-₪200,000 בעמוד אחד וב-₪150,000 בעמוד אחר — שני מספרים סותרים, שאף אחד מהם לא נמצא במקור של הקרן. שניהם הוסרו. **בקשו את התקרה, הריבית ותנאי הערבויות ישירות מהקרן, בכתב.**
 
-- אם יש לך כבר עסק עם הוכחת הכנסה → UJIA-KIEDF (הלוואה זולה)
-- אם אתה בשלב רעיון בלבד → ScaleUp Velocity (תכנית הכשרה + מימון אם תזכה)
-- אם אתה מובטל ומחפש להתחיל קטן → מענק עסק קטן
+**מסלולי משרד הכלכלה והסוכנות לעסקים קטנים ובינוניים** — קיימות תוכניות סיוע והלוואות בערבות מדינה. התנאים משתנים לפי מסלול; בדקו באתר הסוכנות.
+
+## מה הוסר מהדף הזה
+
+"ScaleUp Velocity — 16 שבועות + seed funding של ₪50-150K ל-3 צוותים". הארגון **קיים** — זו זרוע ההון האנושי הקשורה ל-Start-Up Nation Central, והיא מפעילה תוכניות הכשרה כמו Excellenteam ו-Cyber4s. אבל **היא גוף הכשרה, לא משקיע**: אין bootcamp של 16 שבועות, אין seed funding ואין "צוותים זוכים". גם "מענק עסק קטן עד ₪40K" לא נמצא במקור ראשוני.
 
 ## ראו גם
 
 - [UJIA-KIEDF — זכות](/he/rights/ujia-kiedf-business-loans)
-- [Entrepreneurship — סקירה](/he/careers/entrepreneurship)`,
-      en: `## Main funding options
+- [Entrepreneurship — סקירה](/he/careers/entrepreneurship)
 
-- **UJIA-KIEDF loan** — up to ₪150K, subsidized interest, 12-month mentorship
-- **ScaleUp Velocity** — 16 weeks + seed funding for 3 top teams: ₪50-150K each
-- **Small business grant (Ministry of Economy)** — up to ₪40K for a new business with growth potential
+מקורות: [UJIA — תמיכה בעסקים בישראל](https://ujia.org/connect/supporting-israel/business/) · [הסוכנות לעסקים קטנים ובינוניים](https://www.gov.il/he/departments/small_and_medium_business_agency) · נבדק ספטמבר 2026.`,
+      en: `## Funding options
 
-## How to choose
+**The UJIA-KIEDF loan fund** — a loan fund for community-owned businesses, run with KIEDF (the Koret Israel Economic Development Funds) and UJIA's investment arm. The fund is real and operating.
 
-- If you have an active business with proven revenue → UJIA-KIEDF (cheap loan)
-- If at idea stage → ScaleUp Velocity (training + funding if you win)
-- If unemployed and starting small → small business grant
+**What we cannot tell you:** neither UJIA nor KIEDF publishes a borrower ceiling. This site previously stated ₪200,000 on one page and ₪150,000 on another — two contradictory numbers, neither of which appears in any fund source. Both were removed. **Ask the fund directly, in writing, for the ceiling, the interest rate and the guarantor terms.**
+
+**Ministry of Economy and Small and Medium Business Agency tracks** — assistance programmes and state-guaranteed loans exist. Terms vary by track; check the agency's own site.
+
+## What was removed from this page
+
+"ScaleUp Velocity — 16 weeks + ₪50-150K seed funding for 3 top teams". The organisation **exists** — it is the human-capital arm affiliated with Start-Up Nation Central, running training programmes such as Excellenteam and Cyber4s. But **it is a training body, not an investor**: there is no 16-week bootcamp, no seed funding and no "winning teams". The "small business grant up to ₪40K" was also not found in any primary source.
 
 ## See also
 
 - [UJIA-KIEDF — right](/en/rights/ujia-kiedf-business-loans)
 - [Entrepreneurship — overview](/en/careers/entrepreneurship)`,
-      am: `## ዋና የገንዘብ አማራጮች
+      am: `## የገንዘብ አማራጮች
 
-- UJIA-KIEDF — እስከ ₪150K
-- ScaleUp Velocity — 16 ሳምንት + seed funding`,
+**የ UJIA-KIEDF ብድር ፈንድ** — ለማህበረሰቡ ንግዶች እውነተኛ እና ንቁ ፈንድ ነው።
+
+**ልንነግርዎት የማንችለው:** UJIA ወይም KIEDF የብድር ጣሪያ አያትሙም። ይህ ገጽ ቀደም ሲል ₪200,000 እና ₪150,000 — ሁለት የሚጋጩ ቁጥሮች — ገልጾ ነበር። ሁለቱም ተወግደዋል። **ውሉን በጽሑፍ ከፈንዱ ራሱ ይጠይቁ።**
+
+## ከዚህ ገጽ የተወገደው
+
+"ScaleUp Velocity — 16 ሳምንት + seed funding"። ድርጅቱ **አለ**፣ ነገር ግን **የስልጠና አካል ነው እንጂ ባለሀብት አይደለም**።`,
     },
   },
   {
     slug: "subsidized-trades-electrician-plumber",
-    orderIndex: 14,
+    orderIndex: 13,
     trackSlug: "trades",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "מקצועות יד מסובסדים — חשמל/אינסטלציה",
       en: "Subsidized trades — electrical/plumbing",
       am: "የተደገፉ ሙያዎች — ኤሌክትሪክ/ቧንቧ",
     },
     shortAnswer: {
-      he: "100% מסובסד ע״י משרד העבודה לבני קהילה. תקציב פתוח 2024. רישום דרך לשכת תעסוקה אזורית.",
-      en: "100% subsidized by the Ministry of Labor for community members. 2024 budget is open. Register through your regional Employment Service office.",
-      am: "በስራ ሚኒስቴር 100% የተደገፈ።",
+      he: "מסובסד בשיעור 90% או 80% דרך תוכנית השוברים, לפי רמת הביקוש למקצוע. רישום דרך לשכת תעסוקה אזורית.",
+      en: "Subsidised at 90% or 80% through the voucher scheme, depending on how in-demand the trade is. Register through your regional Employment Service office.",
+      am: "በቫውቸር ፕሮግራም 90% ወይም 80% የተደገፈ።",
     },
     bodies: {
-      he: `## מה כלול במלגה
+      he: `## מה כלול
 
-- שכר לימוד מלא (₪0 לסטודנט)
-- ספרי לימוד וכלים בסיסיים
-- מענק קיום ₪2,500-3,500 לחודש (תלוי במצב משפחתי)
+- **סבסוד שכר הלימוד** — 90% למקצוע בביקוש גבוה, 80% לביקוש בינוני, בתקרה של כ-6,000-12,000 ₪. יש תמיד השתתפות עצמית
 - אישור רשמי של משרד העבודה בסיום
+- ייתכן שתהיו זכאים גם ל**מלגת הכשרה (BOOST)** לעד 6 חודשים — נדרש קריטריון נוסף (למשל מגורים באשכול 1-4 או באזור עדיפות). הסכום אינו מפורסם במקור ראשוני
+
+*הדף קבע בעבר "שכר לימוד מלא (₪0 לסטודנט)" ו"מענק קיום ₪2,500-3,500 לחודש". שניהם היו שגויים.*
 
 ## תקופת ההכשרה
 
@@ -794,13 +958,16 @@ Graduates of any course/degree/bootcamp preparing for job search. Suitable also 
 
 ## ראו גם
 
-- [Trades — סקירה](/he/careers/trades)`,
-      en: `## What the scholarship covers
+- [Trades — סקירה](/he/careers/trades)
 
-- Full tuition (₪0 to the student)
-- Textbooks and basic tools
-- Living grant of ₪2,500-3,500/month (family-status dependent)
-- Official Ministry of Labor certification at completion
+מקור: [מינהל הכשרות מקצועיות, משרד העבודה](https://www.gov.il/he/departments/units/manpower-training-bureau) · נבדק ספטמבר 2026.`,
+      en: `## What is covered
+
+- **Tuition subsidy** — 90% for a high-demand trade, 80% for medium-demand, capped at roughly ₪6,000-12,000. There is always a co-payment
+- Official Ministry of Labour certification at completion
+- You may also qualify for the **BOOST training stipend** for up to 6 months — this requires a further criterion (for example residence in socioeconomic clusters 1-4 or a priority area). Its amount is not published by a primary source
+
+*This page previously said "full tuition (₪0 to the student)" and a "living grant of ₪2,500-3,500/month". Both were wrong.*
 
 ## Training duration
 
@@ -814,176 +981,159 @@ Register through your regional Employment Service office — requires national I
 ## See also
 
 - [Trades — overview](/en/careers/trades)`,
-      am: `## በስኮላርሺፕ የሚካተት
+      am: `## የሚካተት
 
-- ሙሉ የማስተማሪያ ክፍያ
-- መጻሕፍትና መሳሪያዎች
-- የመኖሪያ ስጦታ`,
+- **የትምህርት ክፍያ ድጋፍ** — ለከፍተኛ ፍላጎት ሙያ 90%፣ ለመካከለኛ 80%፣ ጣሪያው ወደ 6,000-12,000 ₪። ሁልጊዜ የራስ መዋጮ አለ
+- በመጨረሻ የሥራ ሚኒስቴር ኦፊሴላዊ ማረጋገጫ
+- ለ**BOOST የስልጠና ስኮላርሺፕ** እስከ 6 ወር ብቁ ሊሆኑ ይችላሉ — ተጨማሪ መስፈርት ይጠይቃል። መጠኑ በዋና ምንጭ አይታተምም`,
     },
   },
   {
     slug: "single-mothers-employment-community",
-    orderIndex: 15,
-    reviewedAt: "2026-05-01",
+    orderIndex: 14,
+    reviewedAt: "2026-09-02",
     question: {
       he: "תעסוקה לאמהות חד-הוריות מהקהילה",
       en: "Employment for single mothers in the community",
       am: "ለማህበረሰቡ ብቸኛ እናቶች ቅጥር",
     },
     shortAnswer: {
-      he: "שילוב של מענק חודשי, סבסוד צהרון, וקורסי הכשרה בשעות גמישות. JDC-Ashalim Strong Families היא התכנית המרכזית.",
-      en: "Combination of monthly grant, daycare subsidy, and flexible-hour training courses. JDC-Ashalim Strong Families is the main program.",
-      am: "ወርሃዊ ስጦታ + ጁምጁምታ ድጋፍ + ተመጣጣኝ ሰዓት ስልጠናዎች።",
+      he: "הזכויות הרלוונטיות קיימות — אך הן נקבעות לפי הכנסה והרכב משפחה, לא לפי מוצא. הסבסוד לצהרון ולמעון הוא המשמעותי ביותר, וכדאי לבדוק דרגה מדי שנה.",
+      en: "The relevant benefits exist — but they are set by income and family composition, not by origin. The daycare subsidy is the most significant, and it is worth checking your grade each year.",
+      am: "ጠቃሚዎቹ መብቶች አሉ — ነገር ግን በገቢ እና በቤተሰብ ስብጥር ይወሰናሉ እንጂ በተወላጅነት አይደለም።",
     },
     bodies: {
-      he: `## הזכויות הזמינות
+      he: `## הזכויות הזמינות — ואיך הן באמת נקבעות
 
-- **מענק חד-הורית** — תוספת לסל קליטה / לקצבת ילדים
-- **סבסוד צהרון** — עד 80% מהעלות לבני קהילה
-- **תקנת חופשת לידה ארוכה** — 28 שבועות (שבועיים יותר מסטנדרט)
+**סבסוד מעון יום וצהרון** — הזכות המשמעותית ביותר כאן. הדרגה נקבעת לפי **הכנסה לנפש ולפי היקף העבודה או הלימודים של ההורה** (לפחות 32 שעות שבועיות), בסולם של 15 דרגות. להורה עצמאי ההכנסה מחושבת לפי 50% מהברוטו חלקי מספר הנפשות ועוד אחד — חישוב שמיטיב עם משפחות חד-הוריות.
 
-## תכנית JDC-Ashalim Strong Families
+**חשוב:** אין בסבסוד הזה **שום קריטריון של מוצא**. דף זה קבע בעבר "סבסוד צהרון עד 80% לבני קהילה", כאילו מדובר בזכות עדתית. זו אינה זכות עדתית אלא זכות שנקבעת לפי הכנסה — ולכן כדאי לבדוק את הדרגה שלכם כל שנה, גם אם בשנה שעברה לא הייתם זכאים.
 
-ליווי משפחתי + תעסוקה — מרכזי-ארץ ב-נתניה, רחובות, באר-שבע, חיפה. כולל בנק זמנים גמיש, מנטורית קהילתית, וחיבור לעבודה הולמת.
+**סל קליטה להורה עצמאי** — סכום הסל להורה עצמאי גבוה יותר (35,071 ₪ לעומת 21,694 ₪ ליחיד). זה **תעריף גבוה יותר, לא מענק נפרד**.
+
+**קצבת ילדים** — נקבעת לפי מספר הילדים בלבד. **אין בה תוספת להורה עצמאי.**
+
+**הבטחת הכנסה ומענק לימודים** — למי שזכאי: תעריפי הבטחת הכנסה גבוהים יותר להורה עצמאי, ומענק לימודים שנתי לכל ילד באוגוסט.
+
+## מה הוסר מהדף הזה
+
+- "תקנת חופשת לידה ארוכה — 28 שבועות (שבועיים יותר מסטנדרט)". **אין דבר כזה.** חופשת הלידה היא 26 שבועות (15 בתשלום מביטוח לאומי), ואין וריאנט של 28 שבועות, לא לחד-הוריות ולא לבני הקהילה.
+- "תכנית JDC-Ashalim Strong Families" ומרכזיה בנתניה, רחובות, באר-שבע וחיפה. תוכנית בשם הזה אינה מופיעה אצל הג'וינט. עבודתו עם משפחות יוצאות אתיופיה מתנהלת בתוכנית **PACT (פאקט)**, שעוברת ל"התחלה טובה".
 
 ## ראו גם
 
 - [Daycare subsidy — זכות](/he/rights/daycare-subsidy)
 - [Family counseling — זכות](/he/rights/family-counseling)
-- [JDC-Ashalim — פרופיל ארגון](/he/orgs/jdc-ashalim)`,
-      en: `## Available rights
+- [JDC-Ashalim — פרופיל ארגון](/he/orgs/jdc-ashalim)
 
-- **Single-parent grant** — addition to klita basket / child allowance
-- **Daycare subsidy** — up to 80% of cost for community members
-- **Extended parental leave** — 28 weeks (2 weeks longer than standard)
+מקורות: [משרד העלייה והקליטה — סל קליטה](https://www.gov.il/he/pages/absorption_basket) · [ביטוח לאומי — קצבת ילדים](https://www.btl.gov.il/benefits/children/Pages/default.aspx) · [ביטוח לאומי — דמי לידה](https://www.btl.gov.il/benefits/maternity/Pages/default.aspx) · נבדק ספטמבר 2026.`,
+      en: `## Available benefits — and how they are actually set
 
-## JDC-Ashalim Strong Families
+**Daycare and after-school subsidy** — the most significant benefit here. The grade is set by **per-capita family income and by the parent's working or study hours** (at least 32 a week), on a 15-grade scale. For a single parent, income is calculated as 50% of gross divided by the number of family members plus one — a calculation that favours single-parent families.
 
-Family + employment guidance — regional centers in Netanya, Rehovot, Beersheba, Haifa. Includes flexible-time bank, community mentor, and matching to suitable work.
+**Important:** this subsidy has **no origin criterion of any kind**. This page previously said "daycare subsidy — up to 80% of cost for community members", framing it as an ethnic entitlement. It is not; it is income-based — which is why it is worth rechecking your grade every year, even if you did not qualify last year.
+
+**Absorption basket for a single parent** — the single-parent rate is higher (₪35,071 against ₪21,694 for a single person). That is a **higher rate, not a separate grant**.
+
+**Child allowance** — set solely by the number of children. **It carries no single-parent supplement.**
+
+**Income support and the study grant** — for those eligible: higher income-support rates for a single parent, and an annual study grant per child each August.
+
+## What was removed from this page
+
+- "Extended parental leave — 28 weeks (2 weeks longer than standard)". **No such thing exists.** Statutory leave is 26 weeks (15 paid by National Insurance), and there is no 28-week variant, for single parents or for community members.
+- "JDC-Ashalim Strong Families" and its centres in Netanya, Rehovot, Beersheba and Haifa. No programme by that name appears at JDC. Its work with Ethiopian-Israeli families runs through **PACT**, which is transitioning to "A Good Start".
 
 ## See also
 
 - [Daycare subsidy — right](/en/rights/daycare-subsidy)
 - [Family counseling — right](/en/rights/family-counseling)
 - [JDC-Ashalim — organization profile](/en/orgs/jdc-ashalim)`,
-      am: `## ያሉ መብቶች
+      am: `## ያሉ መብቶች — እና እንዴት እንደሚወሰኑ
 
-- ብቸኛ ወላጅ ስጦታ
-- የጁምጁምታ ድጋፍ
-- ረዥም ወላጅ ፈቃድ`,
+**የመዋዕለ ሕፃናት ድጋፍ** — እዚህ ትልቁ መብት። ደረጃው በ**የነፍስ ወከፍ የቤተሰብ ገቢ እና በወላጁ የሥራ ሰዓት** (በሳምንት ቢያንስ 32) ይወሰናል። **ምንም የተወላጅነት መስፈርት የለውም።** ይህ ገጽ ቀደም ሲል "ለማህበረሰብ አባላት እስከ 80%" ብሎ ነበር — ስህተት ነው። በገቢ ላይ የተመሠረተ ስለሆነ በየዓመቱ ደረጃዎን ይመርምሩ።
+
+**የመግቢያ ቅርጫት ለብቸኛ ወላጅ** — 35,071 ₪ (ከ21,694 ₪ ይልቅ)። ይህ **ከፍ ያለ ተመን ነው እንጂ የተለየ ስጦታ አይደለም**።
+
+**የልጆች አበል** — በልጆች ብዛት ብቻ ይወሰናል። **የብቸኛ ወላጅ ተጨማሪ የለውም።**
+
+## የተወገደው
+
+- "28 ሳምንት የወሊድ ፈቃድ"። **እንዲህ ያለ ነገር የለም** — ሕጋዊው 26 ሳምንት ነው (15 የሚከፈልበት)።
+- "JDC-Ashalim Strong Families" — በዚህ ስም ፕሮግራም የለም። የጆይንት ሥራ በ **PACT** በኩል ነው።`,
     },
   },
-  {
-    slug: "matriculation-and-vocational-training-parallel",
-    orderIndex: 16,
-    trackSlug: "tech",
-    reviewedAt: "2026-05-01",
-    question: {
-      he: "השלמת בגרות + הכשרה מקצועית במקביל",
-      en: "Matriculation completion + vocational training in parallel",
-      am: "የብቃት ምስክር መጨረስ + የሙያ ስልጠና በትይዩ",
-    },
-    shortAnswer: {
-      he: "Hila מציעה מסלול 18-24 חודש המשלב השלמת בגרות עם bootcamp הייטק ראשוני. המסלול מקצר זמן עד שתעסוקה ב-12+ חודשים.",
-      en: "Hila offers an 18-24 month track combining matriculation completion with an initial tech bootcamp. The track shortens time-to-employment by 12+ months.",
-      am: "ሂላ የብቃት ምስክርን ከቴክ ቡት ካምፕ ጋር ያጣምራል።",
-    },
-    bodies: {
-      he: `## איך זה עובד
-
-12-18 חודשים של השלמת בגרות (5 יחידות מתמטיקה + אנגלית + מדעים) — במקביל ל-6-12 חודשי bootcamp פיתוח ראשוני (front-end / QA).
-
-## תוצאות מתועדות
-
-- 65% מסיימים את הבגרות בהצלחה (יעד: 80% עד 2027)
-- 40% מהבוגרים ממשיכים ל-bootcamp הייטק מלא (כמו ENP Tech-Career)
-
-## כסף
-
-מלגת קיום ₪3,500/חודש (תלוי בזמינות תקציב משרד החינוך).
-
-## ראו גם
-
-- [Matriculation grant — זכות](/he/rights/matriculation-grant)`,
-      en: `## How it works
-
-12-18 months of matriculation completion (5-unit math + English + science) — in parallel with 6-12 months of intro dev bootcamp (front-end / QA).
-
-## Documented outcomes
-
-- 65% complete matriculation successfully (target: 80% by 2027)
-- 40% continue into a full tech bootcamp (e.g. ENP Tech-Career)
-
-## Money
-
-Living grant of ₪3,500/month (subject to Ministry of Education budget).
-
-## See also
-
-- [Matriculation grant — right](/en/rights/matriculation-grant)`,
-      am: `## እንዴት ይሰራል
-
-12-18 ወር የብቃት ምስክር መጨረስ — ከ6-12 ወር ቴክ ቡት ካምፕ ጋር በትይዩ።`,
-    },
-  },
+  // TED-158: FAQ "matriculation-and-vocational-training-parallel"
+  // deleted. It described an 18-24 month "Hila" track combining bagrut
+  // completion with a tech bootcamp and paying a ₪3,500/month living
+  // grant, with 65% and 40% outcome rates. No such programme exists.
+  // Three real bodies are named Hila/היל"ה — a Ministry of Education
+  // dropout-education programme, a parent-advocacy NGO, and a dissolved
+  // עמותה — and none of them matches any part of the description.
   {
     slug: "military-tracks-with-career-employment",
-    orderIndex: 17,
+    orderIndex: 15,
     trackSlug: "public-sector",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "תוכניות צבאיות עם מסלול תעסוקתי",
       en: "Military tracks with a career path",
       am: "የሙያ መንገድ ያለው ወታደራዊ ፕሮግራሞች",
     },
     shortAnswer: {
-      he: "Aharai pre-army (לפני הצבא) → עתידים צה״לי (במהלך השירות) → עתידים אקדמי (אחרי השחרור). שלושה שלבים שמובילים לתפקיד ציבורי בכיר.",
-      en: "Aharai pre-army → Atidim Military (during service) → Atidim Academic (after release). Three stages leading to a senior public-sector role.",
-      am: "Aharai → Atidim Military → Atidim Academic።",
+      he: 'אחרי! מפעילה מכינות קדם-צבאיות, ועתידים מפעילה מסלולים בצה"ט ובתעשייה. אך זה אינו מסלול רציף מובטח לשירות המדינה, כפי שנכתב כאן בעבר.',
+      en: "Aharai! runs pre-military mechinot and Atidim runs IDF and industry tracks. But this is not a guaranteed continuous pipeline into the civil service, as this page previously said.",
+      am: "አኻራይ! ቅድመ-ወታደራዊ ማሰልጠኛዎችን ያካሂዳል፤ አቲዲም በ IDF እና በኢንዱስትሪ መንገዶችን ያካሂዳል። ነገር ግን ወደ መንግሥት አገልግሎት የተረጋገጠ ተከታታይ መንገድ አይደለም።",
     },
     bodies: {
-      he: `## שלוש שלבים
+      he: `## מה קיים באמת
 
-1. **Aharai pre-army** — מכינה צבאית לבני 17-18 (כיתה י"ב). מכינה לתפקיד יחידה איכותית
-2. **Atidim צה"לי** — תפקיד טכנולוגי בצה"ל (mamram, 8200, מודיעין) — 4 שנות שירות
-3. **Atidim Academic** — תואר ראשון/שני בחסות + שירות ציבורי 3 שנים מובטחות
+**אחרי! (Aharai)** — עמותה שהוקמה ב-1997 ומפעילה "מכינות אור", חמש מכינות עירוניות של חצי שנה (יבנה, ירושלים, שלומי, לוד, דימונה), כ-250 משתתפים בשנה.
 
-## למה זה מסלול חזק
+**חשוב לדעת:** הארגון **אינו מפרסם מסלול ייעודי ליוצאי אתיופיה**. גורמים שלישיים מזכירים מסלול כזה, אך הארגון עצמו לא — ולכן איננו מפרסמים זאת כזכות. פנו אליו ישירות ובררו.
 
-הזיהוי "מסלול שירות מלא" פותח דלתות לתפקידי ניהול ב-30+ שנות הקריירה הראשונה. רוב הבכירים בשירות הציבורי הישראלי עברו מסלול דומה.
+**עתידים** — מפעילה את "עתידים בצה"ל" (ובתוכה העתודה האקדמית ומכינות קדם-אקדמיות), "עתידים לתעשייה ולהייטק", "לוחמים להייטק" ו"עתידים להתגייס".
+
+## התיקון החשוב
+
+הדף הציג בעבר שרשרת של שלושה שלבים — מכינה, "עתידים צה"לי", ואז "עתידים אקדמי" — שמובילה לתפקיד ציבורי בכיר. **זו אינה שרשרת קיימת.** מסלולי עתידים בצה"ל מובילים ליחידות טכנולוגיות בצה"ל; הצינור לשירות המדינה הוא תוכנית נפרדת, **"צוערים לשירות המדינה"**. גם הקביעה ש"רוב הבכירים בשירות הציבורי הישראלי עברו מסלול דומה" לא נמצאה בשום מקור והוסרה.
 
 ## ראו גם
 
-- [Aharai pre-army — זכות](/he/rights/aharai-pre-army)
 - [Atidim Academic — תכנית](/he/careers/programs/atidim-academic)
 - [Atidim Military — תכנית](/he/careers/programs/atidim-military)`,
-      en: `## Three stages
+      en: `## What actually exists
 
-1. **Aharai pre-army** — pre-military mechina for 17-18-year-olds. Prepares for elite-unit roles
-2. **Atidim Military** — technological role in IDF (Mamram, 8200, Intelligence) — 4 years of service
-3. **Atidim Academic** — fully-sponsored BA/MA + guaranteed 3-year civil service
+**Aharai!** — a nonprofit founded in 1997 running "Mechinot Or", five half-year urban pre-military academies (Yavne, Jerusalem, Shlomi, Lod, Dimona), with around 250 participants a year.
 
-## Why it's a strong track
+**Worth knowing:** the organisation **publishes no Ethiopian-Israeli-specific track**. Third parties mention one; the operator itself does not — so it is not stated here as an entitlement. Approach them directly and ask.
 
-Identifying as "full service path" opens doors to management roles for 30+ years of career. Most senior figures in Israeli civil service went through a similar pipeline.
+**Atidim** — runs "Atidim in the IDF" (including the academic reserve and pre-academic mechinot), "Atidim for Industry and High-Tech", "Combat Soldiers to High-Tech" and "Atidim to Enlist".
+
+## The correction that matters
+
+This page previously presented a three-stage chain — mechina, "Atidim Military", then "Atidim Academic" — leading to a senior public-sector role. **That chain does not exist.** Atidim's IDF tracks lead to IDF technological units; the pipeline into the civil service is a separate programme, the **Civil Service Cadets**. The claim that "most senior figures in Israeli civil service went through a similar pipeline" was found in no source and was removed.
 
 ## See also
 
-- [Aharai pre-army — right](/en/rights/aharai-pre-army)
 - [Atidim Academic — program](/en/careers/programs/atidim-academic)
 - [Atidim Military — program](/en/careers/programs/atidim-military)`,
-      am: `## ሦስት ደረጃዎች
+      am: `## በእውነት ያለው
 
-1. Aharai pre-army
-2. Atidim Military
-3. Atidim Academic`,
+**አኻራይ!** — በ1997 የተቋቋመ ማህበር፤ አምስት የግማሽ ዓመት የከተማ ቅድመ-ወታደራዊ ማሰልጠኛዎችን ያካሂዳል። ድርጅቱ **ለኢትዮጵያ ተወላጆች የተለየ መንገድ አያትምም**።
+
+**አቲዲም** — በ IDF እና በኢንዱስትሪ መንገዶችን ያካሂዳል።
+
+## አስፈላጊው ማስተካከያ
+
+ይህ ገጽ ቀደም ሲል ወደ ከፍተኛ የመንግሥት ሚና የሚያደርስ የሦስት ደረጃ ሰንሰለት አቅርቦ ነበር። **ይህ ሰንሰለት የለም።** የአቲዲም የ IDF መንገዶች ወደ IDF ቴክኖሎጂ ክፍሎች ይመራሉ።`,
     },
   },
   {
     slug: "apprenticeship-which-sectors",
-    orderIndex: 18,
+    orderIndex: 16,
     trackSlug: "trades",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "Apprenticeship/חניכות תעסוקתית — אילו סקטורים",
       en: "Apprenticeship — which sectors",
@@ -1036,8 +1186,8 @@ First, get the professional license (3-9 months), then apprentice with a veteran
   },
   {
     slug: "interview-stigma-handling",
-    orderIndex: 19,
-    reviewedAt: "2026-05-01",
+    orderIndex: 17,
+    reviewedAt: "2026-09-02",
     question: {
       he: "סטיגמה בראיונות עבודה — איך מתמודדים",
       en: "Stigma in job interviews — how to handle it",
@@ -1049,9 +1199,9 @@ First, get the professional license (3-9 months), then apprentice with a veteran
       am: "መብቶችዎን ይወቁ፣ ጉዳዮችን ይመዝግቡ፣ በግልጽ መድልዎ ሲኖር ጤቤካን ያነጋግሩ።",
     },
     bodies: {
-      he: `## ההכנה
+      he: `## ההקשר — מה שכדאי לדעת מראש
 
-PRESEN של ENP מטפלת בנושא ספציפית — מלמדת איך להתמקד במיומנויות ולנסות הסחת דעת מ-bias מוקדם. שיעור הצלחה ראיון עולה ב-30%+ אחרי הקורס.
+סקר מעסיקים של משרד הכלכלה מצא ש**רק 5.6% מהמעסיקים הביעו נכונות להעסיק יוצאי אתיופיה** — השיעור הנמוך ביותר מבין הקבוצות שנבדקו. זה לא נאמר כדי לייאש, אלא כדי למקד: החסם מרוכז ב**שלב הסינון**, ולכן פנייה דרך אדם — מנטור, בוגר, ממליץ — יעילה יותר מהגשה עיוורת.
 
 ## אם אתם חושדים בהפליה
 
@@ -1064,9 +1214,9 @@ PRESEN של ENP מטפלת בנושא ספציפית — מלמדת איך לה�
 
 - [טבקה — פרופיל ארגון](/he/orgs/tebeka)
 - [Tebeka legal aid — זכות](/he/rights/tebeka-legal-aid)`,
-      en: `## Preparation
+      en: `## The context — worth knowing in advance
 
-ENP's PRESEN handles this specifically — teaches how to focus on skills and divert attention from early bias. Interview success rate rises 30%+ after the course.
+A Ministry of Economy employer survey found that **only 5.6% of employers expressed willingness to employ Ethiopian-Israelis** — the lowest of the groups surveyed. That is not said to discourage but to focus: the barrier is concentrated at the **screening stage**, which is why an approach through a person — a mentor, an alum, a referrer — works better than a blind application.
 
 ## If you suspect discrimination
 
@@ -1079,9 +1229,9 @@ ENP's PRESEN handles this specifically — teaches how to focus on skills and di
 
 - [Tebeka — organization profile](/en/orgs/tebeka)
 - [Tebeka legal aid — right](/en/rights/tebeka-legal-aid)`,
-      am: `## ዝግጅት
+      am: `## አውድ
 
-PRESEN ይረዳል። የስኬት መጠን በ30%+ ይነሳል።
+የኢኮኖሚ ሚኒስቴር ጥናት **5.6% አሠሪዎች ብቻ** የኢትዮጵያ ተወላጆችን ለመቅጠር ፈቃደኛ መሆናቸውን አግኝቷል። እንቅፋቱ በ**የማጣሪያ ደረጃ** ላይ ያተኮረ ነው፤ ስለዚህ በሰው በኩል መቅረብ ይሻላል።
 
 ## መድልዎ ከጠረጠሩ
 
@@ -1092,61 +1242,119 @@ PRESEN ይረዳል። የስኬት መጠን በ30%+ ይነሳል።
   },
   {
     slug: "tax-relief-new-immigrant-impact-salary",
-    orderIndex: 20,
+    orderIndex: 18,
     trackSlug: "finance",
-    reviewedAt: "2026-05-01",
+    reviewedAt: "2026-09-02",
     question: {
       he: "מס הכנסה + פטור לעולה חדש — איך משפיע על משכורת",
       en: "Income tax + new immigrant exemption — impact on salary",
       am: "ገቢ ግብር + የስደተኛ ነፃ — በደመወዝ ላይ ያለው ተጽእኖ",
     },
     shortAnswer: {
-      he: "עולה חדש זוכה לפטור ממס על הכנסה זרה ל-10 שנים + נקודות זיכוי נוספות. נטו של עולה חדש בעבודה מקומית גבוה ב-15-25% מאזרח רגיל באותה משכורת ברוטו.",
-      en: "A new oleh gets foreign-income tax exemption for 10 years + extra credit points. A new oleh's net pay from local work is 15-25% higher than a regular citizen at the same gross salary.",
-      am: "አዲስ ስደተኛ ለ10 ዓመት የውጭ ገቢ ነፃ + ተጨማሪ ክሬዲት ነጥቦች ያገኛል።",
+      he: "עולה חדש מקבל נקודות זיכוי נוספות לפי לוח קבוע לאורך 54 חודשים. ההשפעה על הנטו אמיתית אך צנועה — כמה מאות שקלים בחודש, לא אלפים.",
+      en: "A new oleh receives extra tax credit points on a fixed schedule over 54 months. The effect on net pay is real but modest — a few hundred shekels a month, not thousands.",
+      am: "አዲስ ስደተኛ በ54 ወራት ውስጥ በተወሰነ ሰሌዳ ተጨማሪ የክሬዲት ነጥቦች ያገኛል። በተጣራ ደመወዝ ላይ ያለው ተጽዕኖ እውነተኛ ግን መጠነኛ ነው።",
     },
     bodies: {
-      he: `## ההטבות העיקריות
+      he: `## נקודות זיכוי — הלוח המלא
 
-- **פטור ממס על הכנסה זרה** — 10 שנים מיום העלייה
-- **נקודות זיכוי נוספות** — 1 נקודת זיכוי לעולה (~₪3,000 בשנה) + 0.5 נקודה נוספת ל-3 שנים ראשונות
-- **פטור ממס שבח על דירה ראשונה** — אם נרכשה תוך 7 שנים מהעלייה
+לעולה מ-1.1.2022 ואילך, לפי סעיף 35 לפקודת מס הכנסה:
 
-## משמעות מעשית
+| חודשים מהעלייה | נקודות זיכוי |
+| --- | --- |
+| 1-12 | 1 |
+| 13-30 | 4.5 |
+| 31-42 | 2 |
+| 43-54 | 1 |
 
-עולה חדש בשכר ₪10,000 ברוטו לחודש מקבל נטו של ~₪9,200 (לעומת ~₪7,800 לאזרח רגיל).
+שווי נקודת זיכוי ב-2026: **242 ₪ לחודש** (2,904 ₪ לשנה). סך ההטבה לאורך 54 החודשים: **כ-24,700 ₪**.
+
+*הדף קבע בעבר "נקודה אחת + 0.5 נקודה נוספת ל-3 שנים ראשונות". לוח כזה אינו קיים.*
+
+## משמעות מעשית — במספרים
+
+בשכר של 10,000 ₪ ברוטו (2026):
+
+- אזרח ותיק — נטו של כ-**8,816 ₪**
+- עולה בשנה הראשונה — כ-**9,058 ₪** (הפרש של 242 ₪)
+- עולה בחודשים 13-30 — כ-**9,392 ₪** (הפרש של 575 ₪, כי מס ההכנסה מתאפס)
+
+**זו התקרה.** אזרח ותיק בשכר כזה משלם 575 ₪ מס הכנסה בסך הכול, ולכן אי-אפשר לחסוך יותר מזה. הדף קבע בעבר "נטו ~9,200 ₪ לעומת ~7,800 ₪" ו"גבוה ב-15-25%" — פער של 1,400 ₪ אינו אפשרי אריתמטית.
+
+## פטור ממס על הכנסה מחו"ל
+
+הפטור ל-10 שנים על הכנסה מחו"ל **עדיין חל** על מי שעולה היום. תיקון 272 (2024) ביטל את הפטור מ**דיווח** החל משנת המס 2026 — אבל הפטור ממס עצמו נשאר.
+
+## דירה ראשונה — תיקון
+
+לעולים **אין פטור ממס שבח** על דירה ראשונה. ההטבה האמיתית היא **מס רכישה מופחת**, בחלון של שנה לפני העלייה עד תום השנה השביעית אחריה, לדירה יחידה למגורי העולה. המדרגות משתנות לפי מועד הכניסה לתקנה — בדקו מול רשות המסים לפני רכישה.
 
 ## איך מממשים
 
-הפטור אוטומטי דרך מס הכנסה אם רשמתם את העלייה בעת ההגעה. אם נשכח — הגישו טופס 116 (תיקון אחורה).
+נקודות הזיכוי ניתנות דרך טופס **101** אצל המעסיק. לתיקון רטרואקטיבי — **טופס 135** (דוח שנתי מקוצר), עד שש שנים אחורה. *(טופס 116 שהופיע כאן הוא בקשה לתיאום מס — מסמך אחר לגמרי.)*
 
 ## ראו גם
 
 - [Immigrant tax relief — זכות](/he/rights/immigrant-tax-relief)
-- [Klita basket — זכות](/he/rights/klita-basket)`,
-      en: `## Main benefits
+- [Klita basket — זכות](/he/rights/klita-basket)
 
-- **Foreign-income tax exemption** — 10 years from aliyah date
-- **Additional credit points** — 1 credit point per oleh (~₪3,000/year) + 0.5 extra point for the first 3 years
-- **Capital-gains tax exemption on first home** — if purchased within 7 years of aliyah
+מקורות: [ס' 35 לפקודת מס הכנסה](https://www.nevo.co.il/law_html/law01/255_001.htm) · [רשות המסים — הטבות לעולים](https://www.gov.il/he/departments/israel_tax_authority) · נבדק ספטמבר 2026.`,
+      en: `## Credit points — the full schedule
 
-## Practical meaning
+For aliyah from 1.1.2022, under s.35 of the Income Tax Ordinance:
 
-A new oleh on ₪10,000 monthly gross receives ~₪9,200 net (vs ~₪7,800 for a regular citizen).
+| Months since aliyah | Credit points |
+| --- | --- |
+| 1-12 | 1 |
+| 13-30 | 4.5 |
+| 31-42 | 2 |
+| 43-54 | 1 |
+
+The value of a credit point in 2026 is **₪242 per month** (₪2,904 a year). Total benefit across the 54 months: **about ₪24,700**.
+
+*This page previously said "1 point + 0.5 extra for the first 3 years". No such schedule exists.*
+
+## What it actually means, in numbers
+
+On ₪10,000 gross (2026):
+
+- an established resident nets about **₪8,816**
+- an oleh in year one, about **₪9,058** (a ₪242 difference)
+- an oleh in months 13-30, about **₪9,392** (a ₪575 difference, because income tax falls to zero)
+
+**That is the ceiling.** An established resident on that salary pays ₪575 in income tax in total, so no larger saving is arithmetically possible. This page previously claimed "~₪9,200 net vs ~₪7,800" and "15-25% higher" — a ₪1,400 gap cannot happen.
+
+## Foreign-income exemption
+
+The 10-year exemption on foreign income **still applies** to someone making aliyah today. Amendment 272 (2024) removed only the exemption from **reporting**, from tax year 2026 — the tax exemption itself remains.
+
+## First home — a correction
+
+Olim have **no capital-gains (מס שבח) exemption** on a first home. The real benefit is a **reduced purchase tax (מס רכישה)**, in a window running from one year before aliyah to the end of the seventh year after, for a single apartment for the oleh's own residence. The brackets differ by when you entered the scheme — check with the Tax Authority before buying.
 
 ## How to claim
 
-The exemption is automatic through the Tax Authority if you registered your aliyah on arrival. If forgotten — file form 116 (retroactive correction).
+Credit points are claimed through form **101** with your employer. For a retroactive correction, file **form 135** (short annual return), up to six years back. *(Form 116, which this page named, is a tax-coordination request — a different document entirely.)*
 
 ## See also
 
 - [Immigrant tax relief — right](/en/rights/immigrant-tax-relief)
 - [Klita basket — right](/en/rights/klita-basket)`,
-      am: `## ዋና ጥቅሞች
+      am: `## የክሬዲት ነጥቦች — ሙሉ ሰሌዳ
 
-- የውጭ ገቢ ነፃ — 10 ዓመት
-- ተጨማሪ ክሬዲት ነጥቦች
-- የመጀመሪያ ቤት ካፒታል-ጋይን ነፃ`,
+ከ1.1.2022 ጀምሮ ለመጣ ስደተኛ: ወራት 1-12 → 1 ነጥብ፤ 13-30 → 4.5፤ 31-42 → 2፤ 43-54 → 1። የነጥብ ዋጋ በ2026: **242 ₪ በወር**። በ54 ወራት ጠቅላላ ጥቅም: **ወደ 24,700 ₪**።
+
+## በተግባር ምን ማለት ነው
+
+በ10,000 ₪ ጠቅላላ ደመወዝ: የቆየ ነዋሪ ወደ **8,816 ₪**፤ በመጀመሪያ ዓመት ስደተኛ ወደ **9,058 ₪**፤ በወራት 13-30 ወደ **9,392 ₪**። **ይህ ጣሪያው ነው።** ቀደም ሲል የተጻፈው "15-25% ከፍ ያለ" በሂሳብ የማይቻል ነው።
+
+## የመጀመሪያ ቤት — ማስተካከያ
+
+ስደተኞች በመጀመሪያ ቤት ላይ **የካፒታል ትርፍ ግብር ነፃነት የላቸውም**። እውነተኛው ጥቅም **የተቀነሰ የግዢ ግብር** ነው።
+
+## እንዴት ማግኘት
+
+በ**ቅጽ 101** በአሠሪው በኩል። ወደ ኋላ ለማስተካከል **ቅጽ 135** — እስከ ስድስት ዓመት።`,
     },
   },
 ];

@@ -42,15 +42,14 @@ const PLANNED_BOOTCAMPS = [
   "olim-beyahad-mentorship",
   "isef-excellence-employment",
   "itworks-israel",
-  "codeoved",
   "career-counselors-network",
   "atidim-academic",
   "atidim-military",
 ];
 
 describe("BOOTCAMPS seed shape", () => {
-  it("contains exactly 7 entries (15 planned, 8 retired by TED-157)", () => {
-    expect(BOOTCAMPS).toHaveLength(7);
+  it("contains exactly 6 entries (15 planned, 8 retired by TED-157, codeOved by TED-158)", () => {
+    expect(BOOTCAMPS).toHaveLength(6);
   });
 
   it("every slug matches the canonical RIN-472 list", () => {

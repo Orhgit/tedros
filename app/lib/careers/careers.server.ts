@@ -48,7 +48,7 @@ export const CAREER_TRACKS: CareerTrackEntry[] = [
     relatedRights: ["tech-career-bootcamp", "student-aid"],
     relatedOrgs: ["enp", "olim-beyahad", "isef"],
     relatedTerms: ["enp", "olim-beyahad"],
-    recommendedBootcamps: ["itworks-israel", "codeoved"],
+    recommendedBootcamps: ["itworks-israel"],
     relatedProfessions: ["career-counselor"],
     bodies: {
       he: `## למה זה רלוונטי לקהילה
@@ -383,7 +383,6 @@ Small businesses owned by Ethiopian-Israelis are a meaningful mobility path — 
 
 - **תואר ראשון בחשבונאות + מלגת ISEF** — מסלול מצטיינים → התמחות בפירמה
 - **קורס יועץ משכנתאות** — דרישה מובנית לחברה האתיופית-ישראלית בגלל המשכנתא הקהילתית
-- **PRESEN — interview prep** — הכנה לראיונות ללא pre-screening bias
 
 ## מה כדאי לדעת
 
@@ -398,7 +397,6 @@ Finance roles offer stable pay, clear mobility (junior → senior → manager), 
 
 - **Bachelor's in accounting + ISEF scholarship** — excellence track → firm internship
 - **Mortgage advisor course** — community-specific demand due to the community mortgage
-- **PRESEN — interview prep** — interview preparation without pre-screening bias
 
 ## What to know
 
@@ -413,7 +411,6 @@ Finance roles offer stable pay, clear mobility (junior → senior → manager), 
 
 - **የመጀመሪያ ዲግሪ በሂሳብ + ISEF እርዳታ**
 - **የሞርጌጅ አማካሪ ኮርስ**
-- **PRESEN — interview prep**
 
 ## ማወቅ ያለበት
 
@@ -447,7 +444,6 @@ Finance roles offer stable pay, clear mobility (junior → senior → manager), 
 
 - **תואר ראשון בעבודה סוציאלית** — מסלול 3 שנים, מלגות ENP/ISEF זמינות לקהילה
 - **תפקידי-עוזר עו"ס** — אפשרי בלי תואר תוך כדי לימודים (לשכות רווחה ערי-קהילה)
-- **JDC-Ashalim Strong Families** — תכנית ליווי + תעסוקה במשפחות בסיכון
 
 ## מה כדאי לדעת
 
@@ -462,7 +458,6 @@ Social work is the classic path to meaningful public-sector employment — syste
 
 - **Bachelor's in social work** — 3-year track, ENP/ISEF community scholarships available
 - **Social-work assistant roles** — possible without a degree while studying (community-city welfare offices)
-- **JDC-Ashalim Strong Families** — guidance + employment in at-risk families
 
 ## What to know
 
@@ -477,7 +472,6 @@ Social work is the classic path to meaningful public-sector employment — syste
 
 - **የመጀመሪያ ዲግሪ በማህበራዊ ስራ**
 - **የማህበራዊ ሰራተኛ ረዳት ሚናዎች**
-- **JDC-Ashalim Strong Families**
 
 ## ማወቅ ያለበት
 
@@ -637,7 +631,6 @@ Trades offer a fast path to self-employment with steady demand — a well-establ
 
 - **משרות ראשונות** — שופרסל, רמי לוי, רשתות אופנה — אין דרישות מוקדמות
 - **Place-IL** — רשת השמה לבעלי משברי-תעסוקה אחרי קורונה / ניוד
-- **PRESEN** — הכנה לראיונות עבודה (גם ל-customer-facing roles)
 
 ## מה כדאי לדעת
 
@@ -652,7 +645,6 @@ Retail and service is the most accessible entry — no degree, starting wage of 
 
 - **Entry-level positions** — Shufersal, Rami Levy, fashion chains — no prerequisites
 - **Place-IL** — placement network for those facing job-disruption after COVID / relocation
-- **PRESEN** — interview prep (also for customer-facing roles)
 
 ## What to know
 
@@ -667,7 +659,6 @@ Retail and service is the most accessible entry — no degree, starting wage of 
 
 - **መነሻ ቦታዎች**
 - **Place-IL**
-- **PRESEN**
 
 ## ማወቅ ያለበት
 

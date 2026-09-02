@@ -1986,19 +1986,17 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
     },
     govUrl: "https://ujia.org/connect/supporting-israel/business/",
     eligibilitySummary: {
-      he: "קרן הלוואות חברתית לבעלי עסקים קטנים מהקהילה. עד 200,000 ₪, ריבית מסובסדת, ללא בטחונות בנקאיים. UJIA-KIEDF במימון בריטי-יהודי.",
-      en: "Social loan fund for community small-business owners. Up to ₪200,000, subsidized interest, no bank collateral. UJIA-KIEDF funded by British-Jewish community.",
-      am: "ለማህበረሰብ ትንሽ-ንግድ ባለቤቶች ማህበራዊ የብድር ፈንድ። እስከ 200,000 ₪፣ የተደገፈ ወለድ፣ የባንክ ዋስትና አያስፈልግም።",
+      he: "קרן הלוואות חברתית לבעלי עסקים קטנים מהקהילה, בשיתוף KIEDF (קרן קורת) וזרוע ההשקעות של UJIA. הקרן אינה מפרסמת תקרת הלוואה — בקשו את התנאים מהקרן בכתב.",
+      en: "Social loan fund for community small-business owners, run with KIEDF (Koret Israel Economic Development Funds) and UJIA's investment arm. The fund publishes no loan ceiling — ask it for its terms in writing.",
+      am: "ለማህበረሰብ ትንሽ-ንግድ ባለቤቶች ማህበራዊ የብድር ፈንድ። ፈንዱ የብድር ጣሪያ አያትምም — ውሉን በጽሑፍ ይጠይቁ።",
     },
     tags: ["small_business", "entrepreneurship", "grants"],
     bodies: {
       he: `## מה הקרן מציעה?
 
-- **סכום**: עד ₪200,000 לעסק
-- **ריבית מסובסדת**: סביב פריים-2% (משתנה)
-- **תקופת החזר**: עד 5 שנים
-- **בלי בטחונות בנקאיים**: הקרן עובדת על ערבים אישיים בלבד
-- **ליווי עסקי**: מנטור עסקי בחינם לכל לווה
+- **סכום**: הקרן אינה מפרסמת תקרת הלוואה. אתר זה נקב בעבר ב-₪200,000 בעמוד אחד וב-₪150,000 בעמוד אחר — שני מספרים סותרים שאין להם מקור. שניהם הוסרו
+- **ריבית, תקופת החזר, ובטחונות**: נקבעים מול הקרן. בקשו אותם **בכתב** לפני שאתם מסתמכים על תנאי כלשהו
+- **ליווי עסקי**: הקרן מציעה ליווי; היקפו נקבע מולה
 
 ## למי מיועד?
 
@@ -2015,15 +2013,15 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 4. **חתימה**: חוזה הלוואה + ערבים
 5. **משיכה**: כספים בחשבון תוך שבוע
 
-**טיפ**: מנטור Kurat (ארגון נוסף) זמין לחברי קהילה לפני הגשת בקשה — מסייע בכתיבת תכנית עסקית.
+מקורות: [UJIA — תמיכה בעסקים בישראל](https://ujia.org/connect/supporting-israel/business/) · [הסוכנות לעסקים קטנים ובינוניים, משרד הכלכלה](https://www.gov.il/he/departments/small_and_medium_business_agency) · נבדק ספטמבר 2026.
+
+*הערה: גרסה קודמת של הדף המליצה כאן על "מנטור Kurat (ארגון נוסף)". "Kurat" הוא שיבוש של Koret — ה-K שבתוך KIEDF עצמה, לא ארגון נפרד. ההמלצה הוסרה.*
 `,
       en: `## What the fund offers
 
-- **Amount**: up to ₪200,000 per business
-- **Subsidized interest**: prime - 2% (varies)
-- **Repayment period**: up to 5 years
-- **No bank collateral**: only personal guarantors
-- **Business mentorship**: free mentor for every borrower
+- **Amount**: the fund publishes no loan ceiling. This site previously stated ₪200,000 on one page and ₪150,000 on another — two contradictory figures with no source. Both were removed
+- **Interest, repayment period and collateral**: set with the fund. Ask for them **in writing** before relying on any term
+- **Business mentorship**: the fund offers accompaniment; its scope is set with them
 
 ## Who is eligible?
 
@@ -2040,15 +2038,13 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 4. **Signing**: loan contract + guarantors
 5. **Disbursement**: funds in account within a week
 
-**Tip**: Kurat (another community org) provides mentorship to community members BEFORE application — helps with business plan writing.
+*Note: an earlier version of this page recommended "Kurat (another community org)" here. "Kurat" is a corruption of Koret — the K inside KIEDF itself, not a separate organisation. The recommendation was removed.*
 `,
       am: `## ፈንዱ የሚያቀርበው
 
-- **መጠን**: በንግድ እስከ 200,000 ሺ"ል
-- **የተደገፈ ወለድ**: prime - 2% (ይለያያል)
-- **የመክፈያ ጊዜ**: እስከ 5 ዓመታት
-- **የባንክ ዋስትና የለም**: የግል ዋስ ብቻ
-- **የንግድ የአማካሪ ድጋፍ**: ለእያንዳንዱ ተበዳሪ ነፃ አማካሪ
+- **መጠን**: ፈንዱ የብድር ጣሪያ አያትምም። ይህ ድረ-ገጽ ቀደም ሲል ₪200,000 እና ₪150,000 — ሁለት የሚጋጩ ቁጥሮች — ገልጾ ነበር። ሁለቱም ተወግደዋል
+- **ወለድ፣ የመክፈያ ጊዜ እና ዋስትና**: ከፈንዱ ጋር ይወሰናሉ። **በጽሑፍ** ይጠይቁ
+- **የንግድ አማካሪ ድጋፍ**: ፈንዱ ድጋፍ ይሰጣል
 
 ## ለማን ይሆናል?
 
@@ -2065,7 +2061,7 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 4. **መፈረም**: የብድር ኮንትራት + ዋሶች
 5. **መለቀቅ**: ገንዘቦች በአንድ ሳምንት ውስጥ በአካውንት
 
-**ምክር**: Kurat (ሌላ የማህበረሰብ ድርጅት) ማመልከት ከመፈለግ በፊት ለማህበረሰብ አባላት የአማካሪ ድጋፍ ይሰጣል።
+*ማስታወሻ: ቀደም ሲል እዚህ "Kurat" የተባለ ድርጅት ይመከር ነበር። "Kurat" የ Koret ስህተት ነው — በ KIEDF ውስጥ ያለው K ራሱ እንጂ የተለየ ድርጅት አይደለም። ተወግዷል።*
 `,
     },
   },
@@ -2084,9 +2080,9 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
     },
     govUrl: "https://www.sherut-leumi.co.il",
     eligibilitySummary: {
-      he: "אלטרנטיבה לצבא: שנה-שנתיים שירות בקהילה (חינוך, רווחה, בריאות), עם הטבות זהות לחיילי קבע — שכר, מלגת לימוד, פטור ממס.",
-      en: "Alternative to army: 1-2 years serving the community (education, welfare, health), with benefits identical to standing-army soldiers — stipend, study grant, tax exemption.",
-      am: "ለሰራዊት አማራጭ: ማህበረሰቡን (ትምህርት፣ ደህንነት፣ ጤና) የማገልገል 1-2 ዓመታት፣ ከቋሚ ሰራዊት ወታደሮች ጋር አንድ ዓይነት ጥቅሞች።",
+      he: "אלטרנטיבה לצבא: שנה-שנתיים שירות בקהילה (חינוך, רווחה, בריאות). דמי הקיום עומדים על 810 ₪ לחודש, בתוספת דמי כלכלה מדורגים ונסיעות חינם.",
+      en: "Alternative to the army: 1-2 years serving the community (education, welfare, health). The subsistence payment is ₪810 a month, plus a tiered maintenance allowance and free travel.",
+      am: "ለሰራዊት አማራጭ: ማህበረሰቡን የማገልገል 1-2 ዓመታት። የመኖሪያ ክፍያ በወር 810 ₪ ነው፣ በተጨማሪ የምግብ አበል እና ነጻ ጉዞ።",
     },
     tags: ["civic_service", "youth", "education"],
     bodies: {
@@ -2098,18 +2094,23 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 
 ## הטבות
 
-- **מלגה**: ~5,000 ₪/חודש (משתנה לפי תפקיד)
-- **דיור**: סובסידיה לדיור או דיור משותף
-- **מלגת לימוד**: עד 5 שנים אחרי השירות לתואר
-- **פטור ממס**: שלוש שנות עבודה ראשונות אחרי שחרור
-- **שירות מוכר** ל-Bituach Leumi וגם לתפקידים ציבוריים
+- **דמי קיום**: **810 ₪ לחודש** (עלה מ-540 ₪ במרץ 2025, רטרואקטיבית לינואר 2025)
+- **דמי כלכלה**: בנוסף, ומדורגים לפי מגורים וארוחות. מתנדב בודד זכאי לתוספת של 50% מהתעריף למתנדב המתגורר בביתו
+- **נסיעות**: חינם ברכבת ובאוטובוס
+- **דיור בעין**: למתנדבים המוצבים רחוק מהבית
+
+**סך הכול המזומן נע בערך בין 800 ל-2,100 ₪ לחודש**, לפי הרכב הזכאות.
+
+*הדף קבע בעבר "מלגה ~5,000 ₪ לחודש" — פי חמישה בערך מהסכום האמיתי. הוא גם קבע "הטבות זהות לחיילי קבע" ו"פטור ממס לשלוש שנות עבודה ראשונות"; לא נמצא מקור לאף אחת מהשתיים והן הוסרו.*
 
 ## איך מתחילים?
 
 1. **רישום**: דרך [sherut-leumi.co.il](https://www.sherut-leumi.co.il) → "מועמדים"
-2. **בחירת תפקיד**: רשימת ארגונים שותפים — ENP, Tene Briut, Tebeka, Olim Beyahad הם רובם
+2. **בחירת תפקיד**: מתוך רשימת הגופים המפעילים המוכרים באתר הרשות. *(גרסה קודמת של הדף כתבה ש-ENP, טנא בריאות, טבקה ועולים ביחד הם "רובם" — יש מאות גופים מפעילים, וזה לא היה נכון.)*
 3. **ראיון**: עם הארגון
 4. **התחלה**: בדרך כלל ב-1 בחודש הקרוב
+
+מקורות: [רשות השירות הלאומי-אזרחי](https://www.gov.il/he/departments/national_civil_service) · [זכויות והטבות בשירות הלאומי](https://www.ncs.gov.il/) · נבדק ספטמבר 2026.
 
 **רעיון לחבר/ה**: שירות ב-ENP/Fidel/Tene Briut = עבודה ישירה עם הקהילה + פיתוח קריירה במקצועות חינוך/רווחה/בריאות.
 `,
@@ -2121,16 +2122,19 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 
 ## Benefits
 
-- **Stipend**: ~₪5,000/month (varies by role)
-- **Housing**: rental subsidy or shared housing
-- **Study grant**: up to 5 years after service for tertiary education
-- **Tax exemption**: first three working years post-release
-- **Recognized service** for Bituach Leumi + public-sector roles
+- **Subsistence payment**: **₪810 a month** (raised from ₪540 in March 2025, backdated to January 2025)
+- **Maintenance allowance (דמי כלכלה)**: paid in addition, tiered by housing and meals. A lone volunteer receives a supplement of 50% of the rate for a volunteer living at home
+- **Travel**: free on trains and buses
+- **Housing in kind**: for volunteers placed far from home
+
+**In total the cash components run roughly ₪800-2,100 a month**, depending on the mix.
+
+*This page previously said "~₪5,000/month" — about five times the real figure. It also claimed "benefits identical to standing-army soldiers" and a "tax exemption for the first three working years"; no source was found for either and both were removed.*
 
 ## How to start
 
 1. **Registration**: via [sherut-leumi.co.il](https://www.sherut-leumi.co.il) → "Candidates"
-2. **Choose a role**: list of partner orgs — ENP, Tene Briut, Tebeka, Olim Beyahad are most of them
+2. **Choose a role**: from the list of recognised host organisations on the authority's site. *(An earlier version said ENP, Tene Briut, Tebeka and Olim Beyahad were "most of them" — there are hundreds of host organisations, so that was not true.)*
 3. **Interview**: with the host organization
 4. **Start**: usually 1st of the next month
 
@@ -2144,16 +2148,18 @@ The new pilot (2026) shifts to **direct housing absorption** — a subsidized ap
 
 ## ጥቅሞች
 
-- **ስቲፐንድ**: በወር ~5,000 ሺ"ል (በሚና ይለያያል)
-- **መኖሪያ**: የኪራይ ድጋፍ ወይም ጋራ መኖሪያ
-- **የጥናት ስጦታ**: ከአገልግሎት በኋላ እስከ 5 ዓመታት ለከፍተኛ ትምህርት
-- **የግብር ነፃነት**: ከመለቀቅ በኋላ የመጀመሪያ ሦስት የስራ ዓመታት
-- **የተወከለ አገልግሎት** ለብሔራዊ ኢንሹራንስ + የሕዝብ-ዘርፍ ሚናዎች
+- **የመኖሪያ ክፍያ**: **በወር 810 ₪** (በመጋቢት 2025 ከ540 ₪ ከፍ ብሏል)
+- **የምግብ አበል (דמי כלכלה)**: በተጨማሪ ይከፈላል፤ በመኖሪያና በምግብ ይለያያል። ብቸኛ በጎ ፈቃደኛ 50% ተጨማሪ ያገኛል
+- **ጉዞ**: በባቡርና በአውቶቡስ ነጻ
+
+**በጠቅላላው በወር ወደ 800-2,100 ₪ ይሆናል።**
+
+*ይህ ገጽ ቀደም ሲል "~5,000 ₪ በወር" ብሎ ነበር — ከእውነተኛው መጠን ወደ አምስት እጥፍ። "ከቋሚ ወታደሮች ጋር አንድ ዓይነት ጥቅሞች" የሚለውም ተወግዷል።*
 
 ## እንዴት መጀመር ይቻላል
 
 1. **ምዝገባ**: በ [sherut-leumi.co.il](https://www.sherut-leumi.co.il)
-2. **ሚና ይምረጡ**: የአጋር ድርጅቶች ዝርዝር — ENP፣ ጤና ብርሃት፣ ቴቤካ፣ ኦሊም በያሃድ ብዙዎቹ ናቸው
+2. **ሚና ይምረጡ**: በባለ ሥልጣኑ ድረ-ገጽ ካሉት እውቅና ካላቸው አስተናጋጅ ድርጅቶች ዝርዝር። *(ቀደም ሲል አራት ድርጅቶች "ብዙዎቹ ናቸው" ተብሎ ነበር — በመቶዎች የሚቆጠሩ አሉ።)*
 3. **ቃለ መጠይቅ**: ከአስተናጋጅ ድርጅት ጋር
 4. **መጀመር**: አብዛኛውን ጊዜ የቀጣዩ ወር 1ኛ
 
@@ -5473,8 +5479,8 @@ TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት �
     govUrl: "https://www.gov.il/he/departments/topics/housing-grants",
     eligibilitySummary: {
       he: "מה קיים היום ומה נסגר: הלוואת ה-600,000 ₪ אינה פתוחה להרשמה, ומענק הדיור לעולי אתיופיה ממרכזי קליטה (החלטה 1103) הוא המסלול הפעיל — 235,000 עד 650,000 ₪ לפי הרכב המשפחה.",
-      en: "Complete guide to all mortgage programs available to Ethiopian-Israelis: the 600K loan, Homot grant, 90% financing eligibility, and special interest tracks.",
-      am: "ለኢትዮጵያ-እስራኤሎች ለሚገኙ ሁሉም የቤት ብድር ፕሮግራሞች ሙሉ መመሪያ።",
+      en: "What still exists and what has closed: the ₪600,000 loan is not open for registration, and the absorption-centre housing grant for olim from Ethiopia (Decision 1103) is the active route — ₪235,000 to ₪650,000 by family composition.",
+      am: "ዛሬ ያለውና የተዘጋው: የ600,000 ₪ ብድር ለምዝገባ ክፍት አይደለም፤ ንቁ የሆነው መንገድ የመቀበያ ማዕከል የቤት ድጎማ (ውሳኔ 1103) ነው — በቤተሰብ ስብጥር 235,000 እስከ 650,000 ₪።",
     },
     tags: ["housing", "mortgage", "grants", "new_immigrant"],
     bodies: {
@@ -5510,41 +5516,44 @@ TEBEKA ለኢትዮጵያ-እስራኤሎች ዋናው የሕግ ድርጅት �
 📞 לשאלות: מרכז קבלת קהל של משרד הבינוי — 5442* | משרד הקליטה — 3450*`,
       en: `## Mortgage Programs for the Ethiopian-Israeli Community
 
-Ethiopian-Israelis have access to several preferential programs not available to the general public:
+**Four claims that stood on this page have been removed.** They are named below so that you recognise them if you meet them elsewhere — none of them should be acted on.
 
-### 1. The 600,000 ILS State Loan (Annual Lottery)
-0% interest for the first 10 years, 2% for the next 15. Approx. 200 families win per year. Register at Bank Leumi, Discount, or Igud branches in January–February.
+### 1. The ₪600,000 state loan — real terms, wrong tense
+The loan itself existed and its terms were as described. But it was a time-limited allocation from 2016; the first registration round closed on 18.4.2017 and both ministry programme pages now return 404. **There is no annual lottery and no January registration window.** The page also listed Bank Igud, which was dissolved in 2020.
 
-### 2. "Homot" Grant (Ministry of Construction)
-One-time grant of 120,000–200,000 ILS for first-home purchase. Conditions: family income up to ~18,000 ILS/month, first apartment, age 21+. Can be combined with the 600K loan.
+### 2. The "Homot" grant of ₪120,000-200,000
+**No grant by that name was found.** The real instrument is the absorption-centre housing grant, worth ₪235,000-650,000 by family size under Government Decision 1103 — a different programme, with different amounts and a different route.
 
-### 3. Up to 90% Financing
-Approved banks (Leumi, Mizrahi, HaPoalim) approve up to 90% of property value — vs. the standard 75% — for government-program eligible applicants.
+### 3. There is no 90% financing track
+Bank of Israel rules cap a first-home buyer at 75% financing. No track approving 90% for government-programme applicants was found, and the line claiming one has been removed.
 
-### 4. Military Service Mortgage Points
-Army service qualifies for additional interest-rate points and more flexible repayment terms.
+### 4. Military-service mortgage points
+Not verified against any official source; searched for and not located. Do not act on this.
 
-## Application Steps
+## Application steps
 1. Check eligibility: gov.il/he/service/first-time-homebuyers
-2. Meet with a certified mortgage advisor (community-familiar — see /en/professionals)
-3. Submit to bank: ID, 3 months pay slips, NII confirmation
-4. Preliminary approval → sign purchase contract → release of funds
+2. Meet a certified mortgage advisor (community-familiar — see /en/professionals)
+3. Submit to the bank: ID, 3 months of pay slips, National Insurance confirmation
+4. Preliminary approval → sign the purchase contract → release of funds
 
-📞 Ministry of Construction hotline: *5442 | Ministry of Aliya: *3450`,
+📞 Ministry of Construction hotline: *5442 | Ministry of Aliyah and Integration: *3450`,
       am: `## ለኢትዮጵያ-እስራኤሎች የቤት ብድር ፕሮግራሞች
 
-ኢትዮጵያ-እስራኤሎች ለሌሎች ህዝቦች የማይገኙ ልዩ ፕሮግራሞች አሏቸው፦
+**በዚህ ገጽ ላይ የነበሩ አራት ማረጋገጫዎች ተወግደዋል።** በሌላ ቦታ ቢያገኟቸው እንዲያውቁ ከዚህ በታች ተዘርዝረዋል — በአንዳቸውም ላይ አይተማመኑ።
 
-### 1. የ600,000 ሺ"ል ብድር (ዓመታዊ ዕጣ)
-ለመጀመሪያ 10 ዓመታት 0% ወለድ። በዓመት ~200 ቤተሰቦች ይመረጣሉ። በጥር ወር ይመዘገቡ።
+### 1. የ600,000 ₪ የመንግሥት ብድር — ውሉ እውነት፣ ጊዜው ግን አልፏል
+ብድሩ ነበረ፤ ነገር ግን ከ2016 የተወሰነ ጊዜ ያለው ድልድል ነበር። የመጀመሪያው ምዝገባ በ18.4.2017 ተዘግቷል። **ዓመታዊ ዕጣ የለም፤ የጥር ምዝገባም የለም።**
 
-### 2. "ሆሞት" ድጎማ
-ለመጀመሪያ ቤት 120,000–200,000 ሺ"ል ነጠላ ስጦታ። ቤተሰቡ ወርሃዊ ገቢ እስከ 18,000 ሺ"ል።
+### 2. የ120,000-200,000 ₪ "ሆሞት" ድጎማ
+**በዚህ ስም ድጎማ አልተገኘም።** እውነተኛው መሣሪያ በቤተሰብ መጠን 235,000-650,000 ₪ የሚደርሰው የመቀበያ ማዕከል የቤት ድጎማ ነው።
 
-### 3. እስከ 90% ፋይናንስ
-ለተፈቀደላቸው አመልካቾች ባንኮች እስከ 90% ይሰጣሉ።
+### 3. የ90% ፋይናንስ መንገድ የለም
+የእስራኤል ባንክ ደንብ የመጀመሪያ ቤት ገዢን በ75% ይገድባል።
 
-## አቅምዎን ያረጋግጡ
+### 4. የወታደራዊ አገልግሎት የብድር ነጥቦች
+በኦፊሴላዊ ምንጭ አልተረጋገጠም። በዚህ ላይ አይተማመኑ።
+
+## ብቁነትዎን ያረጋግጡ
 gov.il/he/service/first-time-homebuyers ወይም *5442 ይደውሉ።`,
     },
   },
@@ -6634,7 +6643,7 @@ Most people choose mortgages alone — and lose tens of thousands of ILS in unne
 
 ## Free Counselling — Who Qualifies?
 
-Ministry of Housing free counselling for: 600K loan applicants, Homot grant applicants, new immigrants (up to 5 years), senior citizens (67+), public housing tenants buying an apartment.
+Ministry of Housing free counselling for: applicants to the absorption-centre housing grant (Decision 1103), new immigrants (up to 5 years), senior citizens (67+), and public housing tenants buying an apartment.
 
 How to access: Contact regional Housing Ministry → request "mortgage counselling" → free certified adviser assigned.
 
