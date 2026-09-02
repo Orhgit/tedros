@@ -3285,7 +3285,7 @@ Counseling adapted to understand:
 
 - **משטרה**: 100 (אם בסכנת חיים)
 - **118**: קו הסיוע הארצי של משרד הרווחה לאלימות במשפחה — 24/7, אנונימי, מענה גם באמהרית
-- **\*6724**: קו הסיוע של עמותת ל.א — 24/7
+- *6724: קו הסיוע של עמותת ל.א — 24/7
 - **ער"ן**: 1201 (תמיכה רגשית, 24/7)
 
 ## למי מיועד?
@@ -3307,7 +3307,7 @@ Counseling adapted to understand:
 
 ## איך מתחילים בלי סכנה?
 
-- **טלפון**: 118 (קו ארצי, 24/7) או \*6724 (עמותת ל.א, 24/7)
+- **טלפון**: 118 (קו ארצי, 24/7) או *6724 (עמותת ל.א, 24/7)
 - **WhatsApp**: 050-2270118 — הפנייה השקטה למוקד 118, כשאי-אפשר לדבר
 - **דרך מורה / רופאה**: גם הם חייבים בדיווח אם יש סכנה לקטין
 - **דרך Tene Briut**: ליווי תרבותי בלי דיווח אוטומטי
@@ -3316,7 +3316,7 @@ Counseling adapted to understand:
 
 - **Police**: 100 (if life-threatening)
 - **118**: the welfare ministry's national domestic-violence line — 24/7, anonymous, Amharic available
-- **\*6724**: L.A. Association support line — 24/7
+- *6724: L.A. Association support line — 24/7
 - **ERAN**: 1201 (emotional support, 24/7)
 
 ## Who is eligible?
@@ -3338,7 +3338,7 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 
 ## How to start safely?
 
-- **Phone**: 118 (national, 24/7) or \*6724 (L.A. Association, 24/7)
+- **Phone**: 118 (national, 24/7) or *6724 (L.A. Association, 24/7)
 - **WhatsApp**: 050-2270118 — the silent route into the 118 centre when you cannot speak
 - **Via teacher / doctor**: they also have a duty to report if a minor is in danger
 - **Via Tene Briut**: cultural accompaniment without automatic reporting
@@ -3347,7 +3347,7 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 
 - **ፖሊስ**: 100
 - **118**: የሠራተኛና ማኅበራዊ ጉዳይ ሚኒስቴር ብሔራዊ የቤት ውስጥ አመፅ መስመር — 24/7፣ ስም-አልባ፣ በአማርኛም
-- **\*6724**: L.A. ማኅበር የድጋፍ መስመር — 24/7
+- *6724: L.A. ማኅበር የድጋፍ መስመር — 24/7
 - **ERAN**: 1201
 
 ## ለማን ይሆናል?
@@ -3369,7 +3369,7 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 
 ## በደህንነት እንዴት መጀመር ይቻላል
 
-- **ስልክ**: 118 (24/7) ወይም \*6724
+- **ስልክ**: 118 (24/7) ወይም *6724
 - **WhatsApp**: 050-2270118 — መናገር በማይቻልበት ጊዜ ወደ 118 ጸጥታዊ መንገድ
 - **በመምህር / ሐኪም በኩል**
 - **በጤና ብርሃት በኩል**: ራስ-ሰር ሪፖርት ሳይደረግ
@@ -4652,8 +4652,8 @@ Tene Briut (תנא בריאות) is a Clalit program specifically for the Ethiop
 | גוף | שירות | טלפון |
 |-----|-------|-------|
 | **משרד הרווחה** | 17 מקלטים ברחבי הארץ — ההפניה עוברת דרך מוקד 118 | **118** |
-| **עמותת ל.א** | קו סיוע 24/7, ליווי ומקלטים | **\*6724** |
-| **נעמת** | מקלטים + ייעוץ | **\*9201** |
+| **עמותת ל.א** | קו סיוע 24/7, ליווי ומקלטים | *6724 |
+| **נעמת** | מקלטים + ייעוץ | *9201 |
 | **ל.א.ה (ארגון נשים אתיופיות)** | מלווה אמהרית | ירושלים, ת"א |
 
 **קו הסיוע הארצי לאלימות במשפחה**: **118** (24/7, מענה גם באמהרית). כשאי-אפשר לדבר — WhatsApp ל-050-2270118.
@@ -4720,8 +4720,8 @@ The order can include eviction of the abuser (even if the home is in his name), 
 
 - **National domestic-violence hotline: 118** (24/7, Amharic available)
 - **Police: 100**
-- **L.A. Association support line: \*6724** (24/7)
-- **Na'amat shelters: \*9201**
+- **L.A. Association support line: *6724** (24/7)
+- **Na'amat shelters: *9201**
 - **TEBEKA (legal):** 072-2424622
 
 ## Financial Safety Net During Separation
@@ -4738,7 +4738,7 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 
 - **የቤተሰብ ጥቃት ስልክ: 118** (24/7፣ አማርኛ አለ)
 - **ፖሊስ: 100**
-- **L.A. ማኅበር: \*6724** (24/7)
+- **L.A. ማኅበር: *6724** (24/7)
 - **TEBEKA: 072-2424622**
 
 ## ልዩነቶቹ

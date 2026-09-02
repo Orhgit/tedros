@@ -2261,7 +2261,7 @@ ENP: free community nutrition counselling — 03-5368944. GP referral to dietiti
 📞 **משטרה**: 100
 📞 **מד"א**: 101
 📞 **קו הסיוע לאלימות במשפחה**: 118 (24/7, גם באמהרית)
-📞 **עמותת ל.א**: \*6724 (24/7)
+📞 **עמותת ל.א**: *6724 (24/7)
 📞 **מרכזי הסיוע לנפגעות תקיפה מינית**: 1202 (גברים — 1203), 24/7
 📞 **טבקה** (עם תרגום): 072-2424622
 
@@ -2279,14 +2279,14 @@ ENP: free community nutrition counselling — 03-5368944. GP referral to dietiti
 
 ארגון מאצימות מציע תמיכה ייחודית לנשים מהקהילה: קבוצות תמיכה, ייעוץ, מנטורות.
 
-📞 maatzimot.org.il | 118 | \*6724 | 072-2424622`,
+📞 maatzimot.org.il | 118 | *6724 | 072-2424622`,
       en: `## Medical Impact of Violence
 
 Domestic violence causes obvious physical harm, but long-term psychological damage is more lasting: PTSD (33% of women experiencing violence), depression (×2.5), chronic anxiety, increased substance use, harm to exposed children.
 
 ## Emergency — Right Now
 
-Police: 100 | MDA: 101 | National domestic-violence line: 118 (24/7, Amharic available) | L.A. Association: \*6724 (24/7) | Rape crisis centres: 1202 women / 1203 men | Tebeka (with translation): 072-2424622
+Police: 100 | MDA: 101 | National domestic-violence line: 118 (24/7, Amharic available) | L.A. Association: *6724 (24/7) | Rape crisis centres: 1202 women / 1203 men | Tebeka (with translation): 072-2424622
 
 ## Shelters
 
@@ -2296,12 +2296,12 @@ Shelters for women and children nationwide — addresses confidential. Police (1
 
 Protection order: obtained within 24 hours from court. Removal order: removes the abuser from the home. Free legal support: Tebeka 072-2424622.
 
-📞 118 | \*6724 | 072-2424622 | maatzimot.org.il`,
+📞 118 | *6724 | 072-2424622 | maatzimot.org.il`,
       am: `## ቤተሰብ ጥቃት ጤናን ይጎዳ
 
 33% PTSD | ×2.5 ዲፕሬሽን
 
-📞 118 (24/7፣ በአማርኛም) | \*6724 (24/7) | ፖሊስ 100 | ቴቤቃ: 072-2424622`,
+📞 118 (24/7፣ በአማርኛም) | *6724 (24/7) | ፖሊስ 100 | ቴቤቃ: 072-2424622`,
     },
     figures: [
       {

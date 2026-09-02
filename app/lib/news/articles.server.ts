@@ -540,7 +540,7 @@ For community members who can't reach Jerusalem — regional ceremonies are acti
 |---|---|---|
 | ער"ן — עזרה ראשונה רגשית (כולל נוער) | **1201** | 24/7 |
 | ס.ה.ר — מניעת אובדנות | צ'אט ו-WhatsApp ב-[sahar.org.il](https://sahar.org.il/) | 24/7 |
-| נט"ל — טראומה | **1-800-363-363** (או \*3362) | 24/7 |
+| נט"ל — טראומה | **1-800-363-363** (או *3362) | 24/7 |
 | מרכזי הסיוע לנפגעות תקיפה מינית | **1202** (גברים — **1203**) | 24/7 |
 
 ## על הסטיגמה — שיחה כנה
@@ -2067,14 +2067,14 @@ Tech-Career በኢትዮጵያ-እስራኤላውያን ማህበረሰብ አ�
 |------|------|-------|
 | **משטרה** | **100** | 24/7 |
 | **קו הסיוע הארצי לאלימות במשפחה** | **118** | משרד הרווחה, 24/7 — מענה גם באמהרית. WhatsApp: 050-2270118 |
-| **עמותת ל.א** | **\*6724** | קו סיוע 24/7 |
-| **נעמת** | **\*9201** | קו ייעוץ לנשים, תיאום מקלט |
+| **עמותת ל.א** | *6724 | קו סיוע 24/7 |
+| **נעמת** | *9201 | קו ייעוץ לנשים, תיאום מקלט |
 | **מרכזי הסיוע לנפגעות תקיפה מינית** | **1202** | 24/7 (לגברים — 1203) |
 
 ## מקלטים עם דוברי אמהרית
 
 - **מקלט ויצו נתניה** — צוות דובר אמהרית
-- **מקלט Na'amat חיפה** — תאמו מראש דרך קו הייעוץ לנשים \*9201
+- **מקלט Na'amat חיפה** — תאמו מראש דרך קו הייעוץ לנשים *9201
 - **מקלט לבנת בת-ים** — קולטת נשים ממוצא אתיופי
 
 ## צו הרחקה — אפשרי באותו יום
@@ -2118,14 +2118,14 @@ An inter-ministerial committee was formed in 2022 following femicides in the Eth
 |---------|--------|-------|
 | Police | 100 | 24/7 |
 | National domestic-violence line | 118 | Ministry of Welfare, 24/7, Amharic available. WhatsApp: 050-2270118 |
-| L.A. Association | \*6724 | Support line, 24/7 |
-| Na'amat | \*9201 | Women's counselling line, shelter coordination |
+| L.A. Association | *6724 | Support line, 24/7 |
+| Na'amat | *9201 | Women's counselling line, shelter coordination |
 | Rape crisis centres | 1202 | 24/7 (men's line: 1203) |
 
 ## Shelters with Amharic-speaking staff
 
 - WIZO Netanya — Amharic-speaking staff
-- Na'amat Haifa — coordinate via the women's counselling line \*9201
+- Na'amat Haifa — coordinate via the women's counselling line *9201
 - Livnat, Bat Yam — accepts Ethiopian-Israeli women
 
 ## Restraining order — same-day possible
@@ -2154,8 +2154,8 @@ Delete browsing history after reading. If phone may be monitored, use an alterna
 
 - ፖሊስ: **100** (24/7)
 - ብሔራዊ የቤት ውስጥ አመፅ መስመር: **118** (24/7፣ በአማርኛም)
-- L.A. ማኅበር: **\*6724** (24/7)
-- Na'amat: **\*9201**
+- L.A. ማኅበር: *6724 (24/7)
+- Na'amat: *9201
 
 ## ዕቅድ ትዕዛዝ — ዕለቱ ይቻላል
 
