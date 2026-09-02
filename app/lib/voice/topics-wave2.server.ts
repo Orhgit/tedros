@@ -1,7 +1,55 @@
 // Voice & Action pillar — Wave 2 topic data (18 topics).
 //
 // HE is source-of-truth (CLAUDE.md). EN + AM mirrored.
-// Content reviewed: 2026-06-02.
+// Content reviewed: 2026-06-02. Factual audit: TED-158, 2026-09-02.
+// See docs/adr/021-sourced-claims.md.
+//
+// NOTE ON REACH: no route imports ALL_VOICE_TOPICS, so these 18 topics
+// render nowhere today — only the four wave-1 pages are routed and in the
+// sitemap. They were audited anyway: the entries carried a `lastReviewed`
+// stamp, which is exactly the trap TED-152 left behind (content that looks
+// reviewed because a field says so). See the TED-158 PR for the argument
+// that this file should be deleted rather than kept as unrouted debt.
+//
+// VERIFIED AGAINST PRIMARY SOURCES
+//   - הצוות למיגור הגזענות נגד יוצאי אתיופיה (המכונה "ועדת פלמור"):
+//     החלטת ממשלה 1107 (4.2.2016) הקימה אותו; המלצותיו (למעלה מ-50)
+//     אומצו בהחלטה 1958 (16.8.2016).
+//   - החלטת ממשלה 3243 (15.7.2025) — התקציב הייעודי הנוכחי: 99.75 מ' ₪
+//     (2025) ו-113.93 מ' ₪ (2026). מחליפה את החלטה 787 (17.7.2023).
+//   - ס' 144ב לחוק העונשין (5 שנות מאסר); חוק איסור הפליה התשס"א-2000
+//     ס' 5 (פיצוי ללא הוכחת נזק, 50,000 ₪ צמוד למדד, בסיס אוקטובר 2000).
+//   - חוק המידע הפלילי ותקנת השבים, התשע"ט-2019 — נכנס לתוקף 15.7.2022
+//     וביטל את חוק המרשם הפלילי 1981 (ס' 56). התיישנות ס' 18-20,
+//     מחיקה ס' 21-23.
+//   - הסיוע המשפטי: *6405 (מידע) / 073-3927788 (פתיחת תיק).
+//   - טבקה: 072-2424622, "ללא תשלום", מאתר הארגון.
+//   - מועצת העיתונות והתקשורת בישראל: presscouncil.co.il.
+//   - יהודה ביאדגה (18.1.2019, בת ים) וסלומון טקה (30.6.2019, קריית חיים)
+//     — שני אירועים נפרדים; פרטי ההליכים המשפטיים מדיווח עיתונאי.
+//
+// DELIBERATELY EXCLUDED — investigated, not published
+//   - "1-700-704-555" as the Legal Aid line: returns zero hits anywhere,
+//     in any language. Not a retired number — no evidence it is anyone's.
+//   - "ידיד — מרכזי זכויות בקהילה": the NGO went into liquidation in 2019
+//     and closed in 2020, and yedid.org.il is now an unrelated commercial
+//     tutoring marketplace. We were sending people seeking rights help to
+//     an ad site. Removed entirely.
+//   - "תנועת אמונה" (amona.co.il): NXDOMAIN — never registered.
+//   - "מועצת העיתונות" at m-z.co.il: that domain is a bookkeeping firm.
+//   - IAEJ "מפרסם ניתוחי תקציב": iaej.co.il currently serves an "אתר
+//     בבנייה" placeholder; no budget analysis could be found.
+//   - Tebeka "הייעוץ הראשוני ניתן ללא עלות": their site does not say it.
+//     Their free-of-charge statement is kept; the free-*initial-
+//     consultation* framing is not.
+//   - Tebeka "עבירות שנאה" as a practice area: they litigate racist
+//     harassment and לשון הרע; their site never uses that phrase.
+//   - Tebeka "מלווה יוזמות קהילתיות": they run their own programmes
+//     (רקיע, נערי דין), not third-party initiatives.
+//   - A precise count of the Palmor recommendations (51 / 60 / "over 50"
+//     disagree) and any claim about the current composition of the
+//     Second Authority council (in flux after the June 2026 resignations).
+//   - The name of the current כאן ombudsman: could not be confirmed.
 
 import type { VoiceTopic } from "./topics.server";
 
@@ -23,10 +71,12 @@ export const VOICE_TOPICS_WAVE2: VoiceTopic[] = [
       he: `ייצוג פוליטי בכנסת הוא אחד הכלים החזקים ביותר לשינוי מדיניות. מאז כניסתה של אדיסו מסלה לכנסת ב-1996 — חבר הכנסת הראשון יוצא אתיופיה — הקהילה ראתה גידול הדרגתי בייצוג.
 
 ## נציגים בולטים לאורך השנים
-- **אדיסו מסלה** — חבר הכנסת הראשון מהקהילה (העבודה, 1996), חלוץ המאבק לעלייה ולשוויון.
-- **שלמה מולה** — קידם חוקים נגד אפליה וזכויות עולים.
-- **פנינה תמנו-שטה** — שרת העלייה והקליטה הראשונה ילידת אתיופיה, הובילה חקיקה בנושאי קליטה.
-- **גדי יברקן** — פעל בנושאי גזענות מוסדית וייצוג הולם.
+*(נכון לספטמבר 2026)*
+
+- **אדיסו מסלה** — חבר הכנסת הראשון מהקהילה, הושבע ב-17.6.1996 בכנסת ה-14 וסיים ב-7.6.1999. כיהן מטעם העבודה ומ-25.3.1999 מטעם "עם אחד".
+- **שלמה מולה** — כיהן עד פברואר 2013; קידם חקיקה נגד אפליה ובזכויות עולים.
+- **פנינה תמנו-שטה** — חברת הכנסת הראשונה ילידת אתיופיה (2013). כיהנה כשרת העלייה והקליטה מ-17.5.2020 עד 29.12.2022, וכיו"ר הוועדה לקידום מעמד האישה מ-13.3.2024 עד 8.7.2025. **מכהנת כיום בכנסת ה-25 — ואינה שרה.**
+- **גדי יברקן** — כיהן עד אוגוסט 2022, ובתוך כך כ**סגן** השר לביטחון הפנים (25.5.2020-13.6.2021). פעל בנושאי גזענות מוסדית וייצוג הולם.
 
 ## במה הם עוסקים?
 חברי הכנסת מהקהילה מקדמים בדרך כלל:
@@ -47,10 +97,12 @@ export const VOICE_TOPICS_WAVE2: VoiceTopic[] = [
       en: `Political representation in the Knesset is one of the most powerful tools for policy change. Since Addisu Messele entered the Knesset in 1996 — the first member of Ethiopian origin — the community has seen gradual growth in representation.
 
 ## Notable representatives over the years
-- **Addisu Messele** — the first Knesset member from the community (Labor, 1996), a pioneer of the struggle for immigration and equality.
-- **Shlomo Molla** — advanced anti-discrimination and immigrant-rights legislation.
-- **Pnina Tamano-Shata** — the first Ethiopian-born Minister of Immigration and Absorption, who led absorption-related legislation.
-- **Gadi Yevarkan** — worked on institutional racism and fair representation.
+*(as of September 2026)*
+
+- **Addisu Messele** — the first Knesset member from the community, sworn in on 17.6.1996 in the 14th Knesset and leaving on 7.6.1999. He sat for Labor and, from 25.3.1999, for Am Ehad.
+- **Shlomo Molla** — served until February 2013; advanced anti-discrimination and immigrant-rights legislation.
+- **Pnina Tamano-Shata** — the first Ethiopian-born woman MK (2013). Minister of Aliyah and Integration from 17.5.2020 to 29.12.2022, and chair of the Committee on the Status of Women from 13.3.2024 to 8.7.2025. **She is a serving MK in the 25th Knesset — and is not a minister.**
+- **Gadi Yevarkan** — served until August 2022, including as **Deputy** Minister of Public Security (25.5.2020-13.6.2021). Worked on institutional racism and fair representation.
 
 ## What do they work on?
 Knesset members from the community generally promote:
@@ -103,7 +155,7 @@ Low turnout at the ballot box translates into low political power. Voting — na
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 2. Protest Timeline 1996–2026 ───────────────────────────────────────────
@@ -123,51 +175,72 @@ Low turnout at the ballot box translates into low political power. Voting — na
       he: `המחאה הציבורית הייתה כלי מרכזי במאבק הקהילה האתיופית לשוויון בישראל. ציר הזמן הבא מסכם תחנות מרכזיות.
 
 ## 1996 — פרשת מנות הדם
-נחשף ששירותי בנק הדם השליכו תרומות דם של יוצאי אתיופיה מחשש מופרך ל-HIV. כ-10,000 הפגינו מול משרד ראש הממשלה. זו הייתה המחאה הגדולה הראשונה — ונקודת מפנה בתודעה הציבורית.
+ב-24.1.1996 נחשף שבנק הדם השליך תרומות דם של יוצאי אתיופיה מחשש מופרך ל-HIV. ב-28.1.1996 הפגינו כ-8,000-10,000 איש מול משרד ראש הממשלה בירושלים; 41 שוטרים ולמעלה מ-20 מפגינים נפצעו. ועדת נבון בחנה את הפרשה ודיווחה ביולי 1996. זו הייתה המחאה הגדולה הראשונה — ונקודת מפנה בתודעה הציבורית.
 
-## 2012–2013 — מחאות הדיור והקליטה
-מחאות נגד אפליה במרכזי קליטה ובדיור, כולל אירוע סירוב מכירת דירות למשפחות יוצאות אתיופיה בקריית-מלאכי.
+## 2012 — מחאת הדיור בקריית-מלאכי
+בינואר 2012 נחשף בערוץ 2 שדיירים בשכונת בר-יהודה בקריית-מלאכי סירבו למכור ולהשכיר דירות למשפחות יוצאות אתיופיה. ב-10.1.2012 הפגינו כ-2,000 איש בקריית-מלאכי, וב-18.1.2012 כ-5,000 בירושלים.
 
 ## 2015 — מחאת דמאס פיקדה
-תיעוד וידאו של הכאת החייל דמאס פיקדה בידי שוטר הצית גל מחאות ארצי בתל-אביב ובירושלים. אלפים יצאו לרחובות נגד אלימות משטרתית וגזענות מוסדית. בעקבות המחאות הוקמה **ועדת פלמור** (2016).
+ב-27.4.2015 בחולון תועד בווידאו שוטר מכה את החייל דמאס פיקדה. התיעוד הצית גל מחאות ארצי, ובהן ההפגנה הגדולה בכיכר רבין בתל-אביב במאי 2015. השוטר הושעה ומח"ש לא הגישה נגדו כתב אישום; תיקו של פיקדה עצמו נסגר בעילת "חוסר אשמה" באפריל 2019.
 
-## 2019 — מחאת יהודה ביאדגה
-מותו של הצעיר סלומון טקה מירי שוטר באיגוד הוביל למחאות הגדולות ביותר בתולדות הקהילה — חסימת צמתים ראשיים ברחבי הארץ.
+## 2016 — דוח הצוות למיגור הגזענות ("ועדת פלמור")
+הצוות, בראשות עו"ד אמי פלמור, הוקם בהחלטת ממשלה 1107 (4.2.2016) בעקבות גל המחאות. דוחו מיולי 2016 כלל למעלה מ-50 המלצות, והממשלה אימצה אותן בהחלטה 1958 (16.8.2016) — ההכרה הרשמית הראשונה בקיומה של אפליה שיטתית. בעקבותיו הוקמה היחידה הממשלתית לתיאום המאבק בגזענות.
 
-## 2016 — דוח ועדת פלמור
-הממשלה הכירה רשמית בקיומה של אפליה שיטתית והוציאה תוכנית לאומית למיגור גזענות.
+## ינואר 2019 — יהודה ביאדגה
+ב-18.1.2019 בבת ים נורה למוות יהודה ביאדגה, בן 24, בידי שוטר **במדים ובתפקיד**. ביאדגה יצא מביתו במצוקה נפשית חריפה כשהוא אוחז סכין; בני משפחתו הם שהזעיקו את המשטרה וביקשו לנהוג בזהירות בשל מצבו. ב-30.1.2019 הפגינו כ-20,000 איש בתל-אביב. מח"ש סגרה את התיק כעבור כארבעה חודשים; המשפחה עתרה לבג"ץ והעתירה נדחתה. לא הוגש כתב אישום.
+
+## יוני 2019 — סלומון טקה
+ב-30.6.2019 בקריית-חיים נהרג סלומון טקה, בן 18. שוטר **שלא היה בתפקיד**, בבגדים אזרחיים, התערב בתגרה, הותקף באבנים וירה יריה אחת לעבר הקרקע; הכדור הקפיץ מהאספלט ופגע בטקה. אחרי הלווייתו ב-2.7.2019 פרצו המחאות הגדולות ביותר בתולדות הקהילה, ובהן חסימת צמתים ראשיים ברחבי הארץ. השוטר הועמד לדין בפברואר 2020 בעבירת גרימת מוות ברשלנות, **זוכה באפריל 2024** בטענת הגנה עצמית, וערעור המדינה נדחה בספטמבר 2024. במקביל שילמה המשטרה למשפחה 1.8 מיליון ₪ בפשרה אזרחית (מרץ 2022).
+
+*פרטי ההליכים המשפטיים בשני המקרים מבוססים על דיווח עיתונאי, לא על נוסח פסקי הדין.*
 
 ## מורשת המחאה
 המחאות הביאו להכרה ממשלתית, להקמת יחידות ניטור, ולהעלאת המודעות הציבורית. הן הוכיחו שקול קולקטיבי מארגן יוצר שינוי מדיניות ממשי.`,
       en: `Public protest has been a central tool in the Ethiopian community's struggle for equality in Israel. The following timeline summarises key milestones.
 
 ## 1996 — The blood donation affair
-It emerged that the blood bank discarded blood donations from Ethiopian Israelis over an unfounded fear of HIV. Around 10,000 protested outside the Prime Minister's Office. This was the first large protest — and a turning point in public awareness.
+On 24.1.1996 it emerged that the blood bank discarded donations from Ethiopian Israelis over an unfounded fear of HIV. On 28.1.1996 some 8,000-10,000 people protested outside the Prime Minister's Office in Jerusalem; 41 police officers and more than 20 demonstrators were injured. The Navon Commission examined the affair and reported in July 1996. This was the first large protest — and a turning point in public awareness.
 
-## 2012–2013 — Housing and absorption protests
-Protests against discrimination in absorption centres and housing, including the refusal to sell apartments to Ethiopian families in Kiryat Malachi.
+## 2012 — The Kiryat Malachi housing protest
+In January 2012 a Channel 2 report revealed that residents of the Bar-Yehuda neighbourhood in Kiryat Malachi were refusing to sell or rent apartments to Ethiopian-Israeli families. Some 2,000 protested in Kiryat Malachi on 10.1.2012 and about 5,000 in Jerusalem on 18.1.2012.
 
 ## 2015 — The Damas Pakada protest
-Video footage of soldier Damas Pakada being beaten by a police officer sparked a nationwide wave of protests in Tel Aviv and Jerusalem. Thousands took to the streets against police violence and institutional racism. The protests led to the establishment of the **Palmor Committee** (2016).
+On 27.4.2015 in Holon, video captured a police officer beating soldier Damas Pakada. The footage sparked a nationwide protest wave, including the large Rabin Square demonstration in Tel Aviv in May 2015. The officer was suspended and MAHASH filed no charges; Pakada's own file was closed for "lack of guilt" in April 2019.
 
-## 2019 — The protests after Solomon Teka
-The death of young Solomon Teka, shot by an off-duty officer, led to the largest protests in the community's history — blocking major junctions across the country.
+## 2016 — Report of the team to eradicate racism ("the Palmor Committee")
+The team, chaired by Emi Palmor, was established by Government Decision 1107 (4.2.2016) following the protest wave. Its July 2016 report made more than 50 recommendations, adopted by Government Decision 1958 (16.8.2016) — the first formal recognition that systematic discrimination exists. It led to the creation of the Government Unit for Coordinating the Fight Against Racism.
 
-## 2016 — The Palmor Committee report
-The government formally acknowledged the existence of systematic discrimination and issued a national plan to eradicate racism.
+## January 2019 — Yehuda Biadga
+On 18.1.2019 in Bat Yam, Yehuda Biadga, 24, was shot dead by a uniformed, **on-duty** officer. Biadga had left home in acute mental distress holding a knife; it was his own family who called the police and asked them to take care given his condition. Some 20,000 protested in Tel Aviv on 30.1.2019. MAHASH closed the case after about four months; the family petitioned the Supreme Court and the petition was rejected. No indictment was filed.
+
+## June 2019 — Solomon Teka
+On 30.6.2019 in Kiryat Haim, Solomon Teka, 18, was killed. An **off-duty** officer in civilian clothes intervened in a scuffle, was pelted with stones and fired one shot at the ground; the bullet ricocheted off the asphalt and struck Teka. After his funeral on 2.7.2019 the largest protests in the community's history broke out, blocking major junctions nationwide. The officer was indicted in February 2020 for negligent homicide, **acquitted in April 2024** on self-defence grounds, and the State's appeal was rejected in September 2024. Separately, the police paid the family ₪1.8m in a civil settlement (March 2022).
+
+*The legal outcomes in both cases are drawn from press reporting, not from the judgment texts.*
 
 ## The legacy of protest
 The protests brought governmental recognition, the creation of monitoring units, and raised public awareness. They proved that an organised collective voice produces real policy change.`,
       am: `ሕዝባዊ ተቃውሞ የኢትዮጵያ ማህበረሰብ ለእኩልነት ትግል ማዕከላዊ መሣሪያ ነበር። ይህ የጊዜ ሰሌዳ ቁልፍ ምዕራፎችን ያጠቃልላል።
 
 ## 1996 — የደም ልገሳ ጉዳይ
-የደም ባንክ ከኢትዮጵያ ዜጎች የተገኙ የደም ልገሳዎችን በHIV ፍርሃት ይጥል እንደነበር ተገለጸ። ወደ 10,000 ሰዎች ተቃውሞ አደረጉ።
+በ24.1.1996 የደም ባንክ ከኢትዮጵያ ዜጎች የተገኙ ልገሳዎችን በHIV ፍርሃት ይጥል እንደነበር ተገለጸ። በ28.1.1996 ከ8,000-10,000 ሰዎች በኢየሩሳሌም ተቃውመዋል።
+
+## 2012 — የቂርያት ማላኪ የመኖሪያ ቤት ተቃውሞ
+በጥር 2012 በቂርያት ማላኪ ነዋሪዎች ለኢትዮጵያ-እስራኤላዊ ቤተሰቦች ቤት ለመሸጥ አለመፍቀዳቸው ተጋለጠ። በ10.1.2012 ወደ 2,000፣ በ18.1.2012 በኢየሩሳሌም ወደ 5,000 ተቃውመዋል።
 
 ## 2015 — የደማስ ፓካዳ ተቃውሞ
-ወታደር ደማስ ፓካዳ በፖሊስ ሲደበደብ የሚያሳይ ቪዲዮ በመላ ሀገሪቱ ተቃውሞ ቀሰቀሰ። የፓልሞር ኮሚቴ (2016) ተቋቋመ።
+በ27.4.2015 በሖሎን ወታደር ደማስ ፓካዳ በፖሊስ ሲደበደብ የሚያሳይ ቪዲዮ በመላ ሀገሪቱ ተቃውሞ ቀሰቀሰ።
 
-## 2019 — የሰሎሞን ተካ ተቃውሞ
-የወጣቱ ሰሎሞን ተካ ሞት በማህበረሰቡ ታሪክ ትልቁን ተቃውሞ አስከተለ።
+## 2016 — ዘረኝነትን ለማጥፋት የተቋቋመው ቡድን ሪፖርት ("የፓልሞር ኮሚቴ")
+በመንግሥት ውሳኔ 1107 (4.2.2016) ተቋቋመ፤ ከ50 በላይ ምክረ ሐሳቦቹ በውሳኔ 1958 (16.8.2016) ጸድቀዋል።
+
+## ጥር 2019 — የሁዳ ቢያድጋ
+በ18.1.2019 በባት ያም የ24 ዓመቱ የሁዳ ቢያድጋ **በሥራ ላይ በነበረ** ፖሊስ ተገደለ። በከባድ የአእምሮ ጭንቀት ውስጥ ሆኖ ቢላዋ ይዞ ከቤቱ ወጥቶ ነበር፤ ፖሊስን የጠሩት ቤተሰቦቹ ናቸው። በ30.1.2019 ወደ 20,000 ሰዎች በተል አቪቭ ተቃውመዋል። ክስ አልቀረበም።
+
+## ሰኔ 2019 — ሰሎሞን ተካ
+በ30.6.2019 በቂርያት ሐይም የ18 ዓመቱ ሰሎሞን ተካ ተገደለ። **በሥራ ላይ ያልነበረ** ፖሊስ ወደ መሬት አንድ ጥይት ተኮሰ፤ ጥይቱ ከአስፋልቱ ተመልሶ መታው። ከቀብሩ በኋላ በማህበረሰቡ ታሪክ ትልቁ ተቃውሞ ተነሳ። ፖሊሱ በ2020 ተከሶ በሚያዝያ 2024 ተለቋል።
+
+*በሁለቱም ጉዳዮች ያሉት የሕግ ውጤቶች ከጋዜጣ ዘገባ የተወሰዱ ናቸው።*
 
 ## የተቃውሞ ውርስ
 ተቃውሞዎቹ የመንግሥት ዕውቅና፣ የክትትል ክፍሎች መቋቋም እና የሕዝብ ግንዛቤ አምጥተዋል።`,
@@ -193,7 +266,7 @@ The protests brought governmental recognition, the creation of monitoring units,
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 3. IAEJ ─────────────────────────────────────────────────────────────────
@@ -274,7 +347,7 @@ Institutional advocacy organisations give the community lasting power beyond a o
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 4. ENP National Project ─────────────────────────────────────────────────
@@ -332,7 +405,7 @@ Institutional advocacy organisations give the community lasting power beyond a o
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 5. NACOEJ ───────────────────────────────────────────────────────────────
@@ -354,30 +427,26 @@ Institutional advocacy organisations give the community lasting power beyond a o
 ## תפקיד היסטורי
 NACOEJ סייע בתקופות הקריטיות של מבצע משה (1984) ומבצע שלמה (1991), כולל מימון, סנגור בינלאומי, ותמיכה ביהודים שנותרו באזורי גונדר ואדיס-אבבה בהמתנה לעלייה.
 
-## פעילות בהווה
-1. **תמיכה בחינוך** — מלגות ותוכניות העשרה לתלמידים ולסטודנטים בישראל.
-2. **סיוע לעולים חדשים** — ליווי בקליטה ובהשתלבות.
-3. **שימור מורשת** — תמיכה במלאכת רקמה מסורתית ומיזמי תרבות.
-4. **סנגור** — העלאת מודעות בקהילות יהודיות בצפון-אמריקה.
+## מצב הארגון כיום — חשוב לדעת
+**NACOEJ מצוי בתהליך סגירה.** באתר הארגון עצמו נכתב שהוא "winding down its operations" לקראת העברת פעילותו לסוכנות היהודית. הדוחות הכספיים האחרונים שפורסמו הם משנת 2023, וחלק מתיאורי התוכניות עדיין מתייחסים לתקופת הקורונה.
 
-## כיצד נעזרים בו?
-- **בקשת מלגה** דרך תוכניות החינוך של הארגון.
-- **פנייה לתוכניות תרבות ומורשת.**
+**המשמעות המעשית:** אין להסתמך על NACOEJ כמקור למלגה או לסיוע כיום. מי שמחפש מלגה או ליווי בקליטה — פנו לסוכנות היהודית, למשרד העלייה והקליטה, או לארגוני הקהילה הפעילים.
 
-*הערה: היקף הפעילות ופרטי התוכניות מתעדכנים — מומלץ לאמת מול הארגון.*`,
+## תפקידו ההיסטורי נותר חשוב
+גם כשארגון נסגר, התיעוד שיצר נשאר. NACOEJ אסף חומרים על הקהילה בגונדר ובאדיס-אבבה ועל תקופת ההמתנה לעלייה — מקור לחוקרים ולמשפחות המחפשות את סיפורן.`,
       en: `NACOEJ (North American Conference on Ethiopian Jewry) is an international Jewish organisation that played a historic role in rescuing Ethiopian Jews and bringing them to Israel. It has operated since the 1980s.
 
 ## Historic role
 NACOEJ assisted during Operation Moses (1984) and Operation Solomon (1991), including funding, international advocacy, and support for Jews awaiting immigration.
 
-## Present-day activity
-Education support, assistance to new immigrants, heritage preservation, and advocacy in North American Jewish communities.
+## Where the organisation stands today — important
+**NACOEJ is winding down.** Its own site states that it "is now winding down its operations in preparation for the takeover of the Jewish Agency for Israel". The most recent published financials are from 2023, and some programme descriptions still refer to the COVID period.
 
-## How to use their help
-Apply for a scholarship, approach culture and heritage programs, or cooperate on documenting the aliyah story.
+**What that means in practice:** do not rely on NACOEJ as a source of a scholarship or of assistance today. For a scholarship or absorption support, approach the Jewish Agency, the Ministry of Aliyah and Integration, or the community organisations that are currently active.
 
-*Note: the scope of activity and program details are updated — verify with the organisation.*`,
-      am: `NACOEJ ኢትዮጵያ አይሁዶችን ለማዳን ታሪካዊ ሚና የተጫወተ ዓለም አቀፍ ድርጅት ነው። አሁን ትምህርት፣ ቅበላ እና ቅርስ ጥበቃ ይቀጥላሉ።`,
+## Its historical role still matters
+When an organisation closes, the record it created remains. NACOEJ gathered material on the communities in Gondar and Addis Ababa and on the years of waiting to emigrate — a source for researchers and for families looking for their own story.`,
+      am: `NACOEJ ኢትዮጵያ አይሁዶችን ለማዳን ታሪካዊ ሚና የተጫወተ ዓለም አቀፍ ድርጅት ነው። **ነገር ግን ድርጅቱ አሁን በመዘጋት ሂደት ላይ ነው** — በራሱ ድረ-ገጽ እንደተገለጸው ሥራውን ወደ አይሁድ ኤጀንሲ በማስተላለፍ ላይ ነው። ስለዚህ ለስኮላርሺፕ ወይም ለድጋፍ በእሱ ላይ አይተማመኑ፤ ወደ አይሁድ ኤጀንሲ ወይም ወደ የስደት ሚኒስቴር ይሂዱ።`,
     },
     resources: [
       {
@@ -390,7 +459,7 @@ Apply for a scholarship, approach culture and heritage programs, or cooperate on
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 6. Police Violence Trials ───────────────────────────────────────────────
@@ -468,7 +537,7 @@ Civil suit, organisational accompaniment (Tebeka, ACRI), and public documentatio
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 7. Punishing Racism — Law and Reality ───────────────────────────────────
@@ -502,8 +571,10 @@ Civil suit, organisational accompaniment (Tebeka, ACRI), and public documentatio
 
 ## מה אפשר לעשות?
 1. **להגיש תלונה** — כל תלונה מתעדת דפוס.
-2. **לתבוע פיצוי אזרחי** — חוק איסור הפליה מאפשר תביעה ללא הוכחת נזק.
-3. **לפנות לטבקה** לייעוץ וליווי.`,
+2. **לתבוע פיצוי אזרחי** — **סעיף 5 לחוק איסור הפליה** מאפשר תביעה **ללא הוכחת נזק**, עד 50,000 ₪ צמוד למדד (בסיס אוקטובר 2000).
+3. **לפנות לטבקה** לייעוץ וליווי.
+
+מקורות: [ס' 144ב לחוק העונשין](https://www.nevo.co.il/law_html/law01/073_002.htm) · [חוק איסור הפליה, התשס"א-2000](https://www.nevo.co.il/law_html/law00/74365.htm) · נבדק ספטמבר 2026.`,
       en: `Israeli law prohibits racism and incitement — but the gap between legislation and actual enforcement is a source of frustration.
 
 > **Legal disclaimer:** This information is general and not legal advice. Contact a lawyer or Tebeka for a concrete case.
@@ -518,7 +589,9 @@ Civil suit, organisational accompaniment (Tebeka, ACRI), and public documentatio
 Under-reporting, difficulty of proof, and a low prosecution rate.
 
 ## What can be done?
-File a complaint, sue for civil damages (no proof of damage needed under the 2000 Act), and contact Tebeka.`,
+File a complaint; sue for civil damages — **s.5 of the 2000 Act** allows a claim **without proof of damage**, up to ₪50,000 index-linked (October 2000 base); and contact Tebeka.
+
+Sources: [Penal Code s.144B](https://www.nevo.co.il/law_html/law01/073_002.htm) · [anti-discrimination act, 2000](https://www.nevo.co.il/law_html/law00/74365.htm) · verified September 2026.`,
       am: `ሕጉ ዘረኝነትን ይከለክላል ነገር ግን አፈጻጸሙ ዝቅተኛ ነው። ቅሬታ ያቅርቡ፣ ካሳ ይጠይቁ፣ ቴቤካን ያነጋግሩ።`,
     },
     resources: [
@@ -542,7 +615,7 @@ File a complaint, sue for civil damages (no proof of damage needed under the 200
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 8. Government Budget Tracking ───────────────────────────────────────────
@@ -561,11 +634,14 @@ File a complaint, sue for civil damages (no proof of damage needed under the 200
     body: {
       he: `הממשלה מקבלת מעת לעת החלטות ומקצה תקציבים ייעודיים לצמצום פערים. אך החלטה ללא יישום היא חסרת ערך — ולכן מעקב אזרחי הוא כלי סנגור מרכזי.
 
+## התקציב הייעודי הנוכחי
+**החלטת ממשלה 3243 מיום 15.7.2025** מקצה 99.75 מיליון ₪ לשנת 2025 ו-113.93 מיליון ₪ לשנת 2026, בחלוקה בין משרדי החינוך, העבודה, הרווחה, הביטחון הלאומי, הבריאות, התרבות והספורט וההתיישבות, ולמטה יישום. היא מחליפה את החלטה 787 (17.7.2023). **שימו לב: ההחלטה מתקצבת עד סוף 2026 בלבד** — המשך התקצוב אינו מובטח, וזו נקודת הלחץ הסנגורית הקרובה.
+
 ## כיצד עוקבים אחר תקציב?
 1. **אתר החלטות הממשלה** (gov.il) — מאגר ציבורי של כל ההחלטות.
 2. **דוחות מבקר המדינה** — בודקים אם תקציבים יושמו בפועל.
-3. **ועדות הכנסת** — ועדת הכספים ווועדה מיוחדת ליישום.
-4. **ארגוני מחקר** — IAEJ וארגונים נוספים מפרסמים ניתוחי תקציב.
+3. **ועדות הכנסת** — ועדת הכספים ודיוני ועדות בנושא יישום.
+4. **מרכז המחקר והמידע של הכנסת (ממ"מ)** — מסמכים מבוססי-נתונים לפי בקשת חבר כנסת.
 
 ## כיצד דורשים יישום?
 - **שאילתה דרך חבר כנסת** על מצב היישום.
@@ -573,17 +649,24 @@ File a complaint, sue for civil damages (no proof of damage needed under the 200
 - **פנייה לארגון מחקר** שיכין נייר עמדה.
 
 ## מסקנה
-תקציב שלא נוצל "נשרף" בסוף שנה. נתונים מדויקים הם הנשק היעיל ביותר מול בירוקרטיה.`,
+תקציב שלא נוצל "נשרף" בסוף שנה. נתונים מדויקים הם הנשק היעיל ביותר מול בירוקרטיה.
+
+מקורות: [החלטה 3243 (15.7.2025)](https://www.gov.il/he/pages/dec3243-2025) · [החלטה 787 (17.7.2023)](https://www.gov.il/he/pages/dec787-2023) · נבדק ספטמבר 2026.`,
       en: `The government periodically makes decisions and allocates dedicated budgets to close gaps. But a decision without implementation is worthless — so civic monitoring is a central advocacy tool.
 
+## The current dedicated budget
+**Government Decision 3243 of 15.7.2025** allocates ₪99.75m for 2025 and ₪113.93m for 2026, split across the ministries of Education, Labour, Welfare, National Security, Health, Culture and Sport, and Settlement, plus an implementation HQ. It replaced Decision 787 (17.7.2023). **Note that it funds 2025-2026 only** — continuation is not guaranteed, which is the nearest advocacy pressure point.
+
 ## How to track a budget
-Government decisions website (gov.il), State Comptroller reports, Knesset committees, and research organisations (IAEJ).
+The government decisions repository (gov.il), State Comptroller reports, Knesset committees, and the Knesset Research and Information Center (MMM), which prepares data-based papers at an MK's request.
 
 ## How to demand implementation
-A parliamentary query through a Knesset member, Freedom of Information Act requests, and commissioning research organisations.
+A parliamentary query through a Knesset member, and Freedom of Information Act requests.
 
 ## Conclusion
-An unused budget is burned at year-end. Accurate data is the most effective weapon against bureaucracy.`,
+An unused budget is burned at year-end. Accurate data is the most effective weapon against bureaucracy.
+
+Sources: [Decision 3243 (15.7.2025)](https://www.gov.il/he/pages/dec3243-2025) · [Decision 787 (17.7.2023)](https://www.gov.il/he/pages/dec787-2023) · verified September 2026.`,
       am: `የቡጀት ክትትል ጸጥ ያለ ግን ኃይለኛ የትግል ዓይነት ነው። ትክክለኛ መረጃ በቢሮክራሲ ላይ ውጤታማ መሣሪያ ነው።`,
     },
     resources: [
@@ -609,13 +692,13 @@ An unused budget is burned at year-end. Accurate data is the most effective weap
         name: "אגודת יהודי אתיופיה (IAEJ)",
         url: "https://www.iaej.co.il",
         description: {
-          he: "מפרסם ניתוחי תקציב וניירות עמדה מבוססי-נתונים על יישום מדיניות.",
-          en: "Publishes budget analyses and data-based position papers on policy implementation.",
-          am: "የቡጀት ትንታኔዎችን ያትማል።",
+          he: 'ארגון סנגור ומחקר ותיק לקהילה. נכון לספטמבר 2026 אתר הארגון מציג דף "אתר בבנייה" — מומלץ לפנות אליו ישירות ולא להסתמך על האתר.',
+          en: 'A veteran advocacy and research organisation for the community. As of September 2026 its website serves an "under construction" placeholder — approach the organisation directly rather than relying on the site.',
+          am: 'ለማህበረሰቡ ጥንታዊ የተሟጋችነት እና ምርምር ድርጅት። እስከ መስከረም 2026 ድረስ ድረ-ገጹ "በግንባታ ላይ" ነው።',
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 9. Women and Leadership ─────────────────────────────────────────────────
@@ -645,7 +728,7 @@ An unused budget is burned at year-end. Accurate data is the most effective weap
 - **מלגות לימודים** לנשים בהשכלה גבוהה.
 
 ## כיצד להשתלב?
-- **לפנות לארגון** כמו אמונה או גוונים על תוכניות פעילות.
+- **לפנות לארגון** כמו גוונים או טבקה על תוכניות פעילות.
 - **להצטרף לרשת מנהיגות** של בוגרות.
 - **ליזום** קבוצה מקומית.`,
       en: `Ethiopian-Israeli women stand at the forefront of the equality struggle, facing a **double glass ceiling** — both gender and ethnic barriers.
@@ -657,19 +740,11 @@ Pnina Tamano-Shata — the first Ethiopian-born Minister of Immigration and Abso
 Leadership programs, entrepreneurship courses, support groups, and study scholarships.
 
 ## How to get involved
-Approach Amona or Gvanim about active programs, join a leadership network, or initiate a local group.`,
-      am: `ኢትዮጵያ-እስራኤላዊ ሴቶች ለእኩልነት ትግል ግንባር ቀደም ናቸው። ድርብ ፈተና ይገጥማቸዋል። አሞና እና ጋቫኒም ፕሮግራሞች ያቀርባሉ።`,
+Approach Gvanim or Tebeka about active programs, join a leadership network, or initiate a local group.`,
+      am: `ኢትዮጵያ-እስራኤላዊ ሴቶች ለእኩልነት ትግል ግንባር ቀደም ናቸው። ድርብ ፈተና ይገጥማቸዋል። ጋቫኒም እና ቴቤካ ፕሮግራሞች ያቀርባሉ።`,
     },
     resources: [
-      {
-        name: "תנועת אמונה",
-        url: "https://www.amona.co.il",
-        description: {
-          he: "מפעילה תוכניות העצמה ומנהיגות לנשים יוצאות אתיופיה ברחבי הארץ.",
-          en: "Runs empowerment and leadership programs for Ethiopian-Israeli women across the country.",
-          am: "ለኢትዮጵያ-እስራኤላዊ ሴቶች የማብቃት እና መሪነት ፕሮግራሞች።",
-        },
-      },
+      // TED-158: "תנועת אמונה" removed — amona.co.il is NXDOMAIN.
       {
         name: "גוונים — מרכז לשילוב וקידום",
         url: "https://www.gvanim.org.il",
@@ -680,7 +755,7 @@ Approach Amona or Gvanim about active programs, join a leadership network, or in
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 10. Youth and Leadership ────────────────────────────────────────────────
@@ -709,7 +784,7 @@ Approach Amona or Gvanim about active programs, join a leadership network, or in
 כלי הנהגה, רשת חברתית, תחושת שליחות, ודמויות מופת.
 
 ## כיצד מצטרפים?
-דרך בית-הספר, הרשות המקומית, ארגוני הקהילה (ENP, אמונה, גוונים), או מרכזי צעירים עירוניים.
+דרך בית-הספר, הרשות המקומית, ארגוני הקהילה (ENP, גוונים), או מרכזי צעירים עירוניים.
 
 ## מסקנה
 מנהיגות היא מיומנות נרכשת. תוכניות מובנות נותנות לצעירים כלים להפוך מכוח פוטנציאלי לכוח מוביל.`,
@@ -722,7 +797,7 @@ ENP youth programs, pre-military academies, academic excellence programs, and yo
 Leadership tools, a social network, a sense of mission, and role models.
 
 ## How to join
-Through school, local authority, community organisations (ENP, Amona, Gvanim), or municipal youth centres.`,
+Through school, local authority, community organisations (ENP, Gvanim), or municipal youth centres.`,
       am: `ወጣቶችን ለማልማት ENP፣ ቅድመ-ወታደራዊ ማሰልጠኛዎች፣ አካዳሚክ ፕሮግራሞች እና የወጣት እንቅስቃሴዎች አሉ።`,
     },
     resources: [
@@ -735,17 +810,9 @@ Through school, local authority, community organisations (ENP, Amona, Gvanim), o
           am: "ለማህበረሰብ ወጣቶች የመሪነት እና ብቃት ፕሮግራሞች።",
         },
       },
-      {
-        name: "תנועת אמונה",
-        url: "https://www.amona.co.il",
-        description: {
-          he: "תוכניות נוער ומנהיגות צעירה לחיזוק מעורבות חברתית וזהות קהילתית.",
-          en: "Youth and young-leadership programs to strengthen social engagement and community identity.",
-          am: "ማህበራዊ ተሳትፎን ለማጠናከር የወጣቶች ፕሮግራሞች።",
-        },
-      },
+      // TED-158: "תנועת אמונה" removed — amona.co.il is NXDOMAIN.
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 11. Demanding Media Representation ──────────────────────────────────────
@@ -771,7 +838,7 @@ Through school, local authority, community organisations (ENP, Amona, Gvanim), o
 
 ## כיצד פועלים?
 1. **תלונה לרשות השנייה לטלוויזיה ולרדיו** — על תוכן פוגעני בשידורים מסחריים.
-2. **פנייה לנציב תלונות הציבור של כאן** — על תכנים בשידור הציבורי.
+2. **פנייה לממונה על קבילות הציבור בתאגיד השידור הישראלי (כאן)** — על תכנים בשידור הציבורי. התפקיד מעוגן בחוק השידור הציבורי הישראלי, התשע"ד-2014. דוא"ל kvilot@kan.org.il.
 3. **פנייה ישירה לעורכים** — מכתב מנומק.
 4. **מועצת העיתונות** — לתלונות על אתיקה עיתונאית.
 
@@ -783,7 +850,7 @@ Through school, local authority, community organisations (ENP, Amona, Gvanim), o
 Under-representation, stereotypes, and absence of an authentic voice.
 
 ## How to act
-Complaint to the Second Authority for Television and Radio (commercial), the public broadcaster (Kan) ombudsman, direct approach to editors, or the Press Council.
+Complaint to the Second Authority for Television and Radio (commercial broadcasting), to the Public Complaints Commissioner at the Israeli Public Broadcasting Corporation (Kan) — a statutory post under the 2014 Public Broadcasting Law, kvilot@kan.org.il — a direct approach to editors, or the Press and Media Council.
 
 ## Creating independent content
 Social networks, podcasts, and blogs — telling the narrative from within.`,
@@ -800,8 +867,8 @@ Social networks, podcasts, and blogs — telling the narrative from within.`,
         },
       },
       {
-        name: "מועצת העיתונות בישראל",
-        url: "https://www.m-z.co.il",
+        name: "מועצת העיתונות והתקשורת בישראל",
+        url: "https://www.presscouncil.co.il/tluna/",
         description: {
           he: "גוף אתי לבירור תלונות על סיקור עיתונאי פוגעני או מפלה.",
           en: "An ethics body for adjudicating complaints about offensive or discriminatory journalistic coverage.",
@@ -809,7 +876,7 @@ Social networks, podcasts, and blogs — telling the narrative from within.`,
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 12. Local Ethiopian Politicians ─────────────────────────────────────────
@@ -874,7 +941,7 @@ Vote in local elections, support community candidates, and volunteer in campaign
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 13. How to Start Community Activism ─────────────────────────────────────
@@ -946,7 +1013,7 @@ Change takes time. Document progress and celebrate small wins.`,
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 14. Building Coalitions ─────────────────────────────────────────────────
@@ -1011,7 +1078,7 @@ Clear shared goal, mutual respect, fair role division, and transparency.`,
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 15. Legal Aid Organisations ─────────────────────────────────────────────
@@ -1033,15 +1100,14 @@ Clear shared goal, mutual respect, fair role division, and transparency.`,
 > **הבהרה:** רשימה זו כללית. זכאות ותחומי טיפול משתנים.
 
 ## טבקה — ייעוץ ייעודי לקהילה
-מתמחה בזכויות הקהילה האתיופית. ייעוץ וייצוג בתיקי אפליה, אלימות משטרתית, וזכויות אזרח — ללא עלות.
+מתמחה בזכויות הקהילה האתיופית: אפליה על רקע מוצא, אלימות משטרתית, עיכובים, דיני עבודה, ומחיקת רישום פלילי. הארגון מציין באתרו שסיועו ניתן ללא תשלום. טלפון 072-2424622.
 
 ## הסיוע המשפטי — משרד המשפטים
-ייצוג חינמי בתחומים אזרחיים (משפחה, דיור, ביטוח לאומי) לזכאים כלכלית.
+ייצוג בתחומים אזרחיים (משפחה, דיור, ביטוח לאומי) לזכאים כלכלית. השירות ניתן ללא תשלום, למעט דמי השתתפות שנקבעים לפי רמת ההכנסה. מוקד מידע **\\*6405**; פתיחת תיק 073-3927788.
 
 ## ארגונים נוספים
-1. **ACRI** — תיקים עקרוניים.
-2. **קליניקות משפטיות באוניברסיטאות** — ללא עלות בליווי מרצים.
-3. **ידיד** — מיצוי זכויות מול רשויות.
+1. **ACRI** — תיקים עקרוניים בזכויות אדם.
+2. **קליניקות משפטיות באוניברסיטאות** — ללא עלות, בליווי מרצים.
 
 ## מתי לפנות?
 מוקדם ככל האפשר — לתיקים פליליים ולתלונות יש מועדי התיישנות.`,
@@ -1053,14 +1119,14 @@ Clear shared goal, mutual respect, fair role division, and transparency.`,
 Specialises in Ethiopian community rights. Free advice and representation in discrimination, police violence, and civil rights cases.
 
 ## Legal Aid — Ministry of Justice
-Free civil representation (family, housing, National Insurance) for the financially eligible.
+Civil representation (family, housing, National Insurance) for the financially eligible. The service is free apart from a participation fee set by income level. Information line **\\*6405**; to open a case, 073-3927788.
 
 ## Additional organisations
-ACRI (principled cases), university legal clinics (free), and Yedid (rights realisation).
+ACRI (principled human-rights cases) and university legal clinics (free, supervised by faculty).
 
 ## When to turn to them?
 As early as possible — criminal cases and complaints have limitation periods.`,
-      am: `ቴቤካ ነጻ ምክር ይሰጣል። የሕግ እርዳታ ቢሮዎች ለሚበቁ ሰዎች ነጻ ውክልና ይሰጣሉ። ACRI፣ ክሊኒኮች እና ይዲድ ሌሎች አማራጮች ናቸው።`,
+      am: `ቴቤካ ለኢትዮጵያ ተወላጆች ያለ ክፍያ የሕግ ድጋፍ ይሰጣል። የፍትህ ሚኒስቴር የሕግ እርዳታ ለሚበቁ ሰዎች በፍትሐ ብሔር ጉዳዮች ውክልና ይሰጣል — የመረጃ መስመር **\\*6405**። ACRI እና የዩኒቨርሲቲ የሕግ ክሊኒኮች ሌሎች አማራጮች ናቸው።`,
     },
     resources: [
       {
@@ -1075,7 +1141,7 @@ As early as possible — criminal cases and complaints have limitation periods.`
       },
       {
         name: "הסיוע המשפטי — משרד המשפטים",
-        phone: "1-700-704-555",
+        phone: "*6405",
         url: "https://www.gov.il/he/departments/legal_aid",
         description: {
           he: "ייצוג משפטי חינמי בתחומים אזרחיים לזכאים מבחינה כלכלית, לפי אזור מגורים.",
@@ -1083,17 +1149,12 @@ As early as possible — criminal cases and complaints have limitation periods.`
           am: "ለሚበቁ ሰዎች ነጻ የፍትሐ ብሔር ውክልና።",
         },
       },
-      {
-        name: "ידיד — מרכזי זכויות בקהילה",
-        url: "https://www.yedid.org.il",
-        description: {
-          he: "סיוע במיצוי זכויות מול הרשויות וליווי אישי בתחומי רווחה, דיור וביטוח לאומי.",
-          en: "Assistance in realising rights before the authorities and personal accompaniment in welfare, housing, and National Insurance.",
-          am: "ባለ ሥልጣናት ፊት መብቶችን ለማግኘት እርዳታ።",
-        },
-      },
+      // TED-158: "ידיד — מרכזי זכויות בקהילה" removed. The NGO went into
+      // liquidation in 2019 and closed in 2020, and yedid.org.il is now an
+      // unrelated commercial tutoring/personal-training marketplace — so
+      // this entry was routing people seeking rights help to an ad site.
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 16. Reporting Hate Crimes ───────────────────────────────────────────────
@@ -1162,8 +1223,8 @@ Physical assault, property damage with racist graffiti, threats and harassment, 
         phone: "072-2424622",
         url: "https://www.tebeka.org.il",
         description: {
-          he: "ליווי משפטי ותמיכה בקורבנות עבירות שנאה על רקע גזעני.",
-          en: "Legal accompaniment and support for victims of racially motivated hate crimes.",
+          he: "ליווי משפטי ותמיכה בנפגעי תקיפה, הטרדה והתבטאויות גזעניות — לרבות במסלול לשון הרע.",
+          en: "Legal accompaniment and support for people harmed by racially motivated assault, harassment and statements — including via the defamation route.",
           am: "ለዘረኛ ምክንያት የጥላቻ ወንጀል ሰለባዎች ሕጋዊ ድጋፍ።",
         },
       },
@@ -1177,7 +1238,7 @@ Physical assault, property damage with racist graffiti, threats and harassment, 
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 17. Criminal Record Expungement ─────────────────────────────────────────
@@ -1199,12 +1260,15 @@ Physical assault, property damage with racist graffiti, threats and harassment, 
 > **הבהרה משפטית:** מידע זה כללי. כל מקרה שונה — מומלץ לפנות לעורך-דין.
 
 ## ההבדל בין התיישנות למחיקה
-חוק המרשם הפלילי ותקנת השבים (1981):
-1. **תקופת ההתיישנות** — בתומה, רק גופים מסוימים רשאים לראות הרישום; למעסיק רגיל אסור.
-2. **תקופת המחיקה** — לאחר תקופה נוספת, הרישום נמחק כמעט לחלוטין.
+החוק החל היום הוא **חוק המידע הפלילי ותקנת השבים, התשע"ט-2019**, שנכנס לתוקף ב-15.7.2022 והחליף את חוק המרשם הפלילי ותקנת השבים משנת 1981. שני השלבים נשמרו:
 
-## זכות צו חנינה
-ניתן לפנות לנשיא המדינה בבקשת חנינה לקיצור המחיקה — בדרך כלל דרך עורך-דין.
+1. **תקופת ההתיישנות** (ס' 18-20) — בתומה, רק גופים מסוימים רשאים לראות את המידע; מעסיק רגיל אינו רשאי.
+2. **תקופת המחיקה** (ס' 21-23) — לאחר תקופה נוספת המידע נמחק.
+
+## בקשת חנינה
+ניתן לפנות לנשיא המדינה בבקשת חנינה לקיצור התקופות — בדרך כלל בליווי עורך-דין.
+
+מקור: [חוק המידע הפלילי ותקנת השבים, התשע"ט-2019](https://www.nevo.co.il/law_html/law00/228942.htm) · נבדק ספטמבר 2026.
 
 ## למה זה חשוב לקהילה?
 שיטור-יתר עלול להותיר רישום לצעירים על עבירות קלות. ידיעה שהרישום נמחק מאפשרת תכנון עתיד תעסוקתי.`,
@@ -1213,21 +1277,24 @@ Physical assault, property damage with racist graffiti, threats and harassment, 
 > **Legal disclaimer:** This information is general. Every case differs — consult a lawyer or Legal Aid.
 
 ## The difference between limitation and expungement
-Criminal Register and Rehabilitation of Offenders Act (1981):
-1. **Limitation period** — after this, only certain bodies may view the record; ordinary employers may not.
-2. **Expungement period** — after a further period, the record is almost entirely erased.
+The governing statute today is the **Criminal Information and Rehabilitation of Offenders Law, 2019**, in force since 15.7.2022, which replaced the 1981 Criminal Register act. Both stages survive:
 
-## The right to a pardon
-You may petition the President for a pardon to shorten the expungement period.
+1. **Limitation period** (ss.18-20) — after this, only certain bodies may view the information; ordinary employers may not.
+2. **Expungement period** (ss.21-23) — after a further period the information is erased.
+
+## Petitioning for a pardon
+You may petition the President for a pardon to shorten these periods — usually with a lawyer's help.
+
+Source: [Criminal Information and Rehabilitation of Offenders Law, 2019](https://www.nevo.co.il/law_html/law00/228942.htm) · verified September 2026.
 
 ## Why does this matter to the community?
 Over-policing may leave young people with records for minor offences. Knowing the record can be expunged enables planning for employment.`,
-      am: `የወንጀል መዝገብ ሕጉ (1981) የይርጋ ጊዜ (የተወሰኑ አካላት ብቻ) እና የማጥፋት ጊዜ (ሙሉ ቅነሳ) ያቀርባሉ። ሕጋዊ ምክር ይፈልጉ።`,
+      am: `ዛሬ የሚሠራው ሕግ **የ2019 የወንጀል መረጃ እና የወንጀለኞች መልሶ ማቋቋም ሕግ** ነው፤ ከ15.7.2022 ጀምሮ በሥራ ላይ ውሎ የ1981ኙን ተክቷል። የይርጋ ጊዜ (ክፍሎች 18-20) እና የማጥፋት ጊዜ (ክፍሎች 21-23) ሁለቱም አሉ። ሕጋዊ ምክር ይፈልጉ።`,
     },
     resources: [
       {
         name: "הסיוע המשפטי — משרד המשפטים",
-        phone: "1-700-704-555",
+        phone: "*6405",
         url: "https://www.gov.il/he/departments/legal_aid",
         description: {
           he: "ייעוץ משפטי בנושאי מרשם פלילי, התיישנות, מחיקה ובקשות חנינה לזכאים.",
@@ -1246,7 +1313,7 @@ Over-policing may leave young people with records for minor offences. Knowing th
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 
   // ── 18. Tebeka — Justice and Equality ───────────────────────────────────────
@@ -1263,45 +1330,45 @@ Over-policing may leave young people with records for minor offences. Knowing th
       am: "የማህበረሰቡ ቀዳሚ የሕግ ድርጅት — ምክር፣ ውክልና እና ዘረኝነትን መዋጋት።",
     },
     body: {
-      he: `"טבקה" — שמשמעותו באמהרית "להגן על צדק" — הוא ארגון משפטי-חברתי שהוקם כדי להגן על זכויות הקהילה האתיופית בישראל.
+      he: `"טבקה" — שמשמעותו באמהרית **"סנגור של צדק"** — הוא ארגון משפטי-חברתי שהוקם כדי להגן על זכויות הקהילה האתיופית בישראל.
 
 ## מה טבקה עושה?
-1. **ייעוץ וייצוג משפטי חינמי** — בתיקי אפליה, אלימות משטרתית, עבודה, וזכויות אזרח.
-2. **ליטיגציה אסטרטגית** — ניהול תיקים תקדימיים שמשנים מדיניות.
-3. **סנגור ציבורי** — קידום חקיקה מול הכנסת והממשלה.
-4. **הסברה והעצמה** — סדנאות על זכויות.
-5. **מוקד פניות** — קו ישיר לקבלת ייעוץ ראשוני.
+1. **ייעוץ וייצוג משפטי** — אפליה על רקע מוצא, אלימות משטרתית, עיכובים, דיני עבודה, דיור, חינוך ובריאות. הארגון מציין באתרו שסיועו ניתן ללא תשלום.
+2. **ליטיגציה אסטרטגית** — תיקים תקדימיים שמשנים מדיניות, כולל עתירות לבג"ץ (בהן עתירות נגד נוהל דרישת הזדהות של המשטרה).
+3. **סנגור ציבורי** — קידום חקיקה ושינוי נהלים מול הכנסת והממשלה.
+4. **הסברה והעצמה** — הרצאות וסדנאות על זכויות, בעברית ובאמהרית.
+5. **תוכניות של הארגון עצמו** — בהן "רקיע" ו"נערי דין".
 
 ## מתי לפנות לטבקה?
-- חוויתם אפליה במקום עבודה, כניסה למקום ציבורי, או שירות.
-- נפגעתם מאלימות משטרתית.
+- חוויתם אפליה במקום עבודה, בכניסה למקום ציבורי, או בקבלת שירות.
+- נפגעתם מאלימות משטרתית או עוכבתם ללא סיבה נראית לעין.
 - פוטרתם או קופחתם על רקע מוצא.
-- נתקלתם בגזענות והסתה.
-- זקוקים לייעוץ בזכויות אזרח.
+- נתקלתם בהתבטאויות גזעניות או בהסתה — טבקה מטפלת בהן גם במסלול לשון הרע.
+- נותר לכם רישום פלילי ואתם רוצים לבדוק מחיקה.
 
 ## כיצד פונים?
-טלפון: **072-2424622** | אתר: tebeka.org.il. תארו בקצרה את הבעיה, התאריך, והמסמכים שברשותכם. הייעוץ הראשוני ניתן ללא עלות.
+טלפון: **072-2424622** | אתר: tebeka.org.il. תארו בקצרה את הבעיה, התאריך, והמסמכים שברשותכם.
 
 ## מסקנה
 אם חוויתם פגיעה בזכויות — אל תישארו לבד. טבקה כאן בדיוק בשביל זה.`,
-      en: `"Tebeka" — meaning "to advocate for justice" in Amharic — is a legal-social organisation founded to protect the rights of the Ethiopian community in Israel.
+      en: `"Tebeka" — Amharic for **"advocate of justice"** — is a legal-social organisation founded to protect the rights of the Ethiopian community in Israel.
 
 ## What does Tebeka do?
-1. **Free legal advice and representation** — discrimination, police violence, employment, and civil rights.
-2. **Strategic litigation** — precedent-setting cases that change policy.
-3. **Public advocacy** — legislation and regulatory change.
-4. **Education and empowerment** — workshops on rights.
-5. **An enquiry line** — direct line for initial advice.
+1. **Legal advice and representation** — origin-based discrimination, police violence, street stops, employment, housing, education and health. The organisation states on its site that its assistance is provided without payment.
+2. **Strategic litigation** — precedent-setting cases that change policy, including Supreme Court petitions (among them petitions against the police procedure for demanding identification).
+3. **Public advocacy** — legislation and changes to official procedure.
+4. **Education and empowerment** — lectures and workshops on rights, in Hebrew and Amharic.
+5. **Its own programmes** — including Rakia and Na'arei Din.
 
 ## When to turn to Tebeka?
-Discrimination at work or in public, police violence, dismissal based on origin, racism or incitement, civil rights advice.
+Discrimination at work, in entry to a public place, or in receiving a service; police violence or a stop with no visible cause; dismissal or disadvantage based on origin; racist statements or incitement, which they also pursue as defamation; and checking whether a criminal record can be expunged.
 
 ## How to approach
-Phone: **072-2424622** | Website: tebeka.org.il. Initial advice is free.
+Phone: **072-2424622** | Website: tebeka.org.il.
 
 ## Conclusion
 If you have experienced a rights violation — do not stay alone. Tebeka is here for exactly that.`,
-      am: `"ቴቤካ" — "ለፍትህ መከራከር" ማለት ነው። ነጻ ምክር እና ውክልና፣ ስትራቴጂካዊ ሙግት፣ ሕዝባዊ ተሟጋችነት እና ትምህርት ይሰጣሉ። ስልክ: 072-2424622። መብትዎ ከተጣሰ ብቻዎን አይቆዩ።`,
+      am: `"ቴቤካ" በአማርኛ **"የፍትህ ጠበቃ"** ማለት ነው። በተወላጅነት ላይ የተመሠረተ አድሎ፣ የፖሊስ ጥቃት፣ ማቆም፣ የሥራ ሕግ እና የወንጀል መዝገብ ማጥፋት ላይ የሕግ ምክር እና ውክልና ይሰጣሉ፤ በድረ-ገጻቸው ድጋፉ ያለ ክፍያ እንደሚሰጥ ገልጸዋል። ስትራቴጂካዊ ሙግት፣ ሕዝባዊ ተሟጋችነት እና ትምህርትም ይሰጣሉ። ስልክ: 072-2424622። መብትዎ ከተጣሰ ብቻዎን አይቆዩ።`,
     },
     resources: [
       {
@@ -1324,6 +1391,6 @@ If you have experienced a rights violation — do not stay alone. Tebeka is here
         },
       },
     ],
-    lastReviewed: "2026-06-02",
+    lastReviewed: "2026-09-02",
   },
 ];
