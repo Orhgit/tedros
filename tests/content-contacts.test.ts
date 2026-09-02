@@ -27,6 +27,13 @@ const SCAN_DIRS = [
 const SCAN_EXTENSIONS = [".ts", ".tsx", ".json"];
 
 /**
+ * An optional phone-number separator: absent (the `tel:` form), an ASCII
+ * hyphen, or any of the Unicode dashes — U+2011 in particular, which content
+ * authors reach for to stop a number wrapping mid-digit.
+ */
+const SEP = "[-‐-―]?";
+
+/**
  * Retired contact details, with the source that retired them. `pattern` is
  * matched against raw file text, so it catches both the display form
  * ("03-5103538") and link forms ("tel:035103538") when written accordingly.
@@ -67,6 +74,30 @@ const RETIRED: ReadonlyArray<{
     pattern: /aka\.idf\.il/,
     replacement: "a verified live IDF/gov.il page",
     source: "TED-142 — reported unreachable",
+  },
+  // TED-159. Separators below are matched via SEP rather than a literal "-":
+  // the Hebrew body of the domestic-violence topic wrote this number with
+  // U+2011 non-breaking hyphens, so an ASCII-only pattern read clean while the
+  // wrong number was live on the page.
+  {
+    label: "DV hotline 1-800-22-0000 (was published as WIZO's)",
+    pattern: new RegExp(`1${SEP}800${SEP}22${SEP}0000`),
+    replacement: "118 (welfare ministry) or *6724 (עמותת ל.א.)",
+    source:
+      "wizo.org.il — absent from their site; their exchange is 03-692xxxx. " +
+      "Traceable only to ~2001 Haaretz listings as the ministry's old line.",
+  },
+  {
+    label: "Na'amat phone 03-6922022",
+    pattern: new RegExp(`03${SEP}6922022`),
+    replacement: "*9201",
+    source: "naamat.org.il — publishes *9201; 03-692xxxx is WIZO's exchange",
+  },
+  {
+    label: "ITIM phone 1-700-500-507",
+    pattern: new RegExp(`1${SEP}700${SEP}500${SEP}507`),
+    replacement: "*8083",
+    source: "itim.org.il — publishes *8083",
   },
 ];
 

@@ -164,7 +164,7 @@ All official links appear in the checklist and resources on this page.`,
     {
       name: "עמותת עתים — ליווי מול חברה קדישא",
       url: "https://itim.org.il",
-      phone: "1-700-500-507",
+      phone: "*8083",
       description: {
         he: "מידע וסיוע חינם בהתנהלות מול חברות קדישא וברשויות הדת — כולל במקרים של קושי או סירוב.",
         en: "Free guidance in dealing with chevra kadisha societies and religious authorities — including cases of difficulty or refusal.",

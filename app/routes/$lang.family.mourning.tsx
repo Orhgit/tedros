@@ -270,6 +270,7 @@ export default function MourningGuidePage({ loaderData }: Route.ComponentProps) 
                     {r.phone && (
                       <a
                         href={`tel:${r.phone.replace(/[^0-9+*]/g, "")}`}
+                        dir="ltr"
                         className="mt-1 inline-block font-display text-xl font-bold text-earth-700 hover:underline"
                         aria-label={`${r.name}: ${r.phone}`}
                       >

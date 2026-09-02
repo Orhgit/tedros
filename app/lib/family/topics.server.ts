@@ -67,7 +67,7 @@ const DOMESTIC_VIOLENCE: FamilyTopic = {
     am: "ለኢትዮጵያ ሴቶች በእስራኤል — የቤት ውስጥ ጥቃት ሲያጋጥም፡ ድንገተኛ ስልኮች፣ መጠለያዎች፣ እና ህጋዊ መብቶች።",
   },
   body: {
-    he: `אלימות במשפחה היא עבירה פלילית בישראל — ללא קשר לרקע תרבותי או מסורת. חוק מניעת אלימות במשפחה (1991) מאפשר להוציא צו הגנה תוך שעות. אם את בסכנה — חייגי מיד 100 (משטרה) או 1‑800‑22‑0000 (WIZO — קו חינם 24/7).
+    he: `אלימות במשפחה היא עבירה פלילית בישראל — ללא קשר לרקע תרבותי או מסורת. חוק מניעת אלימות במשפחה (1991) מאפשר להוציא צו הגנה תוך שעות. אם את בסכנה — חייגי מיד 100 (משטרה) או 118 (מוקד משרד הרווחה — 24/7, גם באמהרית).
 
 מחקרים מראים שנשים מקהילת יוצאי אתיופיה מדווחות פחות על אלימות מחשש מסטיגמה קהילתית ומאי ידיעת הזכויות. פנייה לעזרה היא מעשה אומץ ואחריות — לא בגידה. כל הפניות לגורמי הסיוע חסויות.
 
@@ -78,7 +78,7 @@ const DOMESTIC_VIOLENCE: FamilyTopic = {
 • זכות לייצוג משפטי חינם — לנשים שאינן יכולות לממן עורך דין, הלשכה לסיוע משפטי מספקת ייצוג.
 • זכות למקלט — מקלטים מספקים לינה, תמיכה נפשית, ייעוץ משפטי, וסיוע בשיקום.
 • ילדים עם נשים במקלט — ניתן להגיע עם ילדים; המקלט ידאג גם לצורכיהם.`,
-    en: `Domestic violence is a criminal offence in Israel — regardless of cultural background or tradition. The Prevention of Family Violence Law (1991) allows obtaining a protection order within hours. If you are in danger, call the police immediately at 100 or WIZO at 1-800-22-0000 (free line, 24/7).
+    en: `Domestic violence is a criminal offence in Israel — regardless of cultural background or tradition. The Prevention of Family Violence Law (1991) allows obtaining a protection order within hours. If you are in danger, call the police immediately at 100, or the Ministry of Welfare hotline at 118 (24/7, Amharic available).
 
 Research shows that women from the Ethiopian-Israeli community under-report domestic violence due to fear of community stigma and lack of awareness of their rights. Seeking help is an act of courage and responsibility — not betrayal. All referrals to support services are confidential.
 
@@ -89,7 +89,7 @@ Basic rights:
 • Right to free legal representation — the Legal Aid Bureau provides free representation for women who cannot afford a lawyer.
 • Right to a shelter — shelters provide accommodation, psychological support, legal advice, and rehabilitation assistance.
 • Children with women in shelters — you may arrive with children; the shelter will care for their needs as well.`,
-    am: `የቤት ውስጥ ጥቃት በእስራኤል ወንጀል ነው — ባህላዊ ወይም ሃይማኖታዊ ምክንያቶች ምንም ቢሆኑ። የቤተሰብ ጥቃት መከላከያ ህግ (1991) በጥቂት ሰዓታት ውስጥ የጥበቃ ትዕዛዝ ለማውጣት ያስችላል። አደጋ ውስጥ ከሆኑ — ወዲያው 100 (ፖሊስ) ወይም 1-800-22-0000 (WIZO — ነፃ 24/7) ይደውሉ።
+    am: `የቤት ውስጥ ጥቃት በእስራኤል ወንጀል ነው — ባህላዊ ወይም ሃይማኖታዊ ምክንያቶች ምንም ቢሆኑ። የቤተሰብ ጥቃት መከላከያ ህግ (1991) በጥቂት ሰዓታት ውስጥ የጥበቃ ትዕዛዝ ለማውጣት ያስችላል። አደጋ ውስጥ ከሆኑ — ወዲያው 100 (ፖሊስ) ወይም 118 (የበጎ አድራጎት ሚኒስቴር መስመር — 24/7፣ በአማርኛም) ይደውሉ።
 
 ጥናቶች እንደሚያሳዩ ከኢትዮጵያ ማህበረሰብ የሆኑ ሴቶች ስለ ማህበረሰብ ስቃይ ፍርሃት እና ስለ መብቶቻቸው ስለ ማወቅ ማጣት ጥቃቱን ሪፖርት ማድረጊያ ይቸገራሉ። እርዳታ መጠየቅ ድፍረት እና ሃላፊነት ነው — ክህደት አይደለም።
 
@@ -102,18 +102,28 @@ Basic rights:
   },
   resources: [
     {
-      name: "WIZO — קו חירום לנשים",
-      phone: "1-800-22-0000",
-      url: "https://www.wizo.org.il",
+      name: "משרד הרווחה — מוקד 118",
+      phone: "118",
+      url: "https://www.gov.il/he/pages/molsa-118",
       description: {
-        he: "קו חירום חינמי לנשים במצוקה, 24 שעות ביממה. ייעוץ, הפניה למקלטים, וסיוע משפטי.",
-        en: "Free emergency line for women in crisis, 24/7. Counselling, shelter referrals, and legal assistance.",
-        am: "ለጭንቀት ውስጥ ላሉ ሴቶች ነፃ አደጋ መስመር፣ 24/7። ምክር፣ ወደ መጠለያ ምንባብ፣ እና የህግ ድጋፍ።",
+        he: "המוקד הארצי לאלימות במשפחה של משרד הרווחה — 24 שעות ביממה, בעברית, ערבית, רוסית ואמהרית. הערכת מסוכנות, הפניה למקלטים ולמרכזי טיפול.",
+        en: "The Ministry of Welfare's national domestic-violence hotline — 24/7, in Hebrew, Arabic, Russian, and Amharic. Danger assessment, shelter referrals, and treatment centres.",
+        am: "የበጎ አድራጎት ሚኒስቴር ብሔራዊ የቤት ውስጥ ጥቃት መስመር — 24/7፣ በዕብራይስጥ፣ በአረብኛ፣ በሩሲያኛ እና በአማርኛ። የአደጋ ግምገማ፣ ወደ መጠለያ እና ወደ ህክምና ማዕከላት ምንባብ።",
+      },
+    },
+    {
+      name: "עמותת ל.א. — לאלימות נגד נשים",
+      phone: "*6724",
+      url: "https://no2violence.co.il",
+      description: {
+        he: "קו סיוע ארצי חינם, 24 שעות ביממה, ב-14 שפות. הקשבה, ייעוץ, וליווי עד להגעה למקום מוגן.",
+        en: "Free national helpline, 24/7, in 14 languages. A listening ear, counselling, and accompaniment until you reach a safe place.",
+        am: "ነፃ ብሔራዊ የድጋፍ መስመር፣ 24/7፣ በ14 ቋንቋዎች። ማዳመጥ፣ ምክር፣ እና ወደ ደህና ቦታ እስኪደርሱ ድረስ አጃቢነት።",
       },
     },
     {
       name: "Na'amat — נעמ\"ת",
-      phone: "03-6922022",
+      phone: "*9201",
       url: "https://www.naamat.org.il",
       description: {
         he: "ארגון נשים המספק מקלטים, ייעוץ משפטי, ותמיכה לנשים שנפגעו מאלימות.",
@@ -317,7 +327,7 @@ JDC-Eshel ሴቶች ብሔራዊ ኔትወርክ — ቤርሼባ፣ ኔታን�
     },
     {
       name: "Na'amat — נעמ\"ת",
-      phone: "03-6922022",
+      phone: "*9201",
       url: "https://www.naamat.org.il",
       description: {
         he: "ייעוץ משפטי, גישור וסדנאות העצמה לנשים.",

@@ -81,24 +81,28 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
       <SiteHeader locale={locale} currentPath={`/${locale}${familyPath()}`} />
       <main id="main-content" className="container-default mx-auto max-w-4xl py-10">
         {/* Emergency banner. Phone numbers are tel: links wrapped dir="ltr" +
-            nowrap — at 375px the bidi algorithm used to split 1-800-22-0000
-            across two lines with the hyphen on the wrong side (TED-121). */}
+            nowrap — at 375px the bidi algorithm used to split the old dashed
+            number across two lines with the hyphen on the wrong side (TED-121).
+            The numbers here are now short and undashed, but the wrapper stays:
+            it is what keeps a leading "*" on the correct side of an RTL run
+            (TED-159). */}
         <div className="mb-6 rounded-xl border border-red-200 bg-red-50 p-4">
           <p className="text-sm font-semibold text-red-800">
             {locale === "he" ? (
               <>
                 בסכנה מיידית? חייגי <EmergencyTel number="100" /> (משטרה) או{" "}
-                <EmergencyTel number="1-800-22-0000" /> (WIZO — חינם 24/7)
+                <EmergencyTel number="118" /> (מוקד משרד הרווחה — 24/7, גם באמהרית)
               </>
             ) : locale === "am" ? (
               <>
                 ቅጽበታዊ አደጋ? <EmergencyTel number="100" /> (ፖሊስ) ወይም{" "}
-                <EmergencyTel number="1-800-22-0000" /> (WIZO — ነፃ 24/7) ይደውሉ
+                <EmergencyTel number="118" /> (የበጎ አድራጎት ሚኒስቴር — 24/7፣ በአማርኛም) ይደውሉ
               </>
             ) : (
               <>
                 Immediate danger? Call <EmergencyTel number="100" /> (police) or{" "}
-                <EmergencyTel number="1-800-22-0000" /> (WIZO — free 24/7)
+                <EmergencyTel number="118" /> (Ministry of Welfare — 24/7, Amharic
+                available)
               </>
             )}
           </p>
@@ -157,7 +161,8 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
                   </h3>
                   {r.phone && (
                     <a
-                      href={`tel:${r.phone.replace(/[^0-9+]/g, "")}`}
+                      href={`tel:${r.phone.replace(/[^0-9+*]/g, "")}`}
+                      dir="ltr"
                       className="mt-1 block font-display text-2xl font-bold text-red-700 hover:underline"
                       aria-label={`${r.name}: ${r.phone}`}
                     >
