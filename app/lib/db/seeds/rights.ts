@@ -1349,7 +1349,7 @@ Public-housing companies (Amidar, Amigor, Halamish, Shikmona) manage the apartme
 
 - מעצר על ידי משטרה
 - פיטורין במקום העבודה
-- אלימות במשפחה (גם דרך 105)
+- אלימות במשפחה (גם דרך 118)
 - חשד לאפליה במהלך פנייה לשירות ציבורי
 `,
       en: `## What cases does Tebeka handle?
@@ -1373,7 +1373,7 @@ Public-housing companies (Amidar, Amigor, Halamish, Shikmona) manage the apartme
 
 - Arrest by police
 - Termination from work
-- Domestic violence (also via 105)
+- Domestic violence (also via 118)
 - Suspected discrimination during a public-service interaction
 `,
       am: `## ቴቤካ ምን ጉዳዮችን ይዛለች?
@@ -1397,7 +1397,7 @@ Public-housing companies (Amidar, Amigor, Halamish, Shikmona) manage the apartme
 
 - በፖሊስ መታሰር
 - ከስራ መባረር
-- የቤት ውስጥ አመፅ (በ105 በኩልም)
+- የቤት ውስጥ አመፅ (በ118 በኩልም)
 - በሕዝብ-አገልግሎት ግንኙነት ወቅት መድልዎ መጠርጠር
 `,
     },
@@ -3283,9 +3283,10 @@ Counseling adapted to understand:
     bodies: {
       he: `## 🚨 במצב חירום
 
-- **105**: קו חירום ארצי לאלימות במשפחה — 24/7, אנונימי
 - **משטרה**: 100 (אם בסכנת חיים)
-- **ERAN**: 1201 (תמיכה רגשית)
+- **118**: קו הסיוע הארצי של משרד הרווחה לאלימות במשפחה — 24/7, אנונימי, מענה גם באמהרית
+- **\*6724**: קו הסיוע של עמותת ל.א — 24/7
+- **ער"ן**: 1201 (תמיכה רגשית, 24/7)
 
 ## למי מיועד?
 
@@ -3306,16 +3307,17 @@ Counseling adapted to understand:
 
 ## איך מתחילים בלי סכנה?
 
-- **טלפון**: 105 (קו ארצי) או 03-5240479 (WIZO)
-- **WhatsApp**: שלח הודעה לרכזת קהילתית (מספרים ב-WIZO.org.il)
+- **טלפון**: 118 (קו ארצי, 24/7) או \*6724 (עמותת ל.א, 24/7)
+- **WhatsApp**: 050-2270118 — הפנייה השקטה למוקד 118, כשאי-אפשר לדבר
 - **דרך מורה / רופאה**: גם הם חייבים בדיווח אם יש סכנה לקטין
 - **דרך Tene Briut**: ליווי תרבותי בלי דיווח אוטומטי
 `,
       en: `## 🚨 In emergency
 
-- **105**: national domestic violence hotline — 24/7, anonymous
 - **Police**: 100 (if life-threatening)
-- **ERAN**: 1201 (emotional support)
+- **118**: the welfare ministry's national domestic-violence line — 24/7, anonymous, Amharic available
+- **\*6724**: L.A. Association support line — 24/7
+- **ERAN**: 1201 (emotional support, 24/7)
 
 ## Who is eligible?
 
@@ -3336,15 +3338,16 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 
 ## How to start safely?
 
-- **Phone**: 105 (national) or 03-5240479 (WIZO)
-- **WhatsApp**: message a community coordinator (numbers at WIZO.org.il)
+- **Phone**: 118 (national, 24/7) or \*6724 (L.A. Association, 24/7)
+- **WhatsApp**: 050-2270118 — the silent route into the 118 centre when you cannot speak
 - **Via teacher / doctor**: they also have a duty to report if a minor is in danger
 - **Via Tene Briut**: cultural accompaniment without automatic reporting
 `,
       am: `## 🚨 በአደጋ ጊዜ
 
-- **105**: ብሔራዊ የቤት ውስጥ አመፅ መስመር — 24/7
 - **ፖሊስ**: 100
+- **118**: የሠራተኛና ማኅበራዊ ጉዳይ ሚኒስቴር ብሔራዊ የቤት ውስጥ አመፅ መስመር — 24/7፣ ስም-አልባ፣ በአማርኛም
+- **\*6724**: L.A. ማኅበር የድጋፍ መስመር — 24/7
 - **ERAN**: 1201
 
 ## ለማን ይሆናል?
@@ -3366,8 +3369,8 @@ All inquiries are **anonymous** and not reported to kessim, rabbis, or the commu
 
 ## በደህንነት እንዴት መጀመር ይቻላል
 
-- **ስልክ**: 105
-- **WhatsApp**: ለማህበረሰብ አስተባባሪ
+- **ስልክ**: 118 (24/7) ወይም \*6724
+- **WhatsApp**: 050-2270118 — መናገር በማይቻልበት ጊዜ ወደ 118 ጸጥታዊ መንገድ
 - **በመምህር / ሐኪም በኩል**
 - **በጤና ብርሃት በኩል**: ራስ-ሰር ሪፖርት ሳይደረግ
 `,
@@ -4648,12 +4651,12 @@ Tene Briut (תנא בריאות) is a Clalit program specifically for the Ethiop
 
 | גוף | שירות | טלפון |
 |-----|-------|-------|
-| **ויצ"ו (WIZO)** | מקלטים בערים גדולות | 1-800-500-550 |
-| **נעמת** | מקלטים + ייעוץ | 1-800-505-360 |
+| **משרד הרווחה** | 17 מקלטים ברחבי הארץ — ההפניה עוברת דרך מוקד 118 | **118** |
+| **עמותת ל.א** | קו סיוע 24/7, ליווי ומקלטים | **\*6724** |
+| **נעמת** | מקלטים + ייעוץ | **\*9201** |
 | **ל.א.ה (ארגון נשים אתיופיות)** | מלווה אמהרית | ירושלים, ת"א |
-| **ELEM** | מקלטי נוער (מתחת לגיל 18) | 1201 |
 
-**קו חירום ארצי לאלימות במשפחה**: **118** (פועל 24/7, ניתן לשוחח באמהרית)
+**קו הסיוע הארצי לאלימות במשפחה**: **118** (24/7, מענה גם באמהרית). כשאי-אפשר לדבר — WhatsApp ל-050-2270118.
 
 ---
 
@@ -4717,8 +4720,8 @@ The order can include eviction of the abuser (even if the home is in his name), 
 
 - **National domestic-violence hotline: 118** (24/7, Amharic available)
 - **Police: 100**
-- **WIZO shelters: 1-800-500-550**
-- **Na'amat shelters: 1-800-505-360**
+- **L.A. Association support line: \*6724** (24/7)
+- **Na'amat shelters: \*9201**
 - **TEBEKA (legal):** 072-2424622
 
 ## Financial Safety Net During Separation
@@ -4735,7 +4738,7 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 
 - **የቤተሰብ ጥቃት ስልክ: 118** (24/7፣ አማርኛ አለ)
 - **ፖሊስ: 100**
-- **WIZO: 1-800-500-550**
+- **L.A. ማኅበር: \*6724** (24/7)
 - **TEBEKA: 072-2424622**
 
 ## ልዩነቶቹ
@@ -4836,7 +4839,7 @@ When leaving, you are entitled to emergency housing, alimony (if children are in
 |-------|-------|-----|
 | **IEWA (נשים יוצאות אתיופיה)** | ייעוץ, ליווי, קהילה | iewa.org.il |
 | **טבקה** | ייעוץ משפטי, מזונות, גירושין | 072-2424622 |
-| **ויצ"ו** | מרכזי הורים, עזרה לגננות | 1-800-500-550 |
+| **ויצ"ו** | מרכזי הורים, עזרה לגננות | 03-6923717 |
 | **ביטוח לאומי** | מזונות מובטחים, קצבת ילדים | *6050 |
 | **שירות התעסוקה** | הכשרות, קצבאות | המשרד הקרוב |
 
