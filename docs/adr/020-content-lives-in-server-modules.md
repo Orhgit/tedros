@@ -96,6 +96,8 @@ It is still reasonable to move one to make the guarantee explicit rather than in
 
 ### 6. The budget stays at 400 kB and the glob stays as it is
 
+> **Superseded by [ADR-022](./022-measure-the-payload-users-download.md) (TED-154).** The glob changed, as its own decision with its own justification, exactly as this section required. The gate now budgets the initial payload of two named pages plus a per-route-chunk cap. Everything else in this ADR — where content lives, the `meta` rule, the `.server` split — stands unchanged.
+
 `size-limit`'s path stays `build/client/assets/*.js`. It is an imperfect metric — it sums every lazily-loaded route chunk and all three locales, so no user ever downloads the number it reports, and it would even penalise correct per-locale code-splitting. **Changing the glob is equivalent to raising the limit and is not to be done as a side effect of a content PR.** If the metric is to change, that is its own ADR with its own justification.
 
 ## Consequences

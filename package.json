@@ -26,7 +26,7 @@
     "db:reset": "drizzle-kit drop && drizzle-kit migrate && pnpm db:seed",
     "news:promote": "tsx scripts/news-promote.ts",
     "lighthouse": "lhci autorun",
-    "size": "size-limit",
+    "size": "size-limit && node scripts/check-route-chunks.mjs",
     "prepare": "husky"
   },
   "dependencies": {
@@ -95,9 +95,41 @@
   },
   "size-limit": [
     {
-      "name": "client bundle",
-      "path": "build/client/assets/*.js",
-      "limit": "400 KB"
+      "name": "initial payload — home page (/he)",
+      "path": [
+        "build/client/assets/entry.client-*.js",
+        "build/client/assets/chunk-*.js",
+        "build/client/assets/manifest-*.js",
+        "build/client/assets/messages-*.js",
+        "build/client/assets/utils-*.js",
+        "build/client/assets/jsx-runtime-*.js",
+        "build/client/assets/root-*.js",
+        "build/client/assets/_lang-*.js",
+        "build/client/assets/site-header-*.js",
+        "build/client/assets/site-footer-*.js",
+        "build/client/assets/hreflang-*.js",
+        "build/client/assets/_lang._index-*.js"
+      ],
+      "limit": "172 KB"
+    },
+    {
+      "name": "initial payload — mortgage calculator (heaviest route)",
+      "path": [
+        "build/client/assets/entry.client-*.js",
+        "build/client/assets/chunk-*.js",
+        "build/client/assets/manifest-*.js",
+        "build/client/assets/messages-*.js",
+        "build/client/assets/utils-*.js",
+        "build/client/assets/jsx-runtime-*.js",
+        "build/client/assets/root-*.js",
+        "build/client/assets/_lang-*.js",
+        "build/client/assets/site-header-*.js",
+        "build/client/assets/site-footer-*.js",
+        "build/client/assets/lead-form-*.js",
+        "build/client/assets/registry-*.js",
+        "build/client/assets/_lang.calculator.mortgage-*.js"
+      ],
+      "limit": "188 KB"
     }
   ]
 }
