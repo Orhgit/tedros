@@ -91,20 +91,18 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
             {locale === "he" ? (
               <>
                 בסכנה מיידית? חייגי <EmergencyTel number="100" /> (משטרה) או{" "}
-                <EmergencyTel number="118" /> (מוקד משרד הרווחה — 24/7, גם
-                באמהרית)
+                <EmergencyTel number="118" /> (מוקד משרד הרווחה — 24/7, גם באמהרית)
               </>
             ) : locale === "am" ? (
               <>
                 ቅጽበታዊ አደጋ? <EmergencyTel number="100" /> (ፖሊስ) ወይም{" "}
-                <EmergencyTel number="118" /> (የበጎ አድራጎት ሚኒስቴር — 24/7፣ በአማርኛም)
-                ይደውሉ
+                <EmergencyTel number="118" /> (የበጎ አድራጎት ሚኒስቴር — 24/7፣ በአማርኛም) ይደውሉ
               </>
             ) : (
               <>
                 Immediate danger? Call <EmergencyTel number="100" /> (police) or{" "}
-                <EmergencyTel number="118" /> (Ministry of Welfare — 24/7,
-                Amharic available)
+                <EmergencyTel number="118" /> (Ministry of Welfare — 24/7, Amharic
+                available)
               </>
             )}
           </p>
@@ -164,6 +162,7 @@ export default function DomesticViolencePage({ loaderData }: Route.ComponentProp
                   {r.phone && (
                     <a
                       href={`tel:${r.phone.replace(/[^0-9+*]/g, "")}`}
+                      dir="ltr"
                       className="mt-1 block font-display text-2xl font-bold text-red-700 hover:underline"
                       aria-label={`${r.name}: ${r.phone}`}
                     >
