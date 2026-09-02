@@ -99,6 +99,76 @@ const RETIRED: ReadonlyArray<{
     replacement: "*8083",
     source: "itim.org.il — publishes *8083",
   },
+  // TED-160. All of these were live on crisis pages. Every pattern below uses
+  // SEP for the same reason TED-159 introduced it.
+  {
+    label: "WIZO shelter line 1-800-500-550",
+    pattern: new RegExp(`1${SEP}800${SEP}500${SEP}550`),
+    replacement: "118 (welfare ministry) or *6724 (עמותת ל.א.)",
+    source: "wizo.org.il — absent from their site; WIZO publishes no DV line",
+  },
+  {
+    label: "WIZO phone 03-5240479",
+    pattern: new RegExp(`03${SEP}5240479`),
+    replacement: "118 or *6724",
+    source: "wizo.org.il — absent from their site",
+  },
+  {
+    label: "WIZO hotline 1900",
+    // Bare four-digit code: anchored to a non-digit on each side so it cannot
+    // match inside a year, a price, or a longer number.
+    pattern: /(?<![\d*-])1900(?![\d-])/,
+    replacement: "118 or *6724",
+    source: "wizo.org.il — absent from their site; no such WIZO hotline",
+  },
+  {
+    label: "WIZO Haifa 04-8562222",
+    pattern: new RegExp(`04${SEP}8562222`),
+    replacement: "118 or *6724",
+    source: "wizo.org.il — absent from their site",
+  },
+  {
+    label: "Na'amat shelter line 1-800-505-360",
+    pattern: new RegExp(`1${SEP}800${SEP}505${SEP}360`),
+    replacement: "*9201",
+    source: "naamat.org.il — publishes *9201 and nothing else for women",
+  },
+  {
+    label: "Na'amat phone 09-866-2222",
+    pattern: new RegExp(`09${SEP}866${SEP}2222`),
+    replacement: "*9201",
+    source: "naamat.org.il — absent from their site",
+  },
+  {
+    label: "ELEM phone 03-613-9090",
+    pattern: new RegExp(`03${SEP}613${SEP}9090`),
+    replacement: "03-7686666",
+    source: "elem.org.il/contact — publishes 03-7686666",
+  },
+  {
+    label: "Tebeka phone 03-629-4040",
+    pattern: new RegExp(`03${SEP}629${SEP}4040`),
+    replacement: "072-2424622",
+    source: "tebeka.org.il — publishes 072-2424622",
+  },
+  {
+    label: "ACRI phone 03-6936893",
+    pattern: new RegExp(`03${SEP}6936893`),
+    replacement: "03-5608185",
+    source: "acri.org.il — publishes 03-5608185 (Tel Aviv) and 04-8526333",
+  },
+  {
+    label: "105 published as the domestic-violence hotline",
+    // 105 is the police child-online-protection centre. The bare number is far
+    // too common to ban outright, so this targets the co-occurrence that made
+    // it wrong: the digits sitting in the same line as a DV/hotline phrase.
+    pattern:
+      /(?<![\d*-])105(?![\d-])[^\n]*(אלימות במשפחה|domestic violence|የቤት ውስጥ አመፅ)|(אלימות במשפחה|domestic violence|የቤት ውስጥ አመፅ)[^\n]*(?<![\d*-])105(?![\d-])/,
+    replacement: "118 — the welfare ministry's national DV line",
+    source:
+      "police.gov.il/join/unit-105 — 105 is the National Centre for the " +
+      "Protection of Children Online, unrelated to domestic violence",
+  },
 ];
 
 function contentFilesUnder(dir: string): string[] {

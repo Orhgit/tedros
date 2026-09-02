@@ -1571,7 +1571,7 @@ Sudden blurred vision, severe eye pain, flashes of light. Rainbow halo around li
 | אחות בריאות המשפחה | קופת חולים | סניף |
 | מרכז לבריאות האם | בי"ח מקומי | שאלו |
 | טנא בריאות | 03-5162060 | עברית + אמהרית |
-| NATAL — תמיכה | 1201 | 24/7 |
+| נט"ל — תמיכה | 1-800-363-363 | 24/7 |
 
 ## תזונה לאחר לידה
 
@@ -1594,7 +1594,7 @@ Persistent sadness, difficulty bonding with baby, "bad mother" feelings, health 
 
 ## Support Available
 
-Family health nurse (health fund). Tene Briut: 03-5162060 (Hebrew + Amharic). NATAL support: 1201 (24/7).
+Family health nurse (health fund). Tene Briut: 03-5162060 (Hebrew + Amharic). NATAL support: 1-800-363-363 (24/7).
 
 ## Nutrition After Birth
 
@@ -2260,13 +2260,14 @@ ENP: free community nutrition counselling — 03-5368944. GP referral to dietiti
 
 📞 **משטרה**: 100
 📞 **מד"א**: 101
-📞 **קו חם לנשים מוכות**: 1202 (24/7)
-📞 **WIZO**: 04-8562222
+📞 **קו הסיוע לאלימות במשפחה**: 118 (24/7, גם באמהרית)
+📞 **עמותת ל.א**: *6724 (24/7)
+📞 **מרכזי הסיוע לנפגעות תקיפה מינית**: 1202 (גברים — 1203), 24/7
 📞 **טבקה** (עם תרגום): 072-2424622
 
 ## בתי מקלט
 
-ישנם בתי מקלט לנשים ולילדים ברחבי הארץ — כתובות חסויות. **משטרה או 1202 יפנו מיידית**.
+ישנם בתי מקלט לנשים ולילדים ברחבי הארץ — כתובות חסויות. **משטרה (100) או מוקד 118 יפנו מיידית**.
 
 ## זכויות משפטיות
 
@@ -2278,29 +2279,29 @@ ENP: free community nutrition counselling — 03-5368944. GP referral to dietiti
 
 ארגון מאצימות מציע תמיכה ייחודית לנשים מהקהילה: קבוצות תמיכה, ייעוץ, מנטורות.
 
-📞 maatzimot.org.il | 1202 | 072-2424622`,
+📞 maatzimot.org.il | 118 | *6724 | 072-2424622`,
       en: `## Medical Impact of Violence
 
 Domestic violence causes obvious physical harm, but long-term psychological damage is more lasting: PTSD (33% of women experiencing violence), depression (×2.5), chronic anxiety, increased substance use, harm to exposed children.
 
 ## Emergency — Right Now
 
-Police: 100 | MDA: 101 | Women's Hotline: 1202 (24/7) | Tebeka (with translation): 072-2424622
+Police: 100 | MDA: 101 | National domestic-violence line: 118 (24/7, Amharic available) | L.A. Association: *6724 (24/7) | Rape crisis centres: 1202 women / 1203 men | Tebeka (with translation): 072-2424622
 
 ## Shelters
 
-Shelters for women and children nationwide — addresses confidential. Police or 1202 will refer immediately.
+Shelters for women and children nationwide — addresses confidential. Police (100) or the 118 centre will refer immediately.
 
 ## Legal Rights
 
 Protection order: obtained within 24 hours from court. Removal order: removes the abuser from the home. Free legal support: Tebeka 072-2424622.
 
-📞 1202 | 072-2424622 | maatzimot.org.il`,
+📞 118 | *6724 | 072-2424622 | maatzimot.org.il`,
       am: `## ቤተሰብ ጥቃት ጤናን ይጎዳ
 
 33% PTSD | ×2.5 ዲፕሬሽን
 
-📞 1202 (24/7) | ፖሊስ 100 | ቴቤቃ: 072-2424622`,
+📞 118 (24/7፣ በአማርኛም) | *6724 (24/7) | ፖሊስ 100 | ቴቤቃ: 072-2424622`,
     },
     figures: [
       {
