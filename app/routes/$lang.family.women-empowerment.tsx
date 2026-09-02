@@ -197,7 +197,7 @@ export default function WomenEmpowermentPage({ loaderData }: Route.ComponentProp
                     </h3>
                     {r.phone && (
                       <a
-                        href={`tel:${r.phone.replace(/[^0-9+]/g, "")}`}
+                        href={`tel:${r.phone.replace(/[^0-9+*]/g, "")}`}
                         className="mt-1 inline-block font-display text-xl font-bold text-earth-700 hover:underline"
                         aria-label={`${r.name}: ${r.phone}`}
                       >
