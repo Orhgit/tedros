@@ -538,11 +538,10 @@ For community members who can't reach Jerusalem — regional ceremonies are acti
 
 | שירות | מספר | שעות |
 |---|---|---|
-| ער"ן — עזרה ראשונה רגשית | **1201** | 24/7 |
-| ס.ה.ר — מניעת התאבדויות | **1201** | 24/7 |
-| בט"ל — בריאות נפש | **1222** | א'-ה' 08:00–22:00 |
-| קו לאישה | **1202** | 24/7 |
-| קו חם לנוער (ער"ן) | **1201** | 24/7 |
+| ער"ן — עזרה ראשונה רגשית (כולל נוער) | **1201** | 24/7 |
+| ס.ה.ר — מניעת אובדנות | צ'אט ו-WhatsApp ב-[sahar.org.il](https://sahar.org.il/) | 24/7 |
+| נט"ל — טראומה | **1-800-363-363** (או \*3362) | 24/7 |
+| מרכזי הסיוע לנפגעות תקיפה מינית | **1202** (גברים — **1203**) | 24/7 |
 
 ## על הסטיגמה — שיחה כנה
 
@@ -569,7 +568,7 @@ Since 2015, every Israeli resident is entitled to 8 free therapy sessions per ye
 
 ## Crisis hotlines
 
-ERAN emotional first aid: **1201** (24/7). BTL mental health: **1222** (Sun-Thu 08:00-22:00). Women's helpline: **1202** (24/7).
+ERAN emotional first aid: **1201** (24/7). NATAL trauma line: **1-800-363-363** (24/7). Rape crisis centres: **1202** for women, **1203** for men (24/7). SAHAR runs a 24/7 chat at [sahar.org.il](https://sahar.org.il/).
 
 ## See also
 
@@ -585,7 +584,7 @@ ERAN emotional first aid: **1201** (24/7). BTL mental health: **1222** (Sun-Thu 
 
 ## የአደጋ ጊዜ ስልኮች
 
-ኤራን: **1201** (24/7) | ቢቲኤል: **1222** | የሴቶች መስመር: **1202**`,
+ኤራን: **1201** (24/7) | ናታል: **1-800-363-363** | የሴቶች መስመር: **1202** (ለወንዶች **1203**)`,
     },
   },
   {
@@ -1336,7 +1335,7 @@ Hebrew University research (2022) found Ethiopian-Israelis are stopped and searc
 
 ## Filing a complaint
 
-Mahash (police investigation department): [mahash.gov.il](https://www.mahash.gov.il), 02-541-8888. Tebeka legal aid: 03-629-4040. ACRI hotline: 072-2424622.
+Mahash (police investigation department): [mahash.gov.il](https://www.mahash.gov.il), 02-541-8888. Tebeka legal aid: 072-2424622. ACRI (Association for Civil Rights in Israel): 03-5608185.
 
 ## See also
 
@@ -2067,15 +2066,15 @@ Tech-Career በኢትዮጵያ-እስራኤላውያን ማህበረሰብ አ�
 | גורם | מספר | הערות |
 |------|------|-------|
 | **משטרה** | **100** | 24/7 |
-| **קו תמיכה לנשים** | **1202** | משרד הרווחה, 24/7 |
-| **ויצו** | **1900** | יש דוברי אמהרית בשעות מסוימות |
-| **Na'amat** | **09-866-2222** | תיאום מקלט |
-| **ELEM** | **03-613-9090** | צעירות עד גיל 25 |
+| **קו הסיוע הארצי לאלימות במשפחה** | **118** | משרד הרווחה, 24/7 — מענה גם באמהרית. WhatsApp: 050-2270118 |
+| **עמותת ל.א** | **\*6724** | קו סיוע 24/7 |
+| **נעמת** | **\*9201** | קו ייעוץ לנשים, תיאום מקלט |
+| **מרכזי הסיוע לנפגעות תקיפה מינית** | **1202** | 24/7 (לגברים — 1203) |
 
 ## מקלטים עם דוברי אמהרית
 
 - **מקלט ויצו נתניה** — צוות דובר אמהרית
-- **מקלט Na'amat חיפה** — תאמו מראש 09-866-2222
+- **מקלט Na'amat חיפה** — תאמו מראש דרך קו הייעוץ לנשים \*9201
 - **מקלט לבנת בת-ים** — קולטת נשים ממוצא אתיופי
 
 ## צו הרחקה — אפשרי באותו יום
@@ -2118,15 +2117,15 @@ An inter-ministerial committee was formed in 2022 following femicides in the Eth
 | Service | Number | Notes |
 |---------|--------|-------|
 | Police | 100 | 24/7 |
-| Women's Support Line | 1202 | Ministry of Welfare, 24/7 |
-| WIZO hotline | 1900 | Some Amharic-speaking staff |
-| Na'amat | 09-866-2222 | Shelter coordination |
-| ELEM | 03-613-9090 | Women up to age 25 |
+| National domestic-violence line | 118 | Ministry of Welfare, 24/7, Amharic available. WhatsApp: 050-2270118 |
+| L.A. Association | \*6724 | Support line, 24/7 |
+| Na'amat | \*9201 | Women's counselling line, shelter coordination |
+| Rape crisis centres | 1202 | 24/7 (men's line: 1203) |
 
 ## Shelters with Amharic-speaking staff
 
 - WIZO Netanya — Amharic-speaking staff
-- Na'amat Haifa — coordinate via 09-866-2222
+- Na'amat Haifa — coordinate via the women's counselling line \*9201
 - Livnat, Bat Yam — accepts Ethiopian-Israeli women
 
 ## Restraining order — same-day possible
@@ -2154,9 +2153,9 @@ Delete browsing history after reading. If phone may be monitored, use an alterna
 ## ሃሳቤ ሆኖ ቁጥሮች
 
 - ፖሊስ: **100** (24/7)
-- የሴቶች ድጋፍ: **1202** (24/7)
-- WIZO: **1900**
-- Na'amat: **09-866-2222**
+- ብሔራዊ የቤት ውስጥ አመፅ መስመር: **118** (24/7፣ በአማርኛም)
+- L.A. ማኅበር: **\*6724** (24/7)
+- Na'amat: **\*9201**
 
 ## ዕቅድ ትዕዛዝ — ዕለቱ ይቻላል
 
@@ -3225,7 +3224,7 @@ Annual ceremony at Weizmann Park — IAEJ Rehovot and Yadid Rehovot.
 
 **ELEM — תל אביב דרום (משרת גם בת ים)**
 - כתובת: פינסקר 14, תל-אביב
-- טל: 03-613-9090
+- טל: 03-7686666
 - שירותים: תוכניות נוער בסיכון גיל 12-22, ייעוץ פסיכולוגי, קבוצות תמיכה
 
 **מרכז רב-תרבותי עיריית בת ים**
@@ -3283,7 +3282,7 @@ Annual ceremony at Weizmann Park — IAEJ Rehovot and Yadid Rehovot.
 
 ## Key organisations
 
-- **ELEM Tel Aviv South** (serves Bat Yam) — Pinsker 14, Tel Aviv, tel 03-613-9090. At-risk youth 12–22, psychological counselling.
+- **ELEM Tel Aviv South** (serves Bat Yam) — Pinsker 14, Tel Aviv, tel 03-7686666. At-risk youth 12–22, psychological counselling.
 - **Bat Yam Multicultural Centre** — Ben Gurion 4. Migrant community programmes, Hebrew classes, community counselling.
 - **Yadid Bat Yam representative** — rights counselling via Tel Aviv branch, tel 03-561-0011.
 
@@ -3317,7 +3316,7 @@ Bat Yam community participates in the central Gush Dan Sigd at Yarkon Park, Tel 
 
 ## ዋና ድርጅቶች
 
-- ELEM ቴል አቪቭ ደቡብ — ፒንስከር 14፣ ስ.ቁ 03-613-9090
+- ELEM ቴል አቪቭ ደቡብ — ፒንስከር 14፣ ስ.ቁ 03-7686666
 - ባት ያም ሁለገብ ማዕከል — ቤን ጉሪዮን 4
 - ቴነ ብሪዩት — ሄርዝል 60
 - BTL ባት ያም — ሄርዝል 20፣ ስ.ቁ 03-613-5200
