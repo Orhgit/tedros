@@ -256,7 +256,7 @@ Graduates with a bachelor's in CS / math / engineering — or non-graduates with
 
 ## איך מממשים את הזכות
 
-1. בעת הגשת מועמדות לתפקיד ציבורי — סמנו את ה-flag "ייצוג הולם / צו 50"
+1. בעת הגשת מועמדות לתפקיד ציבורי — ציינו את השתייכותכם בסעיף הייצוג ההולם (ס' 15א לחוק שירות המדינה (מינויים))
 2. שמרו עותק של ההגשה (ראיה במקרה של ערעור)
 3. אם נדחיתם וחושדים בהפליה — פנו לטבקה לייעוץ משפטי חינמי
 
@@ -284,7 +284,7 @@ The Commission set an interim target of 2.0% by 2026 and 2.5% by 2027. Additiona
 
 ## How to claim the right
 
-1. When applying for a public-sector role — flag "Affirmative representation / Order 50"
+1. When applying for a public-sector role — state your status under the affirmative-representation clause (s.15A of the Civil Service (Appointments) Law)
 2. Keep a copy of the application (evidence in case of appeal)
 3. If rejected and you suspect discrimination — contact Tebeka for free legal counsel
 

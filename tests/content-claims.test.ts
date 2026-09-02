@@ -98,6 +98,55 @@ const RETIRED_CLAIMS: readonly RetiredClaim[] = [
     pattern: /הגרלה שנתית|annual lottery/,
     why: "registration closed after the 2017 round; both ministry programme pages now 404",
   },
+
+  // ── TED-158 ───────────────────────────────────────────────────────────────
+
+  {
+    label: "phantom statutes cited as the basis of a right",
+    pattern: /המעוקין|חוק שוויון זכויות \(2000\)|Equal Rights Act \(2000\)/,
+    why: 'no statute of either name exists. The whistleblower law is חוק הגנה על עובדים ... התשנ"ז-1997; the 2000 act is חוק איסור הפליה במוצרים ובשירותים',
+  },
+  {
+    label: '"צו 50" as the basis of civil-service affirmative representation',
+    pattern:
+      /צו 50 מחייב|Order 50 requires|תיבת "ייצוג הולם \/ צו 50"|Affirmative representation \/ Order 50/,
+    why: "no instrument of that name. The basis is ס' 15א לחוק שירות המדינה (מינויים), the test is 'כישורים דומים' — not 'two equal candidates' — and the preference is discretionary. NOTE: the bare term 'צו 50' still appears in careers/, news/ and stories/ and needs its own sweep — this pattern bans the false legal proposition, not the term",
+  },
+  {
+    label: "the 1982 criminal-procedure law as the source of stop powers",
+    pattern: /חוק סדר הדין הפלילי \(1982\)|Code of Criminal Procedure \(1982\)/,
+    why: "עיכוב is governed by פרק ג' (ss.66-75) of the 1996 arrests law. The 1982 citation contradicted our own street-stop guide",
+  },
+  {
+    label: "עלבון עובד ציבור offered to a racism complainant as a remedy",
+    pattern: /עלבון עובד ציבור|insulting a public official/,
+    why: "s.288 protects the public servant, not the complainant. It is among the offences people in this community are charged with in these encounters — it appears in the schedule of the 2024 records-deletion law for that reason",
+  },
+  {
+    label: "the phantom Legal Aid and defunct-NGO contact routes",
+    pattern: /1-700-704-555|yedid\.org\.il|m-z\.co\.il|amona\.co\.il/,
+    why: "1-700-704-555 returns zero hits anywhere (Legal Aid is *6405); Yedid closed in 2020 and its domain is now a commercial tutoring marketplace; m-z.co.il is a bookkeeping firm, not the Press Council; amona.co.il is NXDOMAIN",
+  },
+  {
+    label: "programmes that do not exist",
+    pattern: /PRESEN|codeOved|JDC-Ashalim Strong Families/,
+    why: "PRESEN and codeOved have no operator at all; 'JDC-Ashalim Strong Families' is not a JDC programme (their work is PACT); Scale-Up Velocity is real but is a training body, not an investor — it runs no seed-funding bootcamp",
+  },
+  // NOT YET BANNABLE — "ENP Tech-Career". Tech-Career is an independent
+  // עמותה; ENP works with ages 13-18 and runs no bootcamp or employment
+  // programme, and the "78% placement (ENP 2024 report)" cited for it came
+  // from a report that does not exist. Corrected in careers/faqs.server here,
+  // but the conflation also sits in careers.server, comparisons, news,
+  // professionals and stories.server — and stories.server is frozen pending
+  // the owner's persona-labelling decision, so a ban added now would fail the
+  // build on a file nobody is allowed to touch. Add this pattern in the PR
+  // that clears the remaining five files.
+  {
+    label: "the 28-week maternity leave and the ethnic daycare subsidy",
+    pattern:
+      /28 שבועות|28 weeks[^\n]{0,30}(leave|לידה)|סבסוד צהרון[^\n]{0,20}80%|80% of cost for community members/,
+    why: "the TED-148 exclusivity-fabrication pattern. Statutory leave is 26 weeks (15 paid) with no 28-week or community-specific variant; the daycare subsidy is means-tested and has no origin criterion",
+  },
 ];
 
 function contentFilesUnder(dir: string): string[] {
@@ -146,13 +195,14 @@ describe("retired claims stay retired (TED-157)", () => {
 
 /** Phrases that mark a paragraph as warning about a claim rather than making it. */
 const DEBUNK_RE =
-  /(אינם מופיעים|אינו מופיע|לא קיים|לא קיימת|אין זכות כזו|אין מענק|אין מסלול|אין הגרלה|אין תוכנית|הוסר|הוסרו|ההרשמה סגורה|נסגרה|do not appear|does not appear|no such|not a real|no longer|was removed|were removed|is closed|does not exist|no origin criterion|in error)/;
+  /(אינם מופיעים|אינו מופיע|אינה קיימת|אינו קיים|לא קיים|לא קיימת|אין דבר כזה|אין זכות כזו|אין מענק|אין מסלול|אין הגרלה|אין תוכנית|אינה מפרסמת|אינה זכות עדתית|שום קריטריון של מוצא|קבע בעבר|הופיע כאן בעבר|נכתב כאן בעבר|לא נמצא|לא נמצאה|הוסר|הוסרו|הוסרה|שגוי|טעות|ההרשמה סגורה|נסגרה|do not appear|does not appear|no such|not a real|no longer|was removed|were removed|is closed|does not exist|do not exist|there is no|no evidence|no origin criterion|in error|is wrong|was wrong|publishes no|deliberately excluded|NXDOMAIN|\bremoved\b|\bretired\b|previously (said|stated|listed|described))/i;
 
 // ---------------------------------------------------------------------------
 // 2. Sourced money claims — ADR-021
 // ---------------------------------------------------------------------------
 
 import { CAREER_TRACKS } from "../app/lib/careers/careers.server";
+import { FAQS } from "../app/lib/careers/faqs.server";
 import { COMPARISONS } from "../app/lib/comparisons/comparisons.server";
 import { PRIORITY_RIGHTS } from "../app/lib/db/seeds/rights";
 import { ALL_SCHOLARSHIPS } from "../app/lib/education/scholarships.server";
@@ -190,6 +240,12 @@ const CLAIM_REGISTRIES: ReadonlyArray<{
   },
   { label: "careers/careers.server", entries: CAREER_TRACKS, requireGovSource: false },
   { label: "family/topics.server", entries: FAMILY_TOPICS, requireGovSource: false },
+  // TED-158: this registry was missing from the list, so the ADR-021
+  // sourcing rule had never applied to it — while the route emits FAQPage
+  // JSON-LD, i.e. asks Google to serve its numbers as answers. It entered
+  // the TED-158 audit with ~25 percentage claims, a dozen shekel figures
+  // and zero URLs. Adding it here is what keeps that from recurring.
+  { label: "careers/faqs.server", entries: FAQS, requireGovSource: false },
 ];
 
 /** A shekel amount: "₪1,250", "1,250 ₪", '600,000 ש"ח'. */
@@ -220,14 +276,12 @@ const GRANDFATHERED: ReadonlyArray<{ readonly id: string; readonly why: string }
     id: "db/seeds/rights:youth-mentorship",
     why: "PERACH stipend corrected to the published ₪7,000; the entry's other programmes are NGO-run, so the source is an org page, not gov.il",
   },
-  {
-    id: "db/seeds/rights:ujia-kiedf-business-loans",
-    why: "₪200,000 ceiling UNVERIFIED — the audit ran out of search budget before reaching KIEDF/UJIA",
-  },
-  {
-    id: "db/seeds/rights:national-civic-service",
-    why: "~₪5,000/month national-service allowance UNVERIFIED and flagged high-risk — the real דמי כלכלה are believed far lower",
-  },
+  // TED-158 CLEARED: ujia-kiedf-business-loans and national-civic-service.
+  // The loan ceiling was removed (neither UJIA nor KIEDF publishes one, and
+  // our two files disagreed: ₪200,000 vs ₪150,000). The national-service
+  // allowance was ~5x overstated — the real subsistence payment is ₪810/month
+  // since March 2025, plus a tiered maintenance allowance, totalling roughly
+  // ₪800-2,100. Both entries now state their figures with sources.
   {
     id: "db/seeds/rights:hesegim-scholarships",
     why: "stale: 'הישגים' is a grades 7-12 tutoring programme, not a scholarship. Entry needs rewriting or deleting, like the comparison already removed",

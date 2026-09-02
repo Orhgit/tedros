@@ -45,7 +45,6 @@ const PLANNED_BOOTCAMPS = new Set([
   "isef-excellence-employment",
   "hila-bagrut-tech",
   "itworks-israel",
-  "codeoved",
   "scaleup-velocity",
   "presen",
   "career-counselors-network",

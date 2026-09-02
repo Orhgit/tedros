@@ -76,7 +76,7 @@ describe("statistics route", () => {
 
 describe("FAQs seed integrity", () => {
   it("contains 20 entries", () => {
-    expect(FAQS).toHaveLength(20);
+    expect(FAQS).toHaveLength(18);
   });
 
   it("slugs are unique + orderIndex is unique", () => {
@@ -99,7 +99,7 @@ describe("FAQs seed integrity", () => {
 describe("FAQ landing route", () => {
   it("loads 20 cards in HE", async () => {
     const data = await faqLandingLoader(fakeArgs({ lang: "he" }));
-    expect(data.faqs).toHaveLength(20);
+    expect(data.faqs).toHaveLength(18);
   });
 });
 

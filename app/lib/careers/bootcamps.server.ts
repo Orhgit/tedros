@@ -304,79 +304,11 @@ New olim — including 1st-gen community members who arrived in 2020+ — withou
     },
   },
 
-  // 6 — codeOved ---------------------------------------------------------
-  {
-    slug: "codeoved",
-    trackSlug: "tech",
-    programType: "Bootcamp",
-    name: {
-      he: "codeOved — bootcamp פיתוח",
-      en: "codeOved — Developer bootcamp",
-      am: "codeOved — የማበልፀጊ ቡት ካምፕ",
-    },
-    shortDescription: {
-      he: "Bootcamp פיתוח 9 חודשים בדגש על תעסוקה מהירה — full-stack JS/Python, מתאים גם לחסרי תואר.",
-      en: "9-month dev bootcamp with a fast-employment focus — full-stack JS/Python, suitable for non-graduates.",
-      am: "ፈጣን ቅጥር ትኩረት ያለው የ9 ወር የማበልፀጊ ቡት ካምፕ።",
-    },
-    timeToComplete: "P36W",
-    financialAidEligible: true,
-    occupationalCategory: "software-developer",
-    applicationUrl: "https://codeoved.org.il",
-    relatedRights: ["tech-career-bootcamp"],
-    relatedProfessions: ["career-counselor"],
-    cities: ["tel-aviv", "haifa"],
-    bodies: {
-      he: `## למי
-
-חסרי תואר עם תשוקה לתחום + יכולת התמדה. אין דרישת רקע טכני קודם.
-
-## מה כלול
-
-- 9 חודשי לימודים בוקר-ערב — JavaScript, Python, React, Node, SQL
-- 5 פרויקטים בעלי הצמדה למיומנויות נדרשות בתעשייה
-- ימי-חברה (open days) חודשיים עם מעסיקים שותפים
-
-## תוצאות
-
-- שיעור placement: ~65%
-- שכר התחלה: ₪13-17K
-
-## איך פונים
-
-[הגשת מועמדות](https://codeoved.org.il) — מצריך מבחן לוגיקה + ראיון 60 דקות.`,
-      en: `## Who is it for
-
-Non-graduates with passion for the field and grit. No prior technical background required.
-
-## What's included
-
-- 9 months of morning-and-evening study — JavaScript, Python, React, Node, SQL
-- 5 projects mapped to industry-required skills
-- Monthly open days with partner employers
-
-## Outcomes
-
-- Placement rate: ~65%
-- Starting salary: ₪13-17K
-
-## How to apply
-
-[Apply here](https://codeoved.org.il) — requires logic test + 60-minute interview.`,
-      am: `## ለማን
-
-በመስኩ ላይ ፍላጎትና ጠንካራ ፈቃደኝነት ያላቸው ምሩቃን-ያልሆኑ።
-
-## የሚካተት
-
-- 9 ወር ጥናት — JavaScript፣ Python፣ React
-- 5 ፕሮጀክቶች
-
-## ውጤቶች
-
-- የቅጥር መጠን: ~65%`,
-    },
-  },
+  // TED-158: the "codeOved" bootcamp entry was removed. No organisation,
+  // site or domain of that name could be found — it appears to be a
+  // garbling of KodCode (kodcode.org.il), which is a different operator
+  // with different terms. A published placement rate ("~65%") was
+  // attached to it.
 
   // 9 — Career counselors network (cross-org) ---------------------------
   {

@@ -42,7 +42,7 @@ export const BODIES: Record<Locale, string> = {
 ## איך מממשים — צעד אחר צעד
 
 1. **בדיקת זכאות**: פנו לדף [ייצוג הולם בשירות הציבורי](/he/rights/public-sector-representation) להבין את הזכאות הספציפית.
-2. **הגשת מועמדות**: בעת הגשה למשרה ציבורית — סמנו את ה-flag "ייצוג הולם / צו 50" בטופס. השדה הזה הוא לעיתים opt-in נסתר; אם אינכם רואים אותו, פנו לאחראית גיוס.
+2. **הגשת מועמדות**: בעת הגשה למשרה ציבורית — ציינו את השתייכותכם בסעיף הייצוג ההולם שבטופס (הבסיס הוא ס' 15א לחוק שירות המדינה (מינויים) — אין מסמך בשם "צו 50"). אם אין סעיף כזה בטופס, פנו לאחראית הגיוס בכתב ושמרו עותק.
 3. **שמירה על תיעוד**: שמרו עותק של ההגשה כולל הסימון. בערעור על דחייה זה הראיה המרכזית.
 4. **ערעור אם נדחית**: דרך [טבקה (Tebeka)](/he/orgs/tebeka) — מקרי discrimination מתועדים, ייעוץ משפטי חינמי לקהילה.
 
@@ -94,7 +94,7 @@ Any Israeli citizen of Ethiopian descent — including 1st, 2nd, and 3rd generat
 ## How to claim it — step by step
 
 1. **Verify eligibility**: visit [Affirmative-action public-sector](/en/rights/public-sector-representation) to understand the specific eligibility.
-2. **Submit application**: when applying to a public-sector role — flag "Affirmative representation / Order 50" on the form. This field is often opt-in and hidden; if you don't see it, ask the recruiter.
+2. **Submit application**: when applying to a public-sector role — state your status in the affirmative-representation clause of the form (the basis is s.15A of the Civil Service (Appointments) Law — there is no document called "Order 50"). If the form has no such clause, write to the recruiting officer and keep a copy.
 3. **Keep documentation**: save a copy of the application including the flag. In an appeal, this is the central evidence.
 4. **Appeal a rejection**: via [Tebeka](/en/orgs/tebeka) — documented discrimination cases, free legal counsel for the community.
 
