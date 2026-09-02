@@ -6477,7 +6477,7 @@ Kav LaOved (free advice): 1-800-354-354 | Tebeka: 072-2424622 | UNHCR (refugee s
 
 - **טבקה**: ייצוג חינם בפלילים — 072-2424622
 - **הסנגוריה הציבורית**: ייצוג חינם לנאשמים ללא אמצעים — 02-5453555
-- **ACRI**: תלונות על הפרת זכויות — 03-6936893
+- **ACRI**: תלונות על הפרת זכויות — 03-5608185
 
 ## מתרגמים מוסמכים
 
@@ -6498,7 +6498,7 @@ Don't sign any document you haven't understood. Say: "I refuse to continue witho
 
 ## Who to Contact
 
-Tebeka (free criminal defence): 072-2424622 | Public Defender (free): 02-5453555 | ACRI (rights violations): 03-6936893
+Tebeka (free criminal defence): 072-2424622 | Public Defender (free): 02-5453555 | ACRI (rights violations): 03-5608185
 
 📞 072-2424622`,
       am: `## ትርጉም መብት

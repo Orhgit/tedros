@@ -1048,7 +1048,7 @@ Employment Service (taasuka.gov.il), ORT Israel (Netanya/Lod/Beersheba), Olim Be
 
 ## היכן מקבלים סיוע משפטי חינם
 
-**טבקה — עורכי דין לקידום צדק**: מספקים ייעוץ משפטי חינמי בנושאי דיור לבני הקהילה. **טלפון**: 03-629-4040. **אתר**: [tebeka.org.il](https://www.tebeka.org.il).
+**טבקה — עורכי דין לקידום צדק**: מספקים ייעוץ משפטי חינמי בנושאי דיור לבני הקהילה. **טלפון**: 072-2424622. **אתר**: [tebeka.org.il](https://www.tebeka.org.il).
 
 ## ראו גם
 
@@ -1069,7 +1069,7 @@ Netanya (Kiryat Nordau), Lod (Ramot neighborhood), Ramla (northern quarter), Kir
 
 ## Free legal help
 
-Tebeka — Lawyers for the Advancement of Justice provides free legal advice on housing matters. Phone: 03-629-4040. Website: [tebeka.org.il](https://www.tebeka.org.il).
+Tebeka — Lawyers for the Advancement of Justice provides free legal advice on housing matters. Phone: 072-2424622. Website: [tebeka.org.il](https://www.tebeka.org.il).
 
 ## See also
 
@@ -1081,7 +1081,7 @@ Tebeka — Lawyers for the Advancement of Justice provides free legal advice on 
 
 ## ነጻ የሕግ እርዳታ
 
-ቴቤካ — ለፍትህ ወኪሎች ለቤት ጉዳዮች ነጻ ምክር ይሰጣሉ። ስልክ: 03-629-4040።`,
+ቴቤካ — ለፍትህ ወኪሎች ለቤት ጉዳዮች ነጻ ምክር ይሰጣሉ። ስልክ: 072-2424622።`,
     },
   },
   {
@@ -1301,9 +1301,9 @@ HbA1c ምርመራ በዓመት ሁለት ጊዜ ያለ ወጪ ይፈቀዳል�
 - **מאוחר ב-3 חודשים ממועד האירוע** — הגישו בהקדם.
 
 ### עמותת טבקה
-מייצגת בני קהילה בתיקים של אפליה משטרתית — **ללא עלות**. **טלפון**: 03-629-4040.
+מייצגת בני קהילה בתיקים של אפליה משטרתית — **ללא עלות**. **טלפון**: 072-2424622.
 
-### עמותת האגודה לזכויות האזרח בישראל (אקי"ם/ACRI)
+### האגודה לזכויות האזרח בישראל (ACRI)
 קו חינם לתלונות על הפרות זכויות: **072-2424622**.
 
 ## ראו גם
@@ -1353,7 +1353,7 @@ Mahash (police investigation department): [mahash.gov.il](https://www.mahash.gov
 
 ## ቅሬታ ማቅረብ
 
-ማሃሽ: [mahash.gov.il](https://www.mahash.gov.il)። ቴቤካ: 03-629-4040። ACRI: 072-2424622።`,
+ማሃሽ: [mahash.gov.il](https://www.mahash.gov.il)። ቴቤካ: 072-2424622። ACRI: 03-5608185።`,
     },
   },
 
@@ -2101,7 +2101,7 @@ Tech-Career በኢትዮጵያ-እስራኤላውያን ማህበረሰብ አ�
 
 - מחקו היסטוריית גלישה לאחר קריאת מדריך זה
 - אם הטלפון עשוי להיות מנוטר — פנו ממכשיר חלופי
-- טהל (עזרה לנפגעות תקיפה מינית, 1202) גם בוואטסאפ: 052-352-7777
+- כשאי-אפשר לדבר — פנו בכתב: WhatsApp למוקד 118 ב-050-2270118, או ל"קול מילה" של מרכזי הסיוע ב-052-836-1202
 
 ## ראו גם
 
@@ -3665,7 +3665,7 @@ Under Halacha: not defined as Jewish until conversion is complete, but historica
 
 ## תמיכת טבקה מפני הפליה
 
-אם נתקלתם בהפליה בתהליך קבלה ללימודים או לעבודה — טבקה מספק ייעוץ משפטי חינמי. טל: 03-629-4040.
+אם נתקלתם בהפליה בתהליך קבלה ללימודים או לעבודה — טבקה מספק ייעוץ משפטי חינמי. טל: 072-2424622.
 
 ## שקילות השכלת סיעוד מחו"ל
 
@@ -3694,7 +3694,7 @@ Hospitals and sick funds in high-community cities specifically seek Amharic-spea
 
 ## Career ladder
 
-Charge Nurse (3–5 years): ₪13,000–₪18,000. Head Nurse (8–10 years): ₪18,000–₪25,000. Tebeka provides free discrimination support: 03-629-4040.
+Charge Nurse (3–5 years): ₪13,000–₪18,000. Head Nurse (8–10 years): ₪18,000–₪25,000. Tebeka provides free discrimination support: 072-2424622.
 
 ## See also
 
@@ -4085,7 +4085,7 @@ ENP እና Tech-Career 2025: ቴክ ክፍሎች ምሩቃን 2.3 እጥፍ ፈ�
 
 ## ייעוץ משפטי אם נדחיתם
 
-טבקה: 03-629-4040. IAEJ (אל"י): 03-510-0082.
+טבקה: 072-2424622. IAEJ (אל"י): 03-510-0082.
 
 ## ראו גם
 
@@ -4110,7 +4110,7 @@ Entry (grade 38–40): ₪7,500–₪10,000. After 5–8 years (grade 42–45): 
 
 ## Free legal support if rejected
 
-Tebeka: 03-629-4040. IAEJ: 03-510-0082.
+Tebeka: 072-2424622. IAEJ: 03-510-0082.
 
 ## See also
 

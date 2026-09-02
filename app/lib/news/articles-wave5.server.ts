@@ -1410,7 +1410,7 @@ All public bodies with 25+ employees: government ministries, state companies (el
 | גוף | טלפון | מה עושים |
 |-----|-------|----------|
 | **טבקה** | 072-2424622 | ייצוג משפטי חינם |
-| **ACRI** | 03-6936893 | תלונה לגוף זכויות |
+| **ACRI** | 03-5608185 | תלונה לגוף זכויות |
 | **נציב תלונות** | 03-7633xxx | תלונה רשמית |
 | **משטרה** | 100 | תלונה פלילית |
 
@@ -1424,7 +1424,7 @@ All public bodies with 25+ employees: government ministries, state companies (el
 - לא לוותר מיד — תיעוד טוב = כוח משפטי
 - לא לאיים — שמרו על רוגע ותעדו
 
-📞 טבקה: 072-2424622 | ACRI: 03-6936893`,
+📞 טבקה: 072-2424622 | ACRI: 03-5608185`,
       en: `## The Law
 
 The Anti-Discrimination in Products, Services and Public Entertainment Law (2000) prohibits rental discrimination on grounds of **race, national origin, community, gender, sexual orientation, religion and more**.
@@ -1435,13 +1435,13 @@ Section 5 makes advertising "not suitable for Ethiopians" a criminal offence.
 
 1. **Document everything**: Save ads, WhatsApp messages, emails; note time, date, exact words said.
 2. **Test**: Ask a non-Ethiopian friend to enquire about the same apartment — success = evidence of discrimination.
-3. **Report**: Tebeka (free legal): 072-2424622 | ACRI: 03-6936893 | Police: 100
+3. **Report**: Tebeka (free legal): 072-2424622 | ACRI: 03-5608185 | Police: 100
 
 ## Compensation
 
 A successful claim can yield **up to 120,000 ILS** without proving actual damage.
 
-📞 Tebeka: 072-2424622 | ACRI: 03-6936893`,
+📞 Tebeka: 072-2424622 | ACRI: 03-5608185`,
       am: `## ሕጉ
 
 ዘር ወይም ምንጭ ምክንያት ቤት ለመከራየት መከልከል ወንጀል ነው።
@@ -1450,7 +1450,7 @@ A successful claim can yield **up to 120,000 ILS** without proving actual damage
 
 1. ሁሉ ነገር ቅዳ/ፎቶ ቅዳ
 2. ቴቤቃ: 072-2424622
-3. ACRI: 03-6936893`,
+3. ACRI: 03-5608185`,
     },
   },
 
