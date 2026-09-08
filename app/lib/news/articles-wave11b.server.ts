@@ -766,4 +766,237 @@ For parents' rights in the education system in depth — [our guide](/en/educati
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "education-ministry-scholarships-parent-payments-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["education"],
+    title: {
+      he: "יש תקציב מלגות לתשלומי הורים — ובית הספר חייב ליידע אתכם שהוא קיים",
+      en: "There is a scholarship budget for parent payments — and the school is obliged to tell you it exists",
+      am: "ለወላጅ ክፍያዎች የስኮላርሺፕ በጀት አለ — ትምህርት ቤቱም መኖሩን የማሳወቅ ግዴታ አለበት",
+    },
+    excerpt: {
+      he: 'משרד החינוך מקצה לבתי ספר תקציב מלגות לתלמידים שהוריהם מתקשים לשלם עבור ספרים, אביזרי לימוד ופעילויות. ₪100–750 ביסודי, ₪100–1,200 בעל-יסודי. ההחלטה בידי ועדת מלגות בית-ספרית, המועדים נקבעים בבית הספר — ועל ההנהלה חלה חובה מפורשת לפרסם שהתקציב קיים.',
+      en: "The Ministry of Education allocates schools a scholarship budget for pupils whose parents struggle to pay for books, learning materials and activities. ₪100–750 in primary school, ₪100–1,200 in secondary. The decision sits with a school scholarship committee, the dates are set by the school — and management is under an explicit duty to publicize that the budget exists.",
+      am: "የትምህርት ሚኒስቴር ወላጆቻቸው ለመጻሕፍት፣ ለመማሪያ ቁሳቁስና ለእንቅስቃሴዎች ለመክፈል ለሚቸገሩ ተማሪዎች ለትምህርት ቤቶች የስኮላርሺፕ በጀት ይመድባል። በአንደኛ ደረጃ ₪100–750፣ በሁለተኛ ደረጃ ₪100–1,200። ውሳኔው በትምህርት ቤቱ የስኮላርሺፕ ኮሚቴ እጅ ነው፣ ቀኖቹም በትምህርት ቤቱ ይወሰናሉ — አመራሩም በጀቱ መኖሩን የማስታወቅ ግልጽ ግዴታ አለበት።",
+    },
+    bodies: {
+      he: `## הזכות שמעטים יודעים עליה
+
+בכתבה על [הסכומים המרביים בתשפ"ז](/he/news/parent-payments-tashpaz-maximum-amounts-2026) הזכרנו שאין למנוע מתלמיד להשתתף בפעילות בגלל אי-תשלום מסיבה כלכלית. הכתבה הזאת עוסקת במה שקיים **בנוסף** לכלל הזה: תקציב מלגות אמיתי, שמשרד החינוך מקצה לבתי ספר בדיוק למטרה הזו.
+
+ההוראה המסדירה אותו היא **הוראת קבע 0406, "הענקת מלגות לתלמידים שהוריהם מתקשים לשלם עבור אביזרי לימוד ופעילויות חינוכיות וחברתיות"**, שפורסמה ב-1 בספטמבר 2023 והיא בתוקף מאותו יום. היא מבטלת כל הוראה קודמת בנושא.
+
+## הסכומים
+
+- **בחינוך היסודי: ₪100–750 לתלמיד.**
+- **בחינוך העל-יסודי: ₪100–1,200 לתלמיד.**
+
+מקור: [חוזר הוראות קבע 0406, משרד החינוך, 1.9.2023, בתוקף](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) · נבדק ספטמבר 2026.
+
+ההוראה מציינת שהטווח הזה הורחב לעומת ההוראה הקודמת (מס' 222, משנת תשע"ט) "כדי לאפשר למוסדות גמישות מרבית".
+
+## למי זה מיועד
+
+לתלמידים בבתי ספר בפיקוח ממלכתי וממלכתי-דתי, וכן לתלמידי רשתות החינוך העצמאי ומעיין החינוך התורני המלמדות על פי תוכנית הליבה — בחינוך היסודי, בחטיבות הביניים ובחטיבות העליונות, במגזר היהודי, הערבי, הדרוזי והבדואי.
+
+התקציב מוקצה לבית הספר **על פי תבחינים סוציו-אקונומיים**: לפי שכבת הגיל ולפי העשירון שבו בית הספר נמצא במדד הטיפוח, ביחס למספר התלמידים.
+
+## שני תנאי סף שכדאי להכיר
+
+1. **בית ספר בלי אישור אפיק לא יכול לחלק מלגות.** ההוראה קובעת: "תנאי סף להקצאת תקציב מלגות לבית ספר הוא קבלת אישור במערכת אפיק לגביית תשלומי הורים וקיום גבייה בפועל". גובה המלגה לא יעלה על גובה תשלומי ההורים שאושרו באפיק לאותה שנה.
+2. **בית ספר שגובה פחות מ-₪100 בשנה אינו רשאי להעניק מלגות כלל.**
+
+עוד קובעת ההוראה: **אין לשלם במזומן להורים.** המחאות יינתנו רק במקרים חריגים.
+
+## איך ההחלטה מתקבלת
+
+ההחלטה בידי **ועדת מלגות בית-ספרית**. ההוראה מסבירה את ההיגיון בכנות: "מאחר שאין אפשרות לסייע לכלל התלמידים המתקשים בתשלום... ממונה ועדת מלגות שמטרתה לאתר את הנצרכים ביותר ולסייע להם, ולו באופן חלקי".
+
+הניקוד בנוי משני חלקים:
+
+- **משקל ההכנסה החודשית לנפש — 85%.** ההוראה מביאה טבלת מדרגות לדוגמה, שבה הכנסה לנפש של עד ₪1,299 מקבלת את הניקוד הגבוה ביותר, והכנסה של ₪2,781 ומעלה את הנמוך ביותר.
+- **ניקוד פרטני — 15%.** הוועדה רשאית להוסיף **עד 15 נקודות** לפי שיקול דעתה, עבור נתונים שאינם באים לידי ביטוי בהכנסה לנפש — ההוראה נותנת כדוגמאות "הוצאות רפואיות חריגות עבור התלמיד או בני משפחתו, נסיבות משפחתיות מורכבות וכדומה". על הוועדה לפרט את הנימוקים.
+
+זה משנה את מה שכדאי לכתוב בטופס. אם יש בבית הוצאה חריגה שאינה נראית בתלוש — **כתבו אותה.** יש לה מקום בניקוד.
+
+## המועדים — נקבעים בבית הספר, לא בירושלים
+
+ההוראה מטילה על הוועדה לקבוע מועדים להגשת הבקשות ומועדים לדיון בהשגות על החלטותיה, ולפרסמם להורים. כלומר: **אין תאריך ארצי אחיד.** התאריך שרלוונטי לכם הוא זה שבית הספר שלכם פרסם, ובדרך כלל הוא נופל בשבועות הראשונים של השנה.
+
+חוזר תשלומי ההורים לתשפ"ז מוסיף שבתי ספר שבתוכנית הגפ"ן מקצים מלגות לפי הנוהל שבמדריך הגפ"ן; מוסדות שאינם בגפ"ן מקבלים את התקציב באמצעות ספק חיצוני.
+
+**פרוטוקולי הוועדה חסויים** ונשמרים בבית הספר. פנייה ישירה של הורה למשרד החינוך בבקשת מלגה תועבר בחזרה למנהל בית הספר, שיפנה אותה לוועדה — כך שאין טעם לעקוף את המסלול.
+
+## חובת הפרסום — והיא זו שנשענים עליה
+
+זו הנקודה החשובה ביותר להורים. שני מקורות אומרים את זה במפורש:
+
+- הוראה 0406: "על הנהלת בית הספר לוודא שכל התלמידים הזקוקים לסיוע יהיו מודעים לקיומו של תקציב המלגות. הפרסום ייעשה במצורף למכתב הבקשה לתשלומי הורים וכן על לוחות המודעות במשרדי בית הספר."
+- הודעה 0379 (תשלומי הורים תשפ"ז): "המנהלים מתבקשים לפעול להקצאת תקציב המלגות בהתאם להנחיות אלה וליידע את התלמידים ואת הוריהם על אודותיו."
+
+**אם לא קיבלתם שום מידע על תקציב המלגות יחד עם דרישת התשלום — זו לא טעות שלכם.** אפשר לבקש את הפרטים ואת מועד ההגשה במזכירות.
+
+## מה לעשות מחר
+
+1. בקשו במזכירות את **טופס הבקשה למלגת סיוע בתשלומי הורים** ואת המועד האחרון להגשה.
+2. מלאו גם את הסעיפים על נסיבות חריגות — שם נמצאות 15 הנקודות.
+3. אם נדחיתם — לוועדה יש מועד קבוע לדיון בהשגות. בקשו אותו.
+
+הטופס מפורסם גם באתר משרד החינוך, בעברית ובערבית.
+
+## מקורות
+
+- [חוזר הוראות קבע 0406 — הענקת מלגות לתלמידים שהוריהם מתקשים לשלם, משרד החינוך, 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — נקרא במלואו 2.9.2026
+- [הודעה 0379 — תשלומי הורים לשנת הלימודים התשפ"ז, 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377)
+- [טופס בקשה לקבלת מלגת סיוע בתשלומי הורים (PDF)](https://meyda.education.gov.il/files/Prh/Parents/RightsObligationsRegulations/application-scholarship-form.pdf)
+- [הכתבה שלנו על הסכומים המרביים בתשפ"ז](/he/news/parent-payments-tashpaz-maximum-amounts-2026)
+- [זכויות הורים במערכת החינוך — טדרוס](/he/education/parent-rights)`,
+      en: `## The entitlement few people know about
+
+In our article on [the maximum amounts for 5787](/en/news/parent-payments-tashpaz-maximum-amounts-2026) we noted that a pupil may not be barred from an activity because of non-payment due to financial difficulty. This article is about what exists **in addition** to that rule: a real scholarship budget, which the Ministry of Education allocates to schools for exactly this purpose.
+
+The instrument governing it is **Permanent Instruction 0406, "Granting scholarships to pupils whose parents struggle to pay for learning materials and educational and social activities,"** published on September 1, 2023 and in force from that day. It cancels every earlier instruction on the subject.
+
+## The amounts
+
+- **In primary school: ₪100–750 per pupil.**
+- **In secondary school: ₪100–1,200 per pupil.**
+
+Source: [Permanent Instructions circular 0406, Ministry of Education, 1.9.2023, in force](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) · verified September 2026.
+
+The instruction notes that this range was widened relative to the previous instruction (no. 222, from 5779) "in order to give institutions maximum flexibility."
+
+## Who it is for
+
+Pupils in state and state-religious schools, and pupils of the Independent Education and Ma'ayan HaChinuch HaTorani networks that teach the core curriculum — in primary schools, middle schools and high schools, across the Jewish, Arab, Druze and Bedouin sectors.
+
+The budget is allocated to the school **according to socio-economic criteria**: by age level and by the school's decile on the nurture index, proportionally to the number of pupils.
+
+## Two thresholds worth knowing
+
+1. **A school without Afik approval cannot distribute scholarships.** The instruction states: "a threshold condition for allocating a scholarship budget to a school is receiving approval in the Afik system for collecting parent payments and actually collecting them." The scholarship may not exceed the parent payments approved on Afik for that year.
+2. **A school that collects less than ₪100 a year may not award scholarships at all.**
+
+The instruction adds: **no cash payments to parents.** Cheques only in exceptional cases.
+
+## How the decision is made
+
+The decision rests with a **school scholarship committee**. The instruction explains the logic candidly: "since it is not possible to help all the pupils who struggle to pay... a scholarship committee is appointed whose purpose is to identify those in greatest need and to help them, even if only partially."
+
+The scoring has two parts:
+
+- **Monthly income per capita — 85% of the weight.** The instruction gives a sample bracket table in which an income per capita of up to ₪1,299 receives the highest score, and ₪2,781 and above the lowest.
+- **Individual scoring — 15%.** The committee may add **up to 15 points** at its discretion for facts that income per capita does not capture — the instruction gives as examples "exceptional medical expenses for the pupil or their family members, complex family circumstances and the like." The committee must set out its reasons.
+
+This changes what is worth writing on the form. If the household carries an exceptional expense that does not show on a payslip — **write it down.** It has a place in the score.
+
+## The deadlines — set by the school, not by Jerusalem
+
+The instruction requires the committee to set dates for submitting applications and dates for hearing objections to its decisions, and to publish them to parents. In other words: **there is no single national date.** The date that matters to you is the one your school published, and it usually falls in the first weeks of the year.
+
+The 5787 parent-payments circular adds that schools in the GPN programme allocate scholarships per the procedure in the GPN guide; institutions outside GPN receive the budget through an external contractor.
+
+**The committee's minutes are confidential** and are kept at the school. A parent's direct approach to the Ministry of Education requesting a scholarship is routed back to the school principal, who refers it to the committee — so there is no point in trying to bypass the route.
+
+## The duty to publicize — and it is the one to lean on
+
+This is the most important point for parents. Two sources say it explicitly:
+
+- Instruction 0406: "The school management must ensure that all pupils in need of assistance are aware of the existence of the scholarship budget. Publication shall be made together with the parent-payments request letter and on the notice boards in the school offices."
+- Notice 0379 (parent payments 5787): "Principals are asked to act on allocating the scholarship budget in accordance with these guidelines and to inform pupils and their parents about it."
+
+**If you received no information at all about the scholarship budget alongside the payment demand — that is not your mistake.** You may ask the school office for the details and the submission date.
+
+## What to do tomorrow
+
+1. Ask the school office for the **application form for parent-payment assistance** and the submission deadline.
+2. Fill in the sections on exceptional circumstances too — that is where the 15 points live.
+3. If you are refused — the committee has a set date for hearing objections. Ask for it.
+
+The form is also published on the Ministry of Education's site, in Hebrew and in Arabic.
+
+## Sources
+
+- [Permanent Instructions circular 0406 — granting scholarships to pupils whose parents struggle to pay, Ministry of Education, 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — read in full 2.9.2026
+- [Notice 0379 — parent payments for the 5787 school year, 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377)
+- [Application form for parent-payment assistance (PDF)](https://meyda.education.gov.il/files/Prh/Parents/RightsObligationsRegulations/application-scholarship-form.pdf)
+- [Our article on the maximum amounts for 5787](/en/news/parent-payments-tashpaz-maximum-amounts-2026)
+- [Parents' rights in the education system — Tedros](/en/education/parent-rights)`,
+      am: `## ጥቂቶች የሚያውቁት መብት
+
+በ[የ5787 ከፍተኛ መጠኖች](/am/news/parent-payments-tashpaz-maximum-amounts-2026) ጽሑፋችን በኢኮኖሚ ችግር ምክንያት ባለመክፈሉ ተማሪ ከእንቅስቃሴ መከልከል እንደማይቻል ገልጸናል። ይህ ጽሑፍ ከዚያ ደንብ **በተጨማሪ** ስላለው ነው፦ የትምህርት ሚኒስቴር ለዚሁ ዓላማ ለትምህርት ቤቶች የሚመድበው እውነተኛ የስኮላርሺፕ በጀት።
+
+የሚያስተዳድረው መመሪያ **ቋሚ መመሪያ 0406፣ «ወላጆቻቸው ለመማሪያ ቁሳቁስና ለትምህርታዊና ማህበራዊ እንቅስቃሴዎች ለመክፈል ለሚቸገሩ ተማሪዎች ስኮላርሺፕ ስለ መስጠት»** ሲሆን በሴፕቴምበር 1, 2023 ታትሞ ከዚያ ቀን ጀምሮ በሥራ ላይ ነው። በዚህ ጉዳይ የነበረውን ማንኛውንም ቀደም ያለ መመሪያ ይሰርዛል።
+
+## መጠኖቹ
+
+- **በአንደኛ ደረጃ ትምህርት፦ በተማሪ ₪100–750።**
+- **በሁለተኛ ደረጃ ትምህርት፦ በተማሪ ₪100–1,200።**
+
+ምንጭ፦ [የቋሚ መመሪያዎች ማስታወቂያ 0406፣ የትምህርት ሚኒስቴር፣ 1.9.2023፣ በሥራ ላይ](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) · በሴፕቴምበር 2026 ተረጋግጧል።
+
+መመሪያው ይህ ክልል «ለተቋማት ከፍተኛ ተለዋዋጭነት ለመስጠት» ከቀድሞው መመሪያ (ቁጥር 222፣ ከ5779) አንጻር መስፋቱን ይገልጻል።
+
+## ለማን ነው
+
+በመንግሥትና በመንግሥት-ሃይማኖታዊ ቁጥጥር ላሉ ትምህርት ቤቶች ተማሪዎች፣ እንዲሁም የመሠረታዊ ሥርዓተ ትምህርቱን ለሚያስተምሩ የነጻ ትምህርትና የማዕያን ሃሒኑኽ ሃቶራኒ መረቦች ተማሪዎች — በአንደኛ ደረጃ፣ በመካከለኛ ደረጃና በሁለተኛ ደረጃ፣ በአይሁድ፣ በአረብ፣ በድሩዝና በቤዱዊን ዘርፎች።
+
+በጀቱ ለትምህርት ቤቱ የሚመደበው **በማህበራዊ-ኢኮኖሚያዊ መስፈርቶች** ነው፦ በዕድሜ ደረጃና ትምህርት ቤቱ በእንክብካቤ መለኪያ ላይ ባለው አስረኛ ደረጃ፣ ከተማሪዎች ብዛት ጋር በተመጣጣኝ።
+
+## ማወቅ የሚገባቸው ሁለት መስፈርቶች
+
+1. **የአፊቅ ፈቃድ የሌለው ትምህርት ቤት ስኮላርሺፕ ማከፋፈል አይችልም።** መመሪያው ይላል፦ «ለትምህርት ቤት የስኮላርሺፕ በጀት ለመመደብ የመግቢያ ሁኔታው የወላጅ ክፍያ ለመሰብሰብ በአፊቅ ሥርዓት ፈቃድ ማግኘትና በተግባርም መሰብሰብ ነው»። የስኮላርሺፑ መጠን ለዚያ ዓመት በአፊቅ ከጸደቀው የወላጅ ክፍያ መብለጥ አይችልም።
+2. **በዓመት ከ₪100 በታች የሚሰበስብ ትምህርት ቤት በጭራሽ ስኮላርሺፕ መስጠት አይችልም።**
+
+መመሪያው ይጨምራል፦ **ለወላጆች በጥሬ ገንዘብ መክፈል አይቻልም።** ቼክ የሚሰጠው በልዩ ሁኔታዎች ብቻ ነው።
+
+## ውሳኔው እንዴት ይሰጣል
+
+ውሳኔው በ**የትምህርት ቤቱ የስኮላርሺፕ ኮሚቴ** እጅ ነው። መመሪያው አመክንዮውን በግልጽ ያስረዳል፦ «ለመክፈል የሚቸገሩትን ተማሪዎች ሁሉ መርዳት ስለማይቻል... በጣም የተቸገሩትን ለይቶ ለመርዳት፣ ቢያንስ በከፊል፣ የስኮላርሺፕ ኮሚቴ ይሾማል»።
+
+ነጥቡ ሁለት ክፍል አለው፦
+
+- **በነፍስ ወከፍ ወርሃዊ ገቢ — 85% ክብደት።** መመሪያው የናሙና ደረጃ ሠንጠረዥ ያቀርባል፤ በዚህም እስከ ₪1,299 ያለው በነፍስ ወከፍ ገቢ ከፍተኛውን ነጥብ፣ ₪2,781 እና ከዚያ በላይ ደግሞ ዝቅተኛውን ያገኛል።
+- **የግል ነጥብ — 15%።** ኮሚቴው በነፍስ ወከፍ ገቢ የማይገለጹ ሁኔታዎችን ግምት ውስጥ በማስገባት **እስከ 15 ነጥብ** በራሱ ውሳኔ መጨመር ይችላል — መመሪያው «ለተማሪው ወይም ለቤተሰቡ አባላት ያልተለመደ የሕክምና ወጪ፣ ውስብስብ የቤተሰብ ሁኔታዎችና የመሳሰሉት» የሚሉ ምሳሌዎችን ይሰጣል። ኮሚቴው ምክንያቶቹን ማብራራት አለበት።
+
+ይህ በቅጹ ላይ ምን መጻፍ እንደሚገባ ይለውጣል። በቤት ውስጥ በደመወዝ ወረቀት የማይታይ ያልተለመደ ወጪ ካለ — **ይጻፉት።** በነጥቡ ውስጥ ቦታ አለው።
+
+## ቀነ ገደቦቹ — በትምህርት ቤቱ እንጂ በኢየሩሳሌም አይወሰኑም
+
+መመሪያው ኮሚቴው ማመልከቻ የሚቀርብበትን ቀንና በውሳኔዎቹ ላይ ተቃውሞ የሚሰማበትን ቀን እንዲወስንና ለወላጆች እንዲያሳውቅ ያስገድዳል። ማለትም፦ **አንድ ወጥ ብሔራዊ ቀን የለም።** ለእርስዎ የሚመለከተው ቀን ትምህርት ቤትዎ ያሳወቀው ነው፣ አብዛኛውን ጊዜም በዓመቱ የመጀመሪያ ሳምንታት ይወድቃል።
+
+የ5787 የወላጅ ክፍያ ማስታወቂያ ይጨምራል፦ በጋፓን ፕሮግራም ውስጥ ያሉ ትምህርት ቤቶች በጋፓን መመሪያ ደንብ መሠረት ስኮላርሺፕ ይመድባሉ፤ ከጋፓን ውጪ ያሉ ተቋማት በጀቱን በውጭ አቅራቢ በኩል ይቀበላሉ።
+
+**የኮሚቴው ቃለ ጉባኤ ሚስጥራዊ ነው** በትምህርት ቤቱም ይቀመጣል። ወላጅ ስኮላርሺፕ ጠይቆ በቀጥታ ወደ ትምህርት ሚኒስቴር ቢሄድ ጉዳዩ ወደ ትምህርት ቤቱ ርዕሰ መምህር ይመለሳል፣ እሱም ወደ ኮሚቴው ይመራዋል — ስለዚህ መንገዱን ለማለፍ መሞከር ትርጉም የለውም።
+
+## የማሳወቅ ግዴታ — መደገፍ የሚገባው ይህ ነው
+
+ለወላጆች ዋነኛው ነጥብ ይህ ነው። ሁለት ምንጮች በግልጽ ይሉታል፦
+
+- መመሪያ 0406፦ «የትምህርት ቤቱ አመራር ድጋፍ የሚያስፈልጋቸው ተማሪዎች ሁሉ የስኮላርሺፕ በጀቱ መኖሩን እንዲያውቁ ማረጋገጥ አለበት። ማሳወቂያው ከወላጅ ክፍያ ጥያቄ ደብዳቤ ጋር እንዲሁም በትምህርት ቤቱ ጽሕፈት ቤቶች ማስታወቂያ ሰሌዳ ላይ ይሆናል።»
+- ማስታወቂያ 0379 (የ5787 የወላጅ ክፍያ)፦ «ርዕሳነ መምህራን በእነዚህ መመሪያዎች መሠረት የስኮላርሺፕ በጀቱን እንዲመድቡና ተማሪዎችንና ወላጆቻቸውን እንዲያሳውቁ ይጠየቃሉ።»
+
+**ከክፍያ ጥያቄው ጋር ስለ ስኮላርሺፕ በጀቱ ምንም መረጃ ካልደረሰዎት — የእርስዎ ስህተት አይደለም።** ዝርዝሩንና የማስረከቢያ ቀኑን በጽሕፈት ቤቱ መጠየቅ ይችላሉ።
+
+## ነገ ምን ማድረግ
+
+1. በጽሕፈት ቤቱ **የወላጅ ክፍያ ድጋፍ ማመልከቻ ቅጽ**ንና የመጨረሻውን የማስረከቢያ ቀን ይጠይቁ።
+2. ስለ ልዩ ሁኔታዎች ያሉትን ክፍሎችም ይሙሉ — 15ቱ ነጥቦች የሚገኙት እዚያ ነው።
+3. ውድቅ ከተደረጉ — ኮሚቴው ተቃውሞ የሚሰማበት የተወሰነ ቀን አለው። ይጠይቁት።
+
+ቅጹ በትምህርት ሚኒስቴር ድረ-ገጽ ላይም በዕብራይስጥና በአረብኛ ታትሟል።
+
+## ምንጮች
+
+- [የቋሚ መመሪያዎች ማስታወቂያ 0406 — ወላጆቻቸው ለመክፈል ለሚቸገሩ ተማሪዎች ስኮላርሺፕ ስለ መስጠት፣ የትምህርት ሚኒስቴር፣ 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — ሙሉ በሙሉ የተነበበ 2.9.2026
+- [ማስታወቂያ 0379 — ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች፣ 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377)
+- [የወላጅ ክፍያ ድጋፍ ማመልከቻ ቅጽ (PDF)](https://meyda.education.gov.il/files/Prh/Parents/RightsObligationsRegulations/application-scholarship-form.pdf)
+- [ስለ የ5787 ከፍተኛ መጠኖች ጽሑፋችን](/am/news/parent-payments-tashpaz-maximum-amounts-2026)
+- [በትምህርት ሥርዓት ውስጥ የወላጆች መብቶች — ትድሮስ](/am/education/parent-rights)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
