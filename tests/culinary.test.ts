@@ -185,9 +185,9 @@ describe("Sigd menu guide", () => {
 
   it("carries the Sigd 2026 date consistent with the heritage module", () => {
     const sigd = HERITAGE_EVENTS.find((e) => e.slug === "sigd")!;
-    expect(sigd.upcomingDates).toContain("2026-11-19");
-    expect(SIGD_MENU_GUIDE.body.he).toContain("19 בנובמבר 2026");
-    expect(SIGD_MENU_GUIDE.body.en).toContain("19 November 2026");
+    expect(sigd.upcomingDates).toContain("2026-11-09");
+    expect(SIGD_MENU_GUIDE.body.he).toContain("9 בנובמבר 2026");
+    expect(SIGD_MENU_GUIDE.body.en).toContain("9 November 2026");
   });
 
   it("heritage Sigd bodies link back to the menu guide", () => {
@@ -298,7 +298,7 @@ describe("sigd menu loader", () => {
     for (const lang of LOCALES) {
       const data = await sigdMenuLoader(fakeArgs({ lang }));
       expect(data.html.length).toBeGreaterThan(500);
-      expect(data.next).toBe("2026-11-19");
+      expect(data.next).toBe("2026-11-09");
       expect(data.sigdCities.length).toBeGreaterThan(0);
     }
   });
