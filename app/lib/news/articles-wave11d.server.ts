@@ -974,4 +974,157 @@ Kiryat Nordau was built in the 1950s. Per the plan documents as reported, at the
 - [ናድላን ሴንተር፣ መጋቢት 30፣ 2022](https://www.nadlancenter.co.il/article/5402)`,
     },
   },
+
+  // 7 — Tofsei HaOrit, TAU --------------------------------------------------
+  {
+    slug: "tofsei-haorit-tau-tashpaz-registration-open",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["community", "announcement"],
+    title: {
+      he: '"תופסי האורית": ההרשמה למחזור תשפ"ז נפתחה — עד חמש מלגות לבני הקהילה',
+      en: "\"Tofsei HaOrit\": registration for the 5787 cohort is open — up to five scholarships for community members",
+      am: "«ተፎሴ ሃኦሪት»፦ የ5787 ዙር ምዝገባ ተከፍቷል — እስከ አምስት ስኮላርሺፖች ለማህበረሰቡ አባላት",
+    },
+    excerpt: {
+      he: 'תוכנית מ"א ייחודית בחוג למקרא באוניברסיטת תל אביב מכשירה חוקרים לקרוא את האורית — כתבי הקודש של ביתא ישראל בגעז — ולתעד את מסורות הקסים בעל פה. ההרשמה לתשפ"ז נפתחה. התוכנית מציעה עד חמש מלגות לבני ובנות הקהילה.',
+      en: "A distinctive MA track in Tel Aviv University's Bible department trains researchers to read the Orit — Beta Israel's sacred texts in Ge'ez — and to document the kessim's oral traditions. Registration for 5787 is open. The programme offers up to five scholarships for community members.",
+      am: "በቴል አቪቭ ዩኒቨርሲቲ የመጽሐፍ ቅዱስ ክፍል ልዩ የማስተርስ መርሃ ግብር ተመራማሪዎችን ኦሪትን — የቤተ እስራኤል በግዕዝ የተጻፉ ቅዱሳት መጻሕፍት — እንዲያነቡ ያሠለጥናል። የ5787 ምዝገባ ተከፍቷል።",
+    },
+    bodies: {
+      he: `## מה זה
+
+**"תופסי האורית"** היא תוכנית דגש במסגרת לימודי המ"א בחוג למקרא באוניברסיטת תל אביב. היא מכשירה סטודנטים — מן הציבור הכללי ומבני ובנות קהילת ביתא ישראל — לחקור בעצמם את כתבי הקודש של הקהילה ואת מסורותיה שבעל פה.
+
+השם בא, לפי אתר החוג, על משקל "תֹּפְשֵׂי הַתּוֹרָה" (ירמיהו ב, ח) — הכוהנים שהיו בעלי הידע בתורה. החוג מבהיר במפורש: "לא, אנחנו איננו מסמיכים קסים… אלא מכשירים חוקרים וחוקרות לעסוק בכתבי הקודש".
+
+## מה זו האורית
+
+**האורית** (מארמית: אורייתא) הוא השם לשמונת הספרים הראשונים בתנ"ך האתיופי — חמישה חומשי תורה, ועוד יהושע, שופטים ורות. אלה כתבי הקודש החשובים ביותר לקהילת ביתא ישראל. האורית כתובה **בגעז**, לשון קודש המובנת רק לקסים, לקומץ חוקרים ולמעט ישראלים ממוצא אתיופי.
+
+## מה לומדים
+
+לפי אתר החוג, הלימודים משלבים שלושה תחומים:
+
+- **מקרא** — מסורות נוסח, ובכללן מסורת הנוסח האתיופית, ושיטות תרגום ופרשנות.
+- **שפות** — געז ואמהרית, אצל **פרופ' אנבסה טפרה** מהחוג ללשון העברית ולבלשנות שמית, במטרה לרכוש מיומנות בקריאת האורית.
+- **אנתרופולוגיה** — שיטות לאיסוף ושימור מסורות בעל פה, אצל **פרופ' אריקה וייס**, לצורך עבודת שדה: מפגשים וראיונות עם הקסים הבכירים והמבוגרים ביותר בקהילה.
+
+התוכנית בראשות **פרופ' דלית רום-שילוני**.
+
+## למה זה דחוף
+
+מספר הקסים שהוכשרו עוד באתיופיה הולך וקטן. הידע שבידיהם — כיצד קוראים את האורית, כיצד מתרגמים אותה, ומה הפרשנות שנמסרה בעל פה — אינו כתוב בשום ספר. תוכנית שמוציאה סטודנטים לשטח כדי לראיין אותם היא, בפועל, מרוץ מול לוח זמנים.
+
+מה שכבר יצא מזה: **מאגר דיגיטלי לכתבי הקודש של ביתא ישראל**, שהוקם באפריל 2024 בשיתוף **הספרייה הלאומית** ו**המרכז למורשת יהדות אתיופיה**. במאי 2024 התקיימה סדנה נודדת ברחבי הארץ עם חוקרים בינלאומיים, ובה נמצאו **19 כתבי קודש מיוחדים במינם** — בהם **שתי אוריות מהמאה החמש-עשרה**, העתיקות ביותר שהתגלו עד היום בקרב ביתא ישראל. כתבי הקודש נשארים בידי בעליהם ומצולמים בבתי התפילה של הקסים לצורכי מחקר בלבד; הצילומים מיועדים להיפתח לציבור באתר הספרייה הלאומית.
+
+## התנאים
+
+- **למי מיועד**: בוגרות ובוגרי ב"א/בא"ד בציון ממוצע 80 לפחות.
+- **מבנה**: שנת השלמות (בימי א'), ואחריה שתי שנות מ"א (בימי ד') — כשלוש שנים, יום לימודים אחד ארוך בשבוע.
+- **מלגות**: **עד חמש מלגות לסטודנטים בני ובנות קהילת ביתא ישראל**, הכוללות שכר לימוד ומלגת קיום שהחוג מגדיר "צנועה אך משמעותית". סכומים אינם מפורסמים בעמוד — בררו ישירות.
+- **הרשמה**: דורשת ראיון וקבלה.
+- **פרטים**: מזכירות החוג למקרא, 03-6409787; פרופ' דלית רום-שילוני, 050-33321005, dromshil@tauex.tau.ac.il.
+
+מקור: [עמוד התוכנית באתר החוג למקרא, אוניברסיטת תל אביב](https://humanities.tau.ac.il/bible/bbl20) · נבדק ספטמבר 2026.
+
+## קראו גם
+
+- [קסים לפי עיר](/he/heritage/kessim)
+- [הימים הנוראים תשפ"ז והתפילה בגעז](/he/news/high-holidays-5787-beta-israel-tradition)
+- [400 שנה לממלכת הגדעונים — כנס באוקטובר](/he/news/gideon-kingdom-conference-jerusalem-october-2026)
+
+## מקורות
+
+- ["תופסי האורית" — לימוד ומחקר של כתבי הקודש של ביתא ישראל, החוג למקרא, אוניברסיטת תל אביב](https://humanities.tau.ac.il/bible/bbl20) · נבדק 2.9.2026
+- [אוניברסיטת תל אביב — "לראשונה: כתבי הקודש הקדומים ביותר של יהדות אתיופיה נחשפו"](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · נבדק 2.9.2026
+- סיקור בעברית שהחוג עצמו מפנה אליו: יפעת ארליך, "לחשוף את הקלפים", ישראל היום, 30.5.2025; ynet, 3.7.2025`,
+      en: `## What it is
+
+**"Tofsei HaOrit"** ("those who hold the Orit") is a specialised track within the MA programme of Tel Aviv University's Bible department. It trains students — from the general public and from the Beta Israel community — to research the community's sacred texts and oral traditions themselves.
+
+The name echoes "tofsei ha-Torah" (Jeremiah 2:8), the priests who held knowledge of the Torah. The department is explicit: "No, we do not ordain kessim… we train researchers to work on the sacred texts."
+
+## What the Orit is
+
+The **Orit** (from the Aramaic *oraita*) is the name for the first eight books of the Ethiopian Bible — the five books of the Torah plus Joshua, Judges and Ruth. These are the most important sacred texts for the Beta Israel community. The Orit is written in **Ge'ez**, a sacred language understood only by the kessim, a handful of scholars, and a few Israelis of Ethiopian origin.
+
+## What is studied
+
+Per the department's page, the studies combine three fields:
+
+- **Bible** — textual traditions, including the Ethiopic textual tradition, and methods of translation and interpretation.
+- **Languages** — Ge'ez and Amharic, with **Prof. Anbessa Teferra** of the Hebrew Language and Semitic Linguistics department, aiming at real competence in reading the Orit.
+- **Anthropology** — methods for collecting and preserving oral traditions, with **Prof. Erika Weiss**, for fieldwork: meeting and interviewing the community's most senior and eldest kessim.
+
+The programme is headed by **Prof. Dalit Rom-Shiloni**.
+
+## Why it is urgent
+
+The number of kessim trained back in Ethiopia keeps shrinking. What they hold — how the Orit is read, how it is translated, and what interpretation was passed on orally — is written in no book. A programme that sends students into the field to interview them is, in practice, a race against a clock.
+
+What has already come out of it: a **digital repository of Beta Israel sacred manuscripts**, established in April 2024 together with the **National Library of Israel** and the **Center for Ethiopian Jewish Heritage**. In May 2024 a travelling workshop was held around the country with international scholars, and it located **19 uniquely important sacred manuscripts** — among them **two Orit manuscripts from the 15th century**, the oldest ever found among Beta Israel. The manuscripts stay with their owners and are photographed in the kessim's prayer houses for research only; the images are intended to open to the public on the National Library's site.
+
+## The terms
+
+- **Who it is for**: BA graduates with an average of at least 80.
+- **Structure**: a completion year (Sundays), then two MA years (Wednesdays) — about three years, one long study day a week.
+- **Scholarships**: **up to five scholarships for students from the Beta Israel community**, covering tuition and a living stipend the department describes as "modest but meaningful". Amounts are not published on the page — ask directly.
+- **Registration**: requires an interview and acceptance.
+- **Details**: Bible department secretariat, 03-6409787; Prof. Dalit Rom-Shiloni, 050-33321005, dromshil@tauex.tau.ac.il.
+
+Source: [the programme page at the Bible department, Tel Aviv University](https://humanities.tau.ac.il/bible/bbl20) · verified September 2026.
+
+## Read also
+
+- [Kessim by city](/en/heritage/kessim)
+- [The High Holidays of 5787 and prayer in Ge'ez](/en/news/high-holidays-5787-beta-israel-tradition)
+- [400 years since the Gideon kingdom — a conference in October](/en/news/gideon-kingdom-conference-jerusalem-october-2026)
+
+## Sources
+
+- ["Tofsei HaOrit" — study and research of the sacred texts of Beta Israel, Bible department, Tel Aviv University](https://humanities.tau.ac.il/bible/bbl20) · verified 2 Sep 2026
+- [Tel Aviv University — "For the first time: the oldest sacred texts of Ethiopian Jewry revealed"](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · verified 2 Sep 2026
+- Hebrew coverage the department itself links to: Yifat Erlich, "Laying the cards on the table", Israel Hayom, 30 May 2025; ynet, 3 July 2025`,
+      am: `## ምንድን ነው
+
+**«ተፎሴ ሃኦሪት»** በቴል አቪቭ ዩኒቨርሲቲ የመጽሐፍ ቅዱስ ክፍል ውስጥ ያለ ልዩ የማስተርስ መስመር ነው። ተማሪዎችን — ከጠቅላላው ሕዝብና ከቤተ እስራኤል ማህበረሰብ — የማህበረሰቡን ቅዱሳት መጻሕፍትና የቃል ትውፊቶች ራሳቸው እንዲመረምሩ ያሠለጥናል።
+
+## ኦሪት ምንድን ነው
+
+**ኦሪት** በኢትዮጵያ መጽሐፍ ቅዱስ ውስጥ ላሉት የመጀመሪያዎቹ ስምንት መጻሕፍት የተሰጠ ስም ነው — አምስቱ የኦሪት መጻሕፍት፣ ኢያሱ፣ መሳፍንትና ሩት። **በግዕዝ** ተጽፏል፣ ይህም ቋንቋ የሚገባቸው ቄሶች፣ ጥቂት ተመራማሪዎችና ጥቂት የኢትዮጵያ ተወላጅ እስራኤላውያን ብቻ ናቸው።
+
+## ምን ይማራሉ
+
+- **መጽሐፍ ቅዱስ** — የጽሑፍ ትውፊቶች፣ የትርጉምና የትርጓሜ ዘዴዎች።
+- **ቋንቋዎች** — ግዕዝና አማርኛ፣ ከ**ፕሮፌሰር አንበሳ ተፈራ** ጋር።
+- **አንትሮፖሎጂ** — የቃል ትውፊቶችን የመሰብሰብ ዘዴዎች፣ ከ**ፕሮፌሰር ኤሪካ ዋይስ** ጋር፣ ከከፍተኛ ቄሶች ጋር ለሚደረግ የመስክ ሥራ።
+
+መርሃ ግብሩን **ፕሮፌሰር ዳሊት ሮም-ሺሎኒ** ይመራሉ።
+
+## ለምን አጣዳፊ ነው
+
+በኢትዮጵያ የሠለጠኑ ቄሶች ቁጥር እየቀነሰ ነው። በእጃቸው ያለው ዕውቀት በምንም መጽሐፍ ውስጥ አልተጻፈም።
+
+በሚያዝያ 2024 ከ**ብሔራዊ ቤተ መጻሕፍት**ና ከ**የኢትዮጵያ አይሁድ ቅርስ ማዕከል** ጋር **ዲጂታል ማከማቻ** ተቋቁሟል። በግንቦት 2024 በተካሄደ ጉዞ አውደ ጥናት **19 ልዩ ቅዱሳት መጻሕፍት** ተገኝተዋል — ከእነሱም መካከል **ከ15ኛው ክፍለ ዘመን ሁለት ኦሪቶች**፣ በቤተ እስራኤል ውስጥ እስካሁን የተገኙት ጥንታዊዎቹ።
+
+## ሁኔታዎቹ
+
+- **ለማን**: የመጀመሪያ ዲግሪ ምሩቃን፣ ቢያንስ የ80 አማካይ ውጤት።
+- **አወቃቀር**: የማሟያ ዓመት (እሑድ)፣ ከዚያም ሁለት የማስተርስ ዓመታት (ረቡዕ) — ሦስት ዓመት ገደማ።
+- **ስኮላርሺፖች**: **እስከ አምስት ስኮላርሺፖች ለቤተ እስራኤል ማህበረሰብ አባላት**፣ የትምህርት ክፍያና የኑሮ ድጎማ። መጠኑ በገጹ ላይ አልታተመም — በቀጥታ ይጠይቁ።
+- **ዝርዝር**: 03-6409787፤ ፕሮፌሰር ዳሊት ሮም-ሺሎኒ፣ 050-33321005፣ dromshil@tauex.tau.ac.il።
+
+## ተጨማሪ ያንብቡ
+
+- [ቄሶች በከተማ](/am/heritage/kessim)
+- [የ5787 ታላላቅ በዓላት](/am/news/high-holidays-5787-beta-israel-tradition)
+- [የጊዴዎን መንግሥት ጉባኤ](/am/news/gideon-kingdom-conference-jerusalem-october-2026)
+
+## ምንጮች
+
+- [የመርሃ ግብሩ ገጽ፣ የመጽሐፍ ቅዱስ ክፍል፣ ቴል አቪቭ ዩኒቨርሲቲ](https://humanities.tau.ac.il/bible/bbl20) · መስከረም 2፣ 2026 ተረጋግጧል
+- [ቴል አቪቭ ዩኒቨርሲቲ — ጥንታዊዎቹ ቅዱሳት መጻሕፍት ተገለጡ](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · መስከረም 2፣ 2026 ተረጋግጧል`,
+    },
+  },
 ];
