@@ -180,4 +180,231 @@ The main ceremony takes place on the Armon Hanatziv promenade in Jerusalem, led 
 - የሰግድ በዓል ህግ፣ 5768-2008`,
     },
   },
+
+  // 2 — CBS locality table --------------------------------------------------
+  {
+    slug: "where-the-community-lives-cbs-locality-table",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["cities", "community"],
+    title: {
+      he: "איפה גרה הקהילה: הטבלה המלאה של הלמ״ס — נתניה במספרים, קריית מלאכי באחוזים",
+      en: "Where the community lives: the full CBS table — Netanya by number, Kiryat Malachi by share",
+      am: "ማህበረሰቡ የት ይኖራል፦ ሙሉው የCBS ሰንጠረዥ — ናታንያ በቁጥር፣ ቅርያት ማላኺ በመቶኛ",
+    },
+    excerpt: {
+      he: "בסוף 2024 מנתה האוכלוסייה ממוצא אתיופי 177.6 אלף תושבים — 1.8% מאוכלוסיית ישראל. נתניה מובילה במספרים (13.3 אלף), קריית מלאכי באחוזים (13.8%). הטבלה המלאה של כל 23 היישובים, מתוך הודעת הלמ״ס לרגל הסיגד.",
+      en: "At the end of 2024 the Ethiopian-origin population numbered 177,600 — 1.8% of Israel's population. Netanya leads by number (13,300), Kiryat Malachi by share (13.8%). The full table of all 23 localities, from the CBS Sigd release.",
+      am: "በ2024 መጨረሻ የኢትዮጵያ ተወላጅ ሕዝብ 177,600 ነበር — ከእስራኤል ሕዝብ 1.8%። ናታንያ በቁጥር (13,300)፣ ቅርያት ማላኺ በመቶኛ (13.8%) ትመራለች። ከCBS የሰግድ ዘገባ የ23ቱ ከተሞች ሙሉ ሰንጠረዥ።",
+    },
+    bodies: {
+      he: `## למה עכשיו
+
+הלמ"ס מפרסמת מדי שנה, לקראת הסיגד, לקט נתונים על האוכלוסייה ממוצא אתיופי בישראל. הפרסום האחרון — **הודעה 367/2025, שיצאה ב-16 בנובמבר 2025** — הוא הנתון העדכני ביותר שקיים, והוא מתייחס לסוף שנת 2024. הפרסום הבא צפוי סמוך ל[סיגד תשפ"ז, 9 בנובמבר 2026](/he/news/sigd-5787-monday-9-november-2026). עד אז, אלה המספרים.
+
+קראנו את הודעת הלמ"ס במלואה. מה שמובא כאן לקוח ממנה ישירות.
+
+## התמונה הארצית
+
+- **177.6 אלף תושבים** ממוצא אתיופי בסוף 2024 — **1.8%** מאוכלוסיית ישראל (10,065.5 אלף).
+- מתוכם **93.4 אלף ילידי אתיופיה** (כ-53%) ו**84.2 אלף ילידי ישראל שאביהם נולד באתיופיה** (כ-47%).
+- בנוסף: 6,860 ילידי ישראל שאִמם בלבד נולדה באתיופיה, ועוד 1,029 זרים בעלי תעודת זהות אתיופית.
+- **בשנת 2024 עלו מאתיופיה 285 איש** — לעומת 1,812 ב-2023 ו-1,680 ב-2022.
+
+## איפה גרים
+
+64.6% מהאוכלוסייה מתגוררת בשני מחוזות: **המרכז (37.2%, כ-66.1 אלף איש)** ו**הדרום (27.4%, כ-48.8 אלף)**. במחוז תל אביב מתגוררים 6.4% (כ-11.3 אלף).
+
+## הטבלה המלאה — יישובים עם 2,000 תושבים ויותר ממוצא אתיופי
+
+| יישוב | תושבים ממוצא אתיופי (אלפים) | סה"כ תושבים (אלפים) | אחוז |
+|-------|------------------------------|----------------------|------|
+| [קריית מלאכי](/he/cities/kiryat-malakhi) | 3.9 | 28.0 | **13.8%** |
+| [קריית גת](/he/cities/kiryat-gat) | 8.5 | 72.1 | 11.8% |
+| [יבנה](/he/cities/yavne) | 3.8 | 58.1 | 6.5% |
+| [עפולה](/he/cities/afula) | 4.1 | 66.4 | 6.2% |
+| [אשקלון](/he/cities/ashkelon) | 10.1 | 166.9 | 6.1% |
+| חדרה | 6.4 | 108.0 | 5.9% |
+| [נתניה](/he/cities/netanya) | **13.3** | 234.8 | 5.6% |
+| [רמלה](/he/cities/ramla) | 4.7 | 86.1 | 5.5% |
+| קריית ים | 2.2 | 42.0 | 5.3% |
+| [באר שבע](/he/cities/beer-sheva) | 11.4 | 223.6 | 5.1% |
+| [לוד](/he/cities/lod) | 4.7 | 94.2 | 5.0% |
+| [רחובות](/he/cities/rehovot) | 7.8 | 155.0 | 5.0% |
+| [נתיבות](/he/cities/netivot) | 2.7 | 56.0 | 4.7% |
+| [קריית ביאליק](/he/cities/kiryat-bialik) | 2.1 | 47.1 | 4.4% |
+| [פתח תקווה](/he/cities/petach-tikva) | 10.5 | 270.4 | 3.9% |
+| [ראשון לציון](/he/cities/rishon-lezion) | 9.9 | 259.3 | 3.8% |
+| [אשדוד](/he/cities/ashdod) | 7.6 | 228.6 | 3.3% |
+| [בית שמש](/he/cities/beit-shemesh) | 4.7 | 176.8 | 2.7% |
+| [בת ים](/he/cities/bat-yam) | 2.7 | 129.5 | 2.1% |
+| [חיפה](/he/cities/haifa) | 5.6 | 297.1 | 1.9% |
+| [חולון](/he/cities/holon) | 3.1 | 191.8 | 1.6% |
+| [ירושלים](/he/cities/jerusalem) | 6.5 | 1,050.2 | 0.6% |
+| [תל אביב-יפו](/he/cities/tel-aviv) | 2.7 | 494.9 | 0.5% |
+
+מקור: הלמ"ס, הודעה 367/2025, לוח א, סוף 2024.
+
+## מה הטבלה הזאת אומרת בפועל
+
+שני מספרים שונים מספרים שני סיפורים. **נתניה** היא היישוב עם מספר התושבים הגבוה ביותר ממוצא אתיופי — 13.3 אלף — אבל הם 5.6% מהעיר. **קריית מלאכי**, עם 3.9 אלף בלבד, היא היישוב שבו הקהילה היא החלק הגדול ביותר מהאוכלוסייה: 13.8%, כמעט שמונה פעמים הממוצע הארצי.
+
+זה מסביר למה שירות שנפתח בקריית מלאכי מרגיש אחרת מאותו שירות בנתניה: בקריית מלאכי ובקריית גת מדובר בשירות שהעיר כולה מרגישה, ובנתניה בשירות שכונתי.
+
+## ילודה
+
+בשנת 2024 נולדו **4,010 תינוקות** לנשים ממוצא אתיופי, כ-71% מהם לנשים ילידות אתיופיה. מספר הילדים הממוצע לאישה עמד על **2.54**, נמוך מזה של יהודיות ואחרות (2.94).
+
+היישובים עם מספר הילודים הרב ביותר לאימהות ממוצא אתיופי: **נתניה (311)**, **ראשון לציון (257)** ו**פתח תקווה (239)**. היישובים עם האחוז הגבוה ביותר של ילודים כאלה מכלל הילודים ביישוב: **קריית מלאכי (כ-15%)**, **קריית גת (כ-14%)** ו**קריית ים (כ-12%)**.
+
+## גיל ומשק בית
+
+- **26.2%** מהאוכלוסייה ממוצא אתיופי הם ילדים בני 0–14 (יותר מ-94.6% מהם ילידי ישראל) — דומה לכלל היהודים והאחרים (26.7%).
+- **7.0%** בני 65 ומעלה — לעומת **15.0%** בקרב היהודים והאחרים, כמעט פי שניים. זו אוכלוסייה צעירה.
+- **46.3 אלף משקי בית** (ממוצע 2022–2024), בגודל ממוצע של **3.70 נפשות** לעומת 2.99 בקרב היהודים והאחרים.
+
+## קראו גם
+
+- [ערים — כל דפי הערים](/he/cities)
+- [דמוגרפיה — נתוני הקהילה](/he/statistics/demographics)
+- [סיגד תשפ"ז — 9 בנובמבר 2026](/he/news/sigd-5787-monday-9-november-2026)
+
+## מקורות
+
+- [הלמ"ס — האוכלוסייה ממוצא אתיופי בישראל, לקט נתונים לרגל חג הסיגד 2025 (הודעה 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · פורסם 16.11.2025 · נבדק 2.9.2026`,
+      en: `## Why now
+
+Each year, ahead of Sigd, Israel's Central Bureau of Statistics publishes a data compilation on the Ethiopian-origin population. The most recent — **release 367/2025, published 16 November 2025** — is the newest figure that exists, and it describes the end of 2024. The next one is expected close to [Sigd 5787, 9 November 2026](/en/news/sigd-5787-monday-9-november-2026). Until then, these are the numbers.
+
+We read the CBS release in full. What follows is taken from it directly.
+
+## The national picture
+
+- **177,600 residents** of Ethiopian origin at the end of 2024 — **1.8%** of Israel's population (10,065,500).
+- Of these, **93,400 born in Ethiopia** (~53%) and **84,200 born in Israel to a father born in Ethiopia** (~47%).
+- In addition: 6,860 Israel-born whose mother alone was born in Ethiopia, and 1,029 foreign nationals holding Ethiopian identity documents.
+- **285 people immigrated from Ethiopia in 2024** — against 1,812 in 2023 and 1,680 in 2022.
+
+## Where they live
+
+64.6% live in two districts: the **Central district (37.2%, about 66,100 people)** and the **Southern district (27.4%, about 48,800)**. The Tel Aviv district holds 6.4% (about 11,300).
+
+## The full table — localities with 2,000 or more residents of Ethiopian origin
+
+| Locality | Ethiopian-origin residents (thousands) | Total residents (thousands) | Share |
+|----------|----------------------------------------|------------------------------|-------|
+| [Kiryat Malachi](/en/cities/kiryat-malakhi) | 3.9 | 28.0 | **13.8%** |
+| [Kiryat Gat](/en/cities/kiryat-gat) | 8.5 | 72.1 | 11.8% |
+| [Yavne](/en/cities/yavne) | 3.8 | 58.1 | 6.5% |
+| [Afula](/en/cities/afula) | 4.1 | 66.4 | 6.2% |
+| [Ashkelon](/en/cities/ashkelon) | 10.1 | 166.9 | 6.1% |
+| Hadera | 6.4 | 108.0 | 5.9% |
+| [Netanya](/en/cities/netanya) | **13.3** | 234.8 | 5.6% |
+| [Ramla](/en/cities/ramla) | 4.7 | 86.1 | 5.5% |
+| Kiryat Yam | 2.2 | 42.0 | 5.3% |
+| [Beersheba](/en/cities/beer-sheva) | 11.4 | 223.6 | 5.1% |
+| [Lod](/en/cities/lod) | 4.7 | 94.2 | 5.0% |
+| [Rehovot](/en/cities/rehovot) | 7.8 | 155.0 | 5.0% |
+| [Netivot](/en/cities/netivot) | 2.7 | 56.0 | 4.7% |
+| [Kiryat Bialik](/en/cities/kiryat-bialik) | 2.1 | 47.1 | 4.4% |
+| [Petah Tikva](/en/cities/petach-tikva) | 10.5 | 270.4 | 3.9% |
+| [Rishon LeZion](/en/cities/rishon-lezion) | 9.9 | 259.3 | 3.8% |
+| [Ashdod](/en/cities/ashdod) | 7.6 | 228.6 | 3.3% |
+| [Beit Shemesh](/en/cities/beit-shemesh) | 4.7 | 176.8 | 2.7% |
+| [Bat Yam](/en/cities/bat-yam) | 2.7 | 129.5 | 2.1% |
+| [Haifa](/en/cities/haifa) | 5.6 | 297.1 | 1.9% |
+| [Holon](/en/cities/holon) | 3.1 | 191.8 | 1.6% |
+| [Jerusalem](/en/cities/jerusalem) | 6.5 | 1,050.2 | 0.6% |
+| [Tel Aviv-Yafo](/en/cities/tel-aviv) | 2.7 | 494.9 | 0.5% |
+
+Source: CBS release 367/2025, Table A, end of 2024.
+
+## What the table actually says
+
+Two different numbers tell two different stories. **Netanya** has the largest number of Ethiopian-origin residents — 13,300 — but they are 5.6% of the city. **Kiryat Malachi**, with only 3,900, is the locality where the community forms the largest share of the population: 13.8%, almost eight times the national average.
+
+That is why a service opening in Kiryat Malachi feels different from the same service in Netanya: in Kiryat Malachi and Kiryat Gat it is a service the whole town notices; in Netanya it is a neighbourhood service.
+
+## Births
+
+In 2024, **4,010 babies** were born to women of Ethiopian origin, about 71% of them to women born in Ethiopia. The total fertility rate was **2.54**, below that of Jewish and other women (2.94).
+
+Localities with the most births to mothers of Ethiopian origin: **Netanya (311)**, **Rishon LeZion (257)** and **Petah Tikva (239)**. Localities where such births are the highest share of all births in the locality: **Kiryat Malachi (~15%)**, **Kiryat Gat (~14%)** and **Kiryat Yam (~12%)**.
+
+## Age and household
+
+- **26.2%** of the Ethiopian-origin population are children aged 0-14 (more than 94.6% of them Israel-born) — close to the figure for Jews and others (26.7%).
+- **7.0%** are 65 or over — against **15.0%** among Jews and others, nearly double. This is a young population.
+- **46,300 households** (2022-2024 average), with an average size of **3.70 people** against 2.99 among Jews and others.
+
+## Read also
+
+- [Cities — all city pages](/en/cities)
+- [Demographics — community data](/en/statistics/demographics)
+- [Sigd 5787 — 9 November 2026](/en/news/sigd-5787-monday-9-november-2026)
+
+## Sources
+
+- [CBS — The Ethiopian Population in Israel, data compilation for the Sigd holiday 2025 (release 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · published 16 Nov 2025 · verified 2 Sep 2026`,
+      am: `## ለምን አሁን
+
+የእስራኤል ማዕከላዊ ስታቲስቲክስ ቢሮ (CBS) በየዓመቱ ከሰግድ በፊት ስለ ኢትዮጵያ ተወላጅ ሕዝብ መረጃ ያወጣል። የቅርቡ — **ዘገባ 367/2025፣ ኅዳር 16፣ 2025 የወጣ** — እስካሁን ያለው አዲሱ አኃዝ ሲሆን የ2024 መጨረሻን ይገልጻል።
+
+## ብሔራዊ ስዕል
+
+- በ2024 መጨረሻ **177,600 ነዋሪዎች** የኢትዮጵያ ተወላጅ — ከእስራኤል ሕዝብ **1.8%**።
+- ከእነዚህ **93,400 በኢትዮጵያ የተወለዱ** (~53%) እና **84,200 አባታቸው በኢትዮጵያ የተወለደ በእስራኤል የተወለዱ** (~47%)።
+- **በ2024 ከኢትዮጵያ 285 ሰዎች መጡ** — በ2023 1,812፣ በ2022 1,680 ነበር።
+
+## የት ይኖራሉ
+
+64.6% በሁለት ክፍለ ሀገር ይኖራሉ፦ **መካከለኛው (37.2%፣ ~66,100)** እና **ደቡብ (27.4%፣ ~48,800)**። በቴል አቪቭ ክፍለ ሀገር 6.4% (~11,300)።
+
+## ዋና ከተሞች
+
+| ከተማ | የኢትዮጵያ ተወላጅ (ሺህ) | ጠቅላላ (ሺህ) | መቶኛ |
+|---|---|---|---|
+| [ቅርያት ማላኺ](/am/cities/kiryat-malakhi) | 3.9 | 28.0 | **13.8%** |
+| [ቅርያት ጋት](/am/cities/kiryat-gat) | 8.5 | 72.1 | 11.8% |
+| [ያቭኔ](/am/cities/yavne) | 3.8 | 58.1 | 6.5% |
+| [አፉላ](/am/cities/afula) | 4.1 | 66.4 | 6.2% |
+| [አሽቀሎን](/am/cities/ashkelon) | 10.1 | 166.9 | 6.1% |
+| ሐዴራ | 6.4 | 108.0 | 5.9% |
+| [ናታንያ](/am/cities/netanya) | **13.3** | 234.8 | 5.6% |
+| [ራምላ](/am/cities/ramla) | 4.7 | 86.1 | 5.5% |
+| [ቤርሼቫ](/am/cities/beer-sheva) | 11.4 | 223.6 | 5.1% |
+| [ሎድ](/am/cities/lod) | 4.7 | 94.2 | 5.0% |
+| [ሬሆቮት](/am/cities/rehovot) | 7.8 | 155.0 | 5.0% |
+| [ፔታሕ ቲቅቫ](/am/cities/petach-tikva) | 10.5 | 270.4 | 3.9% |
+| [ሪሾን ለጽዮን](/am/cities/rishon-lezion) | 9.9 | 259.3 | 3.8% |
+| [አሽዶድ](/am/cities/ashdod) | 7.6 | 228.6 | 3.3% |
+| [ኢየሩሳሌም](/am/cities/jerusalem) | 6.5 | 1,050.2 | 0.6% |
+
+ምንጭ፦ CBS ዘገባ 367/2025፣ ሰንጠረዥ ሀ፣ የ2024 መጨረሻ።
+
+## ይህ ምን ማለት ነው
+
+**ናታንያ** በቁጥር ትመራለች (13,300)፣ ግን ከከተማዋ 5.6% ብቻ ናቸው። **ቅርያት ማላኺ** 3,900 ብቻ ቢኖራትም ማህበረሰቡ ከከተማዋ ሕዝብ ትልቁን ድርሻ የያዘባት ናት፦ 13.8%፣ ከብሔራዊ አማካይ ስምንት እጥፍ ገደማ።
+
+## ልደት
+
+በ2024 ለኢትዮጵያ ተወላጅ ሴቶች **4,010 ሕፃናት** ተወለዱ። አማካይ የልጆች ቁጥር **2.54** ነበር። በቁጥር የመሩት ከተሞች፦ ናታንያ (311)፣ ሪሾን ለጽዮን (257)፣ ፔታሕ ቲቅቫ (239)።
+
+## ዕድሜና ቤተሰብ
+
+- **26.2%** ከ0-14 ዓመት ልጆች ናቸው።
+- **7.0%** ብቻ 65 እና ከዚያ በላይ ናቸው — ከአይሁዶችና ሌሎች 15.0% ጋር ሲነጻጸር።
+- **46,300 ቤተሰቦች**፣ አማካይ መጠን **3.70 ሰዎች** (ከ2.99 ጋር ሲነጻጸር)።
+
+## ተጨማሪ ያንብቡ
+
+- [ከተሞች](/am/cities)
+- [ስነ-ሕዝብ](/am/statistics/demographics)
+- [ሰግድ 5787 — ኅዳር 9፣ 2026](/am/news/sigd-5787-monday-9-november-2026)
+
+## ምንጮች
+
+- [CBS — በእስራኤል የኢትዮጵያ ተወላጅ ሕዝብ፣ ለሰግድ 2025 (ዘገባ 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · ኅዳር 16፣ 2025 ታተመ · መስከረም 2፣ 2026 ተረጋግጧል`,
+    },
+  },
 ];
