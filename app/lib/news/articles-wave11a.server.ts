@@ -976,4 +976,150 @@ Tedros reports this as fact and takes no position.
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "ethiopia-aliyah-budget-comptroller-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["immigration", "policy"],
+    title: {
+      he: "הרקע לדיון: תקציב 2026 ללא הקצאה לעלייה מאתיופיה, דוח קנפו שלא נדון, וביקורת מדינה שנפתחה",
+      en: "The background to the session: a 2026 budget with no allocation for Ethiopian aliyah, an undiscussed Kanfo report, and an audit that was opened",
+      am: "የስብሰባው ዳራ፦ ለኢትዮጵያ ዓሊያ ምንም ድልድል የሌለው የ2026 በጀት፣ ያልተወያዩበት የካንፎ ሪፖርት፣ እና የተከፈተ ኦዲት",
+    },
+    excerpt: {
+      he: "כדי להבין את דיון ועדת העלייה מ-7.9.2026 צריך את מה שקדם לו. שלושה דיווחים של \"דבר\" מינואר ומפברואר 2026 מתעדים תקציב שנתי רביעי ברציפות ללא הקצאה לעלייה מאתיופיה, 1,226 מאושרי עלייה שממתינים, ופתיחת ביקורת של מבקר המדינה.",
+      en: "To understand the Aliyah Committee session of 7 September 2026, you need what preceded it. Three Davar reports from January and February 2026 document a fourth consecutive annual budget with no allocation for Ethiopian aliyah, 1,226 approved immigrants still waiting, and the opening of a State Comptroller audit.",
+      am: "የመስከረም 7 ቀን 2026ን የዓሊያ ኮሚቴ ስብሰባ ለመረዳት ከዚያ በፊት የነበረውን ማወቅ ያስፈልጋል። ከጥር እና የካቲት 2026 የወጡ ሦስት የዳቫር ዘገባዎች ለኢትዮጵያ ዓሊያ ድልድል የሌለው አራተኛ ተከታታይ ዓመታዊ በጀት፣ 1,226 የጸደቀላቸው ተጠባባቂዎች፣ እና የመንግሥት ኦዲተር ኦዲት መከፈትን ይመዘግባሉ።",
+    },
+    bodies: {
+      he: `## למה כתבה על מה שקרה לפני שבעה חודשים
+
+ב-7.9.2026 התקיים דיון בוועדת העלייה של הכנסת, שבו נחשף שמשלחת מצאה זכאי חוק השבות באתיופיה — [כתבנו עליו בנפרד](/he/news/aliyah-committee-tigray-law-of-return-2026). הדיון הזה לא מתרחש בחלל ריק, ובלי הרקע קשה להבין למה חברי כנסת הגיבו אליו כפי שהגיבו.
+
+הכתבה הזו מרכזת את מה שקדם. **הדיווחים שבבסיסה הם מינואר ומפברואר 2026** — הם אינם חדשות מהשבוע, והם מסומנים ככאלה בכוונה.
+
+## התקציב
+
+לפי דיווח של **יהל פרג' ב"דבר", 28.1.2026**, תקציב משרד העלייה והקליטה לשנת 2026 אינו כולל הקצאה ייעודית לעלייה מאתיופיה — **השנה הרביעית ברציפות**.
+
+באותו דיווח: **כ-1,226 אנשים שעלייתם כבר אושרה** אינם יכולים לעלות בשל מגבלות תקציב, בעוד אלפים ממתינים במחנות בגונדר ובאדיס אבבה.
+
+לפי הדיווח, המשרד כן הקצה משאבים לעידוד עלייה ממדינות דוברות אנגלית, ובכלל זה **עשרה תקנים** שעניינם גיוס עולים מצפון אמריקה.
+
+לשכת השר **אופיר סופר** מסרה בתגובה שמשלחת תבחן בקרוב זכאות לפי חוק השבות, ואמרה: "אם יימצאו זכאי חוק שבות, לא יהיה מחסום תקציבי לעלייתם". המשלחת הזו היא בדיוק זו שדוחותיה נדונו בכנסת ב-7.9.2026.
+
+## דוח קנפו
+
+לפי אותו דיווח, ועדה בראשות **סגן אלוף הראל קנפו**, שהוקמה לבקשת השר סופר, הגישה ביוני 2024 דוח שהציג **ארבע חלופות** להמשך העלייה מאתיופיה. הדוח לא הובא לדיון בממשלה.
+
+## ביקורת המדינה
+
+ב-**11.2.2026** דיווחה "דבר" (יהל פרג') שמבקר המדינה **מתניהו אנגלמן** הודיע על פתיחת ביקורת שתבחן את יישום החלטות הממשלה בנוגע לעלייתם של שארית יהדות אתיופיה וזרע ישראל, "במטרה להציג לכנסת תמונה מלאה ולהניע לפעולה". ההודעה נמסרה בדיון בוועדה לענייני ביקורת המדינה של הכנסת. לפי הדיווח, אנגלמן לא התחייב ללוח זמנים להגשת הממצאים.
+
+מאז סיום מבצע "צור ישראל" ביולי 2023, נמסר באותו דיווח, לא עלו עולים מאתיופיה.
+
+## מה עוד לא ידוע
+
+- **מתי יוגשו ממצאי ביקורת המדינה.** לא נקבע מועד.
+- **אם ומתי תידון חלופה מארבע חלופות ועדת קנפו** בממשלה.
+- **מה ייעשה עם 1,226 מאושרי העלייה** הממתינים.
+
+נעקוב ונעדכן. אם מצבך או מצב בן משפחה קשור לאחת השאלות האלה, ראו את [מדריכי הזכויות](/he/rights) ואת [רשימת הארגונים](/he/orgs) שלנו.
+
+טדרוס מדווח על הדברים כעובדה ואינו מביע עמדה.
+
+## מקורות
+
+- ["דבר", ‏28.1.2026 — יהל פרג', "תקציב העלייה: מיליונים ליהודי צפון אמריקה, אפס לממתינים לעלייה מאתיופיה"](https://www.davar1.co.il/651520/)
+- ["דבר", ‏11.2.2026 — יהל פרג', "מבקר המדינה: פותח בביקורת על העיכוב בהעלאת יהודי אתיופיה"](https://www.davar1.co.il/653569/)
+- [משרד מבקר המדינה — "נבדוק את העלאת שארית יהדות אתיופיה וזרע ישראל", 10.2.2026](https://www.mevaker.gov.il/newsroom/2026-02-10)
+- [הכתבה שלנו על דיון ועדת העלייה, 7.9.2026](/he/news/aliyah-committee-tigray-law-of-return-2026)`,
+      en: `## Why an article about something seven months old
+
+On 7 September 2026 the Knesset Aliyah Committee held a session at which it emerged that a delegation had found Law of Return eligibles in Ethiopia — [we covered it separately](/en/news/aliyah-committee-tigray-law-of-return-2026). That session does not take place in a vacuum, and without the background it is hard to understand why MKs reacted to it as they did.
+
+This article gathers what came before. **The reports it rests on are from January and February 2026** — they are not this week's news, and they are marked as such deliberately.
+
+## The budget
+
+Per a report by **Yahel Farag in Davar, 28 January 2026**, the Ministry of Aliyah and Integration's 2026 budget contains no dedicated allocation for aliyah from Ethiopia — **the fourth consecutive year**.
+
+In the same report: **roughly 1,226 people whose aliyah has already been approved** cannot immigrate because of budget constraints, while thousands wait in camps in Gondar and Addis Ababa.
+
+Per the report, the ministry did allocate resources to encourage immigration from English-speaking countries, including **ten positions** dedicated to recruitment in North America.
+
+The office of Minister **Ofir Sofer** responded that a delegation would shortly examine eligibility under the Law of Return, saying: "If Law of Return eligibles are found, there will be no budgetary obstacle to their aliyah." That delegation is precisely the one whose findings were discussed in the Knesset on 7 September 2026.
+
+## The Kanfo report
+
+Per the same report, a committee headed by **Lt. Col. Harel Kanfo**, established at Minister Sofer's request, submitted a report in June 2024 presenting **four alternatives** for continuing aliyah from Ethiopia. The report was not brought before the government for discussion.
+
+## The State Comptroller audit
+
+On **11 February 2026** Davar (Yahel Farag) reported that State Comptroller **Matanyahu Englman** announced the opening of an audit examining the implementation of government decisions on the aliyah of the remnant of Ethiopian Jewry and Zera Israel, "with the aim of presenting the Knesset a complete picture and spurring action". The announcement was made at a session of the Knesset State Control Committee. Per the report, Englman did not commit to a timeline for submitting the findings.
+
+Since Operation Tzur Israel ended in July 2023, the same report stated, no immigrants have come from Ethiopia.
+
+## What is still unknown
+
+- **When the comptroller's findings will be submitted.** No date has been set.
+- **Whether and when one of the Kanfo committee's four alternatives** will be discussed by the government.
+- **What will be done about the 1,226 approved immigrants** still waiting.
+
+We will follow and update. If your situation or a family member's touches on one of these questions, see our [rights guides](/en/rights) and our [organisations directory](/en/orgs).
+
+Tedros reports this as fact and takes no position.
+
+## Sources
+
+- [Davar, 28 Jan 2026 — Yahel Farag, "The aliyah budget: millions for North American Jews, zero for those waiting to immigrate from Ethiopia"](https://www.davar1.co.il/651520/)
+- [Davar, 11 Feb 2026 — Yahel Farag, "State Comptroller: opening an audit into the delay in bringing Ethiopian Jews"](https://www.davar1.co.il/653569/)
+- [Office of the State Comptroller — "We will audit the aliyah of the remnant of Ethiopian Jewry and Zera Israel", 10 Feb 2026](https://www.mevaker.gov.il/newsroom/2026-02-10)
+- [Our article on the Aliyah Committee session, 7 Sept 2026](/en/news/aliyah-committee-tigray-law-of-return-2026)`,
+      am: `## ከሰባት ወር በፊት ስለተከሰተ ነገር ለምን ዘገባ
+
+መስከረም 7 ቀን 2026 የኔሴት የዓሊያ ኮሚቴ ስብሰባ አካሂዷል፤ በዚያም ልዑክ በኢትዮጵያ የመመለሻ ሕግ ብቁዎችን ማግኘቱ ተገለጸ — [በተለየ ዘግበናል](/am/news/aliyah-committee-tigray-law-of-return-2026)። ያ ስብሰባ በባዶ ቦታ ላይ አይካሄድም፤ ዳራው ከሌለም የኔሴት አባላት ለምን እንደዚያ እንደመለሱ መረዳት ከባድ ነው።
+
+ይህ ዘገባ ከዚያ በፊት የነበረውን ያሰባስባል። **የተመሠረተባቸው ዘገባዎች ከጥር እና ከየካቲት 2026 ናቸው** — የዚህ ሳምንት ዜና አይደሉም፣ ሆን ተብሎም እንደዚያ ተለይተዋል።
+
+## በጀቱ
+
+**ያሄል ፋራግ በዳቫር፣ ጥር 28 ቀን 2026** ባቀረበው ዘገባ መሠረት፣ የዓሊያና የመቀበል ሚኒስቴር የ2026 በጀት ለኢትዮጵያ ዓሊያ የተለየ ድልድል አልያዘም — **አራተኛው ተከታታይ ዓመት**።
+
+በዚያው ዘገባ፦ **ዓሊያቸው አስቀድሞ የጸደቀላቸው 1,226 ሰዎች** በበጀት እጥረት ምክንያት መሰደድ አይችሉም፤ በዚህ ጊዜ ሺዎች በጎንደርና በአዲስ አበባ ካምፖች ይጠባበቃሉ።
+
+በዘገባው መሠረት፣ ሚኒስቴሩ እንግሊዝኛ ተናጋሪ ከሆኑ አገሮች ስደትን ለማበረታታት ሀብት መድቧል፣ በሰሜን አሜሪካ ለሚደረግ ምልመላ የተመደቡ **አሥር መደቦችን** ጨምሮ።
+
+የሚኒስትር **ኦፊር ሶፈር** ጽሕፈት ቤት ልዑክ በቅርቡ በመመለሻ ሕግ ብቁነትን እንደሚመረምር መልስ ሰጥቷል፦ «የመመለሻ ሕግ ብቁዎች ከተገኙ፣ ለዓሊያቸው የበጀት እንቅፋት አይኖርም።» ያ ልዑክ መስከረም 7 ቀን 2026 በኔሴት ግኝቶቹ የተወያዩበት ልክ ያው ነው።
+
+## የካንፎ ሪፖርት
+
+በዚያው ዘገባ መሠረት፣ በሚኒስትር ሶፈር ጥያቄ የተቋቋመ በ**ሌተና ኮሎኔል ሃረል ካንፎ** የሚመራ ኮሚቴ በሰኔ 2024 ከኢትዮጵያ ዓሊያን ለመቀጠል **አራት አማራጮችን** ያቀረበ ሪፖርት አስረክቧል። ሪፖርቱ ለመንግሥት ውይይት አልቀረበም።
+
+## የመንግሥት ኦዲት
+
+**የካቲት 11 ቀን 2026** ዳቫር (ያሄል ፋራግ) እንደዘገበው፣ የመንግሥት ኦዲተር **ማታንያሁ እንግልማን** የቀሩት የኢትዮጵያ አይሁዶችና የዘራ እስራኤል ዓሊያን በተመለከተ የመንግሥት ውሳኔዎችን አፈጻጸም የሚመረምር ኦዲት መከፈቱን አስታውቀዋል፤ «ለኔሴት ሙሉ ምስል ለማቅረብና እርምጃ ለማነሳሳት በማሰብ»። ማስታወቂያው በኔሴት የመንግሥት ቁጥጥር ኮሚቴ ስብሰባ ላይ ተሰጥቷል። በዘገባው መሠረት፣ እንግልማን ግኝቶቹን ለማቅረብ የጊዜ ገደብ አልገቡም።
+
+የጹር እስራኤል ዘመቻ በሐምሌ 2023 ካበቃ በኋላ፣ በዚያው ዘገባ እንደተገለጸው፣ ከኢትዮጵያ ስደተኞች አልመጡም።
+
+## ገና ያልታወቀው
+
+- **የኦዲተሩ ግኝቶች መቼ እንደሚቀርቡ።** ቀን አልተወሰነም።
+- **ከካንፎ ኮሚቴ አራት አማራጮች አንዱ በመንግሥት ይወያይ እንደሆነና መቼ**።
+- **ስለሚጠባበቁት 1,226 የጸደቀላቸው ስደተኞች ምን እንደሚደረግ**።
+
+እንከታተላለን፣ እናዘምናለን። የእርስዎ ወይም የቤተሰብ አባልዎ ሁኔታ ከእነዚህ ጥያቄዎች አንዱን የሚነካ ከሆነ፣ የእኛን [የመብቶች መመሪያዎች](/am/rights) እና [የድርጅቶች ማውጫ](/am/orgs) ይመልከቱ።
+
+ትድሮስ ይህንን እንደ እውነታ ይዘግባል፣ አቋም አይይዝም።
+
+## ምንጮች
+
+- [ዳቫር፣ ጥር 28 ቀን 2026 — ያሄል ፋራግ](https://www.davar1.co.il/651520/)
+- [ዳቫር፣ የካቲት 11 ቀን 2026 — ያሄል ፋራግ](https://www.davar1.co.il/653569/)
+- [የመንግሥት ኦዲተር ጽሕፈት ቤት፣ የካቲት 10 ቀን 2026](https://www.mevaker.gov.il/newsroom/2026-02-10)
+- [ስለ ዓሊያ ኮሚቴ ስብሰባ የእኛ ዘገባ፣ መስከረም 7 ቀን 2026](/am/news/aliyah-committee-tigray-law-of-return-2026)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
