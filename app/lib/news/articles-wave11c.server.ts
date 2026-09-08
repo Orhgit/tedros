@@ -968,4 +968,145 @@ Their recommendations, as published:
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "womens-health-termination-committees-and-screening-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["health", "family"],
+    title: {
+      he: "פי חמישה אישורי הפסקת היריון עד גיל 19 — ומה המדינה בנתה בתגובה",
+      en: "Five times the rate of termination approvals under 19 — and what the state built in response",
+      am: "እስከ 19 ዓመት ዕድሜ የእርግዝና ማቋረጥ ፈቃዶች አምስት እጥፍ — መንግሥትም በምላሹ ምን ገነባ",
+    },
+    excerpt: {
+      he: "מסמך הכנסת מ-2024 מציג פער חד בהפסקות היריון בקרב ילידות אתיופיה, בולט במיוחד אצל נערות. דוח משרד ראש הממשלה מינואר 2026 מתאר מה הוקם בעקבותיו: תוכנית ארצית של עובדות סוציאליות שמלוות נערות לוועדות, בחמישה בתי חולים. הנה שני המסמכים יחד.",
+      en: "The 2024 Knesset paper shows a sharp gap in pregnancy terminations among Ethiopia-born women, widest among teenagers. The Prime Minister's Office report of January 2026 describes what was built in response: a national programme of social workers accompanying girls to the committees, in five hospitals. Here are the two documents together.",
+      am: "የ2024 የኔሴት ሰነድ በኢትዮጵያ በተወለዱ ሴቶች መካከል በእርግዝና ማቋረጥ ላይ ሰፊ ክፍተት ያሳያል። የጥር 2026 ሪፖርት በምላሹ የተገነባውን ይገልጻል።",
+    },
+    bodies: {
+      he: `שני מסמכים ממשלתיים, שנתיים זה מזה, מספרים יחד סיפור אחד. קראנו את שניהם.
+
+## המספרים
+
+מתוך מסמך מרכז המחקר והמידע של הכנסת "נתונים על מצב הבריאות של יוצאי אתיופיה" (10.7.2024):
+
+- בשנת 2022, שיעור הפסקות ההיריון ל-1,000 נשים בגיל הפריון בקרב **ילידות אתיופיה היה 17.6**, לעומת **7.5** בקרב יהודיות ואחרות ללא עולות, ולעומת **7.1** בכלל האוכלוסייה.
+- שיעור אישורי הוועדות להפסקת היריון בקרב ילידות אתיופיה **עד גיל 19 היה 17.4 — גדול פי חמישה** מהשיעור בקרב יהודיות ואחרות ללא עולות (3.5).
+- לשם השוואה: ב-2019 עמד השיעור הכללי בקרב ילידות אתיופיה על 26.3 לעומת 8.4. כלומר הפער מצטמצם — ונשאר גדול.
+
+באותו מסמך, על בדיקות סקר: בשנים 2019–2022 שיעורי ביצוע בדיקת ממוגרפיה בקרב ילידות אתיופיה עמדו על **67%–69%**, לעומת **70%–72%** בקרב יהודיות ממוצא אחר, ומתחת ליעד הלאומי של 70% מכלל הנשים בגיל 50–74.
+
+## מה נבנה בעקבות זה
+
+מתוך דוח משרד ראש הממשלה על התוכנית הממשלתית לשילוב יוצאי אתיופיה (ינואר 2026), פרק משרד הבריאות:
+
+> לטובת קידום בריאות האישה והנערה, הוקמה תוכנית ארצית של עובדים סוציאליים לליווי נערות לוועדות הפסקת הריון ולצמצום הפלות חוזרות. התוכנית התקיימה בחמישה בתי חולים, נוסף על שני פרויקטים שהתקיימו במחוז מרכז וצפון בליווי מתאמות HIV.
+
+בנוסף מדווח באותו פרק: **בדיקת הסקר BRCA 1,2 נכנסה לסל**, הופעל מהלך שיתוף ציבור, ובעקבותיו הוציא המשרד הנחיות לעידוד ביצוע הבדיקה בקופות החולים — לצד **יצירת דפי מידע בשפה האמהרית**. הדוח מציין שקמפיינים ואירועים ברשויות לעידוד בדיקות סקר לגילוי מוקדם של סרטן השד, כולל ממוגרפיה, מתוכננים "במהלך החודשים הקרובים".
+
+בטבלת רמות הביצוע באותו דוח, "בריאות האישה והנערה" מסומנת כ**בוצע חלקית**.
+
+## איך לקרוא את זה נכון
+
+שיעור גבוה של הפסקות היריון אינו אמירה על נשים. הוא אמירה על מה שקדם להן: נגישות לאמצעי מניעה, ייעוץ בשפה מובנת, וליווי. זו בדיוק הסיבה שהמענה שהמדינה בנתה הוא עובדת סוציאלית שמלווה לוועדה — ולא קמפיין.
+
+וגם: שיעור ביצוע ממוגרפיה של 67%–69% אינו פער דרמטי מ-70%–72%. הוא כן מתחת ליעד הלאומי, ובקבוצה שבה, לפי אותו מסמך, סרטן השד הוא הסרטן החודרני השכיח ביותר בקרב ילידות אתיופיה (22.6% מכלל המקרים).
+
+## מה מגיע לכן, בפועל
+
+1. **ליווי לוועדה להפסקת היריון** — התוכנית פועלת בחמישה בתי חולים לפי הדוח. שווה לשאול בבית החולים או בקופה אם יש עובדת סוציאלית ייעודית ללוות.
+2. **מתורגמנית בכל שיחה רפואית** — כולל בוועדה. פירטנו איך מבקשים ב[מדריך הנגישות הלשונית](/he/health/mental-health/interpreter).
+3. **ממוגרפיה** — סקר לגילוי מוקדם לנשים בגילי 50–74 הוא חלק מסל הבריאות. אם לא קיבלתן זימון, אפשר ליזום פנייה לקופה.
+4. **BRCA 1,2** — הבדיקה בסל, ולפי הדוח קיים חומר הסבר באמהרית.
+
+## מקורות
+
+- [מרכז המחקר והמידע של הכנסת — יונת מייזל, "נתונים על מצב הבריאות של יוצאי אתיופיה", 10.7.2024](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
+- [משרד ראש הממשלה — "התוכנית הממשלתית לשילוב יוצאי אתיופיה: דוח סיכום פעילות לשנים 2023-2024", ינואר 2026, פרק משרד הבריאות](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf)
+- [מרכז הבריאות של טדרוס](/he/health)
+- [מרכז המשפחה של טדרוס](/he/family)`,
+      en: `Two government documents, two years apart, tell one story together. We read both.
+
+## The numbers
+
+From the Knesset Research and Information Center paper "Data on the health status of Ethiopian-Israelis" (10 July 2024):
+
+- In 2022, the rate of pregnancy terminations per 1,000 women of childbearing age among **women born in Ethiopia was 17.6**, against **7.5** among Jewish and other women excluding immigrants, and **7.1** in the general population.
+- The rate of termination-committee approvals among Ethiopia-born women **under 19 was 17.4 — five times** the rate among Jewish and other women excluding immigrants (3.5).
+- For comparison: in 2019 the overall rate among Ethiopia-born women was 26.3 against 8.4. The gap is narrowing — and remains large.
+
+From the same paper, on screening: in 2019–2022, mammography uptake among Ethiopia-born women was **67%–69%**, against **70%–72%** among Jewish women of other origins, and below the national target of 70% of all women aged 50–74.
+
+## What was built in response
+
+From the Prime Minister's Office report on the government integration programme (January 2026), health ministry chapter:
+
+> To advance the health of women and girls, a national programme of social workers was established to accompany girls to pregnancy-termination committees and to reduce repeat terminations. The programme ran in five hospitals, in addition to two projects in the Central and Northern districts accompanied by HIV coordinators.
+
+The same chapter also reports: **BRCA 1,2 screening entered the health basket**, a public-consultation process was run, and following it the ministry issued guidance to the health funds to encourage uptake — alongside **the production of information sheets in Amharic**. The report notes that campaigns and local events to encourage early-detection screening for breast cancer, including mammography, are planned "in the coming months".
+
+In the delivery table of that same report, "women's and girls' health" is marked **partly delivered**.
+
+## How to read this properly
+
+A high termination rate is not a statement about women. It is a statement about what came before: access to contraception, counselling in a language you understand, and accompaniment. That is exactly why the response the state built is a social worker who comes with you to the committee — and not a campaign.
+
+Also: mammography uptake of 67%–69% is not a dramatic gap from 70%–72%. It is below the national target, though, in a group where — per that same paper — breast cancer is the most common invasive cancer among Ethiopia-born women (22.6% of all cases).
+
+## What you are actually entitled to
+
+1. **Accompaniment to a termination committee** — the programme runs in five hospitals per the report. It is worth asking at the hospital or your health fund whether a dedicated social worker is available to come with you.
+2. **An interpreter in every clinical conversation** — including at the committee. We explain how to ask in our [language-access guide](/en/health/mental-health/interpreter).
+3. **Mammography** — early-detection screening for women aged 50–74 is part of the health basket. If you have had no invitation, you can approach your fund yourself.
+4. **BRCA 1,2** — the test is in the basket, and per the report explanatory material exists in Amharic.
+
+## Sources
+
+- [Knesset Research and Information Center — Yonat Meisel, "Data on the health status of Ethiopian-Israelis", 10 July 2024](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
+- [Prime Minister's Office — "The government programme for the integration of Ethiopian-Israelis: activity summary report 2023-2024", January 2026, Ministry of Health chapter](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf)
+- [The Tedros health hub](/en/health)
+- [The Tedros family hub](/en/family)`,
+      am: `ሁለት የመንግሥት ሰነዶች፣ በሁለት ዓመት ልዩነት፣ አብረው አንድ ታሪክ ይነግራሉ። ሁለቱንም አነበብን።
+
+## ቁጥሮቹ
+
+ከኔሴት የምርምርና መረጃ ማዕከል ሰነድ (ሐምሌ 10፣ 2024)፦
+
+- በ2022 በወሊድ ዕድሜ ላይ ባሉ ሴቶች በ1,000 የእርግዝና ማቋረጥ ምጣኔ **በኢትዮጵያ በተወለዱ 17.6** ነበር፣ ስደተኞችን ሳይጨምር በአይሁድና ሌሎች ሴቶች **7.5**፣ በጠቅላላው ሕዝብ **7.1**።
+- **እስከ 19 ዓመት** ዕድሜ ባሉ በኢትዮጵያ በተወለዱ ሴቶች የኮሚቴ ፈቃድ ምጣኔ **17.4 — አምስት እጥፍ** ነበር (በሌሎች 3.5)።
+- ለንጽጽር፦ በ2019 አጠቃላይ ምጣኔው 26.3 በተቃራኒው 8.4 ነበር። ክፍተቱ እየጠበበ ነው — አሁንም ሰፊ ነው።
+
+በዚያው ሰነድ ስለ ምርመራዎች፦ በ2019–2022 በኢትዮጵያ በተወለዱ ሴቶች የማሞግራፊ ምርመራ ተሳትፎ **67%–69%** ነበር፣ ከሌላ መነሻ ባላቸው አይሁድ ሴቶች **70%–72%**፣ ከ50–74 ዓመት ሴቶች 70% ከሚለው አገራዊ ግብ በታች።
+
+## በምላሹ ምን ተገነባ
+
+ከጠቅላይ ሚኒስትር ጽ/ቤት ሪፖርት (ጥር 2026)፣ የጤና ሚኒስቴር ምዕራፍ፦
+
+> የሴቶችንና የወጣት ልጃገረዶችን ጤና ለማሳደግ፣ ልጃገረዶችን ወደ የእርግዝና ማቋረጥ ኮሚቴዎች የሚያጅቡና ተደጋጋሚ ማቋረጥን የሚቀንሱ ማህበራዊ ሠራተኞች አገራዊ መርሃ ግብር ተቋቁሟል። መርሃ ግብሩ በአምስት ሆስፒታሎች ተካሂዷል።
+
+በዚያው ምዕራፍ፦ **የBRCA 1,2 ምርመራ ወደ ጤና ቅርጫቱ ገብቷል**፣ ሚኒስቴሩም ተሳትፎን ለማበረታታት መመሪያ አውጥቷል — ከ**በአማርኛ የመረጃ ወረቀቶች ማዘጋጀት** ጎን ለጎን።
+
+በዚያው ሪፖርት የአፈጻጸም ሰንጠረዥ «የሴቶችና የወጣት ልጃገረዶች ጤና» **በከፊል ተፈጽሟል** ተብሎ ተመልክቷል።
+
+## ይህን በትክክል እንዴት ማንበብ
+
+ከፍተኛ የማቋረጥ ምጣኔ ስለ ሴቶች የሚናገር አይደለም። ከዚያ በፊት ስለነበረው ነው የሚናገረው፦ የወሊድ መከላከያ ተደራሽነት፣ በሚገባ ቋንቋ ምክር፣ እና አጃቢነት። መንግሥት የገነባው ምላሽ ወደ ኮሚቴው አብሮ የሚሄድ ማህበራዊ ሠራተኛ የሆነውም ለዚህ ነው።
+
+## በተግባር ምን ይገባዎታል
+
+1. **ወደ የእርግዝና ማቋረጥ ኮሚቴ አጃቢ** — በሪፖርቱ መሠረት መርሃ ግብሩ በአምስት ሆስፒታሎች ይሠራል። በሆስፒታሉ ወይም በጤና ድርጅትዎ መጠየቅ ተገቢ ነው።
+2. **በእያንዳንዱ የሕክምና ውይይት አስተርጓሚ** — በኮሚቴውም ጭምር። እንዴት እንደሚጠየቅ በ[የቋንቋ ተደራሽነት መመሪያችን](/am/health/mental-health/interpreter) አብራርተናል።
+3. **ማሞግራፊ** — ከ50–74 ዓመት ለሆኑ ሴቶች የቅድመ ማወቂያ ምርመራ የጤና ቅርጫቱ አካል ነው።
+4. **BRCA 1,2** — ምርመራው በቅርጫቱ ውስጥ ነው፣ በሪፖርቱ መሠረትም በአማርኛ ማብራሪያ አለ።
+
+## ምንጮች
+
+- [የኔሴት የምርምርና መረጃ ማዕከል — ዮናት ማይዘል፣ ሐምሌ 10፣ 2024](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
+- [የጠቅላይ ሚኒስትር ጽ/ቤት — የ2023-2024 ማጠቃለያ ሪፖርት፣ ጥር 2026፣ የጤና ሚኒስቴር ምዕራፍ](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf)
+- [የትድሮስ የጤና ማዕከል](/am/health)
+- [የትድሮስ የቤተሰብ ማዕከል](/am/family)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
