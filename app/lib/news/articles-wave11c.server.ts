@@ -1,5 +1,5 @@
 // Wave 11c articles — health, family and rights (TED-164), researched and
-// verified 2026-09-02.
+// verified 2026-09-08.
 //
 // Same discipline as waves 8 and 10: every item below is based on a primary
 // source that was opened and read in full — not a search-result snippet. The
@@ -30,8 +30,8 @@ import type { NewsArticleEntry } from "./articles.server";
 export const ARTICLES_WAVE11C: NewsArticleEntry[] = [
   {
     slug: "moh-ethiopian-health-programme-report-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["health", "rights"],
     title: {
       he: "דוח המדינה על בריאות הקהילה: 19 מגשרים חדשים בקופות — ושלושה מתורגמנים לאמהרית בכל מוקד המידע",
@@ -212,8 +212,8 @@ Source: [Prime Minister's Office — The government programme for the integratio
   },
   {
     slug: "welfare-services-ethiopian-families-report-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["family", "rights"],
     title: {
       he: "643 ילדים הוצאו מהבית ב-2024 לעומת 491 ב-2019 — ומספר המשפחות בשירותי הרווחה בקהילה שולש",
@@ -266,6 +266,8 @@ Source: [Prime Minister's Office — The government programme for the integratio
 
 בכל מצב של אלימות במשפחה — הקו הארצי של משרד הרווחה והביטחון החברתי הוא **118**, פעיל 24 שעות ביממה, וכולל מענה באמהרית. בסכנה מיידית — **100**. פירטנו את המסלול המלא ב[מדריך שלנו על אלימות במשפחה](/he/family/domestic-violence).
 
+**לקראת החגים:** המחלקות לשירותים חברתיים ברשויות עובדות בשעות מצומצמות סביב ראש השנה, ולכן פנייה שאפשר להקדים — כדאי להקדים. קווי החירום, לעומת זאת, אינם נסגרים: 118 ו-100 פעילים גם בחג. תקופת החגים היא גם תקופה שבה מתחים במשפחה מתחדדים; אם אתם מזהים סימנים, לא צריך לחכות לאחרי החג.
+
 ## מקורות
 
 - [משרד ראש הממשלה, המטה לשילוב יוצאי אתיופיה — "התוכנית הממשלתית לשילוב יוצאי אתיופיה: דוח סיכום פעילות לשנים 2023-2024", ינואר 2026](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — פרק "משרד הרווחה והבטחון החברתי", עמ' 40–41
@@ -311,6 +313,8 @@ The 44-of-56 line matters, because it explains the waiting list. The report writ
 
 In any situation of domestic violence, the national line of the Ministry of Welfare and Social Security is **118**, operating 24 hours a day and including service in Amharic. In immediate danger — **100**. We set out the full route in [our domestic violence guide](/en/family/domestic-violence).
 
+**Going into the holidays:** municipal social services departments work reduced hours around Rosh Hashanah, so anything you can bring forward, bring forward. The emergency lines do not close: 118 and 100 operate over the holiday too. The holiday period is also one in which family tensions sharpen; if you are seeing the signs, there is no need to wait until afterwards.
+
 ## Sources
 
 - [Prime Minister's Office, Headquarters for the Integration of Ethiopian-Israelis — "The government programme for the integration of Ethiopian-Israelis: activity summary report 2023-2024", January 2026](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — "Ministry of Welfare and Social Security" chapter, pp. 40–41
@@ -354,6 +358,8 @@ In any situation of domestic violence, the national line of the Ministry of Welf
 
 በማንኛውም የቤት ውስጥ ጥቃት ሁኔታ — የበጎ አድራጎትና ማህበራዊ ደህንነት ሚኒስቴር አገር አቀፍ መስመር **118** ነው፣ በቀን 24 ሰዓት የሚሠራ ሲሆን በአማርኛም ምላሽ ይሰጣል። አፋጣኝ አደጋ ላይ ከሆኑ — **100**። ሙሉውን መንገድ በ[የቤት ውስጥ ጥቃት መመሪያችን](/am/family/domestic-violence) አብራርተናል።
 
+**ወደ በዓላቱ ስንገባ፦** የአካባቢ ማህበራዊ አገልግሎት መምሪያዎች በሮሽ ሀሻና አካባቢ በተቀነሰ ሰዓት ይሠራሉ፤ ስለዚህ ማስቀደም የሚቻለውን ማስቀደም ይሻላል። የአስቸኳይ ጊዜ መስመሮች ግን አይዘጉም፦ 118 እና 100 በበዓሉም ይሠራሉ። የበዓል ወቅት የቤተሰብ ውጥረቶች የሚጠነክሩበትም ጊዜ ነው፤ ምልክቶቹን እያዩ ከሆነ እስከ በዓሉ ማብቂያ መጠበቅ አያስፈልግም።
+
 ## ምንጮች
 
 - [የጠቅላይ ሚኒስትር ጽ/ቤት — «የኢትዮጵያ ተወላጆች መዋሃድ መንግሥታዊ መርሃ ግብር፦ የ2023-2024 ማጠቃለያ ሪፖርት»፣ ጥር 2026](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — «የበጎ አድራጎትና ማህበራዊ ደህንነት ሚኒስቴር» ምዕራፍ፣ ገጽ 40–41
@@ -364,8 +370,8 @@ In any situation of domestic violence, the national line of the Ministry of Welf
   },
   {
     slug: "over-policing-hearing-and-missing-data-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["rights"],
     title: {
       he: "המשטרה הפסיקה למסור נתוני אכיפה מ-2023 — וזו הסיבה שקשה להוכיח מה שכולם רואים",
@@ -519,8 +525,8 @@ Two and a half years without fresh data is not only a research problem. It decid
   },
   {
     slug: "records-deletion-law-what-it-covers-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["rights"],
     title: {
       he: "חוק מחיקת הרישומים: מה בדיוק נמחק, למי, ולמה עדיין אין מספר",
@@ -677,8 +683,8 @@ Deletion under the law does not depend on filing an application: the section is 
   },
   {
     slug: "mental-health-hospitalization-and-rehab-data-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["health"],
     title: {
       he: "904 אשפוזים, 1,112 סלי שיקום: המספרים שמראים איפה בדיוק הקהילה נופלת בין הכיסאות",
@@ -728,6 +734,8 @@ Deletion under the law does not depend on filing an application: the section is 
 2. **באשפוז יש זכויות, וגם זכות למתורגמן.** ריכזנו אותן ב[עמוד זכויות באשפוז פסיכיאטרי](/he/health/mental-health/hospitalization-rights) וב[מדריך הנגישות הלשונית](/he/health/mental-health/interpreter).
 3. **אם אתם או מישהו קרוב במצוקה נפשית — ער"ן, קו חם 1201**, לפי אתר העמותה. בסכנת חיים מיידית — **101**.
 
+**הערה לימי החגים:** מרפאות בריאות הנפש בקהילה עובדות בשעות מצומצמות סביב ראש השנה, ותור שנקבע עלול להידחות. אם אתם על תרופות — בדקו עכשיו שיש לכם מספיק מלאי למשך החג, ואם צריך מרשם, בקשו אותו לפני. קווי החירום ומיון בתי החולים פועלים כרגיל. עבור מי שבודד או אבל, ימי החג הם תקופה מוכרת של החמרה — זו סיבה לפנות, לא סיבה לחכות.
+
 ## מקורות
 
 - [מרכז המחקר והמידע של הכנסת — יונת מייזל, "נתונים על מצב הבריאות של יוצאי אתיופיה", 10.7.2024 (הוכן לבקשת ח"כ צגה צגנש מלכו)](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
@@ -770,6 +778,8 @@ At the end of 2022 the Ethiopian-Israeli population numbered around 175,000 — 
 1. **A rehabilitation basket is a right you ask for.** It starts with an application to a regional Health Ministry rehabilitation-basket committee. If someone in your family is living with an ongoing mental health condition, that is the question to put to their clinician — before things reach an emergency room.
 2. **Hospitalisation carries rights, including the right to an interpreter.** We have gathered them on our [psychiatric hospitalisation rights page](/en/health/mental-health/hospitalization-rights) and in our [language-access guide](/en/health/mental-health/interpreter).
 3. **If you or someone close to you is in distress — ERAN, hotline 1201**, per the organisation's own site. In immediate danger to life — **101**.
+
+**A note for the holidays:** community mental-health clinics work reduced hours around Rosh Hashanah, and a booked appointment may be pushed back. If you are on medication, check now that you have enough to last the holiday, and if you need a prescription, request it beforehand. Crisis lines and hospital emergency rooms operate as usual. For anyone who is isolated or bereaved, the holidays are a well-recognised period of worsening — that is a reason to reach out, not a reason to wait.
 
 ## Sources
 
@@ -814,6 +824,8 @@ At the end of 2022 the Ethiopian-Israeli population numbered around 175,000 — 
 2. **በሆስፒታል መተኛት ውስጥ መብቶች አሉ፣ የአስተርጓሚ መብትም ጭምር።** በ[የሥነ ልቦና ሆስፒታል መተኛት መብቶች ገጻችን](/am/health/mental-health/hospitalization-rights) እና በ[የቋንቋ ተደራሽነት መመሪያችን](/am/health/mental-health/interpreter) ሰብስበናቸዋል።
 3. **እርስዎ ወይም የቅርብ ሰው በጭንቀት ውስጥ ከሆኑ — ኤራን፣ ሙቅ መስመር 1201**፣ በድርጅቱ ድህረ ገጽ መሠረት። አፋጣኝ የሕይወት አደጋ ላይ — **101**።
 
+**ለበዓላቱ ማስታወሻ፦** የማህበረሰብ የአእምሮ ጤና ክሊኒኮች በሮሽ ሀሻና አካባቢ በተቀነሰ ሰዓት ይሠራሉ፤ የተያዘ ቀጠሮም ሊገፋ ይችላል። መድኃኒት እየወሰዱ ከሆነ ለበዓሉ የሚበቃ እንዳለዎት አሁን ያረጋግጡ፤ ማዘዣ ካስፈለገዎትም አስቀድመው ይጠይቁ። የአስቸኳይ ጊዜ መስመሮችና የሆስፒታል ድንገተኛ ክፍሎች እንደተለመደው ይሠራሉ። ብቸኝነት ወይም ሐዘን ላለበት ሰው የበዓል ቀናት የሚታወቅ የመባባስ ጊዜ ናቸው — ይህ ለመጠየቅ ምክንያት እንጂ ለመጠበቅ ምክንያት አይደለም።
+
 ## ምንጮች
 
 - [የኔሴት የምርምርና መረጃ ማዕከል — ዮናት ማይዘል፣ «የኢትዮጵያ ተወላጆች የጤና ሁኔታ መረጃ»፣ ሐምሌ 10፣ 2024](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
@@ -826,8 +838,8 @@ At the end of 2022 the Ethiopian-Israeli population numbered around 175,000 — 
   },
   {
     slug: "hadassah-study-depression-anxiety-chronic-illness-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["health"],
     title: {
       he: "מחקר חדש מהדסה: שאלון קצר באמהרית מצא מצוקה נפשית אצל רוב המטופלים — ואיש לא שאל אותם קודם",
@@ -970,8 +982,8 @@ Their recommendations, as published:
   },
   {
     slug: "womens-health-termination-committees-and-screening-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["health", "family"],
     title: {
       he: "פי חמישה אישורי הפסקת היריון עד גיל 19 — ומה המדינה בנתה בתגובה",
@@ -1111,8 +1123,8 @@ Also: mammography uptake of 67%–69% is not a dramatic gap from 70%–72%. It i
   },
   {
     slug: "national-insurance-family-amounts-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["family", "rights"],
     title: {
       he: "הסכומים המדויקים למשפחה ב-2026: קצבת ילדים, מענק לידה ומענק לימודים — מהחוזר של ביטוח לאומי",
