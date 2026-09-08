@@ -1546,4 +1546,228 @@ For training, mentoring and placement programmes that work on exactly these two 
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "government-program-education-results-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["education"],
+    title: {
+      he: 'דוח ממשלתי: מספר המורים יוצאי אתיופיה עלה מ-709 ל-1,180 בארבע שנים — ובחינוך הבלתי-פורמלי חלק מהמספרים ירדו',
+      en: "Government report: the number of Ethiopian-Israeli teachers rose from 709 to 1,180 in four years — and in non-formal education some of the numbers fell",
+      am: "የመንግሥት ሪፖርት፦ የኢትዮጵያ ተወላጅ መምህራን ቁጥር በአራት ዓመት ከ709 ወደ 1,180 አድጓል — በኢ-መደበኛ ትምህርት ግን አንዳንድ ቁጥሮች ወርደዋል",
+    },
+    excerpt: {
+      he: 'דוח סיכום התוכנית הממשלתית לשילוב יוצאי אתיופיה לשנים 2023–2024, שפורסם בינואר 2026, מציג יעדים שהושגו בחינוך הפורמלי: זכאות לבגרות העומדת בתנאי הסף של האוניברסיטאות עלתה מ-50.54% ל-59.89%, מעל היעד. באותו דוח, מספר הילדים בחוגים ומספר המתנדבים לשנת שירות ירדו.',
+      en: "The summary report of the government programme for the integration of Ethiopian-Israelis for 2023–2024, published in January 2026, presents targets met in formal education: matriculation eligibility meeting the university threshold rose from 50.54% to 59.89%, above target. In the same report, the number of children in enrichment classes and the number of gap-year volunteers fell.",
+      am: "በጃንዋሪ 2026 የታተመው የኢትዮጵያ-እስራኤላውያን ውህደት የመንግሥት ፕሮግራም የ2023–2024 ማጠቃለያ ሪፖርት በመደበኛ ትምህርት የተሳኩ ግቦችን ያሳያል፦ የዩኒቨርሲቲ መግቢያ መስፈርት የሚያሟላ የማትሪክ ብቁነት ከ50.54% ወደ 59.89% አድጓል፣ ከግቡ በላይ። በዚያው ሪፖርት የማበልጸጊያ ክፍሎች የልጆች ቁጥርና የአገልግሎት ዓመት በጎ ፈቃደኞች ቁጥር ወርደዋል።",
+    },
+    bodies: {
+      he: `## מה זה הדוח הזה
+
+**"התוכנית הממשלתית לשילוב יוצאי אתיופיה — דו"ח סיכום פעילות לשנים 2023-2024"**, שפרסם המטה לשילוב יוצאי אתיופיה במשרד ראש הממשלה ב**ינואר 2026 (טבת תשפ"ו)**.
+
+התוכנית פועלת ברצף מאז סוף 2016. הבסיס לשנים המדוברות הוא **החלטת ממשלה 787 מ-17.7.2023**, ולצידה **החלטת ההמשך 3243 מ-15.7.2025**.
+
+הדוח פותח בשני סייגים שלו עצמו: מלחמת "חרבות ברזל" פרצה חודשים ספורים אחרי החלטה 787 ואילצה התאמות מהירות; ובנוסף, **קיצוץ רוחבי של 8% בתקציב החלטות הממשלה בשנת 2024** אילץ עדכונים ותעדוף מחדש.
+
+## המספר הבולט: מורים
+
+היעד בהחלטה 787 היה **הגדלת מספר עובדי ההוראה יוצאי אתיופיה ב-60 בכל שנה.**
+
+| | 2020 (תש"פ) | 2024 (תשפ"ד) |
+| --- | --- | --- |
+| מורים יוצאי אתיופיה המועסקים במערכת החינוך | **709** | **1,180** |
+| עובדי הוראה בתפקידי ניהול וריכוז | 99 (תשפ"א) | **137** |
+
+הדוח מסכם: "במספר המורים יוצאי אתיופיה ישנה עלייה ממוצעת של יותר מ-100 מורים בשנה בין השנים 2024-2020, באופן העומד ואף עולה על היעד שהוצב בהחלטת הממשלה."
+
+התוכניות שמאחורי המספר, עם מספרי המשתתפים: **מענקים לסטודנטים — 323** (בוצע במלואו); **תמריץ לעידוד הכשרה להוראת המדעים ואנגלית — 31** (בוצע במלואו); **רכז מכללתי — 14**; **רכזים ארציים — 2**.
+
+## הישגים לימודיים — היעד המרכזי הושג
+
+היעד בהחלטה 787: הגעה ל-**58%** זכאים לבגרות העומדת בתנאי הסף של האוניברסיטאות עד תשפ"ה, בקצב של 2%+ בשנה, ועלייה של 1% בשנה בתעודות מצטיינות.
+
+| יעד | 2020 | 2024 |
+| --- | --- | --- |
+| זכאים לתעודת בגרות | 71.69% | **77.48%** |
+| זכאים לבגרות העומדת בתנאי הסף של האוניברסיטאות | 50.54% | **59.89%** |
+| זכאים לתעודת בגרות מצטיינת | 1.59% | **2.93%** |
+| מחוננים ומצטיינים מאותרים הלומדים במסגרות ייעודיות | 81 | **349** |
+| תלמידים יוצאי אתיופיה בתוכניות מצטיינים | 1,796 | **2,935** |
+
+**59.89% ב-2024 הוא מעל היעד של 58% שנקבע לתשפ"ה.** מספר המחוננים המאותרים הלומדים במסגרות ייעודיות גדל פי יותר מארבעה.
+
+מקור: [דו"ח סיכום התוכנית הממשלתית לשילוב יוצאי אתיופיה 2023-2024, משרד ראש הממשלה, ינואר 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) · נבדק ספטמבר 2026.
+
+**הערה על השוואה:** המספרים כאן הם מדדי התוכנית הממשלתית, והם אינם זהים לנתוני הלמ"ס שסקרנו ב[כתבה על נתוני החינוך](/he/news/cbs-education-data-ethiopian-israelis-2026) — שם, לתשפ"ד, מדובר על 76.2% זכאות ו-57.0% עמידה בדרישות הסף. ההגדרות והאוכלוסיות הנמדדות אינן זהות. אל תערבבו בין שתי הסדרות.
+
+## ומה שירד
+
+באותו דוח, בפרק של מינהל חברה ונוער, שלושה מדדים ירדו לעומת 2019:
+
+| יעד | 2019 | 2024 |
+| --- | --- | --- |
+| ילדים המשתתפים בחוגים | 4,800 | **3,450** |
+| משתתפים בתנועות ובארגוני נוער | 8,600 | **9,525** |
+| מתנדבים לשנת שירות | 88 | **54** |
+| משתתפים במכינות קדם צבאיות חצי שנתיות | 220 | **126** |
+
+תנועות הנוער עלו. **החוגים ירדו ב-28%, שנת השירות ב-39%, והמכינות ב-43%.**
+
+הדוח אינו מייחס את הירידות האלה לסיבה מסוימת. שני ההקשרים שהוא כן נותן — המלחמה והקיצוץ הרוחבי של 8% — נמצאים בפתח הדוח ורלוונטיים לכאן. אנחנו לא נמתח מהם קו סיבתי שהדוח עצמו לא מותח.
+
+מדדי הביצוע המלאים לתוכניות משרד החינוך: "מפתחות" (חוגי העשרה מסובסדים לכיתות א'–ו') — 3,450; הכנה בית ספרית לשירות משמעותי — 683; הכנה רשותית — 549; פיתוח מנהיגות צעירה (מש"צים, מד"צים) — 303 (0.84% מכלל האוכלוסייה); תנועות וארגוני נוער — 9,525 (1.37%); מלגות למכינות קדם צבאיות ושנת שירות — 296.
+
+## התקציב כן נוצל
+
+מימוש התקציב במשרד החינוך: **96% ב-2023, 97% ב-2024.** הדוח מציין שמרבית המשרדים שמרו על רמת ניצול תקציבית גבוהה, ובכללם משרד החינוך. משרד החינוך הוא גם המשרד עם מספר התוכניות הגדול ביותר בתוכנית — 9.
+
+זה חשוב לקריאה הנכונה של הירידות למעלה: לא מדובר בתקציב שלא נוצל.
+
+## מקורות
+
+- [התוכנית הממשלתית לשילוב יוצאי אתיופיה — דו"ח סיכום פעילות 2023-2024, המטה לשילוב יוצאי אתיופיה, משרד ראש הממשלה, ינואר 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — נקרא 8.9.2026
+- החלטת ממשלה 787 מ-17.7.2023, והחלטת ההמשך 3243 מ-15.7.2025 (מצוטטות בדוח)
+- [נתוני הלמ"ס על החינוך — הכתבה שלנו](/he/news/cbs-education-data-ethiopian-israelis-2026)
+- [פרק התעסוקה של אותו דוח — הכתבה שלנו](/he/news/government-program-employment-results-2026)`,
+      en: `## What this report is
+
+**"The government programme for the integration of Ethiopian-Israelis — activity summary report for 2023-2024,"** published by the Unit for the Integration of Ethiopian-Israelis in the Prime Minister's Office in **January 2026**.
+
+The programme has run continuously since the end of 2016. The basis for the years in question is **government decision 787 of 17.7.2023**, alongside **continuation decision 3243 of 15.7.2025**.
+
+The report opens with two caveats of its own: the war broke out a few months after decision 787 and forced rapid adjustments; and in addition, **an across-the-board 8% cut to the budget of government decisions in 2024** forced revisions and re-prioritization.
+
+## The standout number: teachers
+
+The target in decision 787 was **increasing the number of Ethiopian-Israeli teaching staff by 60 each year.**
+
+| | 2020 | 2024 |
+| --- | --- | --- |
+| Ethiopian-Israeli teachers employed in the education system | **709** | **1,180** |
+| Teaching staff in management and coordination roles | 99 (2021) | **137** |
+
+The report concludes: "in the number of Ethiopian-Israeli teachers there is an average increase of more than 100 teachers per year between 2020 and 2024, in a manner that meets and even exceeds the target set in the government decision."
+
+The programmes behind that number, with participant counts: **grants for students — 323** (fully implemented); **an incentive to encourage training for teaching science and English — 31** (fully implemented); **college coordinator — 14**; **national coordinators — 2**.
+
+## Academic achievement — the central target was met
+
+The target in decision 787: reaching **58%** eligibility for matriculation meeting the university threshold by 2024/25, at a pace of +2% a year, and a 1% annual rise in certificates of excellence.
+
+| Target | 2020 | 2024 |
+| --- | --- | --- |
+| Eligible for a matriculation certificate | 71.69% | **77.48%** |
+| Eligible for matriculation meeting the university threshold | 50.54% | **59.89%** |
+| Eligible for a certificate of excellence | 1.59% | **2.93%** |
+| Identified gifted and outstanding pupils studying in dedicated frameworks | 81 | **349** |
+| Ethiopian-Israeli pupils in excellence programmes | 1,796 | **2,935** |
+
+**59.89% in 2024 is above the 58% target set for 2024/25.** The number of identified gifted pupils studying in dedicated frameworks grew more than fourfold.
+
+Source: [Summary report of the government programme for the integration of Ethiopian-Israelis 2023-2024, Prime Minister's Office, January 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) · verified September 2026.
+
+**A note on comparison:** the numbers here are the government programme's own measures, and they are not identical to the CBS figures we reviewed in [our article on the education data](/en/news/cbs-education-data-ethiopian-israelis-2026) — there, for 2023/24, the figures are 76.2% eligibility and 57.0% meeting the threshold requirements. The definitions and the populations measured are not the same. Do not mix the two series.
+
+## And what fell
+
+In the same report, in the Society and Youth Administration's chapter, three measures fell relative to 2019:
+
+| Target | 2019 | 2024 |
+| --- | --- | --- |
+| Children participating in enrichment classes | 4,800 | **3,450** |
+| Participants in youth movements and organizations | 8,600 | **9,525** |
+| Gap-year (shnat sherut) volunteers | 88 | **54** |
+| Participants in half-year pre-military academies | 220 | **126** |
+
+Youth movements rose. **Enrichment classes fell by 28%, the service year by 39%, and the pre-military academies by 43%.**
+
+The report does not attribute these declines to any particular cause. The two contexts it does give — the war and the across-the-board 8% cut — appear at the head of the report and are relevant here. We will not draw a causal line from them that the report itself does not draw.
+
+The full performance measures for the Ministry of Education's programmes: "Maftechot" (subsidized enrichment classes for grades 1–6) — 3,450; school-based preparation for meaningful service — 683; municipal preparation — 549; young leadership development — 303 (0.84% of the population); youth movements and organizations — 9,525 (1.37%); scholarships for pre-military academies and the service year — 296.
+
+## The budget was in fact used
+
+Budget utilization at the Ministry of Education: **96% in 2023, 97% in 2024.** The report notes that most ministries maintained a high level of budget utilization, the Ministry of Education among them. The Ministry of Education also runs the largest number of programmes within the programme — 9.
+
+That matters for reading the declines above correctly: this is not a case of a budget left unspent.
+
+## Sources
+
+- [The government programme for the integration of Ethiopian-Israelis — activity summary report 2023-2024, Prime Minister's Office, January 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — read 8.9.2026
+- Government decision 787 of 17.7.2023, and continuation decision 3243 of 15.7.2025 (both cited in the report)
+- [The CBS education data — our article](/en/news/cbs-education-data-ethiopian-israelis-2026)
+- [The employment chapter of the same report — our article](/en/news/government-program-employment-results-2026)`,
+      am: `## ይህ ሪፖርት ምንድን ነው
+
+**«የኢትዮጵያ-እስራኤላውያን ውህደት የመንግሥት ፕሮግራም — የ2023-2024 የእንቅስቃሴ ማጠቃለያ ሪፖርት»**፣ በጠቅላይ ሚኒስትር ጽሕፈት ቤት በሚገኘው የኢትዮጵያ-እስራኤላውያን ውህደት ክፍል በ**ጃንዋሪ 2026** የታተመ።
+
+ፕሮግራሙ ከ2016 መጨረሻ ጀምሮ በተከታታይ ይሠራል። ለተጠቀሱት ዓመታት መሠረቱ **የመንግሥት ውሳኔ 787 የ17.7.2023** ሲሆን፣ ከጎኑም **የቀጣይነት ውሳኔ 3243 የ15.7.2025** አለ።
+
+ሪፖርቱ በራሱ ሁለት ማስጠንቀቂያዎች ይከፍታል፦ ጦርነቱ ከውሳኔ 787 ጥቂት ወራት በኋላ ተነሳ፣ ፈጣን ማስተካከያዎችንም አስገደደ፤ በተጨማሪም **በ2024 በመንግሥት ውሳኔዎች በጀት ላይ የተደረገው 8% አጠቃላይ ቅነሳ** ማሻሻያዎችንና እንደገና ቅድሚያ መስጠትን አስገደደ።
+
+## ጎላ ያለው ቁጥር፦ መምህራን
+
+በውሳኔ 787 የነበረው ግብ **የኢትዮጵያ ተወላጅ የማስተማር ሠራተኞችን ቁጥር በየዓመቱ በ60 መጨመር** ነበር።
+
+| | 2020 | 2024 |
+| --- | --- | --- |
+| በትምህርት ሥርዓቱ የተቀጠሩ የኢትዮጵያ ተወላጅ መምህራን | **709** | **1,180** |
+| በአስተዳደርና በማስተባበር ሚና ያሉ የማስተማር ሠራተኞች | 99 (2021) | **137** |
+
+ሪፖርቱ ያጠቃልላል፦ «በ2020 እና 2024 መካከል የኢትዮጵያ ተወላጅ መምህራን ቁጥር በዓመት ከ100 መምህራን በላይ አማካይ ጭማሪ አለው፤ ይህም በመንግሥት ውሳኔ የተቀመጠውን ግብ የሚያሟላና የሚበልጥ ነው።»
+
+ከዚያ ቁጥር ጀርባ ያሉ ፕሮግራሞች ከተሳታፊ ብዛት ጋር፦ **ለተማሪዎች ድጎማ — 323** (ሙሉ በሙሉ ተተግብሯል)፤ **ሳይንስና እንግሊዝኛ ማስተማር ሥልጠናን ለማበረታታት ማበረታቻ — 31** (ሙሉ በሙሉ ተተግብሯል)፤ **የኮሌጅ አስተባባሪ — 14**፤ **ብሔራዊ አስተባባሪዎች — 2**።
+
+## የትምህርት ውጤት — ዋናው ግብ ተሳክቷል
+
+በውሳኔ 787 የነበረው ግብ፦ እስከ 2024/25 የዩኒቨርሲቲ መግቢያ መስፈርት የሚያሟላ የማትሪክ ብቁነት **58%** መድረስ፣ በዓመት +2% ፍጥነት፣ እንዲሁም በብቃት ምስክሮች በዓመት 1% ጭማሪ።
+
+| ግብ | 2020 | 2024 |
+| --- | --- | --- |
+| ለማትሪክ ምስክር ብቁ የሆኑ | 71.69% | **77.48%** |
+| የዩኒቨርሲቲ መግቢያ መስፈርት የሚያሟላ ማትሪክ ብቁ የሆኑ | 50.54% | **59.89%** |
+| ለብቃት ምስክር ብቁ የሆኑ | 1.59% | **2.93%** |
+| በልዩ ማዕቀፎች የሚማሩ የተለዩ ተሰጥኦ ያላቸውና ብቁ ተማሪዎች | 81 | **349** |
+| በብቃት ፕሮግራሞች ያሉ የኢትዮጵያ ተወላጅ ተማሪዎች | 1,796 | **2,935** |
+
+**በ2024 ያለው 59.89% ለ2024/25 ከተቀመጠው የ58% ግብ በላይ ነው።** በልዩ ማዕቀፎች የሚማሩ የተለዩ ተሰጥኦ ያላቸው ተማሪዎች ቁጥር ከአራት እጥፍ በላይ አድጓል።
+
+ምንጭ፦ [የኢትዮጵያ-እስራኤላውያን ውህደት የመንግሥት ፕሮግራም ማጠቃለያ ሪፖርት 2023-2024፣ የጠቅላይ ሚኒስትር ጽሕፈት ቤት፣ ጃንዋሪ 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) · በሴፕቴምበር 2026 ተረጋግጧል።
+
+**ስለ ንጽጽር ማስታወሻ፦** እዚህ ያሉት ቁጥሮች የመንግሥት ፕሮግራሙ የራሱ መለኪያዎች ናቸው፣ በ[የትምህርት መረጃ ጽሑፋችን](/am/news/cbs-education-data-ethiopian-israelis-2026) ከገመገምናቸው የCBS አኃዞች ጋር አንድ አይደሉም — እዚያ ለ2023/24 76.2% ብቁነትና 57.0% የመግቢያ መስፈርት ማሟላት ነው። የሚለኩት ትርጓሜዎችና ሕዝቦች አንድ አይደሉም። ሁለቱን ተከታታዮች አያምታቱ።
+
+## የወረደውስ
+
+በዚያው ሪፖርት፣ በማህበረሰብና ወጣቶች አስተዳደር ምዕራፍ፣ ከ2019 አንጻር ሦስት መለኪያዎች ወርደዋል፦
+
+| ግብ | 2019 | 2024 |
+| --- | --- | --- |
+| በማበልጸጊያ ክፍሎች የሚሳተፉ ልጆች | 4,800 | **3,450** |
+| በወጣት ንቅናቄዎችና ድርጅቶች የሚሳተፉ | 8,600 | **9,525** |
+| የአገልግሎት ዓመት በጎ ፈቃደኞች | 88 | **54** |
+| በግማሽ ዓመት ቅድመ-ወታደራዊ አካዳሚዎች የሚሳተፉ | 220 | **126** |
+
+የወጣት ንቅናቄዎች አድገዋል። **የማበልጸጊያ ክፍሎች በ28%፣ የአገልግሎት ዓመቱ በ39%፣ ቅድመ-ወታደራዊ አካዳሚዎቹም በ43% ወርደዋል።**
+
+ሪፖርቱ እነዚህን ውድቀቶች ለተለየ ምክንያት አይሰጥም። የሚሰጣቸው ሁለት አውዶች — ጦርነቱና የ8% አጠቃላይ ቅነሳው — በሪፖርቱ መግቢያ ላይ ያሉና እዚህም የሚመለከቱ ናቸው። ሪፖርቱ ራሱ ያልሳበውን የምክንያት መስመር አንስብም።
+
+የትምህርት ሚኒስቴር ፕሮግራሞች ሙሉ የአፈጻጸም መለኪያዎች፦ «ማፍቴሖት» (ለ1–6ኛ ክፍል የተደጎሙ የማበልጸጊያ ክፍሎች) — 3,450፤ ትርጉም ላለው አገልግሎት በትምህርት ቤት ዝግጅት — 683፤ በአካባቢ አስተዳደር ዝግጅት — 549፤ የወጣት አመራር ልማት — 303 (ከሕዝቡ 0.84%)፤ የወጣት ንቅናቄዎችና ድርጅቶች — 9,525 (1.37%)፤ ለቅድመ-ወታደራዊ አካዳሚዎችና ለአገልግሎት ዓመት ስኮላርሺፖች — 296።
+
+## በጀቱ በእርግጥ ተጠቅሟል
+
+በትምህርት ሚኒስቴር የበጀት አጠቃቀም፦ **በ2023 96%፣ በ2024 97%።** ሪፖርቱ አብዛኞቹ ሚኒስቴሮች ከፍተኛ የበጀት አጠቃቀም ደረጃ እንደጠበቁ ይገልጻል፣ የትምህርት ሚኒስቴርንም ጨምሮ። የትምህርት ሚኒስቴር በፕሮግራሙ ውስጥ ትልቁን የፕሮግራሞች ብዛትም ያንቀሳቅሳል — 9።
+
+ይህ ከላይ ያሉትን ውድቀቶች በትክክል ለማንበብ ወሳኝ ነው፦ ያልተጠቀመ በጀት ጉዳይ አይደለም።
+
+## ምንጮች
+
+- [የኢትዮጵያ-እስራኤላውያን ውህደት የመንግሥት ፕሮግራም — የ2023-2024 የእንቅስቃሴ ማጠቃለያ ሪፖርት፣ የጠቅላይ ሚኒስትር ጽሕፈት ቤት፣ ጃንዋሪ 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — የተነበበ 8.9.2026
+- የመንግሥት ውሳኔ 787 የ17.7.2023፣ እና የቀጣይነት ውሳኔ 3243 የ15.7.2025 (ሁለቱም በሪፖርቱ የተጠቀሱ)
+- [የCBS የትምህርት መረጃ — ጽሑፋችን](/am/news/cbs-education-data-ethiopian-israelis-2026)
+- [የዚያው ሪፖርት የሥራ ስምሪት ምዕራፍ — ጽሑፋችን](/am/news/government-program-employment-results-2026)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
