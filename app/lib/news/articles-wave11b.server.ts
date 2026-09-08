@@ -1080,4 +1080,240 @@ The form is also published on the Ministry of Education's site, in Hebrew and in
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "cbs-education-data-ethiopian-israelis-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["education"],
+    title: {
+      he: 'שבוע לתוך שנת הלימודים: מה באמת אומרים נתוני הלמ"ס על החינוך בקהילה — כולל מספר אחד שמצוטט הפוך',
+      en: "A week into the school year: what the CBS data actually says about education in the community — including one number that is quoted backwards",
+      am: "ወደ ትምህርት ዓመቱ አንድ ሳምንት፦ የCBS መረጃ ስለ ማህበረሰቡ ትምህርት በእውነት ምን ይላል — በተገላቢጦሽ የሚጠቀስ አንድ ቁጥር ጨምሮ",
+    },
+    excerpt: {
+      he: 'הלשכה המרכזית לסטטיסטיקה פרסמה 57.7% מול 39.1% — והמספר הזה מצוטט שוב ושוב כאילו הוא אומר ש-57.7% מיוצאי אתיופיה ממשיכים לתואר. הוא לא. הוא אומר משהו אחר לגמרי, והמספר האמיתי על המשך לימודים הוא 23.2%. סקירה של נתוני החינוך בפרסום, כולל פערי הבגרות ומגמות שעולות.',
+      en: "The Central Bureau of Statistics published 57.7% against 39.1% — and that number is quoted again and again as though it means 57.7% of Ethiopian-Israelis go on to a degree. It does not. It says something else entirely, and the real continuation figure is 23.2%. A review of the education data in the release, including the matriculation gaps and the trends that are rising.",
+      am: "ማዕከላዊ የስታቲስቲክስ ቢሮ 57.7% ከ39.1% ጋር አሳተመ — ይህም ቁጥር 57.7% የሚሆኑ ኢትዮጵያ-እስራኤላውያን ወደ ዲግሪ ይቀጥላሉ እንደሚል ደጋግሞ ይጠቀሳል። አይደለም። ፍጹም ሌላ ነገር ይላል፣ ትክክለኛው የመቀጠል ቁጥርም 23.2% ነው። በሕትመቱ ውስጥ ያሉ የትምህርት መረጃዎች ቅኝት፣ የማትሪክ ክፍተቶችንና እያደጉ ያሉ አዝማሚያዎችን ጨምሮ።",
+    },
+    bodies: {
+      he: `## על מה מדובר
+
+הפרסום הרשמי העדכני ביותר על החינוך בקהילה הוא הודעה לתקשורת **367/2025 של הלשכה המרכזית לסטטיסטיקה, "האוכלוסייה ממוצא אתיופי בישראל — לקט נתונים לרגל חג הסיגד 2025", שפורסמה ב-16 בנובמבר 2025**. זה לא פרסום חדש, וזה הפרסום הכי עדכני שיש. קראנו את הקובץ במלואו.
+
+שנת הלימודים נפתחה לפני שבוע. זה זמן טוב לדעת מה באמת כתוב שם.
+
+## המספר שמצוטט הפוך
+
+בפרסום מופיעה השורה: "אחוז הממשיכים ללימודי תואר ראשון במכללות אקדמיות בקרב יוצאי אתיופיה היה גבוה משמעותית מהאחוז בקרב כלל התלמידים בחינוך העברי (57.7% לעומת 39.1%, בהתאמה)".
+
+השורה הזאת מצוטטת לא פעם כאילו היא אומרת ש-57.7% מבוגרי התיכון יוצאי אתיופיה ממשיכים לתואר ראשון. **היא לא אומרת את זה.**
+
+היא אומרת: **מבין אלה שכבר המשיכו לתואר ראשון**, 57.7% למדו במכללות אקדמיות — לעומת 39.1% מבין הממשיכים בכלל החינוך העברי. זהו פילוח של סוג המוסד בתוך קבוצת הממשיכים, לא שיעור ההמשך.
+
+שיעור ההמשך עצמו מופיע באותו עמוד, והוא אחר לגמרי:
+
+> **23.2% בלבד ממסיימי התיכון ממוצא אתיופי המשיכו ללימודי תואר ראשון בתוך 8 שנים מסיום התיכון, לעומת 48.1% מכלל מסיימי התיכון בחינוך העברי.**
+
+(המעקב הוא אחר מסיימי תשע"ו — 2015/16 — עד תשפ"ד.) בתוך הממשיכים, שיעור הלומדים באוניברסיטאות היה 24.0% מול 37.4%.
+
+זה ההבדל בין "רוב מי שממשיך הולך למכללה" לבין "רוב האנשים ממשיכים". המספר הראשון נכון. השני לא.
+
+## הבגרות — הפער אמיתי, והמגמה עולה
+
+בשנת הלימודים תשפ"ד (2023/24) ניגשו לבחינות הבגרות **2,300 תלמידי כיתות יב ממוצא אתיופי**.
+
+| מדד | יוצאי אתיופיה | כלל החינוך העברי |
+| --- | --- | --- |
+| שיעור הניגשים לבגרות | 93.7% | 95.1% |
+| זכאות לתעודת בגרות | 76.2% | 85.4% |
+| בגרות העומדת בדרישות הסף של האוניברסיטאות | 57.0% | 76.1% |
+
+הפער בשורה השלישית הוא זה שקובע מי בכלל יכול להגיש מועמדות לאוניברסיטה. דרישות הסף כוללות, מעבר לזכאות, ציון עובר ברמה של 3 יחידות במתמטיקה ו-4 יחידות באנגלית.
+
+**הלמ"ס מציינת שהשיעור הזה נמצא במגמת עלייה בשנים האחרונות.** זה לא פרט שולי.
+
+שני פילוחים נוספים מהפרסום:
+
+- **פיקוח:** בקרב יוצאי אתיופיה שלמדו במוסדות של מינהל החינוך הדתי, הזכאות לבגרות הגיעה ל-79.0% לעומת 74.3% בפיקוח הכללי; העומדים בדרישות הסף — 62.2% לעומת 53.4%.
+- **דור:** בני הדור השני (ילידי הארץ שאבותיהם ילידי אתיופיה) היו 70.1% מתלמידי יב ממוצא אתיופי. הזכאות בקרבם 78.2% לעומת 71.5% בקרב ילידי אתיופיה; העמידה בדרישות הסף — 60.7% לעומת 47.9%.
+
+## מי יושב בכיתה
+
+- **34.3 אלף תלמידים ממוצא אתיופי** בחינוך היסודי והעל-יסודי בתשפ"ד — כ-2.2% מכלל התלמידים בחינוך העברי.
+- **13.5% מהם ילידי אתיופיה** — לעומת 37.3% עשור קודם לכן (תשע"ד). הכיתה היום היא בעיקר כיתה של ילידי הארץ.
+- **פיקוח:** ממלכתי 50.4% (עלה מ-46.5% בתשע"ד), ממלכתי-דתי 42.9% (ירד מ-50.0%), חרדי 6.6% (עלה מ-3.6%).
+
+## החינוך הטכנולוגי — פער של 11.5 נקודות אחוז
+
+בקרב תלמידי החטיבה העליונה ממוצא אתיופי, **46.4% למדו בחינוך הטכנולוגי/מקצועי** — לעומת 34.9% בקרב תלמידי החינוך העברי שאינם ממוצא אתיופי.
+
+ובהכשרה המקצועית של משרד העבודה: בשנת 2024 החלו את לימודיהם **986 תלמידים ממוצא אתיופי**, 2.3% מכלל הלומדים בהכשרות. 60.6% מהם ילידי אתיופיה. ענפי ההכשרה הבולטים: **תחבורה (31.2%), חשמל ובקרת אקלים (21.4%), וניהול, שיווק ופיננסים (12.6%)** — שהם גם שלושת התחומים הבולטים בכלל האוכלוסייה.
+
+## באקדמיה
+
+בתשפ"ה (2024/25) למדו לתואר אקדמי **4,151 סטודנטים יוצאי אתיופיה** (כולל 534 לתואר ראשון באוניברסיטה הפתוחה) — **1.4%** מכלל הסטודנטים, כמו בשנה הקודמת. המספר כמעט לא זז: 4,144 בשנה שלפניה.
+
+הפילוח לפי סוג מוסד חד: **1 מכל 35 סטודנטים במכללות האקדמיות הלא-מתוקצבות היה יוצא אתיופיה, לעומת 1 מתוך 90 בשאר סוגי המוסדות ו-1 מתוך 125 באוניברסיטאות.**
+
+לפי תחום: האחוזים הגבוהים ביותר בעסקים ומדעי הניהול ובמקצועות הבריאות; הנמוך ביותר במדעים המדויקים. במקצועות ה-STEM למדו שליש מהיהודים והאחרים שאינם יוצאי אתיופיה — **פי 2 מהשיעור בקרב יוצאי אתיופיה.**
+
+זה בדיוק הפער שמלגת מרום מנסה להזיז, דרך [תיעדוף תחומי לימוד ורמות עדיפות](/he/news/marom-scholarship-tashpaz-terms-change-2026).
+
+## מה לא נמצא בפרסום הזה
+
+הפרסום אינו כולל פרק על שכר או תעסוקה. למי שמחפש את הנתונים האלה — [סקירת מרכז המחקר והמידע של הכנסת מאוגוסט 2025](/he/news/knesset-mmm-wage-gap-2026) היא המקום.
+
+## מקורות
+
+- [הודעה לתקשורת 367/2025 — האוכלוסייה ממוצא אתיופי בישראל, לקט נתונים לרגל חג הסיגד 2025, הלשכה המרכזית לסטטיסטיקה, 16.11.2025 (PDF)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) — נקרא במלואו 8.9.2026
+- [דף ההודעה באתר הלמ"ס](https://www.cbs.gov.il/he/mediarelease/Pages/2025/%D7%94%D7%90%D7%95%D7%9B%D7%9C%D7%95%D7%A1%D7%99%D7%99%D7%94-%D7%9E%D7%9E%D7%95%D7%A6%D7%90-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C---%D7%9C%D7%A7%D7%98-%D7%A0%D7%AA%D7%95%D7%A0%D7%99%D7%9D-%D7%9C%D7%A8%D7%92%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%99%D7%92%D7%93-2025.aspx)
+- [מסלולי לימוד והשכלה — טדרוס](/he/education/tracks)`,
+      en: `## What this is about
+
+The most recent official publication on education in the community is press release **367/2025 of the Central Bureau of Statistics, "The Ethiopian Population in Israel — a selection of data for the Sigd festival 2025," published on November 16, 2025**. It is not a new publication, and it is the most current one there is. We read the file in full.
+
+The school year opened a week ago. This is a good moment to know what it actually says.
+
+## The number that gets quoted backwards
+
+The publication contains this line: "the share continuing to bachelor's studies at academic colleges among Ethiopian-Israelis was significantly higher than the share among all pupils in Hebrew education (57.7% against 39.1%, respectively)."
+
+That line is not infrequently quoted as though it means that 57.7% of Ethiopian-Israeli high-school leavers go on to a bachelor's degree. **It does not say that.**
+
+It says: **among those who had already gone on to a bachelor's degree**, 57.7% studied at academic colleges — against 39.1% among the continuers in Hebrew education as a whole. It is a breakdown of institution type within the group of continuers, not a continuation rate.
+
+The continuation rate itself appears on the same page, and it is something else entirely:
+
+> **Only 23.2% of Ethiopian-origin high-school leavers went on to bachelor's studies within 8 years of finishing high school, against 48.1% of all high-school leavers in Hebrew education.**
+
+(The tracking follows the 2015/16 cohort through to 2023/24.) Among the continuers, the share studying at universities was 24.0% against 37.4%.
+
+That is the difference between "most of those who continue go to a college" and "most people continue." The first is true. The second is not.
+
+## Matriculation — the gap is real, and the trend is rising
+
+In the 2023/24 school year, **2,300 Ethiopian-origin twelfth-graders** sat matriculation exams.
+
+| Measure | Ethiopian-Israelis | All Hebrew education |
+| --- | --- | --- |
+| Share sitting matriculation exams | 93.7% | 95.1% |
+| Matriculation certificate eligibility | 76.2% | 85.4% |
+| Matriculation meeting university threshold requirements | 57.0% | 76.1% |
+
+The gap in the third row is the one that determines who can even apply to a university. The threshold requirements include, beyond eligibility, a passing grade at the level of 3 units in mathematics and 4 units in English.
+
+**The CBS notes that this share has been on a rising trend in recent years.** That is not a marginal detail.
+
+Two further breakdowns from the publication:
+
+- **Supervision:** among Ethiopian-Israelis studying in religious-education institutions, matriculation eligibility reached 79.0% against 74.3% in general supervision; those meeting the threshold requirements — 62.2% against 53.4%.
+- **Generation:** the second generation (Israeli-born with Ethiopia-born fathers) made up 70.1% of Ethiopian-origin twelfth-graders. Eligibility among them was 78.2% against 71.5% among the Ethiopia-born; meeting the threshold requirements — 60.7% against 47.9%.
+
+## Who is sitting in the classroom
+
+- **34.3 thousand pupils of Ethiopian origin** in primary and secondary education in 2023/24 — about 2.2% of all pupils in Hebrew education.
+- **13.5% of them were born in Ethiopia** — against 37.3% a decade earlier. Today's classroom is mostly a classroom of Israeli-born pupils.
+- **Supervision:** state 50.4% (up from 46.5%), state-religious 42.9% (down from 50.0%), Haredi 6.6% (up from 3.6%).
+
+## Technological education — a gap of 11.5 percentage points
+
+Among Ethiopian-origin upper-secondary pupils, **46.4% studied in technological/vocational education** — against 34.9% among Hebrew-education pupils not of Ethiopian origin.
+
+And in the Ministry of Labour's vocational training: in 2024, **986 pupils of Ethiopian origin** began courses, 2.3% of all trainees that year. 60.6% of them were born in Ethiopia. The prominent training branches: **transport (31.2%), electricity and climate control (21.4%), and management, marketing and finance (12.6%)** — which are also the three prominent fields in the population as a whole.
+
+## In academia
+
+In 2024/25, **4,151 Ethiopian-Israeli students** were studying for an academic degree (including 534 for a bachelor's at the Open University) — **1.4%** of all students, as in the previous year. The number has barely moved: 4,144 the year before.
+
+The breakdown by institution type is stark: **1 in every 35 students at non-budgeted academic colleges was of Ethiopian origin, against 1 in 90 at other institution types and 1 in 125 at universities.**
+
+By field: the highest shares were in business and management sciences and in the health professions; the lowest in the exact sciences. In STEM subjects, a third of Jews and others not of Ethiopian origin were studying — **twice the rate among Ethiopian-Israelis.**
+
+This is precisely the gap the Marom scholarship is trying to move, through [the prioritization of fields of study and priority levels](/en/news/marom-scholarship-tashpaz-terms-change-2026).
+
+## What is not in this publication
+
+The publication contains no chapter on wages or employment. For anyone looking for those figures — [the Knesset Research and Information Center's August 2025 review](/en/news/knesset-mmm-wage-gap-2026) is the place.
+
+## Sources
+
+- [Press release 367/2025 — The Ethiopian Population in Israel, a selection of data for the Sigd festival 2025, Central Bureau of Statistics, 16.11.2025 (PDF)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) — read in full 8.9.2026
+- [The release page on the CBS site](https://www.cbs.gov.il/he/mediarelease/Pages/2025/%D7%94%D7%90%D7%95%D7%9B%D7%9C%D7%95%D7%A1%D7%99%D7%99%D7%94-%D7%9E%D7%9E%D7%95%D7%A6%D7%90-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C---%D7%9C%D7%A7%D7%98-%D7%A0%D7%AA%D7%95%D7%A0%D7%99%D7%9D-%D7%9C%D7%A8%D7%92%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%99%D7%92%D7%93-2025.aspx)
+- [Study tracks and education — Tedros](/en/education/tracks)`,
+      am: `## ስለ ምንድን ነው
+
+ስለ ማህበረሰቡ ትምህርት በጣም የቅርብ ጊዜው ኦፊሴላዊ ሕትመት የማዕከላዊ ስታቲስቲክስ ቢሮ የፕሬስ መግለጫ **367/2025፣ «በእስራኤል ያለው የኢትዮጵያ ተወላጅ ሕዝብ — ለሲግድ በዓል 2025 የተመረጡ መረጃዎች»፣ በኖቬምበር 16, 2025 የታተመ** ነው። አዲስ ሕትመት አይደለም፤ ያለው በጣም ወቅታዊው ግን ይኸው ነው። ፋይሉን ሙሉ በሙሉ አንብበናል።
+
+የትምህርት ዓመቱ ከሳምንት በፊት ተከፍቷል። በእውነት ምን እንደሚል ለማወቅ ጥሩ ጊዜ ነው።
+
+## በተገላቢጦሽ የሚጠቀሰው ቁጥር
+
+በሕትመቱ ውስጥ ይህ መስመር አለ፦ «በኢትዮጵያ-እስራኤላውያን መካከል በአካዳሚክ ኮሌጆች ወደ መጀመሪያ ዲግሪ የሚቀጥሉት ድርሻ በዕብራይስጥ ትምህርት ካሉት ሁሉ ድርሻ በእጅጉ ከፍ ያለ ነበር (57.7% ከ39.1% ጋር)»።
+
+ይህ መስመር 57.7% የሚሆኑ ኢትዮጵያ-እስራኤላውያን የሁለተኛ ደረጃ ተመራቂዎች ወደ መጀመሪያ ዲግሪ ይቀጥላሉ እንደሚል ብዙ ጊዜ ይጠቀሳል። **ያንን አይልም።**
+
+የሚለው፦ **አስቀድመው ወደ መጀመሪያ ዲግሪ ከቀጠሉት መካከል** 57.7% በአካዳሚክ ኮሌጆች ተምረዋል — በዕብራይስጥ ትምህርት ካሉት ቀጣዮች 39.1% ጋር ሲነጻጸር። ይህ በቀጣዮች ቡድን ውስጥ ያለ የተቋም ዓይነት ክፍፍል እንጂ የመቀጠል መጠን አይደለም።
+
+የመቀጠሉ መጠን ራሱ በዚያው ገጽ ላይ አለ፣ ፍጹም ሌላ ነው፦
+
+> **ከሁለተኛ ደረጃ ካጠናቀቁ የኢትዮጵያ ተወላጆች 23.2% ብቻ ናቸው ከጨረሱ በ8 ዓመት ውስጥ ወደ መጀመሪያ ዲግሪ የቀጠሉት፣ በዕብራይስጥ ትምህርት ካጠናቀቁት ሁሉ 48.1% ጋር ሲነጻጸር።**
+
+(ክትትሉ የ2015/16 ቡድንን እስከ 2023/24 ይከታተላል።) ከቀጣዮቹ መካከል በዩኒቨርሲቲዎች የተማሩት ድርሻ 24.0% ከ37.4% ጋር ነበር።
+
+ይህ «ከሚቀጥሉት አብዛኞቹ ወደ ኮሌጅ ይሄዳሉ» እና «አብዛኞቹ ሰዎች ይቀጥላሉ» መካከል ያለው ልዩነት ነው። የመጀመሪያው እውነት ነው። ሁለተኛው አይደለም።
+
+## ማትሪክ — ክፍተቱ እውነተኛ ነው፣ አዝማሚያውም እያደገ ነው
+
+በ2023/24 የትምህርት ዓመት **2,300 የኢትዮጵያ ተወላጅ 12ኛ ክፍል ተማሪዎች** የማትሪክ ፈተና ወስደዋል።
+
+| መለኪያ | ኢትዮጵያ-እስራኤላውያን | ሁሉም የዕብራይስጥ ትምህርት |
+| --- | --- | --- |
+| ፈተና የወሰዱ ድርሻ | 93.7% | 95.1% |
+| የማትሪክ ምስክር ብቁነት | 76.2% | 85.4% |
+| የዩኒቨርሲቲ መግቢያ መስፈርት የሚያሟላ ማትሪክ | 57.0% | 76.1% |
+
+በሦስተኛው ረድፍ ያለው ክፍተት ማን ወደ ዩኒቨርሲቲ ማመልከት እንደሚችል የሚወስን ነው። የመግቢያ መስፈርቶቹ ከብቁነት በተጨማሪ በሒሳብ የ3 ክፍል እና በእንግሊዝኛ የ4 ክፍል ደረጃ ማለፊያ ውጤት ያካትታሉ።
+
+**CBS ይህ ድርሻ በቅርብ ዓመታት እያደገ መሆኑን ይገልጻል።** ይህ ጠርዝ ላይ ያለ ዝርዝር አይደለም።
+
+ከሕትመቱ ሁለት ተጨማሪ ክፍፍሎች፦
+
+- **ቁጥጥር፦** በሃይማኖታዊ ትምህርት ተቋማት በተማሩ ኢትዮጵያ-እስራኤላውያን መካከል የማትሪክ ብቁነት 79.0% ደርሷል፣ በአጠቃላይ ቁጥጥር ካለው 74.3% ጋር ሲነጻጸር፤ የመግቢያ መስፈርት የሚያሟሉ — 62.2% ከ53.4% ጋር።
+- **ትውልድ፦** ሁለተኛው ትውልድ (አባቶቻቸው በኢትዮጵያ የተወለዱ በእስራኤል የተወለዱ) ከኢትዮጵያ ተወላጅ 12ኛ ክፍል ተማሪዎች 70.1% ነበሩ። በእነሱ ዘንድ ብቁነት 78.2% ሲሆን በኢትዮጵያ ከተወለዱት 71.5% ጋር ሲነጻጸር፤ የመግቢያ መስፈርት ማሟላት — 60.7% ከ47.9% ጋር።
+
+## በክፍል ውስጥ የተቀመጠው ማን ነው
+
+- በ2023/24 በአንደኛና ሁለተኛ ደረጃ ትምህርት **34.3 ሺህ የኢትዮጵያ ተወላጅ ተማሪዎች** — በዕብራይስጥ ትምህርት ካሉት ሁሉ 2.2% ገደማ።
+- **ከእነሱ 13.5% በኢትዮጵያ የተወለዱ ናቸው** — ከአስር ዓመት በፊት ከነበረው 37.3% ጋር ሲነጻጸር። የዛሬው ክፍል በአብዛኛው በእስራኤል የተወለዱ ተማሪዎች ክፍል ነው።
+- **ቁጥጥር፦** መንግሥታዊ 50.4% (ከ46.5% አድጓል)፣ መንግሥታዊ-ሃይማኖታዊ 42.9% (ከ50.0% ቀንሷል)፣ ሐረዲ 6.6% (ከ3.6% አድጓል)።
+
+## የቴክኖሎጂ ትምህርት — የ11.5 በመቶ ነጥብ ክፍተት
+
+በኢትዮጵያ ተወላጅ የሁለተኛ ደረጃ ተማሪዎች መካከል **46.4% በቴክኖሎጂ/ሙያ ትምህርት ተምረዋል** — የኢትዮጵያ ተወላጅ ካልሆኑ የዕብራይስጥ ትምህርት ተማሪዎች 34.9% ጋር ሲነጻጸር።
+
+በሠራተኛ ሚኒስቴር የሙያ ሥልጠናም፦ በ2024 **986 የኢትዮጵያ ተወላጅ ተማሪዎች** ትምህርታቸውን ጀምረዋል፣ በዚያ ዓመት ከነበሩት ሠልጣኞች ሁሉ 2.3%። ከእነሱ 60.6% በኢትዮጵያ የተወለዱ ናቸው። ጎላ ያሉ የሥልጠና ዘርፎች፦ **ትራንስፖርት (31.2%)፣ ኤሌክትሪክና የአየር ንብረት ቁጥጥር (21.4%)፣ እና አስተዳደር፣ ግብይትና ፋይናንስ (12.6%)** — እነዚህም በጠቅላላው ሕዝብ ውስጥ ጎላ ያሉት ሦስት መስኮች ናቸው።
+
+## በአካዳሚው
+
+በ2024/25 **4,151 ኢትዮጵያ-እስራኤላውያን ተማሪዎች** ለአካዳሚክ ዲግሪ ተምረዋል (በክፍት ዩኒቨርሲቲ ለመጀመሪያ ዲግሪ የተማሩ 534ን ጨምሮ) — ካሉት ተማሪዎች ሁሉ **1.4%**፣ እንደ ቀደመው ዓመት። ቁጥሩ ብዙም አልተንቀሳቀሰም፦ ከዚያ በፊት ባለው ዓመት 4,144።
+
+በተቋም ዓይነት ያለው ክፍፍል ግልጽ ነው፦ **በበጀት ባልተደገፉ አካዳሚክ ኮሌጆች ከ35 ተማሪዎች 1 የኢትዮጵያ ተወላጅ ነበር፣ በሌሎች የተቋም ዓይነቶች ከ90 1፣ በዩኒቨርሲቲዎች ደግሞ ከ125 1።**
+
+በመስክ፦ ከፍተኛዎቹ ድርሻዎች በንግድና በአስተዳደር ሳይንሶች እንዲሁም በጤና ሙያዎች ነበሩ፤ ዝቅተኛው በትክክለኛ ሳይንሶች። በSTEM ትምህርቶች የኢትዮጵያ ተወላጅ ያልሆኑ አይሁዶችና ሌሎች አንድ ሦስተኛው ይማሩ ነበር — **በኢትዮጵያ-እስራኤላውያን ካለው መጠን በእጥፍ።**
+
+የማሮም ስኮላርሺፕ [በጥናት መስኮች ቅድሚያና በቅድሚያ ደረጃዎች](/am/news/marom-scholarship-tashpaz-terms-change-2026) ለማንቀሳቀስ የሚሞክረው ልክ ይህንን ክፍተት ነው።
+
+## በዚህ ሕትመት ውስጥ የሌለው
+
+ሕትመቱ ስለ ደመወዝ ወይም ስለ ሥራ ስምሪት ምዕራፍ የለውም። እነዚያን አኃዞች ለሚፈልግ — [የክኔሴት የምርምርና መረጃ ማዕከል የኦገስት 2025 ቅኝት](/am/news/knesset-mmm-wage-gap-2026) ቦታው ነው።
+
+## ምንጮች
+
+- [የፕሬስ መግለጫ 367/2025 — በእስራኤል ያለው የኢትዮጵያ ተወላጅ ሕዝብ፣ ለሲግድ በዓል 2025 የተመረጡ መረጃዎች፣ ማዕከላዊ የስታቲስቲክስ ቢሮ፣ 16.11.2025 (PDF)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) — ሙሉ በሙሉ የተነበበ 8.9.2026
+- [በCBS ድረ-ገጽ ላይ ያለው የመግለጫው ገጽ](https://www.cbs.gov.il/he/mediarelease/Pages/2025/%D7%94%D7%90%D7%95%D7%9B%D7%9C%D7%95%D7%A1%D7%99%D7%99%D7%94-%D7%9E%D7%9E%D7%95%D7%A6%D7%90-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C---%D7%9C%D7%A7%D7%98-%D7%A0%D7%AA%D7%95%D7%A0%D7%99%D7%9D-%D7%9C%D7%A8%D7%92%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%99%D7%92%D7%93-2025.aspx)
+- [የጥናት መስመሮችና ትምህርት — ትድሮስ](/am/education/tracks)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
