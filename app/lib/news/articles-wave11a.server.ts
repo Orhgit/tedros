@@ -714,4 +714,117 @@ Tedros reports this as political fact and takes no position.
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "mehereta-baruch-ron-democrats-list-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["civic", "community"],
+    title: {
+      he: "מהרטה ברוך-רון במקום ה-26 ברשימת הדמוקרטים שהוגשה לוועדת הבחירות",
+      en: "Mehereta Baruch-Ron placed 26th on the Democrats list submitted to the Elections Committee",
+      am: "መሀረታ ባሩክ-ሮን ለምርጫ ኮሚቴ በቀረበው የዴሞክራቶች ዝርዝር 26ኛ ቦታ ላይ",
+    },
+    excerpt: {
+      he: "ברשימת הדמוקרטים בראשות יאיר גולן, כפי שהוגשה לוועדת הבחירות המרכזית ופורסמה באתרה ב-7.9.2026, מופיעה מהרטה ברוך-רון במקום ה-26 — סגנית ראש עיריית תל אביב-יפו לשעבר, הראשונה מיוצאי הקהילה שכיהנה בתפקיד.",
+      en: "On the Democrats list led by Yair Golan, as submitted to the Central Elections Committee and published on its site on 7 September 2026, Mehereta Baruch-Ron appears at number 26 — a former deputy mayor of Tel Aviv-Yafo, the first member of the community to hold that post.",
+      am: "በያኢር ጎላን በሚመራው የዴሞክራቶች ዝርዝር፣ ለማዕከላዊ ምርጫ ኮሚቴ ቀርቦ መስከረም 7 ቀን 2026 በድረ ገጹ በታተመው መሠረት፣ መሀረታ ባሩክ-ሮን በ26ኛ ቦታ ላይ ትገኛለች — የቀድሞ የቴል አቪቭ-ያፎ ምክትል ከንቲባ፣ ይህን ሹመት የያዘች የመጀመሪያዋ የማህበረሰቡ አባል።",
+    },
+    bodies: {
+      he: `## הממצא
+
+ועדת הבחירות המרכזית מפרסמת באתרה כל רשימת מועמדים שהוגשה, על מלוא שמות המועמדים וסדרם. עברנו על שמות המועמדים ב-18 הרשימות שהוגשו ביום הראשון, 7.9.2026.
+
+ברשימת **הדמוקרטים בראשות יאיר גולן** (אותיות אמת), בעמוד שפרסמה הוועדה ב-7.9.2026, מופיעה במקום ה-**26**:
+
+> "26. ברוך רון מהרטה — מטעם מפלגת הדמוקרטים מיסודה של תנועת העבודה"
+
+## מי היא
+
+מהרטה ברוך-רון היא פוליטיקאית, שחקנית ומגישת טלוויזיה. היא כיהנה כסגנית ראש עיריית תל אביב-יפו מטעם מרצ, והיא **הראשונה מיוצאי הקהילה האתיופית-ישראלית שנבחרה למועצת העיר תל אביב-יפו והראשונה שכיהנה כסגנית ראש העיר**.
+
+## מה זה אומר, ומה זה לא אומר
+
+**מה שאפשר לומר בוודאות:** היא מופיעה במקום 26 ברשימה שהוגשה לוועדה.
+
+**מה שאי אפשר לומר:** אם המקום ריאלי. זו שאלה של תוצאות, לא של עובדות — ותלויה במספר המנדטים שהרשימה תקבל ב-27.10.2026. טדרוס אינו מפרסם תחזיות מנדטים ואינו מביע עמדה על מפלגה כלשהי.
+
+**וגם זה חשוב:** הרשימות שהוגשו **טרם אושרו**. אישור רשימות המועמדים נקבע ל-27.9.2026 ופרסומן הרשמי ל-18.10.2026, ועד אז ייתכנו שינויים.
+
+## הערת שקיפות על היקף הבדיקה
+
+בדקנו את שמות המועמדים ב-18 הרשימות שהוגשו ב-7.9.2026 בלבד. **יום ההגשה השני הוא 8.9.2026**, ומפלגות גדולות — ובהן הליכוד — טרם הגישו את רשימותיהן כשעמוד הוועדה עודכן. לכן אין לקרוא את הכתבה הזו כמפה מלאה של ייצוג הקהילה בבחירות האלה; זו תמונת מצב חלקית של יום אחד. נשוב לנושא כשהתמונה תושלם.
+
+על הרקע בליכוד כתבנו בעבר: [32 קסים חתמו על מכתב לנתניהו](/he/news/likud-reserved-slots-kessim-letter-2026) ו[מאמר הדעה של שמואל לגסה](/he/news/legesse-oped-gabi-worku-realistic-slot-2026).
+
+## מקורות
+
+- [ועדת הבחירות המרכזית — "הדמוקרטים בראשות יאיר גולן", רשימת המועמדים כפי שהוגשה, gov.il, פורסם 7.9.2026](https://www.gov.il/he/pages/hademokratim_list17)
+- [ועדת הבחירות המרכזית — "רשימות המועמדים לכנסת", gov.il, עודכן 7.9.2026](https://www.gov.il/he/pages/candidates-lists-26)
+- [ויקיפדיה העברית — מהרטה ברוך-רון (לרקע הביוגרפי)](https://he.wikipedia.org/wiki/%D7%9E%D7%94%D7%A8%D7%98%D7%94_%D7%91%D7%A8%D7%95%D7%9A-%D7%A8%D7%95%D7%9F)`,
+      en: `## The finding
+
+The Central Elections Committee publishes on its site every candidate list submitted, with the full names of the candidates and their order. We went through the candidate names on the 18 lists submitted on day one, 7 September 2026.
+
+On the list of **The Democrats, led by Yair Golan** (ballot letters אמת), on the page the committee published on 7 September 2026, at number **26**:
+
+> "26. Baruch Ron Mehereta — on behalf of the Democrats party, founded by the Labour movement"
+
+## Who she is
+
+Mehereta Baruch-Ron is a politician, actress and television presenter. She served as deputy mayor of Tel Aviv-Yafo on behalf of Meretz, and she is **the first member of the Ethiopian-Israeli community elected to the Tel Aviv-Yafo city council and the first to serve as deputy mayor of the city**.
+
+## What this says, and what it does not
+
+**What can be said with certainty:** she appears at number 26 on the list submitted to the committee.
+
+**What cannot be said:** whether the slot is realistic. That is a question of results, not of facts — it depends on how many seats the list wins on 27 October 2026. Tedros does not publish seat projections and takes no position on any party.
+
+**Also important:** the submitted lists have **not yet been approved**. Approval of candidate lists is set for 27 September 2026 and their formal publication for 18 October 2026; changes are possible until then.
+
+## A transparency note on the scope of this check
+
+We checked the candidate names on the 18 lists submitted on 7 September 2026 only. **The second submission day is 8 September 2026**, and large parties — Likud among them — had not yet submitted their lists when the committee's page was updated. This article should therefore not be read as a complete map of community representation in this election; it is a partial snapshot of a single day. We will return to the subject once the picture is complete.
+
+On the Likud background we have written before: [32 kessim signed a letter to Netanyahu](/en/news/likud-reserved-slots-kessim-letter-2026) and [Shmuel Legesse's op-ed](/en/news/legesse-oped-gabi-worku-realistic-slot-2026).
+
+## Sources
+
+- [Central Elections Committee — "The Democrats, led by Yair Golan", candidate list as submitted, gov.il, published 7 Sept 2026](https://www.gov.il/he/pages/hademokratim_list17)
+- [Central Elections Committee — "Candidate lists for the Knesset", gov.il, updated 7 Sept 2026](https://www.gov.il/he/pages/candidates-lists-26)
+- [Hebrew Wikipedia — Mehereta Baruch-Ron (biographical background)](https://he.wikipedia.org/wiki/%D7%9E%D7%94%D7%A8%D7%98%D7%94_%D7%91%D7%A8%D7%95%D7%9A-%D7%A8%D7%95%D7%9F)`,
+      am: `## ግኝቱ
+
+ማዕከላዊ ምርጫ ኮሚቴ የቀረበውን እያንዳንዱን የዕጩዎች ዝርዝር፣ ከሙሉ የዕጩዎች ስሞችና ቅደም ተከተላቸው ጋር፣ በድረ ገጹ ላይ ያሳትማል። በመጀመሪያው ቀን፣ መስከረም 7 ቀን 2026፣ በቀረቡት 18 ዝርዝሮች ውስጥ ያሉትን የዕጩዎች ስሞች መርምረናል።
+
+በ**ያኢር ጎላን በሚመራው የዴሞክራቶች** ዝርዝር (የምርጫ ወረቀት ፊደላት አמת)፣ ኮሚቴው መስከረም 7 ቀን 2026 ባሳተመው ገጽ ላይ፣ በ**26**ኛ ቁጥር፦
+
+> «26. ባሩክ ሮን መሀረታ — ከሌበር እንቅስቃሴ በተመሠረተው የዴሞክራቶች ፓርቲ ስም»
+
+## እርሷ ማን ናት
+
+መሀረታ ባሩክ-ሮን ፖለቲከኛ፣ ተዋናይትና የቴሌቪዥን አቅራቢ ናት። በሜሬጽ ስም የቴል አቪቭ-ያፎ ምክትል ከንቲባ ሆና አገልግላለች፤ እንዲሁም **ወደ ቴል አቪቭ-ያፎ ከተማ ምክር ቤት የተመረጠች የመጀመሪያዋ የኢትዮጵያ-እስራኤላውያን ማህበረሰብ አባልና የከተማዋ ምክትል ከንቲባ ሆና ያገለገለች የመጀመሪያዋ** ናት።
+
+## ይህ ምን ይላል፣ ምንስ አይልም
+
+**በእርግጠኝነት ሊባል የሚችለው፦** ለኮሚቴው በቀረበው ዝርዝር ውስጥ በ26ኛ ቁጥር ላይ ትገኛለች።
+
+**ሊባል የማይችለው፦** ቦታው ተጨባጭ መሆን አለመሆኑ። ይህ የውጤት ጥያቄ እንጂ የእውነታ አይደለም — ዝርዝሩ ጥቅምት 27 ቀን 2026 በሚያገኘው መቀመጫ ብዛት ላይ የተመሠረተ ነው። ትድሮስ የመቀመጫ ትንበያ አያሳትምም፤ በማንኛውም ፓርቲ ላይ አቋም አይይዝም።
+
+**ይህም አስፈላጊ ነው፦** የቀረቡት ዝርዝሮች **ገና አልጸደቁም**። የዕጩዎች ዝርዝር ማጽደቅ ለመስከረም 27 ቀን 2026፣ ኦፊሴላዊ ማሳተማቸው ደግሞ ለጥቅምት 18 ቀን 2026 ተወስኗል፤ እስከዚያ ድረስ ለውጦች ሊኖሩ ይችላሉ።
+
+## ስለ ምርመራው ስፋት የግልጽነት ማስታወሻ
+
+መስከረም 7 ቀን 2026 በቀረቡት 18 ዝርዝሮች ውስጥ ያሉትን ስሞች ብቻ ነው የመረመርነው። **ሁለተኛው የማቅረቢያ ቀን መስከረም 8 ቀን 2026 ነው**፤ ትላልቅ ፓርቲዎችም — ሊኩድን ጨምሮ — የኮሚቴው ገጽ በተዘመነበት ጊዜ ዝርዝራቸውን ገና አላቀረቡም ነበር። ስለዚህ ይህ ዘገባ በዚህ ምርጫ የማህበረሰቡ ውክልና ሙሉ ካርታ ተደርጎ መነበብ የለበትም፤ የአንድ ቀን ከፊል ገጽታ ነው። ምስሉ ሲሟላ ወደ ጉዳዩ እንመለሳለን።
+
+ስለ ሊኩድ ዳራ ከዚህ በፊት ጽፈናል፦ [32 ቀሲሶች ለኔታንያሁ ደብዳቤ ፈረሙ](/am/news/likud-reserved-slots-kessim-letter-2026) እና [የሽሙኤል ለገሰ አስተያየት](/am/news/legesse-oped-gabi-worku-realistic-slot-2026)።
+
+## ምንጮች
+
+- [ማዕከላዊ ምርጫ ኮሚቴ — «ዴሞክራቶቹ፣ በያኢር ጎላን የሚመራ»፣ የቀረበው የዕጩዎች ዝርዝር፣ gov.il፣ መስከረም 7 ቀን 2026 ታትሟል](https://www.gov.il/he/pages/hademokratim_list17)
+- [ማዕከላዊ ምርጫ ኮሚቴ — «የኔሴት ዕጩዎች ዝርዝር»፣ gov.il፣ መስከረም 7 ቀን 2026 ተዘምኗል](https://www.gov.il/he/pages/candidates-lists-26)
+- [የዕብራይስጥ ውክፔዲያ — መሀረታ ባሩክ-ሮን (የሕይወት ታሪክ ዳራ)](https://he.wikipedia.org/wiki/%D7%9E%D7%94%D7%A8%D7%98%D7%94_%D7%91%D7%A8%D7%95%D7%9A-%D7%A8%D7%95%D7%9F)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
