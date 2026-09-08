@@ -1109,4 +1109,172 @@ Also: mammography uptake of 67%–69% is not a dramatic gap from 70%–72%. It i
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "national-insurance-family-amounts-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["family", "rights"],
+    title: {
+      he: "הסכומים המדויקים למשפחה ב-2026: קצבת ילדים, מענק לידה ומענק לימודים — מהחוזר של ביטוח לאומי",
+      en: "The exact family amounts for 2026: child allowance, birth grant and study grant — from the National Insurance circular",
+      am: "ለቤተሰብ የ2026 ትክክለኛ መጠኖች፦ የልጆች አበል፣ የወሊድ ስጦታና የትምህርት ስጦታ — ከብሔራዊ መድን ሰርኩላር",
+    },
+    excerpt: {
+      he: "בכל ינואר משתנים סכומי הקצבאות, ובכל שנה מסתובבים ברשת מספרים לא מדויקים. פתחנו את החוזר המקורי של מינהל המחקר והתכנון בביטוח לאומי מ-30 בדצמבר 2025 וקראנו את הטבלאות עמודה-עמודה. אלה הסכומים, עם המקור.",
+      en: "Every January the benefit amounts change, and every year inexact numbers circulate online. We opened the original circular of the National Insurance Institute's research and planning administration, dated 30 December 2025, and read the tables column by column. Here are the amounts, with the source.",
+      am: "በየጥር ወሩ የአበል መጠኖች ይለወጣሉ፣ በየዓመቱም ትክክል ያልሆኑ ቁጥሮች ይሰራጫሉ። የታኅሣሥ 30፣ 2025 የብሔራዊ መድን ሰርኩላር ከፍተን ሰንጠረዦቹን ዓምድ በዓምድ አነበብን።",
+    },
+    bodies: {
+      he: `זו לא כתבה על זכות חדשה. זו כתבה על מספרים נכונים, כי בכל ינואר מתעדכנים סכומי הקצבאות ובכל שנה מסתובבים ברשת סכומים שגויים בכמה שקלים — וכמה שקלים בחודש כפול שנה זה כסף.
+
+פתחנו את המקור: **חוזר "עדכון קצבאות ינואר 2026" של מינהל המחקר והתכנון במוסד לביטוח לאומי, מיום 30 בדצמבר 2025 (י' טבת תשפ"ו), בחתימת ניצה קסיר, סמנכ"ל מחקר ותכנון.**
+
+## איך התעדכנו הסכומים
+
+- הסכומים הבסיסיים לפי פסקאות (1) עד (3) עלו ב-**2.4%**, לפי עליית מדד המחירים לצרכן (מדד נובמבר 2025 ביחס לנובמבר 2024).
+- הסכום הבסיסי לפי פסקה (4), לעניין קצבת נכות כללית והקצבאות הנגזרות ממנה, מתעדכן לפי השכר הממוצע ועלה ב-**3.4%**.
+
+## קצבת ילדים — הסכומים החודשיים
+
+לפי הגדרת "הסכום הבסיסי" לפי פסקה (2) בחוזר:
+
+- **173 ₪** בעד הילד הראשון, ובעד הילד החמישי ואילך.
+- **219 ₪** בעד הילד השני, השלישי והרביעי.
+- **162 ₪** לעניין גמלה לפי חוק הבטחת הכנסה, או תוספת משפחתית למקבלי הבטחת הכנסה.
+
+תוספת קצבה למשפחה עם שלושה ילדים לפחות הזכאית לגמלת הבטחת הכנסה או לדמי מזונות: **113 ₪** למשפחה עם שלושה ילדים, **226 ₪** למשפחה עם ארבעה ילדים ויותר.
+
+## מענק לידה
+
+- ילד ראשון: **2,103 ₪** (היה 2,054 ₪).
+- ילד שני: **946 ₪** (היה 924 ₪).
+- ילד שלישי ואילך: **631 ₪** (היה 616 ₪).
+- לידת שני ילדים: **10,514 ₪** (היה 10,268 ₪).
+
+## מענק לימודים
+
+לילד שמלאו לו 6 וטרם מלאו לו 18: **1,204 ₪** (היה 1,176 ₪).
+
+## חיסכון ארוך טווח לילד
+
+- החיסכון הבסיסי: **58 ₪** לחודש (היה 57 ₪). החיסכון הנוסף: **58 ₪**.
+- מענק גיל שלוש ומענק גיל מצוות, למי שנולד מ-1.1.2017: **291 ₪** כל אחד (היו 284 ₪).
+- מענק גיל 18 למי שנולד לפני 1.1.2017, ומענק גיל 21: **582 ₪** כל אחד (היו 568 ₪).
+
+## מה חשוב לדעת לפני שמחשבים
+
+- **קצבת ילדים משולמת אוטומטית** — אין להגיש בקשה. מענק לידה משולם דרך בית החולים.
+- **מענק לימודים אינו אוטומטי לכולם.** הוא משולם למשפחות בתנאים מסוימים (למשל הורים יחידים ומקבלי קצבאות מסוימות). אם אתם לא בטוחים אם הוא הגיע — זו שאלה לסניף.
+- **הסכומים כאן הם הסכומים הבסיסיים בחוזר.** מה שיגיע לחשבון תלוי במספר הילדים, בהרכב המשפחה ובזכאויות נוספות. אל תתכננו לפי המספר בכתבה — תבדקו בחשבון האישי שלכם באתר ביטוח לאומי.
+- **מגיע לכם שירות בשפה שלכם.** בסניפי ביטוח לאומי אפשר לבקש סיוע בשפה; אם לא הבנתם מסמך, אל תחתמו עליו.
+
+מקור: [המוסד לביטוח לאומי, מינהל המחקר והתכנון — "עדכון קצבאות ינואר 2026", חוזר מיום 30.12.2025](https://www.btl.gov.il/Publications/benefits_update/Documents/hozerkizba2026.pdf) · תקף מינואר 2026 · נבדק ספטמבר 2026.
+
+## מקורות
+
+- [המוסד לביטוח לאומי — חוזר "עדכון קצבאות ינואר 2026", 30.12.2025 (PDF)](https://www.btl.gov.il/Publications/benefits_update/Documents/hozerkizba2026.pdf)
+- [דף עדכון הקצבאות באתר ביטוח לאומי](https://www.btl.gov.il/Publications/benefits_update/Pages/hozerkizba2026.aspx)
+- [מרכז המשפחה של טדרוס](/he/family)`,
+      en: `This is not an article about a new entitlement. It is an article about correct numbers, because every January the benefit amounts are updated and every year figures circulate online that are wrong by a few shekels — and a few shekels a month times a year is money.
+
+We opened the source: **the "January 2026 benefits update" circular of the research and planning administration of the National Insurance Institute, dated 30 December 2025, signed by Nitza Kasir, deputy director-general for research and planning.**
+
+## How the amounts were updated
+
+- The basic amounts under paragraphs (1) to (3) rose by **2.4%**, tracking the consumer price index (November 2025 against November 2024).
+- The basic amount under paragraph (4), for general disability benefit and the benefits derived from it, tracks the average wage and rose by **3.4%**.
+
+## Child allowance — monthly amounts
+
+Per the definition of the "basic amount" under paragraph (2) in the circular:
+
+- **₪173** for the first child, and for the fifth child onward.
+- **₪219** for the second, third and fourth child.
+- **₪162** for the purposes of a benefit under the Income Support Law, or the family supplement for income-support recipients.
+
+Benefit supplement for a family with at least three children entitled to income support or alimony payments: **₪113** for a family with three children, **₪226** for a family with four or more.
+
+## Birth grant
+
+- First child: **₪2,103** (was ₪2,054).
+- Second child: **₪946** (was ₪924).
+- Third child onward: **₪631** (was ₪616).
+- Birth of two children: **₪10,514** (was ₪10,268).
+
+## Study grant
+
+For a child aged 6 and under 18: **₪1,204** (was ₪1,176).
+
+## Long-term savings for a child
+
+- Basic savings: **₪58** a month (was ₪57). Additional savings: **₪58**.
+- Age-three grant and bar/bat mitzvah-age grant, for children born from 1 January 2017: **₪291** each (were ₪284).
+- Age-18 grant for children born before 1 January 2017, and the age-21 grant: **₪582** each (were ₪568).
+
+## What to know before you calculate
+
+- **Child allowance is paid automatically** — no application. The birth grant is paid via the hospital.
+- **The study grant is not automatic for everyone.** It is paid to families meeting certain conditions (single parents and recipients of certain benefits, for instance). If you are unsure whether it arrived, that is a question for your branch.
+- **The amounts here are the basic amounts in the circular.** What reaches your account depends on the number of children, family composition and other entitlements. Do not plan from a number in an article — check your personal account on the National Insurance site.
+- **You are entitled to service in your language.** At National Insurance branches you can ask for language assistance; if you did not understand a document, do not sign it.
+
+Source: [National Insurance Institute, research and planning administration — "January 2026 benefits update", circular of 30 December 2025](https://www.btl.gov.il/Publications/benefits_update/Documents/hozerkizba2026.pdf) · effective January 2026 · verified September 2026.
+
+## Sources
+
+- [National Insurance Institute — "January 2026 benefits update" circular, 30 December 2025 (PDF)](https://www.btl.gov.il/Publications/benefits_update/Documents/hozerkizba2026.pdf)
+- [The benefits-update page on the National Insurance site](https://www.btl.gov.il/Publications/benefits_update/Pages/hozerkizba2026.aspx)
+- [The Tedros family hub](/en/family)`,
+      am: `ይህ ስለ አዲስ መብት የተጻፈ አይደለም። ስለ ትክክለኛ ቁጥሮች ነው — በየጥር ወሩ የአበል መጠኖች ስለሚዘምኑና በየዓመቱም በጥቂት ሸቀል የተሳሳቱ ቁጥሮች ስለሚሰራጩ።
+
+ምንጩን ከፈትን፦ **የብሔራዊ መድን ተቋም የምርምርና ዕቅድ አስተዳደር «የጥር 2026 አበል ማዘመኛ» ሰርኩላር፣ ታኅሣሥ 30፣ 2025፣ በኒጻ ካሲር የተፈረመ።**
+
+## መጠኖቹ እንዴት ተዘመኑ
+
+- በአንቀጾች (1) እስከ (3) ያሉት መሠረታዊ መጠኖች በ**2.4%** ጨምረዋል (የሸማቾች ዋጋ መረጃ ጠቋሚ)።
+- በአንቀጽ (4) ያለው መሠረታዊ መጠን በ**3.4%** ጨምሯል።
+
+## የልጆች አበል — ወርሃዊ መጠኖች
+
+- **₪173** ለመጀመሪያው ልጅ፣ እንዲሁም ከአምስተኛው ልጅ ጀምሮ።
+- **₪219** ለሁለተኛው፣ ሦስተኛውና አራተኛው ልጅ።
+- **₪162** በገቢ ማረጋገጫ ሕግ መሠረት ላለ ጥቅም ወይም ለቤተሰብ ተጨማሪ።
+
+ቢያንስ ሦስት ልጆች ላሏት የገቢ ማረጋገጫ ተጠቃሚ ቤተሰብ ተጨማሪ፦ ሦስት ልጆች **₪113**፣ አራትና ከዚያ በላይ **₪226**።
+
+## የወሊድ ስጦታ
+
+- የመጀመሪያ ልጅ፦ **₪2,103** (ቀደም ₪2,054)።
+- ሁለተኛ ልጅ፦ **₪946** (ቀደም ₪924)።
+- ከሦስተኛ ልጅ ጀምሮ፦ **₪631** (ቀደም ₪616)።
+- የሁለት ልጆች ወሊድ፦ **₪10,514** (ቀደም ₪10,268)።
+
+## የትምህርት ስጦታ
+
+ዕድሜው 6 የሞላውና 18 ላልሞላው ልጅ፦ **₪1,204** (ቀደም ₪1,176)።
+
+## ለልጅ የረጅም ጊዜ ቁጠባ
+
+- መሠረታዊ ቁጠባ፦ በወር **₪58** (ቀደም ₪57)። ተጨማሪ ቁጠባ፦ **₪58**።
+- ከ1.1.2017 ጀምሮ ለተወለዱ የሦስት ዓመትና የበዓለ ሚጽዋ ስጦታ፦ እያንዳንዱ **₪291** (ቀደም ₪284)።
+- ከ1.1.2017 በፊት ለተወለዱ የ18 ዓመት ስጦታና የ21 ዓመት ስጦታ፦ እያንዳንዱ **₪582** (ቀደም ₪568)።
+
+## ከማስላትዎ በፊት ማወቅ ያለብዎ
+
+- **የልጆች አበል በራስ-ሰር ይከፈላል** — ማመልከቻ አያስፈልግም። የወሊድ ስጦታ በሆስፒታሉ በኩል ይከፈላል።
+- **የትምህርት ስጦታ ለሁሉም በራስ-ሰር አይደለም።** በተወሰኑ ሁኔታዎች ላሉ ቤተሰቦች ይከፈላል። እርግጠኛ ካልሆኑ ቅርንጫፉን ይጠይቁ።
+- **እዚህ ያሉት መጠኖች በሰርኩላሩ ያሉ መሠረታዊ መጠኖች ናቸው።** ወደ ሂሳብዎ የሚደርሰው በልጆች ብዛትና በቤተሰብ ስብጥር ይወሰናል። በጽሑፍ ባለ ቁጥር ላይ አያቅዱ — በብሔራዊ መድን ድህረ ገጽ የግል ሂሳብዎን ይመልከቱ።
+- **በቋንቋዎ አገልግሎት ማግኘት ይገባዎታል።** በቅርንጫፎች የቋንቋ እርዳታ መጠየቅ ይችላሉ፤ ሰነድ ካልገባዎት አይፈርሙ።
+
+ምንጭ፦ [የብሔራዊ መድን ተቋም — «የጥር 2026 አበል ማዘመኛ»፣ የታኅሣሥ 30፣ 2025 ሰርኩላር](https://www.btl.gov.il/Publications/benefits_update/Documents/hozerkizba2026.pdf) · ከጥር 2026 ጀምሮ የሚሠራ · በመስከረም 2026 ተረጋግጧል።
+
+## ምንጮች
+
+- [የብሔራዊ መድን ተቋም — «የጥር 2026 አበል ማዘመኛ» ሰርኩላር፣ ታኅሣሥ 30፣ 2025 (PDF)](https://www.btl.gov.il/Publications/benefits_update/Documents/hozerkizba2026.pdf)
+- [በብሔራዊ መድን ድህረ ገጽ የአበል ማዘመኛ ገጽ](https://www.btl.gov.il/Publications/benefits_update/Pages/hozerkizba2026.aspx)
+- [የትድሮስ የቤተሰብ ማዕከል](/am/family)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
