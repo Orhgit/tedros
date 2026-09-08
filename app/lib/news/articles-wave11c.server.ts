@@ -517,4 +517,162 @@ Two and a half years without fresh data is not only a research problem. It decid
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "records-deletion-law-what-it-covers-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["rights"],
+    title: {
+      he: "חוק מחיקת הרישומים: מה בדיוק נמחק, למי, ולמה עדיין אין מספר",
+      en: "The records-deletion law: exactly what is deleted, for whom, and why there is still no number",
+      am: "የሪከርድ ስረዛ ሕግ፦ በትክክል ምን ይሰረዛል፣ ለማን፣ እና ለምን እስካሁን ቁጥር የለም",
+    },
+    excerpt: {
+      he: "קראנו את נוסח החוק מסעיף לסעיף. הוא מוחק רישום פלילי ומשטרתי בעבירות הפרת סדר שנעברו עד 31.12.2020, בתנאים מוגדרים, ומחייב את המשטרה לדווח לוועדת החוקה כמה רישומים נמחקו. את הדיווח הזה לא הצלחנו למצוא מפורסם.",
+      en: "We read the statute section by section. It deletes criminal and police records for public-order offences committed up to 31 December 2020, on defined conditions, and requires the police to report to the Constitution Committee how many records were deleted. We could not find that report published anywhere.",
+      am: "የሕጉን ጽሑፍ ከአንቀጽ አንቀጽ አነበብን። እስከ 31.12.2020 ለተፈጸሙ የሕዝብ ሥርዓት ጥሰት ወንጀሎች የወንጀልና የፖሊስ ሪከርድን ይሰርዛል፣ ፖሊስም ስንት ሪከርድ እንደተሰረዘ ለኮሚቴው እንዲያሳውቅ ያስገድዳል።",
+    },
+    bodies: {
+      he: `חוק מחיקת רישומים פליליים ומשטרתיים של יוצאי אתיופיה, התשפ"ד–2024, התקבל בכנסת ב-16 ביולי 2024 ופורסם בספר החוקים תשפ"ד, עמ' 1094. קראנו את נוסחו המלא. הנה מה שהוא אומר בפועל — ומה עוד לא קרה.
+
+## מי נחשב "יוצא אתיופיה" לעניין החוק
+
+סעיף 1 מגדיר: מי שנולד באתיופיה, **או** שלפחות אחד מהוריו נולד באתיופיה. זו הגדרה רחבה יותר מזו שמשתמשת בה הלמ"ס בסטטיסטיקה, שסופרת רק ילידי ישראל שאביהם יליד אתיופיה.
+
+## מה נמחק
+
+**סעיף 2(א) — רישום פלילי.** פרטי רישום פלילי בעבירות "הפרת הסדר הציבורי" המנויות בתוספת לחוק, **שנעברו עד 31 בדצמבר 2020**, יימחקו — בהתקיים שלושה תנאים במצטבר:
+
+1. לא הוטל מאסר בפועל על אותה עבירה;
+2. אין פרט רישום פלילי אחר שתקופות ההתיישנות והמחיקה שלו טרם חלפו;
+3. אין פרט רישום משטרתי לפי סעיף 27(א)(1)–(3) לחוק המידע הפלילי.
+
+**סעיף 2(ב) — רישום משטרתי.** פרטי רישום משטרתי לפי סעיף 27(א)(2) לחוק המידע הפלילי, באותן עבירות ובאותה תקופה, יבוטלו — אם אין רישום פלילי או משטרתי אחר שתקופותיו טרם חלפו.
+
+## אילו עבירות
+
+התוספת לחוק מונה סעיפי עבירה מוגדרים: סעיפים 151–158, 216, 275, 287(א), 288, 288א ו-382א(א) לחוק העונשין; סעיף 47(א) לפקודת סדר הדין הפלילי; וסעיף 79(1)(ב) לפקודת המשטרה. אלה סעיפי ההתפרעות, ההפרעה לשוטר והתקיפה שנפתחו בהמוניהם בגלי המחאה.
+
+**מה לא בתוספת:** עבירות מחוץ לרשימה הזו. אם התיק שלכם נפתח בעבירה אחרת — החוק הזה אינו חל עליו, וייתכן שמסלול המחיקה הכללי בחוק המידע הפלילי כן רלוונטי.
+
+## הדיווח שהחוק דורש — ומה מצאנו
+
+סעיף 3 קובע שמשטרת ישראל תמסור לוועדת החוקה, חוק ומשפט של הכנסת, **בתום שישה חודשים מיום תחילתו של החוק**, דיווח על יישום הוראותיו ועל מספר פרטי הרישום שנמחקו או בוטלו לפי סעיף 2, בפירוט לפי סעיפי העבירה.
+
+חיפשנו את הדיווח הזה — באתר הכנסת, בפרוטוקולי ועדת החוקה ובפרסומי המשטרה. **לא מצאנו אותו מפורסם.** אנחנו כותבים זאת כאן במפורש, במקום לנחש מספר: אנחנו לא יודעים כמה רישומים נמחקו בפועל, ואיננו יודעים אם הדיווח נמסר ולא פורסם, או לא נמסר.
+
+בשני פרסומים עיתונאיים מ-2026 הוזכר החוק על ידי גורמים רשמיים — המשרד לביטחון לאומי מנה אותו בין הישגי התקופה (ynet, 19.6.2026), ודובר המשטרה הזכיר את תמיכת המשטרה בחקיקה (וואלה, 6.1.2026) — אך באף אחד מהם לא הופיע מספר הרישומים שנמחקו.
+
+## מה זה אומר לכם
+
+המחיקה לפי החוק אינה תלויה בהגשת בקשה: הסעיף מנוסח כמחיקה, לא כזכות להגיש בקשה. אבל **בדיקה של המצב בפועל היא באחריותכם**, ושווה לעשות אותה לפני ראיון עבודה, גיוס, או בקשה לרישיון.
+
+- בדקו ראשית אם התנאים חלים עליכם ב[עמוד מחיקת הרישום הפלילי שלנו](/he/rights/criminal-record-expungement), שמפרט את התנאים בשאלות פשוטות.
+- אם התיק שלכם נפתח אחרי 31.12.2020 — החוק הזה לא חל עליו.
+
+> המידע כאן הוא מידע כללי ואינו ייעוץ משפטי. מצב הרישום שלכם תלוי בנתונים שרק הרשויות רואות. במקרה קונקרטי — פנו לעורך דין או לסיוע משפטי.
+
+## מקורות
+
+- [נוסח החוק — חוק מחיקת רישומים פליליים ומשטרתיים של יוצאי אתיופיה, התשפ"ד–2024 (ויקיטקסט; ס"ח תשפ"ד עמ' 1094, התקבל בכנסת 16.7.2024)](https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%97%D7%99%D7%A7%D7%AA_%D7%A8%D7%99%D7%A9%D7%95%D7%9E%D7%99%D7%9D_%D7%A4%D7%9C%D7%99%D7%9C%D7%99%D7%99%D7%9D_%D7%95%D7%9E%D7%A9%D7%98%D7%A8%D7%AA%D7%99%D7%99%D7%9D_%D7%A9%D7%9C_%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94)
+- [מרכז המחקר והמידע של הכנסת — "נתוני אכיפה כלפי יוצאי אתיופיה בשנים 2019–2023", 21.5.2024 (הוכן כרקע לדיוני ועדת החוקה בהצעת החוק)](https://fs.knesset.gov.il/25/law/25_ls_mmm_4436954.pdf)
+- [ynet, ‏19.6.2026 — גיא אסיף](https://www.ynet.co.il/news/article/yokra14801640)
+- [וואלה חדשות, 6.1.2026 — אפרת פורשר](https://news.walla.co.il/item/3807037)
+- [בדיקת הזכאות שלנו](/he/rights/criminal-record-expungement)`,
+      en: `The Law for the Deletion of Criminal and Police Records of Ethiopian-Israelis, 5784–2024, passed the Knesset on 16 July 2024 and was published in the statute book (5784, p. 1094). We read the full text. Here is what it actually says — and what has not yet happened.
+
+## Who counts as "of Ethiopian origin" under the law
+
+Section 1 defines it: a person born in Ethiopia, **or** with at least one parent born in Ethiopia. That is broader than the definition the Central Bureau of Statistics uses, which counts Israel-born people only where the father was born in Ethiopia.
+
+## What is deleted
+
+**Section 2(a) — criminal records.** Criminal record entries for the "public order" offences listed in the schedule to the law, **committed up to 31 December 2020**, are deleted — where three conditions hold together:
+
+1. no actual imprisonment was imposed for that offence;
+2. there is no other criminal record entry whose limitation and deletion periods have not yet run;
+3. there is no police record entry under section 27(a)(1)–(3) of the Criminal Information Law.
+
+**Section 2(b) — police records.** Police record entries under section 27(a)(2) of the Criminal Information Law, for the same offences and the same period, are cancelled — if there is no other criminal or police record whose periods have not yet run.
+
+## Which offences
+
+The schedule lists specific offence sections: sections 151–158, 216, 275, 287(a), 288, 288a and 382a(a) of the Penal Law; section 47(a) of the Criminal Procedure Ordinance; and section 79(1)(b) of the Police Ordinance. These are the riot, obstruction-of-an-officer and assault provisions under which files were opened en masse during the protest waves.
+
+**What is not in the schedule:** offences outside that list. If your file was opened under a different offence, this law does not apply to it, and the general deletion route under the Criminal Information Law may be the relevant one instead.
+
+## The report the law requires — and what we found
+
+Section 3 provides that Israel Police shall submit to the Knesset Constitution, Law and Justice Committee, **within six months of the law's commencement**, a report on implementation and on the number of record entries deleted or cancelled under section 2, itemised by offence section.
+
+We looked for that report — on the Knesset site, in Constitution Committee protocols, and in police publications. **We did not find it published.** We are saying so plainly rather than guessing at a number: we do not know how many records have actually been deleted, and we do not know whether the report was submitted and not published, or not submitted.
+
+Two 2026 news reports quote officials invoking the law — the National Security Ministry listed it among its achievements (Ynet, 19 June 2026), and a police spokesperson referred to police support for the legislation (Walla, 6 January 2026) — but neither carried a figure for records deleted.
+
+## What this means for you
+
+Deletion under the law does not depend on filing an application: the section is drafted as a deletion, not as a right to apply. But **checking your actual status is on you**, and it is worth doing before a job interview, enlistment, or a licence application.
+
+- First check whether the conditions apply to you on [our criminal-record deletion page](/en/rights/criminal-record-expungement), which walks through the conditions as plain questions.
+- If your file was opened after 31 December 2020, this law does not cover it.
+
+> This is general information and not legal advice. Your record status depends on data only the authorities can see. In a specific case, consult a lawyer or legal aid.
+
+## Sources
+
+- [The statute — Law for the Deletion of Criminal and Police Records of Ethiopian-Israelis, 5784–2024 (Wikisource; statute book 5784 p. 1094, passed 16 July 2024)](https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%97%D7%99%D7%A7%D7%AA_%D7%A8%D7%99%D7%A9%D7%95%D7%9E%D7%99%D7%9D_%D7%A4%D7%9C%D7%99%D7%9C%D7%99%D7%99%D7%9D_%D7%95%D7%9E%D7%A9%D7%98%D7%A8%D7%AA%D7%99%D7%99%D7%9D_%D7%A9%D7%9C_%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94)
+- [Knesset Research and Information Center — "Enforcement data concerning Ethiopian-Israelis, 2019–2023", 21 May 2024 (prepared as background for the Constitution Committee's debate on the bill)](https://fs.knesset.gov.il/25/law/25_ls_mmm_4436954.pdf)
+- [Ynet, 19 June 2026 — Gai Asif](https://www.ynet.co.il/news/article/yokra14801640)
+- [Walla News, 6 January 2026 — Efrat Forcher](https://news.walla.co.il/item/3807037)
+- [Our eligibility check](/en/rights/criminal-record-expungement)`,
+      am: `የኢትዮጵያ ተወላጆች የወንጀልና የፖሊስ ሪከርድ ስረዛ ሕግ፣ 5784–2024፣ በሐምሌ 16፣ 2024 በኔሴት ጸድቆ በሕግ መጽሐፍ (5784፣ ገጽ 1094) ታትሟል። ሙሉ ጽሑፉን አነበብን። በተግባር የሚለውና ገና ያልተከናወነው ይኸውና።
+
+## በሕጉ መሠረት «የኢትዮጵያ ተወላጅ» ማን ነው
+
+አንቀጽ 1 ይተረጉመዋል፦ በኢትዮጵያ የተወለደ፣ **ወይም** ቢያንስ አንድ ወላጁ በኢትዮጵያ የተወለደ። ይህ ማዕከላዊ የስታቲስቲክስ ቢሮ ከሚጠቀመው ትርጓሜ ይሰፋል።
+
+## ምን ይሰረዛል
+
+**አንቀጽ 2(ሀ) — የወንጀል ሪከርድ።** በሕጉ አባሪ ውስጥ ለተዘረዘሩ «የሕዝብ ሥርዓት» ወንጀሎች፣ **እስከ ታኅሣሥ 31፣ 2020 ለተፈጸሙ**፣ የወንጀል ሪከርድ መዝገቦች ይሰረዛሉ — ሦስቱ ሁኔታዎች በአንድነት ሲሟሉ፦
+
+1. በዚያ ወንጀል ላይ ትክክለኛ እስራት አልተጣለም፤
+2. የይርጋና የስረዛ ጊዜያቸው ያላለፈ ሌላ የወንጀል ሪከርድ የለም፤
+3. በወንጀል መረጃ ሕግ አንቀጽ 27(ሀ)(1)–(3) መሠረት የፖሊስ ሪከርድ የለም።
+
+**አንቀጽ 2(ለ) — የፖሊስ ሪከርድ።** በወንጀል መረጃ ሕግ አንቀጽ 27(ሀ)(2) መሠረት ያሉ የፖሊስ ሪከርዶች፣ በተመሳሳይ ወንጀሎችና ጊዜ፣ ይሰረዛሉ — ጊዜያቸው ያላለፈ ሌላ ሪከርድ ከሌለ።
+
+## የትኞቹ ወንጀሎች
+
+አባሪው የተወሰኑ የወንጀል አንቀጾችን ይዘረዝራል፦ የቅጣት ሕግ አንቀጾች 151–158፣ 216፣ 275፣ 287(ሀ)፣ 288፣ 288ሀ እና 382ሀ(ሀ)፤ የወንጀል ሥነ ሥርዓት አዋጅ አንቀጽ 47(ሀ)፤ እና የፖሊስ አዋጅ አንቀጽ 79(1)(ለ)።
+
+**በአባሪው ውስጥ ያልሆነው፦** ከዚህ ዝርዝር ውጭ ያሉ ወንጀሎች። መዝገብዎ በሌላ ወንጀል ከተከፈተ ይህ ሕግ አይመለከተውም።
+
+## ሕጉ የሚጠይቀው ሪፖርት — እና ያገኘነው
+
+አንቀጽ 3 የእስራኤል ፖሊስ **ሕጉ ከጸና ከስድስት ወር በኋላ** ለኔሴት ሕገ መንግሥት፣ ሕግና ፍትሕ ኮሚቴ የአፈጻጸም ሪፖርትና በአንቀጽ 2 መሠረት የተሰረዙ ሪከርዶች ብዛት፣ በወንጀል አንቀጽ ተከፋፍሎ እንዲያቀርብ ይደነግጋል።
+
+ይህን ሪፖርት ፈለግን — በኔሴት ድህረ ገጽ፣ በኮሚቴ ቃለ ጉባኤዎችና በፖሊስ ህትመቶች። **ታትሞ አላገኘነውም።** ቁጥር ከመገመት ይልቅ ይህን በግልጽ እንጽፋለን፦ በተግባር ስንት ሪከርድ እንደተሰረዘ አናውቅም።
+
+ሁለት የ2026 ዘገባዎች ባለሥልጣናት ሕጉን ሲጠቅሱ ያሳያሉ — የብሔራዊ ደህንነት ሚኒስቴር (ይኔት፣ ሰኔ 19፣ 2026) እና የፖሊስ ቃል አቀባይ (ዋላ፣ ጥር 6፣ 2026) — ነገር ግን በሁለቱም የተሰረዙ ሪከርዶች ቁጥር አልቀረበም።
+
+## ለእርስዎ ምን ማለት ነው
+
+በሕጉ መሠረት ስረዛው ማመልከቻ ማቅረብን አይጠይቅም። ነገር ግን **ትክክለኛ ሁኔታዎን ማረጋገጥ የእርስዎ ኃላፊነት ነው** — ከሥራ ቃለ መጠይቅ፣ ከውትድርና ወይም ከፈቃድ ማመልከቻ በፊት ማድረግ ተገቢ ነው።
+
+- መጀመሪያ ሁኔታዎቹ እርስዎን ይመለከቱ እንደሆነ በ[የወንጀል ሪከርድ ስረዛ ገጻችን](/am/rights/criminal-record-expungement) ይመልከቱ።
+- መዝገብዎ ከታኅሣሥ 31፣ 2020 በኋላ ከተከፈተ ይህ ሕግ አይሸፍነውም።
+
+> ይህ አጠቃላይ መረጃ ነው እንጂ የሕግ ምክር አይደለም። በተለየ ጉዳይ ጠበቃ ወይም የሕግ እርዳታ ያማክሩ።
+
+## ምንጮች
+
+- [የሕጉ ጽሑፍ — የኢትዮጵያ ተወላጆች የወንጀልና የፖሊስ ሪከርድ ስረዛ ሕግ፣ 5784–2024](https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%97%D7%99%D7%A7%D7%AA_%D7%A8%D7%99%D7%A9%D7%95%D7%9E%D7%99%D7%9D_%D7%A4%D7%9C%D7%99%D7%9C%D7%99%D7%99%D7%9D_%D7%95%D7%9E%D7%A9%D7%98%D7%A8%D7%AA%D7%99%D7%99%D7%9D_%D7%A9%D7%9C_%D7%99%D7%95%D7%A6%D7%90%D7%99_%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94)
+- [የኔሴት የምርምርና መረጃ ማዕከል፣ ግንቦት 21፣ 2024](https://fs.knesset.gov.il/25/law/25_ls_mmm_4436954.pdf)
+- [ይኔት፣ ሰኔ 19፣ 2026 — ጋይ አሲፍ](https://www.ynet.co.il/news/article/yokra14801640)
+- [ዋላ ኒውስ፣ ጥር 6፣ 2026 — ኤፍራት ፎርሸር](https://news.walla.co.il/item/3807037)
+- [የእኛ የብቁነት ማረጋገጫ](/am/rights/criminal-record-expungement)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
