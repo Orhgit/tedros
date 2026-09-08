@@ -362,4 +362,159 @@ In any situation of domestic violence, the national line of the Ministry of Welf
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "over-policing-hearing-and-missing-data-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["rights"],
+    title: {
+      he: "המשטרה הפסיקה למסור נתוני אכיפה מ-2023 — וזו הסיבה שקשה להוכיח מה שכולם רואים",
+      en: "The police stopped releasing enforcement data in 2023 — which is why what everyone sees is hard to prove",
+      am: "ፖሊስ ከ2023 ጀምሮ የማስፈጸሚያ መረጃ መስጠት አቁሟል — ሁሉም የሚያየው ነገር ለማስረዳት የከበደው ለዚህ ነው",
+    },
+    excerpt: {
+      he: "בינואר 2026 נשמעו בכנסת עדויות הורים על אלימות שוטרים כלפי ילדיהם. ביוני 2026 פרסם ynet תחקיר שלפיו המשטרה אינה מוסרת נתוני אכיפה מאז 2023. מסמך מרכז המחקר של הכנסת מ-2024 הוא עדיין הנתון הרשמי האחרון — והנה מה שכתוב בו.",
+      en: "In January 2026 the Knesset heard parents testify about police violence against their children. In June 2026 Ynet published an investigation reporting that the police have released no enforcement data since 2023. A 2024 Knesset Research Center paper is still the last official figure — here is what it says.",
+      am: "በጥር 2026 በኔሴት ወላጆች በልጆቻቸው ላይ ስለደረሰ የፖሊስ ጥቃት መስክረዋል። በሰኔ 2026 ይኔት ፖሊስ ከ2023 ጀምሮ የማስፈጸሚያ መረጃ አለመስጠቱን የሚገልጽ ምርመራ አሳተመ።",
+    },
+    bodies: {
+      he: `## מה קרה בכנסת בינואר
+
+ב-6 בינואר 2026 דיווחה אפרת פורשר בוואלה על דיון בוועדה מיוחדת בכנסת, ביוזמת ח"כ פנינה תמנו-שטה, שבו נשמעו עדויות הורים על יחס שוטרים לילדיהם. בין העדויות שדווחו: אם שסיפרה שבנה, נכה צה"ל, הוכה בידי שוטרים ונשאר במעצר; הורה שסיפר על ילד בן 12 ש"מפחד לצאת מהבית"; אב שתיאר שוטרים ששלפו נשק במעצר בנו בחשד לגניבת קורקינט שהיה שלו; וגבר בן 30 שתיאר שירו בו טייזר כשהיה אזוק, אחרי שהגיע להגיש תלונה.
+
+לפי אותו דיווח, דובר המשטרה אריה דורון הזכיר בתגובה את היחידה הייעודית לקשרי הקהילה ואת תמיכת המשטרה בחקיקה למחיקת הרישום הפלילי. תמנו-שטה אמרה באותו דיון שהיא מתדרכת את ילדה מגיל 7 בכל פעם שהוא יוצא מהבית.
+
+## מה קרה בתחקיר ביוני
+
+ב-19 ביוני 2026 פרסם גיא אסיף ב-ynet תחקיר על אכיפה משטרתית כלפי יוצאי אתיופיה. שני ממצאים ממנו:
+
+- **המשטרה אינה מוסרת נתוני אכיפה מאז 2023.** גורם במרכז המחקר והמידע של הכנסת נמסר בתחקיר כאומר שלא התקבלו תשובות מהמשטרה במשך חודשים.
+- לפי הנתונים שכן הוצגו בתחקיר: יוצאי אתיופיה מהווים כ-2.2% מהאוכלוסייה היהודית בישראל אך כ-9% מכלל מעצרי הקטינים; ולמעלה מ-50% מתיקי החקירה שנפתחו נגד יוצאי אתיופיה נסגרו מחוסר ראיות מספיקות — שיעור גבוה בכ-5% מזה שבאוכלוסייה היהודית הכללית.
+
+בתגובה שפורסמה בתחקיר מנה המשרד לביטחון לאומי הישגים בתקופת השר איתמר בן גביר, ובהם חוק מחיקת הרישומים מיולי 2024, גיוס 170 שוטרים יוצאי אתיופיה ב-2024 לעומת 46 ב-2021, והקמת יחידה ייעודית לשיטור קהילתי. המשטרה מסרה שהיא דוחה מכל וכל הצגה מוטה, והפנתה להכשרות ולתוכניות קהילתיות שהופעלו מאז 2021.
+
+## הנתון הרשמי האחרון
+
+כשמערכת מפסיקה לפרסם, מה שנשאר הוא הפרסום האחרון. זהו מסמך מרכז המחקר והמידע של הכנסת "נתוני אכיפה כלפי יוצאי אתיופיה בשנים 2019–2023", מאת ד"ר נורית יכימוביץ-כהן, מיום 21 במאי 2024. הוא הוכן לבקשת ח"כ צגה מלכו, כרקע לדיוני ועדת החוקה בהצעת חוק מחיקת הרישומים.
+
+מה שכתוב בו, בכל אחת מהשנים 2019–2023:
+
+- יוצאי אתיופיה הם **2.2%** מכלל היהודים בישראל.
+- שיעורם בכלל העצורים היהודים: **8%–9%**.
+- שיעורם במעצרים בגין "עבירות מגע" (תקיפת שוטר, תקיפת שוטר בנסיבות מחמירות, הכשלת שוטר): **10%–12%**.
+- שיעורם מקרב החשודים בכלל תיקי החקירה: **5%–6%**; בתיקי עבירות מגע: **9%–11%**.
+
+המסמך עצמו מציין שהגרסה שפורסמה מחליפה גרסה קודמת, ושחלק מנתוני עבירות המגע הוסרו ממנו "עקב איתור טעות בנתונים שהמשטרה העבירה".
+
+## למה זה חשוב מעבר למספרים
+
+שנתיים וחצי בלי נתונים חדשים אינן רק בעיה מחקרית. הן קובעות מי נושא בנטל ההוכחה. בלי סדרת נתונים מתעדכנת, כל תלונה חוזרת להיות סיפור אישי מול הכחשה מוסדית — וזה בדיוק המבנה שבו עדות של הורה בוועדה נשמעת כרגש, ותגובת דובר נשמעת כעובדה.
+
+## מה לעשות בעצירה ברחוב
+
+- אתם רשאים לשאול **על מה אתם מעוכבים**. פירטנו את הזכויות והנוסחים המדויקים ב[מדריך העיכוב ברחוב שלנו](/he/voice/street-stop).
+- להתלונן על התנהגות שוטר — הנתיבים והכתובות מרוכזים ב[מדריך התנהלות מול שוטרים](/he/voice/police-conduct).
+- אם נפתח נגדכם תיק בעבר על עבירות הפרת סדר — ייתכן שהוא נמחק בחוק מ-2024. בדקו ב[עמוד מחיקת הרישום הפלילי](/he/rights/criminal-record-expungement).
+
+> המידע כאן הוא מידע כללי ואינו ייעוץ משפטי. במקרה קונקרטי — פנו לעורך דין או לסיוע משפטי.
+
+## מקורות
+
+- [וואלה חדשות, 6.1.2026 — אפרת פורשר, "הורים לצעירים יוצאי אתיופיה שחוו אלימות משטרתית"](https://news.walla.co.il/item/3807037)
+- [ynet, ‏19.6.2026 — גיא אסיף, "גזענות המשטרה נגד יוצאי אתיופיה לא נעלמה. היא רק שינתה צורה"](https://www.ynet.co.il/news/article/yokra14801640)
+- [מרכז המחקר והמידע של הכנסת — ד"ר נורית יכימוביץ-כהן, "נתוני אכיפה כלפי יוצאי אתיופיה בשנים 2019–2023", 21.5.2024](https://fs.knesset.gov.il/25/law/25_ls_mmm_4436954.pdf)`,
+      en: `## What happened in the Knesset in January
+
+On 6 January 2026 Efrat Forcher reported in Walla on a special Knesset committee hearing, convened at the initiative of MK Pnina Tamano-Shata, at which parents testified about how police treated their children. Among the testimonies reported: a mother who said her son, a disabled IDF veteran, was beaten by officers and remained in custody; a parent who described a 12-year-old who "is afraid to leave home"; a father who described officers drawing weapons during his son's arrest over a scooter that belonged to the boy; and a 30-year-old man who described being tasered while handcuffed, after coming in to file a complaint.
+
+Per that report, police spokesperson Arieh Doron pointed in response to the dedicated community-relations unit and to police support for the records-expungement legislation. Tamano-Shata said at the hearing that she briefs her own child, from age seven, every time he leaves the house.
+
+## What the June investigation found
+
+On 19 June 2026 Gai Asif published an investigation in Ynet into police enforcement against Ethiopian-Israelis. Two findings from it:
+
+- **The police have released no enforcement data since 2023.** A figure at the Knesset Research and Information Center is quoted in the piece as saying no answers had been received from the police for months.
+- Of the data the piece did present: Ethiopian-Israelis are around 2.2% of Israel's Jewish population but around 9% of all youth arrests; and more than 50% of investigation files opened against Ethiopian-Israelis were closed for insufficient evidence — about 5% higher than the rate in the general Jewish population.
+
+In the response published in the piece, the National Security Ministry listed achievements under Minister Itamar Ben Gvir, among them the July 2024 records-deletion law, the recruitment of 170 Ethiopian-Israeli officers in 2024 against 46 in 2021, and the establishment of a dedicated community-policing unit. The police said they firmly reject any biased portrayal, and pointed to training and community programmes run since 2021.
+
+## The last official figure
+
+When a system stops publishing, what is left is the last publication. That is the Knesset Research and Information Center paper "Enforcement data concerning Ethiopian-Israelis, 2019–2023", by Dr Nurit Yachimovich-Cohen, dated 21 May 2024. It was prepared at the request of MK Tsega Melaku, as background for the Constitution Committee's debate on the records-deletion bill.
+
+What it says, in each of the years 2019–2023:
+
+- Ethiopian-Israelis are **2.2%** of all Jews in Israel.
+- Their share of all Jewish detainees: **8%–9%**.
+- Their share of arrests for "contact offences" (assaulting an officer, aggravated assault of an officer, obstructing an officer): **10%–12%**.
+- Their share of suspects across all investigation files: **5%–6%**; in contact-offence files: **9%–11%**.
+
+The paper itself notes that the published version replaces an earlier one, and that some contact-offence data were removed from it "following the identification of an error in the data transmitted by the police".
+
+## Why this matters beyond the numbers
+
+Two and a half years without fresh data is not only a research problem. It decides who carries the burden of proof. Without an updated data series, every complaint reverts to being a personal story against an institutional denial — which is exactly the structure in which a parent's testimony at a committee sounds like emotion, and a spokesperson's response sounds like fact.
+
+## What to do in a street stop
+
+- You are entitled to ask **what you are being detained for**. We set out the rights and the exact wording in [our street-stop guide](/en/voice/street-stop).
+- To complain about an officer's conduct, the routes and addresses are gathered in [our guide to dealing with police](/en/voice/police-conduct).
+- If a file was opened against you in the past for public-order offences, it may have been deleted by the 2024 law. Check on [our criminal-record deletion page](/en/rights/criminal-record-expungement).
+
+> This is general information and not legal advice. In a specific case, consult a lawyer or legal aid.
+
+## Sources
+
+- [Walla News, 6 Jan 2026 — Efrat Forcher, "Parents of young Ethiopian-Israelis who experienced police violence"](https://news.walla.co.il/item/3807037)
+- [Ynet, 19 June 2026 — Gai Asif, "Police racism against Ethiopian-Israelis has not disappeared. It has only changed shape"](https://www.ynet.co.il/news/article/yokra14801640)
+- [Knesset Research and Information Center — Dr Nurit Yachimovich-Cohen, "Enforcement data concerning Ethiopian-Israelis, 2019–2023", 21 May 2024](https://fs.knesset.gov.il/25/law/25_ls_mmm_4436954.pdf)`,
+      am: `## በጥር በኔሴት ምን ተከሰተ
+
+በጥር 6፣ 2026 ኤፍራት ፎርሸር በዋላ ላይ በኔሴት ልዩ ኮሚቴ ስለተካሄደ ውይይት ዘግባለች። ውይይቱ በኔሴት አባል ፒኒና ተምኑ-ሻጣ ተነሳሽነት የተጠራ ሲሆን ወላጆች ፖሊስ ልጆቻቸውን እንዴት እንደያዘ መስክረዋል። ከተዘገቡት ምስክርነቶች መካከል፦ ልጇ የጦር ሠራዊት አካል ጉዳተኛ ሆኖ በፖሊስ እንደተደበደበና በእስር እንደቀረ የተናገረች እናት፤ ባለ12 ዓመት ልጅ «ከቤት ለመውጣት እንደሚፈራ» የገለጸ ወላጅ፤ የልጁ የነበረውን ስኩተር በመስረቅ ጥርጣሬ ፖሊሶች መሣሪያ እንደመዘዙ የገለጸ አባት፤ እና ቅሬታ ለማቅረብ ከመጣ በኋላ በካቴና ታስሮ ሳለ ቴዘር እንደተተኮሰበት የተናገረ የ30 ዓመት ወንድ።
+
+በዚያው ዘገባ መሠረት፣ የፖሊስ ቃል አቀባይ አርየ ዶሮን በምላሹ ስለ ማህበረሰብ ግንኙነት ልዩ ክፍልና ፖሊስ የወንጀል ሪከርድ ስረዛ ሕግን ስለመደገፉ ጠቅሷል።
+
+## በሰኔ ምርመራው ምን አገኘ
+
+በሰኔ 19፣ 2026 ጋይ አሲፍ በይኔት ላይ በኢትዮጵያ ተወላጆች ላይ ስለሚደረግ የፖሊስ ማስፈጸሚያ ምርመራ አሳተመ። ሁለት ግኝቶች፦
+
+- **ፖሊስ ከ2023 ጀምሮ የማስፈጸሚያ መረጃ አልሰጠም።** በኔሴት የምርምርና መረጃ ማዕከል ውስጥ ያለ ባለሙያ ለወራት ከፖሊስ ምላሽ እንዳልደረሰው ተጠቅሷል።
+- በዘገባው ከቀረቡት መረጃዎች፦ የኢትዮጵያ ተወላጆች ከእስራኤል አይሁድ ሕዝብ 2.2% ገደማ ሲሆኑ ከወጣቶች እስራት ግን 9% ገደማ ናቸው፤ በኢትዮጵያ ተወላጆች ላይ ከተከፈቱ የምርመራ መዝገቦች ከ50% በላይ በበቂ ማስረጃ እጦት ተዘግተዋል — ከጠቅላላው የአይሁድ ሕዝብ በ5% ገደማ የሚበልጥ።
+
+በዘገባው በወጣው ምላሽ የብሔራዊ ደህንነት ሚኒስቴር በሚኒስትር ኢታማር ቤን ግቪር ጊዜ የተገኙ ውጤቶችን ዘርዝሯል — የሐምሌ 2024 የሪከርድ ስረዛ ሕግ፣ በ2024 170 የኢትዮጵያ ተወላጅ ፖሊሶች መቀጠር (በ2021 46 ነበሩ)፣ እና ልዩ የማህበረሰብ ፖሊስ ክፍል መቋቋም። ፖሊስ ማንኛውንም አድሏዊ አቀራረብ እንደሚቃወም ገልጿል።
+
+## የመጨረሻው ይፋዊ አኃዝ
+
+አንድ ሥርዓት ማተም ሲያቆም የሚቀረው የመጨረሻው ህትመት ነው። ይህም የኔሴት የምርምርና መረጃ ማዕከል «በ2019–2023 በኢትዮጵያ ተወላጆች ላይ የማስፈጸሚያ መረጃ» የሚለው ሰነድ ነው — በዶ/ር ኑሪት ያኪሞቪች-ኮሄን፣ ግንቦት 21፣ 2024። በኔሴት አባል ጼጋ መላኩ ጥያቄ የተዘጋጀ ነው።
+
+በ2019–2023 በእያንዳንዱ ዓመት የሚለው፦
+
+- የኢትዮጵያ ተወላጆች ከእስራኤል አይሁዶች ሁሉ **2.2%** ናቸው።
+- ከታሰሩት አይሁዶች ሁሉ ድርሻቸው፦ **8%–9%**።
+- «የመነካካት ወንጀሎች» (ፖሊስ ማጥቃት፣ ፖሊስ ማደናቀፍ) እስራት ውስጥ ድርሻቸው፦ **10%–12%**።
+- በሁሉም የምርመራ መዝገቦች ከተጠርጣሪዎች ድርሻቸው፦ **5%–6%**፤ በመነካካት ወንጀል መዝገቦች፦ **9%–11%**።
+
+ሰነዱ ራሱ የታተመው ስሪት ቀደም ያለውን እንደሚተካና «ፖሊስ ባስተላለፈው መረጃ ላይ ስህተት በመገኘቱ» የተወሰኑ መረጃዎች እንደተወገዱ ይገልጻል።
+
+## ከቁጥሮች ባሻገር ለምን አስፈላጊ ነው
+
+ሁለት ዓመት ተኩል ያለ አዲስ መረጃ የምርምር ችግር ብቻ አይደለም። የማስረጃ ሸክሙን ማን እንደሚሸከም ይወስናል። የተዘመነ የመረጃ ተከታታይ ከሌለ፣ እያንዳንዱ ቅሬታ ወደ ግላዊ ታሪክ ተመልሶ በተቋማዊ ክህደት ፊት ይቆማል።
+
+## በመንገድ ላይ ሲያቆሙዎት ምን ማድረግ
+
+- **በምን ምክንያት እንደታገዱ** የመጠየቅ መብት አለዎት። መብቶቹንና ትክክለኛዎቹን አገላለጾች በ[የመንገድ ማቆም መመሪያችን](/am/voice/street-stop) አብራርተናል።
+- ስለ ፖሊስ ባህርይ ቅሬታ ለማቅረብ — መንገዶቹ በ[ከፖሊስ ጋር የመገናኘት መመሪያችን](/am/voice/police-conduct) ተሰብስበዋል።
+- ቀደም ሲል በሕዝብ ሥርዓት ጥሰት መዝገብ ተከፍቶብዎ ከነበረ በ2024 ሕግ ተሰርዞ ሊሆን ይችላል። በ[የወንጀል ሪከርድ ስረዛ ገጻችን](/am/rights/criminal-record-expungement) ይመልከቱ።
+
+> ይህ አጠቃላይ መረጃ ነው እንጂ የሕግ ምክር አይደለም። በተለየ ጉዳይ ጠበቃ ወይም የሕግ እርዳታ ያማክሩ።
+
+## ምንጮች
+
+- [ዋላ ኒውስ፣ ጥር 6፣ 2026 — ኤፍራት ፎርሸር](https://news.walla.co.il/item/3807037)
+- [ይኔት፣ ሰኔ 19፣ 2026 — ጋይ አሲፍ](https://www.ynet.co.il/news/article/yokra14801640)
+- [የኔሴት የምርምርና መረጃ ማዕከል — ዶ/ር ኑሪት ያኪሞቪች-ኮሄን፣ «በ2019–2023 በኢትዮጵያ ተወላጆች ላይ የማስፈጸሚያ መረጃ»፣ ግንቦት 21፣ 2024](https://fs.knesset.gov.il/25/law/25_ls_mmm_4436954.pdf)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
