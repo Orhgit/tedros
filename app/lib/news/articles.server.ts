@@ -407,7 +407,7 @@ A presidential committee in Q3 2024 discussed a recommendation to expand to 1,50
       am: "ሰግድ 2026 — ቀኖች እና ዝርዝሮች",
     },
     excerpt: {
-      he: "התאריך: יום שני, 9 בנובמבר 2026 (כ\"ט בחשוון תשפ\"ז). הטקס המרכזי בארמון הנציב, ירושלים, ולצדו טקסים עירוניים.",
+      he: 'התאריך: יום שני, 9 בנובמבר 2026 (כ"ט בחשוון תשפ"ז). הטקס המרכזי בארמון הנציב, ירושלים, ולצדו טקסים עירוניים.',
       en: "The date: Monday, November 9, 2026 (29 Cheshvan 5787). The main ceremony is at Armon Hanatziv, Jerusalem, alongside municipal ceremonies.",
       am: "ቀኑ: ሰኞ፣ ኅዳር 9፣ 2026 (29 ኅዳር 5787)።",
     },

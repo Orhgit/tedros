@@ -420,7 +420,7 @@ Localities with the most births to mothers of Ethiopian origin: **Netanya (311)*
       am: "የጊዴዎን መንግሥት ከወደቀ 400 ዓመታት፦ ጥቅምት 14 በኢየሩሳሌም ጉባኤ",
     },
     excerpt: {
-      he: "המרכז למורשת יהדות אתיופיה יקיים ב-14.10.2026 כנס \"חידושים בחקר ממלכת הגדעונים\", 400 שנה אחרי שהקיסר סוסניוס הכריע סופית את השלטון העצמי היהודי בהרי סמיין. הכנס פתוח לקהל, בבנייני האומה בירושלים.",
+      he: 'המרכז למורשת יהדות אתיופיה יקיים ב-14.10.2026 כנס "חידושים בחקר ממלכת הגדעונים", 400 שנה אחרי שהקיסר סוסניוס הכריע סופית את השלטון העצמי היהודי בהרי סמיין. הכנס פתוח לקהל, בבנייני האומה בירושלים.',
       en: "On 14 October 2026 the Center for Ethiopian Jewish Heritage holds a conference on new research into the Kingdom of the Gideons, 400 years after Emperor Susenyos finally defeated Jewish self-rule in the Simien mountains. Open to the public, at Binyanei Ha'uma in Jerusalem.",
       am: "የኢትዮጵያ አይሁድ ቅርስ ማዕከል ጥቅምት 14፣ 2026 «በጊዴዎን መንግሥት ጥናት ላይ አዳዲስ ግኝቶች» ጉባኤ ያካሂዳል፣ ንጉሥ ሱስንዮስ በሰሜን ተራሮች የነበረውን የአይሁድ ራስን በራስ ማስተዳደር ካሸነፈ 400 ዓመታት በኋላ።",
     },
@@ -696,7 +696,7 @@ The civil dates come from Hebcal's holiday calendar. The description of the litu
       am: "ታማ 38 ግንቦት 18 አበቃ። በከተሞቻችን — ማን ተኪ አለው ማን የለውም",
     },
     excerpt: {
-      he: 'התוכנית הארצית לחיזוק מבנים פקעה סופית ב-18.5.2026, ואי אפשר עוד להגיש בקשות להיתר מכוחה. במקומה — תוכניות עירוניות. ברמלה, ביבנה, בפתח תקווה ובבאר שבע כבר יש תוכנית מאושרת; בראשון לציון, באשקלון, בבית שמש ובחיפה עדיין לא. פינוי-בינוי הוא מסלול נפרד ולא הושפע.',
+      he: "התוכנית הארצית לחיזוק מבנים פקעה סופית ב-18.5.2026, ואי אפשר עוד להגיש בקשות להיתר מכוחה. במקומה — תוכניות עירוניות. ברמלה, ביבנה, בפתח תקווה ובבאר שבע כבר יש תוכנית מאושרת; בראשון לציון, באשקלון, בבית שמש ובחיפה עדיין לא. פינוי-בינוי הוא מסלול נפרד ולא הושפע.",
       en: "The national plan for structural reinforcement expired for good on 18 May 2026, and permit applications can no longer be filed under it. Municipal plans replace it. Ramla, Yavne, Petah Tikva and Beersheba already have an approved plan; Rishon LeZion, Ashkelon, Beit Shemesh and Haifa do not. Pinui-binui is a separate track and is unaffected.",
       am: "የሕንፃ ማጠናከሪያ ብሔራዊ ዕቅድ ግንቦት 18፣ 2026 በመጨረሻ አበቃ። በምትኩ የከተማ ዕቅዶች መጡ። ራምላ፣ ያቭኔ፣ ፔታሕ ቲቅቫና ቤርሼቫ የጸደቀ ዕቅድ አላቸው፤ ሪሾን ለጽዮን፣ አሽቀሎን፣ ቤት ሼመሽና ሐይፋ የላቸውም።",
     },
@@ -983,7 +983,7 @@ Kiryat Nordau was built in the 1950s. Per the plan documents as reported, at the
     tags: ["community", "announcement"],
     title: {
       he: '"תופסי האורית": ההרשמה למחזור תשפ"ז נפתחה — עד חמש מלגות לבני הקהילה',
-      en: "\"Tofsei HaOrit\": registration for the 5787 cohort is open — up to five scholarships for community members",
+      en: '"Tofsei HaOrit": registration for the 5787 cohort is open — up to five scholarships for community members',
       am: "«ተፎሴ ሃኦሪት»፦ የ5787 ዙር ምዝገባ ተከፍቷል — እስከ አምስት ስኮላርሺፖች ለማህበረሰቡ አባላት",
     },
     excerpt: {
@@ -1141,7 +1141,7 @@ Source: [the programme page at the Bible department, Tel Aviv University](https:
     },
     excerpt: {
       he: 'עיריית נתניה — העיר עם מספר התושבים ממוצא אתיופי הגבוה בישראל — מפרסמת דף שירות לתוכנית "הדרך החדשה": ליווי משפחות בידי עובדים סוציאליים ומלווים דוברי אמהרית, בשלושה מסלולים. הטקסט עצמו מגדיר את התוכנית "עד לשנת 2020". בדקו לפני שיוצאים.',
-      en: "Netanya municipality — the city with the largest Ethiopian-origin population in Israel — publishes a service page for the \"HaDerech HaHadasha\" programme: family accompaniment by social workers and Amharic-speaking guides, in three tracks. The page's own text describes the programme as running \"until 2020\". Check before you set out.",
+      en: 'Netanya municipality — the city with the largest Ethiopian-origin population in Israel — publishes a service page for the "HaDerech HaHadasha" programme: family accompaniment by social workers and Amharic-speaking guides, in three tracks. The page\'s own text describes the programme as running "until 2020". Check before you set out.',
       am: "የናታንያ ማዘጋጃ ቤት — በእስራኤል ከፍተኛ የኢትዮጵያ ተወላጅ ሕዝብ ያላት ከተማ — ለ«ሃደረኽ ሃሓዳሻ» መርሃ ግብር የአገልግሎት ገጽ ያሳትማል። የገጹ ጽሑፍ ግን መርሃ ግብሩን «እስከ 2020» ይለዋል። ከመሄድዎ በፊት ያረጋግጡ።",
     },
     bodies: {
