@@ -27,6 +27,7 @@ import { ARTICLES_WAVE8 } from "./articles-wave8.server";
 import { ARTICLES_WAVE9 } from "./articles-wave9.server";
 import { ARTICLES_WAVE10 } from "./articles-wave10.server";
 import { ARTICLES_WAVE11A } from "./articles-wave11a.server";
+import { ARTICLES_WAVE11D } from "./articles-wave11d.server";
 
 export interface NewsArticleEntry {
   slug: string;
@@ -399,7 +400,7 @@ A presidential committee in Q3 2024 discussed a recommendation to expand to 1,50
   {
     slug: "sigd-2026-dates-and-details",
     publishedAt: "2026-05-01",
-    updatedAt: "2026-05-01",
+    updatedAt: "2026-09-08",
     tags: ["holiday", "announcement"],
     title: {
       he: "סיגד 2026 — תאריכים ופרטים",
@@ -407,76 +408,68 @@ A presidential committee in Q3 2024 discussed a recommendation to expand to 1,50
       am: "ሰግድ 2026 — ቀኖች እና ዝርዝሮች",
     },
     excerpt: {
-      he: "התאריך: 19 בנובמבר 2026 (29 בחשוון). טקס מרכזי בארמון הנציב, ירושלים. הסעות מ-16 ערי קליטה.",
-      en: "The date: November 19, 2026 (29 Cheshvan). Main ceremony at Armon Hanatziv, Jerusalem. Buses from 16 absorption cities.",
-      am: "ቀኑ: ኅዳር 19፣ 2026።",
+      he: 'התאריך: יום שני, 9 בנובמבר 2026 (כ"ט בחשוון תשפ"ז). הטקס המרכזי בארמון הנציב, ירושלים, ולצדו טקסים עירוניים.',
+      en: "The date: Monday, November 9, 2026 (29 Cheshvan 5787). The main ceremony is at Armon Hanatziv, Jerusalem, alongside municipal ceremonies.",
+      am: "ቀኑ: ሰኞ፣ ኅዳር 9፣ 2026 (29 ኅዳር 5787)።",
     },
     bodies: {
       he: `## התאריך לסיגד 2026
 
-29 בחשוון תשפ"ז, יום חמישי, **19 בנובמבר 2026**. החג רשמי בישראל מאז 2008 (חוק יום הסיגד).
+כ"ט בחשוון תשפ"ז, יום שני, **9 בנובמבר 2026**. החג רשמי בישראל מאז 2008 (חוק חג הסיגד, התשס"ח-2008).
+
+> **תיקון (8.9.2026):** גרסה קודמת של דף זה נקבה בתאריך 19 בנובמבר 2026 וביום חמישי. זו הייתה טעות. כ"ט בחשוון תשפ"ז חל ביום שני, 9 בנובמבר 2026.
 
 ## הטקס המרכזי בירושלים
 
-- **מקום**: טיילת ארמון הנציב, ירושלים (תצפית מסורתית מאז 1980)
-- **שעת תחילה**: 09:00 בבוקר עם הצום
-- **קייסים**: ~30 קייסים מובילים את התפילות
-- **תיאום אבטחה**: כיתות ליווי שיתאימו את התפילות בזמן הצום
+הטקס המרכזי מתקיים מדי שנה בטיילת ארמון הנציב בירושלים, בהובלת הקסים. שעות הפתיחה, ההסעות והתוכנייה מתפרסמות בכל שנה סמוך לחג על ידי הרשויות המקומיות ועל ידי הגופים המארגנים — בדקו מולם ואל תסתמכו על לוח זמנים משנה קודמת.
 
-## הסעות מאורגנות
+## טקסים עירוניים
 
-מ-16 ערי קליטה (ראו רשימה ב-[סיגד × ערים](/he/heritage/events/sigd)) פועלות הסעות מסובסדות. הזמנות נסגרות ב-12 בנובמבר.
-
-## טקסים אזוריים
-
-לבני קהילה שלא יכולים להגיע לירושלים — טקסי אזור פעילים בנתניה, רחובות, באר-שבע, חיפה, ראשון לציון, ועוד.
+לצד הטקס בירושלים מתקיימים טקסים עירוניים בערים שבהן קהילה גדולה. ראו את [דף הסיגד](/he/heritage/events/sigd) ואת [מדריך התפריט לסיגד](/he/culinary/sigd-menu).
 
 ## מקורות
 
+- [כל-זכות — חג הסיגד](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · נבדק ספטמבר 2026
 - [סיגד — דף הסבר](/he/heritage/events/sigd)
 - [סיגד — מילון](/he/glossary/sigd)
 - [מימון פעילויות סיגד — זכות](/he/rights/sigd-funding)`,
       en: `## The date for Sigd 2026
 
-29 Cheshvan 5787, Thursday, **November 19, 2026**. The holiday has been a national Israeli holiday since 2008 (the Sigd Day Law).
+29 Cheshvan 5787, Monday, **November 9, 2026**. The holiday has been a national Israeli holiday since 2008 (the Sigd Holiday Law, 5768-2008).
+
+> **Correction (Sept 8, 2026):** an earlier version of this page gave the date as November 19, 2026, and as a Thursday. That was wrong. 29 Cheshvan 5787 falls on Monday, November 9, 2026.
 
 ## The main ceremony in Jerusalem
 
-- **Location**: Armon Hanatziv promenade, Jerusalem (the traditional vantage point since 1980)
-- **Start time**: 09:00 AM with the fast
-- **Kessim**: ~30 Kessim lead the prayers
-- **Security coordination**: support teams adapt the prayers to the fast
+The main ceremony takes place each year on the Armon Hanatziv promenade in Jerusalem, led by the kessim. Opening times, buses and the programme are published close to the holiday each year by the local authorities and the organizing bodies — check with them rather than relying on last year's schedule.
 
-## Organized buses
+## Municipal ceremonies
 
-From the 16 absorption cities (see the list at [Sigd × cities](/en/heritage/events/sigd)), subsidized buses are running. Reservations close November 12.
-
-## Regional ceremonies
-
-For community members who can't reach Jerusalem — regional ceremonies are active in Netanya, Rehovot, Beersheba, Haifa, Rishon LeZion, and more.
+Alongside the Jerusalem ceremony, municipal ceremonies are held in cities with a large community. See the [Sigd page](/en/heritage/events/sigd) and the [Sigd menu guide](/en/culinary/sigd-menu).
 
 ## Sources
 
+- [Kol Zchut — the Sigd holiday](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · verified September 2026
 - [Sigd — explainer](/en/heritage/events/sigd)
 - [Sigd — glossary](/en/glossary/sigd)
 - [Sigd funding — right](/en/rights/sigd-funding)`,
       am: `## የሰግድ 2026 ቀን
 
-29 ኅዳር 5787፣ ሐሙስ፣ **ኅዳር 19፣ 2026**።
+29 ኅዳር 5787፣ ሰኞ፣ **ኅዳር 9፣ 2026**። በዓሉ ከ2008 ጀምሮ በእስራኤል ብሔራዊ በዓል ነው (የሰግድ በዓል ህግ፣ 5768-2008)።
+
+> **እርማት (መስከረም 8፣ 2026):** የዚህ ገጽ ቀደም ያለ ስሪት ቀኑን ኅዳር 19፣ 2026 ብሎ ጠቅሶ ነበር። ያ ስህተት ነበር። 29 ኅዳር 5787 ሰኞ፣ ኅዳር 9፣ 2026 ይውላል።
 
 ## በኢየሩሳሌም ዋና ስነ-ስርዓት
 
-- ቦታ: አርሞን ሀናጺቭ ጎዳና፣ ኢየሩሳሌም
-- መነሻ ሰዓት: ጠዋት 09:00
-- ቄሶች: ~30 ቄሶች ጸሎቶችን ይመሩ
+ዋናው ስነ-ስርዓት በየዓመቱ በኢየሩሳሌም በአርሞን ሀናጺቭ ጎዳና ላይ በቄሶች መሪነት ይካሄዳል። ሰዓቶች፣ መጓጓዣና መርሃ ግብር በየዓመቱ ከበዓሉ አጠገብ በአካባቢ ባለስልጣናት ይታተማሉ — ያለፈውን ዓመት መርሃ ግብር ሳይሆን እነሱን ያረጋግጡ።
 
-## የተደራጀ መጓጓዣ
+## የከተማ ስነ-ስርዓቶች
 
-ከ16 መቀበያ ከተሞች የተደገፉ መጓጓዣዎች።
+ትልቅ ማህበረሰብ ባለባቸው ከተሞች የከተማ ስነ-ስርዓቶች ይካሄዳሉ። [የሰግድ ገጽ](/am/heritage/events/sigd) እና [የሰግድ ማዕድ መመሪያ](/am/culinary/sigd-menu) ይመልከቱ።
 
-## የአካባቢ ስነ-ስርዓቶች
+## ምንጮች
 
-በነታንያ፣ ሬሆቮት፣ ቤርሼባ፣ ሀይፋ ይካሄዳሉ።`,
+- [ኮል-ዝኹት — የሰግድ በዓል](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · መስከረም 2026 ተረጋግጧል`,
     },
   },
   // ── Wave 4 articles (TED — Content & SEO) ────────────────────────────────
@@ -5876,6 +5869,7 @@ If you're drafting a will, contract, or any binding legal document, make sure:
   ...ARTICLES_WAVE9,
   ...ARTICLES_WAVE10,
   ...ARTICLES_WAVE11A,
+  ...ARTICLES_WAVE11D,
 ];
 
 // TODO(data/architect): the "Marom" scholarship entry embedded above (~line
