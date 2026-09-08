@@ -27,6 +27,7 @@ import { ARTICLES_WAVE8 } from "./articles-wave8.server";
 import { ARTICLES_WAVE9 } from "./articles-wave9.server";
 import { ARTICLES_WAVE10 } from "./articles-wave10.server";
 import { ARTICLES_WAVE11A } from "./articles-wave11a.server";
+import { ARTICLES_WAVE11C } from "./articles-wave11c.server";
 import { ARTICLES_WAVE11D } from "./articles-wave11d.server";
 
 export interface NewsArticleEntry {
@@ -5869,6 +5870,7 @@ If you're drafting a will, contract, or any binding legal document, make sure:
   ...ARTICLES_WAVE9,
   ...ARTICLES_WAVE10,
   ...ARTICLES_WAVE11A,
+  ...ARTICLES_WAVE11C,
   ...ARTICLES_WAVE11D,
 ];
 

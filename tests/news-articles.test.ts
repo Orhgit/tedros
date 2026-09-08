@@ -37,9 +37,13 @@ function fakeArgs(params: Record<string, string | undefined>): AnyArgs {
 const ctx = { publicUrl: "https://tedros.co.il", locale: "he" as const };
 
 describe("ARTICLES seed shape", () => {
-  // 123 base + 8 (wave 11a, TED-162) + 8 (wave 11d, TED-165).
-  it("contains 139 articles", () => {
-    expect(ARTICLES).toHaveLength(139);
+  // 123 base + 8 (wave 11a, TED-162) + 8 (wave 11d, TED-165)
+  // + 8 (wave 11c, TED-164). Wave 11b is still in flight and will add its own.
+  // NOTE: the assertion below and the landing-loader one further down both
+  // auto-merge SILENTLY to a stale value when two waves land together — only
+  // this comment or the it() title raises a conflict marker. Check both.
+  it("contains 147 articles", () => {
+    expect(ARTICLES).toHaveLength(147);
   });
 
   it("every article has unique slug + HE/EN/AM body non-empty", () => {
@@ -149,7 +153,7 @@ describe("landing loader", () => {
   it("returns articles in HE/EN/AM with the expected count", async () => {
     for (const lang of ["he", "en", "am"]) {
       const data = await landingLoader(fakeArgs({ lang }));
-      expect(data.articles).toHaveLength(139);
+      expect(data.articles).toHaveLength(147);
     }
   });
 
