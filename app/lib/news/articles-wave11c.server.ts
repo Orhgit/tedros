@@ -824,4 +824,148 @@ At the end of 2022 the Ethiopian-Israeli population numbered around 175,000 — 
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "hadassah-study-depression-anxiety-chronic-illness-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["health"],
+    title: {
+      he: "מחקר חדש מהדסה: שאלון קצר באמהרית מצא מצוקה נפשית אצל רוב המטופלים — ואיש לא שאל אותם קודם",
+      en: "New Hadassah study: a short Amharic questionnaire found distress in most patients — and nobody had asked them before",
+      am: "ከሀዳሳ አዲስ ጥናት፦ አጭር የአማርኛ መጠይቅ በአብዛኞቹ ታካሚዎች ላይ የስሜት ጭንቀት አገኘ — ከዚህ በፊት ማንም አልጠየቃቸውም",
+    },
+    excerpt: {
+      he: "מחקר שפורסם ב-31 במרץ 2026 בכתב העת Journal of Migration and Health בדק 90 מטופלים ילידי אתיופיה במרפאה בהדסה. הממצא המרכזי אינו על המחלה — הוא על מה שקורה כששואלים בשפה הנכונה. המסקנה של החוקרים ישימה הרבה מעבר לקבוצה שנבדקה.",
+      en: "A study published on 31 March 2026 in the Journal of Migration and Health assessed 90 Ethiopian-born patients at a Hadassah clinic. The central finding is not about the illness — it is about what happens when you ask in the right language. The authors' conclusion applies well beyond the group studied.",
+      am: "በመጋቢት 31፣ 2026 በJournal of Migration and Health የታተመ ጥናት በሀዳሳ ክሊኒክ 90 በኢትዮጵያ የተወለዱ ታካሚዎችን መርምሯል። ዋናው ግኝት ስለ በሽታው ሳይሆን በትክክለኛው ቋንቋ ሲጠየቅ ስለሚሆነው ነው።",
+    },
+    bodies: {
+      he: `## מה נעשה במחקר
+
+ב-31 במרץ 2026 פורסם בכתב העת Journal of Migration and Health מחקר של גלדסטון, אלינב, כהן, אולשטיין-פופס, ישראל, קורם, צ'רניאק, אורנבוך-הרוך, שטרהילביץ, דינשטג ואוסטר. זהו מחקר חתך תצפיתי שנערך במרכז ה-AIDS של הדסה בירושלים, במחלקה למיקרוביולוגיה קלינית ומחלות זיהומיות, בין אפריל 2021 לדצמבר 2022.
+
+נבדקו **90 מטופלים ילידי אתיופיה** — 46.9% מאוכלוסיית המרפאה באותה תקופה. 66.6% מהם נשים, גיל חציוני 49.5, בממוצע 17 שנה מאז האבחון.
+
+## מה נמצא
+
+- **43%** עמדו בקריטריונים לדיכאון או חרדה בשאלון HADS; ל-20.9% נוספים היו ציונים גבוליים.
+- **35.6%** נמצאו חיוביים לפסיכופתולוגיה בשאלון SRQ-F.
+- **60.87%** בסך הכול סבלו — או נחשדו כסובלים — מדיכאון, חרדה או פסיכופתולוגיה.
+
+גורמי סיכון שנמצאו מובהקים: אבטלה; עלייה בשנים 2000–2009; היסטוריה פסיכיאטרית קודמת; וכן מספר גדול יותר של כדורים ביום, עומס נגיפי מדיד וספירת CD4 נמוכה באבחון.
+
+## למה זה מעניין גם מי שהמחלה הזו לא נוגעת לו
+
+שימו לב מה בעצם קרה כאן. לפני המחקר, המטופלים האלה הגיעו למרפאה שנים — בממוצע 17 — ומצוקה נפשית של רוב מוחלט מהם לא תועדה. היא לא נעלמה. פשוט אף אחד לא שאל בכלים ובשפה שהיו עשויים לקבל תשובה.
+
+זו אותה תמונה שמופיעה בנתוני הכנסת: [ייצוג יתר באשפוז פסיכיאטרי לצד ייצוג חסר בשיקום בקהילה](/he/news/mental-health-hospitalization-and-rehab-data-2026). מערכת שלא שואלת בזמן, פוגשת אנשים מאוחר.
+
+## מה החוקרים ממליצים
+
+ההמלצות שלהם, כפי שפורסמו:
+
+1. **סקר שיטתי לדיכאון וחרדה בשאלונים מתוקפים באמהרית.**
+2. **צוות רב-מקצועי** הכולל פסיכיאטרים ומגשרים תרבותיים מהקהילה.
+3. העלאת מודעות — אצל מטופלים ואצל אנשי מקצוע כאחד.
+4. בחינת טלה-פסיכיאטריה כדרך לגשר על פערי שפה ומקצוע.
+5. שילוב שירותים סוציאליים במענה.
+6. שעומס נגיפי מדיד צריך להתריע בפני הצוות הרפואי על אפשרות של דיכאון או חרדה שלא אובחנו.
+
+## מה זה אומר לכם
+
+- **מצוקה נפשית לצד מחלה כרונית היא ממצא רפואי, לא חולשה.** המחקר מראה שהיא שכיחה, ושהיא משפיעה ישירות על ההיצמדות לטיפול.
+- **אפשר לבקש שישאלו אתכם בשפה שלכם.** אם הצוות לא יזם, אפשר לבקש מתורגמן — הסברנו איך ב[מדריך הנגישות הלשונית](/he/health/mental-health/interpreter).
+- **מספרים ממחקר אחד אינם שיעור בקהילה.** 90 מטופלים במרפאה אחת בירושלים אינם מדגם של יוצאי אתיופיה בישראל, והמחקר אינו טוען זאת. מה שהוא כן מראה הוא איך נראית מרפאה שמתחילה לשאול.
+
+## מקורות
+
+- [Gladstone, Elinav, Cohen, Olshtain-Pops, Israel, Korem, Cherniak, Orenbuch-Harroch, Strahilevitz, Dienstag & Oster — "Depression, anxiety, and psychiatric morbidity in Ethiopian immigrants living with HIV", Journal of Migration and Health, 31.3.2026](https://pmc.ncbi.nlm.nih.gov/articles/PMC13084718/)
+- [הנתונים של מרכז המחקר של הכנסת על בריאות הנפש בקהילה — הכתבה שלנו](/he/news/mental-health-hospitalization-and-rehab-data-2026)
+- [מדריך הנגישות הלשונית](/he/health/mental-health/interpreter)`,
+      en: `## What the study did
+
+On 31 March 2026 the Journal of Migration and Health published a study by Gladstone, Elinav, Cohen, Olshtain-Pops, Israel, Korem, Cherniak, Orenbuch-Harroch, Strahilevitz, Dienstag and Oster. It is an observational cross-sectional study run at the Hadassah AIDS Center in Jerusalem, in the Department of Clinical Microbiology and Infectious Diseases, between April 2021 and December 2022.
+
+It assessed **90 Ethiopian-born patients** — 46.9% of the clinic's population in that period. 66.6% were women, median age 49.5, an average of 17 years since diagnosis.
+
+## What it found
+
+- **43%** met criteria for depression or anxiety on the HADS questionnaire; a further 20.9% had borderline scores.
+- **35.6%** screened positive for psychopathology on the SRQ-F questionnaire.
+- **60.87%** in total suffered from — or were suspected of suffering from — depression, anxiety or psychopathology.
+
+Risk factors that reached significance: unemployment; immigration during 2000–2009; prior psychiatric history; and a higher daily pill burden, a detectable viral load, and a lower CD4 count at diagnosis.
+
+## Why this matters to people the illness does not touch
+
+Notice what actually happened here. Before the study, these patients had been attending the clinic for years — 17 on average — and distress in a clear majority of them was undocumented. It had not gone away. Nobody had asked, with instruments and in a language likely to get an answer.
+
+It is the same picture the Knesset data shows: [over-representation in psychiatric hospitalisation alongside under-representation in community rehabilitation](/en/news/mental-health-hospitalization-and-rehab-data-2026). A system that does not ask in time meets people late.
+
+## What the researchers recommend
+
+Their recommendations, as published:
+
+1. **Systematic depression and anxiety screening using validated questionnaires in Amharic.**
+2. **Multidisciplinary teams** including psychiatrists and Ethiopian cultural mediators.
+3. Raising awareness — among patients and clinicians alike.
+4. Exploring telepsychiatry as a way to bridge language and workforce gaps.
+5. Integrating social services into the response.
+6. That a detectable viral load should alert clinicians to the possibility of undiagnosed depression or anxiety.
+
+## What this means for you
+
+- **Distress alongside a chronic illness is a clinical finding, not a weakness.** The study shows it is common, and that it directly affects adherence to treatment.
+- **You can ask to be asked in your own language.** If the team does not offer, you can request an interpreter — we explain how in our [language-access guide](/en/health/mental-health/interpreter).
+- **Numbers from one study are not a community rate.** Ninety patients at a single Jerusalem clinic are not a sample of Ethiopian-Israelis, and the study makes no such claim. What it does show is what a clinic looks like once it starts asking.
+
+## Sources
+
+- [Gladstone, Elinav, Cohen, Olshtain-Pops, Israel, Korem, Cherniak, Orenbuch-Harroch, Strahilevitz, Dienstag & Oster — "Depression, anxiety, and psychiatric morbidity in Ethiopian immigrants living with HIV", Journal of Migration and Health, 31 March 2026](https://pmc.ncbi.nlm.nih.gov/articles/PMC13084718/)
+- [Our report on the Knesset Research Center's community mental-health data](/en/news/mental-health-hospitalization-and-rehab-data-2026)
+- [Our language-access guide](/en/health/mental-health/interpreter)`,
+      am: `## ጥናቱ ምን አደረገ
+
+በመጋቢት 31፣ 2026 Journal of Migration and Health በግላድስቶን፣ ኤሊናቭ፣ ኮሄን፣ ኦልሽታይን-ፖፕስ፣ እስራኤል፣ ኮሬም፣ ቸርኒያክ፣ ኦረንቡክ-ሀሮክ፣ ስትራሂሌቪትዝ፣ ዲንስታግ እና ኦስተር የተሠራ ጥናት አሳተመ። በኢየሩሳሌም በሀዳሳ ማዕከል፣ በክሊኒካል ማይክሮባዮሎጂና ተላላፊ በሽታዎች ክፍል፣ ከሚያዝያ 2021 እስከ ታኅሣሥ 2022 የተካሄደ የመስቀለኛ ምልከታ ጥናት ነው።
+
+**90 በኢትዮጵያ የተወለዱ ታካሚዎችን** መርምሯል — በዚያ ወቅት ከክሊኒኩ ሕዝብ 46.9%። 66.6% ሴቶች፣ መካከለኛ ዕድሜ 49.5፣ ከምርመራው በአማካይ 17 ዓመት አልፏል።
+
+## ያገኘው
+
+- **43%** በHADS መጠይቅ የድብርት ወይም የጭንቀት መስፈርቶችን አሟልተዋል፤ ተጨማሪ 20.9% ደግሞ የድንበር ውጤት ነበራቸው።
+- **35.6%** በSRQ-F መጠይቅ ለሳይኮፓቶሎጂ አዎንታዊ ሆነዋል።
+- በአጠቃላይ **60.87%** በድብርት፣ በጭንቀት ወይም በሳይኮፓቶሎጂ ይሠቃዩ ነበር ወይም ተጠርጥረዋል።
+
+ጉልህ ሆነው የተገኙ የአደጋ ምክንያቶች፦ ሥራ አጥነት፤ በ2000–2009 መሰደድ፤ ቀደም ያለ የሥነ ልቦና ታሪክ፤ እንዲሁም ከፍ ያለ የዕለት ክኒን ጫና፣ ሊለካ የሚችል የቫይረስ መጠንና በምርመራ ወቅት ዝቅተኛ የCD4 ቁጥር።
+
+## በሽታው ለማይመለከታቸውም ለምን ጠቃሚ ነው
+
+እዚህ በትክክል ምን እንደተከሰተ ልብ ይበሉ። ከጥናቱ በፊት እነዚህ ታካሚዎች ለዓመታት — በአማካይ 17 — ወደ ክሊኒኩ ሲመጡ ነበር፣ የአብዛኞቹ የስሜት ጭንቀት ግን አልተመዘገበም። አልጠፋም። መልስ ሊያገኝ በሚችል መሣሪያና ቋንቋ ማንም አልጠየቀም።
+
+ይህ በኔሴት መረጃ ላይ የሚታየው ተመሳሳይ ምስል ነው፦ [በሥነ ልቦና ሆስፒታል መተኛት ከመጠን በላይ መወከል፣ በማህበረሰብ ማገገሚያ ደግሞ ከመጠን በታች](/am/news/mental-health-hospitalization-and-rehab-data-2026)።
+
+## ተመራማሪዎቹ የሚመክሩት
+
+1. **በአማርኛ በተረጋገጡ መጠይቆች ስልታዊ የድብርትና የጭንቀት ምርመራ።**
+2. ሳይኮሎጂስቶችንና ከማህበረሰቡ የመጡ የባህል አገናኞችን የሚያካትት **ብዙ ሙያ ያለው ቡድን**።
+3. ግንዛቤ ማሳደግ — በታካሚዎችም በሙያተኞችም።
+4. የቋንቋና የሙያ ክፍተቶችን ለማገናኘት ቴሌ-ሳይካትሪን መመርመር።
+5. ማህበራዊ አገልግሎቶችን በምላሹ ውስጥ ማካተት።
+6. ሊለካ የሚችል የቫይረስ መጠን ላልታወቀ ድብርት ወይም ጭንቀት ሐኪሙን ማስጠንቀቅ አለበት።
+
+## ለእርስዎ ምን ማለት ነው
+
+- **ከሥር የሰደደ በሽታ ጎን ለጎን ያለ የስሜት ጭንቀት የሕክምና ግኝት ነው እንጂ ድክመት አይደለም።**
+- **በቋንቋዎ እንዲጠየቁ መጠየቅ ይችላሉ።** ቡድኑ ካላቀረበ አስተርጓሚ መጠየቅ ይችላሉ — በ[የቋንቋ ተደራሽነት መመሪያችን](/am/health/mental-health/interpreter) አብራርተናል።
+- **ከአንድ ጥናት የተገኙ ቁጥሮች የማህበረሰብ ምጣኔ አይደሉም።** በአንድ የኢየሩሳሌም ክሊኒክ 90 ታካሚዎች የእስራኤል የኢትዮጵያ ተወላጆች ናሙና አይደሉም፣ ጥናቱም እንዲህ አይልም።
+
+## ምንጮች
+
+- [ግላድስቶን እና ሌሎች — «Depression, anxiety, and psychiatric morbidity in Ethiopian immigrants living with HIV», Journal of Migration and Health፣ መጋቢት 31፣ 2026](https://pmc.ncbi.nlm.nih.gov/articles/PMC13084718/)
+- [ስለ ኔሴት የአእምሮ ጤና መረጃ ዘገባችን](/am/news/mental-health-hospitalization-and-rehab-data-2026)
+- [የቋንቋ ተደራሽነት መመሪያችን](/am/health/mental-health/interpreter)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
