@@ -827,4 +827,153 @@ On the Likud background we have written before: [32 kessim signed a letter to Ne
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "aliyah-committee-tigray-law-of-return-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["immigration", "policy"],
+    title: {
+      he: "בוועדת העלייה נחשף: משלחת מצאה זכאי חוק השבות באתיופיה — 21 בקשות אושרו מתוך 146",
+      en: "Revealed at the Aliyah Committee: a delegation found Law of Return eligibles in Ethiopia — 21 of 146 applications approved",
+      am: "በዓሊያ ኮሚቴ ተገለጸ፦ ልዑክ በኢትዮጵያ የመመለሻ ሕግ ብቁዎችን አገኘ — ከ146 ማመልከቻዎች 21 ጸደቁ",
+    },
+    excerpt: {
+      he: "בדיון בוועדת העלייה והקליטה של הכנסת ב-7.9.2026 נחשף שמשלחת של רשות האוכלוסין והסוכנות היהודית יצאה לאדיס אבבה ביולי 2026 לבחון 146 בקשות לעלייה מכוח חוק השבות. 21 אושרו, אחת נדחתה, והשאר בבדיקות. יו\"ר הוועדה: הנתונים סותרים את עמדת המדינה משנת 2013.",
+      en: "At a session of the Knesset Aliyah and Absorption Committee on 7 September 2026 it emerged that a delegation of the Population Authority and the Jewish Agency travelled to Addis Ababa in July 2026 to examine 146 applications for aliyah under the Law of Return. 21 were approved, one rejected, the rest under review. The committee chair: the data contradicts the state's 2013 position.",
+      am: "መስከረም 7 ቀን 2026 በኔሴት የዓሊያና የመቀበል ኮሚቴ ስብሰባ ላይ፣ የሕዝብ ባለሥልጣንና የአይሁድ ኤጀንሲ ልዑክ በሐምሌ 2026 ወደ አዲስ አበባ ሄዶ በመመለሻ ሕግ 146 የዓሊያ ማመልከቻዎችን እንደመረመረ ተገለጸ። 21 ጸደቁ፣ አንዱ ተቀባይነት አላገኘም፣ የቀሩት በምርመራ ላይ ናቸው።",
+    },
+    bodies: {
+      he: `## מה נחשף בדיון
+
+**ועדת העלייה, הקליטה והתפוצות של הכנסת** קיימה דיון ב-**7.9.2026**, בראשות ח"כ **גלעד קריב** (הדמוקרטים). בדיון נחשף שמשלחת של **רשות האוכלוסין וההגירה והסוכנות היהודית** יצאה לאתיופיה ביולי 2026 כדי לבחון **146 בקשות** של משפחות לעלות מכוח **חוק השבות**.
+
+הדיווח הוא של **יהל פרג', כתבת הרווחה של "דבר"**, שפורסם ב-7.9.2026.
+
+## המספרים
+
+לפי הדיווח מהדיון:
+
+- **146 בקשות** נבחנו על ידי המשלחת.
+- **21 בקשות אושרו.**
+- **בקשה אחת נדחתה.**
+- **השאר נמצאות בבדיקות שונות**, לרבות בדיקות DNA.
+- **עם 23 משפחות מתוך ה-146 לא ניתן היה ליצור קשר**, ולכן לא התקיימו ראיונות.
+
+הראיונות התקיימו **באדיס אבבה בלבד**, בשל מצב ביטחוני באזורי גונדר וטיגראי.
+
+## למה זה משמעותי
+
+הנקודה המרכזית היא שהממצאים סותרים עמדה רשמית ותיקה. מדינת ישראל הצהירה בשנת 2013 שלא נותרו באתיופיה זכאי חוק השבות. הבדיקה בשטח העלתה תמונה אחרת.
+
+יו"ר הוועדה, ח"כ גלעד קריב, אמר בדיון:
+
+> "קיבלתי את הרושם שמדינת ישראל אומרת שאין זכאי חוק השבות באתיופיה אבל הנתונים מוכיחים אחרת".
+
+עוד נמסר בדיון שאחת המסקנות מהמשלחת היא שקיימים יהודים וזכאי חוק השבות **בטיגראי**. ח"כ **משה סולומון** (הבית היהודי) אמר שזכאים אינם צריכים להמתין להחלטות ממשלה כדי לעלות.
+
+ההבחנה חשובה: **חוק השבות** הוא מסלול זכאות שאינו תלוי בהחלטת ממשלה נפרדת — בשונה ממסלול הפלאש מורה, שהעלאתם מוסדרת בהחלטות ממשלה ייעודיות ובתקצוב נפרד.
+
+## הדסק שעדיין לא עומד
+
+בדיון הובעה גם ביקורת על עיכוב בהקמת **דסק אתיופיה** ברשות האוכלוסין. לפי הדיווח, **אושרו עשרה תקנים** של עובדי הרשות שכל תפקידם יהיה מענה לבקשות — אך רק **שמונה מתוך העשרה אוישו**, וטרם אותר מקום עבודה פיזי עבורם.
+
+## מה הלאה
+
+הבקשות שנמצאות "בבדיקות שונות" הן עכשיו הנתון שכדאי לעקוב אחריו, וכן השאלה אם תצא משלחת נוספת לאזורים שלא נבדקו. על הרקע התקציבי והביקורתי כתבנו בנפרד: [תקציב 2026, ועדת קנפו וביקורת המדינה](/he/news/ethiopia-aliyah-budget-comptroller-2026).
+
+טדרוס מדווח על הדברים כעובדה ואינו מביע עמדה.
+
+## מקורות
+
+- ["דבר", ‏7.9.2026 — יהל פרג', "'אולי נגלה שגיירנו יהודים': בוועדת העלייה נחשף שיש עוד יהודים באתיופיה שזכאים לעלייה"](https://www.davar1.co.il/696294/)`,
+      en: `## What emerged at the session
+
+The **Knesset Committee on Aliyah, Absorption and Diaspora Affairs** held a session on **7 September 2026**, chaired by MK **Gilad Kariv** (The Democrats). It emerged that a delegation of the **Population and Immigration Authority and the Jewish Agency** travelled to Ethiopia in July 2026 to examine **146 applications** from families to immigrate under the **Law of Return**.
+
+The report is by **Yahel Farag, welfare correspondent for Davar**, published on 7 September 2026.
+
+## The numbers
+
+Per the report from the session:
+
+- **146 applications** were examined by the delegation.
+- **21 applications were approved.**
+- **One was rejected.**
+- **The rest are under various reviews**, including DNA testing.
+- **23 of the 146 families could not be contacted**, so no interviews took place.
+
+The interviews were held **in Addis Ababa only**, because of the security situation in the Gondar and Tigray regions.
+
+## Why this matters
+
+The central point is that the findings contradict a long-standing official position. The State of Israel declared in 2013 that no Law of Return eligibles remained in Ethiopia. The assessment on the ground produced a different picture.
+
+The committee chair, MK Gilad Kariv, said at the session:
+
+> "I got the impression that the State of Israel says there are no Law of Return eligibles in Ethiopia, but the data proves otherwise."
+
+It was further stated at the session that one conclusion from the delegation is that Jews and Law of Return eligibles exist **in Tigray**. MK **Moshe Solomon** (Habayit Hayehudi) said that eligible people should not have to wait for government decisions in order to immigrate.
+
+The distinction matters: **the Law of Return** is an eligibility route that does not depend on a separate government decision — unlike the Falash Mura track, whose immigration is governed by dedicated government decisions and separate budgeting.
+
+## The desk that is still not standing
+
+The session also heard criticism of the delay in establishing an **Ethiopia desk** at the Population Authority. Per the report, **ten civil service positions were approved** for authority staff whose entire role would be handling applications — but only **eight of the ten were filled**, and no physical workspace had yet been found for them.
+
+## What comes next
+
+The applications "under various reviews" are now the figure to watch, along with whether a further delegation will travel to the regions that were not assessed. We wrote separately on the budgetary and audit background: [the 2026 budget, the Kanfo committee and the State Comptroller](/en/news/ethiopia-aliyah-budget-comptroller-2026).
+
+Tedros reports this as fact and takes no position.
+
+## Sources
+
+- [Davar, 7 Sept 2026 — Yahel Farag, "'Maybe we will discover we converted Jews': the Aliyah Committee heard there are more Jews in Ethiopia eligible to immigrate"](https://www.davar1.co.il/696294/)`,
+      am: `## በስብሰባው ላይ የተገለጸው
+
+የ**ኔሴት የዓሊያ፣ የመቀበልና የዲያስፖራ ጉዳዮች ኮሚቴ** መስከረም **7 ቀን 2026** ስብሰባ አካሂዷል፤ በኔሴት አባል **ጊላድ ካሪቭ** (ዴሞክራቶቹ) ሊቀመንበርነት። የ**ሕዝብና ኢሚግሬሽን ባለሥልጣንና የአይሁድ ኤጀንሲ** ልዑክ በሐምሌ 2026 ወደ ኢትዮጵያ ሄዶ በ**መመለሻ ሕግ** ለመሰደድ የቀረቡ **146 የቤተሰብ ማመልከቻዎችን** እንደመረመረ ተገለጸ።
+
+ዘገባው የ**ያሄል ፋራግ፣ የዳቫር የበጎ አድራጎት ዘጋቢ** ነው፤ መስከረም 7 ቀን 2026 ታትሟል።
+
+## ቁጥሮቹ
+
+ከስብሰባው ዘገባ መሠረት፦
+
+- **146 ማመልከቻዎች** በልዑኩ ተመርምረዋል።
+- **21 ማመልከቻዎች ጸድቀዋል።**
+- **አንዱ ተቀባይነት አላገኘም።**
+- **የቀሩት በተለያዩ ምርመራዎች ላይ ናቸው**፣ የDNA ምርመራን ጨምሮ።
+- **ከ146ቱ 23 ቤተሰቦች ጋር መገናኘት አልተቻለም**፣ ስለሆነም ቃለ መጠይቅ አልተካሄደም።
+
+ቃለ መጠይቆቹ የተካሄዱት **በአዲስ አበባ ብቻ** ነው፤ በጎንደርና በትግራይ አካባቢዎች ባለው የጸጥታ ሁኔታ ምክንያት።
+
+## ለምን አስፈላጊ ሆነ
+
+ዋናው ነጥብ ግኝቶቹ ለረጅም ጊዜ የቆየን ኦፊሴላዊ አቋም መቃረናቸው ነው። የእስራኤል መንግሥት በ2013 በኢትዮጵያ የመመለሻ ሕግ ብቁዎች እንዳልቀሩ አውጇል። በመስክ የተደረገው ግምገማ ግን የተለየ ምስል አሳይቷል።
+
+የኮሚቴው ሊቀመንበር፣ የኔሴት አባል ጊላድ ካሪቭ በስብሰባው ላይ እንዲህ ብለዋል፦
+
+> «የእስራኤል መንግሥት በኢትዮጵያ የመመለሻ ሕግ ብቁዎች የሉም እንደሚል ስሜት አግኝቻለሁ፤ መረጃው ግን ሌላ ያረጋግጣል።»
+
+በስብሰባው ላይ ከልዑኩ ከተገኙ መደምደሚያዎች አንዱ **በትግራይ** አይሁዶችና የመመለሻ ሕግ ብቁዎች መኖራቸው እንደሆነ ተገልጿል። የኔሴት አባል **ሞሼ ሰለሞን** (ሃባይት ሃየሁዲ) ብቁ የሆኑ ሰዎች ለመሰደድ የመንግሥት ውሳኔዎችን መጠበቅ የለባቸውም ብለዋል።
+
+ልዩነቱ አስፈላጊ ነው፦ **የመመለሻ ሕግ** በተለየ የመንግሥት ውሳኔ ላይ የማይመሠረት የብቁነት መንገድ ነው — ከፈላሽ ሙራ መስመር በተለየ፣ የእነሱ ስደት በተለዩ የመንግሥት ውሳኔዎችና በተለየ በጀት የሚመራ ነው።
+
+## ገና ያልቆመው ዴስክ
+
+ስብሰባው በሕዝብ ባለሥልጣን ውስጥ **የኢትዮጵያ ዴስክ** ማቋቋም መዘግየቱን የሚተች ሐሳብም ሰምቷል። በዘገባው መሠረት፣ ሙሉ ሥራቸው ማመልከቻዎችን መያዝ ለሚሆን የባለሥልጣኑ ሠራተኞች **አሥር የሠራተኛ መደቦች ጸድቀዋል** — ነገር ግን ከአሥሩ **ስምንቱ ብቻ ተሞልተዋል**፣ ለእነሱም አካላዊ የሥራ ቦታ ገና አልተገኘም።
+
+## ቀጥሎ ምን ይሆናል
+
+«በተለያዩ ምርመራዎች ላይ» ያሉት ማመልከቻዎች አሁን ሊከታተሉት የሚገባ ቁጥር ናቸው፤ እንዲሁም ያልተገመገሙትን አካባቢዎች የሚሸፍን ተጨማሪ ልዑክ ይሄድ እንደሆነ። ስለ በጀትና ኦዲት ዳራ በተለየ ጽፈናል፦ [የ2026 በጀት፣ የካንፎ ኮሚቴና የመንግሥት ኦዲተር](/am/news/ethiopia-aliyah-budget-comptroller-2026)።
+
+ትድሮስ ይህንን እንደ እውነታ ይዘግባል፣ አቋም አይይዝም።
+
+## ምንጮች
+
+- [ዳቫር፣ መስከረም 7 ቀን 2026 — ያሄል ፋራግ](https://www.davar1.co.il/696294/)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
