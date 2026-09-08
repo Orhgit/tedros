@@ -1,5 +1,5 @@
 // Wave 11b articles — education and employment, manually researched and
-// verified (2026-09-02), TED-163.
+// verified (2026-09-08), TED-163.
 //
 // Same discipline as waves 8 and 10: every item below rests on a primary
 // source that was opened and read in full — the granting body's own page, a
@@ -18,25 +18,43 @@ import type { NewsArticleEntry } from "./articles.server";
 export const ARTICLES_WAVE11B: NewsArticleEntry[] = [
   {
     slug: "marom-scholarship-tashpaz-terms-change-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["education"],
     title: {
-      he: 'מלגת מרום נפתחת החודש — ובתשפ"ז תנאיה משתנים: חובת ההתנדבות מבוטלת, והסכום נקבע לפי תחום הלימוד',
-      en: "The Marom scholarship opens this month — and its terms change for 5787: the volunteering requirement is abolished and the amount is set by field of study",
-      am: "የማሮም ስኮላርሺፕ በዚህ ወር ይከፈታል — በ5787 ደግሞ ሁኔታዎቹ ይለወጣሉ፦ የበጎ ፈቃድ ግዴታ ይሰረዛል፣ መጠኑም በጥናት መስክ ይወሰናል",
+      he: 'מלגת מרום: מערכת ההרשמה סגורה ומציגה פתיחה בפברואר 2027 — בזמן ששני דפים רשמיים אומרים "ספטמבר 2026"',
+      en: 'The Marom scholarship: the registration system is closed and shows an opening date of February 2027 — while two official pages say "September 2026"',
+      am: "የማሮም ስኮላርሺፕ፦ የምዝገባ ሥርዓቱ ተዘግቷል የካቲት 2027 መክፈቻ ያሳያል — ሁለት ኦፊሴላዊ ገጾች ግን «ሴፕቴምበር 2026» ይላሉ",
     },
     excerpt: {
-      he: 'ההרשמה למלגת מרום לשנת הלימודים תשפ"ז נפתחת במהלך ספטמבר 2026 ונסגרת בתחילת נובמבר. לפי דף המלגה של המל"ג, החל מתשפ"ז מבוטלת חובת ההתנדבות, וגובה המלגה נקבע כאחוז משכר הלימוד לפי רמת העדיפות של תחום הלימוד. זה מתקן פרט שפרסמנו בפברואר.',
-      en: "Registration for the Marom scholarship for the 2026-27 academic year opens during September 2026 and closes in early November. Per the Council for Higher Education's own scholarship page, from 5787 the volunteering requirement is abolished and the amount is set as a percentage of tuition according to the priority level of the field of study. This corrects a detail we published in February.",
-      am: "ለ2026-27 የትምህርት ዓመት የማሮም ስኮላርሺፕ ምዝገባ በሴፕቴምበር 2026 ውስጥ ይከፈታል፣ በኖቬምበር መጀመሪያ ይዘጋል። በከፍተኛ ትምህርት ምክር ቤት ገጽ መሠረት፣ ከ5787 ጀምሮ የበጎ ፈቃድ ግዴታ ይሰረዛል፣ መጠኑም በጥናት መስኩ ቅድሚያ ደረጃ መሠረት ከትምህርት ክፍያ በመቶኛ ይወሰናል። ይህ በየካቲት ያሳተምነውን ዝርዝር ያስተካክላል።",
+      he: 'שבוע לתוך ספטמבר, ההרשמה למלגת מרום עדיין לא נפתחה. מערכת ההרשמה של פר"ח מציגה "ההרשמה למרום סגורה כעת" ותאריך פתיחה 28.2.2027, בעוד דף המל"ג ודף פר"ח אומרים ספטמבר 2026. מה שכן מאומת: מתשפ"ז מבוטלת חובת ההתנדבות, והמלגה נקבעת כאחוז משכר הלימוד לפי תחום הלימוד.',
+      en: 'A week into September, registration for the Marom scholarship has still not opened. Perach\'s registration system displays "Marom registration is currently closed" and an opening date of 28.2.2027, while the CHE page and the Perach content page both say September 2026. What is verified: from 5787 the volunteering requirement is abolished, and the scholarship is set as a percentage of tuition by field of study.',
+      am: "ወደ ሴፕቴምበር አንድ ሳምንት ገብቷል፤ የማሮም ስኮላርሺፕ ምዝገባ ገና አልተከፈተም። የፔራች የምዝገባ ሥርዓት «የማሮም ምዝገባ አሁን ተዘግቷል» እና የመክፈቻ ቀን 28.2.2027 ያሳያል፤ የCHE ገጽና የፔራች ገጽ ግን ሴፕቴምበር 2026 ይላሉ። የተረጋገጠው፦ ከ5787 ጀምሮ የበጎ ፈቃድ ግዴታ ይሰረዛል፣ ስኮላርሺፑም በጥናት መስክ መሠረት ከትምህርት ክፍያ በመቶኛ ይወሰናል።",
     },
     bodies: {
-      he: `## מה נפתח, ומתי
+      he: `## מה בדקנו, ומה מצאנו
 
-**ההרשמה למלגת מרום לשנת הלימודים תשפ"ז נפתחת במהלך חודש ספטמבר 2026.** כך כתוב, בלשון הזאת, בדף "הגשת מועמדות למלגה" באתר פר"ח — הגוף שמפעיל את התכנית. דף המלגה של המועצה להשכלה גבוהה (מל"ג) מוסיף את מועד הסגירה: "תקופת ההרשמה למלגה נפתחת בחודש ספטמבר מדי שנה ונסגרת בתחילת נובמבר".
+בדקנו היום (8.9.2026) שלושה מקורות רשמיים של אותה מלגה. הם אינם אומרים את אותו דבר.
 
-זהו חלון של כשמונה שבועות, פעם בשנה. מי שמחמיץ אותו ממתין שנה.
+**1. דף מלגת מרום של המועצה להשכלה גבוהה (מל"ג):** "תקופת ההרשמה למלגה נפתחת בחודש ספטמבר מדי שנה ונסגרת בתחילת נובמבר".
+
+**2. דף "הגשת מועמדות" של פר"ח**, הגוף שמפעיל את התכנית: "ההרשמה לשנה הקרובה תשפ"ז תיפתח במהלך חודש ספטמבר 2026".
+
+**3. מערכת ההרשמה עצמה** — זו שאליה שני הדפים האלה שולחים אתכם. נכון להיום היא מציגה:
+
+> **"ההרשמה למרום סגורה כעת. ההרשמה לשנת הפעילות תשפ"ז תפתח ב-28/02/27 בשעה 08:00."**
+
+זו לא אי-הבנה של תאריך: 28 בפברואר 2027 הוא כחמישה חודשים וחצי אחרי החלון שהדפים מבטיחים, וארבעה חודשים אחרי מועד הסגירה שהמל"ג מפרסמת.
+
+## מה זה אומר בפועל
+
+**נכון ל-8 בספטמבר 2026, אי אפשר להירשם למלגת מרום.** אם שמעתם ש"ההרשמה נפתחת בספטמבר" — זה נכון כמדיניות כתובה, ולא נכון כרגע כמצב בפועל.
+
+אנחנו לא יודעים אם 28.2.27 הוא מועד אמיתי, ברירת מחדל של המערכת, או תאריך שטרם עודכן. **לא נציג ניחוש כעובדה.** מה שכן ברור: אין טעם לפתוח את טופס ההרשמה השבוע, ויש טעם לשאול.
+
+**מי לשאול:** צוות מרום בפר"ח — milga.marom@perach-il.org · 054-7731216 (גם בוואטסאפ) · מענה טלפוני א'–ה' 8:00–15:00. מוקד פר"ח הכללי: 1-599-550-500.
+
+אנחנו נבדוק שוב ונעדכן את הכתבה הזאת.
 
 ## השינוי המרכזי: חובת ההתנדבות מבוטלת
 
@@ -93,10 +111,18 @@ export const ARTICLES_WAVE11B: NewsArticleEntry[] = [
 
 עד לפרסום הזה, התנאים המפורטים שעדיין מופיעים באותו דף — 680 מקומות לתואר ראשון, ניקוד לפי מצב סוציו-אקונומי ותחום לימוד, כפל מלגות עד ₪30,000 בשנה, ₪10,000 לתואר שני לא מחקרי — הם תנאי המחזור הקודם. אל תבנו עליהם תכנית כלכלית לשנה הבאה.
 
-## הלוח, בקצרה
+## מה כן אפשר לעשות השבוע
 
-- **ספטמבר 2026** — ההרשמה נפתחת, דרך לשונית "מרום" באתר פר"ח.
-- **תחילת נובמבר** — ההרשמה נסגרת.
+1. **להכין את המסמכים.** הם לא ישתנו, ולפי דף פר"ח יש להעלות את כולם בזמן ההרשמה.
+2. **לבדוק זכאות למסלול אחר שההרשמה אליו פתוחה עכשיו.** אם אתם בתוך 15 שנה מקבלת מעמד עולה, [המינהל לסטודנטים עולים פתח את ההרשמה לתשפ"ז](/he/news/student-authority-ethiopian-extended-eligibility-2026), עם מועד של 1 באוקטובר לסטודנטים ממשיכים ו-10 בנובמבר לחדשים. שם המועדים חיים.
+3. **לשאול את פר"ח מה התאריך האמיתי**, ולא להסתמך על דף שמנוסח בלשון עתיד מאז אוגוסט.
+
+## הלוח כפי שהמדיניות מתארת אותו
+
+זהו התהליך כפי שהוא כתוב — לא לוח מאושר למחזור הזה:
+
+- **ספטמבר** — ההרשמה אמורה להיפתח, דרך לשונית "מרום" באתר פר"ח.
+- **תחילת נובמבר** — ההרשמה אמורה להיסגר.
 - **דצמבר** — הודעת זכאות או אי-זכאות במייל. במקרה של דחייה, בחלק מהמקרים אפשר להגיש ערעור.
 - המלגה משולמת בשתי פעימות לאורך השנה.
 
@@ -106,16 +132,35 @@ export const ARTICLES_WAVE11B: NewsArticleEntry[] = [
 
 ## מקורות
 
-- [מלגת מרום — המועצה להשכלה גבוהה (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — נקרא במלואו 2.9.2026
+- [מלגת מרום — המועצה להשכלה גבוהה (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — נקרא במלואו 8.9.2026
 - [החלטת מל"ג 18.6.2024 — עדכון תיעדוף תחומי לימוד ליוצאי אתיופיה](https://che.org.il/decision/%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%AA%D7%99%D7%A2%D7%93%D7%95%D7%A3-%D7%AA%D7%97%D7%95%D7%9E%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4-2/)
 - [פר"ח — פרטים נוספים בהרשמה למלגת מרום](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D)
+- [מערכת ההרשמה של פר"ח למרום — מציגה "ההרשמה סגורה כעת" ופתיחה ב-28/02/27](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — נבדקה 8.9.2026
 - [הכתבה שלנו מפברואר 2026, שפרטים בה מתוקנים כאן](/he/news/marom-scholarship-tashpav-cycle)
 - [דף הזכות המלא של מלגת מרום באתר טדרוס](/he/education/scholarships/marom-che)`,
-      en: `## What opens, and when
+      en: `## What we checked, and what we found
 
-**Registration for the Marom scholarship for the 2026-27 academic year opens during September 2026.** That is the wording on the "submitting a candidacy" page of Perach, the organization that operates the programme. The Council for Higher Education's (CHE) scholarship page adds the closing date: "the registration period opens in September each year and closes in early November."
+Today (8.9.2026) we checked three official sources on the same scholarship. They do not say the same thing.
 
-That is roughly an eight-week window, once a year. Miss it and you wait a year.
+**1. The Council for Higher Education's (CHE) Marom page:** "the registration period opens in September each year and closes in early November."
+
+**2. Perach's "submitting a candidacy" page**, Perach being the organization that operates the programme: "registration for the coming year, 5787, will open during September 2026."
+
+**3. The registration system itself** — the one both of those pages send you to. As of today it displays:
+
+> **"Marom registration is currently closed. Registration for the 5787 activity year will open on 28/02/27 at 08:00."**
+
+This is not a misreading of a date: February 28, 2027 is some five and a half months after the window the pages promise, and four months after the closing date the CHE publishes.
+
+## What this means in practice
+
+**As of September 8, 2026, you cannot register for the Marom scholarship.** If you heard that "registration opens in September" — that is correct as written policy, and not correct right now as a state of affairs.
+
+We do not know whether 28.2.27 is a real date, a system default, or a date that has simply not been updated. **We will not present a guess as a fact.** What is clear: there is no point opening the registration form this week, and there is a point in asking.
+
+**Who to ask:** the Marom team at Perach — milga.marom@perach-il.org · 054-7731216 (also WhatsApp) · phone Sun–Thu 8:00–15:00. Perach's general line: 1-599-550-500.
+
+We will check again and update this article.
 
 ## The main change: the volunteering requirement is abolished
 
@@ -172,10 +217,18 @@ The Perach page announces: "From next year (5787) the terms of the Marom scholar
 
 Until that publication, the detailed terms still shown on that same page — 680 undergraduate places, scoring by socio-economic status and field of study, stacked scholarships up to ₪30,000 a year, ₪10,000 for a non-research master's — are the previous cycle's terms. Do not build next year's budget on them.
 
-## The timeline, briefly
+## What you can do this week
 
-- **September 2026** — registration opens, through the "Marom" tab on Perach's site.
-- **Early November** — registration closes.
+1. **Get the documents ready.** They will not change, and per the Perach page all of them must be uploaded at the time of registration.
+2. **Check eligibility for another track that is open right now.** If you are within 15 years of receiving oleh status, [the Students Authority has opened applications for 5787](/en/news/student-authority-ethiopian-extended-eligibility-2026), with October 1 for continuing students and November 10 for new ones. Those deadlines are live.
+3. **Ask Perach what the real date is**, rather than relying on a page that has been written in the future tense since August.
+
+## The timeline as the policy describes it
+
+This is the process as written — not a confirmed schedule for this cycle:
+
+- **September** — registration is supposed to open, through the "Marom" tab on Perach's site.
+- **Early November** — registration is supposed to close.
 - **December** — an eligibility or non-eligibility notice by email. If rejected, an appeal is possible in some cases.
 - The scholarship is paid in two instalments over the year.
 
@@ -185,16 +238,35 @@ Until that publication, the detailed terms still shown on that same page — 680
 
 ## Sources
 
-- [Marom scholarship — Council for Higher Education (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — read in full 2.9.2026
+- [Marom scholarship — Council for Higher Education (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — read in full 8.9.2026
 - [CHE decision, June 18, 2024 — updating the prioritization of fields of study for Ethiopian-Israelis](https://che.org.il/decision/%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%AA%D7%99%D7%A2%D7%93%D7%95%D7%A3-%D7%AA%D7%97%D7%95%D7%9E%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4-2/)
 - [Perach — further details on registering for Marom](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D)
+- [Perach's Marom registration system — displays "registration is currently closed" and an opening on 28/02/27](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — checked 8.9.2026
 - [Our February 2026 article, details of which are corrected here](/en/news/marom-scholarship-tashpav-cycle)
 - [The full Marom rights page on Tedros](/en/education/scholarships/marom-che)`,
-      am: `## ምን ይከፈታል፣ መቼም
+      am: `## ምን መረመርን፣ ምንስ አገኘን
 
-**ለ2026-27 የትምህርት ዓመት የማሮም ስኮላርሺፕ ምዝገባ በሴፕቴምበር 2026 ውስጥ ይከፈታል።** ይህ ቃል በቃል ፕሮግራሙን በሚያንቀሳቅሰው በፔራች ድረ-ገጽ «ለስኮላርሺፑ ማመልከቻ ማቅረብ» ገጽ ላይ ተጽፏል። የከፍተኛ ትምህርት ምክር ቤት (CHE) ገጽ የመዝጊያውን ቀን ይጨምራል፦ «የምዝገባ ጊዜው በየዓመቱ በሴፕቴምበር ይከፈታል በኖቬምበር መጀመሪያ ይዘጋል»።
+ዛሬ (8.9.2026) ስለ አንድ ስኮላርሺፕ ሦስት ኦፊሴላዊ ምንጮችን መርምረናል። አንድ ዓይነት ነገር አይሉም።
 
-ይህ በዓመት አንድ ጊዜ የሚከፈት የስምንት ሳምንት ያህል መስኮት ነው። ያመለጠው አንድ ዓመት ይጠብቃል።
+**1. የከፍተኛ ትምህርት ምክር ቤት (CHE) የማሮም ገጽ፦** «የምዝገባ ጊዜው በየዓመቱ በሴፕቴምበር ይከፈታል በኖቬምበር መጀመሪያ ይዘጋል»።
+
+**2. ፕሮግራሙን የሚያንቀሳቅሰው የፔራች «ማመልከቻ ማቅረብ» ገጽ፦** «ለሚመጣው 5787 ዓመት ምዝገባ በሴፕቴምበር 2026 ውስጥ ይከፈታል»።
+
+**3. የምዝገባ ሥርዓቱ ራሱ** — ሁለቱም ገጾች የሚልኩበት። ዛሬ እንደሚያሳየው፦
+
+> **«የማሮም ምዝገባ አሁን ተዘግቷል። ለ5787 የእንቅስቃሴ ዓመት ምዝገባ በ28/02/27 ከጠዋቱ 08:00 ይከፈታል።»**
+
+ይህ የቀን አለመረዳት አይደለም፦ የካቲት 28, 2027 ገጾቹ ከሚሉት መስኮት አምስት ወር ተኩል ገደማ በኋላ ነው፣ CHE ከሚያሳውቀው የመዝጊያ ቀንም አራት ወር በኋላ።
+
+## በተግባር ምን ማለት ነው
+
+**እስከ ሴፕቴምበር 8, 2026 ድረስ ለማሮም ስኮላርሺፕ መመዝገብ አይቻልም።** «ምዝገባ በሴፕቴምበር ይከፈታል» የሚል ከሰሙ — እንደ የተጻፈ ፖሊሲ ትክክል ነው፣ አሁን ባለው ተጨባጭ ሁኔታ ግን ትክክል አይደለም።
+
+28.2.27 እውነተኛ ቀን፣ የሥርዓቱ ነባሪ ወይም ያልተዘመነ ቀን መሆኑን አናውቅም። **ግምትን እንደ እውነት አናቀርብም።** ግልጽ የሆነው፦ በዚህ ሳምንት የምዝገባ ቅጹን መክፈት ትርጉም የለውም፤ መጠየቅ ግን ትርጉም አለው።
+
+**ማንን መጠየቅ፦** በፔራች የማሮም ቡድን — milga.marom@perach-il.org · 054-7731216 (በዋትስአፕም) · ስልክ እሑድ–ሐሙስ 8:00–15:00። የፔራች አጠቃላይ መስመር፦ 1-599-550-500።
+
+እንደገና መርምረን ይህን ጽሑፍ እናዘምናለን።
 
 ## ዋናው ለውጥ፦ የበጎ ፈቃድ ግዴታ ይሰረዛል
 
@@ -251,10 +323,18 @@ Until that publication, the detailed terms still shown on that same page — 680
 
 እስከዚያ ድረስ በዚያው ገጽ ላይ የሚታዩት ዝርዝር ሁኔታዎች — 680 የመጀመሪያ ዲግሪ ቦታዎች፣ በማህበራዊ-ኢኮኖሚያዊ ሁኔታና በጥናት መስክ የሚሰጥ ነጥብ፣ በዓመት እስከ ₪30,000 የተደራረቡ ስኮላርሺፖች፣ ለምርምር ላልሆነ ሁለተኛ ዲግሪ ₪10,000 — የቀድሞው ዙር ሁኔታዎች ናቸው። የሚቀጥለውን ዓመት በጀትዎን በእነሱ ላይ አይመሥርቱ።
 
-## የጊዜ ሰሌዳው በአጭሩ
+## በዚህ ሳምንት ምን ማድረግ ይቻላል
 
-- **ሴፕቴምበር 2026** — ምዝገባ ይከፈታል፣ በፔራች ድረ-ገጽ «ማሮም» ትር።
-- **የኖቬምበር መጀመሪያ** — ምዝገባ ይዘጋል።
+1. **ሰነዶቹን ያዘጋጁ።** አይለወጡም፤ በፔራች ገጽ መሠረትም ሁሉም በምዝገባ ጊዜ መጫን አለባቸው።
+2. **አሁን ክፍት የሆነ ሌላ መስመር ብቁነትዎን ይፈትሹ።** የስደተኛ መቀበያ ከተሰጠዎት በ15 ዓመት ውስጥ ከሆኑ፣ [የስደተኛ ተማሪዎች አስተዳደር ለ5787 ምዝገባ ከፍቷል](/am/news/student-authority-ethiopian-extended-eligibility-2026)፤ ለቀጣይ ተማሪዎች ኦክቶበር 1፣ ለአዲሶች ኖቬምበር 10። እነዚያ ቀነ ገደቦች በሥራ ላይ ናቸው።
+3. **ትክክለኛው ቀን ምን እንደሆነ ፔራችን ይጠይቁ** — ከኦገስት ጀምሮ በመጪ ጊዜ ቅርጽ በተጻፈ ገጽ ላይ አይመኩ።
+
+## ፖሊሲው እንደሚገልጸው የጊዜ ሰሌዳ
+
+ይህ እንደተጻፈው ሂደት ነው — ለዚህ ዙር የጸደቀ መርሐ ግብር አይደለም፦
+
+- **ሴፕቴምበር** — ምዝገባ መከፈት ነበረበት፣ በፔራች ድረ-ገጽ «ማሮም» ትር።
+- **የኖቬምበር መጀመሪያ** — ምዝገባ መዘጋት ነበረበት።
 - **ዲሴምበር** — የብቁነት ወይም ብቁ ያለመሆን ማሳወቂያ በኢሜይል። ውድቅ ከሆነ በአንዳንድ ሁኔታዎች ይግባኝ ይቻላል።
 - ስኮላርሺፑ በዓመቱ ውስጥ በሁለት ክፍያ ይሰጣል።
 
@@ -264,9 +344,10 @@ Until that publication, the detailed terms still shown on that same page — 680
 
 ## ምንጮች
 
-- [ማሮም ስኮላርሺፕ — የከፍተኛ ትምህርት ምክር ቤት (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — ሙሉ በሙሉ የተነበበ 2.9.2026
+- [ማሮም ስኮላርሺፕ — የከፍተኛ ትምህርት ምክር ቤት (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — ሙሉ በሙሉ የተነበበ 8.9.2026
 - [የCHE ውሳኔ፣ ሰኔ 18, 2024 — ለኢትዮጵያ-እስራኤላውያን የጥናት መስኮች ቅድሚያ ማዘመን](https://che.org.il/decision/%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%AA%D7%99%D7%A2%D7%93%D7%95%D7%A3-%D7%AA%D7%97%D7%95%D7%9E%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4-2/)
 - [ፔራች — ለማሮም ስለ መመዝገብ ተጨማሪ ዝርዝሮች](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D)
+- [የፔራች የማሮም ምዝገባ ሥርዓት — «ምዝገባ አሁን ተዘግቷል» እና በ28/02/27 መከፈቻ ያሳያል](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — በ8.9.2026 ተመርምሯል
 - [የየካቲት 2026 ጽሑፋችን፣ ዝርዝሮቹ እዚህ የተስተካከሉ](/am/news/marom-scholarship-tashpav-cycle)
 - [በትድሮስ ላይ ያለው ሙሉ የማሮም መብት ገጽ](/am/education/scholarships/marom-che)
 
@@ -275,8 +356,8 @@ Until that publication, the detailed terms still shown on that same page — 680
   },
   {
     slug: "student-authority-ethiopian-extended-eligibility-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["education"],
     title: {
       he: 'ההרשמה למינהל לסטודנטים עולים לתשפ"ז פתוחה — ולעולי אתיופיה יש תנאי זכאות מורחבים. אלה ההבדלים',
@@ -346,7 +427,7 @@ Until that publication, the detailed terms still shown on that same page — 680
 
 ## שתי מלגות ממשלתיות — לא בבת אחת
 
-הדף חוזר על כך פעמיים: **"לא ניתן להעניק מלגת שכר לימוד לסטודנטים המקבלים מלגה מגורם ממשלתי אחר".** זו נקודה מעשית מול [מלגת מרום של המל"ג](/he/news/marom-scholarship-tashpaz-terms-change-2026), שהרשמתה נפתחת החודש. שני המסלולים לא נועדו להיערם זה על זה, והם מכוונים לאוכלוסיות משלימות: מרום — למי שבארץ מעל 15 שנה או יליד הארץ; המינהל — למי שבתוך 15 שנה ממתן המעמד.
+הדף חוזר על כך פעמיים: **"לא ניתן להעניק מלגת שכר לימוד לסטודנטים המקבלים מלגה מגורם ממשלתי אחר".** זו נקודה מעשית מול [מלגת מרום של המל"ג](/he/news/marom-scholarship-tashpaz-terms-change-2026), שההרשמה אליה טרם נפתחה. שני המסלולים לא נועדו להיערם זה על זה, והם מכוונים לאוכלוסיות משלימות: מרום — למי שבארץ מעל 15 שנה או יליד הארץ; המינהל — למי שבתוך 15 שנה ממתן המעמד.
 
 הדף עצמו מפנה את מי שאינו זכאי לסיוע המינהל לבדוק זכאות למרום — אבל **התאריכים שמופיעים שם ("נפתחה בתאריך 9/9/2025... עד 11/11/25") הם של מחזור תשפ"ו**, לא של המחזור הנפתח כעת. אל תסתמכו עליהם.
 
@@ -358,7 +439,7 @@ Until that publication, the detailed terms still shown on that same page — 680
 
 ## מקורות
 
-- [תנאי זכאות מורחבים לעולים מאתיופיה, יוצאי תימן ובני המנשה — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — נקרא במלואו 2.9.2026
+- [תנאי זכאות מורחבים לעולים מאתיופיה, יוצאי תימן ובני המנשה — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — נקרא במלואו 8.9.2026
 - [תנאי זכאות לקבלת סיוע ומלגת לימודים (המסלול הכללי) — gov.il](https://www.gov.il/he/pages/students-eligibility-conditions) — עודכן 11.6.2026
 - [בקשה מקוונת לסיוע מהמינהל לסטודנטים עולים — gov.il](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority)
 - [מלגת מרום — הכתבה שלנו על מחזור תשפ"ז](/he/news/marom-scholarship-tashpaz-terms-change-2026)
@@ -420,7 +501,7 @@ On tuition: "each year the scholarship will be up to the level of a full scholar
 
 ## Two government scholarships — not at once
 
-The page repeats it twice: **"A tuition scholarship cannot be granted to students receiving a scholarship from another government body."** This matters in practice against [the CHE's Marom scholarship](/en/news/marom-scholarship-tashpaz-terms-change-2026), whose registration opens this month. The two tracks were not designed to stack, and they target complementary populations: Marom — those in Israel more than 15 years or Israeli-born; the Authority — those within 15 years of receiving status.
+The page repeats it twice: **"A tuition scholarship cannot be granted to students receiving a scholarship from another government body."** This matters in practice against [the CHE's Marom scholarship](/en/news/marom-scholarship-tashpaz-terms-change-2026), whose registration has not yet opened. The two tracks were not designed to stack, and they target complementary populations: Marom — those in Israel more than 15 years or Israeli-born; the Authority — those within 15 years of receiving status.
 
 The page itself directs anyone not eligible for Authority assistance to check Marom — but **the dates shown there ("opened on 9/9/2025... until 11/11/25") belong to the 5786 cycle**, not to the cycle opening now. Do not rely on them.
 
@@ -432,7 +513,7 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
 
 ## Sources
 
-- [Extended eligibility conditions for olim from Ethiopia, Yemen and Bnei Menashe — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — read in full 2.9.2026
+- [Extended eligibility conditions for olim from Ethiopia, Yemen and Bnei Menashe — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — read in full 8.9.2026
 - [Eligibility conditions for assistance and a study scholarship (the general track) — gov.il](https://www.gov.il/he/pages/students-eligibility-conditions) — updated 11.6.2026
 - [Online application for assistance from the Students Authority — gov.il](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority)
 - [Marom scholarship — our article on the 5787 cycle](/en/news/marom-scholarship-tashpaz-terms-change-2026)
@@ -494,7 +575,7 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
 
 ## ሁለት የመንግሥት ስኮላርሺፖች — በአንድ ጊዜ አይደለም
 
-ገጹ ሁለት ጊዜ ይደግመዋል፦ **«ከሌላ የመንግሥት አካል ስኮላርሺፕ ለሚቀበሉ ተማሪዎች የትምህርት ክፍያ ስኮላርሺፕ መስጠት አይቻልም»።** ይህ በዚህ ወር ምዝገባው ከሚከፈተው [የCHE ማሮም ስኮላርሺፕ](/am/news/marom-scholarship-tashpaz-terms-change-2026) አንጻር ተግባራዊ ጠቀሜታ አለው። ሁለቱ መስመሮች እንዲደራረቡ አልተነደፉም፣ የሚያገለግሉትም የሚደጋገፉ ሕዝቦችን ነው፦ ማሮም — በእስራኤል ከ15 ዓመት በላይ የቆዩ ወይም በእስራኤል የተወለዱ፤ አስተዳደሩ — መቀበያ ከተሰጠ በ15 ዓመት ውስጥ ያሉ።
+ገጹ ሁለት ጊዜ ይደግመዋል፦ **«ከሌላ የመንግሥት አካል ስኮላርሺፕ ለሚቀበሉ ተማሪዎች የትምህርት ክፍያ ስኮላርሺፕ መስጠት አይቻልም»።** ይህ ምዝገባው ገና ካልተከፈተው [የCHE ማሮም ስኮላርሺፕ](/am/news/marom-scholarship-tashpaz-terms-change-2026) አንጻር ተግባራዊ ጠቀሜታ አለው። ሁለቱ መስመሮች እንዲደራረቡ አልተነደፉም፣ የሚያገለግሉትም የሚደጋገፉ ሕዝቦችን ነው፦ ማሮም — በእስራኤል ከ15 ዓመት በላይ የቆዩ ወይም በእስራኤል የተወለዱ፤ አስተዳደሩ — መቀበያ ከተሰጠ በ15 ዓመት ውስጥ ያሉ።
 
 ገጹ ራሱ ለአስተዳደሩ ድጋፍ ብቁ ያልሆነውን ማሮምን እንዲፈትሽ ይመራዋል — ነገር ግን **እዚያ የሚታዩት ቀኖች («በ9/9/2025 ተከፍቷል... እስከ 11/11/25») የ5786 ዙር ናቸው**፣ አሁን የሚከፈተው ዙር አይደሉም። በእነሱ አይመኩ።
 
@@ -506,7 +587,7 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
 
 ## ምንጮች
 
-- [ከኢትዮጵያ፣ ከየመንና ቤኔ ምናሼ ለመጡ የተስፋፉ የብቁነት ሁኔታዎች — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — ሙሉ በሙሉ የተነበበ 2.9.2026
+- [ከኢትዮጵያ፣ ከየመንና ቤኔ ምናሼ ለመጡ የተስፋፉ የብቁነት ሁኔታዎች — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — ሙሉ በሙሉ የተነበበ 8.9.2026
 - [ለድጋፍና ለትምህርት ስኮላርሺፕ የብቁነት ሁኔታዎች (አጠቃላይ መስመር) — gov.il](https://www.gov.il/he/pages/students-eligibility-conditions) — በ11.6.2026 ተዘምኗል
 - [ከስደተኛ ተማሪዎች አስተዳደር ድጋፍ የመስመር ላይ ማመልከቻ — gov.il](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority)
 - [ማሮም ስኮላርሺፕ — ስለ 5787 ዙር ጽሑፋችን](/am/news/marom-scholarship-tashpaz-terms-change-2026)
@@ -517,8 +598,8 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
   },
   {
     slug: "parent-payments-tashpaz-maximum-amounts-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["education"],
     title: {
       he: 'שנת הלימודים נפתחה: אלה הסכומים המרביים שמותר לגבות מכם בתשפ"ז — ומה שאסור לגבות בכלל',
@@ -533,7 +614,7 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
     bodies: {
       he: `## למה זה חשוב עכשיו
 
-שנת הלימודים תשפ"ז נפתחה ב-1.9.2026. בשבועות הקרובים יגיעו הביתה חוזרי תשלומים, טפסים ובקשות. **הסכומים אינם נתונים לשיקול דעת של בית הספר** — הם מאושרים בוועדת החינוך, התרבות והספורט של הכנסת ומתפרסמים בחוזר מנכ"ל.
+שנת הלימודים תשפ"ז נפתחה לפני שבוע, ב-1.9.2026. בימים ובשבועות הקרובים יגיעו הביתה חוזרי תשלומים, טפסים ובקשות. **הסכומים אינם נתונים לשיקול דעת של בית הספר** — הם מאושרים בוועדת החינוך, התרבות והספורט של הכנסת ומתפרסמים בחוזר מנכ"ל.
 
 ב-**10 באוגוסט 2026** (כ"ז באב תשפ"ו) פרסם משרד החינוך את **הודעה מס' 0379, "תשלומי הורים לשנת הלימודים התשפ"ז"**. אלה המספרים.
 
@@ -604,13 +685,13 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
 
 ## מקורות
 
-- [הודעה 0379 — תשלומי הורים לשנת הלימודים התשפ"ז, מאגר חוזרי מנכ"ל, פורסמה 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — נקראה במלואה 2.9.2026
+- [הודעה 0379 — תשלומי הורים לשנת הלימודים התשפ"ז, מאגר חוזרי מנכ"ל, פורסמה 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — נקראה במלואה 8.9.2026
 - [תשלומי הורים — פורטל ההורים, משרד החינוך](https://parents.education.gov.il/gov-education/school/payments/)
 - [חוק לימוד חובה, תש"ט-1949](https://fs.knesset.gov.il/%5C1%5Claw%5C1_lsr_203716.PDF)
 - [זכויות הורים במערכת החינוך — טדרוס](/he/education/parent-rights)`,
       en: `## Why this matters now
 
-The 5787 school year opened on September 1, 2026. Over the coming weeks, payment circulars, forms and requests will arrive at home. **The amounts are not at the school's discretion** — they are approved by the Knesset's Education, Culture and Sport Committee and published in a director-general's circular.
+The 5787 school year opened a week ago, on September 1, 2026. Over the coming days and weeks, payment circulars, forms and requests will arrive at home. **The amounts are not at the school's discretion** — they are approved by the Knesset's Education, Culture and Sport Committee and published in a director-general's circular.
 
 On **August 10, 2026** the Ministry of Education published **Notice no. 0379, "Parent payments for the 5787 school year."** These are the numbers.
 
@@ -681,13 +762,13 @@ For parents' rights in the education system in depth — [our guide](/en/educati
 
 ## Sources
 
-- [Notice 0379 — parent payments for the 5787 school year, director-general circulars database, published 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — read in full 2.9.2026
+- [Notice 0379 — parent payments for the 5787 school year, director-general circulars database, published 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — read in full 8.9.2026
 - [Parent payments — parents' portal, Ministry of Education](https://parents.education.gov.il/gov-education/school/payments/)
 - [Compulsory Education Law, 1949](https://fs.knesset.gov.il/%5C1%5Claw%5C1_lsr_203716.PDF)
 - [Parents' rights in the education system — Tedros](/en/education/parent-rights)`,
       am: `## ይህ አሁን ለምን አስፈለገ
 
-የ5787 የትምህርት ዓመት በሴፕቴምበር 1, 2026 ተከፍቷል። በሚቀጥሉት ሳምንታት የክፍያ ማስታወቂያዎች፣ ቅጾችና ጥያቄዎች ወደ ቤት ይደርሳሉ። **መጠኖቹ በትምህርት ቤቱ ውሳኔ ላይ የተመሠረቱ አይደሉም** — በክኔሴት የትምህርት፣ ባህልና ስፖርት ኮሚቴ ይጸድቃሉ፣ በዋና ዳይሬክተር ማስታወቂያም ይታተማሉ።
+የ5787 የትምህርት ዓመት ከሳምንት በፊት፣ በሴፕቴምበር 1, 2026 ተከፍቷል። በሚቀጥሉት ቀናትና ሳምንታት የክፍያ ማስታወቂያዎች፣ ቅጾችና ጥያቄዎች ወደ ቤት ይደርሳሉ። **መጠኖቹ በትምህርት ቤቱ ውሳኔ ላይ የተመሠረቱ አይደሉም** — በክኔሴት የትምህርት፣ ባህልና ስፖርት ኮሚቴ ይጸድቃሉ፣ በዋና ዳይሬክተር ማስታወቂያም ይታተማሉ።
 
 በ**ኦገስት 10, 2026** የትምህርት ሚኒስቴር **ማስታወቂያ ቁጥር 0379፣ «ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች»** አሳተመ። ቁጥሮቹ እነሆ።
 
@@ -758,7 +839,7 @@ For parents' rights in the education system in depth — [our guide](/en/educati
 
 ## ምንጮች
 
-- [ማስታወቂያ 0379 — ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች፣ የዋና ዳይሬክተር ማስታወቂያዎች ማከማቻ፣ በ10.8.2026 ታትሟል](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — ሙሉ በሙሉ የተነበበ 2.9.2026
+- [ማስታወቂያ 0379 — ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች፣ የዋና ዳይሬክተር ማስታወቂያዎች ማከማቻ፣ በ10.8.2026 ታትሟል](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — ሙሉ በሙሉ የተነበበ 8.9.2026
 - [የወላጅ ክፍያዎች — የወላጆች ፖርታል፣ የትምህርት ሚኒስቴር](https://parents.education.gov.il/gov-education/school/payments/)
 - [የግዴታ ትምህርት ሕግ፣ 1949](https://fs.knesset.gov.il/%5C1%5Claw%5C1_lsr_203716.PDF)
 - [በትምህርት ሥርዓት ውስጥ የወላጆች መብቶች — ትድሮስ](/am/education/parent-rights)
@@ -768,8 +849,8 @@ For parents' rights in the education system in depth — [our guide](/en/educati
   },
   {
     slug: "education-ministry-scholarships-parent-payments-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["education"],
     title: {
       he: "יש תקציב מלגות לתשלומי הורים — ובית הספר חייב ליידע אתכם שהוא קיים",
@@ -848,7 +929,7 @@ For parents' rights in the education system in depth — [our guide](/en/educati
 
 ## מקורות
 
-- [חוזר הוראות קבע 0406 — הענקת מלגות לתלמידים שהוריהם מתקשים לשלם, משרד החינוך, 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — נקרא במלואו 2.9.2026
+- [חוזר הוראות קבע 0406 — הענקת מלגות לתלמידים שהוריהם מתקשים לשלם, משרד החינוך, 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — נקרא במלואו 8.9.2026
 - [הודעה 0379 — תשלומי הורים לשנת הלימודים התשפ"ז, 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377)
 - [טופס בקשה לקבלת מלגת סיוע בתשלומי הורים (PDF)](https://meyda.education.gov.il/files/Prh/Parents/RightsObligationsRegulations/application-scholarship-form.pdf)
 - [הכתבה שלנו על הסכומים המרביים בתשפ"ז](/he/news/parent-payments-tashpaz-maximum-amounts-2026)
@@ -919,7 +1000,7 @@ The form is also published on the Ministry of Education's site, in Hebrew and in
 
 ## Sources
 
-- [Permanent Instructions circular 0406 — granting scholarships to pupils whose parents struggle to pay, Ministry of Education, 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — read in full 2.9.2026
+- [Permanent Instructions circular 0406 — granting scholarships to pupils whose parents struggle to pay, Ministry of Education, 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — read in full 8.9.2026
 - [Notice 0379 — parent payments for the 5787 school year, 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377)
 - [Application form for parent-payment assistance (PDF)](https://meyda.education.gov.il/files/Prh/Parents/RightsObligationsRegulations/application-scholarship-form.pdf)
 - [Our article on the maximum amounts for 5787](/en/news/parent-payments-tashpaz-maximum-amounts-2026)
@@ -990,7 +1071,7 @@ The form is also published on the Ministry of Education's site, in Hebrew and in
 
 ## ምንጮች
 
-- [የቋሚ መመሪያዎች ማስታወቂያ 0406 — ወላጆቻቸው ለመክፈል ለሚቸገሩ ተማሪዎች ስኮላርሺፕ ስለ መስጠት፣ የትምህርት ሚኒስቴር፣ 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — ሙሉ በሙሉ የተነበበ 2.9.2026
+- [የቋሚ መመሪያዎች ማስታወቂያ 0406 — ወላጆቻቸው ለመክፈል ለሚቸገሩ ተማሪዎች ስኮላርሺፕ ስለ መስጠት፣ የትምህርት ሚኒስቴር፣ 1.9.2023](https://apps.education.gov.il/Mankal/horaa.aspx?siduri=507) — ሙሉ በሙሉ የተነበበ 8.9.2026
 - [ማስታወቂያ 0379 — ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች፣ 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377)
 - [የወላጅ ክፍያ ድጋፍ ማመልከቻ ቅጽ (PDF)](https://meyda.education.gov.il/files/Prh/Parents/RightsObligationsRegulations/application-scholarship-form.pdf)
 - [ስለ የ5787 ከፍተኛ መጠኖች ጽሑፋችን](/am/news/parent-payments-tashpaz-maximum-amounts-2026)
