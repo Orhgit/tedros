@@ -273,4 +273,246 @@ Until that publication, the detailed terms still shown on that same page — 680
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "student-authority-ethiopian-extended-eligibility-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["education"],
+    title: {
+      he: 'ההרשמה למינהל לסטודנטים עולים לתשפ"ז פתוחה — ולעולי אתיופיה יש תנאי זכאות מורחבים. אלה ההבדלים',
+      en: "Applications to the Students Authority for 5787 are open — and olim from Ethiopia have extended eligibility. Here are the differences",
+      am: "ለ5787 የስደተኛ ተማሪዎች አስተዳደር ምዝገባ ክፍት ነው — ከኢትዮጵያ ለመጡ ደግሞ የተስፋፋ ብቁነት አለ። ልዩነቶቹ እነሆ",
+    },
+    excerpt: {
+      he: 'המינהל לסטודנטים עולים פתח את ההרשמה לתשפ"ז. לעולים מאתיופיה, מתימן ולבני המנשה יש מסלול זכאות מורחב: 15 שנה מקבלת המעמד לתחילת הלימודים במקום 36 חודשים, גיל מרבי גבוה יותר, מימון תואר שני בנוסף לראשון, ומלגת קיום של ₪600 לחודש. סטודנטים ממשיכים — עד 1 באוקטובר.',
+      en: "The Students Authority has opened applications for 5787. Olim from Ethiopia, from Yemen, and Bnei Menashe have an extended eligibility track: 15 years from receiving status to the start of studies instead of 36 months, higher age ceilings, master's funding on top of a bachelor's, and a ₪600 monthly living stipend. Continuing students: by October 1.",
+      am: "የስደተኛ ተማሪዎች አስተዳደር ለ5787 ምዝገባ ከፍቷል። ከኢትዮጵያ፣ ከየመንና ቤኔ ምናሼ ለመጡ የተስፋፋ የብቁነት መስመር አለ፦ ትምህርት ለመጀመር ከ36 ወር ይልቅ ከመቀበያ ቀን 15 ዓመት፣ ከፍ ያለ የዕድሜ ጣሪያ፣ ከመጀመሪያ ዲግሪ በተጨማሪ የሁለተኛ ዲግሪ ድጋፍ፣ እና በወር ₪600 የመተዳደሪያ ስኮላርሺፕ። ቀጣይ ተማሪዎች፦ እስከ ኦክቶበር 1።",
+    },
+    bodies: {
+      he: `## ההרשמה פתוחה — ושני מועדים כבר קרובים
+
+בדף השירות של המינהל לסטודנטים עולים כתוב היום: **"ההרשמה לשנת הלימודים תשפ"ז (2026-2027) נפתחה".** המועדים, כלשון הדף:
+
+- **סטודנטים ממשיכים** בסמסטר א' — עד **1 באוקטובר**.
+- **סטודנטים חדשים** בסמסטר א' — עד **10 בנובמבר**.
+- מתחילים בסמסטר ב' — עד 1 באפריל. מתחילים בסמסטר קיץ — עד 15 באוגוסט.
+
+לצד זה הדף קובע שורה שכדאי לקרוא לפני שדוחים את הטיפול: **"לא ניתן לקבל סיוע רטרואקטיבי"**, ושיש להגיש בקשה מקוונת מחדש בכל שנה או סמסטר.
+
+## מה מורחב, בדיוק
+
+למינהל יש דף ייעודי בשם "תנאי זכאות מורחבים לעולים מאתיופיה, יוצאי תימן ובני המנשה". קראנו אותו לצד דף תנאי הזכאות הכלליים, כדי לבדוק מה באמת שונה — ולא להציג הטבה כללית כאילו היא ייחודית לקהילה. ההבדלים אמיתיים, והם אלה:
+
+| | המסלול הכללי | המסלול המורחב |
+| --- | --- | --- |
+| חלון הזמן מקבלת המעמד עד תחילת הלימודים | **36 חודשים** | **15 שנים** |
+| גיל מרבי בתחילת הלימודים — תואר ראשון / הנדסאי / לימודי תעודה | עד 27 | **עד 28** |
+| גיל מרבי — תואר שני / הסבה לבעלי תואר | עד 30 | **עד 40** |
+| מימון תואר שני בנוסף לתואר ראשון | לא, למעט חריגים | **כן, מפורשות** |
+| מלגת קיום | לא נכללת בתנאים הכלליים | **כן** |
+
+בשני המסלולים תקופת שירות צבאי או לאומי אינה נספרת בתוך חלון הזמן.
+
+ההרחבה של 36 חודשים ל-15 שנים היא ההבדל המשמעותי ביותר. מי שעלה כילד, שירת, עבד כמה שנים ורק אז החליט ללמוד — במסלול הכללי כבר איבד את הזכאות. במסלול המורחב הוא בתוכה.
+
+## מלגת הקיום
+
+לפי הדף:
+
+- **₪600 לחודש, עד 9 חודשים בשנה**, בחודשי הלימוד בלבד.
+- מותנית בתכנית לימודים בהיקף של **לפחות 50%** שנתי או סמסטריאלי.
+- באוניברסיטה הפתוחה — לפחות שני קורסים, בהיקף של לפחות 12 נקודות זכות בסמסטר.
+- **סטודנטים לרפואה זכאים למלגות קיום בכל שנות לימודיהם.**
+- **אינם זכאים:** מי שלומד פחות מ-50%, מי שלומד לתואר מתקדם (כולל תואר שני, הסבה או תעודה לאחר תואר), ומי שלומד בסמסטר קיץ.
+
+מקור: [תנאי זכאות מורחבים לעולים מאתיופיה, יוצאי תימן ובני המנשה — משרד העלייה והקליטה](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) · נבדק ספטמבר 2026.
+
+## מה עוד כלול
+
+מימון ייעוץ והכוון בבחירת תחום הלימוד על ידי מכון מקצועי; מימון שכר לימוד לפי משך הלימודים במסלול; מימון קורסי אנגלית ועברית במסגרת החובות לתואר; ומערך "מעטפ"ת" — שיעורי עזר, פעולות חברה ותרבות, אירועים וסמינרים, שירותי תמיכה של עובדים סוציאליים ומדריכים לליווי אישי-חברתי.
+
+בשכר לימוד: "בכל שנה גובה המלגה יהיה עד לגובה מלגה מלאה בתעריף אוניברסיטאי (100% שכר לימוד), ובהתאם למערכת הלימודים של הסטודנט בפועל". במוסדות ששכר הלימוד בהם גבוה מהתעריף הממשלתי, המינהל משלים עד התעריף והיתרה על הסטודנט.
+
+## התנאים האקדמיים — ומה מפיל אנשים בפועל
+
+- קבלה ללימודים מן המניין במוסד ובמסלול המוכרים לסיוע על ידי המינהל.
+- הסטודנט אינו בעל תואר או תעודה מקבילים או זהים לאלה שעבורם מבוקש הסיוע.
+- זכאות לתעודת בגרות או תעודת סיום מכינה. **באוניברסיטה הפתוחה**, מי שהתקבל בלי בגרות יהיה זכאי לסיוע רק אחרי שיסיים בהצלחה שלושה קורסים אקדמיים בהיקף 18 נקודות זכות.
+- **להמשך הסיוע נדרש ממוצע 60 ומעלה** ואישור מעבר תקין משנה לשנה.
+- **אין מימון לשנה חוזרת** — לא בכישלון ולא בשינוי מסלול.
+- מותרת הפסקת לימודים של עד שנתיים אקדמיות בכל תקופת הזכאות.
+- מי שמפסיק ללמוד חייב להודיע מיד. אי-הודעה עלולה להוביל לרישום חוב ולהפסקת כל סיוע כספי מהמשרד.
+- מקבל הסיוע נדרש לשעות התנדבות בקהילה במסגרת תוכנית שח"ק (שירות חברתי קהילתי).
+
+## שתי מלגות ממשלתיות — לא בבת אחת
+
+הדף חוזר על כך פעמיים: **"לא ניתן להעניק מלגת שכר לימוד לסטודנטים המקבלים מלגה מגורם ממשלתי אחר".** זו נקודה מעשית מול [מלגת מרום של המל"ג](/he/news/marom-scholarship-tashpaz-terms-change-2026), שהרשמתה נפתחת החודש. שני המסלולים לא נועדו להיערם זה על זה, והם מכוונים לאוכלוסיות משלימות: מרום — למי שבארץ מעל 15 שנה או יליד הארץ; המינהל — למי שבתוך 15 שנה ממתן המעמד.
+
+הדף עצמו מפנה את מי שאינו זכאי לסיוע המינהל לבדוק זכאות למרום — אבל **התאריכים שמופיעים שם ("נפתחה בתאריך 9/9/2025... עד 11/11/25") הם של מחזור תשפ"ו**, לא של המחזור הנפתח כעת. אל תסתמכו עליהם.
+
+## סייג שהמינהל עצמו כותב
+
+"כל האמור לעיל הינו תמצית הכללים, ובכל מקרה קובעים הנוהל והוראת השעה. הסיוע מותנה בקיום תקציב ובחידוש הוראת השעה בכל שנה."
+
+זו לא הסתייגות פורמלית בלבד: הזכאות תלויה בהוראת שעה שמתחדשת שנה-שנה. לפני שמבססים תכנית של ארבע שנים על המסלול הזה, כדאי לדעת את זה.
+
+## מקורות
+
+- [תנאי זכאות מורחבים לעולים מאתיופיה, יוצאי תימן ובני המנשה — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — נקרא במלואו 2.9.2026
+- [תנאי זכאות לקבלת סיוע ומלגת לימודים (המסלול הכללי) — gov.il](https://www.gov.il/he/pages/students-eligibility-conditions) — עודכן 11.6.2026
+- [בקשה מקוונת לסיוע מהמינהל לסטודנטים עולים — gov.il](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority)
+- [מלגת מרום — הכתבה שלנו על מחזור תשפ"ז](/he/news/marom-scholarship-tashpaz-terms-change-2026)
+- [מלגות והשכלה גבוהה — המדריך המלא בטדרוס](/he/education/scholarships)`,
+      en: `## Applications are open — and two deadlines are already close
+
+The Students Authority's service page says today: **"Registration for the 2026-2027 academic year has opened."** The deadlines, in the page's own words:
+
+- **Continuing students** in the first semester — by **October 1**.
+- **New students** in the first semester — by **November 10**.
+- Starting in the second semester — by April 1. Starting in the summer semester — by August 15.
+
+Alongside this the page sets out a line worth reading before you put the paperwork off: **"Retroactive assistance cannot be given"**, and an online application must be filed afresh every year or semester.
+
+## What exactly is extended
+
+The Authority has a dedicated page titled "Extended eligibility conditions for olim from Ethiopia, from Yemen, and Bnei Menashe." We read it alongside the general eligibility page, in order to check what genuinely differs — and not to present a general benefit as though it were community-specific. The differences are real, and these are they:
+
+| | General track | Extended track |
+| --- | --- | --- |
+| Window from receiving status to the start of studies | **36 months** | **15 years** |
+| Maximum age at the start of studies — bachelor's / practical engineer / certificate studies | up to 27 | **up to 28** |
+| Maximum age — master's / conversion for degree holders | up to 30 | **up to 40** |
+| Master's funding on top of a bachelor's | no, apart from exceptions | **yes, explicitly** |
+| Living stipend | not part of the general conditions | **yes** |
+
+In both tracks, a period of military or national service is not counted inside the window.
+
+Extending 36 months to 15 years is the most consequential difference. Someone who made aliyah as a child, served, worked a few years and only then decided to study has already lost eligibility under the general track. Under the extended track they are inside it.
+
+## The living stipend
+
+Per the page:
+
+- **₪600 a month, for up to 9 months a year**, in study months only.
+- Conditional on a course load of **at least 50%** annually or per semester.
+- At the Open University — at least two courses, at least 12 credits in the semester.
+- **Medical students are entitled to living stipends throughout all their years of study.**
+- **Not entitled:** anyone studying less than 50%, anyone studying for an advanced degree (including a master's, a conversion or a post-degree certificate), and anyone studying in the summer semester.
+
+Source: [Extended eligibility conditions for olim from Ethiopia, Yemen and Bnei Menashe — Ministry of Aliyah and Integration](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) · verified September 2026.
+
+## What else is included
+
+Funding for professional counselling and guidance in choosing a field of study; tuition funding according to the standard length of the track; funding for English and Hebrew courses required for the degree; and the "Ma'atefet" support system — tutoring, social and cultural activities, events and seminars, social-worker support services, and mentors for personal and social accompaniment.
+
+On tuition: "each year the scholarship will be up to the level of a full scholarship at the university rate (100% of tuition), and in accordance with the student's actual course load." At institutions whose tuition exceeds the government rate, the Authority pays up to the rate and the balance is on the student.
+
+## The academic conditions — and what actually trips people up
+
+- Admission as a regular student to an institution and track recognized by the Authority.
+- The student does not already hold a degree or certificate equivalent or identical to the one for which assistance is sought.
+- Matriculation certificate eligibility or a preparatory-programme completion certificate. **At the Open University**, someone admitted without matriculation becomes eligible only after successfully completing three academic courses totalling 18 credits.
+- **Continued assistance requires an average of 60 or above** and confirmation of proper year-to-year progression.
+- **No funding for a repeated year** — neither after a failure nor after a change of track.
+- A break in studies of up to two academic years is permitted across the whole eligibility period.
+- Anyone who stops studying must notify immediately. Failure to do so can lead to a debt being recorded and all financial assistance from the ministry being stopped.
+- Recipients are required to perform community volunteering hours under the Shachak programme (social-community service).
+
+## Two government scholarships — not at once
+
+The page repeats it twice: **"A tuition scholarship cannot be granted to students receiving a scholarship from another government body."** This matters in practice against [the CHE's Marom scholarship](/en/news/marom-scholarship-tashpaz-terms-change-2026), whose registration opens this month. The two tracks were not designed to stack, and they target complementary populations: Marom — those in Israel more than 15 years or Israeli-born; the Authority — those within 15 years of receiving status.
+
+The page itself directs anyone not eligible for Authority assistance to check Marom — but **the dates shown there ("opened on 9/9/2025... until 11/11/25") belong to the 5786 cycle**, not to the cycle opening now. Do not rely on them.
+
+## A caveat the Authority itself writes
+
+"All of the above is a summary of the rules, and in any event the procedure and the temporary order govern. Assistance is conditional on budget availability and on the annual renewal of the temporary order."
+
+This is not merely formal boilerplate: eligibility depends on a temporary order renewed year by year. Worth knowing before you build a four-year plan on this track.
+
+## Sources
+
+- [Extended eligibility conditions for olim from Ethiopia, Yemen and Bnei Menashe — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — read in full 2.9.2026
+- [Eligibility conditions for assistance and a study scholarship (the general track) — gov.il](https://www.gov.il/he/pages/students-eligibility-conditions) — updated 11.6.2026
+- [Online application for assistance from the Students Authority — gov.il](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority)
+- [Marom scholarship — our article on the 5787 cycle](/en/news/marom-scholarship-tashpaz-terms-change-2026)
+- [Scholarships and higher education — the full Tedros guide](/en/education/scholarships)`,
+      am: `## ምዝገባ ክፍት ነው — ሁለት የመጨረሻ ቀኖችም ተቃርበዋል
+
+የስደተኛ ተማሪዎች አስተዳደር የአገልግሎት ገጽ ዛሬ ይላል፦ **«ለ2026-2027 የትምህርት ዓመት ምዝገባ ተከፍቷል»።** የመጨረሻ ቀኖቹ በገጹ ቃል፦
+
+- በመጀመሪያ ሴሚስተር **ቀጣይ ተማሪዎች** — እስከ **ኦክቶበር 1**።
+- በመጀመሪያ ሴሚስተር **አዲስ ተማሪዎች** — እስከ **ኖቬምበር 10**።
+- በሁለተኛ ሴሚስተር የሚጀምሩ — እስከ ኤፕሪል 1። በበጋ ሴሚስተር የሚጀምሩ — እስከ ኦገስት 15።
+
+ከዚህ ጎን ገጹ ወረቀቱን ከማዘግየትዎ በፊት ማንበብ የሚገባ መስመር ያስቀምጣል፦ **«ኋላ ቀር ድጋፍ መስጠት አይቻልም»**፣ እንዲሁም በየዓመቱ ወይም በየሴሚስተሩ አዲስ የመስመር ላይ ማመልከቻ መቅረብ አለበት።
+
+## በትክክል ምን ተስፋፍቷል
+
+አስተዳደሩ «ከኢትዮጵያ ለመጡ ስደተኞች፣ ለየመን ተወላጆችና ለቤኔ ምናሼ የተስፋፉ የብቁነት ሁኔታዎች» የሚል ልዩ ገጽ አለው። በእውነት ምን እንደሚለያይ ለመፈተሽ — እና አጠቃላይ ጥቅምን የማህበረሰብ ብቻ አድርጎ ላለማቅረብ — ከአጠቃላዩ የብቁነት ገጽ ጎን አንብበነዋል። ልዩነቶቹ እውነተኛ ናቸው፣ እነሆም፦
+
+| | አጠቃላይ መስመር | የተስፋፋ መስመር |
+| --- | --- | --- |
+| መቀበያ ከተሰጠ ጀምሮ ትምህርት እስከሚጀመር ያለው መስኮት | **36 ወር** | **15 ዓመት** |
+| ትምህርት ሲጀመር ከፍተኛ ዕድሜ — መጀመሪያ ዲግሪ / ተግባራዊ መሐንዲስ / የምስክር ወረቀት ትምህርት | እስከ 27 | **እስከ 28** |
+| ከፍተኛ ዕድሜ — ሁለተኛ ዲግሪ / ለዲግሪ ባለቤቶች የሙያ ለውጥ | እስከ 30 | **እስከ 40** |
+| ከመጀመሪያ ዲግሪ በተጨማሪ የሁለተኛ ዲግሪ ድጋፍ | አይ፣ ከልዩ ሁኔታዎች በስተቀር | **አዎ፣ በግልጽ** |
+| የመተዳደሪያ ስኮላርሺፕ | በአጠቃላዩ ሁኔታዎች ውስጥ የለም | **አዎ** |
+
+በሁለቱም መስመሮች የውትድርና ወይም የብሔራዊ አገልግሎት ጊዜ በመስኮቱ ውስጥ አይቆጠርም።
+
+ከ36 ወር ወደ 15 ዓመት መስፋቱ በጣም ወሳኙ ልዩነት ነው። በልጅነት የመጣ፣ ያገለገለ፣ ጥቂት ዓመታት የሠራና ከዚያ በኋላ ብቻ ለመማር የወሰነ ሰው በአጠቃላዩ መስመር ብቁነቱን አጥቷል። በተስፋፋው መስመር ግን በውስጡ ነው።
+
+## የመተዳደሪያ ስኮላርሺፑ
+
+በገጹ መሠረት፦
+
+- **በወር ₪600፣ በዓመት እስከ 9 ወር**፣ በትምህርት ወራት ብቻ።
+- **ቢያንስ 50%** ዓመታዊ ወይም ሴሚስተራዊ የትምህርት ጫና ይጠይቃል።
+- በክፍት ዩኒቨርሲቲ — ቢያንስ ሁለት ኮርሶች፣ በሴሚስተር ቢያንስ 12 ክሬዲት።
+- **የሕክምና ተማሪዎች በሁሉም የትምህርት ዓመታቸው የመተዳደሪያ ስኮላርሺፕ ይገባቸዋል።**
+- **ብቁ ያልሆኑ፦** ከ50% በታች የሚማሩ፣ ለከፍተኛ ዲግሪ የሚማሩ (ሁለተኛ ዲግሪ፣ የሙያ ለውጥ ወይም ከዲግሪ በኋላ የምስክር ወረቀት ጨምሮ)፣ እና በበጋ ሴሚስተር የሚማሩ።
+
+ምንጭ፦ [ከኢትዮጵያ፣ ከየመንና ቤኔ ምናሼ ለመጡ የተስፋፉ የብቁነት ሁኔታዎች — የዓሊያና ውህደት ሚኒስቴር](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) · በሴፕቴምበር 2026 ተረጋግጧል።
+
+## ሌላ ምን ተካቷል
+
+የጥናት መስክ በመምረጥ ረገድ በሙያዊ ተቋም የሚሰጥ ምክርና አቅጣጫ ድጋፍ፤ በመስመሩ መደበኛ ርዝመት መሠረት የትምህርት ክፍያ ድጋፍ፤ ለዲግሪው የሚያስፈልጉ የእንግሊዝኛና የዕብራይስጥ ኮርሶች ድጋፍ፤ እና «ማአቴፌት» የድጋፍ ሥርዓት — የማጠናከሪያ ትምህርት፣ ማህበራዊና ባህላዊ እንቅስቃሴዎች፣ ዝግጅቶችና ሴሚናሮች፣ የማህበራዊ ሠራተኞች ድጋፍ፣ እና ለግልና ማህበራዊ አጃቢነት አማካሪዎች።
+
+ስለ ትምህርት ክፍያ፦ «በየዓመቱ የስኮላርሺፑ መጠን በዩኒቨርሲቲ ተመን እስከ ሙሉ ስኮላርሺፕ (100% የትምህርት ክፍያ) ድረስ ይሆናል፣ በተማሪው ትክክለኛ የትምህርት ጫና መሠረት»። የትምህርት ክፍያቸው ከመንግሥት ተመን በሚበልጥ ተቋማት አስተዳደሩ እስከ ተመኑ ይሸፍናል፣ ቀሪው በተማሪው ላይ ነው።
+
+## የአካዳሚ ሁኔታዎች — በተግባር ሰዎችን የሚጥለው
+
+- በአስተዳደሩ በታወቀ ተቋምና መስመር እንደ መደበኛ ተማሪ መቀበል።
+- ተማሪው ድጋፍ ለሚጠይቅበት ዲግሪ ተመሳሳይ ወይም እኩል የሆነ ዲግሪ ወይም የምስክር ወረቀት የለውም።
+- የማትሪክ ወይም የቅድመ-አካዳሚ ማጠናቀቂያ ምስክር። **በክፍት ዩኒቨርሲቲ**፣ ያለ ማትሪክ የተቀበለ ሰው 18 ክሬዲት የሚያህሉ ሦስት የአካዳሚ ኮርሶችን በተሳካ ሁኔታ ካጠናቀቀ በኋላ ብቻ ብቁ ይሆናል።
+- **ድጋፉ እንዲቀጥል ከ60 በላይ አማካይ** እና ከዓመት ወደ ዓመት ትክክለኛ የመሸጋገር ማረጋገጫ ያስፈልጋል።
+- **ለተደጋገመ ዓመት ድጋፍ የለም** — በውድቀትም ሆነ በመስመር ለውጥ።
+- በጠቅላላው የብቁነት ጊዜ እስከ ሁለት የአካዳሚ ዓመት ማቋረጥ ይፈቀዳል።
+- ትምህርቱን የሚያቋርጥ ወዲያውኑ ማሳወቅ አለበት። አለማሳወቅ ዕዳ እንዲመዘገብና ከሚኒስቴሩ የሚሰጥ ማንኛውም የገንዘብ ድጋፍ እንዲቋረጥ ሊያደርግ ይችላል።
+- ተጠቃሚው በሻሓቅ ፕሮግራም (ማህበራዊ-ማህበረሰብ አገልግሎት) ስር የማህበረሰብ የበጎ ፈቃድ ሰዓታት ይጠበቅበታል።
+
+## ሁለት የመንግሥት ስኮላርሺፖች — በአንድ ጊዜ አይደለም
+
+ገጹ ሁለት ጊዜ ይደግመዋል፦ **«ከሌላ የመንግሥት አካል ስኮላርሺፕ ለሚቀበሉ ተማሪዎች የትምህርት ክፍያ ስኮላርሺፕ መስጠት አይቻልም»።** ይህ በዚህ ወር ምዝገባው ከሚከፈተው [የCHE ማሮም ስኮላርሺፕ](/am/news/marom-scholarship-tashpaz-terms-change-2026) አንጻር ተግባራዊ ጠቀሜታ አለው። ሁለቱ መስመሮች እንዲደራረቡ አልተነደፉም፣ የሚያገለግሉትም የሚደጋገፉ ሕዝቦችን ነው፦ ማሮም — በእስራኤል ከ15 ዓመት በላይ የቆዩ ወይም በእስራኤል የተወለዱ፤ አስተዳደሩ — መቀበያ ከተሰጠ በ15 ዓመት ውስጥ ያሉ።
+
+ገጹ ራሱ ለአስተዳደሩ ድጋፍ ብቁ ያልሆነውን ማሮምን እንዲፈትሽ ይመራዋል — ነገር ግን **እዚያ የሚታዩት ቀኖች («በ9/9/2025 ተከፍቷል... እስከ 11/11/25») የ5786 ዙር ናቸው**፣ አሁን የሚከፈተው ዙር አይደሉም። በእነሱ አይመኩ።
+
+## አስተዳደሩ ራሱ የሚጽፈው ማስጠንቀቂያ
+
+«ከላይ የተጠቀሰው ሁሉ የደንቦቹ ማጠቃለያ ነው፣ በማንኛውም ሁኔታ ደንቡና ጊዜያዊ ትዕዛዙ ይወስናሉ። ድጋፉ በበጀት መኖርና ጊዜያዊ ትዕዛዙ በየዓመቱ በመታደስ ላይ የተመሠረተ ነው።»
+
+ይህ የቅርጽ ማስጠንቀቂያ ብቻ አይደለም፦ ብቁነቱ ዓመት በዓመት በሚታደስ ጊዜያዊ ትዕዛዝ ላይ የተመሠረተ ነው። በዚህ መስመር ላይ የአራት ዓመት ዕቅድ ከመመሥረትዎ በፊት ማወቅ ተገቢ ነው።
+
+## ምንጮች
+
+- [ከኢትዮጵያ፣ ከየመንና ቤኔ ምናሼ ለመጡ የተስፋፉ የብቁነት ሁኔታዎች — gov.il](https://www.gov.il/he/pages/ethiopian_jews_students_scholarships) — ሙሉ በሙሉ የተነበበ 2.9.2026
+- [ለድጋፍና ለትምህርት ስኮላርሺፕ የብቁነት ሁኔታዎች (አጠቃላይ መስመር) — gov.il](https://www.gov.il/he/pages/students-eligibility-conditions) — በ11.6.2026 ተዘምኗል
+- [ከስደተኛ ተማሪዎች አስተዳደር ድጋፍ የመስመር ላይ ማመልከቻ — gov.il](https://www.gov.il/he/service/apply-online-for-a-scholarship-from-the-student-authority)
+- [ማሮም ስኮላርሺፕ — ስለ 5787 ዙር ጽሑፋችን](/am/news/marom-scholarship-tashpaz-terms-change-2026)
+- [ስኮላርሺፖችና ከፍተኛ ትምህርት — ሙሉው የትድሮስ መመሪያ](/am/education/scholarships)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
