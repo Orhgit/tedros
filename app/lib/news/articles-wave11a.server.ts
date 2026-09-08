@@ -303,4 +303,129 @@ If the check shows you are not in the register, there is a legal route — and i
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "voter-register-petition-deadline-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["civic", "rights"],
+    title: {
+      he: "11.9.2026: המועד האחרון לעתור על אי-הכללה בפנקס הבוחרים",
+      en: "11 September 2026: the last day to petition over exclusion from the voter register",
+      am: "መስከረም 11 ቀን 2026፦ ከመራጮች መዝገብ ስለመተው አቤቱታ የማቅረቢያ የመጨረሻ ቀን",
+    },
+    excerpt: {
+      he: "בלוח הזמנים הרשמי של ועדת הבחירות המרכזית מופיע סעיף 53א: המועד האחרון להגשת עתירה על אי-הכללה בפנקס הבוחרים הוא יום ו', 11.9.2026 — 46 יום לפני הבחירות. ההחלטה בעתירות תינתן עד 2.10.2026.",
+      en: "The Central Elections Committee's statutory timetable lists section 53a: the last day to file a petition over exclusion from the voter register is Friday, 11 September 2026 — 46 days before the election. Decisions on those petitions are due by 2 October 2026.",
+      am: "የማዕከላዊ ምርጫ ኮሚቴ ሕጋዊ የጊዜ ሰሌዳ አንቀጽ 53ሀን ይዘረዝራል፦ ከመራጮች መዝገብ ስለመተው አቤቱታ ለማቅረብ የመጨረሻው ቀን ዓርብ፣ መስከረም 11 ቀን 2026 ነው — ከምርጫው 46 ቀናት በፊት። በእነዚህ አቤቱታዎች ላይ ውሳኔ እስከ ጥቅምት 2 ቀን 2026 ይሰጣል።",
+    },
+    bodies: {
+      he: `## למה זה דחוף
+
+פנקס הבוחרים לבחירות לכנסת ה-26 **נכנס לתוקף ב-6.9.2026**. מרגע זה הוא סגור — אבל החוק משאיר חלון קצר אחד למי שסבור שהוא נגרע ממנו שלא כדין.
+
+בלוח הזמנים הסטטוטורי שמפרסמת ועדת הבחירות המרכזית מופיעה שורה מפורשת:
+
+> **סעיף 53א — עתירה על אי-הכללה בפנקס הבוחרים — 46 יום לפני הבחירות — 11/09/2026, כ"ט אלול תשפ"ו, יום ו'.**
+
+באותו לוח מופיע גם המשך ההליך: **סעיף 53א(ב) — החלטה בעתירה על אי-הכללה בפנקס — 2.10.2026**.
+
+11.9.2026 הוא גם ערב ראש השנה. מי שצריך לפעול, כדאי שיעשה זאת מוקדם ביום ולא יסתמך על שעות אחר הצהריים.
+
+## למי זה רלוונטי
+
+הדרישות להיכללות בפנקס הבוחרים, לפי חוק הבחירות לכנסת [נוסח משולב], תשכ"ט-1969, הן:
+
+- להיות **אזרח ישראלי** ביום שליפת הפנקס;
+- להיות רשום, **הוא ומענו**, במרשם האוכלוסין כתושב;
+- שיום ההולדת ה-18 יחול **לא יאוחר מיום הבחירות**.
+
+התנאי השני הוא זה שמכשיל אנשים בפועל. מי שאין לו מען רשום ותקין במרשם — למשל אחרי מעבר דירה שלא דווח, אחרי תקופה בחו"ל, או בעקבות אי-התאמה ברישום — עלול לגלות שאינו מופיע בפנקס.
+
+## מה לעשות, לפי הסדר
+
+1. **קודם כול, לבדוק.** מוקד משרד הפנים: **1-800-101975** או **073-2458358**, א'–ה' 08:30–21:00, ו' 08:30–13:00. שירות עצמי ב-SMS או WhatsApp: **053-3801464**, 24 שעות. המענה ניתן גם **באמהרית**.
+2. **אם אתה מופיע בפנקס** — אין מה לעשות בערוץ הזה. ודא רק שהקלפי מתאימה לך.
+3. **אם אינך מופיע ואתה סבור שאתה זכאי** — זה המסלול של סעיף 53א, והוא נסגר ב-11.9.2026.
+4. **אם אינך בטוח מה מעמדך** — כדאי להתייעץ. אפשר לפנות לגורם משפטי או לארגון סיוע; ראו את [מדריכי הזכויות שלנו](/he/rights) ואת [עמוד הקול הקהילתי](/he/voice).
+
+טדרוס אינו נותן ייעוץ משפטי. המידע כאן הוא תיאור של לוח הזמנים הרשמי; לפעולה עצמה כדאי ליווי מקצועי.
+
+## מקורות
+
+- [ועדת הבחירות המרכזית — לוח זמנים לפעילות הוועדה (סעיף 53א ו-53א(ב)), gov.il](https://www.gov.il/he/pages/time--table-26)
+- [ועדת הבחירות המרכזית — "בחירות לכנסת ה-26" (תנאי ההיכללות בפנקס), gov.il, עודכן 7.9.2026](https://www.gov.il/he/pages/knesset-elections-2026)`,
+      en: `## Why this is urgent
+
+The voter register for the 26th Knesset elections **came into force on 6 September 2026**. From that moment it is closed — but the law leaves one short window for anyone who believes they were wrongly left out of it.
+
+The statutory timetable published by the Central Elections Committee carries an explicit line:
+
+> **Section 53a — petition over exclusion from the voter register — 46 days before the election — 11/09/2026, Friday.**
+
+The same timetable sets the next step: **section 53a(b) — decision on a petition over exclusion from the register — 2 October 2026**.
+
+11 September 2026 is also the eve of Rosh Hashanah. Anyone who needs to act should do so early in the day rather than count on the afternoon.
+
+## Who this concerns
+
+The requirements for inclusion in the register, under the Knesset Elections Law [Consolidated Version], 1969, are:
+
+- to be an **Israeli citizen** on the day the register is drawn;
+- to be registered, **together with your address**, in the population registry as a resident;
+- that your 18th birthday falls **no later than election day**.
+
+The second condition is the one that trips people up in practice. Someone without a valid registered address — after an unreported move, after a period abroad, or through a registration mismatch — may find they do not appear in the register.
+
+## What to do, in order
+
+1. **First, check.** Interior Ministry line: **1-800-101975** or **073-2458358**, Sun–Thu 08:30–21:00, Fri 08:30–13:00. Self-service by SMS or WhatsApp: **053-3801464**, 24 hours. The line also answers **in Amharic**.
+2. **If you are in the register** — nothing to do through this channel. Just confirm the polling station suits you.
+3. **If you are not, and you believe you are eligible** — this is the section 53a route, and it closes on 11 September 2026.
+4. **If you are unsure of your status** — get advice. You can approach a legal body or an aid organisation; see our [rights guides](/en/rights) and the [community voice page](/en/voice).
+
+Tedros does not give legal advice. What is described here is the official timetable; for the step itself, professional support is worth having.
+
+## Sources
+
+- [Central Elections Committee — statutory activity timetable (sections 53a and 53a(b)), gov.il](https://www.gov.il/he/pages/time--table-26)
+- [Central Elections Committee — "Elections to the 26th Knesset" (register eligibility conditions), gov.il, updated 7 Sept 2026](https://www.gov.il/he/pages/knesset-elections-2026)`,
+      am: `## ለምን አጣዳፊ ሆነ
+
+ለ26ኛው ኔሴት ምርጫ የመራጮች መዝገብ **መስከረም 6 ቀን 2026 ሥራ ላይ ዋለ**። ከዚያ ቅጽበት ጀምሮ ተዘግቷል — ነገር ግን ሕጉ ያለአግባብ ተትቻለሁ ብሎ ለሚያምን ሰው አንድ አጭር መስኮት ይተዋል።
+
+ማዕከላዊ ምርጫ ኮሚቴ የሚያሳትመው ሕጋዊ የጊዜ ሰሌዳ ግልጽ መስመር ይዟል፦
+
+> **አንቀጽ 53ሀ — ከመራጮች መዝገብ ስለመተው አቤቱታ — ከምርጫው 46 ቀናት በፊት — 11/09/2026፣ ዓርብ።**
+
+ተመሳሳዩ የጊዜ ሰሌዳ ቀጣዩን ደረጃ ያስቀምጣል፦ **አንቀጽ 53ሀ(ለ) — ከመዝገብ ስለመተው በቀረበ አቤቱታ ላይ ውሳኔ — ጥቅምት 2 ቀን 2026**።
+
+መስከረም 11 ቀን 2026 የሮሽ ሀሻና ዋዜማም ነው። እርምጃ መውሰድ የሚያስፈልገው ሰው በቀኑ መጀመሪያ ላይ ያድርገው እንጂ በከሰዓት በኋላ ላይ አይመካ።
+
+## ይህ ማንን ይመለከታል
+
+በኔሴት ምርጫ ሕግ [የተጠናከረ ቅጅ]፣ 1969 መሠረት በመዝገቡ ውስጥ ለመካተት የሚያስፈልጉት፦
+
+- መዝገቡ በሚዘጋጅበት ቀን **የእስራኤል ዜጋ** መሆን፤
+- **ከአድራሻዎ ጋር** በሕዝብ መዝገብ ውስጥ እንደ ነዋሪ መመዝገብ፤
+- 18ኛ ልደትዎ **ከምርጫው ቀን ባልዘገየ** መዋሉ።
+
+በተግባር ሰዎችን የሚያሰናክለው ሁለተኛው ሁኔታ ነው። ትክክለኛ የተመዘገበ አድራሻ የሌለው ሰው — ሳይነገር ከተደረገ ዝውውር በኋላ፣ በውጭ አገር ከቆየ በኋላ፣ ወይም በምዝገባ አለመጣጣም ምክንያት — በመዝገቡ ውስጥ አለመኖሩን ሊያገኝ ይችላል።
+
+## በቅደም ተከተል ምን ማድረግ
+
+1. **በመጀመሪያ፣ ያረጋግጡ።** የውስጥ ጉዳይ ሚኒስቴር መስመር፦ **1-800-101975** ወይም **073-2458358**፣ እሁድ–ሐሙስ 08:30–21:00፣ ዓርብ 08:30–13:00። በSMS ወይም WhatsApp በራስ-አገልግሎት፦ **053-3801464**፣ 24 ሰዓት። መስመሩ **በአማርኛም** ምላሽ ይሰጣል።
+2. **በመዝገቡ ውስጥ ከሆኑ** — በዚህ መንገድ የሚደረግ ነገር የለም። የምርጫ ጣቢያው እንደሚስማማዎት ብቻ ያረጋግጡ።
+3. **ካልሆኑ እና ብቁ ነኝ ብለው ካመኑ** — ይህ የአንቀጽ 53ሀ መንገድ ነው፤ መስከረም 11 ቀን 2026 ይዘጋል።
+4. **ስለ ሁኔታዎ እርግጠኛ ካልሆኑ** — ምክር ይጠይቁ። ወደ ሕግ አካል ወይም ወደ ድጋፍ ድርጅት መቅረብ ይችላሉ፤ የእኛን [የመብቶች መመሪያዎች](/am/rights) እና [የማህበረሰብ ድምፅ ገጽ](/am/voice) ይመልከቱ።
+
+ትድሮስ የሕግ ምክር አይሰጥም። እዚህ የተገለጸው ኦፊሴላዊው የጊዜ ሰሌዳ ነው፤ ለእርምጃው ራሱ ሙያዊ ድጋፍ ጠቃሚ ነው።
+
+## ምንጮች
+
+- [ማዕከላዊ ምርጫ ኮሚቴ — ሕጋዊ የእንቅስቃሴ የጊዜ ሰሌዳ (አንቀጽ 53ሀ እና 53ሀ(ለ))፣ gov.il](https://www.gov.il/he/pages/time--table-26)
+- [ማዕከላዊ ምርጫ ኮሚቴ — «ለ26ኛው ኔሴት ምርጫ»፣ gov.il፣ መስከረም 7 ቀን 2026 ተዘምኗል](https://www.gov.il/he/pages/knesset-elections-2026)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
