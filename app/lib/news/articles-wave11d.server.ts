@@ -1,5 +1,5 @@
 // Wave 11d articles — heritage, community, cities and housing (TED-165),
-// researched and verified 2026-09-02.
+// researched and verified 2026-09-08.
 //
 // Same discipline as waves 8 and 10: every item rests on a primary source
 // that was opened and read in full — the CBS release PDF was downloaded and
@@ -27,8 +27,8 @@ export const ARTICLES_WAVE11D: NewsArticleEntry[] = [
   // 1 — Sigd 5787 date correction -------------------------------------------
   {
     slug: "sigd-5787-monday-9-november-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["holiday", "announcement"],
     title: {
       he: 'סיגד תשפ"ז יחול ביום שני, 9 בנובמבר 2026 — ומה מגיע לכם ביום הזה',
@@ -85,8 +85,8 @@ export const ARTICLES_WAVE11D: NewsArticleEntry[] = [
 
 ## מקורות
 
-- [כל-זכות — חג הסיגד](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · נבדק 2.9.2026
-- [Hebcal — ממיר תאריכים עבריים](https://www.hebcal.com/converter?hy=5787&hm=Cheshvan&hd=29&h2g=1) · נבדק 2.9.2026
+- [כל-זכות — חג הסיגד](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · נבדק 8.9.2026
+- [Hebcal — ממיר תאריכים עבריים](https://www.hebcal.com/converter?hy=5787&hm=Cheshvan&hd=29&h2g=1) · נבדק 8.9.2026
 - חוק חג הסיגד, התשס"ח-2008`,
       en: `## The date
 
@@ -132,8 +132,8 @@ The main ceremony takes place on the Armon Hanatziv promenade in Jerusalem, led 
 
 ## Sources
 
-- [Kol Zchut — the Sigd holiday](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · verified 2 Sep 2026
-- [Hebcal — Hebrew date converter](https://www.hebcal.com/converter?hy=5787&hm=Cheshvan&hd=29&h2g=1) · verified 2 Sep 2026
+- [Kol Zchut — the Sigd holiday](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · verified 8 Sep 2026
+- [Hebcal — Hebrew date converter](https://www.hebcal.com/converter?hy=5787&hm=Cheshvan&hd=29&h2g=1) · verified 8 Sep 2026
 - The Sigd Holiday Law, 5768-2008`,
       am: `## ቀኑ
 
@@ -175,7 +175,7 @@ The main ceremony takes place on the Armon Hanatziv promenade in Jerusalem, led 
 
 ## ምንጮች
 
-- [ኮል-ዝኹት — የሰግድ በዓል](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · መስከረም 2፣ 2026 ተረጋግጧል
+- [ኮል-ዝኹት — የሰግድ በዓል](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · መስከረም 8፣ 2026 ተረጋግጧል
 - [Hebcal — የዕብራይስጥ ቀን መቀየሪያ](https://www.hebcal.com/converter?hy=5787&hm=Cheshvan&hd=29&h2g=1)
 - የሰግድ በዓል ህግ፣ 5768-2008`,
     },
@@ -184,8 +184,8 @@ The main ceremony takes place on the Armon Hanatziv promenade in Jerusalem, led 
   // 2 — CBS locality table --------------------------------------------------
   {
     slug: "where-the-community-lives-cbs-locality-table",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["cities", "community"],
     title: {
       he: "איפה גרה הקהילה: הטבלה המלאה של הלמ״ס — נתניה במספרים, קריית מלאכי באחוזים",
@@ -271,7 +271,7 @@ The main ceremony takes place on the Armon Hanatziv promenade in Jerusalem, led 
 
 ## מקורות
 
-- [הלמ"ס — האוכלוסייה ממוצא אתיופי בישראל, לקט נתונים לרגל חג הסיגד 2025 (הודעה 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · פורסם 16.11.2025 · נבדק 2.9.2026`,
+- [הלמ"ס — האוכלוסייה ממוצא אתיופי בישראל, לקט נתונים לרגל חג הסיגד 2025 (הודעה 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · פורסם 16.11.2025 · נבדק 8.9.2026`,
       en: `## Why now
 
 Each year, ahead of Sigd, Israel's Central Bureau of Statistics publishes a data compilation on the Ethiopian-origin population. The most recent — **release 367/2025, published 16 November 2025** — is the newest figure that exists, and it describes the end of 2024. The next one is expected close to [Sigd 5787, 9 November 2026](/en/news/sigd-5787-monday-9-november-2026). Until then, these are the numbers.
@@ -345,7 +345,7 @@ Localities with the most births to mothers of Ethiopian origin: **Netanya (311)*
 
 ## Sources
 
-- [CBS — The Ethiopian Population in Israel, data compilation for the Sigd holiday 2025 (release 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · published 16 Nov 2025 · verified 2 Sep 2026`,
+- [CBS — The Ethiopian Population in Israel, data compilation for the Sigd holiday 2025 (release 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · published 16 Nov 2025 · verified 8 Sep 2026`,
       am: `## ለምን አሁን
 
 የእስራኤል ማዕከላዊ ስታቲስቲክስ ቢሮ (CBS) በየዓመቱ ከሰግድ በፊት ስለ ኢትዮጵያ ተወላጅ ሕዝብ መረጃ ያወጣል። የቅርቡ — **ዘገባ 367/2025፣ ኅዳር 16፣ 2025 የወጣ** — እስካሁን ያለው አዲሱ አኃዝ ሲሆን የ2024 መጨረሻን ይገልጻል።
@@ -404,15 +404,15 @@ Localities with the most births to mothers of Ethiopian origin: **Netanya (311)*
 
 ## ምንጮች
 
-- [CBS — በእስራኤል የኢትዮጵያ ተወላጅ ሕዝብ፣ ለሰግድ 2025 (ዘገባ 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · ኅዳር 16፣ 2025 ታተመ · መስከረም 2፣ 2026 ተረጋግጧል`,
+- [CBS — በእስራኤል የኢትዮጵያ ተወላጅ ሕዝብ፣ ለሰግድ 2025 (ዘገባ 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · ኅዳር 16፣ 2025 ታተመ · መስከረም 8፣ 2026 ተረጋግጧል`,
     },
   },
 
   // 3 — Gideon kingdom conference -------------------------------------------
   {
     slug: "gideon-kingdom-conference-jerusalem-october-2026",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["community", "announcement"],
     title: {
       he: "400 שנה לנפילת ממלכת הגדעונים: כנס בירושלים ב-14 באוקטובר",
@@ -458,8 +458,8 @@ Localities with the most births to mothers of Ethiopian origin: **Netanya (311)*
 
 ## מקורות
 
-- [המרכז למורשת יהדות אתיופיה — עמוד הכנסים](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · נבדק 2.9.2026
-- [המרכז למורשת יהדות אתיופיה — לוח אירועים](https://ethiopianjhc.org.il/events-calendar/) · נבדק 2.9.2026`,
+- [המרכז למורשת יהדות אתיופיה — עמוד הכנסים](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · נבדק 8.9.2026
+- [המרכז למורשת יהדות אתיופיה — לוח אירועים](https://ethiopianjhc.org.il/events-calendar/) · נבדק 8.9.2026`,
       en: `## What is happening
 
 The **Center for Ethiopian Jewish Heritage** will hold a conference titled **"New directions in the study of the Kingdom of the Gideons"** on **14 October 2026, from 14:30 to 20:00**, at the Center in Jerusalem.
@@ -493,8 +493,8 @@ Registration details and the full programme are published on the Center's confer
 
 ## Sources
 
-- [Center for Ethiopian Jewish Heritage — conferences page](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · verified 2 Sep 2026
-- [Center for Ethiopian Jewish Heritage — events calendar](https://ethiopianjhc.org.il/events-calendar/) · verified 2 Sep 2026`,
+- [Center for Ethiopian Jewish Heritage — conferences page](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · verified 8 Sep 2026
+- [Center for Ethiopian Jewish Heritage — events calendar](https://ethiopianjhc.org.il/events-calendar/) · verified 8 Sep 2026`,
       am: `## ምን ይካሄዳል
 
 **የኢትዮጵያ አይሁድ ቅርስ ማዕከል** በ**ጥቅምት 14፣ 2026፣ ከ14:30 እስከ 20:00**፣ **«በጊዴዎን መንግሥት ጥናት ላይ አዳዲስ ግኝቶች»** የተሰኘ ጉባኤ በኢየሩሳሌም ያካሂዳል።
@@ -524,16 +524,16 @@ Registration details and the full programme are published on the Center's confer
 
 ## ምንጮች
 
-- [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የጉባኤዎች ገጽ](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · መስከረም 2፣ 2026 ተረጋግጧል
-- [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የዝግጅቶች ቀን መቁጠሪያ](https://ethiopianjhc.org.il/events-calendar/) · መስከረም 2፣ 2026 ተረጋግጧል`,
+- [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የጉባኤዎች ገጽ](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · መስከረም 8፣ 2026 ተረጋግጧል
+- [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የዝግጅቶች ቀን መቁጠሪያ](https://ethiopianjhc.org.il/events-calendar/) · መስከረም 8፣ 2026 ተረጋግጧል`,
     },
   },
 
   // 4 — High Holidays 5787 in Beta Israel tradition --------------------------
   {
     slug: "high-holidays-5787-beta-israel-tradition",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["holiday", "community"],
     title: {
       he: 'הימים הנוראים תשפ"ז: התאריכים, והשמות שהקהילה נושאת להם',
@@ -593,7 +593,7 @@ Registration details and the full programme are published on the Center's confer
 
 ## מקורות
 
-- [Hebcal — לוח החגים היהודיים 2026](https://www.hebcal.com/holidays/2026) · נבדק 2.9.2026
+- [Hebcal — לוח החגים היהודיים 2026](https://www.hebcal.com/holidays/2026) · נבדק 8.9.2026
 - [הרב ד"ר שרון שלום, "חקר הליטורגיה בקהילת ביתא ישראל — מאפיינים ייחודיים", מכון שלום הרטמן, 5.12.2024](https://heb.hartman.org.il/bete_israel_litrugy/)`,
       en: `## The dates
 
@@ -642,7 +642,7 @@ The civil dates come from Hebcal's holiday calendar. The description of the litu
 
 ## Sources
 
-- [Hebcal — Jewish holiday calendar 2026](https://www.hebcal.com/holidays/2026) · verified 2 Sep 2026
+- [Hebcal — Jewish holiday calendar 2026](https://www.hebcal.com/holidays/2026) · verified 8 Sep 2026
 - [Rabbi Dr. Sharon Shalom, "Research on the liturgy of the Beta Israel community — distinctive features", Shalom Hartman Institute, 5 Dec 2024](https://heb.hartman.org.il/bete_israel_litrugy/)`,
       am: `## ቀኖቹ
 
@@ -679,7 +679,7 @@ The civil dates come from Hebcal's holiday calendar. The description of the litu
 
 ## ምንጮች
 
-- [Hebcal — የ2026 የአይሁድ በዓላት ቀን መቁጠሪያ](https://www.hebcal.com/holidays/2026) · መስከረም 2፣ 2026 ተረጋግጧል
+- [Hebcal — የ2026 የአይሁድ በዓላት ቀን መቁጠሪያ](https://www.hebcal.com/holidays/2026) · መስከረም 8፣ 2026 ተረጋግጧል
 - [ራቢ ዶ/ር ሻሮን ሻሎም፣ ሻሎም ሃርትማን ተቋም፣ ኅዳር 5፣ 2024](https://heb.hartman.org.il/bete_israel_litrugy/)`,
     },
   },
@@ -687,8 +687,8 @@ The civil dates come from Hebcal's holiday calendar. The description of the litu
   // 5 — TAMA 38 expiry ------------------------------------------------------
   {
     slug: "tama-38-expired-what-replaces-it-in-our-cities",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["housing", "cities"],
     title: {
       he: 'תמ"א 38 פקעה ב-18 במאי. בערים שלנו — מי כבר החליף אותה ומי עוד לא',
@@ -832,8 +832,8 @@ Buso quotes the head of planning at the Urban Renewal Authority: "In 2022, when 
   // 6 — Kiryat Nordau, Netanya ----------------------------------------------
   {
     slug: "kiryat-nordau-netanya-korczak-complex-approved",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["housing", "cities"],
     title: {
       he: "קריית נורדאו: מתחם קורצ'אק אושר — 304 דירות ייהרסו, 1,155 ייבנו",
@@ -978,8 +978,8 @@ Kiryat Nordau was built in the 1950s. Per the plan documents as reported, at the
   // 7 — Tofsei HaOrit, TAU --------------------------------------------------
   {
     slug: "tofsei-haorit-tau-tashpaz-registration-open",
-    publishedAt: "2026-09-02",
-    updatedAt: "2026-09-02",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
     tags: ["community", "announcement"],
     title: {
       he: '"תופסי האורית": ההרשמה למחזור תשפ"ז נפתחה — עד חמש מלגות לבני הקהילה',
@@ -1036,8 +1036,8 @@ Kiryat Nordau was built in the 1950s. Per the plan documents as reported, at the
 
 ## מקורות
 
-- ["תופסי האורית" — לימוד ומחקר של כתבי הקודש של ביתא ישראל, החוג למקרא, אוניברסיטת תל אביב](https://humanities.tau.ac.il/bible/bbl20) · נבדק 2.9.2026
-- [אוניברסיטת תל אביב — "לראשונה: כתבי הקודש הקדומים ביותר של יהדות אתיופיה נחשפו"](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · נבדק 2.9.2026
+- ["תופסי האורית" — לימוד ומחקר של כתבי הקודש של ביתא ישראל, החוג למקרא, אוניברסיטת תל אביב](https://humanities.tau.ac.il/bible/bbl20) · נבדק 8.9.2026
+- [אוניברסיטת תל אביב — "לראשונה: כתבי הקודש הקדומים ביותר של יהדות אתיופיה נחשפו"](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · נבדק 8.9.2026
 - סיקור בעברית שהחוג עצמו מפנה אליו: יפעת ארליך, "לחשוף את הקלפים", ישראל היום, 30.5.2025; ynet, 3.7.2025`,
       en: `## What it is
 
@@ -1083,8 +1083,8 @@ Source: [the programme page at the Bible department, Tel Aviv University](https:
 
 ## Sources
 
-- ["Tofsei HaOrit" — study and research of the sacred texts of Beta Israel, Bible department, Tel Aviv University](https://humanities.tau.ac.il/bible/bbl20) · verified 2 Sep 2026
-- [Tel Aviv University — "For the first time: the oldest sacred texts of Ethiopian Jewry revealed"](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · verified 2 Sep 2026
+- ["Tofsei HaOrit" — study and research of the sacred texts of Beta Israel, Bible department, Tel Aviv University](https://humanities.tau.ac.il/bible/bbl20) · verified 8 Sep 2026
+- [Tel Aviv University — "For the first time: the oldest sacred texts of Ethiopian Jewry revealed"](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · verified 8 Sep 2026
 - Hebrew coverage the department itself links to: Yifat Erlich, "Laying the cards on the table", Israel Hayom, 30 May 2025; ynet, 3 July 2025`,
       am: `## ምንድን ነው
 
@@ -1123,8 +1123,180 @@ Source: [the programme page at the Bible department, Tel Aviv University](https:
 
 ## ምንጮች
 
-- [የመርሃ ግብሩ ገጽ፣ የመጽሐፍ ቅዱስ ክፍል፣ ቴል አቪቭ ዩኒቨርሲቲ](https://humanities.tau.ac.il/bible/bbl20) · መስከረም 2፣ 2026 ተረጋግጧል
-- [ቴል አቪቭ ዩኒቨርሲቲ — ጥንታዊዎቹ ቅዱሳት መጻሕፍት ተገለጡ](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · መስከረም 2፣ 2026 ተረጋግጧል`,
+- [የመርሃ ግብሩ ገጽ፣ የመጽሐፍ ቅዱስ ክፍል፣ ቴል አቪቭ ዩኒቨርሲቲ](https://humanities.tau.ac.il/bible/bbl20) · መስከረም 8፣ 2026 ተረጋግጧል
+- [ቴል አቪቭ ዩኒቨርሲቲ — ጥንታዊዎቹ ቅዱሳት መጻሕፍት ተገለጡ](https://www.tau.ac.il/research/old-ethiopian-bible-discovery) · መስከረም 8፣ 2026 ተረጋግጧል`,
+    },
+  },
+
+  // 8 — "HaDerech HaHadasha", Netanya ---------------------------------------
+  {
+    slug: "derech-hahadasha-netanya-what-the-page-says",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["cities", "community"],
+    title: {
+      he: '"הדרך החדשה" בנתניה: מה העירייה עדיין מפרסמת, ומה כדאי לשאול לפני שהולכים',
+      en: '"HaDerech HaHadasha" in Netanya: what the municipality still publishes, and what to ask before you go',
+      am: "«ሃደረኽ ሃሓዳሻ» በናታንያ፦ ማዘጋጃ ቤቱ አሁንም የሚያሳትመው፣ እና ከመሄድዎ በፊት ምን ይጠይቁ",
+    },
+    excerpt: {
+      he: 'עיריית נתניה — העיר עם מספר התושבים ממוצא אתיופי הגבוה בישראל — מפרסמת דף שירות לתוכנית "הדרך החדשה": ליווי משפחות בידי עובדים סוציאליים ומלווים דוברי אמהרית, בשלושה מסלולים. הטקסט עצמו מגדיר את התוכנית "עד לשנת 2020". בדקו לפני שיוצאים.',
+      en: "Netanya municipality — the city with the largest Ethiopian-origin population in Israel — publishes a service page for the \"HaDerech HaHadasha\" programme: family accompaniment by social workers and Amharic-speaking guides, in three tracks. The page's own text describes the programme as running \"until 2020\". Check before you set out.",
+      am: "የናታንያ ማዘጋጃ ቤት — በእስራኤል ከፍተኛ የኢትዮጵያ ተወላጅ ሕዝብ ያላት ከተማ — ለ«ሃደረኽ ሃሓዳሻ» መርሃ ግብር የአገልግሎት ገጽ ያሳትማል። የገጹ ጽሑፍ ግን መርሃ ግብሩን «እስከ 2020» ይለዋል። ከመሄድዎ በፊት ያረጋግጡ።",
+    },
+    bodies: {
+      he: `## למה נתניה
+
+[נתניה](/he/cities/netanya) היא היישוב עם מספר התושבים ממוצא אתיופי הגבוה בישראל — 13.3 אלף איש, לפי [נתוני הלמ"ס](/he/news/where-the-community-lives-cbs-locality-table). מה שהעירייה מפעילה שם נוגע ליותר אנשים מאשר בכל עיר אחרת.
+
+## מה כתוב בדף
+
+באתר עיריית נתניה, תחת אגף הרווחה והביטחון החברתי, יש דף שירות לתוכנית **"הדרך החדשה"**. לפי הדף, זו "תוכנית ממשלתית המיועדת לסייע בשילוב מיטבי של יוצאי אתיופיה בחברה", והיא מפעילה **צוות של עובדים סוציאליים ומלווים דוברי אמהרית**.
+
+השירותים שהדף מונה: ליווי אישי למשפחה, שילוב בתוכניות קבוצתיות וקהילתיות, ייעוץ תעסוקתי, תגבור לימודים, חונכות, הדרכת הורים, ליווי והכוונה במיצוי זכויות, וקשר עם גורמים בקהילה.
+
+**ההפניה לתוכנית נעשית על ידי עובד סוציאלי משפחה** — לא בפנייה ישירה.
+
+## שלושת המסלולים
+
+| מסלול | למי | דרך ההפניה |
+|-------|-----|-------------|
+| **משפחה תומכת** | משפחות יוצאות אתיופיה שאחד מילדיהן מטופל בשירות מבחן לנוער — הכוונה למימוש זכויות, תיווך מול נותני שירותים, וכלים למעורבות בחיי המתבגר | שירות מבחן לנוער |
+| **התוכנית הביתית** | אמהות לילדים בגילאי 0–3 שאינם שוהים במסגרת — הדרכה אישית בבית עם מדריכה דוברת אמהרית, בתחום התפתחות הילד והקשר בין הילד להורה, והיכרות עם שירותי הגיל הרך | עובד סוציאלי משפחה, מרכזים לגיל הרך, טיפות חלב |
+| **מעטפת** | נערים בני הקהילה בגילאי 13–18 עם קשיים תפקודיים בסיכון גבוה — שיקום והשארה בקהילה | עובד סוציאלי משפחה |
+
+## הכתובת
+
+הדף רושם את כתובת השירות: **יונה בוגולה 2, נתניה**, ומשייך אותו לאזור **רמת ידין**.
+
+(הרחוב קרוי על שם יונה בוגלה, ממנהיגי יהדות אתיופיה ומחלוצי החינוך בקהילה. שם רחוב הוא דבר קטן, וגם הוא לא מובן מאליו.)
+
+## ההסתייגות — וזאת הסיבה שאנחנו כותבים על זה
+
+הטקסט על הדף עצמו מגדיר את התוכנית כמיועדת לסייע "**עד לשנת 2020**". כלומר: הדף חי, אבל הניסוח שבו מתאר אופק שחלף לפני שש שנים.
+
+זה לא אומר שהשירות לא קיים. זה כן אומר שאסור להסתמך על הדף כאילו הוא מעודכן. **לפני שנוסעים** — התקשרו למוקד העירוני 106 או לאגף הרווחה, אמרו את שם התוכנית ואת שם המסלול שרלוונטי לכם, ושאלו שלוש שאלות:
+
+1. האם התוכנית או המסלול פעילים היום?
+2. אם לא — מה החליף אותם, ומי מפעיל את זה עכשיו?
+3. מי העובד הסוציאלי שדרכו עוברת ההפניה, ואיך קובעים איתו?
+
+ואם התשובה היא שהתוכנית נסגרה — זו עדיין תשובה שימושית, כי היא חוסכת נסיעה.
+
+## למה זה חוזר על עצמו
+
+תוכניות ממשלתיות ליוצאי אתיופיה מגיעות עם אופק תקציבי ומתחלפות בשמן. דפי השירות העירוניים שנכתבו לפי אותן תוכניות נשארים באוויר הרבה אחרי שהתקציב נגמר. התוצאה היא אנשים שנוסעים לכתובת עם שם תוכנית שכבר לא קיים. הכלל הפשוט: **טלפון לפני נסיעה, תמיד.**
+
+## קראו גם
+
+- [נתניה — דף העיר](/he/cities/netanya)
+- [איפה גרה הקהילה — נתוני הלמ"ס](/he/news/where-the-community-lives-cbs-locality-table)
+- [קריית נורדאו — התחדשות עירונית בנתניה](/he/urban-renewal/kiryat-nordau-netanya)
+
+## מקורות
+
+- [עיריית נתניה — "הדרך החדשה": תוכנית ממשלתית לטיפול ביוצאי אתיופיה](https://www.netanya.muni.il/Residents/Welfare/Administration/Pages/NewPath.aspx) · נבדק 8.9.2026
+- [הלמ"ס, הודעה 367/2025, 16.11.2025](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf)`,
+      en: `## Why Netanya
+
+[Netanya](/en/cities/netanya) has the largest Ethiopian-origin population of any locality in Israel — 13,300 people, per [the CBS figures](/en/news/where-the-community-lives-cbs-locality-table). What the municipality runs there reaches more people than in any other city.
+
+## What the page says
+
+On Netanya municipality's site, under the welfare and social security division, there is a service page for the **"HaDerech HaHadasha"** ("the new path") programme. Per the page, it is "a government programme intended to assist the optimal integration of Ethiopian-Israelis into society", and it operates **a team of social workers and Amharic-speaking guides**.
+
+The services the page lists: personal accompaniment for the family, inclusion in group and community programmes, employment counselling, academic reinforcement, mentoring, parenting guidance, guidance in realising entitlements, and connection to community bodies.
+
+**Referral to the programme is made by a family social worker** — not by applying directly.
+
+## The three tracks
+
+| Track | For whom | Route of referral |
+|-------|----------|-------------------|
+| **Supportive family** | Ethiopian-Israeli families with a child under the care of the juvenile probation service — guidance on realising entitlements, mediation with service providers, and tools for involvement in the adolescent's life | Juvenile probation service |
+| **The home programme** | Mothers of children aged 0-3 who are not in any framework — personal guidance at home with an Amharic-speaking guide, on child development and the parent-child relationship, plus an introduction to early-childhood services | Family social worker, early-childhood centres, tipat halav clinics |
+| **Wraparound** | Community boys aged 13-18 with functional difficulties at high risk — rehabilitation and keeping them in the community | Family social worker |
+
+## The address
+
+The page records the service address: **2 Yona Bogola Street, Netanya**, in the **Ramat Yadin** area.
+
+(The street is named after Yona Bogale, a leader of Ethiopian Jewry and a pioneer of education in the community. A street name is a small thing, and it is not self-evident either.)
+
+## The caveat — and this is why we are writing about it
+
+The text on the page itself describes the programme as intended to assist "**until the year 2020**". That is: the page is live, but its wording describes a horizon that passed six years ago.
+
+That does not mean the service does not exist. It does mean the page must not be relied on as current. **Before you travel** — call the municipal hotline 106 or the welfare division, give the programme name and the track relevant to you, and ask three questions:
+
+1. Is the programme, or that track, operating today?
+2. If not — what replaced it, and who runs that now?
+3. Who is the social worker the referral goes through, and how do I get an appointment?
+
+And if the answer is that the programme closed — that is still a useful answer, because it saves the trip.
+
+## Why this keeps happening
+
+Government programmes for Ethiopian-Israelis come with a budget horizon and change names. The municipal service pages written around those programmes stay up long after the budget ends. The result is people travelling to an address with a programme name that no longer exists. The simple rule: **phone before you travel, always.**
+
+## Read also
+
+- [Netanya — the city page](/en/cities/netanya)
+- [Where the community lives — the CBS figures](/en/news/where-the-community-lives-cbs-locality-table)
+- [Kiryat Nordau — urban renewal in Netanya](/en/urban-renewal/kiryat-nordau-netanya)
+
+## Sources
+
+- [Netanya municipality — "HaDerech HaHadasha": a government programme for Ethiopian-Israelis](https://www.netanya.muni.il/Residents/Welfare/Administration/Pages/NewPath.aspx) · verified 8 Sep 2026
+- [CBS release 367/2025, 16 Nov 2025](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf)`,
+      am: `## ለምን ናታንያ
+
+[ናታንያ](/am/cities/netanya) በእስራኤል ውስጥ ከፍተኛ የኢትዮጵያ ተወላጅ ሕዝብ ያላት ከተማ ናት — 13,300 ሰዎች።
+
+## ገጹ ምን ይላል
+
+በናታንያ ማዘጋጃ ቤት ድረ-ገጽ፣ በማህበራዊ ደህንነት ክፍል ሥር፣ ለ**«ሃደረኽ ሃሓዳሻ»** መርሃ ግብር የአገልግሎት ገጽ አለ። በገጹ መሠረት ይህ «የኢትዮጵያ ተወላጆችን በኅብረተሰቡ ውስጥ ለማዋሃድ የተዘጋጀ የመንግሥት መርሃ ግብር» ሲሆን **የማህበራዊ ሠራተኞችና አማርኛ ተናጋሪ አጃቢዎች ቡድን** ያሠራል።
+
+አገልግሎቶቹ፦ የቤተሰብ ግላዊ አጃቢነት፣ በቡድንና በማህበረሰብ መርሃ ግብሮች ውስጥ ማካተት፣ የሥራ ምክር፣ የትምህርት ማጠናከሪያ፣ አማካሪነት፣ የወላጅነት መመሪያ፣ መብቶችን በማስከበር ላይ አጃቢነት።
+
+**ወደ መርሃ ግብሩ የሚደረገው ሪፈራል በቤተሰብ ማህበራዊ ሠራተኛ ነው** — በቀጥታ በማመልከት አይደለም።
+
+## ሦስቱ መስመሮች
+
+| መስመር | ለማን | የሪፈራል መንገድ |
+|---|---|---|
+| **ደጋፊ ቤተሰብ** | ከልጆቻቸው አንዱ በወጣቶች የሙከራ አገልግሎት የሚታይ ቤተሰቦች | የወጣቶች የሙከራ አገልግሎት |
+| **የቤት መርሃ ግብር** | ከ0-3 ዓመት ልጆች ያሏቸው በተቋም ውስጥ ያልሆኑ እናቶች — በቤት ውስጥ ከአማርኛ ተናጋሪ አሠልጣኝ ጋር | የቤተሰብ ማህበራዊ ሠራተኛ፣ የሕፃናት ማዕከላት፣ ጠብታ ወተት |
+| **መጠቅለያ** | ከ13-18 ዓመት ከፍተኛ አደጋ ላይ ያሉ የማህበረሰቡ ወጣቶች | የቤተሰብ ማህበራዊ ሠራተኛ |
+
+## አድራሻው
+
+ገጹ የአገልግሎቱን አድራሻ ይመዘግባል፦ **ዮና ቦጎላ ጎዳና 2፣ ናታንያ**፣ በ**ራማት ያዲን** አካባቢ።
+
+(ጎዳናው የተሰየመው በዮና ቦጋለ ስም ነው፣ የኢትዮጵያ አይሁድ መሪና በማህበረሰቡ የትምህርት ፈር ቀዳጅ።)
+
+## ማስጠንቀቂያው
+
+በገጹ ላይ ያለው ጽሑፍ መርሃ ግብሩን «**እስከ 2020 ዓ.ም.**» ለመርዳት የታሰበ ብሎ ይገልጻል። ገጹ በሕይወት አለ፣ ግን ቃላቱ ከስድስት ዓመት በፊት ያለፈ አድማስ ይገልጻሉ።
+
+ይህ አገልግሎቱ የለም ማለት አይደለም። ግን ገጹን እንደ ወቅታዊ መቁጠር አይገባም ማለት ነው። **ከመሄድዎ በፊት** የከተማውን መስመር 106 ወይም የማህበራዊ ደህንነት ክፍሉን ይደውሉ፣ ሦስት ጥያቄዎችን ይጠይቁ፦
+
+1. መርሃ ግብሩ ወይም መስመሩ ዛሬ እየሠራ ነው?
+2. ካልሆነ — ምን ተካው፣ አሁን ማን ያሠራዋል?
+3. ሪፈራሉ የሚያልፍበት ማህበራዊ ሠራተኛ ማን ነው?
+
+መርሃ ግብሩ እንደተዘጋ የሚል መልስ ቢሆንም እንኳ ጠቃሚ ነው — ጉዞን ያድናል።
+
+## ተጨማሪ ያንብቡ
+
+- [ናታንያ](/am/cities/netanya)
+- [ማህበረሰቡ የት ይኖራል](/am/news/where-the-community-lives-cbs-locality-table)
+- [ቅርያት ኖርዳው](/am/urban-renewal/kiryat-nordau-netanya)
+
+## ምንጮች
+
+- [የናታንያ ማዘጋጃ ቤት — «ሃደረኽ ሃሓዳሻ»](https://www.netanya.muni.il/Residents/Welfare/Administration/Pages/NewPath.aspx) · መስከረም 8፣ 2026 ተረጋግጧል
+- [CBS ዘገባ 367/2025፣ ኅዳር 16፣ 2025](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf)`,
     },
   },
 ];

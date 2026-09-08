@@ -399,7 +399,7 @@ A presidential committee in Q3 2024 discussed a recommendation to expand to 1,50
   {
     slug: "sigd-2026-dates-and-details",
     publishedAt: "2026-05-01",
-    updatedAt: "2026-09-02",
+    updatedAt: "2026-09-08",
     tags: ["holiday", "announcement"],
     title: {
       he: "סיגד 2026 — תאריכים ופרטים",
@@ -416,7 +416,7 @@ A presidential committee in Q3 2024 discussed a recommendation to expand to 1,50
 
 כ"ט בחשוון תשפ"ז, יום שני, **9 בנובמבר 2026**. החג רשמי בישראל מאז 2008 (חוק חג הסיגד, התשס"ח-2008).
 
-> **תיקון (2.9.2026):** גרסה קודמת של דף זה נקבה בתאריך 19 בנובמבר 2026 וביום חמישי. זו הייתה טעות. כ"ט בחשוון תשפ"ז חל ביום שני, 9 בנובמבר 2026.
+> **תיקון (8.9.2026):** גרסה קודמת של דף זה נקבה בתאריך 19 בנובמבר 2026 וביום חמישי. זו הייתה טעות. כ"ט בחשוון תשפ"ז חל ביום שני, 9 בנובמבר 2026.
 
 ## הטקס המרכזי בירושלים
 
@@ -436,7 +436,7 @@ A presidential committee in Q3 2024 discussed a recommendation to expand to 1,50
 
 29 Cheshvan 5787, Monday, **November 9, 2026**. The holiday has been a national Israeli holiday since 2008 (the Sigd Holiday Law, 5768-2008).
 
-> **Correction (Sept 2, 2026):** an earlier version of this page gave the date as November 19, 2026, and as a Thursday. That was wrong. 29 Cheshvan 5787 falls on Monday, November 9, 2026.
+> **Correction (Sept 8, 2026):** an earlier version of this page gave the date as November 19, 2026, and as a Thursday. That was wrong. 29 Cheshvan 5787 falls on Monday, November 9, 2026.
 
 ## The main ceremony in Jerusalem
 
@@ -456,7 +456,7 @@ Alongside the Jerusalem ceremony, municipal ceremonies are held in cities with a
 
 29 ኅዳር 5787፣ ሰኞ፣ **ኅዳር 9፣ 2026**። በዓሉ ከ2008 ጀምሮ በእስራኤል ብሔራዊ በዓል ነው (የሰግድ በዓል ህግ፣ 5768-2008)።
 
-> **እርማት (መስከረም 2፣ 2026):** የዚህ ገጽ ቀደም ያለ ስሪት ቀኑን ኅዳር 19፣ 2026 ብሎ ጠቅሶ ነበር። ያ ስህተት ነበር። 29 ኅዳር 5787 ሰኞ፣ ኅዳር 9፣ 2026 ይውላል።
+> **እርማት (መስከረም 8፣ 2026):** የዚህ ገጽ ቀደም ያለ ስሪት ቀኑን ኅዳር 19፣ 2026 ብሎ ጠቅሶ ነበር። ያ ስህተት ነበር። 29 ኅዳር 5787 ሰኞ፣ ኅዳር 9፣ 2026 ይውላል።
 
 ## በኢየሩሳሌም ዋና ስነ-ስርዓት
 
