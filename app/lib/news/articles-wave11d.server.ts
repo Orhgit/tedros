@@ -828,4 +828,150 @@ Buso quotes the head of planning at the Urban Renewal Authority: "In 2022, when 
 - [ሂላ ጽዮን፣ ynet፣ ሐምሌ 31፣ 2024](https://www.ynet.co.il/economy/article/rjbuacikr)`,
     },
   },
+
+  // 6 — Kiryat Nordau, Netanya ----------------------------------------------
+  {
+    slug: "kiryat-nordau-netanya-korczak-complex-approved",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["housing", "cities"],
+    title: {
+      he: "קריית נורדאו: מתחם קורצ'אק אושר — 304 דירות ייהרסו, 1,155 ייבנו",
+      en: "Kiryat Nordau: the Korczak complex is approved — 304 flats to be demolished, 1,155 built",
+      am: "ቅርያት ኖርዳው፦ የኮርቻክ ሕንጻ ስብስብ ጸደቀ — 304 ቤቶች ይፈርሳሉ፣ 1,155 ይሠራሉ",
+    },
+    excerpt: {
+      he: "בשכונה שבה, לפי מסמכי התוכנית, כשליש מהתושבים הם עולי אתיופיה וברית המועצות לשעבר, אושרה בדצמבר 2025 תב\"ע מפורטת לפינוי-בינוי במתחם עגנון-קורצ'אק. כ-87% מבעלי הזכויות כבר חתמו. הבנייה אמורה להתחיל בתוך שלוש שנים.",
+      en: "In a neighbourhood where, per the plan documents, about a third of residents are olim from Ethiopia and the former Soviet Union, a detailed pinui-binui plan for the Agnon-Korczak complex was approved in December 2025. About 87% of rights holders have signed. Construction is due to begin within three years.",
+      am: "በዕቅድ ሰነዶች መሠረት ከነዋሪዎቹ አንድ ሦስተኛ ገደማ ከኢትዮጵያና ከቀድሞ ሶቪየት ኅብረት የመጡ ኦሊም በሆኑበት ሰፈር፣ በታኅሣሥ 2025 ዝርዝር የፒኑይ-ቢኑይ ዕቅድ ጸደቀ። 87% ገደማ የመብት ባለቤቶች ፈርመዋል።",
+    },
+    bodies: {
+      he: `## מה אושר
+
+בדצמבר 2025 אושרה תב"ע מפורטת שנותנת תוקף לתוכנית פינוי-בינוי במתחם **ש"י עגנון–יאנוש קורצ'אק** בשכונת קריית נורדאו בנתניה.
+
+לפי הדיווח, התוכנית כוללת:
+
+- **הריסה של 304 יחידות דיור קיימות**
+- **בנייה של כ-1,155 יחידות דיור** בתשעה בנייני מגורים — שילוב של בנייה רבת-קומות ובנייה מרקמית
+- **כ-10,000 מ"ר מסחר**, חזית מסחרית בקומת הקרקע, תעסוקה ומוסדות ציבור
+- כ-**87% מבעלי הזכויות** כבר חתמו על הסכמים עם היזם, רוטשטיין נדל"ן
+- תחילת בנייה של השלב הראשון — **בתוך שלוש שנים**
+
+מנכ"ל החברה, אבישי בן-חיים, נמסר כאומר: "זה פרויקט שעתיד לחולל שינוי של ממש במרקם השכונתי".
+
+## ההקשר: תוכנית המתאר לכל השכונה
+
+מתחם קורצ'אק הוא חלק מתוכנית גדולה בהרבה. תוכנית המתאר להתחדשות עירונית בקריית נורדאו (**נת/401**) הוגשה על ידי הרשות הממשלתית להתחדשות עירונית יחד עם הוועדה המקומית נתניה, ומשתרעת על **כ-967 דונם**. היא הופקדה ב-2021, והוועדה המחוזית מרכז החליטה לאשר אותה למתן תוקף.
+
+התוכנית מגדילה את השכונה מכ-6,319 יחידות דיור (כולל 664 שאושרו קודם במתחם ש"י עגנון) ל**כ-11,344 יחידות דיור** ועוד 210 יחידות מיוחדות — תוספת של כ-4,900 דירות. לצדן: כ-124 דונם למבני ציבור, כ-30,000 מ"ר מסחר וכ-107 דונם שטחים פתוחים.
+
+## למה זה נוגע לקהילה
+
+קריית נורדאו הוקמה בשנות ה-50. לפי מסמכי התוכנית כפי שדווחו, בסוף 2013 התגוררו בה כ-19,500 תושבים, ו**כשליש מהם הם עולי אתיופיה ועולי ברית המועצות לשעבר**. מסמכי התוכנית מתארים את מצבה הפיזי של השכונה כירוד, ואת מאפייניה החברתיים-כלכליים כנמוכים במקצת מממוצע העיר.
+
+[נתניה](/he/cities/netanya) היא היישוב עם מספר התושבים ממוצא אתיופי הגבוה בישראל — 13.3 אלף, לפי [נתוני הלמ"ס](/he/news/where-the-community-lives-cbs-locality-table). כשמפנים 304 משפחות ובונים 1,155 דירות במקומן, ההרכב של מי שחוזר לשכונה הוא שאלה שנקבעת בחוזים — לא בתוכנית.
+
+## מה לבדוק אם אתם בעלי דירה שם
+
+- **באיזה מתחם אתם** — התוכנית הכללית משתרעת על כל השכונה, אבל התב"ע המפורטת שאושרה נוגעת למתחם עגנון-קורצ'אק בלבד. אלה שני דברים שונים.
+- **מה בדיוק חתמתם** — 87% חתימות זה נתון של היזם. אם לא חתמתם, אתם עדיין בעלי זכות, ואינכם חייבים לחתום על מה שהוצע לכם עד היום.
+- **ליווי משפטי** — בפינוי-בינוי היזם משלם לעורך הדין של הדיירים, ולא אתם. אל תוותרו על ייעוץ עצמאי.
+- **דיירים בשכירות** — התוכנית מדברת על בעלי זכויות. אם אתם שוכרים, מעמדכם שונה לגמרי; בררו אותו מוקדם.
+
+## קראו גם
+
+- [קריית נורדאו — דף השכונה](/he/urban-renewal/kiryat-nordau-netanya)
+- [נתניה — דף העיר](/he/cities/netanya)
+- [תמ"א 38 פקעה — מה זה אומר בערים שלנו](/he/news/tama-38-expired-what-replaces-it-in-our-cities)
+
+## מקורות
+
+- ["בתוך שלוש שנים תחל התחדשות הענק בקריית נורדאו בנתניה", מגדילים, 16.12.2025](https://magdilim.co.il/161220250913/)
+- ["הופקדה תוכנית ההתחדשות העירונית לשכונת קריית נורדאו בנתניה", מרכז הנדל"ן, 19.9.2021](https://www.nadlancenter.co.il/article/4335)
+- ["בדרך ל-11 אלף יח\\"ד: אושרה סופית תוכנית המתאר להתחדשות עירונית בקריית נורדאו נתניה", מרכז הנדל"ן, 30.3.2022 (עודכן 30.7.2023)](https://www.nadlancenter.co.il/article/5402)`,
+      en: `## What was approved
+
+In December 2025 a detailed plan was approved giving legal force to the pinui-binui scheme for the **S.Y. Agnon–Janusz Korczak** complex in the Kiryat Nordau neighbourhood of Netanya.
+
+Per the report, the plan covers:
+
+- **Demolition of 304 existing housing units**
+- **Construction of about 1,155 units** across nine residential buildings — a mix of high-rise and mid-rise
+- **About 10,000 m² of commercial space**, ground-floor retail frontage, employment and public institutions
+- About **87% of rights holders** have already signed agreements with the developer, Rothstein Real Estate
+- First-phase construction to begin **within three years**
+
+The company's CEO, Avishai Ben-Chaim, is quoted saying: "This is a project that will bring genuine change to the neighbourhood fabric."
+
+## The context: the master plan for the whole neighbourhood
+
+The Korczak complex is part of something much larger. The urban-renewal master plan for Kiryat Nordau (**NT/401**) was filed by the Government Authority for Urban Renewal together with Netanya's local planning committee, and covers **about 967 dunams**. It was deposited in 2021, and the Central District Committee resolved to approve it for validity.
+
+The plan grows the neighbourhood from about 6,319 units (including 664 previously approved in the S.Y. Agnon complex) to **about 11,344 units** plus 210 special-purpose units — an addition of roughly 4,900 flats. Alongside them: about 124 dunams for public buildings, about 30,000 m² of commercial space and about 107 dunams of open space.
+
+## Why this concerns the community
+
+Kiryat Nordau was built in the 1950s. Per the plan documents as reported, at the end of 2013 it had about 19,500 residents, and **about a third of them are olim from Ethiopia and the former Soviet Union**. The plan documents describe the neighbourhood's physical condition as poor, and its socioeconomic characteristics as somewhat below the city average.
+
+[Netanya](/en/cities/netanya) has the largest number of Ethiopian-origin residents of any locality in Israel — 13,300, per [the CBS figures](/en/news/where-the-community-lives-cbs-locality-table). When 304 families are moved out and 1,155 flats are built in their place, who comes back to the neighbourhood is settled in the contracts, not in the plan.
+
+## What to check if you own a flat there
+
+- **Which complex you are in** — the master plan covers the whole neighbourhood, but the detailed plan just approved covers only the Agnon-Korczak complex. These are two different things.
+- **What exactly you signed** — 87% is the developer's figure. If you have not signed, you are still a rights holder, and you are not obliged to accept what has been offered so far.
+- **Legal representation** — in pinui-binui the developer pays for the residents' lawyer, not you. Do not give up independent advice.
+- **Tenants renting** — the plan speaks of rights holders. If you rent, your position is entirely different; find out what it is early.
+
+## Read also
+
+- [Kiryat Nordau — the neighbourhood page](/en/urban-renewal/kiryat-nordau-netanya)
+- [Netanya — the city page](/en/cities/netanya)
+- [TAMA 38 expired — what it means in our cities](/en/news/tama-38-expired-what-replaces-it-in-our-cities)
+
+## Sources
+
+- ["Within three years the giant renewal in Kiryat Nordau, Netanya will begin", Magdilim, 16 Dec 2025](https://magdilim.co.il/161220250913/)
+- ["The urban renewal plan for the Kiryat Nordau neighbourhood in Netanya has been deposited", Nadlan Center, 19 Sep 2021](https://www.nadlancenter.co.il/article/4335)
+- ["Towards 11,000 units: the urban renewal master plan for Kiryat Nordau, Netanya has been finally approved", Nadlan Center, 30 Mar 2022 (updated 30 Jul 2023)](https://www.nadlancenter.co.il/article/5402)`,
+      am: `## ምን ጸደቀ
+
+በታኅሣሥ 2025 በናታንያ ቅርያት ኖርዳው ሰፈር ውስጥ ለ**ሽ.ይ. አግኖን–ያኑሽ ኮርቻክ** ሕንጻ ስብስብ የፒኑይ-ቢኑይ ዕቅድ ሕጋዊ ኃይል የሚሰጥ ዝርዝር ዕቅድ ጸደቀ።
+
+- **304 ነባር የመኖሪያ ቤቶች ይፈርሳሉ**
+- **1,155 ገደማ ቤቶች** በዘጠኝ የመኖሪያ ሕንፃዎች ይሠራሉ
+- **10,000 ካሬ ሜትር ገደማ የንግድ ቦታ**
+- **87% ገደማ የመብት ባለቤቶች** ከአልሚው ሮትሽታይን ጋር ተፈራርመዋል
+- የመጀመሪያ ደረጃ ግንባታ **በሦስት ዓመታት ውስጥ** ይጀምራል
+
+## ሰፊው ዕቅድ
+
+የቅርያት ኖርዳው የከተማ ማደሻ ዋና ዕቅድ (**ንት/401**) **967 ዱናም ገደማ** ይሸፍናል። ሰፈሩን ከ6,319 ቤቶች ወደ **11,344 ገደማ** ያሳድጋል።
+
+## ለምን ማህበረሰቡን ይመለከታል
+
+ቅርያት ኖርዳው በ1950ዎቹ ተገነባ። በዕቅድ ሰነዶች መሠረት በ2013 መጨረሻ 19,500 ገደማ ነዋሪዎች ነበሩት፣ **አንድ ሦስተኛ ገደማቸው ከኢትዮጵያና ከቀድሞ ሶቪየት ኅብረት የመጡ ኦሊም** ናቸው።
+
+[ናታንያ](/am/cities/netanya) በእስራኤል ውስጥ ከፍተኛ ቁጥር ያለው የኢትዮጵያ ተወላጅ ነዋሪ ያላት ከተማ ናት — 13,300።
+
+## ባለቤት ከሆኑ ምን ያረጋግጡ
+
+- **በየትኛው ስብስብ ውስጥ ነዎት** — ዋናው ዕቅድ ሰፈሩን በሙሉ ይሸፍናል፤ የጸደቀው ዝርዝር ዕቅድ ግን የአግኖን-ኮርቻክ ስብስብን ብቻ ነው።
+- **ምን እንደፈረሙ** — 87% የአልሚው አኃዝ ነው። ካልፈረሙ አሁንም የመብት ባለቤት ነዎት።
+- **የሕግ ድጋፍ** — በፒኑይ-ቢኑይ የነዋሪዎችን ጠበቃ አልሚው ይከፍላል፣ እርስዎ አይደሉም።
+- **ተከራዮች** — ዕቅዱ ስለ መብት ባለቤቶች ይናገራል። ተከራይ ከሆኑ ሁኔታዎ ፍጹም የተለየ ነው።
+
+## ተጨማሪ ያንብቡ
+
+- [ቅርያት ኖርዳው](/am/urban-renewal/kiryat-nordau-netanya)
+- [ናታንያ](/am/cities/netanya)
+- [ታማ 38 አበቃ](/am/news/tama-38-expired-what-replaces-it-in-our-cities)
+
+## ምንጮች
+
+- [ማግዲሊም፣ ታኅሣሥ 16፣ 2025](https://magdilim.co.il/161220250913/)
+- [ናድላን ሴንተር፣ መስከረም 19፣ 2021](https://www.nadlancenter.co.il/article/4335)
+- [ናድላን ሴንተር፣ መጋቢት 30፣ 2022](https://www.nadlancenter.co.il/article/5402)`,
+    },
+  },
 ];
