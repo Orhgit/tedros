@@ -52,7 +52,7 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
       en: "29 Cheshvan (late October / early November)",
       am: "29 ኅዳር (የጥቅምት መጨረሻ / የኅዳር መጀመሪያ)",
     },
-    upcomingDates: ["2026-11-19", "2027-11-08", "2028-11-25"],
+    upcomingDates: ["2026-11-09", "2027-11-29", "2028-11-16"],
     relatedRights: ["sigd-funding"],
     relatedTerms: ["sigd", "kessim"],
     relatedOrgs: ["bina", "iaej"],
@@ -61,19 +61,19 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
 
 סיגד הוא חג מרכזי בלוח השנה של יהדות אתיופיה — נחגג מאז המאה ה-15. החג מציין את חידוש הברית של בני ישראל עם אלוהים, על-פי המודל של שיבת ציון בספר נחמיה. ב-2008 נחקק חוק יום הסיגד, והוא חג רשמי במדינת ישראל.
 
-**סיגד 2026 יחול ב-19 בנובמבר 2026 (29 בחשוון תשפ"ז).**
+**סיגד תשפ"ז יחול ביום שני, 9 בנובמבר 2026 (כ"ט בחשוון תשפ"ז).** מקור: [כל-זכות — חג הסיגד](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · נבדק ספטמבר 2026.
 
 ## לוח אירועים 2026
 
 | עיר | אירוע | מועד משוער |
 |-----|-------|-----------|
-| ירושלים — ארמון הנציב | טקס מרכזי, ~5,000 משתתפים | 19.11.2026 |
-| נתניה | טקס עירוני + שוק מסורתי | 19.11.2026 |
-| רחובות | טקס קהילתי | 19.11.2026 |
-| באר-שבע | אירוע קהילה + ריקודים | 19.11.2026 |
-| חיפה | טקס בפארק | 19.11.2026 |
-| אשדוד | פסטיבל סיגד | 19.11.2026 |
-| רמלה / לוד | אירוע משותף | 19.11.2026 |
+| ירושלים — ארמון הנציב | טקס מרכזי, ~5,000 משתתפים | 9.11.2026 |
+| נתניה | טקס עירוני + שוק מסורתי | 9.11.2026 |
+| רחובות | טקס קהילתי | 9.11.2026 |
+| באר-שבע | אירוע קהילה + ריקודים | 9.11.2026 |
+| חיפה | טקס בפארק | 9.11.2026 |
+| אשדוד | פסטיבל סיגד | 9.11.2026 |
+| רמלה / לוד | אירוע משותף | 9.11.2026 |
 
 ## הטקס בירושלים — מה לצפות?
 
@@ -127,19 +127,19 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
 
 Sigd is a central holiday in the Ethiopian Jewish calendar — celebrated since the 15th century. The holiday marks the renewal of the covenant between the Children of Israel and God, modeled on the return to Zion in the Book of Nehemiah. In 2008, the Sigd Day Law was enacted, and it is now a national holiday in the State of Israel.
 
-**Sigd 2026 falls on 19 November 2026 (29 Cheshvan 5787).**
+**Sigd 5787 falls on Monday, 9 November 2026 (29 Cheshvan 5787).** Source: [Kol Zchut — the Sigd holiday](https://www.kolzchut.org.il/he/%D7%97%D7%92_%D7%94%D7%A1%D7%99%D7%92%D7%93) · verified September 2026.
 
 ## 2026 events calendar
 
 | City | Event | Approx. date |
 |------|-------|-------------|
-| Jerusalem — Armon Hanatziv | Main ceremony, ~5,000 attendees | 19.11.2026 |
-| Netanya | Municipal ceremony + traditional market | 19.11.2026 |
-| Rehovot | Community ceremony | 19.11.2026 |
-| Beersheba | Community event + dancing | 19.11.2026 |
-| Haifa | Park ceremony | 19.11.2026 |
-| Ashdod | Sigd festival | 19.11.2026 |
-| Ramla / Lod | Joint event | 19.11.2026 |
+| Jerusalem — Armon Hanatziv | Main ceremony, ~5,000 attendees | 9.11.2026 |
+| Netanya | Municipal ceremony + traditional market | 9.11.2026 |
+| Rehovot | Community ceremony | 9.11.2026 |
+| Beersheba | Community event + dancing | 9.11.2026 |
+| Haifa | Park ceremony | 9.11.2026 |
+| Ashdod | Sigd festival | 9.11.2026 |
+| Ramla / Lod | Joint event | 9.11.2026 |
 
 ## The Jerusalem ceremony — what to expect
 
@@ -193,7 +193,7 @@ For more — dish by dish, the meaning of the fast, and shopping for the holiday
 
 ሰግድ የኢትዮጵያ አይሁዳዊ የቀን መቁጠሪያ ዋና በዓል ነው — ከ15ኛው ክፍለ ዘመን ጀምሮ ይከበራል። በዓሉ የእስራኤል ልጆች ከእግዚአብሔር ጋር ያለው ቃል ኪዳን መታደሱን ያመለክታል። በ2008 የሰግድ ቀን ህግ ተሻሽሏል፣ አሁን ብሔራዊ በዓል ነው።
 
-**ሰግድ 2026 — ህዳር 19፣ 2026 (29 ኅዳር 5787)**
+**ሰግድ 5787 — ሰኞ፣ ህዳር 9፣ 2026 (29 ኅዳር 5787)**
 
 ## 2026 የዝግጅቶች ዝርዝር
 
@@ -398,7 +398,7 @@ Operations Moses and Solomon saved ~16,000 community members. About 4,000 fell d
       en: "No fixed holiday date — Beta Israel refers to the community identity, not a single observance.",
       am: "ቋሚ የበዓል ቀን የለም — ቤተ እስራኤል ማህበረሰብን ያመለክታል፣ አንድ ብቻ ክብረ-በዓልን አይደለም።",
     },
-    upcomingDates: ["2026-11-19", "2027-11-08", "2028-11-25"],
+    upcomingDates: ["2026-11-09", "2027-11-29", "2028-11-16"],
     relatedRights: ["klita-basket-ethiopia", "falash-mura-direct-absorption"],
     relatedTerms: ["aliyah-from-ethiopia", "sal-klita"],
     relatedOrgs: ["iaej", "tebeka"],

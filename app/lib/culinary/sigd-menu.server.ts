@@ -3,7 +3,7 @@
 // A natural extension of the existing Sigd heritage pillar
 // (app/lib/heritage/events.server.ts) per the keyword research: the open
 // niche is "menu + religious meaning" — no competitor combines the two.
-// Timed for Sigd 2026 (19 November 2026, 29 Cheshvan 5787); the heritage
+// Timed for Sigd 5787 (9 November 2026, 29 Cheshvan 5787); the heritage
 // module is the source of truth for observance dates.
 //
 // HE is the source-of-truth locale. Server-only module.
@@ -26,14 +26,14 @@ export const SIGD_MENU_GUIDE: SigdMenuGuide = {
     am: "የሰግድ ጾም እና የጾም መስበሪያ ምግብ — ሙሉ መመሪያ",
   },
   description: {
-    he: "למה צמים בסיגד, מתי שוברים את הצום, ומה עולה על השולחן — דאבו, אינג'רה, דורו ואט ועוד. כולל לוח זמנים לסיגד 2026 (19.11).",
-    en: "Why the community fasts on Sigd, when the fast is broken, and what goes on the table — dabo, injera, doro wat and more. Includes the Sigd 2026 schedule (Nov 19).",
-    am: "በሰግድ ለምን እንደሚጾም፣ ጾሙ መቼ እንደሚሰበር እና በማዕዱ ላይ ምን እንደሚቀርብ — ዳቦ፣ እንጀራ፣ ዶሮ ወጥ። የሰግድ 2026 መርሃ ግብር (ህዳር 19) ያካትታል።",
+    he: "למה צמים בסיגד, מתי שוברים את הצום, ומה עולה על השולחן — דאבו, אינג'רה, דורו ואט ועוד. כולל לוח זמנים לסיגד 2026 (9.11).",
+    en: "Why the community fasts on Sigd, when the fast is broken, and what goes on the table — dabo, injera, doro wat and more. Includes the Sigd 2026 schedule (Nov 9).",
+    am: "በሰግድ ለምን እንደሚጾም፣ ጾሙ መቼ እንደሚሰበር እና በማዕዱ ላይ ምን እንደሚቀርብ — ዳቦ፣ እንጀራ፣ ዶሮ ወጥ። የሰግድ 2026 መርሃ ግብር (ህዳር 9) ያካትታል።",
   },
   body: {
     he: `## למה בכלל צמים בסיגד?
 
-הסיגד — שיחול ב-**19 בנובמבר 2026** (כ"ט בחשוון תשפ"ז) — הוא יום של חידוש הברית בין העם לאלוהיו, על-פי המודל של מעמד שיבת ציון בספרי עזרא ונחמיה: העם מתכנס, שומע את התורה, מתוודה ומתחייב מחדש. הצום הוא לב העניין הדתי של החג: כמו ביום הכיפורים, ההימנעות מאכילה מבטאת תשובה, הזדככות וכיסופים לירושלים.
+הסיגד — שיחול ב-**9 בנובמבר 2026** (כ"ט בחשוון תשפ"ז) — הוא יום של חידוש הברית בין העם לאלוהיו, על-פי המודל של מעמד שיבת ציון בספרי עזרא ונחמיה: העם מתכנס, שומע את התורה, מתוודה ומתחייב מחדש. הצום הוא לב העניין הדתי של החג: כמו ביום הכיפורים, ההימנעות מאכילה מבטאת תשובה, הזדככות וכיסופים לירושלים.
 
 באתיופיה היו בני הקהילה עולים בצום אל ראש הר גבוה — זכר להר סיני — כשהקייסים נושאים את האורית (התורה בגעז). בישראל עולים אל טיילת ארמון הנציב בירושלים, מול העיר העתיקה. הצום נמשך מהבוקר ועד לסיום התפילות בצהריים — לא יממה שלמה — וילדים, נשים בהיריון וחולים פטורים ממנו, כמקובל.
 
@@ -72,7 +72,7 @@ export const SIGD_MENU_GUIDE: SigdMenuGuide = {
 **מקורות**: [חוק יום הסיגד, 2008 — הכנסת](https://main.knesset.gov.il/); [הלמ"ס — לקט נתונים לקראת חג הסיגד](https://www.cbs.gov.il/); [ynet — מאכלי חג הסיגד](https://www.ynet.co.il/articles/0,7340,L-5623579,00.html).`,
     en: `## Why fast on Sigd at all?
 
-Sigd — falling on **19 November 2026** (29 Cheshvan 5787) — is a day of renewing the covenant between the people and God, modelled on the Return-to-Zion assembly in the books of Ezra and Nehemiah: the people gather, hear the Torah, confess and recommit. The fast is the religious heart of the holiday: as on Yom Kippur, abstaining from food expresses repentance, purification and longing for Jerusalem.
+Sigd — falling on **9 November 2026** (29 Cheshvan 5787) — is a day of renewing the covenant between the people and God, modelled on the Return-to-Zion assembly in the books of Ezra and Nehemiah: the people gather, hear the Torah, confess and recommit. The fast is the religious heart of the holiday: as on Yom Kippur, abstaining from food expresses repentance, purification and longing for Jerusalem.
 
 In Ethiopia, community members would ascend a high mountain while fasting — a remembrance of Mount Sinai — with the Kessim carrying the Orit (the Torah in Ge'ez). In Israel, the ascent is to the Armon Hanatziv promenade in Jerusalem, facing the Old City. The fast runs from morning until prayers end at midday — not a full day — and children, pregnant women and the ill are exempt, as is customary.
 
@@ -111,7 +111,7 @@ The Sigd fast is relatively short, but anyone on regular medication — for diab
 **Sources**: [The Sigd Day Law, 2008 — the Knesset](https://main.knesset.gov.il/); [CBS — annual Sigd data digest](https://www.cbs.gov.il/); [ynet — Sigd holiday dishes](https://www.ynet.co.il/articles/0,7340,L-5623579,00.html).`,
     am: `## በሰግድ ለምን ይጾማል?
 
-ሰግድ — **ህዳር 19፣ 2026** (29 ኅዳር 5787) የሚውለው — በሕዝቡና በእግዚአብሔር መካከል ያለው ቃል ኪዳን የሚታደስበት ቀን ነው፣ በዕዝራና በነህምያ መጻሕፍት የጽዮን መመለስ ስብሰባ ሞዴል። ጾሙ የበዓሉ ሃይማኖታዊ ልብ ነው፡ እንደ ዮም ኪፑር፣ ከምግብ መከልከል ንስሐን፣ መንጻትንና ወደ ኢየሩሳሌም መናፈቅን ይገልጻል።
+ሰግድ — **ህዳር 9፣ 2026** (29 ኅዳር 5787) የሚውለው — በሕዝቡና በእግዚአብሔር መካከል ያለው ቃል ኪዳን የሚታደስበት ቀን ነው፣ በዕዝራና በነህምያ መጻሕፍት የጽዮን መመለስ ስብሰባ ሞዴል። ጾሙ የበዓሉ ሃይማኖታዊ ልብ ነው፡ እንደ ዮም ኪፑር፣ ከምግብ መከልከል ንስሐን፣ መንጻትንና ወደ ኢየሩሳሌም መናፈቅን ይገልጻል።
 
 በኢትዮጵያ የማህበረሰቡ አባላት እየጾሙ ወደ ከፍተኛ ተራራ ይወጡ ነበር — የሲና ተራራ መታሰቢያ — ቄሶቹ ኦሪትን ተሸክመው። በእስራኤል ወደ ኢየሩሳሌም አርሞን ሃናጺቭ መመልከቻ ይወጣል። ጾሙ ከጠዋት እስከ ቀትር ጸሎቶች መጨረሻ ይቆያል — ሙሉ ቀን አይደለም — ልጆች፣ እርጉዞችና ህሙማን ነጻ ናቸው።
 

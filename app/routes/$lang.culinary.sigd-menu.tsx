@@ -1,5 +1,5 @@
 // /:lang/culinary/sigd-menu — the Sigd fast + break-fast menu guide
-// (TED-146). Timed for Sigd 2026 (19.11.2026); cross-links the existing
+// (TED-146). Timed for Sigd 5787 (9.11.2026); cross-links the existing
 // Sigd heritage event pages (hub + city cells).
 //
 // Schema.org: Article + BreadcrumbList.
