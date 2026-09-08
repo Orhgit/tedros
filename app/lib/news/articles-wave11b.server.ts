@@ -1316,4 +1316,234 @@ The publication contains no chapter on wages or employment. For anyone looking f
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "knesset-mmm-wage-gap-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["employment"],
+    title: {
+      he: 'מסמך הכנסת: פער של ₪5,800 בשכר החודשי — 43.6% — בין שכירים יוצאי אתיופיה לשאר השכירים היהודים באותם ענפים',
+      en: "Knesset document: a ₪5,800 monthly wage gap — 43.6% — between Ethiopian-Israeli employees and other Jewish employees in the same industries",
+      am: "የክኔሴት ሰነድ፦ በተመሳሳይ ዘርፎች በኢትዮጵያ-እስራኤላውያንና በሌሎች አይሁድ ሠራተኞች መካከል የ₪5,800 ወርሃዊ ደመወዝ ክፍተት — 43.6%",
+    },
+    excerpt: {
+      he: 'סקירה כלכלית של מרכז המחקר והמידע של הכנסת מ-10.8.2025 מציגה תמונה כפולה: שיעור התעסוקה של יוצאי אתיופיה גבוה יחסית לשיעורם באוכלוסייה בגיל העבודה — 3.4% ממשרות השכיר של יהודים מול 2.8% מהאוכלוסייה — והשכר הממוצע נמוך ב-43.6%. הפערים הגדולים ביותר דווקא בענפים המשתכרים ביותר.',
+      en: "An economic review by the Knesset Research and Information Center dated 10.8.2025 presents a double picture: the employment rate among Ethiopian-Israelis is high relative to their share of the working-age population — 3.4% of Jewish salaried jobs against 2.8% of the population — while the average wage is 43.6% lower. The largest gaps are precisely in the highest-paying industries.",
+      am: "የክኔሴት የምርምርና መረጃ ማዕከል በ10.8.2025 ያወጣው የኢኮኖሚ ቅኝት ድርብ ምስል ያሳያል፦ የኢትዮጵያ-እስራኤላውያን የሥራ ስምሪት መጠን በሥራ ዕድሜ ካለው ሕዝብ ድርሻ አንጻር ከፍ ያለ ነው — ከአይሁድ የደመወዝ ሥራዎች 3.4% ከሕዝቡ 2.8% ጋር — አማካይ ደመወዙ ግን በ43.6% ያንሳል። ትልቁ ክፍተትም ልክ በከፍተኛ ደመወዝ በሚከፍሉ ዘርፎች ነው።",
+    },
+    bodies: {
+      he: `## המסמך
+
+**"נתונים על יוצאי אתיופיה וסקירת תכניות סיוע בדיור"** — סקירה כלכלית של מרכז המחקר והמידע של הכנסת, **מיום 10 באוגוסט 2025**. כתיבה: בת חן רוטנברג, כלכלנית. אישור: עמי צדיק, מנהל המחלקה לפיקוח תקציבי. המסמך נכתב לבקשת חבר הכנסת אלי דלל לקראת אירוע שדולה.
+
+הפרק על התעסוקה והשכר מבוסס על עיבודים לנתוני הלמ"ס לשנת **2021**. זה תאריך הנתונים, ויש לקרוא אותו יחד עם התוצאה.
+
+## הממצא המרכזי
+
+> **"בשנת 2021 השכר הממוצע של שכירים יוצאי אתיופיה בכלל הענפים היה נמוך ב-5,800 ש"ח משכרם הממוצע של שאר השכירים היהודים באותם ענפים, פער של 43.6%."**
+
+מקור: [מרכז המחקר והמידע של הכנסת, 10.8.2025 (PDF)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) · נבדק ספטמבר 2026.
+
+שימו לב לניסוח: **"באותם ענפים"**. זה לא פער שנוצר מכך שהשוואנו מלצר למתכנת. זו השוואה בתוך אותו ענף כלכלי.
+
+## התמונה הכפולה
+
+המסקנה שהמסמך עצמו מנסח בסופו:
+
+> "הנתונים שהוצגו לעיל מעלים כי שיעור התעסוקה של יוצאי אתיופיה גבוה יחסית לשיעורם באוכלוסייה בגיל העבודה והשכר הממוצע שלהם נמוך יחסית."
+
+בפירוט:
+
+- בשנת 2021 מספר משרות השכיר של יוצאי אתיופיה היה **כ-72 אלף**.
+- משקלן מסך משרות השכיר של יהודים: **3.4%** — **גבוה** ממשקל יוצאי אתיופיה מסך היהודים בגילי 18–64, שהוא 2.8%.
+
+כלומר: **עובדים**. שיעור ההשתתפות אינו הבעיה. השכר הוא.
+
+## איפה יושבים העובדים
+
+המסמך מוצא **מתאם שלילי בין השכר הממוצע בענף לבין משקל משרות השכיר של יוצאי אתיופיה בענף** — ככל שהענף משתכר יותר, כך נמצאים בו פחות.
+
+| | יוצאי אתיופיה | יתר היהודים |
+| --- | --- | --- |
+| משרות בענפים ששכרם הממוצע **נמוך** מהממוצע במשק | **74%** | 66% |
+| משרות בענפים ששכרם הממוצע **גבוה** מהממוצע במשק | **26%** | 34% |
+
+## הפער הכי גדול נמצא במקום שהכי משתלם
+
+זו השורה החשובה במסמך, והיא נגד האינטואיציה:
+
+> "בענפים שבהם השכר הממוצע הוא הגבוה ביותר, פערי השכר (במונחים נומינליים ובאחוזים) בין יוצאי אתיופיה לשאר היהודים הם הגבוהים ביותר — מידע ותקשורת, אספקת חשמל, שירותים פיננסיים, שירותים מקצועיים, תעשייה וכרייה ופעילות נדל"ן; בענפים שבהם השכר הממוצע הוא הנמוך ביותר, פערי השכר הם הנמוכים ביותר — שירותי אוכל ושירותים אחרים."
+
+במילים אחרות: **להיכנס לענף המשתכר אינו סוף הסיפור.** בענפים שבהם השכר הגבוה ביותר, הפער בתוך הענף הוא הגדול ביותר. זה מצביע על מה שקורה אחרי הכניסה — התפקיד, הוותק, מסלול הקידום — ולא רק על מי מתקבל.
+
+זו גם הסיבה שמדדי הצלחה שסופרים רק כניסות אינם מספיקים. [דוח התוכנית הממשלתית](/he/news/government-program-employment-results-2026) מודד גם את תוספת השכר בפועל של בוגרי התוכניות, וזה המדד הנכון יותר.
+
+## הסתייגויות שהמסמך עצמו רושם — וצריך לקרוא אותן
+
+בהערות השוליים:
+
+- הנתונים מתייחסים **למספר משרות ולא למספר מועסקים**. חלק מהמשרות חלקיות, ואדם אחד עשוי להחזיק יותר ממשרה אחת.
+- לכן **השוואת נתוני הייצוג בתעסוקה לנתוני הייצוג באוכלוסייה** (שמחושבים במונחי אנשים) "אינה מדויקת לגמרי והיא מובאת לצורך קבלת אומדן".
+- הנתונים כוללים **רק גופים המעסיקים חמישה עובדים או יותר**.
+
+לא ציטטנו את המסמך כדי לקבוע שהפער הוא בדיוק 43.6% בכל חתך. ציטטנו אותו כי זו האמידה הרשמית העדכנית ביותר שמצאנו, והיא נכתבה עבור הכנסת.
+
+## מה זה אומר לקורא
+
+אם אתם בתחילת דרך תעסוקתית, שתי מסקנות מעשיות עולות מהנתונים האלה:
+
+1. **הענף שבוחרים משנה** — 74% מהמשרות נמצאות בענפים ששכרם מתחת לממוצע.
+2. **בתוך הענף, התפקיד משנה לא פחות** — הפער הגדול ביותר הוא דווקא בענפים החזקים.
+
+לתוכניות הכשרה, ליווי והשמה שפועלות בדיוק על שתי הנקודות האלה — [מרכז הקריירה שלנו](/he/careers).
+
+## מקורות
+
+- [נתונים על יוצאי אתיופיה וסקירת תכניות סיוע בדיור — מרכז המחקר והמידע של הכנסת, 10.8.2025 (PDF)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) — נקרא במלואו 8.9.2026
+- [נתוני הלמ"ס על החינוך וההשכלה — הכתבה שלנו](/he/news/cbs-education-data-ethiopian-israelis-2026)
+- [מרכז הקריירה — טדרוס](/he/careers)`,
+      en: `## The document
+
+**"Data on Ethiopian-Israelis and a review of housing assistance programmes"** — an economic review by the Knesset Research and Information Center, **dated August 10, 2025**. Written by Bat Chen Rotenberg, economist. Approved by Ami Tzadik, head of the budgetary oversight department. The document was written at the request of MK Eli Dallal ahead of a lobby event.
+
+The employment and wages chapter is based on processing of CBS data for **2021**. That is the date of the data, and it should be read together with the finding.
+
+## The central finding
+
+> **"In 2021 the average wage of Ethiopian-Israeli salaried employees across all industries was ₪5,800 lower than the average wage of other Jewish employees in those same industries, a gap of 43.6%."**
+
+Source: [Knesset Research and Information Center, 10.8.2025 (PDF)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) · verified September 2026.
+
+Note the phrasing: **"in those same industries."** This is not a gap produced by comparing a waiter with a programmer. It is a comparison within the same economic industry.
+
+## The double picture
+
+The conclusion the document itself sets out at the end:
+
+> "The data presented above indicate that the employment rate of Ethiopian-Israelis is high relative to their share of the working-age population, and that their average wage is relatively low."
+
+In detail:
+
+- In 2021 the number of salaried jobs held by Ethiopian-Israelis was **about 72,000**.
+- Their weight in all Jewish salaried jobs: **3.4%** — **higher** than the Ethiopian-Israeli share of Jews aged 18–64, which is 2.8%.
+
+In other words: **people are working.** The participation rate is not the problem. The wage is.
+
+## Where those workers sit
+
+The document finds **a negative correlation between the average wage in an industry and the weight of Ethiopian-Israeli salaried jobs in it** — the better an industry pays, the fewer of them are in it.
+
+| | Ethiopian-Israelis | Other Jews |
+| --- | --- | --- |
+| Jobs in industries whose average wage is **below** the national average | **74%** | 66% |
+| Jobs in industries whose average wage is **above** the national average | **26%** | 34% |
+
+## The biggest gap sits where the pay is best
+
+This is the important line in the document, and it runs against intuition:
+
+> "In the industries where the average wage is highest, the wage gaps (in nominal terms and in percentages) between Ethiopian-Israelis and other Jews are the largest — information and communications, electricity supply, financial services, professional services, manufacturing and mining, and real-estate activity; in the industries where the average wage is lowest, the wage gaps are the smallest — food services and other services."
+
+In other words: **getting into a well-paying industry is not the end of the story.** In the industries with the highest pay, the within-industry gap is the widest. That points at what happens after entry — the role, the seniority, the promotion track — and not only at who gets hired.
+
+It is also why success measures that count only entries are not enough. [The government programme's report](/en/news/government-program-employment-results-2026) also measures the actual wage increase of programme graduates, which is the sounder measure.
+
+## Caveats the document itself records — and they should be read
+
+In the footnotes:
+
+- The data refer to **the number of jobs, not the number of employed people**. Some jobs are part-time, and one person may hold more than one.
+- Therefore **comparing employment representation figures with population representation figures** (which are calculated in terms of people) "is not entirely accurate and is presented in order to obtain an estimate."
+- The data cover **only bodies employing five or more employees**.
+
+We did not quote the document in order to establish that the gap is exactly 43.6% in every cut. We quoted it because it is the most recent official estimate we found, and it was written for the Knesset.
+
+## What this means for a reader
+
+If you are at the start of a working life, two practical conclusions follow from these figures:
+
+1. **The industry you choose matters** — 74% of the jobs sit in industries paying below the average.
+2. **Within the industry, the role matters no less** — the largest gap is precisely in the strongest industries.
+
+For training, mentoring and placement programmes that work on exactly these two points — [our careers centre](/en/careers).
+
+## Sources
+
+- [Data on Ethiopian-Israelis and a review of housing assistance programmes — Knesset Research and Information Center, 10.8.2025 (PDF)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) — read in full 8.9.2026
+- [The CBS education and schooling data — our article](/en/news/cbs-education-data-ethiopian-israelis-2026)
+- [Careers centre — Tedros](/en/careers)`,
+      am: `## ሰነዱ
+
+**«ስለ ኢትዮጵያ-እስራኤላውያን መረጃና የመኖሪያ ቤት ድጋፍ ፕሮግራሞች ቅኝት»** — የክኔሴት የምርምርና መረጃ ማዕከል የኢኮኖሚ ቅኝት፣ **በኦገስት 10, 2025 የተጻፈ**። ጸሐፊ፦ ባት ሔን ሮተንበርግ፣ ኢኮኖሚስት። አጽዳቂ፦ አሚ ጻዲቅ፣ የበጀት ቁጥጥር ክፍል ኃላፊ። ሰነዱ የተጻፈው በክኔሴት አባል ኤሊ ዳላል ጥያቄ መሠረት ለአንድ የሎቢ ዝግጅት ነው።
+
+የሥራ ስምሪትና የደመወዝ ምዕራፉ የተመሠረተው በ**2021** የCBS መረጃ ማቀናበሪያ ላይ ነው። ይህ የመረጃው ቀን ነው፣ ከውጤቱ ጋር አብሮ መነበብ አለበት።
+
+## ዋናው ግኝት
+
+> **«በ2021 በሁሉም ዘርፎች የኢትዮጵያ-እስራኤላውያን የደመወዝ ሠራተኞች አማካይ ደመወዝ በእነዚያው ዘርፎች ካሉ ሌሎች አይሁድ ሠራተኞች አማካይ ደመወዝ በ5,800 ሸቀል ያንስ ነበር፣ የ43.6% ክፍተት።»**
+
+ምንጭ፦ [የክኔሴት የምርምርና መረጃ ማዕከል፣ 10.8.2025 (PDF)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) · በሴፕቴምበር 2026 ተረጋግጧል።
+
+አገላለጹን ልብ ይበሉ፦ **«በእነዚያው ዘርፎች»**። ይህ አስተናጋጅን ከፕሮግራመር በማወዳደር የተፈጠረ ክፍተት አይደለም። በአንድ ዓይነት የኢኮኖሚ ዘርፍ ውስጥ ያለ ንጽጽር ነው።
+
+## ድርብ ምስሉ
+
+ሰነዱ ራሱ በመጨረሻ የሚያስቀምጠው መደምደሚያ፦
+
+> «ከላይ የቀረበው መረጃ የኢትዮጵያ-እስራኤላውያን የሥራ ስምሪት መጠን በሥራ ዕድሜ ካለው ሕዝብ ድርሻ አንጻር ከፍ ያለ መሆኑን፣ አማካይ ደመወዛቸው ግን በአንጻራዊ ሁኔታ ዝቅተኛ መሆኑን ያሳያል።»
+
+በዝርዝር፦
+
+- በ2021 በኢትዮጵያ-እስራኤላውያን የተያዙ የደመወዝ ሥራዎች ብዛት **72 ሺህ ገደማ** ነበር።
+- ከአይሁድ የደመወዝ ሥራዎች ሁሉ ያላቸው ክብደት፦ **3.4%** — በ18–64 ዕድሜ ካሉ አይሁዶች ካላቸው 2.8% ድርሻ **ከፍ ያለ**።
+
+በሌላ አነጋገር፦ **ሰዎች እየሠሩ ነው።** የተሳትፎ መጠኑ ችግሩ አይደለም። ደመወዙ ነው።
+
+## እነዚያ ሠራተኞች የት ተቀምጠዋል
+
+ሰነዱ **በዘርፉ አማካይ ደመወዝና በዘርፉ ውስጥ ባለው የኢትዮጵያ-እስራኤላውያን የሥራ ድርሻ መካከል አሉታዊ ተዛምዶ** አግኝቷል — ዘርፉ በተሻለ በከፈለ ቁጥር፣ በውስጡ ያሉት ያንሳሉ።
+
+| | ኢትዮጵያ-እስራኤላውያን | ሌሎች አይሁዶች |
+| --- | --- | --- |
+| አማካይ ደመወዛቸው ከአገራዊ አማካይ **በታች** በሆኑ ዘርፎች ያሉ ሥራዎች | **74%** | 66% |
+| አማካይ ደመወዛቸው ከአገራዊ አማካይ **በላይ** በሆኑ ዘርፎች ያሉ ሥራዎች | **26%** | 34% |
+
+## ትልቁ ክፍተት ክፍያው በተሻለበት ቦታ ነው
+
+በሰነዱ ውስጥ ጠቃሚው መስመር ይህ ነው፣ ከግምት ተቃራኒም ነው፦
+
+> «አማካይ ደመወዝ ከፍተኛ በሆነባቸው ዘርፎች በኢትዮጵያ-እስራኤላውያንና በሌሎች አይሁዶች መካከል ያለው የደመወዝ ክፍተት (በስም ዋጋም በመቶኛም) ትልቁ ነው — መረጃና ኮሙኒኬሽን፣ የኤሌክትሪክ አቅርቦት፣ የፋይናንስ አገልግሎቶች፣ የሙያ አገልግሎቶች፣ ማምረቻና ማዕድን፣ የሪል እስቴት እንቅስቃሴ፤ አማካይ ደመወዝ ዝቅተኛ በሆነባቸው ዘርፎች የደመወዝ ክፍተቶቹ ትንሹ ናቸው — የምግብ አገልግሎቶችና ሌሎች አገልግሎቶች።»
+
+በሌላ አነጋገር፦ **ጥሩ ወደሚከፍል ዘርፍ መግባት የታሪኩ መጨረሻ አይደለም።** ከፍተኛ ክፍያ ባላቸው ዘርፎች በዘርፉ ውስጥ ያለው ክፍተት ሰፊው ነው። ይህ ከገቡ በኋላ የሚሆነውን — የሥራ ድርሻውን፣ የአገልግሎት ዘመኑን፣ የዕድገት መስመሩን — ያመለክታል እንጂ ማን እንደሚቀጠር ብቻ አይደለም።
+
+ስለዚህም መግቢያዎችን ብቻ የሚቆጥሩ የስኬት መለኪያዎች በቂ አይደሉም። [የመንግሥት ፕሮግራሙ ሪፖርት](/am/news/government-program-employment-results-2026) የፕሮግራም ተመራቂዎችን ተጨባጭ የደመወዝ ጭማሪም ይለካል፤ ይህም የተሻለ ትክክለኛ መለኪያ ነው።
+
+## ሰነዱ ራሱ የሚመዘግባቸው ማስጠንቀቂያዎች — መነበብ ያለባቸው
+
+በግርጌ ማስታወሻዎቹ፦
+
+- መረጃው **የሥራ ብዛትን እንጂ የተቀጣሪዎችን ብዛት** አይመለከትም። አንዳንድ ሥራዎች የትርፍ ሰዓት ናቸው፣ አንድ ሰውም ከአንድ በላይ ሥራ ሊይዝ ይችላል።
+- ስለዚህ **የሥራ ስምሪት ውክልና መረጃን ከሕዝብ ውክልና መረጃ ጋር ማወዳደር** (በሰዎች ብዛት የሚሰላ) «ሙሉ በሙሉ ትክክለኛ አይደለም፣ የሚቀርበውም ግምት ለማግኘት ነው»።
+- መረጃው **አምስትና ከዚያ በላይ ሠራተኞችን የሚቀጥሩ አካላትን ብቻ** ያካትታል።
+
+ሰነዱን የጠቀስነው ክፍተቱ በሁሉም ክፍፍል በትክክል 43.6% ነው ለማለት አይደለም። የጠቀስነው ያገኘነው በጣም ወቅታዊ ኦፊሴላዊ ግምት ስለሆነና ለክኔሴት ስለተጻፈ ነው።
+
+## ለአንባቢው ምን ማለት ነው
+
+የሥራ ሕይወት መጀመሪያ ላይ ከሆኑ፣ ከእነዚህ አኃዞች ሁለት ተግባራዊ መደምደሚያዎች ይወጣሉ፦
+
+1. **የሚመርጡት ዘርፍ ወሳኝ ነው** — 74% የሚሆኑት ሥራዎች ከአማካይ በታች በሚከፍሉ ዘርፎች ውስጥ ናቸው።
+2. **በዘርፉ ውስጥም የሥራ ድርሻው ከዚያ ያነሰ ወሳኝ አይደለም** — ትልቁ ክፍተት ልክ በጠንካራዎቹ ዘርፎች ነው።
+
+በእነዚህ ሁለት ነጥቦች ላይ በትክክል ለሚሠሩ የሥልጠና፣ የአጃቢነትና የምደባ ፕሮግራሞች — [የሥራ ማዕከላችን](/am/careers)።
+
+## ምንጮች
+
+- [ስለ ኢትዮጵያ-እስራኤላውያን መረጃና የመኖሪያ ቤት ድጋፍ ፕሮግራሞች ቅኝት — የክኔሴት የምርምርና መረጃ ማዕከል፣ 10.8.2025 (PDF)](https://fs.knesset.gov.il/globaldocs/MMM/e9906a60-7f76-f011-a863-005056aa9911/2_e9906a60-7f76-f011-a863-005056aa9911_11_21096.pdf) — ሙሉ በሙሉ የተነበበ 8.9.2026
+- [የCBS የትምህርት መረጃ — ጽሑፋችን](/am/news/cbs-education-data-ethiopian-israelis-2026)
+- [የሥራ ማዕከል — ትድሮስ](/am/careers)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
