@@ -683,4 +683,149 @@ The civil dates come from Hebcal's holiday calendar. The description of the litu
 - [ራቢ ዶ/ር ሻሮን ሻሎም፣ ሻሎም ሃርትማን ተቋም፣ ኅዳር 5፣ 2024](https://heb.hartman.org.il/bete_israel_litrugy/)`,
     },
   },
+
+  // 5 — TAMA 38 expiry ------------------------------------------------------
+  {
+    slug: "tama-38-expired-what-replaces-it-in-our-cities",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["housing", "cities"],
+    title: {
+      he: 'תמ"א 38 פקעה ב-18 במאי. בערים שלנו — מי כבר החליף אותה ומי עוד לא',
+      en: "TAMA 38 expired on 18 May. In our cities — who already has a replacement and who does not",
+      am: "ታማ 38 ግንቦት 18 አበቃ። በከተሞቻችን — ማን ተኪ አለው ማን የለውም",
+    },
+    excerpt: {
+      he: 'התוכנית הארצית לחיזוק מבנים פקעה סופית ב-18.5.2026, ואי אפשר עוד להגיש בקשות להיתר מכוחה. במקומה — תוכניות עירוניות. ברמלה, ביבנה, בפתח תקווה ובבאר שבע כבר יש תוכנית מאושרת; בראשון לציון, באשקלון, בבית שמש ובחיפה עדיין לא. פינוי-בינוי הוא מסלול נפרד ולא הושפע.',
+      en: "The national plan for structural reinforcement expired for good on 18 May 2026, and permit applications can no longer be filed under it. Municipal plans replace it. Ramla, Yavne, Petah Tikva and Beersheba already have an approved plan; Rishon LeZion, Ashkelon, Beit Shemesh and Haifa do not. Pinui-binui is a separate track and is unaffected.",
+      am: "የሕንፃ ማጠናከሪያ ብሔራዊ ዕቅድ ግንቦት 18፣ 2026 በመጨረሻ አበቃ። በምትኩ የከተማ ዕቅዶች መጡ። ራምላ፣ ያቭኔ፣ ፔታሕ ቲቅቫና ቤርሼቫ የጸደቀ ዕቅድ አላቸው፤ ሪሾን ለጽዮን፣ አሽቀሎን፣ ቤት ሼመሽና ሐይፋ የላቸውም።",
+    },
+    bodies: {
+      he: `## מה קרה
+
+**תמ"א 38 — התוכנית הארצית לחיזוק מבנים מפני רעידות אדמה — פקעה סופית ב-18 במאי 2026.** מאותו יום אי אפשר להגיש בקשות חדשות להיתר בנייה מכוחה בשום מקום בארץ.
+
+זה לא היה פתאומי. המועצה הארצית לתכנון ובנייה אישרה את ביטול התוכנית באפריל 2024, וב-31 ביולי 2024 היא פקעה עבור רוב הרשויות. חמש-עשרה רשויות שהגישו למוסדות התכנון תוכנית "התחדשות בניינית" מחליפה קיבלו הארכה — עד מאי 2026, או עד אישור התוכנית החדשה, המוקדם מביניהם. ההארכה הזאת נגמרה עכשיו.
+
+## מה בא במקום
+
+שני מסלולים:
+
+1. **תוכניות התחדשות בניינית עירוניות** — כל עיר מגבשת תוכנית משלה, מותאמת לתשתיות, למרקם ולאופי הבנייה שלה, במקום תוכנית ארצית אחת גורפת.
+2. **"חלופת שקד"** — מסלול מקביל שמאפשר להוציא היתרים בזמן שהתוכניות עדיין בהליך אישור.
+
+## איפה זה עומד בערים שבהן קהילה גדולה
+
+לפי סקירה של נמרוד בוסו במרכז הנדל"ן מ-10 ביוני 2026, זה המצב:
+
+**תוכנית מחליפה כבר אושרה** — [רמלה](/he/cities/ramla), [יבנה](/he/cities/yavne), רעננה, חדרה, כפר סבא, [פתח תקווה](/he/cities/petach-tikva), [באר שבע](/he/cities/beer-sheva), גבעתיים.
+
+**התוכנית עדיין בהליך** — תל אביב, ירושלים, [חיפה](/he/cities/haifa), רמת גן, [ראשון לציון](/he/cities/rishon-lezion), [בית שמש](/he/cities/beit-shemesh), [אשקלון](/he/cities/ashkelon) ואחרות.
+
+שלוש ערים בחרו כבר ב-2024 לא לבקש הארכה כלל: [לוד](/he/cities/lod), [בת ים](/he/cities/bat-yam) ובני ברק. תל אביב-יפו הודיעה שלא תקדם תוכנית מחליפה, ותסתמך על חלופת שקד ועל תוכניות התחדשות מחוזיות.
+
+בוסו מצטט את ראש אגף התכנון ברשות להתחדשות עירונית: "בשנת 2022 כשהתחלנו לעבוד על התוכניות, לא חשבנו שארבע שנים מאוחר יותר חלק ניכר מהן עדיין לא תהיינה בתוקף". לפי אותה סקירה, עד מועד הפרסום טרם הוצא ולו היתר בנייה אחד במסלול חלופת שקד.
+
+## מה זה אומר לכם
+
+- **אם יש לכם כבר היתר בנייה תקף מכוח תמ"א 38** — הפרויקט ממשיך. הפקיעה נוגעת להגשת בקשות חדשות.
+- **אם הבניין שלכם באמצע מו"מ עם יזם על תמ"א 38** — בדקו מול הוועדה המקומית באיזה מסלול הפרויקט יכול להתקדם עכשיו. בערים שבהן אין עדיין תוכנית מאושרת, ייתכן עיכוב ממשי.
+- **אם אתם בפינוי-בינוי** — זה מסלול חוקי אחר לגמרי. פקיעת תמ"א 38 לא נוגעת אליו.
+
+**אזהרה מעשית**: זה בדיוק סוג המצב שבו מגיעים ל-ווטסאפ של דיירים "מסרים" עם חצי מידע. אל תחתמו על מסמך מול יזם על סמך מה שנאמר בעל פה על מצב תכנוני. בקשו את מספר התוכנית ובדקו אותו מול הוועדה המקומית או באתר מינהל התכנון.
+
+## קראו גם
+
+- [התחדשות עירונית — כל השכונות](/he/urban-renewal)
+- [ערים — כל דפי הערים](/he/cities)
+- [דיור — נתוני הקהילה](/he/statistics/housing)
+
+## מקורות
+
+- [נמרוד בוסו, "וואקום מסוכן: תמ"א 38 פקעה סופית, וברוב הערים אין לה מחליפה", מרכז הנדל"ן, 10.6.2026](https://www.nadlancenter.co.il/article/14694)
+- [הילה ציון, "הסוף לתמ"א 38: מה יחליף אותה ואיפה היא בכל זאת תימשך? הרשימה המלאה", ynet, 31.7.2024](https://www.ynet.co.il/economy/article/rjbuacikr)`,
+      en: `## What happened
+
+**TAMA 38 — the national outline plan for reinforcing buildings against earthquakes — expired for good on 18 May 2026.** From that day, no new building-permit application can be filed under it anywhere in the country.
+
+This was not sudden. The National Planning and Building Council approved discontinuing the plan in April 2024, and on 31 July 2024 it lapsed for most authorities. Fifteen authorities that had filed a replacement "building renewal" plan with the planning institutions received an extension — until May 2026, or until their new plan was approved, whichever came first. That extension has now run out.
+
+## What replaces it
+
+Two tracks:
+
+1. **Municipal building-renewal plans** — each city drafts its own plan, fitted to its infrastructure, urban fabric and building character, instead of one sweeping national plan.
+2. **The "Shaked alternative"** — a parallel track that allows permits to be issued while the plans are still in approval.
+
+## Where this stands in cities with a large community
+
+Per a review by Nimrod Buso at Nadlan Center published 10 June 2026:
+
+**Replacement plan already approved** — [Ramla](/en/cities/ramla), [Yavne](/en/cities/yavne), Ra'anana, Hadera, Kfar Saba, [Petah Tikva](/en/cities/petach-tikva), [Beersheba](/en/cities/beer-sheva), Givatayim.
+
+**Plan still in process** — Tel Aviv, Jerusalem, [Haifa](/en/cities/haifa), Ramat Gan, [Rishon LeZion](/en/cities/rishon-lezion), [Beit Shemesh](/en/cities/beit-shemesh), [Ashkelon](/en/cities/ashkelon) and others.
+
+Three cities chose back in 2024 not to seek an extension at all: [Lod](/en/cities/lod), [Bat Yam](/en/cities/bat-yam) and Bnei Brak. Tel Aviv-Yafo announced it would not promote a replacement plan, relying instead on the Shaked amendment and district renewal plans.
+
+Buso quotes the head of planning at the Urban Renewal Authority: "In 2022, when we started working on the plans, we did not think that four years later a substantial part of them would still not be in force." Per the same review, not a single building permit had yet been issued under the Shaked alternative as of publication.
+
+## What this means for you
+
+- **If you already hold a valid TAMA 38 building permit** — your project continues. The expiry concerns new applications.
+- **If your building is mid-negotiation with a developer over TAMA 38** — check with the local planning committee which track the project can now advance under. In cities with no approved plan yet, expect real delay.
+- **If you are in a pinui-binui project** — that is an entirely separate legal track. The TAMA 38 expiry does not touch it.
+
+**A practical warning**: this is exactly the kind of moment when half-information circulates in residents' WhatsApp groups. Do not sign anything with a developer on the strength of what someone said about the planning situation. Ask for the plan number and check it with the local committee or on the Planning Administration site.
+
+## Read also
+
+- [Urban renewal — all neighbourhoods](/en/urban-renewal)
+- [Cities — all city pages](/en/cities)
+- [Housing — community data](/en/statistics/housing)
+
+## Sources
+
+- [Nimrod Buso, "A dangerous vacuum: TAMA 38 has finally expired, and most cities have no replacement", Nadlan Center, 10 June 2026](https://www.nadlancenter.co.il/article/14694)
+- [Hila Tzion, "The end of TAMA 38: what will replace it and where it will nonetheless continue — the full list", ynet, 31 July 2024](https://www.ynet.co.il/economy/article/rjbuacikr)`,
+      am: `## ምን ሆነ
+
+**ታማ 38 — ሕንፃዎችን ከመሬት መንቀጥቀጥ ለማጠናከር የወጣው ብሔራዊ ዕቅድ — ግንቦት 18፣ 2026 በመጨረሻ አበቃ።** ከዚያ ቀን ጀምሮ በእሱ ሥር አዲስ የግንባታ ፈቃድ ማመልከቻ ማቅረብ አይቻልም።
+
+## በምትኩ ምን መጣ
+
+ሁለት መንገዶች፦
+
+1. **የከተማ የሕንፃ ማደሻ ዕቅዶች** — እያንዳንዷ ከተማ የራሷን ዕቅድ ታዘጋጃለች።
+2. **«የሻቀድ አማራጭ»** — ዕቅዶቹ በማጽደቅ ሂደት ላይ እያሉ ፈቃድ እንዲሰጥ የሚያስችል ትይዩ መንገድ።
+
+## ትልቅ ማህበረሰብ ባለባቸው ከተሞች ያለው ሁኔታ
+
+በንምሮድ ቡሶ (ናድላን ሴንተር፣ ሰኔ 10፣ 2026) ዘገባ መሠረት፦
+
+**ተኪ ዕቅድ የጸደቀላቸው** — [ራምላ](/am/cities/ramla)፣ [ያቭኔ](/am/cities/yavne)፣ ራአናና፣ ሐዴራ፣ ክፋር ሳባ፣ [ፔታሕ ቲቅቫ](/am/cities/petach-tikva)፣ [ቤርሼቫ](/am/cities/beer-sheva)፣ ጊቫታይም።
+
+**ዕቅዱ ገና በሂደት ላይ ያለ** — ቴል አቪቭ፣ ኢየሩሳሌም፣ [ሐይፋ](/am/cities/haifa)፣ ራማት ጋን፣ [ሪሾን ለጽዮን](/am/cities/rishon-lezion)፣ [ቤት ሼመሽ](/am/cities/beit-shemesh)፣ [አሽቀሎን](/am/cities/ashkelon)።
+
+[ሎድ](/am/cities/lod)፣ [ባት ያም](/am/cities/bat-yam) እና ብኔ ብራቅ በ2024 ማራዘሚያ ላለመጠየቅ መርጠዋል።
+
+## ለእርስዎ ምን ማለት ነው
+
+- **ቀድሞ የጸና የታማ 38 ፈቃድ ካለዎት** — ፕሮጀክቱ ይቀጥላል።
+- **ሕንፃዎ ከአልሚ ጋር በድርድር ላይ ከሆነ** — በየትኛው መንገድ መቀጠል እንደሚቻል ከአካባቢው ኮሚቴ ያረጋግጡ።
+- **በፒኑይ-ቢኑይ ውስጥ ከሆኑ** — ይህ ፍጹም የተለየ የሕግ መንገድ ነው፣ አልተነካም።
+
+**ተግባራዊ ማስጠንቀቂያ**፦ በቃል በተባለ የዕቅድ ሁኔታ ላይ ተመስርተው ከአልሚ ጋር ሰነድ አይፈርሙ። የዕቅዱን ቁጥር ጠይቀው ከአካባቢው ኮሚቴ ያረጋግጡ።
+
+## ተጨማሪ ያንብቡ
+
+- [የከተማ ማደስ](/am/urban-renewal)
+- [ከተሞች](/am/cities)
+- [መኖሪያ ቤት — መረጃ](/am/statistics/housing)
+
+## ምንጮች
+
+- [ንምሮድ ቡሶ፣ ናድላን ሴንተር፣ ሰኔ 10፣ 2026](https://www.nadlancenter.co.il/article/14694)
+- [ሂላ ጽዮን፣ ynet፣ ሐምሌ 31፣ 2024](https://www.ynet.co.il/economy/article/rjbuacikr)`,
+    },
+  },
 ];
