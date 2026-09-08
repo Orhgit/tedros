@@ -544,4 +544,174 @@ The Central Elections Committee publishes a full statutory timetable — dozens 
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "candidate-lists-day-one-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["civic", "policy"],
+    title: {
+      he: "18 רשימות הוגשו ביום הראשון — והוועדה מדגישה: הגשה אינה אישור",
+      en: "18 lists submitted on day one — and the committee stresses: submission is not approval",
+      am: "በመጀመሪያው ቀን 18 ዝርዝሮች ቀረቡ — ኮሚቴውም ያሰምርበታል፦ ማቅረብ ማጽደቅ አይደለም",
+    },
+    excerpt: {
+      he: "הליך הגשת רשימות המועמדים לכנסת ה-26 נפתח ב-7.9.2026 במשכן הכנסת. עד תום היום הראשון הוגשו 18 רשימות. ועדת הבחירות המרכזית מפרסמת אותן באתרה, עם הבהרה מפורשת שהן טרם אושרו.",
+      en: "The process of submitting candidate lists for the 26th Knesset opened on 7 September 2026 at the Knesset. By the end of day one, 18 lists had been submitted. The Central Elections Committee publishes them on its site, with an explicit clarification that they have not yet been approved.",
+      am: "ለ26ኛው ኔሴት የዕጩዎች ዝርዝር የማቅረብ ሂደት መስከረም 7 ቀን 2026 በኔሴት ተጀመረ። እስከ መጀመሪያው ቀን መጨረሻ 18 ዝርዝሮች ቀርበዋል። ማዕከላዊ ምርጫ ኮሚቴ ገና እንዳልጸደቁ ግልጽ በማድረግ በድረ ገጹ ላይ ያሳትማቸዋል።",
+    },
+    bodies: {
+      he: `## מה קרה
+
+הליך הגשת רשימות המועמדים לכנסת ה-26 יצא לדרך ביום שני, **7.9.2026**, במשכן הכנסת, תחת פיקוחו של יו"ר ועדת הבחירות המרכזית, שופט בית המשפט העליון **נעם סולברג**. לפי דיווח של אמיר אטינגר ב-ynet (7.9.2026), ההליך נמשך עד סמוך לשעה 19:00.
+
+עם תום היום הראשון פרסמה ועדת הבחירות כי **הוגשו 18 רשימות מועמדים**, והבהירה:
+
+> "הגשת הרשימות אינה מהווה אישור שלהן. הרשימות, הכינויים והאותיות המבוקשים ייבדקו על ידי ועדת הבחירות המרכזית בהתאם להוראות הדין".
+
+לפי לוח הזמנים של הוועדה, **8.9.2026 הוא יום ההגשה השני והאחרון** (סעיף 57(ט)).
+
+## הרשימות שהוגשו ביום הראשון
+
+באתר ועדת הבחירות המרכזית, בעמוד שעודכן ב-7.9.2026, מופיעות 18 הרשימות עם האותיות שביקשו:
+
+| אותיות | כינוי הרשימה |
+| --- | --- |
+| ב / רק | ביחד בראשות נפתלי בנט |
+| דרך | ישר! עם איזנקוט לראשות הממשלה מאחדים את ישראל |
+| צדק | שרשר לאהבה ואחדות העם |
+| ד / דק | השותפות לכולם |
+| צף / ף / ר / ףז | הפיראטים צפים לטוב |
+| ך | עמך ישראל |
+| י / ר | ישראל תחילה - בראשות שרן השכל |
+| יה / ה | גן עדן בראשות ישוע בן דוד |
+| קה / צח / נא | קול הנשים |
+| בד / בי / בנ / רץ | ביחד נצליח - רשימה משותפת ערבית יהודית |
+| ל | ישראל ביתנו בראשות אביגדור ליברמן |
+| קץ | משפט צדק |
+| נף | שמע בראשות נפתלי גולדמן |
+| ב | עוצמה יהודית |
+| קך | סדר חדש |
+| די / צ / י | המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה |
+| אמת | הדמוקרטים בראשות יאיר גולן |
+| עם | רע"ם - הרשימה הערבית המאוחדת |
+
+הוועדה מציינת במפורש: "רשימות אלה אינן סופיות וועדת הבחירות המרכזית טרם אישרה אותן". אישור הרשימות נקבע ל-**27.9.2026** ופרסומן ל-**18.10.2026**.
+
+## למה זה חשוב לקורא
+
+זו הנקודה שבה נסגרות האפשרויות. מרגע ההגשה, שמות המועמדים וסדרם ברשימה כבר אינם נתונים למשא ומתן פנים-מפלגתי — ומכאן ואילך ההליך הוא בדיקה משפטית של הוועדה. מי שרוצה לדעת אם יש ייצוג לקהילה ברשימה מסוימת, זה המסמך לבדוק בו, וכל רשימה מתפרסמת בעמוד נפרד באתר הוועדה.
+
+מהרשימות שהוגשו ביום הראשון בדקנו את שמות המועמדים; על מה שמצאנו כתבנו בנפרד ב[כתבה על ייצוג הקהילה ברשימות](/he/news/mehereta-baruch-ron-democrats-list-2026).
+
+טדרוס מדווח על הדברים כעובדה פוליטית ואינו מביע עמדה.
+
+## מקורות
+
+- [ועדת הבחירות המרכזית — "רשימות המועמדים לכנסת", gov.il, עודכן 7.9.2026](https://www.gov.il/he/pages/candidates-lists-26)
+- [ynet, ‏7.9.2026 — אמיר אטינגר, "השמות והרשימות: אלה המועמדים של בחירות 2026"](https://www.ynet.co.il/news/elections2026/article/hkqbeu3dgx)
+- [ועדת הבחירות המרכזית — לוח זמנים לפעילות הוועדה, gov.il](https://www.gov.il/he/pages/time--table-26)`,
+      en: `## What happened
+
+The process of submitting candidate lists for the 26th Knesset began on Monday, **7 September 2026**, at the Knesset, supervised by the chairman of the Central Elections Committee, Supreme Court Justice **Noam Sohlberg**. Per a report by Amir Ettinger in ynet (7 September 2026), the process ran until shortly before 19:00.
+
+At the end of day one the Elections Committee announced that **18 candidate lists had been submitted**, and clarified:
+
+> "The submission of the lists does not constitute their approval. The lists, the names and the letters requested will be examined by the Central Elections Committee in accordance with the provisions of the law."
+
+Per the committee's timetable, **8 September 2026 is the second and final submission day** (section 57(i)).
+
+## The lists submitted on day one
+
+On the Central Elections Committee's site, on a page updated 7 September 2026, the 18 lists appear with the ballot letters they requested:
+
+| Letters | List name |
+| --- | --- |
+| ב / רק | Beyahad, led by Naftali Bennett |
+| דרך | Yashar! With Eisenkot for prime minister, uniting Israel |
+| צדק | Sharshar for love and the unity of the people |
+| ד / דק | The Partnership for All |
+| צף / ף / ר / ףז | The Pirates Float to the Good |
+| ך | Amcha Israel |
+| י / ר | Israel First — led by Sharren Haskel |
+| יה / ה | Gan Eden, led by Yeshua Ben David |
+| קה / צח / נא | The Women's Voice |
+| בד / בי / בנ / רץ | Beyachad Natzliah — a joint Arab-Jewish list |
+| ל | Yisrael Beiteinu, led by Avigdor Lieberman |
+| קץ | Mishpat Tzedek |
+| נף | Shema, led by Naftali Goldman |
+| ב | Otzma Yehudit |
+| קך | Seder Chadash |
+| די / צ / י | The Reservists and the Economic, led by Yoaz Hendel and Yaron Zelekha |
+| אמת | The Democrats, led by Yair Golan |
+| עם | Ra'am — the United Arab List |
+
+The committee states explicitly: "These lists are not final and the Central Elections Committee has not yet approved them." Approval of the lists is set for **27 September 2026** and their publication for **18 October 2026**.
+
+## Why this matters to a reader
+
+This is the point at which options close. From submission onward, the candidates' names and their order on a list are no longer subject to internal party negotiation — from here the process is the committee's legal review. Anyone who wants to know whether a given list carries community representation, this is the document to check, and each list is published on its own page on the committee's site.
+
+We checked the candidate names on the lists submitted on day one; we wrote separately about what we found, in [the article on community representation on the lists](/en/news/mehereta-baruch-ron-democrats-list-2026).
+
+Tedros reports this as political fact and takes no position.
+
+## Sources
+
+- [Central Elections Committee — "Candidate lists for the Knesset", gov.il, updated 7 Sept 2026](https://www.gov.il/he/pages/candidates-lists-26)
+- [ynet, 7 Sept 2026 — Amir Ettinger, "The names and the lists: these are the candidates of the 2026 elections"](https://www.ynet.co.il/news/elections2026/article/hkqbeu3dgx)
+- [Central Elections Committee — statutory activity timetable, gov.il](https://www.gov.il/he/pages/time--table-26)`,
+      am: `## ምን ተከሰተ
+
+ለ26ኛው ኔሴት የዕጩዎች ዝርዝር የማቅረብ ሂደት ሰኞ፣ **መስከረም 7 ቀን 2026**፣ በኔሴት ተጀመረ፤ በማዕከላዊ ምርጫ ኮሚቴ ሊቀመንበር፣ የጠቅላይ ፍርድ ቤት ዳኛ **ኖአም ሶልበርግ** ቁጥጥር ሥር። አሚር ኤቲንገር በynet (መስከረም 7 ቀን 2026) እንደዘገበው፣ ሂደቱ እስከ 19:00 አካባቢ ቀጥሏል።
+
+በመጀመሪያው ቀን መጨረሻ ላይ ምርጫ ኮሚቴው **18 የዕጩዎች ዝርዝሮች መቅረባቸውን** አስታውቆ አብራርቷል፦
+
+> «ዝርዝሮቹን ማቅረብ ማጽደቃቸውን አያመለክትም። የተጠየቁት ዝርዝሮች፣ ስሞችና ፊደላት በማዕከላዊ ምርጫ ኮሚቴ በሕጉ ድንጋጌዎች መሠረት ይመረመራሉ።»
+
+በኮሚቴው የጊዜ ሰሌዳ መሠረት፣ **መስከረም 8 ቀን 2026 ሁለተኛውና የመጨረሻው የማቅረቢያ ቀን ነው** (አንቀጽ 57(ት))።
+
+## በመጀመሪያው ቀን የቀረቡት ዝርዝሮች
+
+በማዕከላዊ ምርጫ ኮሚቴ ድረ ገጽ፣ መስከረም 7 ቀን 2026 በተዘመነ ገጽ ላይ፣ 18ቱ ዝርዝሮች ከጠየቁት የምርጫ ወረቀት ፊደላት ጋር ይታያሉ፦
+
+| ፊደላት | የዝርዝሩ ስም |
+| --- | --- |
+| ב / רק | ቤያሃድ፣ በናፍታሊ ቤኔት የሚመራ |
+| דרך | ያሻር! ከአይዘንኮት ጋር ለጠቅላይ ሚኒስትርነት |
+| צדק | ሻርሻር ለፍቅርና ለሕዝብ አንድነት |
+| ד / דק | ሽርክና ለሁሉም |
+| צף / ף / ר / ףז | ወንበዴዎቹ ወደ በጎ ይንሳፈፋሉ |
+| ך | አምቻ እስራኤል |
+| י / ר | እስራኤል መጀመሪያ — በሻረን ሃስቀል የሚመራ |
+| יה / ה | ጋን ኤደን፣ በየሹዋ ቤን ዳዊት የሚመራ |
+| קה / צח / נא | የሴቶች ድምፅ |
+| בד / בי / בנ / רץ | ቤያሃድ ናጽሊያህ — የጋራ የአረብ-አይሁድ ዝርዝር |
+| ל | እስራኤል ቤቴኑ፣ በአቪግዶር ሊበርማን የሚመራ |
+| קץ | ሚሽፓት ጼዴቅ |
+| נף | ሸማ፣ በናፍታሊ ጎልድማን የሚመራ |
+| ב | ኦጽማ የሁዲት |
+| קך | ሴደር ሃዳሽ |
+| די / צ / י | ተጠባባቂዎቹና ኢኮኖሚው፣ በዮአዝ ሄንደልና ያሮን ዘሌካ የሚመራ |
+| אמת | ዴሞክራቶቹ፣ በያኢር ጎላን የሚመራ |
+| עם | ራአም — የተባበረው የአረብ ዝርዝር |
+
+ኮሚቴው በግልጽ ይናገራል፦ «እነዚህ ዝርዝሮች የመጨረሻ አይደሉም፤ ማዕከላዊ ምርጫ ኮሚቴም ገና አላጸደቃቸውም።» ዝርዝሮቹን ማጽደቅ ለ**መስከረም 27 ቀን 2026**፣ ማሳተማቸው ደግሞ ለ**ጥቅምት 18 ቀን 2026** ተወስኗል።
+
+## ለአንባቢ ለምን አስፈላጊ ሆነ
+
+አማራጮች የሚዘጉበት ነጥብ ይህ ነው። ከቀረበ በኋላ የዕጩዎቹ ስሞችና በዝርዝሩ ውስጥ ያላቸው ቅደም ተከተል ከውስጠ-ፓርቲ ድርድር ውጭ ይሆናሉ — ከዚህ በኋላ ሂደቱ የኮሚቴው ሕጋዊ ምርመራ ነው። አንድ ዝርዝር የማህበረሰብ ውክልና ይዞ እንደሆነ ማወቅ የሚፈልግ ሰው፣ የሚመረምረው ሰነድ ይህ ነው፤ እያንዳንዱ ዝርዝርም በኮሚቴው ድረ ገጽ በራሱ ገጽ ላይ ይታተማል።
+
+በመጀመሪያው ቀን በቀረቡት ዝርዝሮች ውስጥ የዕጩዎችን ስሞች መርምረናል፤ ስላገኘነው ነገር በተለየ ዘገባ ጽፈናል፦ [በዝርዝሮቹ ውስጥ ስለ ማህበረሰቡ ውክልና](/am/news/mehereta-baruch-ron-democrats-list-2026)።
+
+ትድሮስ ይህንን እንደ ፖለቲካዊ እውነታ ብቻ ይዘግባል፣ አቋም አይይዝም።
+
+## ምንጮች
+
+- [ማዕከላዊ ምርጫ ኮሚቴ — «የኔሴት ዕጩዎች ዝርዝር»፣ gov.il፣ መስከረም 7 ቀን 2026 ተዘምኗል](https://www.gov.il/he/pages/candidates-lists-26)
+- [ynet፣ መስከረም 7 ቀን 2026 — አሚር ኤቲንገር](https://www.ynet.co.il/news/elections2026/article/hkqbeu3dgx)
+- [ማዕከላዊ ምርጫ ኮሚቴ — ሕጋዊ የእንቅስቃሴ የጊዜ ሰሌዳ፣ gov.il](https://www.gov.il/he/pages/time--table-26)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
