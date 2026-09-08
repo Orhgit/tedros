@@ -675,4 +675,153 @@ Deletion under the law does not depend on filing an application: the section is 
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "mental-health-hospitalization-and-rehab-data-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["health"],
+    title: {
+      he: "904 אשפוזים, 1,112 סלי שיקום: המספרים שמראים איפה בדיוק הקהילה נופלת בין הכיסאות",
+      en: "904 hospitalisations, 1,112 rehabilitation baskets: the numbers that show exactly where the community falls between the chairs",
+      am: "904 ሆስፒታል መተኛቶች፣ 1,112 የማገገሚያ ቅርጫቶች፦ ማህበረሰቡ በየትኛው ክፍተት እንደሚወድቅ የሚያሳዩ ቁጥሮች",
+    },
+    excerpt: {
+      he: "מסמך מרכז המחקר והמידע של הכנסת על בריאות יוצאי אתיופיה מציג שני נתונים שצריך לקרוא יחד: ייצוג יתר בקבלות לאשפוז פסיכיאטרי, וייצוג חסר — ויורד — בסל השיקום בקהילה. זה ההבדל בין להיות מטופל לבין להיות מאושפז.",
+      en: "The Knesset Research Center paper on the health of Ethiopian-Israelis presents two figures that must be read together: over-representation in psychiatric hospital admissions, and under-representation — falling — in community rehabilitation baskets. That is the difference between being treated and being hospitalised.",
+      am: "የኔሴት የምርምርና መረጃ ማዕከል ሰነድ አብረው መነበብ ያለባቸውን ሁለት አኃዞች ያቀርባል፦ በሥነ ልቦና ሆስፒታል መተኛት ከመጠን በላይ መወከል፣ በማህበረሰብ ማገገሚያ ቅርጫት ደግሞ ከመጠን በታች መወከል።",
+    },
+    bodies: {
+      he: `מרכז המחקר והמידע של הכנסת פרסם מסמך נתונים בשם "נתונים על מצב הבריאות של יוצאי אתיופיה", בכתיבת יונת מייזל ובאישור שלי לוי, מיום 10 ביולי 2024. הוא הוכן לבקשת ח"כ צגה צגנש מלכו. קראנו אותו במלואו. פרק בריאות הנפש שבו מכיל שני מספרים שצריך לקרוא זה מול זה.
+
+## המספר הראשון: אשפוז
+
+בשנת 2023 נרשמו בישראל **23,825 קבלות לאשפוז** במוסדות לבריאות הנפש. מתוכן, **כ-3.8% — 904 קבלות — נרשמו ליוצאי אתיופיה**, שהם כ-2% מאוכלוסיית ישראל.
+
+יש כאן גם מגמה חיובית: בין 2019 ל-2023 ירד שיעור הקבלות של יוצאי אתיופיה מ-4.4% ל-3.8%. הפער הצטמצם. הוא לא נסגר.
+
+המסמך מציין שמשרד הבריאות לא מסר נתונים על יוצאי אתיופיה בחלופות אשפוז כמו "בתים מאזנים", מפני שלדבריו אין בידיו נתונים על מקבלי השירות שם.
+
+## המספר השני: שיקום בקהילה
+
+בשנת 2023 חיו בישראל **37,898 מקבלי סל שיקום** במסגרת שיקום נכי נפש בקהילה. מתוכם **כ-2.9% — 1,112 — יוצאי אתיופיה**.
+
+וכאן המגמה הפוכה: שיעור המשתקמים יוצאי אתיופיה מכלל המשתקמים בקהילה **ירד** מ-3.3% ב-2019 ל-2.9% ב-2023. המסמך מציין במפורש שאין בידיו מידע על שיעורם מכלל הזקוקים לשיקום.
+
+## למה שני המספרים האלה יחד הם הסיפור
+
+סל שיקום הוא מה שקורה **לפני** ו**אחרי** אשפוז — דיור, תעסוקה, לימודים, ליווי חברתי. אשפוז הוא מה שקורה כשאין את זה. הקהילה מיוצגת ביתר במקום שבו נכנסים במשבר, ובחסר במקום שמונע את המשבר. זה בדיוק המבנה שמייצר את המספר הראשון.
+
+## נתוני האובדנות שבאותו מסמך
+
+- לפי הלמ"ס, בשנת 2022 שיעור הפטירות מפגיעה עצמית מכוונת ל-100,000 תושבים בקרב יוצאי אתיופיה היה **8.4**, לעומת **3.7** בכלל האוכלוסייה — יותר מפי שניים. ב-2021 הפער היה גדול הרבה יותר: **16.1** לעומת **4.2**.
+- לפי משרד הבריאות, בשנים 2019–2021 נרשמו **112** ניסיונות התאבדות מתוקננים לגיל ל-100,000 בקרב עולים מאתיופיה בני עשר ומעלה, לעומת **91** בקרב יהודים ואחרים ללא עולים, ו-**136** בקרב עולים מברית המועצות לשעבר.
+
+## הערת הגדרה שחשוב להכיר
+
+המסמך מזהיר שהלמ"ס ומשרד הבריאות סופרים אוכלוסיות שונות. הלמ"ס כוללת ילידי אתיופיה וילידי ישראל שאביהם נולד באתיופיה — כלומר **לא** כוללת ילידי ישראל שרק אימם ילידת אתיופיה, שהיו 6,144 איש בסוף 2022. חלק מנתוני משרד הבריאות מתייחסים לילידי אתיופיה בלבד. כשמשווים אחוזים בין מקורות, ההגדרה משנה.
+
+בסוף 2022 נמנו עם אוכלוסיית יוצאי אתיופיה בישראל כ-175,000 תושבים — כ-2% מהאוכלוסייה.
+
+## מה אפשר לעשות עם זה
+
+1. **סל שיקום הוא זכות שמבקשים.** הוא מתחיל בפנייה לוועדת סל שיקום אזורית של משרד הבריאות. אם מישהו במשפחה מתמודד עם מצב נפשי מתמשך, זו השאלה שכדאי לשאול את הגורם המטפל — לפני שהמצב מגיע למיון.
+2. **באשפוז יש זכויות, וגם זכות למתורגמן.** ריכזנו אותן ב[עמוד זכויות באשפוז פסיכיאטרי](/he/health/mental-health/hospitalization-rights) וב[מדריך הנגישות הלשונית](/he/health/mental-health/interpreter).
+3. **אם אתם או מישהו קרוב במצוקה נפשית — ער"ן, קו חם 1201**, לפי אתר העמותה. בסכנת חיים מיידית — **101**.
+
+## מקורות
+
+- [מרכז המחקר והמידע של הכנסת — יונת מייזל, "נתונים על מצב הבריאות של יוצאי אתיופיה", 10.7.2024 (הוכן לבקשת ח"כ צגה צגנש מלכו)](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
+- [ער"ן — עזרה ראשונה נפשית, קו חם 1201](https://www.eran.org.il/)
+- [זכויות באשפוז פסיכיאטרי](/he/health/mental-health/hospitalization-rights)
+- [בריאות הנפש בקהילה](/he/health/mental-health)`,
+      en: `The Knesset Research and Information Center published a data paper titled "Data on the health status of Ethiopian-Israelis", written by Yonat Meisel and approved by Shelly Levy, dated 10 July 2024. It was prepared at the request of MK Tsega Tsegenesh Melaku. We read it in full. Its mental-health chapter contains two numbers that need to be read against each other.
+
+## The first number: hospitalisation
+
+In 2023 there were **23,825 admissions** to mental health institutions in Israel. Of those, **around 3.8% — 904 admissions — were of Ethiopian-Israelis**, who are around 2% of Israel's population.
+
+There is a positive trend here too: between 2019 and 2023 the Ethiopian-Israeli share of admissions fell from 4.4% to 3.8%. The gap narrowed. It did not close.
+
+The paper notes that the Health Ministry supplied no data on Ethiopian-Israelis in hospitalisation alternatives such as "balancing houses", because it says it holds no data on who receives that service.
+
+## The second number: community rehabilitation
+
+In 2023, **37,898 people in Israel received a rehabilitation basket** under community rehabilitation for people with psychiatric disability. Of them, **around 2.9% — 1,112 — were Ethiopian-Israelis**.
+
+And here the trend runs the other way: the Ethiopian-Israeli share of all people in community rehabilitation **fell** from 3.3% in 2019 to 2.9% in 2023. The paper states explicitly that it has no information on their share of all those who need rehabilitation.
+
+## Why the two numbers together are the story
+
+A rehabilitation basket is what happens **before** and **after** hospitalisation — housing, employment, study, social accompaniment. Hospitalisation is what happens when that is missing. The community is over-represented where people enter in crisis, and under-represented where crisis is prevented. That is precisely the structure that produces the first number.
+
+## The suicide data in the same paper
+
+- Per the Central Bureau of Statistics, in 2022 the rate of deaths from intentional self-harm per 100,000 residents among Ethiopian-Israelis was **8.4**, against **3.7** in the general population — more than double. In 2021 the gap was far wider: **16.1** against **4.2**.
+- Per the Health Ministry, in 2019–2021 there were **112** age-standardised suicide attempts per 100,000 among immigrants from Ethiopia aged ten and over, against **91** among Jews and others excluding immigrants, and **136** among immigrants from the former Soviet Union.
+
+## A definitional note worth knowing
+
+The paper warns that the CBS and the Health Ministry count different populations. The CBS includes people born in Ethiopia and Israel-born people whose father was born in Ethiopia — so it does **not** include Israel-born people whose only Ethiopian-born parent is the mother, who numbered 6,144 at the end of 2022. Some Health Ministry figures refer only to people born in Ethiopia. When comparing percentages across sources, the definition matters.
+
+At the end of 2022 the Ethiopian-Israeli population numbered around 175,000 — about 2% of the population.
+
+## What you can do with this
+
+1. **A rehabilitation basket is a right you ask for.** It starts with an application to a regional Health Ministry rehabilitation-basket committee. If someone in your family is living with an ongoing mental health condition, that is the question to put to their clinician — before things reach an emergency room.
+2. **Hospitalisation carries rights, including the right to an interpreter.** We have gathered them on our [psychiatric hospitalisation rights page](/en/health/mental-health/hospitalization-rights) and in our [language-access guide](/en/health/mental-health/interpreter).
+3. **If you or someone close to you is in distress — ERAN, hotline 1201**, per the organisation's own site. In immediate danger to life — **101**.
+
+## Sources
+
+- [Knesset Research and Information Center — Yonat Meisel, "Data on the health status of Ethiopian-Israelis", 10 July 2024 (prepared at the request of MK Tsega Tsegenesh Melaku)](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
+- [ERAN — emotional first aid, hotline 1201](https://www.eran.org.il/)
+- [Psychiatric hospitalisation rights](/en/health/mental-health/hospitalization-rights)
+- [Mental health in the community](/en/health/mental-health)`,
+      am: `የኔሴት የምርምርና መረጃ ማዕከል «የኢትዮጵያ ተወላጆች የጤና ሁኔታ መረጃ» የተባለ ሰነድ አሳትሟል — በዮናት ማይዘል ተጽፎ በሼሊ ሌቪ የጸደቀ፣ ሐምሌ 10፣ 2024። በኔሴት አባል ጼጋ ጼገነሽ መላኩ ጥያቄ የተዘጋጀ ነው። ሙሉ በሙሉ አነበብነው። የአእምሮ ጤና ምዕራፉ እርስ በርስ መነጻጸር ያለባቸው ሁለት ቁጥሮች አሉት።
+
+## የመጀመሪያው ቁጥር፦ ሆስፒታል መተኛት
+
+በ2023 በእስራኤል ወደ አእምሮ ጤና ተቋማት **23,825 መግቢያዎች** ተመዝግበዋል። ከእነዚህ **3.8% ገደማ — 904 መግቢያዎች — የኢትዮጵያ ተወላጆች** ነበሩ፤ እነሱ ደግሞ ከእስራኤል ሕዝብ 2% ገደማ ናቸው።
+
+አዎንታዊ አዝማሚያም አለ፦ ከ2019 እስከ 2023 የኢትዮጵያ ተወላጆች ድርሻ ከ4.4% ወደ 3.8% ወርዷል። ክፍተቱ ጠበበ እንጂ አልተዘጋም።
+
+ሰነዱ የጤና ሚኒስቴር ስለ «ሚዛን ቤቶች» መረጃ እንዳልሰጠ ይገልጻል — መረጃው የለኝም ስላለ።
+
+## ሁለተኛው ቁጥር፦ በማህበረሰብ ውስጥ ማገገም
+
+በ2023 በእስራኤል **37,898 ሰዎች የማገገሚያ ቅርጫት** አግኝተዋል። ከእነሱ **2.9% ገደማ — 1,112 — የኢትዮጵያ ተወላጆች** ናቸው።
+
+እዚህ ላይ አዝማሚያው በተቃራኒው ነው፦ ድርሻቸው ከ2019 3.3% ወደ 2023 2.9% **ወርዷል**። ሰነዱ ከሚያስፈልጋቸው ሁሉ ስንቱን እንደሚወክል መረጃ እንደሌለው በግልጽ ይናገራል።
+
+## ሁለቱ ቁጥሮች አብረው ለምን ታሪኩ ናቸው
+
+የማገገሚያ ቅርጫት ከሆስፒታል መተኛት **በፊትና በኋላ** የሚሆነው ነው — መኖሪያ፣ ሥራ፣ ትምህርት፣ ማህበራዊ አጃቢነት። ሆስፒታል መተኛት ደግሞ ይህ ሲጠፋ የሚሆነው ነው። ማህበረሰቡ ሰዎች በችግር በሚገቡበት ቦታ ከመጠን በላይ፣ ችግሩ በሚከላከልበት ቦታ ደግሞ ከመጠን በታች ተወክሏል።
+
+## በዚያው ሰነድ ውስጥ ያለው ራስን የማጥፋት መረጃ
+
+- በማዕከላዊ ስታቲስቲክስ ቢሮ መሠረት፣ በ2022 በኢትዮጵያ ተወላጆች መካከል ሆን ተብሎ በራስ ላይ በሚደርስ ጉዳት የሞት ምጣኔ በ100,000 ነዋሪ **8.4** ነበር፣ በጠቅላላው ሕዝብ ደግሞ **3.7** — ከእጥፍ በላይ። በ2021 ልዩነቱ በጣም ሰፊ ነበር፦ **16.1** በተቃራኒው **4.2**።
+- በጤና ሚኒስቴር መሠረት፣ በ2019–2021 ከኢትዮጵያ በመጡ ዕድሜያቸው አሥርና ከዚያ በላይ በሆኑ መካከል በ100,000 **112** የራስን ሕይወት የማጥፋት ሙከራዎች ተመዝግበዋል፤ ከቀድሞ ሶቪየት ኅብረት በመጡ መካከል ደግሞ **136**።
+
+## ማወቅ የሚገባ የትርጓሜ ማስታወሻ
+
+ሰነዱ ማዕከላዊ ስታቲስቲክስ ቢሮና ጤና ሚኒስቴር የተለያዩ ሕዝቦችን እንደሚቆጥሩ ያስጠነቅቃል። ቢሮው በኢትዮጵያ የተወለዱትንና አባታቸው በኢትዮጵያ የተወለደ እስራኤል ተወላጆችን ያካትታል — እናታቸው ብቻ ኢትዮጵያ ተወላጅ የሆኑትን (በ2022 መጨረሻ 6,144 ሰዎች) **አያካትትም**።
+
+በ2022 መጨረሻ የኢትዮጵያ ተወላጆች ብዛት 175,000 ገደማ ነበር — ከሕዝቡ 2% ገደማ።
+
+## በዚህ ምን ማድረግ ይቻላል
+
+1. **የማገገሚያ ቅርጫት የሚጠየቅ መብት ነው።** በጤና ሚኒስቴር የክልል ኮሚቴ ማመልከቻ ይጀምራል። በቤተሰብዎ ውስጥ ተከታታይ የአእምሮ ጤና ሁኔታ ያለው ሰው ካለ፣ ሁኔታው ወደ ድንገተኛ ክፍል ከመድረሱ በፊት ሐኪሙን መጠየቅ ያለብዎ ጥያቄ ይህ ነው።
+2. **በሆስፒታል መተኛት ውስጥ መብቶች አሉ፣ የአስተርጓሚ መብትም ጭምር።** በ[የሥነ ልቦና ሆስፒታል መተኛት መብቶች ገጻችን](/am/health/mental-health/hospitalization-rights) እና በ[የቋንቋ ተደራሽነት መመሪያችን](/am/health/mental-health/interpreter) ሰብስበናቸዋል።
+3. **እርስዎ ወይም የቅርብ ሰው በጭንቀት ውስጥ ከሆኑ — ኤራን፣ ሙቅ መስመር 1201**፣ በድርጅቱ ድህረ ገጽ መሠረት። አፋጣኝ የሕይወት አደጋ ላይ — **101**።
+
+## ምንጮች
+
+- [የኔሴት የምርምርና መረጃ ማዕከል — ዮናት ማይዘል፣ «የኢትዮጵያ ተወላጆች የጤና ሁኔታ መረጃ»፣ ሐምሌ 10፣ 2024](https://fs.knesset.gov.il/globaldocs/MMM/e0e08b83-2fcf-ee11-815f-005056aac6c3/2_e0e08b83-2fcf-ee11-815f-005056aac6c3_11_20620.pdf)
+- [ኤራን — የስሜት የመጀመሪያ እርዳታ፣ ሙቅ መስመር 1201](https://www.eran.org.il/)
+- [የሥነ ልቦና ሆስፒታል መተኛት መብቶች](/am/health/mental-health/hospitalization-rights)
+- [በማህበረሰብ ውስጥ የአእምሮ ጤና](/am/health/mental-health)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
