@@ -58,10 +58,9 @@ describe("wave 11a shape", () => {
       for (const locale of LOCALES) {
         expect(a.title[locale]?.trim(), `${a.slug}.title.${locale}`).toBeTruthy();
         expect(a.excerpt[locale]?.trim(), `${a.slug}.excerpt.${locale}`).toBeTruthy();
-        expect(
-          a.bodies[locale].length,
-          `${a.slug}.bodies.${locale}`,
-        ).toBeGreaterThan(200);
+        expect(a.bodies[locale].length, `${a.slug}.bodies.${locale}`).toBeGreaterThan(
+          200,
+        );
       }
     }
   });

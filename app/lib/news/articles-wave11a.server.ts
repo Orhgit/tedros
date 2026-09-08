@@ -838,7 +838,7 @@ On the Likud background we have written before: [32 kessim signed a letter to Ne
       am: "በዓሊያ ኮሚቴ ተገለጸ፦ ልዑክ በኢትዮጵያ የመመለሻ ሕግ ብቁዎችን አገኘ — ከ146 ማመልከቻዎች 21 ጸደቁ",
     },
     excerpt: {
-      he: "בדיון בוועדת העלייה והקליטה של הכנסת ב-7.9.2026 נחשף שמשלחת של רשות האוכלוסין והסוכנות היהודית יצאה לאדיס אבבה ביולי 2026 לבחון 146 בקשות לעלייה מכוח חוק השבות. 21 אושרו, אחת נדחתה, והשאר בבדיקות. יו\"ר הוועדה: הנתונים סותרים את עמדת המדינה משנת 2013.",
+      he: 'בדיון בוועדת העלייה והקליטה של הכנסת ב-7.9.2026 נחשף שמשלחת של רשות האוכלוסין והסוכנות היהודית יצאה לאדיס אבבה ביולי 2026 לבחון 146 בקשות לעלייה מכוח חוק השבות. 21 אושרו, אחת נדחתה, והשאר בבדיקות. יו"ר הוועדה: הנתונים סותרים את עמדת המדינה משנת 2013.',
       en: "At a session of the Knesset Aliyah and Absorption Committee on 7 September 2026 it emerged that a delegation of the Population Authority and the Jewish Agency travelled to Addis Ababa in July 2026 to examine 146 applications for aliyah under the Law of Return. 21 were approved, one rejected, the rest under review. The committee chair: the data contradicts the state's 2013 position.",
       am: "መስከረም 7 ቀን 2026 በኔሴት የዓሊያና የመቀበል ኮሚቴ ስብሰባ ላይ፣ የሕዝብ ባለሥልጣንና የአይሁድ ኤጀንሲ ልዑክ በሐምሌ 2026 ወደ አዲስ አበባ ሄዶ በመመለሻ ሕግ 146 የዓሊያ ማመልከቻዎችን እንደመረመረ ተገለጸ። 21 ጸደቁ፣ አንዱ ተቀባይነት አላገኘም፣ የቀሩት በምርመራ ላይ ናቸው።",
     },
@@ -987,7 +987,7 @@ Tedros reports this as fact and takes no position.
       am: "የስብሰባው ዳራ፦ ለኢትዮጵያ ዓሊያ ምንም ድልድል የሌለው የ2026 በጀት፣ ያልተወያዩበት የካንፎ ሪፖርት፣ እና የተከፈተ ኦዲት",
     },
     excerpt: {
-      he: "כדי להבין את דיון ועדת העלייה מ-7.9.2026 צריך את מה שקדם לו. שלושה דיווחים של \"דבר\" מינואר ומפברואר 2026 מתעדים תקציב שנתי רביעי ברציפות ללא הקצאה לעלייה מאתיופיה, 1,226 מאושרי עלייה שממתינים, ופתיחת ביקורת של מבקר המדינה.",
+      he: 'כדי להבין את דיון ועדת העלייה מ-7.9.2026 צריך את מה שקדם לו. שלושה דיווחים של "דבר" מינואר ומפברואר 2026 מתעדים תקציב שנתי רביעי ברציפות ללא הקצאה לעלייה מאתיופיה, 1,226 מאושרי עלייה שממתינים, ופתיחת ביקורת של מבקר המדינה.',
       en: "To understand the Aliyah Committee session of 7 September 2026, you need what preceded it. Three Davar reports from January and February 2026 document a fourth consecutive annual budget with no allocation for Ethiopian aliyah, 1,226 approved immigrants still waiting, and the opening of a State Comptroller audit.",
       am: "የመስከረም 7 ቀን 2026ን የዓሊያ ኮሚቴ ስብሰባ ለመረዳት ከዚያ በፊት የነበረውን ማወቅ ያስፈልጋል። ከጥር እና የካቲት 2026 የወጡ ሦስት የዳቫር ዘገባዎች ለኢትዮጵያ ዓሊያ ድልድል የሌለው አራተኛ ተከታታይ ዓመታዊ በጀት፣ 1,226 የጸደቀላቸው ተጠባባቂዎች፣ እና የመንግሥት ኦዲተር ኦዲት መከፈትን ይመዘግባሉ።",
     },
