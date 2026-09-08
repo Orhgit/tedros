@@ -135,7 +135,12 @@ function staticRoutePaths(): Set<string> {
     if (segments.some((s) => s.startsWith("$"))) continue; // dynamic — handled below
     if (segments[segments.length - 1] === "_index") segments.pop();
     if (segments.length === 0) continue; // `$lang._index` → "/" (already added)
-    out.add("/" + segments.join("/"));
+    // A trailing underscore opts the segment out of its parent layout and is
+    // stripped from the URL: `$lang.health.mental-health_.interpreter.tsx`
+    // serves /health/mental-health/interpreter, as that route's own header and
+    // sitemap-health both state. Without this, the four mental-health detail
+    // pages were unreachable targets and any content linking them failed here.
+    out.add("/" + segments.map((s) => s.replace(/_$/, "")).join("/"));
   }
   return out;
 }
