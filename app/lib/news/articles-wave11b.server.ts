@@ -1770,4 +1770,243 @@ That matters for reading the declines above correctly: this is not a case of a b
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "government-program-employment-results-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["employment"],
+    title: {
+      he: 'תוספת השכר של בוגרי תוכנית "למרחק" עלתה מ-10% ל-47% — הפרק התעסוקתי בדוח הממשלתי, במספרים',
+      en: 'The wage increase for graduates of the "Lamerchak" programme rose from 10% to 47% — the employment chapter of the government report, in numbers',
+      am: "የ«ላመርሓቅ» ፕሮግራም ተመራቂዎች የደመወዝ ጭማሪ ከ10% ወደ 47% አድጓል — የመንግሥት ሪፖርቱ የሥራ ስምሪት ምዕራፍ በቁጥር",
+    },
+    excerpt: {
+      he: 'דוח הסיכום של התוכנית הממשלתית לשנים 2023–2024 מפרט חמש תוכניות תעסוקה של משרד העבודה ליוצאי אתיופיה, עם מספרי המשתתפים ורמת הביצוע של כל אחת. המדד המעניין אינו מספר המשתתפים אלא תוספת השכר: מ-10% בלבד ב-2020 ל-47% בממוצע ב-2024.',
+      en: "The summary report of the government programme for 2023–2024 details five Ministry of Labour employment programmes for Ethiopian-Israelis, with participant numbers and an implementation level for each. The interesting measure is not the number of participants but the wage increase: from only 10% in 2020 to 47% on average in 2024.",
+      am: "የመንግሥት ፕሮግራሙ የ2023–2024 ማጠቃለያ ሪፖርት ለኢትዮጵያ-እስራኤላውያን የሠራተኛ ሚኒስቴር አምስት የሥራ ስምሪት ፕሮግራሞችን ከተሳታፊ ቁጥርና ከየራሳቸው የአፈጻጸም ደረጃ ጋር ይዘረዝራል። አስደናቂው መለኪያ የተሳታፊ ብዛት ሳይሆን የደመወዝ ጭማሪው ነው፦ በ2020 ከ10% ብቻ ወደ በ2024 በአማካይ 47%።",
+    },
+    bodies: {
+      he: `## המדד הנכון
+
+רוב הדיווחים על תוכניות תעסוקה סופרים משתתפים. זה מדד קל למדוד וקל לנפח. הדוח הזה מודד גם משהו אחר, וזה החלק המעניין בו:
+
+> **"ביחס לעלייה בשכר למשתתפי תוכנית 'למרחק', ניתן לראות עלייה דרמטית במדד — מ-10% בלבד של עלייה בשכר עבור בוגרי התוכניות ב-2020, ל-47% בממוצע בשנת 2024."**
+
+מקור: [דו"ח סיכום התוכנית הממשלתית לשילוב יוצאי אתיופיה 2023-2024, משרד ראש הממשלה, ינואר 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) · נבדק ספטמבר 2026.
+
+זה המדד שמדבר ישירות אל [פער השכר של 43.6% שתיעד מרכז המחקר של הכנסת](/he/news/knesset-mmm-wage-gap-2026). תוכנית שמכניסה אנשים לעבודה בלי להזיז את השכר אינה פותרת את הבעיה שהנתונים מתארים. תוכנית שמעלה שכר ב-47% — כן.
+
+## חמש התוכניות, והמספרים שלהן
+
+לפי הדוח, אלה תוכניות משרד העבודה בתקופה 2023–2024, עם מספר המשתתפים ורמת הביצוע כפי שהדוח מסווג אותה:
+
+| תוכנית | משתתפים | רמת ביצוע |
+| --- | --- | --- |
+| תוכנית "למרחק" | **2,518** | בוצע חלקית |
+| הכשרות מקצועיות | **389** | בוצע במלואו |
+| הכשרות להיי-טק | **341** | בוצע במלואו |
+| ייעוץ וליווי אקדמאים | **227** | בוצע חלקית |
+| מסלול הנדסאים | **45** | לא הוגדר יעד |
+
+**"למרחק"** היא תוכנית הדגל של המשרד לליווי תעסוקתי ליוצאי אתיופיה — ליווי, ייעוץ וקידום תעסוקתי לצעירים. הדוח מציין שהיא "הגדילה את מספר המשתתפים ביותר מפי 3 משנת 2020 עד שנת 2024".
+
+שימו לב לעמודה הימנית: **גם תוכנית הדגל מסווגת "בוצע חלקית".** הדוח אינו מציג את עצמו כהצלחה מלאה.
+
+## מי מפעיל מה
+
+הדוח מפרט את השותפים בשם:
+
+- **הכשרות מקצועיות** — באמצעות שוברי הכשרה מקצועית.
+- **ייעוץ וליווי אקדמיים** — באמצעות עמותת **"עולים ביחד"**, "להשתלבות מיטבית במקצועות ההולמים את כישורי המועמדים".
+- **הכשרות מקצועיות במיקוד על מקצועות ההיי-טק** — בשיתוף עמותת **"טק-קריירה"**.
+- **מסלול הנדסאים.**
+
+שני הארגונים האלה קיימים ופעילים. טק-קריירה פועלת מלוד; אתרה הפעיל הוא tech-career.org, והיא מתארת את עצמה כמרכז הכשרה טכנולוגי לצעירים יוצאי אתיופיה הפועל מאז 2002. (הבהרה שחשוב לנו: **טק-קריירה היא עמותה עצמאית**, ולא תוכנית של ארגון אחר.)
+
+**איננו מפרסמים כאן מועדי מחזורים.** דף ההכשרות שבדקנו לא נענה, ומועד פתיחה שלא ראינו במקור לא ייכתב אצלנו כעובדה. לבדיקת מחזורים פתוחים — ישירות באתר הארגון.
+
+## מה החלטה 787 ביקשה מהמשרד
+
+לפי הדוח, ההחלטה הורתה על המשך הרחבת תוכניות התעסוקה וייעולן, לצורך:
+
+- **הנגשת מענים לצעירים שיובילו להשתלבות במקצועות בעלי פוטנציאל השתכרות גבוה**, עם דגש על הנגשת הכשרות בטכנולוגיה והיי-טק;
+- **הכשרות לקידום ולשדרוג מקצועי** במקצועות מבוקשים במשק;
+- **הכוון אישי ובניית מסלול קריירה** — אבחון תעסוקתי, ליווי פרטני וקבוצתי, חיבור למעסיקים וסיוע בהשמה;
+- **הכוונת יוצאי אתיופיה למקצועות המבוקשים במשק.**
+
+שימו לב לניסוח החוזר: לא "תעסוקה" סתם, אלא **"תעסוקה איכותית, הכוללת אופק קידום מקצועי"**. זה בדיוק מה שנתוני השכר של הכנסת מצביעים עליו כחסר.
+
+## ההקשר שהדוח נותן לעצמו
+
+- הדוח מציין ש**משרד העבודה הגדיל את מספר התוכניות מ-4 ל-5**, בדגש על הכשרות.
+- הוא גם מציין ש**קיצוץ רוחבי של 8%** בתקציב החלטות הממשלה ב-2024 אילץ עדכונים ותעדוף מחדש בכל התוכנית.
+- הבסיס: **החלטת ממשלה 787 (17.7.2023)** והחלטת ההמשך **3243 (15.7.2025)**.
+
+## מה זה אומר למי שמחפש עבודה
+
+שלוש נקודות מעשיות:
+
+1. **המסלולים האלה קיימים ומופעלים** דרך משרד העבודה ודרך עמותות מוכרות בשמן בדוח ממשלתי — לא דרך "תוכניות" שאף אחד לא שמע עליהן.
+2. **שוברי הכשרה מקצועית** הם מסלול נפרד ורחב יותר מהתוכניות הייעודיות, ופתוח דרך משרד העבודה.
+3. **תוספת השכר היא השאלה שכדאי לשאול** כל תוכנית לפני שנרשמים: לא כמה בוגרים היו, אלא כמה עלה השכר שלהם.
+
+לתוכניות, מסלולים ומידע תעסוקתי — [מרכז הקריירה של טדרוס](/he/careers).
+
+## מקורות
+
+- [התוכנית הממשלתית לשילוב יוצאי אתיופיה — דו"ח סיכום פעילות 2023-2024, המטה לשילוב יוצאי אתיופיה, משרד ראש הממשלה, ינואר 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — נקרא 8.9.2026
+- [Tech-Career — אתר העמותה](https://www.tech-career.org/) — נבדק 8.9.2026
+- [פער השכר במסמך הכנסת — הכתבה שלנו](/he/news/knesset-mmm-wage-gap-2026)
+- [פרק החינוך של אותו דוח — הכתבה שלנו](/he/news/government-program-education-results-2026)
+- [מרכז הקריירה — טדרוס](/he/careers)`,
+      en: `## The right measure
+
+Most reporting on employment programmes counts participants. That is an easy measure to take and an easy one to inflate. This report also measures something else, and that is the interesting part of it:
+
+> **"With respect to the wage increase for participants in the 'Lamerchak' programme, a dramatic rise in the measure can be seen — from only 10% wage growth for programme graduates in 2020, to 47% on average in 2024."**
+
+Source: [Summary report of the government programme for the integration of Ethiopian-Israelis 2023-2024, Prime Minister's Office, January 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) · verified September 2026.
+
+This is the measure that speaks directly to [the 43.6% wage gap documented by the Knesset Research Center](/en/news/knesset-mmm-wage-gap-2026). A programme that puts people into work without moving the wage does not solve the problem the data describes. A programme that raises wages by 47% does.
+
+## The five programmes, and their numbers
+
+Per the report, these are the Ministry of Labour's programmes in 2023–2024, with participant numbers and the implementation level as the report classifies it:
+
+| Programme | Participants | Implementation level |
+| --- | --- | --- |
+| "Lamerchak" programme | **2,518** | partially implemented |
+| Vocational training | **389** | fully implemented |
+| Hi-tech training | **341** | fully implemented |
+| Counselling and mentoring for graduates | **227** | partially implemented |
+| Practical-engineering track | **45** | no target defined |
+
+**"Lamerchak"** is the ministry's flagship programme for employment mentoring for Ethiopian-Israelis — accompaniment, counselling and career advancement for young people. The report notes that it "increased its number of participants more than threefold from 2020 to 2024."
+
+Note the right-hand column: **even the flagship programme is classified "partially implemented."** The report does not present itself as an unqualified success.
+
+## Who runs what
+
+The report names the partners:
+
+- **Vocational training** — through vocational training vouchers.
+- **Academic counselling and mentoring** — through the **Olim Beyahad** association, "for optimal integration into professions matching candidates' skills."
+- **Vocational training focused on hi-tech professions** — in partnership with the **Tech-Career** association.
+- **The practical-engineering track.**
+
+Both of these organizations exist and are active. Tech-Career operates out of Lod; its live site is tech-career.org, and it describes itself as a technological training centre for young Ethiopian-Israelis operating since 2002. (A clarification that matters to us: **Tech-Career is an independent association**, not a programme run by another organization.)
+
+**We are not publishing cohort dates here.** The training page we checked did not respond, and an opening date we have not seen at the source will not be written here as fact. To check for open cohorts — go directly to the organization's site.
+
+## What decision 787 asked of the ministry
+
+Per the report, the decision directed the continued expansion and streamlining of employment programmes, in order to:
+
+- **Make available responses for young people that lead to integration into professions with high earning potential**, with an emphasis on making technology and hi-tech training accessible;
+- **Training for professional advancement and upgrading** in professions in demand in the economy;
+- **Personal guidance and building a career path** — occupational assessment, individual and group mentoring, connection to employers and placement assistance;
+- **Steering Ethiopian-Israelis toward professions in demand in the economy.**
+
+Note the recurring phrasing: not "employment" plainly, but **"quality employment, including a horizon for professional advancement."** That is precisely what the Knesset's wage data points to as missing.
+
+## The context the report gives itself
+
+- The report notes that **the Ministry of Labour increased the number of programmes from 4 to 5**, with an emphasis on training.
+- It also notes that an **across-the-board 8% cut** to the budget of government decisions in 2024 forced revisions and re-prioritization across the whole programme.
+- The basis: **government decision 787 (17.7.2023)** and continuation decision **3243 (15.7.2025)**.
+
+## What this means for someone looking for work
+
+Three practical points:
+
+1. **These tracks exist and are operating** through the Ministry of Labour and through associations named in a government report — not through "programmes" nobody has heard of.
+2. **Vocational training vouchers** are a separate and broader track than the dedicated programmes, and are open through the Ministry of Labour.
+3. **The wage increase is the question worth asking** of any programme before signing up: not how many graduates there were, but how much their wages rose.
+
+For programmes, tracks and employment information — [the Tedros careers centre](/en/careers).
+
+## Sources
+
+- [The government programme for the integration of Ethiopian-Israelis — activity summary report 2023-2024, Prime Minister's Office, January 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — read 8.9.2026
+- [Tech-Career — the association's site](https://www.tech-career.org/) — checked 8.9.2026
+- [The wage gap in the Knesset document — our article](/en/news/knesset-mmm-wage-gap-2026)
+- [The education chapter of the same report — our article](/en/news/government-program-education-results-2026)
+- [Careers centre — Tedros](/en/careers)`,
+      am: `## ትክክለኛው መለኪያ
+
+ስለ ሥራ ስምሪት ፕሮግራሞች የሚወጡ አብዛኞቹ ዘገባዎች ተሳታፊዎችን ይቆጥራሉ። ይህ ለመለካት ቀላል፣ ለማጋነንም ቀላል መለኪያ ነው። ይህ ሪፖርት ሌላ ነገርም ይለካል፣ አስደናቂው ክፍሉም ይኸው ነው፦
+
+> **«ለ‹ላመርሓቅ› ፕሮግራም ተሳታፊዎች ስለ ደመወዝ ጭማሪ ሲታይ በመለኪያው ላይ ከፍተኛ ዕድገት ይታያል — በ2020 ለፕሮግራም ተመራቂዎች ከነበረው 10% ብቻ የደመወዝ ዕድገት፣ በ2024 በአማካይ ወደ 47%።»**
+
+ምንጭ፦ [የኢትዮጵያ-እስራኤላውያን ውህደት የመንግሥት ፕሮግራም ማጠቃለያ ሪፖርት 2023-2024፣ የጠቅላይ ሚኒስትር ጽሕፈት ቤት፣ ጃንዋሪ 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) · በሴፕቴምበር 2026 ተረጋግጧል።
+
+ይህ [የክኔሴት የምርምር ማዕከል ከመዘገበው የ43.6% የደመወዝ ክፍተት](/am/news/knesset-mmm-wage-gap-2026) ጋር በቀጥታ የሚነጋገር መለኪያ ነው። ሰዎችን ወደ ሥራ የሚያስገባ ነገር ግን ደመወዝን የማያንቀሳቅስ ፕሮግራም መረጃው የሚገልጸውን ችግር አይፈታም። ደመወዝን በ47% የሚያሳድግ ግን ይፈታል።
+
+## አምስቱ ፕሮግራሞችና ቁጥሮቻቸው
+
+በሪፖርቱ መሠረት፣ በ2023–2024 የሠራተኛ ሚኒስቴር ፕሮግራሞች እነዚህ ናቸው፤ ከተሳታፊ ብዛትና ሪፖርቱ ከሚመድበው የአፈጻጸም ደረጃ ጋር፦
+
+| ፕሮግራም | ተሳታፊዎች | የአፈጻጸም ደረጃ |
+| --- | --- | --- |
+| «ላመርሓቅ» ፕሮግራም | **2,518** | በከፊል ተተግብሯል |
+| የሙያ ሥልጠናዎች | **389** | ሙሉ በሙሉ ተተግብሯል |
+| የሃይቴክ ሥልጠናዎች | **341** | ሙሉ በሙሉ ተተግብሯል |
+| ለተመራቂዎች ምክርና አጃቢነት | **227** | በከፊል ተተግብሯል |
+| የተግባራዊ ምህንድስና መስመር | **45** | ግብ አልተቀመጠም |
+
+**«ላመርሓቅ»** ለኢትዮጵያ-እስራኤላውያን የሥራ ስምሪት አጃቢነት የሚሰጥ የሚኒስቴሩ ዋና ፕሮግራም ነው — ለወጣቶች አጃቢነት፣ ምክርና የሥራ ዕድገት። ሪፖርቱ «ከ2020 እስከ 2024 የተሳታፊዎችን ቁጥር ከሦስት እጥፍ በላይ አሳድጓል» ይላል።
+
+የቀኝ ዓምዱን ልብ ይበሉ፦ **ዋናው ፕሮግራምም እንኳ «በከፊል ተተግብሯል» ተብሎ ተመድቧል።** ሪፖርቱ ራሱን እንደ ሙሉ ስኬት አያቀርብም።
+
+## ማን ምን ያንቀሳቅሳል
+
+ሪፖርቱ አጋሮቹን በስም ይዘረዝራል፦
+
+- **የሙያ ሥልጠናዎች** — በሙያ ሥልጠና ቫውቸሮች በኩል።
+- **የአካዳሚክ ምክርና አጃቢነት** — በ**«ኦሊም ቤያሓድ»** ማህበር በኩል፣ «ከዕጩዎች ክህሎት ጋር በሚስማሙ ሙያዎች ውስጥ ለተሻለ ውህደት»።
+- **በሃይቴክ ሙያዎች ላይ ያተኮረ የሙያ ሥልጠና** — ከ**«ቴክ-ካሪየር»** ማህበር ጋር በመተባበር።
+- **የተግባራዊ ምህንድስና መስመር።**
+
+እነዚህ ሁለቱ ድርጅቶች አሉ፣ ንቁም ናቸው። ቴክ-ካሪየር ከሎድ ትሠራለች፤ ንቁ ድረ-ገጿ tech-career.org ሲሆን፣ ራሷን ከ2002 ጀምሮ የምትሠራ ለወጣት ኢትዮጵያ-እስራኤላውያን የቴክኖሎጂ ሥልጠና ማዕከል አድርጋ ትገልጻለች። (ለእኛ ወሳኝ የሆነ ማብራሪያ፦ **ቴክ-ካሪየር ራሱን የቻለ ማህበር ነው**፣ በሌላ ድርጅት የሚካሄድ ፕሮግራም አይደለም።)
+
+**የዙር ቀኖችን እዚህ አናሳትምም።** የመረመርነው የሥልጠናዎች ገጽ ምላሽ አልሰጠም፤ በምንጩ ያላየነውን የመክፈቻ ቀን እንደ እውነት አንጽፍም። ክፍት ዙሮችን ለመፈተሽ — በቀጥታ በድርጅቱ ድረ-ገጽ።
+
+## ውሳኔ 787 ከሚኒስቴሩ የጠየቀው
+
+በሪፖርቱ መሠረት፣ ውሳኔው የሥራ ስምሪት ፕሮግራሞችን ማስፋፋትና ማቀላጠፍ እንዲቀጥል አዟል፤ ዓላማውም፦
+
+- **ለወጣቶች ከፍተኛ የገቢ አቅም ወዳላቸው ሙያዎች የሚያደርሱ ምላሾችን ተደራሽ ማድረግ**፣ የቴክኖሎጂና የሃይቴክ ሥልጠናዎችን ተደራሽ በማድረግ ላይ አጽንዖት በመስጠት፤
+- በኢኮኖሚው ተፈላጊ በሆኑ ሙያዎች **ለሙያ ዕድገትና ማሻሻያ ሥልጠናዎች**፤
+- **የግል አቅጣጫና የሥራ መስመር ግንባታ** — የሥራ ምዘና፣ የግልና የቡድን አጃቢነት፣ ከቀጣሪዎች ጋር ማገናኘትና የምደባ ድጋፍ፤
+- **ኢትዮጵያ-እስራኤላውያንን በኢኮኖሚው ተፈላጊ ወደሆኑ ሙያዎች መምራት።**
+
+ተደጋጋሚውን አገላለጽ ልብ ይበሉ፦ በቀላሉ «ሥራ» ሳይሆን **«የሙያ ዕድገት አድማስን የሚያካትት ጥራት ያለው ሥራ»**። የክኔሴቱ የደመወዝ መረጃ የሚያመለክተው ጉድለት ልክ ይኸው ነው።
+
+## ሪፖርቱ ለራሱ የሚሰጠው አውድ
+
+- ሪፖርቱ **የሠራተኛ ሚኒስቴር የፕሮግራሞችን ቁጥር ከ4 ወደ 5 እንዳሳደገ** ይገልጻል፣ በሥልጠናዎች ላይ አጽንዖት በመስጠት።
+- በ2024 በመንግሥት ውሳኔዎች በጀት ላይ የተደረገው **8% አጠቃላይ ቅነሳ** በጠቅላላው ፕሮግራም ውስጥ ማሻሻያዎችንና እንደገና ቅድሚያ መስጠትን እንዳስገደደም ይገልጻል።
+- መሠረቱ፦ **የመንግሥት ውሳኔ 787 (17.7.2023)** እና የቀጣይነት ውሳኔ **3243 (15.7.2025)**።
+
+## ሥራ ለሚፈልግ ሰው ምን ማለት ነው
+
+ሦስት ተግባራዊ ነጥቦች፦
+
+1. **እነዚህ መስመሮች አሉ፣ እየሠሩም ናቸው** — በሠራተኛ ሚኒስቴርና በመንግሥት ሪፖርት በስም በተጠቀሱ ማህበራት በኩል፣ ማንም ባልሰማቸው «ፕሮግራሞች» በኩል አይደለም።
+2. **የሙያ ሥልጠና ቫውቸሮች** ከልዩ ፕሮግራሞቹ የተለየና ሰፋ ያለ መስመር ናቸው፣ በሠራተኛ ሚኒስቴር በኩልም ክፍት ናቸው።
+3. **የደመወዝ ጭማሪው ከመመዝገብዎ በፊት ማንኛውንም ፕሮግራም መጠየቅ የሚገባው ጥያቄ ነው**፦ ስንት ተመራቂ እንደነበረ ሳይሆን ደመወዛቸው ስንት እንዳደገ።
+
+ለፕሮግራሞች፣ መስመሮችና የሥራ መረጃ — [የትድሮስ የሥራ ማዕከል](/am/careers)።
+
+## ምንጮች
+
+- [የኢትዮጵያ-እስራኤላውያን ውህደት የመንግሥት ፕሮግራም — የ2023-2024 የእንቅስቃሴ ማጠቃለያ ሪፖርት፣ የጠቅላይ ሚኒስትር ጽሕፈት ቤት፣ ጃንዋሪ 2026 (PDF)](https://www.gov.il/BlobFolder/news/ethiopia080126/he/file_ethiopia080126.pdf) — የተነበበ 8.9.2026
+- [Tech-Career — የማህበሩ ድረ-ገጽ](https://www.tech-career.org/) — በ8.9.2026 ተመርምሯል
+- [በክኔሴት ሰነድ ውስጥ ያለው የደመወዝ ክፍተት — ጽሑፋችን](/am/news/knesset-mmm-wage-gap-2026)
+- [የዚያው ሪፖርት የትምህርት ምዕራፍ — ጽሑፋችን](/am/news/government-program-education-results-2026)
+- [የሥራ ማዕከል — ትድሮስ](/am/careers)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
