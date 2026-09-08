@@ -407,4 +407,125 @@ Localities with the most births to mothers of Ethiopian origin: **Netanya (311)*
 - [CBS — በእስራኤል የኢትዮጵያ ተወላጅ ሕዝብ፣ ለሰግድ 2025 (ዘገባ 367/2025)](https://www.cbs.gov.il/he/mediarelease/DocLib/2025/367/11_25_367b.pdf) · ኅዳር 16፣ 2025 ታተመ · መስከረም 2፣ 2026 ተረጋግጧል`,
     },
   },
+
+  // 3 — Gideon kingdom conference -------------------------------------------
+  {
+    slug: "gideon-kingdom-conference-jerusalem-october-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["community", "announcement"],
+    title: {
+      he: "400 שנה לנפילת ממלכת הגדעונים: כנס בירושלים ב-14 באוקטובר",
+      en: "400 years since the fall of the Gideon kingdom: a conference in Jerusalem on 14 October",
+      am: "የጊዴዎን መንግሥት ከወደቀ 400 ዓመታት፦ ጥቅምት 14 በኢየሩሳሌም ጉባኤ",
+    },
+    excerpt: {
+      he: "המרכז למורשת יהדות אתיופיה יקיים ב-14.10.2026 כנס \"חידושים בחקר ממלכת הגדעונים\", 400 שנה אחרי שהקיסר סוסניוס הכריע סופית את השלטון העצמי היהודי בהרי סמיין. הכנס פתוח לקהל, בבנייני האומה בירושלים.",
+      en: "On 14 October 2026 the Center for Ethiopian Jewish Heritage holds a conference on new research into the Kingdom of the Gideons, 400 years after Emperor Susenyos finally defeated Jewish self-rule in the Simien mountains. Open to the public, at Binyanei Ha'uma in Jerusalem.",
+      am: "የኢትዮጵያ አይሁድ ቅርስ ማዕከል ጥቅምት 14፣ 2026 «በጊዴዎን መንግሥት ጥናት ላይ አዳዲስ ግኝቶች» ጉባኤ ያካሂዳል፣ ንጉሥ ሱስንዮስ በሰሜን ተራሮች የነበረውን የአይሁድ ራስን በራስ ማስተዳደር ካሸነፈ 400 ዓመታት በኋላ።",
+    },
+    bodies: {
+      he: `## מה מתקיים
+
+**המרכז למורשת יהדות אתיופיה** יקיים ביום **14 באוקטובר 2026, בין 14:30 ל-20:00**, כנס בשם **"חידושים בחקר ממלכת הגדעונים"**. הכנס יתקיים במשכן המרכז בירושלים.
+
+לפי הודעת המרכז באתרו, הכנס מציין **400 שנה לנפילת ממלכת הגדעונים** — השלטון העצמי היהודי בצפון אתיופיה, שהוכרע סופית בידי הקיסר סוסניוס ב-1626 — ומטרתו להציג את חידושי המחקר בנושא בפני קהילת החוקרים ובפני הציבור הרחב.
+
+## מה זו ממלכת הגדעונים
+
+"ממלכת הגדעונים" הוא השם שבמסורת הקהילה ניתן לשלטון העצמי של יהודי אתיופיה בהרי סמיין — ההרים הגבוהים ביותר בקרן אפריקה. הכינוי בא על שם מלכיה, שרבים מהם נשאו את השם גדעון, על שם השופט המקראי. ההנהגה הזאת הייתה פוליטית וצבאית כאחת, והיא ניהלה עימות ממושך עם השושלת השלמונית הנוצרית ששלטה באזור.
+
+## למה זה עניין של הקהילה, לא רק של אקדמאים
+
+הסיפור הזה כמעט לא מופיע בהיסטוריה הישראלית שנלמדת בבית הספר, ורוב מה שנכתב עליו נכתב בידי היסטוריונים נוצרים — כלומר בידי הצד שניצח. כנס שמציג מחקר חדש על התקופה הזאת הוא, בפועל, החזרה של נרטיב שלם למקום שבו אפשר לצטט אותו.
+
+זה גם לא כנס יחיד: המרכז מקיים כנסים אקדמיים, השקות ספרים ואירועי פולקלור לאורך השנה, וכן אירועים סביב מועדים כמו הסיגד ויום השנה למבצע שלמה. כנס קודם של המרכז באותו נושא — "ממלכת הגדעונים: האוטונומיה המדינית של יהודי אתיופיה ומאבקיה בממלכה השלמונית הנוצרית" — התקיים כבר ב-2022.
+
+## המרכז למורשת יהדות אתיופיה
+
+המרכז הוא גוף ידע ממלכתי לחקר תרבותה ומורשתה של יהדות אתיופיה. הוא מפעיל מכון מחקר, ארכיון ומאגר מידע, פעילות הנצחה, חינוך ותערוכות, ומאגר אתרי מורשת של ביתא ישראל באתיופיה.
+
+- **כתובת**: שדרות שז"ר 1, בנייני האומה, ירושלים
+- **טלפון**: 02-6772568
+
+פרטי הרשמה ותוכנייה מלאה מתפרסמים בעמוד הכנסים של המרכז. מומלץ לבדוק שם לפני שיוצאים לדרך.
+
+## קראו גם
+
+- [סיגד תשפ"ז — 9 בנובמבר 2026](/he/news/sigd-5787-monday-9-november-2026)
+- [קסים — מנהיגות רוחנית בקהילה](/he/heritage/kessim)
+- [ביתא ישראל — דף המורשת](/he/heritage/events/beta-israel)
+
+## מקורות
+
+- [המרכז למורשת יהדות אתיופיה — עמוד הכנסים](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · נבדק 2.9.2026
+- [המרכז למורשת יהדות אתיופיה — לוח אירועים](https://ethiopianjhc.org.il/events-calendar/) · נבדק 2.9.2026`,
+      en: `## What is happening
+
+The **Center for Ethiopian Jewish Heritage** will hold a conference titled **"New directions in the study of the Kingdom of the Gideons"** on **14 October 2026, from 14:30 to 20:00**, at the Center in Jerusalem.
+
+According to the Center's own announcement, the conference marks **400 years since the fall of the Kingdom of the Gideons** — the Jewish self-rule in northern Ethiopia, finally defeated by Emperor Susenyos in 1626 — and aims to present new research to the scholarly community and to the general public.
+
+## What the Kingdom of the Gideons was
+
+"The Kingdom of the Gideons" is the name given in community tradition to the self-rule of Ethiopian Jews in the Simien mountains — the highest range in the Horn of Africa. The name comes from its kings, many of whom bore the name Gideon, after the biblical judge. This leadership was both political and military, and it fought a long conflict with the Christian Solomonic dynasty that ruled the region.
+
+## Why this is a community matter, not only an academic one
+
+This story barely appears in the Israeli history taught in schools, and most of what was written about it was written by Christian historians — that is, by the side that won. A conference presenting new research on the period is, in practice, the return of an entire narrative to a place where it can be cited.
+
+Nor is it a one-off: the Center holds academic conferences, book launches and folklore events through the year, plus events around dates such as Sigd and the anniversary of Operation Solomon. An earlier Center conference on the same subject — "The Kingdom of the Gideons: the political autonomy of Ethiopian Jews and its struggles with the Christian Solomonic kingdom" — was held back in 2022.
+
+## The Center for Ethiopian Jewish Heritage
+
+The Center is a national knowledge body for the study of the culture and heritage of Ethiopian Jewry. It runs a research institute, an archive and database, commemoration activity, education and exhibitions, and a database of Beta Israel heritage sites in Ethiopia.
+
+- **Address**: 1 Sderot Shazar, Binyanei Ha'uma, Jerusalem
+- **Phone**: 02-6772568
+
+Registration details and the full programme are published on the Center's conferences page. Check there before setting out.
+
+## Read also
+
+- [Sigd 5787 — 9 November 2026](/en/news/sigd-5787-monday-9-november-2026)
+- [Kessim — the community's spiritual leadership](/en/heritage/kessim)
+- [Beta Israel — the heritage page](/en/heritage/events/beta-israel)
+
+## Sources
+
+- [Center for Ethiopian Jewish Heritage — conferences page](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · verified 2 Sep 2026
+- [Center for Ethiopian Jewish Heritage — events calendar](https://ethiopianjhc.org.il/events-calendar/) · verified 2 Sep 2026`,
+      am: `## ምን ይካሄዳል
+
+**የኢትዮጵያ አይሁድ ቅርስ ማዕከል** በ**ጥቅምት 14፣ 2026፣ ከ14:30 እስከ 20:00**፣ **«በጊዴዎን መንግሥት ጥናት ላይ አዳዲስ ግኝቶች»** የተሰኘ ጉባኤ በኢየሩሳሌም ያካሂዳል።
+
+በማዕከሉ ማስታወቂያ መሠረት ጉባኤው **የጊዴዎን መንግሥት ከወደቀ 400 ዓመታት** መሆኑን ያከብራል — በሰሜን ኢትዮጵያ የነበረው የአይሁድ ራስን በራስ ማስተዳደር በንጉሥ ሱስንዮስ በ1626 ተሸነፈ።
+
+## የጊዴዎን መንግሥት ምንድን ነው
+
+«የጊዴዎን መንግሥት» በማህበረሰቡ ትውፊት ውስጥ በሰሜን ተራሮች ለነበረው የኢትዮጵያ አይሁዶች ራስን በራስ ማስተዳደር የተሰጠ ስም ነው። ስሙ የመጣው ብዙዎቹ ጊዴዎን ተብለው ከሚጠሩት ነገሥታቱ ነው። ይህ አመራር ፖለቲካዊም ወታደራዊም ነበር፣ ከክርስቲያኑ የሰሎሞናዊ ሥርወ መንግሥት ጋር ረጅም ግጭት አካሂዷል።
+
+## ለምን የማህበረሰብ ጉዳይ ነው
+
+ይህ ታሪክ በእስራኤል ትምህርት ቤቶች ውስጥ ብዙም አይሰጥም፣ ስለ እሱ የተጻፈውም አብዛኛው በክርስቲያን ታሪክ ጸሐፊዎች — ማለትም ባሸነፈው ወገን — የተጻፈ ነው። አዲስ ጥናት የሚያቀርብ ጉባኤ ሙሉ ትረካን ወደ ሊጠቀስበት ወደሚችል ቦታ መመለስ ነው።
+
+## ማዕከሉ
+
+ማዕከሉ የኢትዮጵያ አይሁድ ባህልና ቅርስ ጥናት ብሔራዊ የዕውቀት አካል ነው። የምርምር ተቋም፣ ማህደር፣ የመረጃ ቋት፣ የመታሰቢያ ሥራ፣ ትምህርትና ኤግዚቢሽኖችን ያካሂዳል።
+
+- **አድራሻ**፦ ሽዛር ጎዳና 1፣ ቢንየኔ ሃኡማ፣ ኢየሩሳሌም
+- **ስልክ**፦ 02-6772568
+
+## ተጨማሪ ያንብቡ
+
+- [ሰግድ 5787 — ኅዳር 9፣ 2026](/am/news/sigd-5787-monday-9-november-2026)
+- [ቄሶች](/am/heritage/kessim)
+- [ቤተ እስራኤል](/am/heritage/events/beta-israel)
+
+## ምንጮች
+
+- [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የጉባኤዎች ገጽ](https://ethiopianjhc.org.il/%D7%9E%D7%97%D7%A7%D7%A8/%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/) · መስከረም 2፣ 2026 ተረጋግጧል
+- [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የዝግጅቶች ቀን መቁጠሪያ](https://ethiopianjhc.org.il/events-calendar/) · መስከረም 2፣ 2026 ተረጋግጧል`,
+    },
+  },
 ];
