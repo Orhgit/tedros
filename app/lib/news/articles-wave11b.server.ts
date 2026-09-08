@@ -515,4 +515,255 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "parent-payments-tashpaz-maximum-amounts-2026",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["education"],
+    title: {
+      he: 'שנת הלימודים נפתחה: אלה הסכומים המרביים שמותר לגבות מכם בתשפ"ז — ומה שאסור לגבות בכלל',
+      en: "The school year has opened: these are the maximum amounts a school may charge you in 5787 — and what may not be charged at all",
+      am: "የትምህርት ዓመቱ ተከፍቷል፦ በ5787 ትምህርት ቤት ሊያስከፍልዎ የሚችለው ከፍተኛ መጠን — እና በጭራሽ ሊያስከፍል የማይችለው",
+    },
+    excerpt: {
+      he: 'משרד החינוך פרסם ב-10.8.2026 את הודעה 0379 — הסכומים המרביים לגביית תשלומי הורים בתשפ"ז, שאישרה ועדת החינוך של הכנסת. תשלום החובה היחיד הוא ביטוח תאונות אישיות, ₪69. הסכום הכולל נע בין ₪253 בגן ל-₪1,372 בכיתה י"ב. ובלי אישור במערכת "אפיק" — אין לשלם.',
+      en: "On August 10, 2026 the Ministry of Education published Notice 0379 — the maximum parent-payment amounts for 5787, approved by the Knesset Education Committee. The only compulsory payment is personal accident insurance, ₪69. The overall total ranges from ₪253 in kindergarten to ₪1,372 in twelfth grade. And with no approval in the \"Afik\" system — do not pay.",
+      am: "የትምህርት ሚኒስቴር በኦገስት 10, 2026 ማስታወቂያ 0379 አሳተመ — በክኔሴት የትምህርት ኮሚቴ የጸደቀው የ5787 ከፍተኛ የወላጅ ክፍያ መጠን። ብቸኛው ግዴታዊ ክፍያ የግል አደጋ መድን ነው፣ ₪69። አጠቃላዩ ድምር በመዋለ ሕፃናት ከ₪253 እስከ በ12ኛ ክፍል ₪1,372 ይደርሳል። በ«አፊቅ» ሥርዓት ፈቃድ ከሌለ ደግሞ — አይክፈሉ።",
+    },
+    bodies: {
+      he: `## למה זה חשוב עכשיו
+
+שנת הלימודים תשפ"ז נפתחה ב-1.9.2026. בשבועות הקרובים יגיעו הביתה חוזרי תשלומים, טפסים ובקשות. **הסכומים אינם נתונים לשיקול דעת של בית הספר** — הם מאושרים בוועדת החינוך, התרבות והספורט של הכנסת ומתפרסמים בחוזר מנכ"ל.
+
+ב-**10 באוגוסט 2026** (כ"ז באב תשפ"ו) פרסם משרד החינוך את **הודעה מס' 0379, "תשלומי הורים לשנת הלימודים התשפ"ז"**. אלה המספרים.
+
+## הסכום הכולל המרבי, לפי שכבה
+
+| שכבה | סך תשלומי חובה ורשות |
+| --- | --- |
+| גני ילדים | ₪253 |
+| כיתות א'–ב' | ₪540 |
+| כיתות ג'–ד' | ₪565 |
+| כיתה ה' | ₪691 |
+| כיתה ו' | ₪901 |
+| כיתות ז'–ח' | ₪1,026 |
+| כיתה ח' (בית ספר א'–ח') | ₪1,151 |
+| כיתה ט' (שש-שנתי) | ₪1,042 |
+| כיתה ט' (חט"ב עצמאית) | ₪1,167 |
+| כיתות י'–י"א | ₪1,219 |
+| כיתה י"ב | ₪1,372 |
+
+מקור: [הודעה 0379 — תשלומי הורים לשנת הלימודים התשפ"ז, משרד החינוך, 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) · נבדק ספטמבר 2026.
+
+**הסכומים האלה אינם כוללים תל"ן** (תוכנית לימודים נוספת) **ורכישת שירותים מרצון**, שמוגבלים בנפרד באותו חוזר ודורשים חתימה אישית של כל הורה בנפרד.
+
+## מה חובה ומה לא
+
+**תשלום החובה היחיד הוא ביטוח תאונות אישיות לתלמידים — ₪69 לשנה, בכל שכבה מהגן ועד י"ב.** "חובה" כאן פירושה שההורה משלם גם אם אינו נהנה מהשירות.
+
+כל השאר — **תשלומי רשות**. הורה רשאי להחליט שילדו לא יצרוך את השירות, ואז לא ישלם עבורו. בכלל זה סל תרבות (₪67 בגן עד ₪164 בי"ב), טיולים, מסיבות סיום, השאלת ספרי לימוד (₪280–₪320), של"ח, וועד הורים יישובי והנהגת הורים ארצית (₪1.5 כל אחד).
+
+שימו לב לשורה אחת בטבלה: **מסיבות כיתתיות — 0 בכל השכבות.** אסור לגבות עבורן.
+
+השנה הופחתה הגבייה המרבית עבור סל תרבות ב-12 שקלים לתלמיד; לפי החוזר, משרד החינוך יעביר את הסכום הזה בסוף דצמבר 2026 לרשויות ולבעלויות עבור כל תלמיד מתוקצב.
+
+## הכלל שהכי כדאי להכיר: "אפיק"
+
+זהו הכלל המעשי ביותר בחוזר, והוא פשוט:
+
+> **"אין לגבות כספים מההורים בטרם אושר חוזר התשלומים המוסדי על ידי המפקח או גורם מוסמך אחר במחוז באמצעות מערכת 'אפיק'."**
+
+פורטל ההורים של משרד החינוך מנסח זאת עוד יותר ישירות: **"אם אין חוזר באפיק — משמע שאין אישור לגבייה, ועל כן אין לשלם."**
+
+חוזר התשלומים המוסדי חייב להיחתם על ידי מנהל בית הספר **ועל ידי יו"ר הנהגת ההורים המוסדית**, וטבלת התשלומים המאושרת מופקת ממערכת אפיק ומצורפת אליו. אם קיבלתם דרישת תשלום בלי הטבלה הזאת — יש לכם שאלה לגיטימית לשאול.
+
+ועוד: **הגבייה מותרת רק על ידי מוסד החינוך, הרשות המקומית או הבעלות.** גבייה באמצעות עמותה או ועד הורים אינה מותרת.
+
+## אי-תשלום מסיבה כלכלית — הכלל מפורש
+
+החוזר קובע: **"אין למנוע מתלמידים להשתתף בפעילויות בשל אי-תשלום עקב קשיים כלכליים, ויש למצוא פתרונות לשיתופם באמצעות הרשות המקומית והנהלת בית הספר."**
+
+לכך יש גם תקציב ייעודי — מלגות משרד החינוך לתלמידים שהוריהם מתקשים לשלם. הרחבנו עליהן ב[כתבה נפרדת, כולל הסכומים ולוח הזמנים](/he/news/education-ministry-scholarships-parent-payments-2026).
+
+## פטור מלא מתשלומי רשות — למי
+
+החוזר קובע שאין לגבות תשלומי רשות מ**תלמידים שפונו בהחלטת ממשלה וטרם הוחלט להשיבם לביתם**, מ**תלמידים ששבו מן השבי**, ומ**בני משפחה מדרגה ראשונה של חטופים**. תשלום החובה, תל"ן ורכישה מרצון כן נגבים, והרשות המקומית רשאית לסייע במלגות עד גובה תשלומי ההורים שאושר באפיק.
+
+## תרומות
+
+ועד ההורים רשאי לפנות מיוזמתו בבקשת תרומה. **מנהל בית הספר אינו רשאי** להתרים הורים או לפנות אליהם בבקשת תרומה. אין לבקש כתרומה שירותים שכלולים בתשלומי החובה או הרשות, אין לחייב הורה לתרום, ואין למנוע שירות מתלמיד בעקבות אי-מתן תרומה.
+
+## אם משהו לא מסתדר
+
+- בקשו לראות את **חוזר התשלומים המוסדי המאושר** ואת טבלת אפיק המצורפת אליו.
+- השוו לסכומים שבטבלה למעלה. **אין לגבות מעבר לסכום המרבי.**
+- פנו למזכירות בית הספר, ואם צריך — למפקח הכולל במחוז.
+- מוקד שירות ותמיכה להורים: **6552\\*** (שלוחה 2 ואז 2), א'–ה' 7:30–17:00, ו' 7:30–13:00.
+
+לזכויות ההורים במערכת החינוך בהרחבה — [המדריך שלנו](/he/education/parent-rights).
+
+## מקורות
+
+- [הודעה 0379 — תשלומי הורים לשנת הלימודים התשפ"ז, מאגר חוזרי מנכ"ל, פורסמה 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — נקראה במלואה 2.9.2026
+- [תשלומי הורים — פורטל ההורים, משרד החינוך](https://parents.education.gov.il/gov-education/school/payments/)
+- [חוק לימוד חובה, תש"ט-1949](https://fs.knesset.gov.il/%5C1%5Claw%5C1_lsr_203716.PDF)
+- [זכויות הורים במערכת החינוך — טדרוס](/he/education/parent-rights)`,
+      en: `## Why this matters now
+
+The 5787 school year opened on September 1, 2026. Over the coming weeks, payment circulars, forms and requests will arrive at home. **The amounts are not at the school's discretion** — they are approved by the Knesset's Education, Culture and Sport Committee and published in a director-general's circular.
+
+On **August 10, 2026** the Ministry of Education published **Notice no. 0379, "Parent payments for the 5787 school year."** These are the numbers.
+
+## The maximum total, by grade
+
+| Grade | Total compulsory + optional payments |
+| --- | --- |
+| Kindergarten | ₪253 |
+| Grades 1–2 | ₪540 |
+| Grades 3–4 | ₪565 |
+| Grade 5 | ₪691 |
+| Grade 6 | ₪901 |
+| Grades 7–8 | ₪1,026 |
+| Grade 8 (in a 1–8 school) | ₪1,151 |
+| Grade 9 (six-year school) | ₪1,042 |
+| Grade 9 (independent middle school) | ₪1,167 |
+| Grades 10–11 | ₪1,219 |
+| Grade 12 | ₪1,372 |
+
+Source: [Notice 0379 — parent payments for the 5787 school year, Ministry of Education, 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) · verified September 2026.
+
+**These amounts do not include "TaLaN"** (a supplementary curriculum) **or voluntary purchase of services**, which are capped separately in the same circular and require each parent's individual signature.
+
+## What is compulsory and what is not
+
+**The only compulsory payment is personal accident insurance for pupils — ₪69 a year, at every level from kindergarten through grade 12.** "Compulsory" here means the parent pays it even if they derive no benefit from the service.
+
+Everything else is an **optional-services payment**. A parent may decide their child will not consume the service, and then does not pay for it. That includes the culture basket (₪67 in kindergarten up to ₪164 in grade 12), trips, graduation parties, textbook lending (₪280–₪320), the field-studies programme, and the municipal parents' committee and national parents' body (₪1.5 each).
+
+Note one line in the table: **class parties — 0 at every level.** They may not be charged for.
+
+This year the maximum charge for the culture basket was reduced by 12 shekels per pupil; per the circular, the Ministry of Education will transfer that sum at the end of December 2026 to the local authorities and school owners for every duly budgeted pupil.
+
+## The rule most worth knowing: "Afik"
+
+This is the most practical rule in the circular, and it is simple:
+
+> **"Money may not be collected from parents before the institutional payments circular has been approved by the inspector or another authorized official in the district through the 'Afik' system."**
+
+The Ministry of Education's parents' portal puts it even more directly: **"If there is no circular on Afik, it means there is no approval to collect, and therefore you should not pay."**
+
+The institutional payments circular must be signed by the school principal **and by the chair of the institutional parents' body**, and the approved payments table is generated from Afik and attached to it. If you received a payment demand without that table, you have a legitimate question to ask.
+
+Also: **collection is permitted only by the educational institution, the local authority, or the school's owner.** Collection through an association or a parents' committee is not permitted.
+
+## Non-payment for financial reasons — the rule is explicit
+
+The circular states: **"Pupils may not be prevented from taking part in activities because of non-payment due to financial difficulty, and solutions for including them must be found through the local authority and the school management."**
+
+There is also a dedicated budget for this — Ministry of Education scholarships for pupils whose parents struggle to pay. We covered them in [a separate article, with the amounts and the timetable](/en/news/education-ministry-scholarships-parent-payments-2026).
+
+## Full exemption from optional payments — for whom
+
+The circular states that optional-services payments may not be collected from **pupils evacuated by government decision whose return home has not yet been decided**, from **pupils who have returned from captivity**, and from **first-degree family members of hostages**. The compulsory payment, TaLaN and voluntary purchases are still collected, and the local authority may assist with scholarships up to the parent-payment level approved on Afik.
+
+## Donations
+
+The parents' committee may, on its own initiative, ask parents for a donation. **The school principal may not** solicit donations from parents. Services already included in the compulsory or optional payments may not be requested as a donation, no parent may be compelled to donate, and no service may be withheld from a pupil because a donation was not given.
+
+## If something doesn't add up
+
+- Ask to see the **approved institutional payments circular** and the Afik table attached to it.
+- Compare against the amounts in the table above. **Nothing above the maximum may be collected.**
+- Approach the school office, and if needed the district's inspector.
+- Parents' service and support line: **\\*6552** (extension 2, then 2), Sun–Thu 7:30–17:00, Fri 7:30–13:00.
+
+For parents' rights in the education system in depth — [our guide](/en/education/parent-rights).
+
+## Sources
+
+- [Notice 0379 — parent payments for the 5787 school year, director-general circulars database, published 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — read in full 2.9.2026
+- [Parent payments — parents' portal, Ministry of Education](https://parents.education.gov.il/gov-education/school/payments/)
+- [Compulsory Education Law, 1949](https://fs.knesset.gov.il/%5C1%5Claw%5C1_lsr_203716.PDF)
+- [Parents' rights in the education system — Tedros](/en/education/parent-rights)`,
+      am: `## ይህ አሁን ለምን አስፈለገ
+
+የ5787 የትምህርት ዓመት በሴፕቴምበር 1, 2026 ተከፍቷል። በሚቀጥሉት ሳምንታት የክፍያ ማስታወቂያዎች፣ ቅጾችና ጥያቄዎች ወደ ቤት ይደርሳሉ። **መጠኖቹ በትምህርት ቤቱ ውሳኔ ላይ የተመሠረቱ አይደሉም** — በክኔሴት የትምህርት፣ ባህልና ስፖርት ኮሚቴ ይጸድቃሉ፣ በዋና ዳይሬክተር ማስታወቂያም ይታተማሉ።
+
+በ**ኦገስት 10, 2026** የትምህርት ሚኒስቴር **ማስታወቂያ ቁጥር 0379፣ «ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች»** አሳተመ። ቁጥሮቹ እነሆ።
+
+## ከፍተኛው ጠቅላላ መጠን በክፍል ደረጃ
+
+| ክፍል | ጠቅላላ ግዴታዊ + አማራጭ ክፍያ |
+| --- | --- |
+| መዋለ ሕፃናት | ₪253 |
+| 1–2ኛ ክፍል | ₪540 |
+| 3–4ኛ ክፍል | ₪565 |
+| 5ኛ ክፍል | ₪691 |
+| 6ኛ ክፍል | ₪901 |
+| 7–8ኛ ክፍል | ₪1,026 |
+| 8ኛ ክፍል (በ1–8 ትምህርት ቤት) | ₪1,151 |
+| 9ኛ ክፍል (የስድስት ዓመት ትምህርት ቤት) | ₪1,042 |
+| 9ኛ ክፍል (ራሱን የቻለ መካከለኛ ደረጃ) | ₪1,167 |
+| 10–11ኛ ክፍል | ₪1,219 |
+| 12ኛ ክፍል | ₪1,372 |
+
+ምንጭ፦ [ማስታወቂያ 0379 — ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች፣ የትምህርት ሚኒስቴር፣ 10.8.2026](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) · በሴፕቴምበር 2026 ተረጋግጧል።
+
+**እነዚህ መጠኖች «ተላን»** (ተጨማሪ ሥርዓተ ትምህርት) **እና በፈቃደኝነት የአገልግሎት ግዢን አያካትቱም**፤ እነሱ በዚያው ማስታወቂያ ተለይተው የተገደቡ ሲሆኑ የእያንዳንዱን ወላጅ የግል ፊርማ ይጠይቃሉ።
+
+## ግዴታዊው ምንድን ነው፣ ያልሆነውስ
+
+**ብቸኛው ግዴታዊ ክፍያ የተማሪዎች የግል አደጋ መድን ነው — በዓመት ₪69፣ ከመዋለ ሕፃናት እስከ 12ኛ ክፍል በሁሉም ደረጃ።** «ግዴታዊ» ማለት ወላጁ ከአገልግሎቱ ጥቅም ባያገኝም ይከፍላል ማለት ነው።
+
+ሌላው ሁሉ **የአማራጭ አገልግሎት ክፍያ** ነው። ወላጅ ልጁ አገልግሎቱን እንዳይጠቀም መወሰን ይችላል፣ ከዚያም አይከፍልም። ይህ የባህል ቅርጫትን (በመዋለ ሕፃናት ₪67 እስከ በ12ኛ ክፍል ₪164)፣ ጉዞዎችን፣ የምረቃ ድግሶችን፣ የመማሪያ መጽሐፍ ውሰትን (₪280–₪320)፣ የመስክ ጥናት ፕሮግራምን፣ የከተማ የወላጅ ኮሚቴንና ብሔራዊ የወላጅ አካልን (እያንዳንዱ ₪1.5) ያካትታል።
+
+በሠንጠረዡ ውስጥ አንድ መስመር ልብ ይበሉ፦ **የክፍል ድግሶች — በሁሉም ደረጃ 0።** ለእነሱ ማስከፈል አይፈቀድም።
+
+በዚህ ዓመት ለባህል ቅርጫት ከፍተኛው ክፍያ በአንድ ተማሪ በ12 ሸቀል ቀንሷል፤ በማስታወቂያው መሠረት የትምህርት ሚኒስቴር ይህን ገንዘብ በዲሴምበር 2026 መጨረሻ በአግባቡ ለተመዘገበ ለእያንዳንዱ ተማሪ ለአካባቢ አስተዳደሮችና ለባለቤቶች ያስተላልፋል።
+
+## ማወቅ የሚገባው ዋና ደንብ፦ «አፊቅ»
+
+በማስታወቂያው ውስጥ በጣም ተግባራዊው ደንብ ይህ ነው፣ ቀላልም ነው፦
+
+> **«የተቋሙ የክፍያ ማስታወቂያ በ‹አፊቅ› ሥርዓት በኩል በተቆጣጣሪው ወይም በአውራጃው በሌላ ስልጣን ባለው ባለሥልጣን ሳይጸድቅ ከወላጆች ገንዘብ መሰብሰብ አይቻልም።»**
+
+የትምህርት ሚኒስቴር የወላጆች ፖርታል ይበልጥ በቀጥታ ያስቀምጠዋል፦ **«በአፊቅ ላይ ማስታወቂያ ከሌለ፣ የመሰብሰብ ፈቃድ የለም ማለት ነው፣ ስለዚህ መክፈል የለብዎትም።»**
+
+የተቋሙ የክፍያ ማስታወቂያ በትምህርት ቤቱ ርዕሰ መምህር **እና በተቋሙ የወላጆች አካል ሊቀመንበር** መፈረም አለበት፤ የጸደቀው የክፍያ ሠንጠረዥም ከአፊቅ ወጥቶ ይያያዛል። ያለዚያ ሠንጠረዥ የክፍያ ጥያቄ ከደረሰዎት፣ የሚጠይቁት ትክክለኛ ጥያቄ አለዎት።
+
+እንዲሁም፦ **መሰብሰብ የሚፈቀደው ለትምህርት ተቋሙ፣ ለአካባቢው አስተዳደር ወይም ለትምህርት ቤቱ ባለቤት ብቻ ነው።** በማህበር ወይም በወላጅ ኮሚቴ በኩል መሰብሰብ አይፈቀድም።
+
+## በኢኮኖሚ ምክንያት አለመክፈል — ደንቡ ግልጽ ነው
+
+ማስታወቂያው ይላል፦ **«በኢኮኖሚ ችግር ምክንያት ባለመክፈላቸው ተማሪዎች በእንቅስቃሴዎች እንዳይሳተፉ መከልከል አይቻልም፤ በአካባቢው አስተዳደርና በትምህርት ቤቱ አመራር በኩል እንዲሳተፉ የሚያደርግ መፍትሔ መፈለግ አለበት።»**
+
+ለዚህ የተመደበ በጀትም አለ — ወላጆቻቸው ለመክፈል ለሚቸገሩ ተማሪዎች የትምህርት ሚኒስቴር ስኮላርሺፖች። በ[የተለየ ጽሑፍ ውስጥ ከመጠኖቹና ከጊዜ ሰሌዳው ጋር](/am/news/education-ministry-scholarships-parent-payments-2026) አስፍተነዋል።
+
+## ከአማራጭ ክፍያዎች ሙሉ ነጻ መሆን — ለማን
+
+ማስታወቂያው እንደሚለው ከ**በመንግሥት ውሳኔ ተፈናቅለው ወደ ቤታቸው መመለሳቸው ገና ካልተወሰነ ተማሪዎች**፣ ከ**ከምርኮ ከተመለሱ ተማሪዎች**፣ እና ከ**የታገቱ ሰዎች የመጀመሪያ ደረጃ የቤተሰብ አባላት** የአማራጭ አገልግሎት ክፍያ መሰብሰብ አይቻልም። ግዴታዊው ክፍያ፣ ተላንና በፈቃደኝነት ግዢ ግን ይሰበሰባሉ፤ የአካባቢው አስተዳደርም በአፊቅ እስከጸደቀው የወላጅ ክፍያ ደረጃ በስኮላርሺፕ ሊረዳ ይችላል።
+
+## ልገሳዎች
+
+የወላጆች ኮሚቴ በራሱ ተነሳሽነት ወላጆችን ልገሳ መጠየቅ ይችላል። **የትምህርት ቤቱ ርዕሰ መምህር** ከወላጆች ልገሳ መጠየቅ **አይችልም**። በግዴታዊ ወይም በአማራጭ ክፍያዎች ውስጥ የተካተቱ አገልግሎቶች እንደ ልገሳ መጠየቅ አይቻልም፣ ማንም ወላጅ እንዲለግስ መገደድ የለበትም፣ ልገሳ ባለመስጠቱም ከተማሪ አገልግሎት መከልከል የለበትም።
+
+## የሆነ ነገር ካልተስተካከለ
+
+- **የጸደቀውን የተቋም የክፍያ ማስታወቂያ** እና ከእሱ ጋር የተያያዘውን የአፊቅ ሠንጠረዥ እንዲያሳዩዎት ይጠይቁ።
+- ከላይ ካለው ሠንጠረዥ ጋር ያወዳድሩ። **ከከፍተኛው መጠን በላይ መሰብሰብ አይቻልም።**
+- ወደ ትምህርት ቤቱ ጽሕፈት ቤት፣ አስፈላጊ ከሆነም ወደ አውራጃው ተቆጣጣሪ ይሂዱ።
+- የወላጆች አገልግሎትና ድጋፍ መስመር፦ **\\*6552** (ቅጥያ 2፣ ከዚያ 2)፣ እሑድ–ሐሙስ 7:30–17:00፣ ዓርብ 7:30–13:00።
+
+በትምህርት ሥርዓት ውስጥ ስለ ወላጆች መብቶች በሰፊው — [መመሪያችን](/am/education/parent-rights)።
+
+## ምንጮች
+
+- [ማስታወቂያ 0379 — ለ5787 የትምህርት ዓመት የወላጅ ክፍያዎች፣ የዋና ዳይሬክተር ማስታወቂያዎች ማከማቻ፣ በ10.8.2026 ታትሟል](https://apps.education.gov.il/Mankal/Hodaa.aspx?siduri=377) — ሙሉ በሙሉ የተነበበ 2.9.2026
+- [የወላጅ ክፍያዎች — የወላጆች ፖርታል፣ የትምህርት ሚኒስቴር](https://parents.education.gov.il/gov-education/school/payments/)
+- [የግዴታ ትምህርት ሕግ፣ 1949](https://fs.knesset.gov.il/%5C1%5Claw%5C1_lsr_203716.PDF)
+- [በትምህርት ሥርዓት ውስጥ የወላጆች መብቶች — ትድሮስ](/am/education/parent-rights)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
