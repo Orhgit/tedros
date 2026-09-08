@@ -608,7 +608,7 @@ This is not merely formal boilerplate: eligibility depends on a temporary order 
     },
     excerpt: {
       he: 'משרד החינוך פרסם ב-10.8.2026 את הודעה 0379 — הסכומים המרביים לגביית תשלומי הורים בתשפ"ז, שאישרה ועדת החינוך של הכנסת. תשלום החובה היחיד הוא ביטוח תאונות אישיות, ₪69. הסכום הכולל נע בין ₪253 בגן ל-₪1,372 בכיתה י"ב. ובלי אישור במערכת "אפיק" — אין לשלם.',
-      en: "On August 10, 2026 the Ministry of Education published Notice 0379 — the maximum parent-payment amounts for 5787, approved by the Knesset Education Committee. The only compulsory payment is personal accident insurance, ₪69. The overall total ranges from ₪253 in kindergarten to ₪1,372 in twelfth grade. And with no approval in the \"Afik\" system — do not pay.",
+      en: 'On August 10, 2026 the Ministry of Education published Notice 0379 — the maximum parent-payment amounts for 5787, approved by the Knesset Education Committee. The only compulsory payment is personal accident insurance, ₪69. The overall total ranges from ₪253 in kindergarten to ₪1,372 in twelfth grade. And with no approval in the "Afik" system — do not pay.',
       am: "የትምህርት ሚኒስቴር በኦገስት 10, 2026 ማስታወቂያ 0379 አሳተመ — በክኔሴት የትምህርት ኮሚቴ የጸደቀው የ5787 ከፍተኛ የወላጅ ክፍያ መጠን። ብቸኛው ግዴታዊ ክፍያ የግል አደጋ መድን ነው፣ ₪69። አጠቃላዩ ድምር በመዋለ ሕፃናት ከ₪253 እስከ በ12ኛ ክፍል ₪1,372 ይደርሳል። በ«አፊቅ» ሥርዓት ፈቃድ ከሌለ ደግሞ — አይክፈሉ።",
     },
     bodies: {
@@ -858,7 +858,7 @@ For parents' rights in the education system in depth — [our guide](/en/educati
       am: "ለወላጅ ክፍያዎች የስኮላርሺፕ በጀት አለ — ትምህርት ቤቱም መኖሩን የማሳወቅ ግዴታ አለበት",
     },
     excerpt: {
-      he: 'משרד החינוך מקצה לבתי ספר תקציב מלגות לתלמידים שהוריהם מתקשים לשלם עבור ספרים, אביזרי לימוד ופעילויות. ₪100–750 ביסודי, ₪100–1,200 בעל-יסודי. ההחלטה בידי ועדת מלגות בית-ספרית, המועדים נקבעים בבית הספר — ועל ההנהלה חלה חובה מפורשת לפרסם שהתקציב קיים.',
+      he: "משרד החינוך מקצה לבתי ספר תקציב מלגות לתלמידים שהוריהם מתקשים לשלם עבור ספרים, אביזרי לימוד ופעילויות. ₪100–750 ביסודי, ₪100–1,200 בעל-יסודי. ההחלטה בידי ועדת מלגות בית-ספרית, המועדים נקבעים בבית הספר — ועל ההנהלה חלה חובה מפורשת לפרסם שהתקציב קיים.",
       en: "The Ministry of Education allocates schools a scholarship budget for pupils whose parents struggle to pay for books, learning materials and activities. ₪100–750 in primary school, ₪100–1,200 in secondary. The decision sits with a school scholarship committee, the dates are set by the school — and management is under an explicit duty to publicize that the budget exists.",
       am: "የትምህርት ሚኒስቴር ወላጆቻቸው ለመጻሕፍት፣ ለመማሪያ ቁሳቁስና ለእንቅስቃሴዎች ለመክፈል ለሚቸገሩ ተማሪዎች ለትምህርት ቤቶች የስኮላርሺፕ በጀት ይመድባል። በአንደኛ ደረጃ ₪100–750፣ በሁለተኛ ደረጃ ₪100–1,200። ውሳኔው በትምህርት ቤቱ የስኮላርሺፕ ኮሚቴ እጅ ነው፣ ቀኖቹም በትምህርት ቤቱ ይወሰናሉ — አመራሩም በጀቱ መኖሩን የማስታወቅ ግልጽ ግዴታ አለበት።",
     },
@@ -1091,7 +1091,7 @@ The form is also published on the Ministry of Education's site, in Hebrew and in
       am: "ወደ ትምህርት ዓመቱ አንድ ሳምንት፦ የCBS መረጃ ስለ ማህበረሰቡ ትምህርት በእውነት ምን ይላል — በተገላቢጦሽ የሚጠቀስ አንድ ቁጥር ጨምሮ",
     },
     excerpt: {
-      he: 'הלשכה המרכזית לסטטיסטיקה פרסמה 57.7% מול 39.1% — והמספר הזה מצוטט שוב ושוב כאילו הוא אומר ש-57.7% מיוצאי אתיופיה ממשיכים לתואר. הוא לא. הוא אומר משהו אחר לגמרי, והמספר האמיתי על המשך לימודים הוא 23.2%. סקירה של נתוני החינוך בפרסום, כולל פערי הבגרות ומגמות שעולות.',
+      he: "הלשכה המרכזית לסטטיסטיקה פרסמה 57.7% מול 39.1% — והמספר הזה מצוטט שוב ושוב כאילו הוא אומר ש-57.7% מיוצאי אתיופיה ממשיכים לתואר. הוא לא. הוא אומר משהו אחר לגמרי, והמספר האמיתי על המשך לימודים הוא 23.2%. סקירה של נתוני החינוך בפרסום, כולל פערי הבגרות ומגמות שעולות.",
       en: "The Central Bureau of Statistics published 57.7% against 39.1% — and that number is quoted again and again as though it means 57.7% of Ethiopian-Israelis go on to a degree. It does not. It says something else entirely, and the real continuation figure is 23.2%. A review of the education data in the release, including the matriculation gaps and the trends that are rising.",
       am: "ማዕከላዊ የስታቲስቲክስ ቢሮ 57.7% ከ39.1% ጋር አሳተመ — ይህም ቁጥር 57.7% የሚሆኑ ኢትዮጵያ-እስራኤላውያን ወደ ዲግሪ ይቀጥላሉ እንደሚል ደጋግሞ ይጠቀሳል። አይደለም። ፍጹም ሌላ ነገር ይላል፣ ትክክለኛው የመቀጠል ቁጥርም 23.2% ነው። በሕትመቱ ውስጥ ያሉ የትምህርት መረጃዎች ቅኝት፣ የማትሪክ ክፍተቶችንና እያደጉ ያሉ አዝማሚያዎችን ጨምሮ።",
     },
@@ -1322,12 +1322,12 @@ The publication contains no chapter on wages or employment. For anyone looking f
     updatedAt: "2026-09-08",
     tags: ["employment"],
     title: {
-      he: 'מסמך הכנסת: פער של ₪5,800 בשכר החודשי — 43.6% — בין שכירים יוצאי אתיופיה לשאר השכירים היהודים באותם ענפים',
+      he: "מסמך הכנסת: פער של ₪5,800 בשכר החודשי — 43.6% — בין שכירים יוצאי אתיופיה לשאר השכירים היהודים באותם ענפים",
       en: "Knesset document: a ₪5,800 monthly wage gap — 43.6% — between Ethiopian-Israeli employees and other Jewish employees in the same industries",
       am: "የክኔሴት ሰነድ፦ በተመሳሳይ ዘርፎች በኢትዮጵያ-እስራኤላውያንና በሌሎች አይሁድ ሠራተኞች መካከል የ₪5,800 ወርሃዊ ደመወዝ ክፍተት — 43.6%",
     },
     excerpt: {
-      he: 'סקירה כלכלית של מרכז המחקר והמידע של הכנסת מ-10.8.2025 מציגה תמונה כפולה: שיעור התעסוקה של יוצאי אתיופיה גבוה יחסית לשיעורם באוכלוסייה בגיל העבודה — 3.4% ממשרות השכיר של יהודים מול 2.8% מהאוכלוסייה — והשכר הממוצע נמוך ב-43.6%. הפערים הגדולים ביותר דווקא בענפים המשתכרים ביותר.',
+      he: "סקירה כלכלית של מרכז המחקר והמידע של הכנסת מ-10.8.2025 מציגה תמונה כפולה: שיעור התעסוקה של יוצאי אתיופיה גבוה יחסית לשיעורם באוכלוסייה בגיל העבודה — 3.4% ממשרות השכיר של יהודים מול 2.8% מהאוכלוסייה — והשכר הממוצע נמוך ב-43.6%. הפערים הגדולים ביותר דווקא בענפים המשתכרים ביותר.",
       en: "An economic review by the Knesset Research and Information Center dated 10.8.2025 presents a double picture: the employment rate among Ethiopian-Israelis is high relative to their share of the working-age population — 3.4% of Jewish salaried jobs against 2.8% of the population — while the average wage is 43.6% lower. The largest gaps are precisely in the highest-paying industries.",
       am: "የክኔሴት የምርምርና መረጃ ማዕከል በ10.8.2025 ያወጣው የኢኮኖሚ ቅኝት ድርብ ምስል ያሳያል፦ የኢትዮጵያ-እስራኤላውያን የሥራ ስምሪት መጠን በሥራ ዕድሜ ካለው ሕዝብ ድርሻ አንጻር ከፍ ያለ ነው — ከአይሁድ የደመወዝ ሥራዎች 3.4% ከሕዝቡ 2.8% ጋር — አማካይ ደመወዙ ግን በ43.6% ያንሳል። ትልቁ ክፍተትም ልክ በከፍተኛ ደመወዝ በሚከፍሉ ዘርፎች ነው።",
     },
@@ -1552,12 +1552,12 @@ For training, mentoring and placement programmes that work on exactly these two 
     updatedAt: "2026-09-08",
     tags: ["education"],
     title: {
-      he: 'דוח ממשלתי: מספר המורים יוצאי אתיופיה עלה מ-709 ל-1,180 בארבע שנים — ובחינוך הבלתי-פורמלי חלק מהמספרים ירדו',
+      he: "דוח ממשלתי: מספר המורים יוצאי אתיופיה עלה מ-709 ל-1,180 בארבע שנים — ובחינוך הבלתי-פורמלי חלק מהמספרים ירדו",
       en: "Government report: the number of Ethiopian-Israeli teachers rose from 709 to 1,180 in four years — and in non-formal education some of the numbers fell",
       am: "የመንግሥት ሪፖርት፦ የኢትዮጵያ ተወላጅ መምህራን ቁጥር በአራት ዓመት ከ709 ወደ 1,180 አድጓል — በኢ-መደበኛ ትምህርት ግን አንዳንድ ቁጥሮች ወርደዋል",
     },
     excerpt: {
-      he: 'דוח סיכום התוכנית הממשלתית לשילוב יוצאי אתיופיה לשנים 2023–2024, שפורסם בינואר 2026, מציג יעדים שהושגו בחינוך הפורמלי: זכאות לבגרות העומדת בתנאי הסף של האוניברסיטאות עלתה מ-50.54% ל-59.89%, מעל היעד. באותו דוח, מספר הילדים בחוגים ומספר המתנדבים לשנת שירות ירדו.',
+      he: "דוח סיכום התוכנית הממשלתית לשילוב יוצאי אתיופיה לשנים 2023–2024, שפורסם בינואר 2026, מציג יעדים שהושגו בחינוך הפורמלי: זכאות לבגרות העומדת בתנאי הסף של האוניברסיטאות עלתה מ-50.54% ל-59.89%, מעל היעד. באותו דוח, מספר הילדים בחוגים ומספר המתנדבים לשנת שירות ירדו.",
       en: "The summary report of the government programme for the integration of Ethiopian-Israelis for 2023–2024, published in January 2026, presents targets met in formal education: matriculation eligibility meeting the university threshold rose from 50.54% to 59.89%, above target. In the same report, the number of children in enrichment classes and the number of gap-year volunteers fell.",
       am: "በጃንዋሪ 2026 የታተመው የኢትዮጵያ-እስራኤላውያን ውህደት የመንግሥት ፕሮግራም የ2023–2024 ማጠቃለያ ሪፖርት በመደበኛ ትምህርት የተሳኩ ግቦችን ያሳያል፦ የዩኒቨርሲቲ መግቢያ መስፈርት የሚያሟላ የማትሪክ ብቁነት ከ50.54% ወደ 59.89% አድጓል፣ ከግቡ በላይ። በዚያው ሪፖርት የማበልጸጊያ ክፍሎች የልጆች ቁጥርና የአገልግሎት ዓመት በጎ ፈቃደኞች ቁጥር ወርደዋል።",
     },
@@ -1781,7 +1781,7 @@ That matters for reading the declines above correctly: this is not a case of a b
       am: "የ«ላመርሓቅ» ፕሮግራም ተመራቂዎች የደመወዝ ጭማሪ ከ10% ወደ 47% አድጓል — የመንግሥት ሪፖርቱ የሥራ ስምሪት ምዕራፍ በቁጥር",
     },
     excerpt: {
-      he: 'דוח הסיכום של התוכנית הממשלתית לשנים 2023–2024 מפרט חמש תוכניות תעסוקה של משרד העבודה ליוצאי אתיופיה, עם מספרי המשתתפים ורמת הביצוע של כל אחת. המדד המעניין אינו מספר המשתתפים אלא תוספת השכר: מ-10% בלבד ב-2020 ל-47% בממוצע ב-2024.',
+      he: "דוח הסיכום של התוכנית הממשלתית לשנים 2023–2024 מפרט חמש תוכניות תעסוקה של משרד העבודה ליוצאי אתיופיה, עם מספרי המשתתפים ורמת הביצוע של כל אחת. המדד המעניין אינו מספר המשתתפים אלא תוספת השכר: מ-10% בלבד ב-2020 ל-47% בממוצע ב-2024.",
       en: "The summary report of the government programme for 2023–2024 details five Ministry of Labour employment programmes for Ethiopian-Israelis, with participant numbers and an implementation level for each. The interesting measure is not the number of participants but the wage increase: from only 10% in 2020 to 47% on average in 2024.",
       am: "የመንግሥት ፕሮግራሙ የ2023–2024 ማጠቃለያ ሪፖርት ለኢትዮጵያ-እስራኤላውያን የሠራተኛ ሚኒስቴር አምስት የሥራ ስምሪት ፕሮግራሞችን ከተሳታፊ ቁጥርና ከየራሳቸው የአፈጻጸም ደረጃ ጋር ይዘረዝራል። አስደናቂው መለኪያ የተሳታፊ ብዛት ሳይሆን የደመወዝ ጭማሪው ነው፦ በ2020 ከ10% ብቻ ወደ በ2024 በአማካይ 47%።",
     },
