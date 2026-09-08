@@ -428,4 +428,120 @@ Tedros does not give legal advice. What is described here is the official timeta
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
     },
   },
+  {
+    slug: "knesset-26-elections-timetable-2026",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    tags: ["civic", "policy"],
+    title: {
+      he: "לוח הזמנים לבחירות 27.10.2026 — התאריכים שנוגעים לך כבוחר",
+      en: "The timetable to 27 October 2026 — the dates that concern you as a voter",
+      am: "ወደ ጥቅምት 27 ቀን 2026 የሚወስደው የጊዜ ሰሌዳ — እንደ መራጭ የሚመለከቱዎት ቀናት",
+    },
+    excerpt: {
+      he: "ועדת הבחירות המרכזית מפרסמת לוח זמנים סטטוטורי מלא לבחירות לכנסת ה-26. רובו נוגע למפלגות ולוועדות, אבל שמונה תאריכים בו נוגעים ישירות לבוחר — מהמועד לעתירה על הפנקס ועד פרסום התוצאות.",
+      en: "The Central Elections Committee publishes a full statutory timetable for the 26th Knesset elections. Most of it concerns parties and committees, but eight dates in it concern the voter directly — from the register-petition deadline to the publication of results.",
+      am: "ማዕከላዊ ምርጫ ኮሚቴ ለ26ኛው ኔሴት ምርጫ ሙሉ ሕጋዊ የጊዜ ሰሌዳ ያሳትማል። አብዛኛው ፓርቲዎችንና ኮሚቴዎችን ይመለከታል፣ ነገር ግን ስምንት ቀናት መራጩን በቀጥታ ይመለከታሉ — ከመዝገብ አቤቱታ ቀነ ገደብ እስከ ውጤት ማሳተም።",
+    },
+    bodies: {
+      he: `## התאריכים שחשובים לבוחר
+
+ועדת הבחירות המרכזית מפרסמת לוח זמנים סטטוטורי מלא — עשרות שורות, כל אחת עם סעיף החוק שמכוחו היא נקבעה וספירת הימים לאחור עד יום הבחירות. רובו הגדול מיועד למפלגות, לוועדות האזוריות ולוועדות הקלפי. אלה השורות שנוגעות ישירות לך:
+
+| תאריך | מה קורה | סעיף |
+| --- | --- | --- |
+| 6.9.2026 | כניסת פנקס הבוחרים לתוקף | 26(ד) |
+| 7–8.9.2026 | הגשת רשימות המועמדים לוועדה המרכזית (ימים 1 ו-2) | 57(ט) |
+| **11.9.2026** | **מועד אחרון לעתירה על אי-הכללה בפנקס הבוחרים** | 53א |
+| 22.9.2026 | פרסום הודעת הוועדה בדבר שירותים ציבוריים שיפעלו ביום הבחירות | 71א |
+| 27.9.2026 | הודעה על אישור רשימות מועמדים | 63 |
+| 2.10.2026 | החלטה בעתירה על אי-הכללה בפנקס | 53א(ב) |
+| 6.10.2026 | משלוח ההודעה לבוחר | 55ב |
+| 13.10.2026 | תחילת שידורי תעמולה בטלוויזיה וברדיו | 15, 15א |
+| 18.10.2026 | פרסום רשימות המועמדים | 65 |
+| 20.10.2026 | פרסום הודעה על מקומות הקלפי | 68(ד) |
+| **27.10.2026** | **יום הבחירות** | — |
+| 4.11.2026 | פרסום תוצאות הבחירות | 11 לחוק-יסוד: הכנסת |
+| 18.11.2026 | מועד אחרון לערעור על התוצאות לבית המשפט לעניינים מנהליים בירושלים | 86(ב) |
+
+## שלוש הערות שכדאי לשים לב אליהן
+
+**החגים בתוך המערכה.** לוח הזמנים עצמו מסמן אותם: ערב ראש השנה חל ב-11.9.2026 — אותו יום שבו נסגר המועד לעתירה על הפנקס; ראש השנה ב-12–13.9; יום כיפור ב-21.9; סוכות מ-25.9; ושמחת תורה ב-3.10. מי שמתכנן פעולה בירוקרטית בתקופה הזו צריך לקחת בחשבון ימי סגירה.
+
+**הרשימות עוד לא סופיות.** הגשה אינה אישור. אישור רשימות המועמדים נקבע ל-27.9.2026, ופרסומן ל-18.10.2026. עד אז יכולים לחול שינויים, כולל מחיקת מועמד או סירוב לאשר רשימה.
+
+**מקום הקלפי מתפרסם רשמית רק ב-20.10.2026.** המידע הזמין קודם לכן — כולל מה שהמוקד מוסר — הוא מידע מקדים, ומ-7.9.2026 הוא כבר סופי ברמת המשרד. פירטנו זאת ב[כתבה על בדיקת מקום ההצבעה](/he/news/polling-station-lookup-amharic-2026).
+
+## מקורות
+
+- [ועדת הבחירות המרכזית — לוח זמנים לפעילות הוועדה, gov.il](https://www.gov.il/he/pages/time--table-26)
+- [ועדת הבחירות המרכזית — "בחירות לכנסת ה-26", gov.il, עודכן 7.9.2026](https://www.gov.il/he/pages/knesset-elections-2026)`,
+      en: `## The dates that matter to a voter
+
+The Central Elections Committee publishes a full statutory timetable — dozens of rows, each with the section of law it derives from and a countdown to election day. Most of it is addressed to parties, regional committees and polling committees. These are the rows that concern you directly:
+
+| Date | What happens | Section |
+| --- | --- | --- |
+| 6 Sept 2026 | The voter register comes into force | 26(d) |
+| 7–8 Sept 2026 | Submission of candidate lists to the Central Committee (days 1 and 2) | 57(i) |
+| **11 Sept 2026** | **Last day to petition over exclusion from the voter register** | 53a |
+| 22 Sept 2026 | Publication of the committee's notice on public services operating on election day | 71a |
+| 27 Sept 2026 | Notice of approval of candidate lists | 63 |
+| 2 Oct 2026 | Decision on petitions over exclusion from the register | 53a(b) |
+| 6 Oct 2026 | The voter notification is mailed | 55b |
+| 13 Oct 2026 | Campaign broadcasts begin on television and radio | 15, 15a |
+| 18 Oct 2026 | Publication of the candidate lists | 65 |
+| 20 Oct 2026 | Publication of polling-place locations | 68(d) |
+| **27 Oct 2026** | **Election day** | — |
+| 4 Nov 2026 | Publication of the election results | 11, Basic Law: The Knesset |
+| 18 Nov 2026 | Last day to appeal the results to the Jerusalem Administrative Court | 86(b) |
+
+## Three things worth noticing
+
+**The holidays fall inside the campaign.** The timetable marks them itself: the eve of Rosh Hashanah is 11 September 2026 — the same day the register-petition window closes; Rosh Hashanah 12–13 September; Yom Kippur 21 September; Sukkot from 25 September; and Simchat Torah 3 October. Anyone planning a bureaucratic step in this period should account for closures.
+
+**The lists are not final yet.** Submission is not approval. Approval of candidate lists is set for 27 September 2026, and their publication for 18 October 2026. Until then changes can occur, including the deletion of a candidate or a refusal to approve a list.
+
+**Polling places are formally published only on 20 October 2026.** The information available earlier — including what the call centre gives out — is preliminary, and from 7 September 2026 it is final at ministry level. We covered this in [the article on checking your polling place](/en/news/polling-station-lookup-amharic-2026).
+
+## Sources
+
+- [Central Elections Committee — statutory activity timetable, gov.il](https://www.gov.il/he/pages/time--table-26)
+- [Central Elections Committee — "Elections to the 26th Knesset", gov.il, updated 7 Sept 2026](https://www.gov.il/he/pages/knesset-elections-2026)`,
+      am: `## ለመራጭ የሚያስፈልጉት ቀናት
+
+ማዕከላዊ ምርጫ ኮሚቴ ሙሉ ሕጋዊ የጊዜ ሰሌዳ ያሳትማል — በደርዘን የሚቆጠሩ መስመሮች፣ እያንዳንዳቸው ከወጡበት የሕግ አንቀጽና እስከ ምርጫው ቀን ካለው ቆጠራ ጋር። አብዛኛው ለፓርቲዎች፣ ለክልል ኮሚቴዎችና ለምርጫ ጣቢያ ኮሚቴዎች ነው። እርስዎን በቀጥታ የሚመለከቱት እነዚህ ናቸው፦
+
+| ቀን | ምን ይሆናል | አንቀጽ |
+| --- | --- | --- |
+| መስከረም 6 ቀን 2026 | የመራጮች መዝገብ ሥራ ላይ ይውላል | 26(መ) |
+| መስከረም 7–8 ቀን 2026 | የዕጩዎች ዝርዝር ለማዕከላዊ ኮሚቴ ማቅረብ (ቀን 1 እና 2) | 57(ት) |
+| **መስከረም 11 ቀን 2026** | **ከመራጮች መዝገብ ስለመተው አቤቱታ የማቅረቢያ የመጨረሻ ቀን** | 53ሀ |
+| መስከረም 22 ቀን 2026 | በምርጫው ቀን ስለሚሠሩ የሕዝብ አገልግሎቶች የኮሚቴው ማስታወቂያ ማሳተም | 71ሀ |
+| መስከረም 27 ቀን 2026 | የዕጩዎች ዝርዝር ስለመጽደቁ ማስታወቂያ | 63 |
+| ጥቅምት 2 ቀን 2026 | ከመዝገብ ስለመተው በቀረቡ አቤቱታዎች ላይ ውሳኔ | 53ሀ(ለ) |
+| ጥቅምት 6 ቀን 2026 | ለመራጩ ማስታወቂያ ይላካል | 55ለ |
+| ጥቅምት 13 ቀን 2026 | የቅስቀሳ ስርጭት በቴሌቪዥንና በሬዲዮ ይጀምራል | 15፣ 15ሀ |
+| ጥቅምት 18 ቀን 2026 | የዕጩዎች ዝርዝር ማሳተም | 65 |
+| ጥቅምት 20 ቀን 2026 | የምርጫ ቦታዎች ማስታወቂያ ማሳተም | 68(መ) |
+| **ጥቅምት 27 ቀን 2026** | **የምርጫ ቀን** | — |
+| ኅዳር 4 ቀን 2026 | የምርጫ ውጤት ማሳተም | 11፣ መሠረታዊ ሕግ፦ ኔሴት |
+| ኅዳር 18 ቀን 2026 | ውጤቱን ለኢየሩሳሌም አስተዳደራዊ ፍርድ ቤት ለመቃወም የመጨረሻ ቀን | 86(ለ) |
+
+## ትኩረት የሚሹ ሦስት ነጥቦች
+
+**በዓላቱ በዘመቻው ውስጥ ይወድቃሉ።** የጊዜ ሰሌዳው ራሱ ያመለክታቸዋል፦ የሮሽ ሀሻና ዋዜማ መስከረም 11 ቀን 2026 ነው — የመዝገብ አቤቱታ መስኮቱ የሚዘጋበት ቀን፤ ሮሽ ሀሻና መስከረም 12–13፤ ዮም ኪፑር መስከረም 21፤ ሱኮት ከመስከረም 25፤ ስምሃት ቶራ ጥቅምት 3። በዚህ ወቅት የቢሮክራሲ እርምጃ የሚያቅድ ሰው የመዘጋት ቀናትን ማገናዘብ አለበት።
+
+**ዝርዝሮቹ ገና የመጨረሻ አይደሉም።** ማቅረብ ማጽደቅ አይደለም። የዕጩዎች ዝርዝር ማጽደቅ ለመስከረም 27 ቀን 2026፣ ማሳተማቸው ደግሞ ለጥቅምት 18 ቀን 2026 ተወስኗል። እስከዚያ ድረስ ለውጦች ሊከሰቱ ይችላሉ፣ ዕጩን መሰረዝ ወይም ዝርዝርን ላለማጽደቅ መወሰንን ጨምሮ።
+
+**የምርጫ ቦታዎች በይፋ የሚታተሙት ጥቅምት 20 ቀን 2026 ብቻ ነው።** ከዚያ በፊት የሚገኘው መረጃ — የጥሪ ማዕከሉ የሚሰጠውን ጨምሮ — የመጀመሪያ ደረጃ ነው፤ ከመስከረም 7 ቀን 2026 ጀምሮ ግን በሚኒስቴር ደረጃ የመጨረሻ ነው። ይህንን በ[የምርጫ ቦታዎን ስለማረጋገጥ ባቀረብነው ዘገባ](/am/news/polling-station-lookup-amharic-2026) ዘርዝረናል።
+
+## ምንጮች
+
+- [ማዕከላዊ ምርጫ ኮሚቴ — ሕጋዊ የእንቅስቃሴ የጊዜ ሰሌዳ፣ gov.il](https://www.gov.il/he/pages/time--table-26)
+- [ማዕከላዊ ምርጫ ኮሚቴ — «ለ26ኛው ኔሴት ምርጫ»፣ gov.il፣ መስከረም 7 ቀን 2026 ተዘምኗል](https://www.gov.il/he/pages/knesset-elections-2026)
+
+*[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ እንዲገመግም ይመከራል።]*`,
+    },
+  },
 ];
