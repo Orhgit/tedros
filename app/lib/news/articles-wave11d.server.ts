@@ -528,4 +528,159 @@ Registration details and the full programme are published on the Center's confer
 - [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የዝግጅቶች ቀን መቁጠሪያ](https://ethiopianjhc.org.il/events-calendar/) · መስከረም 2፣ 2026 ተረጋግጧል`,
     },
   },
+
+  // 4 — High Holidays 5787 in Beta Israel tradition --------------------------
+  {
+    slug: "high-holidays-5787-beta-israel-tradition",
+    publishedAt: "2026-09-02",
+    updatedAt: "2026-09-02",
+    tags: ["holiday", "community"],
+    title: {
+      he: 'הימים הנוראים תשפ"ז: התאריכים, והשמות שהקהילה נושאת להם',
+      en: "The High Holidays of 5787: the dates, and the names the community carries for them",
+      am: "የ5787 ታላላቅ በዓላት፦ ቀኖቹና ማህበረሰቡ የሚጠራቸው ስሞች",
+    },
+    excerpt: {
+      he: 'ראש השנה תשפ"ז ב-12–13 בספטמבר, יום כיפור ב-21 בספטמבר, סוכות מ-26 בספטמבר. במסורת ביתא ישראל לחגים האלה שמות משלהם — ברהן סרקה, אסטסריו — ותפילה בגעז שהקסים נושאים בעל פה. וממנה נספרים 50 הימים עד הסיגד.',
+      en: "Rosh Hashanah 5787 on 12-13 September, Yom Kippur on 21 September, Sukkot from 26 September. In Beta Israel tradition these holidays carry their own names — Berhan Saraqa, Astasreyo — and a Ge'ez liturgy the kessim hold by heart. And from Yom Kippur the 50 days to Sigd are counted.",
+      am: "የ5787 ሮሽ ሃሻና መስከረም 12-13፣ ዮም ኪፑር መስከረም 21፣ ሱኮት ከመስከረም 26። በቤተ እስራኤል ትውፊት እነዚህ በዓላት የራሳቸው ስሞች አሏቸው — ብርሃን ሠረቀ፣ አስተስርዮ — እና ቄሶች በቃላቸው የያዙት የግዕዝ ጸሎት።",
+    },
+    bodies: {
+      he: `## התאריכים
+
+| חג | תאריך תשפ"ז |
+|----|--------------|
+| ראש השנה | 12–13 בספטמבר 2026 (החג נכנס בערב 11.9) |
+| יום כיפור | 21 בספטמבר 2026 |
+| סוכות | 26 בספטמבר – 2 באוקטובר 2026 |
+| שמיני עצרת | 3 באוקטובר 2026 |
+| שמחת תורה | 4 באוקטובר 2026 |
+| **סיגד** | **9 בנובמבר 2026** — 50 יום אחרי יום הכיפורים |
+
+התאריכים נבדקו בלוח החגים של Hebcal.
+
+## השמות שהקהילה נושאת
+
+במסורת ביתא ישראל לחגי תשרי שמות משלהם. ראש השנה נקרא **ברהן סרקה** (ברהן שרקה) — "האור זרח"; יום הכיפורים נקרא **אסטסריו**; לסוכות שם נפרד משלו. אלה אינם תרגומים של השמות העבריים אלא שמות עצמאיים, מלוח שנה שהתפתח מאות שנים ללא מגע עם הקהילות היהודיות האחרות.
+
+## התפילה — בגעז, ובעל פה
+
+הרב ד"ר שרון שלום, בסקירה שפרסם במכון שלום הרטמן ב-5 בדצמבר 2024, מתאר את הליטורגיה של ביתא ישראל כמסורת יהודית עתיקה ועצמאית, ולא — כפי שגרסה הנחת עבודה מחקרית רווחת — כהשפעה של המסורת הנוצרית האתיופית.
+
+לפי אותה סקירה:
+
+- התפילות בנויות מ**פסוקי מקרא מפורקים** מן התורה, הנביאים והתהילים, המורכבים יחד באופן שיוצר משמעות חדשה — כלומר מדרש, לא ציטוט.
+- הן **נמסרות בעל פה ונרשמות בגעז**, לשון הקודש של הקהילה.
+- בתפילת **ברהן סרקה** מופיעים תכנים של מלכות, זיכרון ושופר — במבנה המקביל למלכויות, זיכרונות ושופרות שבתפילת ראש השנה.
+
+שלום מצטט קסים שאמרו לו במפורש, על טקסטים מקודשים שבידי הנוצרים באתיופיה, "הם לקחו את זה מאיתנו".
+
+## מה זה אומר בפועל, השנה
+
+מי שגדל בבית שבו הקסים הובילו את התפילה בגעז, ומתפלל היום בבית כנסת שבו הנוסח הוא ספרדי או אשכנזי, מכיר את הפער הזה. הוא לא פער של "פחות" או "יותר" — הוא פער בין שתי מסורות יהודיות שהתפתחו בנפרד.
+
+לקראת הימים הנוראים כדאי לברר מראש מה מתקיים בעיר שלכם: יש קהילות שבהן הקסים מובילים תפילה נפרדת או משולבת, ויש מקומות שבהם אין. [דף הקסים לפי עיר](/he/heritage/kessim) הוא נקודת הפתיחה.
+
+## הערת מקורות
+
+התאריכים הלועזיים לקוחים מלוח החגים של Hebcal. תיאור הליטורגיה לקוח מהסקירה של הרב ד"ר שרון שלום במכון שלום הרטמן. השמות ברהן סרקה ואסטסריו מופיעים גם בערך "חגים ומועדים בקהילות ביתא ישראל" בוויקיפדיה העברית — מקור משני, שאנחנו מביאים כאן לצד המקור המחקרי ולא במקומו.
+
+## קראו גם
+
+- [קסים לפי עיר](/he/heritage/kessim)
+- [ביתא ישראל — דף המורשת](/he/heritage/events/beta-israel)
+- [סיגד תשפ"ז — 9 בנובמבר 2026](/he/news/sigd-5787-monday-9-november-2026)
+
+## מקורות
+
+- [Hebcal — לוח החגים היהודיים 2026](https://www.hebcal.com/holidays/2026) · נבדק 2.9.2026
+- [הרב ד"ר שרון שלום, "חקר הליטורגיה בקהילת ביתא ישראל — מאפיינים ייחודיים", מכון שלום הרטמן, 5.12.2024](https://heb.hartman.org.il/bete_israel_litrugy/)`,
+      en: `## The dates
+
+| Holiday | Date, 5787 |
+|---------|------------|
+| Rosh Hashanah | 12-13 September 2026 (begins the evening of 11 Sept) |
+| Yom Kippur | 21 September 2026 |
+| Sukkot | 26 September - 2 October 2026 |
+| Shmini Atzeret | 3 October 2026 |
+| Simchat Torah | 4 October 2026 |
+| **Sigd** | **9 November 2026** — 50 days after Yom Kippur |
+
+Dates checked against Hebcal's Jewish holiday calendar.
+
+## The names the community carries
+
+In Beta Israel tradition the Tishrei holidays have names of their own. Rosh Hashanah is called **Berhan Saraqa** — "the light has risen"; Yom Kippur is called **Astasreyo**; Sukkot has its own separate name. These are not translations of the Hebrew names but independent ones, from a calendar that developed for centuries without contact with other Jewish communities.
+
+## The prayer — in Ge'ez, and by heart
+
+Rabbi Dr. Sharon Shalom, in a survey published by the Shalom Hartman Institute on 5 December 2024, describes the Beta Israel liturgy as an ancient and autonomous Jewish tradition — and not, as a widespread scholarly working assumption had it, as an influence of Ethiopian Christian tradition.
+
+Per that survey:
+
+- The prayers are built from **fragmented biblical verses** from the Torah, Prophets and Psalms, assembled so as to create new meaning — midrash, not citation.
+- They are **transmitted orally and recorded in Ge'ez**, the community's sacred tongue.
+- The **Berhan Saraqa** liturgy carries themes of kingship, remembrance and the shofar — paralleling the malkhuyot, zikhronot and shofarot of the Rosh Hashanah service.
+
+Shalom quotes kessim who told him plainly, about sacred texts held by Christians in Ethiopia, "they took that from us".
+
+## What this means in practice, this year
+
+Anyone who grew up in a home where the kessim led prayer in Ge'ez, and who today prays in a synagogue with a Sephardi or Ashkenazi rite, knows this gap. It is not a gap of "less" or "more" — it is a gap between two Jewish traditions that developed apart.
+
+Ahead of the High Holidays it is worth finding out in advance what is happening in your city: in some communities the kessim lead a separate or a combined service, and in some places there is none. The [kessim-by-city page](/en/heritage/kessim) is the starting point.
+
+## A note on sources
+
+The civil dates come from Hebcal's holiday calendar. The description of the liturgy comes from Rabbi Dr. Sharon Shalom's survey at the Shalom Hartman Institute. The names Berhan Saraqa and Astasreyo also appear in the Hebrew Wikipedia entry on Beta Israel holidays — a secondary source, which we cite alongside the scholarly one rather than in place of it.
+
+## Read also
+
+- [Kessim by city](/en/heritage/kessim)
+- [Beta Israel — the heritage page](/en/heritage/events/beta-israel)
+- [Sigd 5787 — 9 November 2026](/en/news/sigd-5787-monday-9-november-2026)
+
+## Sources
+
+- [Hebcal — Jewish holiday calendar 2026](https://www.hebcal.com/holidays/2026) · verified 2 Sep 2026
+- [Rabbi Dr. Sharon Shalom, "Research on the liturgy of the Beta Israel community — distinctive features", Shalom Hartman Institute, 5 Dec 2024](https://heb.hartman.org.il/bete_israel_litrugy/)`,
+      am: `## ቀኖቹ
+
+| በዓል | የ5787 ቀን |
+|---|---|
+| ሮሽ ሃሻና | መስከረም 12-13፣ 2026 (መስከረም 11 ምሽት ይጀምራል) |
+| ዮም ኪፑር | መስከረም 21፣ 2026 |
+| ሱኮት | መስከረም 26 - ጥቅምት 2፣ 2026 |
+| ሽሚኒ ዓጼረት | ጥቅምት 3፣ 2026 |
+| ስምሓት ቶራ | ጥቅምት 4፣ 2026 |
+| **ሰግድ** | **ኅዳር 9፣ 2026** — ከዮም ኪፑር 50 ቀናት በኋላ |
+
+## ማህበረሰቡ የሚጠራቸው ስሞች
+
+በቤተ እስራኤል ትውፊት የትሽሬ በዓላት የራሳቸው ስሞች አሏቸው። ሮሽ ሃሻና **ብርሃን ሠረቀ** ይባላል፤ ዮም ኪፑር **አስተስርዮ** ይባላል። እነዚህ የዕብራይስጥ ስሞች ትርጉሞች ሳይሆኑ ራሳቸውን የቻሉ ስሞች ናቸው።
+
+## ጸሎቱ — በግዕዝ፣ በቃል
+
+ራቢ ዶ/ር ሻሮን ሻሎም በሻሎም ሃርትማን ተቋም ኅዳር 5፣ 2024 ባሳተመው ጥናት የቤተ እስራኤልን ጸሎት እንደ ጥንታዊና ራሱን የቻለ የአይሁድ ትውፊት ይገልጻል፣ የኢትዮጵያ ክርስቲያናዊ ተጽዕኖ እንዳልሆነ ይከራከራል።
+
+- ጸሎቶቹ ከኦሪት፣ ከነቢያትና ከመዝሙረ ዳዊት **ከተከፋፈሉ ጥቅሶች** የተገነቡ ናቸው።
+- **በቃል ይተላለፋሉ በግዕዝም ይጻፋሉ**።
+- የ**ብርሃን ሠረቀ** ጸሎት የንግሥና፣ የመታሰቢያና የመለከት ጭብጦችን ይይዛል።
+
+## በተግባር ምን ማለት ነው
+
+ቄሶች በግዕዝ ጸሎት በሚመሩበት ቤት ያደገ ሰው፣ ዛሬ ሰፋራዲ ወይም አሽከናዚ ሥርዓት ባለው ምኩራብ የሚጸልይ ከሆነ ይህን ልዩነት ያውቀዋል። «ያነሰ» ወይም «የበለጠ» ልዩነት አይደለም — ተለያይተው ያደጉ ሁለት የአይሁድ ትውፊቶች ልዩነት ነው።
+
+## ተጨማሪ ያንብቡ
+
+- [ቄሶች በከተማ](/am/heritage/kessim)
+- [ቤተ እስራኤል](/am/heritage/events/beta-israel)
+- [ሰግድ 5787 — ኅዳር 9፣ 2026](/am/news/sigd-5787-monday-9-november-2026)
+
+## ምንጮች
+
+- [Hebcal — የ2026 የአይሁድ በዓላት ቀን መቁጠሪያ](https://www.hebcal.com/holidays/2026) · መስከረም 2፣ 2026 ተረጋግጧል
+- [ራቢ ዶ/ር ሻሮን ሻሎም፣ ሻሎም ሃርትማን ተቋም፣ ኅዳር 5፣ 2024](https://heb.hartman.org.il/bete_israel_litrugy/)`,
+    },
+  },
 ];
