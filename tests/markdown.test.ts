@@ -93,3 +93,40 @@ describe("GFM tables (TED-125)", () => {
     expect(html).toContain("<table");
   });
 });
+
+// TED-169 — a `|` row that is not a well-formed GFM table used to stall the
+// block loop: no block branch consumed the line, and the paragraph branch
+// broke on it before consuming anything, so `i` never advanced and the
+// renderer pushed an empty <p> per iteration until the SSR process died with
+// `FATAL ERROR: Ineffective mark-compacts near heap limit`. One such row in
+// the `foreign-worker-rights-undocumented` seed body took the container down
+// on every crawl of /:lang/rights/foreign-worker-rights-undocumented/:city.
+describe("malformed tables terminate (TED-169)", () => {
+  const cases: Array<[string, string]> = [
+    ["orphan row with no separator", "| א | ב |\n"],
+    [
+      "table broken mid-body by a non-pipe row",
+      "| א | ב |\n|---|---|\n| 1 | 2 |\n- oops | 3 | 4 |\n| 5 | 6 |\n",
+    ],
+    ["row after a heading", "## כותרת\n| א | ב |\n"],
+    ["row after a list", "- פריט\n| א | ב |\n"],
+    ["lone pipe", "|\n"],
+  ];
+
+  for (const [name, src] of cases) {
+    it(`returns for ${name}`, () => {
+      const started = Date.now();
+      const html = renderMarkdown(src);
+      // A stalled loop never returns at all, so reaching this line is the
+      // real assertion. The bounds also catch a merely-quadratic regression.
+      expect(Date.now() - started).toBeLessThan(1000);
+      expect(html.length).toBeLessThan(10_000);
+    });
+  }
+
+  it("renders an orphan row as visible text rather than dropping it", () => {
+    const html = renderMarkdown("| קו לעובד | 1-800-354-354 |\n");
+    expect(html).toContain("קו לעובד");
+    expect(html).toContain("1-800-354-354");
+  });
+});

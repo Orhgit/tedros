@@ -140,16 +140,26 @@ export function renderMarkdown(source: string): string {
     }
 
     // Paragraph — collect consecutive non-blank, non-block-marker lines.
+    //
+    // The first line is taken unconditionally (TED-169). Reaching here means
+    // every block branch above declined the line, which happens for a `|` row
+    // that is not a well-formed GFM table (no `|---|` separator on the next
+    // line). Breaking on it before consuming anything would leave `i`
+    // unchanged and spin the outer `while` forever, pushing an empty <p> per
+    // iteration until the heap dies — a single such line in a rights body
+    // took the SSR server to OOM. Consuming the first line makes progress
+    // unconditional; the loop below is the only place `i` can stall.
     const para: string[] = [];
     while (i < lines.length) {
       const t = (lines[i] ?? "").trim();
       if (
-        t === "" ||
-        t.startsWith("## ") ||
-        t.startsWith("### ") ||
-        t.startsWith("- ") ||
-        t.startsWith("|") ||
-        /^\d+\.\s/.test(t)
+        para.length > 0 &&
+        (t === "" ||
+          t.startsWith("## ") ||
+          t.startsWith("### ") ||
+          t.startsWith("- ") ||
+          t.startsWith("|") ||
+          /^\d+\.\s/.test(t))
       ) {
         break;
       }
