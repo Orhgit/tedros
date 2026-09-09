@@ -1,6 +1,7 @@
 import { Form, Link, redirect } from "react-router";
 import type { Route } from "./+types/$lang.login";
 import { getEnv } from "~/lib/env.server";
+import { rejectUnhandledWrite } from "~/lib/http/no-action";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { t } from "~/lib/i18n/messages";
 
@@ -17,6 +18,13 @@ export async function loader({ params, request }: Route.LoaderArgs) {
   const status = url.searchParams.get("status") ?? null;
   const redirectTo = url.searchParams.get("redirectTo") ?? `/${locale}/dashboard`;
   return { locale, status, redirectTo, googleEnabled };
+}
+
+// `$lang` swallows any single leading segment, so scanner probes like
+// `POST /___proxy_subdomain_whm/login` land here (TED-166). The sign-in form
+// posts to `/auth/signin/google`, so this route has no legitimate submission.
+export async function action(_args: Route.ActionArgs) {
+  rejectUnhandledWrite(405);
 }
 
 export const meta: Route.MetaFunction = ({ data }) => [
