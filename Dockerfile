@@ -29,18 +29,31 @@ ENV PORT=3000
 # limit`, starving postgres, redis and the other project on the 7.6 GB box
 # on its way down.
 #
-# 384 MB is ~10x the 38 MB heap actually in use at idle, and the budget
-# chain works out as:
-#   --max-old-space-size=384  ->  V8 heap_size_limit 576 MB  (measured;
-#                                 V8 adds ~192 MB of new space + reserve)
-#   + ~120 MB non-heap RSS (server bundle, native, stacks; ~41 MB at idle)
-#   = ~700 MB peak RSS, under the 768 MB mem_limit in
-#     docker-compose.prod.yml.
-# Staying under the container limit is the point: V8 hitting its own limit
-# logs and exits so `unless-stopped` restarts cleanly, whereas the cgroup
-# OOM killer SIGKILLs with no log at all. This caps the blast radius; it is
-# not itself a leak fix.
-ENV NODE_OPTIONS="--max-old-space-size=384"
+# SIZING (revised 2026-09-10 after a production regression).
+#
+# The first attempt set this to 384 MB. That was wrong and made things
+# materially worse: crashes went from ~19 per 18 hours to 13 per 2 hours,
+# a ~10x increase in restart frequency, because the leak simply reached a
+# much nearer ceiling. Each restart is a short outage.
+#
+# The leak is real and is NOT the scanner traffic that motivated the
+# earlier fix: crash logs show the heap climbing steadily to the ceiling
+# over ~26 minutes of ordinary SSR — rights x city, heritage and
+# scholarship pages, all 200/404 in 15-30 ms — while Googlebot crawls the
+# ~9,250-URL matrix. Capping the heap does not slow that climb; it only
+# decides how often the process dies.
+#
+# So the ceiling's job is blast radius, not crash prevention, and it should
+# sit as high as the box safely allows. The host has 7.6 GB with ~5 GB
+# free; postgres and redis are the neighbours that must not be starved.
+#   --max-old-space-size=1536  + non-heap RSS  ->  well under
+#   the 2 GB mem_limit in docker-compose.prod.yml.
+# Staying under the container limit still matters: V8 hitting its own
+# limit logs and exits so `unless-stopped` restarts cleanly, whereas the
+# cgroup OOM killer SIGKILLs with no log at all.
+#
+# This is a mitigation. The leak itself is still open.
+ENV NODE_OPTIONS="--max-old-space-size=1536"
 COPY --from=build /app/node_modules /app/node_modules
 COPY --from=build /app/build /app/build
 COPY --from=build /app/app /app/app
