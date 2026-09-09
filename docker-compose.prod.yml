@@ -55,7 +55,7 @@ services:
     # budget chain in the Dockerfile). That ordering is deliberate: V8 must
     # hit its own limit — which logs and exits so `unless-stopped` restarts —
     # before the cgroup SIGKILLs the process with no log at all.
-    mem_limit: 768m
+    mem_limit: 2g
     mem_reservation: 256m
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/healthz"]
