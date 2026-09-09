@@ -1,6 +1,7 @@
 import { data, Outlet, redirect } from "react-router";
 import type { Route } from "./+types/$lang";
 import { getEnv } from "~/lib/env.server";
+import { rejectUnhandledWrite } from "~/lib/http/no-action";
 import { DEFAULT_LOCALE, isLocale, LOCALE_DIRECTION } from "~/lib/i18n/config";
 import { readLocaleCookie, serializeLocaleCookie } from "~/lib/i18n/cookie.server";
 import { localePrefixTarget } from "~/lib/i18n/locale-redirect";
@@ -32,6 +33,16 @@ export async function loader({ params, request }: Route.LoaderArgs) {
     },
     { headers },
   );
+}
+
+// A POST to a locale root (`/he`, `/en`, `/am`) is dispatched to this layout
+// rather than to `$lang._index`: React Router excludes index routes from
+// non-GET targeting unless the request carries `?index`. With no `action`
+// here that built an Error + stack trace per request (TED-166). The locale
+// roots are read-only pages, so 405 with `Allow: GET, HEAD` is the honest
+// answer. Leaf routes that own a form keep their own `action` untouched.
+export async function action(_args: Route.ActionArgs) {
+  rejectUnhandledWrite(405);
 }
 
 // Forward headers (Cache-Control, Content-Language, Set-Cookie) from the

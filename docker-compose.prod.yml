@@ -47,6 +47,16 @@ services:
     env_file: .env.production
     ports:
       - "127.0.0.1:3001:3000"
+    # Memory ceiling (TED-166). The host has 7.6 GB shared with other
+    # projects; before this the container was unbounded, so 19 separate
+    # heap-limit crashes each grew into the gigabytes first. 768 MB is ~4.6x
+    # the app's measured 166 MB idle RSS, and sits ~70 MB above the ~700 MB
+    # peak RSS the Dockerfile's --max-old-space-size=384 permits (see the
+    # budget chain in the Dockerfile). That ordering is deliberate: V8 must
+    # hit its own limit — which logs and exits so `unless-stopped` restarts —
+    # before the cgroup SIGKILLs the process with no log at all.
+    mem_limit: 768m
+    mem_reservation: 256m
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/healthz"]
       interval: 30s

@@ -16,15 +16,37 @@ import Google from "@auth/core/providers/google";
  *
  * to this list, plus `adapter: DrizzleAdapter(db)` in `auth.server.ts`.
  */
-export const authProviders: AuthConfig["providers"] =
-  process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET
-    ? [
-        Google({
-          clientId: process.env.GOOGLE_CLIENT_ID,
-          clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        }),
-      ]
-    : [];
+const googleConfigured = Boolean(
+  process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET,
+);
+
+export const authProviders: AuthConfig["providers"] = googleConfigured
+  ? [
+      Google({
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      }),
+    ]
+  : [];
+
+/**
+ * Ids of the providers that are actually wired up. Empty when the OAuth
+ * credentials are absent — which is the state production has been in, and the
+ * reason `/auth/callback/*` was throwing `TypeError: Cannot read properties
+ * of undefined (reading 'type')` inside Auth.js once per request (TED-166).
+ * `handleAuth` uses this to answer 404 before Auth.js dereferences a provider
+ * that was never registered.
+ */
+export const configuredProviderIds: readonly string[] = googleConfigured
+  ? ["google"]
+  : [];
+
+// One line at module load, not one stack trace per request.
+if (!googleConfigured) {
+  console.warn(
+    "[auth] GOOGLE_CLIENT_ID/GOOGLE_CLIENT_SECRET are unset — Google sign-in is disabled and /auth/* provider routes will answer 404.",
+  );
+}
 
 /**
  * `/login` (no lang prefix) is a locale-aware shim that redirects to
