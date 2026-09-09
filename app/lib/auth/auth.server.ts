@@ -1,5 +1,5 @@
 import { Auth, type AuthConfig } from "@auth/core";
-import { authProviders, authPages } from "../../../auth.config";
+import { authProviders, authPages, configuredProviderIds } from "../../../auth.config";
 import { getEnv } from "../env.server";
 
 /**
@@ -30,7 +30,40 @@ function buildAuthConfig(): AuthConfig {
   };
 }
 
+/**
+ * Auth.js actions whose second path segment names a provider, e.g.
+ * `/auth/callback/google` or `/auth/signin/google`.
+ */
+const PROVIDER_SCOPED_ACTIONS = new Set(["callback", "signin", "signout"]);
+
+/**
+ * True when the URL addresses a provider that isn't registered.
+ *
+ * Auth.js resolves `options.provider` from the path segment and then reads
+ * `options.provider.type` without a guard, so an unregistered provider id
+ * surfaces as `TypeError: Cannot read properties of undefined (reading
+ * 'type')` from `AuthInternal` — once per request, with a full stack trace.
+ * With `GOOGLE_CLIENT_ID` unset every provider id is unregistered, so scanner
+ * traffic to `/auth/callback/*` generated a steady stream of those.
+ */
+function targetsUnknownProvider(request: Request): boolean {
+  const segments = new URL(request.url).pathname.split("/").filter(Boolean);
+  // ["auth", <action>, <providerId>?]
+  const [prefix, action, providerId] = segments;
+  if (prefix !== "auth" || !action || !providerId) return false;
+  if (!PROVIDER_SCOPED_ACTIONS.has(action)) return false;
+  return !configuredProviderIds.includes(providerId);
+}
+
 export function handleAuth(request: Request): Promise<Response> {
+  if (targetsUnknownProvider(request)) {
+    return Promise.resolve(
+      new Response("Not Found", {
+        status: 404,
+        headers: { "Cache-Control": "no-store" },
+      }),
+    );
+  }
   return Auth(request, buildAuthConfig());
 }
 
