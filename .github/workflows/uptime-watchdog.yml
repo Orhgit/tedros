@@ -1,0 +1,77 @@
+name: Uptime watchdog
+
+# TED-167 — external availability probe for tedros.co.il.
+#
+# Why this exists: production crashed 19 times with "JavaScript heap out of
+# memory" between July and September 2026. Nobody noticed. The outages were
+# only discovered afterwards, by reading Google Search Console and finding
+# whole days with near-zero impressions — a 2-3 day reporting lag on an
+# incident that was taking the site off the air repeatedly.
+#
+# This runs on GitHub's infrastructure, not the app host, so it still reports
+# when the host itself is gone. It needs no secrets: failures are recorded as
+# a GitHub issue using the built-in GITHUB_TOKEN.
+#
+# Scheduled runs on GitHub Actions are best-effort and can be delayed under
+# load, so treat this as "did we have an outage" detection, not second-level
+# uptime measurement. The on-host probe in /usr/local/bin/tedros-health-watch.sh
+# runs every minute and captures the forensics.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: uptime-watchdog
+  cancel-in-progress: false
+
+permissions:
+  issues: write
+
+jobs:
+  probe:
+    name: Probe /healthz
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe (3 attempts, 20s apart)
+        id: probe
+        run: |
+          set +e
+          for i in 1 2 3; do
+            body=$(curl -fsS -m 20 https://tedros.co.il/healthz 2>&1)
+            code=$?
+            if [ $code -eq 0 ] && printf '%s' "$body" | grep -q '"status": *"ok"'; then
+              echo "attempt $i: ok"
+              echo "healthy=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "attempt $i failed (curl exit $code)"
+            echo "$body" | head -5
+            [ $i -lt 3 ] && sleep 20
+          done
+          # Three consecutive failures over ~40s — report it.
+          {
+            echo "healthy=false"
+            echo "detail<<EOF"
+            echo "curl exit code: $code"
+            echo "last response: ${body:-<empty>}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Open or update an outage issue
+        if: steps.probe.outputs.healthy == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TITLE="🔴 tedros.co.il is not responding"
+          NOW=$(date -u +"%Y-%m-%d %H:%M UTC")
+          NOTE=$(printf '**%s** — /healthz failed 3 consecutive probes.\n\n```\n%s\n```\n\nRunbook: check `docker inspect tedros-tedros-1 --format "{{.RestartCount}}"` and `/var/log/tedros-health.log` on the host.' "$NOW" "${{ steps.probe.outputs.detail }}")
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number -q '.[0].number' || true)
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$NOTE"
+          else
+            gh issue create --title "$TITLE" --body "$NOTE" --label "" || gh issue create --title "$TITLE" --body "$NOTE"
+          fi
