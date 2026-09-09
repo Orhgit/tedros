@@ -23,6 +23,16 @@ RUN corepack enable && corepack prepare pnpm@9 --activate \
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
+# Bound V8's old space (TED-166). Without this Node sizes the old-space
+# heap from the *host's* 7.6 GB, so a leaking Tedros process grows to
+# multiple GB before `FATAL ERROR: Reached heap limit` — starving postgres,
+# redis and the other project on the same box on its way down. 512 MB is
+# ~3x the app's ~160 MB idle RSS and comfortably above the ~320 MB peak
+# measured while replaying the scanner POST flood, while sitting well under
+# the 768 MB container limit in docker-compose.prod.yml so V8 hits its own
+# limit (logged, restartable) rather than the cgroup OOM killer (SIGKILL,
+# no log). This caps the blast radius; it is not itself a leak fix.
+ENV NODE_OPTIONS="--max-old-space-size=512"
 COPY --from=build /app/node_modules /app/node_modules
 COPY --from=build /app/build /app/build
 COPY --from=build /app/app /app/app

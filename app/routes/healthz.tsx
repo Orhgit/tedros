@@ -13,6 +13,22 @@ async function checkDb(): Promise<CheckResult> {
   }
 }
 
+/**
+ * Heap usage, so a leak is visible on a dashboard before it becomes another
+ * `FATAL ERROR: Reached heap limit` (TED-166). `heap_limit_mb` reflects the
+ * `--max-old-space-size` set in the Dockerfile; `heap_used_pct` climbing and
+ * never falling across scrapes is the signal to alert on.
+ */
+function memory() {
+  const { rss, heapUsed, heapTotal } = process.memoryUsage();
+  const mb = (bytes: number) => Math.round(bytes / 1024 / 1024);
+  return {
+    rss_mb: mb(rss),
+    heap_used_mb: mb(heapUsed),
+    heap_total_mb: mb(heapTotal),
+  };
+}
+
 export async function loader(_args: Route.LoaderArgs) {
   const [database] = await Promise.all([checkDb()]);
   const allOk = database.ok;
@@ -20,6 +36,7 @@ export async function loader(_args: Route.LoaderArgs) {
     status: allOk ? "ok" : "degraded",
     uptime_s: Math.round(process.uptime()),
     timestamp: new Date().toISOString(),
+    memory: memory(),
     checks: { database },
   };
   return new Response(JSON.stringify(body, null, 2), {
