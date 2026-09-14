@@ -447,31 +447,55 @@ describe("category loader", () => {
   });
 });
 
-describe("category × city loader", () => {
-  it("loads every populated cell in every locale", async () => {
+// TED-172 — the supplier category×city cells measured 1.000 pairwise similarity
+// and 0 corpus-unique characters: the category page already lists every supplier
+// with its city. While CITY_CELLS_ENABLED is false every cell 301s to its
+// category page. The happy-path cell tests are preserved in the repo's history.
+describe("category × city loader — 301 to the category page (TED-172)", () => {
+  async function loaderResponse(params: Record<string, string | undefined>) {
+    try {
+      await cityLoader(fakeArgs(params));
+      throw new Error("loader did not throw");
+    } catch (thrown) {
+      return thrown as Response;
+    }
+  }
+
+  it("redirects every populated cell in every locale", async () => {
     const cells = weddingSupplierCells();
     expect(cells.length).toBeGreaterThan(0);
     for (const cell of cells) {
       for (const lang of LOCALES) {
-        const data = await cityLoader(
-          fakeArgs({ lang, category: cell.category, city: cell.citySlug }),
+        const res = await loaderResponse({
+          lang,
+          category: cell.category,
+          city: cell.citySlug,
+        });
+        expect(res.status).toBe(301);
+        expect(res.headers.get("Location")).toBe(
+          `/${lang}/heritage/wedding/suppliers/${cell.category}`,
         );
-        expect(data.citySlug).toBe(cell.citySlug);
-        expect(data.suppliers.length).toBeGreaterThan(0);
       }
     }
   });
 
-  it("404s on a cell with no verified supplier", async () => {
-    // Never an empty city page — that is the invitation to pad it.
+  it("redirects unpopulated and unknown-city cells too", async () => {
+    for (const [category, city] of [
+      ["music", "netanya"],
+      ["catering", "jerusalem"],
+      ["catering", "atlantis"],
+    ]) {
+      const res = await loaderResponse({ lang: "he", category, city });
+      expect(res.status).toBe(301);
+      expect(res.headers.get("Location")).toBe(
+        `/he/heritage/wedding/suppliers/${category}`,
+      );
+    }
+  });
+
+  it("still 404s on an unknown category", async () => {
     await expect(
-      cityLoader(fakeArgs({ lang: "he", category: "music", city: "netanya" })),
-    ).rejects.toMatchObject({ init: { status: 404 } });
-    await expect(
-      cityLoader(fakeArgs({ lang: "he", category: "catering", city: "jerusalem" })),
-    ).rejects.toMatchObject({ init: { status: 404 } });
-    await expect(
-      cityLoader(fakeArgs({ lang: "he", category: "catering", city: "atlantis" })),
+      cityLoader(fakeArgs({ lang: "he", category: "bogus", city: "netanya" })),
     ).rejects.toMatchObject({ init: { status: 404 } });
   });
 });

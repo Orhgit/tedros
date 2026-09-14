@@ -11,10 +11,8 @@ import { RelatedRights } from "~/components/sections/related-rights";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
-import { CITIES, cityName } from "~/lib/cities/registry";
 import { getRightBySlug, relatedRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
-import { relevantCities } from "~/lib/rights/relevance";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
@@ -34,15 +32,9 @@ export async function loader({ params }: Route.LoaderArgs) {
   const html = renderMarkdown(right.body);
   const related = relatedRights(right.slug, locale, 4);
   const steps = extractApplicationSteps(right.body, locale);
-  // City-level pages (rights/<slug>/<city>) existed but nothing linked to
-  // them — orphan pages reachable only from the sitemap (TED-125).
-  const cities = relevantCities(right.slug, CITIES).map((c) => ({
-    slug: c.slug,
-    name: cityName(c, locale),
-  }));
   const { PUBLIC_URL } = getEnv();
   const shareUrl = `${PUBLIC_URL}/${locale}/rights/${right.slug}`;
-  return { locale, right, html, related, steps, cities, shareUrl, publicUrl: PUBLIC_URL };
+  return { locale, right, html, related, steps, shareUrl, publicUrl: PUBLIC_URL };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -94,7 +86,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function RightDetail({ loaderData }: Route.ComponentProps) {
-  const { locale, right, html, related, cities, shareUrl } = loaderData;
+  const { locale, right, html, related, shareUrl } = loaderData;
   const primaryTag = right.tags[0] ?? "housing";
   const tone = classesForTag(primaryTag);
   return (
@@ -204,29 +196,8 @@ export default function RightDetail({ loaderData }: Route.ComponentProps) {
           <WhatsAppShare title={right.title} url={shareUrl} locale={locale} />
         </div>
 
-        {/* City-level pages for this right (rights/<slug>/<city>) */}
-        {cities.length > 0 && (
-          <section className="mt-8" aria-labelledby="right-cities-heading">
-            <h2
-              id="right-cities-heading"
-              className="font-display text-xl font-semibold text-earth-900"
-            >
-              {t(locale, "rights_cities_section_title")}
-            </h2>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {cities.map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    to={`/${locale}/rights/${right.slug}/${c.slug}`}
-                    className="inline-flex items-center rounded-full border border-earth-300 bg-earth-100 px-3 py-1 text-sm text-earth-900 transition hover:bg-earth-200"
-                  >
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {/* TED-172 — the rights×city chips linked to cells that now 301 back
+            here, so the section is gone. Restore it with the cell flag. */}
 
         {/* Related rights by tag overlap (RIN-339 / Phase-3 enrichment) */}
         <RelatedRights rights={related} locale={locale} />

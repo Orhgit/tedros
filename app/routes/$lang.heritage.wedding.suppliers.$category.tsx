@@ -15,13 +15,12 @@ import type { Route } from "./+types/$lang.heritage.wedding.suppliers.$category"
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WeddingSupplierList } from "~/components/sections/wedding-supplier-list";
-import { CITIES, cityName } from "~/lib/cities/registry";
+import { CITIES } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import {
   weddingJoinPath,
   weddingPath,
   weddingSupplierCategoryPath,
-  weddingSupplierCityPath,
 } from "~/lib/heritage/links";
 import { breadcrumbJsonLd, supplierItemListJsonLd } from "~/lib/heritage/schema";
 import {
@@ -35,7 +34,6 @@ import {
   categoryName,
   categoryPageDescription,
   categoryPageTitle,
-  citiesForCategory,
   presentSupplier,
   suppliersByCategory,
 } from "~/lib/heritage/wedding-suppliers.server";
@@ -56,11 +54,6 @@ export async function loader({ params }: Route.LoaderArgs) {
   const description = categoryPageDescription(category, entries.length, locale);
 
   const suppliers = entries.map((s) => presentSupplier(s, locale));
-
-  const cities = citiesForCategory(category)
-    .map((slug) => CITIES.find((c) => c.slug === slug))
-    .filter((c) => c !== undefined)
-    .map((c) => ({ slug: c.slug, name: cityName(c, locale) }));
 
   const itemList = supplierItemListJsonLd(
     { publicUrl: PUBLIC_URL, locale },
@@ -94,7 +87,6 @@ export async function loader({ params }: Route.LoaderArgs) {
     description,
     intro: categoryIntro(category, locale),
     suppliers,
-    cities,
     hasUnlocated: entries.some((s) => !s.citySlug),
     otherCategories: ALL_WEDDING_SUPPLIER_CATEGORIES.filter((c) => c !== category).map(
       (c) => ({ slug: c, name: categoryName(c, locale) }),
@@ -138,17 +130,8 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function WeddingSupplierCategory({ loaderData }: Route.ComponentProps) {
-  const {
-    locale,
-    glyph,
-    title,
-    intro,
-    suppliers,
-    cities,
-    hasUnlocated,
-    otherCategories,
-    copy,
-  } = loaderData;
+  const { locale, glyph, title, intro, suppliers, hasUnlocated, otherCategories, copy } =
+    loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -202,28 +185,8 @@ export default function WeddingSupplierCategory({ loaderData }: Route.ComponentP
           </section>
         )}
 
-        {cities.length > 0 && (
-          <section className="mb-10" aria-labelledby="supplier-cities-heading">
-            <h2
-              id="supplier-cities-heading"
-              className="mb-3 font-display text-base font-semibold text-earth-900"
-            >
-              {copy.citiesHeading}
-            </h2>
-            <ul className="flex flex-wrap gap-2">
-              {cities.map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    to={`/${locale}${weddingSupplierCityPath(loaderData.category, c.slug)}`}
-                    className="inline-flex items-center rounded-full border border-earth-200 bg-card px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-50"
-                  >
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {/* TED-172 — the category×city chips linked to cells that now 301 back
+            to this category page. Restore with the cell flag. */}
 
         <section className="mb-10 rounded-xl border border-earth-200 bg-earth-50 p-5">
           <h2 className="font-display text-base font-semibold text-earth-900">
