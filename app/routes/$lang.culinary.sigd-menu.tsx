@@ -18,9 +18,7 @@ import {
   sigdMenuTitle,
 } from "~/lib/culinary/sigd-menu.server";
 import { findHeritageEvent, nextDate } from "~/lib/heritage/events.server";
-import { eventCityPath, eventPath } from "~/lib/heritage/links";
-import { relevantCities } from "~/lib/heritage/relevance";
-import { CITIES, cityName } from "~/lib/cities/registry";
+import { eventPath } from "~/lib/heritage/links";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -39,13 +37,6 @@ export async function loader({ params }: Route.LoaderArgs) {
   // The heritage module is the source of truth for the next observance.
   const sigd = findHeritageEvent("sigd");
   const next = sigd ? nextDate(sigd) : null;
-  const sigdCities = sigd
-    ? relevantCities(sigd.slug, CITIES).map((c) => ({
-        slug: c.slug,
-        name: cityName(c, locale),
-      }))
-    : [];
-
   const article: JsonLd = articleJsonLd(
     { publicUrl: PUBLIC_URL, locale },
     {
@@ -67,7 +58,6 @@ export async function loader({ params }: Route.LoaderArgs) {
     description,
     html,
     next,
-    sigdCities,
     publicUrl: PUBLIC_URL,
     article,
     breadcrumb,
@@ -95,7 +85,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function SigdMenuGuide({ loaderData }: Route.ComponentProps) {
-  const { locale, title, description, html, next, sigdCities } = loaderData;
+  const { locale, title, description, html, next } = loaderData;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -133,28 +123,8 @@ export default function SigdMenuGuide({ loaderData }: Route.ComponentProps) {
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
-        {sigdCities.length > 0 && (
-          <section className="mt-10" aria-labelledby="sigd-cities-heading">
-            <h2
-              id="sigd-cities-heading"
-              className="font-display text-xl font-semibold text-earth-900"
-            >
-              {t(locale, "culinary_sigd_cities_heading")}
-            </h2>
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {sigdCities.map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    to={`/${locale}${eventCityPath("sigd", c.slug)}`}
-                    className="inline-flex items-center rounded-full border border-earth-200 bg-card px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-50"
-                  >
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {/* TED-172 — the Sigd×city chips linked to cells that now 301 to the
+            Sigd event page. Restore with the cell flag. */}
 
         <div className="mt-12 border-t border-earth-200 pt-6 text-sm">
           <Link

@@ -294,12 +294,13 @@ describe("city shopping loader", () => {
 });
 
 describe("sigd menu loader", () => {
-  it("loads in every locale with next observance + city cells", async () => {
+  // TED-172 — the Sigd×city chips are gone with the event cells they linked to.
+  it("loads in every locale with next observance", async () => {
     for (const lang of LOCALES) {
       const data = await sigdMenuLoader(fakeArgs({ lang }));
       expect(data.html.length).toBeGreaterThan(500);
       expect(data.next).toBe("2026-11-09");
-      expect(data.sigdCities.length).toBeGreaterThan(0);
+      expect(data).not.toHaveProperty("sigdCities");
     }
   });
 });

@@ -217,29 +217,38 @@ describe("event detail loader", () => {
   });
 });
 
-describe("event × city cell loader", () => {
-  it("loads sigd × netanya in HE/EN/AM", async () => {
-    for (const lang of ["he", "en", "am"]) {
-      const data = await cellLoader(fakeArgs({ lang, event: "sigd", city: "netanya" }));
-      expect(data.event.slug).toBe("sigd");
-      expect(data.city.slug).toBe("netanya");
-      expect(data.cityNameLocal.length).toBeGreaterThan(0);
+// TED-172 — the event×city cells rendered the pillar body verbatim (measured
+// 1.000 similarity to their own event page, 0 corpus-unique characters), so
+// while CITY_CELLS_ENABLED is false every cell 301s to its event page. The
+// happy-path cell tests are preserved in the repo's history — restore them
+// the day the flag flips back on.
+describe("event × city cell loader — 301 to the event page (TED-172)", () => {
+  async function loaderResponse(params: Record<string, string | undefined>) {
+    try {
+      await cellLoader(fakeArgs(params));
+      throw new Error("loader did not throw");
+    } catch (thrown) {
+      return thrown as Response;
+    }
+  }
+
+  it("redirects every event in every locale, city relevance aside", async () => {
+    for (const event of HERITAGE_EVENTS) {
+      for (const lang of ["he", "en", "am"]) {
+        for (const city of ["netanya", "atlantis"]) {
+          const res = await loaderResponse({ lang, event: event.slug, city });
+          expect(res.status).toBe(301);
+          expect(res.headers.get("Location")).toBe(
+            `/${lang}/heritage/events/${event.slug}`,
+          );
+        }
+      }
     }
   });
 
-  it("404s when (event, city) is not relevant", async () => {
-    // genna is list-scoped to 3 cities; netanya is not on the list.
-    await expect(
-      cellLoader(fakeArgs({ lang: "he", event: "genna", city: "netanya" })),
-    ).rejects.toMatchObject({ init: { status: 404 } });
-  });
-
-  it("404s on unknown event + unknown city + missing params", async () => {
+  it("still 404s on an unknown event + missing params", async () => {
     await expect(
       cellLoader(fakeArgs({ lang: "he", event: "bogus", city: "tel-aviv" })),
-    ).rejects.toMatchObject({ init: { status: 404 } });
-    await expect(
-      cellLoader(fakeArgs({ lang: "he", event: "sigd", city: "atlantis" })),
     ).rejects.toMatchObject({ init: { status: 404 } });
     await expect(
       cellLoader(fakeArgs({ lang: "he", event: undefined, city: "netanya" })),

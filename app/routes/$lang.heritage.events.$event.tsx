@@ -1,5 +1,5 @@
 // /:lang/heritage/events/:event — Heritage event hub (RIN-422 / RIN-417).
-// Renders the event's HE/EN/AM body + links into the relevant cities
+// Renders the event's HE/EN/AM body + related rights, terms and orgs
 // (programmatic cells handled by `$lang.heritage.events.$event.$city.tsx`).
 
 import { Link, data } from "react-router";
@@ -14,10 +14,8 @@ import {
   heritageEventBody,
   nextDate,
 } from "~/lib/heritage/events.server";
-import { eventCityPath, eventPath, eventsLandingPath } from "~/lib/heritage/links";
-import { relevantCities } from "~/lib/heritage/relevance";
+import { eventPath, eventsLandingPath } from "~/lib/heritage/links";
 import { breadcrumbJsonLd, heritageEventJsonLd } from "~/lib/heritage/schema";
-import { CITIES, cityName } from "~/lib/cities/registry";
 import { getGlossaryEntry } from "~/lib/db/queries/glossary.server";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
@@ -41,11 +39,6 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   const html = renderMarkdown(heritageEventBody(event, locale));
   const next = nextDate(event);
-
-  const cities = relevantCities(event.slug, CITIES).map((c) => ({
-    slug: c.slug,
-    name: cityName(c, locale),
-  }));
 
   const relatedRights = event.relatedRights
     .map((slug) => getRightBySlug(slug, locale))
@@ -73,7 +66,6 @@ export async function loader({ params }: Route.LoaderArgs) {
     event,
     html,
     next,
-    cities,
     relatedRights,
     relatedTerms,
     relatedOrgs,
@@ -126,7 +118,6 @@ export default function HeritageEventDetail({ loaderData }: Route.ComponentProps
     event,
     html,
     next,
-    cities,
     relatedRights,
     relatedTerms,
     relatedOrgs,
@@ -207,25 +198,8 @@ export default function HeritageEventDetail({ loaderData }: Route.ComponentProps
           <WhatsAppShare title={name} url={shareUrl} locale={locale} />
         </div>
 
-        {cities.length > 0 && (
-          <section className="mt-10">
-            <h2 className="font-display text-xl font-semibold text-earth-900">
-              {t(locale, "heritage_events_cities_heading", { event: name })}
-            </h2>
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {cities.map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    to={`/${locale}${eventCityPath(event.slug, c.slug)}`}
-                    className="inline-flex items-center rounded-full border border-earth-200 bg-card px-3 py-1 text-sm text-earth-800 transition hover:border-earth-400 hover:bg-earth-50"
-                  >
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {/* TED-172 — the event×city chips linked to cells that rendered this
+            same body and now 301 back here. Restore with the cell flag. */}
 
         {relatedRights.length > 0 && (
           <section className="mt-10">
