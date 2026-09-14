@@ -1,7 +1,8 @@
 // /:lang/careers/stories/:slug — Success-story detail (RIN-475 / RIN-469).
-// Renders one anonymized profile with markdown body + Article + Person
-// JSON-LD. PII rules: nickname is first-name only, no real photos, body
-// avoids naming specific employers without explicit consent.
+// Renders one composite/illustrative profile (TED-163) with markdown body +
+// Article JSON-LD (no Person node — see schema.ts). Nickname is first-name
+// only, no real photos, body avoids naming specific employers without
+// explicit consent.
 
 import { Link, data } from "react-router";
 
