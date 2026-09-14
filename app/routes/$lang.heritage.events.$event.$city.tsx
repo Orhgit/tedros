@@ -4,7 +4,7 @@
 // `isRelevant`. Inherits the event's body + adds a city overlay so each
 // cell carries unique on-page content (defends against thin-content).
 
-import { Link, data } from "react-router";
+import { Link, data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.heritage.events.$event.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
@@ -33,12 +33,22 @@ function prepFor(locale: Locale): string {
   return locale === "en" ? "in " : locale === "am" ? "በ" : "ב";
 }
 
+// TED-172 — the duplication audit measured these 153 all-locale cells at 1.000
+// pairwise similarity and 1.000 similarity to their own event pillar: the rendered
+// <article> is the pillar body verbatim (`סיגד בחולון` and `סיגד ברמלה` both emit
+// `<h1>סיגד</h1>`), 0 corpus-unique characters. Every cell 301s to its event page.
+// See docs/research/2026-09-14-programmatic-matrix-audit.md. Flip to true to restore.
+const CITY_CELLS_ENABLED = false;
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const eventParam = params.event;
   const cityParam = params.city;
   if (!eventParam || !cityParam || !isHeritageEvent(eventParam)) {
     throw data({ error: "not-found" }, { status: 404 });
+  }
+  if (!CITY_CELLS_ENABLED) {
+    throw redirect(`/${locale}${eventPath(eventParam)}`, 301);
   }
   const event = findHeritageEvent(eventParam);
   const city = findCityBySlug(cityParam);

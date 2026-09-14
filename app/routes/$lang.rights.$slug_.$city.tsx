@@ -7,7 +7,7 @@
 // is long-tail SEO that no competitor covers — Kol-Zchut indexes rights
 // nationally, and Yad2/Madlan don't cover rights at all.
 
-import { Link, data } from "react-router";
+import { Link, data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.rights.$slug_.$city";
 import { EligibilityWizard } from "~/components/sections/eligibility-wizard";
@@ -31,12 +31,25 @@ import { generateCityFaq } from "~/lib/rights/city-faq.server";
 import { isRelevant, relevantCities } from "~/lib/rights/relevance";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
+// TED-172 — the duplication audit (docs/research/2026-09-14-programmatic-matrix-audit.md)
+// measured these 6,414 all-locale cells at a median 92.0 % pairwise similarity and
+// 1.7 % corpus-unique content (59 of 3,447 chars — one templated FAQ heading), while
+// 86 % of their impressions came from queries with no city name in them. Until a cell
+// carries real local content, every one 301s to its right page. Flip to true to restore.
+const CITY_CELLS_ENABLED = false;
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   if (!params.slug || !params.city) {
     throw data({ error: "missing-params" }, { status: 404 });
   }
   const right = getRightBySlug(params.slug, locale);
+  if (!CITY_CELLS_ENABLED) {
+    if (!right) {
+      throw data({ error: "not-found" }, { status: 404 });
+    }
+    throw redirect(`/${locale}/rights/${right.slug}`, 301);
+  }
   const city = findCityBySlug(params.city);
   if (!right || !city) {
     throw data({ error: "not-found" }, { status: 404 });
