@@ -34,7 +34,7 @@ export function loader() {
     "/compare",
     "/statistics",
     "/professionals",
-    "/cities",
+    // NB: the /cities hub itself is emitted below via CITY_PATH_PREFIX.
     "/family",
     "/family/domestic-violence",
     "/family/elderly",

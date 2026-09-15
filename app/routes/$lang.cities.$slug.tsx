@@ -222,7 +222,9 @@ export default function CityPage({ loaderData }: Route.ComponentProps) {
                     {cityRights.map((r) => (
                       <li key={r.slug}>
                         <Link
-                          to={`/${locale}/rights/${r.slug}/${city.slug}`}
+                          // TED-172 — the rights×city cell 301s to the right
+                          // page; link straight there.
+                          to={`/${locale}/rights/${r.slug}`}
                           className="flex items-center gap-2 rounded-md border border-earth-100 bg-earth-50 px-3 py-2 text-sm text-ink-800 transition hover:border-earth-300"
                         >
                           <span aria-hidden="true">

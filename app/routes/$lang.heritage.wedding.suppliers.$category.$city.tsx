@@ -8,7 +8,7 @@
 //
 // JSON-LD: ItemList of LocalBusiness + BreadcrumbList.
 
-import { Link, data } from "react-router";
+import { Link, data, redirect } from "react-router";
 
 import type { Route } from "./+types/$lang.heritage.wedding.suppliers.$category.$city";
 import { SiteFooter } from "~/components/sections/site-footer";
@@ -37,12 +37,21 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
 
+// TED-172 — the duplication audit measured these 18 all-locale cells at 1.000
+// pairwise similarity and 0 corpus-unique characters: the category page already
+// lists every supplier, city column included. Every cell 301s to its category page.
+// See docs/research/2026-09-14-programmatic-matrix-audit.md. Flip to true to restore.
+const CITY_CELLS_ENABLED = false;
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const category = params.category;
   const citySlug = params.city;
   if (!category || !isWeddingSupplierCategory(category) || !citySlug) {
     throw data({ error: "not-found" }, { status: 404 });
+  }
+  if (!CITY_CELLS_ENABLED) {
+    throw redirect(`/${locale}${weddingSupplierCategoryPath(category)}`, 301);
   }
 
   const entries = suppliersByCategoryCity(category, citySlug);

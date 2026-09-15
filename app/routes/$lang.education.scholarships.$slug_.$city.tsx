@@ -35,6 +35,12 @@ import { formatDate } from "~/lib/i18n/format";
 import { classesForTag, tagChipClasses } from "~/lib/rights/categories";
 import { renderMarkdown } from "~/lib/utils/markdown";
 
+// TED-172 — the duplication audit measured these 270 all-locale cells at a median
+// 0.886 pairwise similarity and **0** corpus-unique characters: every line of a cell
+// appears on another Tedros URL. Every cell 301s to its scholarship page.
+// See docs/research/2026-09-14-programmatic-matrix-audit.md. Flip to true to restore.
+const CITY_CELLS_ENABLED = false;
+
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   if (!params.slug || !params.city) {
@@ -43,9 +49,22 @@ export async function loader({ params }: Route.LoaderArgs) {
   // TED-152 — merged duplicates keep their link equity via a permanent redirect.
   const canonical = LEGACY_SCHOLARSHIP_REDIRECTS[params.slug];
   if (canonical) {
-    throw redirect(`/${locale}/education/scholarships/${canonical}/${params.city}`, 301);
+    // TED-172 — the cell is gone, so the legacy slug lands on the canonical pillar
+    // directly rather than on a second redirect.
+    throw redirect(
+      CITY_CELLS_ENABLED
+        ? `/${locale}/education/scholarships/${canonical}/${params.city}`
+        : `/${locale}/education/scholarships/${canonical}`,
+      301,
+    );
   }
   const entry = getScholarshipBySlug(params.slug, locale);
+  if (!CITY_CELLS_ENABLED) {
+    if (!entry) {
+      throw data({ error: "not-found" }, { status: 404 });
+    }
+    throw redirect(`/${locale}/education/scholarships/${entry.slug}`, 301);
+  }
   const city = findCityBySlug(params.city);
   if (!entry || !city) {
     throw data({ error: "not-found" }, { status: 404 });
