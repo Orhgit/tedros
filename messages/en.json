@@ -927,5 +927,15 @@
   "education_amharic_title": "Learning Amharic",
   "education_amharic_subtitle": "The full fidel chart, family words with transliteration, and a verified list of where to study — including the 5-unit bagrut.",
   "education_amharic_ulpan_title": "Hebrew ulpan for parents and grandparents",
-  "education_amharic_ulpan_subtitle": "The official ulpan list, and exactly what to ask on the phone about Amharic support."
+  "education_amharic_ulpan_subtitle": "The official ulpan list, and exactly what to ask on the phone about Amharic support.",
+  "scholarship_opens_on": "Registration opens: {date}",
+  "scholarships_guides_heading": "Application guides",
+  "scholarships_guides_subtitle": "Not a list of scholarships — how you actually apply. Documents, motivation letters, why applications are refused, and what happens after you submit.",
+  "scholarship_guides_landing_title": "Scholarship application guides",
+  "scholarship_guides_landing_subtitle": "The part nobody writes about: exactly what to upload, how to word it, and why applications are refused.",
+  "scholarship_guide_updated": "Updated: {date}",
+  "scholarship_guides_all_cta": "All application guides",
+  "scholarship_guide_sources_heading": "Sources",
+  "scholarship_guide_faq_heading": "Frequently asked questions",
+  "scholarship_guide_back_to_scholarships": "Back to the scholarship list"
 }

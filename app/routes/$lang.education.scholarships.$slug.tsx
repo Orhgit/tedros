@@ -197,6 +197,13 @@ export default function ScholarshipDetail({ loaderData }: Route.ComponentProps) 
             <p className="mt-1 font-display text-lg font-semibold text-earth-900">
               {deadlineText(locale, entry.deadline)}
             </p>
+            {entry.opensOn && (
+              <p className="mt-1 text-xs font-semibold text-earth-800">
+                {t(locale, "scholarship_opens_on", {
+                  date: formatDate(locale, entry.opensOn),
+                })}
+              </p>
+            )}
             <p className="mt-1 text-xs text-ink-600">
               {t(locale, "scholarship_last_verified", {
                 date: formatDate(locale, entry.lastVerified),

@@ -242,6 +242,13 @@ export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps
                           })}
                         </span>
                       )}
+                      {s.status === "closed" && s.opensOn && (
+                        <span className="ms-2 text-xs font-medium text-earth-700">
+                          {t(locale, "scholarship_opens_on", {
+                            date: formatDate(locale, s.opensOn),
+                          })}
+                        </span>
+                      )}
                     </div>
                   )}
                   <div className="mt-3 flex items-center justify-between gap-2">

@@ -54,6 +54,18 @@ export interface ScholarshipEntry {
   deadline: "rolling" | string | null;
   /** Registration status for the current cycle — see ScholarshipStatus. */
   status: ScholarshipStatus;
+  /**
+   * ISO date on which registration is stated to open, when the granting body
+   * publishes one AND the entry is not currently open (TED-168).
+   *
+   * Added because `status: "closed"` alone loses the single most useful fact a
+   * reader of a closed entry needs. מרום is the case that forced it: the CHE
+   * and פר"ח content pages both say "September 2026", while פר"ח's own
+   * registration system — the only surface that actually accepts an
+   * application — says the תשפ"ז round opens 28/02/2027. We print what the
+   * system says, and say in the body that the other two pages disagree.
+   */
+  opensOn?: string;
   /** ISO date this entry's deadline/status/link were last verified (TED-139). */
   lastVerified: string;
   /** External application URL — opens in new tab. */
@@ -726,10 +738,32 @@ Source: [isef.org.il](https://www.isef.org.il/) · checked September 2026.
     },
   },
 
-  // 13. מלגת מרום CHE — slug: marom-che (TED-95: facts corrected against
-  // che.org.il/scholarships/marom, verified 2026-07-26. Prior version of this
-  // entry stated an income/GPA means-test and a fixed March 31 deadline that
-  // do not match the published CHE terms for תשפ"ז — replaced below.)
+  // 13. מלגת מרום CHE — slug: marom-che
+  //
+  // TED-168 (2026-09-15): re-verified against the granting body's own pages,
+  // fetched in full today. Three surfaces still disagree, and the entry now
+  // says so rather than picking one:
+  //   - che.org.il/scholarships/מלגת-מרום — "תקופת ההרשמה למלגה נפתחת בחודש
+  //     ספטמבר מדי שנה ונסגרת בתחילת נובמבר"; amounts ₪10,000 BA / full
+  //     tuition research MA (₪16,490 in תשפ"ז) / ₪7,000 non-research MA;
+  //     "מופעלת באמצעות ארגון פר"ח במכון דוידסון"; volunteering abolished
+  //     from תשפ"ז.
+  //   - perach.org.il/הגשת-מועמדות-למרום — "ההרשמה לשנה הקרובה תשפ"ז תיפתח
+  //     במהלך חודש ספטמבר 2026", and ₪10,000 for a non-research master's
+  //     (CHE says ₪7,000 — the two operators' own pages contradict each other).
+  //   - perach-prj.weizmann.ac.il/PerachStudent/registrationmarom — the system
+  //     that actually accepts applications: "ההרשמה למרום סגורה כעת. ההרשמה
+  //     לשנת הפעילות תשפ"ז תפתח ב- 28/02/27 בשעה- 08:00."
+  //
+  // Two claims that stood here before are removed, not softened:
+  //   1. "ההרשמה לתשפ"ז נפתחת 9.9.2026" — 9/9/2025 is the תשפ"ו opening date,
+  //      still printed on the gov.il page. Neither CHE nor פר"ח names a day
+  //      for תשפ"ז, and the registration system contradicts the month.
+  //   2. The four-level 100%/85%/66%/50%-of-tuition table (published in our own
+  //      news article on 8.9.2026). It appears on neither the CHE Marom page
+  //      nor מל"ג decision 18.6.2024, both read in full today. The four
+  //      priority levels are real and they are a SCORING criterion, not a
+  //      payment rate. Banned in tests/content-claims.test.ts.
   {
     slug: "marom-che",
     level: "undergrad",
@@ -740,116 +774,281 @@ Source: [isef.org.il](https://www.isef.org.il/) · checked September 2026.
       am: "ማሮም ስኮላርሺፕ — ከፍተኛ ትምህርት ምክር ቤት",
     },
     shortDescription: {
-      he: 'מלגה ממלכתית של המועצה להשכלה גבוהה (מל"ג/ות"ת) לתואר ראשון ושני ליוצאי אתיופיה — ₪10,000 לשנה; הרשמה לתשפ"ז נפתחת 9.9.2026.',
-      en: "National scholarship from the Council for Higher Education (CHE/VATAT) for undergraduate and master's students of Ethiopian origin — ₪10,000/year; 2026-27 registration opens Sept 9, 2026.",
-      am: "ከCHE/VATAT ለመጀመሪያና ለሁለተኛ ዲግሪ ኢትዮጵያ-ተወላጅ ተማሪዎች ብሔራዊ ስኮላርሺፕ — ₪10,000/ዓመት፤ ለ2026-27 ምዝገባ በሴፕቴምበር 9, 2026 ይከፈታል።",
+      he: 'מלגה ממלכתית של מל"ג/ות"ת לסטודנטים יוצאי אתיופיה, מופעלת בידי פר"ח במכון דוידסון. נכון ל-15.9.2026 מערכת ההרשמה סגורה ומציגה פתיחה ב-28.2.2027.',
+      en: "A national CHE/VATAT scholarship for Ethiopian-Israeli students, operated by Perach at the Davidson Institute. As of 15 Sept 2026 the registration system is closed and shows an opening date of 28 Feb 2027.",
+      am: "የCHE/VATAT ብሔራዊ ስኮላርሺፕ ለኢትዮጵያ-ተወላጅ ተማሪዎች፤ በዳቪድሰን ኢንስቲትዩት በፔራች ይተዳደራል። እስከ 15.9.2026 ድረስ የምዝገባ ሥርዓቱ ተዘግቷል፣ 28.2.2027 መክፈቻ ያሳያል።",
     },
-    amountMinIls: 10000,
-    amountMaxIls: 10000,
+    amountMinIls: 7000,
+    amountMaxIls: 16490,
     amountNote: {
-      he: "₪10,000 קבועים לכל שנת לימודים, משנה א' ועד סיום שנות התואר התקניות (עודכן — לא מדורג לפי שנה או תחום כפי שנכתב בעבר).",
-      en: "A flat ₪10,000 per academic year, from year 1 through the standard duration of the degree (corrected — not tiered by year or field as previously written here).",
-      am: "₪10,000 ቋሚ በዓመት፣ ከ1ኛ ዓመት እስከ መደበኛ የዲግሪ ዓመታት ፍጻሜ ድረስ።",
+      he: 'תואר ראשון ₪10,000 לשנה תקנית; תואר שני מחקרי — שכר לימוד מלא (₪16,490 בתשפ"ז); תואר שני שאינו מחקרי — ₪7,000 לפי מל"ג, ₪10,000 לשנה א\' בלבד לפי פר"ח. שני המפעילים חלוקים; נבדק ספטמבר 2026.',
+      en: "Undergraduate ₪10,000 per standard year; research master's — full tuition (₪16,490 in 2026-27); non-research master's — ₪7,000 per CHE, ₪10,000 for year 1 only per Perach. The two operators disagree; verified September 2026.",
+      am: "የመጀመሪያ ዲግሪ ₪10,000 በዓመት፤ የምርምር ሁለተኛ ዲግሪ — ሙሉ የትምህርት ክፍያ (₪16,490 በ2026-27)፤ ምርምር ያልሆነ ሁለተኛ ዲግሪ — በCHE ₪7,000፣ በፔራች ₪10,000 ለ1ኛ ዓመት ብቻ። ሴፕቴምበር 2026 ተረጋግጧል።",
     },
     deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://che.org.il/scholarships/marom/",
+    status: "closed",
+    opensOn: "2027-02-28",
+    lastVerified: "2026-09-15",
+    applicationUrl:
+      "https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D",
     tags: ["undergrad", "masters", "community", "government"],
     communityPriority: true,
     relatedScholarships: [
-      "isef-fellowship",
       "klita-tuition-grant",
+      "perach-tutoring-stipend",
       "vatat-excellence-mentoring",
     ],
     relatedRights: ["student-aid", "klita-basket-ethiopia"],
     bodies: {
-      he: `## מה זאת מלגת מרום של המועצה להשכלה גבוהה?
+      he: `## השורה התחתונה, 15 בספטמבר 2026
 
-מלגת מרום היא תכנית מלגות ממלכתית של המועצה להשכלה גבוהה (מל"ג/ות"ת), המיועדת **אך ורק לסטודנטים ממוצא אתיופי**. החל משנת הלימודים תשפ"ז (2026–27) ניתן להגיש בקשה גם לתואר שני, לא רק תואר ראשון.
+**אי אפשר להירשם למרום היום.** מערכת ההרשמה של פר"ח — המערכת היחידה שמקבלת בקשות — מציגה את המשפט הזה מילה במילה:
 
-## מי זכאי?
+> "ההרשמה למרום סגורה כעת. ההרשמה לשנת הפעילות תשפ"ז תפתח ב- 28/02/27 בשעה- 08:00."
 
-- סטודנט/ית ממוצא אתיופי בלבד — נמצא/ת בישראל 15+ שנה, **או** נולד/ה בישראל להורים שנולדו באתיופיה
-- לומד/ת בתכנית אקדמית המוכרת על-ידי מל"ג (תואר ראשון או שני)
-- החל מתשפ"ז: ניתן להגיש בכל שנות הלימוד התקניות של התואר, לא רק בשנה א'
-- החל מתשפ"ז: המצב הסוציו-אקונומי אינו עוד תנאי סף, אלא משוקלל בניקוד הכולל; חובת ההתנדבות שהייתה בעבר בוטלה
+אם אתם צריכים כסף לשנת הלימודים שמתחילה עכשיו, **אל תחכו למרום.** [המינהל לסטודנטים עולים](/he/education/scholarships/klita-tuition-grant) פתח את ההרשמה לתשפ"ז, והמועדים שם חיים: 1 באוקטובר לממשיכים, 10 בנובמבר לחדשים. קראו את [ההשוואה בין המסלולים](/he/education/scholarships/guides/marom-vs-minhal-vs-vatat) לפני שאתם בוחרים — אי אפשר לקבל את שניהם.
 
-> **הערה לעריכה**: הסעיפים לעיל אומתו מול che.org.il/scholarships/marom (יולי 2026). תנאי סף מדויקים לתואר שני (האם יש הבדל בסכום/קריטריונים מול תואר ראשון) לא פורטו במקור שנבדק — מומלץ לוודא מול מל"ג לפני קמפיין ממומן.
+## שלושה מקורות רשמיים, שלוש תשובות
 
-## כמה מקבלים?
+בדקנו היום את שלושת הדפים. הם לא אומרים אותו דבר:
 
-₪10,000 לשנת לימודים, מדי שנה עד סיום שנות התואר התקניות.
+| המקור | מה הוא אומר על מועד ההרשמה לתשפ"ז |
+| --- | --- |
+| דף מלגת מרום של המל"ג | "תקופת ההרשמה למלגה נפתחת בחודש ספטמבר מדי שנה ונסגרת בתחילת נובמבר" |
+| דף "הגשת מועמדות" של פר"ח | "ההרשמה לשנה הקרובה תשפ"ז תיפתח במהלך חודש ספטמבר 2026" |
+| **מערכת ההרשמה של פר"ח** | **"ההרשמה למרום סגורה כעת… תפתח ב- 28/02/27"** |
 
-## איך פונים?
+28 בפברואר 2027 הוא כארבעה חודשים **אחרי** מועד הסגירה שהמל"ג מפרסמת. אנחנו לא יודעים אם זה תאריך אמיתי, ברירת מחדל של המערכת או שדה שלא עודכן, ולא נציג ניחוש כעובדה. מה שוודאי: הטופס סגור.
 
-1. הרשמה מקוונת דרך che.org.il/scholarships/marom
-2. ההרשמה לתשפ"ז נפתחת ב-**9 בספטמבר 2026** ונסגרת בתחילת נובמבר (מועד סגירה מדויק — לוודא כל שנה מול האתר; לא פורסם תאריך יום מדויק)
-3. צירוף מסמכים: תעודת זהות, אישור לימודים/רישום אקדמי, אסמכתא על מוצא אתיופי
-4. אישור הזכאות והעברת המלגה ישירות דרך המוסד האקדמי
+**מי לשאול:** צוות מרום בפר"ח — milga.marom@perach-il.org · 054-7731216 (גם בוואטסאפ) · א'–ה' 8:00–15:00. מוקד פר"ח: 1-599-550-500.
+
+## מי מפעיל את המלגה
+
+דף המל"ג קובע במפורש: המלגה **"מופעלת באמצעות ארגון פר"ח במכון דוידסון"**. בעבר נכתב כאן שההרשמה נעשית ישירות דרך המל"ג ולא דרך פר"ח — זה היה שגוי, והוסר. ההרשמה מתבצעת דרך לשונית "מרום" באתר פר"ח, וההחלטה על הקריטריונים היא של מל"ג-ות"ת.
+
+## מי זכאי
+
+לפי דף המל"ג:
+
+- סטודנטים **יוצאי אתיופיה בלבד**, הנמצאים בארץ מעל 15 שנה **או** ילידי הארץ שהוריהם נולדו באתיופיה.
+- תואר ראשון או שני בתכנית אקדמית המוכרת על ידי המל"ג.
+- לימודים של **לפחות 70%** מהיקף הלימודים המצטבר הנדרש עד השנה הנוכחית ועד בכלל. (דף פר"ח מנסח זאת אחרת — 60% מהמערכת השנתית לתואר ראשון, 66% לתואר שני. שני הניסוחים חיים היום; בדקו מול פר"ח לפני שאתם מסתמכים.)
+- מי שהתחיל בסמסטר ב' רשאי להגיש במועד ההרשמה, ואם יימצא זכאי — המלגה תינתן רטרואקטיבית.
+
+**נמצאים בארץ פחות מ-15 שנה?** מרום אינה בשבילכם, ודף המל"ג עצמו מפנה אתכם למינהל לסטודנטים עולים. זה לא ניחום — זה המסלול הרחב יותר משני הצדדים: שכר לימוד עד 100% בתעריף אוניברסיטאי ומלגת קיום של ₪600 לחודש.
+
+## כמה מקבלים
+
+לפי דף המל"ג, נבדק ספטמבר 2026:
+
+| מסלול | גובה המלגה |
+| --- | --- |
+| תואר ראשון | ₪10,000 לכל שנת לימוד תקנית, החל משנת הרישום |
+| תואר שני מחקרי | שכר לימוד מלא — בתשפ"ז ₪16,490 |
+| תואר שני שאינו מחקרי | ₪7,000 לכל שנת לימוד תקנית |
+
+**שימו לב לסתירה:** על התואר השני שאינו מחקרי, דף פר"ח נוקב ב-₪10,000 "לשנה א' בלבד", ודף המל"ג ב-₪7,000 לכל שנה תקנית. שני הדפים חיים היום. אל תבנו תקציב על אף אחד מהם בלי לשאול את צוות מרום.
+
+מקור: [מלגת מרום — המועצה להשכלה גבוהה](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · [פר"ח — הגשת מועמדות למרום](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D) · נבדק ספטמבר 2026.
+
+## רמות העדיפות קובעות את הסיכוי, לא את הסכום
+
+מל"ג חילקה את תחומי הלימוד לארבע רמות עדיפות (א'–ד') בהחלטתה מ-18.6.2024, לפי צורכי שוק העבודה ולפי תחומים שבהם ליוצאי אתיופיה ייצוג חסר. רמת העדיפות של התחום שלכם היא **קריטריון ניקוד** — היא משפיעה על מקומכם בדירוג שקובע מי מקבל את המלגה, לצד המצב הסוציו-אקונומי והמצב המשפחתי (האם אתם הורים).
+
+**היא אינה מכפיל של הסכום.** בעבר הופיע כאן ובכתבה שלנו טבלה שלפיה המלגה משולמת כ-100%/85%/66%/50% משכר הלימוד לפי רמת עדיפות. קראנו היום את דף המלגה ואת החלטת מל"ג במלואם — טבלת אחוזים כזו **לא נמצאה בשום מקור של הגוף המעניק**, והיא הוסרה מכאן.
+
+## חובת ההתנדבות בוטלה — וזה משנה כסף
+
+דף המל"ג: **"החל משנת הלימודים תשפ"ז לא תחול חובת התנדבות במסגרת מלגת מרום"**, ובמפורש כדי להקל על שילוב מרום עם מלגות שכן דורשות התנדבות, כמו [מלגת פר"ח](/he/education/scholarships/perach-tutoring-stipend) ומלגת מיל-GO.
+
+עד תשפ"ו מלגאי מרום לתואר ראשון נדרשו לשעות התנדבות שהחלו סביב מרץ–אפריל, ומי שכבר התנדב עבור מלגה אחרת נאלץ לבחור. מתשפ"ז אותן שעות יכולות לשרת את שתי המלגות. זו ההטבה הכספית הגדולה ביותר בשינוי התנאים השנה.
+
+## מה כן לעשות השבוע
+
+1. **להכין את המסמכים.** הם לא ישתנו: תעודת זהות עם ספח פתוח באותו קובץ (ולעיתים גם של ההורים), אישור לימודים רשמי, אישור בעלות על חשבון בנק, ולתואר ראשון — תלושי שכר של ההורים או שלכם. הכול ב-PDF. [כך מכינים אותם נכון](/he/education/scholarships/guides/documents-checklist).
+2. **להגיש למינהל לסטודנטים עולים** אם אתם בתוך 15 שנה ממתן המעמד — שם ההרשמה פתוחה עכשיו.
+3. **לשאול את פר"ח מה התאריך האמיתי**, ולא להסתמך על דף שמנוסח בלשון עתיד מאז אוגוסט.
 
 ## ראו גם
 
-- [מלגת ISEF](/he/education/scholarships/isef-fellowship) — לתואר שני/שלישי
-- [מענק שכר לימוד — משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
-- [ות"ת — מצוינות ומנטורינג](/he/education/scholarships/vatat-excellence-mentoring)
+- [איך מגישים בקשה למלגה — המדריך המלא](/he/education/scholarships/guides/how-to-apply)
+- [מרום מול המינהל לסטודנטים עולים מול ות"ת — מי זכאי למה](/he/education/scholarships/guides/marom-vs-minhal-vs-vatat)
+- [מענק שכר לימוד — המינהל לסטודנטים עולים](/he/education/scholarships/klita-tuition-grant)
+- [הכתבה שלנו על הסתירה במועדי ההרשמה](/he/news/marom-scholarship-tashpaz-terms-change-2026)
+
+## מקורות
+
+- [מלגת מרום — המועצה להשכלה גבוהה (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — נקרא במלואו 15.9.2026
+- [פר"ח — הגשת מועמדות למרום](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D) — נקרא במלואו 15.9.2026
+- [מערכת ההרשמה של פר"ח למרום](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — נבדקה 15.9.2026, מציגה "ההרשמה סגורה כעת"
+- [החלטת מל"ג 18.6.2024 — עדכון תיעדוף תחומי לימוד ליוצאי אתיופיה](https://che.org.il/decision/%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%AA%D7%99%D7%A2%D7%93%D7%95%D7%A3-%D7%AA%D7%97%D7%95%D7%9E%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4-2/) — נקראה במלואה 15.9.2026
+- [מדיניות מל"ג לקידום מצוינות בהשכלה גבוהה בקרב יוצאי אתיופיה](https://che.org.il/qa/migvan/ethiopia/) — נקרא במלואו 15.9.2026
 `,
-      en: `## What is the Marom Scholarship from the Council for Higher Education?
+      en: `## The bottom line, 15 September 2026
 
-The Marom Scholarship is a national scholarship program of the Council for Higher Education (CHE/VATAT), designed **exclusively for students of Ethiopian origin**. Starting in the 2026-27 academic year (Hebrew: תשפ"ז), master's students can also apply — not only undergraduates.
+**You cannot register for Marom today.** Perach's registration system — the only system that accepts applications — displays this, word for word:
 
-## Who is eligible?
+> "Marom registration is currently closed. Registration for the 5787 activity year will open on 28/02/27 at 08:00."
 
-- Students of Ethiopian origin only — resident in Israel 15+ years, **or** born in Israel to parents born in Ethiopia
-- Enrolled in a CHE-recognized academic program (undergraduate or master's)
-- From 2026-27: applicants may apply in any standard year of the degree, not just year 1
-- From 2026-27: socio-economic status is no longer a strict eligibility gate but is weighted into the overall score; the previous volunteering requirement has been dropped
+If you need money for the academic year starting now, **do not wait for Marom.** The [Students Authority](/en/education/scholarships/klita-tuition-grant) has opened 2026-27 registration and its deadlines are live: 1 October for continuing students, 10 November for new ones. Read [the comparison of the tracks](/en/education/scholarships/guides/marom-vs-minhal-vs-vatat) before you choose — you cannot hold both.
 
-## How much?
+## Three official sources, three answers
 
-A flat ₪10,000 per academic year, through the standard duration of the degree.
+We read all three pages today. They do not agree:
 
-## How to apply
+| Source | What it says about 2026-27 registration |
+| --- | --- |
+| CHE's Marom page | "The registration period opens in September each year and closes in early November" |
+| Perach's "submit an application" page | "Registration for the coming year 5787 will open during September 2026" |
+| **Perach's registration system** | **"Marom registration is currently closed… will open on 28/02/27"** |
 
-1. Apply online via che.org.il/scholarships/marom
-2. Registration for 2026-27 opens **September 9, 2026** and closes in early November (exact closing date not published on the page checked — verify yearly)
-3. Attach documents: ID, academic enrollment confirmation, proof of Ethiopian origin
-4. Eligibility confirmation and payment via the academic institution
+28 February 2027 is roughly four months **after** the closing date CHE publishes. We do not know whether it is a real date, a system default, or a field nobody updated, and we will not present a guess as fact. What is certain: the form is closed.
+
+**Who to ask:** the Marom team at Perach — milga.marom@perach-il.org · 054-7731216 (also WhatsApp) · Sun–Thu 8:00–15:00. Perach switchboard: 1-599-550-500.
+
+## Who runs the scholarship
+
+CHE's page states it explicitly: the scholarship is **"operated through the Perach organization at the Davidson Institute."** This page previously said applications go directly through CHE and "not through Perach" — that was wrong, and it has been removed. Registration goes through the "Marom" tab on Perach's site; the criteria are set by CHE/VATAT.
+
+## Who is eligible
+
+Per CHE's page:
+
+- Students **of Ethiopian origin only**, resident in Israel more than 15 years **or** born in Israel to parents born in Ethiopia.
+- A bachelor's or master's degree in a CHE-recognized academic program.
+- Studying **at least 70%** of the cumulative required coursework up to and including the current year. (Perach's page words it differently — 60% of the annual load for a bachelor's, 66% for a master's. Both wordings are live today; check with Perach before relying on either.)
+- Students who began in the spring semester may apply in the registration window, and if found eligible receive the scholarship retroactively.
+
+**In Israel less than 15 years?** Marom is not for you, and CHE's own page refers you to the Students Authority. That is not a consolation prize — it is the broader track on both sides: tuition up to 100% of the university rate plus a ₪600/month subsistence stipend.
+
+## How much
+
+Per CHE's page, verified September 2026:
+
+| Track | Amount |
+| --- | --- |
+| Bachelor's | ₪10,000 per standard year of study, from the year of registration |
+| Research master's | Full tuition — ₪16,490 in 2026-27 |
+| Non-research master's | ₪7,000 per standard year of study |
+
+**Note the contradiction:** for the non-research master's, Perach's page says ₪10,000 "for year 1 only" and CHE's page says ₪7,000 per standard year. Both pages are live today. Do not build a budget on either without asking the Marom team.
+
+Sources: [Marom scholarship — CHE](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · [Perach — applying to Marom](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D) · verified September 2026.
+
+## Priority levels set your odds, not your amount
+
+CHE divided fields of study into four priority levels (A–D) in its decision of 18 June 2024, by labour-market need and by fields where Ethiopian-Israelis are under-represented. Your field's priority level is a **scoring criterion** — it affects your place in the ranking that decides who receives the scholarship, alongside socio-economic status and family status (whether you are a parent).
+
+**It is not a multiplier on the amount.** A table claiming the scholarship pays 100%/85%/66%/50% of tuition by priority level previously appeared here and in our news coverage. We read the scholarship page and the CHE decision in full today — no such percentage table appears in any granting-body source, and it has been removed.
+
+## The volunteering requirement is gone — and that is money
+
+CHE's page: **"From the 5787 academic year there will be no volunteering obligation under the Marom scholarship"** — explicitly in order to make it easier to combine Marom with scholarships that do require volunteering, such as the [Perach scholarship](/en/education/scholarships/perach-tutoring-stipend) and Mil-GO.
+
+Through 2025-26, undergraduate Marom recipients owed volunteer hours starting around March–April, and anyone already volunteering for another scholarship had to choose. From 2026-27 the same hours can serve both. It is the largest financial change in this year's terms.
+
+## What to do this week
+
+1. **Prepare the documents.** They will not change: ID card with the open appendix in the same file (sometimes your parents' too), official enrollment confirmation, bank-account ownership confirmation, and for undergraduates — your parents' or your own payslips. All as PDFs. [Here is how to prepare them properly](/en/education/scholarships/guides/documents-checklist).
+2. **Apply to the Students Authority** if you are within 15 years of receiving status — registration there is open now.
+3. **Ask Perach what the real date is**, rather than relying on a page written in the future tense since August.
 
 ## See also
 
-- [ISEF Fellowship](/en/education/scholarships/isef-fellowship) — for master's/PhD
-- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
-- [VATAT — Excellence & Mentoring](/en/education/scholarships/vatat-excellence-mentoring)
+- [How to apply for a scholarship — the full guide](/en/education/scholarships/guides/how-to-apply)
+- [Marom vs the Students Authority vs VATAT — who qualifies for what](/en/education/scholarships/guides/marom-vs-minhal-vs-vatat)
+- [Tuition assistance — the Students Authority](/en/education/scholarships/klita-tuition-grant)
+
+## Sources
+
+- [Marom scholarship — Council for Higher Education (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — read in full 15.9.2026
+- [Perach — applying to Marom](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D) — read in full 15.9.2026
+- [Perach's Marom registration system](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — checked 15.9.2026, shows "registration is currently closed"
+- [CHE decision 18.6.2024 — updating the priority fields for Ethiopian-Israelis](https://che.org.il/decision/%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%AA%D7%99%D7%A2%D7%93%D7%95%D7%A3-%D7%AA%D7%97%D7%95%D7%9E%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4-2/) — read in full 15.9.2026
+- [CHE policy for excellence in higher education among Ethiopian-Israelis](https://che.org.il/qa/migvan/ethiopia/) — read in full 15.9.2026
 `,
-      am: `## ማሮም ስኮላርሺፕ (CHE/VATAT) ምንድን ነው?
+      am: `## ዋናው ነጥብ — 15 ሴፕቴምበር 2026
 
-ይህ ስኮላርሺፕ **ለኢትዮጵያ-ተወላጅ ተማሪዎች ብቻ** የተዘጋጀ ብሔራዊ ፕሮግራም ነው። ከ2026-27 ጀምሮ ለሁለተኛ ዲግሪ ተማሪዎችም ክፍት ነው (ከዚህ በፊት ለመጀመሪያ ዲግሪ ብቻ ነበር)።
+**ዛሬ ለማሮም መመዝገብ አይቻልም።** ማመልከቻ የሚቀበለው ብቸኛው ሥርዓት — የፔራች የምዝገባ ሥርዓት — ይህን በቃል በቃል ያሳያል፦
 
-## ለማን ይሆናል?
+> "ההרשמה למרום סגורה כעת. ההרשמה לשנת הפעילות תשפ"ז תפתח ב- 28/02/27 בשעה- 08:00."
+> (የማሮም ምዝገባ አሁን ተዘግቷል። ለ5787 የሥራ ዓመት ምዝገባ በ28/02/27 በ08:00 ይከፈታል።)
 
-- ኢትዮጵያ-ተወላጅ ተማሪዎች ብቻ — ከ15+ ዓመታት በእስራኤል የኖሩ ወይም በእስራኤል የተወለዱ ለኢትዮጵያ ወላጆች
-- CHE-እውቅና ያለው ፕሮግራም ውስጥ (መጀመሪያ ወይም ሁለተኛ ዲግሪ)
-- ከ2026-27 ጀምሮ፦ በማንኛውም መደበኛ የዲግሪ ዓመት ማመልከት ይቻላል
-- ከ2026-27 ጀምሮ፦ ማህበራዊ-ኢኮኖሚያዊ ሁኔታ ቅድመ-ሁኔታ አይደለም፣ በውጤት ውስጥ ግን ይመዘናል
+አሁን ለሚጀምረው የትምህርት ዓመት ገንዘብ የሚያስፈልግዎት ከሆነ **ማሮምን አይጠብቁ።** [የኦሊም ተማሪዎች አስተዳደር](/am/education/scholarships/klita-tuition-grant) ለ2026-27 ምዝገባ ከፍቷል፤ ቀነ-ገደቦቹም ሕያው ናቸው፦ ለቀጣይ ተማሪዎች ኦክቶበር 1፣ ለአዲስ ተማሪዎች ኖቬምበር 10። ከመምረጥዎ በፊት [የመንገዶቹን ንጽጽር](/am/education/scholarships/guides/marom-vs-minhal-vs-vatat) ያንብቡ — ሁለቱንም በአንድ ጊዜ መያዝ አይቻልም።
 
-*(ማስታወሻ፦ ከላይ ያለው መረጃ ከche.org.il/scholarships/marom ጋር ተረጋግጧል — ሐምሌ 2026)*
+## ሦስት ኦፊሴላዊ ምንጮች፣ ሦስት መልሶች
 
-## ስንት ያገኛሉ?
+ዛሬ ሦስቱንም ገጾች አንብበናል። አይስማሙም፦
 
-₪10,000 ቋሚ በዓመት፣ እስከ ዲግሪ ፍጻሜ ድረስ።
+| ምንጭ | ስለ 2026-27 ምዝገባ የሚለው |
+| --- | --- |
+| የCHE የማሮም ገጽ | "የምዝገባ ጊዜ በየዓመቱ በሴፕቴምበር ይከፈታል በኖቬምበር መጀመሪያ ይዘጋል" |
+| የፔራች "ማመልከቻ ማስገባት" ገጽ | "ለቀጣዩ ዓመት 5787 ምዝገባ በሴፕቴምበር 2026 ውስጥ ይከፈታል" |
+| **የፔራች የምዝገባ ሥርዓት** | **"ምዝገባው አሁን ተዘግቷል… በ28/02/27 ይከፈታል"** |
 
-## እንዴት ማመልከት ይቻላል?
+28 የካቲት 2027 CHE ከሚያሳትመው መዝጊያ ቀን አራት ወር ያህል **በኋላ** ነው። እውነተኛ ቀን ነው ወይስ የሥርዓቱ ነባሪ ቅንብር ወይስ ያልታደሰ መስክ — አናውቅም፤ ግምትንም እንደ እውነታ አናቀርብም። እርግጠኛ የሆነው፦ ቅጹ ተዘግቷል።
 
-1. በche.org.il/scholarships/marom በመስመር ላይ ማመልከት
-2. ለ2026-27 ምዝገባ በሴፕቴምበር 9, 2026 ይከፈታል፣ በኖቬምበር መጀመሪያ ይዘጋል
-3. ሰነዶች ማስረከብ፦ መታወቂያ፣ የትምህርት ምዝገባ ማረጋገጫ፣ የኢትዮጵያ ትውልድ ማረጋገጫ
-4. ብቁነት ማረጋገጫና ክፍያ በአካዳሚክ ተቋሙ በኩል
+**ማንን መጠየቅ፦** በፔራች የማሮም ቡድን — milga.marom@perach-il.org · 054-7731216 (በዋትስአፕም) · እሑድ–ሐሙስ 8:00–15:00። የፔራች ማዕከል፦ 1-599-550-500።
+
+## ፕሮግራሙን የሚያስተዳድረው ማን ነው
+
+የCHE ገጽ በግልጽ ይናገራል፦ ስኮላርሺፑ **"በዳቪድሰን ኢንስቲትዩት በፔራች ድርጅት በኩል ይተዳደራል።"** ከዚህ በፊት በዚህ ገጽ ላይ ምዝገባው በቀጥታ በCHE በኩል እንደሚደረግና "በፔራች በኩል አይደለም" ተብሎ ተጽፎ ነበር — ይህ ስህተት ነበር፣ ተወግዷል። ምዝገባው በፔራች ድረ-ገጽ "ማሮም" ትር በኩል ይከናወናል።
+
+## ብቁ የሚሆነው ማን ነው
+
+በCHE ገጽ መሠረት፦
+
+- **ኢትዮጵያ-ተወላጅ ተማሪዎች ብቻ**፣ በእስራኤል ከ15 ዓመት በላይ የኖሩ **ወይም** በእስራኤል የተወለዱ ወላጆቻቸው በኢትዮጵያ የተወለዱ።
+- በCHE እውቅና ባለው ፕሮግራም የመጀመሪያ ወይም ሁለተኛ ዲግሪ።
+- እስከ አሁኑ ዓመት ድረስ ከሚያስፈልገው ድምር የትምህርት ጫና **ቢያንስ 70%** መማር። (የፔራች ገጽ በተለየ ይገልጸዋል — ለመጀመሪያ ዲግሪ 60%፣ ለሁለተኛ ዲግሪ 66%። ሁለቱም ሕያው ናቸው፤ ከመተማመንዎ በፊት ፔራችን ይጠይቁ።)
+- በጸደይ ሴሚስተር የጀመሩ በምዝገባ ጊዜ ማመልከት ይችላሉ፤ ብቁ ከሆኑም ወደኋላ ተመልሶ ይሰጣቸዋል።
+
+**በእስራኤል ከ15 ዓመት ያነሰ ቆይተዋል?** ማሮም ለእርስዎ አይደለም፤ የCHE ገጽ ራሱ ወደ ኦሊም ተማሪዎች አስተዳደር ይመራዎታል። ያ የማጽናኛ ሽልማት አይደለም — በሁለቱም በኩል ሰፊው መንገድ ነው፦ እስከ 100% የትምህርት ክፍያ እና በወር ₪600 የኑሮ ድጋፍ።
+
+## ስንት ያገኛሉ
+
+በCHE ገጽ መሠረት፣ ሴፕቴምበር 2026 ተረጋግጧል፦
+
+| መንገድ | መጠን |
+| --- | --- |
+| የመጀመሪያ ዲግሪ | ₪10,000 በየመደበኛ የትምህርት ዓመት፣ ከምዝገባ ዓመት ጀምሮ |
+| የምርምር ሁለተኛ ዲግሪ | ሙሉ የትምህርት ክፍያ — በ2026-27 ₪16,490 |
+| ምርምር ያልሆነ ሁለተኛ ዲግሪ | ₪7,000 በየመደበኛ የትምህርት ዓመት |
+
+**ተቃርኖውን ልብ ይበሉ፦** ምርምር ላልሆነው ሁለተኛ ዲግሪ የፔራች ገጽ "ለ1ኛ ዓመት ብቻ" ₪10,000 ይላል፤ የCHE ገጽ ደግሞ በየዓመቱ ₪7,000። ሁለቱም ገጾች ዛሬ ሕያው ናቸው። የማሮምን ቡድን ሳይጠይቁ በየትኛውም ላይ በጀት አይገንቡ።
+
+ምንጭ፦ [የማሮም ስኮላርሺፕ — CHE](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · [ፔራች — ለማሮም ማመልከት](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D) · ሴፕቴምበር 2026 ተረጋግጧል።
+
+## የቅድሚያ ደረጃዎች ዕድልዎን እንጂ መጠንዎን አይወስኑም
+
+CHE በ18 ሰኔ 2024 ውሳኔው የትምህርት መስኮችን በአራት የቅድሚያ ደረጃዎች (ሀ–መ) ከፍሏል። የመስክዎ የቅድሚያ ደረጃ **የነጥብ መስፈርት** ነው — ማን ስኮላርሺፑን እንደሚያገኝ በሚወስነው ደረጃ ውስጥ ቦታዎን ይነካል፣ ከማህበራዊ-ኢኮኖሚያዊ ሁኔታና ከቤተሰብ ሁኔታ ጋር።
+
+**የመጠን ማባዣ አይደለም።** ስኮላርሺፑ በቅድሚያ ደረጃ መሠረት ከትምህርት ክፍያ 100%/85%/66%/50% እንደሚከፍል የሚገልጽ ሰንጠረዥ ከዚህ በፊት እዚህ ቀርቦ ነበር። ዛሬ የስኮላርሺፑን ገጽና የCHE ውሳኔን በሙሉ አንብበናል — እንደዚህ ያለ የመቶኛ ሰንጠረዥ በየትኛውም የሰጪው አካል ምንጭ **አልተገኘም**፣ ከዚህም ተወግዷል።
+
+## የበጎ ፈቃድ ግዴታ ተሰርዟል — ይህም ገንዘብ ነው
+
+የCHE ገጽ፦ **"ከ5787 የትምህርት ዓመት ጀምሮ በማሮም ስኮላርሺፕ ማዕቀፍ የበጎ ፈቃድ ግዴታ አይኖርም"** — ይህም ማሮምን የበጎ ፈቃድ ከሚጠይቁ ሌሎች ስኮላርሺፖች ጋር ለማጣመር እንዲቀል ነው፣ እንደ [የፔራች ስኮላርሺፕ](/am/education/scholarships/perach-tutoring-stipend) እና ሚል-GO።
+
+እስከ 2025-26 ድረስ የማሮም የመጀመሪያ ዲግሪ ተቀባዮች በመጋቢት–ሚያዝያ የሚጀምሩ የበጎ ፈቃድ ሰዓታት ይጠበቅባቸው ነበር። ከ2026-27 ጀምሮ ተመሳሳይ ሰዓታት ሁለቱንም ስኮላርሺፖች ማገልገል ይችላሉ።
+
+## በዚህ ሳምንት ምን ማድረግ ይቻላል
+
+1. **ሰነዶቹን ማዘጋጀት።** አይለወጡም፦ መታወቂያ ከተከፈተ አባሪ ጋር በአንድ ፋይል (አንዳንዴም የወላጆች)፣ ኦፊሴላዊ የትምህርት ማረጋገጫ፣ የባንክ ሒሳብ ባለቤትነት ማረጋገጫ፣ ለመጀመሪያ ዲግሪም — የወላጆችዎ ወይም የእርስዎ የደመወዝ ወረቀቶች። ሁሉም በPDF። [እንዴት በትክክል እንደሚያዘጋጁ](/am/education/scholarships/guides/documents-checklist)።
+2. **ለኦሊም ተማሪዎች አስተዳደር ማመልከት** — መዕመድ ካገኙ በ15 ዓመት ውስጥ ከሆኑ፤ እዚያ ምዝገባው አሁን ክፍት ነው።
+3. **ትክክለኛውን ቀን ፔራችን መጠየቅ።**
 
 ## ይህንንም ይዩ
 
-- [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
-- [VATAT — ልቀትና አማካሪነት](/am/education/scholarships/vatat-excellence-mentoring)
+- [ለስኮላርሺፕ እንዴት ማመልከት — ሙሉ መመሪያ](/am/education/scholarships/guides/how-to-apply)
+- [ማሮም በተቃራኒ የኦሊም ተማሪዎች አስተዳደር በተቃራኒ VATAT](/am/education/scholarships/guides/marom-vs-minhal-vs-vatat)
+- [የትምህርት ክፍያ ድጋፍ — የኦሊም ተማሪዎች አስተዳደር](/am/education/scholarships/klita-tuition-grant)
+
+## ምንጮች
+
+- [የማሮም ስኮላርሺፕ — CHE (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — 15.9.2026 በሙሉ ተነቧል
+- [ፔראች — ለማሮም ማመልከት](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D) — 15.9.2026 በሙሉ ተነቧል
+- [የፔራች የማሮም ምዝገባ ሥርዓት](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — 15.9.2026 ተረጋግጧል
+- [የCHE ውሳኔ 18.6.2024](https://che.org.il/decision/%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%AA%D7%99%D7%A2%D7%93%D7%95%D7%A3-%D7%AA%D7%97%D7%95%D7%9E%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4-2/) — 15.9.2026 በሙሉ ተነቧል
 `,
     },
   },

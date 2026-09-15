@@ -927,5 +927,15 @@
   "education_amharic_title": "ללמוד אמהרית",
   "education_amharic_subtitle": "טבלת הפידל המלאה, מילים למשפחה עם תעתיק, ורשימה מאומתת של איפה לומדים — כולל הבגרות ב-5 יחידות.",
   "education_amharic_ulpan_title": "אולפן עברית להורים ולסבים",
-  "education_amharic_ulpan_subtitle": "הרשימה הרשמית של האולפנים, ומה בדיוק לשאול בטלפון על תמיכה באמהרית."
+  "education_amharic_ulpan_subtitle": "הרשימה הרשמית של האולפנים, ומה בדיוק לשאול בטלפון על תמיכה באמהרית.",
+  "scholarship_opens_on": "ההרשמה נפתחת: {date}",
+  "scholarships_guides_heading": "מדריכי הגשה",
+  "scholarships_guides_subtitle": "לא רשימה של מלגות — איך מגישים. מסמכים, מכתב מוטיבציה, סיבות דחייה, ומה קורה אחרי ההגשה.",
+  "scholarship_guides_landing_title": "מדריכי הגשה למלגות",
+  "scholarship_guides_landing_subtitle": "הצד שאף אחד לא כותב עליו: מה בדיוק להעלות, איך לנסח, ולמה בקשות נדחות.",
+  "scholarship_guide_updated": "עודכן: {date}",
+  "scholarship_guides_all_cta": "לכל מדריכי ההגשה",
+  "scholarship_guide_sources_heading": "מקורות",
+  "scholarship_guide_faq_heading": "שאלות נפוצות",
+  "scholarship_guide_back_to_scholarships": "חזרה לרשימת המלגות"
 }
