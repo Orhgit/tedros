@@ -87,6 +87,31 @@ describe("scholarships seed integrity", () => {
     expect(marom?.amountMaxIls).toBe(16490);
   });
 
+  // TED-168 — the deadline tracker is only worth having if the dates in it were
+  // actually looked at. `lastVerified` is a claim about verification, not
+  // verification (ADR-021 says so in as many words), but a stale date at least
+  // makes staleness legible to the reader, and a sweep that silently skips
+  // entries is how TED-152 left the famous-org entries unaudited.
+  it("no entry carries a verification date older than the TED-168 sweep", () => {
+    const stale = SCHOLARSHIPS.filter((e) => e.lastVerified < "2026-09-15").map(
+      (e) => `${e.slug} (${e.lastVerified})`,
+    );
+    expect(
+      stale,
+      "re-verify against the granting body's own page, then bump lastVerified",
+    ).toEqual([]);
+  });
+
+  it("an entry that is closed with a published opening date says so", () => {
+    for (const e of SCHOLARSHIPS) {
+      if (e.opensOn === undefined) continue;
+      expect(e.opensOn, e.slug).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      // `opensOn` exists to carry the one fact a closed entry's reader needs.
+      // On an open entry it is noise at best and a contradiction at worst.
+      expect(e.status, `${e.slug} is ${e.status} but carries opensOn`).not.toBe("open");
+    }
+  });
+
   it("legacy redirects point merged slugs at existing canonical entries", () => {
     const slugs = new Set(SCHOLARSHIPS.map((e) => e.slug));
     expect(LEGACY_SCHOLARSHIP_REDIRECTS["merom-scholarship"]).toBe("marom-che");

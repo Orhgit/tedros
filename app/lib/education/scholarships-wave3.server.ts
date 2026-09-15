@@ -667,7 +667,7 @@ Source: [Fidel Association](https://www.fidel.org.il) · verified September 2026
 
 הקול הקורא האחרון שפורסם הוא לשנת תשפ"ה: "מועד הגשה מ-02.02.25 עד 30.04.25 — מועד עבר", בסגירה ב-30 באפריל 2025 בשעה 12:00 בצוהריים.
 
-**לא פורסם קול קורא לתשפ"ו או לתשפ"ז באף מקור שאיתרנו.** לכן הסטטוס כאן הוא "טרם נקבע". אם אתם מתכננים להגיש — צרו קשר עם טבקה ובררו אם נפתח מחזור חדש, ובמקביל שאלו בדיקנאט הסטודנטים שלכם, שאליו הקול הקורא נשלח.
+**לא פורסם קול קורא לתשפ"ו או לתשפ"ז באף מקור שאיתרנו.** לכן הסטטוס כאן הוא "טרם נקבע". אם אתם מתכננים להגיש — צרו קשר עם טבקה ובררו אם נפתח מחזור חדש, ובמקביל שאלו בדיקנט הסטודנטים שלכם, שאליו הקול הקורא נשלח.
 
 ## ראו גם
 
@@ -772,23 +772,29 @@ The most recent published call is for the 2024-25 academic year: "submission fro
       en: "A scholarship for Ethiopian-Israeli women, with a dedicated gender lens — a community women-led initiative advancing education and employment.",
       am: "ለኢትዮጵያ-ተወላጅ ሴቶች ድጋፍ — በሴቶች የተመራ የማህበረሰብ ተነሳሽነት።",
     },
-    amountMinIls: 0,
-    amountMaxIls: 0,
+    // TED-168: the amount is now sourced. The org's own page describes a past
+    // ceremony — "טקס מלגות ל-15 סטודנטיות יוצאות אתיופיה מרחבי הארץ, שכל אחת
+    // קיבלה מלגה על סך 4,000 ש״ח" — but names no year, so the figure is stated
+    // as what one past cycle paid, not as a current entitlement.
+    amountMinIls: 4000,
+    amountMaxIls: 4000,
     amountNote: {
-      he: "סכום המלגה בפועל לא אומת עצמאית מול maatzimot.org.il בזמן כתיבת עמוד זה.",
-      en: "The actual scholarship amount was not independently verified against maatzimot.org.il while drafting this page.",
-      am: "ትክክለኛ የድጋፍ መጠን በገለልነት አልተረጋገጠም።",
+      he: "₪4,000 לכל מלגאית ב-15 מלגות, לפי תיאור טקס שהעמותה מפרסמת בלי לציין שנה. אין מחזור פתוח ואין קריטריוני זכאות מפורסמים. מקור: maatzimot.org.il · נבדק ספטמבר 2026.",
+      en: "₪4,000 per recipient across 15 scholarships, per a ceremony the organisation describes without naming a year. There is no open cycle and no published eligibility criteria. Source: maatzimot.org.il · verified September 2026.",
+      am: "በ15 ስኮላርሺፖች ለእያንዳንዷ ተቀባይ ₪4,000፣ ድርጅቱ ዓመት ሳይጠቅስ በሚገልጸው ሥነ ሥርዓት መሠረት። ምንጭ፦ maatzimot.org.il · ሴፕቴምበር 2026 ተረጋግጧል።",
     },
     deadline: null,
     status: "tba",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-15",
     applicationUrl: "https://www.maatzimot.org.il",
     tags: ["undergrad", "women", "community"],
     communityPriority: true,
     relatedScholarships: [],
     relatedRights: [],
     bodies: {
-      he: `## מה זאת התוכנית?
+      he: `> **אזהרה על מקור.** באתר העמותה יש שני דפים שכותרתם "מלגות" שהם **מדריך למלגות של גופים אחרים**, והוא התיישן: הוא מצטט סכום "נכון ל-2014", מפנה לכתובות שכבר אינן קיימות, ונוקב בתנאי סף שאינם מופיעים אצל הגופים עצמם. אל תסתמכו על הנתונים שבאותם דפים — לא אצלם ולא דרכנו. מה שכתוב כאן נלקח מהדפים שבהם העמותה מתארת את **הפעילות שלה עצמה**.
+
+## מה זאת התוכנית?
 
 "נשים אתיופיות מעצימות" (מעצימות) הוא ארגון עם זווית מגדרית ספציפית — מלגות ותמיכה לנשים יוצאות אתיופיה, מתוך הכרה בקשיים הייחודיים העומדים בפני נשים בקהילה בדרך להשכלה גבוהה ותעסוקה.
 
@@ -857,25 +863,25 @@ Via maatzimot.org.il.
     level: "undergrad",
     providerOrgSlug: "huji",
     name: {
-      he: "דיקנאט הסטודנטים ליוצאי אתיופיה — האוניברסיטה העברית",
+      he: "דיקנט הסטודנטים ליוצאי אתיופיה — האוניברסיטה העברית",
       en: "HUJI Dean of Students — Ethiopian-Israeli Students Office",
       am: "የHUJI ተማሪዎች ዲን — ኢትዮጵያ-ተወላጅ ተማሪዎች ጽ/ቤት",
     },
     shortDescription: {
-      he: "שירות מוסדי של דיקנאט הסטודנטים באוניברסיטה העברית לבני קהילת יוצאי אתיופיה — לא מלגה כלל-ארצית, אלא תמיכה מוסדית מקומית.",
+      he: "שירות מוסדי של דיקנט הסטודנטים באוניברסיטה העברית לבני קהילת יוצאי אתיופיה — לא מלגה כלל-ארצית, אלא תמיכה מוסדית מקומית.",
       en: "An institutional service from the Hebrew University Dean of Students for Ethiopian-Israeli students — not a nationwide scholarship, but local institutional support.",
       am: "ከHUJI ተማሪዎች ዲን ለኢትዮጵያ-ተወላጅ ተማሪዎች ተቋማዊ አገልግሎት — ብሔራዊ ድጋፍ አይደለም።",
     },
     amountMinIls: 0,
     amountMaxIls: 0,
     amountNote: {
-      he: "שירות מוסדי (ליווי, ולעיתים מלגות מקומיות דרך הדיקנאט) — לא סכום ארצי אחיד; לבדוק מול studean.huji.ac.il.",
+      he: "שירות מוסדי (ליווי, ולעיתים מלגות מקומיות דרך הדיקנט) — לא סכום ארצי אחיד; לבדוק מול studean.huji.ac.il.",
       en: "An institutional service (mentorship, and sometimes local scholarships via the dean's office) — not a uniform national figure; check studean.huji.ac.il.",
       am: "ተቋማዊ አገልግሎት እንጂ ብሔራዊ ወጥ መጠን አይደለም።",
     },
     deadline: null,
     status: "tba",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-15",
     applicationUrl:
       "https://studean.huji.ac.il/%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94",
     tags: ["undergrad", "masters", "community", "institutional"],
@@ -885,7 +891,7 @@ Via maatzimot.org.il.
     bodies: {
       he: `## מה זה השירות?
 
-דיקנאט הסטודנטים באוניברסיטה העברית מפעיל שירות ייעודי לבני קהילת יוצאי אתיופיה הלומדים בקמפוס. בשונה מרוב הרשומות האחרות בעמוד זה, **מדובר בשירות מוסדי-מקומי, לא במלגה ארצית**.
+דיקנט הסטודנטים באוניברסיטה העברית מפעיל שירות ייעודי לבני קהילת יוצאי אתיופיה הלומדים בקמפוס. בשונה מרוב הרשומות האחרות בעמוד זה, **מדובר בשירות מוסדי-מקומי, לא במלגה ארצית**.
 
 ## מי זכאי?
 
@@ -894,11 +900,11 @@ Via maatzimot.org.il.
 ## מה כלול?
 
 - ליווי מוסדי לסטודנטים מהקהילה בקמפוס האוניברסיטה העברית
-- ייתכנו מלגות/מענקים מקומיים דרך הדיקנאט (לאמת)
+- ייתכנו מלגות/מענקים מקומיים דרך הדיקנט (לאמת)
 
 ## איך פונים?
 
-studean.huji.ac.il — עמוד "יוצאי אתיופיה" הספציפי בתוך אתר הדיקנאט.
+studean.huji.ac.il — עמוד "יוצאי אתיופיה" הספציפי בתוך אתר הדיקנט.
 
 ## ראו גם
 
