@@ -1,20 +1,22 @@
 // Success-story seed (RIN-475 — Careers Hub Wave 5 / RIN-469).
 //
-// 10 anonymized success stories authored in HE/EN/AM. PII rules are
-// enforced editorially, not by code:
-//   - `nickname` is a first-name only (no surname)
+// 10 stories authored in HE/EN/AM. Owner decision (TED-163, 2026-09-14):
+// these are explicitly-labelled composite illustrations, not interviews
+// with real individuals — `careers_stories_disclaimer` states this on
+// every story page. Content rules, enforced editorially not by code:
+//   - `nickname` is a first-name only (no surname), always fictional
 //   - body never names a specific employer without explicit consent
-//     (consentAt timestamp pinned per entry)
-//   - stories below are based on aggregated reporting from ENP /
-//     Olim Beyahad / Tene Briut / Tebeka — composite portraits that
-//     reflect real graduate trajectories without exposing any single
-//     individual. They are appropriate as illustrative content for
-//     V1; the owner can replace specific entries with directly-sourced
-//     stories (with explicit consent) post-launch.
+//   - stories are based on aggregated reporting from ENP / Olim Beyahad /
+//     Tene Briut / Tebeka — patterns across many graduates, not any one
+//     person's account. Do not add a "based on a true story" framing or
+//     a consent/PII field for a specific individual: there is no
+//     individual to consent, and a field implying one is what TED-163
+//     removed (former `consentAt`, identical across all 10 entries).
 //
 // HE source-of-truth (CLAUDE.md). EN + AM mirrored. The route layer
-// at `/$lang/careers/stories/$slug` emits an `Article` + anonymized
-// `Person` JSON-LD per story.
+// at `/$lang/careers/stories/$slug` emits `Article` JSON-LD only — no
+// `Person` node (see schema.ts, TED-163: Person claims an identifiable
+// individual, which contradicts the disclaimer).
 
 import type { Translatable } from "../db/columns";
 import type { Locale } from "../i18n/config";
@@ -29,7 +31,6 @@ export interface SuccessStoryEntry {
   currentRole: Translatable;
   summary: Translatable;
   programsUsed: string[];
-  consentAt: string;
   publishedAt: string;
   bodies: Record<Locale, string>;
 }
@@ -56,7 +57,6 @@ export const STORIES: SuccessStoryEntry[] = [
       am: "ከ12 ወር ENP Tech-Career እስከ ሲኒየር በ4 ዓመት።",
     },
     programsUsed: ["olim-beyahad-mentorship"],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -139,7 +139,6 @@ Senior backend engineer at a slightly larger startup, manages a team of 3. Salar
       am: "ከ Atidim Academic ጋር ወደ ብቁ ቤተሰብ ድጋፍ።",
     },
     programsUsed: ["atidim-academic"],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -224,7 +223,6 @@ Still at the Aliyah Ministry, now a team lead (4 coordinators under her). Salary
       am: "ከሽያጭ ወደ የተረጋገጠ ኤሌክትሪክ።",
     },
     programsUsed: ["madrasa-trades"],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -307,7 +305,6 @@ Self-employed for 14 months. ~₪22K net per month on average (depending on work
       am: "ከ B.Ed ምሩቅ ወደ ENP Teaching Fellowship።",
     },
     programsUsed: ["enp-teaching-fellowship"],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -390,7 +387,6 @@ Teacher + department head at the same school. Salary ~₪16K gross (including th
       am: "ከትምህርት ረዳት ወደ የባህል ጤና አማካሪ።",
     },
     programsUsed: [],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -475,7 +471,6 @@ Still at Rambam, now senior cultural health navigator (a senior role in a team o
       am: "ከ ScaleUp Velocity ጋር።",
     },
     programsUsed: ["scaleup-velocity"],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -558,7 +553,6 @@ With the seed — they hired their first developer (an ENP Tech-Career grad, Dav
       am: "ከ B.A ምሩቅ ወደ የማህበረሰብ ማዕከል ዳይሬክተር።",
     },
     programsUsed: [],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -639,7 +633,6 @@ Director of that same city community center for 2 years. Salary ₪22K gross, te
       am: "ከሽያጭ ሰራተኛ ወደ ክልላዊ ሥራ አስኪያጅ።",
     },
     programsUsed: ["ta-employment-academy"],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -718,7 +711,6 @@ After 4 more years (shift-manager → assistant-manager → store-manager → re
       am: "ከ95 መካከለኛ ያለ ሁለተኛ ደረጃ ምሩቅ ወደ ሲኒየር CPA።",
     },
     programsUsed: ["isef-excellence-employment"],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל
@@ -799,7 +791,6 @@ Senior CPA at PwC for 4 years now. Salary ₪38K gross + annual bonus. Manages a
       am: "ከህግ ረዳት ወደ የ4ኛ ዓመት የህግ ተማሪ።",
     },
     programsUsed: [],
-    consentAt: "2026-04-15",
     publishedAt: "2026-05-01",
     bodies: {
       he: `## איך זה התחיל

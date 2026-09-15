@@ -171,7 +171,7 @@ describe("jobPostingJsonLd (Google for Jobs)", () => {
 });
 
 describe("successStoryJsonLd", () => {
-  it("produces a Graph with anonymized Article + Person entries", () => {
+  it("produces an Article only — no Person node (TED-163: stories are composite illustrations, not identifiable individuals)", () => {
     const out = successStoryJsonLd(ctx, {
       slug: "daniel-tech-tel-aviv",
       nickname: "דניאל",
@@ -182,17 +182,12 @@ describe("successStoryJsonLd", () => {
       city: { he: "תל-אביב" },
       publishedAt: "2026-06-01T00:00:00Z",
     });
-    const graph = out["@graph"] as Array<Record<string, unknown>>;
-    expect(graph).toHaveLength(2);
-    const article = graph[0]!;
-    expect(article["@type"]).toBe("Article");
-    expect(article["url"]).toContain("/he/careers/stories/daniel-tech-tel-aviv");
-    const person = graph[1]!;
-    expect(person["@type"]).toBe("Person");
-    expect(person["name"]).toBe("דניאל");
-    // Critical: no real surname, no PII fields beyond nickname.
-    expect(person["familyName"]).toBeUndefined();
-    expect(person["email"]).toBeUndefined();
+    expect(out["@type"]).toBe("Article");
+    expect(out["url"]).toContain("/he/careers/stories/daniel-tech-tel-aviv");
+    // Critical: no Person node anywhere in the output — a Person claims
+    // an identifiable individual, which these composite stories are not.
+    expect(JSON.stringify(out)).not.toContain('"Person"');
+    expect(out["@graph"]).toBeUndefined();
   });
 });
 

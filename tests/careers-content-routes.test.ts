@@ -154,9 +154,8 @@ describe("Stories seed integrity + PII compliance", () => {
     }
   });
 
-  it("every story has consentAt + publishedAt set + bodies non-empty", () => {
+  it("every story has publishedAt set + bodies non-empty", () => {
     for (const s of STORIES) {
-      expect(s.consentAt.length).toBeGreaterThanOrEqual(10);
       expect(s.publishedAt.length).toBeGreaterThanOrEqual(10);
       expect(s.bodies.he.length).toBeGreaterThan(100);
       expect(s.bodies.en.length).toBeGreaterThan(100);

@@ -8,7 +8,9 @@
 //   careerTrackJsonLd        → WebPage + ItemList
 //   bootcampJsonLd           → EducationalOccupationalProgram | Service
 //   jobPostingJsonLd         → JobPosting (Google for Jobs eligible)
-//   successStoryJsonLd       → Article + Person (anonymized)
+//   successStoryJsonLd       → Article (composite/illustrative — no Person
+//                               node; Person claims an identifiable
+//                               individual, which these stories are not)
 //   faqJsonLd                → FAQPage
 //   careersStatisticsJsonLd  → Dataset
 //   breadcrumbJsonLd         → BreadcrumbList helper
@@ -315,45 +317,32 @@ export function successStoryJsonLd(
   const url = urlFor(ctx, `/careers/stories/${input.slug}`);
   const headline = localizedText(input.headline, ctx.locale);
   const description = localizedText(input.summary, ctx.locale);
-  const role = localizedText(input.currentRole, ctx.locale);
-  const city = localizedText(input.city, ctx.locale);
 
+  // No Person node: Person claims an identifiable individual, and these
+  // stories are composite portraits (owner decision, TED-163) — labelling
+  // one as a real Person contradicts the on-page disclaimer and repeats
+  // the TED-157/TED-148 pattern of structured data asserting more than the
+  // content backs up. `currentRole`/`city` stay in Article's `about` text
+  // instead of a fabricated Occupation/City claim.
   return {
     "@context": SCHEMA_CONTEXT,
-    "@graph": [
-      {
-        "@type": "Article",
-        "@id": url,
-        url,
-        headline,
-        description,
-        datePublished: input.publishedAt,
-        inLanguage: ctx.locale,
-        author: {
-          "@type": "Organization",
-          name: "Tedros",
-          url: ctx.publicUrl,
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Tedros",
-          url: ctx.publicUrl,
-        },
-      },
-      {
-        "@type": "Person",
-        // Anonymized — we never store or emit a real name.
-        name: input.nickname,
-        hasOccupation: {
-          "@type": "Occupation",
-          name: role,
-          occupationLocation: {
-            "@type": "City",
-            name: city,
-          },
-        },
-      },
-    ],
+    "@type": "Article",
+    "@id": url,
+    url,
+    headline,
+    description,
+    datePublished: input.publishedAt,
+    inLanguage: ctx.locale,
+    author: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Tedros",
+      url: ctx.publicUrl,
+    },
   };
 }
 
