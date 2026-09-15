@@ -56,7 +56,8 @@ export const HERITAGE_EVENTS: HeritageEventEntry[] = [
     // 5788 = Mon 29.11.2027; 5789 = *Sat* 18.11.2028, so s.1(a) of חוק חג
     // הסיגד moves it to the preceding Thursday, 16.11.2028. Cross-checks
     // against Yom Kippur 5787 (10 Tishrei = Mon 21.9.2026) + 50 days counted
-    // inclusively. 19.11.2026 is 9 Kislev and was the bug TED-165 fixed.
+    // inclusively. 19.11.2026 is 9 Kislev: it is wrong, and was removed by
+    // TED-165 after shipping on three pages.
     upcomingDates: ["2026-11-09", "2027-11-29", "2028-11-16"],
     relatedRights: ["sigd-funding"],
     relatedTerms: ["sigd", "kessim"],

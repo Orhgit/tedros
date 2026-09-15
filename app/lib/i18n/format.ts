@@ -2,8 +2,8 @@ import { LOCALE_HTML_LANG, type Locale } from "./config";
 
 /**
  * Localized long date for a raw ISO string (TED-128). The site rendered
- * ISO dates ("2026-11-19") straight into Hebrew UI — this returns
- * "19 בנובמבר 2026" / "November 19, 2026" / the Amharic equivalent.
+ * ISO dates ("2026-03-17") straight into Hebrew UI — this returns
+ * "17 במרץ 2026" / "March 17, 2026" / the Amharic equivalent.
  * Falls back to the input when it isn't a parseable date.
  */
 export function formatDate(locale: Locale, iso: string | null | undefined): string {

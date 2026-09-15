@@ -37,11 +37,11 @@ export const SIGD_MENU_GUIDE: SigdMenuGuide = {
 
 באתיופיה היו בני הקהילה עולים בצום אל ראש הר גבוה — זכר להר סיני — כשהקייסים נושאים את האורית (התורה בגעז). בישראל עולים אל טיילת ארמון הנציב בירושלים, מול העיר העתיקה. הצום נמשך מהבוקר ועד לסיום התפילות בצהריים — לא יממה שלמה — וילדים, נשים בהיריון וחולים פטורים ממנו, כמקובל.
 
-מי שרוצה להעמיק בטקס עצמו — לוח האירועים המלא, ההסעות ומה להביא — ימצא הכול ב[עמוד הסיגד המרכזי](/he/heritage/events/sigd).
+מי שרוצה להעמיק בטקס עצמו — מה החג, איך נבחר ההר, מה קוראים באורית ומה קובע החוק — ימצא הכול ב[מדריך הסיגד המלא](/he/heritage/events/sigd). לאירועים שפורסמו בפועל: [אירועי הסיגד 2026](/he/heritage/sigd/events-2026).
 
 ## מתי שוברים את הצום?
 
-בטקס המרכזי בירושלים, התפילות מסתיימות סביב הצהריים (12:00 בקירוב), ואז נשברים הצום — במקום, יחד. מסורתית נושאים המשתתפים צידה מהבית: בכפרים באתיופיה חתמו את היום בסעודת מצווה קהילתית, וההקפדה על הכנסת אורחים סביב הסיגד היא חלק מהותי מהחג. מי שחוגג בעירו — באירוע עירוני או בבית — שובר את הצום בדרך כלל אחרי טקס התפילה המקומי.
+בטקס המרכזי בירושלים הצום נשבר בסיום התפילות — במקום, יחד. המקורות הקהילתיים מתארים יום ש"בחלקו הראשון יום תענית, ובחלקו השני יום חגיגה", ולא נוקבים בשעה אחידה; שעת סיום התפילות משתנה בין הטקסים ומתפרסמת על-ידי המארגן. מסורתית נושאים המשתתפים צידה מהבית: בכפרים באתיופיה חתמו את היום בסעודת מצווה קהילתית, וההקפדה על הכנסת אורחים סביב הסיגד היא חלק מהותי מהחג. מי שחוגג בעירו — באירוע עירוני או בבית — שובר את הצום בדרך כלל אחרי טקס התפילה המקומי.
 
 חשוב לומר: אין "תפריט רשמי" של הסיגד. המנהגים משתנים ממשפחה למשפחה ומקהילה לקהילה — מה שמשותף הוא הרעיון: מהצום אל השולחן המשותף.
 
@@ -65,7 +65,10 @@ export const SIGD_MENU_GUIDE: SigdMenuGuide = {
 
 ## ראו גם
 
-- [סיגד — העמוד המרכזי: טקס, הסעות, לוח אירועים](/he/heritage/events/sigd)
+- [מדריך הסיגד המלא — מה החג, ההר, הצום, החוק](/he/heritage/events/sigd)
+- [אירועי הסיגד 2026 — רשימה מאומתת](/he/heritage/sigd/events-2026)
+- [הסיגד בבית הספר — מה הורה יכול לבקש](/he/heritage/sigd/schools)
+- [באים לסיגד ולא מהקהילה? מדריך השתתפות מכבדת](/he/heritage/sigd/guests)
 - [סיגד — מילון מונחים](/he/glossary/sigd)
 - [מימון פעילויות סיגד מקומיות — זכות ממשלתית](/he/rights/sigd-funding)
 
@@ -76,11 +79,11 @@ Sigd — falling on **9 November 2026** (29 Cheshvan 5787) — is a day of renew
 
 In Ethiopia, community members would ascend a high mountain while fasting — a remembrance of Mount Sinai — with the Kessim carrying the Orit (the Torah in Ge'ez). In Israel, the ascent is to the Armon Hanatziv promenade in Jerusalem, facing the Old City. The fast runs from morning until prayers end at midday — not a full day — and children, pregnant women and the ill are exempt, as is customary.
 
-For the ceremony itself — the full events calendar, transport and what to bring — see [the main Sigd page](/en/heritage/events/sigd).
+For the ceremony itself — what the holiday is, how the mountain was chosen, what is read from the Orit and what the statute says — see [the complete Sigd guide](/en/heritage/events/sigd). For events actually published: [Sigd 2026 events](/en/heritage/sigd/events-2026).
 
 ## When is the fast broken?
 
-At the main Jerusalem ceremony, prayers end around midday (roughly 12:00), and the fast is broken — on the spot, together. Traditionally participants carry provisions from home: in Ethiopia's villages the day closed with a communal festive meal, and hospitality around Sigd is an essential part of the holiday. Those celebrating in their own city — at a municipal event or at home — usually break the fast after the local prayer ceremony.
+At the main Jerusalem ceremony the fast is broken when the prayers end — on the spot, together. Community sources describe a day that is "in its first part a fast day, and in its second part a day of celebration" and give no fixed hour; the time the prayers end varies between ceremonies and is published by the organiser. Traditionally participants carry provisions from home: in Ethiopia's villages the day closed with a communal festive meal, and hospitality around Sigd is an essential part of the holiday. Those celebrating in their own city — at a municipal event or at home — usually break the fast after the local prayer ceremony.
 
 Worth saying clearly: there is no "official" Sigd menu. Customs vary between families and communities — what is shared is the idea: from the fast to the shared table.
 
@@ -104,7 +107,9 @@ The Sigd fast is relatively short, but anyone on regular medication — for diab
 
 ## See also
 
-- [Sigd — the main page: ceremony, transport, events calendar](/en/heritage/events/sigd)
+- [Sigd — the complete guide: the holiday, the fast, the kessim, the statute](/en/heritage/events/sigd)
+- [Sigd 2026 events — a verified list](/en/heritage/sigd/events-2026)
+- [Attending Sigd from outside the community](/en/heritage/sigd/guests)
 - [Sigd — glossary](/en/glossary/sigd)
 - [Funding for local Sigd activities — a government right](/en/rights/sigd-funding)
 
@@ -119,7 +124,7 @@ The Sigd fast is relatively short, but anyone on regular medication — for diab
 
 ## ጾሙ መቼ ይሰበራል?
 
-በኢየሩሳሌም ዋና ስነ-ስርዓት ጸሎቶቹ በግምት ከቀትር (12:00) ላይ ይጠናቀቃሉ፣ ጾሙም እዚያው በጋራ ይሰበራል። በባህል ተሳታፊዎች ስንቅ ከቤት ይዘው ይመጣሉ። በራሳቸው ከተማ የሚያከብሩ — ከአካባቢው ጸሎት በኋላ ይሰብራሉ።
+በኢየሩሳሌም ዋና ስነ-ስርዓት ጾሙ ጸሎቶቹ ሲያልቁ እዚያው በጋራ ይሰበራል። የማህበረሰብ ምንጮች የተወሰነ ሰዓት አይጠቅሱም። በባህል ተሳታፊዎች ስንቅ ከቤት ይዘው ይመጣሉ። በራሳቸው ከተማ የሚያከብሩ — ከአካባቢው ጸሎት በኋላ ይሰብራሉ።
 
 ግልጽ ማድረግ ያለብን፡ "ኦፊሴላዊ" የሰግድ ምግብ ዝርዝር የለም። ወጎች ከቤተሰብ ወደ ቤተሰብ ይለያያሉ — የሚያመሳስለው ሃሳቡ ነው፡ ከጾም ወደ የጋራ ማዕድ።
 
@@ -143,7 +148,10 @@ The Sigd fast is relatively short, but anyone on regular medication — for diab
 
 ## ተጨማሪ
 
-- [ሰግድ — ዋና ገጽ](/am/heritage/events/sigd)
+- [ሰግድ — ሙሉ መመሪያ](/am/heritage/events/sigd)
+- [የ2026 ሰግድ ዝግጅቶች](/am/heritage/sigd/events-2026)
+- [ሰግድ በትምህርት ቤት](/am/heritage/sigd/schools)
+- [ከማህበረሰቡ ውጭ ለሆኑ መመሪያ](/am/heritage/sigd/guests)
 - [ሰግድ — መዝገበ ቃላት](/am/glossary/sigd)
 - [የሰግድ ዝግጅቶች ገንዘብ ድጋፍ](/am/rights/sigd-funding)`,
   },

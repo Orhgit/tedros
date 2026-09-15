@@ -69,6 +69,11 @@ export function loader() {
     ...ALL_WEDDING_SUPPLIER_CATEGORIES.map((c) => weddingSupplierCategoryPath(c)),
     // TED-172 — supplier category×city cells 301 to the category page;
     // redirecting URLs don't belong in a sitemap.
+    // Sigd season (TED-169) — siblings of the Sigd guide, not city cells.
+    // `/heritage/sigd` itself 301s to the guide and stays out.
+    "/heritage/sigd/events-2026",
+    "/heritage/sigd/schools",
+    "/heritage/sigd/guests",
     // Culinary (TED-146)
     "/culinary",
     "/culinary/sigd-menu",

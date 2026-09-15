@@ -37,6 +37,7 @@ import { JOBS } from "../app/lib/careers/jobs.server";
 import { isRelevant as isCareerCellRelevant } from "../app/lib/careers/relevance";
 import { STORIES } from "../app/lib/careers/stories.server";
 import { CITIES } from "../app/lib/cities/registry";
+import { SIGD_MENU_GUIDE } from "../app/lib/culinary/sigd-menu.server";
 import { COMPARISONS } from "../app/lib/comparisons/comparisons.server";
 import { PRIORITY_RIGHTS } from "../app/lib/db/seeds/rights";
 import { isScholarshipCellRelevant } from "../app/lib/education/scholarship-relevance";
@@ -47,6 +48,11 @@ import { GLOSSARY } from "../app/lib/glossary/glossary.server";
 import { CONDITIONS } from "../app/lib/health/conditions.server";
 import { HERITAGE_EVENTS } from "../app/lib/heritage/events.server";
 import { isRelevant as isHeritageCellRelevant } from "../app/lib/heritage/relevance";
+import {
+  SIGD_EVENTS_PAGE,
+  SIGD_GUESTS_PAGE,
+  SIGD_SCHOOLS_PAGE,
+} from "../app/lib/heritage/sigd.server";
 import { WEDDING_COPY, WEDDING_STAGES } from "../app/lib/heritage/wedding.server";
 import { weddingSupplierCells } from "../app/lib/heritage/wedding-suppliers.server";
 import { ARTICLES } from "../app/lib/news/articles.server";
@@ -69,6 +75,12 @@ const LINK_SOURCES: Record<string, unknown> = {
   "glossary/glossary.server (all waves)": GLOSSARY,
   "heritage/events.server": HERITAGE_EVENTS,
   "heritage/wedding.server (stages + copy)": [WEDDING_STAGES, WEDDING_COPY],
+  "heritage/sigd.server (season pages)": [
+    SIGD_EVENTS_PAGE,
+    SIGD_SCHOOLS_PAGE,
+    SIGD_GUESTS_PAGE,
+  ],
+  "culinary/sigd-menu.server": SIGD_MENU_GUIDE,
   "db/seeds/rights": PRIORITY_RIGHTS,
   "family/topics.server": FAMILY_TOPICS,
   "careers/faqs.server": FAQS,
