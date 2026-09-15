@@ -14,6 +14,22 @@ export function eventCityPath(event: HeritageEventSlug, citySlug: string): strin
   return `/heritage/events/${event}/${citySlug}`;
 }
 
+// ── Sigd season pages (TED-169) ────────────────────────────────────────────
+// Siblings of the Sigd guide at `eventPath("sigd")`, not city cells: four
+// distinct pages answering four distinct questions (ADR-024).
+
+export function sigdEventsPath(): string {
+  return "/heritage/sigd/events-2026";
+}
+
+export function sigdSchoolsPath(): string {
+  return "/heritage/sigd/schools";
+}
+
+export function sigdGuestsPath(): string {
+  return "/heritage/sigd/guests";
+}
+
 // ── kessim directory + marriage guide (TED-140) ────────────────────────────
 
 export function kessimLandingPath(): string {

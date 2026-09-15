@@ -147,6 +147,26 @@ const RETIRED_CLAIMS: readonly RetiredClaim[] = [
       /28 שבועות|28 weeks[^\n]{0,30}(leave|לידה)|סבסוד צהרון[^\n]{0,20}80%|80% of cost for community members/,
     why: "the TED-148 exclusivity-fabrication pattern. Statutory leave is 26 weeks (15 paid) with no 28-week or community-specific variant; the daycare subsidy is means-tested and has no origin criterion",
   },
+
+  // ── TED-169 (Sigd) ─────────────────────────────────────────────────────
+
+  {
+    label: "19.11.2026 as the date of Sigd 5787",
+    pattern:
+      /19\.11\.2026|19 בנובמבר 2026|November 19,? 2026|19 November 2026|2026-11-19/,
+    why: 'that date is 9 Kislev. כ"ט בחשוון תשפ"ז is Monday 9.11.2026, which also cross-checks as Yom Kippur 5787 (21.9.2026) plus fifty days counted inclusively. It shipped on three pages before a reader caught it (TED-165); a schema fixture or a correction notice may name it, ordinary copy may not',
+  },
+  {
+    label: "invented Sigd ceremony logistics",
+    pattern:
+      /הסעות (מסובסדות|מאורגנות)|16 ערי קליטה|subsidised buses from 16|~?30 קייסים|~?5,000 (משתתפים|attendees)|חוגגים יחד מאז 1993|celebrate together since 1993/,
+    why: "TED-165 stripped a ~30-kessim figure, a 09:00 start, free buses from 16 absorption cities and a booking deadline; TED-169 stripped a seven-city event table, a ~5,000 attendance figure, a full 07:00-18:00 schedule and a 'since 1993' origin. No source supported any of them. Organiser-published details belong on /heritage/sigd/events-2026 with a link",
+  },
+  {
+    label: "a named mountain for the Sigd ascent",
+    pattern: /הר גריזים|Mount Gerizim|Mt\.? Gerizim/,
+    why: "community sources (the Ethiopian Jewry Heritage Center, and the Hebrew scholarly literature behind the Wikipedia entry) describe the kessim choosing a suitable high mountain near each settlement every year and verifying it is clear of graves — not one named peak. Gerizim appears in no source we opened",
+  },
 ];
 
 function contentFilesUnder(dir: string): string[] {
@@ -195,7 +215,7 @@ describe("retired claims stay retired (TED-157)", () => {
 
 /** Phrases that mark a paragraph as warning about a claim rather than making it. */
 const DEBUNK_RE =
-  /(אינם מופיעים|אינו מופיע|אינה קיימת|אינו קיים|לא קיים|לא קיימת|אין דבר כזה|אין זכות כזו|אין מענק|אין מסלול|אין הגרלה|אין תוכנית|אינה מפרסמת|אינה זכות עדתית|שום קריטריון של מוצא|קבע בעבר|הופיע כאן בעבר|נכתב כאן בעבר|לא נמצא|לא נמצאה|הוסר|הוסרו|הוסרה|שגוי|טעות|ההרשמה סגורה|נסגרה|do not appear|does not appear|no such|not a real|no longer|was removed|were removed|is closed|does not exist|do not exist|there is no|no evidence|no origin criterion|in error|is wrong|was wrong|publishes no|deliberately excluded|NXDOMAIN|\bremoved\b|\bretired\b|previously (said|stated|listed|described))/i;
+  /(אינם מופיעים|אינו מופיע|אינה קיימת|אינו קיים|לא קיים|לא קיימת|אין דבר כזה|אין זכות כזו|אין מענק|אין מסלול|אין הגרלה|אין תוכנית|אינה מפרסמת|אינה זכות עדתית|שום קריטריון של מוצא|קבע בעבר|הופיע כאן בעבר|נכתב כאן בעבר|לא נמצא|לא נמצאה|הוסר|הוסרו|הוסרה|נמחק|נמחקו|שום מקור|שגוי|טעות|ההרשמה סגורה|נסגרה|do not appear|does not appear|no such|not a real|no longer|was removed|were removed|were deleted|no source supported|is closed|does not exist|do not exist|there is no|no evidence|no origin criterion|in error|is wrong|was wrong|publishes no|deliberately excluded|NXDOMAIN|\bremoved\b|\bretired\b|previously (said|stated|listed|described))/i;
 
 // ---------------------------------------------------------------------------
 // 2. Sourced money claims — ADR-021
