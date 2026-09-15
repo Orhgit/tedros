@@ -40,6 +40,7 @@ import { CITIES } from "../app/lib/cities/registry";
 import { COMPARISONS } from "../app/lib/comparisons/comparisons.server";
 import { PRIORITY_RIGHTS } from "../app/lib/db/seeds/rights";
 import { isScholarshipCellRelevant } from "../app/lib/education/scholarship-relevance";
+import { SCHOLARSHIP_GUIDES } from "../app/lib/education/scholarship-guides.server";
 import { ALL_SCHOLARSHIPS } from "../app/lib/education/scholarships.server";
 import { EDUCATION_TRACKS } from "../app/lib/education/tracks";
 import { FAMILY_TOPICS } from "../app/lib/family/topics.server";
@@ -65,6 +66,7 @@ import {
 const LINK_SOURCES: Record<string, unknown> = {
   "news/articles.server (all waves)": ARTICLES,
   "education/scholarships.server (all waves)": ALL_SCHOLARSHIPS,
+  "education/scholarship-guides.server": SCHOLARSHIP_GUIDES,
   "orgs/orgs.server": ORGS,
   "glossary/glossary.server (all waves)": GLOSSARY,
   "heritage/events.server": HERITAGE_EVENTS,
@@ -180,6 +182,12 @@ function dynamicPaths(): Set<string> {
         out.add(`/education/scholarships/${sch.slug}/${city}`);
       }
     }
+  }
+
+  // TED-168 — hand-written application guides.
+  out.add("/education/scholarships/guides");
+  for (const guide of SCHOLARSHIP_GUIDES) {
+    out.add(`/education/scholarships/guides/${guide.slug}`);
   }
 
   for (const track of EDUCATION_TRACKS) out.add(`/education/tracks/${track}`);

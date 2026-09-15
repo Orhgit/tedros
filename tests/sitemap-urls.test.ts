@@ -47,7 +47,9 @@ const EXPECTED_URLS: Record<keyof typeof SITEMAPS, number> = {
   rights: 213,
   careers: 147,
   health: 147,
-  content: 678,
+  // TED-168: 678 - 18 (six scholarships retired, 3 locales each)
+  //          + 15 (the guides index + four application guides, 3 locales each)
+  content: 675,
   news: 504,
 };
 

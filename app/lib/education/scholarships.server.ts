@@ -840,7 +840,7 @@ Note: the gov.il page itself refers readers to Marom using **2025-26 cycle dates
     relatedScholarships: [
       "klita-tuition-grant",
       "perach-tutoring-stipend",
-      "vatat-excellence-mentoring",
+      "isef-fellowship",
     ],
     relatedRights: ["student-aid", "klita-basket-ethiopia"],
     bodies: {

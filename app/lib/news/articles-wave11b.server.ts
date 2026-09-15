@@ -19,7 +19,10 @@ export const ARTICLES_WAVE11B: NewsArticleEntry[] = [
   {
     slug: "marom-scholarship-tashpaz-terms-change-2026",
     publishedAt: "2026-09-08",
-    updatedAt: "2026-09-08",
+    // TED-168: corrected 15.9.2026. The 100/85/66/50 percentage-of-tuition
+    // table this article published on 8.9.2026 appears on neither the CHE
+    // Marom page nor מל"ג decision 18.6.2024, both re-read in full that day.
+    updatedAt: "2026-09-15",
     tags: ["education"],
     title: {
       he: 'מלגת מרום: מערכת ההרשמה סגורה ומציגה פתיחה בפברואר 2027 — בזמן ששני דפים רשמיים אומרים "ספטמבר 2026"',
@@ -62,20 +65,23 @@ export const ARTICLES_WAVE11B: NewsArticleEntry[] = [
 
 המשמעות המעשית ישירה: עד כה מלגאי מרום לתואר ראשון נדרשו לשעות התנדבות בקהילה שהחלו סביב מרץ–אפריל. מי שכבר התנדב במסגרת מלגה אחרת נאלץ לבחור. מתשפ"ז אפשר לצבור את שתיהן על אותן שעות.
 
-## גובה המלגה — אחוז משכר הלימוד, לפי תחום הלימוד
+## תיקון, 15.9.2026: גובה המלגה — סכומים קבועים, לא אחוזים
 
-לפי טבלת גובה המלגה בדף המל"ג, המלגה לתואר ראשון משולמת כאחוז משכר הלימוד, לפי **רמת העדיפות** של מקצוע הלימודים:
+**בגרסה הראשונה של הכתבה הזאת, מ-8.9.2026, פרסמנו טבלה שלפיה המלגה משולמת כ-100%/85%/66%/50% משכר הלימוד לפי רמת עדיפות. זה היה שגוי, והטבלה הוסרה.**
 
-| רמת עדיפות | אחוז משכר הלימוד |
-| ---------- | ---------------- |
-| א'         | 100%             |
-| ב'         | 85%              |
-| ג'         | 66%              |
-| ד'         | 50%              |
+חזרנו ב-15.9.2026 וקראנו מחדש, במלואם, את דף מלגת מרום של המל"ג ואת החלטת מל"ג מ-18.6.2024. **טבלת אחוזים כזו אינה מופיעה באף אחד מהם.** מה שדף המל"ג נוקב בו הם סכומים קבועים לפי סוג התואר:
 
-לתואר שני: **תואר שני מחקרי — 100%** משכר הלימוד; **תואר שני שאינו מחקרי — 85%**. הדף מוסיף שסוג התואר השני נבחן בכל שנה בנפרד.
+| מסלול | גובה המלגה |
+| --- | --- |
+| תואר ראשון | ₪10,000 לכל שנת לימוד תקנית, החל משנת הרישום |
+| תואר שני מחקרי | שכר לימוד מלא — "לדוגמה, בשנת תשפ"ז עומד הסכום על 16,490 ₪" |
+| תואר שני שאינו מחקרי | ₪7,000 לכל שנת לימוד תקנית |
 
-מקור: [מלגת מרום — המועצה להשכלה גבוהה](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · נבדק ספטמבר 2026.
+שימו לב שעל התואר השני שאינו מחקרי דף פר"ח נוקב ב-₪10,000 "לשנה א' בלבד". שני דפים רשמיים, שני סכומים; שניהם חיים היום.
+
+אנחנו מתקנים את זה בגוף הכתבה ולא בהערת שוליים, כי הסכום הוא מה שאנשים בונים עליו תקציב. [ההסבר המלא בדף המלגה](/he/education/scholarships/marom-che).
+
+מקור: [מלגת מרום — המועצה להשכלה גבוהה](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · נקרא במלואו 15.9.2026.
 
 ## מהי "רמת עדיפות"
 
@@ -83,7 +89,9 @@ export const ARTICLES_WAVE11B: NewsArticleEntry[] = [
 
 באותה החלטה נקבע גם מדד הצלחה: שיעור הסטודנטים יוצאי אתיופיה לתואר ראשון ברמות עדיפות א' ו-ב' יגדל ב-5 נקודות אחוז — **מ-45% ל-50%** — בלי ששיעור הלומדים ברמה ג' יקטן.
 
-הטבלה המלאה, תחום אחר תחום, מופיעה בגוף ההחלטה. אנחנו לא משכפלים אותה כאן: הסיווג נקבע לפי תכנית ולפי מוסד, ורמת עדיפות שגויה שווה כאן הפרש של עשרות אחוזים משכר לימוד. **בדקו את התחום שלכם בטבלה עצמה** לפני שאתם מסתמכים על סכום.
+הטבלה המלאה, תחום אחר תחום, מופיעה בגוף ההחלטה, ואנחנו לא משכפלים אותה כאן — הסיווג נקבע לפי תכנית ולפי מוסד.
+
+**ומה רמת העדיפות עושה בפועל?** היא קריטריון ניקוד. דף המל"ג מונה שלושה קריטריונים לניקוד המועמדים: מצב סוציו-אקונומי ובכללו הכנסה ממוצעת לנפש, מקצועות לימוד מועדפים, ומצב משפחתי — האם הסטודנט/ית הורים. כלומר הרמה משפיעה על **הסיכוי שלכם להיכנס למכסה**, לא על הסכום שתקבלו אם נכנסתם.
 
 ## מי זכאי להירשם
 
@@ -100,7 +108,7 @@ export const ARTICLES_WAVE11B: NewsArticleEntry[] = [
 
 בפברואר 2026 פרסמנו כתבה על [מלגת מרום לקראת מחזור תשפ"ז](/he/news/marom-scholarship-tashpav-cycle). שני פרטים בה אינם עומדים מול המקורות שקראנו כעת, ואנחנו מתקנים אותם:
 
-1. **הסכום.** כתבנו "₪10,000 קבועים לשנת לימודים". דף המל"ג הנוכחי אינו נוקב בסכום קבוע לתואר ראשון אלא באחוז משכר הלימוד לפי רמת עדיפות. הסכום הקבוע של ₪10,000 מופיע היום רק בדף פר"ח, ורק לתואר שני שאינו מחקרי — ואותו דף עצמו מכריז שהתנאים משתנים. הלכנו לפי דף הגוף המעניק.
+1. **הסכום.** כתבנו "₪10,000 קבועים לשנת לימודים". זה נכון לתואר ראשון, ודף המל"ג אומר זאת במילים האלה. (ב-8.9.2026 כתבנו כאן שהוא שגוי ושהמלגה משולמת באחוזים — התיקון ההוא עצמו היה שגוי, והוא מתוקן למעלה.) מה שכן חסר בגרסה המקורית: התואר השני. תואר שני מחקרי מקבל שכר לימוד מלא, ותואר שני שאינו מחקרי ₪7,000 לפי המל"ג.
 2. **ערוץ ההרשמה.** כתבנו שההרשמה נעשית ישירות דרך המל"ג ו"לא דרך פר"ח". זה שגוי: דף המל"ג קובע ש**"התכנית מופעלת על ידי ארגון פר"ח במכון דוידסון"**, וההרשמה בפועל מתבצעת דרך לשונית "מרום" באתר פר"ח.
 
 גם התאריך "9 בספטמבר" שהופיע שם דורש זהירות: 9.9.2025 הוא מועד הפתיחה של מחזור **תשפ"ו**, כפי שמופיע עד היום בדף של משרד העלייה והקליטה. לתשפ"ז שני המקורות אומרים "ספטמבר 2026" בלי לנקוב ביום.
@@ -168,26 +176,31 @@ The CHE's Marom page states plainly: **"From 5787 the scholarship's volunteering
 
 The practical meaning is direct. Until now, Marom undergraduates owed community volunteering hours starting around March–April. Anyone already volunteering for another scholarship had to choose. From 5787 the same hours can carry both.
 
-## The amount — a percentage of tuition, by field of study
+## Correction, 15.9.2026: the amount — fixed sums, not percentages
 
-Per the amounts table on the CHE page, the undergraduate scholarship is paid as a percentage of tuition, according to the **priority level** of the field of study:
+**The first version of this article, published 8.9.2026, carried a table stating that the scholarship pays 100%/85%/66%/50% of tuition by priority level. That was wrong, and the table has been removed.**
 
-| Priority level | Share of tuition |
-| -------------- | ---------------- |
-| A              | 100%             |
-| B              | 85%              |
-| C              | 66%              |
-| D              | 50%              |
+We went back on 15.9.2026 and read the CHE Marom page and the CHE decision of 18.6.2024 in full again. **No such percentage table appears in either of them.** What the CHE page states are fixed amounts by degree type:
 
-For master's degrees: **research master's — 100%** of tuition; **non-research master's — 85%**. The page adds that the type of master's degree is assessed separately each year.
+| Track | Amount |
+| --- | --- |
+| Bachelor's | ₪10,000 per standard year of study, from the year of registration |
+| Research master's | Full tuition — "for example, in 5787 the amount stands at ₪16,490" |
+| Non-research master's | ₪7,000 per standard year of study |
 
-Source: [Marom scholarship — Council for Higher Education](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · verified September 2026.
+Note that for the non-research master's, Perach's page says ₪10,000 "for year 1 only" — two official pages, two figures, both live today.
+
+We are correcting this in the body of the article rather than in a footnote, because the amount is what people build a budget on. [The full explanation on the scholarship page](/en/education/scholarships/marom-che).
+
+Source: [Marom scholarship — Council for Higher Education](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · read in full 15.9.2026.
 
 ## What a "priority level" is
 
 This is not about grades; it is about the field. On June 18, 2024, following the recommendations of the steering committee for advancing academic excellence among Ethiopian-Israelis, the CHE decided to update the classification of fields of study into four priority levels. The criteria, in the decision's own words: the needs of the economy and the labour market, fields where graduates' chances of quality employment are relatively high, and fields in which Ethiopian-Israelis are under-represented.
 
 The same decision set a success measure: the share of Ethiopian-Israeli undergraduates in priority levels A and B is to rise by 5 percentage points — **from 45% to 50%** — without the share in level C falling.
+
+**What the priority level actually does:** it is a scoring criterion. The CHE page lists three criteria for scoring candidates — socio-economic situation including average income per person, preferred fields of study, and family status (whether the student is a parent). The level affects your chance of getting inside the quota, not the amount you receive once you are in.
 
 The full field-by-field table is in the body of the decision. We are not reproducing it here: the classification depends on the programme and the institution, and a wrong priority level is worth tens of percent of tuition. **Check your own field in the table itself** before relying on a number.
 
@@ -274,20 +287,23 @@ This is the process as written — not a confirmed schedule for this cycle:
 
 ተግባራዊ ትርጉሙ ቀጥተኛ ነው። እስከ አሁን የመጀመሪያ ዲግሪ የማሮም ተማሪዎች ከመጋቢት–ሚያዝያ ገደማ ጀምሮ የማህበረሰብ የበጎ ፈቃድ ሰዓታት ይጠበቅባቸው ነበር። በሌላ ስኮላርሺፕ ስር አስቀድሞ በጎ ፈቃድ ሲሠራ የነበረ መምረጥ ነበረበት። ከ5787 ጀምሮ ተመሳሳይ ሰዓታት ለሁለቱም ሊቆጠሩ ይችላሉ።
 
-## መጠኑ — በጥናት መስክ መሠረት ከትምህርት ክፍያ በመቶኛ
+## እርማት፣ 15.9.2026፦ መጠኑ — ቋሚ ሒሳቦች እንጂ በመቶኛ አይደለም
 
-በCHE ገጽ ላይ ባለው ሠንጠረዥ መሠረት፣ የመጀመሪያ ዲግሪ ስኮላርሺፕ በጥናት መስኩ **ቅድሚያ ደረጃ** መሠረት ከትምህርት ክፍያ በመቶኛ ይከፈላል፦
+**በዚህ ጽሑፍ የመጀመሪያ ስሪት፣ በ8.9.2026፣ ስኮላርሺፑ በቅድሚያ ደረጃ መሠረት ከትምህርት ክፍያ 100%/85%/66%/50% እንደሚከፈል የሚገልጽ ሠንጠረዥ አሳትመን ነበር። ያ ስህተት ነበር፤ ሠንጠረዡም ተወግዷል።**
 
-| ቅድሚያ ደረጃ | ከትምህርት ክፍያ ድርሻ |
-| --------- | ---------------- |
-| ሀ         | 100%             |
-| ለ         | 85%              |
-| ሐ         | 66%              |
-| መ         | 50%              |
+በ15.9.2026 ተመልሰን የCHE የማሮም ገጽንና የ18.6.2024 የCHE ውሳኔን በሙሉ እንደገና አንብበናል። **እንደዚህ ያለ የመቶኛ ሠንጠረዥ በሁለቱም ውስጥ አይገኝም።** የCHE ገጽ የሚገልጻቸው በዲግሪ ዓይነት ቋሚ መጠኖች ናቸው፦
 
-ለሁለተኛ ዲግሪ፦ **የምርምር ሁለተኛ ዲግሪ — 100%**፤ **የምርምር ያልሆነ ሁለተኛ ዲግሪ — 85%**። ገጹ የሁለተኛ ዲግሪው ዓይነት በየዓመቱ በተናጠል እንደሚመረመር ይጨምራል።
+| መንገድ | የስኮላርሺፕ መጠን |
+| --- | --- |
+| የመጀመሪያ ዲግሪ | በየመደበኛ የትምህርት ዓመት ₪10,000 |
+| የምርምር ሁለተኛ ዲግሪ | ሙሉ የትምህርት ክፍያ — "ለምሳሌ በ5787 ዓመት መጠኑ ₪16,490 ነው" |
+| ምርምር ያልሆነ ሁለተኛ ዲግሪ | በየመደበኛ የትምህርት ዓመት ₪7,000 |
 
-ምንጭ፦ [ማሮም ስኮላርሺፕ — የከፍተኛ ትምህርት ምክር ቤት](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · በሴፕቴምበር 2026 ተረጋግጧል።
+ምርምር ላልሆነው ሁለተኛ ዲግሪ የፔራች ገጽ "ለ1ኛ ዓመት ብቻ" ₪10,000 እንደሚል ልብ ይበሉ — ሁለት ኦፊሴላዊ ገጾች፣ ሁለት ቁጥሮች፣ ሁለቱም ዛሬ ሕያው ናቸው።
+
+ይህንን በግርጌ ማስታወሻ ሳይሆን በጽሑፉ አካል ውስጥ እናስተካክላለን፤ ምክንያቱም ሰዎች በጀት የሚገነቡት በመጠኑ ላይ ነው። [ሙሉ ማብራሪያው በስኮላርሺፑ ገጽ](/am/education/scholarships/marom-che)።
+
+ምንጭ፦ [ማሮም ስኮላርሺፕ — የከፍተኛ ትምህርት ምክር ቤት](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) · 15.9.2026 በሙሉ ተነቧል።
 
 ## «ቅድሚያ ደረጃ» ማለት ምን ማለት ነው
 
@@ -295,7 +311,9 @@ This is the process as written — not a confirmed schedule for this cycle:
 
 ያው ውሳኔ የስኬት መለኪያም አስቀምጧል፦ በቅድሚያ ደረጃ ሀ እና ለ ያሉ የመጀመሪያ ዲግሪ ኢትዮጵያ-እስራኤላውያን ተማሪዎች ድርሻ በ5 በመቶ ነጥብ — **ከ45% ወደ 50%** — እንዲያድግ፣ የደረጃ ሐ ድርሻ ሳይቀንስ።
 
-ሙሉው መስክ-በ-መስክ ሠንጠረዥ በውሳኔው ውስጥ አለ። እዚህ አንደግመውም፦ ምደባው በፕሮግራምና በተቋም ይወሰናል፣ የተሳሳተ ደረጃ ደግሞ በአስር በመቶዎች የሚቆጠር የትምህርት ክፍያ ልዩነት ያስከትላል። በቁጥር ላይ ከመመሥረትዎ በፊት **የራስዎን መስክ በሠንጠረዡ ውስጥ ይመልከቱ**።
+ሙሉው መስክ-በ-መስክ ሠንጠረዥ በውሳኔው ውስጥ አለ፤ እዚህ አንደግመውም — ምደባው በፕሮግራምና በተቋም ይወሰናል።
+
+**ታዲያ የቅድሚያ ደረጃው በእውነቱ ምን ያደርጋል?** የነጥብ መስፈርት ነው። የCHE ገጽ ለዕጩዎች ነጥብ አሰጣጥ ሦስት መስፈርቶችን ይዘረዝራል፦ ማህበራዊ-ኢኮኖሚያዊ ሁኔታ አማካይ የነፍስ ወከፍ ገቢን ጨምሮ፣ ተመራጭ የትምህርት መስኮች፣ እና የቤተሰብ ሁኔታ — ተማሪው ወላጅ መሆኑ። ማለትም ደረጃው **ወደ ኮታው የመግባት ዕድልዎ** ላይ እንጂ ከገቡ በኋላ በሚያገኙት መጠን ላይ ተጽዕኖ የለውም።
 
 ## ማን መመዝገብ ይችላል
 

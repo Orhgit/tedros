@@ -17,8 +17,12 @@ describe("scholarships seed integrity", () => {
   // TED-152 left 40. TED-157 audited every remaining entry against the
   // funder's own site and retired 22 more: the whole of wave 2 (16 entries,
   // none of which the named funder runs) and 6 from wave 1.
-  it("has exactly 18 scholarships after the TED-157 sweep", () => {
-    expect(SCHOLARSHIPS.length).toBe(18);
+  // TED-168 re-ran that audit against the granting bodies' own current pages
+  // and retired 6 more — four duplicates of programmes the portal already
+  // lists, and two programmes the named body does not run (jewish-agency-aliyah,
+  // vatat-excellence-mentoring). All six 301 to a real successor.
+  it("has exactly 12 scholarships after the TED-168 sweep", () => {
+    expect(SCHOLARSHIPS.length).toBe(12);
   });
 
   // TED-152 — fabricated entries retired, duplicates merged
@@ -39,6 +43,48 @@ describe("scholarships seed integrity", () => {
     for (const s of retired) {
       expect(slugs.has(s), s).toBe(false);
     }
+  });
+
+  // TED-168 — the six entries retired by the re-verification sweep.
+  it("carries no slug retired by TED-168", () => {
+    const retired = [
+      "jewish-agency-aliyah",
+      "tech-career-bootcamp-stipend",
+      "isef-scholarship",
+      "olim-beyachad-org",
+      "openu-scholarship",
+      "vatat-excellence-mentoring",
+    ];
+    const slugs = new Set(SCHOLARSHIPS.map((e) => e.slug));
+    for (const s of retired) {
+      expect(slugs.has(s), s).toBe(false);
+      expect(LEGACY_SCHOLARSHIP_REDIRECTS[s], `${s} needs a 301 target`).toBeTruthy();
+    }
+  });
+
+  // TED-168 — the מרום entry must keep reporting the contradiction between the
+  // three official surfaces, and must not drift back to "opens September".
+  // This is the specific regression TED-163 found and TED-168 fixed.
+  it("the מרום entry reports the closed registration system", () => {
+    const marom = SCHOLARSHIPS.find((e) => e.slug === "marom-che");
+    expect(marom).toBeDefined();
+    expect(marom?.status).toBe("closed");
+    expect(marom?.opensOn).toBe("2027-02-28");
+    expect(marom?.bodies.he).toContain("ההרשמה למרום סגורה כעת");
+    // The programme is operated by פר"ח at the Davidson Institute — the entry
+    // previously claimed the opposite.
+    expect(marom?.bodies.he).toContain('פר"ח');
+  });
+
+  // TED-168 — a four-level percentage-of-tuition table for מרום appears in no
+  // granting-body source. It is banned in content-claims; this asserts the
+  // positive: the entry states the flat figures CHE actually publishes.
+  it("the מרום entry states the amounts CHE publishes", () => {
+    const marom = SCHOLARSHIPS.find((e) => e.slug === "marom-che");
+    expect(marom?.bodies.he).toContain("10,000");
+    expect(marom?.bodies.he).toContain("16,490");
+    expect(marom?.amountMinIls).toBe(7000);
+    expect(marom?.amountMaxIls).toBe(16490);
   });
 
   it("legacy redirects point merged slugs at existing canonical entries", () => {
@@ -178,8 +224,12 @@ describe("listScholarships", () => {
 
   it("translates amountNote per locale", () => {
     const isef = listScholarships("he").find((s) => s.slug === "isef-fellowship");
-    // TED-157: ISEF publishes no single figure, so the note says so.
-    expect(isef?.amountNote).toContain("סכום אחיד");
+    // TED-168: TED-157 asserted here that "אייס"ף אינה מפרסמת סכום אחיד". It
+    // does — isef.org.il/מלגות-לתואר-שני states "מלגה בגובה שבין 21,000 ₪ ל-
+    // 23,500 ₪, מדי שנה". The guard now checks that the published figure is
+    // present with its source, which is what ADR-021 actually requires.
+    expect(isef?.amountNote).toContain("21,000");
+    expect(isef?.amountNote).toContain("isef.org.il");
   });
 
   it("exposes status + lastVerified on summaries (TED-139)", () => {
@@ -207,7 +257,7 @@ describe("getScholarshipBySlug", () => {
   it("exposes status + lastVerified on detail (TED-139)", () => {
     const isef = getScholarshipBySlug("isef-fellowship", "he");
     expect(isef?.status).toBe("closed");
-    expect(isef?.lastVerified).toBe("2026-09-01");
+    expect(isef?.lastVerified).toBe("2026-09-15");
   });
 
   it("returns body in requested locale", () => {
