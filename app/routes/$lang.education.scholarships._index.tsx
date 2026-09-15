@@ -7,6 +7,7 @@ import { Link, useSearchParams } from "react-router";
 import type { Route } from "./+types/$lang.education.scholarships._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
+import { listScholarshipGuides } from "~/lib/db/queries/scholarship-guides.server";
 import { listScholarships } from "~/lib/db/queries/scholarships.server";
 import {
   SCHOLARSHIP_LEVELS,
@@ -28,7 +29,13 @@ export async function loader({ params }: Route.LoaderArgs) {
   const scholarships = listScholarships(locale);
   const todayIso = new Date().toISOString().slice(0, 10);
   const { PUBLIC_URL } = getEnv();
-  return { locale, scholarships, todayIso, publicUrl: PUBLIC_URL };
+  return {
+    locale,
+    scholarships,
+    guides: listScholarshipGuides(locale),
+    todayIso,
+    publicUrl: PUBLIC_URL,
+  };
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -55,7 +62,7 @@ function formatAmount(min: number, max: number, locale: Locale): string {
 }
 
 export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps) {
-  const { locale, scholarships, todayIso } = loaderData;
+  const { locale, scholarships, guides, todayIso } = loaderData;
   const [searchParams, setSearchParams] = useSearchParams();
   const level = searchParams.get("level") as ScholarshipLevel | null;
   const [qInput, setQInput] = useSearchQuery();
@@ -141,6 +148,46 @@ export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps
             </ul>
           </section>
         )}
+
+        <section className="mb-10 rounded-2xl border border-earth-200 bg-card p-5 sm:p-6">
+          <h2 className="font-display text-xl font-bold text-earth-900">
+            <span aria-hidden="true" className="me-2">
+              🧭
+            </span>
+            {t(locale, "scholarships_guides_heading")}
+          </h2>
+          <p className="mt-1 text-sm leading-relaxed text-ink-600">
+            {t(locale, "scholarships_guides_subtitle")}
+          </p>
+          <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {guides.map((g) => (
+              <li key={g.slug}>
+                <Link
+                  to={`/${locale}/education/scholarships/guides/${g.slug}`}
+                  className="group block h-full rounded-lg border border-earth-200 p-4 transition hover:border-earth-400"
+                >
+                  <p className="font-display text-sm font-semibold text-earth-900 group-hover:text-earth-700">
+                    {g.title}
+                  </p>
+                  <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-ink-600">
+                    {g.summary}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-sm">
+            <Link
+              to={`/${locale}/education/scholarships/guides`}
+              className="text-earth-700 underline underline-offset-2 hover:text-earth-900"
+            >
+              {t(locale, "scholarship_guides_all_cta")}{" "}
+              <span aria-hidden="true" className="icon-flip inline-block">
+                →
+              </span>
+            </Link>
+          </p>
+        </section>
 
         <section className="mb-8 space-y-4">
           <SearchField
@@ -239,6 +286,13 @@ export default function ScholarshipsLanding({ loaderData }: Route.ComponentProps
                         <span className="ms-2 text-xs font-medium text-green-800 dark:text-green-200">
                           {t(locale, "scholarship_deadline_until", {
                             date: formatDate(locale, s.deadline),
+                          })}
+                        </span>
+                      )}
+                      {s.status === "closed" && s.opensOn && (
+                        <span className="ms-2 text-xs font-medium text-earth-700">
+                          {t(locale, "scholarship_opens_on", {
+                            date: formatDate(locale, s.opensOn),
                           })}
                         </span>
                       )}

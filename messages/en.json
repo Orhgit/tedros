@@ -944,5 +944,15 @@
   "sigd_related_guests_label": "Attending Sigd from outside the community",
   "sigd_related_guests_desc": "What to wear, when to photograph, and what not to say.",
   "sigd_related_menu_label": "The Sigd menu and the meaning of the fast",
-  "sigd_related_menu_desc": "Why the community fasts, when it is broken, and what goes on the table."
+  "sigd_related_menu_desc": "Why the community fasts, when it is broken, and what goes on the table.",
+  "scholarship_opens_on": "Registration opens: {date}",
+  "scholarships_guides_heading": "Application guides",
+  "scholarships_guides_subtitle": "Not a list of scholarships — how you actually apply. Documents, motivation letters, why applications are refused, and what happens after you submit.",
+  "scholarship_guides_landing_title": "Scholarship application guides",
+  "scholarship_guides_landing_subtitle": "The part nobody writes about: exactly what to upload, how to word it, and why applications are refused.",
+  "scholarship_guide_updated": "Updated: {date}",
+  "scholarship_guides_all_cta": "All application guides",
+  "scholarship_guide_sources_heading": "Sources",
+  "scholarship_guide_faq_heading": "Frequently asked questions",
+  "scholarship_guide_back_to_scholarships": "Back to the scholarship list"
 }

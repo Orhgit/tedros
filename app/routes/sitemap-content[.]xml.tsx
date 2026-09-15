@@ -7,6 +7,7 @@ import {
   parentRightsPath,
   registrationDiscriminationPath,
 } from "~/lib/education/links";
+import { SCHOLARSHIP_GUIDES } from "~/lib/education/scholarship-guides.server";
 import { SCHOLARSHIPS } from "~/lib/education/scholarships.server";
 import { getEnv } from "~/lib/env.server";
 import { GLOSSARY } from "~/lib/glossary/glossary.server";
@@ -45,6 +46,10 @@ export function loader() {
     // Education
     "/education/scholarships",
     ...SCHOLARSHIPS.map((s) => `/education/scholarships/${s.slug}`),
+    // TED-168 — hand-written application guides. Unlike the city cells these
+    // carry content that appears on no other URL, so they belong in the index.
+    "/education/scholarships/guides",
+    ...SCHOLARSHIP_GUIDES.map((g) => `/education/scholarships/guides/${g.slug}`),
     "/education/tracks",
     ...EDUCATION_TRACKS.map((t) => `/education/tracks/${t}`),
     // Parents vs. the school system (TED-145)

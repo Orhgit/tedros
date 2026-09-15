@@ -141,6 +141,31 @@ const RETIRED_CLAIMS: readonly RetiredClaim[] = [
   // the owner's persona-labelling decision, so a ban added now would fail the
   // build on a file nobody is allowed to touch. Add this pattern in the PR
   // that clears the remaining five files.
+  // ── TED-168 ───────────────────────────────────────────────────────────────
+
+  {
+    label: "the Marom scholarship paid as a percentage of tuition by priority level",
+    pattern:
+      /רמת עדיפות \| אחוז משכר הלימוד|אחוז משכר הלימוד[^\n]{0,40}רמת עדיפות|100%\/85%\/66%\/50%|100%\s*\/\s*85%\s*\/\s*66%\s*\/\s*50%/,
+    why: "no such table exists. The CHE Marom page and מל\"ג decision 18.6.2024 were both read in full on 2026-09-15: CHE publishes FLAT figures (₪10,000 for a bachelor's, full tuition for a research master's — ₪16,490 in תשפ\"ז — and ₪7,000 for a non-research master's), and the four priority levels א'-ד' are a SCORING criterion that decides who gets in, not a payment rate. We published the percentage table ourselves in a news article on 8.9.2026; getting a number wrong in our own favour is still getting it wrong",
+  },
+  {
+    label: "a September 2026 opening date for Marom registration",
+    pattern:
+      /ההרשמה לתשפ"ז נפתחת ב-?\*?\*?9 בספטמבר|נפתחת 9\.9\.2026|registration opens \*?\*?September 9, 2026/,
+    why: '9/9/2025 is the תשפ"ו opening date, still printed on the gov.il Students Authority page. No source names a day for תשפ"ז, and פר"ח\'s own registration system — the only surface that accepts an application — says "ההרשמה למרום סגורה כעת… תפתח ב- 28/02/27". Report the contradiction; do not resolve it by picking the friendliest page',
+  },
+  {
+    label: 'the claim that Marom is not administered through פר"ח',
+    pattern: /ולא דרך פר"ח|not through Perach|לא דרך פרח/,
+    why: 'the CHE page states the programme is "מופעלת באמצעות ארגון פר"ח במכון דוידסון", and the application itself is made through the "מרום" tab on perach.org.il',
+  },
+  {
+    label: "a 10-year-from-aliyah eligibility window for the Students Authority",
+    pattern: /תוך 10 שנים מעלייה|within 10 years of aliyah|ከዐሊያ 10 ዓመት ውስጥ/,
+    why: "no such rule exists. The general track requires starting studies within 36 MONTHS of receiving status; the extended track for olim from Ethiopia, Yemen and Bnei Menashe runs to 15 YEARS, with age caps of 28 (bachelor's) and 40 (master's). This is the TED-148 harm shape: a reader sent to a counter to be refused, having been told by us that they qualified",
+  },
+
   {
     label: "the 28-week maternity leave and the ethnic daycare subsidy",
     pattern:
@@ -213,9 +238,18 @@ describe("retired claims stay retired (TED-157)", () => {
   });
 });
 
-/** Phrases that mark a paragraph as warning about a claim rather than making it. */
+/**
+ * Phrases that mark a paragraph as warning about a claim rather than making it.
+ *
+ * TED-168 added the Amharic arm. Until then the expression was Hebrew and
+ * English only, which meant a correction written in Amharic — the locale with
+ * the fewest readers able to spot an error for themselves — could never name
+ * the false claim in order to debunk it, and any AM mirror of a correction
+ * failed the build. The three retired-claim bans added in TED-168 each land on
+ * copy that exists in all three locales, so the gap surfaced immediately.
+ */
 const DEBUNK_RE =
-  /(אינם מופיעים|אינו מופיע|אינה קיימת|אינו קיים|לא קיים|לא קיימת|אין דבר כזה|אין זכות כזו|אין מענק|אין מסלול|אין הגרלה|אין תוכנית|אינה מפרסמת|אינה זכות עדתית|שום קריטריון של מוצא|קבע בעבר|הופיע כאן בעבר|נכתב כאן בעבר|לא נמצא|לא נמצאה|הוסר|הוסרו|הוסרה|נמחק|נמחקו|שום מקור|שגוי|טעות|ההרשמה סגורה|נסגרה|do not appear|does not appear|no such|not a real|no longer|was removed|were removed|were deleted|no source supported|is closed|does not exist|do not exist|there is no|no evidence|no origin criterion|in error|is wrong|was wrong|publishes no|deliberately excluded|NXDOMAIN|\bremoved\b|\bretired\b|previously (said|stated|listed|described))/i;
+  /(אינם מופיעים|אינו מופיע|אינה מופיעה|אינה קיימת|אינו קיים|לא קיים|לא קיימת|אין דבר כזה|אין זכות כזו|אין כלל כזה|אין מענק|אין מסלול|אין הגרלה|אין תוכנית|אינה מפרסמת|אינה זכות עדתית|שום קריטריון של מוצא|קבע בעבר|הופיע כאן בעבר|נכתב כאן בעבר|נכתב בעבר|הופיע כאן|לא נמצא|לא נמצאה|הוסר|הוסרו|הוסרה|נמחק|נמחקו|שום מקור|שגוי|טעות|ההרשמה סגורה|נסגרה|do not appear|does not appear|no such|not a real|no longer|was removed|were removed|were deleted|no source supported|is closed|does not exist|do not exist|there is no|no evidence|no origin criterion|in error|is wrong|was wrong|publishes no|deliberately excluded|NXDOMAIN|\bremoved\b|\bretired\b|previously (said|stated|listed|described)|አይገኝም|አልተገኘም|ተወግዷል|ተሰርዟል|ስህተት ነበር|በየትኛውም ቦታ የለም|እንደዚህ ያለ ሕግ የለም)/i;
 
 // ---------------------------------------------------------------------------
 // 2. Sourced money claims — ADR-021
@@ -225,6 +259,7 @@ import { CAREER_TRACKS } from "../app/lib/careers/careers.server";
 import { FAQS } from "../app/lib/careers/faqs.server";
 import { COMPARISONS } from "../app/lib/comparisons/comparisons.server";
 import { PRIORITY_RIGHTS } from "../app/lib/db/seeds/rights";
+import { SCHOLARSHIP_GUIDES } from "../app/lib/education/scholarship-guides.server";
 import { ALL_SCHOLARSHIPS } from "../app/lib/education/scholarships.server";
 import { FAMILY_TOPICS } from "../app/lib/family/topics.server";
 import { PROGRAMS } from "../app/lib/programs/programs.server";
@@ -250,6 +285,16 @@ const CLAIM_REGISTRIES: ReadonlyArray<{
   {
     label: "education/scholarships.server (all waves)",
     entries: ALL_SCHOLARSHIPS,
+    requireGovSource: false,
+  },
+  // TED-168: the application guides quote amounts from the granting bodies'
+  // own pages, so they are in scope for ADR-021 from the day they ship. The
+  // mistake TED-158 found was a registry that emitted FAQPage JSON-LD for
+  // years without the sourcing rule ever applying to it; these guides emit
+  // FAQPage JSON-LD too.
+  {
+    label: "education/scholarship-guides.server",
+    entries: SCHOLARSHIP_GUIDES,
     requireGovSource: false,
   },
   { label: "programs/programs.server", entries: PROGRAMS, requireGovSource: false },

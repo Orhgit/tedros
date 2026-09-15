@@ -1,335 +1,305 @@
-// Scholarships Wave 3 — TED-95 education hub (12 entries).
+// Scholarships Wave 3 — TED-95 education hub (7 entries).
 //
 // Follows the same ScholarshipEntry shape as scholarships.server.ts.
-// Sourced from the TED-95 org/program list (Linear). Facts are used verbatim
-// from the ticket brief. Internal review markers must NOT appear in bodies —
-// they leaked to production once (TED-121); tests/content-markers.test.ts
-// blocks them. Unverified figures carry a user-facing "verify with the
-// institution" note instead. The Maccabim Fund entry was removed entirely:
-// the source page did not match the described scholarship (W3-11).
+// Internal review markers must NOT appear in bodies — they leaked to
+// production once (TED-121); tests/content-markers.test.ts blocks them.
+// Per ADR-021, any entry stating a shekel amount carries a source URL and a
+// visible verification date inside the entry itself.
 //
-// EN/AM bodies are drafted for structural completeness (same headings,
-// shorter prose) but have NOT had native-speaker review — per CLAUDE.md
-// convention (Hebrew source-of-truth, EN/AM mirrored), flag these as
-// machine-assisted drafts pending human review before they are treated as
-// canonical marketing copy.
+// TED-168 verification sweep (2026-09-15), against each granting body's own
+// current page. Five entries were deleted outright rather than softened:
+//   - isef-scholarship          duplicate of isef-fellowship; its programme
+//                               name appears nowhere on ISEF's site and its
+//                               applicationUrl is a hard 404.
+//   - olim-beyachad-org         an org profile, not a scholarship; duplicate
+//                               of olim-beyahad-career-mentorship.
+//   - openu-scholarship         the Open University awards no scholarship of
+//                               its own; its page routes students elsewhere.
+//   - vatat-excellence-mentoring  the programme name was invented; the real
+//                               instrument is an institution-level budget
+//                               line with no student application route.
+//   (The Maccabim Fund entry was removed in an earlier wave, W3-11.)
+// The five surviving entries were rewritten against primary sources.
+//
+// EN/AM bodies mirror the Hebrew (source of truth). Amharic is model-written
+// and has NOT had native-speaker review — flag before treating as canonical.
 
 import type { ScholarshipEntry } from "./scholarships.server";
 
 export const SCHOLARSHIPS_WAVE3: ScholarshipEntry[] = [
-  // W3-1. VATAT — Excellence & Mentoring
-  {
-    slug: "vatat-excellence-mentoring",
-    level: "undergrad",
-    providerOrgSlug: "vatat",
-    name: {
-      he: 'תוכנית ות"ת למצוינות ומנטורינג',
-      en: "VATAT Excellence & Mentoring Program",
-      am: "የVATAT ልቀትና አማካሪነት ፕሮግራም",
-    },
-    shortDescription: {
-      he: 'תוכנית של ות"ת (הוועדה לתכנון ותקצוב) המצמידה מנטור מסגל אקדמי בכיר לכל סטודנט מצטיין יוצא אתיופיה — ליווי אקדמי, לא מלגה כספית גרידא.',
-      en: "A VATAT (Planning and Budgeting Committee) program pairing a senior faculty mentor with every outstanding Ethiopian-Israeli student — academic mentorship, not a plain cash scholarship.",
-      am: "እያንዳንዱ ላቅ ያለ ኢትዮጵያ-ተወላጅ ተማሪ ከከፍተኛ የመምህራን አባል ጋር አማካሪ የሚያገናኝ የVATAT ፕሮግራም — የገንዘብ ድጋፍ ብቻ ሳይሆን የአካዳሚክ ምክር።",
-    },
-    amountMinIls: 0,
-    amountMaxIls: 0,
-    amountNote: {
-      he: "אין מרכיב כספי מובנה בתוכנית עצמה — הערך המרכזי הוא ליווי אקדמי אישי; ייתכן שילוב עם מלגות אחרות (למשל מרום) לאותו סטודנט.",
-      en: "No built-in cash component — the core value is personal academic mentorship; may be combined with other scholarships (e.g. Marom) for the same student.",
-      am: "ራሱ ፕሮግራሙ ውስጥ የገንዘብ ክፍል የለም — ዋናው ዋጋ የግል የአካዳሚክ ምክር ነው።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://che.org.il/qa/migvan/ethiopia/",
-    tags: ["undergrad", "masters", "mentorship", "community", "government"],
-    communityPriority: true,
-    relatedScholarships: ["marom-che", "vatat-doctoral-postdoc-scholarship"],
-    relatedRights: [],
-    bodies: {
-      he: `## מה זאת התוכנית?
-
-תוכנית של ות"ת (הוועדה לתכנון ותקצוב, הזרוע התקציבית של מל"ג) המצמידה מנטור/ית מסגל אקדמי בכיר לכל סטודנט/ית מצטיין/ת יוצא/ת אתיופיה. זו **תוכנית ליווי, לא מלגה כספית** — ההבדל חשוב כדי לא ליצור ציפייה שגויה אצל מבקשים.
-
-## מי זכאי?
-
-- סטודנטים ממוצא אתיופי בעלי הישגים אקדמיים בולטים
-- לומדים במוסד אקדמי מוכר על-ידי מל"ג/ות"ת
-
-## מה כלול?
-
-- הצמדת מנטור אקדמי בכיר (חבר סגל) לאורך תקופת הלימודים
-- ליווי אקדמי, לא כספי — ייעוץ קריירה, כתיבה אקדמית, בחירת מסלול המשך
-
-## איך פונים?
-
-יש לפנות למשרד רו"ח הסטודנטים/יחידת הגיוון במוסד האקדמי בו לומדים, או ישירות דרך che.org.il — התוכנית מנוהלת ברמת המוסד ולא כהרשמה ארצית מרוכזת.
-
-## ראו גם
-
-- [מלגת מרום — המועצה להשכלה גבוהה](/he/education/scholarships/marom-che)
-- [מלגות דוקטורנטים ובתר-דוקטורנטים — ות"ת](/he/education/scholarships/vatat-doctoral-postdoc-scholarship)
-`,
-      en: `## What is this program?
-
-A VATAT (Planning and Budgeting Committee — the CHE's budgetary arm) program pairing a senior faculty mentor with every outstanding Ethiopian-Israeli student. This is a **mentorship program, not a cash scholarship** — an important distinction so applicants don't expect a stipend.
-
-## Who is eligible?
-
-- Students of Ethiopian origin with strong academic achievement
-- Enrolled in a CHE/VATAT-recognized institution
-
-## What's included?
-
-- A senior faculty mentor throughout the studies
-- Academic — not financial — mentorship: career advice, academic writing, choosing a follow-on track
-
-## How to apply
-
-Contact the Dean of Students / diversity office at your academic institution, or via che.org.il directly — the program is run at the institutional level, not as a centralized national application.
-
-## See also
-
-- [Marom Scholarship — Council for Higher Education](/en/education/scholarships/marom-che)
-- [VATAT — Doctoral & Post-doctoral Scholarships](/en/education/scholarships/vatat-doctoral-postdoc-scholarship)
-`,
-      am: `## ይህ ፕሮግራም ምንድን ነው?
-
-እያንዳንዱ ላቅ ያለ ኢትዮጵያ-ተወላጅ ተማሪ ከከፍተኛ የመምህራን አባል ጋር የሚያገናኝ የVATAT ፕሮግራም። ይህ **የምክር ፕሮግራም ነው፣ የገንዘብ ስኮላርሺፕ አይደለም**።
-
-## ለማን ይሆናል?
-
-- ጠንካራ የአካዳሚክ ውጤት ያላቸው ኢትዮጵያ-ተወላጅ ተማሪዎች
-- በCHE/VATAT-እውቅና ባለው ተቋም የሚማሩ
-
-*(ማስታወሻ፦ ትክክለኛ የማመልከቻ ሂደት በገለልተኝነት አልተረጋገጠም — ከመቅረብ በፊት ማጣራት ያስፈልጋል።)*
-
-## ምን ይካተታል?
-
-- በትምህርት ጊዜ ሁሉ ከፍተኛ የመምህራን አማካሪ
-- የአካዳሚክ ምክር (የገንዘብ ድጋፍ አይደለም)
-
-## እንዴት ማመልከት ይቻላል?
-
-በተቋምዎ የተማሪዎች ዲን ጽ/ቤት ወይም በቀጥታ che.org.il በኩል ያነጋግሩ።
-
-## ይህንንም ይዩ
-
-- [ማሮም ስኮላርሺፕ](/am/education/scholarships/marom-che)
-- [VATAT — የዶክትሬትና ድህረ-ዶክትሬት ድጋፎች](/am/education/scholarships/vatat-doctoral-postdoc-scholarship)
-`,
-    },
-  },
-
-  // W3-2. VATAT — Doctoral & Post-doctoral Scholarships
+  // W3-2. VATAT — Doctoral & Post-doctoral Scholarships (diversity populations)
   {
     slug: "vatat-doctoral-postdoc-scholarship",
     level: "phd",
     providerOrgSlug: "vatat",
     name: {
-      he: 'מלגות דוקטורנטים ובתר-דוקטורנטים — ות"ת',
-      en: "VATAT Doctoral & Post-doctoral Scholarships",
-      am: "የVATAT ዶክትሬትና ድህረ-ዶክትሬት ድጋፎች",
+      he: 'מלגות ות"ת לדוקטורנטים ולבתר-דוקטורנטים מאוכלוסיות הגיוון',
+      en: "VATAT Doctoral & Post-doctoral Scholarships (diversity populations)",
+      am: "የVATAT የዶክትሬትና ድህረ-ዶክትሬት ድጋፎች (የብዝኃነት ሕዝቦች)",
     },
     shortDescription: {
-      he: 'מלגות של ות"ת לתואר שלישי ולמחקר בתר-דוקטורט עבור חוקרים יוצאי אתיופיה — פרטי הסכום המדויק דורשים אימות מול האוניברסיטה.',
-      en: "VATAT scholarships for PhD and post-doctoral research for Ethiopian-Israeli researchers — exact amounts require verification with the host university.",
-      am: "ለኢትዮጵያ-ተወላጅ ተመራማሪዎች ለዶክትሬትና ድህረ-ዶክትሬት VATAT ድጋፎች።",
+      he: 'המסלול הייעודי ליוצאי אתיופיה בוטל. מ-20.3.2024 יוצאי אתיופיה הם אחת מקבוצות "אוכלוסיות הגיוון" בתכנית מאוחדת אחת — והגשה אפשרית רק דרך המוסד, לא ישירות.',
+      en: "The Ethiopian-specific track was abolished. Since 20.3.2024 Ethiopian-Israelis are one of several eligible diversity groups in a single merged programme — and applications go through your institution only, never directly.",
+      am: "ለኢትዮጵያ ተወላጆች የተለየው መስመር ተሰርዟል። ከ20.3.2024 ጀምሮ በአንድ የተዋሃደ ፕሮግራም ውስጥ ከብዝኃነት ሕዝቦች አንዱ ናቸው — ማመልከቻም በተቋሙ በኩል ብቻ ነው።",
     },
-    amountMinIls: 0,
-    amountMaxIls: 0,
+    amountMinIls: 62200,
+    amountMaxIls: 62200,
     amountNote: {
-      he: "סכום מדויק לא אומת עצמאית — מומלץ לאמת מול המוסד לפני ההגשה. מקור החיפוש: אתר הדיקנאט של האוניברסיטה העברית (social.huji.ac.il).",
-      en: "Exact amount not independently verified — verify with the institution before applying. Source lead: HUJI Faculty of Social Sciences dean's office site (social.huji.ac.il).",
-      am: "ትክክለኛ መጠን በገለልተኝነት አልተረጋገጠም።",
+      he: 'דוקטורט: כ-62,200 ₪ לשנה לשלוש שנים (52,200 ₪ מות"ת + 10,000 ₪ מהמוסד), ובנוסף 10,000 ₪ לשנה להוצאות מחקר; עד 37 מלגות. בתר-דוקטורט: 36,000$ לשנה (במחירי תשפ"ו) לשנתיים; עד 19 מלגות. מקור: che.org.il · נבדק ספטמבר 2026.',
+      en: "Doctoral: about ₪62,200 a year for three years (₪52,200 from VATAT + ₪10,000 from the institution), plus ₪10,000 a year for research expenses; up to 37 scholarships. Post-doctoral: $36,000 a year (2025-26 prices) for two years; up to 19 scholarships. Source: che.org.il · verified September 2026.",
+      am: "ዶክትሬት፦ በዓመት ወደ ₪62,200 ለሦስት ዓመታት (ከVATAT ₪52,200 + ከተቋሙ ₪10,000)፣ በተጨማሪም ለምርምር ወጪ በዓመት ₪10,000፤ እስከ 37 ድጋፎች። ድህረ-ዶክትሬት፦ በዓመት $36,000 ለሁለት ዓመታት፤ እስከ 19 ድጋፎች። ምንጭ፦ che.org.il · ሴፕቴምበር 2026 ተረጋግጧል።",
     },
-    deadline: "2026-04-23",
+    deadline: "2026-06-01",
     status: "closed",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://graduate.haifa.ac.il/מלגות-בתר-דוקטורט/",
+    lastVerified: "2026-09-15",
+    applicationUrl:
+      "https://che.org.il/scholarships/%D7%AA%D7%9B%D7%A0%D7%99%D7%AA-%D7%9E%D7%9C%D7%92%D7%95%D7%AA-%D7%95%D7%AA%D7%AA-%D7%9C%D7%93%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%A0%D7%98%D7%99%D7%9D-%D7%9E%D7%A6%D7%98%D7%99%D7%99%D7%A0%D7%99%D7%9D/",
     tags: ["phd", "postdoc", "academic", "community"],
     communityPriority: true,
-    relatedScholarships: ["vatat-excellence-mentoring", "isef-fellowship"],
+    relatedScholarships: ["isef-fellowship"],
     relatedRights: [],
     bodies: {
-      he: `## מה כוללת התוכנית?
+      he: `## מה קרה למסלול הייעודי ליוצאי אתיופיה?
 
-מלגות של ות"ת (הוועדה לתכנון ותקצוב) לחוקרים יוצאי אתיופיה בשני מסלולים: **דוקטורט** (תואר שלישי) ו-**מחקר בתר-דוקטורט**. התוכנית מנוהלת ברמת מוסדות אקדמיים בודדים (התגלתה בעקבות חיפוש שהוביל לאתר הדיקנאט של האוניברסיטה העברית).
+הוא בוטל. בהחלטת ות"ת מ-20.3.2024 אוחדו התכניות הנפרדות — לחברה הערבית, לחברה החרדית, ליוצאי אתיופיה ומלגת לבציון — לתכנית אחת. יוצאי אתיופיה הם כיום אחת מכמה קבוצות הנכללות ב"אוכלוסיות הגיוון" הזכאיות, ולא אוכלוסיית יעד נפרדת עם מכסה משלה.
 
-## מי זכאי?
+המשמעות המעשית: אם מצאתם באתר של אוניברסיטה עמוד שעדיין מתאר "מלגת ות"ת ליוצאי אתיופיה" כתכנית נפרדת — זה עמוד ישן שלא עודכן מאז האיחוד. אל תסתמכו עליו.
 
-- חוקרים יוצאי אתיופיה המתקבלים לתכנית דוקטורט או משרת בתר-דוקטורט באוניברסיטה מחקרית בישראל
+## שני המסלולים שקיימים היום
 
-## איך פונים?
+### דוקטורט
 
-יש לפנות לדיקנאט הסטודנטים או לביה"ס ללימודי תואר שלישי במוסד האקדמי הרלוונטי, ולציין שמדובר במלגת ות"ת ליוצאי אתיופיה.
+השם המלא: "תכנית מלגות ות"ת לדוקטורנטים מצטיינים מאוכלוסיות הגיוון ומהפריפריה החברתית-כלכלית (במקום התכניות הנפרדות לחברה ערבית, חברה חרדית, יוצאי אתיופיה ומלגת לבציון)".
+
+- כ-62,200 ₪ לשנה, לשלוש שנים — 52,200 ₪ מות"ת ועוד 10,000 ₪ מהמוסד
+- בנוסף: 10,000 ₪ לשנה להוצאות מחקר
+- עד 37 מלגות
+
+### בתר-דוקטורט
+
+- 36,000$ לשנה (במחירי תשפ"ו), לשנתיים
+- עד 19 מלגות
+
+מקור: [ות"ת — תכנית מלגות לדוקטורנטים מצטיינים](https://che.org.il/scholarships/%D7%AA%D7%9B%D7%A0%D7%99%D7%AA-%D7%9E%D7%9C%D7%92%D7%95%D7%AA-%D7%95%D7%AA%D7%AA-%D7%9C%D7%93%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%A0%D7%98%D7%99%D7%9D-%D7%9E%D7%A6%D7%98%D7%99%D7%99%D7%A0%D7%99%D7%9D/) · נבדק ספטמבר 2026.
+מקור: [ות"ת — מלגות בתר-דוקטורט](https://che.org.il/?post_type=scholarships&p=737887) · נבדק ספטמבר 2026.
+
+## איך פונים? לא דרך טופס
+
+זה הדבר החשוב ביותר לדעת כאן. הפרסום אומר במפורש: "אופן הגשת בקשה: באמצעות המוסדות בלבד". **אתם לא יכולים להגיש מועמדות בעצמכם.**
+
+מה שכן עושים: פונים לרשות לתלמידי מחקר או למשרד הרקטור במוסד שבו אתם לומדים, מבררים מי אחראי שם על ההגשה לות"ת, ומגישים דרכם. אם אתם רק עכשיו מתקבלים לדוקטורט — שאלו על זה כבר בשיחת הקבלה.
+
+**מועד סופי להגשת מועמדות ע"י המוסדות – 01.06.2026.** המוסד צריך את החומרים שלכם הרבה לפני התאריך הזה, אז אל תתחילו ביוני.
 
 ## ראו גם
 
-- [ות"ת — מצוינות ומנטורינג](/he/education/scholarships/vatat-excellence-mentoring)
 - [מלגת ISEF](/he/education/scholarships/isef-fellowship)
 `,
-      en: `## What does the program cover?
+      en: `## What happened to the Ethiopian-specific track?
 
-VATAT scholarships for Ethiopian-Israeli researchers across two tracks: **doctoral (PhD)** and **post-doctoral research**. The program appears to be administered at the individual-institution level (discovered via a search leading to the Hebrew University dean's office site).
+It was abolished. A VATAT decision of 20.3.2024 merged the separate programmes — for Arab society, Haredi society, Ethiopian-Israelis, and the Levtzion scholarship — into one. Ethiopian-Israelis are now one of several eligible "diversity populations" groups, not a separate target population with its own quota.
 
-## Who is eligible?
+In practice: if you find a university page still describing a separate "VATAT scholarship for Ethiopian-Israelis", that page has not been updated since the merger. Do not rely on it.
 
-- Ethiopian-Israeli researchers accepted into a PhD program or a post-doctoral position at an Israeli research university
+## The two tracks that exist today
 
-## How to apply
+### Doctoral
 
-Contact the Dean of Students or the graduate school at the relevant academic institution and specify this is the VATAT scholarship for Ethiopian-Israeli researchers.
+Full title: "VATAT scholarship programme for outstanding doctoral students from diversity populations and the socio-economic periphery (replacing the separate programmes for Arab society, Haredi society, Ethiopian-Israelis, and the Levtzion scholarship)".
+
+- About ₪62,200 a year, for three years — ₪52,200 from VATAT plus ₪10,000 from the institution
+- Plus ₪10,000 a year for research expenses
+- Up to 37 scholarships
+
+### Post-doctoral
+
+- $36,000 a year (2025-26 prices), for two years
+- Up to 19 scholarships
+
+Source: [VATAT — outstanding doctoral students scholarship programme](https://che.org.il/scholarships/%D7%AA%D7%9B%D7%A0%D7%99%D7%AA-%D7%9E%D7%9C%D7%92%D7%95%D7%AA-%D7%95%D7%AA%D7%AA-%D7%9C%D7%93%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%A0%D7%98%D7%99%D7%9D-%D7%9E%D7%A6%D7%98%D7%99%D7%99%D7%A0%D7%99%D7%9D/) · verified September 2026.
+Source: [VATAT — post-doctoral scholarships](https://che.org.il/?post_type=scholarships&p=737887) · verified September 2026.
+
+## How to apply — not through a form
+
+This is the single most useful thing to know. The call states explicitly: "Method of application: through the institutions only". **You cannot submit a candidacy yourself.**
+
+What you do instead: contact the research-students authority or the rector's office at the institution where you study, find out who there handles the VATAT submission, and apply through them. If you are only now being accepted to a doctorate, raise it in your admission conversation.
+
+**Final date for institutions to submit candidacies – 01.06.2026.** Your institution needs your materials well before that date, so do not start in June.
 
 ## See also
 
-- [VATAT — Excellence & Mentoring](/en/education/scholarships/vatat-excellence-mentoring)
 - [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
 `,
-      am: `## ፕሮግራሙ ምን ይሸፍናል?
+      am: `## ለኢትዮጵያ ተወላጆች የተለየው መስመር ምን ሆነ?
 
-ለኢትዮጵያ-ተወላጅ ተመራማሪዎች በሁለት መንገዶች የVATAT ድጋፎች፦ **ዶክትሬት** እና **ድህረ-ዶክትሬት ምርምር**።
+ተሰርዟል። በ20.3.2024 የVATAT ውሳኔ የተለያዩ ፕሮግራሞች — ለአረብ ማህበረሰብ፣ ለሐሬዲ ማህበረሰብ፣ ለኢትዮጵያ ተወላጆችና የሌቭጽዮን ድጋፍ — ወደ አንድ ተዋህደዋል። ኢትዮጵያ ተወላጆች ዛሬ ከ"ብዝኃነት ሕዝቦች" አንዱ ቡድን ናቸው እንጂ የተለየ ኮታ ያለው ሕዝብ አይደሉም።
 
-## ለማን ይሆናል?
+የተለየ "የVATAT ድጋፍ ለኢትዮጵያ ተወላጆች" የሚል የዩኒቨርሲቲ ገጽ ካገኙ፣ ከውህደቱ ወዲህ ያልተሻሻለ አሮጌ ገጽ ነው። አይመኩበት።
 
-- በእስራኤል የምርምር ዩኒቨርሲቲ ለዶክትሬት ወይም ድህረ-ዶክትሬት የተቀበሉ ኢትዮጵያ-ተወላጅ ተመራማሪዎች
+## ዛሬ ያሉት ሁለት መስመሮች
 
-*(ማስታወሻ፦ ትክክለኛ የድጋፍ መጠንና የማመልከቻ ሂደት በገለልተኝነት አልተረጋገጠም — ከተቋሙ ዲን ጽ/ቤት ጋር ማጣራት ያስፈልጋል።)*
+### ዶክትሬት
 
-## እንዴት ማመልከት ይቻላል?
+- በዓመት ወደ ₪62,200፣ ለሦስት ዓመታት — ከVATAT ₪52,200 እና ከተቋሙ ₪10,000
+- በተጨማሪም ለምርምር ወጪ በዓመት ₪10,000
+- እስከ 37 ድጋፎች
 
-በተቋምዎ የተማሪዎች ዲን ጽ/ቤት ወይም የድህረ-ምረቃ ትምህርት ቤት ያነጋግሩ።
+### ድህረ-ዶክትሬት
+
+- በዓመት $36,000 (የ2025-26 ዋጋ)፣ ለሁለት ዓመታት
+- እስከ 19 ድጋፎች
+
+ምንጭ፦ [VATAT — ለላቁ ዶክትሬት ተማሪዎች የድጋፍ ፕሮግራም](https://che.org.il/scholarships/%D7%AA%D7%9B%D7%A0%D7%99%D7%AA-%D7%9E%D7%9C%D7%92%D7%95%D7%AA-%D7%95%D7%AA%D7%AA-%D7%9C%D7%93%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%A0%D7%98%D7%99%D7%9D-%D7%9E%D7%A6%D7%98%D7%99%D7%99%D7%A0%D7%99%D7%9D/) · ሴፕቴምበር 2026 ተረጋግጧል።
+ምንጭ፦ [VATAT — የድህረ-ዶክትሬት ድጋፎች](https://che.org.il/?post_type=scholarships&p=737887) · ሴፕቴምበር 2026 ተረጋግጧል።
+
+## እንዴት ማመልከት ይቻላል — በቅጽ አይደለም
+
+ጥሪው በግልጽ ይላል፦ "የማመልከቻ መንገድ፦ በተቋማት በኩል ብቻ"። **እርስዎ በራስዎ ማመልከት አይችሉም።**
+
+በምትኩ፦ በሚማሩበት ተቋም ያለውን የምርምር ተማሪዎች ባለሥልጣን ወይም የሬክተር ጽ/ቤት ያነጋግሩ፣ የVATAT ማመልከቻን ማን እንደሚያስተናግድ ይወቁ፣ በእነሱ በኩል ያመልክቱ።
+
+**ተቋማት ዕጩዎችን የሚያቀርቡበት የመጨረሻ ቀን – 01.06.2026።** ተቋሙ ሰነዶችዎን ከዚያ ቀን አስቀድሞ ይፈልጋል።
 
 ## ይህንንም ይዩ
 
-- [VATAT — ልቀትና አማካሪነት](/am/education/scholarships/vatat-excellence-mentoring)
 - [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
 `,
     },
   },
 
-  // W3-4. Bar-Ilan Pre-Academic Prep for Ethiopian-Israeli students
+  // W3-4. The Yoel Program (Chiburim), alongside the Bar-Ilan mechina
   {
     slug: "biu-mechina-ethiopian",
     level: "pre-academic",
     providerOrgSlug: "biu",
     name: {
-      he: "מכינה קדם-אקדמית ייעודית, בר-אילן",
-      en: "Bar-Ilan Dedicated Pre-Academic Prep Program",
-      am: "የባር-ኢላን ልዩ ቅድመ-አካዳሚክ ዝግጅት ፕሮግራም",
+      he: "תוכנית יואל — יוצאי אתיופיה לאקדמיה איכותית",
+      en: "The Yoel Program — Ethiopian-Israelis to Quality Academia",
+      am: "የዮኤል ፕሮግራም — ኢትዮጵያ ተወላጆች ወደ ጥራት ያለው አካዳሚ",
     },
     shortDescription: {
-      he: "מכינה קדם-אקדמית של אוניברסיטת בר-אילן ליוצאי אתיופיה — תגבור אנגלית ומתמטיקה, מלגת מעונות וליווי תוכנית יואל (עמותת חיבורים).",
-      en: "Bar-Ilan University's dedicated pre-academic program for Ethiopian-Israeli students — English/math reinforcement, dormitory scholarship, and Yoel Program (Chiburim) mentorship.",
-      am: "ለኢትዮጵያ-ተወላጅ ተማሪዎች የባር-ኢላን ዩኒቨርሲቲ ቅድመ-አካዳሚክ ፕሮግራም — እንግሊዝኛና ሂሳብ ማጠናከሪያ፣ የመኖሪያ ድጋፍ እና የዮኤል ፕሮግራም (ቺቡሪም) ምክር።",
+      he: "תוכנית מלווה לתלמידי המכינה הקדם-אקדמית בבר-אילן, שהוקמה ומופעלת על ידי עמותת חיבורים — מלגת מעונות, תגבור יומיומי וליווי מנטור במהלך התואר.",
+      en: "A support programme for students of the Bar-Ilan pre-academic mechina, established and operated by the Chiburim association — a dormitory scholarship, daily reinforcement, and a mentor during the degree.",
+      am: "በባር-ኢላን ቅድመ-አካዳሚክ መኪና ለሚማሩ ተማሪዎች የድጋፍ ፕሮግራም፣ በቺቡሪም ማህበር የተቋቋመና የሚንቀሳቀስ — የመኖሪያ ድጋፍ፣ ዕለታዊ ማጠናከሪያና በዲግሪ ጊዜ አማካሪ።",
     },
     amountMinIls: 0,
     amountMaxIls: 0,
     amountNote: {
-      he: "המכינה כוללת תגבור לימודי ומלגת מעונות; לא פורסם סכום כספי ישיר לבדיקה עצמאית.",
-      en: "The program includes academic reinforcement and a dormitory scholarship; no direct cash figure was published for independent verification.",
-      am: "ፕሮግራሙ የትምህርት ማጠናከሪያና የመኖሪያ ድጋፍ ያካትታል።",
+      he: 'לא פורסם סכום: התוכנית מציינת "מלגה לסיוע במימון המעונות" בלי לנקוב בסכום. מקור: mechina-kda.biu.ac.il · נבדק ספטמבר 2026.',
+      en: 'No figure is published: the programme lists "a scholarship to help finance the dormitories" without stating an amount. Source: mechina-kda.biu.ac.il · verified September 2026.',
+      am: 'መጠን አልታተመም፦ ፕሮግራሙ "የመኖሪያ ወጪን ለመደገፍ ስኮላርሺፕ" ይላል እንጂ መጠን አይጠቅስም። ምንጭ፦ mechina-kda.biu.ac.il · ሴፕቴምበር 2026 ተረጋግጧል።',
     },
     deadline: null,
-    status: "open",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://mechina-kda.biu.ac.il",
+    status: "tba",
+    lastVerified: "2026-09-15",
+    applicationUrl: "https://mechina-kda.biu.ac.il/Ethiopian_immigrants_in_academy",
     tags: ["pre-academic", "housing", "community"],
     communityPriority: true,
     relatedScholarships: [],
     relatedRights: [],
     bodies: {
-      he: `## מה זאת המכינה?
+      he: `## אין מכינה ייעודית — יש תוכנית מלווה
 
-מכינה קדם-אקדמית ייעודית של אוניברסיטת בר-אילן, המיועדת לבני קהילת יוצאי אתיופיה הזקוקים לחיזוק לימודי לפני כניסה לתואר ראשון.
+חשוב להתחיל מזה: בבר-אילן **אין מכינה קדם-אקדמית ייעודית ליוצאי אתיופיה**. המכינות הייעודיות שם מוגדרות לפי תחום לימוד — הנדסה ומדעים מדויקים, מטרו-טק, Tech Leaders, מדעי הטבע והחיים, מדעי החברה והרוח — ולא לפי קהילה.
+
+מה שכן קיים, ומופיע באתר המכינה תחת "תוכניות מלוות", הוא **תוכנית יואל — "יוצאי אתיופיה לאקדמיה איכותית"**. בלשון האתר: "הוקמה ומופעלת על ידי עמותת 'חיבורים – חינוך בונה חברה'". כלומר זו תוכנית של עמותת חיבורים, שפועלת לצד המכינה של בר-אילן — לא מסלול של האוניברסיטה עצמה.
 
 ## מי זכאי?
 
-- בוגרי תיכון יוצאי אתיופיה המעוניינים בלימודים אקדמיים בבר-אילן או במוסד אחר לאחר המכינה
+כאן הטעות הנפוצה. התוכנית **לא** מיועדת לבוגרי תיכון באופן כללי — אתם צריכים כבר להיות תלמידי המכינה. ההגדרה באתר: "סטודנטים במכינה, בעלי שאיפות אקדמיות גבוהות… בעלי נתוני פתיחה טובים".
+
+כלומר: קודם נרשמים למכינה של בר-אילן, ורק אז תוכנית יואל רלוונטית לכם.
 
 ## מה כלול?
 
-- תגבור אנגלית ומתמטיקה ברמה הנדרשת לתואר ראשון
-- מלגת מעונות (מגורים בקמפוס בר-אילן)
+- "מלגה לסיוע במימון המעונות"
+- "תגבור לימודי יומיומי אחרי שעות הלימודים במכינה"
+- "ליווי מנטור במהלך התואר"
 
-## תוכנית יואל (עמותת חיבורים)
+בשלב א' התגבור כולל "אנגלית, מתמטיקה ומקצועות נוספים".
 
-לצד המכינה פועלת **תוכנית יואל** — "יוצאי אתיופיה לאקדמיה איכותית" — שהוקמה ומופעלת על-ידי עמותת חיבורים ומלווה את תלמידי המכינה:
+לא פורסם סכום למלגת המעונות. אם הסכום קריטי לתכנון שלכם — שאלו עליו לפני שאתם מסתמכים עליו.
 
-- מלגת השתתפות במימון מעונות
-- תגבור לימודי יומי אחרי שעות המכינה
-- העשרה, גיבוש והעצמה אישית
-- ליווי אישי (מנטורינג) גם במהלך התואר
-- הכוונה וסיוע בהשתלבות בתעסוקה מתאימה
+## מתי נפתחת ההרשמה?
 
-פתיחת התוכנית מותנית במספר המשתתפים — פרטים והרשמה בעמוד המכינה.
+אין חלון הרשמה מפורסם, והאתר מסייג במפורש: "*** פתיחת התוכנית מותנית במס' המשתתפים." לכן הסטטוס כאן הוא "טרם נקבע" ולא "פתוח" — התוכנית עשויה לא להיפתח בכלל בשנה נתונה.
 
 ## איך פונים?
 
-הרשמה דרך mechina-kda.biu.ac.il.
+דרך [עמוד התוכנית באתר המכינה](https://mechina-kda.biu.ac.il/Ethiopian_immigrants_in_academy) (עודכן לאחרונה 08/01/2026), או ישירות לאיש הקשר המפורסם: רוני מוהר, 052-2649021.
+
+מקור: [תוכנית יואל — המכינה הקדם-אקדמית, בר-אילן](https://mechina-kda.biu.ac.il/Ethiopian_immigrants_in_academy) · נבדק ספטמבר 2026.
 
 ## ראו גם
 
 `,
-      en: `## What is this program?
+      en: `## There is no dedicated mechina — there is a support programme
 
-A dedicated pre-academic prep program at Bar-Ilan University for Ethiopian-Israeli community members who need academic reinforcement before starting an undergraduate degree.
+Start here: Bar-Ilan has **no dedicated pre-academic mechina for Ethiopian-Israelis**. Its dedicated mechinot are defined by subject — engineering and exact sciences, Metro-Tech, Tech Leaders, natural and life sciences, social sciences and humanities — not by community.
+
+What does exist, listed on the mechina site under "accompanying programmes", is **the Yoel Program — "Ethiopian-Israelis to quality academia"**. In the site's own words: "established and operated by the 'Chiburim – Education Building Society' association". It is a Chiburim programme hosted alongside the Bar-Ilan mechina, not a track of the university itself.
 
 ## Who is eligible?
 
-- Ethiopian-Israeli high-school graduates interested in academic study at Bar-Ilan or elsewhere after the prep year
+This is where people get it wrong. The programme is **not** for high-school graduates generally — you must already be a mechina student. The site's definition: "students in the mechina, with high academic aspirations… with good starting data".
+
+So: you register for the Bar-Ilan mechina first, and only then does the Yoel Program become relevant to you.
 
 ## What's included?
 
-- English and math reinforcement to the level required for an undergraduate degree
-- Dormitory scholarship (housing on the Bar-Ilan campus)
+- "A scholarship to help finance the dormitories"
+- "Daily academic reinforcement after mechina hours"
+- "Mentor support during the degree"
 
-## The Yoel Program (Chiburim association)
+In stage A, the reinforcement covers "English, mathematics and additional subjects".
 
-Alongside the mechina runs the **Yoel Program** — "Ethiopian-Israelis to quality academia" — established and operated by the Chiburim association, supporting mechina students with:
+No figure is published for the dormitory scholarship. If the amount matters to your planning, ask before you rely on it.
 
-- A scholarship contributing to dormitory financing
-- Daily academic reinforcement after mechina hours
-- Enrichment, group bonding, and personal empowerment
-- Individual mentoring that continues into the degree
-- Guidance and assistance toward suitable employment
+## When does registration open?
 
-Opening of the program depends on participant numbers — details and registration on the mechina page.
+There is no published registration window, and the page states explicitly: "*** Opening of the programme is conditional on the number of participants." That is why the status here is "to be announced" rather than "open" — the programme may not open at all in a given year.
 
 ## How to apply
 
-Register via mechina-kda.biu.ac.il.
+Via the [programme page on the mechina site](https://mechina-kda.biu.ac.il/Ethiopian_immigrants_in_academy) (its own last-updated date: 08/01/2026), or directly to the published contact: Roni Mohar, 052-2649021.
+
+Source: [The Yoel Program — Bar-Ilan pre-academic mechina](https://mechina-kda.biu.ac.il/Ethiopian_immigrants_in_academy) · verified September 2026.
 
 ## See also
 
 `,
-      am: `## ይህ ፕሮግራም ምንድን ነው?
+      am: `## የተለየ መኪና የለም — የድጋፍ ፕሮግራም ግን አለ
 
-ከመጀመሪያ ዲግሪ በፊት የአካዳሚክ ማጠናከሪያ ለሚያስፈልጋቸው ኢትዮጵያ-ተወላጅ ማህበረሰብ አባላት የባር-ኢላን ዩኒቨርሲቲ ልዩ ቅድመ-አካዳሚክ ፕሮግራም።
+በባር-ኢላን ለኢትዮጵያ ተወላጆች **የተለየ ቅድመ-አካዳሚክ መኪና የለም**። እዚያ ያሉት የተለዩ መኪናዎች በትምህርት መስክ ነው የሚከፋፈሉት — ኢንጂነሪንግና ትክክለኛ ሳይንሶች፣ ሜትሮ-ቴክ፣ Tech Leaders፣ የተፈጥሮና የሕይወት ሳይንሶች፣ የማህበራዊና ሰብዓዊ ሳይንሶች — በማህበረሰብ አይደለም።
+
+ያለው ነገር በመኪናው ድረ-ገጽ "አጃቢ ፕሮግራሞች" ሥር የተዘረዘረው **የዮኤል ፕሮግራም — "ኢትዮጵያ ተወላጆች ወደ ጥራት ያለው አካዳሚ"** ነው። በድረ-ገጹ ቃል፦ "በ'ቺቡሪም – ትምህርት ማህበረሰብ ገንቢ' ማህበር የተቋቋመና የሚንቀሳቀስ"። ይህም የቺቡሪም ፕሮግራም ነው፣ ከባር-ኢላን መኪና ጎን የሚሰራ እንጂ የዩኒቨርሲቲው መስመር አይደለም።
 
 ## ለማን ይሆናል?
 
-- በባር-ኢላን ወይም በሌላ ተቋም ለማጥናት ፍላጎት ያላቸው ኢትዮጵያ-ተወላጅ የሁለተኛ ደረጃ ምሩቃን
+ፕሮግራሙ በአጠቃላይ ለሁለተኛ ደረጃ ምሩቃን **አይደለም** — አስቀድመው የመኪና ተማሪ መሆን አለብዎት። የድረ-ገጹ ትርጓሜ፦ "በመኪና ውስጥ ያሉ ተማሪዎች፣ ከፍተኛ የአካዳሚክ ምኞት ያላቸው… ጥሩ የመነሻ መረጃ ያላቸው"።
+
+ስለዚህ፦ በመጀመሪያ ለባር-ኢላን መኪና ይመዝገቡ፤ ከዚያ በኋላ ነው የዮኤል ፕሮግራም የሚመለከትዎት።
 
 ## ምን ይካተታል?
 
-- እንግሊዝኛና ሂሳብ ማጠናከሪያ
-- የመኖሪያ ድጋፍ (በባር-ኢላን ካምፓስ)
+- "የመኖሪያ ወጪን ለመደገፍ ስኮላርሺፕ"
+- "ከመኪና ሰዓታት በኋላ ዕለታዊ የትምህርት ማጠናከሪያ"
+- "በዲግሪ ጊዜ የአማካሪ ድጋፍ"
 
-## የዮኤል ፕሮግራም (ቺቡሪም ማህበር)
+በደረጃ አንድ ማጠናከሪያው "እንግሊዝኛ፣ ሂሳብና ተጨማሪ ትምህርቶች" ይሸፍናል።
 
-ከመኪና ጎን የ**ዮኤል ፕሮግራም** ይሰራል — በቺቡሪም ማህበር የተመሰረተና የሚንቀሳቀስ፣ የመኪና ተማሪዎችን የሚደግፍ፦
+ለመኖሪያ ስኮላርሺፑ መጠን አልታተመም።
 
-- የመኖሪያ ፋይናንስ ድጋፍ ስኮላርሺፕ
-- ከመኪና ሰዓታት በኋላ ዕለታዊ የትምህርት ማጠናከሪያ
-- ማበልጸግ፣ የቡድን ትስስርና የግል ማብቃት
-- በዲግሪ ጊዜም የሚቀጥል የግል ምክር (ሜንቶሪንግ)
-- ለተስማሚ ስራ መቀላቀል መመሪያና እገዛ
+## ምዝገባ መቼ ይከፈታል?
+
+የታተመ የምዝገባ መስኮት የለም፣ ገጹም በግልጽ ይላል፦ "*** የፕሮግራሙ መከፈት በተሳታፊዎች ቁጥር ላይ የተመሰረተ ነው።" ስለዚህ ሁኔታው "ገና አልተወሰነም" ነው።
 
 ## እንዴት ማመልከት ይቻላል?
 
-በmechina-kda.biu.ac.il ይመዝገቡ።
+በ[የፕሮግራሙ ገጽ](https://mechina-kda.biu.ac.il/Ethiopian_immigrants_in_academy) በኩል (የገጹ የመጨረሻ ማሻሻያ ቀን፦ 08/01/2026)፣ ወይም በታተመው አድራሻ፦ ሮኒ ሞሃር፣ 052-2649021።
+
+ምንጭ፦ [የዮኤል ፕሮግራም — የባር-ኢላን ቅድመ-አካዳሚክ መኪና](https://mechina-kda.biu.ac.il/Ethiopian_immigrants_in_academy) · ሴፕቴምበር 2026 ተረጋግጧል።
 
 ## ይህንንም ይዩ
 
@@ -337,7 +307,7 @@ Register via mechina-kda.biu.ac.il.
     },
   },
 
-  // W3-5. Tech-Career — organization profile / track catalog
+  // W3-5. Tech-Career — organization profile / course catalog
   {
     slug: "tech-career-org",
     level: "vocational",
@@ -348,93 +318,157 @@ Register via mechina-kda.biu.ac.il.
       am: "ቴክ-ካሪየር — የቴክኖሎጂ ስልጠና",
     },
     shortDescription: {
-      he: "22 שנות פעילות, 1,300 בוגרים, 68 קורסים טכנולוגיים, כ-90% השמה בהייטק — הכשרה טכנולוגית לבני קהילת יוצאי אתיופיה.",
-      en: "22 years active, 1,300 graduates, 68 tech courses, ~90% hi-tech placement — technology training for the Ethiopian-Israeli community.",
-      am: "22 ዓመታት ንቁ፣ 1,300 ምሩቃን፣ 68 የቴክኖሎጂ ኮርሶች፣ ~90% የhi-tech ስራ ምደባ።",
+      he: "מרכז הכשרה טכנולוגי לצעירים יוצאי אתיופיה, פועל מעל 20 שנים. מעל 88% מהבוגרות והבוגרים משתלבים בהייטק. הלימודים אחר הצהריים, פעמיים בשבוע — אפשר לשלב עבודה.",
+      en: "A technology training centre for young Ethiopian-Israelis, running for over 20 years. Over 88% of graduates go into hi-tech. Classes are afternoons, twice a week — you can keep working.",
+      am: "ለወጣት ኢትዮጵያ ተወላጆች የቴክኖሎጂ ስልጠና ማዕከል፣ ከ20 ዓመታት በላይ የሰራ። ከ88% በላይ ምሩቃን ወደ ሃይቴክ ይገባሉ። ትምህርቱ ከሰዓት በኋላ፣ በሳምንት ሁለት ጊዜ ነው።",
     },
-    amountMinIls: 30000,
-    amountMaxIls: 50000,
+    amountMinIls: 0,
+    amountMaxIls: 0,
     amountNote: {
-      he: "הסטיפנדיה במהלך הבוטקמפ מפורטת בעמוד הספציפי של תכנית ה-bootcamp; עמוד זה מסכם את הארגון כמכלול — 68 קורסים, לא רק תכנית אחת.",
-      en: "The bootcamp stipend is detailed on the specific bootcamp program page; this page summarizes the organization as a whole — 68 courses, not a single track.",
-      am: "የቡት ካምፕ ድጋፍ በተለየው የቡት ካምፕ ገጽ ተብራርቷል።",
+      he: "הארגון אינו מפרסם באתרו סכום סטיפנדיה, וגם עלות הקורס אינה מצוינת שם — יש לברר את שניהם ישירות מול טק-קריירה. מקור: tech-career.org · נבדק ספטמבר 2026.",
+      en: "The organisation publishes no stipend figure on its site, and the cost of a course is not stated there either — ask Tech-Career directly about both. Source: tech-career.org · verified September 2026.",
+      am: "ድርጅቱ በድረ-ገጹ የድጋፍ መጠን አያትምም፣ የኮርሱም ዋጋ እዚያ አልተጠቀሰም — ሁለቱንም በቀጥታ ይጠይቁ። ምንጭ፦ tech-career.org · ሴፕቴምበር 2026 ተረጋግጧል።",
     },
-    deadline: "rolling",
+    deadline: "2026-10-20",
     status: "open",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-15",
     applicationUrl: "https://www.tech-career.org/items",
     tags: ["vocational", "tech", "community"],
     communityPriority: true,
-    relatedScholarships: ["tech-career-bootcamp-stipend", "olim-beyachad-org"],
+    relatedScholarships: ["olim-beyahad-career-mentorship"],
     relatedRights: [],
     bodies: {
       he: `## מי זה טק-קריירה?
 
-עמותה הפועלת **22 שנה** בתחום ההכשרה הטכנולוגית לבני קהילת יוצאי אתיופיה. עד כה הכשירה **1,300 בוגרים** במסגרת **68 קורסים** שונים (Web, Mobile, Data, Cyber ותחומים נוספים), עם שיעור השמה בהייטק של **כ-90%**.
+"Tech-Career מרכז הכשרה טכנולוגי לצעירים יוצאי אתיופיה", שפועל לפי אתרו "כבר מעל 20 שנים".
 
-## למי מיועד?
+הנתון שהארגון מפרסם על עצמו: **"מעל 88% מהבוגרות והבוגרים משתלבים במשרות נחשקות בתעשיית ההייטק"**.
 
-- בני קהילה המעוניינים במעבר קריירה לתחומי טכנולוגיה, ללא צורך ברקע תכנותי קודם
+## למי זה מיועד?
 
-## מה כלול?
+האתר מגדיר קהל רחב יותר משנהוג להניח: "צעירות וצעירים, אימהות, מילואמניקים ומילואמניקיות, אנשים שנפגעו במלחמת חרבות ברזל". לא מפורסם קריטריון גיל.
 
-- מגוון רחב של 68 קורסים טכנולוגיים
-- ליווי להשמה בתעשיית ההייטק
-- רשת בוגרים של 1,300 איש לאורך 22 שנות פעילות
+## מה נדרש מכם
 
-## איך פוני?
+התנאים המפורסמים הם שלושה בלבד:
 
-הרשמה דרך tech-career.org — ראו גם את עמוד תכנית ה-bootcamp הספציפית עם פרטי סטיפנדיה.
+- למידה עצמית
+- מעבר מבחן מיון
+- נוכחות קורס של 80%
+
+## הקורסים שמופיעים היום
+
+- **Cloud-Network Engineer** — לוד, נפתח 30.08.2026 (המחזור כבר התחיל)
+- **Cyber-Network Analyst** — לוד, נפתח 14.09.2026
+- **QA Automation** — חיפה, נפתח 20.10.2026
+
+אלה תאריכי פתיחת מחזור, לא הרשמה מתגלגלת. מי שמפספס מחזור ממתין לזה שאחריו — לכן כדאי לפנות מוקדם ולא ביום הפתיחה.
+
+## פורמט הלימודים
+
+"א'-ד' אחה"צ פעמיים בשבוע 17:00–21:00" — היברידי, אחר הצהריים, במתכונת חלקית. לשאלה "האם ניתן לשלב עבודה?" האתר עונה: "כן".
+
+## כמה זה עולה, וכמה מקבלים?
+
+הארגון אינו מפרסם באתרו לא סכום סטיפנדיה ולא את עלות הקורס. אל תניחו סכום — שאלו אותם.
+
+## איך פונים?
+
+דרך [עמוד הקורסים](https://www.tech-career.org/items).
+
+מקור: [Tech-Career — קורסים](https://www.tech-career.org/items) · נבדק ספטמבר 2026.
 
 ## ראו גם
 
-- [סטיפנדיית Tech-Career — Bootcamp](/he/education/scholarships/tech-career-bootcamp-stipend)
-- [עולים ביחד](/he/education/scholarships/olim-beyachad-org)
+- [מצוינות ומנהיגות בתעסוקה — עולים ביחד](/he/education/scholarships/olim-beyahad-career-mentorship)
 `,
       en: `## Who is Tech-Career?
 
-An association active for **22 years** in technology training for the Ethiopian-Israeli community. To date it has trained **1,300 graduates** across **68 different courses** (Web, Mobile, Data, Cyber, and more), with a hi-tech placement rate of **roughly 90%**.
+"Tech-Career, a technology training centre for young Ethiopian-Israelis", which per its own site has been running "for over 20 years already".
+
+The figure the organisation publishes about itself: **"over 88% of graduates go into sought-after roles in the hi-tech industry"**.
 
 ## Who is it for?
 
-- Community members seeking a career shift into technology, with no prior coding background required
+The site defines a broader audience than people assume: "young women and men, mothers, reservists, and people injured in the Iron Swords war". No age criterion is published.
 
-## What's included?
+## What is required of you
 
-- A wide catalog of 68 tech courses
-- Hi-tech industry placement support
-- A 1,300-strong alumni network built over 22 years
+The published requirements are only three:
+
+- Self-directed learning
+- Passing a screening test
+- 80% course attendance
+
+## The courses listed today
+
+- **Cloud-Network Engineer** — Lod, started 30.08.2026 (this cohort has already begun)
+- **Cyber-Network Analyst** — Lod, starts 14.09.2026
+- **QA Automation** — Haifa, starts 20.10.2026
+
+These are cohort start dates, not rolling admission. Miss a cohort and you wait for the next one — so approach early, not on the start date.
+
+## Study format
+
+"Sun-Wed afternoons, twice a week, 17:00–21:00" — hybrid, afternoons, part-time. To the question "can this be combined with work?" the site answers: "yes".
+
+## What does it cost, and what do you get?
+
+The organisation publishes neither a stipend figure nor a course cost on its site. Do not assume an amount — ask them.
 
 ## How to apply
 
-Register via tech-career.org — see also the specific bootcamp program page for stipend details.
+Via the [courses page](https://www.tech-career.org/items).
+
+Source: [Tech-Career — courses](https://www.tech-career.org/items) · verified September 2026.
 
 ## See also
 
-- [Tech-Career Bootcamp Stipend](/en/education/scholarships/tech-career-bootcamp-stipend)
-- [Olim Beyachad](/en/education/scholarships/olim-beyachad-org)
+- [Excellence & Leadership in Employment — Olim Beyahad](/en/education/scholarships/olim-beyahad-career-mentorship)
 `,
       am: `## ቴክ-ካሪየር ማን ነው?
 
-ለኢትዮጵያ-ተወላጅ ማህበረሰብ በቴክኖሎጂ ስልጠና ለ**22 ዓመታት** ንቁ የሆነ ማህበር። እስካሁን **1,300 ምሩቃን**ን በ**68 የተለያዩ ኮርሶች** አሰልጥኗል፣ በ~90% የhi-tech ስራ ምደባ መጠን።
+"ቴክ-ካሪየር፣ ለወጣት ኢትዮጵያ ተወላጆች የቴክኖሎጂ ስልጠና ማዕከል"፣ በራሱ ድረ-ገጽ መሰረት "ከ20 ዓመታት በላይ" የሰራ።
+
+ድርጅቱ ስለራሱ የሚያትመው አኃዝ፦ **"ከ88% በላይ ምሩቃን በሃይቴክ ኢንዱስትሪ ተፈላጊ ሥራዎች ይቀላቀላሉ"**።
 
 ## ለማን ነው?
 
-- ወደ ቴክኖሎጂ ስራ መሸጋገር የሚፈልጉ ማህበረሰብ አባላት
+ድረ-ገጹ ሰፊ ተሳታፊ ይገልጻል፦ "ወጣት ሴቶችና ወንዶች፣ እናቶች፣ የተጠባባቂ ሠራዊት አባላት፣ በብረት ሰይፍ ጦርነት የተጎዱ ሰዎች"። የዕድሜ መስፈርት አልታተመም።
 
-## ምን ይካተታል?
+## ከእርስዎ የሚጠበቀው
 
-- 68 የቴክኖሎጂ ኮርሶች
-- የhi-tech ስራ ምደባ ድጋፍ
-- 1,300 የቀድሞ ተማሪዎች መረብ
+የታተሙት መስፈርቶች ሦስት ብቻ ናቸው፦
+
+- ራስን የማስተማር ችሎታ
+- የመለያ ፈተና ማለፍ
+- የ80% የኮርስ ተገኝነት
+
+## ዛሬ የተዘረዘሩት ኮርሶች
+
+- **Cloud-Network Engineer** — ሎድ፣ በ30.08.2026 ተጀምሯል
+- **Cyber-Network Analyst** — ሎድ፣ በ14.09.2026 ይጀምራል
+- **QA Automation** — ሃይፋ፣ በ20.10.2026 ይጀምራል
+
+እነዚህ የዙር መጀመሪያ ቀኖች ናቸው እንጂ ቀጣይ ምዝገባ አይደለም። ዙር ካመለጠዎት ቀጣዩን ይጠብቃሉ።
+
+## የትምህርት አወቃቀር
+
+"እሑድ-ረቡዕ ከሰዓት በኋላ፣ በሳምንት ሁለት ጊዜ፣ 17:00–21:00" — ድብልቅ፣ ከሰዓት በኋላ፣ በትርፍ ሰዓት። "ከሥራ ጋር ማዋሃድ ይቻላል?" ለሚለው ጥያቄ ድረ-ገጹ "አዎ" ይላል።
+
+## ዋጋውና ድጋፉ ስንት ነው?
+
+ድርጅቱ በድረ-ገጹ የድጋፍ መጠንም የኮርስ ዋጋም አያትምም። መጠን አይገምቱ — ይጠይቋቸው።
 
 ## እንዴት ማመልከት ይቻላል?
 
-በtech-career.org ይመዝገቡ።
+በ[የኮርሶች ገጽ](https://www.tech-career.org/items) በኩል።
+
+ምንጭ፦ [Tech-Career — ኮርሶች](https://www.tech-career.org/items) · ሴፕቴምበር 2026 ተረጋግጧል።
 
 ## ይህንንም ይዩ
 
-- [የTech-Career Bootcamp ድጋፍ](/am/education/scholarships/tech-career-bootcamp-stipend)
+- [በሥራ ስምሪት ልቀትና አመራር — Olim Beyahad](/am/education/scholarships/olim-beyahad-career-mentorship)
 `,
     },
   },
@@ -450,20 +484,20 @@ Register via tech-career.org — see also the specific bootcamp program page for
       am: "ፊደል ማህበር",
     },
     shortDescription: {
-      he: "ארגון חינוך ושילוב חברתי ותיק של קהילת יוצאי אתיופיה — תכניות העשרה, ליווי חינוכי, וחיזוק זהות תרבותית.",
-      en: "A long-established Ethiopian-Israeli community education and social-integration organization — enrichment programs, educational mentorship, and cultural-identity reinforcement.",
-      am: "ቆየት ያለ የኢትዮጵያ-ተወላጅ ማህበረሰብ ትምህርትና ማህበራዊ ውህደት ድርጅት።",
+      he: "עמותה לחינוך ושילוב חברתי של יוצאי אתיופיה, שהוקמה ב-1997 — מרכזי נוער, מנהיגות צעירה, STEP UP, סדנאות להורים ועוד.",
+      en: "An association for the education and social integration of Ethiopian-Israelis, founded in 1997 — youth centres, young leadership, STEP UP, parent workshops and more.",
+      am: "የኢትዮጵያ ተወላጆችን ትምህርትና ማህበራዊ ውህደት የሚያገለግል ማህበር፣ በ1997 የተቋቋመ — የወጣቶች ማዕከላት፣ የወጣት አመራር፣ STEP UP፣ ለወላጆች ወርክሾፖች እና ሌሎችም።",
     },
     amountMinIls: 0,
     amountMaxIls: 0,
     amountNote: {
-      he: "פידל היא בעיקרה עמותת תכניות (לא קרן מלגות) — הערך המרכזי הוא תכניות חינוכיות/חברתיות, לא סכום כספי.",
-      en: "Fidel is primarily a programs organization (not a scholarship fund) — the core value is educational/social programming, not a cash figure.",
-      am: "ፊደል በዋናነት የፕሮግራሞች ድርጅት ነው (የስኮላርሺፕ ፈንድ አይደለም)።",
+      he: "פידל היא עמותת תכניות ולא קרן מלגות — אין לה קול קורא למלגה ואין סכום לפרסם. מקור: fidel.org.il · נבדק ספטמבר 2026.",
+      en: "Fidel is a programmes association, not a scholarship fund — it runs no scholarship call and publishes no amount. Source: fidel.org.il · verified September 2026.",
+      am: "ፊደል የፕሮግራሞች ማህበር ነው እንጂ የስኮላርሺፕ ፈንድ አይደለም — የስኮላርሺፕ ጥሪም መጠንም የለውም። ምንጭ፦ fidel.org.il · ሴፕቴምበር 2026 ተረጋግጧል።",
     },
     deadline: null,
     status: "tba",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-15",
     applicationUrl: "https://www.fidel.org.il",
     tags: ["high-school", "community", "identity"],
     communityPriority: true,
@@ -472,17 +506,31 @@ Register via tech-career.org — see also the specific bootcamp program page for
     bodies: {
       he: `## מי זאת פידל?
 
-עמותת פידל היא ארגון חינוך ושילוב חברתי ותיק, הפועל למען בני קהילת יוצאי אתיופיה. הארגון כבר מופיע כ-profile ב-\`/he/orgs/fidel\` עם פרטי הקמה, יצירת קשר, ותכניות מלאים — עמוד זה מקשר בין אותו פרופיל לבין הקשר החינוכי הספציפי (מלגות/תכניות) ברצף ה-education hub.
+בלשון העמותה עצמה: "פידל (פירוש פידל: א-ב באמהרית), עמותה לחינוך ושילוב חברתי של יוצאי אתיופיה… עמותת פידל הוקמה בשנת 1997 ע"י יוצאי אתיופיה וישראלים ותיקים."
 
-## מה כלול?
+## התכניות של פידל
 
-- תכניות העשרה חינוכיות ותרבותיות
-- ליווי חינוכי לילדים ובני נוער
-- חיזוק זהות תרבותית-קהילתית
+- מרכזי נוער
+- מנהיגות צעירה
+- STEP UP
+- סדנאות להורים
+- חינוך לבריאות
+- אופק לבוגרים
+- מגשרים חינוכיים
+
+## למי זה מיועד?
+
+הרשומה מסווגת כאן תחת שלב "תיכון", וזה צר מהמציאות: תכנית "אופק לבוגרים" פונה לבוגרים, לא לתלמידי תיכון. אם אתם מחוץ לגיל בית הספר — עדיין יש כאן מה לבדוק.
+
+## האם יש מועד הגשה?
+
+לא. לפידל אין מחזור הגשה ואין טופס מלגה — פונים לעמותה ישירות ומבררים איזו תכנית רלוונטית לכם.
 
 ## איך פונים?
 
-ראו את [עמוד הארגון המלא](/he/orgs/fidel) לפרטי יצירת קשר, שנת הקמה, וסניפים, או ישירות דרך fidel.org.il.
+ראו את [עמוד הארגון המלא](/he/orgs/fidel) לפרטי יצירת קשר וסניפים, או ישירות דרך fidel.org.il.
+
+מקור: [עמותת פידל](https://www.fidel.org.il) · נבדק ספטמבר 2026.
 
 ## ראו גם
 
@@ -490,17 +538,31 @@ Register via tech-career.org — see also the specific bootcamp program page for
 `,
       en: `## Who is Fidel?
 
-The Fidel association is a long-established education and social-integration organization serving the Ethiopian-Israeli community. The organization already has a full profile at \`/en/orgs/fidel\` with founding details, contact info, and programs — this page links that profile into the education-hub context (scholarships/programs).
+In the association's own words: "Fidel (the meaning of 'fidel': the alphabet in Amharic), an association for the education and social integration of Ethiopian-Israelis… The Fidel association was founded in 1997 by Ethiopian-Israelis and veteran Israelis."
 
-## What's included?
+## Fidel's programmes
 
-- Educational and cultural enrichment programs
-- Educational mentorship for children and youth
-- Cultural-community identity reinforcement
+- Youth centres
+- Young leadership
+- STEP UP
+- Parent workshops
+- Health education
+- Ofek for adults
+- Educational mediators
+
+## Who is it for?
+
+This entry is filed under the "high school" stage, and that is narrower than reality: the "Ofek for adults" programme serves adults, not high-school students. If you are past school age, there is still something here to check.
+
+## Is there a deadline?
+
+No. Fidel has no application cycle and no scholarship form — you contact the association directly and find out which programme fits you.
 
 ## How to apply
 
-See the [full organization profile](/en/orgs/fidel) for contact details, founding year, and branches, or go directly to fidel.org.il.
+See the [full organization profile](/en/orgs/fidel) for contact details and branches, or go directly to fidel.org.il.
+
+Source: [Fidel Association](https://www.fidel.org.il) · verified September 2026.
 
 ## See also
 
@@ -508,215 +570,189 @@ See the [full organization profile](/en/orgs/fidel) for contact details, foundin
 `,
       am: `## ፊደል ማን ነው?
 
-ፊደል ማህበር ለኢትዮጵያ-ተወላጅ ማህበረሰብ የሚያገለግል ቆየት ያለ የትምህርትና ማህበራዊ ውህደት ድርጅት ነው። ሙሉ መገለጫ በ\`/am/orgs/fidel\` አለ።
+በማህበሩ ቃል፦ "ፊደል (የፊደል ትርጉም፦ በአማርኛ ፊደል)፣ የኢትዮጵያ ተወላጆችን ትምህርትና ማህበራዊ ውህደት የሚያገለግል ማህበር… የፊደል ማህበር በ1997 ዓ.ም. በኢትዮጵያ ተወላጆችና በአንጋፋ እስራኤላውያን ተቋቋመ።"
 
-## ምን ይካተታል?
+## የፊደል ፕሮግራሞች
 
-- የትምህርትና ባህል ማበልፀጊያ ፕሮግራሞች
-- ለልጆችና ወጣቶች የትምህርት ምክር
+- የወጣቶች ማዕከላት
+- የወጣት አመራር
+- STEP UP
+- ለወላጆች ወርክሾፖች
+- የጤና ትምህርት
+- ኦፌክ ለአዋቂዎች
+- የትምህርት አስታራቂዎች
+
+## ለማን ነው?
+
+ይህ መዝገብ በ"ሁለተኛ ደረጃ" ደረጃ ተመድቧል፣ ይህ ግን ከእውነታው ጠባብ ነው፦ "ኦፌክ ለአዋቂዎች" ለአዋቂዎች ያገለግላል።
+
+## የማስገቢያ ቀን አለ?
+
+የለም። ፊደል የማመልከቻ ዙርም የስኮላርሺፕ ቅጽም የለውም — ማህበሩን በቀጥታ ያነጋግሩ።
 
 ## እንዴት ማመልከት ይቻላል?
 
 [ሙሉ የድርጅት መገለጫ](/am/orgs/fidel) ይመልከቱ ወይም በቀጥታ fidel.org.il ይጎብኙ።
 
+ምንጭ፦ [ፊደል ማህበር](https://www.fidel.org.il) · ሴፕቴምበር 2026 ተረጋግጧል።
+
 ## ይህንንም ይዩ
 
+- [የፊደል ድርጅት መገለጫ](/am/orgs/fidel)
 `,
     },
   },
 
-  // W3-7. Tebeka — Law Scholarships
+  // W3-7. Scholarship for Ethiopian-Israeli law students in memory of Adv. Zvi Meitar
   {
     slug: "tebeka-law-scholarship",
     level: "undergrad",
     providerOrgSlug: "tebeka",
     name: {
-      he: "טבקה — מלגות למשפטנים",
-      en: "Tebeka — Law Scholarships",
-      am: "ቴቤካ — ለህግ ተማሪዎች ድጋፎች",
+      he: 'מלגה למשפטנים יוצאי אתיופיה ע"ש עו"ד צבי מיתר ז"ל',
+      en: "Scholarship for Ethiopian-Israeli Law Students in memory of Adv. Zvi Meitar",
+      am: "በጠበቃ ዝቪ ሜይታር መታሰቢያ ለኢትዮጵያ ተወላጅ የሕግ ተማሪዎች ስኮላርሺፕ",
     },
     shortDescription: {
-      he: "מלגות לסטודנטים למשפטים מקהילת יוצאי אתיופיה + תוכנית טרום-התמחות, מטעם טבקה — סיוע משפטי וקידום שוויון.",
-      en: "Scholarships for Ethiopian-Israeli law students + a pre-internship program, from Tebeka — legal aid and equality advocacy.",
-      am: "ከቴቤካ ለኢትዮጵያ-ተወላጅ ህግ ተማሪዎች ድጋፎች + ቅድመ-ልምምድ ፕሮግራም።",
+      he: "מלגה של 5,000 ₪ לסטודנטים למשפטים יוצאי אתיופיה, בניהול טבקה ובמימון קרן משפחת מיתר ומשרד מיתר עורכי דין. המחזור האחרון שפורסם נסגר ב-30.4.2025.",
+      en: "A ₪5,000 scholarship for Ethiopian-Israeli law students, administered by Tebeka and funded by the Meitar family foundation and the Meitar law firm. The last published cycle closed on 30.4.2025.",
+      am: "ለኢትዮጵያ ተወላጅ የሕግ ተማሪዎች የ₪5,000 ስኮላርሺፕ፣ በቴቤካ የሚመራና በሜይታር ቤተሰብ ፈንድና በሜይታር የሕግ ቢሮ የሚደገፍ። የመጨረሻው የታተመ ዙር በ30.4.2025 ተዘግቷል።",
     },
-    amountMinIls: 0,
-    amountMaxIls: 0,
+    amountMinIls: 5000,
+    amountMaxIls: 5000,
     amountNote: {
-      he: "סכום המלגה בפועל לא אומת עצמאית מול tebeka.org.il/kolzchut.org.il בזמן כתיבת עמוד זה — מומלץ לאמת מול המקור לפני ההגשה.",
-      en: "The actual scholarship amount was not independently verified against tebeka.org.il/kolzchut.org.il while drafting this page — verify with the source before applying.",
-      am: "ትክክለኛ የድጋፍ መጠን በገለልተኝነት አልተረጋገጠም።",
+      he: 'גובה המלגה 5,000 ₪, ו"ועדת המלגות רשאית להעניק מלגה גבוהה יותר… על פי שיקול דעתה". מקור: אתר המלגות של אוניברסיטת בר-אילן (biu.ac.il/scholarship/583026) · נבדק ספטמבר 2026.',
+      en: 'The scholarship is ₪5,000, and "the scholarship committee may award a higher scholarship… at its discretion". Source: Bar-Ilan University scholarships page (biu.ac.il/scholarship/583026) · verified September 2026.',
+      am: 'የስኮላርሺፑ መጠን ₪5,000 ነው፣ "የስኮላርሺፕ ኮሚቴው በራሱ ውሳኔ ከፍ ያለ ስኮላርሺፕ ሊሰጥ ይችላል"። ምንጭ፦ የባር-ኢላን ዩኒቨርሲቲ የስኮላርሺፕ ገጽ (biu.ac.il/scholarship/583026) · ሴፕቴምበር 2026 ተረጋግጧል።',
     },
     deadline: null,
     status: "tba",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-15",
     applicationUrl: "https://www.tebeka.org.il",
     tags: ["undergrad", "legal", "community", "career-shift"],
-    communityPriority: true,
-    relatedScholarships: ["isef-scholarship"],
-    relatedRights: [],
-    bodies: {
-      he: `## מה כוללת התוכנית?
-
-טבקה — עמותת סיוע משפטי וקידום שוויון לקהילת יוצאי אתיופיה — מפעילה מלגות לסטודנטים למשפטים מהקהילה, לצד **תוכנית טרום-התמחות** המכינה בוגרי משפטים להתמחות בפועל (לקראת רישיון עריכת דין).
-
-## מי זכאי?
-
-- סטודנטים למשפטים מקהילת יוצאי אתיופיה, בשלבי תואר או לקראת התמחות
-
-## מה כלול?
-
-- מלגה לסטודנטים למשפטים
-- תוכנית טרום-התמחות — הכנה לקראת התמחות משפטית
-
-## איך פונים?
-
-דרך tebeka.org.il, או ראו את [עמוד הארגון המלא](/he/orgs/tebeka) לפרטי יצירת קשר.
-
-## ראו גם
-
-- [מלגת אייסף — עמיתי פוסט-דוקטורט](/he/education/scholarships/isef-scholarship)
-- [עמוד ארגון טבקה](/he/orgs/tebeka)
-`,
-      en: `## What does the program cover?
-
-Tebeka — a legal-aid and equality-advocacy association for the Ethiopian-Israeli community — runs scholarships for community law students, alongside a **pre-internship program** preparing law graduates for their practical internship (toward a bar license).
-
-## Who is eligible?
-
-- Ethiopian-Israeli law students, at any degree stage or approaching internship
-
-## What's included?
-
-- A scholarship for law students
-- A pre-internship program preparing for the legal internship
-
-## How to apply
-
-Via tebeka.org.il, or see the [full org profile](/en/orgs/tebeka) for contact details.
-
-## See also
-
-- [ISEF Scholarship — Post-doctoral Fellows](/en/education/scholarships/isef-scholarship)
-- [Tebeka org profile](/en/orgs/tebeka)
-`,
-      am: `## ፕሮግራሙ ምን ይሸፍናል?
-
-ቴቤካ — ለኢትዮጵያ-ተወላጅ ማህበረሰብ የህግ እርዳታና እኩልነት ማህበር — ለማህበረሰብ ህግ ተማሪዎች ድጋፎችን ያካሂዳል፣ ከ**ቅድመ-ልምምድ ፕሮግራም** ጋር።
-
-## ለማን ይሆናል?
-
-- ኢትዮጵያ-ተወላጅ ህግ ተማሪዎች
-
-## ምን ይካተታል?
-
-- ለህግ ተማሪዎች ድጋፍ
-- ቅድመ-ልምምድ ፕሮግራም
-
-## እንዴት ማመልከት ይቻላል?
-
-በtebeka.org.il በኩል፣ ወይም [ሙሉ የድርጅት መገለጫ](/am/orgs/tebeka) ይመልከቱ።
-
-## ይህንንም ይዩ
-
-- [የቴቤካ ድርጅት መገለጫ](/am/orgs/tebeka)
-`,
-    },
-  },
-
-  // W3-8. ISEF Fund — Scholarship + Post-doctoral Fellows
-  {
-    slug: "isef-scholarship",
-    level: "phd",
-    providerOrgSlug: "isef",
-    name: {
-      he: "קרן אייסף — מלגות ועמיתי פוסט-דוקטורט",
-      en: "ISEF Fund — Scholarships & Post-doctoral Fellows",
-      am: "የISEF ፈንድ — ድጋፎችና ድህረ-ዶክትሬት ባልደረቦች",
-    },
-    shortDescription: {
-      he: 'מלגות אייסף לתואר ראשון/שני/דוקטורט, לצד תוכנית "עמיתי אייסף" למחקר בתר-דוקטורט בחו"ל (עד 10,000$). שונה מ"מלגת ISEF" (תואר שני/שלישי בארץ) שכבר קיימת בפורטל.',
-      en: 'ISEF scholarships for bachelor\'s/master\'s/PhD, plus the "ISEF Fellows" post-doctoral research program abroad (up to $10,000). Distinct from the existing "ISEF Fellowship" page (domestic master\'s/PhD).',
-      am: "ISEF ድጋፎች ለመጀመሪያ/ሁለተኛ/ዶክትሬት ዲግሪ፣ እና ለውጭ ሀገር ድህረ-ዶክትሬት ምርምር (እስከ 10,000$)።",
-    },
-    amountMinIls: 0,
-    amountMaxIls: 0,
-    amountNote: {
-      he: 'עמיתי אייסף לפוסט-דוקטורט: עד 10,000$ (דולר, לא ש"ח — לא הומר לשקלים כדי לא לעוות את הסכום המקורי). מלגות תואר ראשון/שני/דוקטורט: הסכום המדויק לא אומת עצמאית — לראות גם את "מלגת ISEF" (isef-fellowship) הקיימת לתואר שני/שלישי מקומי.',
-      en: "ISEF Fellows post-doctoral: up to $10,000 (US dollars, not ILS — left unconverted to avoid distorting the original figure). Bachelor's/master's/PhD scholarships: exact amount not independently verified — see also the existing \"ISEF Fellowship\" page (isef-fellowship) for the domestic master's/PhD track.",
-      am: "ድህረ-ዶክትሬት ባልደረቦች፦ እስከ 10,000$ (የአሜሪካ ዶላር)።",
-    },
-    deadline: null,
-    status: "open",
-    lastVerified: "2026-08-30",
-    applicationUrl:
-      "https://www.isef.org.il/%D7%9E%D7%9C%D7%92%D7%95%D7%AA-%D7%9C%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D/%D7%9E%D7%9C%D7%92%D7%94-%D7%9C%D7%93%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%98",
-    tags: ["phd", "postdoc", "academic", "community"],
     communityPriority: true,
     relatedScholarships: ["isef-fellowship"],
     relatedRights: [],
     bodies: {
-      he: `## במה שונה עמוד זה מ"מלגת ISEF" הקיימת?
+      he: `## קראו את זה קודם
 
-קרן אייסף מפעילה **יותר ממסלול אחד**. הפורטל כבר מציג את "מלגת ISEF" (\`isef-fellowship\`) — מלגת שכר לימוד וסטיפנדיה לתואר שני/שלישי בישראל. עמוד זה מתאר שני מסלולים **נוספים**:
+אתר טבקה (tebeka.org.il) **לא נטען** אצלנו באף שיטת בדיקה בספטמבר 2026. כל מה שכתוב בעמוד הזה לקוח מעמודי מלגות של מוסדות אקדמיים, לא מהארגון עצמו.
 
-1. **מלגות תואר ראשון/שני/דוקטורט** — מסלול רחב יותר מהמלגה הקיימת
-2. **עמיתי אייסף** — תוכנית מחקר בתר-דוקטורט **בחו"ל**, עד **10,000$**
+המשמעות: הסכומים והתאריכים כאן נכונים לקול הקורא כפי שהמוסדות פרסמו אותו — אבל אנחנו לא יכולים לאשר מול טבקה שזה עדיין המצב. אמתו מולם ישירות לפני שאתם בונים על זה.
+
+## מי נותן את המלגה?
+
+השם המלא הוא **"מלגה למשפטנים יוצאי אתיופיה ע"ש עו"ד צבי מיתר ז"ל"**, וכאן יש בלבול נפוץ: טבקה מנהלת את הקול הקורא, אבל לא היא המממנת. בלשון הפרסום: "יחולקו ע"י קרן משפחת צבי ז"ל ועפרה מיתר ומשרד מיתר | עורכי דין, מלגות לסטודנטים למשפטים יוצאי אתיופיה".
+
+## כמה?
+
+5,000 ₪ למלגה. בנוסף: "ועדת המלגות רשאית להעניק מלגה גבוהה יותר… על פי שיקול דעתה".
+
+מקור: [אוניברסיטת בר-אילן — מלגות](https://www.biu.ac.il/scholarship/583026) · נבדק ספטמבר 2026.
 
 ## מי זכאי?
 
-- לתואר ראשון/שני/דוקטורט: סטודנטים יוצאי אתיופיה בישראל
-- לעמיתי אייסף: חוקרים בעלי דוקטורט המבקשים לבצע מחקר בתר-דוקטורט במוסד מחקר מחוץ לישראל
+- תכנית לימודים מלאה — לפחות שלושה ימי לימודים בשבוע — בפקולטה או במכללה למשפטים במוסד מוכר
+- עדיפות לסטודנטים בשנה א' או ב'
 
-## איך פונים?
+השיקולים בבחירה: יכולת אקדמית, מוטיבציה, מצב משפחתי וסוציו-אקונומי, מעורבות חברתית, וראיון אישי.
 
-הרשמה דרך isef.org.il — יש להבחין בין מסלול "עמיתי אייסף" (בתר-דוקטורט בחו"ל) לבין מלגות התואר הרגילות.
+שימו לב: **לא מפורסם סף ציונים.** אם ראיתם במקום כלשהו ממוצע מינימלי למלגה הזו — הוא לא מופיע בקול הקורא.
+
+## מה מקבלים מעבר לכסף
+
+"כל מלגאי ילווה על ידי עורך דין ממשרד מיתר… לפחות מפגש אחד בחודש". נכון ל-2025 הפרויקט מתקיים בפעם השמינית. זה ליווי במהלך התואר — לא הכנה לשלב ההתמחות שאחריו.
+
+## מתי מגישים?
+
+הקול הקורא האחרון שפורסם הוא לשנת תשפ"ה: "מועד הגשה מ-02.02.25 עד 30.04.25 — מועד עבר", בסגירה ב-30 באפריל 2025 בשעה 12:00 בצוהריים.
+
+**לא פורסם קול קורא לתשפ"ו או לתשפ"ז באף מקור שאיתרנו.** לכן הסטטוס כאן הוא "טרם נקבע". אם אתם מתכננים להגיש — צרו קשר עם טבקה ובררו אם נפתח מחזור חדש, ובמקביל שאלו בדיקנט הסטודנטים שלכם, שאליו הקול הקורא נשלח.
 
 ## ראו גם
 
-- [מלגת ISEF — תואר שני/שלישי בארץ](/he/education/scholarships/isef-fellowship)
+- [מלגת ISEF](/he/education/scholarships/isef-fellowship)
+- [עמוד ארגון טבקה](/he/orgs/tebeka)
 `,
-      en: `## How is this different from the existing "ISEF Fellowship" page?
+      en: `## Read this first
 
-The ISEF Fund runs **more than one track**. The portal already has "ISEF Fellowship" (\`isef-fellowship\`) — a tuition + stipend scholarship for master's/PhD in Israel. This page describes two **additional** tracks:
+Tebeka's website (tebeka.org.il) **would not load** for us by any fetch method in September 2026. Everything on this page comes from academic institutions' scholarship pages, not from the organisation itself.
 
-1. **Bachelor's/master's/PhD scholarships** — a broader track than the existing scholarship
-2. **ISEF Fellows** — a post-doctoral research program **abroad**, up to **$10,000**
+What that means: the amounts and dates here are correct for the call as institutions published it — but we cannot confirm with Tebeka that this is still the position. Verify with them directly before you build on it.
+
+## Who funds this scholarship?
+
+The full name is **"Scholarship for Ethiopian-Israeli law students in memory of Adv. Zvi Meitar"**, and there is a common confusion here: Tebeka administers the call, but it is not the funder. In the published wording: "to be distributed by the foundation of the family of Zvi (z"l) and Ofra Meitar and the firm Meitar | Law Offices, scholarships for Ethiopian-Israeli law students".
+
+## How much?
+
+₪5,000 per scholarship. In addition: "the scholarship committee may award a higher scholarship… at its discretion".
+
+Source: [Bar-Ilan University — scholarships](https://www.biu.ac.il/scholarship/583026) · verified September 2026.
 
 ## Who is eligible?
 
-- For bachelor's/master's/PhD: Ethiopian-Israeli students in Israel
-- For ISEF Fellows: PhD holders seeking to conduct post-doctoral research at a research institution outside Israel
+- A full study programme — at least three study days a week — at a law faculty or law college in a recognised institution
+- Preference for students in year 1 or year 2
 
-## How to apply
+Selection considerations: academic ability, motivation, family and socio-economic situation, social involvement, and a personal interview.
 
-Register via isef.org.il — distinguish between the "ISEF Fellows" track (post-doc abroad) and the regular degree scholarships.
+Note: **no GPA threshold is published.** If you have seen a minimum average quoted for this scholarship somewhere, it does not appear in the call.
+
+## What you get beyond the money
+
+"Each scholarship recipient will be accompanied by a lawyer from the Meitar firm… at least one meeting a month". As of 2025 the project is running for the eighth time. This is mentorship during the degree — not preparation for the internship stage that follows it.
+
+## When do you apply?
+
+The most recent published call is for the 2024-25 academic year: "submission from 02.02.25 to 30.04.25 — date passed", closing 30 April 2025 at 12:00 noon.
+
+**No call for 2025-26 or 2026-27 exists in any source we could find.** That is why the status here is "to be announced". If you plan to apply, contact Tebeka to ask whether a new cycle has opened, and in parallel ask your dean of students' office, which is where the call is sent.
 
 ## See also
 
-- [ISEF Fellowship — domestic master's/PhD](/en/education/scholarships/isef-fellowship)
+- [ISEF Fellowship](/en/education/scholarships/isef-fellowship)
+- [Tebeka org profile](/en/orgs/tebeka)
 `,
-      am: `## ይህ ገጽ ካለው "ISEF Fellowship" እንዴት ይለያል?
+      am: `## በመጀመሪያ ይህንን ያንብቡ
 
-የISEF ፈንድ ከአንድ በላይ መንገድ አለው። ይህ ገጽ ሁለት **ተጨማሪ** መንገዶችን ይገልጻል፦
+የቴቤካ ድረ-ገጽ (tebeka.org.il) በሴፕቴምበር 2026 በምንም መንገድ **አልተከፈተልንም**። በዚህ ገጽ ያለው ሁሉ ከአካዳሚክ ተቋማት የስኮላርሺፕ ገጾች የተወሰደ ነው እንጂ ከድርጅቱ ራሱ አይደለም።
 
-1. **ለመጀመሪያ/ሁለተኛ/ዶክትሬት ዲግሪ ድጋፎች**
-2. **የISEF ባልደረቦች** — ከእስራኤል **ውጭ** ድህረ-ዶክትሬት ምርምር፣ እስከ **$10,000**
+ትርጉሙ፦ እዚህ ያሉት መጠኖችና ቀኖች ተቋማት ባተሙት ጥሪ መሰረት ትክክል ናቸው — ነገር ግን አሁንም እንደዚያ መሆኑን ከቴቤካ ጋር ማረጋገጥ አልቻልንም። ከመተማመንዎ በፊት በቀጥታ ያረጋግጡ።
+
+## ስኮላርሺፑን የሚሰጠው ማን ነው?
+
+ሙሉ ስሙ **"በጠበቃ ዝቪ ሜይታር መታሰቢያ ለኢትዮጵያ ተወላጅ የሕግ ተማሪዎች ስኮላርሺፕ"** ነው። እዚህ የተለመደ ግራ መጋባት አለ፦ ቴቤካ ጥሪውን ያስተዳድራል እንጂ ገንዘቡን የሚሰጥ አይደለም። በታተመው ቃል፦ "በዝቪ (ዘ"ል) እና ኦፍራ ሜይታር ቤተሰብ ፈንድና በሜይታር | የሕግ ቢሮዎች የሚሰጡ፣ ለኢትዮጵያ ተወላጅ የሕግ ተማሪዎች ስኮላርሺፖች"።
+
+## ስንት ነው?
+
+በአንድ ስኮላርሺፕ ₪5,000። በተጨማሪም፦ "የስኮላርሺፕ ኮሚቴው በራሱ ውሳኔ ከፍ ያለ ስኮላርሺፕ ሊሰጥ ይችላል"።
+
+ምንጭ፦ [የባር-ኢላን ዩኒቨርሲቲ — ስኮላርሺፖች](https://www.biu.ac.il/scholarship/583026) · ሴፕቴምበር 2026 ተረጋግጧል።
 
 ## ለማን ይሆናል?
 
-- ለዲግሪ ድጋፎች፦ በእስራኤል ያሉ ኢትዮጵያ-ተወላጅ ተማሪዎች
-- ለባልደረቦች፦ ከእስራኤል ውጭ ድህረ-ዶክትሬት ምርምር የሚፈልጉ የዶክትሬት ያላቸው
+- ሙሉ የትምህርት ፕሮግራም — በሳምንት ቢያንስ ሦስት የትምህርት ቀናት — በእውቅና ባለው ተቋም የሕግ ፋኩልቲ ወይም ኮሌጅ
+- ለ1ኛ ወይም 2ኛ ዓመት ተማሪዎች ቅድሚያ
 
-*($10,000 የሚለው መጠን ከምንጩ (isef.org.il) እንደወጣ ነው የቀረበው፣ ወደ ሺል አልተቀየረም።)*
+የምርጫ ግምቶች፦ የአካዳሚክ ችሎታ፣ ተነሳሽነት፣ የቤተሰብና ማህበራዊ-ኢኮኖሚያዊ ሁኔታ፣ ማህበራዊ ተሳትፎ፣ የግል ቃለ-መጠይቅ።
 
-## እንዴት ማመልከት ይቻላል?
+ልብ ይበሉ፦ **የውጤት ደረጃ ገደብ አልታተመም።**
 
-በisef.org.il በኩል ይመዝገቡ።
+## ከገንዘቡ ባሻገር
+
+"እያንዳንዱ ተጠቃሚ ከሜይታር ቢሮ በጠበቃ ይታጀባል… በወር ቢያንስ አንድ ስብሰባ"። እስከ 2025 ድረስ ፕሮጀክቱ ለስምንተኛ ጊዜ እየተካሄደ ነው። ይህ በዲግሪ ጊዜ የሚደረግ አጃቢነት ነው እንጂ ለቀጣዩ የልምምድ ደረጃ ዝግጅት አይደለም።
+
+## መቼ ማመልከት ይቻላል?
+
+የመጨረሻው የታተመ ጥሪ ለ2024-25 የትምህርት ዓመት ነው፦ "ማስገቢያ ከ02.02.25 እስከ 30.04.25 — ቀኑ አልፏል"፣ በ30 ሚያዝያ 2025 በ12:00 ቀትር ይዘጋል።
+
+**ለ2025-26 ወይም ለ2026-27 ጥሪ ባገኘነው ምንጭ ሁሉ የለም።** ስለዚህ ሁኔታው "ገና አልተወሰነም" ነው። ማመልከት ካሰቡ ቴቤካን ያነጋግሩ፣ በተጓዳኝም የተማሪዎች ዲን ጽ/ቤትዎን ይጠይቁ።
 
 ## ይህንንም ይዩ
 
-- [ISEF Fellowship — በሀገር ውስጥ](/am/education/scholarships/isef-fellowship)
+- [ISEF Fellowship](/am/education/scholarships/isef-fellowship)
+- [የቴቤካ ድርጅት መገለጫ](/am/orgs/tebeka)
 `,
     },
   },
@@ -736,23 +772,29 @@ Register via isef.org.il — distinguish between the "ISEF Fellows" track (post-
       en: "A scholarship for Ethiopian-Israeli women, with a dedicated gender lens — a community women-led initiative advancing education and employment.",
       am: "ለኢትዮጵያ-ተወላጅ ሴቶች ድጋፍ — በሴቶች የተመራ የማህበረሰብ ተነሳሽነት።",
     },
-    amountMinIls: 0,
-    amountMaxIls: 0,
+    // TED-168: the amount is now sourced. The org's own page describes a past
+    // ceremony — "טקס מלגות ל-15 סטודנטיות יוצאות אתיופיה מרחבי הארץ, שכל אחת
+    // קיבלה מלגה על סך 4,000 ש״ח" — but names no year, so the figure is stated
+    // as what one past cycle paid, not as a current entitlement.
+    amountMinIls: 4000,
+    amountMaxIls: 4000,
     amountNote: {
-      he: "סכום המלגה בפועל לא אומת עצמאית מול maatzimot.org.il בזמן כתיבת עמוד זה.",
-      en: "The actual scholarship amount was not independently verified against maatzimot.org.il while drafting this page.",
-      am: "ትክክለኛ የድጋፍ መጠን በገለልነት አልተረጋገጠም።",
+      he: "₪4,000 לכל מלגאית ב-15 מלגות, לפי תיאור טקס שהעמותה מפרסמת בלי לציין שנה. אין מחזור פתוח ואין קריטריוני זכאות מפורסמים. מקור: maatzimot.org.il · נבדק ספטמבר 2026.",
+      en: "₪4,000 per recipient across 15 scholarships, per a ceremony the organisation describes without naming a year. There is no open cycle and no published eligibility criteria. Source: maatzimot.org.il · verified September 2026.",
+      am: "በ15 ስኮላርሺፖች ለእያንዳንዷ ተቀባይ ₪4,000፣ ድርጅቱ ዓመት ሳይጠቅስ በሚገልጸው ሥነ ሥርዓት መሠረት። ምንጭ፦ maatzimot.org.il · ሴፕቴምበር 2026 ተረጋግጧል።",
     },
     deadline: null,
     status: "tba",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-15",
     applicationUrl: "https://www.maatzimot.org.il",
     tags: ["undergrad", "women", "community"],
     communityPriority: true,
     relatedScholarships: [],
     relatedRights: [],
     bodies: {
-      he: `## מה זאת התוכנית?
+      he: `> **אזהרה על מקור.** באתר העמותה יש שני דפים שכותרתם "מלגות" שהם **מדריך למלגות של גופים אחרים**, והוא התיישן: הוא מצטט סכום "נכון ל-2014", מפנה לכתובות שכבר אינן קיימות, ונוקב בתנאי סף שאינם מופיעים אצל הגופים עצמם. אל תסתמכו על הנתונים שבאותם דפים — לא אצלם ולא דרכנו. מה שכתוב כאן נלקח מהדפים שבהם העמותה מתארת את **הפעילות שלה עצמה**.
+
+## מה זאת התוכנית?
 
 "נשים אתיופיות מעצימות" (מעצימות) הוא ארגון עם זווית מגדרית ספציפית — מלגות ותמיכה לנשים יוצאות אתיופיה, מתוך הכרה בקשיים הייחודיים העומדים בפני נשים בקהילה בדרך להשכלה גבוהה ותעסוקה.
 
@@ -815,128 +857,31 @@ Via maatzimot.org.il.
     },
   },
 
-  // W3-10. Olim Beyachad — organization profile (education + employment)
-  {
-    slug: "olim-beyachad-org",
-    level: "vocational",
-    providerOrgSlug: "olim-beyahad",
-    name: {
-      he: "עולים ביחד — תעסוקה והשכלה",
-      en: "Olim Beyachad — Employment & Education",
-      am: "ኦሊም ቢያካድ — ስራና ትምህርት",
-    },
-    shortDescription: {
-      he: "ארגון תעסוקה והשכלה הפועל עם קהילת יוצאי אתיופיה, ושותף מוכר בפתח תקווה (ראו גם עמוד העיר).",
-      en: "An employment-and-education organization working with the Ethiopian-Israeli community, and a recognized partner in Petach Tikva (see also the city page).",
-      am: "ከኢትዮጵያ-ተወላጅ ማህበረሰብ ጋር የሚሰራ ስራና ትምህርት ድርጅት፣ በፔታህ ቲቅቫ የታወቀ አጋር።",
-    },
-    amountMinIls: 0,
-    amountMaxIls: 0,
-    amountNote: {
-      he: "עמוד זה מתאר את הארגון כמכלול תעסוקה+השכלה; לפרטי מלגת ליווי הקריירה הספציפית ראו את הרשומה הקיימת olim-beyahad-career-mentorship.",
-      en: "This page describes the organization as an employment+education whole; for the specific career-mentorship stipend see the existing olim-beyahad-career-mentorship entry.",
-      am: "ይህ ገጽ ድርጅቱን በአጠቃላይ ይገልጻል።",
-    },
-    deadline: "rolling",
-    status: "open",
-    lastVerified: "2026-08-30",
-    applicationUrl: "https://www.olim-beyahad.org.il",
-    tags: ["vocational", "community", "employment", "petach-tikva"],
-    communityPriority: true,
-    relatedScholarships: ["olim-beyahad-career-mentorship", "tech-career-org"],
-    relatedRights: [],
-    bodies: {
-      he: `## מי זה עולים ביחד?
-
-עולים ביחד הוא ארגון תעסוקה והשכלה הפועל לצד קהילת יוצאי אתיופיה. הארגון הוא שותף מוכר ומוזכר בפועל בעמוד העיר [פתח תקווה](/he/cities/petach-tikva) — פתח תקווה מארחת ריכוז של אקדמאים ואנשי מקצוע בכירים מהקהילה, "בין השאר בזכות שיתוף הפעולה עם עמותת עולים ביחד" (טקסט זהה לזה שכבר מופיע בעמוד העיר, לשמירה על עקביות).
-
-## מה כלול?
-
-- ליווי תעסוקתי-השכלתי לבני הקהילה
-- שיתוף פעולה מוסדי עם ערים בעלות ריכוז קהילתי (למשל פתח תקווה)
-
-## מסלול ספציפי קיים בפורטל
-
-לתוכנית ליווי הקריירה הספציפית של הארגון (מנטור אישי, חיבור למעסיקים, מלגת השלמה) — ראו [ליווי קריירה — עולים ביחד](/he/education/scholarships/olim-beyahad-career-mentorship).
-
-## איך פונים?
-
-דרך olim-beyahad.org.il, או ראו את [עמוד הארגון המלא](/he/orgs/olim-beyahad).
-
-## ראו גם
-
-- [ליווי קריירה — עולים ביחד](/he/education/scholarships/olim-beyahad-career-mentorship)
-- [טק-קריירה](/he/education/scholarships/tech-career-org)
-- [עיר: פתח תקווה](/he/cities/petach-tikva)
-`,
-      en: `## Who is Olim Beyachad?
-
-Olim Beyachad is an employment-and-education organization working alongside the Ethiopian-Israeli community. It is a recognized partner mentioned on the [Petach Tikva city page](/en/cities/petach-tikva) — Petach Tikva hosts a concentration of senior professionals and academics from the community, "in part through collaboration with the Olim Beyahad organisation" (matching wording already on the city page, for consistency).
-
-## What's included?
-
-- Employment and education mentorship for community members
-- Institutional partnership with cities that have a strong community presence (e.g. Petach Tikva)
-
-## Existing specific track on the portal
-
-For the organization's specific career-mentorship program (personal mentor, employer connections, supplementary stipend) — see [Career Mentorship — Olim Beyachad](/en/education/scholarships/olim-beyahad-career-mentorship).
-
-## How to apply
-
-Via olim-beyahad.org.il, or see the [full org profile](/en/orgs/olim-beyahad).
-
-## See also
-
-- [Career Mentorship — Olim Beyachad](/en/education/scholarships/olim-beyahad-career-mentorship)
-- [Tech-Career](/en/education/scholarships/tech-career-org)
-- [City: Petach Tikva](/en/cities/petach-tikva)
-`,
-      am: `## ኦሊም ቢያካድ ማን ነው?
-
-ኦሊም ቢያካድ ከኢትዮጵያ-ተወላጅ ማህበረሰብ ጋር የሚሰራ ስራና ትምህርት ድርጅት ነው። በ[ፔታህ ቲቅቫ ከተማ ገጽ](/am/cities/petach-tikva) የተጠቀሰ አጋር ነው።
-
-## ምን ይካተታል?
-
-- ለማህበረሰብ አባላት የስራና ትምህርት ምክር
-- ከከተሞች ጋር ተቋማዊ አጋርነት
-
-## እንዴት ማመልከት ይቻላል?
-
-በolim-beyahad.org.il በኩል፣ ወይም [ሙሉ የድርጅት መገለጫ](/am/orgs/olim-beyahad) ይመልከቱ።
-
-## ይህንንም ይዩ
-
-- [የስራ ምክር — ኦሊም ቢያካድ](/am/education/scholarships/olim-beyahad-career-mentorship)
-`,
-    },
-  },
-
   // W3-12. HUJI Dean of Students — Ethiopian-Israeli Students Office
   {
     slug: "huji-dean-ethiopian-students",
     level: "undergrad",
     providerOrgSlug: "huji",
     name: {
-      he: "דיקנאט הסטודנטים ליוצאי אתיופיה — האוניברסיטה העברית",
+      he: "דיקנט הסטודנטים ליוצאי אתיופיה — האוניברסיטה העברית",
       en: "HUJI Dean of Students — Ethiopian-Israeli Students Office",
       am: "የHUJI ተማሪዎች ዲን — ኢትዮጵያ-ተወላጅ ተማሪዎች ጽ/ቤት",
     },
     shortDescription: {
-      he: "שירות מוסדי של דיקנאט הסטודנטים באוניברסיטה העברית לבני קהילת יוצאי אתיופיה — לא מלגה כלל-ארצית, אלא תמיכה מוסדית מקומית.",
+      he: "שירות מוסדי של דיקנט הסטודנטים באוניברסיטה העברית לבני קהילת יוצאי אתיופיה — לא מלגה כלל-ארצית, אלא תמיכה מוסדית מקומית.",
       en: "An institutional service from the Hebrew University Dean of Students for Ethiopian-Israeli students — not a nationwide scholarship, but local institutional support.",
       am: "ከHUJI ተማሪዎች ዲን ለኢትዮጵያ-ተወላጅ ተማሪዎች ተቋማዊ አገልግሎት — ብሔራዊ ድጋፍ አይደለም።",
     },
     amountMinIls: 0,
     amountMaxIls: 0,
     amountNote: {
-      he: "שירות מוסדי (ליווי, ולעיתים מלגות מקומיות דרך הדיקנאט) — לא סכום ארצי אחיד; לבדוק מול studean.huji.ac.il.",
+      he: "שירות מוסדי (ליווי, ולעיתים מלגות מקומיות דרך הדיקנט) — לא סכום ארצי אחיד; לבדוק מול studean.huji.ac.il.",
       en: "An institutional service (mentorship, and sometimes local scholarships via the dean's office) — not a uniform national figure; check studean.huji.ac.il.",
       am: "ተቋማዊ አገልግሎት እንጂ ብሔራዊ ወጥ መጠን አይደለም።",
     },
     deadline: null,
     status: "tba",
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-15",
     applicationUrl:
       "https://studean.huji.ac.il/%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94",
     tags: ["undergrad", "masters", "community", "institutional"],
@@ -946,7 +891,7 @@ Via olim-beyahad.org.il, or see the [full org profile](/en/orgs/olim-beyahad).
     bodies: {
       he: `## מה זה השירות?
 
-דיקנאט הסטודנטים באוניברסיטה העברית מפעיל שירות ייעודי לבני קהילת יוצאי אתיופיה הלומדים בקמפוס. בשונה מרוב הרשומות האחרות בעמוד זה, **מדובר בשירות מוסדי-מקומי, לא במלגה ארצית**.
+דיקנט הסטודנטים באוניברסיטה העברית מפעיל שירות ייעודי לבני קהילת יוצאי אתיופיה הלומדים בקמפוס. בשונה מרוב הרשומות האחרות בעמוד זה, **מדובר בשירות מוסדי-מקומי, לא במלגה ארצית**.
 
 ## מי זכאי?
 
@@ -955,11 +900,11 @@ Via olim-beyahad.org.il, or see the [full org profile](/en/orgs/olim-beyahad).
 ## מה כלול?
 
 - ליווי מוסדי לסטודנטים מהקהילה בקמפוס האוניברסיטה העברית
-- ייתכנו מלגות/מענקים מקומיים דרך הדיקנאט (לאמת)
+- ייתכנו מלגות/מענקים מקומיים דרך הדיקנט (לאמת)
 
 ## איך פונים?
 
-studean.huji.ac.il — עמוד "יוצאי אתיופיה" הספציפי בתוך אתר הדיקנאט.
+studean.huji.ac.il — עמוד "יוצאי אתיופיה" הספציפי בתוך אתר הדיקנט.
 
 ## ראו גם
 
@@ -1008,101 +953,6 @@ studean.huji.ac.il
 ## ይህንንም ይዩ
 
 - [VATAT — የዶክትሬትና ድህረ-ዶክትሬት ድጋፎች](/am/education/scholarships/vatat-doctoral-postdoc-scholarship)
-`,
-    },
-  },
-
-  // W3-13. Open University Scholarship
-  {
-    slug: "openu-scholarship",
-    level: "undergrad",
-    providerOrgSlug: "openu",
-    name: {
-      he: "מלגת האוניברסיטה הפתוחה",
-      en: "Open University Scholarship",
-      am: "የክፍት ዩኒቨርሲቲ ድጋፍ",
-    },
-    shortDescription: {
-      he: "מלגת האוניברסיטה הפתוחה ליוצאי אתיופיה — רלוונטית במיוחד למשפחות עובדות בזכות מודל הלימוד המרחוק/הגמיש.",
-      en: "An Open University scholarship for Ethiopian-Israeli students — especially relevant for working families thanks to the remote/flexible study model.",
-      am: "ለኢትዮጵያ-ተወላጅ ተማሪዎች የክፍት ዩኒቨርሲቲ ድጋፍ — ለስራተኛ ቤተሰቦች ተስማሚ የርቀት ትምህርት።",
-    },
-    amountMinIls: 0,
-    amountMaxIls: 0,
-    amountNote: {
-      he: "סכום המלגה בפועל לא אומת עצמאית מול openu.ac.il/dean-students/scholarships בזמן כתיבת עמוד זה.",
-      en: "The actual scholarship amount was not independently verified against openu.ac.il/dean-students/scholarships while drafting this page.",
-      am: "ትክክለኛ የድጋፍ መጠን በገለልነት አልተረጋገጠም።",
-    },
-    deadline: null,
-    status: "tba",
-    lastVerified: "2026-08-30",
-    applicationUrl:
-      "https://www.openu.ac.il/dean-students/scholarships/pages/sc_for_ethiopia.aspx",
-    tags: ["undergrad", "flexible-study", "community"],
-    communityPriority: true,
-    relatedScholarships: ["klita-tuition-grant"],
-    relatedRights: [],
-    bodies: {
-      he: `## מה זאת המלגה?
-
-מלגה של האוניברסיטה הפתוחה לסטודנטים יוצאי אתיופיה. הערך הייחודי כאן הוא **מודל הלימוד** של האוניברסיטה הפתוחה — למידה מרחוק וגמישה בקצב אישי — המתאימה במיוחד להורים עובדים ולבני קהילה המשלבים עבודה מלאה עם לימודים.
-
-## מי זכאי?
-
-- סטודנטים יוצאי אתיופיה הלומדים באוניברסיטה הפתוחה
-
-## למה זה שונה מהתוכניות האחרות בעמוד?
-
-בניגוד למכינות/מלגות הדורשות מגורים בקמפוס, מודל הלימוד המרחוק מתאים למי שלא יכול/ה לעזוב עבודה או משפחה לצורך לימודים מסורתיים.
-
-## איך פונים?
-
-openu.ac.il/dean-students/scholarships.
-
-## ראו גם
-
-- [מענק שכר לימוד — משרד הקליטה](/he/education/scholarships/klita-tuition-grant)
-`,
-      en: `## What is this scholarship?
-
-An Open University of Israel scholarship for Ethiopian-Israeli students. The distinct value here is the Open University's **study model** — flexible, self-paced remote learning — which particularly suits working parents and community members combining full-time work with study.
-
-## Who is eligible?
-
-- Ethiopian-Israeli students studying at the Open University
-
-## Why is this different from the other programs on this page?
-
-Unlike prep programs/scholarships that require campus housing, the remote-study model suits those who cannot leave work or family for traditional in-person study.
-
-## How to apply
-
-openu.ac.il/dean-students/scholarships.
-
-## See also
-
-- [Ministry of Aliyah Tuition Grant](/en/education/scholarships/klita-tuition-grant)
-`,
-      am: `## ይህ ድጋፍ ምንድን ነው?
-
-ለኢትዮጵያ-ተወላጅ ተማሪዎች የክፍት ዩኒቨርሲቲ ድጋፍ። ልዩ ዋጋው የ**ትምህርት ሞዴል** ነው — ተለዋዋጭ የርቀት ትምህርት — ለስራተኛ ወላጆችና ስራን ከትምህርት ጋር ለሚያዋህዱ ተስማሚ።
-
-## ለማን ይሆናል?
-
-- በክፍት ዩኒቨርሲቲ የሚማሩ ኢትዮጵያ-ተወላጅ ተማሪዎች
-
-## ለምን ከሌሎቹ ይለያል?
-
-የካምፓስ መኖሪያ ከሚያስፈልጋቸው መርሃ ግብሮች በተለየ፣ የርቀት ትምህርት ሞዴል ስራ ወይም ቤተሰብ መተው ለማይችሉ ተስማሚ ነው።
-
-## እንዴት ማመልከት ይቻላል?
-
-openu.ac.il/dean-students/scholarships
-
-## ይህንንም ይዩ
-
-- [የቅሊታ ሚኒስቴር ድጋፍ](/am/education/scholarships/klita-tuition-grant)
 `,
     },
   },

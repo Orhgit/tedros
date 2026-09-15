@@ -23,6 +23,8 @@ export interface ScholarshipSummary {
   amountNote: string;
   deadline: "rolling" | string | null;
   status: ScholarshipStatus;
+  /** ISO date registration is stated to open, when closed and published (TED-168). */
+  opensOn?: string;
   lastVerified: string;
   applicationUrl: string;
   communityPriority: boolean;
@@ -47,6 +49,7 @@ export function listScholarships(locale: Locale): ScholarshipSummary[] {
     amountNote: pickLocale(e.amountNote, locale),
     deadline: e.deadline,
     status: e.status,
+    opensOn: e.opensOn,
     lastVerified: e.lastVerified,
     applicationUrl: e.applicationUrl,
     communityPriority: e.communityPriority,
@@ -71,6 +74,7 @@ export function getScholarshipBySlug(
     amountNote: pickLocale(entry.amountNote, locale),
     deadline: entry.deadline,
     status: entry.status,
+    opensOn: entry.opensOn,
     lastVerified: entry.lastVerified,
     applicationUrl: entry.applicationUrl,
     communityPriority: entry.communityPriority,
@@ -114,6 +118,7 @@ export function relatedScholarships(
     amountNote: pickLocale(e.amountNote, locale),
     deadline: e.deadline,
     status: e.status,
+    opensOn: e.opensOn,
     lastVerified: e.lastVerified,
     applicationUrl: e.applicationUrl,
     communityPriority: e.communityPriority,

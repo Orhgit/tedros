@@ -9,6 +9,7 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { WhatsAppShare } from "~/components/sections/whatsapp-share";
 import { getOrgEntry } from "~/lib/db/queries/orgs.server";
+import { guidesForScholarship } from "~/lib/db/queries/scholarship-guides.server";
 import { getRightBySlug } from "~/lib/db/queries/rights.server";
 import {
   getScholarshipBySlug,
@@ -45,6 +46,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   const html = renderMarkdown(entry.body);
   const related = relatedScholarships(entry.slug, locale, 3);
   const provider = getOrgEntry(entry.providerOrgSlug, locale);
+  const guides = guidesForScholarship(entry.slug, locale);
   const relatedRightsResolved = entry.relatedRights
     .map((slug) => getRightBySlug(slug, locale))
     .filter((r): r is NonNullable<typeof r> => r !== null)
@@ -57,6 +59,7 @@ export async function loader({ params }: Route.LoaderArgs) {
     html,
     related,
     provider,
+    guides,
     relatedRights: relatedRightsResolved,
     shareUrl,
     publicUrl: PUBLIC_URL,
@@ -117,7 +120,8 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function ScholarshipDetail({ loaderData }: Route.ComponentProps) {
-  const { locale, entry, html, related, provider, relatedRights, shareUrl } = loaderData;
+  const { locale, entry, html, related, provider, guides, relatedRights, shareUrl } =
+    loaderData;
   const tag = SCHOLARSHIP_LEVEL_TO_TAG[entry.level];
   const tone = classesForTag(tag);
   return (
@@ -197,6 +201,13 @@ export default function ScholarshipDetail({ loaderData }: Route.ComponentProps) 
             <p className="mt-1 font-display text-lg font-semibold text-earth-900">
               {deadlineText(locale, entry.deadline)}
             </p>
+            {entry.opensOn && (
+              <p className="mt-1 text-xs font-semibold text-earth-800">
+                {t(locale, "scholarship_opens_on", {
+                  date: formatDate(locale, entry.opensOn),
+                })}
+              </p>
+            )}
             <p className="mt-1 text-xs text-ink-600">
               {t(locale, "scholarship_last_verified", {
                 date: formatDate(locale, entry.lastVerified),
@@ -222,6 +233,26 @@ export default function ScholarshipDetail({ loaderData }: Route.ComponentProps) 
           className="prose prose-sm prose-headings:font-display prose-headings:text-earth-900 prose-a:text-earth-700 prose-a:underline-offset-2 hover:prose-a:underline max-w-none text-ink-700"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+
+        {guides.length > 0 && (
+          <section className="mt-10 rounded-lg border border-earth-200 bg-card p-5">
+            <h2 className="font-display text-lg font-semibold text-earth-900">
+              {t(locale, "scholarships_guides_heading")}
+            </h2>
+            <ul className="mt-3 space-y-2">
+              {guides.map((g) => (
+                <li key={g.slug}>
+                  <Link
+                    to={`/${locale}/education/scholarships/guides/${g.slug}`}
+                    className="text-sm text-earth-700 underline underline-offset-2 hover:text-earth-900"
+                  >
+                    {g.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {provider && (
           <section className="mt-10 rounded-lg border border-earth-200 bg-card p-5">

@@ -944,5 +944,15 @@
   "sigd_related_guests_label": "ከማህበረሰቡ ውጭ ሆኖ ሰግድን መሳተፍ",
   "sigd_related_guests_desc": "ምን መልበስ፣ መቼ ፎቶ ማንሳት፣ እና ምን አለማለት።",
   "sigd_related_menu_label": "የሰግድ ምግብና የጾሙ ትርጉም",
-  "sigd_related_menu_desc": "ለምን እንደሚጾም፣ መቼ እንደሚሰበር፣ እና በማዕዱ ላይ ምን እንደሚቀርብ።"
+  "sigd_related_menu_desc": "ለምን እንደሚጾም፣ መቼ እንደሚሰበር፣ እና በማዕዱ ላይ ምን እንደሚቀርብ።",
+  "scholarship_opens_on": "ምዝገባ የሚከፈተው፦ {date}",
+  "scholarships_guides_heading": "የማመልከቻ መመሪያዎች",
+  "scholarships_guides_subtitle": "የስኮላርሺፕ ዝርዝር አይደለም — እንዴት እንደሚያመለክቱ ነው። ሰነዶች፣ የተነሳሽነት ደብዳቤ፣ ማመልከቻዎች የሚቀሩባቸው ምክንያቶች፣ እና ካስገቡ በኋላ ምን እንደሚሆን።",
+  "scholarship_guides_landing_title": "የስኮላርሺፕ ማመልከቻ መመሪያዎች",
+  "scholarship_guides_landing_subtitle": "ማንም የማይጽፍለት ክፍል፦ በትክክል ምን መጫን እንዳለብዎ፣ እንዴት መጻፍ እንዳለብዎ፣ እና ማመልከቻዎች ለምን እንደሚቀሩ።",
+  "scholarship_guide_updated": "የተዘመነው፦ {date}",
+  "scholarship_guides_all_cta": "ሁሉም የማመልከቻ መመሪያዎች",
+  "scholarship_guide_sources_heading": "ምንጮች",
+  "scholarship_guide_faq_heading": "ተደጋግመው የሚጠየቁ ጥያቄዎች",
+  "scholarship_guide_back_to_scholarships": "ወደ ስኮላርሺፕ ዝርዝር ተመለስ"
 }
