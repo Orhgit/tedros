@@ -47,9 +47,10 @@ const EXPECTED_URLS: Record<keyof typeof SITEMAPS, number> = {
   rights: 213,
   careers: 147,
   health: 147,
-  // TED-168: 678 - 18 (six scholarships retired, 3 locales each)
-  //          + 15 (the guides index + four application guides, 3 locales each)
-  content: 675,
+  // TED-169 took this to 687 (+9: the three Sigd season routes, 3 locales each).
+  // TED-168: -18 (six scholarships retired, 3 locales each)
+  //          +15 (the guides index + four application guides, 3 locales each)
+  content: 684,
   news: 504,
 };
 
@@ -151,6 +152,12 @@ describe("the city templates the audit told us to keep are still published", () 
     expect(has("/rights/mashkanta-guide-ethiopians")).toBe(true);
     expect(has("/rights/urban-renewal-netanya")).toBe(true);
     expect(has("/heritage/events/sigd")).toBe(true);
+    // TED-169 — the Sigd season siblings. Not city cells: three distinct
+    // pages. `/heritage/sigd` itself 301s to the guide and must stay out.
+    expect(has("/heritage/sigd/events-2026")).toBe(true);
+    expect(has("/heritage/sigd/schools")).toBe(true);
+    expect(has("/heritage/sigd/guests")).toBe(true);
+    expect(has("/heritage/sigd")).toBe(false);
     expect(has("/heritage/wedding/suppliers/catering")).toBe(true);
     expect(has("/education/scholarships/isef-fellowship")).toBe(true);
   });
