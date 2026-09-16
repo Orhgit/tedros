@@ -3000,19 +3000,21 @@ Any Amharic-speaking patient — primarily veteran community members (age 50+). 
     },
     govUrl: "https://www.gov.il/he/departments/ministry_of_religious_services",
     eligibilitySummary: {
-      he: 'קייסים — מנהיגי דת ביתא ישראל הוכרו רשמית ב-2018. שני בתי מדרש (אשקלון, ב"ש). תמיכה ממשלתית למימון פעילות, חופות, וטקסי חיים.',
-      en: "Kessim — Beta Israel religious leaders, officially recognized in 2018. Two seminaries (Ashkelon, Be'er Sheva). Government support for activities, weddings, and life-cycle ceremonies.",
+      he: 'קייסים — מנהיגי דת ביתא ישראל הוכרו רשמית ב-2018 (החלטת ממשלה 3649). שני בתי מדרש (אשקלון, ב"ש). תמיכה ממשלתית למימון פעילות וטקסי חיים. ההכרה אינה אישור אוטומטי לעריכת חופה וקידושין רשומה — זה אישור אישי.',
+      en: "Kessim — Beta Israel religious leaders, officially recognized in 2018 (government decision 3649). Two seminaries (Ashkelon, Be'er Sheva). Government support for activities and life-cycle ceremonies. The recognition is not an automatic permit to officiate a registered wedding — that permit is personal.",
       am: "ቄሶች — የቤታ እስራኤል ሃይማኖት መሪዎች በ2018 በይፋ ታውቀዋል። ሁለት የሃይማኖት ት/ቤቶች (አሽከሎን፣ ቤር ሼቫ)።",
     },
     tags: ["religion", "heritage", "community"],
     bodies: {
       he: `## מי הם הקייסים?
 
-מנהיגי דת ביתא ישראל. בעלי סמכות בטקסי חיים: ברית, חופה, אבל. הוכרו רשמית ב-2018 ע"י משרד הדתות. שני בתי מדרש פעילים.
+מנהיגי הדת של ביתא ישראל, ומובילים את טקסי החיים בקהילה: ברית, חתונה, אבל ואזכרה (תזכאר). הוכרו רשמית ב-2018 בהחלטת ממשלה 3649 ע"י המשרד לשירותי דת. שני בתי מדרש פעילים.
+
+**הבחנה אחת חשובה לפני שמתכננים חתונה**: ההכרה מ-2018 אינה אישור אוטומטי לערוך חופה וקידושין רשומה. אישור כזה הוא אישי, וניתן על ידי רב העיר במועצה הדתית שבה נפתח תיק הנישואין או על ידי הוועדה ברבנות הראשית. הקס מוביל את הברכות והמסורת; מי שעורך את החופה הרשומה הוא מי שמחזיק באישור. בררו במועצה הדתית שמית, לפני שקובעים תאריך.
 
 ## מה כלול?
 
-- **שירותי דת**: חופה, ברית, פדיון הבן, אבל — דרך קייס מקומי
+- **שירותי דת**: ברית, פדיון הבן, אבל ותזכאר — דרך קייס מקומי; ובחתונה, ליווי הטקס והברכות
 - **טקסי חיים**: סיגד (29 חשוון), דקס (יום אבל קהילתי)
 - **תמיכה לקייסים**: שכר חודשי ממשרד הדתות, ביטוח, פנסיה
 - **שני בתי מדרש**: אשקלון (לימוד מסורת ביתא ישראל) + ב"ש (השכלה רבנית)
@@ -3028,15 +3030,17 @@ Any Amharic-speaking patient — primarily veteran community members (age 50+). 
 3. **דרך IAEJ**: רשימת קייסים פעילים
 4. **לטקס פרטי**: הזמנה דרך תמ"ת (תיאום מוסדי) או מועצה דתית מקומית
 
-📞 **מועצה דתית — אגף הקייסים**: 02-5311111
+📞 **המשרד לשירותי דת — מוקד פניות הציבור**: 02-5311111 (פעיל 24 שעות, למעט שבתות וחגים). זה מוקד כללי של המשרד, לא קו ייעודי לקייסים; בקשו להעביר אתכם לאגף שירותי דת לעדה האתיופית. לתיאום טקס בעיר מסוימת, המועצה הדתית המקומית היא הכתובת המהירה יותר.
 `,
       en: `## Who are the Kessim?
 
-Beta Israel religious leaders. Authorized to officiate life-cycle ceremonies: brit milah, wedding, mourning. Officially recognized in 2018 by the Ministry of Religious Services. Two active seminaries.
+Beta Israel's religious leaders, who lead the community's life-cycle ceremonies: brit milah, weddings, mourning and memorial (tazkar). Officially recognized in 2018 by government decision 3649, through the Ministry of Religious Services. Two active seminaries.
+
+**One distinction that matters before planning a wedding**: the 2018 recognition is not an automatic permit to officiate a registered wedding. That permit is personal, granted by the city rabbi at the religious council where the marriage file was opened, or by the Chief Rabbinate's committee. The kes leads the blessings and the tradition; whoever officiates the registered ceremony is whoever holds the permit. Ask the religious council by name, before you set a date.
 
 ## What's included?
 
-- **Religious services**: weddings, brit, redemption-of-firstborn, mourning — via local kes
+- **Religious services**: brit, redemption-of-firstborn, mourning and tazkar — via a local kes; and at a wedding, leading the ceremony and the blessings
 - **Life-cycle ceremonies**: Sigd (29 Cheshvan), Dakas (community memorial day)
 - **Kessim support**: monthly salary from Ministry of Religious Services, insurance, pension
 - **Two seminaries**: Ashkelon (Beta Israel tradition) + Be'er Sheva (rabbinical education)
@@ -3052,15 +3056,17 @@ According to reporting (Davar newspaper, 2024), kessim still earn significantly 
 3. **Via IAEJ**: list of active kessim
 4. **For private ceremonies**: book via local religious council
 
-📞 **Religious Council — Kessim Division**: 02-5311111
+📞 **Ministry of Religious Services — public inquiries line**: 02-5311111 (24 hours, except Shabbat and festivals). This is the ministry's general line, not a dedicated kessim number; ask to be transferred to the Division for Religious Services to the Ethiopian Community. To arrange a ceremony in a specific city, the local religious council is the faster address.
 `,
       am: `## ቄሶች ማን ናቸው?
 
-የቤታ እስራኤል የሃይማኖት መሪዎች። ለሕይወት ስነ ስርዓቶች ስልጣን ያላቸው፦ ብርየት ሚላ፣ ሠርግ፣ ሐዘን። በ2018 በይፋ የተወከሉ።
+የቤታ እስራኤል የሃይማኖት መሪዎች፣ የማኅበረሰቡን የሕይወት ሥነ ሥርዓቶች የሚመሩ፦ ብርየት ሚላ፣ ሠርግ፣ ሐዘንና ተዝካር። በ2018 በመንግሥት ውሳኔ 3649 በይፋ ታውቀዋል።
+
+**ሠርግ ከማቀድዎ በፊት አንድ አስፈላጊ ልዩነት**፡ የ2018 እውቅና የተመዘገበ ሠርግ ለመፈጸም ራስ-ሰር ፈቃድ አይደለም። ፈቃዱ የግል ሲሆን መዝገቡ በተከፈተበት የሃይማኖት ምክር ቤት በከተማው ረቢ ወይም በዋናው ረቢነት ኮሚቴ ይሰጣል። ቄሱ ቡራኬዎቹንና ባህሉን ይመራል፤ የተመዘገበውን ሥነ ሥርዓት የሚፈጽመው ግን ፈቃዱን የያዘው ነው። ቀን ከመቁረጥዎ በፊት ከሃይማኖት ምክር ቤቱ በስም ያጣሩ።
 
 ## ምን ይካተታል?
 
-- **የሃይማኖት አገልግሎቶች**: ሠርግ፣ ብርየት፣ የበኩር መግዛት፣ ሐዘን
+- **የሃይማኖት አገልግሎቶች**: ብርየት፣ የበኩር መግዛት፣ ሐዘንና ተዝካር — በአካባቢው ቄስ በኩል፤ በሠርግም ሥነ ሥርዓቱንና ቡራኬዎቹን መምራት
 - **የሕይወት ስነ ስርዓቶች**: ሲግድ (29 ቸሽቫን)፣ ዳካስ
 - **ለቄሶች ድጋፍ**: ወርሃዊ ደመወዝ፣ ኢንሹራንስ፣ ጡረታ
 - **ሁለት የሃይማኖት ት/ቤቶች**: አሽከሎን + ቤር ሼቫ
@@ -3075,7 +3081,7 @@ According to reporting (Davar newspaper, 2024), kessim still earn significantly 
 2. **የማህበረሰብ ምኩራብ**: በአብዛኞቹ ከተሞች
 3. **በ IAEJ በኩል**: ያሉ ቄሶች ዝርዝር
 
-📞 **የሃይማኖት ምክር ቤት — የቄሶች ክፍል**: 02-5311111
+📞 **የሃይማኖት አገልግሎት ሚኒስቴር — የሕዝብ ጥያቄዎች መስመር**: 02-5311111 (24 ሰዓት፣ ከሰንበትና በዓላት በስተቀር)። ይህ የሚኒስቴሩ አጠቃላይ መስመር ነው እንጂ ለቄሶች የተለየ ቁጥር አይደለም፤ ወደ የኢትዮጵያ ማኅበረሰብ የሃይማኖት አገልግሎት ክፍል እንዲያስተላልፉዎ ይጠይቁ። በአንድ ከተማ ሥነ ሥርዓት ለማቀናጀት የአካባቢው የሃይማኖት ምክር ቤት ፈጣኑ አድራሻ ነው።
 `,
     },
   },
