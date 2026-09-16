@@ -51,7 +51,8 @@ const EXPECTED_URLS: Record<keyof typeof SITEMAPS, number> = {
   // TED-168: -18 (six scholarships retired, 3 locales each)
   //          +15 (the guides index + four application guides, 3 locales each)
   content: 684,
-  news: 504,
+  // TED-171: +18 (wave 12 — six news articles, 3 locales each).
+  news: 522,
 };
 
 async function locsOf(name: keyof typeof SITEMAPS): Promise<string[]> {
