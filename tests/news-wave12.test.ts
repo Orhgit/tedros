@@ -78,8 +78,10 @@ describe("wave 12 shape", () => {
 
   it("spreads across domains instead of clustering in one", () => {
     const domains = new Set(ARTICLES_WAVE12.flatMap((a) => a.tags));
-    expect(domains.size, `wave 12 covers only ${[...domains].join(", ")}`)
-      .toBeGreaterThanOrEqual(5);
+    expect(
+      domains.size,
+      `wave 12 covers only ${[...domains].join(", ")}`,
+    ).toBeGreaterThanOrEqual(5);
   });
 
   it("is dated 2026-09-16 or later, with updatedAt >= publishedAt", () => {
