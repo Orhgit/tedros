@@ -200,7 +200,10 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
           </h2>
           <div className="space-y-5">
             {ceremonies.map((item) => (
-              <article key={item.id} className="rounded-xl border border-earth-200 bg-card p-5">
+              <article
+                key={item.id}
+                className="rounded-xl border border-earth-200 bg-card p-5"
+              >
                 <h3 className="font-display text-base font-semibold text-earth-900">
                   {item.title}
                 </h3>
@@ -242,7 +245,10 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
           </h2>
           <div className="space-y-5">
             {arrange.map((item) => (
-              <article key={item.id} className="rounded-xl border border-earth-200 bg-card p-5">
+              <article
+                key={item.id}
+                className="rounded-xl border border-earth-200 bg-card p-5"
+              >
                 <h3 className="font-display text-base font-semibold text-earth-900">
                   {item.title}
                 </h3>

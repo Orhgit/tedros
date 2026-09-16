@@ -6,7 +6,12 @@ export const ARTICLES_WAVE6: NewsArticleEntry[] = [
   {
     slug: "where-to-buy-ethiopian-spices-groceries-israel",
     publishedAt: "2026-08-16",
-    updatedAt: "2026-08-16",
+    // 2026-09-16 (TED-170): added the by-city section linking the eight
+    // source-verified shopping pages. This article earns the "where to buy"
+    // demand (199 impressions, 10 clicks, avg pos 5.0 over 90 days) while
+    // culinary/shopping/<city> earned 0 — and until now there was no link
+    // from the page that ranks to the pages that hold the verified data.
+    updatedAt: "2026-09-16",
     tags: ["community"],
     title: {
       he: "איפה קונים תבלינים ומצרכים אתיופיים בישראל — ומה זה טף",
@@ -53,6 +58,21 @@ export const ARTICLES_WAVE6: NewsArticleEntry[] = [
 - [VegaMarket](https://vegamarket.co.il/our-shop/grocery/pantry/spices/%D7%AA%D7%A2%D7%A8%D7%95%D7%91%D7%AA-%D7%91%D7%A8%D7%91%D7%A8%D7%94-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%AA-%D7%9C%D7%A4%D7%99-%D7%9E%D7%A9%D7%A7%D7%9C/) — תערובת ברברה למכירה לפי משקל.
 - [טעם לחיים](https://www.taam-lehaim.co.il/product/909-%D7%AA%D7%A2%D7%A8%D7%95%D7%91%D7%AA-%D7%91%D7%A8%D7%91%D7%A8%D7%94-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%AA) — חנות טבע/טבעונית בתל אביב (נחלת בנימין), מוכרת ברברה עם משלוח ארצי.
 
+## לפי עיר — חנויות שאימתנו מול מקור
+
+לשמונה ערים יש אצלנו רשימה שנבדקה שם-שם מול מקור ציבורי, עם תאריך אימות ועם סימון מפורש כשהמקור ישן. אם אתם גרים באחת מהן, התחילו שם — זה מדויק יותר מכל רשימה ארצית:
+
+- [נתניה](/he/culinary/shopping/netanya) — שוק נתניה, האזור המתועד ביותר בארץ
+- [תל אביב](/he/culinary/shopping/tel-aviv) — נווה שאנן וסביבת התחנה המרכזית החדשה
+- [ראשון לציון](/he/culinary/shopping/rishon-lezion) — רחוב תרמ"ב
+- [חולון](/he/culinary/shopping/holon) — ג'סי כהן
+- [אשקלון](/he/culinary/shopping/ashkelon) — חנות מפעל עם שעות פתיחה מפורסמות
+- [רחובות](/he/culinary/shopping/rehovot) — שוק רחובות (המקורות ישנים; התקשרו לפני שנוסעים)
+- [קרית מלאכי](/he/culinary/shopping/kiryat-malakhi) — (המקורות ישנים; התקשרו לפני שנוסעים)
+- [באר שבע](/he/culinary/shopping/beer-sheva) — (המקורות ישנים; התקשרו לפני שנוסעים)
+
+ערים שאינן ברשימה הזאת — אשדוד וקרית גת בכללן — אין להן עמוד אצלנו מסיבה אחת: לא הצלחנו לאמת שם אף חנות מול מקור ציבורי. עדיף לומר זאת בקול מאשר למלא את הרשימה בשמות שלא בדקנו.
+
 ## טיפים לקנייה
 
 - **קבוצות פייסבוק קהילתיות** הן ערוץ נפוץ מאוד לשאלות "איפה קונים" ולהמלצות עדכניות מיד ראשונה — למשל קבוצות של אמהות מהקהילה. טדרוס אינו מצטט תוכן ספציפי מקבוצות סגורות, אבל אם אתם מחפשים המלצה עדכנית מהשטח, זה ערוץ טבעי לבדוק.
@@ -98,6 +118,21 @@ There is currently no official community body maintaining an up-to-date list of 
 - [VegaMarket](https://vegamarket.co.il/our-shop/grocery/pantry/spices/%D7%AA%D7%A2%D7%A8%D7%95%D7%91%D7%AA-%D7%91%D7%A8%D7%91%D7%A8%D7%94-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%AA-%D7%9C%D7%A4%D7%99-%D7%9E%D7%A9%D7%A7%D7%9C/) — berbere blend sold by weight.
 - [Taam LeChaim](https://www.taam-lehaim.co.il/product/909-%D7%AA%D7%A2%D7%A8%D7%95%D7%91%D7%AA-%D7%91%D7%A8%D7%91%D7%A8%D7%94-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%AA) — a vegan/nature shop in Tel Aviv (Nahalat Binyamin), sells berbere with nationwide shipping.
 
+## By city — shops we verified against a source
+
+For eight cities we keep a list checked shop by shop against a public source, with a verification date and an explicit flag when the source is old. If you live in one of them, start there — it is more precise than any nationwide list:
+
+- [Netanya](/en/culinary/shopping/netanya) — the Netanya market, the best-documented area in the country
+- [Tel Aviv](/en/culinary/shopping/tel-aviv) — Neve Sha'anan and the New Central Bus Station area
+- [Rishon LeZion](/en/culinary/shopping/rishon-lezion) — Tarmav Street
+- [Holon](/en/culinary/shopping/holon) — Jessie Cohen
+- [Ashkelon](/en/culinary/shopping/ashkelon) — a factory shop with published opening hours
+- [Rehovot](/en/culinary/shopping/rehovot) — the Rehovot market (sources are old; call before you travel)
+- [Kiryat Malakhi](/en/culinary/shopping/kiryat-malakhi) — (sources are old; call before you travel)
+- [Beer Sheva](/en/culinary/shopping/beer-sheva) — (sources are old; call before you travel)
+
+Cities not on that list — Ashdod and Kiryat Gat among them — have no page here for one reason: we could not verify a single shop there against a public source. Better to say so out loud than to pad the list with names we never checked.
+
 ## Buying tips
 
 - **Community Facebook groups** are a very common channel for "where do I buy" questions and up-to-date first-hand recommendations — for example, groups for community mothers. Tedros does not quote specific content from closed groups, but if you want a current on-the-ground recommendation, this is a natural place to check.
@@ -137,6 +172,21 @@ There is currently no official community body maintaining an up-to-date list of 
 
 - [VegaMarket](https://vegamarket.co.il/) — በርበሬ ድብልቅ በክብደት ይሸጣል።
 - [ጣዓም ለቻይም](https://www.taam-lehaim.co.il/) — በተል አቪቭ (ናሃላት ቢንያሚን) የተፈጥሮ/ቬጋን ሱቅ፣ በርበሬን በአገር አቀፍ ማድረሻ ይሸጣል።
+
+## በከተማ — ከምንጭ ጋር ያረጋገጥናቸው ሱቆች
+
+ለስምንት ከተሞች ሱቅ በሱቅ ከሕዝባዊ ምንጭ ጋር የተረጋገጠ ዝርዝር አለን፤ የማረጋገጫ ቀን ያለው፣ ምንጩ ያረጀ ሲሆንም በግልጽ የሚያመለክት። በአንዷ የሚኖሩ ከሆነ ከዚያ ይጀምሩ — ከማንኛውም አገር አቀፍ ዝርዝር የበለጠ ትክክለኛ ነው፦
+
+- [ነታንያ](/am/culinary/shopping/netanya) — የነታንያ ገበያ፣ በአገሪቱ በጣም የተመዘገበው አካባቢ
+- [ተል አቪቭ](/am/culinary/shopping/tel-aviv) — ነቬ ሻአናንና የአዲሱ ማዕከላዊ አውቶቡስ ጣቢያ አካባቢ
+- [ሪሾን ለጽዮን](/am/culinary/shopping/rishon-lezion) — የታርማብ ጎዳና
+- [ሆሎን](/am/culinary/shopping/holon) — ጄሲ ኮሄን
+- [አሽቀሎን](/am/culinary/shopping/ashkelon) — የታወቁ የክፍት ሰዓቶች ያሉት የፋብሪካ ሱቅ
+- [ረሆቮት](/am/culinary/shopping/rehovot) — የረሆቮት ገበያ (ምንጮቹ አርጅተዋል፤ ከመጓዝዎ በፊት ይደውሉ)
+- [ኪርያት ማላኺ](/am/culinary/shopping/kiryat-malakhi) — (ምንጮቹ አርጅተዋል፤ ከመጓዝዎ በፊት ይደውሉ)
+- [ብኤር ሼቫ](/am/culinary/shopping/beer-sheva) — (ምንጮቹ አርጅተዋል፤ ከመጓዝዎ በፊት ይደውሉ)
+
+በዚህ ዝርዝር ውስጥ የሌሉ ከተሞች — አሽዶድና ኪርያት ጋትን ጨምሮ — እዚህ ገጽ የሌላቸው በአንድ ምክንያት ነው፡ እዚያ አንድም ሱቅ ከሕዝባዊ ምንጭ ጋር ማረጋገጥ አልቻልንም። ካላረጋገጥናቸው ስሞች ዝርዝሩን ከመሙላት ይህን በግልጽ መናገር ይሻላል።
 
 ## የግዢ ምክሮች
 

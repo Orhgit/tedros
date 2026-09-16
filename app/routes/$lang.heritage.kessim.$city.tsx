@@ -213,6 +213,25 @@ export default function KessimCityPage({ loaderData }: Route.ComponentProps) {
             ))}
           </ul>
           <p className="mt-3 text-xs text-ink-600">{phoneNote}</p>
+          {/* TED-170 — the ceremonies / what-to-ask / how-to-arrange guidance
+              lives on the landing page and is linked from here, deliberately
+              NOT copied onto all 31 city pages. Repeating one identical block
+              across a city matrix is exactly the pattern the duplication
+              audit measured at 0-1.7% corpus-unique before TED-172 redirected
+              6,858 URLs. These pages stay what they are worth being: the
+              verified roster for this city. */}
+          <p className="mt-3 text-sm leading-relaxed text-ink-700">
+            <Link
+              to={`/${locale}${kessimLandingPath()}`}
+              className="font-medium text-earth-700 underline hover:text-earth-900"
+            >
+              {locale === "he"
+                ? "לאילו טקסים פונים לקס, מה לשאול לפני שמתחייבים ואיך מתאמים"
+                : locale === "am"
+                  ? "ቄስ ለየትኞቹ ሥነ ሥርዓቶች እንደሚቀርብ፣ ከመወሰንዎ በፊት ምን መጠየቅ እንዳለብዎና እንዴት ማቀናጀት እንደሚችሉ"
+                  : "Which ceremonies a kes is approached for, what to ask before you commit, and how to arrange one"}
+            </Link>
+          </p>
         </section>
 
         {/* Cross-links — marriage guide, mourning guide, the right. */}
