@@ -754,9 +754,9 @@ export const KESSIM_COPY: Record<string, Record<Locale, string>> = {
     am: "ዝርዝሩ ከላይ በተጠቀሰው የዘመነበት ቀን ያለውን ሁኔታ ያሳያል፣ ሊለወጥም ይችላል። ከመደወልዎ በፊት የመገናኛ መረጃውን በከተማው ካለው የሃይማኖት ምክር ቤት ጋር ያረጋግጡ።",
   },
   marriageCrosslinkBody: {
-    he: "מאז 2018 הקייסים מוכרים ומוסמכים לערוך חופה וקידושין. המדריך לרישום נישואין מסביר מה לעשות ובאיזה סדר.",
-    en: "Since 2018 the kessim have been recognized and authorized to officiate weddings. The marriage registration guide explains what to do and in what order.",
-    am: "ከ2018 ጀምሮ ቄሶች ታውቀዋል፣ ሠርግ የመፈጸም ሥልጣንም አላቸው። የጋብቻ ምዝገባ መመሪያው ምን ማድረግ እንዳለብዎና በምን ቅደም ተከተል እንደሆነ ያብራራል።",
+    he: "החלטת הממשלה מ-2018 הכירה במעמד הקייסים ושילבה אותם במועצות הדתיות — אבל היא אינה אישור אוטומטי לערוך חופה וקידושין, שהוא אישור אישי. המדריך לרישום נישואין מסביר מה לבדוק, את מי לשאול ובאיזה סדר.",
+    en: "The 2018 government decision recognized the status of the kessim and integrated them into the religious councils — but it is not an automatic permit to officiate a wedding, which is granted personally. The marriage registration guide explains what to check, whom to ask, and in what order.",
+    am: "የ2018 የመንግሥት ውሳኔ የቄሶችን ደረጃ አውቆ በሃይማኖት ምክር ቤቶች አካቷቸዋል — ነገር ግን ሠርግ ለመፈጸም ራስ-ሰር ፈቃድ አይደለም፤ ፈቃዱ የግል ነው። የጋብቻ ምዝገባ መመሪያው ምን ማጣራት እንዳለብዎ፣ ማንን መጠየቅ እንዳለብዎና በምን ቅደም ተከተል እንደሆነ ያብራራል።",
   },
 };
 
