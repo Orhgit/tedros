@@ -223,6 +223,49 @@ describe("marriage guide seed", () => {
     expect(MARRIAGE_BODY.en).toContain("February 2018");
   });
 
+  // TED-170. Decision 3649 recognized the kessim and funded posts for them in
+  // the religious councils. It did NOT make every kes a licensed officiant —
+  // that permit is personal, from the city rabbi or the Chief Rabbinate's
+  // committee. Five passages here previously said otherwise, one of them an
+  // FAQ answering "can a kes officiate our wedding officially?" with "כן."
+  // A couple who believed it would book a hall and be refused at
+  // registration. This is the ADR-021 failure shape, so it gets a guard.
+  it("never claims the 2018 decision authorized kessim to officiate weddings", () => {
+    const banned = [
+      "ומוסמכים לערוך חופה",
+      "והוסמכו לערוך חופה",
+      "מוסמכים לערוך חופה וקידושין",
+      "authorized to officiate weddings",
+      "authorized them to officiate",
+      "ሠርግ የመፈጸም ሥልጣንም አላቸው",
+      "ሠርግ የመፈጸም ሥልጣንም ሰጥቷቸዋል",
+    ];
+    const corpus = [
+      MARRIAGE_BODY.he,
+      MARRIAGE_BODY.en,
+      MARRIAGE_BODY.am,
+      JSON.stringify(MARRIAGE_STEPS),
+      JSON.stringify(MARRIAGE_FAQ),
+    ].join("\n");
+    for (const phrase of banned) {
+      expect(corpus, `unsupported officiating claim: "${phrase}"`).not.toContain(phrase);
+    }
+  });
+
+  it("tells the reader the officiating permit is personal and must be checked", () => {
+    const corpus = [
+      MARRIAGE_BODY.he,
+      MARRIAGE_BODY.en,
+      JSON.stringify(MARRIAGE_STEPS),
+      JSON.stringify(MARRIAGE_FAQ),
+    ].join("\n");
+    // Hebrew: the permit exists, is personal, and the reader is told to ask.
+    expect(corpus).toContain("אישור עריכת חופה וקידושין");
+    expect(corpus).toContain("הוועדה לאישור עורכי חופה וקידושין");
+    // English mirror.
+    expect(corpus).toContain("committee for approving wedding officiants");
+  });
+
   it("does not state a shekel amount for the registration fee (unverified)", () => {
     // Only the 40% discount is sourced; the fee itself lives in a changing
     // regulation appendix and was deliberately excluded.

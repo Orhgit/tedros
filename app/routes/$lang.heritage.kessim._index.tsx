@@ -9,14 +9,17 @@ import type { Route } from "./+types/$lang.heritage.kessim._index";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import {
+  KESSIM_ARRANGE,
+  KESSIM_CEREMONIES,
   KESSIM_CITIES,
   KESSIM_DIRECTORY,
+  KESSIM_QUESTIONS,
   KESSIM_SOURCE,
   kessimByCity,
   kessimCopy,
 } from "~/lib/heritage/kessim.server";
 import { kessimCityPath, kessimLandingPath, marriagePath } from "~/lib/heritage/links";
-import { breadcrumbJsonLd, itemListJsonLd } from "~/lib/heritage/schema";
+import { breadcrumbJsonLd, faqPageJsonLd, itemListJsonLd } from "~/lib/heritage/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -49,11 +52,26 @@ export async function loader({ params }: Route.LoaderArgs) {
     totalEntries: KESSIM_DIRECTORY.length,
     totalKessim: KESSIM_DIRECTORY.filter((e) => e.position === "kes").length,
     totalRabbis: KESSIM_DIRECTORY.filter((e) => e.position !== "kes").length,
+    // TED-170: the ceremonies / what-to-ask / how-to-arrange sections. The
+    // landing page is where the demand for this actually lands ("kessim",
+    // "מה זה קייס", "קייסים"), so it carries the full set.
+    ceremonies: KESSIM_CEREMONIES.map((c) => ({
+      id: c.id,
+      title: c.title[locale] ?? c.title.he,
+      body: c.body[locale] ?? c.body.he,
+    })),
+    questions: KESSIM_QUESTIONS[locale] ?? KESSIM_QUESTIONS.he,
+    arrange: KESSIM_ARRANGE.map((c) => ({
+      id: c.id,
+      title: c.title[locale] ?? c.title.he,
+      body: c.body[locale] ?? c.body.he,
+    })),
     source: {
       govUrl: KESSIM_SOURCE.govUrl,
       dataGovUrl: KESSIM_SOURCE.dataGovUrl,
       publisher: KESSIM_SOURCE.publisher[locale] ?? KESSIM_SOURCE.publisher.he,
       updatedAt: KESSIM_SOURCE.updatedAt,
+      recheckedAt: KESSIM_SOURCE.recheckedAt,
     },
     publicUrl: PUBLIC_URL,
   };
@@ -61,7 +79,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, cities, subtitle, publicUrl } = data;
+  const { locale, cities, subtitle, publicUrl, ceremonies, arrange } = data;
   const title = t(locale, "kessim_landing_title");
   const description = subtitle;
 
@@ -96,6 +114,15 @@ export const meta: Route.MetaFunction = ({ data }) => {
         { name: title, path: kessimLandingPath() },
       ]),
     },
+    // TED-170: the definitional queries this page should own ("kessim",
+    // "מה זה קייס", "קייסים") are questions, so the ceremonies and the
+    // arranging steps are also emitted as an FAQPage.
+    {
+      "script:ld+json": faqPageJsonLd({ publicUrl, locale }, kessimLandingPath(), [
+        ...ceremonies.map((c) => ({ question: c.title, answer: c.body })),
+        ...arrange.map((c) => ({ question: c.title, answer: c.body })),
+      ]),
+    },
   ];
 };
 
@@ -110,7 +137,13 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
     totalKessim,
     totalRabbis,
     source,
+    ceremonies,
+    questions,
+    arrange,
   } = loaderData;
+
+  const heading = (he: string, en: string, am: string) =>
+    locale === "he" ? he : locale === "am" ? am : en;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -150,6 +183,79 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
           >
             {t(locale, "kessim_marriage_crosslink_cta")}
           </Link>
+        </section>
+
+        {/* TED-170 — the ceremonies a kes is approached for. The roster alone
+            answered no search anyone was running; this is what does. */}
+        <section aria-labelledby="kessim-ceremonies-heading" className="mb-10">
+          <h2
+            id="kessim-ceremonies-heading"
+            className="mb-4 font-display text-xl font-semibold text-earth-900"
+          >
+            {heading(
+              "לאילו טקסים פונים לקס",
+              "Which ceremonies a kes is approached for",
+              "ቄስ ለየትኞቹ ሥነ ሥርዓቶች ይቀርባል",
+            )}
+          </h2>
+          <div className="space-y-5">
+            {ceremonies.map((item) => (
+              <article
+                key={item.id}
+                className="rounded-xl border border-earth-200 bg-card p-5"
+              >
+                <h3 className="font-display text-base font-semibold text-earth-900">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-700">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* What to ask before committing — the checklist. */}
+        <section
+          aria-labelledby="kessim-questions-heading"
+          className="mb-10 rounded-2xl border border-earth-200 bg-earth-50 p-5"
+        >
+          <h2
+            id="kessim-questions-heading"
+            className="font-display text-xl font-semibold text-earth-900"
+          >
+            {heading(
+              "מה לשאול לפני שמתחייבים",
+              "What to ask before you commit",
+              "ከመወሰንዎ በፊት ምን መጠየቅ",
+            )}
+          </h2>
+          <ul className="mt-3 list-disc space-y-2 ps-5 text-sm leading-relaxed text-ink-700">
+            {questions.map((q) => (
+              <li key={q}>{q}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* How to arrange one. */}
+        <section aria-labelledby="kessim-arrange-heading" className="mb-10">
+          <h2
+            id="kessim-arrange-heading"
+            className="mb-4 font-display text-xl font-semibold text-earth-900"
+          >
+            {heading("איך מתאמים", "How to arrange one", "እንዴት ማቀናጀት")}
+          </h2>
+          <div className="space-y-5">
+            {arrange.map((item) => (
+              <article
+                key={item.id}
+                className="rounded-xl border border-earth-200 bg-card p-5"
+              >
+                <h3 className="font-display text-base font-semibold text-earth-900">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-700">{item.body}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section aria-labelledby="kessim-cities-heading">
@@ -215,6 +321,15 @@ export default function KessimLanding({ loaderData }: Route.ComponentProps) {
             </li>
           </ul>
           <p className="mt-3 text-xs text-ink-600">{sourceCaveat}</p>
+          {/* TED-170 — say out loud when we last re-ran the list against the
+              source, separately from when the ministry last changed it. */}
+          <p className="mt-2 text-xs text-ink-600">
+            {heading(
+              `הצלבנו את הרשימה מול המקור ב-${source.recheckedAt}: כל ${totalEntries} הרשומות תואמות, ולא קיימת גרסה חדשה יותר מ-${source.updatedAt}.`,
+              `We re-checked this list against the source on ${source.recheckedAt}: all ${totalEntries} records match, and no version newer than ${source.updatedAt} exists.`,
+              `ዝርዝሩን ከምንጩ ጋር በ${source.recheckedAt} አረጋግጠናል፡ ሁሉም ${totalEntries} መዝገቦች ይዛመዳሉ፣ ከ${source.updatedAt} የሚበልጥ አዲስ ስሪትም የለም።`,
+            )}
+          </p>
         </section>
       </main>
       <SiteFooter locale={locale} />

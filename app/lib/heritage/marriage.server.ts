@@ -23,9 +23,24 @@
 //   ravakut, and the referral of olim to the rabbinical court.
 // - itim.org.il — Interior-Ministry registration alone does not prove
 //   Jewish status at the Rabbanut; Itim's free helpline (*8083).
-// - Government decision of 19.02.2018 (reported by Ynet) — recognition of
-//   the kessim, their integration into religious councils, and their
-//   authority to officiate weddings.
+// - Government decision 3649 of 19.02.2018, "הסדרת שירותי הדת עבור יוצאי
+//   אתיופיה" (https://www.gov.il/he/pages/dec3649_2018 — gov.il serves 403
+//   to automated clients; the /Departments/policies/dec3649_2018 form 301s
+//   to it, confirming the page). Reported by Ynet (L-5121468) and Davar
+//   (davar1.co.il/111287): the decision recognized the kessim as the
+//   community's spiritual leaders and funded positions for them in the
+//   religious councils (7.5 kessim posts in 2018, 10 more across 2019-2021,
+//   20 Ethiopian-origin rabbis funded in 2018).
+//   CORRECTED 2026-09-16 (TED-170): this decision did NOT grant kessim the
+//   authority to officiate weddings. Ynet reports marriage authority as a
+//   community demand still under discussion, not as something granted.
+//   Officiating a *registered* חופה וקידושין requires a personal permit from
+//   the city rabbi at the religious council where the file was opened, or
+//   from the Chief Rabbinate's committee for approving officiants
+//   (rabanut.org.il publishes such a per-council approved-officiant list).
+//   Four passages on this page previously asserted the blanket authority —
+//   including an FAQ that answered "can a kes officiate our wedding
+//   officially?" with a flat "yes". All four now state the permit rule.
 //
 // Deliberately EXCLUDED as unverifiable at the time of writing: the exact
 // shekel amount of the marriage-registration fee (published only in a
@@ -106,7 +121,7 @@ export const MARRIAGE_BODY: Record<Locale, string> = {
 את התיק פותחים במועצה הדתית במקום המגורים של אחד מבני הזוג, בדרך כלל בין שלושה חודשים ל-45 יום לפני החתונה (פתיחה מחוץ לחלון הזה מחייבת אישור חריג). מביאים תעודות זהות עם הספח, תמונות, ואת תעודת הנישואין של ההורים מהרבנות — או את אישור היהדות, אם נדרש בירור. נדרשים גם עדי רווקות: שני עדים בגירים שמכירים אתכם ואינם קרובי משפחה מדרגה ראשונה, המאשרים שאתם פנויים להינשא. אם אחד מבני הזוג גרוש או אלמן — יש להביא את מסמכי הגירושין או תעודת הפטירה המקוריים. על רישום הנישואין משלמים אגרה; מי שאחד מבני הזוג הוא חייל בשירות חובה, בשירות לאומי, סטודנט עד גיל 30, עולה בשנתיים הראשונות לעלייה, מקבל תעודת נכות או מטופל ברווחה — זכאי להנחה של 40% באגרה. שאלו על ההנחה יזומה; לא תמיד מציעים אותה.
 
 תפקידו של הקס לצד הרבנות
-מאז החלטת הממשלה מפברואר 2018 הוכר מעמדם של הקייסים, הם משולבים במועצות הדתיות ומוסמכים לערוך חופה וקידושין — ומי שרוצה, יכול לבקש שהקס יערוך את הטקס עצמו. בפועל רבים בקהילה משלבים: הרישום והכתובה מתנהלים מול המועצה הדתית, והקס מלווה את הטקס, הברכות והמסורת המשפחתית. שני המסלולים לגיטימיים ורשמיים — אין כאן "נכון" ו"פחות נכון", אלא בחירה של המשפחה. אם אתם רוצים קס — אמרו זאת כבר בפתיחת התיק ובררו מול המועצה הדתית מי מהקייסים באזור רשום כעורך חופה וקידושין.
+החלטת ממשלה 3649 מפברואר 2018 הכירה במעמדם של הקייסים כמנהיגים הרוחניים של הקהילה, ותקצבה להם משרות במועצות הדתיות. חשוב באותה מידה לדעת מה ההחלטה לא עשתה: היא לא הפכה כל קס לעורך חופה וקידושין. בישראל רשאי לערוך חופה רשומה רק מי שאושר לכך אישית — על ידי רב העיר במועצה הדתית שבה נפתח תיק הנישואין, או על ידי הוועדה לאישור עורכי חופה וקידושין שברבנות הראשית. האישור הזה הוא אישי ואינו נובע מעצם היותו של אדם קס. בפועל רבות מהמשפחות בקהילה משלבות: הרישום והכתובה מתנהלים מול המועצה הדתית, והקס מלווה את הטקס, הברכות והמסורת המשפחתית. אם אתם רוצים שקס יערוך את החופה עצמה — אמרו זאת כבר בפתיחת התיק, ובררו מול המועצה הדתית מי מהקייסים באזורכם מחזיק באישור עריכת חופה וקידושין. אל תניחו שהאישור קיים: שאלו במפורש, לפני שקובעים תאריך ואולם. ולמען הסר ספק — שני המסלולים לגיטימיים ורשמיים באותה מידה, וההבדל ביניהם הוא טכני ולא ערכי: השאלה היא מי מחזיק באישור הרישום, לא איזו מסורת "נכונה" יותר. זו בחירה של המשפחה, ואף אחד לא צריך להתנצל עליה.
 
 אם משהו נתקע
 עיכובים בבירור יהדות הם התסכול המוכר ביותר בתהליך. שמרו עותקים של כל מסמך שהגשתם, בקשו כל החלטה בכתב, ורשמו תאריכים ושמות. אפשר לערער תוך 30 יום, ואפשר להיעזר בליווי חינם: מכון עתים מלווה מול הרבנות ובתי הדין, טבקה מסייעת משפטית לבני הקהילה, והמוקד הממשלתי של היחידה לתיאום המאבק בגזענות מקבל תלונות על יחס מפלה. כל הפרטים בהמשך העמוד.`,
@@ -128,7 +143,7 @@ Opening the marriage file — the practical side
 The file is opened at the religious council where one of the partners lives, generally between three months and 45 days before the wedding (opening outside that window requires special approval). Bring identity cards with the addendum, photographs, and your parents' Rabbanut marriage certificate — or the Jewish-status certificate, if a verification was required. You also need edei ravakut (single-status witnesses): two adults who know you, are not first-degree relatives, and confirm you are free to marry. If either partner is divorced or widowed, bring the original divorce papers or death certificate. A registration fee applies; if one partner is a conscript soldier, in national service, a student under 30, an oleh within the first two years of aliyah, a disability-certificate holder, or supported by welfare services, you are entitled to a 40% discount on the fee. Ask for the discount — it is not always offered.
 
 The role of the kes alongside the Rabbanut
-Since the government decision of February 2018, the status of the kessim has been recognized, they are integrated into the religious councils, and they are authorized to officiate weddings — so a couple who wishes can ask a kes to conduct the ceremony itself. In practice many families combine the two: registration and the ketubah are handled with the religious council, while the kes leads the ceremony, the blessings, and the family tradition. Both tracks are legitimate and official — this is not a matter of "correct" versus "less correct" but a family's choice. If you want a kes, say so when opening the file and check with the religious council which kessim in your area are registered to officiate.
+Government decision 3649 of February 2018 recognized the status of the kessim as the community's spiritual leaders and funded positions for them in the religious councils. It matters just as much to know what the decision did not do: it did not make every kes an authorized wedding officiant. In Israel, only someone personally approved may officiate a registered wedding — by the city rabbi at the religious council where the marriage file was opened, or by the Chief Rabbinate's committee for approving wedding officiants. That approval is personal and does not follow from being a kes. In practice many families in the community combine the two: registration and the ketubah are handled with the religious council, while the kes leads the ceremony, the blessings, and the family tradition. If you want a kes to officiate the ceremony itself, say so when opening the file and check with the religious council which kessim in your area hold the officiating permit. Do not assume the permit is in place: ask explicitly, before you book a date and a venue. And to be clear — Both tracks are legitimate and official in equal measure, and the difference between them is technical rather than a matter of worth: the question is who holds the registration permit, not which tradition is more "correct". It is the family's choice, and nobody needs to apologise for it.
 
 If something gets stuck
 Delays in the birur yahadut are the most familiar frustration in the process. Keep copies of every document you submit, ask for every decision in writing, and note dates and names. You may appeal within 30 days, and free accompaniment is available: Itim guides applicants through the Rabbanut and the rabbinical courts, Tebeka provides legal aid to community members, and the government hotline of the Unit for Coordinating the Struggle Against Racism receives complaints about discriminatory treatment. Full details further down this page.`,
@@ -150,7 +165,7 @@ Delays in the birur yahadut are the most familiar frustration in the process. Ke
 መዝገቡ የሚከፈተው ከጥንዶቹ አንዱ በሚኖርበት ቦታ ባለው የሃይማኖት ምክር ቤት ነው፣ በአብዛኛው ከሠርጉ ከሦስት ወር በፊት እስከ 45 ቀናት ባለው ጊዜ ውስጥ (ከዚህ ውጭ መክፈት ልዩ ፈቃድ ይጠይቃል)። መታወቂያዎችን ከአባሪው ጋር፣ ፎቶዎችን፣ እና የወላጆችዎን የረቢነት የጋብቻ ምስክር ወረቀት — ወይም ማጣራት አስፈልጎ ከነበረ የይሁዲነት ማረጋገጫውን — ይዘው ይምጡ። እንዲሁም ዔዴ ራቫኩት (የነጠላነት ምስክሮች) ያስፈልጋሉ፡ የሚያውቅዎት፣ የመጀመሪያ ደረጃ ዘመድ ያልሆኑ ሁለት ጎልማሶች ለጋብቻ ነጻ መሆንዎን ያረጋግጣሉ። ከጥንዶቹ አንዱ የተፋታ ወይም ባል/ሚስት የሞተበት ከሆነ ዋናውን የፍቺ ሰነድ ወይም የሞት ምስክር ወረቀት ማምጣት ያስፈልጋል። ለምዝገባው ክፍያ (አግራ) አለ፤ ከጥንዶቹ አንዱ የግዴታ ውትድርና ወታደር፣ በብሔራዊ አገልግሎት ላይ፣ ከ30 ዓመት በታች ተማሪ፣ በመጀመሪያዎቹ ሁለት የዓሊያ ዓመታት ውስጥ ያለ ኦሌ፣ የአካል ጉዳት ምስክር ወረቀት ያለው ወይም በማኅበራዊ አገልግሎት የሚደገፍ ከሆነ — 40% የክፍያ ቅናሽ የማግኘት መብት አለው። ቅናሹን ጠይቁ፤ ሁልጊዜ በራሳቸው አያቀርቡትም።
 
 የቄሱ ሚና ከረቢነቱ ጎን
-ከየካቲት 2018 የመንግሥት ውሳኔ ጀምሮ የቄሶች ደረጃ ታውቋል፣ በሃይማኖት ምክር ቤቶች ውስጥ ተካተዋል፣ ሠርግ የመፈጸምም ሥልጣን አላቸው — ስለዚህ የሚፈልግ ጥንድ ሥነ ሥርዓቱን ራሱ ቄስ እንዲመራው መጠየቅ ይችላል። በተግባር ብዙ ቤተሰቦች ሁለቱን ያዋህዳሉ፡ ምዝገባውና ኩቱባው ከሃይማኖት ምክር ቤቱ ጋር ይከናወናሉ፣ ቄሱ ደግሞ ሥነ ሥርዓቱን፣ ቡራኬዎቹንና የቤተሰቡን ባህል ይመራል። ሁለቱም መንገዶች ሕጋዊና ይፋዊ ናቸው — "ትክክለኛ" እና "ያነሰ ትክክለኛ" የሚባል ነገር የለም፤ የቤተሰብ ምርጫ ነው። ቄስ ከፈለጉ መዝገቡን ሲከፍቱ ይናገሩ፣ በአካባቢዎ የትኞቹ ቄሶች ሠርግ ለመፈጸም እንደተመዘገቡ ከሃይማኖት ምክር ቤቱ ያጣሩ።
+የየካቲት 2018 የመንግሥት ውሳኔ 3649 የቄሶችን ደረጃ የማኅበረሰቡ መንፈሳዊ መሪዎች አድርጎ አውቋል፣ በሃይማኖት ምክር ቤቶችም የሥራ መደቦችን መድቦላቸዋል። ውሳኔው ያላደረገውን ማወቅም እኩል አስፈላጊ ነው፡ እያንዳንዱን ቄስ ሠርግ ፈጻሚ አላደረገም። በእስራኤል የተመዘገበ ሠርግ መፈጸም የሚችለው በግል የጸደቀ ሰው ብቻ ነው — መዝገቡ በተከፈተበት የሃይማኖት ምክር ቤት በከተማው ረቢ፣ ወይም በዋናው ረቢነት የሠርግ ፈጻሚዎች ማጽደቂያ ኮሚቴ። ይህ ፈቃድ የግል ነው፤ ቄስ ከመሆን ብቻ አይመጣም። በተግባር ብዙ የማኅበረሰቡ ቤተሰቦች ሁለቱን ያዋህዳሉ፡ ምዝገባውና ኩቱባው ከሃይማኖት ምክር ቤቱ ጋር ይከናወናሉ፣ ቄሱ ደግሞ ሥነ ሥርዓቱን፣ ቡራኬዎቹንና የቤተሰቡን ባህል ይመራል። ቄስ ራሱ ሠርጉን እንዲፈጽም ከፈለጉ መዝገቡን ሲከፍቱ ይናገሩ፣ በአካባቢዎ የትኞቹ ቄሶች ፈቃድ እንዳላቸው ከሃይማኖት ምክር ቤቱ ያጣሩ። ፈቃዱ አለ ብለው አያስቡ፡ ቀንና አዳራሽ ከመያዝዎ በፊት በግልጽ ይጠይቁ። ግልጽ ለማድረግም — ሁለቱም መንገዶች ሕጋዊና ይፋዊ ናቸው በእኩል ደረጃ፤ በመካከላቸው ያለው ልዩነት ቴክኒካዊ እንጂ የክብር አይደለም፡ ጥያቄው የምዝገባ ፈቃዱን ማን እንደያዘ ነው እንጂ የትኛው ባህል የበለጠ "ትክክል" እንደሆነ አይደለም። የቤተሰብ ምርጫ ነው፤ ማንም ስለዚህ ይቅርታ መጠየቅ የለበትም።
 
 አንድ ነገር ከተጣበቀ
 በማጣራቱ ሂደት መዘግየት በጣም የታወቀው ብስጭት ነው። ያስገቡትን እያንዳንዱን ሰነድ ቅጂ ይያዙ፣ እያንዳንዱን ውሳኔ በጽሑፍ ይጠይቁ፣ ቀኖችንና ስሞችን ይመዝግቡ። በ30 ቀናት ውስጥ ይግባኝ ማለት ይችላሉ፣ ነፃ አጃቢነትም አለ፡ የዒቲም ተቋም በረቢነትና በረቢ ፍርድ ቤቶች ያጅባል፣ ጠበቃ (ተቤካ) ለማኅበረሰቡ አባላት የሕግ ድጋፍ ይሰጣል፣ የዘረኝነትን ትግል የማስተባበር መንግሥታዊ ክፍል መስመርም አድሏዊ አያያዝ ላይ ቅሬታ ይቀበላል። ሙሉ ዝርዝሩ ከዚህ ገጽ በታች ይገኛል።`,
@@ -266,9 +281,9 @@ export const MARRIAGE_STEPS: MarriageGuideStep[] = [
       am: "ማን እንደሚያገባ ይምረጡ — ቄስ፣ ረቢ ወይም ሁለቱም",
     },
     detail: {
-      he: "מאז 2018 הקייסים מוכרים, משולבים במועצות הדתיות ומוסמכים לערוך חופה וקידושין. אפשר לבקש שקס יערוך את הטקס, ואפשר לשלב — רישום מול המועצה הדתית וליווי הקס בטקס ובברכות. שני המסלולים רשמיים באותה מידה; זו בחירה של המשפחה. אמרו זאת כבר בפתיחת התיק ובררו מי מהקייסים באזורכם רשום כעורך חופה.",
-      en: "Since 2018 the kessim have been recognized, integrated into the religious councils, and authorized to officiate weddings. You can ask a kes to conduct the ceremony, or combine the two — registration with the religious council and the kes leading the ceremony and the blessings. Both tracks are equally official; it is the family's choice. Say so when opening the file and check which kessim in your area are registered to officiate.",
-      am: "ከ2018 ጀምሮ ቄሶች ታውቀዋል፣ በሃይማኖት ምክር ቤቶች ተካተዋል፣ ሠርግ የመፈጸም ሥልጣንም አላቸው። ቄስ ሥነ ሥርዓቱን እንዲመራ መጠየቅ ይችላሉ፣ ወይም ሁለቱን ማዋሃድ ይችላሉ — ምዝገባው ከሃይማኖት ምክር ቤቱ ጋር፣ ቄሱ ደግሞ ሥነ ሥርዓቱንና ቡራኬዎቹን ይመራል። ሁለቱም መንገዶች እኩል ይፋዊ ናቸው፤ የቤተሰብ ምርጫ ነው። መዝገቡን ሲከፍቱ ይናገሩ፣ በአካባቢዎ የትኞቹ ቄሶች እንደተመዘገቡ ያጣሩ።",
+      he: "מאז 2018 הקייסים מוכרים ומשולבים במועצות הדתיות, אבל ההכרה הזאת אינה אישור לערוך חופה וקידושין — האישור הזה אישי, וניתן על ידי רב העיר או הוועדה ברבנות הראשית. לכן יש שתי אפשרויות: קס שמחזיק באישור עורך את החופה הרשומה בעצמו, או — הנפוץ יותר — רב עורך את החופה הרשומה והקס מלווה את הטקס, הברכות והמסורת המשפחתית. שתיהן לגיטימיות; זו בחירה של המשפחה. בררו שמית במועצה הדתית מי מהקייסים באזורכם מחזיק באישור, ואמרו זאת כבר בפתיחת התיק.",
+      en: "Since 2018 the kessim have been recognized and integrated into the religious councils, but that recognition is not a permit to officiate — the permit is personal, granted by the city rabbi or the Chief Rabbinate's committee. So there are two options: a kes who holds the permit officiates the registered ceremony himself, or — more commonly — a rabbi officiates the registered ceremony while the kes leads the blessings and the family tradition. Both are legitimate; it is the family's choice. Ask the religious council by name which kessim in your area hold the permit, and say so when opening the file.",
+      am: "ከ2018 ጀምሮ ቄሶች ታውቀዋል በሃይማኖት ምክር ቤቶችም ተካተዋል፤ ነገር ግን ይህ እውቅና ሠርግ የመፈጸሚያ ፈቃድ አይደለም — ፈቃዱ የግል ሲሆን በከተማው ረቢ ወይም በዋናው ረቢነት ኮሚቴ ይሰጣል። ስለዚህ ሁለት አማራጮች አሉ፡ ፈቃድ ያለው ቄስ የተመዘገበውን ሥነ ሥርዓት ራሱ ይፈጽማል፣ ወይም — የተለመደው — ረቢ የተመዘገበውን ሥነ ሥርዓት ሲፈጽም ቄሱ ቡራኬዎቹንና የቤተሰቡን ባህል ይመራል። ሁለቱም ሕጋዊ ናቸው፤ የቤተሰብ ምርጫ ነው። በአካባቢዎ የትኞቹ ቄሶች ፈቃድ እንዳላቸው በስም ያጣሩ፣ መዝገቡን ሲከፍቱም ይናገሩ።",
     },
     internalPath: "/heritage/kessim",
     internalLabel: {
@@ -348,9 +363,9 @@ export const MARRIAGE_FAQ: MarriageFaqItem[] = [
       am: "ቄስ ሠርጋችንን በይፋ ሊፈጽም ይችላል?",
     },
     answer: {
-      he: "כן. בהחלטת הממשלה מפברואר 2018 הוכר מעמדם של הקייסים, הם שולבו במועצות הדתיות והוסמכו לערוך חופה וקידושין. הרישום עצמו מתבצע במועצה הדתית כרגיל. בררו מול המועצה הדתית מי מהקייסים באזורכם רשום כעורך חופה, ואמרו על כך כבר בפתיחת התיק.",
-      en: "Yes. The government decision of February 2018 recognized the status of the kessim, integrated them into the religious councils, and authorized them to officiate weddings. The registration itself is done at the religious council as usual. Check with the council which kessim in your area are registered to officiate, and mention it when opening the file.",
-      am: "አዎ። የየካቲት 2018 የመንግሥት ውሳኔ የቄሶችን ደረጃ አውቆ በሃይማኖት ምክር ቤቶች አካቷቸዋል፣ ሠርግ የመፈጸም ሥልጣንም ሰጥቷቸዋል። ምዝገባው ራሱ እንደተለመደው በሃይማኖት ምክር ቤቱ ይከናወናል። በአካባቢዎ የትኞቹ ቄሶች እንደተመዘገቡ ከምክር ቤቱ ያጣሩ፣ መዝገቡን ሲከፍቱም ይናገሩ።",
+      he: "רק אם אותו קס מחזיק באישור אישי לעריכת חופה וקידושין. החלטת הממשלה מפברואר 2018 הכירה במעמד הקייסים ושילבה אותם במועצות הדתיות, אך היא לא הסמיכה את כלל הקייסים לערוך חופה. בישראל עורך חופה רשומה חייב להיות מאושר על ידי רב העיר במועצה הדתית שבה נפתח התיק, או על ידי הוועדה לאישור עורכי חופה וקידושין ברבנות הראשית. לכן: בררו במועצה הדתית שמית מי מהקייסים באזורכם מחזיק באישור, ואמרו על כך כבר בפתיחת התיק. הרישום עצמו מתבצע במועצה הדתית כרגיל. אם אין באזורכם קס עם אישור, עדיין אפשר לשלב — רב עורך את החופה הרשומה, והקס מלווה את הטקס והברכות.",
+      en: "Only if that particular kes holds a personal permit to officiate. The government decision of February 2018 recognized the status of the kessim and integrated them into the religious councils, but it did not authorize kessim in general to officiate weddings. In Israel someone officiating a registered wedding must be approved by the city rabbi at the religious council where the file was opened, or by the Chief Rabbinate's committee for approving wedding officiants. So: ask the religious council by name which kessim in your area hold the permit, and mention it when opening the file. The registration itself is done at the religious council as usual. If no permitted kes is available in your area you can still combine the two — a rabbi officiates the registered ceremony and the kes leads the blessings and the tradition.",
+      am: "ያ ቄስ የግል የሠርግ መፈጸሚያ ፈቃድ ካለው ብቻ ነው። የየካቲት 2018 የመንግሥት ውሳኔ የቄሶችን ደረጃ አውቆ በሃይማኖት ምክር ቤቶች አካቷቸዋል፤ ነገር ግን ቄሶችን በጥቅሉ ሠርግ እንዲፈጽሙ አላሰለጠነም። በእስራኤል የተመዘገበ ሠርግ የሚፈጽም ሰው መዝገቡ በተከፈተበት የሃይማኖት ምክር ቤት በከተማው ረቢ፣ ወይም በዋናው ረቢነት የሠርግ ፈጻሚዎች ማጽደቂያ ኮሚቴ መጽደቅ አለበት። ስለዚህ፡ በአካባቢዎ የትኞቹ ቄሶች ፈቃድ እንዳላቸው ከሃይማኖት ምክር ቤቱ በስም ያጣሩ፣ መዝገቡን ሲከፍቱም ይናገሩ። ምዝገባው ራሱ እንደተለመደው በሃይማኖት ምክር ቤቱ ይከናወናል። በአካባቢዎ ፈቃድ ያለው ቄስ ከሌለ አሁንም ማዋሃድ ይችላሉ — ረቢ የተመዘገበውን ሥነ ሥርዓት ይፈጽማል፣ ቄሱ ደግሞ ቡራኬዎቹንና ባህሉን ይመራል።",
     },
   },
   {

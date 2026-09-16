@@ -10,6 +10,30 @@
 // (saturated SERP, per docs/research/2026-08-05-culinary-and-benefits-
 // keyword-research.md).
 //
+// RE-VERIFIED 2026-09-16 (TED-170). All 11 distinct source URLs re-fetched:
+// every one still resolves 200, except facebook.com/Marketonayla which
+// returns 400 to non-browser clients (Facebook's bot block, not a dead
+// page). The four `confidence: "current"` shops whose source is the
+// business's own site were each opened and confirmed trading, with matching
+// addresses and published hours:
+//   - תבליני סלמון, תרמ"ב 18 Rishon LeZion (salmonspice.com, © 2025)
+//   - עלמיתו תבלינים, העבודה 26 Ashkelon (+ Beit Shikma distribution centre)
+//   - מולו תבלינים, התנאים 5 ג'סי כהן Holon — street address ADDED this pass,
+//     it was previously just "חולון"
+//   - סוד הקסם, בן צבי 21 Yehud
+// The `dated` entries keep their year and their call-ahead caveat: nothing
+// newer was found for them, and inventing freshness is the failure this file
+// exists to avoid.
+//
+// NO CITIES WERE ADDED. TED-170 required demand before expansion, and the
+// 90-day Search Console pull found culinary/shopping/<city> earned 0
+// impressions across all 24 URLs — while the national article
+// news/where-to-buy-ethiopian-spices-groceries-israel earned 199 impressions
+// and 10 clicks at avg position 5.0 on exactly this intent ("איפה קונים",
+// "איפה לקנות", "תבלין"). The demand is national and article-shaped; this
+// registry's job is to be the verified data behind that article, not to grow
+// a city matrix nobody searches.
+//
 // HE is the source-of-truth locale. Server-only module.
 
 import type { Translatable } from "../db/columns";
@@ -139,7 +163,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "dated",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 
   // ── Tel Aviv — Neve Sha'anan / Central Bus Station cluster ───────────────
@@ -179,7 +203,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "current",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 
   // ── Rishon LeZion ────────────────────────────────────────────────────────
@@ -215,7 +239,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "current",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 
   // ── Rehovot — three named shops, all from 2015-era press ─────────────────
@@ -293,7 +317,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "dated",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 
   // ── Holon ────────────────────────────────────────────────────────────────
@@ -308,7 +332,12 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
     shops: [
       {
         name: "מולו תבלינים",
-        area: { he: "חולון", en: "Holon", am: "ሆሎን" },
+        // Street address added 2026-09-16 (TED-170) from the shop's own site.
+        area: {
+          he: "רחוב התנאים 5, ג'סי כהן",
+          en: "5 HaTana'im St., Jessie Cohen",
+          am: "ሃታናኢም ጎዳና 5፣ ጄሲ ኮሄን",
+        },
         sells: {
           he: "תבלינים ומוצרים אתיופיים; חנות פיזית + הזמנות אונליין",
           en: "Ethiopian spices and products; physical shop + online ordering",
@@ -324,7 +353,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "current",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 
   // ── Ashkelon ─────────────────────────────────────────────────────────────
@@ -355,7 +384,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "current",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 
   // ── Kiryat Malakhi — highest community share (CBS: 13.8%) ────────────────
@@ -395,7 +424,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "dated",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 
   // ── Be'er Sheva ──────────────────────────────────────────────────────────
@@ -431,7 +460,7 @@ export const CITY_SHOPPING: CityShoppingEntry[] = [
         confidence: "dated",
       },
     ],
-    verifiedAt: "2026-08-30",
+    verifiedAt: "2026-09-16",
   },
 ];
 

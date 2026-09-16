@@ -37,6 +37,7 @@ import { JOBS } from "../app/lib/careers/jobs.server";
 import { isRelevant as isCareerCellRelevant } from "../app/lib/careers/relevance";
 import { STORIES } from "../app/lib/careers/stories.server";
 import { CITIES } from "../app/lib/cities/registry";
+import { CITY_SHOPPING } from "../app/lib/culinary/shops.server";
 import { SIGD_MENU_GUIDE } from "../app/lib/culinary/sigd-menu.server";
 import { COMPARISONS } from "../app/lib/comparisons/comparisons.server";
 import { PRIORITY_RIGHTS } from "../app/lib/db/seeds/rights";
@@ -243,6 +244,13 @@ function dynamicPaths(): Set<string> {
     if (neighborhoodsByCity(city).length > 0) {
       out.add(`/cities/${city}/urban-renewal`);
     }
+  }
+
+  // Culinary shopping pages exist only for cities with at least one
+  // source-verified shop (TED-146) — like the wedding supplier cells, they
+  // come from the data, never from the city list.
+  for (const entry of CITY_SHOPPING) {
+    out.add(`/culinary/shopping/${entry.citySlug}`);
   }
 
   for (const c of COMPARISONS) out.add(`/compare/${c.slug}`);
