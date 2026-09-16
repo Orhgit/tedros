@@ -551,4 +551,476 @@ ${AM_NOTICE}
 - [ዳቫር — የዝርዝር ማጽደቂያና የምርጫ ቀን፣ መስከረም 8፣ 2026](https://www.davar1.co.il/696375/) · መስከረም 16፣ 2026 ተረጋግጧል`,
     },
   },
+
+  // 4 — Tishrei 5787 clinic hours -------------------------------------------
+  {
+    slug: "tishrei-5787-clinic-hours-yom-kippur-sukkot",
+    publishedAt: "2026-09-16",
+    updatedAt: "2026-09-16",
+    tags: ["health", "holiday"],
+    title: {
+      he: "יום כיפור ב-21.9 וסוכות מ-26.9: מתי המרפאה סגורה, ולמי מתקשרים במקום",
+      en: "Yom Kippur on 21.9 and Sukkot from 26.9: when the clinic is shut, and whom to call instead",
+      am: "ዮም ኪፑር መስከረም 21 እና ሱኮት ከመስከረም 26፦ ክሊኒኩ መቼ ይዘጋል፣ በምትኩስ ለማን ይደውሉ",
+    },
+    excerpt: {
+      he: "ערב יום כיפור, 20.9, המרפאות נסגרות בצהריים; ב-21.9 הן סגורות. בחול המועד סוכות הן פועלות שעות מקוצרות. פתחנו את לוח החגים שפרסמה לאומית, בדקנו שהתאריכים מתיישבים עם הלוח העברי, וריכזנו מה לעשות אם צריך רופא בכל זאת.",
+      en: "On the eve of Yom Kippur, 20 September, clinics close at midday; on 21 September they are shut. During the intermediate days of Sukkot they run shortened hours. We opened the holiday timetable Leumit published, checked the dates against the Hebrew calendar, and set out what to do if you need a doctor anyway.",
+      am: "በዮም ኪፑር ዋዜማ መስከረም 20 ክሊኒኮች እኩለ ቀን ይዘጋሉ፤ መስከረም 21 ዝግ ናቸው። በሱኮት መካከለኛ ቀናት በአጭር ሰዓት ይሠራሉ። ሌኡሚት ያሳተመውን የበዓል የጊዜ ሰሌዳ ከፍተን ቀኖቹን ከዕብራይስጥ ቀን መቁጠሪያ ጋር አረጋግጠናል።",
+    },
+    bodies: {
+      he: `## למה זו כתבה ולא תזכורת
+
+חגי תשרי מרוכזים השנה בשלושה שבועות, ובתוכם יום שבו כל מערכת הבריאות הקהילתית סגורה. מי שמנהל מחלה כרונית, מחכה לתרופה או מטפל בהורה מבוגר צריך לדעת את זה מראש ולא ביום עצמו. לכן בדקנו תאריכים, ולא רק ציטטנו הודעה.
+
+## מה בדקנו, ואיך
+
+פתחנו את עמוד שעות הפעילות בחגי תשרי של **לאומית שירותי בריאות** וקראנו אותו במלואו. העמוד עצמו אינו נושא תאריך פרסום — וזו בעיה מוכרת בעמודי חגים, שנשארים באוויר משנה לשנה. לכן לא הסתפקנו בו: הצלבנו כל תאריך מול הלוח העברי.
+
+| מועד | התאריך בעמוד | מה זה בלוח העברי | מתיישב? |
+| --- | --- | --- | --- |
+| ראש השנה | 11-13.9.2026 | א' בתשרי תשפ"ז חל ב-12.9.2026 | כן |
+| יום כיפור | 20-21.9.2026 | י' בתשרי חל ב-21.9.2026 | כן |
+| סוכות | 25.9-3.10.2026 | ט"ו בתשרי חל ב-26.9.2026 | כן |
+| שמחת תורה | 3.10.2026 | כ"ב בתשרי חל ב-3.10.2026 | כן |
+
+ארבעה מתוך ארבעה. זה עמוד של תשפ"ז, לא שריד משנה שעברה.
+
+## מה שכתוב שם
+
+לפי אותו עמוד, במרכזים הרפואיים של לאומית:
+
+- **ערב יום כיפור, 20.9** — פתוח עד השעה 12:00.
+- **יום כיפור, 21.9** — סגור.
+- **ערב סוכות, 25.9** — פתוח עד 12:00.
+- **יום א' של סוכות, 26.9** — סגור.
+- **חול המועד סוכות, 27.9-1.10** — פתוח עד 13:00.
+- **ערב שמחת תורה, 2.10** — פתוח עד 12:00.
+- **שמחת תורה, 3.10** — סגור.
+
+בנוגע למעבדות, העמוד מציין שבערב יום כיפור יתקבלו **פניות דחופות בלבד ובתיאום מראש**.
+
+מספר שירות הלקוחות שמופיע באותו עמוד: **507\\***.
+
+העמוד גם מפנה לשלושה נותני שירות חיצוניים לרפואה דחופה — טרם, ביקור רופא ואסיא — ומבקש במפורש לוודא מולם שעות לפני שמגיעים.
+
+## ההסתייגות החשובה
+
+זה לוח של **קופה אחת**. אם אתם בכללית, במכבי או במאוחדת — השעות אצלכם שונות, וגם המספרים שונים. המסר שמועבר כאן הוא הדפוס, לא השעה המדויקת: ערב חג עד הצהריים, חג סגור, חול המועד מקוצר.
+
+**מה לעשות בפועל:** היכנסו לאתר הקופה שלכם או התקשרו למוקד שלה **לפני** ערב החג, בדקו מתי הסניף שלכם סגור, ואם אתם על תרופת מרשם קבועה — חדשו אותה השבוע, לא ביום חמישי אחר הצהריים.
+
+במצב חירום רפואי מתקשרים ל-**101** (מד"א), בכל שעה ובכל חג.
+
+## קראו גם
+
+- [שירותי הבריאות — מי נותן מה ואיך ניגשים](/he/health/services)
+- [זכויות בריאות](/he/health/rights)
+
+## מקורות
+
+- [לאומית שירותי בריאות — שעות הפעילות בחגי תשרי](https://leumit.co.il/leumit-general/hours-rosh-hashana/) · לעמוד אין תאריך פרסום; התאריכים שבו הוצלבו מול הלוח העברי · נבדק 16.9.2026
+- מועדי החגים הוצלבו מול חישוב הלוח העברי לתשפ"ז — י' בתשרי תשפ"ז = 21.9.2026, ט"ו בתשרי = 26.9.2026`,
+      en: `## Why this is an article and not a reminder
+
+The Tishrei holidays are packed into three weeks this year, and inside them is a day on which the entire community health system is closed. Anyone managing a chronic illness, waiting on a medication or caring for an elderly parent needs to know that in advance, not on the day. So we checked dates rather than merely quoting a notice.
+
+## What we checked, and how
+
+We opened the Tishrei opening-hours page of **Leumit Health Services** and read it in full. The page itself carries no publication date — a familiar problem with holiday pages, which tend to linger from year to year. So we did not stop there: we cross-checked every date against the Hebrew calendar.
+
+| Occasion | Date on the page | In the Hebrew calendar | Consistent? |
+| --- | --- | --- | --- |
+| Rosh Hashanah | 11-13 Sep 2026 | 1 Tishrei 5787 falls on 12 Sep 2026 | Yes |
+| Yom Kippur | 20-21 Sep 2026 | 10 Tishrei falls on 21 Sep 2026 | Yes |
+| Sukkot | 25 Sep - 3 Oct 2026 | 15 Tishrei falls on 26 Sep 2026 | Yes |
+| Simchat Torah | 3 Oct 2026 | 22 Tishrei falls on 3 Oct 2026 | Yes |
+
+Four out of four. This is a 5787 page, not a leftover from last year.
+
+## What it says
+
+Per that page, at Leumit's medical centres:
+
+- **Eve of Yom Kippur, 20 Sep** — open until 12:00.
+- **Yom Kippur, 21 Sep** — closed.
+- **Eve of Sukkot, 25 Sep** — open until 12:00.
+- **First day of Sukkot, 26 Sep** — closed.
+- **Intermediate days of Sukkot, 27 Sep - 1 Oct** — open until 13:00.
+- **Eve of Shemini Atzeret, 2 Oct** — open until 12:00.
+- **Simchat Torah, 3 Oct** — closed.
+
+For laboratories, the page states that on the eve of Yom Kippur **only urgent requests, by prior arrangement**, will be accepted.
+
+The customer-service number given on that page: **\\*507**.
+
+The page also points to three external urgent-care providers — Terem, Bikur Rofe and Assia — and expressly asks readers to confirm their hours before setting out.
+
+## The important caveat
+
+This is **one HMO's** timetable. If you are with Clalit, Maccabi or Meuhedet, your hours differ and so do the numbers. What carries over is the pattern, not the exact hour: holiday eve until midday, holiday closed, intermediate days shortened.
+
+**What to actually do:** go to your own HMO's site or call its hotline **before** the holiday eve, check when your branch is shut, and if you are on a regular prescription, renew it this week rather than on Thursday afternoon.
+
+In a medical emergency, call **101** (Magen David Adom), at any hour and on any holiday.
+
+## Read also
+
+- [Health services — who provides what and how to access it](/en/health/services)
+- [Health rights](/en/health/rights)
+
+## Sources
+
+- [Leumit Health Services — Tishrei holiday opening hours](https://leumit.co.il/leumit-general/hours-rosh-hashana/) · the page carries no publication date; its dates were cross-checked against the Hebrew calendar · verified 16 Sep 2026
+- Holiday dates cross-checked against the Hebrew calendar for 5787 — 10 Tishrei 5787 = 21 Sep 2026, 15 Tishrei = 26 Sep 2026`,
+      am: `## ይህ ለምን ጽሑፍ ሆነ
+
+የትሽሬ በዓላት በዚህ ዓመት በሦስት ሳምንት ውስጥ ተጠቃለዋል፤ በውስጣቸውም መላው የማህበረሰብ ጤና ሥርዓት የሚዘጋበት ቀን አለ። ሥር የሰደደ በሽታ የሚያስተዳድር፣ መድኃኒት የሚጠብቅ ወይም አረጋዊ ወላጅ የሚንከባከብ ሰው ይህን አስቀድሞ ማወቅ አለበት።
+
+## ምን አረጋገጥን፣ እንዴትም
+
+የ**ሌኡሚት የጤና አገልግሎቶች** የትሽሬ በዓላት የሥራ ሰዓት ገጽ ከፍተን በሙሉ አነበብነው። ገጹ ራሱ የታተመበት ቀን የለውም። ስለዚህ እዚያ አላቆምንም፦ እያንዳንዱን ቀን ከዕብራይስጥ ቀን መቁጠሪያ ጋር አገናዝበናል።
+
+| በዓል | በገጹ ላይ ያለው ቀን | በዕብራይስጥ ቀን መቁጠሪያ | ይስማማል? |
+| --- | --- | --- | --- |
+| ሮሽ ሃሻና | መስከረም 11-13፣ 2026 | 1 ትሽሬ 5787 መስከረም 12፣ 2026 | አዎ |
+| ዮም ኪፑር | መስከረም 20-21፣ 2026 | 10 ትሽሬ መስከረም 21፣ 2026 | አዎ |
+| ሱኮት | መስከረም 25 - ጥቅምት 3፣ 2026 | 15 ትሽሬ መስከረም 26፣ 2026 | አዎ |
+| ስምሓት ቶራ | ጥቅምት 3፣ 2026 | 22 ትሽሬ ጥቅምት 3፣ 2026 | አዎ |
+
+ከአራት አራቱ። ይህ የ5787 ገጽ ነው እንጂ ካለፈው ዓመት የቀረ አይደለም።
+
+## በገጹ ላይ የተጻፈው
+
+በሌኡሚት የሕክምና ማዕከላት፦
+
+- **የዮም ኪፑር ዋዜማ፣ መስከረም 20** — እስከ 12:00 ክፍት።
+- **ዮም ኪፑር፣ መስከረም 21** — ዝግ።
+- **የሱኮት ዋዜማ፣ መስከረም 25** — እስከ 12:00 ክፍት።
+- **የሱኮት የመጀመሪያ ቀን፣ መስከረም 26** — ዝግ።
+- **የሱኮት መካከለኛ ቀናት፣ መስከረም 27 - ጥቅምት 1** — እስከ 13:00 ክፍት።
+- **የሽሚኒ አጼሬት ዋዜማ፣ ጥቅምት 2** — እስከ 12:00 ክፍት።
+- **ስምሓት ቶራ፣ ጥቅምት 3** — ዝግ።
+
+ስለ ላቦራቶሪዎች ገጹ በዮም ኪፑር ዋዜማ **አስቸኳይ ጥያቄዎች ብቻ፣ አስቀድሞ በመስማማት** እንደሚቀበሉ ይገልጻል።
+
+በዚያው ገጽ ላይ ያለው የደንበኞች አገልግሎት ቁጥር፦ **507\\***።
+
+ገጹ ለአስቸኳይ ሕክምና ሦስት ውጫዊ አቅራቢዎችንም ይጠቁማል — ቴሬም፣ ቢኩር ሮፌና አስያ — ከመሄድ በፊት ሰዓታቸውን እንዲያረጋግጡ በግልጽ ይጠይቃል።
+
+## አስፈላጊው ጥንቃቄ
+
+ይህ የ**አንድ ኩባንያ** የጊዜ ሰሌዳ ነው። በክላሊት፣ በማካቢ ወይም በመኡሔደት ከሆኑ ሰዓታቱም ቁጥሮቹም ይለያያሉ። የሚሸጋገረው ዘይቤው ነው እንጂ ትክክለኛው ሰዓት አይደለም፦ የበዓል ዋዜማ እስከ እኩለ ቀን፣ በዓል ዝግ፣ መካከለኛ ቀናት አጭር።
+
+**በተግባር ምን ያድርጉ፦** ከበዓሉ ዋዜማ **በፊት** ወደ ኩባንያዎ ድረ ገጽ ይግቡ ወይም ወደ መስመሩ ይደውሉ፤ ቅርንጫፍዎ መቼ እንደሚዘጋ ያረጋግጡ፤ መደበኛ የሐኪም ትዕዛዝ መድኃኒት ላይ ከሆኑም በዚህ ሳምንት ያድሱት።
+
+በሕክምና አስቸኳይ ሁኔታ በማንኛውም ሰዓትና በማንኛውም በዓል **101** (ማገን ዳቪድ አዶም) ይደውሉ።
+
+## ተጨማሪ ያንብቡ
+
+- [የጤና አገልግሎቶች](/am/health/services)
+- [የጤና መብቶች](/am/health/rights)
+
+${AM_NOTICE}
+
+## ምንጮች
+
+- [ሌኡሚት የጤና አገልግሎቶች — የትሽሬ በዓላት የሥራ ሰዓት](https://leumit.co.il/leumit-general/hours-rosh-hashana/) · ገጹ የታተመበት ቀን የለውም፤ ቀኖቹ ከዕብራይስጥ ቀን መቁጠሪያ ጋር ተገናዝበዋል · መስከረም 16፣ 2026 ተረጋግጧል
+- የበዓል ቀናት ለ5787 ከዕብራይስጥ ቀን መቁጠሪያ ጋር ተገናዝበዋል — 10 ትሽሬ 5787 = መስከረም 21፣ 2026`,
+    },
+  },
+
+  // 5 — the Sigd season opens with nothing published yet ---------------------
+  {
+    slug: "sigd-5787-no-published-events-yet-2026",
+    publishedAt: "2026-09-16",
+    updatedAt: "2026-09-16",
+    tags: ["holiday", "community"],
+    title: {
+      he: 'פחות מחודשיים לסיגד תשפ"ז, ואף אירוע לא פורסם — מה זה אומר למי שמתכנן',
+      en: "Under two months to Sigd 5787 and not one event has been published — what that means if you are planning",
+      am: "ለሰግድ 5787 ከሁለት ወር ያነሰ ቀርቷል፣ አንድም ዝግጅት ግን አልታተመም — ለሚያቅዱ ምን ማለት ነው",
+    },
+    excerpt: {
+      he: 'סיגד תשפ"ז חל ב-9.11.2026. בדקנו היום את שני העמודים שמפרסמים בדרך כלל את הטקס — המרכז למורשת יהדות אתיופיה והקרן למורשת הכותל — ושניהם עדיין מציגים את אירוע תשפ"ו מנובמבר 2025. אל תזמינו הסעה או חופשה לפי לוח של שנה שעברה.',
+      en: "Sigd 5787 falls on 9 November 2026. We checked today the two pages that normally publish the ceremony — the Ethiopian Jewry Heritage Center and the Western Wall Heritage Foundation — and both still show the 5786 event from November 2025. Do not book travel or leave off last year's schedule.",
+      am: "ሰግድ 5787 ኅዳር 9፣ 2026 ይውላል። ዛሬ ስነ-ስርዓቱን የሚያሳትሙትን ሁለቱን ገጾች አረጋግጠናል — የኢትዮጵያ አይሁድ ቅርስ ማዕከልና የምዕራብ ግንብ ቅርስ ፋውንዴሽን — ሁለቱም አሁንም የኅዳር 2025ን የ5786 ዝግጅት ያሳያሉ።",
+    },
+    bodies: {
+      he: `## התאריך, קודם כול
+
+**סיגד תשפ"ז חל ביום שני, 9 בנובמבר 2026.** התאריך הזה מבוסס על כ"ט בחשוון תשפ"ז, ועל כך כתבנו בנפרד ובהרחבה, כולל תיקון של תאריך שגוי שהופיע אצלנו בעבר: [סיגד תשפ"ז יחול ביום שני, 9 בנובמבר 2026](/he/news/sigd-5787-monday-9-november-2026).
+
+מהיום ועד החג נותרו פחות מחודשיים.
+
+## מה בדקנו היום
+
+פתחנו וקראנו את שני העמודים שמפרסמים בפועל, שנה אחר שנה, את פרטי הטקס:
+
+**המרכז למורשת יהדות אתיופיה — עמוד חג הסגד.** האירוע המופיע בו הוא עדיין **אירוע תשפ"ו, מ-20 בנובמבר 2025**, על מיקומו ושעותיו. לא מופיע בעמוד אירוע לתשפ"ז, ולא מופיע בו תאריך עדכון.
+
+**הקרן למורשת הכותל המערבי — עמוד חג הסיגד.** העמוד מסביר את החג ומציין שהוא חל בכ"ט בחשוון, 50 יום אחרי יום כיפור, אך **אינו נוקב בתאריך ל-2026** ואינו מכריז על אירוע. הפריט האחרון שמופיע בו קשור לסיגד תשפ"ו, בנובמבר 2025.
+
+כלומר: נכון ל-16.9.2026, **אין אירוע סיגד תשפ"ז שפורסם** באף אחד משני המקורות האלה.
+
+## מה זה אומר, ומה זה לא אומר
+
+**מה שזה לא אומר:** שלא יהיה טקס. הטקס המרכזי מתקיים מדי שנה, והפרטים מתפרסמים בדרך כלל סמוך יותר לחג.
+
+**מה שזה כן אומר:** שכל לוח זמנים לסיגד 2026 שאתם רואים עכשיו איפשהו — שעות, מקום, סדר יום — הוא או ניחוש, או העתקה של אירוע 2025. אנחנו לא מפרסמים לוח זמנים שאיננו יכולים לפתוח במקור, ואנחנו ממליצים לכם לא להסתמך על אחד כזה.
+
+זו לא זהירות תיאורטית. בעבר התפרסמו באתר הזה פרטי לוגיסטיקה לסיגד שלא נמצא להם שום מקור, והם הוסרו. לא נחזור על זה.
+
+## מה כן לעשות עכשיו
+
+1. **סמנו את התאריך** — יום שני, 9.11.2026.
+2. **אם אתם עובדי מדינה** — זכרו שיש לכם ימי בחירה בשכר, ואין צורך לוותר על יום חופש. הפירוט בכתבה שלנו על התאריך.
+3. **אם אתם מתכננים נסיעה או לינה** — חכו לפרסום הרשמי לפני שאתם משלמים על משהו שתלוי בשעה מדויקת.
+4. **עקבו אחרי הגופים המארגנים עצמם**, ולא אחרי עמודים שמעתיקים מהם.
+
+אנחנו נעדכן את [דף אירועי הסיגד 2026](/he/heritage/sigd/events-2026) ברגע שיפורסם אירוע עם מקור שאפשר לפתוח.
+
+## קראו גם
+
+- [מדריך הסיגד](/he/heritage/sigd)
+- [סיגד — דף המורשת](/he/heritage/events/sigd)
+- [תפריט הסיגד — הצום והשבירה](/he/culinary/sigd-menu)
+- [אירועי סיגד 2026](/he/heritage/sigd/events-2026)
+
+## מקורות
+
+- [המרכז למורשת יהדות אתיופיה — חג הסגד](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · האירוע המוצג הוא מ-20.11.2025; אין תאריך עדכון בעמוד · נבדק 16.9.2026
+- [הקרן למורשת הכותל המערבי — חג הסיגד](https://thekotel.org/en/uncategorized-en/holidays-and-festivals/sigd-holiday/) · הפריט האחרון בעמוד מנובמבר 2025 · נבדק 16.9.2026
+- [הכתבה שלנו על תאריך סיגד תשפ"ז](/he/news/sigd-5787-monday-9-november-2026)`,
+      en: `## The date, first
+
+**Sigd 5787 falls on Monday, 9 November 2026.** That date rests on 29 Cheshvan 5787, and we wrote about it separately and at length, including a correction of a wrong date that once appeared here: [Sigd 5787 falls on Monday, 9 November 2026](/en/news/sigd-5787-monday-9-november-2026).
+
+From today, less than two months remain.
+
+## What we checked today
+
+We opened and read the two pages that actually publish the ceremony details, year after year:
+
+**The Ethiopian Jewry Heritage Center — Sigd page.** The event shown on it is still the **5786 event, from 20 November 2025**, with its location and hours. No 5787 event appears on the page, and no update date appears either.
+
+**The Western Wall Heritage Foundation — Sigd page.** The page explains the holiday and notes that it falls on 29 Cheshvan, 50 days after Yom Kippur, but **gives no date for 2026** and announces no event. The most recent item on it relates to Sigd 5786, in November 2025.
+
+In other words: as of 16 September 2026, **no Sigd 5787 event has been published** by either of these sources.
+
+## What that means, and what it does not
+
+**What it does not mean:** that there will be no ceremony. The main ceremony is held every year, and the details are usually published closer to the holiday.
+
+**What it does mean:** that any Sigd 2026 schedule you see anywhere right now — times, place, running order — is either a guess or a copy of the 2025 event. A schedule we cannot open at source never reaches this site, and we advise you not to rely on one either.
+
+This is not theoretical caution. Sigd logistics for which no source could be found were once published on this site, and they were removed. We are not doing it again.
+
+## What to do now
+
+1. **Mark the date** — Monday, 9 November 2026.
+2. **If you are a state employee**, remember you have paid choice days and do not need to give up a vacation day. The detail is in our article on the date.
+3. **If you are planning travel or a stay**, wait for the official publication before paying for anything that depends on an exact hour.
+4. **Follow the organising bodies themselves**, not pages that copy from them.
+
+We will update [the Sigd 2026 events page](/en/heritage/sigd/events-2026) the moment an event is published with a source that can be opened.
+
+## Read also
+
+- [The Sigd guide](/en/heritage/sigd)
+- [Sigd — the heritage page](/en/heritage/events/sigd)
+- [The Sigd menu — the fast and the break-fast](/en/culinary/sigd-menu)
+- [Sigd 2026 events](/en/heritage/sigd/events-2026)
+
+## Sources
+
+- [Ethiopian Jewry Heritage Center — the Sigd holiday](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · the event shown is from 20 Nov 2025; no update date on the page · verified 16 Sep 2026
+- [Western Wall Heritage Foundation — the Sigd holiday](https://thekotel.org/en/uncategorized-en/holidays-and-festivals/sigd-holiday/) · the most recent item on the page is from November 2025 · verified 16 Sep 2026
+- [Our article on the date of Sigd 5787](/en/news/sigd-5787-monday-9-november-2026)`,
+      am: `## በመጀመሪያ ቀኑ
+
+**ሰግድ 5787 ሰኞ፣ ኅዳር 9፣ 2026 ይውላል።** ይህ ቀን በ29 ኅሽዋን 5787 ላይ የተመሠረተ ነው፤ ስለዚህም በተለየ ጽሑፍ በሰፊው ጽፈናል፦ [ሰግድ 5787 ሰኞ፣ ኅዳር 9፣ 2026 ይውላል](/am/news/sigd-5787-monday-9-november-2026)።
+
+ከዛሬ ጀምሮ ከሁለት ወር ያነሰ ቀርቷል።
+
+## ዛሬ ምን አረጋገጥን
+
+የስነ-ስርዓቱን ዝርዝር በየዓመቱ የሚያሳትሙትን ሁለቱን ገጾች ከፍተን አነበብን፦
+
+**የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የሰግድ ገጽ።** በላዩ ላይ የሚታየው ዝግጅት አሁንም **የ5786 ዝግጅት፣ ከኅዳር 20፣ 2025** ነው። የ5787 ዝግጅት በገጹ ላይ አይታይም፤ የዘመነበትም ቀን የለም።
+
+**የምዕራብ ግንብ ቅርስ ፋውንዴሽን — የሰግድ ገጽ።** ገጹ በዓሉን ያብራራል፤ በ29 ኅሽዋን፣ ከዮም ኪፑር 50 ቀናት በኋላ እንደሚውል ይገልጻል፤ ነገር ግን **ለ2026 ቀን አይሰጥም** ዝግጅትም አያስታውቅም። በላዩ ላይ ያለው የቅርብ ጊዜ ጽሑፍ የኅዳር 2025 ነው።
+
+ማለትም፦ እስከ መስከረም 16፣ 2026 ድረስ በእነዚህ ሁለት ምንጮች **የታተመ የሰግድ 5787 ዝግጅት የለም**።
+
+## ምን ማለት ነው፣ ምንስ ማለት አይደለም
+
+**ማለት የማይሆነው፦** ስነ-ስርዓት አይኖርም ማለት አይደለም። ዋናው ስነ-ስርዓት በየዓመቱ ይካሄዳል፤ ዝርዝሮቹም ብዙውን ጊዜ ወደ በዓሉ ሲቀርብ ይታተማሉ።
+
+**ማለት የሆነው፦** አሁን የሚያዩት ማንኛውም የ2026 የሰግድ የጊዜ ሰሌዳ — ሰዓት፣ ቦታ፣ መርሃ ግብር — ወይ ግምት ነው ወይም የ2025 ዝግጅት ቅጂ ነው። ከምንጭ ልንከፍተው የማንችለውን የጊዜ ሰሌዳ አናሳትምም፤ እርስዎም እንዳይመኩበት እንመክራለን።
+
+ይህ የንድፈ ሐሳብ ጥንቃቄ አይደለም። ምንም ምንጭ ያልተገኘላቸው የሰግድ ዝርዝሮች ቀደም ሲል በዚህ ጣቢያ ታትመው ነበር፤ ተወግደዋልም። ድጋሚ አናደርገውም።
+
+## አሁን ምን ያድርጉ
+
+1. **ቀኑን ይመዝግቡ** — ሰኞ፣ ኅዳር 9፣ 2026።
+2. **የመንግሥት ሠራተኛ ከሆኑ**፣ የተከፈለባቸው የምርጫ ቀናት እንዳሉዎት ያስታውሱ።
+3. **ጉዞ ወይም ማረፊያ እያቀዱ ከሆነ**፣ ይፋዊው ህትመት እስኪወጣ ይጠብቁ።
+4. **አዘጋጅ አካላትን ራሳቸውን ይከታተሉ**፣ ከእነሱ የሚገለብጡ ገጾችን ሳይሆን።
+
+ሊከፈት የሚችል ምንጭ ያለው ዝግጅት እንደታተመ [የሰግድ 2026 ዝግጅቶች ገጽ](/am/heritage/sigd/events-2026) እናዘምናለን።
+
+## ተጨማሪ ያንብቡ
+
+- [የሰግድ መመሪያ](/am/heritage/sigd)
+- [ሰግድ — የቅርስ ገጽ](/am/heritage/events/sigd)
+- [የሰግድ ማዕድ](/am/culinary/sigd-menu)
+- [የሰግድ 2026 ዝግጅቶች](/am/heritage/sigd/events-2026)
+
+${AM_NOTICE}
+
+## ምንጮች
+
+- [የኢትዮጵያ አይሁድ ቅርስ ማዕከል — የሰግድ በዓል](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · የሚታየው ዝግጅት ከኅዳር 20፣ 2025 ነው · መስከረም 16፣ 2026 ተረጋግጧል
+- [የምዕራብ ግንብ ቅርስ ፋውንዴሽን — የሰግድ በዓል](https://thekotel.org/en/uncategorized-en/holidays-and-festivals/sigd-holiday/) · በገጹ ላይ ያለው የቅርብ ጽሑፍ ከኅዳር 2025 ነው · መስከረም 16፣ 2026 ተረጋግጧል
+- [ስለ ሰግድ 5787 ቀን የእኛ ጽሑፍ](/am/news/sigd-5787-monday-9-november-2026)`,
+    },
+  },
+
+  // 6 — what Tech-Career's course page actually shows ------------------------
+  {
+    slug: "tech-career-course-page-september-2026",
+    publishedAt: "2026-09-16",
+    updatedAt: "2026-09-16",
+    tags: ["employment", "education"],
+    title: {
+      he: "טק-קריירה: שני הקורסים שמפורסמים באתר כבר נפתחו — כך נרשמים למחזור הבא",
+      en: "Tech-Career: both courses listed on the site have already started — how to get into the next cohort",
+      am: "ቴክ-ካሪየር፦ በጣቢያው የተዘረዘሩት ሁለቱም ኮርሶች ጀምረዋል — ወደ ቀጣዩ ዙር እንዴት እንደሚገቡ",
+    },
+    excerpt: {
+      he: "פתחנו את עמוד ההכשרות של טק-קריירה וקראנו אותו במלואו. מופיעים בו שני קורסים בלוד, בתאריכי פתיחה 30.8.2026 ו-14.9.2026 — שניהם כבר עברו. אין באתר מועד פתיחה עתידי מפורסם, ולכן זו לא כתבה על דדליין אלא על מה כן אפשר לעשות השבוע.",
+      en: "We opened Tech-Career's training page and read it in full. It lists two courses in Lod, with start dates of 30 August 2026 and 14 September 2026 — both already past. No future start date is published on the site, so this is not a deadline piece but a piece on what you can actually do this week.",
+      am: "የቴክ-ካሪየርን የሥልጠና ገጽ ከፍተን በሙሉ አነበብነው። በሎድ ሁለት ኮርሶች ተዘርዝረዋል፤ የመጀመሪያ ቀናቸው ነሐሴ 30፣ 2026 እና መስከረም 14፣ 2026 — ሁለቱም አልፈዋል። በጣቢያው የታተመ የወደፊት መጀመሪያ ቀን የለም።",
+    },
+    bodies: {
+      he: `## מה יש בעמוד, מילה במילה
+
+טק-קריירה היא עמותה שמכשירה צעירות וצעירים יוצאי אתיופיה למקצועות ההייטק, ולפי הכתוב באתרה היא פועלת 22 שנה. פתחנו את עמוד ההכשרות שלה וקראנו אותו במלואו. אלה שני הקורסים המופיעים בו:
+
+| קורס | מיקום | מתכונת | משך | תאריך פתיחה |
+| --- | --- | --- | --- | --- |
+| Cyber-Network Analyst (תקשורת + אבטחה) | לוד | היברידי/פנימייה | 6 חודשים | 14 בספטמבר 2026 |
+| Cloud-Network Engineer (סיסקו + ענן) | לוד | היברידי/פנימייה | 6 חודשים | 30 באוגוסט 2026 |
+
+בשני הקורסים כתוב שניתן לשלב עבודה תוך כדי הלימודים.
+
+## ולמה זו כתבה
+
+כי שני התאריכים האלה **כבר עברו**. העמוד מזמין את הקורא "להתרשם מסוגי ההכשרות שייפתחו בשנה הקרובה" — כלומר מציג את סוגי ההכשרות, לא בהכרח מחזור שנפתח מחר. **לא מופיע בעמוד מועד פתיחה עתידי, ולא מופיע בו דדליין הרשמה.**
+
+ראינו במקום אחר אזכור של מחזור שאמור להיפתח ב-20.10.2026. בדקנו — התאריך הזה **אינו מופיע** באתר של טק-קריירה עצמה. לכן לא נפרסם אותו כאן כעובדה. זה בדיוק המקום שבו קורא מפספס דדליין אמיתי כי סמך על תאריך שמישהו העתיק.
+
+## מה כן לעשות השבוע
+
+אם אתם רוצים להיכנס למחזור הבא:
+
+1. **פנו ישירות לעמותה** דרך עמוד יצירת הקשר באתרה, ושאלו מתי נפתח המחזור הבא ומתי נסגרת ההרשמה אליו. זו השאלה שכדאי לשאול, ובדיוק במילים האלה.
+2. **הירשמו לניוזלטר** שבתחתית אתר העמותה — זה הערוץ שבו הם עצמם מודיעים על פעילויות.
+3. **בינתיים התכוננו למיון.** תהליכי המיון לתוכניות הכשרה מסוג זה בוחנים התאמה ולא רק רקע טכני, והעמוד עצמו מדגיש שהמודל מבוסס על מחויבות מלאה ללימודים.
+
+## ההסתייגות שלנו
+
+זו תמונת מצב של עמוד אחד ביום אחד — **16.9.2026**. עמודי הכשרות מתעדכנים, ויכול להיות שמחר יופיע שם מחזור חדש עם תאריך. אל תסיקו מכאן שאין מחזור; הסיקו מכאן שצריך לשאול, ולא להניח.
+
+## קראו גם
+
+- [מסלולי קריירה](/he/careers)
+- [איך מתחילים קריירה בהייטק](/he/careers/faq/how-to-start-tech-career-ethiopian)
+- [בוטקמפים ותוכניות השמה](/he/careers/programs/itworks-israel)
+
+## מקורות
+
+- [טק-קריירה — עמוד ההכשרות](https://www.tech-career.org/items) · נקרא במלואו · נבדק 16.9.2026
+- [טק-קריירה — עמוד הבית](https://www.tech-career.org/) · נבדק 16.9.2026`,
+      en: `## What the page says, word for word
+
+Tech-Career is a non-profit that trains young Ethiopian-Israelis for hi-tech roles, and per its own site it has been operating for 22 years. We opened its training page and read it in full. These are the two courses on it:
+
+| Course | Location | Format | Length | Start date |
+| --- | --- | --- | --- | --- |
+| Cyber-Network Analyst (networking + security) | Lod | Hybrid / residential | 6 months | 14 September 2026 |
+| Cloud-Network Engineer (Cisco + cloud) | Lod | Hybrid / residential | 6 months | 30 August 2026 |
+
+Both courses state that students can combine work with study.
+
+## And why this is an article
+
+Because both of those dates have **already passed**. The page invites the reader to "get a sense of the kinds of training that will open in the coming year" — that is, it shows the types of training, not necessarily a cohort opening tomorrow. **No future start date appears on the page, and no registration deadline appears either.**
+
+We saw a reference elsewhere to a cohort said to open on 20 October 2026. We checked — that date **does not appear** on Tech-Career's own site. So we will not publish it here as fact. This is precisely where a reader misses a real deadline because they relied on a date somebody copied.
+
+## What to actually do this week
+
+If you want to get into the next cohort:
+
+1. **Contact the organisation directly** through the contact page on its site, and ask when the next cohort opens and when registration for it closes. That is the question worth asking, in those words.
+2. **Sign up for the newsletter** at the foot of the organisation's site — that is the channel through which they themselves announce activities.
+3. **Prepare for selection in the meantime.** Selection for training programmes of this kind tests fit and not only technical background, and the page itself stresses that the model rests on full commitment to study.
+
+## Our caveat
+
+This is a snapshot of one page on one day — **16 September 2026**. Training pages get updated, and a new cohort with a date may appear there tomorrow. Do not conclude from this that there is no cohort; conclude that you should ask rather than assume.
+
+## Read also
+
+- [Career tracks](/en/careers)
+- [How to start a career in hi-tech](/en/careers/faq/how-to-start-tech-career-ethiopian)
+- [Bootcamps and placement programmes](/en/careers/programs/itworks-israel)
+
+## Sources
+
+- [Tech-Career — training page](https://www.tech-career.org/items) · read in full · verified 16 Sep 2026
+- [Tech-Career — home page](https://www.tech-career.org/) · verified 16 Sep 2026`,
+      am: `## በገጹ ላይ ያለው፣ ቃል በቃል
+
+ቴክ-ካሪየር የኢትዮጵያ ተወላጅ ወጣቶችን ለሃይቴክ ሙያዎች የሚያሠለጥን ድርጅት ነው፤ በራሱ ጣቢያ መሠረት ለ22 ዓመታት ሲሠራ ቆይቷል። የሥልጠና ገጹን ከፍተን በሙሉ አነበብነው። በውስጡ ያሉት ሁለት ኮርሶች እነዚህ ናቸው፦
+
+| ኮርስ | ቦታ | ዓይነት | ርዝመት | የመጀመሪያ ቀን |
+| --- | --- | --- | --- | --- |
+| Cyber-Network Analyst | ሎድ | ድብልቅ / አዳሪ | 6 ወር | መስከረም 14፣ 2026 |
+| Cloud-Network Engineer | ሎድ | ድብልቅ / አዳሪ | 6 ወር | ነሐሴ 30፣ 2026 |
+
+ሁለቱም ኮርሶች ከትምህርት ጎን ለጎን መሥራት እንደሚቻል ይገልጻሉ።
+
+## ይህ ለምን ጽሑፍ ሆነ
+
+ሁለቱም ቀናት **አልፈዋል** ስለዚህ። ገጹ አንባቢውን «በሚመጣው ዓመት የሚከፈቱትን የሥልጠና ዓይነቶች ይመልከቱ» ይላል — ማለትም የሥልጠና ዓይነቶችን ያሳያል እንጂ ነገ የሚከፈት ዙር አይደለም። **በገጹ ላይ የወደፊት የመጀመሪያ ቀንም ሆነ የምዝገባ ገደብ አይታይም።**
+
+በሌላ ቦታ ጥቅምት 20፣ 2026 ይከፈታል የተባለ ዙር ተጠቅሶ አይተናል። አረጋግጠናል — ያ ቀን በቴክ-ካሪየር ጣቢያ ራሱ ላይ **አይገኝም**። ስለዚህ እዚህ እንደ እውነታ አናሳትመውም።
+
+## በዚህ ሳምንት ምን ያድርጉ
+
+1. **በቀጥታ ወደ ድርጅቱ ይደውሉ** በጣቢያው የመገናኛ ገጽ በኩል፤ ቀጣዩ ዙር መቼ እንደሚከፈትና ምዝገባው መቼ እንደሚዘጋ ይጠይቁ።
+2. **ለዜና መጽሔቱ ይመዝገቡ** በድርጅቱ ጣቢያ ግርጌ — እነሱ ራሳቸው እንቅስቃሴዎቻቸውን የሚያስታውቁበት መንገድ ነው።
+3. **በዚህ መካከል ለምርጫ ይዘጋጁ።** ገጹ ራሱ ሞዴሉ በሙሉ የትምህርት ቁርጠኝነት ላይ እንደተመሠረተ ያሰምርበታል።
+
+## የእኛ ጥንቃቄ
+
+ይህ የአንድ ገጽ የአንድ ቀን ምስል ነው — **መስከረም 16፣ 2026**። የሥልጠና ገጾች ይዘመናሉ። ዙር የለም ብለው አይደምድሙ፤ መገመት ሳይሆን መጠየቅ እንደሚያስፈልግ ይደምድሙ።
+
+## ተጨማሪ ያንብቡ
+
+- [የሙያ መንገዶች](/am/careers)
+- [በሃይቴክ ሙያ እንዴት እንደሚጀምሩ](/am/careers/faq/how-to-start-tech-career-ethiopian)
+- [ቡትካምፖችና የምደባ ፕሮግራሞች](/am/careers/programs/itworks-israel)
+
+${AM_NOTICE}
+
+## ምንጮች
+
+- [ቴክ-ካሪየር — የሥልጠና ገጽ](https://www.tech-career.org/items) · በሙሉ ተነቧል · መስከረም 16፣ 2026 ተረጋግጧል
+- [ቴክ-ካሪየር — መነሻ ገጽ](https://www.tech-career.org/) · መስከረም 16፣ 2026 ተረጋግጧል`,
+    },
+  },
 ];
