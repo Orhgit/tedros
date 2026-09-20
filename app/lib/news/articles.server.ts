@@ -586,8 +586,8 @@ ERAN emotional first aid: **1201** (24/7). NATAL trauma line: **1-800-363-363** 
   },
   {
     slug: "sigd-2026-complete-guide",
-    publishedAt: "2026-10-01",
-    updatedAt: "2026-10-01",
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-09-20",
     tags: ["holiday", "announcement"],
     title: {
       he: `סיגד 2026 — המדריך המלא: תאריך, מיקומים ומשמעות החג`,
@@ -614,30 +614,11 @@ ERAN emotional first aid: **1201** (24/7). NATAL trauma line: **1-800-363-363** 
 
 ## אירועים לפי עיר
 
-### ירושלים — הטקס המרכזי
-- **מקום**: טיילת ארמון הנציב
-- **שעות**: 08:30 — קבלת פנים; 09:00 — תחילת הצום והתפילה; 14:00 — סיום הצום ואכילה משותפת; 16:00 — נאומים ומוזיקה
-- **הגעה**: קווי 78/78א מהמרכז, חניה מאורגנת בנחלת שמעון
+**מה שלא נכתוב כאן:** שעות פתיחה, כתובות מדויקות, קווי הסעה או מועדי הרשמה. הנתונים האלה משתנים משנה לשנה, מתפרסמים על-ידי המארגנים בסמוך לחג, ואדם שיגיע לפי לוח זמנים של שנה שעברה עלול למצוא שער סגור.
 
-### נתניה (שכונת קרית נורדאו)
-- **מקום**: גן הסיגד, רח' ניצנה 15
-- **שעות**: 09:00–13:00 תפילות, 18:00 אירוע ערב עם מוזיקה
-- **ארגון**: עיריית נתניה + אגודת יוצאי אתיופיה
+הטקס המרכזי מתקיים מדי שנה בטיילת ארמון הנציב בירושלים, בהובלת הקייסים. לצדו מתקיימים טקסים עירוניים בערים שבהן קהילה גדולה — נתניה, באר-שבע, קריית-מלאכי, קריית-גת, רחובות ואחרות.
 
-### באר-שבע
-- **מקום**: גן הרצל
-- **שעות**: 09:30 — תפילות קהילתיות; 17:30 — חגיגת ערב
-- **הסעות**: מוות שלשום (Dalet) לגן הרצל מ-08:00
-
-### קריית-מלאכי
-- **מקום**: כיכר המרכז
-- **שעות**: 10:00–15:00
-- **ארגון**: עמותת פידל + מועצת קריית-מלאכי
-
-### קריית-גת
-- **מקום**: פארק העירוני
-- **שעות**: 10:00–14:00; ערב חגיגי 19:00
-- **ארגון**: עמותת אגם + עיריית קריית-גת
+**לפרטים המאומתים:** [אירועי הסיגד 5787](/he/heritage/sigd/events-2026) — שם נכנס רק מה שהמארגן עצמו פרסם, עם קישור למקור ותאריך בדיקה.
 
 ## תפקיד הקֵּס
 
@@ -645,17 +626,17 @@ ERAN emotional first aid: **1201** (24/7). NATAL trauma line: **1-800-363-363** 
 
 ## צום ותפילה — סדר הטקס
 
-הצום מתחיל בזריחה ומסתיים בצהרים-שתיים. הטקס כולל: ביסמלה (ברכת פתיחה), קריאת הוריה, ווידוי קולקטיבי, זורא (תחינה), והכרזת השנה הבאה בירושלים. לבישת לבן מקובלת ומסורתית.
+הצום נמשך מהבוקר עד סיום התפילות, והוא נשבר בסעודה משותפת. הטקס כולל ברכת פתיחה, קריאה באורית, וידוי קהילתי, תחינה, והכרזת השנה הבאה בירושלים. לבישת לבן מקובלת ומסורתית. **שעת שבירת הצום משתנה בין המקומות ומתפרסמת על-ידי המארגנים** — ראו [אירועי הסיגד 5787](/he/heritage/sigd/events-2026).
 
 ## מי יכול להשתתף
 
-כולם מוזמנים — גם מי שאינו מקהילה. מוצע ללמוד בסיסי לפני: לא לאכול לפני 14:00, ללבוש לבן אם אפשר, לאפשר לקֵּס לנהל את הטקס בשקט.
+כולם מוזמנים — גם מי שאינו מקהילה. כמה דברים שכדאי לדעת מראש: זהו יום צום עד סיום התפילות, ולכן לא נהוג לאכול בפומבי לפני שבירת הצום; לבן הוא הלבוש המקובל; והטקס מתנהל בהובלת הקייסים — כדאי לתת לו להתנהל בשקט.
 
 ## ארגונים שמתאמים
 
 - **IAEJ** (האיגוד הישראלי לתרבות יהדות אתיופיה) — תיאום לאומי
-- **פידל** — ייצוג קהילתי ולוביסט תרבותי
-- **מועצות מקומיות** של נתניה, ב"ש, קריית-מלאכי
+- **פידל** — ייצוג קהילתי וחינוכי
+- **רשויות מקומיות** בערים שבהן קהילה גדולה — כל רשות מפרסמת את הטקס שלה בנפרד
 
 ## לבוש ואוכל
 
@@ -673,19 +654,15 @@ Sigd (Ge'ez: "to prostrate") is the Beta Israel holiday celebrated exactly 50 da
 
 ## Events by city
 
-**Jerusalem (Armon Hanatziv promenade)**: 08:30 reception; 09:00 fast and prayers led by Kessim; 14:00 fast-break communal meal; 16:00 speeches and music. Buses from 16 absorption cities — reservations close 3 November.
+**What we will not print here:** opening times, exact addresses, bus routes or registration deadlines. These change year to year, are published by the organisers close to the holiday, and someone arriving on last year's schedule can find a closed gate.
 
-**Netanya (Kiryat Nordau — Gan Sigd, 15 Nitzana St)**: 09:00–13:00 prayers, 18:00 evening concert.
+The central ceremony is held each year on the Armon Hanatziv promenade in Jerusalem, led by the Kessim. Municipal ceremonies are held alongside it in cities with large communities — Netanya, Beersheba, Kiryat Malachi, Kiryat Gat, Rehovot and others.
 
-**Beersheba (Gan Herzl)**: 09:30 prayers, 17:30 evening celebration.
-
-**Kiryat Malachi (central square)**: 10:00–15:00, organized by Fidel Association.
-
-**Kiryat Gat (city park)**: 10:00–14:00 with evening at 19:00.
+**For verified details:** [Sigd 5787 events](/en/heritage/sigd/events-2026) — only what the organiser itself published, with a source link and a check date.
 
 ## The Kes role and fasting
 
-The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the fast, and delivers the debrash (sermon). The fast runs from sunrise to early afternoon. Traditional white dress (netela for women, khamis for men) is customary. All are welcome regardless of background — visitors should not eat before 14:00 and should allow the ceremony to proceed quietly.
+The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the fast, and delivers the debrash (sermon). The fast runs from the morning until the prayers conclude and is broken with a communal meal; the exact hour varies by location and is announced by the organisers. Traditional white dress (netela for women, khamis for men) is customary. All are welcome regardless of background — it is a fast day until the prayers end, so eating in public beforehand is not customary, and visitors should let the Kessim lead the ceremony undisturbed.
 
 ## See also
 
@@ -697,19 +674,15 @@ The Kes (Beta Israel priest) leads the Orit (Torah in Ge'ez) reading, guides the
 
 ## በከተማ ዝግጅቶች
 
-**ኢየሩሳሌም (አርሞን ሀናጺቭ)**: ቅዳሴ 09:00፣ ፆምን ማቋረጥ 14:00።
+**እዚህ የማንጽፈው:** የመክፈቻ ሰዓቶች፣ ትክክለኛ አድራሻዎች፣ የአውቶቡስ መስመሮች ወይም የምዝገባ ቀነ-ገደቦች። እነዚህ ከዓመት ዓመት ይለወጣሉ፣ በአዘጋጆቹ በበዓሉ ዋዜማ ይታወጃሉ።
 
-**ነታንያ (ጋን ሰግድ)**: 09:00-13:00 ጸሎቶች፣ 18:00 ምሽት ኮንሰርት።
+ዋናው ሥነ-ሥርዓት በየዓመቱ በኢየሩሳሌም በአርሞን ሀናጺቭ ይካሄዳል፣ በቄሶች መሪነት። ከጎኑ ትልቅ ማኅበረሰብ ባለባቸው ከተሞች የከተማ ሥነ-ሥርዓቶች ይካሄዳሉ — ነታንያ፣ ቤርሼባ፣ ቂርያት ማላኪ፣ ቂርያት ጋት፣ ርሆቮት እና ሌሎችም።
 
-**ቤርሼባ**: 09:30 ጸሎቶች፣ 17:30 ምሽት።
-
-**ቂርያት ማላኪ**: 10:00-15:00።
-
-**ቂርያት ጋት**: 10:00-14:00 እና ምሽት 19:00።
+**ለተረጋገጡ ዝርዝሮች:** [የሰግድ 5787 ዝግጅቶች](/am/heritage/sigd/events-2026) — አዘጋጁ ራሱ ያሳተመው ብቻ፣ ከምንጭ ማገናኛ ጋር።
 
 ## የቄስ ሚና
 
-ቄስ ኦሪትን (ቶራ በግእዝ) ያነባሉ፣ ፆምን ይመሩ፣ ደብርሻ (ስብከት) ይሰጣሉ። ባህላዊ ነጭ ልብስ (ናጣላ ለሴቶች፣ ቃሚስ ለወንዶች) ይመከራል።`,
+ቄስ ኦሪትን (ቶራ በግእዝ) ያነባሉ፣ ፆምን ይመሩ፣ ደብርሻ (ስብከት) ይሰጣሉ። ፆሙ ከጠዋት እስከ ጸሎቶቹ መጨረሻ ይቆያል፤ ትክክለኛው ሰዓት እንደየቦታው ይለያያል። ባህላዊ ነጭ ልብስ (ናጣላ ለሴቶች፣ ቃሚስ ለወንዶች) ይመከራል።`,
     },
   },
   {
