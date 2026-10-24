@@ -32,6 +32,8 @@ export interface ScholarshipSummary {
 }
 
 export interface ScholarshipDetail extends ScholarshipSummary {
+  /** Page <title> when the display name is not the term people search for. */
+  metaTitle?: string;
   body: string;
   relatedScholarships: string[];
   relatedRights: string[];
@@ -77,6 +79,7 @@ export function getScholarshipBySlug(
     opensOn: entry.opensOn,
     lastVerified: entry.lastVerified,
     applicationUrl: entry.applicationUrl,
+    metaTitle: entry.metaTitle ? pickLocale(entry.metaTitle, locale) : undefined,
     communityPriority: entry.communityPriority,
     tags: entry.tags,
     body: getScholarshipBodyForLocale(entry, locale),
