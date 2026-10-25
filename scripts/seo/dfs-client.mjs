@@ -29,14 +29,21 @@ export async function dfs(endpoint, payload, { refresh = false } = {}) {
   await loadEnv();
   const login = process.env.DATAFORSEO_LOGIN;
   const password = process.env.DATAFORSEO_PASSWORD;
-  if (!login || !password) throw new Error("DATAFORSEO_LOGIN / DATAFORSEO_PASSWORD missing from .env");
+  if (!login || !password)
+    throw new Error("DATAFORSEO_LOGIN / DATAFORSEO_PASSWORD missing from .env");
 
-  const key = crypto.createHash("md5")
-    .update(endpoint + JSON.stringify(payload)).digest("hex").slice(0, 12);
+  const key = crypto
+    .createHash("md5")
+    .update(endpoint + JSON.stringify(payload))
+    .digest("hex")
+    .slice(0, 12);
   const cachePath = path.join(CACHE_DIR, `${endpoint.replace(/\//g, "_")}-${key}.json`);
 
   if (!refresh) {
-    const hit = await fs.readFile(cachePath, "utf8").then(JSON.parse).catch(() => null);
+    const hit = await fs
+      .readFile(cachePath, "utf8")
+      .then(JSON.parse)
+      .catch(() => null);
     if (hit) return hit;
   }
 
@@ -49,9 +56,11 @@ export async function dfs(endpoint, payload, { refresh = false } = {}) {
     body: JSON.stringify([{ tag: "tedros", ...payload }]),
   });
   const json = await res.json();
-  if (json.status_code !== 20000) throw new Error(`${json.status_code} ${json.status_message}`);
+  if (json.status_code !== 20000)
+    throw new Error(`${json.status_code} ${json.status_message}`);
   const task = json.tasks?.[0];
-  if (task?.status_code !== 20000) throw new Error(`task ${task?.status_code} ${task?.status_message}`);
+  if (task?.status_code !== 20000)
+    throw new Error(`task ${task?.status_code} ${task?.status_message}`);
 
   await fs.mkdir(CACHE_DIR, { recursive: true });
   await fs.writeFile(cachePath, JSON.stringify(task.result, null, 2));
