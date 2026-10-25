@@ -43,7 +43,9 @@ const SITEMAPS = {
 // All-locale URL count per static sitemap, measured on this branch. Each path
 // is emitted once per locale (he/en/am), so every number is divisible by 3.
 const EXPECTED_URLS: Record<keyof typeof SITEMAPS, number> = {
-  core: 282,
+  // 282 -> 279: /privacy dropped (TED-173). It was noindex-worthy and ranked
+  // above the homepage for `tedros.co.il`; a noindex page must not be submitted.
+  core: 279,
   rights: 213,
   careers: 147,
   health: 147,
@@ -105,6 +107,33 @@ describe("sitemap URL counts", () => {
   it("lists no URL twice", async () => {
     const locs = await allLocs();
     expect(new Set(locs).size).toBe(locs.length);
+  });
+});
+
+// TED-173: /privacy was submitted in sitemap-core while being the kind of page
+// that should never compete for the site's own name — and a live SERP check
+// for `tedros.co.il` put /he/privacy at #2, above the homepage at #4.
+// Submitting a page tells Google it matters; these pages do not.
+describe("routes that must never be submitted (TED-173)", () => {
+  const NEVER_SUBMIT = [
+    "/privacy",
+    "/terms",
+    "/design",
+    "/login",
+    "/dashboard",
+    "/agency",
+    "/calculator/mortgage",
+    "/professionals/join",
+    "/heritage/wedding/join",
+  ];
+
+  it.each(NEVER_SUBMIT)("does not publish %s", async (path) => {
+    const locs = await allLocs();
+    const offenders = locs.filter((loc) => {
+      const p = new URL(loc).pathname.replace(/^\/(he|en|am)/, "");
+      return p === path;
+    });
+    expect(offenders).toEqual([]);
   });
 });
 

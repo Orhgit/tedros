@@ -12,7 +12,6 @@ import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
-import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { privacyContent } from "~/lib/pages/privacy-copy.server";
 
 const LAST_UPDATED = "2026-08-25";
@@ -25,11 +24,15 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, publicUrl, content } = data;
+  const { content } = data;
   return [
     { title: `${content.title} — Tedros` },
     { name: "description", content: content.metaDescription },
-    ...hreflangMeta(publicUrl, locale, "/privacy"),
+    // noindex (TED-173): a live SERP check for `tedros.co.il` returned
+    // /he/privacy at #2 and /en/privacy at #3, ABOVE the homepage at #4.
+    // Google was reading the policy as the site's most important page.
+    // Per the convention in $lang.tsx, noindex routes skip hreflangMeta.
+    { name: "robots", content: "noindex,follow" },
   ];
 };
 

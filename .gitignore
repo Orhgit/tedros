@@ -164,3 +164,6 @@ drizzle/
 # macOS
 .DS_Store
 .claude/worktrees/
+
+# DataForSEO response cache
+data/seo-cache/
