@@ -38,8 +38,14 @@ export interface ScholarshipEntry {
   level: ScholarshipLevel;
   /** Slug of the providing organization (FK to /lib/orgs). */
   providerOrgSlug: string;
-  /** Display name in 3 locales. */
+  /** Display name in 3 locales. Used in cards, breadcrumbs and related lists. */
   name: Translatable;
+  /**
+   * Optional page <title>, when the display name is not what people search for.
+   * `name` has to stay short enough for a card; a title can lead with the term
+   * someone types and the question they are asking. Falls back to `name`.
+   */
+  metaTitle?: Translatable;
   /** ~140-char summary used in cards + meta description. */
   shortDescription: Translatable;
   /** ILS — minimum award per recipient per year. 0 = no monetary award (mentorship-only). */
@@ -817,10 +823,15 @@ Note: the gov.il page itself refers readers to Marom using **2025-26 cycle dates
       en: "Marom Scholarship — Council for Higher Education",
       am: "ማሮም ስኮላርሺፕ — ከፍተኛ ትምህርት ምክር ቤት",
     },
+    metaTitle: {
+      he: 'מלגת מרום תשפ"ז — מתי נסגרת ההרשמה, כמה מקבלים ומי זכאי',
+      en: "The Marom Scholarship 2026-27 — when registration closes, how much, who qualifies",
+      am: "የማሮም ስኮላርሺፕ 2026-27 — ምዝገባ መቼ ይዘጋል፣ ስንት ነው፣ ማን ብቁ ነው",
+    },
     shortDescription: {
-      he: 'מלגה ממלכתית של מל"ג/ות"ת לסטודנטים יוצאי אתיופיה, מופעלת בידי פר"ח במכון דוידסון. נכון ל-15.9.2026 מערכת ההרשמה סגורה ומציגה פתיחה ב-28.2.2027.',
-      en: "A national CHE/VATAT scholarship for Ethiopian-Israeli students, operated by Perach at the Davidson Institute. As of 15 Sept 2026 the registration system is closed and shows an opening date of 28 Feb 2027.",
-      am: "የCHE/VATAT ብሔራዊ ስኮላርሺፕ ለኢትዮጵያ-ተወላጅ ተማሪዎች፤ በዳቪድሰን ኢንስቲትዩት በፔራች ይተዳደራል። እስከ 15.9.2026 ድረስ የምዝገባ ሥርዓቱ ተዘግቷል፣ 28.2.2027 መክፈቻ ያሳያል።",
+      he: 'מלגה ממלכתית של מל"ג/ות"ת לסטודנטים יוצאי אתיופיה, ₪10,000 לשנה, מופעלת בידי פר"ח. מערכת ההרשמה נבדקה ב-24.10.2026 והיא סגורה; היא מציגה פתיחה ב-28.2.2027 — גם אחרי שארבעה דפים רשמיים הבטיחו חלון שנפתח בספטמבר.',
+      en: "A national CHE/VATAT scholarship for Ethiopian-Israeli students, ₪10,000 a year, operated by Perach. The registration system was checked on 24 Oct 2026 and is closed; it shows an opening of 28 Feb 2027 — after four official pages promised a window opening in September.",
+      am: "የCHE/VATAT ብሔራዊ ስኮላርሺፕ ለኢትዮጵያ-ተወላጅ ተማሪዎች፣ በዓመት ₪10,000፣ በፔራች ይተዳደራል። የምዝገባ ሥርዓቱ በ24.10.2026 ተመርምሮ ተዘግቷል፤ 28.2.2027 መክፈቻ ያሳያል።",
     },
     amountMinIls: 7000,
     amountMaxIls: 16490,
@@ -832,7 +843,7 @@ Note: the gov.il page itself refers readers to Marom using **2025-26 cycle dates
     deadline: null,
     status: "closed",
     opensOn: "2027-02-28",
-    lastVerified: "2026-09-15",
+    lastVerified: "2026-10-24",
     applicationUrl:
       "https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D",
     tags: ["undergrad", "masters", "community", "government"],
@@ -844,27 +855,37 @@ Note: the gov.il page itself refers readers to Marom using **2025-26 cycle dates
     ],
     relatedRights: ["student-aid", "klita-basket-ethiopia"],
     bodies: {
-      he: `## השורה התחתונה, 15 בספטמבר 2026
+      he: `## השורה התחתונה, 24 באוקטובר 2026
 
-**אי אפשר להירשם למרום היום.** מערכת ההרשמה של פר"ח — המערכת היחידה שמקבלת בקשות — מציגה את המשפט הזה מילה במילה:
+**אי אפשר להירשם למרום היום.** בדקנו הבוקר את מערכת ההרשמה של פר"ח — המערכת היחידה שמקבלת בקשות — והיא מציגה את זה מילה במילה:
 
 > "ההרשמה למרום סגורה כעת. ההרשמה לשנת הפעילות תשפ"ז תפתח ב- 28/02/27 בשעה- 08:00."
 
-אם אתם צריכים כסף לשנת הלימודים שמתחילה עכשיו, **אל תחכו למרום.** [המינהל לסטודנטים עולים](/he/education/scholarships/klita-tuition-grant) פתח את ההרשמה לתשפ"ז, והמועדים שם חיים: 1 באוקטובר לממשיכים, 10 בנובמבר לחדשים. קראו את [ההשוואה בין המסלולים](/he/education/scholarships/guides/marom-vs-minhal-vs-vatat) לפני שאתם בוחרים — אי אפשר לקבל את שניהם.
+זה אותו נוסח שראינו ב-15 בספטמבר. **חמישה שבועות עברו, והוא לא השתנה.**
 
-## שלושה מקורות רשמיים, שלוש תשובות
+## ארבעה דפים רשמיים הבטיחו חלון שלא נפתח
 
-בדקנו היום את שלושת הדפים. הם לא אומרים אותו דבר:
+זו הסיבה שקשה לקבל תשובה. ארבעה מקורות רשמיים מתארים הרשמה שהיתה אמורה להיפתח בספטמבר–אוקטובר — והיא לא נפתחה:
 
-| המקור | מה הוא אומר על מועד ההרשמה לתשפ"ז |
-| --- | --- |
-| דף מלגת מרום של המל"ג | "תקופת ההרשמה למלגה נפתחת בחודש ספטמבר מדי שנה ונסגרת בתחילת נובמבר" |
-| דף "הגשת מועמדות" של פר"ח | "ההרשמה לשנה הקרובה תשפ"ז תיפתח במהלך חודש ספטמבר 2026" |
-| **מערכת ההרשמה של פר"ח** | **"ההרשמה למרום סגורה כעת… תפתח ב- 28/02/27"** |
+| המקור | מה הוא אומר | מה קרה בפועל |
+| --- | --- | --- |
+| המל"ג | "נפתחת בספטמבר מדי שנה ונסגרת בתחילת נובמבר" | לא נפתחה |
+| פר"ח — דף התוכנית | "ההרשמה לשנת תשפ"ז תפתח ב-5.10.26" | התאריך עבר |
+| אוניברסיטת בן-גוריון | "תפתח ב-9.9.26", ובאנר: "רישום פתוח עד 30.11.2026" | התאריך עבר |
+| פר"ח — הגשת מועמדות | "תיפתח במהלך חודש ספטמבר 2026" | החודש עבר |
+| **מערכת ההרשמה** | **"סגורה כעת… תפתח ב-28/02/27"** | **זה המצב בפועל** |
 
-28 בפברואר 2027 הוא כארבעה חודשים **אחרי** מועד הסגירה שהמל"ג מפרסמת. אנחנו לא יודעים אם זה תאריך אמיתי, ברירת מחדל של המערכת או שדה שלא עודכן, ולא נציג ניחוש כעובדה. מה שוודאי: הטופס סגור.
+**הכלל פשוט: רק המערכת שמקבלת את הבקשה קובעת.** דף שיווקי שמנוסח בלשון עתיד אינו מועד הרשמה.
 
-**מי לשאול:** צוות מרום בפר"ח — milga.marom@perach-il.org · 054-7731216 (גם בוואטסאפ) · א'–ה' 8:00–15:00. מוקד פר"ח: 1-599-550-500.
+**אל תחכו למרום לשנה הזו.** אם אתם צריכים מימון לשנת הלימודים שכבר התחילה, [המינהל לסטודנטים עולים](/he/education/scholarships/klita-tuition-grant) הוא המסלול החי — ו[ההשוואה בין המסלולים](/he/education/scholarships/guides/marom-vs-minhal-vs-vatat) תראה לכם אם אתם זכאים.
+
+**לאימות עצמאי:** צוות מרום בפר"ח — milga.marom@perach-il.org · 054-7731216 (גם בוואטסאפ) · א'–ה' 8:00–15:00 · מוקד פר"ח 1-599-550-500. אם תקבלו תשובה אחרת ממה שכתוב כאן, היא גוברת — ונשמח שתעדכנו אותנו.
+
+## כפל מלגות — עד ₪30,000
+
+דף הגשת המועמדות של פר"ח קובע: **"ניתן לקבל כפל מלגות עד לסכום של 30,000 ₪ בשנה כולל מלגת מרום."**
+
+זה **אינו** סותר את האיסור על צבירה עם המינהל לסטודנטים עולים — שם האיסור ספציפי לגורם ממשלתי אחר. מלגות שאינן ממשלתיות כן נערמות, עד התקרה.
 
 ## מי מפעיל את המלגה
 
@@ -911,7 +932,7 @@ Note: the gov.il page itself refers readers to Marom using **2025-26 cycle dates
 
 1. **להכין את המסמכים.** הם לא ישתנו: תעודת זהות עם ספח פתוח באותו קובץ (ולעיתים גם של ההורים), אישור לימודים רשמי, אישור בעלות על חשבון בנק, ולתואר ראשון — תלושי שכר של ההורים או שלכם. הכול ב-PDF. [כך מכינים אותם נכון](/he/education/scholarships/guides/documents-checklist).
 2. **להגיש למינהל לסטודנטים עולים** אם אתם בתוך 15 שנה ממתן המעמד — שם ההרשמה פתוחה עכשיו.
-3. **לשאול את פר"ח מה התאריך האמיתי**, ולא להסתמך על דף שמנוסח בלשון עתיד מאז אוגוסט.
+3. **לסמן ביומן את 28.2.2027** — זה התאריך שהמערכת עצמה מציגה. ולשאול את פר"ח, כי ארבעה דפים רשמיים מבטיחים תאריך אחר.
 
 ## ראו גם
 
@@ -924,7 +945,9 @@ Note: the gov.il page itself refers readers to Marom using **2025-26 cycle dates
 
 - [מלגת מרום — המועצה להשכלה גבוהה (che.org.il)](https://che.org.il/scholarships/%D7%9E%D7%9C%D7%92%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D/) — נקרא במלואו 15.9.2026
 - [פר"ח — הגשת מועמדות למרום](https://www.perach.org.il/%D7%94%D7%92%D7%A9%D7%AA-%D7%9E%D7%95%D7%A2%D7%9E%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%A8%D7%95%D7%9D) — נקרא במלואו 15.9.2026
-- [מערכת ההרשמה של פר"ח למרום](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — נבדקה 15.9.2026, מציגה "ההרשמה סגורה כעת"
+- [מערכת ההרשמה של פר"ח למרום](https://perach-prj.weizmann.ac.il/PerachStudent/registrationmarom) — **נבדקה שוב 24.10.2026**, עדיין מציגה "ההרשמה סגורה כעת… תפתח ב- 28/02/27"
+- [פר"ח — תוכנית המלגות מרום](https://www.perach.org.il/%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA-%D7%94%D7%9E%D7%9C%D7%92%D7%95%D7%AA-%D7%9E%D7%A8%D7%95%D7%9D-%D7%A2%D7%91%D7%95%D7%A8-%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D-%D7%95%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%95%D7%AA-%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4%D7%99%D7%94-1) — נקרא 24.10.2026
+- [מלגת מרום — אוניברסיטת בן-גוריון](https://www.bgu.ac.il/welcome/scholarship/marom-scholarship/) — נקרא 24.10.2026
 - [החלטת מל"ג 18.6.2024 — עדכון תיעדוף תחומי לימוד ליוצאי אתיופיה](https://che.org.il/decision/%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%AA%D7%99%D7%A2%D7%93%D7%95%D7%A3-%D7%AA%D7%97%D7%95%D7%9E%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9C%D7%99%D7%95%D7%A6%D7%90%D7%99-%D7%90%D7%AA%D7%99%D7%95%D7%A4-2/) — נקראה במלואה 15.9.2026
 - [מדיניות מל"ג לקידום מצוינות בהשכלה גבוהה בקרב יוצאי אתיופיה](https://che.org.il/qa/migvan/ethiopia/) — נקרא במלואו 15.9.2026
 `,

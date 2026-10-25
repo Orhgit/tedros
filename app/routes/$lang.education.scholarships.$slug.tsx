@@ -77,7 +77,13 @@ export const meta: Route.MetaFunction = ({ data }) => {
   const { locale, entry, publicUrl } = data;
   const description = entry.shortDescription;
   return [
-    { title: `${entry.name} — ${t(locale, "scholarships_landing_title")} — Tedros` },
+    {
+      // metaTitle lets an entry lead its <title> with the term people actually
+      // search for; without one the page keeps the section-suffixed form.
+      title: entry.metaTitle
+        ? `${entry.metaTitle} — Tedros`
+        : `${entry.name} — ${t(locale, "scholarships_landing_title")} — Tedros`,
+    },
     { name: "description", content: description },
     ...hreflangMeta(publicUrl, locale, `/education/scholarships/${entry.slug}`),
     { property: "og:title", content: entry.name },
