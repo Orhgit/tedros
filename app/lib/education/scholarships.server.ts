@@ -138,7 +138,15 @@ export const SCHOLARSHIPS: ScholarshipEntry[] = [
     slug: "isef-fellowship",
     level: "masters",
     providerOrgSlug: "isef",
-    name: { he: "מלגת ISEF", en: "ISEF Fellowship", am: "የISEF ህብረት" },
+    name: { he: "מלגת אייסף (ISEF)", en: "ISEF Fellowship", am: "የISEF ህብረት" },
+    // `קרן אייסף מלגה` is 70/mo and `מלגת אייסף` is how people spell it; the
+    // Latin "ISEF" alone was invisible to both (TED-180, same failure as the
+    // kessim directory in TED-174).
+    metaTitle: {
+      he: "מלגת אייסף — מי זכאי, כמה מקבלים ואיך מגישים",
+      en: "The ISEF Fellowship — who qualifies, how much, how to apply",
+      am: "የISEF ስኮላርሺፕ — ማን ብቁ ነው፣ ስንት ነው፣ እንዴት ማመልከት",
+    },
     shortDescription: {
       he: "מלגות שכר לימוד ומחיה לסטודנטים יוצאי אתיופיה לתואר שני ושלישי באוניברסיטאות בישראל.",
       en: "Tuition and living-cost scholarships for Ethiopian-Israeli students in master's and PhD programs at Israeli universities.",

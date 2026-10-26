@@ -6753,9 +6753,9 @@ If you worked "off the books" (no pay slip) — you are still entitled. Prove em
   },
   {
     title: {
-      he: "זכות לדיור ציבורי — רשימת ממתינים ואיך מגישים",
-      en: "Right to Public Housing — Waiting List and How to Apply",
-      am: "የህዝብ ቤት መብት — መጠበቂያ ዝርዝር እና ማመልከቻ",
+      he: "דיור ציבורי — מי זכאי, איך מגישים ומה באמת קובע",
+      en: "Public Housing — who qualifies, how to apply, and what actually decides",
+      am: "የህዝብ ቤት — ማን ብቁ ነው፣ እንዴት ማመልከት እና በእውነት የሚወስነው",
     },
     slug: {
       he: "public-housing-waiting-list",
@@ -6772,25 +6772,26 @@ If you worked "off the books" (no pay slip) — you are still entitled. Prove em
     bodies: {
       he: `## מה זה דיור ציבורי?
 
-**דיור ציבורי** הוא דירה בבעלות המדינה (עמידר/עמיגור) שמושכרת במחיר מסובסד (כ-20-30% משוק) למשפחות בעלות הכנסה נמוכה.
+**דיור ציבורי** הוא דירה בבעלות המדינה (עמידר/עמיגור) שמושכרת בשכר דירה מסובסד למשפחות בעלות הכנסה נמוכה. גובה הסבסוד נקבע פרטנית ואינו אחוז קבוע.
 
 ## מי זכאי?
 
-**תנאים בסיסיים:**
-- תושב ישראל לפחות **12 שנים**
-- אין בבעלותך דירה (או חלק מדירה)
-- הכנסה חודשית מתחת לתקרה (לפי גודל משפחה)
+**הזכאות נקבעת בתעודת זכאות ממשרד הבינוי והשיכון, לפי שיטת ניקוד** — גיל, מצב משפחתי ומספר ילדים. אין סף אחד פשוט שאפשר לבדוק מול עצמכם, ולכן התשובה המחייבת מגיעה רק ממחלקת האכלוס במחוז שלכם.
 
-**עדיפות ראשונה:**
-- נכה עם מוגבלות פיזית קשה
-- קשיש חסר דיור
-- משפחה עם ילד נכה
+**מה שכן ברור מהתנאים המתפרסמים:**
 
-## ממוצע המתנה
+- אין בבעלותכם — ולא הייתה — דירה או חלק מדירה
+- לא קיבלתם בעבר סיוע ממשלתי לדיור
+- הכנסה מתחת לתקרה שנקבעת לפי גודל המשפחה
+- נדרש ותק מגורים בארץ, והוכחתו באישור תושבות
 
-- **בכלל**: 8-15 שנים
-- **קריית מלאכי**: 12-16 שנים
-- **נתניה**: 10-14 שנים
+**עדיפות** ניתנת למצבים כמו מוגבלות פיזית קשה, קשיש חסר דיור ומשפחה עם ילד נכה.
+
+**מה שלא נכתוב כאן:** מספר שנות ותק מדויק, אחוז הסבסוד, או זמן המתנה לפי עיר. גרסה קודמת של העמוד נקבה ב-"12 שנות ותק", ב-"8–15 שנות המתנה" ובמספרים לקריית מלאכי ולנתניה — **אף אחד מהם לא נמצא בפרסום רשמי**, והם הוסרו. מספר שגוי כאן גורם לאדם לוותר על הגשה שהוא זכאי לה.
+
+## כמה מחכים
+
+זמן ההמתנה משתנה מאוד לפי אזור, גודל הדירה והניקוד, ומתפרסם על-ידי משרד השיכון ולא על-ידינו. **הכלל המעשי היחיד: הגישו בכל מקרה** — הוותק נספר ממועד ההגשה.
 
 ## איך מגישים?
 
@@ -6801,31 +6802,41 @@ If you worked "off the books" (no pay slip) — you are still entitled. Prove em
 
 ## עדיפות לעולים חדשים
 
-עולי אתיופיה (פלאשמורה ומבצע שלמה) זכאים ל**עדיפות** על רשימת ממתינים לפי צו מיוחד — בדקו עם משרד הקליטה.
+קיימים מסלולי סיוע ייעודיים לעולים, והם משתנים לפי מועד העלייה והמעמד. **אנחנו לא קובעים כאן שמגיעה לכם עדיפות** — זו טענה שדורשת אישור פרטני. בדקו מול משרד העלייה והקליטה ומול מחלקת האכלוס במחוז.
 
-📞 עמידר: 03-9533333 | עמיגור: 04-8507777 | משרד השיכון: 5442*`,
+📞 עמידר: 03-9533333 | עמיגור: 04-8507777 | משרד השיכון: 5442*
+
+**מקור:** [משרד הבינוי והשיכון — דיור ציבורי](https://www.gov.il/he/departments/topics/public-housing). התנאים המחייבים מתפרסמים על-ידי המשרד ומשתנים מעת לעת. נבדק אוקטובר 2026.`,
       en: `## What is Public Housing?
 
 State-owned apartments (Amidar/Amigour) rented at subsidised prices (~20-30% of market rate) to low-income families.
 
 ## Who Qualifies?
 
-Israeli resident for at least **12 years**; no property ownership; income below threshold (by family size). Priority: severe physical disability, homeless elderly, family with disabled child.
+Eligibility is decided by a certificate from the Ministry of Construction and Housing, scored on age, marital status and number of children. There is no single threshold you can check yourself — the binding answer comes from your district housing office.
+
+What the published conditions do make clear: you neither own nor have owned a home or part of one; you have not previously received state housing assistance; income is below a ceiling set by family size; residency must be evidenced. Priority exists for severe physical disability, homeless elderly and families with a disabled child.
+
+**What we will not print here:** an exact residency threshold, a subsidy percentage, or a waiting time by city. An earlier version gave "12 years", "8-15 years" and figures for Kiryat Malachi and Netanya — none appear in any official publication, and they were removed. A wrong number here makes someone give up on an application they qualify for.
 
 ## Average Wait Time
 
-8-15 years nationally. Apply regardless — the clock starts from application date.
+It varies widely by area, apartment size and score, and is published by the Ministry, not by us. The one practical rule: **apply anyway** — seniority counts from the application date.
 
 ## Special Priority for Ethiopian Immigrants
 
-Falashmura and Operation Solomon olim may have **priority** on the waiting list under special government decree — check with Ministry of Aliyah.
+Dedicated assistance tracks for olim exist and vary by date of aliyah and status. **We do not assert here that you are entitled to priority** — that needs individual confirmation from the Ministry of Aliyah and your district housing office.
 
-📞 Amidar: 03-9533333 | Ministry of Housing: *5442`,
+📞 Amidar: 03-9533333 | Ministry of Housing: *5442
+
+**Source:** [Ministry of Construction and Housing](https://www.gov.il/he/departments/topics/public-housing). Binding conditions are published by the Ministry and change over time. Checked October 2026.`,
       am: `## ምን ነው?
 
-መንግስት ቤቶቸ (20-30% ከ ገበያ ዋጋ) ዝቅተኛ ደሞዝ ቤተሰቦቸ ይሰጣቸዋል።
+መንግስት የሚያከራያቸው ቤቶች ለዝቅተኛ ገቢ ቤተሰቦች፣ በድጎማ ኪራይ። የድጎማው መጠን በግለሰብ ደረጃ ይወሰናል።
 
-ቀጠሮ: 8-15 ዓመት — ዛሬ ያመልክቱ!
+ብቁነት የሚወሰነው በቤቶች ሚኒስቴር በሚሰጥ የብቁነት ማረጋገጫ ነው። **ትክክለኛውን መልስ የሚሰጠው የአካባቢዎ የቤቶች መምሪያ ብቻ ነው።**
+
+ተግባራዊ ምክር: **ለማንኛውም ያመልክቱ** — ቀዳሚነት ከማመልከቻው ቀን ይቆጠራል።
 
 📞 03-9533333`,
     },
