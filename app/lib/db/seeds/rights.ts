@@ -6764,9 +6764,9 @@ If you worked "off the books" (no pay slip) — you are still entitled. Prove em
     },
     govUrl: "https://www.gov.il/he/departments/topics/public-housing",
     eligibilitySummary: {
-      he: "משפחות בעלות הכנסה נמוכה ותושבות ותיקה יכולות להגיש לדיור ציבורי. ממוצע המתנה: 8-15 שנים, אך יש עדיפויות לזכאים מיוחדים.",
-      en: "Low-income families with long residency can apply for public housing. Average wait: 8-15 years, but special eligible groups receive priority.",
-      am: "ዝቅተኛ ገቢ ያላቸው ቤተሰቦቸ ለህዝብ ቤት ማመልከት ይችላሉ። አማካኝ ጊዜ: 8-15 ዓመታት።",
+      he: "הזכאות לדיור ציבורי נקבעת בתעודת זכאות ממשרד הבינוי והשיכון, לפי שיטת ניקוד. זמן ההמתנה משתנה לפי אזור וניקוד — הוותק נספר ממועד ההגשה, ולכן כדאי להגיש בכל מקרה.",
+      en: "Eligibility for public housing is set by a Ministry of Construction and Housing certificate, scored on age, marital status and children. Waiting time varies by area and score — seniority counts from the application date, so apply anyway.",
+      am: "ብቁነት በቤቶች ሚኒስቴር በሚሰጥ የብቁነት ማረጋገጫ ይወሰናል። የመጠበቂያ ጊዜ በአካባቢው ይለያያል — ቀዳሚነት ከማመልከቻው ቀን ይቆጠራል።",
     },
     tags: ["housing", "rights", "social_welfare"],
     bodies: {
