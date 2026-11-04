@@ -12,11 +12,23 @@ const DISMISS_KEY = "promo-dismissed:miami-residence";
 
 // Never show an investment ad above crisis content — it undermines trust at
 // the exact moment a visitor needs the site most (TED-121).
-const SENSITIVE_PATHS = [
-  "/family/domestic-violence",
-  "/health/mental-health",
-  "/voice/racism-report",
-];
+//
+// TED-183 widened this from three named pages to whole verticals. The old
+// list let a "$150,000 seaside apartment" banner run above the public-housing
+// eligibility guide and the health pages — the same trust problem the rule
+// was written to prevent, just on the pages nobody had enumerated yet.
+// Whole sections, not individual URLs, so a new page is covered the day it
+// ships rather than the day somebody notices.
+const SENSITIVE_SECTIONS = ["/rights", "/health", "/education", "/family"];
+
+const SENSITIVE_PATHS = ["/voice/racism-report"];
+
+export function isSensitivePath(pathname: string): boolean {
+  return (
+    SENSITIVE_SECTIONS.some((s) => pathname.includes(`${s}/`) || pathname.endsWith(s)) ||
+    SENSITIVE_PATHS.some((p) => pathname.includes(p))
+  );
+}
 
 // Colors sampled from merkaz-h.co.il's own campaign page so the banner
 // reads as a continuation of their brand, not a generic ad strip.
@@ -35,7 +47,7 @@ export function PromoBanner({ locale }: { locale: Locale }) {
   }, []);
 
   if (dismissed) return null;
-  if (SENSITIVE_PATHS.some((p) => pathname.includes(p))) return null;
+  if (isSensitivePath(pathname)) return null;
 
   const dismiss = () => {
     setDismissed(true);

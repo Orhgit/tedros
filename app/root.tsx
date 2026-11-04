@@ -159,6 +159,26 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
       primaryHref: "/am",
       primaryLabel: "ወደ መነሻ ገጽ",
     },
+    // 410 is deliberate removal, not breakage (TED-176) — saying "temporary
+    // issue on our side" about a page we retired on purpose would be a lie.
+    "410-he": {
+      title: "העמוד הוסר",
+      body: "העמוד הזה הוסר מהאתר ולא יחזור. אפשר לחזור לעמוד הבית או לעבור ישירות לזכויות.",
+      primaryHref: "/he",
+      primaryLabel: "חזרה לעמוד הבית",
+    },
+    "410-en": {
+      title: "This page was removed",
+      body: "This page has been retired and won't be coming back. Head back home, or jump to the rights catalog.",
+      primaryHref: "/en",
+      primaryLabel: "Back to homepage",
+    },
+    "410-am": {
+      title: "ገጹ ተወግዷል",
+      body: "ይህ ገጽ ከጣቢያው ተወግዷል እና አይመለስም። ወደ መነሻ ገጹ ይመለሱ ወይም ወደ መብቶች ካታሎግ ይዝለሉ።",
+      primaryHref: "/am",
+      primaryLabel: "ወደ መነሻ ገጽ",
+    },
     "500-he": {
       title: "משהו השתבש",
       body: "תקלה זמנית בצד שלנו. נסו לרענן את הדף, ואם זה ממשיך — דווחו לנו ב-GitHub.",
