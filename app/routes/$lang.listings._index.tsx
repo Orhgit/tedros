@@ -20,6 +20,7 @@ import {
   cleanListingTitle,
   effectiveListingType,
   formatRooms,
+  listingSourceUrl,
 } from "~/lib/listings/display";
 
 const LISTING_TYPES: ListingType[] = [
@@ -244,6 +245,9 @@ function ListingCard({ item, locale }: { item: PublicListingSummary; locale: Loc
   // Deal-type guard (TED-129): synced "sale" rows with monthly-rent-sized
   // prices are displayed (label + URL) as rentals. See lib/listings/display.
   const displayType = effectiveListingType(item.type, item.price);
+  // TED-176: a syndicated row's detail page is 410 now, so the card goes
+  // straight to the source listing on merkaz-h instead.
+  const sourceUrl = listingSourceUrl(item.attributes as Record<string, unknown>);
   const href = `/${locale}/listings/${item.city.slugHe}/${displayType}/${slug}`;
   const rooms = (item.attributes as { rooms?: number }).rooms;
   const roomsLabel = formatRooms(rooms);
@@ -255,11 +259,11 @@ function ListingCard({ item, locale }: { item: PublicListingSummary; locale: Loc
       | "EUR"
       | undefined) ?? "ILS";
 
-  return (
-    <Link
-      to={href}
-      className="block h-full rounded-lg border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-sm dark:border-gray-800 dark:hover:border-gray-600"
-    >
+  const cardClassName =
+    "block h-full rounded-lg border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-sm dark:border-gray-800 dark:hover:border-gray-600";
+
+  const body = (
+    <>
       <span className="inline-block rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
         {t(locale, `listings_type_${displayType}`)}
       </span>
@@ -285,6 +289,25 @@ function ListingCard({ item, locale }: { item: PublicListingSummary; locale: Loc
           .filter(Boolean)
           .join(" · ")}
       </p>
+    </>
+  );
+
+  if (sourceUrl) {
+    return (
+      <a
+        href={sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cardClassName}
+      >
+        {body}
+      </a>
+    );
+  }
+
+  return (
+    <Link to={href} className={cardClassName}>
+      {body}
     </Link>
   );
 }

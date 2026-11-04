@@ -59,6 +59,26 @@ export function cleanListingTitle(title: string): string {
     .trim();
 }
 
+// --- Syndication ------------------------------------------------------------
+
+/**
+ * A listing imported from merkaz-h.co.il rather than authored here. The sync
+ * stores the source page on the row, which is also what the card links to, so
+ * its presence is the authoritative "this is somebody else's page" marker.
+ *
+ * TED-176 retired these from search: they were thin copies of a page that
+ * already ranks on the source domain, and republishing them in three locales
+ * put 537 duplicate URLs into our index for zero clicks.
+ */
+export function listingSourceUrl(attributes: Record<string, unknown>): string | null {
+  const url = attributes.externalSourceUrl;
+  return typeof url === "string" && url.length > 0 ? url : null;
+}
+
+export function isSyndicated(listing: { attributes: Record<string, unknown> }): boolean {
+  return listingSourceUrl(listing.attributes) !== null;
+}
+
 // --- De-duplication ---------------------------------------------------------
 
 export type DedupableListing = {

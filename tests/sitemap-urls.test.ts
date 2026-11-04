@@ -6,8 +6,9 @@
 // per-sitemap URL counts are asserted so a future change that re-inflates the
 // matrix by thousands of URLs cannot land quietly.
 //
-// `sitemap-listings.xml` is DB-backed and is excluded here; it is covered by
-// the listings tests.
+// TED-176 retired `sitemap-listings.xml` entirely: 537 syndicated listing URLs
+// that earned 24 impressions and zero clicks in their whole lifetime. The index
+// test below asserts it stays gone.
 
 import { beforeAll, describe, expect, it } from "vitest";
 
@@ -190,5 +191,25 @@ describe("the city templates the audit told us to keep are still published", () 
     expect(has("/heritage/sigd")).toBe(false);
     expect(has("/heritage/wedding/suppliers/catering")).toBe(true);
     expect(has("/education/scholarships/isef-fellowship")).toBe(true);
+  });
+});
+
+// TED-176: the listings sitemap published 537 syndicated copies of
+// merkaz-h.co.il pages. Over their whole lifetime they earned 24 impressions
+// and zero clicks while making up a fifth of everything we asked Google to
+// index. The sub-sitemap is gone and the index must not advertise it.
+describe("the retired listings sitemap (TED-176)", () => {
+  it("is not referenced by the sitemap index", async () => {
+    const { loader } = await import("../app/routes/sitemap[.]xml");
+    const xml = await (loader() as Response).text();
+    expect(xml).not.toContain("sitemap-listings.xml");
+  });
+
+  it("still advertises every sub-sitemap that remains", async () => {
+    const { loader } = await import("../app/routes/sitemap[.]xml");
+    const xml = await (loader() as Response).text();
+    for (const name of ["core", "rights", "careers", "health", "content", "news"]) {
+      expect(xml, name).toContain(`sitemap-${name}.xml`);
+    }
   });
 });

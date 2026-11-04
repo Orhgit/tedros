@@ -19,6 +19,7 @@ import {
   cleanListingTitle,
   effectiveListingType,
   formatRooms,
+  listingSourceUrl,
 } from "~/lib/listings/display";
 import { listRights } from "~/lib/db/queries/rights.server";
 import { getEnv } from "~/lib/env.server";
@@ -464,7 +465,10 @@ function ListingCard({
   // Deal-type guard (TED-129): synced "sale" rows with monthly-rent-sized
   // prices are displayed (label + URL) as rentals. See lib/listings/display.
   const displayType = effectiveListingType(listing.type, listing.price);
-  const externalUrl = attrs.externalSourceUrl as string | undefined;
+  // TED-176: a syndicated row's detail page is 410 now, so the card goes
+  // straight to the source listing. Only agency-authored rows still have a
+  // page of ours to link to.
+  const externalUrl = listingSourceUrl(attrs);
   const href = externalUrl ?? `/${locale}/listings/${citySlug}/${displayType}/${slug}`;
   const isExternal = !!externalUrl;
 
