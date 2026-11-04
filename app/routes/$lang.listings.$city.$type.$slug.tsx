@@ -22,6 +22,7 @@ import {
   cleanListingTitle,
   effectiveListingType,
   formatRooms,
+  isSyndicated,
 } from "~/lib/listings/display";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
@@ -76,6 +77,23 @@ export async function loader({ params }: Route.LoaderArgs) {
   if (!listing) {
     throw new Response("Not found", { status: 404 });
   }
+
+  // TED-176: syndicated rows are retired. An imported listing is a copy of a
+  // merkaz-h.co.il page — ~1,000 characters of mostly-navigation markup with
+  // images proxied from the source domain, mirrored into three locales. The
+  // 537 URLs that produced earned 24 impressions and zero clicks in their
+  // lifetime while making up a fifth of everything we asked Google to index.
+  //
+  // 410 and not 301: there is no equivalent page here, and `Gone` is the
+  // unambiguous signal to drop the URL. The canonical copy lives on
+  // merkaz-h, and that is where the city cards now point.
+  //
+  // Agency-authored listings (no external source) keep their detail page and
+  // lead form — those are ours, and they are not the problem.
+  if (isSyndicated(listing)) {
+    throw new Response("Gone", { status: 410 });
+  }
+
   const { PUBLIC_URL } = getEnv();
   return { locale, listing, publicUrl: PUBLIC_URL };
 }
