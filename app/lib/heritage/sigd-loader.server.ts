@@ -11,7 +11,13 @@ import type { Locale } from "../i18n/config";
 import { t } from "../i18n/messages";
 import { renderMarkdown } from "../utils/markdown";
 import { eventPath, sigdEventsPath, sigdGuestsPath, sigdSchoolsPath } from "./links";
-import { breadcrumbJsonLd, heritageArticleJsonLd, type JsonLd } from "./schema";
+import {
+  breadcrumbJsonLd,
+  heritageArticleJsonLd,
+  publishedEventJsonLd,
+  type JsonLd,
+} from "./schema";
+import { cityName, findCityBySlug } from "../cities/registry";
 import {
   SIGD_5787_DATE,
   SIGD_5787_HEBREW_DATE,
@@ -98,6 +104,33 @@ export function sigdSeasonPayload(kind: SigdSeasonKind, locale: Locale) {
         }))
       : [];
 
+  // One Event node per verified entry, naming the real organiser. Emitted
+  // only for `events`, and only for rows that cleared the sourcing bar — so
+  // an empty list emits no Event node rather than an empty one.
+  const eventNodes: JsonLd[] =
+    kind === "events"
+      ? SIGD_EVENTS_2026.map((e) => {
+          const city = e.citySlug ? findCityBySlug(e.citySlug) : undefined;
+          return publishedEventJsonLd(
+            { publicUrl: PUBLIC_URL, locale },
+            {
+              path,
+              id: e.id,
+              name: e.name[locale] ?? e.name.he,
+              description: e.notes
+                ? (e.notes[locale] ?? e.notes.he)
+                : (e.name[locale] ?? e.name.he),
+              date: e.date,
+              startTime: e.startTime,
+              organizerName: e.organizer[locale] ?? e.organizer.he,
+              organizerUrl: e.sourceUrl,
+              locationName: e.location[locale] ?? e.location.he,
+              addressLocality: city ? cityName(city, locale) : undefined,
+            },
+          );
+        })
+      : [];
+
   const article: JsonLd = heritageArticleJsonLd(
     { publicUrl: PUBLIC_URL, locale },
     {
@@ -141,5 +174,6 @@ export function sigdSeasonPayload(kind: SigdSeasonKind, locale: Locale) {
     publicUrl: PUBLIC_URL,
     article,
     breadcrumb,
+    eventNodes,
   };
 }
