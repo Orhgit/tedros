@@ -32,6 +32,7 @@ import {
   SIGD_5787_HEBREW_DATE,
   SIGD_EVENTS_2026,
   SIGD_EVENTS_PAGE,
+  SIGD_EVENTS_RECHECK,
   SIGD_GUESTS_PAGE,
   SIGD_SCHOOLS_PAGE,
   sigdPageBody,
@@ -209,11 +210,49 @@ describe("Sigd season routes", () => {
     expect(crumbs[3]!.item).toBe(`https://tedros.co.il/he${sigdEventsPath()}`);
   });
 
-  it("shows the honest empty state while no event is verified", async () => {
+  it("renders the published assembly, with its source, in every locale", async () => {
+    for (const locale of LOCALES) {
+      const data = await eventsLoader(args(locale));
+      expect(data.events.length).toBeGreaterThan(0);
+      const row = data.events.find((e) =>
+        e.id.startsWith("jerusalem-central-prayer-assembly"),
+      );
+      expect(row, `no Jerusalem assembly row in ${locale}`).toBeTruthy();
+      expect(row!.name).toBeTruthy();
+      expect(row!.organizer).toBeTruthy();
+      expect(row!.location).toBeTruthy();
+      expect(row!.sourceUrl).toMatch(/^https:\/\/ethiopianjhc\.org\.il\//);
+      // The 5786 assembly sits on the same host. Sourcing the 5787 row to
+      // last year's page is the exact mistake this guards.
+      expect(row!.sourceUrl).not.toContain("20.11.2025");
+    }
+    // The empty-state copy still has to exist for the day the list is empty.
+    const he = await eventsLoader(args("he"));
+    expect(he.emptyHeading).toBeTruthy();
+    expect(he.emptyBody).toBeTruthy();
+  });
+
+  it("emits an Event node per verified ceremony, crediting the real organiser", async () => {
     const data = await eventsLoader(args("he"));
-    expect(data.events).toEqual([]);
-    expect(data.emptyHeading).toBeTruthy();
-    expect(data.emptyBody).toBeTruthy();
+    expect(data.eventNodes).toHaveLength(SIGD_EVENTS_2026.length);
+    const node = data.eventNodes[0] as Record<string, unknown>;
+    expect(node["@type"]).toBe("Event");
+    // Claiming to organise somebody else's ceremony would be a false claim
+    // in structured data, which is the one place nobody proof-reads.
+    const organizer = node["organizer"] as Record<string, string>;
+    expect(organizer.name).not.toContain("Tedros");
+    expect(organizer.url).toContain("ethiopianjhc.org.il");
+    expect(node["startDate"]).toBe(`${SIGD_5787_DATE}T08:00`);
+    const place = node["location"] as Record<string, unknown>;
+    expect(place["@type"]).toBe("Place");
+    expect((place["address"] as Record<string, string>).addressLocality).toBe("ירושלים");
+  });
+
+  it("emits no Event node on the pages that list no events", async () => {
+    for (const loader of [schoolsLoader, guestsLoader]) {
+      const data = await loader(args("he"));
+      expect(data.eventNodes).toEqual([]);
+    }
   });
 
   it("301s /heritage/sigd to the guide rather than serving a second hub", async () => {
@@ -225,6 +264,37 @@ describe("Sigd season routes", () => {
       expect((thrown as Response).headers.get("location")).toBe(
         `/${locale}${eventPath("sigd")}`,
       );
+    }
+  });
+});
+
+describe("the re-check schedule is enforced, not decorative", () => {
+  // 5787 shipped three re-check dates in a comment and nothing that read
+  // them. All three passed unswept, and for five weeks the site told readers
+  // no Sigd event had been published while the organiser's own page carried
+  // the ceremony. A date that nothing reads is not a schedule.
+  it("fails once a re-check date has passed while no event is listed", () => {
+    const today = new Date().toISOString().slice(0, 10);
+    const passed = SIGD_EVENTS_RECHECK.filter((d) => d <= today);
+    if (passed.length > 0) {
+      expect(
+        SIGD_EVENTS_2026.length,
+        `re-check date(s) ${passed.join(", ")} have passed and no event is ` +
+          `listed. Sweep the organisers' sites and either add what they ` +
+          `published or move the dates forward — do not leave both stale.`,
+      ).toBeGreaterThan(0);
+    }
+  });
+
+  it("keeps every re-check date on or before the holiday", () => {
+    for (const d of SIGD_EVENTS_RECHECK) {
+      expect(d <= SIGD_5787_DATE, `${d} is after the holiday`).toBe(true);
+    }
+  });
+
+  it("verifies each listed event no later than the day it happens", () => {
+    for (const e of SIGD_EVENTS_2026) {
+      expect(e.verifiedOn <= e.date, `${e.id} verified after its own date`).toBe(true);
     }
   });
 });

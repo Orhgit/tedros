@@ -73,19 +73,73 @@ export interface SigdEvent {
 /**
  * Verified Sigd 5787 events.
  *
- * Empty as of 2026-09-15. A sweep of the Jerusalem, Netanya, Rehovot,
- * Beer Sheva, Haifa, Ashdod, Kiryat Gat, Lod and Ramla municipal sites, of
- * gov.il, of the Ethiopian Jewry Heritage Center, of thekotel.org and of
- * iaej.co.il found no 5787 announcement. Several of those hosts also refuse
- * automated fetches (403), so nothing could be confirmed from them either
- * way — which is a reason to publish nothing, not a reason to guess.
+ * Empty from 2026-09-15 until 2026-11-05, and that was the correct state:
+ * nobody had published. On 2026-11-05 the organiser's own event-calendar
+ * entry for 09.11.2026 was opened and read, and it is the single entry below.
+ *
+ * How it was checked, because the 5786 entry sitting on the same host is a
+ * trap: the holiday page lists the 5787 assembly as an UPCOMING event and
+ * files the 20.11.2025 assembly under `אירועים שחלפו`, and the dedicated
+ * event page below contains `09.11.2026` and no `20.11.2025` at all. The
+ * schedule and the shuttle paragraph are read from the 5787 page, not
+ * carried across from last year's.
+ *
+ * Nothing else is listed. Rehovot's municipal ceremony was reported for
+ * 2.11.2026 — already past — and only in news write-ups; the municipality's
+ * own publication could not be opened, and a write-up is not the organiser.
+ * Netanya, Ashdod, Kiryat Gat, Beer Sheva, Haifa, Lod and Ramla still have
+ * nothing published under their own name.
  *
  * Re-check dates are in `SIGD_EVENTS_RECHECK`.
  */
-export const SIGD_EVENTS_2026: SigdEvent[] = [];
+export const SIGD_EVENTS_2026: SigdEvent[] = [
+  {
+    id: "jerusalem-central-prayer-assembly-5787",
+    name: {
+      he: "עצרת התפילה המרכזית של חג הסגד בירושלים",
+      en: "The central Sigd prayer assembly in Jerusalem",
+      am: "የሰግድ በዓል ማዕከላዊ የጸሎት ስብሰባ በኢየሩሳሌም",
+    },
+    organizer: {
+      he: "המרכז למורשת יהדות אתיופיה",
+      en: "The Ethiopian Jewry Heritage Center",
+      am: "የኢትዮጵያ አይሁዶች ቅርስ ማዕከል",
+    },
+    location: {
+      he: "טיילת שרובר, ליד ארמון הנציב, ירושלים",
+      en: "The Sherover Promenade, by Armon Hanatziv, Jerusalem",
+      am: "የሼሮቨር መንገድ፣ ከአርሞን ሃናጺቭ አጠገብ፣ ኢየሩሳሌም",
+    },
+    citySlug: "jerusalem",
+    date: SIGD_5787_DATE,
+    // Published by the organiser as the opening of the prayer compound.
+    startTime: "08:00",
+    sourceUrl:
+      "https://ethiopianjhc.org.il/events-calendar/%D7%A2%D7%A6%D7%A8%D7%AA-%D7%94%D7%AA%D7%A4%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%A9%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93-%D7%91%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99/",
+    sourceLabel: {
+      he: "המרכז למורשת יהדות אתיופיה — דף האירוע",
+      en: "The Ethiopian Jewry Heritage Center — the event page",
+      am: "የኢትዮጵያ አይሁዶች ቅርስ ማዕከል — የዝግጅቱ ገጽ",
+    },
+    verifiedOn: "2026-11-05",
+    notes: {
+      he: 'לוח הזמנים כפי שהמארגן פרסם אותו: 08:00 פתיחת מתחם התפילה · 12:30 טקס הברכות הממלכתי · 14:00 שבירת הצום. לפי אותו פרסום יופעל ביום העצרת מערך הסעות מתחנות האוטובוסים שעל ציר רחוב שז"ר, הצמוד לבנייני האומה, ובנוסף יצאו אוטובוסים מרחבי הארץ; את נקודות היציאה המארגן לא פרסם, ומפנה לטלפון המשרד 02-6772568.',
+      en: "The schedule as the organiser published it: 08:00 the prayer compound opens · 12:30 the state blessings ceremony · 14:00 the breaking of the fast. The same publication says a shuttle service will run from the bus stops along Shazar Street, next to Binyanei Ha'uma, with additional buses from around the country; the organiser did not publish the departure points and refers callers to its office, 02-6772568.",
+      am: "አዘጋጁ እንዳሳተመው መርሐ ግብር፦ 08:00 የጸሎቱ ቦታ ይከፈታል · 12:30 የመንግሥት የበረከት ሥነ ሥርዓት · 14:00 ጾም መፍቻ። በዚያው ህትመት መሠረት በሻዛር መንገድ ላይ ካሉት የአውቶብስ ማቆሚያዎች ልዩ የማመላለሻ አገልግሎት ይሠራል፤ የመነሻ ቦታዎቹ አልታተሙም፣ ለጽሕፈት ቤቱ 02-6772568 ይደውሉ።",
+    },
+  },
+];
 
-/** When to sweep organiser sites again. The 5786 cycle published mid-month. */
-export const SIGD_EVENTS_RECHECK = ["2026-10-04", "2026-10-20", "2026-11-01"];
+/**
+ * When to sweep organiser sites again.
+ *
+ * These are enforced: `tests/sigd-season.test.ts` fails once a date here has
+ * passed while `SIGD_EVENTS_2026` is still empty. The 5787 cycle shipped with
+ * three dates and no enforcement, all three passed unswept, and the site told
+ * readers for five weeks that nothing had been published while the organiser's
+ * own page carried the ceremony. The test is the fix for that, not this list.
+ */
+export const SIGD_EVENTS_RECHECK = ["2026-11-06", "2026-11-08"];
 
 export interface SigdPage {
   title: Record<Locale, string>;
@@ -102,9 +156,9 @@ export const SIGD_EVENTS_PAGE: SigdPage = {
     am: "የ2026 ሰግድ ዝግጅቶች — የተረጋገጠ፣ የሚዘመን ዝርዝር",
   },
   description: {
-    he: "טקסי ואירועי הסיגד 2026 (9.11) — רק מה שהמארגן עצמו פרסם, עם קישור למקור ותאריך בדיקה. נכון להיום טרם פורסמו אירועים; העמוד מתעדכן.",
-    en: "Sigd 2026 ceremonies and events (9 Nov) — only what the organiser published, each with its source link and check date. Nothing published yet; this page updates.",
-    am: "የ2026 ሰግድ ሥነ ሥርዓቶችና ዝግጅቶች (ኅዳር 9) — አዘጋጁ ራሱ ያሳተመው ብቻ፣ ከምንጭ ማገናኛ ጋር።",
+    he: "עצרת התפילה המרכזית של הסיגד תתקיים ביום שני 9.11.2026 בטיילת שרובר שליד ארמון הנציב — כך פרסם המרכז למורשת יהדות אתיופיה. כאן הפרטים עם קישור לפרסום המארגן ותאריך הבדיקה.",
+    en: "The central Sigd prayer assembly will be held on Monday 9 November 2026 at the Sherover Promenade by Armon Hanatziv — as published by the Ethiopian Jewry Heritage Center. Details here, with the organiser's own link and the date it was checked.",
+    am: "የሰግድ ማዕከላዊ የጸሎት ስብሰባ ሰኞ ኅዳር 9፣ 2026 በሼሮቨር መንገድ ይካሄዳል — የኢትዮጵያ አይሁዶች ቅርስ ማዕከል እንዳሳተመው። ዝርዝሩ ከአዘጋጁ ማገናኛ ጋር።",
   },
   body: {
     he: `## הסיגד יחול ביום שני, 9 בנובמבר 2026
@@ -113,17 +167,19 @@ ${SIGD_5787_HEBREW_DATE}. התאריך הזה נגזר משני כיוונים �
 
 ## מה מצב האירועים כרגע
 
-**נכון ל-15 בספטמבר 2026 — לא פורסם עדיין שום אירוע סיגד לתשפ"ז.**
+**העצרת המרכזית פורסמה.** ב-5 בנובמבר 2026 פתחנו את דף האירוע של המרכז למורשת יהדות אתיופיה וקראנו בו את פרטי עצרת התפילה המרכזית לתשפ"ז. הפרטים — מקום, לוח זמנים והסעות ככל שפורסמו — מופיעים בכרטיס האירוע בראש העמוד הזה, לצד הקישור לפרסום עצמו.
 
-זו לא רשלנות שלנו ולא מחסור במידע אצלכם: בשלב הזה של השנה המארגנים פשוט עוד לא פרסמו. במחזור הקודם פורסמו פרטי האירועים בסמוך לחג, באמצע נובמבר. אנחנו סורקים מחדש את אתרי המארגנים ב-4 באוקטובר, ב-20 באוקטובר ושוב ב-1 בנובמבר, והעמוד הזה יתעדכן עם כל אירוע שיפורסם.
+עד לתאריך הזה העמוד הזה אמר שלא פורסם דבר, וזה היה נכון כשנכתב בספטמבר — אבל הוא המשיך לאמר את זה גם אחרי שהמארגן פרסם. זו הייתה טעות שלנו, והיא תוקנה. אם אתם קוראים את זה אחרי החג, הכרטיס נשאר כתיעוד של מה שפורסם.
 
-מה שכן ידוע כבר עכשיו:
+**אירועים עירוניים:** נכון ל-5 בנובמבר 2026 לא מצאנו פרסום של רשות מקומית תחת שמה שלה לתשפ"ז. הטקס העירוני ברחובות דווח בכתבות לתאריך 2.11.2026, שכבר חלף, ולא מצאנו את פרסום העירייה עצמה — וכתבה על אירוע אינה המארגן. אם מצאתם פרסום עירוני, שלחו לנו את הקישור.
+
+מה שידוע מעבר לכך:
 
 - **התאריך** — יום שני, 9.11.2026.
 - **המקום שבו מתכנסת הקהילה בירושלים** — טיילת גבריאל שרובר (טיילת ארמון הנציב). זה המקום שבו נערך הטקס המרכזי מאז שעבר מהר ציון.
 - **שיש עצרת מרכזית ממלכתית** — ס' 2 לחוק: "שר המדע התרבות והספורט יורה על קיום עצרת מרכזית לפתיחת חג הסיגד". שימו לב: זו חובה על השר, ולא ערובה שהטקס יתקיים בכל שנה בפועל — ב-2023, בעקבות מלחמת חרבות ברזל, הטקס הממלכתי בארמון הנציב בוטל.
 
-## למה העמוד הזה ריק — וזה בכוונה
+## למה יש כאן אירוע אחד ולא שבעה
 
 אפשר היה למלא את העמוד הזה בשבע שורות טבלה: "ירושלים — טקס מרכזי", "נתניה — טקס עירוני + שוק מסורתי", "אשדוד — פסטיבל סיגד". גרסה קודמת של האתר הזה עשתה בדיוק את זה, ואף אחת מהשורות לא נשענה על מקור.
 
@@ -133,7 +189,8 @@ ${SIGD_5787_HEBREW_DATE}. התאריך הזה נגזר משני כיוונים �
 
 ## מה לעשות בינתיים
 
-- **בדקו מול העירייה שלכם ישירות.** אתר העירייה ומחלקת התרבות/קליטה הם המקור הראשון שמפרסם. אם מצאתם פרסום — שלחו לנו את הקישור ונוסיף אותו לכאן.
+- **אם אתם נוסעים לעצרת בירושלים** — הפרטים בכרטיס האירוע למעלה, והקישור שם מוביל לפרסום של המארגן. נקודות היציאה של ההסעות לא פורסמו באינטרנט; המארגן מפנה לטלפון המשרד שמופיע בכרטיס.
+- **בדקו מול העירייה שלכם ישירות.** אתר העירייה ומחלקת התרבות/קליטה הם המקור הראשון שמפרסם אירוע עירוני. אם מצאתם פרסום — שלחו לנו את הקישור ונוסיף אותו לכאן.
 - **אם אתם שכירים** — הסיגד הוא "יום בחירה" לפי ס' 1(ב) לחוק, כלומר הבחירה לצאת לחופשה או לעבוד היא שלכם, והיום נספר על חשבון ימי החופשה. כדאי להודיע למעסיק מראש ולא ביום עצמו. הפירוט: [מדריך הסיגד](/he/heritage/events/sigd).
 - **אם יש לכם ילדים במערכת החינוך** — שר החינוך מחויב בחוק לקבוע פעילויות חינוכיות לחג. מה זה אומר ומה אפשר לבקש: [הסיגד בבתי הספר](/he/heritage/sigd/schools).
 - **אם אתם מתכננים לבוא ואינכם מהקהילה** — [מדריך השתתפות מכבדת](/he/heritage/sigd/guests).
@@ -143,24 +200,26 @@ ${SIGD_5787_HEBREW_DATE}. התאריך הזה נגזר משני כיוונים �
 
 אם אתם רשות מקומית, בית ספר, עמותה או קהילה ופרסמתם אירוע סיגד לתשפ"ז — שלחו לנו את הקישור לפרסום שלכם ונוסיף אותו. אנחנו לא גובים על זה ולא מקדמים אף אחד; התנאי היחיד הוא שהפרסום יהיה שלכם ויהיה פומבי, כדי שנוכל לקשר אליו. [צרו קשר](/he/about).
 
-**מקורות**: [חוק חג הסיגד, התשס"ח-2008 — ספר החוקים 2164, עמ' 625](https://fs.knesset.gov.il/17/law/17_lsr_300844.pdf) · [המרכז למורשת יהדות אתיופיה — חג הסגד](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · נבדק 15 בספטמבר 2026.`,
+**מקורות**: [חוק חג הסיגד, התשס"ח-2008 — ספר החוקים 2164, עמ' 625](https://fs.knesset.gov.il/17/law/17_lsr_300844.pdf) · [המרכז למורשת יהדות אתיופיה — דף האירוע לתשפ"ז](https://ethiopianjhc.org.il/events-calendar/%D7%A2%D7%A6%D7%A8%D7%AA-%D7%94%D7%AA%D7%A4%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%A9%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93-%D7%91%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99/) · [המרכז למורשת יהדות אתיופיה — חג הסגד](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · נבדק 5 בנובמבר 2026.`,
     en: `## Sigd falls on Monday, 9 November 2026
 
 29 Cheshvan 5787. The date is derived from two independent directions — s. 1(a) of the Sigd Holiday Law plus the Hebrew calendar on one side, and the fifty-day count from Yom Kippur on the other. The full explanation, including a table of the coming years: [the Sigd guide](/en/heritage/events/sigd).
 
 ## Where the events stand right now
 
-**As of 15 September 2026, no Sigd event for 5787 has been published by anyone.**
+**The central assembly has been published.** On 5 November 2026 we opened the Ethiopian Jewry Heritage Center's event page and read the details of the 5787 central prayer assembly there. The details — venue, schedule and shuttles as far as they were published — are in the event card at the top of this page, next to the link to the publication itself.
 
-That is not an oversight on our part and not a gap on yours: at this point in the year the organisers simply have not published. In the previous cycle event details went up close to the holiday, in mid-November. We re-sweep the organisers' sites on 4 October, 20 October and again on 1 November, and this page updates with every event that is published.
+Until that date this page said nothing had been published, which was true when it was written in September — but it went on saying it after the organiser had published. That was our error and it has been corrected. If you are reading this after the holiday, the card stays as a record of what was published.
 
-What is already known:
+**Municipal events:** as of 5 November 2026 we found no local authority publishing a 5787 event under its own name. Rehovot's municipal ceremony was reported in news write-ups for 2 November 2026, which has already passed, and we could not find the municipality's own publication — and a write-up about an event is not the organiser. If you find a municipal publication, send us the link.
+
+What is known beyond that:
 
 - **The date** — Monday, 9 November 2026.
 - **Where the community gathers in Jerusalem** — the Gabriel Sherover Promenade (the Armon Hanatziv promenade). That is where the central ceremony has been held since it moved from Mount Zion.
 - **That a state opening ceremony is mandated** — s. 2 of the law: "The Minister of Science, Culture and Sport shall order the holding of a central assembly to open the Sigd Holiday." Note: that is a duty on the minister, not a guarantee the ceremony happens in any given year — in 2023, following the Swords of Iron war, the state ceremony at Armon Hanatziv was cancelled.
 
-## Why this page is empty — on purpose
+## Why there is one event here and not seven
 
 We could fill it with seven table rows: "Jerusalem — central ceremony", "Netanya — municipal ceremony and traditional market", "Ashdod — Sigd festival". An earlier version of this site did exactly that, and not one of those rows rested on a source.
 
@@ -170,7 +229,8 @@ It looks harmless. It is not. Someone planning a day off — and under the statu
 
 ## What to do in the meantime
 
-- **Check with your municipality directly.** The municipal site and its culture or absorption department are the first to publish. If you find a published event, send us the link and we will add it.
+- **If you are travelling to the Jerusalem assembly** — the details are in the event card above, and the link there goes to the organiser's publication. The shuttle departure points were not published online; the organiser refers callers to the office number shown on the card.
+- **Check with your municipality directly.** The municipal site and its culture or absorption department are the first to publish a municipal event. If you find a published event, send us the link and we will add it.
 - **If you are an employee** — Sigd is a "day of choice" under s. 1(b): the choice to take leave or to work is yours, and the day is counted against your annual leave. Tell your employer in advance rather than on the day. Details: [the Sigd guide](/en/heritage/events/sigd).
 - **If you have children in school** — the Minister of Education is required by statute to set educational activities for the holiday. What that means and what you can ask for: [Sigd in schools](/en/heritage/sigd/schools).
 - **If you are planning to attend from outside the community** — [the respectful-attendance guide](/en/heritage/sigd/guests).
@@ -180,24 +240,26 @@ It looks harmless. It is not. Someone planning a day off — and under the statu
 
 If you are a local authority, a school, a non-profit or a community group and you have published a Sigd 5787 event, send us the link to your publication and we will add it. We charge nothing for this and promote no one; the only condition is that the publication is yours and is public, so that we can link to it. [Get in touch](/en/about).
 
-**Sources**: [Sigd Holiday Law, 5768-2008 — Sefer HaChukim 2164, p. 625](https://fs.knesset.gov.il/17/law/17_lsr_300844.pdf) · [Ethiopian Jewry Heritage Center — the Sigd holiday](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · verified 15 September 2026.`,
+**Sources**: [Sigd Holiday Law, 5768-2008 — Sefer HaChukim 2164, p. 625](https://fs.knesset.gov.il/17/law/17_lsr_300844.pdf) · [Ethiopian Jewry Heritage Center — the 5787 event page](https://ethiopianjhc.org.il/events-calendar/%D7%A2%D7%A6%D7%A8%D7%AA-%D7%94%D7%AA%D7%A4%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%A9%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93-%D7%91%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99/) · [Ethiopian Jewry Heritage Center — the Sigd holiday](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · verified 5 November 2026.`,
     am: `## ሰግድ ሰኞ ኅዳር 9፣ 2026 ይውላል
 
 29 ኅሸዋን 5787። ቀኑ በሁለት ገለልተኛ መንገዶች ተረጋግጧል — የሰግድ በዓል ሕግ አንቀጽ 1(ሀ) እና የዕብራይስጥ የቀን መቁጠሪያ በአንድ በኩል፣ ከዮም ኪፑር የሃምሳ ቀናት ቆጠራ በሌላ በኩል። ሙሉ ማብራሪያ፦ [የሰግድ መመሪያ](/am/heritage/events/sigd)።
 
 ## የዝግጅቶቹ ሁኔታ አሁን
 
-**እስከ መስከረም 15፣ 2026 ድረስ ለ5787 ማንኛውም የሰግድ ዝግጅት አልታተመም።**
+**ማዕከላዊው ስብሰባ ታትሟል።** በኅዳር 5፣ 2026 የኢትዮጵያ አይሁዶች ቅርስ ማዕከልን የዝግጅት ገጽ ከፍተን የ5787 ማዕከላዊ የጸሎት ስብሰባ ዝርዝሮችን አንብበናል። ዝርዝሮቹ — ቦታው፣ መርሐ ግብሩና እንደታተመው የማመላለሻ መረጃ — በዚህ ገጽ ላይኛው የዝግጅት ካርድ ውስጥ ከህትመቱ ማገናኛ ጋር ይገኛሉ።
 
-በዚህ የዓመቱ ወቅት አዘጋጆቹ ገና አላሳተሙም። ባለፈው ዓመት የዝግጅት ዝርዝሮች ከበዓሉ አቅራቢያ፣ በኅዳር አጋማሽ ወጥተዋል። የአዘጋጆቹን ድረ-ገጾች በጥቅምት 4፣ በጥቅምት 20 እና በኅዳር 1 እንደገና እንመረምራለን፤ ይህ ገጽም ይዘመናል።
+እስከዚያ ቀን ድረስ ይህ ገጽ ምንም አልታተመም ይል ነበር። በመስከረም ሲጻፍ እውነት ነበር፤ ነገር ግን አዘጋጁ ካሳተመ በኋላም መናገሩን ቀጥሏል። ይህ የእኛ ስህተት ነበር፤ ተስተካክሏል።
 
-አሁን የሚታወቀው፦
+**የማዘጋጃ ቤት ዝግጅቶች፦** እስከ ኅዳር 5፣ 2026 ድረስ በራሱ ስም ያሳተመ የአካባቢ መስተዳድር አላገኘንም። የሬሆቮት የከተማ ሥነ ሥርዓት በዜና ጽሑፎች ለኅዳር 2፣ 2026 ተዘግቦ ነበር — ያ ቀን አልፏል — የማዘጋጃ ቤቱን ህትመት ራሱ ማግኘት አልቻልንም።
+
+ከዚያ ባሻገር የሚታወቀው፦
 
 - **ቀኑ** — ሰኞ፣ ኅዳር 9፣ 2026።
 - **ማህበረሰቡ በኢየሩሳሌም የሚሰበሰብበት ቦታ** — የገብርኤል ሼሮቨር መንገድ (የአርሞን ሃናጺቭ መንገድ)።
 - **ማዕከላዊ መንግሥታዊ ሥነ ሥርዓት በሕግ የታዘዘ መሆኑ** — አንቀጽ 2። ነገር ግን በ2023 በጦርነቱ ምክንያት በአርሞን ሃናጺቭ የነበረው መንግሥታዊ ሥነ ሥርዓት ተሰርዟል።
 
-## ይህ ገጽ ለምን ባዶ ነው — ሆን ተብሎ
+## ለምን አንድ ዝግጅት ብቻ አለ፣ ሰባት አይደለም
 
 ይህን ገጽ በሰባት የሰንጠረዥ መስመሮች መሙላት ይቻል ነበር። የዚህ ድረ-ገጽ ቀደም ያለ ቅጂ በትክክል ያንን አድርጓል፣ ከመስመሮቹም አንዳቸውም በምንጭ ላይ አልተመሠረቱም።
 
@@ -207,6 +269,7 @@ If you are a local authority, a school, a non-profit or a community group and yo
 
 ## እስከዚያው ምን ማድረግ
 
+- **ወደ ኢየሩሳሌም ስብሰባ የሚሄዱ ከሆነ** — ዝርዝሮቹ ከላይ በዝግጅት ካርዱ ውስጥ ናቸው፤ ማገናኛውም የአዘጋጁ ህትመት ነው። የማመላለሻ መነሻ ቦታዎች አልታተሙም፤ አዘጋጁ በካርዱ ላይ ወደሚገኘው የጽሕፈት ቤት ስልክ ይመራል።
 - **በቀጥታ ከከተማዎ ማዘጋጃ ቤት ጋር ያረጋግጡ።** ህትመት ካገኙ ማገናኛውን ይላኩልን።
 - **ሠራተኛ ከሆኑ** — ሰግድ በአንቀጽ 1(ለ) መሠረት "የምርጫ ቀን" ነው። [የሰግድ መመሪያ](/am/heritage/events/sigd)።
 - **ልጆች በትምህርት ቤት ካሉዎት** — [ሰግድ በትምህርት ቤቶች](/am/heritage/sigd/schools)።
@@ -215,7 +278,7 @@ If you are a local authority, a school, a non-profit or a community group and yo
 
 *[⚠️ የAI ትርጉም — በአማርኛ ቋንቋ ተወላጅ ተናጋሪ መገምገም ይኖርበታል።]*
 
-**ምንጮች**፦ [የሰግድ በዓል ሕግ 5768-2008](https://fs.knesset.gov.il/17/law/17_lsr_300844.pdf) · [የኢትዮጵያ አይሁዶች ቅርስ ማዕከል](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · መስከረም 15፣ 2026 ተረጋግጧል።`,
+**ምንጮች**፦ [የሰግድ በዓል ሕግ 5768-2008](https://fs.knesset.gov.il/17/law/17_lsr_300844.pdf) · [የኢትዮጵያ አይሁዶች ቅርስ ማዕከል — የ5787 ዝግጅት ገጽ](https://ethiopianjhc.org.il/events-calendar/%D7%A2%D7%A6%D7%A8%D7%AA-%D7%94%D7%AA%D7%A4%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%A9%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93-%D7%91%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99/) · [የኢትዮጵያ አይሁዶች ቅርስ ማዕከል](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · ኅዳር 5፣ 2026 ተረጋግጧል።`,
   },
 };
 

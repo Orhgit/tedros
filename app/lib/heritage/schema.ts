@@ -115,6 +115,76 @@ export function heritageEventJsonLd(
   };
 }
 
+// ── Published third-party event (TED-185) ────────────────────────────────
+
+/**
+ * An event somebody else organises and has published themselves.
+ *
+ * Distinct from `heritageEventJsonLd`, which describes a holiday observance
+ * in the abstract and names Tedros as the organizer because the subject is
+ * the page, not a gathering. Here there is a real gathering with a real
+ * organiser, and claiming to organise it would be false.
+ *
+ * `startDate` carries no UTC offset on purpose. Schema consumers read a
+ * bare local date-time as the venue's local time, which is what the
+ * organiser published; inventing an offset would be one more unsourced
+ * detail on a page whose whole premise is that it has none.
+ */
+export interface PublishedEventJsonLdInput {
+  /** Locale-relative path of the page listing the event. */
+  path: string;
+  /** Stable fragment, so several events on one page get distinct `@id`s. */
+  id: string;
+  name: string;
+  description: string;
+  /** ISO date (YYYY-MM-DD) as the organiser published it. */
+  date: string;
+  /** Local start time (HH:MM), only when the organiser published one. */
+  startTime?: string;
+  organizerName: string;
+  /** The organiser's own page for the event. */
+  organizerUrl: string;
+  locationName: string;
+  addressLocality?: string;
+}
+
+export function publishedEventJsonLd(
+  ctx: SchemaContext,
+  input: PublishedEventJsonLdInput,
+): JsonLd {
+  const url = urlFor(ctx, input.path);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Event",
+    "@id": `${url}#${input.id}`,
+    url: input.organizerUrl,
+    name: input.name,
+    description: input.description,
+    inLanguage: ctx.locale,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    startDate: input.startTime ? `${input.date}T${input.startTime}` : input.date,
+    location: {
+      "@type": "Place",
+      name: input.locationName,
+      ...(input.addressLocality
+        ? {
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: input.addressLocality,
+              addressCountry: "IL",
+            },
+          }
+        : {}),
+    },
+    organizer: {
+      "@type": "Organization",
+      name: input.organizerName,
+      url: input.organizerUrl,
+    },
+  };
+}
+
 // ── ItemList (kessim directory — TED-140) ─────────────────────────────────
 
 export interface ItemListEntry {

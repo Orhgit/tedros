@@ -17,7 +17,8 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ data }) => {
   if (!data) return [{ title: "Tedros" }];
-  const { locale, title, description, path, publicUrl, article, breadcrumb } = data;
+  const { locale, title, description, path, publicUrl, article, breadcrumb, eventNodes } =
+    data;
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
@@ -31,6 +32,8 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { property: "og:locale", content: locale },
     { "script:ld+json": article },
     { "script:ld+json": breadcrumb },
+    // One Event node per organiser-published ceremony (TED-185).
+    ...eventNodes.map((node) => ({ "script:ld+json": node })),
   ];
 };
 

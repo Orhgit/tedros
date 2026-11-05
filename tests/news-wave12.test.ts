@@ -159,16 +159,32 @@ describe("wave 12 facts that must not drift", () => {
     expect(sigd!.bodies.en).toContain("9 November 2026");
   });
 
-  it("invents no ceremony schedule for Sigd 5787", () => {
-    // TED-165 and TED-169 both had to strip fabricated Sigd logistics. The
-    // point of this article is that nothing has been published yet, so any
-    // clock time appearing in its body would be a regression.
+  it("states a ceremony schedule only where the organiser's source backs it", () => {
+    // TED-165 and TED-169 both had to strip fabricated Sigd logistics, and
+    // this guard was written while nothing had been published, so it banned
+    // clock times outright. On 2026-11-05 the organiser did publish a
+    // schedule, so the ban narrows rather than disappears: a time of day may
+    // appear only in a paragraph that also links the organiser's own page.
+    // A clock time with no source next to it is still a regression.
     for (const locale of LOCALES) {
-      expect(
-        /\b\d{1,2}:\d{2}\b/.test(sigd!.bodies[locale]),
-        `${locale} body states a time of day for a ceremony nobody has announced`,
-      ).toBe(false);
+      for (const para of sigd!.bodies[locale].split(/\n\n+/)) {
+        if (!/\b\d{1,2}:\d{2}\b/.test(para)) continue;
+        expect(
+          para.includes("ethiopianjhc.org.il"),
+          `${locale}: a clock time with no organiser source: ${para.slice(0, 90)}`,
+        ).toBe(true);
+      }
     }
+  });
+
+  it("points the updated Sigd article at the canonical events page", () => {
+    // The article ranks above the events page it supersedes, so the update
+    // notice has to hand the reader onward rather than dead-end.
+    for (const locale of LOCALES) {
+      expect(sigd!.bodies[locale]).toContain(`/${locale}/heritage/sigd/events-2026`);
+    }
+    // dateModified drives the news sitemap's lastmod and the JSON-LD.
+    expect(sigd!.updatedAt).not.toBe(sigd!.publishedAt);
   });
 
   it("does not assert a 200% election-day pay rate the statute does not set", () => {

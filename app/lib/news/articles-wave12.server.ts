@@ -730,24 +730,30 @@ ${AM_NOTICE}
     },
   },
 
-  // 5 — the Sigd season opens with nothing published yet ---------------------
+  // 5 — the Sigd season: opened with nothing published, updated when it was ---
   {
     slug: "sigd-5787-no-published-events-yet-2026",
     publishedAt: "2026-09-16",
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-11-05",
     tags: ["holiday", "community"],
     title: {
-      he: 'פחות מחודשיים לסיגד תשפ"ז, ואף אירוע לא פורסם — מה זה אומר למי שמתכנן',
-      en: "Under two months to Sigd 5787 and not one event has been published — what that means if you are planning",
-      am: "ለሰግድ 5787 ከሁለት ወር ያነሰ ቀርቷል፣ አንድም ዝግጅት ግን አልታተመም — ለሚያቅዱ ምን ማለት ነው",
+      he: 'עודכן: העצרת המרכזית של הסיגד תשפ"ז פורסמה — 9.11.2026, טיילת שרובר',
+      en: "Updated: the central Sigd 5787 assembly has been published — 9 November 2026, the Sherover Promenade",
+      am: "ዘምኗል፦ የሰግድ 5787 ማዕከላዊ ስብሰባ ታትሟል — ኅዳር 9፣ 2026፣ የሼሮቨር መንገድ",
     },
     excerpt: {
-      he: 'סיגד תשפ"ז חל ב-9.11.2026. בדקנו היום את שני העמודים שמפרסמים בדרך כלל את הטקס — המרכז למורשת יהדות אתיופיה והקרן למורשת הכותל — ושניהם עדיין מציגים את אירוע תשפ"ו מנובמבר 2025. אל תזמינו הסעה או חופשה לפי לוח של שנה שעברה.',
-      en: "Sigd 5787 falls on 9 November 2026. We checked today the two pages that normally publish the ceremony — the Ethiopian Jewry Heritage Center and the Western Wall Heritage Foundation — and both still show the 5786 event from November 2025. Do not book travel or leave off last year's schedule.",
-      am: "ሰግድ 5787 ኅዳር 9፣ 2026 ይውላል። ዛሬ ስነ-ስርዓቱን የሚያሳትሙትን ሁለቱን ገጾች አረጋግጠናል — የኢትዮጵያ አይሁድ ቅርስ ማዕከልና የምዕራብ ግንብ ቅርስ ፋውንዴሽን — ሁለቱም አሁንም የኅዳር 2025ን የ5786 ዝግጅት ያሳያሉ።",
+      he: 'כשכתבנו את הכתבה הזו בספטמבר, אף אירוע סיגד לתשפ"ז לא היה מפורסם. ב-5.11.2026 חזרנו לבדוק: המרכז למורשת יהדות אתיופיה פרסם את העצרת המרכזית — יום שני 9.11.2026, טיילת שרובר ליד ארמון הנציב. הפרטים המלאים, עם הקישור לפרסום המארגן, כאן ובעמוד האירועים.',
+      en: "When this piece was written in September, no Sigd 5787 event had been published. On 5 November 2026 we checked again: the Ethiopian Jewry Heritage Center has published the central assembly — Monday 9 November 2026, the Sherover Promenade by Armon Hanatziv. The full details, with the organiser's link, are here and on the events page.",
+      am: "ይህ ጽሑፍ በመስከረም ሲጻፍ ለ5787 የታተመ የሰግድ ዝግጅት አልነበረም። በኅዳር 5፣ 2026 እንደገና አረጋግጠናል፦ የኢትዮጵያ አይሁዶች ቅርስ ማዕከል ማዕከላዊውን ስብሰባ አሳትሟል — ሰኞ ኅዳር 9፣ 2026፣ የሼሮቨር መንገድ።",
     },
     bodies: {
-      he: `## התאריך, קודם כול
+      he: `> **עדכון, 5 בנובמבר 2026.** הכתבה הזו נכתבה ב-16.9.2026, כשאף אירוע סיגד לתשפ"ז לא היה מפורסם. **זה כבר לא המצב.** המרכז למורשת יהדות אתיופיה פרסם את עצרת התפילה המרכזית: **יום שני, 9 בנובמבר 2026, בטיילת שרובר ליד ארמון הנציב בירושלים.** לפי הפרסום, מתחם התפילה נפתח ב-08:00, טקס הברכות הממלכתי ב-12:30 ושבירת הצום ב-14:00; ביום העצרת יופעל מערך הסעות מתחנות האוטובוסים שעל ציר רחוב שז"ר, ליד בנייני האומה, ובנוסף אוטובוסים מרחבי הארץ — את נקודות היציאה המארגן לא פרסם ומפנה לטלפון המשרד 02-6772568.
+>
+> המקור: [דף האירוע של המרכז למורשת יהדות אתיופיה](https://ethiopianjhc.org.il/events-calendar/%D7%A2%D7%A6%D7%A8%D7%AA-%D7%94%D7%AA%D7%A4%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%A9%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93-%D7%91%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99/) · נבדק 5 בנובמבר 2026. שימו לב שעל אותו אתר יושב גם אירוע תשפ"ו מ-20.11.2025; הקישור כאן הוא לדף של תשפ"ז.
+>
+> הפרטים המלאים והמתעדכנים: [אירועי הסיגד 2026](/he/heritage/sigd/events-2026). האמור למטה נשאר כפי שנכתב בספטמבר, כתיעוד של מה שהיה ידוע אז.
+
+## התאריך, קודם כול
 
 **סיגד תשפ"ז חל ביום שני, 9 בנובמבר 2026.** התאריך הזה מבוסס על כ"ט בחשוון תשפ"ז, ועל כך כתבנו בנפרד ובהרחבה, כולל תיקון של תאריך שגוי שהופיע אצלנו בעבר: [סיגד תשפ"ז יחול ביום שני, 9 בנובמבר 2026](/he/news/sigd-5787-monday-9-november-2026).
 
@@ -792,7 +798,13 @@ ${AM_NOTICE}
 - [המרכז למורשת יהדות אתיופיה — חג הסגד](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · האירוע המוצג הוא מ-20.11.2025; אין תאריך עדכון בעמוד · נבדק 16.9.2026
 - [הקרן למורשת הכותל המערבי — חג הסיגד](https://thekotel.org/en/uncategorized-en/holidays-and-festivals/sigd-holiday/) · הפריט האחרון בעמוד מנובמבר 2025 · נבדק 16.9.2026
 - [הכתבה שלנו על תאריך סיגד תשפ"ז](/he/news/sigd-5787-monday-9-november-2026)`,
-      en: `## The date, first
+      en: `> **Update, 5 November 2026.** This piece was written on 16 September 2026, when no Sigd 5787 event had been published. **That is no longer the case.** The Ethiopian Jewry Heritage Center has published the central prayer assembly: **Monday, 9 November 2026, at the Sherover Promenade by Armon Hanatziv in Jerusalem.** Per that publication the prayer compound opens at 08:00, the state blessings ceremony is at 12:30 and the fast is broken at 14:00; a shuttle service will run from the bus stops along Shazar Street next to Binyanei Ha'uma, with additional buses from around the country — the organiser did not publish the departure points and refers callers to its office, 02-6772568.
+>
+> Source: [the Ethiopian Jewry Heritage Center's event page](https://ethiopianjhc.org.il/events-calendar/%D7%A2%D7%A6%D7%A8%D7%AA-%D7%94%D7%AA%D7%A4%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%A9%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93-%D7%91%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99/) · verified 5 November 2026. Note that the same site also carries the 5786 assembly of 20 November 2025; the link here is to the 5787 page.
+>
+> The full, updating details: [Sigd 2026 events](/en/heritage/sigd/events-2026). What follows stands as written in September, as a record of what was known then.
+
+## The date, first
 
 **Sigd 5787 falls on Monday, 9 November 2026.** That date rests on 29 Cheshvan 5787, and we wrote about it separately and at length, including a correction of a wrong date that once appeared here: [Sigd 5787 falls on Monday, 9 November 2026](/en/news/sigd-5787-monday-9-november-2026).
 
@@ -837,7 +849,13 @@ We will update [the Sigd 2026 events page](/en/heritage/sigd/events-2026) the mo
 - [Ethiopian Jewry Heritage Center — the Sigd holiday](https://ethiopianjhc.org.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%98%D7%A7%D7%A1%D7%99%D7%9D/%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93/) · the event shown is from 20 Nov 2025; no update date on the page · verified 16 Sep 2026
 - [Western Wall Heritage Foundation — the Sigd holiday](https://thekotel.org/en/uncategorized-en/holidays-and-festivals/sigd-holiday/) · the most recent item on the page is from November 2025 · verified 16 Sep 2026
 - [Our article on the date of Sigd 5787](/en/news/sigd-5787-monday-9-november-2026)`,
-      am: `## በመጀመሪያ ቀኑ
+      am: `> **ዝመና፣ ኅዳር 5፣ 2026።** ይህ ጽሑፍ የተጻፈው መስከረም 16፣ 2026 ነው፤ በዚያን ጊዜ ለ5787 የታተመ የሰግድ ዝግጅት አልነበረም። **አሁን ግን ሁኔታው ተለውጧል።** የኢትዮጵያ አይሁዶች ቅርስ ማዕከል ማዕከላዊውን የጸሎት ስብሰባ አሳትሟል፦ **ሰኞ፣ ኅዳር 9፣ 2026፣ በሼሮቨር መንገድ፣ ከአርሞን ሃናጺቭ አጠገብ፣ ኢየሩሳሌም።** እንደ ህትመቱ የጸሎቱ ቦታ በ08:00 ይከፈታል፣ የመንግሥት የበረከት ሥነ ሥርዓት በ12:30፣ ጾም መፍቻ በ14:00። በሻዛር መንገድ ላይ ካሉ ማቆሚያዎች ማመላለሻ ይሠራል፤ የመነሻ ቦታዎቹ አልታተሙም — ለጽሕፈት ቤቱ 02-6772568 ይደውሉ።
+>
+> ምንጭ፦ [የማዕከሉ የዝግጅት ገጽ](https://ethiopianjhc.org.il/events-calendar/%D7%A2%D7%A6%D7%A8%D7%AA-%D7%94%D7%AA%D7%A4%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%A9%D7%9C-%D7%97%D7%92-%D7%94%D7%A1%D7%92%D7%93-%D7%91%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99/) · ኅዳር 5፣ 2026 ተረጋግጧል። በዚያው ድረ-ገጽ ላይ የ5786 ስብሰባ (ኅዳር 20፣ 2025) ጭምር አለ፤ ይህ ማገናኛ የ5787 ገጽ ነው።
+>
+> ሙሉና የሚዘመን ዝርዝር፦ [የ2026 ሰግድ ዝግጅቶች](/am/heritage/sigd/events-2026)። ከታች ያለው በመስከረም እንደተጻፈ ይቀራል።
+
+## በመጀመሪያ ቀኑ
 
 **ሰግድ 5787 ሰኞ፣ ኅዳር 9፣ 2026 ይውላል።** ይህ ቀን በ29 ኅሽዋን 5787 ላይ የተመሠረተ ነው፤ ስለዚህም በተለየ ጽሑፍ በሰፊው ጽፈናል፦ [ሰግድ 5787 ሰኞ፣ ኅዳር 9፣ 2026 ይውላል](/am/news/sigd-5787-monday-9-november-2026)።
 
