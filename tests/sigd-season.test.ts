@@ -21,6 +21,7 @@ beforeAll(() => {
 });
 
 import { findHeritageEvent } from "../app/lib/heritage/events.server";
+import { t } from "../app/lib/i18n/messages";
 import {
   eventPath,
   sigdEventsPath,
@@ -226,10 +227,15 @@ describe("Sigd season routes", () => {
       // last year's page is the exact mistake this guards.
       expect(row!.sourceUrl).not.toContain("20.11.2025");
     }
-    // The empty-state copy still has to exist for the day the list is empty.
+    // The empty-state copy must NOT ride along once an event is listed: it
+    // reached production inside the hydration payload of a page announcing
+    // the event, saying no event had been published.
     const he = await eventsLoader(args("he"));
-    expect(he.emptyHeading).toBeTruthy();
-    expect(he.emptyBody).toBeTruthy();
+    expect(he.emptyHeading).toBeUndefined();
+    expect(he.emptyBody).toBeUndefined();
+    // It still has to exist as copy, for the day the list is empty again.
+    expect(t("he", "sigd_events_empty_heading").length).toBeGreaterThan(5);
+    expect(t("he", "sigd_events_empty_body").length).toBeGreaterThan(20);
   });
 
   it("emits an Event node per verified ceremony, crediting the real organiser", async () => {

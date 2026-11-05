@@ -160,8 +160,19 @@ export function sigdSeasonPayload(kind: SigdSeasonKind, locale: Locale) {
     dateValue: formatDate(locale, SIGD_5787_DATE),
     hebrewDate: SIGD_5787_HEBREW_DATE,
     eventsHeading: kind === "events" ? t(locale, "sigd_events_heading") : undefined,
-    emptyHeading: kind === "events" ? t(locale, "sigd_events_empty_heading") : undefined,
-    emptyBody: kind === "events" ? t(locale, "sigd_events_empty_body") : undefined,
+    // Only sent when there is nothing to show. Sending it alongside a listed
+    // event shipped "טרם פורסמו אירועים" inside the hydration payload of a
+    // page whose own heading announces the event — invisible to a reader,
+    // contradictory to anything parsing the payload, and dead bytes either
+    // way. Found by fetching production, not by reading the diff.
+    emptyHeading:
+      kind === "events" && events.length === 0
+        ? t(locale, "sigd_events_empty_heading")
+        : undefined,
+    emptyBody:
+      kind === "events" && events.length === 0
+        ? t(locale, "sigd_events_empty_body")
+        : undefined,
     sourceLabel: t(locale, "culinary_source_label"),
     verifiedLabel: t(locale, "sigd_events_verified_label"),
     homeLabel: t(locale, "rights_breadcrumb_home"),
