@@ -1,11 +1,15 @@
 import { Form, Link, useNavigation } from "react-router";
 import type { Route } from "./+types/$lang._index";
+import { SeasonalEventStrip } from "~/components/sections/seasonal-event-strip";
 import { SiteFooter } from "~/components/sections/site-footer";
 import { SiteHeader } from "~/components/sections/site-header";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
 import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { t } from "~/lib/i18n/messages";
+import { formatDate } from "~/lib/i18n/format";
+import { sigdEventsPath } from "~/lib/heritage/links";
+import { daysUntil, upcomingSigdEvent } from "~/lib/heritage/sigd.server";
 import { submitSubscriber } from "~/lib/subscribers/submit.server";
 import { subscribeSchema } from "~/lib/validation/subscriber";
 
@@ -65,7 +69,31 @@ export const links: Route.LinksFunction = () => [
 export async function loader({ params }: Route.LoaderArgs) {
   const locale: Locale = isLocale(params.lang) ? params.lang : DEFAULT_LOCALE;
   const { PUBLIC_URL } = getEnv();
-  return { locale, publicUrl: PUBLIC_URL };
+
+  // A verified, imminent event, surfaced on the most-crawled page on the
+  // site (TED-185). Date-driven, so it also removes itself.
+  const today = new Date().toISOString().slice(0, 10);
+  const event = upcomingSigdEvent(today);
+  const seasonalEvent = event
+    ? {
+        eyebrow: t(locale, "seasonal_event_eyebrow"),
+        name: event.name[locale] ?? event.name.he,
+        date: formatDate(locale, event.date),
+        location: event.location[locale] ?? event.location.he,
+        startTime: event.startTime,
+        countdown: countdownLabel(locale, daysUntil(today, event.date)),
+        href: sigdEventsPath(),
+        ctaLabel: t(locale, "seasonal_event_cta"),
+      }
+    : null;
+
+  return { locale, publicUrl: PUBLIC_URL, seasonalEvent };
+}
+
+function countdownLabel(locale: Locale, days: number): string {
+  if (days <= 0) return t(locale, "seasonal_event_today");
+  if (days === 1) return t(locale, "seasonal_event_tomorrow");
+  return t(locale, "seasonal_event_in_days", { days });
 }
 
 export async function action({ request, params }: Route.ActionArgs) {
@@ -137,7 +165,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 };
 
 export default function Home({ loaderData, actionData }: Route.ComponentProps) {
-  const { locale } = loaderData;
+  const { locale, seasonalEvent } = loaderData;
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   const submitted = actionData?.ok === true;
@@ -148,6 +176,10 @@ export default function Home({ loaderData, actionData }: Route.ComponentProps) {
       {/* Global header — the homepage used to render only a logo span and a
           language switcher, leaving it with no navigation at all (TED-124). */}
       <SiteHeader locale={locale} currentPath={`/${locale}`} />
+      {/* A verified, imminent event — rendered only inside its date window
+          (TED-185). Above the hero so it is in the first screenful and in
+          the first kilobytes of markup a crawler reads. */}
+      {seasonalEvent && <SeasonalEventStrip locale={locale} {...seasonalEvent} />}
       {/* ── HERO ── full-bleed, community background image */}
       <section
         className="relative isolate flex min-h-[85vh] flex-col overflow-hidden"

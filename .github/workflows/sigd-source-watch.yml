@@ -1,0 +1,180 @@
+name: Content source watch
+
+# TED-185 — the automation that should have existed in September.
+#
+# `app/lib/heritage/sigd.server.ts` named three sweep dates — 4.10, 20.10 and
+# 1.11 — in a comment. All three passed. None ran, because a date in a
+# comment is a wish, not a schedule. For five weeks the site told readers that
+# no Sigd event had been published while the organiser's own page carried the
+# ceremony, on the page that ranks best for the holiday.
+#
+# Two things run here, and they fail for different reasons:
+#
+#   1. The unit suite, which fails when a sweep date has passed while the
+#      event list is still empty. That one is deterministic and also gates
+#      every PR.
+#   2. The live source checks (`tests/live/`), which fetch each listed
+#      event's own source page and verify it still carries the date and start
+#      time we publish from it. Those cannot gate a PR — a source host having
+#      a bad afternoon is not a reason to block a deploy — so they only run
+#      here.
+#
+# A failure opens one issue and keeps updating it rather than filing a new one
+# every hour. It needs no secrets: `GITHUB_TOKEN` is enough.
+on:
+  schedule:
+    # 06:40 UTC daily. Seasonal content is only wrong for as long as nobody
+    # looks, and a day is short enough to catch a holiday window.
+    - cron: "40 6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: content-source-watch
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    name: Verify published events against their sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Deterministic: is a declared sweep date overdue?
+      - name: Re-check schedule and event invariants
+        id: schedule
+        run: |
+          set +e
+          out=$(npx vitest run tests/sigd-season.test.ts 2>&1)
+          code=$?
+          echo "$out" | tail -40
+          {
+            echo "log<<SIGD_EOF"
+            echo "$out" | tail -40
+            echo "SIGD_EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "ok=$([ $code -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      # Live: does the organiser still say what we say they say?
+      - name: Live source verification
+        id: live
+        run: |
+          set +e
+          out=$(npm run test:live 2>&1)
+          code=$?
+          echo "$out" | tail -60
+          {
+            echo "log<<SIGD_EOF"
+            echo "$out" | tail -60
+            echo "SIGD_EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "ok=$([ $code -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Open or update the sweep issue
+        if: steps.schedule.outputs.ok == 'false' || steps.live.outputs.ok == 'false'
+        uses: actions/github-script@v7
+        env:
+          SCHEDULE_OK: ${{ steps.schedule.outputs.ok }}
+          LIVE_OK: ${{ steps.live.outputs.ok }}
+          SCHEDULE_LOG: ${{ steps.schedule.outputs.log }}
+          LIVE_LOG: ${{ steps.live.outputs.log }}
+        with:
+          script: |
+            const TITLE = "Content source watch: a published event no longer matches its source";
+            const parts = [
+              "A scheduled sweep found a problem with event content whose",
+              "accuracy depends on somebody else's page.",
+              "",
+              `- Re-check schedule and invariants: ${process.env.SCHEDULE_OK === "true" ? "pass" : "**FAIL**"}`,
+              `- Live source verification: ${process.env.LIVE_OK === "true" ? "pass" : "**FAIL**"}`,
+              "",
+              `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              "",
+              "## What to do",
+              "",
+              "Open the organiser's page and read it. Then either update",
+              "`SIGD_EVENTS_2026` to what it now says, or move",
+              "`SIGD_EVENTS_RECHECK` forward. Do not leave both stale — that",
+              "is exactly how 5787 went wrong.",
+              "",
+              "## Re-check schedule and invariants",
+              "",
+              "```",
+              process.env.SCHEDULE_LOG || "(no output)",
+              "```",
+              "",
+              "## Live source verification",
+              "",
+              "```",
+              process.env.LIVE_LOG || "(no output)",
+              "```",
+            ];
+            const body = parts.join("\n");
+
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "content-source-watch",
+              per_page: 20,
+            });
+
+            if (open.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: open[0].number,
+                body: `Still failing as of ${new Date().toISOString()}.\n\n${body}`,
+              });
+              core.setFailed(`Source watch still failing; updated #${open[0].number}`);
+              return;
+            }
+
+            const { data: created } = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: TITLE,
+              body,
+              labels: ["content-source-watch"],
+            });
+            core.setFailed(`Source watch failing; opened #${created.number}`);
+
+      - name: Close the sweep issue once it passes
+        if: steps.schedule.outputs.ok == 'true' && steps.live.outputs.ok == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "content-source-watch",
+              per_page: 20,
+            });
+            for (const issue of open) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `Resolved: the scheduled sweep passed at ${new Date().toISOString()}.`,
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: "closed",
+              });
+            }

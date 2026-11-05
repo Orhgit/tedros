@@ -141,6 +141,42 @@ export const SIGD_EVENTS_2026: SigdEvent[] = [
  */
 export const SIGD_EVENTS_RECHECK = ["2026-11-06", "2026-11-08"];
 
+/**
+ * How many days before an event the homepage starts surfacing it.
+ *
+ * The homepage is the most frequently crawled page on this site and it did
+ * not link to the Sigd content at all, four days before the holiday — so the
+ * corrected pages sat behind a crawl that had last run twenty and
+ * forty-four days earlier. A link from here is the only recrawl lever this
+ * project actually controls; "request indexing" in Search Console has no API.
+ */
+export const SIGD_LEAD_DAYS = 21;
+
+/**
+ * The next verified event within the lead window, or `undefined`.
+ *
+ * Date-driven on purpose: nobody has to remember to put the strip up, and
+ * more importantly nobody has to remember to take it down. A seasonal banner
+ * that outlives its season is the same class of bug as a page that says no
+ * event has been published after one has.
+ *
+ * `today` is injected rather than read from the clock so this is testable.
+ */
+export function upcomingSigdEvent(today: string): SigdEvent | undefined {
+  const horizon = new Date(`${today}T00:00:00Z`);
+  horizon.setUTCDate(horizon.getUTCDate() + SIGD_LEAD_DAYS);
+  const last = horizon.toISOString().slice(0, 10);
+  return SIGD_EVENTS_2026.filter((e) => e.date >= today && e.date <= last).sort((a, b) =>
+    a.date.localeCompare(b.date),
+  )[0];
+}
+
+/** Whole days from `today` to `date`; 0 on the day itself. */
+export function daysUntil(today: string, date: string): number {
+  const ms = Date.parse(`${date}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`);
+  return Math.round(ms / 86_400_000);
+}
+
 export interface SigdPage {
   title: Record<Locale, string>;
   description: Record<Locale, string>;
