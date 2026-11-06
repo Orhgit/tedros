@@ -32,6 +32,22 @@ concurrency:
   group: content-source-watch
   cancel-in-progress: false
 
+# Toolchain and env match CI exactly, and that is deliberate. The first
+# dispatched run of this workflow died after 6s on `actions/setup-node` with
+# "Dependencies lock file is not found": it had been written for a package
+# manager this repo does not use. A scheduled job that fails before it reaches
+# its own assertions is worse than no job at all — it goes red every morning
+# for a reason that has nothing to do with the content it exists to watch, and
+# that is exactly the kind of noise people learn to ignore.
+#
+# The unit suite loads routes that validate the environment at module scope,
+# so the placeholders below are required for it to load at all.
+env:
+  NODE_VERSION: "22"
+  PNPM_VERSION: "9"
+  AUTH_SECRET: "ci-only-placeholder-secret-do-not-use-in-prod-32+chars"
+  DATABASE_URL: "postgres://tedros:tedros_ci@localhost:5432/tedros_ci"
+
 permissions:
   contents: read
   issues: write
@@ -44,19 +60,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       # Deterministic: is a declared sweep date overdue?
       - name: Re-check schedule and event invariants
         id: schedule
         run: |
           set +e
-          out=$(npx vitest run tests/sigd-season.test.ts 2>&1)
+          out=$(pnpm vitest run tests/sigd-season.test.ts 2>&1)
           code=$?
           echo "$out" | tail -40
           {
@@ -72,7 +92,7 @@ jobs:
         id: live
         run: |
           set +e
-          out=$(npm run test:live 2>&1)
+          out=$(pnpm test:live 2>&1)
           code=$?
           echo "$out" | tail -60
           {
