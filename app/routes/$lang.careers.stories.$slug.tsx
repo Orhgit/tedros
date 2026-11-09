@@ -3,6 +3,15 @@
 // Article JSON-LD (no Person node — see schema.ts). Nickname is first-name
 // only, no real photos, body avoids naming specific employers without
 // explicit consent.
+//
+// noindex,follow (TED-187). The labelling TED-163 put on these pages is
+// correct and stays: they are explicitly-marked composite illustrations, not
+// interviews. But a composite illustration is not a document a search engine
+// should be offering as an answer about a real person's career, and these ten
+// stories drew zero impressions in the six weeks to 8.11.2026. The pages stay
+// reachable and linked from /careers/stories — only the invitation to index
+// them is withdrawn. `follow` keeps the links out to tracks and bootcamps
+// crawlable.
 
 import { Link, data } from "react-router";
 
@@ -23,7 +32,6 @@ import { STORIES, findStory, storyBody } from "~/lib/careers/stories.server";
 import { CITIES, cityName } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
-import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { classesForTag } from "~/lib/rights/categories";
@@ -108,7 +116,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${headline} — Tedros` },
     { name: "description", content: summary },
-    ...hreflangMeta(publicUrl, locale, storyPath(story.slug)),
+    // noindex, and therefore no hreflang — see the file header and the
+    // convention in $lang.tsx.
+    { name: "robots", content: "noindex,follow" },
     { property: "og:title", content: headline },
     { property: "og:description", content: summary },
     { property: "og:image", content: `${publicUrl}/og-default.jpg` },

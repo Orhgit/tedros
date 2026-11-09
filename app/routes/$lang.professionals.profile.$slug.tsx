@@ -1,8 +1,25 @@
 // /:lang/professionals/profile/:slug — directory-slot detail (RIN-444 / Wave 2b).
-// Renders one anonymous-slot information page. Person schema is INTENTIONALLY
-// NOT emitted here — these slots describe a *type* of professional, not a
-// named individual. When real profs onboard, the slot becomes a real Person
-// listing with sameAs/jobTitle/knowsLanguage at that point.
+//
+// Two kinds of page render through this one template, and they are treated
+// differently on purpose (TED-187):
+//
+//   * A *listed* slot (`slot.listedProfessional` set) describes a real, named
+//     person who asked to be in the directory. It is indexed, carries
+//     hreflang, and emits a real `Person` node.
+//
+//   * An *anonymous* slot describes a *type* of professional — "what to expect
+//     from a lawyer in Maale Adumim" — and has nobody behind it until someone
+//     onboards. 30 of the 35 slots are these. They are `noindex,follow` and
+//     emit NO `Person` node.
+//
+// The header here used to claim "Person schema is INTENTIONALLY NOT emitted",
+// but the meta function emitted one for every slot, falling back to
+// `name: slot.title` when there was no person — a `Person` for somebody who
+// does not exist. That is the same defect TED-163 fixed for careers/stories,
+// and it is now fixed here too.
+//
+// `follow` is deliberate: these pages link to the rights, glossary and org
+// pages we do want crawled, and noindex-nofollow would strand them.
 
 import { Link, data } from "react-router";
 
@@ -78,7 +95,12 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${slot.title} — Tedros` },
     { name: "description", content: description },
-    ...hreflangMeta(publicUrl, locale, `/professionals/profile/${slot.slug}`),
+    // Anonymous slots are noindex, and per the convention in $lang.tsx a
+    // noindex route skips hreflang — telling Google about three language
+    // variants of a page we asked it not to index is a contradiction.
+    ...(listed
+      ? hreflangMeta(publicUrl, locale, `/professionals/profile/${slot.slug}`)
+      : [{ name: "robots", content: "noindex,follow" }]),
     { property: "og:title", content: slot.title },
     { property: "og:description", content: description },
     { property: "og:image", content: `${publicUrl}/og-default.jpg` },
@@ -86,33 +108,36 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { name: "twitter:image", content: `${publicUrl}/og-default.jpg` },
     { property: "og:type", content: "article" },
     { property: "og:locale", content: locale },
-    {
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        // Real listed professionals get their actual name/contact; the
-        // anonymous "what to expect" slots use the page title as a stand-in
-        // (see file header on professionals.server.ts).
-        name: listed?.name ?? slot.title,
-        jobTitle: slot.profession,
-        ...(listed?.phone ? { telephone: listed.phone } : {}),
-        ...(listed?.languages ? { knowsLanguage: listed.languages } : {}),
-        ...(listed?.licenseNumber
-          ? {
-              hasCredential: {
-                "@type": "EducationalOccupationalCredential",
-                credentialCategory: "license",
-                identifier: listed.licenseNumber,
+    // A `Person` node is a claim that a specific human exists. Only emit one
+    // when a specific human actually asked to be listed.
+    ...(listed
+      ? [
+          {
+            "script:ld+json": {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: listed.name,
+              jobTitle: slot.profession,
+              ...(listed.phone ? { telephone: listed.phone } : {}),
+              ...(listed.languages ? { knowsLanguage: listed.languages } : {}),
+              ...(listed.licenseNumber
+                ? {
+                    hasCredential: {
+                      "@type": "EducationalOccupationalCredential",
+                      credentialCategory: "license",
+                      identifier: listed.licenseNumber,
+                    },
+                  }
+                : {}),
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: slot.citySlug,
+                addressCountry: "IL",
               },
-            }
-          : {}),
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: slot.citySlug,
-          addressCountry: "IL",
-        },
-      },
-    },
+            },
+          },
+        ]
+      : []),
   ];
 };
 

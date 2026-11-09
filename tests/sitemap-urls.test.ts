@@ -48,12 +48,19 @@ const EXPECTED_URLS: Record<keyof typeof SITEMAPS, number> = {
   // above the homepage for `tedros.co.il`; a noindex page must not be submitted.
   core: 279,
   rights: 213,
-  careers: 147,
+  // TED-187: 147 -> 117. The ten careers/stories detail pages are noindex
+  // (composite illustrations, zero impressions in the six weeks to 8.11.2026),
+  // so they are no longer submitted. /careers/stories itself stays.
+  careers: 117,
   health: 147,
   // TED-169 took this to 687 (+9: the three Sigd season routes, 3 locales each).
   // TED-168: -18 (six scholarships retired, 3 locales each)
   //          +15 (the guides index + four application guides, 3 locales each)
-  content: 684,
+  // TED-187: 684 -> 594. The 30 anonymous professional slots are noindex —
+  // they describe a *type* of professional and have nobody behind them — so
+  // they are no longer submitted. The 5 slots with a real named professional
+  // stay, which is why this is -90 and not -105.
+  content: 594,
   // TED-171: +18 (wave 12 — six news articles, 3 locales each).
   news: 522,
 };

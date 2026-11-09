@@ -3,7 +3,6 @@ import { CAREER_TRACKS } from "~/lib/careers/careers.server";
 import { FAQS } from "~/lib/careers/faqs.server";
 import { activeJobs } from "~/lib/careers/jobs.server";
 import { relevantCities as careerRelevantCities } from "~/lib/careers/relevance";
-import { STORIES } from "~/lib/careers/stories.server";
 import { CITIES } from "~/lib/cities/registry";
 import { getEnv } from "~/lib/env.server";
 import { buildSitemapXml, sitemapResponse } from "~/lib/seo/sitemap.server";
@@ -39,8 +38,10 @@ export function loader() {
     "/careers/statistics",
     "/careers/faq",
     ...FAQS.map((f) => `/careers/faq/${f.slug}`),
+    // TED-187: the landing page stays submitted; the ten story detail pages
+    // are noindex (composite illustrations, zero impressions in six weeks) and
+    // a noindex page must never be submitted.
     "/careers/stories",
-    ...STORIES.map((s) => `/careers/stories/${s.slug}`),
   ];
 
   return sitemapResponse(buildSitemapXml(PUBLIC_URL, paths, lastmodByPath));
