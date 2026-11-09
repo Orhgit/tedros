@@ -97,7 +97,13 @@ export function loader() {
     "/professionals/amharic", // Amharic-speaker landing (TED-136)
     ...ALL_PROFESSIONS.map((p) => `/professionals/${p}`),
     ...professionalCells,
-    ...PROFESSIONALS.map((e) => `/professionals/profile/${e.slug}`),
+    // TED-187: only the slots with a real, named professional behind them are
+    // submitted. The other 30 are "what to expect from a lawyer in X" pages
+    // with nobody behind them; they are noindex in the route, and a noindex
+    // page must never be submitted (the TED-173 rule).
+    ...PROFESSIONALS.filter((e) => e.listedProfessional).map(
+      (e) => `/professionals/profile/${e.slug}`,
+    ),
   ];
 
   return sitemapResponse(buildSitemapXml(PUBLIC_URL, paths));
