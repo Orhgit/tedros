@@ -1,6 +1,5 @@
 import { BOOTCAMPS } from "~/lib/careers/bootcamps.server";
 import { CAREER_TRACKS } from "~/lib/careers/careers.server";
-import { FAQS } from "~/lib/careers/faqs.server";
 import { activeJobs } from "~/lib/careers/jobs.server";
 import { relevantCities as careerRelevantCities } from "~/lib/careers/relevance";
 import { CITIES } from "~/lib/cities/registry";
@@ -36,8 +35,10 @@ export function loader() {
     "/careers/jobs",
     ...jobs.map((j) => `/careers/jobs/${j.slug}`),
     "/careers/statistics",
+    // TED-187: the hub stays; the 18 one-question pages do not. Every one of
+    // them is rendered in full on /careers/faq, so they held no content of
+    // their own — they are noindex now, and a noindex page is not submitted.
     "/careers/faq",
-    ...FAQS.map((f) => `/careers/faq/${f.slug}`),
     // TED-187: the landing page stays submitted; the ten story detail pages
     // are noindex (composite illustrations, zero impressions in six weeks) and
     // a noindex page must never be submitted.

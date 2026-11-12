@@ -19,6 +19,13 @@ export interface ProfessionalSummary {
   shortDescription: string;
   /** BCP-47 language codes served (TED-136). */
   languages: string[];
+  /**
+   * True when a specific, named human asked to be listed in this slot
+   * (TED-187). Anonymous slots describe a *type* of professional and have
+   * nobody behind them, so callers that decide what to index, or whether to
+   * assert a `Person`, must branch on this and not on the slot's existence.
+   */
+  isListed: boolean;
 }
 
 export interface ProfessionalDetail extends ProfessionalSummary {
@@ -38,6 +45,7 @@ function summarize(entry: ProfessionalSlot, locale: Locale): ProfessionalSummary
     title: pickLocale(entry.title, locale),
     shortDescription: pickLocale(entry.shortDescription, locale),
     languages: entry.languages,
+    isListed: entry.listedProfessional != null,
   };
 }
 

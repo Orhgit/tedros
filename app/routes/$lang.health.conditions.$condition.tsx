@@ -20,7 +20,6 @@ import { conditionsPath, healthPath } from "~/lib/health/links";
 import { breadcrumbJsonLd, healthConditionJsonLd } from "~/lib/health/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
-import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 
@@ -73,7 +72,20 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${condition.name} — Tedros` },
     { name: "description", content: condition.shortDescription },
-    ...hreflangMeta(publicUrl, locale, `/health/conditions/${condition.slug}`),
+    // TED-187 — the 40 condition pages are noindex.
+    //
+    // This is the one cluster in this change that is withdrawn on expertise
+    // rather than on emptiness. The figures here are real and sourced, but
+    // this is YMYL medical content on a community portal with no clinician
+    // anywhere behind it, and Google judges YMYL hardest of all. Until a
+    // named clinician reviews these pages, asking to rank for medical queries
+    // is asking to be judged on expertise we cannot show.
+    //
+    // The pages still render, stay linked from /health/conditions, and keep
+    // their disclaimers — nothing is hidden from a reader who arrives here.
+    // Per the convention in $lang.tsx a noindex route skips hreflang, which
+    // also drops the self-canonical: noindex plus canonical is a contradiction.
+    { name: "robots", content: "noindex,follow" },
     { property: "og:title", content: condition.name },
     { property: "og:description", content: condition.shortDescription },
     { property: "og:image", content: `${publicUrl}/og-default.jpg` },
@@ -88,7 +100,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
           slug: condition.slug,
           name: condition.name,
           description: condition.shortDescription,
-          lastReviewed: condition.lastReviewed,
+          lastEdited: condition.lastReviewed,
         },
       ),
     },

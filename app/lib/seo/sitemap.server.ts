@@ -5,8 +5,6 @@ export function buildSitemapXml(
   paths: string[],
   lastmodByPath: Map<string, string> = new Map(),
 ): string {
-  const buildDate = new Date().toISOString().slice(0, 10);
-
   function altLinksFor(path: string): string {
     return SUPPORTED_LOCALES.map(
       (loc) =>
@@ -49,12 +47,25 @@ export function buildSitemapXml(
     return "monthly";
   }
 
+  // TED-188 — `lastmod` is emitted only when the caller actually knows when
+  // the content changed.
+  //
+  // This used to fall back to `new Date()`, which meant 1,323 of 1,992 URLs
+  // (66%) told Google "this changed today" on every single request, every
+  // day, for pages that had not been touched in months. `lastmod` is the one
+  // signal we have for asking that a page be looked at again, and spending it
+  // on every URL daily is the same as not having it: a crawler that has been
+  // lied to about 66% of a sitemap has no reason to believe the other 34%.
+  //
+  // `lastmod` is optional in the sitemaps protocol. Omitting it leaves Google
+  // on its own heuristics, which is where it already was — but it means that
+  // when we *do* set it, on the news articles and on a page we have genuinely
+  // just rewritten, the claim is true and worth acting on.
   function urlEntry(path: string, lastmod?: string): string {
-    const lm = lastmod ?? buildDate;
+    const lastmodLine = lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : "";
     return SUPPORTED_LOCALES.map(
       (loc) => `  <url>
-    <loc>${publicUrl}/${loc}${path}</loc>
-    <lastmod>${lm}</lastmod>
+    <loc>${publicUrl}/${loc}${path}</loc>${lastmodLine}
     <changefreq>${changefreqFor(path)}</changefreq>
     <priority>${priorityFor(path)}</priority>
 ${altLinksFor(path)}

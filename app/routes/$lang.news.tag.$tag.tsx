@@ -12,7 +12,6 @@ import { articlesByTag } from "~/lib/news/articles.server";
 import { breadcrumbJsonLd } from "~/lib/news/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
-import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 
@@ -51,7 +50,15 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${title} — Tedros` },
     { name: "description", content: description },
-    ...hreflangMeta(publicUrl, locale, `/news/tag/${tag}`),
+    // TED-187 — the 13 tag archives are noindex.
+    //
+    // A tag archive holds no writing of its own; it is a filtered view of
+    // /news, and every headline on it already lives on the article it links
+    // to and on the news landing page. Withdrawing a paginated archive while
+    // keeping the articles themselves is the ordinary treatment, not a
+    // concession — the articles are the asset, and they carry 29 of the
+    // site's 34 clicks.
+    { name: "robots", content: "noindex,follow" },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:image", content: `${publicUrl}/og-default.jpg` },

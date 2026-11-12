@@ -1,5 +1,4 @@
 import { ARTICLES } from "~/lib/news/articles.server";
-import { ALL_NEWS_TAGS } from "~/lib/news/categories";
 import { getEnv } from "~/lib/env.server";
 import { buildSitemapXml, sitemapResponse } from "~/lib/seo/sitemap.server";
 
@@ -15,8 +14,10 @@ export function loader() {
   );
 
   const paths = [
+    // TED-187: the articles are the asset — they carry 29 of the site's 34
+    // clicks. The 13 tag archives are filtered views that hold no writing of
+    // their own, so they are noindex and no longer submitted.
     ...ARTICLES.map((a) => `/news/${a.slug}`),
-    ...ALL_NEWS_TAGS.map((tag) => `/news/tag/${tag}`),
   ];
 
   return sitemapResponse(buildSitemapXml(PUBLIC_URL, paths, lastmodByPath));

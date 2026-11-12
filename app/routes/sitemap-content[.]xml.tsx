@@ -32,15 +32,25 @@ import { buildSitemapXml, sitemapResponse } from "~/lib/seo/sitemap.server";
 export function loader() {
   const { PUBLIC_URL } = getEnv();
 
-  const professionalCells: string[] = [];
-  const seen = new Set<string>();
+  // TED-187 — a profession × city cell is submitted only while a named human
+  // is actually in it. Of the 33 cells, 29 hold nothing but anonymous slots
+  // and are noindex in the route, so they must not be submitted either.
+  //
+  // The cell is keyed first and *then* tested, rather than testing each slot
+  // as it goes, because lawyer/jerusalem is a mixed cell: one anonymous slot
+  // next to one real person. It has to stay in, and a per-slot test would
+  // have let the anonymous slot decide the whole cell.
+  const cellHasListed = new Map<string, boolean>();
   for (const e of PROFESSIONALS as ProfessionalSlot[]) {
-    const key = `${e.profession}::${e.citySlug}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      professionalCells.push(`/professionals/${e.profession}/${e.citySlug}`);
-    }
+    const key = `${e.profession}/${e.citySlug}`;
+    cellHasListed.set(
+      key,
+      (cellHasListed.get(key) ?? false) || e.listedProfessional != null,
+    );
   }
+  const professionalCells: string[] = [...cellHasListed]
+    .filter(([, hasListed]) => hasListed)
+    .map(([key]) => `/professionals/${key}`);
 
   const paths = [
     // Education

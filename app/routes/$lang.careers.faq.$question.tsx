@@ -15,7 +15,6 @@ import { faqPath, trackPath } from "~/lib/careers/links";
 import { breadcrumbJsonLd, faqJsonLd } from "~/lib/careers/schema";
 import { getEnv } from "~/lib/env.server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "~/lib/i18n/config";
-import { hreflangMeta } from "~/lib/i18n/hreflang";
 import { formatDate } from "~/lib/i18n/format";
 import { t } from "~/lib/i18n/messages";
 import { renderMarkdown } from "~/lib/utils/markdown";
@@ -70,7 +69,17 @@ export const meta: Route.MetaFunction = ({ data }) => {
   return [
     { title: `${question} — Tedros` },
     { name: "description", content: description },
-    ...hreflangMeta(publicUrl, locale, faqPath(faq.slug)),
+    // TED-187 — the 18 one-question FAQ pages are noindex.
+    //
+    // Each one carries a single question and its answer, and every one of
+    // them is also rendered in full on /careers/faq. There is no URL here
+    // that holds content the index page does not already hold, so 54 of
+    // them compete with their own hub and with each other. The hub stays
+    // indexed; the per-question URLs stay reachable and linked.
+    //
+    // The `FAQPage` JSON-LD below is left in place: it is a true description
+    // of what the page contains, and it is not an expertise claim.
+    { name: "robots", content: "noindex,follow" },
     { property: "og:title", content: question },
     { property: "og:description", content: description },
     { property: "og:image", content: `${publicUrl}/og-default.jpg` },
