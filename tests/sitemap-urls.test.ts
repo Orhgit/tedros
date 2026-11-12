@@ -51,8 +51,14 @@ const EXPECTED_URLS: Record<keyof typeof SITEMAPS, number> = {
   // TED-187: 147 -> 117. The ten careers/stories detail pages are noindex
   // (composite illustrations, zero impressions in the six weeks to 8.11.2026),
   // so they are no longer submitted. /careers/stories itself stays.
-  careers: 117,
-  health: 147,
+  // TED-187 phase 2: 117 -> 63. The 18 one-question /careers/faq/* pages are
+  // noindex — each is rendered in full on /careers/faq, so none held content
+  // of its own. The hub stays.
+  careers: 63,
+  // TED-187 phase 2: 147 -> 27. The 40 health condition pages are noindex.
+  // Withdrawn on expertise, not emptiness: YMYL medical content with no
+  // clinician behind it. /health/conditions itself stays.
+  health: 27,
   // TED-169 took this to 687 (+9: the three Sigd season routes, 3 locales each).
   // TED-168: -18 (six scholarships retired, 3 locales each)
   //          +15 (the guides index + four application guides, 3 locales each)
@@ -60,9 +66,15 @@ const EXPECTED_URLS: Record<keyof typeof SITEMAPS, number> = {
   // they describe a *type* of professional and have nobody behind them — so
   // they are no longer submitted. The 5 slots with a real named professional
   // stay, which is why this is -90 and not -105.
-  content: 594,
+  // TED-187 phase 2: 594 -> 507. 29 of the 33 profession x city cells hold
+  // nothing but anonymous slots and are withdrawn (-87). The 4 cells that
+  // hold a real named professional stay, which is why this is -87 and not -99.
+  content: 507,
   // TED-171: +18 (wave 12 — six news articles, 3 locales each).
-  news: 522,
+  // TED-187 phase 2: 522 -> 483. The 13 /news/tag/* archives are noindex:
+  // filtered views of /news holding no writing of their own. The articles
+  // stay — they carry 29 of the site's 34 clicks.
+  news: 483,
 };
 
 async function locsOf(name: keyof typeof SITEMAPS): Promise<string[]> {
@@ -173,11 +185,15 @@ describe("consolidated city cells are absent from every sitemap (TED-172)", () =
 });
 
 describe("the city templates the audit told us to keep are still published", () => {
-  it("keeps the 33 professionals × city cells, 31 kessim, 8 culinary, 39 city hubs", async () => {
+  it("keeps the 4 staffed professionals × city cells, 31 kessim, 8 culinary, 39 city hubs", async () => {
     const locs = await allLocs();
     const count = (re: RegExp) => locs.filter((l) => re.test(l)).length / 3;
 
-    expect(cityCellsUnder(locs, "/professionals").length / 3).toBe(33);
+    // TED-187 phase 2: was 33. The audit kept all 33 cells on the grounds that
+    // they were the main SEO surface; 29 of them turned out to list nothing
+    // but anonymous slots. Only the 4 with a real named professional are
+    // submitted now. `noindex-programmatic-phase2.test.ts` names them.
+    expect(cityCellsUnder(locs, "/professionals").length / 3).toBe(4);
     expect(count(/\/heritage\/kessim\/[^/]+$/)).toBe(31);
     expect(count(/\/culinary\/shopping\/[^/]+$/)).toBe(8);
     expect(count(/\/cities\/[^/]+$/)).toBe(39);

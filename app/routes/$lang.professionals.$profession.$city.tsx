@@ -97,7 +97,22 @@ export const meta: Route.MetaFunction = ({ data }) => {
     { name: "twitter:image", content: `${publicUrl}/og-default.jpg` },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: locale },
-    ...hreflangMeta(publicUrl, locale, path),
+    // TED-187 — a cell is submitted only while at least one named human is
+    // actually in it. 29 of the 33 cells hold nothing but anonymous slots:
+    // "what to expect from a lawyer in Netanya", with no lawyer. Those 87
+    // URLs are withdrawn. The 4 cells that do hold a real, named professional
+    // (lawyer/jerusalem, lawyer/maale-adumim, real-estate-agent/jerusalem,
+    // real-estate-agent/maale-adumim) keep their hreflang and canonical.
+    //
+    // The guard is `slots.some((s) => s.isListed)` and not a hard-coded list,
+    // so the moment a professional onboards into one of the other 29 pairs
+    // that cell comes back into the index by itself. lawyer/jerusalem is the
+    // case that makes this matter: it is a *mixed* cell, one anonymous slot
+    // beside one real person, and a naive "does this cell contain an
+    // anonymous slot" test would have withdrawn it.
+    ...(slots.some((s) => s.isListed)
+      ? hreflangMeta(publicUrl, locale, path)
+      : [{ name: "robots", content: "noindex,follow" }]),
     {
       "script:ld+json": {
         "@context": "https://schema.org",

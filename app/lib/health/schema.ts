@@ -84,8 +84,11 @@ export interface HealthConditionJsonLdInput {
   slug: string;
   name: string;
   description: string;
-  /** ISO date of last review, e.g. "2026-05-11". */
-  lastReviewed: string;
+  /**
+   * ISO date the entry's content was last edited, e.g. "2026-05-11". Emitted
+   * as `dateModified`, NOT as `lastReviewed` — see the note below.
+   */
+  lastEdited: string;
   /** Medical audience: Patient | MedicalResearcher | etc. */
   audienceType?: string;
 }
@@ -103,12 +106,21 @@ export function healthConditionJsonLd(
     name: input.name,
     description: input.description,
     inLanguage: ctx.locale,
-    lastReviewed: input.lastReviewed,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "Tedros",
-      url: ctx.publicUrl,
-    },
+    // TED-187 — `lastReviewed` and `reviewedBy` used to be emitted here, with
+    // `reviewedBy` naming the organisation "Tedros". On a `MedicalWebPage`
+    // those two properties are a specific, machine-readable claim: that this
+    // page's medical content was reviewed, on that date, by that reviewer.
+    //
+    // No medical review has ever taken place. The date was the seed date, and
+    // "Tedros" is a website, not a clinician. That made 40 YMYL pages assert
+    // an expertise they do not have — the same class of defect as the `Person`
+    // node that claimed an anonymous directory slot was a human being.
+    //
+    // `dateModified` is the honest version of the same freshness signal: the
+    // content was last edited then, and nothing more is claimed. Restoring
+    // `reviewedBy`/`lastReviewed` requires a named clinician who actually did
+    // the review, which is a content decision, not a schema one.
+    dateModified: input.lastEdited,
     audience: {
       "@type": "MedicalAudience",
       audienceType: input.audienceType ?? "Patient",

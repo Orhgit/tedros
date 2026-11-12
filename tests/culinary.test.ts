@@ -295,11 +295,26 @@ describe("city shopping loader", () => {
 
 describe("sigd menu loader", () => {
   // TED-172 — the Sigd×city chips are gone with the event cells they linked to.
-  it("loads in every locale with next observance", async () => {
+  //
+  // The expected date used to be the literal "2026-11-09". That passed until
+  // Sigd 5787 actually happened: on 10.11.2026 the loader correctly rolled to
+  // the next observance and the test started failing on the calendar rather
+  // than on a code change. It is derived from the same registry the loader
+  // reads now, so it keeps asserting the real behaviour — that `next` is the
+  // first observance that has not yet passed — without re-breaking every year.
+  it("loads in every locale with the next observance that has not passed", async () => {
+    const today = new Date().toISOString().slice(0, 10);
+    const sigd = HERITAGE_EVENTS.find((e) => e.slug === "sigd");
+    const expected = sigd?.upcomingDates.find((d) => d >= today);
+    expect(
+      expected,
+      "no future Sigd date left in the registry — extend it",
+    ).toBeDefined();
+
     for (const lang of LOCALES) {
       const data = await sigdMenuLoader(fakeArgs({ lang }));
       expect(data.html.length).toBeGreaterThan(500);
-      expect(data.next).toBe("2026-11-09");
+      expect(data.next).toBe(expected);
       expect(data).not.toHaveProperty("sigdCities");
     }
   });
